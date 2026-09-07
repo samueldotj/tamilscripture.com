@@ -4,7 +4,7 @@
 
 Live site (planned): **https://www.tamilscripture.com**
 
-> Status: M0 in progress. The Rust pipeline parses all five source texts, and the SvelteKit app prerenders chapter pages. Not yet deployed.
+> Status: **live at https://www.tamilscripture.com** (first deploy 7 Sep 2026). All 1,189 chapters of IRVTAM, TCV, BSB, WEB and KJV are readable; the search table is loaded. M0 nearly complete; M1 features (picker, reference box, formats, PWA) in progress.
 
 ## Getting started
 
@@ -82,7 +82,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | Milestone | Goal | Requirements | Exit test | Status |
 |---|---|---|---|---|
-| **M0 · Foundations** | Repository, pipeline and deploy path exist end to end with a three-book fixture. | R-3.1, R-3.5 | A fixture chapter is visible on a Vercel preview URL, built by CI from USFM. | Not started |
+| **M0 · Foundations** | Repository, pipeline and deploy path exist end to end. | R-3.1, R-3.5 | A chapter is visible on the production URL, built by CI from USFM. | Done except 0.11, 0.12 spikes and books.toml review |
 | **M1 · Read** | Anyone can read IRVTAM, TCV and an English version of their choice on a phone, fast, at a shareable URL. | R-3.1–3.3, 3.5, R-1.1–1.5, 1.7–1.8, 1.10, 1.12–1.14, R-8.1, 8.3 | Every chapter loads under budget on the 4G profile. A Tamil user can reach any verse by typing its Tamil abbreviation. | Not started |
 | **M2 · Study** | Word search, cross-references, the Cross-reference format and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Not started |
 | **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Not started |
@@ -102,7 +102,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; chapter pages rendered from JSON via ISR (see ADR-1 for why not prerender) with breadcrumbs, prev/next, footnotes and attribution | ADR-1 | ☑ |
 | 0.8 | One hosted Supabase project in Mumbai (`zytgmnqmrvgspjdokajp`); first migration (`pg_trgm`, `tamil_norm` placeholder, `verse_search`) written; applied by the deploy workflow once secrets exist. Second project deferred to M3. | design §11 | ◧ |
 | 0.9 | GitHub Actions: `ci.yml` (fmt, clippy, cargo test, full-corpus strict build, determinism diff, svelte-check, web build) ☑; `preview.yml` (Vercel preview against the development project) ☐ | design §11 | ◧ |
-| 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☐ |
+| 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☑ |
 | 0.11 | Spike: `bible-ref` compiled to WebAssembly running on the Vercel edge runtime; measure bundle size and cold start | design §13 risks | ☐ |
 | 0.12 | Spike: PGroonga versus `pg_trgm` on the fixture corpus for Tamil fuzzy search | design §6, ADR-2 | ☐ |
 

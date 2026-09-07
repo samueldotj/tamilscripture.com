@@ -304,7 +304,7 @@ Budgets are measured, not aspirational. Each is checked in CI with Lighthouse an
 
 ### How the budgets are met
 
-- **Prerender everything static.** All 1,189 chapters of each version are prerendered at build time to HTML and served from Vercel's edge. Verse and range URLs serve the chapter page with client-side scroll.
+- **Scripture is static content.** Chapter text is built once from USFM into JSON on the CDN. Chapter, verse and range pages are rendered from it on first request and cached at Vercel's edge until the next deploy (ISR), so every request after the first is a static hit. See design ADR-1 for why full prerendering is not possible on Vercel.
 - **Prefetch neighbours.** The next and previous chapter are prefetched on hover or when idle.
 - **Small, subsetted fonts.** Tamil web font subset to the characters used in the corpus, preloaded, with `font-display: swap` and size-adjusted fallback metrics to keep layout shift near zero.
 - **Search index near the user.** Postgres full-text and trigram indexes in Supabase for word search, with a WebAssembly reference parser in the browser so references never touch the server.
