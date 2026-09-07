@@ -159,3 +159,6 @@ apps/web/build/
 
 .vercel
 .env*
+
+# variable TTF sources for scripts/subset-fonts.py (downloaded on demand)
+data/fonts-src/

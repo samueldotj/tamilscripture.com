@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Client JavaScript (all routes, gzip)",
+    "path": ".svelte-kit/output/client/_app/immutable/**/*.js",
+    "limit": "120 kB",
+    "gzip": true
+  },
+  {
+    "name": "Reference parser wasm",
+    "path": "../../packages/bible-wasm/pkg/bible_wasm_bg.wasm",
+    "limit": "45 kB",
+    "gzip": true
+  },
+  {
+    "name": "Tamil serif regular font",
+    "path": "static/fonts/noto-serif-tamil-regular.woff2",
+    "limit": "80 kB",
+    "gzip": false
+  }
+]

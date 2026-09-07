@@ -1,5 +1,15 @@
-/* Fonts: Google Fonts for now; replaced by a self-hosted subset in M1.18. */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap');
+/* Self-hosted subset fonts built by scripts/subset-fonts.py (OFL). Tamil faces
+   carry unicode-range so a page downloads a face only when it uses the script.
+   size-adjust keeps the fallback metrics close enough to avoid layout shift. */
+@font-face { font-family: 'Noto Serif Tamil'; font-weight: 400; font-display: swap; src: url('/fonts/noto-serif-tamil-regular.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Noto Serif Tamil'; font-weight: 600; font-display: swap; src: url('/fonts/noto-serif-tamil-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Noto Sans Tamil'; font-weight: 400; font-display: swap; src: url('/fonts/noto-sans-tamil-regular.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Noto Sans Tamil'; font-weight: 600; font-display: swap; src: url('/fonts/noto-sans-tamil-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Source Serif 4'; font-weight: 400; font-display: swap; src: url('/fonts/source-serif-4-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Source Serif 4'; font-weight: 600; font-display: swap; src: url('/fonts/source-serif-4-semibold.woff2') format('woff2'); }
+@font-face { font-family: 'Source Sans 3'; font-weight: 400; font-display: swap; src: url('/fonts/source-sans-3-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Source Sans 3'; font-weight: 600; font-display: swap; src: url('/fonts/source-sans-3-semibold.woff2') format('woff2'); }
+@font-face { font-family: 'Tamil Fallback'; src: local('Nirmala UI'), local('Latha'), local('Tamil Sangam MN'), local('Noto Sans Tamil'); size-adjust: 104%; ascent-override: 95%; descent-override: 30%; }
 
 :root {
 	--bg: #f3f2ee;
@@ -12,11 +22,17 @@
 	--accent-soft: rgba(126, 42, 42, 0.1);
 	--select: rgba(126, 42, 42, 0.12);
 	--wj: #8a1f1f;
-	--tamil: 'Noto Serif Tamil', 'Nirmala UI', 'Latha', 'Tamil Sangam MN', serif;
+	/* Tamil face is chosen in settings: tf-serif (default), tf-sans, tf-system */
+	--tamil-serif: 'Noto Serif Tamil', 'Tamil Fallback', serif;
+	--tamil-sans: 'Noto Sans Tamil', 'Tamil Fallback', sans-serif;
+	--tamil: var(--tamil-serif);
 	--serif: 'Source Serif 4', Georgia, serif;
 	--sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
 	color-scheme: light dark;
 }
+html.tf-sans { --tamil: var(--tamil-sans); }
+html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam MN', sans-serif; }
+
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
 		--bg: #15181c;
@@ -76,7 +92,8 @@ button { font: inherit; }
 .fmt-xref .chapter .para { margin: 0 0 0.5em; }
 .fmt-xref .chapter .xref-list { display: block; }
 
-.no-headings .chapter .heading { display: none; }
+.no-headings .chapter .heading,
+.no-headings .dual .heading { display: none; }
 .no-footnotes .chapter .fn,
 .no-footnotes .chapter .footnotes { display: none; }
 .no-xrefs .chapter .xref,

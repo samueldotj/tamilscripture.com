@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { settings, type Format, type Theme } from '$lib/settings/store.svelte';
+	import { settings, type Format, type TamilFont, type Theme } from '$lib/settings/store.svelte';
 	import { manifest } from '$lib/content/manifest';
 
 	let { open = $bindable(false) }: { open?: boolean } = $props();
@@ -10,6 +10,11 @@
 		{ id: 'reader', ta: 'வாசிப்பு', en: 'Reader', hint: 'no verse numbers' },
 		{ id: 'standard', ta: 'நிலையான', en: 'Standard', hint: 'like a printed Bible' },
 		{ id: 'xref', ta: 'குறிப்பு', en: 'Cross-reference', hint: 'one verse per line' }
+	];
+	const fonts: { id: TamilFont; label: string; sample: string }[] = [
+		{ id: 'serif', label: 'Noto Serif', sample: 'அகர' },
+		{ id: 'sans', label: 'Noto Sans', sample: 'அகர' },
+		{ id: 'system', label: 'System', sample: 'அகர' }
 	];
 	const themes: { id: Theme; ta: string; en: string }[] = [
 		{ id: 'system', ta: 'சாதனம்', en: 'System' },
@@ -60,6 +65,17 @@
 		</fieldset>
 
 		<fieldset>
+			<legend>{ta ? 'தமிழ் எழுத்துரு' : 'Tamil typeface'}</legend>
+			<div class="seg" role="radiogroup">
+				{#each fonts as f (f.id)}
+					<button type="button" role="radio" aria-checked={s.tamilFont === f.id} class:on={s.tamilFont === f.id} class="font-{f.id}" onclick={() => settings.update({ tamilFont: f.id })}>
+						<span class="sample" lang="ta">{f.sample}</span> <span class="fname">{f.label}</span>
+					</button>
+				{/each}
+			</div>
+		</fieldset>
+
+		<fieldset>
 			<legend>{ta ? 'தோற்றம்' : 'Theme'}</legend>
 			<div class="seg" role="radiogroup">
 				{#each themes as t (t.id)}
@@ -100,6 +116,11 @@
 	.seg button { flex: 1; padding: 0.5rem 0.4rem; border: 0; background: var(--surface); color: inherit; cursor: pointer; font-family: var(--tamil); min-height: 40px; }
 	.seg button + button { border-left: 1px solid var(--line); }
 	.seg button.on { background: var(--accent); color: #fff; }
+	.font-serif .sample { font-family: var(--tamil-serif); }
+	.font-sans .sample { font-family: var(--tamil-sans); }
+	.font-system .sample { font-family: 'Tamil Fallback', 'Nirmala UI', 'Latha', sans-serif; }
+	.sample { font-size: 1.1rem; display: block; }
+	.fname { font-size: 0.7rem; opacity: 0.8; font-family: var(--sans); }
 	.size { display: flex; align-items: center; gap: 1rem; }
 	.size button { min-width: 44px; min-height: 40px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: inherit; cursor: pointer; }
 	.size button:disabled { opacity: 0.4; cursor: default; }

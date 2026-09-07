@@ -53,3 +53,26 @@ jobs:
       - run: pnpm build
         env:
           VERCEL: '1'
+      - name: Size budgets
+        working-directory: apps/web
+        run: pnpm exec size-limit
+
+  lighthouse:
+    name: Lighthouse budgets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm content:fixture
+      - name: Build with the Node adapter
+        run: pnpm build
+      - name: Lighthouse CI
+        working-directory: apps/web
+        run: pnpm exec lhci autorun
