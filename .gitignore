@@ -141,3 +141,16 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# --- tamilscripture.com ---
+# Rust
+target/
+# pipeline output and generated fonts (built at deploy time)
+apps/web/static/content/
+apps/web/static/fonts/
+# SvelteKit / Vercel
+.svelte-kit/
+.vercel/
+# Supabase local
+supabase/.branches/
+supabase/.temp/
