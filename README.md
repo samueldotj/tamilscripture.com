@@ -96,7 +96,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 0.1 | Set up the monorepo: pnpm workspace, Cargo workspace, `rust-toolchain.toml`, root scripts, `.gitignore` for `target/` and `static/content` | design §14 | ☑ |
 | 0.2 | Decide the USFM parsing approach: own marker-level parser in `usfm-ingest` over the eBible dialect | design §14 | ☑ |
 | 0.3 | Download IRVTAM, TCV, BSB, WEB, KJV from eBible.org and OpenBible cross-references; record `LICENSE` + `SOURCE.md` for each | R-3.5, open questions 1–2 | ☑ |
-| 0.4 | Create `data/books.toml` with English and Tamil names, slugs and abbreviations for all 66 books (drafted from the USFM headers by `scripts/draft-books-toml.py`; Tamil abbreviations awaiting owner review) | R-1.13 | ☑ |
+| 0.4 | Create `data/books.toml` with English and Tamil names, slugs and abbreviations for all 66 books (drafted from the USFM headers by `scripts/draft-books-toml.py`; reviewed by owner 7 Sep 2026) | R-1.13 | ☑ |
 | 0.5 | Create the three-book fixture version under `data/fixtures/` (Ruth, Jonah, Philemon in IRVTAM and BSB) | design §14 | ☑ |
 | 0.6 | `usfm-ingest` v0: parse all five versions with strict validation, emit chapter JSON, intro JSON, cross-ref JSON, `manifest.json` and search CSV; determinism check in CI | R-3.1 | ☑ |
 | 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; chapter pages rendered from JSON via ISR (see ADR-1 for why not prerender) with breadcrumbs, prev/next, footnotes and attribution | ADR-1 | ☑ |

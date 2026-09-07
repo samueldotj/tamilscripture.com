@@ -1,0 +1,19 @@
+[package]
+name = "bible-ref"
+description = "Bible reference parser (English and Tamil) shared by the browser, the edge redirector and the pipeline"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+build = "build.rs"
+
+[lib]
+crate-type = ["rlib"]
+
+[dependencies]
+unicode-normalization.workspace = true
+
+[build-dependencies]
+toml.workspace = true
+serde.workspace = true
+unicode-normalization.workspace = true
