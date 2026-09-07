@@ -13,7 +13,9 @@
 		onxref,
 		highlight = null,
 		hasNote = false,
-		onnote
+		onnote,
+		heat = 0,
+		users = 0
 	}: {
 		seg: Segment;
 		lang: 'ta' | 'en';
@@ -26,6 +28,9 @@
 		highlight?: string | null;
 		hasNote?: boolean;
 		onnote?: (id: string) => void;
+		/** community heat bucket 0..4 (overlay) and raw user count (tooltip) */
+		heat?: number;
+		users?: number;
 	} = $props();
 
 	// Split the text into runs at span boundaries and note anchors so that
@@ -74,10 +79,10 @@
 	}
 </script>
 
-<span class="verse {highlight ? `hl-${highlight}` : ''}" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
+<span class="verse {highlight ? `hl-${highlight}` : ''} {heat ? `heat-${heat}` : ''}" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
 	{#if seg.n}
 		{#if onselect && seg.id}
-			<button type="button" class="vn" aria-label="verse {seg.n}" aria-pressed={selected} onclick={() => onselect(seg.id!)}>{seg.n}</button>
+			<button type="button" class="vn" aria-label="verse {seg.n}{users ? `, highlighted by ${users} readers` : ''}" title={users ? `${users} readers highlighted this verse` : undefined} aria-pressed={selected} onclick={() => onselect(seg.id!)}>{seg.n}</button>
 		{:else}
 			<sup class="vn" aria-label="verse {seg.n}">{seg.n}</sup>
 		{/if}

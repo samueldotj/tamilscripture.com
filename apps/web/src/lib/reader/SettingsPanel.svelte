@@ -53,6 +53,7 @@
 			<label><input type="checkbox" checked={s.intro} onchange={() => settings.toggle('intro')} /> {ta ? 'புத்தக முன்னுரை' : 'Book introductions'}</label>
 			<label><input type="checkbox" checked={s.footnotes} onchange={() => settings.toggle('footnotes')} /> {ta ? 'அடிக்குறிப்புகள்' : 'Footnotes'}</label>
 			<label><input type="checkbox" checked={s.xrefs} onchange={() => settings.toggle('xrefs')} /> {ta ? 'ஒப்புவசனங்கள்' : 'Cross-references'}</label>
+			<label><input type="checkbox" checked={s.heat} onchange={() => settings.toggle('heat')} /> {ta ? 'சமூக அடிக்கோட்டு வெப்பம்' : 'Community highlight heat'}</label>
 		</fieldset>
 
 		<fieldset>

@@ -14,6 +14,8 @@ export interface Settings {
 	intro: boolean;
 	footnotes: boolean;
 	xrefs: boolean;
+	/** Tint verses by community highlight count (R-2.3), off by default. */
+	heat: boolean;
 	/** 1..5, 3 is the default 17px */
 	fontSize: number;
 	theme: Theme;
@@ -28,6 +30,7 @@ export const DEFAULTS: Settings = {
 	intro: true,
 	footnotes: true,
 	xrefs: true,
+	heat: false,
 	fontSize: 3,
 	theme: 'system',
 	uiLang: 'ta',
@@ -64,7 +67,7 @@ class SettingsStore {
 		this.persist();
 	}
 
-	toggle(key: 'headings' | 'intro' | 'footnotes' | 'xrefs') {
+	toggle(key: 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat') {
 		this.update({ [key]: !this.value[key] } as Partial<Settings>);
 	}
 

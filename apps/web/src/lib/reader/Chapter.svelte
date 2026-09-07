@@ -12,7 +12,8 @@
 		versionPath = 'irvtam',
 		highlights = new Map<string, string>(),
 		noted = new Set<string>(),
-		onnote
+		onnote,
+		heat = null
 	}: {
 		chapter: ChapterJson;
 		lang: 'ta' | 'en';
@@ -26,7 +27,13 @@
 		/** verse ids that carry a user note */
 		noted?: Set<string>;
 		onnote?: (id: string) => void;
+		/** verse number → { bucket, users } for the community heat overlay */
+		heat?: Map<number, { bucket: number; users: number }> | null;
 	} = $props();
+	function heatFor(seg: Segment) {
+		if (!heat || !seg.id) return { bucket: 0, users: 0 };
+		return heat.get(Number(seg.id.split('.')[2])) ?? { bucket: 0, users: 0 };
+	}
 
 	// Footnotes numbered across the chapter for the list at the end.
 	const notes = $derived.by(() => {
@@ -89,6 +96,8 @@
 						highlight={seg.id ? highlights.get(seg.id) ?? null : null}
 						hasNote={seg.id !== undefined && noted.has(seg.id)}
 						{onnote}
+						heat={heatFor(seg).bucket}
+						users={heatFor(seg).users}
 					/>
 				{/each}
 			</p>

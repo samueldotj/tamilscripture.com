@@ -86,7 +86,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M1 · Read** | Anyone can read IRVTAM, TCV and an English version of their choice on a phone, fast, at a shareable URL. | R-3.1–3.3, 3.5, R-1.1–1.5, 1.7–1.8, 1.10, 1.12–1.14, R-8.1, 8.3 | Every chapter loads under budget on the 4G profile. A Tamil user can reach any verse by typing its Tamil abbreviation. | Shipped 7 Sep 2026 except 1.17 font choice, 1.18 self-hosted subset, 1.19 i18n module, 1.23 CI guards, 1.24 a11y pass, 1.25 Sentry |
 | **M2 · Study** | Word search, cross-references, the Cross-reference format and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Shipped 7 Sep 2026; 2.14 (log review) ongoing |
 | **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Code shipped 7 Sep 2026; blocked on owner's Supabase Auth URL setup (3.1); 3.4, 3.8, 3.9 open |
-| **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Not started |
+| **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Code shipped 7 Sep 2026; 4.7 alerting open |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
 
 ### M0 · Foundations
@@ -175,12 +175,12 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 4.1 | `share_aggregates` flag on `profiles` with a settings toggle | R-2.4 | ☐ |
-| 4.2 | `verse_highlight_counts` materialised view: distinct users, join on opt-in, `having count ≥ 3`; hourly `pg_cron` concurrent refresh | R-2.1, R-2.4, ADR-8 | ☐ |
-| 4.3 | `/api/heat/{book}.json` with one-hour CDN cache | design §8 | ☐ |
-| 4.4 | Counts next to verse numbers and in the action bar, rendered into reserved space | R-2.1 | ☐ |
-| 4.5 | Heatmap page per book with quantile buckets and chapter labels; whole-Bible view per chapter | R-2.2 | ☐ |
-| 4.6 | Optional heat overlay in the reader, off by default | R-2.3 | ☐ |
+| 4.1 | `share_aggregates` flag on `profiles` with a toggle on the Account page | R-2.4 | ☑ |
+| 4.2 | `verse_highlight_counts` materialised view: distinct users, join on opt-in, `having count ≥ 3`; hourly `pg_cron` concurrent refresh | R-2.1, R-2.4, ADR-8 | ☑ |
+| 4.3 | `/api/heat/{book}.json` and `/api/heat/all.json` with one-hour CDN cache | design §8 | ☑ |
+| 4.4 | Counts shown in the verse-number tooltip and in the action bar for the selection (no inline text, so no layout shift) | R-2.1 | ☑ |
+| 4.5 | `/heatmap` (one cell per chapter) and `/heatmap/{book}` (one cell per verse) with quantile buckets; tap opens the passage | R-2.2 | ☑ |
+| 4.6 | Heat overlay in the reader as a settings toggle, off by default | R-2.3 | ☑ |
 | 4.7 | Alert if view refresh exceeds 30 s; document the trigger-table upgrade path | design §13 risks | ☐ |
 
 ### M5 · Later

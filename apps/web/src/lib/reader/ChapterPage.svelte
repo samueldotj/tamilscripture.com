@@ -8,6 +8,7 @@
 	import NoteSheet from './NoteSheet.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { loadXrefs } from '$lib/content/load';
+	import { bookHeat, bucket } from '$lib/content/heat';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
 	import type { XrefChapter } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
@@ -90,6 +91,28 @@
 			.then((x) => { if (!cancelled && key === data.canonical) fetched = x; })
 			.catch(() => {});
 		return () => { cancelled = true; };
+	});
+
+	// Community heat (R-2.1, R-2.3): counts for tooltips and the action bar always;
+	// the background tint only when the setting is on. Loaded after paint from
+	// the hour-cached API; classes change background only, so no layout shift.
+	let heatMap = $state<Map<number, { bucket: number; users: number }> | null>(null);
+	$effect(() => {
+		const key = data.canonical;
+		heatMap = null;
+		bookHeat(fetch, data.book.slug).then((h) => {
+			if (key !== data.canonical) return;
+			const ch = h[String(data.chapter)] ?? {};
+			const allValues = Object.values(h).flatMap((c) => Object.values(c));
+			const m = new Map<number, { bucket: number; users: number }>();
+			for (const [v, users] of Object.entries(ch)) m.set(Number(v), { bucket: bucket(users, allValues), users });
+			heatMap = m;
+		});
+	});
+	const heatOverlay = $derived(settings.value.heat ? heatMap : heatMap && new Map([...heatMap].map(([k, v]) => [k, { bucket: 0, users: v.users }])));
+	const selectedUsers = $derived.by(() => {
+		if (!heatMap || !selected.size) return 0;
+		return Math.max(0, ...[...selected].map((id) => heatMap!.get(Number(id.split('.')[2]))?.users ?? 0));
 	});
 
 	// Personal data (R-10.x): loaded after paint, only when signed in.
@@ -217,7 +240,7 @@
 	<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
 
 	{#if data.chapters.length === 1}
-		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} />
+		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} />
 	{:else}
 		<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 	{/if}
@@ -235,7 +258,7 @@
 	</footer>
 </div>
 
-<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} onclear={() => (selected = new Set())} onhighlight={applyHighlight} onnote={() => openNote()} />
+<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={() => (selected = new Set())} onhighlight={applyHighlight} onnote={() => openNote()} />
 
 {#if noteOpen}
 	<NoteSheet book={data.book.code} chapter={data.chapter} verseStart={noteOpen.start} verseEnd={noteOpen.end} existing={noteOpen.existing} lang={ui}

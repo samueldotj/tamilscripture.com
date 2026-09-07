@@ -13,6 +13,7 @@
 		lang,
 		signedIn = false,
 		currentColor = null,
+		communityUsers = 0,
 		onclear,
 		onhighlight,
 		onnote
@@ -25,6 +26,8 @@
 		lang: 'ta' | 'en';
 		signedIn?: boolean;
 		currentColor?: HighlightColor | null;
+		/** readers who highlighted the selected verse (max over the selection); 0 when below the privacy threshold */
+		communityUsers?: number;
 		onclear: () => void;
 		onhighlight?: (color: HighlightColor | null) => void;
 		onnote?: () => void;
@@ -83,6 +86,9 @@
 {#if selected.size}
 	<div class="bar" role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
 		<span class="label">{label}</span>
+		{#if communityUsers}
+			<span class="community" title={ta ? `${communityUsers} வாசகர்கள் அடிக்கோடிட்டனர்` : `${communityUsers} readers highlighted this`}>◉ {communityUsers}</span>
+		{/if}
 		{#if signedIn}
 			<span class="colors" role="group" aria-label={ta ? 'அடிக்கோடு' : 'Highlight'}>
 				{#each COLORS as c (c)}
@@ -106,6 +112,7 @@
 	button, .btn { border: 1px solid var(--line); background: var(--surface-2); color: inherit; border-radius: 999px; padding: 0.4rem 0.9rem; min-height: 40px; cursor: pointer; font-family: var(--tamil); text-decoration: none; display: inline-flex; align-items: center; }
 	button:hover, .btn:hover { border-color: var(--accent); }
 	.ghost { background: none; border-color: transparent; font-size: 1.3rem; line-height: 1; min-width: 40px; padding: 0; color: var(--muted); }
+	.community { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
 	.colors { display: inline-flex; gap: 0.3rem; padding: 0 0.2rem; }
 	.swatch { width: 28px; height: 28px; min-height: 28px; padding: 0; border-radius: 50%; border: 2px solid transparent; }
 	.swatch.yellow { background: var(--hl-yellow); } .swatch.green { background: var(--hl-green); } .swatch.blue { background: var(--hl-blue); } .swatch.pink { background: var(--hl-pink); }

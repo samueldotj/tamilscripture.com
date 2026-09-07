@@ -26,6 +26,7 @@
 	--hl-green: #bfe3b4;
 	--hl-blue: #bbd7f2;
 	--hl-pink: #f2c1d1;
+	--heat-rgb: 126, 42, 42;
 	/* Tamil face is chosen in settings: tf-serif (default), tf-sans, tf-system */
 	--tamil-serif: 'Noto Serif Tamil', 'Tamil Fallback', serif;
 	--tamil-sans: 'Noto Sans Tamil', 'Tamil Fallback', sans-serif;
@@ -53,9 +54,11 @@ html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam
 		--hl-green: #2f4f2c;
 		--hl-blue: #29405a;
 		--hl-pink: #5a2e3c;
+		--heat-rgb: 208, 124, 124;
 	}
 }
 :root[data-theme='dark'] {
+	--heat-rgb: 208, 124, 124;
 	--hl-yellow: #6e6224;
 	--hl-green: #2f4f2c;
 	--hl-blue: #29405a;
@@ -95,6 +98,12 @@ button { font: inherit; }
 .verse.hl-blue { background: var(--hl-blue); }
 .verse.hl-pink { background: var(--hl-pink); }
 .verse[class*='hl-'] { box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 0.1em; }
+
+/* ---- Community heat overlay (R-2.3): quantile buckets within the book ---- */
+.verse.heat-1 { background: rgba(var(--heat-rgb), 0.08); }
+.verse.heat-2 { background: rgba(var(--heat-rgb), 0.16); }
+.verse.heat-3 { background: rgba(var(--heat-rgb), 0.26); }
+.verse.heat-4 { background: rgba(var(--heat-rgb), 0.38); }
 
 /* ---- Reader formats and paratext toggles (classes on <html>) ---- */
 /* Reader: flowing text, no verse numbers, no note markers, roomier lines */
