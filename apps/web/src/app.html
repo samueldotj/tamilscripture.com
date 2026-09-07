@@ -1,9 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="ta" class="fmt-standard fs-3">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="text-scale" content="scale" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="theme-color" content="#f3f2ee" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)" />
+		<script>
+			// Apply saved reader settings before first paint so shared links open in
+			// the recipient's own layout with no flash. Mirrors settings/store.svelte.ts.
+			try {
+				var s = JSON.parse(localStorage.getItem('reader') || '{}');
+				var c = ['fmt-' + (s.format || 'standard'), 'fs-' + (s.fontSize || 3)];
+				if (s.headings === false) c.push('no-headings');
+				if (s.intro === false) c.push('no-intro');
+				if (s.footnotes === false) c.push('no-footnotes');
+				if (s.xrefs === false) c.push('no-xrefs');
+				document.documentElement.className = c.join(' ');
+				if (s.theme === 'light' || s.theme === 'dark') document.documentElement.setAttribute('data-theme', s.theme);
+			} catch (e) {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

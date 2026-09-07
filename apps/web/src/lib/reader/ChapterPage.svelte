@@ -1,21 +1,22 @@
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import Chapter from './Chapter.svelte';
+	import ActionBar from './ActionBar.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
+	import { settings } from '$lib/settings/store.svelte';
 
 	let { data }: { data: ChapterPageData } = $props();
 
 	const primary = $derived(data.versions[0]);
-	const isTamil = $derived(primary.lang === 'ta');
-	const bookName = $derived(isTamil ? data.book.name_ta : data.book.name_en);
+	const ui = $derived(settings.value.uiLang);
+	const isTamil = $derived(ui === 'ta');
+	const bookName = $derived(primary.lang === 'ta' ? data.book.name_ta : data.book.name_en);
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));
-	const refLabel = $derived(
-		data.range
-			? `${bookName} ${data.chapter}:${data.range.start}${data.range.end !== data.range.start ? `-${data.range.end}` : ''}`
-			: `${bookName} ${data.chapter}`
+	const rangeLabel = $derived(
+		data.range ? `${data.range.start}${data.range.end !== data.range.start ? `-${data.range.end}` : ''}` : ''
 	);
-	const title = $derived(`${refLabel} · ${primary.short}`);
+	const title = $derived(`${bookName} ${data.chapter}${rangeLabel ? `:${rangeLabel}` : ''} · ${primary.short}`);
 
 	// Description: the selected verses if any, else the chapter opening.
 	const description = $derived.by(() => {
@@ -42,25 +43,57 @@
 			: isTamil ? 'புதிய ஏற்பாடு' : 'New Testament'
 	);
 
-	// Verse ids selected by the URL, e.g. JHN.3.16..18, resolving bridges.
-	const selected = $derived.by(() => {
-		if (!data.range) return new Set<string>();
+	// Selection: starts from the URL range (resolving bridges), then follows taps.
+	function idsFromRange(): Set<string> {
 		const ids = new Set<string>();
+		if (!data.range) return ids;
 		const bridges = data.chapters[0].bridges ?? {};
 		for (let v = data.range.start; v <= data.range.end; v++) {
 			const id = `${data.book.code}.${data.chapter}.${v}`;
 			ids.add(bridges[id] ?? id);
 		}
 		return ids;
+	}
+	let selected = $state<Set<string>>(new Set());
+	$effect(() => {
+		// Reset when the passage changes.
+		void data.canonical;
+		selected = idsFromRange();
 	});
+	function toggle(id: string) {
+		const s = new Set(selected);
+		if (s.has(id)) s.delete(id); else s.add(id);
+		selected = s;
+	}
 
 	afterNavigate(() => {
 		if (!data.range) return;
 		const first = document.getElementById(`${data.book.code}.${data.chapter}.${data.range.start}`)
-			?? document.querySelector(`[data-verse="${[...selected][0]}"]`);
+			?? document.querySelector(`[data-verse="${[...idsFromRange()][0]}"]`);
 		first?.scrollIntoView({ block: 'start' });
 	});
+
+	// Swipe between chapters on touch screens; arrow keys on desktop.
+	let touchX = 0, touchY = 0;
+	function touchStart(e: TouchEvent) { touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; }
+	function touchEnd(e: TouchEvent) {
+		const dx = e.changedTouches[0].clientX - touchX;
+		const dy = e.changedTouches[0].clientY - touchY;
+		if (Math.abs(dx) > 70 && Math.abs(dy) < 50) {
+			const target = dx < 0 ? navUrl(next) : navUrl(prev);
+			if (target) goto(target);
+		}
+	}
+	function onKey(e: KeyboardEvent) {
+		const t = e.target as HTMLElement | null;
+		if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+		if (e.key === 'ArrowRight' && navUrl(next)) goto(navUrl(next)!);
+		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
+		else if (e.key === 'Escape' && selected.size) selected = new Set();
+	}
 </script>
+
+<svelte:window onkeydown={onKey} />
 
 <svelte:head>
 	<title>{title} · Tamil Scripture</title>
@@ -70,56 +103,70 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content={`https://www.tamilscripture.com${data.canonical}`} />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Bible', item: 'https://www.tamilscripture.com/' },
+			{ '@type': 'ListItem', position: 2, name: data.book.name_en, item: `https://www.tamilscripture.com${chapterUrl(versionPath, data.book)}` },
+			{ '@type': 'ListItem', position: 3, name: `${data.book.name_en} ${data.chapter}`, item: `https://www.tamilscripture.com${chapterUrl(versionPath, data.book, data.chapter)}` }
+		]
+	})}</script>`}
 </svelte:head>
 
-<nav class="crumbs" aria-label="Breadcrumb">
-	<a href="/">Bible</a>
-	<span aria-hidden="true">›</span>
-	<span>{testamentName}</span>
-	<span aria-hidden="true">›</span>
-	<a href={chapterUrl(versionPath, data.book)}>{bookName}</a>
-	<span aria-hidden="true">›</span>
-	{#if data.range}
-		<a href={chapterUrl(versionPath, data.book, data.chapter)}>{data.chapter}</a>
+<!-- svelte-ignore a11y_no_static_element_interactions -- swipe is a shortcut for the prev/next links below -->
+<div class="reader" ontouchstart={touchStart} ontouchend={touchEnd}>
+	<nav class="crumbs" aria-label="Breadcrumb">
+		<a href="/">Bible</a>
 		<span aria-hidden="true">›</span>
-		<span aria-current="page">{data.range.start}{data.range.end !== data.range.start ? `-${data.range.end}` : ''}</span>
-	{:else}
-		<span aria-current="page">{data.chapter}</span>
-	{/if}
-</nav>
+		<span>{testamentName}</span>
+		<span aria-hidden="true">›</span>
+		<a href={chapterUrl(versionPath, data.book)}>{bookName}</a>
+		<span aria-hidden="true">›</span>
+		{#if data.range}
+			<a href={chapterUrl(versionPath, data.book, data.chapter)}>{data.chapter}</a>
+			<span aria-hidden="true">›</span>
+			<span aria-current="page">{rangeLabel}</span>
+		{:else}
+			<span aria-current="page">{data.chapter}</span>
+		{/if}
+	</nav>
 
-<div class="pager">
-	{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
-	<span class="version-tag">{data.versions.map((v) => v.short).join(' + ')}</span>
-	{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
-</div>
-
-<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
-
-{#if data.chapters.length === 1}
-	<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} />
-{:else}
-	<div class="dual">
-		{#each data.chapters as ch, i (ch.version)}
-			<section aria-label={data.versions[i].name}>
-				<h2 class="version-head">{data.versions[i].short}</h2>
-				<Chapter chapter={ch} lang={data.versions[i].lang} {selected} />
-			</section>
-		{/each}
+	<div class="pager">
+		{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
+		<span class="version-tag">{data.versions.map((v) => v.short).join(' + ')}</span>
+		{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
 	</div>
-{/if}
 
-<div class="pager bottom">
-	{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
-	<span></span>
-	{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
+	<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
+
+	{#if data.chapters.length === 1}
+		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} />
+	{:else}
+		<div class="dual">
+			{#each data.chapters as ch, i (ch.version)}
+				<section aria-label={data.versions[i].name}>
+					<h2 class="version-head">{data.versions[i].short}</h2>
+					<Chapter chapter={ch} lang={data.versions[i].lang} {selected} onselect={toggle} />
+				</section>
+			{/each}
+		</div>
+	{/if}
+
+	<div class="pager bottom">
+		{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
+		<span></span>
+		{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
+	</div>
+
+	<footer class="attribution">
+		{#each data.versions as v (v.code)}
+			<p><a href={v.source_url} rel="license">{v.attribution}</a></p>
+		{/each}
+	</footer>
 </div>
 
-<footer class="attribution">
-	{#each data.versions as v (v.code)}
-		<p><a href={v.source_url} rel="license">{v.attribution}</a></p>
-	{/each}
-</footer>
+<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} onclear={() => (selected = new Set())} />
 
 <style>
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); margin: 0 0 1rem; }

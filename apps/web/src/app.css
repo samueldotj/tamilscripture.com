@@ -4,10 +4,13 @@
 :root {
 	--bg: #f3f2ee;
 	--surface: #ffffff;
+	--surface-2: #ebeae4;
 	--ink: #1e252e;
 	--muted: #66707b;
 	--line: #d6d5cd;
 	--accent: #7e2a2a;
+	--accent-soft: rgba(126, 42, 42, 0.1);
+	--select: rgba(126, 42, 42, 0.12);
 	--wj: #8a1f1f;
 	--tamil: 'Noto Serif Tamil', 'Nirmala UI', 'Latha', 'Tamil Sangam MN', serif;
 	--serif: 'Source Serif 4', Georgia, serif;
@@ -15,19 +18,71 @@
 	color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not([data-theme='light']) {
 		--bg: #15181c;
 		--surface: #1d2126;
+		--surface-2: #252a30;
 		--ink: #e9e7e1;
 		--muted: #979ea6;
 		--line: #333941;
 		--accent: #d07c7c;
+		--accent-soft: rgba(208, 124, 124, 0.16);
+		--select: rgba(208, 124, 124, 0.2);
 		--wj: #e08585;
 	}
 }
+:root[data-theme='dark'] {
+	--bg: #15181c;
+	--surface: #1d2126;
+	--surface-2: #252a30;
+	--ink: #e9e7e1;
+	--muted: #979ea6;
+	--line: #333941;
+	--accent: #d07c7c;
+	--accent-soft: rgba(208, 124, 124, 0.16);
+	--select: rgba(208, 124, 124, 0.2);
+	--wj: #e08585;
+	color-scheme: dark;
+}
+:root[data-theme='light'] { color-scheme: light; }
+
+/* Font size steps (settings.fontSize 1..5) */
+html.fs-1 { font-size: 14px; }
+html.fs-2 { font-size: 15.5px; }
+html.fs-3 { font-size: 17px; }
+html.fs-4 { font-size: 19px; }
+html.fs-5 { font-size: 21.5px; }
 
 * { box-sizing: border-box; }
-html { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.55; -webkit-text-size-adjust: 100%; }
+html { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; -webkit-text-size-adjust: 100%; }
 body { margin: 0; }
 a { color: var(--accent); }
 code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- Reader formats and paratext toggles (classes on <html>) ---- */
+/* Reader: flowing text, no verse numbers, no note markers, roomier lines */
+.fmt-reader .chapter .vn,
+.fmt-reader .chapter .fn,
+.fmt-reader .chapter .footnotes,
+.fmt-reader .chapter .xref { display: none; }
+.fmt-reader .chapter[lang='ta'] { line-height: 2.05; }
+.fmt-reader .chapter[lang='en'] { line-height: 1.85; }
+
+/* Cross-reference: one verse per line, bold leading numbers */
+.fmt-xref .chapter .verse { display: block; padding: 0.15em 0 0.15em 2.4em; text-indent: -2.4em; }
+.fmt-xref .chapter .verse .vn { display: inline-block; width: 2.1em; text-indent: 0; font-size: 0.75em; vertical-align: baseline; font-weight: 600; }
+.fmt-xref .chapter .para { margin: 0 0 0.5em; }
+.fmt-xref .chapter .xref-list { display: block; }
+
+.no-headings .chapter .heading { display: none; }
+.no-footnotes .chapter .fn,
+.no-footnotes .chapter .footnotes { display: none; }
+.no-xrefs .chapter .xref,
+.no-xrefs .chapter .xref-list { display: none; }
+.no-intro .intro { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+	* { scroll-behavior: auto !important; transition: none !important; }
+}
