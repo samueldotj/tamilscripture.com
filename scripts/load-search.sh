@@ -7,6 +7,14 @@ set -euo pipefail
 
 content="${1:?content dir}"
 db="${2:?postgres url}"
+
+# The direct host (db.<ref>.supabase.co) is IPv6-only and unreachable from
+# GitHub runners. Use the Session pooler string from the dashboard's Connect
+# dialog instead: postgres.<ref>@aws-N-<region>.pooler.supabase.com:5432.
+if [[ "$db" == *"@db."*".supabase.co"* ]]; then
+  echo "error: SUPABASE_DB_URL is the direct connection; use the Session pooler URI (IPv4)." >&2
+  exit 2
+fi
 build=$(python3 -c "import json,sys; print(json.load(open('$content/manifest.json', encoding='utf-8'))['build'])")
 dir="$content/$build/search"
 
