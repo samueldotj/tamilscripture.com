@@ -1,0 +1,17 @@
+{
+  "name": "tamilscripture",
+  "private": true,
+  "description": "Tamil Bible Online - www.tamilscripture.com",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "content": "cargo run --release -p usfm-ingest -- --books data/books.toml --xrefs data/xrefs/cross_references.txt --out apps/web/static/content data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv",
+    "content:fixture": "cargo run -p usfm-ingest -- --books data/books.toml --xrefs data/xrefs/cross_references.txt --out apps/web/static/content data/fixtures/versions/irvtam data/fixtures/versions/bsb",
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "check": "pnpm --filter web check",
+    "test": "cargo test --workspace && pnpm --filter web test"
+  }
+}

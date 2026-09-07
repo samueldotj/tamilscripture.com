@@ -154,3 +154,5 @@ apps/web/static/fonts/
 # Supabase local
 supabase/.branches/
 supabase/.temp/
+# adapter-node local build output
+apps/web/build/

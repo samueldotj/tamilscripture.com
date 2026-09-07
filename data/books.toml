@@ -1,0 +1,934 @@
+# Book table for tamilscripture.com. One entry per book, canonical order.
+#
+# code      USFM/Paratext book id, used in verse ids (JHN.3.16) and file names
+# slug      canonical URL segment; slugs are alternates that redirect to it
+# abbr_*    accepted in the reference box and search, matched case-insensitively;
+#           a trailing dot is always optional
+# name_ta   IRVTAM heading; alias_ta holds other spellings (TCV) that must also match
+# openbible book abbreviation in data/xrefs/cross_references.txt
+#
+# Drafted by scripts/draft-books-toml.py from the USFM headers; maintained by hand.
+
+[[book]]
+code = "GEN"
+order = 1
+testament = "OT"
+chapters = 50
+slug = "genesis"
+slugs = ["gen", "ge", "gn"]
+name_en = "Genesis"
+abbr_en = ["Gen", "Ge", "Gn"]
+name_ta = "ஆதியாகமம்"
+alias_ta = []
+abbr_ta = ["ஆதி"]
+openbible = "Gen"
+
+[[book]]
+code = "EXO"
+order = 2
+testament = "OT"
+chapters = 40
+slug = "exodus"
+slugs = ["exo", "ex", "exod"]
+name_en = "Exodus"
+abbr_en = ["Exo", "Ex", "Exod"]
+name_ta = "யாத்திராகமம்"
+alias_ta = []
+abbr_ta = ["யாத்"]
+openbible = "Exod"
+
+[[book]]
+code = "LEV"
+order = 3
+testament = "OT"
+chapters = 27
+slug = "leviticus"
+slugs = ["lev", "le", "lv"]
+name_en = "Leviticus"
+abbr_en = ["Lev", "Le", "Lv"]
+name_ta = "லேவியராகமம்"
+alias_ta = []
+abbr_ta = ["லேவி"]
+openbible = "Lev"
+
+[[book]]
+code = "NUM"
+order = 4
+testament = "OT"
+chapters = 36
+slug = "numbers"
+slugs = ["num", "nu", "nm", "nb"]
+name_en = "Numbers"
+abbr_en = ["Num", "Nu", "Nm", "Nb"]
+name_ta = "எண்ணாகமம்"
+alias_ta = []
+abbr_ta = ["எண்"]
+openbible = "Num"
+
+[[book]]
+code = "DEU"
+order = 5
+testament = "OT"
+chapters = 34
+slug = "deuteronomy"
+slugs = ["deu", "deut", "dt", "de"]
+name_en = "Deuteronomy"
+abbr_en = ["Deu", "Deut", "Dt", "De"]
+name_ta = "உபாகமம்"
+alias_ta = []
+abbr_ta = ["உபா"]
+openbible = "Deut"
+
+[[book]]
+code = "JOS"
+order = 6
+testament = "OT"
+chapters = 24
+slug = "joshua"
+slugs = ["jos", "josh", "jsh"]
+name_en = "Joshua"
+abbr_en = ["Jos", "Josh", "Jsh"]
+name_ta = "யோசுவா"
+alias_ta = []
+abbr_ta = ["யோசு"]
+openbible = "Josh"
+
+[[book]]
+code = "JDG"
+order = 7
+testament = "OT"
+chapters = 21
+slug = "judges"
+slugs = ["jdg", "judg", "jg", "jgs"]
+name_en = "Judges"
+abbr_en = ["Jdg", "Judg", "Jg", "Jgs"]
+name_ta = "நியாயாதிபதிகள்"
+alias_ta = []
+abbr_ta = ["நியாயாதி", "நியா"]
+openbible = "Judg"
+
+[[book]]
+code = "RUT"
+order = 8
+testament = "OT"
+chapters = 4
+slug = "ruth"
+slugs = ["rut", "ru", "rth"]
+name_en = "Ruth"
+abbr_en = ["Rut", "Ru", "Rth"]
+name_ta = "ரூத்"
+alias_ta = []
+abbr_ta = []
+openbible = "Ruth"
+
+[[book]]
+code = "1SA"
+order = 9
+testament = "OT"
+chapters = 31
+slug = "1-samuel"
+slugs = ["1sa", "1sam", "1sm", "1s"]
+name_en = "1 Samuel"
+abbr_en = ["1Sa", "1Sam", "1Sm", "1S"]
+name_ta = "1 சாமுவேல்"
+alias_ta = ["1 சாமுயேல்"]
+abbr_ta = ["1 சாமு", "1சாமு"]
+openbible = "1Sam"
+
+[[book]]
+code = "2SA"
+order = 10
+testament = "OT"
+chapters = 24
+slug = "2-samuel"
+slugs = ["2sa", "2sam", "2sm", "2s"]
+name_en = "2 Samuel"
+abbr_en = ["2Sa", "2Sam", "2Sm", "2S"]
+name_ta = "2 சாமுவேல்"
+alias_ta = ["2 சாமுயேல்"]
+abbr_ta = ["2 சாமு", "2சாமு"]
+openbible = "2Sam"
+
+[[book]]
+code = "1KI"
+order = 11
+testament = "OT"
+chapters = 22
+slug = "1-kings"
+slugs = ["1ki", "1kgs", "1kg", "1k"]
+name_en = "1 Kings"
+abbr_en = ["1Ki", "1Kgs", "1Kg", "1K"]
+name_ta = "1 இராஜாக்கள்"
+alias_ta = []
+abbr_ta = ["1 இராஜா", "1இராஜா"]
+openbible = "1Kgs"
+
+[[book]]
+code = "2KI"
+order = 12
+testament = "OT"
+chapters = 25
+slug = "2-kings"
+slugs = ["2ki", "2kgs", "2kg", "2k"]
+name_en = "2 Kings"
+abbr_en = ["2Ki", "2Kgs", "2Kg", "2K"]
+name_ta = "2 இராஜாக்கள்"
+alias_ta = []
+abbr_ta = ["2இராஜா", "2 இராஜா"]
+openbible = "2Kgs"
+
+[[book]]
+code = "1CH"
+order = 13
+testament = "OT"
+chapters = 29
+slug = "1-chronicles"
+slugs = ["1ch", "1chr", "1chron"]
+name_en = "1 Chronicles"
+abbr_en = ["1Ch", "1Chr", "1Chron"]
+name_ta = "1 நாளாகமம்"
+alias_ta = []
+abbr_ta = ["1 நாளாக", "1நாளா", "1 நாளா"]
+openbible = "1Chr"
+
+[[book]]
+code = "2CH"
+order = 14
+testament = "OT"
+chapters = 36
+slug = "2-chronicles"
+slugs = ["2ch", "2chr", "2chron"]
+name_en = "2 Chronicles"
+abbr_en = ["2Ch", "2Chr", "2Chron"]
+name_ta = "2 நாளாகமம்"
+alias_ta = []
+abbr_ta = ["2 நாளாக", "2நாளா", "2 நாளா"]
+openbible = "2Chr"
+
+[[book]]
+code = "EZR"
+order = 15
+testament = "OT"
+chapters = 10
+slug = "ezra"
+slugs = ["ezr", "ezra"]
+name_en = "Ezra"
+abbr_en = ["Ezr", "Ezra"]
+name_ta = "எஸ்றா"
+alias_ta = []
+abbr_ta = []
+openbible = "Ezra"
+
+[[book]]
+code = "NEH"
+order = 16
+testament = "OT"
+chapters = 13
+slug = "nehemiah"
+slugs = ["neh", "ne"]
+name_en = "Nehemiah"
+abbr_en = ["Neh", "Ne"]
+name_ta = "நெகேமியா"
+alias_ta = []
+abbr_ta = ["நெகே"]
+openbible = "Neh"
+
+[[book]]
+code = "EST"
+order = 17
+testament = "OT"
+chapters = 10
+slug = "esther"
+slugs = ["est", "esth", "es"]
+name_en = "Esther"
+abbr_en = ["Est", "Esth", "Es"]
+name_ta = "எஸ்தர்"
+alias_ta = []
+abbr_ta = ["எஸ்த", "எஸ்"]
+openbible = "Esth"
+
+[[book]]
+code = "JOB"
+order = 18
+testament = "OT"
+chapters = 42
+slug = "job"
+slugs = ["job", "jb"]
+name_en = "Job"
+abbr_en = ["Job", "Jb"]
+name_ta = "யோபு"
+alias_ta = []
+abbr_ta = []
+openbible = "Job"
+
+[[book]]
+code = "PSA"
+order = 19
+testament = "OT"
+chapters = 150
+slug = "psalms"
+slugs = ["psa", "ps", "psalm", "pss", "psm"]
+name_en = "Psalms"
+abbr_en = ["Psa", "Ps", "Psalm", "Pss", "Psm"]
+name_ta = "சங்கீதங்கள்"
+alias_ta = ["சங்கீதம்"]
+abbr_ta = ["சங்"]
+openbible = "Ps"
+
+[[book]]
+code = "PRO"
+order = 20
+testament = "OT"
+chapters = 31
+slug = "proverbs"
+slugs = ["pro", "prov", "pr", "prv"]
+name_en = "Proverbs"
+abbr_en = ["Pro", "Prov", "Pr", "Prv"]
+name_ta = "நீதிமொழிகள்"
+alias_ta = ["நீதிமொழி"]
+abbr_ta = ["நீதி"]
+openbible = "Prov"
+
+[[book]]
+code = "ECC"
+order = 21
+testament = "OT"
+chapters = 12
+slug = "ecclesiastes"
+slugs = ["ecc", "eccl", "ec", "qoh"]
+name_en = "Ecclesiastes"
+abbr_en = ["Ecc", "Eccl", "Ec", "Qoh"]
+name_ta = "பிரசங்கி"
+alias_ta = []
+abbr_ta = ["பிரச", "பிர"]
+openbible = "Eccl"
+
+[[book]]
+code = "SNG"
+order = 22
+testament = "OT"
+chapters = 8
+slug = "song-of-songs"
+slugs = ["sng", "song", "sos", "ss", "song-of-solomon", "canticles"]
+name_en = "Song"
+abbr_en = ["Sng", "Song", "SoS", "SS", "Cant"]
+name_ta = "உன்னதப்பாட்டு"
+alias_ta = []
+abbr_ta = ["உன்னத", "உன்"]
+openbible = "Song"
+
+[[book]]
+code = "ISA"
+order = 23
+testament = "OT"
+chapters = 66
+slug = "isaiah"
+slugs = ["isa", "is"]
+name_en = "Isaiah"
+abbr_en = ["Isa", "Is"]
+name_ta = "ஏசாயா"
+alias_ta = []
+abbr_ta = ["ஏசா"]
+openbible = "Isa"
+
+[[book]]
+code = "JER"
+order = 24
+testament = "OT"
+chapters = 52
+slug = "jeremiah"
+slugs = ["jer", "je", "jr"]
+name_en = "Jeremiah"
+abbr_en = ["Jer", "Je", "Jr"]
+name_ta = "எரேமியா"
+alias_ta = []
+abbr_ta = ["எரே"]
+openbible = "Jer"
+
+[[book]]
+code = "LAM"
+order = 25
+testament = "OT"
+chapters = 5
+slug = "lamentations"
+slugs = ["lam", "la"]
+name_en = "Lamentations"
+abbr_en = ["Lam", "La"]
+name_ta = "புலம்பல்கள்"
+alias_ta = ["புலம்பல்"]
+abbr_ta = ["புலம்", "புல"]
+openbible = "Lam"
+
+[[book]]
+code = "EZK"
+order = 26
+testament = "OT"
+chapters = 48
+slug = "ezekiel"
+slugs = ["ezk", "ezek", "eze"]
+name_en = "Ezekiel"
+abbr_en = ["Ezk", "Ezek", "Eze"]
+name_ta = "எசேக்கியேல்"
+alias_ta = []
+abbr_ta = ["எசேக்", "எசே"]
+openbible = "Ezek"
+
+[[book]]
+code = "DAN"
+order = 27
+testament = "OT"
+chapters = 12
+slug = "daniel"
+slugs = ["dan", "da", "dn"]
+name_en = "Daniel"
+abbr_en = ["Dan", "Da", "Dn"]
+name_ta = "தானியேல்"
+alias_ta = []
+abbr_ta = ["தானி"]
+openbible = "Dan"
+
+[[book]]
+code = "HOS"
+order = 28
+testament = "OT"
+chapters = 14
+slug = "hosea"
+slugs = ["hos", "ho"]
+name_en = "Hosea"
+abbr_en = ["Hos", "Ho"]
+name_ta = "ஓசியா"
+alias_ta = []
+abbr_ta = ["ஓசி"]
+openbible = "Hos"
+
+[[book]]
+code = "JOL"
+order = 29
+testament = "OT"
+chapters = 3
+slug = "joel"
+slugs = ["jol", "joel", "jl"]
+name_en = "Joel"
+abbr_en = ["Jol", "Joel", "Jl"]
+name_ta = "யோவேல்"
+alias_ta = ["யோயேல்"]
+abbr_ta = ["யோவே", "யோயே"]
+openbible = "Joel"
+
+[[book]]
+code = "AMO"
+order = 30
+testament = "OT"
+chapters = 9
+slug = "amos"
+slugs = ["amo", "amos", "am"]
+name_en = "Amos"
+abbr_en = ["Amo", "Amos", "Am"]
+name_ta = "ஆமோஸ்"
+alias_ta = []
+abbr_ta = ["ஆமோ"]
+openbible = "Amos"
+
+[[book]]
+code = "OBA"
+order = 31
+testament = "OT"
+chapters = 1
+slug = "obadiah"
+slugs = ["oba", "obad", "ob"]
+name_en = "Obadiah"
+abbr_en = ["Oba", "Obad", "Ob"]
+name_ta = "ஒபதியா"
+alias_ta = []
+abbr_ta = ["ஒபதி", "ஒப"]
+openbible = "Obad"
+
+[[book]]
+code = "JON"
+order = 32
+testament = "OT"
+chapters = 4
+slug = "jonah"
+slugs = ["jon", "jonah", "jnh"]
+name_en = "Jonah"
+abbr_en = ["Jon", "Jonah", "Jnh"]
+name_ta = "யோனா"
+alias_ta = []
+abbr_ta = []
+openbible = "Jonah"
+
+[[book]]
+code = "MIC"
+order = 33
+testament = "OT"
+chapters = 7
+slug = "micah"
+slugs = ["mic", "mc"]
+name_en = "Micah"
+abbr_en = ["Mic", "Mc"]
+name_ta = "மீகா"
+alias_ta = []
+abbr_ta = []
+openbible = "Mic"
+
+[[book]]
+code = "NAM"
+order = 34
+testament = "OT"
+chapters = 3
+slug = "nahum"
+slugs = ["nam", "nah", "na"]
+name_en = "Nahum"
+abbr_en = ["Nam", "Nah", "Na"]
+name_ta = "நாகூம்"
+alias_ta = []
+abbr_ta = ["நாகூ"]
+openbible = "Nah"
+
+[[book]]
+code = "HAB"
+order = 35
+testament = "OT"
+chapters = 3
+slug = "habakkuk"
+slugs = ["hab", "hb"]
+name_en = "Habakkuk"
+abbr_en = ["Hab", "Hb"]
+name_ta = "ஆபகூக்"
+alias_ta = []
+abbr_ta = ["ஆப"]
+openbible = "Hab"
+
+[[book]]
+code = "ZEP"
+order = 36
+testament = "OT"
+chapters = 3
+slug = "zephaniah"
+slugs = ["zep", "zeph", "zp"]
+name_en = "Zephaniah"
+abbr_en = ["Zep", "Zeph", "Zp"]
+name_ta = "செப்பனியா"
+alias_ta = []
+abbr_ta = ["செப்ப", "செப்"]
+openbible = "Zeph"
+
+[[book]]
+code = "HAG"
+order = 37
+testament = "OT"
+chapters = 2
+slug = "haggai"
+slugs = ["hag", "hg"]
+name_en = "Haggai"
+abbr_en = ["Hag", "Hg"]
+name_ta = "ஆகாய்"
+alias_ta = []
+abbr_ta = ["ஆகா"]
+openbible = "Hag"
+
+[[book]]
+code = "ZEC"
+order = 38
+testament = "OT"
+chapters = 14
+slug = "zechariah"
+slugs = ["zec", "zech", "zc"]
+name_en = "Zechariah"
+abbr_en = ["Zec", "Zech", "Zc"]
+name_ta = "சகரியா"
+alias_ta = []
+abbr_ta = ["சகரி", "சக"]
+openbible = "Zech"
+
+[[book]]
+code = "MAL"
+order = 39
+testament = "OT"
+chapters = 4
+slug = "malachi"
+slugs = ["mal", "ml"]
+name_en = "Malachi"
+abbr_en = ["Mal", "Ml"]
+name_ta = "மல்கியா"
+alias_ta = []
+abbr_ta = ["மல்கி", "மல்"]
+openbible = "Mal"
+
+[[book]]
+code = "MAT"
+order = 40
+testament = "NT"
+chapters = 28
+slug = "matthew"
+slugs = ["mat", "matt", "mt"]
+name_en = "Matthew"
+abbr_en = ["Mat", "Matt", "Mt"]
+name_ta = "மத்தேயு"
+alias_ta = []
+abbr_ta = ["மத்"]
+openbible = "Matt"
+
+[[book]]
+code = "MRK"
+order = 41
+testament = "NT"
+chapters = 16
+slug = "mark"
+slugs = ["mrk", "mark", "mk", "mr"]
+name_en = "Mark"
+abbr_en = ["Mrk", "Mark", "Mk", "Mr"]
+name_ta = "மாற்கு"
+alias_ta = []
+abbr_ta = ["மாற்"]
+openbible = "Mark"
+
+[[book]]
+code = "LUK"
+order = 42
+testament = "NT"
+chapters = 24
+slug = "luke"
+slugs = ["luk", "luke", "lk"]
+name_en = "Luke"
+abbr_en = ["Luk", "Luke", "Lk"]
+name_ta = "லூக்கா"
+alias_ta = []
+abbr_ta = ["லூக்"]
+openbible = "Luke"
+
+[[book]]
+code = "JHN"
+order = 43
+testament = "NT"
+chapters = 21
+slug = "john"
+slugs = ["jhn", "john", "jn", "joh"]
+name_en = "John"
+abbr_en = ["Jhn", "John", "Jn", "Joh"]
+name_ta = "யோவான்"
+alias_ta = []
+abbr_ta = ["யோவா"]
+openbible = "John"
+
+[[book]]
+code = "ACT"
+order = 44
+testament = "NT"
+chapters = 28
+slug = "acts"
+slugs = ["act", "acts", "ac"]
+name_en = "Acts"
+abbr_en = ["Act", "Acts", "Ac"]
+name_ta = "அப்போஸ்தலருடைய நடபடிகள்"
+alias_ta = ["அப்போஸ்தலர்"]
+abbr_ta = ["அப்"]
+openbible = "Acts"
+
+[[book]]
+code = "ROM"
+order = 45
+testament = "NT"
+chapters = 16
+slug = "romans"
+slugs = ["rom", "ro", "rm"]
+name_en = "Romans"
+abbr_en = ["Rom", "Ro", "Rm"]
+name_ta = "ரோமர்"
+alias_ta = []
+abbr_ta = ["ரோம"]
+openbible = "Rom"
+
+[[book]]
+code = "1CO"
+order = 46
+testament = "NT"
+chapters = 16
+slug = "1-corinthians"
+slugs = ["1co", "1cor", "1c"]
+name_en = "1 Corinthians"
+abbr_en = ["1Co", "1Cor", "1C"]
+name_ta = "1 கொரிந்தியர்"
+alias_ta = []
+abbr_ta = ["1 கொரி", "1கொரி"]
+openbible = "1Cor"
+
+[[book]]
+code = "2CO"
+order = 47
+testament = "NT"
+chapters = 13
+slug = "2-corinthians"
+slugs = ["2co", "2cor", "2c"]
+name_en = "2 Corinthians"
+abbr_en = ["2Co", "2Cor", "2C"]
+name_ta = "2 கொரிந்தியர்"
+alias_ta = []
+abbr_ta = ["2 கொரி", "2கொரி"]
+openbible = "2Cor"
+
+[[book]]
+code = "GAL"
+order = 48
+testament = "NT"
+chapters = 6
+slug = "galatians"
+slugs = ["gal", "ga"]
+name_en = "Galatians"
+abbr_en = ["Gal", "Ga"]
+name_ta = "கலாத்தியர்"
+alias_ta = []
+abbr_ta = ["கலா"]
+openbible = "Gal"
+
+[[book]]
+code = "EPH"
+order = 49
+testament = "NT"
+chapters = 6
+slug = "ephesians"
+slugs = ["eph", "ep"]
+name_en = "Ephesians"
+abbr_en = ["Eph", "Ep"]
+name_ta = "எபேசியர்"
+alias_ta = []
+abbr_ta = ["எபே"]
+openbible = "Eph"
+
+[[book]]
+code = "PHP"
+order = 50
+testament = "NT"
+chapters = 4
+slug = "philippians"
+slugs = ["php", "phil", "pp"]
+name_en = "Philippians"
+abbr_en = ["Php", "Phil", "Pp"]
+name_ta = "பிலிப்பியர்"
+alias_ta = []
+abbr_ta = ["பிலி"]
+openbible = "Phil"
+
+[[book]]
+code = "COL"
+order = 51
+testament = "NT"
+chapters = 4
+slug = "colossians"
+slugs = ["col", "co"]
+name_en = "Colossians"
+abbr_en = ["Col", "Co"]
+name_ta = "கொலோசெயர்"
+alias_ta = ["கொலோசேயர்"]
+abbr_ta = ["கொலோ"]
+openbible = "Col"
+
+[[book]]
+code = "1TH"
+order = 52
+testament = "NT"
+chapters = 5
+slug = "1-thessalonians"
+slugs = ["1th", "1thess", "1thes", "1ths"]
+name_en = "1 Thessalonians"
+abbr_en = ["1Th", "1Thess", "1Thes", "1Ths"]
+name_ta = "1 தெசலோனிக்கேயர்"
+alias_ta = []
+abbr_ta = ["1 தெச", "1தெச"]
+openbible = "1Thess"
+
+[[book]]
+code = "2TH"
+order = 53
+testament = "NT"
+chapters = 3
+slug = "2-thessalonians"
+slugs = ["2th", "2thess", "2thes", "2ths"]
+name_en = "2 Thessalonians"
+abbr_en = ["2Th", "2Thess", "2Thes", "2Ths"]
+name_ta = "2 தெசலோனிக்கேயர்"
+alias_ta = []
+abbr_ta = ["2 தெச", "2தெச"]
+openbible = "2Thess"
+
+[[book]]
+code = "1TI"
+order = 54
+testament = "NT"
+chapters = 6
+slug = "1-timothy"
+slugs = ["1ti", "1tim", "1tm"]
+name_en = "1 Timothy"
+abbr_en = ["1Ti", "1Tim", "1Tm"]
+name_ta = "1 தீமோத்தேயு"
+alias_ta = []
+abbr_ta = ["1 தீமோ", "1தீமோ"]
+openbible = "1Tim"
+
+[[book]]
+code = "2TI"
+order = 55
+testament = "NT"
+chapters = 4
+slug = "2-timothy"
+slugs = ["2ti", "2tim", "2tm"]
+name_en = "2 Timothy"
+abbr_en = ["2Ti", "2Tim", "2Tm"]
+name_ta = "2 தீமோத்தேயு"
+alias_ta = []
+abbr_ta = ["2 தீமோ", "2தீமோ"]
+openbible = "2Tim"
+
+[[book]]
+code = "TIT"
+order = 56
+testament = "NT"
+chapters = 3
+slug = "titus"
+slugs = ["tit", "ti"]
+name_en = "Titus"
+abbr_en = ["Tit", "Ti"]
+name_ta = "தீத்து"
+alias_ta = []
+abbr_ta = ["தீத்"]
+openbible = "Titus"
+
+[[book]]
+code = "PHM"
+order = 57
+testament = "NT"
+chapters = 1
+slug = "philemon"
+slugs = ["phm", "phlm", "philem", "pm"]
+name_en = "Philemon"
+abbr_en = ["Phm", "Phlm", "Philem", "Pm"]
+name_ta = "பிலேமோன்"
+alias_ta = []
+abbr_ta = ["பிலே"]
+openbible = "Phlm"
+
+[[book]]
+code = "HEB"
+order = 58
+testament = "NT"
+chapters = 13
+slug = "hebrews"
+slugs = ["heb", "he"]
+name_en = "Hebrews"
+abbr_en = ["Heb", "He"]
+name_ta = "எபிரெயர்"
+alias_ta = []
+abbr_ta = ["எபி"]
+openbible = "Heb"
+
+[[book]]
+code = "JAS"
+order = 59
+testament = "NT"
+chapters = 5
+slug = "james"
+slugs = ["jas", "jm", "jam"]
+name_en = "James"
+abbr_en = ["Jas", "Jm", "Jam"]
+name_ta = "யாக்கோபு"
+alias_ta = []
+abbr_ta = ["யாக்"]
+openbible = "Jas"
+
+[[book]]
+code = "1PE"
+order = 60
+testament = "NT"
+chapters = 5
+slug = "1-peter"
+slugs = ["1pe", "1pet", "1pt", "1p"]
+name_en = "1 Peter"
+abbr_en = ["1Pe", "1Pet", "1Pt", "1P"]
+name_ta = "1 பேதுரு"
+alias_ta = []
+abbr_ta = ["1 பேது", "1பேது"]
+openbible = "1Pet"
+
+[[book]]
+code = "2PE"
+order = 61
+testament = "NT"
+chapters = 3
+slug = "2-peter"
+slugs = ["2pe", "2pet", "2pt", "2p"]
+name_en = "2 Peter"
+abbr_en = ["2Pe", "2Pet", "2Pt", "2P"]
+name_ta = "2 பேதுரு"
+alias_ta = []
+abbr_ta = ["2 பேது", "2பேது"]
+openbible = "2Pet"
+
+[[book]]
+code = "1JN"
+order = 62
+testament = "NT"
+chapters = 5
+slug = "1-john"
+slugs = ["1jn", "1john", "1jo", "1j"]
+name_en = "1 John"
+abbr_en = ["1Jn", "1John", "1Jo", "1J"]
+name_ta = "1 யோவான்"
+alias_ta = []
+abbr_ta = ["1 யோவா", "1யோவா"]
+openbible = "1John"
+
+[[book]]
+code = "2JN"
+order = 63
+testament = "NT"
+chapters = 1
+slug = "2-john"
+slugs = ["2jn", "2john", "2jo", "2j"]
+name_en = "2 John"
+abbr_en = ["2Jn", "2John", "2Jo", "2J"]
+name_ta = "2 யோவான்"
+alias_ta = []
+abbr_ta = ["2 யோவா", "2யோவா"]
+openbible = "2John"
+
+[[book]]
+code = "3JN"
+order = 64
+testament = "NT"
+chapters = 1
+slug = "3-john"
+slugs = ["3jn", "3john", "3jo", "3j"]
+name_en = "3 John"
+abbr_en = ["3Jn", "3John", "3Jo", "3J"]
+name_ta = "3 யோவான்"
+alias_ta = []
+abbr_ta = ["3 யோவா", "3யோவா"]
+openbible = "3John"
+
+[[book]]
+code = "JUD"
+order = 65
+testament = "NT"
+chapters = 1
+slug = "jude"
+slugs = ["jud", "jude", "jd"]
+name_en = "Jude"
+abbr_en = ["Jud", "Jude", "Jd"]
+name_ta = "யூதா"
+alias_ta = []
+abbr_ta = []
+openbible = "Jude"
+
+[[book]]
+code = "REV"
+order = 66
+testament = "NT"
+chapters = 22
+slug = "revelation"
+slugs = ["rev", "re", "rv", "apocalypse"]
+name_en = "Revelation"
+abbr_en = ["Rev", "Re", "Rv"]
+name_ta = "வெளிப்படுத்தின விசேஷம்"
+alias_ta = ["வெளிப்படுத்தல்"]
+abbr_ta = ["வெளி"]
+openbible = "Rev"

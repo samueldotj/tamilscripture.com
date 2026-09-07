@@ -4,7 +4,19 @@
 
 Live site (planned): **https://www.tamilscripture.com**
 
-> Status: pre-development. Requirements and architecture are written; no application code yet.
+> Status: M0 in progress. The Rust pipeline parses all five source texts, and the SvelteKit app prerenders chapter pages. Not yet deployed.
+
+## Getting started
+
+Prerequisites: Node 22+, pnpm, stable Rust (with the `wasm32-unknown-unknown` target for later milestones).
+
+```bash
+pnpm install
+pnpm content:fixture   # parse the three-book fixture into apps/web/static/content
+pnpm dev               # http://localhost:5173
+```
+
+`pnpm content` builds the full corpus (all five versions, about 6 seconds). `pnpm test` runs the Rust tests; `pnpm check` and `pnpm build` cover the web app.
 
 ## Documents
 
@@ -65,15 +77,15 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 0.1 | Set up the monorepo: pnpm workspace, Cargo workspace, `rust-toolchain.toml`, root scripts, `.gitignore` for `target/` and `static/content` | design §14 | ☐ |
+| 0.1 | Set up the monorepo: pnpm workspace, Cargo workspace, `rust-toolchain.toml`, root scripts, `.gitignore` for `target/` and `static/content` | design §14 | ☑ |
 | 0.2 | Decide the USFM parsing approach: own marker-level parser in `usfm-ingest` over the eBible dialect | design §14 | ☑ |
 | 0.3 | Download IRVTAM, TCV, BSB, WEB, KJV from eBible.org and OpenBible cross-references; record `LICENSE` + `SOURCE.md` for each | R-3.5, open questions 1–2 | ☑ |
-| 0.4 | Create `data/books.toml` with English and Tamil names, slugs and abbreviations for all 66 books | R-1.13 | ☐ |
-| 0.5 | Create the three-book fixture version under `data/fixtures/` | design §14 | ☐ |
-| 0.6 | `usfm-ingest` v0: parse the fixture, emit chapter JSON and `books.json`, determinism test | R-3.1 | ☐ |
-| 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; render one prerendered chapter from JSON | ADR-1 | ☐ |
+| 0.4 | Create `data/books.toml` with English and Tamil names, slugs and abbreviations for all 66 books (drafted from the USFM headers by `scripts/draft-books-toml.py`; Tamil abbreviations awaiting owner review) | R-1.13 | ☑ |
+| 0.5 | Create the three-book fixture version under `data/fixtures/` (Ruth, Jonah, Philemon in IRVTAM and BSB) | design §14 | ☑ |
+| 0.6 | `usfm-ingest` v0: parse all five versions with strict validation, emit chapter JSON, intro JSON, cross-ref JSON, `manifest.json` and search CSV; determinism check in CI | R-3.1 | ☑ |
+| 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; prerender chapter pages from JSON with breadcrumbs, prev/next, footnotes and attribution | ADR-1 | ☑ |
 | 0.8 | Two hosted Supabase projects in Mumbai (production and development); first migration (`versions`, `books`) applied with `supabase db push`; no Docker | design §11 | ☐ |
-| 0.9 | GitHub Actions: `ci.yml` (cargo test, svelte-check), `preview.yml` (Vercel preview against the development project) | design §11 | ☐ |
+| 0.9 | GitHub Actions: `ci.yml` (fmt, clippy, cargo test, full-corpus strict build, determinism diff, svelte-check, web build) ☑; `preview.yml` (Vercel preview against the development project) ☐ | design §11 | ◧ |
 | 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☐ |
 | 0.11 | Spike: `bible-ref` compiled to WebAssembly running on the Vercel edge runtime; measure bundle size and cold start | design §13 risks | ☐ |
 | 0.12 | Spike: PGroonga versus `pg_trgm` on the fixture corpus for Tamil fuzzy search | design §6, ADR-2 | ☐ |

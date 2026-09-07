@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  rust:
+    name: Rust tests and pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --all --check
+      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo test --workspace
+      - name: Build full content (strict validation)
+        run: |
+          cargo run --release -p usfm-ingest -- \
+            --books data/books.toml --xrefs data/xrefs/cross_references.txt \
+            --out /tmp/content \
+            data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv
+      - name: Determinism check
+        run: |
+          cargo run --release -p usfm-ingest -- \
+            --books data/books.toml --xrefs data/xrefs/cross_references.txt \
+            --out /tmp/content2 \
+            data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv
+          diff -r /tmp/content /tmp/content2
+
+  web:
+    name: Web app check and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build fixture content
+        run: pnpm content:fixture
+      - run: pnpm check
+      - run: pnpm build
+        env:
+          VERCEL: '1'
