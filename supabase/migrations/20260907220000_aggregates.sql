@@ -6,7 +6,7 @@ create materialized view public.verse_highlight_counts as
   select h.book, h.chapter, v as verse, count(distinct h.user_id)::int as users
   from public.highlights h
   join public.profiles p on p.user_id = h.user_id and p.share_aggregates
-  cross join lateral generate_series(h.verse_start, h.verse_end) as v
+  cross join lateral generate_series(h.verse_start::int, h.verse_end::int) as v
   group by h.book, h.chapter, v
   having count(distinct h.user_id) >= 3;
 create unique index verse_highlight_counts_key on public.verse_highlight_counts (book, chapter, verse);
