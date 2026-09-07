@@ -156,3 +156,6 @@ supabase/.branches/
 supabase/.temp/
 # adapter-node local build output
 apps/web/build/
+
+.vercel
+.env*
