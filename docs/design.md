@@ -214,7 +214,7 @@ src/lib/
 
 | Route | Mode | Why | Cache |
 |---|---|---|---|
-| Chapter | Prerender at build | Fixed content. 1,189 chapters × 5 versions ≈ 5,950 pages, plus dual pairs on demand. | Immutable until next deploy; CDN edge, ETag |
+| Chapter | ISR on the edge | Fixed content, but prerendering 5,950 pages is impossible on Vercel: adapter-vercel emits two routes per prerendered page and the platform caps a deployment at 2,048 routes. Each chapter is rendered once from its JSON on first request and cached until the next deploy. | `isr: { expiration: false }`, invalidated by deploy |
 | Verse / range | ISR on the edge | Roughly 31,000 verses per version is too many to prerender. The first request renders from chapter JSON with per-verse title, description and Open Graph tags; every later request is a cache hit. | `isr: { expiration: false }`, invalidated by deploy |
 | Dual version | ISR on the edge | Version pairs are combinatorial. Rendered from two chapter JSON files aligned through the versification map. | Same as verse |
 | Shorthand | Edge function | Parses with `bible-ref` (WebAssembly runs on the edge runtime) and redirects. No HTML rendered. | Redirect cached 1 day |
@@ -515,10 +515,12 @@ Secrets live only in GitHub repository settings (`SUPABASE_ACCESS_TOKEN`, `SUPAB
 
 The choices that were genuinely open, what was considered, and why the chosen option won. Revisit a record when its stated condition changes.
 
-### ADR-1 · Prerender chapters, ISR for verses, no SSR for public text
-- **Options:** Full SSR per request · prerender everything including verses · prerender chapters + ISR verses.
-- **Chosen:** Chapters prerendered; verse and range URLs rendered once on the edge and cached. Roughly 6,000 pages build in minutes; 150,000+ verse pages would not. Verse pages still get unique metadata.
-- **Revisit if:** Vercel ISR limits change or content updates need to go live without a deploy.
+### ADR-1 · ISR for all scripture pages, prerender only the handful of fixed pages
+- **Options:** Full SSR per request · prerender everything · prerender chapters + ISR verses · ISR for all scripture pages.
+- **Chosen:** ISR for chapters, verses, ranges and dual views; prerender only home, about and similar fixed pages. Each URL is rendered once from the static JSON on first request, then served from the edge cache until the next deploy, so steady-state latency equals a static page.
+- **History:** The first design prerendered all 5,950 chapter pages. The first production deploy (7 Sep 2026) was rejected: adapter-vercel writes two routes per prerendered page (a rewrite and a trailing-slash redirect), 11,901 in total, and Vercel allows 2,048 per deployment on every plan. The chapter JSON itself is still static and served from the CDN.
+- **Consequence:** the first visitor to each chapter after a deploy pays one function render in bom1 (tens of milliseconds plus a JSON fetch). A post-deploy warm-up of the most visited URLs is the mitigation, tracked in the risks table.
+- **Revisit if:** Vercel raises the route limit or adapter-vercel stops emitting per-page redirects, in which case chapters can move back to prerender.
 
 ### ADR-2 · Search in Postgres, not an external search service
 - **Options:** Postgres FTS + pg_trgm · Meilisearch or Typesense · client-side index in WebAssembly.

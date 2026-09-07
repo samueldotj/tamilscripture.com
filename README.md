@@ -99,7 +99,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 0.4 | Create `data/books.toml` with English and Tamil names, slugs and abbreviations for all 66 books (drafted from the USFM headers by `scripts/draft-books-toml.py`; Tamil abbreviations awaiting owner review) | R-1.13 | ☑ |
 | 0.5 | Create the three-book fixture version under `data/fixtures/` (Ruth, Jonah, Philemon in IRVTAM and BSB) | design §14 | ☑ |
 | 0.6 | `usfm-ingest` v0: parse all five versions with strict validation, emit chapter JSON, intro JSON, cross-ref JSON, `manifest.json` and search CSV; determinism check in CI | R-3.1 | ☑ |
-| 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; prerender chapter pages from JSON with breadcrumbs, prev/next, footnotes and attribution | ADR-1 | ☑ |
+| 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; chapter pages rendered from JSON via ISR (see ADR-1 for why not prerender) with breadcrumbs, prev/next, footnotes and attribution | ADR-1 | ☑ |
 | 0.8 | One hosted Supabase project in Mumbai (`zytgmnqmrvgspjdokajp`); first migration (`pg_trgm`, `tamil_norm` placeholder, `verse_search`) written; applied by the deploy workflow once secrets exist. Second project deferred to M3. | design §11 | ◧ |
 | 0.9 | GitHub Actions: `ci.yml` (fmt, clippy, cargo test, full-corpus strict build, determinism diff, svelte-check, web build) ☑; `preview.yml` (Vercel preview against the development project) ☐ | design §11 | ◧ |
 | 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☐ |

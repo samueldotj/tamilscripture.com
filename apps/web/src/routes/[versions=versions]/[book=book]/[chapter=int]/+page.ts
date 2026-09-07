@@ -1,24 +1,15 @@
 import { error, redirect } from '@sveltejs/kit';
-import type { EntryGenerator, PageLoad } from './$types';
-import { chapterUrl, findBook, findVersion, manifest } from '$lib/content/manifest';
+import type { PageLoad } from './$types';
+import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 import { loadChapter } from '$lib/content/load';
 
-export const prerender = true;
+// Rendered on first request and cached at the edge until the next deploy
+// (ADR-1). Prerendering every chapter is not possible on Vercel: the adapter
+// emits two routes per prerendered page and the platform caps routes at 2,048.
+export const prerender = false;
+export const config = { isr: { expiration: false } };
 
-export const entries: EntryGenerator = () =>
-	manifest.versions.flatMap((v) =>
-		manifest.books
-			.filter((b) => v.books.includes(b.code))
-			.flatMap((b) =>
-				Array.from({ length: b.chapters }, (_, i) => ({
-					versions: v.code.toLowerCase(),
-					book: b.slug,
-					chapter: String(i + 1)
-				}))
-			)
-	);
-
-export const load: PageLoad = async ({ params, fetch }) => {
+export const load: PageLoad = async ({ params, fetch, url }) => {
 	const codes = params.versions.split('+');
 	const versions = codes.map((c) => findVersion(c)!);
 	const book = findBook(params.book)!;
@@ -33,6 +24,12 @@ export const load: PageLoad = async ({ params, fetch }) => {
 		redirect(301, canonical);
 	}
 
-	const chapters = await Promise.all(versions.map((v) => loadChapter(fetch, v.code, book.code, chapter)));
+	// Absolute URL so the server-side render fetches the static JSON from the
+	// same deployment; in the browser this is the CDN path.
+	const absolute: typeof fetch = (input, init) =>
+		fetch(typeof input === 'string' ? new URL(input, url.origin) : input, init);
+	const chapters = await Promise.all(
+		versions.map((v) => loadChapter(absolute, v.code, book.code, chapter))
+	);
 	return { versions, book, chapter, chapters, canonical };
 };
