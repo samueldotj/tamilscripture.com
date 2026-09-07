@@ -18,6 +18,22 @@ pnpm dev               # http://localhost:5173
 
 `pnpm content` builds the full corpus (all five versions, about 6 seconds). `pnpm test` runs the Rust tests; `pnpm check` and `pnpm build` cover the web app.
 
+For features that talk to Supabase, copy `apps/web/.env.example` to `apps/web/.env` and fill in the anon key from the Supabase dashboard.
+
+## Deploying
+
+Every push to `main` runs [deploy.yml](.github/workflows/deploy.yml): build content, apply migrations with `supabase db push`, load the search table, then build the site and upload it prebuilt to Vercel. The workflow needs these repository secrets, entered once by the owner:
+
+| Secret | Where to get it |
+|---|---|
+| `SUPABASE_ACCESS_TOKEN` | Supabase account → Access Tokens |
+| `SUPABASE_DB_PASSWORD` | Set when the project was created; resettable under Project Settings → Database |
+| `SUPABASE_DB_URL` | Project Settings → Database → Connection string, **Session pooler** (port 5432; GitHub runners have no IPv6 for the direct host) |
+| `VERCEL_TOKEN` | Vercel account → Tokens |
+| `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` | From `.vercel/project.json` after running `vercel link` once locally, or the project settings page |
+
+The Vercel project should have its Git integration's production deploys disabled (or an "Ignored Build Step" that always skips), since GitHub Actions performs the deploy.
+
 ## Documents
 
 | Document | What it covers |
@@ -84,7 +100,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 0.5 | Create the three-book fixture version under `data/fixtures/` (Ruth, Jonah, Philemon in IRVTAM and BSB) | design §14 | ☑ |
 | 0.6 | `usfm-ingest` v0: parse all five versions with strict validation, emit chapter JSON, intro JSON, cross-ref JSON, `manifest.json` and search CSV; determinism check in CI | R-3.1 | ☑ |
 | 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; prerender chapter pages from JSON with breadcrumbs, prev/next, footnotes and attribution | ADR-1 | ☑ |
-| 0.8 | Two hosted Supabase projects in Mumbai (production and development); first migration (`versions`, `books`) applied with `supabase db push`; no Docker | design §11 | ☐ |
+| 0.8 | One hosted Supabase project in Mumbai (`zytgmnqmrvgspjdokajp`); first migration (`pg_trgm`, `tamil_norm` placeholder, `verse_search`) written; applied by the deploy workflow once secrets exist. Second project deferred to M3. | design §11 | ◧ |
 | 0.9 | GitHub Actions: `ci.yml` (fmt, clippy, cargo test, full-corpus strict build, determinism diff, svelte-check, web build) ☑; `preview.yml` (Vercel preview against the development project) ☐ | design §11 | ◧ |
 | 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☐ |
 | 0.11 | Spike: `bible-ref` compiled to WebAssembly running on the Vercel edge runtime; measure bundle size and cold start | design §13 risks | ☐ |

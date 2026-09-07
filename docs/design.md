@@ -485,9 +485,11 @@ Each budget from the requirements maps to a specific mechanism, and each mechani
 
 ### Environments
 - **Production:** Vercel production project on `www.tamilscripture.com` (apex redirects to www) + Supabase production project in the Mumbai region.
-- **Development:** a second hosted Supabase project (`tamilscripture-dev`, free tier, Mumbai). Migrations are applied with `supabase db push`, which needs only the CLI and a database URL. No Docker and no local Postgres: the CLI's `supabase start` and `db diff` are the only commands that need Docker, and neither is used. Migrations are written by hand.
-- **Preview:** every PR gets a Vercel preview pointed at the development project. Since commits go straight to `main`, previews are rare; if they become common, switch to hosted Supabase branching, which is also Docker-free.
-- **Local:** `pnpm dev` against the development project, pipeline output in `static/content` for one test version.
+- **Production:** one hosted Supabase project, ref `zytgmnqmrvgspjdokajp`, Mumbai. Through M2 it holds only the search table, which is rebuilt from USFM on every deploy, so nothing in it is irreplaceable and it doubles as the development database. Migrations are written by hand and applied with `supabase db push` from the deploy workflow. No Docker and no local Postgres: the CLI's `supabase start` and `db diff` are the only commands that need Docker, and neither is used.
+- **Development, from M3:** a second free-tier project is created before the first real sign-in, so the RLS test suite, migration rehearsals and search-index reloads never touch real accounts. Until then it would protect nothing.
+- **Local:** `pnpm dev` against the hosted project, pipeline output in `static/content` for the fixture version.
+
+Secrets live only in GitHub repository settings (`SUPABASE_ACCESS_TOKEN`, `SUPABASE_DB_PASSWORD`, `SUPABASE_DB_URL`, `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`) and are entered by the owner. The repository is not linked to Supabase's GitHub integration; the deploy workflow drives the CLI directly so that migrations always run before the site deploys. Vercel builds are uploaded prebuilt from GitHub Actions because Vercel's build image has no Rust toolchain.
 
 ### CI pipeline
 - `cargo test` for all crates, including the parser fixtures and normalisation parity.
