@@ -1,4 +1,0 @@
-# wasm-pack output is committed so the web app builds without a Rust toolchain,
-# except these regenerated helper files.
-pkg/.gitignore
-pkg/README.md

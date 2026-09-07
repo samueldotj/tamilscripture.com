@@ -12,6 +12,6 @@
   },
   "files": ["index.ts", "pkg/"],
   "scripts": {
-    "build": "wasm-pack build ../../crates/wasm --release --target web --out-dir ../../packages/bible-wasm/pkg --out-name bible_wasm --no-pack"
+    "build": "wasm-pack build ../../crates/wasm --release --target web --out-dir ../../packages/bible-wasm/pkg --out-name bible_wasm --no-pack && node -e \"require('fs').rmSync('pkg/.gitignore',{force:true});require('fs').rmSync('pkg/README.md',{force:true})\""
   }
 }

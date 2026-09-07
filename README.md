@@ -103,7 +103,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 0.8 | One hosted Supabase project in Mumbai (`zytgmnqmrvgspjdokajp`); first migration (`pg_trgm`, `tamil_norm` placeholder, `verse_search`) written; applied by the deploy workflow once secrets exist. Second project deferred to M3. | design §11 | ◧ |
 | 0.9 | GitHub Actions: `ci.yml` (fmt, clippy, cargo test, full-corpus strict build, determinism diff, svelte-check, web build) ☑; `preview.yml` (Vercel preview against the development project) ☐ | design §11 | ◧ |
 | 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☑ |
-| 0.11 | Spike: `bible-ref` compiled to WebAssembly running on the Vercel edge runtime; measure bundle size and cold start | design §13 risks | ☐ |
+| 0.11 | Spike: `bible-ref` compiled to WebAssembly running on the Vercel edge runtime; measure bundle size and cold start. *Outcome:* the wasm is 31 kB gzipped and the redirector runs in the Node runtime (bom1) via `read()` from `$app/server`; edge deferred because it adds nothing measurable for a redirect | design §13 risks | ☑ |
 | 0.12 | Spike: PGroonga versus `pg_trgm` on the fixture corpus for Tamil fuzzy search | design §6, ADR-2 | ☐ |
 
 ### M1 · Read
@@ -113,13 +113,13 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.1 | `usfm-ingest`: full paratext support (introductions, headings, poetry, paragraphs, footnotes, `\x` markers) | R-3.2 | ☐ |
 | 1.2 | `usfm-ingest`: verse bridges and split verses, `bridges` map in chapter JSON | R-3.3 | ☐ |
 | 1.3 | Ingest IRVTAM, TCV, BSB, WEB and KJV; golden-file tests; English version selector (BSB default) | R-3.1 | ☐ |
-| 1.4 | `bible-ref` crate: grammar, English and Tamil book matching, Tamil numerals, canonical URL builder; 500-case fixture suite | R-1.2, R-1.13 | ☐ |
-| 1.5 | `packages/bible-wasm`: wasm-pack build, lazy loader in `src/lib/wasm` | ADR-3 | ☐ |
-| 1.6 | Chapter route: prerender all chapters for all versions from `books.json`; `Chapter`, `Block`, `Verse` components | R-1.1, ADR-1 | ☐ |
-| 1.7 | Verse and range routes with ISR and per-verse title, description, Open Graph tags | R-1.12, R-1.15, ADR-1 | ☐ |
-| 1.8 | Shorthand and Tamil-path redirector on the edge runtime | R-1.12, ADR-7 | ☐ |
-| 1.9 | Book, chapter and verse picker with Tamil and English names | R-1.1 | ☐ |
-| 1.10 | Reference box wired to `bible-ref`, with suggestions on ambiguous input | R-1.2 | ☐ |
+| 1.4 | `bible-ref` crate: grammar, English and Tamil book matching, Tamil numerals, canonical URL builder; fixture suite (190 cases, grow to 500) | R-1.2, R-1.13 | ☑ |
+| 1.5 | `packages/bible-wasm`: wasm-pack build (31 kB gzipped), lazy loader in `src/lib/ref` | ADR-3 | ☑ |
+| 1.6 | Chapter route rendered from JSON via ISR; `Chapter`, `Verse` components | R-1.1, ADR-1 | ☑ |
+| 1.7 | Verse and range routes with ISR, selected-verse highlight, per-verse title, description, Open Graph tags | R-1.12, R-1.15, ADR-1 | ☑ |
+| 1.8 | Shorthand (`/jn3.16`) and Tamil-path (`/யோவான்/3/16`) redirectors; Node runtime rather than edge (see 0.11) | R-1.12, ADR-7 | ☑ |
+| 1.9 | Book page with chapter grid and translation introduction ☑; compact in-reader picker reflecting current position ☐ | R-1.1 | ◧ |
+| 1.10 | Reference box in the header wired to `bible-wasm`, with book suggestions and a not-recognised hint | R-1.2 | ☑ |
 | 1.11 | History handling: `pushState` per passage, `replaceState` for toggles, scroll anchor restore | R-1.3 | ☐ |
 | 1.12 | Breadcrumbs with JSON-LD `BreadcrumbList` | R-1.4 | ☐ |
 | 1.13 | Previous and next chapter controls, swipe on touch, neighbour prefetch | R-1.5 | ☐ |
