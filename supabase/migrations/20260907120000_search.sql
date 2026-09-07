@@ -5,7 +5,7 @@
 --    Postgres does not recompute them when the function changes.
 alter table public.verse_search drop column tsv, drop column text_norm;
 
--- BEGIN generated (supabase/generated/tamil_norm.sql)
+-- Superseded by 20260907160000_search_collation_fix.sql; kept as applied.
 create or replace function public.tamil_norm(t text)
 returns text
 language sql
@@ -20,7 +20,7 @@ as $$
            'ணநளழறஆஈஊஏஓஔீூேோௌா',
            'னனலலரஅஇஉஎஒஒிுெொொ')
 $$;
--- END generated
+
 
 alter table public.verse_search
   add column text_norm text generated always as (public.tamil_norm(text)) stored,

@@ -78,7 +78,10 @@ mod tests {
         let s = parse_reference("Jn 3:16-18").unwrap();
         assert!(s.contains("\"code\":\"JHN\""));
         assert!(s.contains("\"verse_end\":18"));
-        assert_eq!(reference_path("சங் 23", "IRVTAM").unwrap(), "/irvtam/psalms/23");
+        assert_eq!(
+            reference_path("சங் 23", "IRVTAM").unwrap(),
+            "/irvtam/psalms/23"
+        );
         assert!(reference_path("hello", "irvtam").is_none());
         assert!(suggest_books("யோ", 5).contains("JHN"));
     }
