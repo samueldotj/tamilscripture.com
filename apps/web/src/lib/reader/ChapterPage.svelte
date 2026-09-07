@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { afterNavigate, goto } from '$app/navigation';
 	import Chapter from './Chapter.svelte';
+	import DualChapter from './DualChapter.svelte';
 	import ActionBar from './ActionBar.svelte';
 	import Picker from './Picker.svelte';
 	import XrefPanel from './XrefPanel.svelte';
@@ -163,14 +164,7 @@
 	{#if data.chapters.length === 1}
 		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} />
 	{:else}
-		<div class="dual">
-			{#each data.chapters as ch, i (ch.version)}
-				<section aria-label={data.versions[i].name}>
-					<h2 class="version-head">{data.versions[i].short}</h2>
-					<Chapter chapter={ch} lang={data.versions[i].lang} {selected} onselect={toggle} xrefs={i === 0 ? xrefs : null} onxref={(id) => (xrefOpen = id)} versionPath={data.versions[i].code.toLowerCase()} />
-				</section>
-			{/each}
-		</div>
+		<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 	{/if}
 
 	<div class="pager bottom">
@@ -200,9 +194,6 @@
 	.pager.bottom { margin-top: 2rem; }
 	h1 { font-family: var(--serif); font-weight: 600; font-size: 1.8rem; margin: 0 0 1rem; }
 	h1[lang='ta'] { font-family: var(--tamil); }
-	.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-	@media (max-width: 720px) { .dual { grid-template-columns: 1fr; } }
-	.version-head { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.5rem; }
 	.attribution { margin-top: 3rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
 	.attribution a { color: inherit; }
 </style>

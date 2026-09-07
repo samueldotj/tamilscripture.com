@@ -83,8 +83,8 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | Milestone | Goal | Requirements | Exit test | Status |
 |---|---|---|---|---|
 | **M0 · Foundations** | Repository, pipeline and deploy path exist end to end. | R-3.1, R-3.5 | A chapter is visible on the production URL, built by CI from USFM. | Done except 0.11, 0.12 spikes and books.toml review |
-| **M1 · Read** | Anyone can read IRVTAM, TCV and an English version of their choice on a phone, fast, at a shareable URL. | R-3.1–3.3, 3.5, R-1.1–1.5, 1.7–1.8, 1.10, 1.12–1.14, R-8.1, 8.3 | Every chapter loads under budget on the 4G profile. A Tamil user can reach any verse by typing its Tamil abbreviation. | Not started |
-| **M2 · Study** | Word search, cross-references, the Cross-reference format and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Not started |
+| **M1 · Read** | Anyone can read IRVTAM, TCV and an English version of their choice on a phone, fast, at a shareable URL. | R-3.1–3.3, 3.5, R-1.1–1.5, 1.7–1.8, 1.10, 1.12–1.14, R-8.1, 8.3 | Every chapter loads under budget on the 4G profile. A Tamil user can reach any verse by typing its Tamil abbreviation. | Shipped 7 Sep 2026 except 1.17 font choice, 1.18 self-hosted subset, 1.19 i18n module, 1.23 CI guards, 1.24 a11y pass, 1.25 Sentry |
+| **M2 · Study** | Word search, cross-references, the Cross-reference format and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Shipped 7 Sep 2026; 2.14 (log review) ongoing |
 | **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Not started |
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Not started |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
@@ -140,19 +140,19 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 2.1 | `tamil-norm` crate: NFC, near-letter folding, suffix stripping; SQL generator; Rust-to-SQL parity test | R-5.4 | ☐ |
-| 2.2 | Migration: `verse_search` table, generated columns, GIN and trigram indexes (or PGroonga per spike 0.12) | design §6 | ☐ |
-| 2.3 | `usfm-ingest`: emit `verse_search.csv`; `scripts/load-search.sh`; CI step to load on deploy | design §3 | ☐ |
-| 2.4 | `search_verses()` function: exact phrase, full-text, trigram fallback, ranking, paging | R-5.3, R-5.4 | ☐ |
-| 2.5 | `/api/search` route with normalisation, match marking, 60 s CDN cache | R-5.5 | ☐ |
-| 2.6 | Search box: reference-or-words classification in the browser, results page grouped by book | R-5.1, R-5.2, R-5.5 | ☐ |
-| 2.7 | `search_log` table, security-definer insert, `common_searches` view, nightly refresh, `/api/common-searches`, empty-state UI | R-5.6, R-5.9 | ☐ |
-| 2.8 | `usfm-ingest`: merge OpenBible cross-references with USFM `\x`; emit cross-ref JSON per chapter | R-7.3 | ☐ |
-| 2.9 | Cross-reference markers, panel with passage text, links that push history; off switch stops the fetch | R-7.1, R-7.2, R-7.4 | ☐ |
-| 2.10 | Cross-reference display format | R-8.1 | ☐ |
-| 2.11 | Format switch keeps scroll position to the nearest verse | R-8.2 | ☐ |
-| 2.12 | Versification map in the pipeline; build fails on unmapped verses | R-3.4 | ☐ |
-| 2.13 | Dual version route (`/irvtam+bsb/...`) with ISR; side-by-side and interleaved layouts; synced scroll and selection; dash-and-footnote for missing verses | R-9.1–9.5 | ☐ |
+| 2.1 | `tamil-norm` crate: near-letter folding, suffix stripping; SQL generator with explicit Tamil code points; CI diff keeps the SQL current (a live parity test needs the M3 dev project) | R-5.4 | ☑ |
+| 2.2 | Migrations: `verse_search` generated columns from our own Tamil tokeniser (`tamil_tsvector`), GIN and trigram indexes | design §6 | ☑ |
+| 2.3 | `usfm-ingest` emits `search/{VERSION}.csv`; `scripts/load-search.sh` upserts per version in the deploy workflow | design §3 | ☑ |
+| 2.4 | `search_verses()`: exact phrase (trigram-prefiltered), full text with Tamil prefix matching, word-similarity fallback, ranking, paging, blank-query guard | R-5.3, R-5.4 | ☑ |
+| 2.5 | `/api/search` with 60 s CDN cache; client-side match marking | R-5.5 | ☑ |
+| 2.6 | Header box classifies reference vs words in the browser; `/search` page grouped by book with scope (version, language, all) and paging | R-5.1, R-5.2, R-5.5 | ☑ |
+| 2.7 | `search_log` + `log_search()`, `common_searches` view refreshed nightly by pg_cron, `/api/common-searches`, empty-state chips | R-5.6, R-5.9 | ☑ |
+| 2.8 | `usfm-ingest` emits OpenBible cross-references per chapter (USFM `\x` markers are kept as verse notes) | R-7.3 | ☑ |
+| 2.9 | Cross-reference markers (‡), panel with target text in the current version, links push history; toggle off stops the fetch | R-7.1, R-7.2, R-7.4 | ☑ |
+| 2.10 | Cross-reference display format: one verse per line with inline reference list | R-8.1 | ☑ |
+| 2.11 | Format switch is a class change, so scroll position is kept | R-8.2 | ☑ |
+| 2.12 | Versification: pipeline validates chapter counts across versions (all 66 books agree); dual view aligns rows by verse number and shows a dash for a verse missing on one side | R-3.4, R-9.4 | ☑ |
+| 2.13 | Dual version route (`/irvtam+bsb/...`) with ISR; verse-aligned rows side by side, stacked per verse on phones; shared selection; compare control in the picker | R-9.1–9.5 | ☑ |
 | 2.14 | Weekly search-log review during the first month; tune folding tables | design §13 risks | ☐ |
 
 ### M3 · Remember
