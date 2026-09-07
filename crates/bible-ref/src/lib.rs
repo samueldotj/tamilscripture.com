@@ -8,8 +8,10 @@
 //! and spaces inside the book name, so `1 Cor.` and `1cor` are the same.
 //!
 //! The book table is generated at compile time from `data/books.toml`.
-
-use unicode_normalization::UnicodeNormalization;
+//!
+//! Input is expected in Unicode NFC. The table is built in NFC and callers
+//! (the JS wrapper, the pipeline) normalise before calling, which keeps the
+//! normalisation tables out of the wasm binary.
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Book {
@@ -89,7 +91,7 @@ fn tamil_digit(c: char) -> Option<char> {
 
 /// Normalise for lookup: NFC, lowercase, drop spaces, dots and hyphens, ASCII digits.
 fn key(s: &str) -> String {
-    s.nfc()
+    s.chars()
         .flat_map(|c| c.to_lowercase())
         .filter(|c| !c.is_whitespace() && *c != '.' && *c != '-')
         .map(|c| tamil_digit(c).unwrap_or(c))
@@ -142,7 +144,7 @@ fn roman_ordinal(s: &str) -> Option<(u32, usize)> {
 /// Split input into (book part, number part) and parse.
 pub fn parse(input: &str) -> Option<Reference> {
     let s: String = input
-        .nfc()
+        .chars()
         .map(|c| tamil_digit(c).unwrap_or(c))
         .map(|c| if c == '–' || c == '—' { '-' } else { c })
         .collect();

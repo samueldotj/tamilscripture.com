@@ -114,6 +114,10 @@ importers:
         version: 2.116.0
 
   apps/web:
+    dependencies:
+      '@tamilscripture/bible-wasm':
+        specifier: workspace:*
+        version: link:../../packages/bible-wasm
     devDependencies:
       '@sveltejs/adapter-node':
         specifier: ^5.5.7
@@ -142,6 +146,8 @@ importers:
       vite:
         specifier: ^8.0.16
         version: 8.2.2(@types/node@26.4.1)(esbuild@0.28.2)
+
+  packages/bible-wasm: {}
 
 packages:
 

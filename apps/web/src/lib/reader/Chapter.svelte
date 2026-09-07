@@ -2,7 +2,11 @@
 	import type { ChapterJson, Segment } from '$lib/content/types';
 	import Verse from './Verse.svelte';
 
-	let { chapter, lang }: { chapter: ChapterJson; lang: 'ta' | 'en' } = $props();
+	let {
+		chapter,
+		lang,
+		selected = new Set<string>()
+	}: { chapter: ChapterJson; lang: 'ta' | 'en'; selected?: Set<string> } = $props();
 
 	// Footnotes numbered across the chapter for the list at the end.
 	const notes = $derived.by(() => {
@@ -40,7 +44,7 @@
 		{:else}
 			<p class="para style-{block.style}">
 				{#each block.segments as seg (seg.id ?? `${i}-${seg.text.slice(0, 8)}`)}
-					<Verse {seg} noteStart={(() => { const s = noteIndex; noteIndex += seg.notes?.length ?? 0; return s; })()} />
+					<Verse {seg} selected={seg.id !== undefined && selected.has(seg.id)} noteStart={(() => { const s = noteIndex; noteIndex += seg.notes?.length ?? 0; return s; })()} />
 				{/each}
 			</p>
 		{/if}

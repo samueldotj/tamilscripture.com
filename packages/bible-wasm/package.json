@@ -1,0 +1,17 @@
+{
+  "name": "@tamilscripture/bible-wasm",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bible reference parser (English + Tamil) compiled from crates/bible-ref to WebAssembly",
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./wasm": "./pkg/bible_wasm_bg.wasm"
+  },
+  "files": ["index.ts", "pkg/"],
+  "scripts": {
+    "build": "wasm-pack build ../../crates/wasm --release --target web --out-dir ../../packages/bible-wasm/pkg --out-name bible_wasm --no-pack"
+  }
+}

@@ -1,9 +1,6 @@
 import type { PageLoad } from './$types';
 import { loadChapterPage } from '$lib/content/chapter-load';
 
-// Rendered on first request and cached at the edge until the next deploy
-// (ADR-1). Prerendering every chapter is not possible on Vercel: the adapter
-// emits two routes per prerendered page and the platform caps routes at 2,048.
 export const prerender = false;
 export const config = { isr: { expiration: false } };
 

@@ -11,7 +11,6 @@ build = "build.rs"
 crate-type = ["rlib"]
 
 [dependencies]
-unicode-normalization.workspace = true
 
 [build-dependencies]
 toml.workspace = true
