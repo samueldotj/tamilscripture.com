@@ -421,7 +421,7 @@ create policy "own rows" on highlights
 - Location is stored as book, chapter and verse range integers rather than a verse-id string, so chapter loads are one indexed range scan and range highlights need no parsing.
 - Offline edits queue in IndexedDB with a client-generated `id`, so replays are idempotent upserts.
 - Account deletion cascades from `auth.users`. Export is a single RPC that returns the user's rows from all three tables as JSON.
-- An RLS test suite signs in as two users and asserts each sees only its own rows through PostgREST. It runs in CI against a branch database.
+- An RLS test suite signs in as two users and asserts each sees only its own rows through PostgREST. It runs in CI against the development project.
 
 ---
 
@@ -485,14 +485,15 @@ Each budget from the requirements maps to a specific mechanism, and each mechani
 
 ### Environments
 - **Production:** Vercel production project on `www.tamilscripture.com` (apex redirects to www) + Supabase production project in the Mumbai region.
-- **Preview:** every PR gets a Vercel preview and a Supabase branch database seeded with a small corpus.
-- **Local:** `supabase start` with Docker, `pnpm dev`, pipeline output checked into `static/content` for one test version.
+- **Development:** a second hosted Supabase project (`tamilscripture-dev`, free tier, Mumbai). Migrations are applied with `supabase db push`, which needs only the CLI and a database URL. No Docker and no local Postgres: the CLI's `supabase start` and `db diff` are the only commands that need Docker, and neither is used. Migrations are written by hand.
+- **Preview:** every PR gets a Vercel preview pointed at the development project. Since commits go straight to `main`, previews are rare; if they become common, switch to hosted Supabase branching, which is also Docker-free.
+- **Local:** `pnpm dev` against the development project, pipeline output in `static/content` for one test version.
 
 ### CI pipeline
 - `cargo test` for all crates, including the parser fixtures and normalisation parity.
 - `svelte-check`, unit tests (Vitest), Playwright on a phone viewport.
 - Pipeline run, prerender, `size-limit`, Lighthouse CI.
-- Migrations applied to the branch database; RLS suite runs against it.
+- Migrations applied to the development project; RLS suite runs against it.
 - Deploy on merge to main; migrations applied to production first, then the site.
 
 ### Observability
@@ -617,7 +618,7 @@ tamilscripture.com/
 ├─ supabase/
 │  ├─ migrations/                  numbered SQL: tables, RLS, functions, views, pg_cron jobs
 │  ├─ functions/                   edge functions if any (currently none)
-│  ├─ seed.sql                     loads fixtures version for branch databases
+│  ├─ seed.sql                     loads the fixtures version into the development project
 │  └─ config.toml
 ├─ scripts/
 │  ├─ build-content.sh             cargo run usfm-ingest → apps/web/static/content
@@ -640,7 +641,7 @@ tamilscripture.com/
 ### How the pieces connect
 
 - **Rust reaches the browser through one npm package.** The `crates/wasm` wrapper is built with wasm-pack into `packages/bible-wasm`, and the web app depends on it as a workspace package. The web app never touches Cargo directly, so a front-end contributor without a Rust toolchain can still run `pnpm dev` against a checked-in build of the package.
-- **Content is built, not committed.** USFM sources and licences are committed under `data/`, since they are a few megabytes of text per version. Pipeline output goes to the git-ignored `static/content` folder and is produced by `pnpm content` locally and by CI on deploy. The only committed output is the three-book fixture version used by tests and branch databases.
+- **Content is built, not committed.** USFM sources and licences are committed under `data/`, since they are a few megabytes of text per version. Pipeline output goes to the git-ignored `static/content` folder and is produced by `pnpm content` locally and by CI on deploy. The only committed output is the three-book fixture version used by tests and the development database.
 - **The database schema lives only in migrations.** Nothing is created through the Supabase dashboard. The generated `tamil_norm` SQL is written by the Rust crate into a migration file, and a CI check fails if the committed migration differs from a fresh generation.
 - **One `books.toml` feeds everything.** The pipeline emits `books.json` for the app and generated Rust tables for the parser from the same file, so a new abbreviation is added in one place.
 

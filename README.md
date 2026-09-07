@@ -72,8 +72,8 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 0.5 | Create the three-book fixture version under `data/fixtures/` | design §14 | ☐ |
 | 0.6 | `usfm-ingest` v0: parse the fixture, emit chapter JSON and `books.json`, determinism test | R-3.1 | ☐ |
 | 0.7 | Scaffold the SvelteKit app with `adapter-vercel`; render one prerendered chapter from JSON | ADR-1 | ☐ |
-| 0.8 | Supabase project in Mumbai; first migration (`versions`, `books`); local `supabase start` | design §11 | ☐ |
-| 0.9 | GitHub Actions: `ci.yml` (cargo test, svelte-check), `preview.yml` (Vercel preview + Supabase branch) | design §11 | ☐ |
+| 0.8 | Two hosted Supabase projects in Mumbai (production and development); first migration (`versions`, `books`) applied with `supabase db push`; no Docker | design §11 | ☐ |
+| 0.9 | GitHub Actions: `ci.yml` (cargo test, svelte-check), `preview.yml` (Vercel preview against the development project) | design §11 | ☐ |
 | 0.10 | Point `www.tamilscripture.com` at Vercel; redirect apex to www | ADR-7 | ☐ |
 | 0.11 | Spike: `bible-ref` compiled to WebAssembly running on the Vercel edge runtime; measure bundle size and cold start | design §13 risks | ☐ |
 | 0.12 | Spike: PGroonga versus `pg_trgm` on the fixture corpus for Tamil fuzzy search | design §6, ADR-2 | ☐ |
@@ -134,7 +134,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 3.1 | Supabase Auth: Google, magic link; Facebook after app review (decide per open question 4) | R-10.1, R-10.2 | ☐ |
 | 3.2 | `/auth/callback`, `hooks.server.ts` with `@supabase/ssr`, session check after hydration on public pages | design §7 | ☐ |
 | 3.3 | Migrations: `profiles`, `highlights`, `notes`, `history` with RLS policies and indexes | ADR-5, design §7 | ☐ |
-| 3.4 | RLS test suite (two users through PostgREST) running in CI against a branch database | design §7 | ☐ |
+| 3.4 | RLS test suite (two users through PostgREST) running in CI against the development project | design §7 | ☐ |
 | 3.5 | Highlights: colour picker in the action bar, render in all formats and both themes, change or remove, highlights page | R-10.12, R-10.13 | ☐ |
 | 3.6 | Notes: note sheet with autosave, markers, notes page with search | R-10.8, R-10.9, R-10.10 | ☐ |
 | 3.7 | History: debounced insert, 10-minute collapse, history page with day grouping and book filter, pause and clear | R-10.5, R-10.7 | ☐ |
