@@ -18,6 +18,8 @@ jobs:
       - run: cargo fmt --all --check
       - run: cargo clippy --workspace --all-targets -- -D warnings
       - run: cargo test --workspace
+      - name: Generated SQL is current
+        run: cargo run -q -p tamil-norm --bin tamil-norm-sql | diff - supabase/generated/tamil_norm.sql
       - name: Build full content (strict validation)
         run: |
           cargo run --release -p usfm-ingest -- \

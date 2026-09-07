@@ -29,15 +29,19 @@
 	}
 
 	async function submit(text = value) {
+		const trimmed = text.trim();
+		if (!trimmed) return;
 		await ensure();
-		const path = referencePath(text, versionPath);
+		const path = referencePath(trimmed, versionPath);
+		suggestions = [];
+		input.blur();
 		if (path) {
-			suggestions = [];
 			value = '';
-			input.blur();
 			await goto(path);
 		} else {
-			notFound = true;
+			// Not a reference: search the words in the current primary version.
+			const v = versionPath.split('+')[0].toUpperCase();
+			await goto(`/search?${new URLSearchParams({ q: trimmed, v })}`);
 		}
 	}
 
@@ -75,7 +79,7 @@
 		enterkeyhint="go"
 		aria-label={lang === 'ta' ? 'வசனம் தேடு' : 'Go to reference'}
 		aria-invalid={notFound}
-		placeholder={lang === 'ta' ? 'யோவா 3:16 · John 3:16' : 'John 3:16 · யோவா 3:16'}
+		placeholder={lang === 'ta' ? 'யோவா 3:16 · அன்பு' : 'John 3:16 · love'}
 		onfocus={ensure}
 		oninput={onInput}
 		onkeydown={onKey}
@@ -93,7 +97,7 @@
 		</ul>
 	{/if}
 	{#if notFound}
-		<p class="hint" role="status">{lang === 'ta' ? 'இது வசனக் குறிப்பாகத் தெரியவில்லை. எ.கா. யோவா 3:16' : 'Not recognised as a reference. Try John 3:16.'}</p>
+		<p class="hint" role="status">{lang === 'ta' ? 'எ.கா. யோவா 3:16' : 'e.g. John 3:16'}</p>
 	{/if}
 </form>
 

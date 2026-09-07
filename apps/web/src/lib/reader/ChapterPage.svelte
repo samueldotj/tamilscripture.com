@@ -3,8 +3,11 @@
 	import Chapter from './Chapter.svelte';
 	import ActionBar from './ActionBar.svelte';
 	import Picker from './Picker.svelte';
+	import XrefPanel from './XrefPanel.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
+	import { loadXrefs } from '$lib/content/load';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
+	import type { XrefChapter } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
 
 	let { data }: { data: ChapterPageData } = $props();
@@ -66,6 +69,22 @@
 		if (s.has(id)) s.delete(id); else s.add(id);
 		selected = s;
 	}
+
+	// Cross-references: fetched after paint, only while the toggle is on
+	// (R-7.2: turning them off stops the fetch).
+	let xrefs = $state<XrefChapter | null>(null);
+	let xrefOpen = $state<string | null>(null);
+	$effect(() => {
+		const key = data.canonical;
+		xrefs = null;
+		xrefOpen = null;
+		if (!settings.value.xrefs) return;
+		let cancelled = false;
+		loadXrefs(fetch, data.book.code, data.chapter)
+			.then((x) => { if (!cancelled && key === data.canonical) xrefs = x; })
+			.catch(() => {});
+		return () => { cancelled = true; };
+	});
 
 	afterNavigate(() => {
 		if (!data.range) return;
@@ -142,13 +161,13 @@
 	<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
 
 	{#if data.chapters.length === 1}
-		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} />
+		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} />
 	{:else}
 		<div class="dual">
 			{#each data.chapters as ch, i (ch.version)}
 				<section aria-label={data.versions[i].name}>
 					<h2 class="version-head">{data.versions[i].short}</h2>
-					<Chapter chapter={ch} lang={data.versions[i].lang} {selected} onselect={toggle} />
+					<Chapter chapter={ch} lang={data.versions[i].lang} {selected} onselect={toggle} xrefs={i === 0 ? xrefs : null} onxref={(id) => (xrefOpen = id)} versionPath={data.versions[i].code.toLowerCase()} />
 				</section>
 			{/each}
 		</div>
@@ -168,6 +187,10 @@
 </div>
 
 <ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} onclear={() => (selected = new Set())} />
+
+{#if xrefOpen && xrefs?.[xrefOpen]}
+	<XrefPanel verseId={xrefOpen} targets={xrefs[xrefOpen]} version={primary.code} lang={ui} onclose={() => (xrefOpen = null)} />
+{/if}
 
 <style>
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); margin: 0 0 1rem; }

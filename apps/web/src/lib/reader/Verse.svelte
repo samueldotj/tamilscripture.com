@@ -1,12 +1,26 @@
 <script lang="ts">
-	import type { Segment } from '$lib/content/types';
+	import type { Segment, XrefTarget } from '$lib/content/types';
+	import { chapterUrl, findBook } from '$lib/content/manifest';
 
 	let {
 		seg,
+		lang,
+		versionPath = 'irvtam',
 		noteStart = 0,
 		selected = false,
-		onselect
-	}: { seg: Segment; noteStart?: number; selected?: boolean; onselect?: (id: string) => void } = $props();
+		onselect,
+		xrefs = null,
+		onxref
+	}: {
+		seg: Segment;
+		lang: 'ta' | 'en';
+		versionPath?: string;
+		noteStart?: number;
+		selected?: boolean;
+		onselect?: (id: string) => void;
+		xrefs?: XrefTarget[] | null;
+		onxref?: (id: string) => void;
+	} = $props();
 
 	// Split the text into runs at span boundaries and note anchors so that
 	// words-of-Jesus spans and footnote markers land at the right characters.
@@ -37,6 +51,21 @@
 		return out;
 	});
 	const chapterId = $derived(seg.id?.split('.').slice(0, 2).join('.'));
+
+	// Inline list for the Cross-reference format (CSS shows it only there).
+	function xrefLabel(t: XrefTarget) {
+		const [code, ch, v] = t.to.split('.');
+		const book = findBook(code)!;
+		const end = t.end?.split('.');
+		const name = lang === 'ta' ? (book.abbr_ta[0] ?? book.name_ta) : (book.abbr_en[0] ?? book.name_en);
+		return end && end[1] === ch ? `${name} ${ch}:${v}-${end[2]}` : `${name} ${ch}:${v}`;
+	}
+	function xrefHref(t: XrefTarget, version: string) {
+		const [code, ch, v] = t.to.split('.');
+		const book = findBook(code)!;
+		const end = t.end?.split('.');
+		return chapterUrl(version, book, Number(ch), end && end[1] === ch && end[2] !== v ? `${v}-${end[2]}` : v);
+	}
 </script>
 
 <span class="verse" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
@@ -51,6 +80,15 @@
 		{#if run.wj}<span class="wj">{run.text}</span>{:else}{run.text}{/if}
 		{#if run.noteAfter}<sup class="fn"><a href="#{chapterId}.n{run.noteAfter}" aria-label="footnote {run.noteAfter}">{run.noteAfter}</a></sup>{/if}
 	{/each}
+	{#if xrefs?.length && seg.id}
+		<button type="button" class="xref" aria-label="{xrefs.length} cross-references" onclick={() => onxref?.(seg.id!)}>‡</button>
+		<span class="xref-list" lang={lang}>
+			{#each xrefs.slice(0, 8) as t (t.to + (t.end ?? ''))}
+				<a href={xrefHref(t, versionPath)}>{xrefLabel(t)}</a>
+			{/each}
+			{#if xrefs.length > 8}<button type="button" class="xref-more" onclick={() => onxref?.(seg.id!)}>+{xrefs.length - 8}</button>{/if}
+		</span>
+	{/if}
 </span>
 
 <style>
@@ -62,4 +100,10 @@
 	.fn { font-family: var(--sans); font-size: 0.6em; }
 	.fn a { color: var(--muted); text-decoration: none; }
 	.wj { color: var(--wj); }
+	.xref { border: 0; background: none; padding: 0 0.15em; margin-left: 0.1em; color: var(--muted); font-size: 0.7em; vertical-align: super; line-height: 1; cursor: pointer; font-family: var(--sans); }
+	.xref:hover { color: var(--accent); }
+	.xref-list { display: none; font-family: var(--sans); font-size: 0.78em; color: var(--muted); text-indent: 0; margin-top: 0.1em; }
+	.xref-list a { color: var(--muted); text-decoration: none; margin-right: 0.7em; }
+	.xref-list a:hover { color: var(--accent); }
+	.xref-more { border: 0; background: none; color: var(--accent); cursor: pointer; padding: 0; font-size: inherit; }
 </style>

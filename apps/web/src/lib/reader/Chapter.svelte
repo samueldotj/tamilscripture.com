@@ -1,17 +1,23 @@
 <script lang="ts">
-	import type { ChapterJson, Segment } from '$lib/content/types';
+	import type { ChapterJson, Segment, XrefChapter } from '$lib/content/types';
 	import Verse from './Verse.svelte';
 
 	let {
 		chapter,
 		lang,
 		selected = new Set<string>(),
-		onselect
+		onselect,
+		xrefs = null,
+		onxref,
+		versionPath = 'irvtam'
 	}: {
 		chapter: ChapterJson;
 		lang: 'ta' | 'en';
 		selected?: Set<string>;
 		onselect?: (id: string) => void;
+		xrefs?: XrefChapter | null;
+		onxref?: (id: string) => void;
+		versionPath?: string;
 	} = $props();
 
 	// Footnotes numbered across the chapter for the list at the end.
@@ -29,7 +35,19 @@
 		}
 		return out;
 	});
-	let noteIndex = 0;
+	// Running footnote index so each segment numbers its markers correctly.
+	const noteStarts = $derived.by(() => {
+		const map = new Map<Segment, number>();
+		let i = 0;
+		for (const b of chapter.blocks) {
+			if (b.type !== 'para') continue;
+			for (const seg of b.segments) {
+				map.set(seg, i);
+				i += seg.notes?.length ?? 0;
+			}
+		}
+		return map;
+	});
 </script>
 
 <article class="chapter" {lang} data-version={chapter.version} data-book={chapter.book} data-chapter={chapter.chapter}>
@@ -50,7 +68,16 @@
 		{:else}
 			<p class="para style-{block.style}">
 				{#each block.segments as seg (seg.id ?? `${i}-${seg.text.slice(0, 8)}`)}
-					<Verse {seg} {onselect} selected={seg.id !== undefined && selected.has(seg.id)} noteStart={(() => { const s = noteIndex; noteIndex += seg.notes?.length ?? 0; return s; })()} />
+					<Verse
+						{seg}
+						{onselect}
+						{lang}
+						{versionPath}
+						selected={seg.id !== undefined && selected.has(seg.id)}
+						noteStart={noteStarts.get(seg) ?? 0}
+						xrefs={seg.n && seg.id && xrefs ? xrefs[seg.id] ?? null : null}
+						{onxref}
+					/>
 				{/each}
 			</p>
 		{/if}
@@ -73,6 +100,7 @@
 	.chapter[lang='en'] { font-family: var(--serif); font-size: 1.05rem; line-height: 1.7; }
 	.chapter-label { display: none; }
 	.heading { font-family: var(--sans); font-weight: 600; margin: 1.6em 0 0.5em; line-height: 1.3; }
+	.chapter[lang='ta'] .heading { font-family: var(--tamil); }
 	h3.heading { font-size: 1.05rem; }
 	h2.heading.major { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.04em; }
 	.heading.ref { font-size: 0.85rem; color: var(--muted); font-weight: 400; margin-top: 0; }
