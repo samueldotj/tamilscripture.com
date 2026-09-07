@@ -85,7 +85,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M0 · Foundations** | Repository, pipeline and deploy path exist end to end. | R-3.1, R-3.5 | A chapter is visible on the production URL, built by CI from USFM. | Done except 0.11, 0.12 spikes and books.toml review |
 | **M1 · Read** | Anyone can read IRVTAM, TCV and an English version of their choice on a phone, fast, at a shareable URL. | R-3.1–3.3, 3.5, R-1.1–1.5, 1.7–1.8, 1.10, 1.12–1.14, R-8.1, 8.3 | Every chapter loads under budget on the 4G profile. A Tamil user can reach any verse by typing its Tamil abbreviation. | Shipped 7 Sep 2026 except 1.17 font choice, 1.18 self-hosted subset, 1.19 i18n module, 1.23 CI guards, 1.24 a11y pass, 1.25 Sentry |
 | **M2 · Study** | Word search, cross-references, the Cross-reference format and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Shipped 7 Sep 2026; 2.14 (log review) ongoing |
-| **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Not started |
+| **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Code shipped 7 Sep 2026; blocked on owner's Supabase Auth URL setup (3.1); 3.4, 3.8, 3.9 open |
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Not started |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
 
@@ -126,13 +126,13 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.14 | Verse selection (tap verse numbers) and action bar: copy text with reference and link, share via Web Share or link copy | R-1.7 | ☑ |
 | 1.15 | Reader, Standard and Cross-reference formats as CSS classes on `<html>`; inline pre-paint stamp in `app.html` | R-8.1, R-8.3, ADR-6 | ☑ |
 | 1.16 | Paratext toggles (introductions, headings, footnotes, cross-ref markers) persisted in local storage; default version cookie for the shorthand redirector | R-1.8, R-1.14 | ☑ |
-| 1.17 | Reader settings: text size (5 steps) ☑, theme ☑, UI language ☑; Tamil typeface choice and low-end Android check ☐ | R-1.10, open question 6 | ◧ |
-| 1.18 | Tamil font subsetting script, preload, `size-adjust` fallback metrics | design §10 | ☐ |
+| 1.17 | Reader settings: text size (5 steps), theme, UI language, Tamil typeface (Noto Serif, Noto Sans, system) ☑; low-end Android check ☐ | R-1.10, open question 6 | ◧ |
+| 1.18 | Self-hosted subset fonts via `scripts/subset-fonts.py` (Tamil faces ~40 kB each, `unicode-range`, `font-display: optional`, preload, fallback metrics); Google Fonts removed | design §10 | ☑ |
 | 1.19 | Tamil and English interface strings; default from browser language | requirements §12 | ☐ |
 | 1.20 | PWA shell: web manifest with icons, service worker (shell precache, content JSON cache-first, last 20 reader pages offline) | requirements §12, design §9 | ☑ |
 | 1.21 | About page with licences and attribution; footer notice on reading pages; site footer link | R-3.5 | ☑ |
 | 1.22 | Sitemap index plus one sitemap per version, `robots.txt`, `rel="canonical"`, Tamil page titles | R-1.12, requirements §12 | ☑ |
-| 1.23 | CI guards: Lighthouse budgets, `size-limit` (120 kB reader route), Playwright text-visible-under-500 ms on throttled profile | design §10 | ☐ |
+| 1.23 | CI guards: Lighthouse CI (a11y ≥ 0.95 and CLS < 0.05 as errors, performance ≥ 0.9 as warning) ☑, `size-limit` (reader route ≤ 120 kB, all chunks ≤ 200 kB, wasm, font) ☑; Playwright text-visible-under-500 ms ☐ | design §10 | ◧ |
 | 1.24 | Accessibility pass: `lang` attributes, focus states, 44 px targets, WCAG 2.2 AA contrast | requirements §12 | ☐ |
 | 1.25 | Production deploy on `www.tamilscripture.com` ☑; Vercel Analytics ☑; Sentry ☐ (needs DSN); uptime probe ☐ | design §11 | ◧ |
 
@@ -159,17 +159,17 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 3.1 | Supabase Auth: Google, magic link; Facebook after app review (decide per open question 4) | R-10.1, R-10.2 | ☐ |
-| 3.2 | `/auth/callback`, `hooks.server.ts` with `@supabase/ssr`, session check after hydration on public pages | design §7 | ☐ |
-| 3.3 | Migrations: `profiles`, `highlights`, `notes`, `history` with RLS policies and indexes | ADR-5, design §7 | ☐ |
-| 3.4 | RLS test suite (two users through PostgREST) running in CI against the development project | design §7 | ☐ |
-| 3.5 | Highlights: colour picker in the action bar, render in all formats and both themes, change or remove, highlights page | R-10.12, R-10.13 | ☐ |
-| 3.6 | Notes: note sheet with autosave, markers, notes page with search | R-10.8, R-10.9, R-10.10 | ☐ |
-| 3.7 | History: debounced insert, 10-minute collapse, history page with day grouping and book filter, pause and clear | R-10.5, R-10.7 | ☐ |
-| 3.8 | Settings sync to `profiles` for signed-in users (format, toggles, default version) | R-1.9 | ☐ |
+| 3.1 | Supabase Auth: magic link ☑ and Google button ☑ in the app; Google provider credentials and Site URL / redirect URLs to be entered in the Supabase dashboard by the owner ☐; Facebook deferred (open question 4) | R-10.1, R-10.2 | ◧ |
+| 3.2 | Client-side PKCE: `/auth/callback` exchanges the code in the browser; public pages never read the session on the server (ADR-9); supabase-js loads lazily only for signed-in visitors | design §7 | ☑ |
+| 3.3 | Migration `20260907200000_personal`: `profiles` (auto-created on signup), `highlights`, `notes`, `history` with RLS, `record_visit`, `export_my_data`, `delete_my_account` | ADR-5, design §7 | ☑ |
+| 3.4 | RLS test suite (two users through PostgREST) in CI; needs the M3 development project and a service key in secrets | design §7 | ☐ |
+| 3.5 | Highlights: four colours in the action bar, contiguous runs stored as rows, remove or recolour, rendered in every format and both themes, `/me/highlights` grouped by book with colour filter | R-10.12, R-10.13 | ☑ |
+| 3.6 | Notes: bottom sheet with autosave and delete, ✎ markers on verses, `/me/notes` with full-text search | R-10.8, R-10.9, R-10.10 | ☑ |
+| 3.7 | History: `record_visit` collapses repeats within 10 minutes, `/me/history` grouped by day with book filter, pause and clear | R-10.5, R-10.7 | ☑ |
+| 3.8 | Settings sync to `profiles.settings` for signed-in users | R-1.9 | ☐ |
 | 3.9 | Offline outbox in IndexedDB with idempotent upserts; cross-device sync within 5 s | R-10.14, design §9 | ☐ |
-| 3.10 | Export RPC (all personal rows as JSON) and account deletion with cascade | R-10.4 | ☐ |
-| 3.11 | Privacy policy page; graceful degradation message when Supabase is unreachable | requirements §12 | ☐ |
+| 3.10 | `/me/account`: export as JSON (copyable), delete account with typed confirmation, opt-out of aggregates | R-10.4, R-2.4 | ☑ |
+| 3.11 | Privacy text on the About page ☑; graceful degradation message when Supabase is unreachable ☐ | requirements §12 | ◧ |
 
 ### M4 · Community
 

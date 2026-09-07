@@ -74,18 +74,20 @@
 		selected = s;
 	}
 
-	// Cross-references: fetched after paint, only while the toggle is on
-	// (R-7.2: turning them off stops the fetch).
-	let xrefs = $state<XrefChapter | null>(null);
+	// Cross-references arrive with the page data (markers present at first
+	// paint, hidden by CSS when off). If the toggle is switched on for a page
+	// that was navigated to with it off, fetch them then.
+	let fetched = $state<XrefChapter | null>(null);
 	let xrefOpen = $state<string | null>(null);
+	const xrefs = $derived(settings.value.xrefs ? (data.xrefs ?? fetched) : null);
 	$effect(() => {
 		const key = data.canonical;
-		xrefs = null;
+		fetched = null;
 		xrefOpen = null;
-		if (!settings.value.xrefs) return;
+		if (data.xrefs || !settings.value.xrefs) return;
 		let cancelled = false;
 		loadXrefs(fetch, data.book.code, data.chapter)
-			.then((x) => { if (!cancelled && key === data.canonical) xrefs = x; })
+			.then((x) => { if (!cancelled && key === data.canonical) fetched = x; })
 			.catch(() => {});
 		return () => { cancelled = true; };
 	});

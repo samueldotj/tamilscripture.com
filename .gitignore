@@ -147,7 +147,6 @@ vite.config.ts.timestamp-*
 target/
 # pipeline output and generated fonts (built at deploy time)
 apps/web/static/content/
-apps/web/static/fonts/
 # SvelteKit / Vercel
 .svelte-kit/
 .vercel/

@@ -560,6 +560,12 @@ flowchart LR
 - **Options:** Tamil canonical · English canonical · both canonical with alternate links.
 - **Chosen:** English canonical on `www.tamilscripture.com`. Tamil URLs percent-encode to long, fragile strings when pasted into most chat apps, and one canonical avoids split search ranking. Tamil paths are accepted and redirect, and page titles remain Tamil.
 
+### ADR-9 · Authentication is client-side only
+- **Options:** Server-side sessions with `@supabase/ssr` cookies and SSR of personal pages · browser-only PKCE with supabase-js and client-rendered personal pages.
+- **Chosen:** Browser-only. The token lives in the browser, `/auth/callback` exchanges the PKCE code in the browser, and `/me/*` pages render client-side. Public pages never touch the session on the server, so every chapter stays an edge-cacheable ISR page, and no cookie plumbing or per-request Supabase client is needed in the SvelteKit server. supabase-js is imported lazily and only when a stored session exists, keeping it out of the reader's JavaScript budget.
+- **Consequence:** personal pages show a brief blank state before the session resolves, and search engines never see them, which is intended.
+- **Revisit if:** a feature needs personal data in server-rendered HTML.
+
 ### ADR-8 · Aggregates via scheduled materialised view
 - **Options:** Live count on request · trigger-maintained summary table · hourly materialised view.
 - **Chosen:** Materialised view. Simplest thing that meets "updates at most hourly", and the threshold lives in the view definition. The trigger table is the documented upgrade path.

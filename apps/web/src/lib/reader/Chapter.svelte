@@ -67,8 +67,10 @@
 				<p class="heading speaker">{block.text}</p>
 			{:else if block.kind === 'ms'}
 				<h2 class="heading major">{block.text}</h2>
-			{:else}
+			{:else if block.level >= 2}
 				<h3 class="heading level-{block.level}">{block.text}</h3>
+			{:else}
+				<h2 class="heading level-1">{block.text}</h2>
 			{/if}
 		{:else if block.type === 'break'}
 			<div class="blank" aria-hidden="true"></div>
@@ -111,7 +113,8 @@
 	.chapter-label { display: none; }
 	.heading { font-family: var(--sans); font-weight: 600; margin: 1.6em 0 0.5em; line-height: 1.3; }
 	.chapter[lang='ta'] .heading { font-family: var(--tamil); }
-	h3.heading { font-size: 1.05rem; }
+	h2.heading.level-1 { font-size: 1.05rem; }
+	h3.heading { font-size: 1rem; }
 	h2.heading.major { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.04em; }
 	.heading.ref { font-size: 0.85rem; color: var(--muted); font-weight: 400; margin-top: 0; }
 	.heading.speaker { font-style: italic; font-weight: 400; margin-bottom: 0; }
