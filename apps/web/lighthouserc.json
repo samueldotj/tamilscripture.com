@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "startServerCommand": "node build",
+      "startServerCommand": "ORIGIN=http://localhost:3000 node build",
       "startServerReadyPattern": "Listening on",
       "url": ["http://localhost:3000/", "http://localhost:3000/irvtam/jonah/1", "http://localhost:3000/irvtam/ruth/1/16-17"],
       "numberOfRuns": 2,

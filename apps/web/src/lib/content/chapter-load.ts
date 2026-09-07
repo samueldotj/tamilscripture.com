@@ -34,8 +34,9 @@ export async function loadChapterPage(
 	const canonical = chapterUrl(canonicalVersions, book, chapter, verses);
 	if (decodeURIComponent(url.pathname) !== canonical) redirect(301, canonical);
 
-	const absolute: typeof fetch = (input, init) =>
-		fetch(typeof input === 'string' ? new URL(input, url.origin) : input, init);
-	const chapters = await Promise.all(versions.map((v) => loadChapter(absolute, v.code, book.code, chapter)));
+	// Relative URLs: on the server SvelteKit serves static assets through the
+	// adapter's `read` (no network, works on Vercel and Node alike); in the
+	// browser this is the CDN path.
+	const chapters = await Promise.all(versions.map((v) => loadChapter(fetch, v.code, book.code, chapter)));
 	return { versions, book, chapter, chapters, canonical, range };
 }

@@ -14,8 +14,6 @@ export const load: PageLoad = async ({ params, fetch, url }) => {
 	const canonical = chapterUrl(versions.map((v) => v.code.toLowerCase()).join('+'), book);
 	if (decodeURIComponent(url.pathname) !== canonical) redirect(301, canonical);
 
-	const absolute: typeof fetch = (input, init) =>
-		fetch(typeof input === 'string' ? new URL(input, url.origin) : input, init);
-	const intro = await loadIntro(absolute, versions[0].code, book.code).catch(() => null);
+	const intro = await loadIntro(fetch, versions[0].code, book.code).catch(() => null);
 	return { versions, book, intro, canonical };
 };

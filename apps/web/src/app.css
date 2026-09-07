@@ -22,6 +22,10 @@
 	--accent-soft: rgba(126, 42, 42, 0.1);
 	--select: rgba(126, 42, 42, 0.12);
 	--wj: #8a1f1f;
+	--hl-yellow: #f6e27a;
+	--hl-green: #bfe3b4;
+	--hl-blue: #bbd7f2;
+	--hl-pink: #f2c1d1;
 	/* Tamil face is chosen in settings: tf-serif (default), tf-sans, tf-system */
 	--tamil-serif: 'Noto Serif Tamil', 'Tamil Fallback', serif;
 	--tamil-sans: 'Noto Sans Tamil', 'Tamil Fallback', sans-serif;
@@ -45,9 +49,17 @@ html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam
 		--accent-soft: rgba(208, 124, 124, 0.16);
 		--select: rgba(208, 124, 124, 0.2);
 		--wj: #e08585;
+		--hl-yellow: #6e6224;
+		--hl-green: #2f4f2c;
+		--hl-blue: #29405a;
+		--hl-pink: #5a2e3c;
 	}
 }
 :root[data-theme='dark'] {
+	--hl-yellow: #6e6224;
+	--hl-green: #2f4f2c;
+	--hl-blue: #29405a;
+	--hl-pink: #5a2e3c;
 	--bg: #15181c;
 	--surface: #1d2126;
 	--surface-2: #252a30;
@@ -76,6 +88,13 @@ a { color: var(--accent); }
 code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
 button { font: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- User highlights (R-10.12) ---- */
+.verse.hl-yellow { background: var(--hl-yellow); }
+.verse.hl-green { background: var(--hl-green); }
+.verse.hl-blue { background: var(--hl-blue); }
+.verse.hl-pink { background: var(--hl-pink); }
+.verse[class*='hl-'] { box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 0.1em; }
 
 /* ---- Reader formats and paratext toggles (classes on <html>) ---- */
 /* Reader: flowing text, no verse numbers, no note markers, roomier lines */

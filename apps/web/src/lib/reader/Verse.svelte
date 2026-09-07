@@ -10,7 +10,10 @@
 		selected = false,
 		onselect,
 		xrefs = null,
-		onxref
+		onxref,
+		highlight = null,
+		hasNote = false,
+		onnote
 	}: {
 		seg: Segment;
 		lang: 'ta' | 'en';
@@ -20,6 +23,9 @@
 		onselect?: (id: string) => void;
 		xrefs?: XrefTarget[] | null;
 		onxref?: (id: string) => void;
+		highlight?: string | null;
+		hasNote?: boolean;
+		onnote?: (id: string) => void;
 	} = $props();
 
 	// Split the text into runs at span boundaries and note anchors so that
@@ -68,7 +74,7 @@
 	}
 </script>
 
-<span class="verse" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
+<span class="verse {highlight ? `hl-${highlight}` : ''}" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
 	{#if seg.n}
 		{#if onselect && seg.id}
 			<button type="button" class="vn" aria-label="verse {seg.n}" aria-pressed={selected} onclick={() => onselect(seg.id!)}>{seg.n}</button>
@@ -80,6 +86,9 @@
 		{#if run.wj}<span class="wj">{run.text}</span>{:else}{run.text}{/if}
 		{#if run.noteAfter}<sup class="fn"><a href="#{chapterId}.n{run.noteAfter}" aria-label="footnote {run.noteAfter}">{run.noteAfter}</a></sup>{/if}
 	{/each}
+	{#if hasNote && seg.n && seg.id}
+		<button type="button" class="note-mark" aria-label={lang === 'ta' ? 'உங்கள் குறிப்பு' : 'Your note'} onclick={() => onnote?.(seg.id!)}>✎</button>
+	{/if}
 	{#if xrefs?.length && seg.id}
 		<button type="button" class="xref" aria-label="{xrefs.length} cross-references" onclick={() => onxref?.(seg.id!)}>‡</button>
 		<span class="xref-list" lang={lang}>
@@ -92,16 +101,17 @@
 </span>
 
 <style>
-	.verse { scroll-margin-top: 5rem; }
-	.verse.selected { background: var(--select); box-shadow: 0 0 0 3px var(--select); border-radius: 2px; }
+	.verse { scroll-margin-top: 5rem; border-radius: 2px; }
+	.verse.selected { background: var(--select); box-shadow: 0 0 0 3px var(--select); }
 	.vn { font-family: var(--sans); font-size: 0.62em; color: var(--accent); margin-right: 0.15em; font-weight: 600; vertical-align: super; line-height: 1; }
 	button.vn { border: 0; background: none; padding: 0.15em 0.2em; margin-left: -0.2em; cursor: pointer; border-radius: 3px; }
 	button.vn:hover { background: var(--accent-soft); }
 	.fn { font-family: var(--sans); font-size: 0.6em; }
 	.fn a { color: var(--muted); text-decoration: none; }
 	.wj { color: var(--wj); }
-	.xref { border: 0; background: none; padding: 0 0.15em; margin-left: 0.1em; color: var(--muted); font-size: 0.7em; vertical-align: super; line-height: 1; cursor: pointer; font-family: var(--sans); }
-	.xref:hover { color: var(--accent); }
+	.note-mark, .xref { border: 0; background: none; padding: 0 0.15em; margin-left: 0.1em; color: var(--muted); font-size: 0.7em; vertical-align: super; line-height: 1; cursor: pointer; font-family: var(--sans); }
+	.note-mark { color: var(--accent); }
+	.xref:hover, .note-mark:hover { color: var(--accent); }
 	.xref-list { display: none; font-family: var(--sans); font-size: 0.78em; color: var(--muted); text-indent: 0; margin-top: 0.1em; }
 	.xref-list a { color: var(--muted); text-decoration: none; margin-right: 0.7em; }
 	.xref-list a:hover { color: var(--accent); }

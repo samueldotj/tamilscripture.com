@@ -9,7 +9,10 @@
 		onselect,
 		xrefs = null,
 		onxref,
-		versionPath = 'irvtam'
+		versionPath = 'irvtam',
+		highlights = new Map<string, string>(),
+		noted = new Set<string>(),
+		onnote
 	}: {
 		chapter: ChapterJson;
 		lang: 'ta' | 'en';
@@ -18,6 +21,11 @@
 		xrefs?: XrefChapter | null;
 		onxref?: (id: string) => void;
 		versionPath?: string;
+		/** verse id → highlight colour */
+		highlights?: Map<string, string>;
+		/** verse ids that carry a user note */
+		noted?: Set<string>;
+		onnote?: (id: string) => void;
 	} = $props();
 
 	// Footnotes numbered across the chapter for the list at the end.
@@ -35,7 +43,6 @@
 		}
 		return out;
 	});
-	// Running footnote index so each segment numbers its markers correctly.
 	const noteStarts = $derived.by(() => {
 		const map = new Map<Segment, number>();
 		let i = 0;
@@ -77,6 +84,9 @@
 						noteStart={noteStarts.get(seg) ?? 0}
 						xrefs={seg.n && seg.id && xrefs ? xrefs[seg.id] ?? null : null}
 						{onxref}
+						highlight={seg.id ? highlights.get(seg.id) ?? null : null}
+						hasNote={seg.id !== undefined && noted.has(seg.id)}
+						{onnote}
 					/>
 				{/each}
 			</p>

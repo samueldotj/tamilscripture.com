@@ -1,7 +1,13 @@
 [
   {
-    "name": "Client JavaScript (all routes, gzip)",
+    "name": "Client JavaScript, all chunks incl. lazily loaded supabase-js (gzip)",
     "path": ".svelte-kit/output/client/_app/immutable/**/*.js",
+    "limit": "200 kB",
+    "gzip": true
+  },
+  {
+    "name": "Reader route JavaScript excluding lazy chunks (gzip)",
+    "path": [".svelte-kit/output/client/_app/immutable/entry/*.js", ".svelte-kit/output/client/_app/immutable/nodes/*.js"],
     "limit": "120 kB",
     "gzip": true
   },

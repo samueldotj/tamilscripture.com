@@ -5,11 +5,14 @@
 	import ActionBar from './ActionBar.svelte';
 	import Picker from './Picker.svelte';
 	import XrefPanel from './XrefPanel.svelte';
+	import NoteSheet from './NoteSheet.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { loadXrefs } from '$lib/content/load';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
 	import type { XrefChapter } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
+	import { session } from '$lib/supabase/session.svelte';
+	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, type Highlight, type HighlightColor, type Note } from '$lib/personal/repo';
 
 	let { data }: { data: ChapterPageData } = $props();
 
@@ -87,6 +90,56 @@
 		return () => { cancelled = true; };
 	});
 
+	// Personal data (R-10.x): loaded after paint, only when signed in.
+	let userHighlights = $state<Highlight[]>([]);
+	let userNotes = $state<Note[]>([]);
+	let noteOpen = $state<{ start: number; end: number; existing: Note | null } | null>(null);
+	const highlightMap = $derived.by(() => {
+		const m = new Map<string, string>();
+		for (const h of userHighlights) for (let v = h.verse_start; v <= h.verse_end; v++) m.set(`${data.book.code}.${data.chapter}.${v}`, h.color);
+		return m;
+	});
+	const notedSet = $derived.by(() => {
+		const s = new Set<string>();
+		for (const n of userNotes) for (let v = n.verse_start; v <= n.verse_end; v++) s.add(`${data.book.code}.${data.chapter}.${v}`);
+		return s;
+	});
+	async function loadPersonal() {
+		try {
+			[userHighlights, userNotes] = await Promise.all([chapterHighlights(data.book.code, data.chapter), chapterNotes(data.book.code, data.chapter)]);
+		} catch { /* offline or signed out */ }
+	}
+	$effect(() => {
+		void data.canonical;
+		userHighlights = [];
+		userNotes = [];
+		noteOpen = null;
+		if (!session.ready || !session.signedIn) return;
+		loadPersonal();
+		recordVisit(data.book.code, data.chapter, primary.code, data.range).catch(() => {});
+	});
+	const selectedNumbers = $derived([...selected].map((id) => Number(id.split('.')[2])).filter((n) => !isNaN(n)).sort((a, b) => a - b));
+	const currentColor = $derived.by(() => {
+		if (!selected.size) return null;
+		const colors = new Set([...selected].map((id) => highlightMap.get(id) ?? null));
+		return colors.size === 1 ? ([...colors][0] as HighlightColor | null) : null;
+	});
+	async function applyHighlight(color: HighlightColor | null) {
+		if (!selectedNumbers.length) return;
+		try {
+			if (color) await setHighlight(data.book.code, data.chapter, selectedNumbers, color);
+			else await removeHighlight(data.book.code, data.chapter, selectedNumbers);
+			await loadPersonal();
+		} catch { /* surface later via toast */ }
+	}
+	function openNote(forId?: string) {
+		const nums = forId ? [Number(forId.split('.')[2])] : selectedNumbers;
+		if (!nums.length) return;
+		const start = nums[0], end = nums[nums.length - 1];
+		const existing = userNotes.find((n) => n.verse_start <= start && n.verse_end >= start) ?? null;
+		noteOpen = existing ? { start: existing.verse_start, end: existing.verse_end, existing } : { start, end, existing: null };
+	}
+
 	afterNavigate(() => {
 		if (!data.range) return;
 		const first = document.getElementById(`${data.book.code}.${data.chapter}.${data.range.start}`)
@@ -162,7 +215,7 @@
 	<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
 
 	{#if data.chapters.length === 1}
-		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} />
+		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} />
 	{:else}
 		<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 	{/if}
@@ -180,7 +233,13 @@
 	</footer>
 </div>
 
-<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} onclear={() => (selected = new Set())} />
+<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} onclear={() => (selected = new Set())} onhighlight={applyHighlight} onnote={() => openNote()} />
+
+{#if noteOpen}
+	<NoteSheet book={data.book.code} chapter={data.chapter} verseStart={noteOpen.start} verseEnd={noteOpen.end} existing={noteOpen.existing} lang={ui}
+		label={`${bookName} ${data.chapter}:${noteOpen.start}${noteOpen.end !== noteOpen.start ? `-${noteOpen.end}` : ''}`}
+		onclose={() => (noteOpen = null)} onsaved={() => loadPersonal()} />
+{/if}
 
 {#if xrefOpen && xrefs?.[xrefOpen]}
 	<XrefPanel verseId={xrefOpen} targets={xrefs[xrefOpen]} version={primary.code} lang={ui} onclose={() => (xrefOpen = null)} />

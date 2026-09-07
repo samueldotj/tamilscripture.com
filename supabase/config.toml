@@ -155,6 +155,11 @@ max_indexes = 5
 enabled = true
 # The base URL of your website. Used as an allow-list for redirects and for constructing URLs used
 # in emails.
+# Production values are set in the dashboard (Authentication → URL Configuration):
+#   Site URL: https://www.tamilscripture.com
+#   Redirect URLs: https://www.tamilscripture.com/**, https://tamilscripturecom.vercel.app/**,
+#                  http://localhost:5173/**, http://localhost:5180/**
+# config.toml is not pushed to the project (it would also reset provider toggles).
 site_url = "http://127.0.0.1:3000"
 # The public URL that Auth serves on. Defaults to the API external URL with `/auth/v1` appended.
 # external_url = ""

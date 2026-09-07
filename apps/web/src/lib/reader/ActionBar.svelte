@@ -1,8 +1,8 @@
 <script lang="ts">
-	// Floating actions for the current verse selection: copy text, share link, clear.
-	import type { ChapterJson } from '$lib/content/types';
-	import type { Book } from '$lib/content/types';
+	// Floating actions for the current verse selection: highlight, note, copy, share, clear.
+	import type { ChapterJson, Book } from '$lib/content/types';
 	import { chapterUrl } from '$lib/content/manifest';
+	import { COLORS, type HighlightColor } from '$lib/personal/repo';
 
 	let {
 		selected,
@@ -11,7 +11,11 @@
 		versionPath,
 		versionShort,
 		lang,
-		onclear
+		signedIn = false,
+		currentColor = null,
+		onclear,
+		onhighlight,
+		onnote
 	}: {
 		selected: Set<string>;
 		chapter: ChapterJson;
@@ -19,13 +23,16 @@
 		versionPath: string;
 		versionShort: string;
 		lang: 'ta' | 'en';
+		signedIn?: boolean;
+		currentColor?: HighlightColor | null;
 		onclear: () => void;
+		onhighlight?: (color: HighlightColor | null) => void;
+		onnote?: () => void;
 	} = $props();
 
 	let toast = $state('');
 	const ta = $derived(lang === 'ta');
 
-	// Verse numbers in the selection, sorted; range string like "16-18" or "3,5".
 	const numbers = $derived(
 		[...selected].map((id) => Number(id.split('.')[2])).filter((n) => !isNaN(n)).sort((a, b) => a - b)
 	);
@@ -57,37 +64,35 @@
 		}
 		return `${out.join(' ')}\n— ${label} (${versionShort})\n${url}`;
 	}
-
 	async function copy() {
-		try {
-			await navigator.clipboard.writeText(selectedText());
-			flash(ta ? 'நகலெடுக்கப்பட்டது' : 'Copied');
-		} catch {
-			flash(ta ? 'நகலெடுக்க முடியவில்லை' : 'Could not copy');
-		}
+		try { await navigator.clipboard.writeText(selectedText()); flash(ta ? 'நகலெடுக்கப்பட்டது' : 'Copied'); }
+		catch { flash(ta ? 'நகலெடுக்க முடியவில்லை' : 'Could not copy'); }
 	}
-
 	async function share() {
 		const data = { title: label, text: selectedText(), url };
-		if (navigator.share) {
-			try { await navigator.share(data); } catch { /* cancelled */ }
-		} else {
-			try {
-				await navigator.clipboard.writeText(url);
-				flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied');
-			} catch { flash(url); }
-		}
+		if (navigator.share) { try { await navigator.share(data); } catch { /* cancelled */ } }
+		else { try { await navigator.clipboard.writeText(url); flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied'); } catch { flash(url); } }
 	}
-
-	function flash(msg: string) {
-		toast = msg;
-		setTimeout(() => (toast = ''), 1800);
-	}
+	function flash(msg: string) { toast = msg; setTimeout(() => (toast = ''), 1800); }
+	const colorNames: Record<HighlightColor, [string, string]> = {
+		yellow: ['மஞ்சள்', 'Yellow'], green: ['பச்சை', 'Green'], blue: ['நீலம்', 'Blue'], pink: ['இளஞ்சிவப்பு', 'Pink']
+	};
+	const signinHref = $derived(`/signin?next=${encodeURIComponent(location.pathname)}`);
 </script>
 
 {#if selected.size}
 	<div class="bar" role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
 		<span class="label">{label}</span>
+		{#if signedIn}
+			<span class="colors" role="group" aria-label={ta ? 'அடிக்கோடு' : 'Highlight'}>
+				{#each COLORS as c (c)}
+					<button type="button" class="swatch {c}" class:on={currentColor === c} aria-label={ta ? colorNames[c][0] : colorNames[c][1]} aria-pressed={currentColor === c} onclick={() => onhighlight?.(currentColor === c ? null : c)}></button>
+				{/each}
+			</span>
+			<button type="button" onclick={() => onnote?.()}>{ta ? 'குறிப்பு' : 'Note'}</button>
+		{:else}
+			<a class="btn" href={signinHref}>{ta ? 'அடிக்கோடு · குறிப்பு' : 'Highlight · Note'}</a>
+		{/if}
 		<button type="button" onclick={copy}>{ta ? 'நகல்' : 'Copy'}</button>
 		<button type="button" onclick={share}>{ta ? 'பகிர்' : 'Share'}</button>
 		<button type="button" class="ghost" onclick={onclear} aria-label={ta ? 'தெரிவை நீக்கு' : 'Clear selection'}>×</button>
@@ -96,10 +101,14 @@
 {/if}
 
 <style>
-	.bar { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.6rem 0.5rem 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18); max-width: calc(100vw - 2rem); }
+	.bar { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; display: flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.6rem 0.5rem 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18); max-width: calc(100vw - 1rem); flex-wrap: wrap; justify-content: center; }
 	.label { font-family: var(--tamil); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
-	button { border: 1px solid var(--line); background: var(--surface-2); color: inherit; border-radius: 999px; padding: 0.4rem 0.9rem; min-height: 40px; cursor: pointer; font-family: var(--tamil); }
-	button:hover { border-color: var(--accent); }
+	button, .btn { border: 1px solid var(--line); background: var(--surface-2); color: inherit; border-radius: 999px; padding: 0.4rem 0.9rem; min-height: 40px; cursor: pointer; font-family: var(--tamil); text-decoration: none; display: inline-flex; align-items: center; }
+	button:hover, .btn:hover { border-color: var(--accent); }
 	.ghost { background: none; border-color: transparent; font-size: 1.3rem; line-height: 1; min-width: 40px; padding: 0; color: var(--muted); }
+	.colors { display: inline-flex; gap: 0.3rem; padding: 0 0.2rem; }
+	.swatch { width: 28px; height: 28px; min-height: 28px; padding: 0; border-radius: 50%; border: 2px solid transparent; }
+	.swatch.yellow { background: var(--hl-yellow); } .swatch.green { background: var(--hl-green); } .swatch.blue { background: var(--hl-blue); } .swatch.pink { background: var(--hl-pink); }
+	.swatch.on { border-color: var(--ink); }
 	.toast { position: absolute; bottom: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 0.85rem; padding: 0.35rem 0.7rem; border-radius: 6px; white-space: nowrap; }
 </style>
