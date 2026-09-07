@@ -1,3 +1,7 @@
-# allow crawling everything by default
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /me/
+Disallow: /api/
+
+Sitemap: https://www.tamilscripture.com/sitemap.xml

@@ -118,23 +118,23 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.6 | Chapter route rendered from JSON via ISR; `Chapter`, `Verse` components | R-1.1, ADR-1 | ☑ |
 | 1.7 | Verse and range routes with ISR, selected-verse highlight, per-verse title, description, Open Graph tags | R-1.12, R-1.15, ADR-1 | ☑ |
 | 1.8 | Shorthand (`/jn3.16`) and Tamil-path (`/யோவான்/3/16`) redirectors; Node runtime rather than edge (see 0.11) | R-1.12, ADR-7 | ☑ |
-| 1.9 | Book page with chapter grid and translation introduction ☑; compact in-reader picker reflecting current position ☐ | R-1.1 | ◧ |
+| 1.9 | Book page with chapter grid and translation introduction; in-reader version/book/chapter picker reflecting the current position | R-1.1 | ☑ |
 | 1.10 | Reference box in the header wired to `bible-wasm`, with book suggestions and a not-recognised hint | R-1.2 | ☑ |
-| 1.11 | History handling: `pushState` per passage, `replaceState` for toggles, scroll anchor restore | R-1.3 | ☐ |
-| 1.12 | Breadcrumbs with JSON-LD `BreadcrumbList` | R-1.4 | ☐ |
-| 1.13 | Previous and next chapter controls, swipe on touch, neighbour prefetch | R-1.5 | ☐ |
-| 1.14 | Verse selection and action bar (copy, share link; other actions stubbed until M2/M3) | R-1.7 | ☐ |
-| 1.15 | Reader and Standard formats as CSS state; inline format-stamping script in `app.html` | R-8.1, R-8.3, ADR-6 | ☐ |
-| 1.16 | Paratext toggles (introductions, headings, footnotes, cross-ref markers) persisted in local storage | R-1.8, R-1.14 | ☐ |
-| 1.17 | Reader settings: font size, line height, Tamil typeface choice; pick default face after testing on low-end Android | R-1.10, open question 6 | ☐ |
+| 1.11 | History handling: SvelteKit client navigation per passage (one history entry each), settings changes never navigate, scroll restored on back | R-1.3 | ☑ |
+| 1.12 | Breadcrumbs with JSON-LD `BreadcrumbList` | R-1.4 | ☑ |
+| 1.13 | Previous and next chapter controls, swipe on touch, ← → keys, hover prefetch | R-1.5 | ☑ |
+| 1.14 | Verse selection (tap verse numbers) and action bar: copy text with reference and link, share via Web Share or link copy | R-1.7 | ☑ |
+| 1.15 | Reader, Standard and Cross-reference formats as CSS classes on `<html>`; inline pre-paint stamp in `app.html` | R-8.1, R-8.3, ADR-6 | ☑ |
+| 1.16 | Paratext toggles (introductions, headings, footnotes, cross-ref markers) persisted in local storage; default version cookie for the shorthand redirector | R-1.8, R-1.14 | ☑ |
+| 1.17 | Reader settings: text size (5 steps) ☑, theme ☑, UI language ☑; Tamil typeface choice and low-end Android check ☐ | R-1.10, open question 6 | ◧ |
 | 1.18 | Tamil font subsetting script, preload, `size-adjust` fallback metrics | design §10 | ☐ |
 | 1.19 | Tamil and English interface strings; default from browser language | requirements §12 | ☐ |
-| 1.20 | PWA shell: manifest, service worker precache, stale-while-revalidate for last 20 chapters | requirements §12, design §9 | ☐ |
-| 1.21 | About page with licences and attribution; footer notice on reading pages | R-3.5 | ☐ |
-| 1.22 | Sitemaps per version, `rel="canonical"`, Tamil page titles | R-1.12, requirements §12 | ☐ |
+| 1.20 | PWA shell: web manifest with icons, service worker (shell precache, content JSON cache-first, last 20 reader pages offline) | requirements §12, design §9 | ☑ |
+| 1.21 | About page with licences and attribution; footer notice on reading pages; site footer link | R-3.5 | ☑ |
+| 1.22 | Sitemap index plus one sitemap per version, `robots.txt`, `rel="canonical"`, Tamil page titles | R-1.12, requirements §12 | ☑ |
 | 1.23 | CI guards: Lighthouse budgets, `size-limit` (120 kB reader route), Playwright text-visible-under-500 ms on throttled profile | design §10 | ☐ |
 | 1.24 | Accessibility pass: `lang` attributes, focus states, 44 px targets, WCAG 2.2 AA contrast | requirements §12 | ☐ |
-| 1.25 | Production deploy on `www.tamilscripture.com`; uptime probe from Chennai; Sentry and Vercel Analytics | design §11 | ☐ |
+| 1.25 | Production deploy on `www.tamilscripture.com` ☑; Vercel Analytics ☑; Sentry ☐ (needs DSN); uptime probe ☐ | design §11 | ◧ |
 
 ### M2 · Study
 
@@ -187,8 +187,8 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 5.1 | Keyboard shortcuts | R-1.6 | ☐ |
-| 5.2 | Light, dark and system theme | R-1.11 | ☐ |
+| 5.1 | Keyboard shortcuts (← → chapters, / focuses the reference box, Esc clears) | R-1.6 | ☑ |
+| 5.2 | Light, dark and system theme | R-1.11 | ☑ |
 | 5.3 | Autocomplete for book names and recent searches | R-5.7 | ☐ |
 | 5.4 | Restrict search to testament, book or chapter range | R-5.8 | ☐ |
 | 5.5 | Romanised Tamil search input | R-5.4 stretch | ☐ |

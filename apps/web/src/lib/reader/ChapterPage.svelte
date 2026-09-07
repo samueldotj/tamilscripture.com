@@ -2,6 +2,7 @@
 	import { afterNavigate, goto } from '$app/navigation';
 	import Chapter from './Chapter.svelte';
 	import ActionBar from './ActionBar.svelte';
+	import Picker from './Picker.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
 	import { settings } from '$lib/settings/store.svelte';
@@ -134,7 +135,7 @@
 
 	<div class="pager">
 		{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
-		<span class="version-tag">{data.versions.map((v) => v.short).join(' + ')}</span>
+		<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
 		{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
 	</div>
 
@@ -174,7 +175,6 @@
 	.pager { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; margin: 0 0 1rem; }
 	.pager a:last-child { text-align: right; }
 	.pager.bottom { margin-top: 2rem; }
-	.version-tag { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 	h1 { font-family: var(--serif); font-weight: 600; font-size: 1.8rem; margin: 0 0 1rem; }
 	h1[lang='ta'] { font-family: var(--tamil); }
 	.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }

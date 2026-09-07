@@ -5,6 +5,8 @@
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
 	import { settings } from '$lib/settings/store.svelte';
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
 
 	let { children } = $props();
 	let settingsOpen = $state(false);
@@ -13,7 +15,10 @@
 	const versionPath = $derived(page.params.versions ?? settings.value.version);
 	const ui = $derived(settings.value.uiLang);
 
-	onMount(() => settings.stamp());
+	onMount(() => {
+		settings.stamp();
+		inject({ mode: dev ? 'development' : 'production' });
+	});
 
 	function onKey(e: KeyboardEvent) {
 		const t = e.target as HTMLElement | null;
@@ -46,6 +51,11 @@
 	{@render children()}
 </main>
 
+<footer class="site-foot">
+	<a href="/about">{ui === 'ta' ? 'பற்றி · உரிமங்கள்' : 'About · licences'}</a>
+	<a href="https://github.com/samueldotj/tamilscripture.com">GitHub</a>
+</footer>
+
 <style>
 	.site { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
 	.bar { display: flex; align-items: center; gap: 0.75rem; max-width: 60rem; margin: 0 auto; padding: 0.5rem 1rem; }
@@ -56,5 +66,7 @@
 	.gear { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--muted); cursor: pointer; }
 	.gear:hover { color: var(--accent); border-color: var(--accent); }
 	.page { max-width: 60rem; margin: 0 auto; padding: 1.25rem 1rem 4rem; }
+	.site-foot { max-width: 60rem; margin: 0 auto; padding: 1rem 1rem 2rem; display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); }
+	.site-foot a { color: inherit; }
 	@media (max-width: 480px) { .brand .en { display: none; } .ref { max-width: none; } }
 </style>
