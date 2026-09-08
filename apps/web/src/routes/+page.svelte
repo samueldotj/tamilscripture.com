@@ -1,9 +1,12 @@
 <script lang="ts">
-	import { chapterUrl, DEFAULT_VERSION, manifest } from '$lib/content/manifest';
+	import { chapterUrl, manifest } from '$lib/content/manifest';
+	import { settings } from '$lib/settings/store.svelte';
 
 	const ot = manifest.books.filter((b) => b.testament === 'OT');
 	const nt = manifest.books.filter((b) => b.testament === 'NT');
-	const version = DEFAULT_VERSION.toLowerCase();
+	// Default version comes from settings (changeable in the settings panel or the reader picker).
+	const version = $derived(settings.value.version);
+	const ta = $derived(settings.value.uiLang === 'ta');
 </script>
 
 <svelte:head>
@@ -13,16 +16,7 @@
 </svelte:head>
 
 <h1 lang="ta">தமிழ் வேதாகமம்</h1>
-<p class="lede">Tamil Bible online. Pick a book to start reading, or open a link like <code>/irvtam/john/3/16</code>.</p>
-
-<section class="versions">
-	{#each manifest.versions as v (v.code)}
-		<a class="version" href={chapterUrl(v.code.toLowerCase(), manifest.books[0], 1)}>
-			<span class="code">{v.short}</span>
-			<span class="name" lang={v.lang}>{v.name_native}</span>
-		</a>
-	{/each}
-</section>
+<p class="lede">{ta ? 'வாசிக்கத் தொடங்க ஒரு புத்தகத்தைத் தேர்வு செய்யுங்கள், அல்லது மேலே யோவா 3:16 போல தட்டச்சு செய்யுங்கள்.' : 'Pick a book to start reading, or type a reference like John 3:16 above.'}</p>
 
 <section class="books">
 	<h2 lang="ta">பழைய ஏற்பாடு <span class="en">Old Testament</span></h2>
@@ -41,11 +35,7 @@
 
 <style>
 	h1 { font-family: var(--tamil); font-size: 2rem; margin: 0 0 0.5rem; }
-	.lede { color: var(--muted); max-width: 40rem; }
-	.versions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 2rem; }
-	.version { display: grid; gap: 0.15rem; padding: 0.6rem 0.9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); text-decoration: none; color: inherit; min-width: 9rem; }
-	.version .code { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--accent); font-weight: 600; }
-	.version .name { font-size: 0.95rem; }
+	.lede { color: var(--muted); max-width: 40rem; font-family: var(--tamil); margin-bottom: 1.5rem; }
 	.books h2 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
 	.books .en { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); font-weight: 400; }
 	.books ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 0.25rem 1rem; }

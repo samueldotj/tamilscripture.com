@@ -43,6 +43,9 @@
 			<span class="en">tamilscripture.com</span>
 		</a>
 		<div class="ref"><ReferenceBox {versionPath} lang={ui} /></div>
+		<button class="lang" type="button" aria-label={ui === 'ta' ? 'Switch interface to English' : 'இடைமுகத்தை தமிழுக்கு மாற்று'} title={ui === 'ta' ? 'English' : 'தமிழ்'} onclick={() => settings.update({ uiLang: ui === 'ta' ? 'en' : 'ta' })}>
+			<span class:on={ui === 'ta'} lang="ta">த</span><span class="sep" aria-hidden="true">/</span><span class:on={ui === 'en'} lang="en">EN</span>
+		</button>
 		{#if session.ready && session.signedIn}
 			<div class="user">
 				<button class="avatar" type="button" aria-label={ui === 'ta' ? 'கணக்கு' : 'Account'} aria-expanded={menuOpen} onclick={() => (menuOpen = !menuOpen)}>
@@ -87,6 +90,11 @@
 	.brand .ta { font-family: var(--tamil); font-weight: 600; font-size: 1.05rem; }
 	.brand .en { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; }
 	.ref { flex: 1; max-width: 22rem; margin-left: auto; }
+	.lang { flex: none; display: inline-flex; align-items: center; gap: 0.15rem; height: 44px; padding: 0 0.6rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--muted); cursor: pointer; font-size: 0.85rem; letter-spacing: 0.02em; }
+	.lang [lang='ta'] { font-family: var(--tamil); font-size: 1rem; }
+	.lang .on { color: var(--accent); font-weight: 600; }
+	.lang .sep { opacity: 0.5; }
+	.lang:hover { border-color: var(--accent); }
 	.signin { flex: none; font-family: var(--tamil); text-decoration: none; padding: 0.4rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; min-height: 44px; display: inline-flex; align-items: center; color: inherit; white-space: nowrap; }
 	.user { position: relative; flex: none; }
 	.avatar { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--accent); color: #fff; font-weight: 600; cursor: pointer; }

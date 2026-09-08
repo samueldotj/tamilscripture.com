@@ -93,14 +93,6 @@
 				{/each}
 			</select>
 		</fieldset>
-
-		<fieldset>
-			<legend>{ta ? 'இடைமுக மொழி' : 'Interface language'}</legend>
-			<div class="seg" role="radiogroup">
-				<button type="button" role="radio" aria-checked={s.uiLang === 'ta'} class:on={s.uiLang === 'ta'} onclick={() => settings.update({ uiLang: 'ta' })}>தமிழ்</button>
-				<button type="button" role="radio" aria-checked={s.uiLang === 'en'} class:on={s.uiLang === 'en'} onclick={() => settings.update({ uiLang: 'en' })}>English</button>
-			</div>
-		</fieldset>
 	</div>
 {/if}
 
