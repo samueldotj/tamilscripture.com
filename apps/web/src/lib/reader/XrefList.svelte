@@ -62,25 +62,27 @@
 		return parts.join(' ');
 	}
 	const textLang = $derived(version.toUpperCase().endsWith('TAM') || version.toUpperCase() === 'TCV' ? 'ta' : 'en');
+
+	// Resolve every target's text before rendering the list, so items appear
+	// at their final height and nothing below them shifts (CLS budget).
+	const items = $derived(Promise.all(shown.map(async (t) => ({ t, txt: await text(t).catch(() => '—') }))));
 </script>
 
-<ol>
-	{#each shown as t (t.to + (t.end ?? ''))}
-		<li>
-			<div class="ref">
-				<a href={href(t)} onclick={() => onnavigate?.()} lang={ta ? 'ta' : 'en'}>{label(t)}</a>
-				<span class="alt" lang={ta ? 'en' : 'ta'}>{altBook(t)}</span>
-			</div>
-			{#await text(t)}
-				<p class="loading">…</p>
-			{:then txt}
+{#await items}
+	<p class="loading">…</p>
+{:then list}
+	<ol>
+		{#each list as { t, txt } (t.to + (t.end ?? ''))}
+			<li>
+				<div class="ref">
+					<a href={href(t)} onclick={() => onnavigate?.()} lang={ta ? 'ta' : 'en'}>{label(t)}</a>
+					<span class="alt" lang={ta ? 'en' : 'ta'}>{altBook(t)}</span>
+				</div>
 				<p lang={textLang}>{txt}</p>
-			{:catch}
-				<p class="loading">—</p>
-			{/await}
-		</li>
-	{/each}
-</ol>
+			</li>
+		{/each}
+	</ol>
+{/await}
 {#if targets.length > 10 && !showAll}
 	<button type="button" class="chip more" onclick={() => (showAll = true)}>{ta ? `மேலும் ${targets.length - 10}` : `${targets.length - 10} more`}</button>
 {/if}
