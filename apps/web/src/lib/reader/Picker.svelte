@@ -38,18 +38,18 @@
 </script>
 
 <div class="picker" role="group" aria-label={ta ? 'இடம் தேர்வு' : 'Choose passage'}>
-	<select aria-label={ta ? 'மொழிபெயர்ப்பு' : 'Version'} value={versions[0].code} onchange={onVersion}>
+	<select class="chip" aria-label={ta ? 'மொழிபெயர்ப்பு' : 'Version'} value={versions[0].code} onchange={onVersion}>
 		{#each manifest.versions as v (v.code)}
 			<option value={v.code} disabled={!v.books.includes(book.code)}>{v.short}</option>
 		{/each}
 	</select>
-	<select class="compare" aria-label={ta ? 'ஒப்பிடு' : 'Compare with'} value={secondary} onchange={onCompare}>
+	<select class="chip compare" class:dashed={!secondary} aria-label={ta ? 'ஒப்பிடு' : 'Compare with'} value={secondary} onchange={onCompare}>
 		<option value="">{ta ? '+ ஒப்பிடு' : '+ compare'}</option>
 		{#each manifest.versions.filter((v) => v.code !== versions[0].code) as v (v.code)}
 			<option value={v.code} disabled={!v.books.includes(book.code)}>{v.short}</option>
 		{/each}
 	</select>
-	<select aria-label={ta ? 'புத்தகம்' : 'Book'} value={book.code} onchange={onBook} lang={ta ? 'ta' : 'en'}>
+	<select class="chip" aria-label={ta ? 'புத்தகம்' : 'Book'} value={book.code} onchange={onBook} lang={ta ? 'ta' : 'en'}>
 		<optgroup label={ta ? 'பழைய ஏற்பாடு' : 'Old Testament'}>
 			{#each ot as b (b.code)}<option value={b.code}>{ta ? b.name_ta : b.name_en}</option>{/each}
 		</optgroup>
@@ -58,7 +58,7 @@
 		</optgroup>
 	</select>
 	{#if chapter !== undefined}
-		<select aria-label={ta ? 'அதிகாரம்' : 'Chapter'} value={String(chapter)} onchange={onChapter}>
+		<select class="chip" aria-label={ta ? 'அதிகாரம்' : 'Chapter'} value={String(chapter)} onchange={onChapter}>
 			{#each Array.from({ length: book.chapters }, (_, i) => i + 1) as c (c)}
 				<option value={String(c)}>{c}</option>
 			{/each}
@@ -67,8 +67,9 @@
 </div>
 
 <style>
-	.picker { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; }
-	select { font: inherit; font-size: 0.92rem; padding: 0.4rem 0.5rem; min-height: 40px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: inherit; max-width: 100%; }
-	select[lang='ta'] { font-family: var(--tamil); }
-	.compare { color: var(--muted); }
+	.picker { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+	select.chip { padding: 0.5rem 0.75rem; max-width: 100%; font-family: var(--sans); }
+	select.chip[lang='ta'] { font-family: var(--tamil); }
+	select.chip option { font-weight: 400; }
+	.compare.dashed { color: var(--accent); }
 </style>

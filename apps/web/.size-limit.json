@@ -7,7 +7,10 @@
   },
   {
     "name": "Reader route JavaScript excluding lazy chunks (gzip)",
-    "path": [".svelte-kit/output/client/_app/immutable/entry/*.js", ".svelte-kit/output/client/_app/immutable/nodes/*.js"],
+    "path": [
+      ".svelte-kit/output/client/_app/immutable/entry/*.js",
+      ".svelte-kit/output/client/_app/immutable/nodes/*.js"
+    ],
     "limit": "120 kB",
     "gzip": true
   },
@@ -18,8 +21,8 @@
     "gzip": true
   },
   {
-    "name": "Tamil serif regular font",
-    "path": "static/fonts/noto-serif-tamil-regular.woff2",
+    "name": "Tamil regular font (Mukta Malar subset)",
+    "path": "static/fonts/mukta-malar-regular.woff2",
     "limit": "80 kB",
     "gzip": false
   }

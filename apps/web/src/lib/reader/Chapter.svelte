@@ -116,23 +116,24 @@
 </article>
 
 <style>
-	.chapter { max-width: 42rem; }
-	.chapter[lang='ta'] { font-family: var(--tamil); font-size: 1.05rem; line-height: 1.9; }
-	.chapter[lang='en'] { font-family: var(--serif); font-size: 1.05rem; line-height: 1.7; }
+	/* Scripture measure follows the redesign: Tamil 22px/1.9, English 19px/1.8 at the default step. */
+	.chapter { max-width: 40rem; }
+	.chapter[lang='ta'] { font-family: var(--tamil); font-size: 1.3rem; line-height: 1.9; }
+	.chapter[lang='en'] { font-family: var(--en); font-size: 1.12rem; line-height: 1.8; color: var(--ink-en); }
 	.chapter-label { display: none; }
-	.heading { font-family: var(--sans); font-weight: 600; margin: 1.6em 0 0.5em; line-height: 1.3; }
+	.heading { font-family: var(--sans); font-weight: 600; margin: 1.5em 0 0.6em; line-height: 1.35; color: var(--amber); text-wrap: balance; }
 	.chapter[lang='ta'] .heading { font-family: var(--tamil); }
-	h2.heading.level-1 { font-size: 1.05rem; }
+	h2.heading.level-1 { font-size: 1.06rem; }
 	h3.heading { font-size: 1rem; }
-	h2.heading.major { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.04em; }
+	h2.heading.major { font-size: 1.2rem; letter-spacing: 0.02em; }
 	.heading.ref { font-size: 0.85rem; color: var(--muted); font-weight: 400; margin-top: 0; }
-	.heading.speaker { font-style: italic; font-weight: 400; margin-bottom: 0; }
-	.para { margin: 0 0 0.9em; }
+	.heading.speaker { font-style: italic; font-weight: 400; margin-bottom: 0; color: var(--ink-2); }
+	.para { margin: 0 0 1em; text-wrap: pretty; }
 	.style-q1, .style-qm1 { margin: 0; padding-left: 1.5em; text-indent: -1.5em; }
 	.style-q2, .style-qm2 { margin: 0; padding-left: 3em; text-indent: -1.5em; }
 	.style-q3 { margin: 0; padding-left: 4.5em; text-indent: -1.5em; }
 	.style-qr { margin: 0; text-align: right; }
-	.style-qc, .style-pc { margin: 0 0 0.9em; text-align: center; }
+	.style-qc, .style-pc { margin: 0 0 1em; text-align: center; }
 	.style-m, .style-nb { text-indent: 0; }
 	.style-mi, .style-pi1, .style-pm, .style-pmo, .style-pmc, .style-pr { margin-left: 1.5em; }
 	.style-li1 { margin: 0; padding-left: 1.5em; }
@@ -140,8 +141,9 @@
 	.style-li3 { margin: 0; padding-left: 4.5em; }
 	.style-li4 { margin: 0; padding-left: 6em; }
 	.style-d { font-style: italic; color: var(--muted); }
-	.blank { height: 0.9em; }
-	.footnotes { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.75rem; }
+	.blank { height: 1em; }
+	.footnotes { margin-top: 2rem; font-size: 0.85rem; line-height: 1.6; color: var(--ink-2); border-top: var(--bw) solid var(--line); padding-top: 0.9rem; font-family: var(--sans); }
+	.chapter[lang='ta'] .footnotes { font-family: var(--tamil); }
 	.footnotes ol { padding-left: 1.5rem; margin: 0; }
-	.fn-ref { font-weight: 600; }
+	.fn-ref { font-weight: 600; color: var(--muted); }
 </style>

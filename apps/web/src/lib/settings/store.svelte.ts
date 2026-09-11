@@ -5,7 +5,7 @@ import { browser } from '$app/environment';
 
 export type Format = 'reader' | 'standard' | 'xref';
 export type Theme = 'system' | 'light' | 'dark';
-export type TamilFont = 'serif' | 'sans' | 'system';
+export type TamilFont = 'mukta' | 'sans' | 'serif' | 'system';
 
 export interface Settings {
 	format: Format;
@@ -25,7 +25,7 @@ export interface Settings {
 
 export const DEFAULTS: Settings = {
 	format: 'standard',
-	tamilFont: 'serif',
+	tamilFont: 'mukta',
 	headings: true,
 	intro: true,
 	footnotes: true,

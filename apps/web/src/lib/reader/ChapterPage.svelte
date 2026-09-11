@@ -21,6 +21,7 @@
 	const ui = $derived(settings.value.uiLang);
 	const isTamil = $derived(ui === 'ta');
 	const bookName = $derived(primary.lang === 'ta' ? data.book.name_ta : data.book.name_en);
+	const altName = $derived(primary.lang === 'ta' ? data.book.name_en : data.book.name_ta);
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));
 	const rangeLabel = $derived(
 		data.range ? `${data.range.start}${data.range.end !== data.range.start ? `-${data.range.end}` : ''}` : ''
@@ -165,7 +166,12 @@
 		noteOpen = existing ? { start: existing.verse_start, end: existing.verse_end, existing } : { start, end, existing: null };
 	}
 
+	// Text size popover ("AA" in the toolbar), per the redesign's reader screen.
+	let sizeOpen = $state(false);
+	const fontSize = $derived(settings.value.fontSize);
+
 	afterNavigate(() => {
+		sizeOpen = false;
 		if (!data.range) return;
 		const first = document.getElementById(`${data.book.code}.${data.chapter}.${data.range.start}`)
 			?? document.querySelector(`[data-verse="${[...idsFromRange()][0]}"]`);
@@ -188,7 +194,10 @@
 		if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
 		if (e.key === 'ArrowRight' && navUrl(next)) goto(navUrl(next)!);
 		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
-		else if (e.key === 'Escape' && selected.size) selected = new Set();
+		else if (e.key === 'Escape') {
+			if (sizeOpen) sizeOpen = false;
+			else if (selected.size) selected = new Set();
+		}
 	}
 </script>
 
@@ -214,49 +223,73 @@
 </svelte:head>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -- swipe is a shortcut for the prev/next links below -->
-<div class="reader" ontouchstart={touchStart} ontouchend={touchEnd}>
-	<nav class="crumbs" aria-label="Breadcrumb">
-		<a href="/">Bible</a>
-		<span aria-hidden="true">›</span>
-		<span>{testamentName}</span>
-		<span aria-hidden="true">›</span>
-		<a href={chapterUrl(versionPath, data.book)}>{bookName}</a>
-		<span aria-hidden="true">›</span>
-		{#if data.range}
-			<a href={chapterUrl(versionPath, data.book, data.chapter)}>{data.chapter}</a>
-			<span aria-hidden="true">›</span>
-			<span aria-current="page">{rangeLabel}</span>
-		{:else}
-			<span aria-current="page">{data.chapter}</span>
-		{/if}
-	</nav>
-
-	<div class="pager">
-		{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
+<div class="reader" class:dual={data.chapters.length > 1} ontouchstart={touchStart} ontouchend={touchEnd}>
+	<div class="toolbar">
 		<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
-		{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
+		<div class="right">
+			<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
+			{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
+			{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
+		</div>
 	</div>
 
-	<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
+	<div class="measure">
+		<nav class="crumbs" aria-label="Breadcrumb">
+			<a href="/">Bible</a>
+			<span aria-hidden="true">›</span>
+			<span>{testamentName}</span>
+			<span aria-hidden="true">›</span>
+			<a href={chapterUrl(versionPath, data.book)} lang={primary.lang}>{bookName}</a>
+			<span aria-hidden="true">›</span>
+			{#if data.range}
+				<a href={chapterUrl(versionPath, data.book, data.chapter)}>{data.chapter}</a>
+				<span aria-hidden="true">›</span>
+				<span aria-current="page">{rangeLabel}</span>
+			{:else}
+				<span aria-current="page">{data.chapter}</span>
+			{/if}
+		</nav>
 
-	{#if data.chapters.length === 1}
-		<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} />
-	{:else}
-		<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
-	{/if}
+		<div class="titles">
+			<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
+			<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}</span>
+		</div>
 
-	<div class="pager bottom">
-		{#if navUrl(prev)}<a href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முந்தைய' : 'Previous'}</a>{:else}<span></span>{/if}
-		<span></span>
-		{#if navUrl(next)}<a href={navUrl(next)} rel="next">{isTamil ? 'அடுத்த' : 'Next'} ›</a>{:else}<span></span>{/if}
+		{#if data.chapters.length === 1}
+			<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} />
+		{:else}
+			<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
+		{/if}
+
+		<nav class="pager" aria-label={isTamil ? 'அதிகாரங்கள்' : 'Chapters'}>
+			{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Previous'}</a>{:else}<span class="chip spacer" aria-hidden="true"></span>{/if}
+			<a class="chip primary round list" href={chapterUrl(versionPath, data.book)} aria-label={isTamil ? `${bookName}: அதிகாரங்கள்` : `${bookName}: all chapters`} title={isTamil ? 'அதிகாரங்கள்' : 'All chapters'}>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
+			</a>
+			{#if navUrl(next)}<a class="chip" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{:else}<span class="chip spacer" aria-hidden="true"></span>{/if}
+		</nav>
+
+		<footer class="attribution">
+			{#each data.versions as v (v.code)}
+				<p><a href={v.source_url} rel="license">{v.attribution}</a></p>
+			{/each}
+		</footer>
 	</div>
-
-	<footer class="attribution">
-		{#each data.versions as v (v.code)}
-			<p><a href={v.source_url} rel="license">{v.attribution}</a></p>
-		{/each}
-	</footer>
 </div>
+
+{#if sizeOpen}
+	<div class="size card" role="dialog" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'}>
+		<div class="size-head">
+			<strong><span lang="ta">எழுத்து அளவு</span> <span class="muted">· Text size</span></strong>
+			<button type="button" class="x" onclick={() => (sizeOpen = false)} aria-label={isTamil ? 'மூடு' : 'Close'}>✕</button>
+		</div>
+		<div class="size-row">
+			<button type="button" class="chip step" onclick={() => settings.update({ fontSize: Math.max(1, fontSize - 1) })} disabled={fontSize <= 1} aria-label={isTamil ? 'சிறிது' : 'Smaller'}>A −</button>
+			<span class="sample" lang="ta" aria-live="polite">வசனம் <span class="n">{fontSize}/5</span></span>
+			<button type="button" class="chip step" onclick={() => settings.update({ fontSize: Math.min(5, fontSize + 1) })} disabled={fontSize >= 5} aria-label={isTamil ? 'பெரிது' : 'Larger'}>A +</button>
+		</div>
+	</div>
+{/if}
 
 <ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={() => (selected = new Set())} onhighlight={applyHighlight} onnote={() => openNote()} />
 
@@ -271,13 +304,39 @@
 {/if}
 
 <style>
-	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); margin: 0 0 1rem; }
-	.crumbs a { color: inherit; }
-	.pager { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; margin: 0 0 1rem; }
-	.pager a:last-child { text-align: right; }
-	.pager.bottom { margin-top: 2rem; }
-	h1 { font-family: var(--serif); font-weight: 600; font-size: 1.8rem; margin: 0 0 1rem; }
+	.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 1rem; margin: 0 0 1.5rem; border-bottom: var(--bw) solid var(--line); }
+	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }
+	.aa { font-family: var(--sans); font-weight: 700; color: var(--accent); gap: 0; }
+	.aa span { font-size: 0.72em; }
+	.measure { max-width: 40rem; margin: 0 auto; }
+	.reader.dual .measure { max-width: none; }
+	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
+	.crumbs a { color: var(--accent); font-weight: 600; text-decoration: none; }
+	.crumbs a[lang='ta'] { font-family: var(--tamil); }
+	.titles { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0 0 0.6rem; }
+	h1 { font-family: var(--sans); font-weight: 600; font-size: 2.2rem; margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
 	h1[lang='ta'] { font-family: var(--tamil); }
-	.attribution { margin-top: 3rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
+	.alt { font-size: 0.9rem; color: var(--muted); }
+	.alt[lang='ta'] { font-family: var(--tamil); }
+	.pager { display: flex; align-items: center; gap: 0.75rem; margin: 2.5rem 0 0; padding-top: 1rem; border-top: var(--bw) solid var(--line); }
+	.pager .chip { flex: 1; min-height: 56px; border-radius: var(--r-l); font-size: 1rem; }
+	.pager .list { flex: none; width: 56px; padding: 0; }
+	.pager .spacer { visibility: hidden; }
+	.attribution { margin-top: 2.5rem; font-size: 0.78rem; color: var(--muted); }
 	.attribution a { color: inherit; }
+	.attribution p { margin: 0.2rem 0; }
+	.size { position: fixed; z-index: 16; left: 50%; bottom: max(1.25rem, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(24rem, calc(100vw - 2rem)); padding: 1.1rem; box-shadow: var(--shadow); border-radius: var(--r-2xl); border-color: var(--line-2); display: grid; gap: 0.9rem; }
+	.size-head { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; }
+	.size-head [lang='ta'] { font-family: var(--tamil); }
+	.muted { color: var(--muted); font-weight: 400; }
+	.x { border: 0; background: none; color: var(--muted); cursor: pointer; min-width: 40px; min-height: 40px; border-radius: 999px; }
+	.x:hover { background: var(--surface-2); }
+	.size-row { display: flex; gap: 0.75rem; align-items: stretch; }
+	.step { width: 4.25rem; min-height: 56px; border-radius: 14px; font-family: var(--sans); font-size: 1.1rem; font-weight: 700; color: var(--ink-2); }
+	.sample { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border: var(--bw) solid var(--accent); background: var(--accent-soft); border-radius: 14px; font-family: var(--tamil); font-size: 1.3rem; }
+	.sample .n { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+	@media (max-width: 640px) {
+		.toolbar .right { width: 100%; margin-left: 0; }
+		.toolbar .right .chip:not(.aa) { flex: 1; }
+	}
 </style>

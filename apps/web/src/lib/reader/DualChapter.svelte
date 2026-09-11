@@ -1,7 +1,8 @@
 <script lang="ts">
 	// Two versions aligned verse by verse (R-9.1, R-9.2, R-9.4). Rows follow the
 	// primary version's verse order; a verse missing from one side shows a dash.
-	// On narrow screens each row stacks A above B, which is the interleaved form.
+	// Desktop: verse-locked columns with a shared number in the gutter (design
+	// 3B). Narrow screens: one card per verse with both versions stacked (design 03).
 	import type { ChapterJson, Segment, VersionMeta } from '$lib/content/types';
 	import Verse from './Verse.svelte';
 
@@ -17,7 +18,7 @@
 		onselect?: (id: string) => void;
 	} = $props();
 
-	type Row = { id: string; heading?: string; cells: (Segment[] | null)[] };
+	type Row = { id: string; n: string; heading?: string; cells: (Segment[] | null)[] };
 
 	const rows = $derived.by(() => {
 		// Collect segments per verse id per version, remembering headings that
@@ -52,28 +53,47 @@
 		}
 		// Sort by verse number so extra verses from the second version land in place.
 		order.sort((a, b) => Number(a.split('.')[2]) - Number(b.split('.')[2]));
-		return order.map<Row>((id) => ({
-			id,
-			heading: perVersion[0].headings.get(id),
-			cells: perVersion.map((pv) => pv.map.get(id) ?? null)
-		}));
+		return order.map<Row>((id) => {
+			const first = perVersion.map((pv) => pv.map.get(id)?.[0]).find(Boolean);
+			return {
+				id,
+				n: first?.n ?? id.split('.')[2],
+				heading: perVersion[0].headings.get(id),
+				cells: perVersion.map((pv) => pv.map.get(id) ?? null)
+			};
+		});
 	});
+	const verseWord = $derived(versions[0].lang === 'ta' ? 'வசனம்' : 'Verse');
 </script>
 
 <div class="dual">
-	<div class="head" aria-hidden="true">
-		{#each versions as v (v.code)}<span>{v.short}</span>{/each}
+	<div class="head">
+		<span class="gutter" aria-hidden="true"></span>
+		{#each versions as v (v.code)}
+			<div class="col">
+				<span class="code">{v.short}</span>
+				<span class="name" lang={v.lang}>{v.name_native}</span>
+			</div>
+		{/each}
 	</div>
 	{#each rows as row (row.id)}
 		{#if row.heading}
 			<h3 class="heading" lang={versions[0].lang}>{row.heading}</h3>
 		{/if}
-		<div class="row" data-verse={row.id}>
+		<div class="row" class:selected={selected.has(row.id)} data-verse={row.id}>
+			{#if onselect}
+				<button type="button" class="gn" aria-pressed={selected.has(row.id)} aria-label="{verseWord} {row.n}" onclick={() => onselect(row.id)}>
+					<span class="badge">{row.n}</span>
+					<span class="word kicker">{verseWord} {row.n}</span>
+				</button>
+			{:else}
+				<span class="gn"><span class="badge">{row.n}</span></span>
+			{/if}
 			{#each row.cells as cell, i (versions[i].code)}
 				<div class="cell chapter" lang={versions[i].lang} class:missing={!cell}>
 					{#if cell}
 						{#each cell as seg, j (j)}
-							<Verse {seg} lang={versions[i].lang} versionPath={versions[i].code.toLowerCase()} selected={selected.has(row.id)} onselect={i === 0 ? onselect : undefined} />
+							<Verse {seg} lang={versions[i].lang} versionPath={versions[i].code.toLowerCase()} />
 						{/each}
 					{:else}
 						<span class="dash" title="Not present in this version">—</span>
@@ -85,18 +105,37 @@
 </div>
 
 <style>
-	.dual { max-width: 60rem; }
-	.head { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
-	.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 0.35rem 0; border-top: 1px solid var(--line); }
-	.row:hover { background: var(--surface); }
-	.heading { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 1.4em 0 0.4em; }
+	.dual { max-width: 74rem; }
+	.head, .row { display: grid; grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1fr); gap: 0 2rem; align-items: stretch; }
+	.head .col { display: flex; align-items: baseline; gap: 0.6rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--ink); }
+	.head .code { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: var(--ink); }
+	.head .name { font-size: 0.78rem; color: var(--muted); }
+	.head .name[lang='ta'] { font-family: var(--tamil); }
+	.heading { grid-column: 2 / -1; font-family: var(--sans); font-size: 1.06rem; font-weight: 600; color: var(--amber); margin: 1.4em 0 0.2em calc(3rem + 2rem); }
 	.heading[lang='ta'] { font-family: var(--tamil); }
-	.cell[lang='ta'] { font-family: var(--tamil); font-size: 1.02rem; line-height: 1.85; }
-	.cell[lang='en'] { font-family: var(--serif); line-height: 1.65; }
+	.row { padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
+	.row.selected { background: var(--hl); box-shadow: 0 0 0 0.6rem var(--hl); border-radius: 2px; }
+	.gn { display: flex; align-items: flex-start; justify-content: flex-end; border: 0; background: none; padding: 0.15rem 0; color: var(--muted); font-family: var(--sans); font-size: 0.9rem; font-weight: 700; cursor: pointer; line-height: 1.6; border-radius: 4px; }
+	.gn:hover { color: var(--accent); }
+	.row.selected .gn { color: var(--amber); }
+	.gn .word { display: none; }
+	/* verse numbers live in the gutter here */
+	.cell :global(.vn) { display: none; }
+	.cell[lang='ta'] { font-family: var(--tamil); font-size: 1.25rem; line-height: 1.85; text-wrap: pretty; }
+	.cell[lang='en'] { font-family: var(--en); font-size: 1.12rem; line-height: 1.8; color: var(--ink-en); text-wrap: pretty; }
 	.dash { color: var(--muted); }
 	@media (max-width: 720px) {
 		.head { display: none; }
-		.row { grid-template-columns: 1fr; gap: 0.4rem; }
-		.cell + .cell { padding-left: 0.75rem; border-left: 2px solid var(--line); }
+		.heading { margin-left: 0; }
+		.row { display: block; margin: 0 0 0.9rem; padding: 0; border: var(--bw) solid var(--line); border-radius: var(--r-xl); background: var(--surface); overflow: hidden; }
+		.row.selected { background: var(--surface); box-shadow: none; border-color: var(--accent); }
+		.gn { width: 100%; justify-content: flex-start; align-items: center; gap: 0.6rem; padding: 0.6rem 1rem; background: var(--surface-2); border-bottom: var(--bw) solid var(--line); border-radius: 0; }
+		.gn .badge { width: 26px; height: 26px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font-size: 0.78rem; display: inline-flex; align-items: center; justify-content: center; }
+		.gn .word { display: inline; font-size: 0.72rem; }
+		.gn .word:lang(ta) { font-family: var(--tamil); }
+		.cell { padding: 0.9rem 1rem; }
+		.cell + .cell { border-top: 1px dashed var(--line-2); }
+		.cell[lang='ta'] { font-size: 1.22rem; line-height: 1.8; }
+		.cell[lang='en'] { font-size: 1.06rem; line-height: 1.7; color: var(--ink-2); }
 	}
 </style>

@@ -1,83 +1,129 @@
 /* Self-hosted subset fonts built by scripts/subset-fonts.py (OFL). Tamil faces
    carry unicode-range so a page downloads a face only when it uses the script.
-   size-adjust keeps the fallback metrics close enough to avoid layout shift. */
-@font-face { font-family: 'Noto Serif Tamil'; font-weight: 400; font-display: optional; src: url('/fonts/noto-serif-tamil-regular.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
-@font-face { font-family: 'Noto Serif Tamil'; font-weight: 600; font-display: optional; src: url('/fonts/noto-serif-tamil-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+   size-adjust keeps the fallback metrics close enough to avoid layout shift.
+   Faces follow the redesign: Mukta Malar for Tamil, Noto Sans for Latin. */
+@font-face { font-family: 'Mukta Malar'; font-weight: 400; font-display: optional; src: url('/fonts/mukta-malar-regular.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Mukta Malar'; font-weight: 600; font-display: optional; src: url('/fonts/mukta-malar-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
 @font-face { font-family: 'Noto Sans Tamil'; font-weight: 400; font-display: optional; src: url('/fonts/noto-sans-tamil-regular.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
 @font-face { font-family: 'Noto Sans Tamil'; font-weight: 600; font-display: optional; src: url('/fonts/noto-sans-tamil-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
-@font-face { font-family: 'Source Serif 4'; font-weight: 400; font-display: optional; src: url('/fonts/source-serif-4-regular.woff2') format('woff2'); }
-@font-face { font-family: 'Source Serif 4'; font-weight: 600; font-display: optional; src: url('/fonts/source-serif-4-semibold.woff2') format('woff2'); }
-@font-face { font-family: 'Source Sans 3'; font-weight: 400; font-display: optional; src: url('/fonts/source-sans-3-regular.woff2') format('woff2'); }
-@font-face { font-family: 'Source Sans 3'; font-weight: 600; font-display: optional; src: url('/fonts/source-sans-3-semibold.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Serif Tamil'; font-weight: 400; font-display: optional; src: url('/fonts/noto-serif-tamil-regular.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Noto Serif Tamil'; font-weight: 600; font-display: optional; src: url('/fonts/noto-serif-tamil-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
+@font-face { font-family: 'Noto Sans'; font-weight: 400; font-display: optional; src: url('/fonts/noto-sans-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans'; font-weight: 600; font-display: optional; src: url('/fonts/noto-sans-semibold.woff2') format('woff2'); }
 @font-face { font-family: 'Tamil Fallback'; src: local('Nirmala UI'), local('Latha'), local('Tamil Sangam MN'), local('Noto Sans Tamil'); size-adjust: 104%; ascent-override: 95%; descent-override: 30%; }
 
+/* ---- Theme tokens ----
+   Light is the "warm paper" palette, dark is "night slate" (Claude Design
+   handoff, Tamil Bible Site Redesign 1a / 3A / 6A). Every colour a component
+   uses comes from here so both themes resolve as a set. */
 :root {
-	--bg: #f3f2ee;
-	--surface: #ffffff;
-	--surface-2: #ebeae4;
-	--ink: #1e252e;
-	--muted: #5a646f;
-	--line: #d6d5cd;
-	--accent: #7e2a2a;
-	--accent-soft: rgba(126, 42, 42, 0.1);
-	--select: rgba(126, 42, 42, 0.12);
-	--wj: #8a1f1f;
-	--hl-yellow: #f6e27a;
-	--hl-green: #bfe3b4;
-	--hl-blue: #bbd7f2;
-	--hl-pink: #f2c1d1;
-	--heat-rgb: 126, 42, 42;
-	/* Tamil face is chosen in settings: tf-serif (default), tf-sans, tf-system */
-	--tamil-serif: 'Noto Serif Tamil', 'Tamil Fallback', serif;
+	--bg: #FBF7F0;          /* page ground: warm paper */
+	--surface: #FFFFFF;     /* cards, inputs, chips */
+	--surface-2: #F3EDE2;   /* inset panels, card headers */
+	--surface-3: #EFE8DC;   /* segmented-control track */
+	--ink: #191512;         /* primary text */
+	--ink-2: #57504A;       /* secondary text */
+	--ink-en: #2A241E;      /* English scripture */
+	--muted: #6B6259;       /* captions, kickers */
+	--line: #E5DCCF;        /* dividers */
+	--line-2: #DED3C4;      /* control borders */
+	--accent: #2B5B8C;      /* one deep blue */
+	--accent-hover: #1E4267;
+	--on-accent: #FFFFFF;
+	--accent-soft: #EEF3F8; /* tinted selection surface */
+	--amber: #A2600F;       /* section headings, second reference colour */
+	--hl: #FBEFD3;          /* selected verse, search match */
+	--select: var(--hl);
+	--wj: var(--amber);
+	--hl-yellow: #F9E7A6;
+	--hl-green: #CFE6C2;
+	--hl-blue: #C9DCF2;
+	--hl-pink: #F4CBD8;
+	--accent-rgb: 43, 91, 140;
+	--heat-rgb: var(--accent-rgb);
+	--shadow: 0 14px 34px rgba(28, 26, 24, 0.14);
+	--shadow-lg: 0 24px 60px rgba(28, 26, 24, 0.18);
+	--scrim: rgba(28, 26, 24, 0.28);
+	/* shape */
+	--bw: 1.5px;
+	--r-s: 8px;
+	--r: 12px;
+	--r-l: 16px;
+	--r-xl: 18px;
+	--r-2xl: 22px;
+	/* type. Tamil face is chosen in settings: tf-mukta (default), tf-sans, tf-serif, tf-system */
+	--tamil-mukta: 'Mukta Malar', 'Tamil Fallback', sans-serif;
 	--tamil-sans: 'Noto Sans Tamil', 'Tamil Fallback', sans-serif;
-	--tamil: var(--tamil-serif);
-	--serif: 'Source Serif 4', Georgia, serif;
-	--sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+	--tamil-serif: 'Noto Serif Tamil', 'Tamil Fallback', serif;
+	--tamil: var(--tamil-mukta);
+	--sans: 'Noto Sans', 'Segoe UI', system-ui, sans-serif;
+	--en: var(--sans);      /* English scripture */
+	--serif: var(--sans);   /* retired alias */
 	color-scheme: light dark;
 }
 html.tf-sans { --tamil: var(--tamil-sans); }
+html.tf-serif { --tamil: var(--tamil-serif); }
 html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam MN', sans-serif; }
 
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
-		--bg: #15181c;
-		--surface: #1d2126;
-		--surface-2: #252a30;
-		--ink: #e9e7e1;
-		--muted: #979ea6;
-		--line: #333941;
-		--accent: #d07c7c;
-		--accent-soft: rgba(208, 124, 124, 0.16);
-		--select: rgba(208, 124, 124, 0.2);
-		--wj: #e08585;
-		--hl-yellow: #6e6224;
-		--hl-green: #2f4f2c;
-		--hl-blue: #29405a;
-		--hl-pink: #5a2e3c;
-		--heat-rgb: 208, 124, 124;
+		--bg: #1B1D22;
+		--surface: #262930;
+		--surface-2: #20232A;
+		--surface-3: #2E323B;
+		--ink: #F1ECE1;
+		--ink-2: #C4BEB1;
+		--ink-en: #D8D2C6;
+		--muted: #B0AA9D;
+		--line: #2E323B;
+		--line-2: #3A3F4A;
+		--accent: #D9B25C;
+		--accent-hover: #E5C578;
+		--on-accent: #262930;
+		--accent-soft: rgba(217, 178, 92, 0.14);
+		--amber: #E39A5F;
+		--hl: #3B3420;
+		--hl-yellow: #6E6224;
+		--hl-green: #2F4F2C;
+		--hl-blue: #29405A;
+		--hl-pink: #5A2E3C;
+		--accent-rgb: 217, 178, 92;
+		--shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+		--shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+		--scrim: rgba(0, 0, 0, 0.5);
 	}
 }
 :root[data-theme='dark'] {
-	--heat-rgb: 208, 124, 124;
-	--hl-yellow: #6e6224;
-	--hl-green: #2f4f2c;
-	--hl-blue: #29405a;
-	--hl-pink: #5a2e3c;
-	--bg: #15181c;
-	--surface: #1d2126;
-	--surface-2: #252a30;
-	--ink: #e9e7e1;
-	--muted: #979ea6;
-	--line: #333941;
-	--accent: #d07c7c;
-	--accent-soft: rgba(208, 124, 124, 0.16);
-	--select: rgba(208, 124, 124, 0.2);
-	--wj: #e08585;
+	--bg: #1B1D22;
+	--surface: #262930;
+	--surface-2: #20232A;
+	--surface-3: #2E323B;
+	--ink: #F1ECE1;
+	--ink-2: #C4BEB1;
+	--ink-en: #D8D2C6;
+	--muted: #B0AA9D;
+	--line: #2E323B;
+	--line-2: #3A3F4A;
+	--accent: #D9B25C;
+	--accent-hover: #E5C578;
+	--on-accent: #262930;
+	--accent-soft: rgba(217, 178, 92, 0.14);
+	--amber: #E39A5F;
+	--hl: #3B3420;
+	--hl-yellow: #6E6224;
+	--hl-green: #2F4F2C;
+	--hl-blue: #29405A;
+	--hl-pink: #5A2E3C;
+	--accent-rgb: 217, 178, 92;
+	--shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+	--shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+	--scrim: rgba(0, 0, 0, 0.5);
 	color-scheme: dark;
 }
 :root[data-theme='light'] { color-scheme: light; }
 
-/* Font size steps (settings.fontSize 1..5) */
+/* Font size steps (settings.fontSize 1..5). Scripture is 1.3rem, so step 3
+   gives the design's 22px Tamil measure. */
 html.fs-1 { font-size: 14px; }
 html.fs-2 { font-size: 15.5px; }
 html.fs-3 { font-size: 17px; }
@@ -86,11 +132,31 @@ html.fs-5 { font-size: 21.5px; }
 
 * { box-sizing: border-box; }
 html { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; -webkit-text-size-adjust: 100%; }
-body { margin: 0; }
+body { margin: 0; background: var(--bg); }
 a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
 code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
-button { font: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* ---- Shared primitives (used across routes and components) ---- */
+/* Kicker: small uppercase label above a group */
+.kicker { font-family: var(--sans); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+/* Chip: outlined control on the surface colour; .primary fills with the accent */
+.chip { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 42px; padding: 0.5rem 0.85rem; border: var(--bw) solid var(--line-2); border-radius: 11px; background: var(--surface); color: var(--ink); font-family: var(--tamil); font-weight: 600; font-size: 0.92rem; text-decoration: none; cursor: pointer; white-space: nowrap; }
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+.chip.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--on-accent); }
+.chip.dashed { border-style: dashed; color: var(--accent); background: transparent; }
+.chip.round { border-radius: 999px; }
+.chip:disabled { opacity: 0.45; cursor: default; }
+/* Card: bordered surface */
+.card { background: var(--surface); border: var(--bw) solid var(--line); border-radius: var(--r-xl); }
+/* Text field */
+.field { width: 100%; padding: 0.7rem 0.95rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-l); background: var(--surface); color: var(--ink); font-family: var(--tamil); }
+.field:focus-visible { outline: 0; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.field::placeholder { color: var(--muted); }
 
 /* ---- User highlights (R-10.12) ---- */
 .verse.hl-yellow { background: var(--hl-yellow); }
@@ -112,11 +178,11 @@ button { font: inherit; }
 .fmt-reader .chapter .footnotes,
 .fmt-reader .chapter .xref { display: none; }
 .fmt-reader .chapter[lang='ta'] { line-height: 2.05; }
-.fmt-reader .chapter[lang='en'] { line-height: 1.85; }
+.fmt-reader .chapter[lang='en'] { line-height: 1.9; }
 
 /* Cross-reference: one verse per line, bold leading numbers */
-.fmt-xref .chapter .verse { display: block; padding: 0.15em 0 0.15em 2.4em; text-indent: -2.4em; }
-.fmt-xref .chapter .verse .vn { display: inline-block; width: 2.1em; text-indent: 0; font-size: 0.75em; vertical-align: baseline; font-weight: 600; }
+.fmt-xref .chapter .verse { display: block; padding: 0.2em 0 0.2em 2.4em; text-indent: -2.4em; }
+.fmt-xref .chapter .verse .vn { display: inline-block; width: 2.1em; text-indent: 0; font-size: 0.7em; vertical-align: baseline; font-weight: 700; }
 .fmt-xref .chapter .para { margin: 0 0 0.5em; }
 .fmt-xref .chapter .xref-list { display: block; }
 

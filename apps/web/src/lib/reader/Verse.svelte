@@ -106,18 +106,19 @@
 </span>
 
 <style>
-	.verse { scroll-margin-top: 5rem; border-radius: 2px; }
-	.verse.selected { background: var(--select); box-shadow: 0 0 0 3px var(--select); }
-	.vn { font-family: var(--sans); font-size: 0.62em; color: var(--accent); margin-right: 0.15em; font-weight: 600; vertical-align: super; line-height: 1; }
-	button.vn { border: 0; background: none; padding: 0.15em 0.2em; margin-left: -0.2em; cursor: pointer; border-radius: 3px; }
+	.verse { scroll-margin-top: 6rem; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+	/* Selected verse: the design's amber block, bled 6px past the text box */
+	.verse.selected { background: var(--hl); box-shadow: 0 0 0 6px var(--hl); }
+	.vn { font-family: var(--sans); font-size: 0.58em; color: var(--accent); margin-right: 0.25em; font-weight: 700; vertical-align: super; line-height: 1; }
+	button.vn { border: 0; background: none; padding: 0.15em 0.25em; margin-left: -0.25em; cursor: pointer; border-radius: 4px; }
 	button.vn:hover { background: var(--accent-soft); }
 	.fn { font-family: var(--sans); font-size: 0.6em; }
 	.fn a { color: var(--muted); text-decoration: none; }
 	.wj { color: var(--wj); }
-	.note-mark, .xref { border: 0; background: none; padding: 0 0.15em; margin-left: 0.1em; color: var(--muted); font-size: 0.7em; vertical-align: super; line-height: 1; cursor: pointer; font-family: var(--sans); }
+	.note-mark, .xref { border: 0; background: none; padding: 0 0.15em; margin-left: 0.1em; color: var(--muted); font-size: 0.66em; vertical-align: super; line-height: 1; cursor: pointer; font-family: var(--sans); }
 	.note-mark { color: var(--accent); }
 	.xref:hover, .note-mark:hover { color: var(--accent); }
-	.xref-list { display: none; font-family: var(--sans); font-size: 0.78em; color: var(--muted); text-indent: 0; margin-top: 0.1em; }
+	.xref-list { display: none; font-family: var(--sans); font-size: 0.72em; color: var(--muted); text-indent: 0; margin-top: 0.1em; }
 	.xref-list a { color: var(--muted); text-decoration: none; margin-right: 0.7em; }
 	.xref-list a:hover { color: var(--accent); }
 	.xref-more { border: 0; background: none; color: var(--accent); cursor: pointer; padding: 0; font-size: inherit; }

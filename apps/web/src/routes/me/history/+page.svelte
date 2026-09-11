@@ -86,7 +86,7 @@
 	.head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
 	h1 { font-family: var(--tamil); font-size: 1.5rem; margin: 0; }
 	.controls { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; font-size: 0.9rem; }
-	.controls select, .controls button { font: inherit; padding: 0.4rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: inherit; min-height: 40px; }
+	.controls select, .controls button { font: inherit; padding: 0.4rem 0.6rem; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); color: inherit; min-height: 40px; }
 	h2 { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 1.2rem 0 0.4rem; }
 	ul { list-style: none; padding: 0; margin: 0; }
 	li { display: flex; gap: 0.7rem; align-items: baseline; padding: 0.45rem 0; border-top: 1px solid var(--line); }

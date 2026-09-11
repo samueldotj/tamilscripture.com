@@ -53,7 +53,7 @@
 	.name { font-size: 0.85rem; text-decoration: none; color: inherit; font-family: var(--tamil); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 	.cells { display: grid; gap: 2px; }
 	.cell { display: block; aspect-ratio: 1; border-radius: 2px; background: var(--surface-2); min-width: 6px; }
-	.b1 { background: rgba(126, 42, 42, 0.2); } .b2 { background: rgba(126, 42, 42, 0.4); } .b3 { background: rgba(126, 42, 42, 0.65); } .b4 { background: var(--accent); }
+	.b1 { background: rgba(var(--heat-rgb), 0.2); } .b2 { background: rgba(var(--heat-rgb), 0.4); } .b3 { background: rgba(var(--heat-rgb), 0.65); } .b4 { background: var(--accent); }
 	.legend { display: flex; gap: 0.35rem; align-items: center; font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; }
 	.legend .cell { width: 14px; }
 	.muted { color: var(--muted); }

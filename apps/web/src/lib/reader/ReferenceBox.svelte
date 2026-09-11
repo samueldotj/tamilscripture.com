@@ -70,21 +70,24 @@
 </script>
 
 <form class="refbox" role="search" onsubmit={(e) => { e.preventDefault(); submit(); }}>
+	<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5" /><path d="m20.5 20.5-4.2-4.2" /></svg>
 	<input
 		bind:this={input}
 		bind:value
+		class="field"
 		type="search"
 		autocomplete="off"
 		spellcheck="false"
 		enterkeyhint="go"
-		aria-label={lang === 'ta' ? 'வசனம் தேடு' : 'Go to reference'}
+		aria-label={lang === 'ta' ? 'வசனம் அல்லது சொல் தேடு' : 'Go to a reference or search a word'}
 		aria-invalid={notFound}
-		placeholder={lang === 'ta' ? 'யோவா 3:16 · அன்பு' : 'John 3:16 · love'}
+		placeholder={lang === 'ta' ? 'யோவான் 3:16 · புத்தகம், வசனம், சொல்' : 'John 3:16 · book, verse, word'}
 		onfocus={ensure}
 		oninput={onInput}
 		onkeydown={onKey}
 		onblur={() => setTimeout(() => (suggestions = []), 150)}
 	/>
+	<kbd class="kbd" aria-hidden="true">Ctrl K</kbd>
 	{#if suggestions.length}
 		<ul class="suggest" role="listbox">
 			{#each suggestions as b, i (b.code)}
@@ -103,13 +106,19 @@
 
 <style>
 	.refbox { position: relative; }
-	input { width: 100%; font: inherit; font-family: var(--tamil); padding: 0.45rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); }
-	input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-	input[aria-invalid='true'] { border-color: var(--accent); }
-	.suggest { position: absolute; z-index: 10; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); }
-	.suggest button { display: flex; gap: 0.6rem; width: 100%; padding: 0.4rem 0.6rem; border: 0; background: none; color: inherit; font: inherit; text-align: left; border-radius: 4px; cursor: pointer; }
-	.suggest li.active button, .suggest button:hover { background: var(--accent-soft, rgba(126, 42, 42, 0.08)); }
-	.suggest .en { color: var(--muted); font-size: 0.9em; }
-	.suggest [lang='ta'] { font-family: var(--tamil); }
-	.hint { position: absolute; margin: 4px 0 0; font-size: 0.8rem; color: var(--accent); }
+	.icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+	input { min-height: 46px; padding: 0.7rem 4.4rem 0.7rem 2.7rem; border-radius: 14px; font-size: 0.95rem; }
+	input::-webkit-search-cancel-button { -webkit-appearance: none; }
+	input[aria-invalid='true'] { border-color: var(--amber); }
+	.kbd { position: absolute; right: 0.8rem; top: 50%; transform: translateY(-50%); font: 600 0.68rem var(--sans); color: var(--muted); border: 1px solid var(--line); border-radius: var(--r-s); padding: 2px 7px; pointer-events: none; }
+	.suggest { position: absolute; z-index: 10; left: 0; right: 0; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none; background: var(--surface); border: var(--bw) solid var(--line-2); border-radius: 14px; box-shadow: var(--shadow); }
+	.suggest button { display: flex; gap: 0.6rem; align-items: baseline; width: 100%; padding: 0.55rem 0.75rem; border: 0; background: none; color: inherit; font: inherit; text-align: left; border-radius: var(--r-s); cursor: pointer; }
+	.suggest li.active button, .suggest button:hover { background: var(--accent-soft); }
+	.suggest .en { color: var(--muted); font-size: 0.85em; }
+	.suggest [lang='ta'] { font-family: var(--tamil); font-weight: 600; }
+	.hint { position: absolute; margin: 4px 0 0 1rem; font-size: 0.8rem; color: var(--amber); }
+	@media (max-width: 720px) {
+		.kbd { display: none; }
+		input { padding-right: 1rem; }
+	}
 </style>

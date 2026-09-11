@@ -66,6 +66,6 @@
 	.ch { font-variant-numeric: tabular-nums; text-decoration: none; color: var(--muted); font-size: 0.85rem; padding-top: 1px; }
 	.cells { display: flex; flex-wrap: wrap; gap: 2px; }
 	.cell { display: block; width: 12px; height: 12px; border-radius: 2px; background: var(--surface-2); }
-	.b1 { background: rgba(126, 42, 42, 0.2); } .b2 { background: rgba(126, 42, 42, 0.4); } .b3 { background: rgba(126, 42, 42, 0.65); } .b4 { background: var(--accent); }
+	.b1 { background: rgba(var(--heat-rgb), 0.2); } .b2 { background: rgba(var(--heat-rgb), 0.4); } .b3 { background: rgba(var(--heat-rgb), 0.65); } .b4 { background: var(--accent); }
 	.muted { color: var(--muted); }
 </style>

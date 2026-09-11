@@ -57,11 +57,11 @@
 <style>
 	.about { max-width: 42rem; }
 	.about p[lang='ta'] { font-family: var(--tamil); line-height: 1.9; }
-	h1 { font-family: var(--tamil); font-size: 1.8rem; margin: 0 0 1rem; }
+	h1 { font-family: var(--tamil); font-size: 2rem; font-weight: 600; margin: 0 0 1rem; }
 	h1 .en { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); font-weight: 400; margin-left: 0.5rem; }
-	h2 { font-family: var(--serif); font-size: 1.2rem; margin: 1.8rem 0 0.5rem; }
+	h2 { font-family: var(--sans); font-size: 1.15rem; font-weight: 600; margin: 1.8rem 0 0.5rem; }
 	.versions { margin: 0; display: grid; gap: 0.9rem; }
-	.versions div { padding: 0.8rem 1rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+	.versions div { padding: 0.9rem 1.1rem; border: var(--bw) solid var(--line); border-radius: var(--r-l); background: var(--surface); }
 	dt { font-weight: 600; margin-bottom: 0.25rem; }
 	dt .code { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--accent); margin-right: 0.4rem; }
 	dt [lang='ta'] { font-family: var(--tamil); }

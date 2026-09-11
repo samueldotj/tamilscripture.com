@@ -50,7 +50,7 @@
 	.head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
 	h1 { font-family: var(--tamil); font-size: 1.5rem; margin: 0; }
 	h1 .n { color: var(--muted); font-size: 1rem; font-weight: 400; }
-	input { font: inherit; font-family: var(--tamil); padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: inherit; min-width: 14rem; }
+	input { font: inherit; font-family: var(--tamil); padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); color: inherit; min-width: 14rem; }
 	ul { list-style: none; padding: 0; margin: 0; max-width: 42rem; }
 	li { padding: 0.8rem 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
 	.ref { font-family: var(--tamil); text-decoration: none; font-weight: 600; }

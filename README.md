@@ -126,7 +126,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.14 | Verse selection (tap verse numbers) and action bar: copy text with reference and link, share via Web Share or link copy | R-1.7 | ☑ |
 | 1.15 | Reader, Standard and Cross-reference formats as CSS classes on `<html>`; inline pre-paint stamp in `app.html` | R-8.1, R-8.3, ADR-6 | ☑ |
 | 1.16 | Paratext toggles (introductions, headings, footnotes, cross-ref markers) persisted in local storage; default version cookie for the shorthand redirector | R-1.8, R-1.14 | ☑ |
-| 1.17 | Reader settings: text size (5 steps), theme, UI language, Tamil typeface (Noto Serif, Noto Sans, system) ☑; low-end Android check ☐ | R-1.10, open question 6 | ◧ |
+| 1.17 | Reader settings: text size (5 steps), theme, UI language, Tamil typeface (Mukta Malar, Noto Sans, Noto Serif, system) ☑; low-end Android check ☐ | R-1.10, open question 6 | ◧ |
 | 1.18 | Self-hosted subset fonts via `scripts/subset-fonts.py` (Tamil faces ~40 kB each, `unicode-range`, `font-display: optional`, preload, fallback metrics); Google Fonts removed | design §10 | ☑ |
 | 1.19 | Tamil and English interface strings; default from browser language | requirements §12 | ☐ |
 | 1.20 | PWA shell: web manifest with icons, service worker (shell precache, content JSON cache-first, last 20 reader pages offline) | requirements §12, design §9 | ☑ |

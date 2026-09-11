@@ -1,21 +1,22 @@
 <!doctype html>
-<html lang="ta" class="fmt-standard fs-3 tf-serif">
+<html lang="ta" class="fmt-standard fs-3 tf-mukta">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="color-scheme" content="light dark" />
-		<meta name="theme-color" content="#f3f2ee" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#FBF7F0" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#1B1D22" media="(prefers-color-scheme: dark)" />
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="/icons/icon-192.png" />
-		<link rel="preload" href="/fonts/noto-serif-tamil-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/mukta-malar-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/noto-sans-regular.woff2" as="font" type="font/woff2" crossorigin />
 		<script>
 			// Apply saved reader settings before first paint so shared links open in
 			// the recipient's own layout with no flash. Mirrors settings/store.svelte.ts.
 			try {
 				var s = JSON.parse(localStorage.getItem('reader') || '{}');
-				var c = ['fmt-' + (s.format || 'standard'), 'fs-' + (s.fontSize || 3), 'tf-' + (s.tamilFont || 'serif')];
+				var c = ['fmt-' + (s.format || 'standard'), 'fs-' + (s.fontSize || 3), 'tf-' + (s.tamilFont || 'mukta')];
 				if (s.headings === false) c.push('no-headings');
 				if (s.intro === false) c.push('no-intro');
 				if (s.footnotes === false) c.push('no-footnotes');

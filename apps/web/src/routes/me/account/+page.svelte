@@ -67,10 +67,10 @@
 	h2 { font-family: var(--tamil); font-size: 1.05rem; margin: 0 0 0.5rem; }
 	label { display: flex; gap: 0.6rem; align-items: flex-start; font-family: var(--tamil); }
 	.muted { color: var(--muted); }
-	button, input[type='text'] { font: inherit; padding: 0.5rem 0.9rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: inherit; min-height: 40px; }
+	button, input[type='text'] { font: inherit; padding: 0.5rem 0.9rem; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); color: inherit; min-height: 40px; }
 	button { cursor: pointer; font-family: var(--tamil); }
 	button:disabled { opacity: 0.5; cursor: default; }
 	.del { border-color: var(--accent); color: var(--accent); }
-	textarea { display: block; width: 100%; margin-top: 0.6rem; font: 0.8rem ui-monospace, monospace; padding: 0.6rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: inherit; }
+	textarea { display: block; width: 100%; margin-top: 0.6rem; font: 0.8rem ui-monospace, monospace; padding: 0.6rem; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--bg); color: inherit; }
 	.err { color: var(--accent); }
 </style>

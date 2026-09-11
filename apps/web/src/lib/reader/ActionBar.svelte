@@ -84,8 +84,8 @@
 </script>
 
 {#if selected.size}
-	<div class="bar" role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
-		<span class="label">{label}</span>
+	<div class="bar card" role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
+		<span class="label" lang={lang}>{label}</span>
 		{#if communityUsers}
 			<span class="community" title={ta ? `${communityUsers} வாசகர்கள் அடிக்கோடிட்டனர்` : `${communityUsers} readers highlighted this`}>◉ {communityUsers}</span>
 		{/if}
@@ -95,27 +95,28 @@
 					<button type="button" class="swatch {c}" class:on={currentColor === c} aria-label={ta ? colorNames[c][0] : colorNames[c][1]} aria-pressed={currentColor === c} onclick={() => onhighlight?.(currentColor === c ? null : c)}></button>
 				{/each}
 			</span>
-			<button type="button" onclick={() => onnote?.()}>{ta ? 'குறிப்பு' : 'Note'}</button>
+			<button type="button" class="chip primary" onclick={() => onnote?.()}>{ta ? 'குறிப்பு' : 'Note'}</button>
 		{:else}
-			<a class="btn" href={signinHref}>{ta ? 'அடிக்கோடு · குறிப்பு' : 'Highlight · Note'}</a>
+			<a class="chip primary" href={signinHref}>{ta ? 'அடிக்கோடு · குறிப்பு' : 'Highlight · Note'}</a>
 		{/if}
-		<button type="button" onclick={copy}>{ta ? 'நகல்' : 'Copy'}</button>
-		<button type="button" onclick={share}>{ta ? 'பகிர்' : 'Share'}</button>
-		<button type="button" class="ghost" onclick={onclear} aria-label={ta ? 'தெரிவை நீக்கு' : 'Clear selection'}>×</button>
+		<button type="button" class="chip" onclick={copy}>{ta ? 'நகல்' : 'Copy'}</button>
+		<button type="button" class="chip" onclick={share}>{ta ? 'பகிர்' : 'Share'}</button>
+		<button type="button" class="ghost" onclick={onclear} aria-label={ta ? 'தெரிவை நீக்கு' : 'Clear selection'}>✕</button>
 		{#if toast}<span class="toast" role="status">{toast}</span>{/if}
 	</div>
 {/if}
 
 <style>
-	.bar { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; display: flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.6rem 0.5rem 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18); max-width: calc(100vw - 1rem); flex-wrap: wrap; justify-content: center; }
-	.label { font-family: var(--tamil); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
-	button, .btn { border: 1px solid var(--line); background: var(--surface-2); color: inherit; border-radius: 999px; padding: 0.4rem 0.9rem; min-height: 40px; cursor: pointer; font-family: var(--tamil); text-decoration: none; display: inline-flex; align-items: center; }
-	button:hover, .btn:hover { border-color: var(--accent); }
-	.ghost { background: none; border-color: transparent; font-size: 1.3rem; line-height: 1; min-width: 40px; padding: 0; color: var(--muted); }
+	.bar { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.6rem 0.6rem 1rem; border-color: var(--line-2); border-radius: var(--r-2xl); box-shadow: var(--shadow); max-width: calc(100vw - 1.5rem); flex-wrap: wrap; justify-content: center; }
+	.label { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
+	.label[lang='ta'] { font-family: var(--tamil); }
+	.chip { min-height: 40px; padding: 0.4rem 0.85rem; border-radius: var(--r); }
+	.ghost { border: 0; background: none; color: var(--muted); font-size: 0.95rem; line-height: 1; min-width: 40px; min-height: 40px; padding: 0; cursor: pointer; border-radius: 999px; }
+	.ghost:hover { background: var(--surface-2); color: var(--ink); }
 	.community { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
-	.colors { display: inline-flex; gap: 0.3rem; padding: 0 0.2rem; }
-	.swatch { width: 28px; height: 28px; min-height: 28px; padding: 0; border-radius: 50%; border: 2px solid transparent; }
+	.colors { display: inline-flex; gap: 0.35rem; padding: 0 0.2rem; }
+	.swatch { width: 28px; height: 28px; min-height: 28px; padding: 0; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
 	.swatch.yellow { background: var(--hl-yellow); } .swatch.green { background: var(--hl-green); } .swatch.blue { background: var(--hl-blue); } .swatch.pink { background: var(--hl-pink); }
 	.swatch.on { border-color: var(--ink); }
-	.toast { position: absolute; bottom: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 0.85rem; padding: 0.35rem 0.7rem; border-radius: 6px; white-space: nowrap; }
+	.toast { position: absolute; bottom: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: var(--r-s); white-space: nowrap; }
 </style>
