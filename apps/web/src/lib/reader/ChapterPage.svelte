@@ -6,6 +6,8 @@
 	import Picker from './Picker.svelte';
 	import XrefPanel from './XrefPanel.svelte';
 	import NoteSheet from './NoteSheet.svelte';
+	import BookRail from './BookRail.svelte';
+	import ContextPanel from './ContextPanel.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
@@ -18,10 +20,12 @@
 	let { data }: { data: ChapterPageData } = $props();
 
 	const primary = $derived(data.versions[0]);
+	const dual = $derived(data.chapters.length > 1);
 	const ui = $derived(settings.value.uiLang);
 	const isTamil = $derived(ui === 'ta');
 	const bookName = $derived(primary.lang === 'ta' ? data.book.name_ta : data.book.name_en);
 	const altName = $derived(primary.lang === 'ta' ? data.book.name_en : data.book.name_ta);
+	const uiBookName = $derived(isTamil ? data.book.name_ta : data.book.name_en);
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));
 	const rangeLabel = $derived(
 		data.range ? `${data.range.start}${data.range.end !== data.range.start ? `-${data.range.end}` : ''}` : ''
@@ -74,6 +78,20 @@
 		const s = new Set(selected);
 		if (s.has(id)) s.delete(id); else s.add(id);
 		selected = s;
+		xrefOpen = null; // the context panel follows the selection again
+	}
+	const verseNum = (id: string) => Number(id.split('.')[2]);
+	const selectedNumbers = $derived([...selected].map(verseNum).filter((n) => !isNaN(n)).sort((a, b) => a - b));
+	function rangeText(nums: number[]) {
+		if (!nums.length) return '';
+		const parts: string[] = [];
+		let start = nums[0], last = nums[0];
+		for (const n of nums.slice(1).concat(NaN)) {
+			if (n === last + 1) { last = n; continue; }
+			parts.push(start === last ? `${start}` : `${start}-${last}`);
+			start = last = n;
+		}
+		return parts.join(',');
 	}
 
 	// Cross-references arrive with the page data (markers present at first
@@ -94,6 +112,16 @@
 		return () => { cancelled = true; };
 	});
 
+	// Desktop context panel: the verse whose ‡ was pressed, else the first
+	// selected verse. Hidden by CSS below the wide breakpoint.
+	const panelVerse = $derived(xrefOpen ?? [...selected].sort((a, b) => verseNum(a) - verseNum(b))[0] ?? null);
+	const panelLabel = $derived(
+		xrefOpen ? `${uiBookName} ${data.chapter}:${verseNum(xrefOpen)}`
+		: selected.size ? `${uiBookName} ${data.chapter}:${rangeText(selectedNumbers)}`
+		: ''
+	);
+	const panelTargets = $derived(panelVerse && xrefs ? xrefs[panelVerse] ?? [] : null);
+
 	// Community heat (R-2.1, R-2.3): counts for tooltips and the action bar always;
 	// the background tint only when the setting is on. Loaded after paint from
 	// the hour-cached API; classes change background only, so no layout shift.
@@ -113,7 +141,7 @@
 	const heatOverlay = $derived(settings.value.heat ? heatMap : heatMap && new Map([...heatMap].map(([k, v]) => [k, { bucket: 0, users: v.users }])));
 	const selectedUsers = $derived.by(() => {
 		if (!heatMap || !selected.size) return 0;
-		return Math.max(0, ...[...selected].map((id) => heatMap!.get(Number(id.split('.')[2]))?.users ?? 0));
+		return Math.max(0, ...[...selected].map((id) => heatMap!.get(verseNum(id))?.users ?? 0));
 	});
 
 	// Personal data (R-10.x): loaded after paint, only when signed in.
@@ -144,7 +172,6 @@
 		loadPersonal();
 		recordVisit(data.book.code, data.chapter, primary.code, data.range).catch(() => {});
 	});
-	const selectedNumbers = $derived([...selected].map((id) => Number(id.split('.')[2])).filter((n) => !isNaN(n)).sort((a, b) => a - b));
 	const currentColor = $derived.by(() => {
 		if (!selected.size) return null;
 		const colors = new Set([...selected].map((id) => highlightMap.get(id) ?? null));
@@ -159,7 +186,7 @@
 		} catch { /* surface later via toast */ }
 	}
 	function openNote(forId?: string) {
-		const nums = forId ? [Number(forId.split('.')[2])] : selectedNumbers;
+		const nums = forId ? [verseNum(forId)] : selectedNumbers;
 		if (!nums.length) return;
 		const start = nums[0], end = nums[nums.length - 1];
 		const existing = userNotes.find((n) => n.verse_start <= start && n.verse_end >= start) ?? null;
@@ -196,6 +223,7 @@
 		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
 		else if (e.key === 'Escape') {
 			if (sizeOpen) sizeOpen = false;
+			else if (xrefOpen) xrefOpen = null;
 			else if (selected.size) selected = new Set();
 		}
 	}
@@ -222,59 +250,87 @@
 	})}</script>`}
 </svelte:head>
 
+<!-- Three columns on wide screens for a single version (design 3A): book rail,
+     reading column, context panel. Compare pages use the full width (design 3B). -->
 <!-- svelte-ignore a11y_no_static_element_interactions -- swipe is a shortcut for the prev/next links below -->
-<div class="reader" class:dual={data.chapters.length > 1} ontouchstart={touchStart} ontouchend={touchEnd}>
-	<div class="toolbar">
-		<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
-		<div class="right">
-			<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
-			{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
-			{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
-		</div>
-	</div>
+<div class="reader" class:dual ontouchstart={touchStart} ontouchend={touchEnd}>
+	{#if !dual}
+		<aside class="rail">
+			<BookRail versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
+		</aside>
+	{/if}
 
-	<div class="measure">
-		<nav class="crumbs" aria-label="Breadcrumb">
-			<a href="/">Bible</a>
-			<span aria-hidden="true">›</span>
-			<span>{testamentName}</span>
-			<span aria-hidden="true">›</span>
-			<a href={chapterUrl(versionPath, data.book)} lang={primary.lang}>{bookName}</a>
-			<span aria-hidden="true">›</span>
-			{#if data.range}
-				<a href={chapterUrl(versionPath, data.book, data.chapter)}>{data.chapter}</a>
+	<div class="main">
+		<div class="toolbar">
+			<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
+			<div class="right">
+				<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
+				{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
+				{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
+			</div>
+		</div>
+
+		<div class="measure">
+			<nav class="crumbs" aria-label="Breadcrumb">
+				<a href="/">Bible</a>
 				<span aria-hidden="true">›</span>
-				<span aria-current="page">{rangeLabel}</span>
+				<span>{testamentName}</span>
+				<span aria-hidden="true">›</span>
+				<a href={chapterUrl(versionPath, data.book)} lang={primary.lang}>{bookName}</a>
+				<span aria-hidden="true">›</span>
+				{#if data.range}
+					<a href={chapterUrl(versionPath, data.book, data.chapter)}>{data.chapter}</a>
+					<span aria-hidden="true">›</span>
+					<span aria-current="page">{rangeLabel}</span>
+				{:else}
+					<span aria-current="page">{data.chapter}</span>
+				{/if}
+			</nav>
+
+			<div class="titles">
+				<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
+				<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}</span>
+			</div>
+
+			{#if !dual}
+				<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} />
 			{:else}
-				<span aria-current="page">{data.chapter}</span>
+				<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 			{/if}
-		</nav>
 
-		<div class="titles">
-			<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
-			<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}</span>
+			<nav class="pager" aria-label={isTamil ? 'அதிகாரங்கள்' : 'Chapters'}>
+				{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Previous'}</a>{:else}<span class="chip spacer" aria-hidden="true"></span>{/if}
+				<a class="chip primary round list" href={chapterUrl(versionPath, data.book)} aria-label={isTamil ? `${bookName}: அதிகாரங்கள்` : `${bookName}: all chapters`} title={isTamil ? 'அதிகாரங்கள்' : 'All chapters'}>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
+				</a>
+				{#if navUrl(next)}<a class="chip" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{:else}<span class="chip spacer" aria-hidden="true"></span>{/if}
+			</nav>
+
+			<footer class="attribution">
+				{#each data.versions as v (v.code)}
+					<p><a href={v.source_url} rel="license">{v.attribution}</a></p>
+				{/each}
+			</footer>
 		</div>
-
-		{#if data.chapters.length === 1}
-			<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={(id) => (xrefOpen = id)} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} />
-		{:else}
-			<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
-		{/if}
-
-		<nav class="pager" aria-label={isTamil ? 'அதிகாரங்கள்' : 'Chapters'}>
-			{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Previous'}</a>{:else}<span class="chip spacer" aria-hidden="true"></span>{/if}
-			<a class="chip primary round list" href={chapterUrl(versionPath, data.book)} aria-label={isTamil ? `${bookName}: அதிகாரங்கள்` : `${bookName}: all chapters`} title={isTamil ? 'அதிகாரங்கள்' : 'All chapters'}>
-				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
-			</a>
-			{#if navUrl(next)}<a class="chip" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{:else}<span class="chip spacer" aria-hidden="true"></span>{/if}
-		</nav>
-
-		<footer class="attribution">
-			{#each data.versions as v (v.code)}
-				<p><a href={v.source_url} rel="license">{v.attribution}</a></p>
-			{/each}
-		</footer>
 	</div>
+
+	{#if !dual}
+		<aside class="panel">
+			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui}>
+				{#snippet actions()}
+					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={() => { selected = new Set(); xrefOpen = null; }} onhighlight={applyHighlight} onnote={() => openNote()} />
+				{/snippet}
+			</ContextPanel>
+		</aside>
+	{/if}
+</div>
+
+<!-- Overlays for screens without the context panel -->
+<div class="overlays" class:dual>
+	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={() => (selected = new Set())} onhighlight={applyHighlight} onnote={() => openNote()} />
+	{#if xrefOpen && xrefs?.[xrefOpen]}
+		<XrefPanel verseId={xrefOpen} targets={xrefs[xrefOpen]} version={primary.code} lang={ui} onclose={() => (xrefOpen = null)} />
+	{/if}
 </div>
 
 {#if sizeOpen}
@@ -291,25 +347,25 @@
 	</div>
 {/if}
 
-<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={() => (selected = new Set())} onhighlight={applyHighlight} onnote={() => openNote()} />
-
 {#if noteOpen}
 	<NoteSheet book={data.book.code} chapter={data.chapter} verseStart={noteOpen.start} verseEnd={noteOpen.end} existing={noteOpen.existing} lang={ui}
 		label={`${bookName} ${data.chapter}:${noteOpen.start}${noteOpen.end !== noteOpen.start ? `-${noteOpen.end}` : ''}`}
 		onclose={() => (noteOpen = null)} onsaved={() => loadPersonal()} />
 {/if}
 
-{#if xrefOpen && xrefs?.[xrefOpen]}
-	<XrefPanel verseId={xrefOpen} targets={xrefs[xrefOpen]} version={primary.code} lang={ui} onclose={() => (xrefOpen = null)} />
-{/if}
-
 <style>
+	/* Column frame. Single column by default; the rail joins at 960px and the
+	   context panel at 1180px. Compare pages stay one centred column. */
+	.reader { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
+	.rail, .panel { display: none; }
+	.main { width: 100%; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+	.measure { max-width: 40rem; margin: 0 auto; }
+	.reader.dual .measure { max-width: none; }
+
 	.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 1rem; margin: 0 0 1.5rem; border-bottom: var(--bw) solid var(--line); }
 	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }
 	.aa { font-family: var(--sans); font-weight: 700; color: var(--accent); gap: 0; }
 	.aa span { font-size: 0.72em; }
-	.measure { max-width: 40rem; margin: 0 auto; }
-	.reader.dual .measure { max-width: none; }
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
 	.crumbs a { color: var(--accent); font-weight: 600; text-decoration: none; }
 	.crumbs a[lang='ta'] { font-family: var(--tamil); }
@@ -325,6 +381,7 @@
 	.attribution { margin-top: 2.5rem; font-size: 0.78rem; color: var(--muted); }
 	.attribution a { color: inherit; }
 	.attribution p { margin: 0.2rem 0; }
+
 	.size { position: fixed; z-index: 16; left: 50%; bottom: max(1.25rem, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(24rem, calc(100vw - 2rem)); padding: 1.1rem; box-shadow: var(--shadow); border-radius: var(--r-2xl); border-color: var(--line-2); display: grid; gap: 0.9rem; }
 	.size-head { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; }
 	.size-head [lang='ta'] { font-family: var(--tamil); }
@@ -335,8 +392,28 @@
 	.step { width: 4.25rem; min-height: 56px; border-radius: 14px; font-family: var(--sans); font-size: 1.1rem; font-weight: 700; color: var(--ink-2); }
 	.sample { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border: var(--bw) solid var(--accent); background: var(--accent-soft); border-radius: 14px; font-family: var(--tamil); font-size: 1.3rem; }
 	.sample .n { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+	@media (max-width: 720px) {
+		.main { padding: 1.25rem 1rem 4rem; }
+	}
 	@media (max-width: 640px) {
 		.toolbar .right { width: 100%; margin-left: 0; }
 		.toolbar .right .chip:not(.aa) { flex: 1; }
+	}
+
+	/* Rail joins */
+	@media (min-width: 960px) {
+		.reader:not(.dual) { grid-template-columns: 16.75rem minmax(0, 1fr); }
+		.reader:not(.dual) .rail { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); }
+		.reader:not(.dual) .main { max-width: none; padding: 1.5rem 2.5rem 4rem; }
+		/* The rail covers book and chapter navigation */
+		.reader:not(.dual) :global(.picker select.nav) { display: none; }
+	}
+	/* Context panel joins; the floating action bar and the overlay drawer step aside */
+	@media (min-width: 1180px) {
+		.reader:not(.dual) { grid-template-columns: 16.75rem minmax(0, 1fr) 21.5rem; }
+		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); scrollbar-width: thin; }
+		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
+		.overlays:not(.dual) { display: none; }
 	}
 </style>

@@ -12,6 +12,10 @@
 	let { children } = $props();
 	let settingsOpen = $state(false);
 	let menuOpen = $state(false);
+	// Header height feeds the sticky rail/panel offsets of the reader layout.
+	let headerH = $state(0);
+	// Chapter pages run edge to edge so the reader can lay out its own columns.
+	const wide = $derived(page.route.id?.includes('[chapter=int]') ?? false);
 
 	// Keep the reader's current version(s) when jumping by reference.
 	const versionPath = $derived(page.params.versions ?? settings.value.version);
@@ -45,7 +49,7 @@
 
 <svelte:window onkeydown={onKey} />
 
-<header class="site">
+<header class="site" bind:clientHeight={headerH}>
 	<div class="bar">
 		<a class="brand" href="/">
 			<span class="ta" lang="ta">தமிழ் வேதாகமம்</span>
@@ -86,7 +90,7 @@
 
 <SettingsPanel bind:open={settingsOpen} />
 
-<main class="page">
+<main class="page" class:wide style="--header-h: {headerH}px">
 	{@render children()}
 </main>
 
@@ -119,6 +123,7 @@
 	.gear { width: 42px; height: 42px; min-height: 42px; padding: 0; color: var(--ink-2); }
 	.gear:hover { color: var(--accent); }
 	.page { max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+	.page.wide { max-width: none; padding: 0; }
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
 	.site-foot a:hover { color: var(--accent); }
@@ -126,6 +131,6 @@
 		.bar { padding: 0.6rem 1rem; gap: 0.6rem 0.75rem; }
 		.brand .en { display: none; }
 		.ref { order: 3; flex-basis: 100%; max-width: none; }
-		.page, .site-foot { padding-left: 1rem; padding-right: 1rem; }
+		.page:not(.wide), .site-foot { padding-left: 1rem; padding-right: 1rem; }
 	}
 </style>

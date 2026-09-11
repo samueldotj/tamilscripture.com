@@ -1,5 +1,7 @@
 <script lang="ts">
-	// Floating actions for the current verse selection: highlight, note, copy, share, clear.
+	// Actions for the current verse selection: highlight, note, copy, share, clear.
+	// `floating` is the pill over the text (phones, tablets); `panel` lays the
+	// same controls out inside the desktop context column.
 	import type { ChapterJson, Book } from '$lib/content/types';
 	import { chapterUrl } from '$lib/content/manifest';
 	import { COLORS, type HighlightColor } from '$lib/personal/repo';
@@ -14,6 +16,7 @@
 		signedIn = false,
 		currentColor = null,
 		communityUsers = 0,
+		variant = 'floating',
 		onclear,
 		onhighlight,
 		onnote
@@ -28,6 +31,7 @@
 		currentColor?: HighlightColor | null;
 		/** readers who highlighted the selected verse (max over the selection); 0 when below the privacy threshold */
 		communityUsers?: number;
+		variant?: 'floating' | 'panel';
 		onclear: () => void;
 		onhighlight?: (color: HighlightColor | null) => void;
 		onnote?: () => void;
@@ -84,7 +88,7 @@
 </script>
 
 {#if selected.size}
-	<div class="bar card" role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
+	<div class="bar" class:card={variant === 'floating'} class:floating={variant === 'floating'} class:panel={variant === 'panel'} role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
 		<span class="label" lang={lang}>{label}</span>
 		{#if communityUsers}
 			<span class="community" title={ta ? `${communityUsers} வாசகர்கள் அடிக்கோடிட்டனர்` : `${communityUsers} readers highlighted this`}>◉ {communityUsers}</span>
@@ -107,15 +111,22 @@
 {/if}
 
 <style>
-	.bar { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.6rem 0.6rem 1rem; border-color: var(--line-2); border-radius: var(--r-2xl); box-shadow: var(--shadow); max-width: calc(100vw - 1.5rem); flex-wrap: wrap; justify-content: center; }
+	.bar { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+	.floating { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; padding: 0.6rem 0.6rem 0.6rem 1rem; border-color: var(--line-2); border-radius: var(--r-2xl); box-shadow: var(--shadow); max-width: calc(100vw - 1.5rem); justify-content: center; }
+	.panel { position: relative; }
+	.panel .label { display: none; }
 	.label { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
 	.label[lang='ta'] { font-family: var(--tamil); }
 	.chip { min-height: 40px; padding: 0.4rem 0.85rem; border-radius: var(--r); }
+	.panel .chip { flex: 1 1 auto; min-height: 46px; }
 	.ghost { border: 0; background: none; color: var(--muted); font-size: 0.95rem; line-height: 1; min-width: 40px; min-height: 40px; padding: 0; cursor: pointer; border-radius: 999px; }
 	.ghost:hover { background: var(--surface-2); color: var(--ink); }
 	.community { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+	.panel .community { width: 100%; }
 	.colors { display: inline-flex; gap: 0.35rem; padding: 0 0.2rem; }
+	.panel .colors { width: 100%; gap: 0.5rem; padding: 0 0 0.2rem; }
 	.swatch { width: 28px; height: 28px; min-height: 28px; padding: 0; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
+	.panel .swatch { width: 32px; height: 32px; min-height: 32px; }
 	.swatch.yellow { background: var(--hl-yellow); } .swatch.green { background: var(--hl-green); } .swatch.blue { background: var(--hl-blue); } .swatch.pink { background: var(--hl-pink); }
 	.swatch.on { border-color: var(--ink); }
 	.toast { position: absolute; bottom: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: var(--r-s); white-space: nowrap; }

@@ -49,7 +49,7 @@
 			<option value={v.code} disabled={!v.books.includes(book.code)}>{v.short}</option>
 		{/each}
 	</select>
-	<select class="chip" aria-label={ta ? 'புத்தகம்' : 'Book'} value={book.code} onchange={onBook} lang={ta ? 'ta' : 'en'}>
+	<select class="chip nav" aria-label={ta ? 'புத்தகம்' : 'Book'} value={book.code} onchange={onBook} lang={ta ? 'ta' : 'en'}>
 		<optgroup label={ta ? 'பழைய ஏற்பாடு' : 'Old Testament'}>
 			{#each ot as b (b.code)}<option value={b.code}>{ta ? b.name_ta : b.name_en}</option>{/each}
 		</optgroup>
@@ -58,7 +58,7 @@
 		</optgroup>
 	</select>
 	{#if chapter !== undefined}
-		<select class="chip" aria-label={ta ? 'அதிகாரம்' : 'Chapter'} value={String(chapter)} onchange={onChapter}>
+		<select class="chip nav" aria-label={ta ? 'அதிகாரம்' : 'Chapter'} value={String(chapter)} onchange={onChapter}>
 			{#each Array.from({ length: book.chapters }, (_, i) => i + 1) as c (c)}
 				<option value={String(c)}>{c}</option>
 			{/each}

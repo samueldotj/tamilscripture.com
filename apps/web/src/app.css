@@ -21,6 +21,7 @@
 	--surface: #FFFFFF;     /* cards, inputs, chips */
 	--surface-2: #F3EDE2;   /* inset panels, card headers */
 	--surface-3: #EFE8DC;   /* segmented-control track */
+	--rail: #F7F2E8;        /* desktop book rail */
 	--ink: #191512;         /* primary text */
 	--ink-2: #57504A;       /* secondary text */
 	--ink-en: #2A241E;      /* English scripture */
@@ -71,6 +72,7 @@ html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam
 		--surface: #262930;
 		--surface-2: #20232A;
 		--surface-3: #2E323B;
+		--rail: #20232A;
 		--ink: #F1ECE1;
 		--ink-2: #C4BEB1;
 		--ink-en: #D8D2C6;
@@ -98,6 +100,7 @@ html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam
 	--surface: #262930;
 	--surface-2: #20232A;
 	--surface-3: #2E323B;
+	--rail: #20232A;
 	--ink: #F1ECE1;
 	--ink-2: #C4BEB1;
 	--ink-en: #D8D2C6;
