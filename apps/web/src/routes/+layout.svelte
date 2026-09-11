@@ -90,7 +90,7 @@
 
 <SettingsPanel bind:open={settingsOpen} />
 
-<main class="page" class:wide style="--header-h: {headerH}px">
+<main class="page" class:wide style={headerH ? `--header-h: ${headerH}px` : undefined}>
 	{@render children()}
 </main>
 
@@ -122,7 +122,10 @@
 	.menu a:hover, .menu button:hover { background: var(--accent-soft); }
 	.gear { width: 42px; height: 42px; min-height: 42px; padding: 0; color: var(--ink-2); }
 	.gear:hover { color: var(--accent); }
-	.page { max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+	/* Sticky offsets for the reader columns. The fallback matches the one-row
+	   header (46px search field + 0.8rem padding each side + border) so the
+	   measured value only fine-tunes it and nothing jumps after hydration. */
+	.page { --header-h: 4.4rem; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 	.page.wide { max-width: none; padding: 0; }
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
