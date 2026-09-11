@@ -82,11 +82,11 @@
 			</li>
 		{/each}
 	</ol>
+	{#if targets.length > 10 && !showAll}
+		<button type="button" class="chip more" onclick={() => (showAll = true)}>{ta ? `மேலும் ${targets.length - 10}` : `${targets.length - 10} more`}</button>
+	{/if}
+	<p class="credit">OpenBible.info, CC BY</p>
 {/await}
-{#if targets.length > 10 && !showAll}
-	<button type="button" class="chip more" onclick={() => (showAll = true)}>{ta ? `மேலும் ${targets.length - 10}` : `${targets.length - 10} more`}</button>
-{/if}
-<p class="credit">OpenBible.info, CC BY</p>
 
 <style>
 	ol { list-style: none; padding: 0.6rem 0 0; margin: 0; display: grid; gap: 1.1rem; }
