@@ -88,6 +88,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Code shipped 7 Sep 2026; blocked on owner's Supabase Auth URL setup (3.1); 3.4, 3.8, 3.9 open |
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Code shipped 7 Sep 2026; 4.7 alerting open |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
+| **M6 · Places, dictionary, people, maps** | Verse-linked places with maps, Reformed dictionary articles, people, and an interactive atlas. Plan in [docs/atlas-roadmap.md](docs/atlas-roadmap.md). | To be added as R-11–R-14 | Acts 13 shows its places on a map; "தமஸ்கு" in the search box opens Damascus. | Proposed 12 Sep 2026, awaiting prioritisation |
 
 ### M0 · Foundations
 
