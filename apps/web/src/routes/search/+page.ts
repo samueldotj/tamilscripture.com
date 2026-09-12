@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import { search, commonSearches } from '$lib/search/api';
+import { search, commonSearches, searchEntities } from '$lib/search/api';
 import { DEFAULT_VERSION, findVersion, manifest } from '$lib/content/manifest';
 
 export const prerender = false;
@@ -19,12 +19,15 @@ export const load: PageLoad = async ({ url, fetch }) => {
 
 	if (q.length < 2) {
 		const common = await commonSearches(fetch, primary.lang).catch(() => []);
-		return { q, scope, primary, versions, offset, result: null, common, error: null };
+		return { q, scope, primary, versions, offset, result: null, entities: [], common, error: null };
 	}
+	// Entity cards ride alongside the first page of verse hits.
+	const entitiesPromise = offset === 0 ? searchEntities(fetch, q, 6).catch(() => []) : Promise.resolve([]);
 	try {
-		const result = await search(fetch, q, versions, offset);
-		return { q, scope, primary, versions, offset, result, common: [], error: null };
+		const [result, entities] = await Promise.all([search(fetch, q, versions, offset), entitiesPromise]);
+		return { q, scope, primary, versions, offset, result, entities, common: [], error: null };
 	} catch (e) {
-		return { q, scope, primary, versions, offset, result: null, common: [], error: (e as Error).message };
+		const entities = await entitiesPromise;
+		return { q, scope, primary, versions, offset, result: null, entities, common: [], error: (e as Error).message };
 	}
 };

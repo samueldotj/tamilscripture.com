@@ -570,6 +570,21 @@ flowchart LR
 - **Options:** Live count on request · trigger-maintained summary table · hourly materialised view.
 - **Chosen:** Materialised view. Simplest thing that meets "updates at most hourly", and the threshold lives in the view definition. The trigger table is the documented upgrade path.
 
+
+### ADR-10 · Places are content build outputs; entity pages are ISR
+- **Options:** Entities in Postgres read at request time · entities as static JSON from the pipeline with ISR pages · a separate atlas site.
+- **Chosen:** A second Rust crate, `entity-ingest`, runs after `usfm-ingest` and writes place JSON, per-chapter mentions, GeoJSON, SVG maps and a search CSV into the same content build. Pages read only static files; Postgres gains one search table loaded from the CSV. Place pages are ISR for the same route-cap reason as chapters (ADR-1).
+- **Consequence:** the reading path stays free of new requests; correcting a name means a content rebuild, which is also how community corrections will land (feature_dictionary.md).
+
+### ADR-11 · Outline base map as clipped GeoJSON, no tiles in version 1
+- **Options:** PMTiles archive on object storage · public OpenStreetMap tiles · Natural Earth outline clipped to the region and served as plain GeoJSON.
+- **Chosen:** Clipped Natural Earth GeoJSON (about 200 kB for land, lakes and rivers). It is public domain, small enough to be a static asset, renders both the build-time SVG maps and the MapLibre explore page, and needs no tile pipeline or second provider. PMTiles remains the upgrade path if terrain or more detail is wanted.
+- **Consequence:** the explore map shows coastlines, water and our own labels only, which is the intended "biblical outline" look.
+
+### ADR-12 · Tamil place names come from the corpus, not from transliteration
+- **Options:** Model transliteration from English or Hebrew · manual entry · co-occurrence over the verses the place appears in.
+- **Chosen:** Co-occurrence: candidate stems are shared prefixes of normalised tokens in the place's verses, scored by coverage and rarity, so every form is a word that actually occurs in that version. The base form is the shortest well-attested spelling. Confidence and a review flag are stored; the build rejects a form absent from the text.
+- **Consequence:** rare names and same-named places need human review, which the community review flow in M7 provides; no Tamil form on the site can fail to link to a verse.
 ---
 
 ## 13. Risks and mitigations

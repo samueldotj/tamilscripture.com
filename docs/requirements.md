@@ -33,8 +33,9 @@ Companion document: [design.md](design.md).
 14. [Data model](#14-data-model)
 15. [Delivery phases](#15-delivery-phases)
 16. [Open questions and assumptions](#16-open-questions-and-assumptions)
+17. [Places and maps](#17-places-and-maps)
 
-Requirement IDs follow the numbering of the original feature list (R-1.x reading, R-2.x stats, R-3.x sources, R-5.x search, R-7.x cross-references, R-8.x formats, R-9.x dual display, R-10.x accounts).
+Requirement IDs follow the numbering of the original feature list (R-1.x reading, R-2.x stats, R-3.x sources, R-5.x search, R-7.x cross-references, R-8.x formats, R-9.x dual display, R-10.x accounts, R-11.x places, R-14.x maps).
 
 ---
 
@@ -412,6 +413,7 @@ Ship a reader first. Each phase is usable on its own and feeds real usage data i
 | **3 · Remember** | Sign-in, history, notes, highlights, cross-device sync, export and delete. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; a user's data is invisible to another user via the API. |
 | **4 · Community** | Highlight counts, heatmaps, heat overlay, opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. |
 | **Later** | Could items: keyboard shortcuts, romanised Tamil search, sub-verse highlights, Markdown notes, monthly top verses, anonymous import. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | |
+| **6 · Places and maps** | Verse-linked places with Tamil names, static maps in the reader, place and journey pages, interactive atlas, place search. | R-11.1–11.8, R-14.1–14.6 | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. |
 
 ---
 
@@ -428,3 +430,26 @@ Decisions that change the build. Each names who should decide.
 7. **Assumption: highlights are whole-verse in version 1.** Sub-verse highlighting is deferred because it must be stored per version. *Confirmed unless objected.*
 8. **Assumption: notes are private in version 1.** Any sharing feature would change the privacy policy and RLS design. *Confirmed unless objected.*
 9. **Assumption: the 300 ms home page budget is a desktop, warm-cache figure.** The mobile budget is 1.2 s as in section 11. *Confirmed unless objected.*
+
+---
+
+## 17. Places and maps
+
+Added 12 Sep 2026 for milestone M6 (design: [feature_maps.md](feature_maps.md)). Every place the Bible names is an entity with a stable page, and the reader can show where a passage happens without leaving the text.
+
+| ID | Requirement | Priority |
+|---|---|---|
+| R-11.1 | Every place in the OpenBible geocoding data is an entity with a stable English slug at `/place/{slug}`; same-named places carry a qualifier ("Antioch (1)"). | Must |
+| R-11.2 | A place page shows the name in both scripts, its kind (city, river, region…), coordinates and location precision, every verse that names it grouped by book with links, related journeys, nearby places, and the data attribution. | Must |
+| R-11.3 | Tamil place names are aligned per Tamil version from the verse text itself, never invented: every published form occurs in that version's text for the place's verses, and the build fails otherwise. Unreviewed alignments are shown with a "draft" badge. | Must |
+| R-11.4 | While reading, a Places tab in the context panel (desktop) or sheet (phones) lists the places named in the chapter with the verses that name them, emphasising the selected verse's places. | Must |
+| R-11.5 | Places are found by the search box and offered in the reference box suggestions, in either script, with the same Tamil folding as verse search. | Must |
+| R-11.6 | Entity pages are cached at the edge like chapters and listed in a sitemap. | Must |
+| R-11.7 | The reading pages gain no blocking request: mentions and maps load when the panel opens; the layout-shift budget is unchanged. | Must |
+| R-11.8 | Tamil kind, precision and period labels come from one bilingual glossary file. | Should |
+| R-14.1 | Each chapter that names a located place has a static outline map (coastline, water, rivers, our labels) with those places marked; each place and journey has one too. Maps are SVG inlined into the page so they follow the theme and show labels in the interface language. | Must |
+| R-14.2 | The base map is public-domain Natural Earth clipped to the biblical world; no external map or tile service is called from the site. | Must |
+| R-14.3 | An interactive map at `/atlas/explore` lets a reader pan, zoom, and tap places; it loads only on request and has its own size budget, never affecting the reader. | Must |
+| R-14.4 | Journeys are ordered stops with passage references and a route; version 1 draws straight legs between stops. `/atlas` lists journeys and the most-mentioned places; `/atlas/{journey}` shows the map, stops and passages. | Must |
+| R-14.5 | Historical regions carry period metadata; a period selector appears only once two or more periods exist. | Could |
+| R-14.6 | Every map carries its attribution (OpenBible.info CC BY 4.0, Natural Earth). | Must |

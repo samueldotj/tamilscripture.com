@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
-	import { queryTokens } from '$lib/search/api';
+	import { entityLabelTa, queryTokens } from '$lib/search/api';
 	import { settings } from '$lib/settings/store.svelte';
 
 	let { data } = $props();
@@ -71,6 +71,24 @@
 		<button type="button" role="radio" aria-checked={data.scope === 'lang'} class:on={data.scope === 'lang'} onclick={() => setScope('lang')}>{data.primary.lang === 'ta' ? (ta ? 'எல்லா தமிழ்' : 'All Tamil') : (ta ? 'எல்லா ஆங்கிலம்' : 'All English')}</button>
 		<button type="button" role="radio" aria-checked={data.scope === 'all'} class:on={data.scope === 'all'} onclick={() => setScope('all')}>{ta ? 'எல்லாம்' : 'All versions'}</button>
 	</div>
+
+	{#if data.entities?.length}
+		<section class="entities" aria-label={ta ? 'இடங்கள்' : 'Places'}>
+			<h2 class="kicker"><span lang="ta">இடங்கள்</span> · Places</h2>
+			<ul>
+				{#each data.entities as e (e.id)}
+					{@const label = entityLabelTa(e)}
+					<li>
+						<a class="card ent" href="/place/{e.slug}">
+							<span class="pin" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+							<span class="ename" lang={ta && label ? 'ta' : 'en'}>{ta && label ? label : e.name_en}</span>
+							<span class="ealt" lang={ta ? 'en' : 'ta'}>{ta ? e.name_en : (label ?? '')}</span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
 
 	{#if data.error}
 		<p class="error" role="alert">{ta ? 'தேடல் தற்போது கிடைக்கவில்லை. சிறிது நேரம் கழித்து முயற்சிக்கவும்.' : 'Search is unavailable right now. Please try again shortly.'}</p>
@@ -160,6 +178,17 @@
 	.common ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 	.common .chip { font-weight: 500; color: var(--ink-2); min-height: 40px; }
 	.common .chip[lang='ta'] { font-family: var(--tamil); }
+	.entities { margin: 0 0 1.4rem; }
+	.entities h2 { margin: 0 0 0.6rem; }
+	.entities h2 [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
+	.entities ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 0.6rem; }
+	.ent { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 0.6rem; align-items: baseline; padding: 0.7rem 0.9rem; text-decoration: none; color: inherit; border-radius: 14px; }
+	.ent:hover { border-color: var(--accent); }
+	.ent .pin { grid-row: 1 / span 2; color: var(--accent); align-self: center; }
+	.ename { font-weight: 700; font-size: 1.05rem; }
+	.ename[lang='ta'] { font-family: var(--tamil); }
+	.ealt { font-size: 0.78rem; color: var(--muted); }
+	.ealt[lang='ta'] { font-family: var(--tamil); }
 	.hint { color: var(--muted); max-width: 42rem; margin-top: 1.5rem; line-height: 1.7; }
 	.hint[lang='ta'] { font-family: var(--tamil); }
 	.error { color: var(--amber); }

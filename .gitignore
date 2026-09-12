@@ -161,3 +161,4 @@ apps/web/build/
 
 # variable TTF sources for scripts/subset-fonts.py (downloaded on demand)
 data/fonts-src/
+data/basemap-src/
