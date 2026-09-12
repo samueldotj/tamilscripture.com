@@ -8,8 +8,8 @@ This document turns the data-source discussion (`bible_project_maps_data_summary
 
 | Question | Decision |
 |---|---|
-| Tamil descriptions | Articles are drafted in Tamil by an AI process run outside this repository from the English public-domain articles, committed as drafts, and corrected by the community (§7). English is shown only where no Tamil draft exists. |
-| Tamil name alignment | Drafted inside the pipeline from verse co-occurrence (§3); a model may only choose between corpus candidates, never invent a form. Corrected by the community (§7). |
+| Tamil descriptions | Articles are drafted in Tamil by an AI process run outside this repository from the English public-domain articles, committed as drafts, and corrected by the community (§5). English is shown only where no Tamil draft exists. |
+| Tamil name alignment | Drafted inside the pipeline from verse co-occurrence (§3); a model may only choose between corpus candidates, never invent a form. Corrected by the community (§5). |
 | Review | Crowdsourced. Signed-in readers suggest paragraph-level corrections; reviewers accept or reject; moderators also manage roles. Readers see nothing until acceptance. |
 | Publishing corrections | Export only. A scheduled job every 12 hours exports accepted corrections from the database into the repository, which rebuilds the site. Moderators can trigger the export immediately. The site never reads entity content from Postgres. |
 | Contribution licence | Suggesting a correction licenses it CC BY, stated on the form and the account page. |
@@ -98,7 +98,7 @@ Per-chapter mentions:
 
 ### Tamil name alignment
 
-`data/entities/names-ta.toml` maps each **name string** (not each entity: the thirty people called Zechariah share one Tamil form, and TIPNR's verse lists tell them apart) to its Tamil surface forms per version. `entity-ingest` has a `--draft-names` mode that proposes forms by co-occurrence: for each name, collect the verses it appears in, tokenise the Tamil text of those verses, apply the existing `tamil-norm` folding and suffix stripping, and rank tokens that recur across the name's verses and rarely elsewhere. Candidates are therefore always words present in the text. A model is used only to break ties between candidates, never to transliterate. Each row carries a confidence; low-confidence rows are shown with a "draft" badge until a reviewer accepts them (§7). Build rule: every accepted form must occur in at least one of that name's verses in that version, or the build fails. Expect roughly 2,500 distinct names, places first.
+`data/entities/names-ta.toml` maps each **name string** (not each entity: the thirty people called Zechariah share one Tamil form, and TIPNR's verse lists tell them apart) to its Tamil surface forms per version. `entity-ingest` has a `--draft-names` mode that proposes forms by co-occurrence: for each name, collect the verses it appears in, tokenise the Tamil text of those verses, apply the existing `tamil-norm` folding and suffix stripping, and rank tokens that recur across the name's verses and rarely elsewhere. Candidates are therefore always words present in the text. A model is used only to break ties between candidates, never to transliterate. Each row carries a confidence; low-confidence rows are shown with a "draft" badge until a reviewer accepts them (§5). Build rule: every accepted form must occur in at least one of that name's verses in that version, or the build fails. Expect roughly 2,500 distinct names, places first.
 
 ### Reformed-content gate
 
@@ -160,7 +160,7 @@ Effort is rough calendar time at the pace of the earlier milestones, excluding t
 | **A3 · People** | TIPNR people with disambiguation, Tamil names reviewed, person pages, People tab, name underline setting. | Selecting Acts 13:1 lists six people, each opening a page with the right disambiguation. | 2–3 weeks |
 | **A4 · Interactive map** | PMTiles archive on Vercel Blob, MapLibre explore page, place and journey layers, journey pages. | Explore loads under budget on 4G; Paul's journeys draw with ordered stops. | 2 weeks |
 | **A5 · Events and periods** | Theographic events and periods if licence and value justify it; period selector for regions. | Optional; decided after A4. | 2 weeks |
-| **A6 · Tamil draft articles** | Externally produced Tamil drafts (§7) ingested from `data/entities/drafts/ta/`, validated, shown first in Tamil UI with English as fallback; suggestions enabled on every paragraph. | A place page in Tamil UI shows the Tamil article first; a stale draft falls back per paragraph. | 1 week after drafts arrive |
+| **A6 · Tamil draft articles** | Externally produced Tamil drafts (§5) ingested from `data/entities/drafts/ta/`, validated, shown first in Tamil UI with English as fallback; suggestions enabled on every paragraph. | A place page in Tamil UI shows the Tamil article first; a stale draft falls back per paragraph. | 1 week after drafts arrive |
 
 ### A0 · Sources and licences
 
@@ -188,14 +188,14 @@ Effort is rough calendar time at the pace of the earlier milestones, excluding t
 
 | # | Task | Refs |
 |---|---|---|
-| A1b.1 | Migration: `profiles.role`, `entity_suggestions`, `entity_accepted`, `moderation_log`; RLS; `set_role`, `accept_suggestion`, `reject_suggestion` functions; rate limits | §7 |
-| A1b.2 | RLS test suite covering reader, reviewer and moderator (closes M3 task 3.4) | design §7 |
-| A1b.3 | Suggestion control on every Tamil name and article paragraph for signed-in users; CC BY consent line; `/me/contributions` | §7 |
-| A1b.4 | `/mod` queue: open suggestions with current text, suggestion and English source side by side; accept, edit-then-accept, reject with reason; per-entity grouping | §7 |
-| A1b.5 | `/mod/roles` for moderators: appoint and remove reviewers | §7 |
-| A1b.6 | Export workflow: every 12 hours and on dispatch, read accepted rows with the service key, write `data/entities/overrides/`, commit if changed; deploy follows | §7 |
-| A1b.7 | "Publish now" in `/mod`: server route verifies the moderator's session and dispatches the export workflow through a fine-grained GitHub token | §7 |
-| A1b.8 | Build applies overrides over drafts; badges for draft, community-corrected and owner-authored text | §3, §7 |
+| A1b.1 | Migration: `profiles.role`, `entity_suggestions`, `entity_accepted`, `moderation_log`; RLS; `set_role`, `accept_suggestion`, `reject_suggestion` functions; rate limits | §5 |
+| A1b.2 | RLS test suite covering reader, reviewer and moderator (closes M3 task 3.4) | design §5 |
+| A1b.3 | Suggestion control on every Tamil name and article paragraph for signed-in users; CC BY consent line; `/me/contributions` | §5 |
+| A1b.4 | `/mod` queue: open suggestions with current text, suggestion and English source side by side; accept, edit-then-accept, reject with reason; per-entity grouping | §5 |
+| A1b.5 | `/mod/roles` for moderators: appoint and remove reviewers | §5 |
+| A1b.6 | Export workflow: every 12 hours and on dispatch, read accepted rows with the service key, write `data/entities/overrides/`, commit if changed; deploy follows | §5 |
+| A1b.7 | "Publish now" in `/mod`: server route verifies the moderator's session and dispatches the export workflow through a fine-grained GitHub token | §5 |
+| A1b.8 | Build applies overrides over drafts; badges for draft, community-corrected and owner-authored text | §3, §5 |
 
 ### A2 · Dictionary
 
@@ -239,11 +239,11 @@ Effort is rough calendar time at the pace of the earlier milestones, excluding t
 
 | # | Task | Refs |
 |---|---|---|
-| A6.1 | Ingest `data/entities/drafts/ta/` with the validation rules in §7; per-paragraph fallback to English when stale | §7 |
+| A6.1 | Ingest `data/entities/drafts/ta/` with the validation rules in §5; per-paragraph fallback to English when stale | §5 |
 | A6.2 | Full-text search over Tamil articles with `tamil_tsvector` | §3 |
-| A6.3 | Glossary check: report draft paragraphs whose names differ from accepted Tamil forms | §7 |
+| A6.3 | Glossary check: report draft paragraphs whose names differ from accepted Tamil forms | §5 |
 
-## 7. Community review of Tamil content
+## 5. Community review of Tamil content
 
 The site keeps its rule that scripture and reference content are static. The database is a moderation workspace only: readers write suggestions into it, reviewers accept them there, and a scheduled export writes the accepted text back into the repository, which rebuilds and deploys. No page reads entity content from Postgres.
 
@@ -368,7 +368,7 @@ Output the external process must produce, one file per article, committed to the
 
 Rules the build enforces on drafts: same paragraph ids and count as the source, `source_hash` matches the current English file (otherwise the draft is flagged stale and the English paragraph is shown for the changed ones), Tamil script present, no HTML. Name occurrences inside a draft should use the accepted Tamil forms from `names-ta.toml`; the external process can read that file to build its glossary, and the build reports paragraphs whose entity names do not match the accepted forms so reviewers can fix them first. Drafts are released CC BY as translations of public-domain text; a draft of a CC BY-SA source (if Aquifer is ever approved) is stored under `drafts/ta-sa/` and keeps the ShareAlike licence.
 
-## 5. Risks
+## 6. Risks
 
 | Risk | Mitigation |
 |---|---|
@@ -380,7 +380,7 @@ Rules the build enforces on drafts: same paragraph ids and count as the source, 
 | Reading performance regresses | Nothing new on the reading critical path; panel content loads on demand; existing Lighthouse and size budgets extended, not relaxed |
 | Journey and region data of poor quality | Ship only reviewed files; hand-author the short list later |
 
-## 6. Open items for the owner
+## 7. Open items for the owner
 
 1. Approve or reject Smith's and Aquifer after reading the A0.2 samples.
 2. Choose which phases come before the outstanding M3–M5 items (settings sync, error tracking, custom domain verification). The RLS test suite (3.4) is now part of A1b.
