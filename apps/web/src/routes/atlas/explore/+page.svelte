@@ -10,6 +10,10 @@
 	import type { Journey, PlaceIndexEntry } from '$lib/entities/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import 'maplibre-gl/dist/maplibre-gl.css';
+	// MapLibre's worker imports its shared module by a relative path that a
+	// bundle cannot satisfy, so Vite bundles the worker into its own chunk and
+	// MapLibre is pointed at that URL.
+	import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
 	const lang = $derived(settings.value.uiLang);
@@ -116,6 +120,7 @@
 	async function init() {
 		try {
 			maplibre = await import('maplibre-gl');
+			maplibre.setWorkerUrl(workerUrl);
 			const [index, js] = await Promise.all([loadPlaceIndex(fetch), loadJourneys(fetch).catch(() => [])]);
 			places = index.places;
 			journeys = js;
@@ -156,6 +161,16 @@
 				maxBounds: [[8, 20], [54, 48]],
 				attributionControl: false
 			});
+			map.on('error', (e) => {
+				console.error('maplibre', e.error ?? e);
+				if (status === 'loading') status = 'error';
+			});
+			if (page.url.searchParams.has('debug')) {
+				const bus = map as unknown as { on: (type: string, fn: (e: { dataType?: string; sourceId?: string }) => void) => void };
+				for (const ev of ['styledata', 'sourcedata', 'idle', 'load', 'webglcontextlost', 'dataloading', 'styledataloading', 'sourcedataloading']) {
+					bus.on(ev, (e) => console.log('maplibre-debug', ev, e.dataType ?? '', e.sourceId ?? ''));
+				}
+			}
 			map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
 			map.addControl(new maplibre.AttributionControl({ compact: true, customAttribution: 'Places: OpenBible.info CC BY 4.0 · Base map: Natural Earth' }));
 			map.on('load', async () => {

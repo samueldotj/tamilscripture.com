@@ -13,6 +13,9 @@ const adapter = process.env.VERCEL
 	: node({ precompress: false });
 
 export default defineConfig({
+	// Vite's dependency optimizer drops MapLibre's web worker in dev, so the map
+	// never loads; the production bundle is unaffected.
+	optimizeDeps: { exclude: ['maplibre-gl'] },
 	build: {
 		rollupOptions: {
 			output: {

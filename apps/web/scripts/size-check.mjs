@@ -8,14 +8,14 @@ import { gzipSync } from 'node:zlib';
 
 const root = new URL('../.svelte-kit/output/client/_app/immutable/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const SITE_LIMIT = 200 * 1024; // gzip, all chunks except the map engine
-const MAP_LIMIT = 320 * 1024; // gzip, the map engine chunk(s)
+const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 
 function walk(dir) {
 	const out = [];
 	for (const name of readdirSync(dir)) {
 		const p = join(dir, name);
 		if (statSync(p).isDirectory()) out.push(...walk(p));
-		else if (name.endsWith('.js')) out.push(p);
+		else if (name.endsWith('.js') || name.endsWith('.mjs')) out.push(p);
 	}
 	return out;
 }
@@ -26,7 +26,7 @@ const mapFiles = [];
 for (const file of walk(root)) {
 	const src = readFileSync(file);
 	const gz = gzipSync(src).length;
-	if (src.includes('maplibregl') && gz > 50 * 1024) {
+	if ((src.includes('maplibregl') && gz > 50 * 1024) || file.includes('maplibre-gl-worker')) {
 		map += gz;
 		mapFiles.push(file.slice(root.length));
 	} else {
