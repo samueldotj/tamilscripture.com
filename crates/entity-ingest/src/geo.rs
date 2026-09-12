@@ -17,7 +17,12 @@ pub struct BBox {
 
 impl BBox {
     pub fn empty() -> BBox {
-        BBox { min_lon: f64::MAX, min_lat: f64::MAX, max_lon: f64::MIN, max_lat: f64::MIN }
+        BBox {
+            min_lon: f64::MAX,
+            min_lat: f64::MAX,
+            max_lon: f64::MIN,
+            max_lat: f64::MIN,
+        }
     }
     pub fn add(&mut self, p: Pt) {
         self.min_lon = self.min_lon.min(p[0]);
@@ -51,16 +56,34 @@ fn read_pts(v: &Value) -> Vec<Pt> {
 }
 
 pub fn load_layer(path: &Path) -> Result<Layer> {
-    let text = std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
-    let d: Value = serde_json::from_str(&text).with_context(|| format!("parsing {}", path.display()))?;
-    let mut layer = Layer { polygons: Vec::new(), lines: Vec::new() };
+    let text =
+        std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    let d: Value =
+        serde_json::from_str(&text).with_context(|| format!("parsing {}", path.display()))?;
+    let mut layer = Layer {
+        polygons: Vec::new(),
+        lines: Vec::new(),
+    };
     for f in d["features"].as_array().into_iter().flatten() {
         let g = &f["geometry"];
         match g["type"].as_str() {
-            Some("Polygon") => layer.polygons.push(g["coordinates"].as_array().into_iter().flatten().map(read_pts).collect()),
+            Some("Polygon") => layer.polygons.push(
+                g["coordinates"]
+                    .as_array()
+                    .into_iter()
+                    .flatten()
+                    .map(read_pts)
+                    .collect(),
+            ),
             Some("MultiPolygon") => {
                 for poly in g["coordinates"].as_array().into_iter().flatten() {
-                    layer.polygons.push(poly.as_array().into_iter().flatten().map(read_pts).collect());
+                    layer.polygons.push(
+                        poly.as_array()
+                            .into_iter()
+                            .flatten()
+                            .map(read_pts)
+                            .collect(),
+                    );
                 }
             }
             Some("LineString") => layer.lines.push(read_pts(&g["coordinates"])),
@@ -77,7 +100,11 @@ pub fn load_layer(path: &Path) -> Result<Layer> {
 
 /// Sutherland–Hodgman clipping of one ring against a rectangle.
 pub fn clip_ring(ring: &[Pt], b: &BBox) -> Vec<Pt> {
-    fn clip_edge(input: &[Pt], inside: impl Fn(Pt) -> bool, intersect: impl Fn(Pt, Pt) -> Pt) -> Vec<Pt> {
+    fn clip_edge(
+        input: &[Pt],
+        inside: impl Fn(Pt) -> bool,
+        intersect: impl Fn(Pt, Pt) -> Pt,
+    ) -> Vec<Pt> {
         let mut out = Vec::with_capacity(input.len());
         if input.is_empty() {
             return out;
@@ -97,8 +124,18 @@ pub fn clip_ring(ring: &[Pt], b: &BBox) -> Vec<Pt> {
         }
         out
     }
-    let at_x = |x: f64| move |p: Pt, q: Pt| -> Pt { let t = (x - p[0]) / (q[0] - p[0]); [x, p[1] + t * (q[1] - p[1])] };
-    let at_y = |y: f64| move |p: Pt, q: Pt| -> Pt { let t = (y - p[1]) / (q[1] - p[1]); [p[0] + t * (q[0] - p[0]), y] };
+    let at_x = |x: f64| {
+        move |p: Pt, q: Pt| -> Pt {
+            let t = (x - p[0]) / (q[0] - p[0]);
+            [x, p[1] + t * (q[1] - p[1])]
+        }
+    };
+    let at_y = |y: f64| {
+        move |p: Pt, q: Pt| -> Pt {
+            let t = (y - p[1]) / (q[1] - p[1]);
+            [p[0] + t * (q[0] - p[0]), y]
+        }
+    };
     let r = clip_edge(ring, |p| p[0] >= b.min_lon, at_x(b.min_lon));
     let r = clip_edge(&r, |p| p[0] <= b.max_lon, at_x(b.max_lon));
     let r = clip_edge(&r, |p| p[1] >= b.min_lat, at_y(b.min_lat));
@@ -133,7 +170,12 @@ fn clip_segment(p: Pt, q: Pt, b: &BBox) -> Option<(Pt, Pt)> {
     let (dx, dy) = (q[0] - p[0], q[1] - p[1]);
     let mut t0 = 0.0f64;
     let mut t1 = 1.0f64;
-    for (pk, qk) in [(-dx, p[0] - b.min_lon), (dx, b.max_lon - p[0]), (-dy, p[1] - b.min_lat), (dy, b.max_lat - p[1])] {
+    for (pk, qk) in [
+        (-dx, p[0] - b.min_lon),
+        (dx, b.max_lon - p[0]),
+        (-dy, p[1] - b.min_lat),
+        (dy, b.max_lat - p[1]),
+    ] {
         if pk == 0.0 {
             if qk < 0.0 {
                 return None;
@@ -156,7 +198,10 @@ fn clip_segment(p: Pt, q: Pt, b: &BBox) -> Option<(Pt, Pt)> {
     if t0 > t1 {
         return None;
     }
-    Some(([p[0] + t0 * dx, p[1] + t0 * dy], [p[0] + t1 * dx, p[1] + t1 * dy]))
+    Some((
+        [p[0] + t0 * dx, p[1] + t0 * dy],
+        [p[0] + t1 * dx, p[1] + t1 * dy],
+    ))
 }
 
 /// Equirectangular projection with a latitude-corrected horizontal scale,
@@ -172,7 +217,12 @@ impl Proj {
     /// Expands `bbox` to the canvas aspect ratio (centred) and pads it.
     pub fn fit(mut bbox: BBox, w: f64, h: f64, pad_frac: f64, min_lon_span: f64) -> Proj {
         if bbox.is_empty() {
-            bbox = BBox { min_lon: 34.0, min_lat: 29.5, max_lon: 37.0, max_lat: 33.5 };
+            bbox = BBox {
+                min_lon: 34.0,
+                min_lat: 29.5,
+                max_lon: 37.0,
+                max_lat: 33.5,
+            };
         }
         let mid_lat = (bbox.min_lat + bbox.max_lat) / 2.0;
         let cos = mid_lat.to_radians().cos().max(0.2);
@@ -189,12 +239,24 @@ impl Proj {
         }
         let c_lon = (bbox.min_lon + bbox.max_lon) / 2.0;
         let c_lat = mid_lat;
-        let fitted = BBox { min_lon: c_lon - span_lon / 2.0, max_lon: c_lon + span_lon / 2.0, min_lat: c_lat - span_lat / 2.0, max_lat: c_lat + span_lat / 2.0 };
-        Proj { bbox: fitted, kx: w / span_lon, ky: h / span_lat }
+        let fitted = BBox {
+            min_lon: c_lon - span_lon / 2.0,
+            max_lon: c_lon + span_lon / 2.0,
+            min_lat: c_lat - span_lat / 2.0,
+            max_lat: c_lat + span_lat / 2.0,
+        };
+        Proj {
+            bbox: fitted,
+            kx: w / span_lon,
+            ky: h / span_lat,
+        }
     }
 
     pub fn xy(&self, p: Pt) -> (f64, f64) {
-        ((p[0] - self.bbox.min_lon) * self.kx, (self.bbox.max_lat - p[1]) * self.ky)
+        (
+            (p[0] - self.bbox.min_lon) * self.kx,
+            (self.bbox.max_lat - p[1]) * self.ky,
+        )
     }
 }
 

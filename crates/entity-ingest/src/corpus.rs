@@ -22,7 +22,10 @@ impl Corpus {
     pub fn prefix_df(&self, prefix: &str) -> u32 {
         let mut end = prefix.to_string();
         end.push('\u{10FFFF}');
-        self.df_sorted.range(prefix.to_string()..end).map(|(_, c)| *c).sum()
+        self.df_sorted
+            .range(prefix.to_string()..end)
+            .map(|(_, c)| *c)
+            .sum()
     }
 }
 
@@ -51,19 +54,26 @@ impl Corpus {
         let mut verses: HashMap<String, String> = HashMap::new();
         for book in books {
             for ch in 1..=book.chapters {
-                let path = build_dir.join(version).join(&book.code).join(format!("{ch}.json"));
+                let path = build_dir
+                    .join(version)
+                    .join(&book.code)
+                    .join(format!("{ch}.json"));
                 if !path.exists() {
                     continue;
                 }
-                let text = std::fs::read_to_string(&path).with_context(|| format!("reading {}", path.display()))?;
-                let d: Value = serde_json::from_str(&text).with_context(|| format!("parsing {}", path.display()))?;
+                let text = std::fs::read_to_string(&path)
+                    .with_context(|| format!("reading {}", path.display()))?;
+                let d: Value = serde_json::from_str(&text)
+                    .with_context(|| format!("parsing {}", path.display()))?;
                 let mut by_id: BTreeMap<String, String> = BTreeMap::new();
                 for block in d["blocks"].as_array().into_iter().flatten() {
                     if block["type"].as_str() != Some("para") {
                         continue;
                     }
                     for seg in block["segments"].as_array().into_iter().flatten() {
-                        let (Some(id), Some(t)) = (seg["id"].as_str(), seg["text"].as_str()) else { continue };
+                        let (Some(id), Some(t)) = (seg["id"].as_str(), seg["text"].as_str()) else {
+                            continue;
+                        };
                         let e = by_id.entry(id.to_string()).or_default();
                         if !e.is_empty() {
                             e.push(' ');
@@ -83,12 +93,21 @@ impl Corpus {
         }
         let mut df_sorted: BTreeMap<String, u32> = BTreeMap::new();
         for text in verses.values() {
-            let set: HashSet<String> = tokens(text).iter().map(|t| norm(t)).filter(|n| !n.is_empty()).collect();
+            let set: HashSet<String> = tokens(text)
+                .iter()
+                .map(|t| norm(t))
+                .filter(|n| !n.is_empty())
+                .collect();
             for n in set {
                 *df_sorted.entry(n).or_insert(0) += 1;
             }
         }
         let n_verses = verses.len() as u32;
-        Ok(Corpus { version: version.to_string(), verses, df_sorted, n_verses })
+        Ok(Corpus {
+            version: version.to_string(),
+            verses,
+            df_sorted,
+            n_verses,
+        })
     }
 }

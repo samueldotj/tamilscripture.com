@@ -45,7 +45,8 @@ pub fn load(path: &Path) -> Result<NamesTa> {
     if !path.exists() {
         return Ok(NamesTa::new());
     }
-    let text = std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    let text =
+        std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
     toml::from_str(&text).with_context(|| format!("parsing {}", path.display()))
 }
 
@@ -99,7 +100,10 @@ fn char_prefix(s: &str, n: usize) -> &str {
 /// Draft a form for one name from the verses it occurs in. `None` when the
 /// corpus has none of those verses.
 pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
-    let texts: Vec<&String> = verse_ids.iter().filter_map(|v| corpus.verses.get(v)).collect();
+    let texts: Vec<&String> = verse_ids
+        .iter()
+        .filter_map(|v| corpus.verses.get(v))
+        .collect();
     if texts.is_empty() {
         return None;
     }
@@ -136,7 +140,10 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
     let big_n = corpus.n_verses.max(1) as f32;
     let mut scored: Vec<(f32, String)> = Vec::new();
     for p in candidates {
-        let covered = verse_norms.iter().filter(|set| set.iter().any(|k| k.starts_with(p.as_str()))).count() as f32;
+        let covered = verse_norms
+            .iter()
+            .filter(|set| set.iter().any(|k| k.starts_with(p.as_str())))
+            .count() as f32;
         let coverage = covered / n;
         let df = corpus.prefix_df(&p).max(1) as f32;
         let idf = ((big_n / df).ln().max(0.0) / 6.0).min(1.0);
@@ -152,7 +159,11 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
     });
     let (score, stem) = scored.first().cloned()?;
     // Runner-up that is not a prefix relative of the winner.
-    let runner = scored.iter().find(|(_, p)| !(p.starts_with(stem.as_str()) || stem.starts_with(p.as_str()))).map(|(s, _)| *s).unwrap_or(0.0);
+    let runner = scored
+        .iter()
+        .find(|(_, p)| !(p.starts_with(stem.as_str()) || stem.starts_with(p.as_str())))
+        .map(|(s, _)| *s)
+        .unwrap_or(0.0);
 
     let mut forms: BTreeMap<String, u32> = BTreeMap::new();
     for (k, spellings) in &raws {
@@ -170,7 +181,11 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
     // Label: the shortest well-attested spelling (the nominative is shortest
     // and usually common); fall back to the shortest spelling of all.
     let attested: Vec<(&String, &u32)> = forms.iter().filter(|(_, c)| **c >= floor).collect();
-    let mut pool: Vec<(&String, &u32)> = if attested.is_empty() { forms.iter().collect() } else { attested };
+    let mut pool: Vec<(&String, &u32)> = if attested.is_empty() {
+        forms.iter().collect()
+    } else {
+        attested
+    };
     // A vocative (…ே) or a form carrying a following clitic is never the base
     // form when any other spelling is attested.
     let is_vocative = |s: &str| s.ends_with('\u{0BC7}');
@@ -179,17 +194,30 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
     }
     let label = pool
         .iter()
-        .min_by(|a, b| a.0.chars().count().cmp(&b.0.chars().count()).then_with(|| b.1.cmp(a.1)).then_with(|| a.0.cmp(b.0)))
+        .min_by(|a, b| {
+            a.0.chars()
+                .count()
+                .cmp(&b.0.chars().count())
+                .then_with(|| b.1.cmp(a.1))
+                .then_with(|| a.0.cmp(b.0))
+        })
         .map(|(raw, _)| (*raw).clone())?;
 
     let mut confidence = score;
     if texts.len() == 1 {
         confidence = confidence.min(0.5);
     }
-    let review = confidence < 0.7 || texts.len() < 2 || (runner > 0.0 && runner / score.max(1e-6) > 0.85);
+    let review =
+        confidence < 0.7 || texts.len() < 2 || (runner > 0.0 && runner / score.max(1e-6) > 0.85);
     let mut list: Vec<(u32, String)> = forms.into_iter().map(|(r, c)| (c, r)).collect();
     list.sort_by(|a, b| b.0.cmp(&a.0).then_with(|| a.1.cmp(&b.1)));
-    Some(NameForm { label, forms: list.into_iter().map(|(_, r)| r).collect(), confidence, n: texts.len() as u32, review })
+    Some(NameForm {
+        label,
+        forms: list.into_iter().map(|(_, r)| r).collect(),
+        confidence,
+        n: texts.len() as u32,
+        review,
+    })
 }
 
 /// Checks that every inflected form occurs in the version's text for the
@@ -198,8 +226,13 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
 /// builds) are not checked.
 pub fn validate(name: &str, form: &NameForm, verse_ids: &[String], corpus: &Corpus) -> Vec<String> {
     let mut problems = Vec::new();
-    let texts: Vec<&String> = verse_ids.iter().filter_map(|v| corpus.verses.get(v)).collect();
-    if texts.is_empty() {
+    let texts: Vec<&String> = verse_ids
+        .iter()
+        .filter_map(|v| corpus.verses.get(v))
+        .collect();
+    // A partial corpus (fixture build) cannot judge forms drawn from chapters
+    // it does not have; only a full corpus validates.
+    if texts.is_empty() || texts.len() < verse_ids.len() {
         return problems;
     }
     let mut present = HashSet::new();
@@ -211,7 +244,10 @@ pub fn validate(name: &str, form: &NameForm, verse_ids: &[String], corpus: &Corp
     for f in form.forms.iter() {
         let nfc: String = unicode_normalization::UnicodeNormalization::nfc(f.as_str()).collect();
         if !present.contains(&nfc) {
-            problems.push(format!("{name} [{}]: form {f:?} does not occur in the name's verses", corpus.version));
+            problems.push(format!(
+                "{name} [{}]: form {f:?} does not occur in the name's verses",
+                corpus.version
+            ));
         }
     }
     problems

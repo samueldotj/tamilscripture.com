@@ -52,7 +52,9 @@ fn slugify(s: &str) -> String {
 
 fn split_qualifier(friendly: &str) -> (String, Option<String>) {
     match friendly.rsplit_once(' ') {
-        Some((name, n)) if !n.is_empty() && n.chars().all(|c| c.is_ascii_digit()) => (name.to_string(), Some(n.to_string())),
+        Some((name, n)) if !n.is_empty() && n.chars().all(|c| c.is_ascii_digit()) => {
+            (name.to_string(), Some(n.to_string()))
+        }
         _ => (friendly.to_string(), None),
     }
 }
@@ -69,14 +71,16 @@ fn verse_id(books: &Books, osis: &str) -> Option<(u32, u32, u32, String)> {
 }
 
 pub fn load(path: &Path, books: &Books) -> Result<Vec<Place>> {
-    let text = std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    let text =
+        std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
     let mut places = Vec::new();
     let mut seen_slugs: BTreeMap<String, usize> = BTreeMap::new();
     for (lineno, line) in text.lines().enumerate() {
         if line.trim().is_empty() {
             continue;
         }
-        let d: Value = serde_json::from_str(line).with_context(|| format!("ancient.jsonl line {}", lineno + 1))?;
+        let d: Value = serde_json::from_str(line)
+            .with_context(|| format!("ancient.jsonl line {}", lineno + 1))?;
         let ob_id = d["id"].as_str().unwrap_or_default().to_string();
         let friendly = d["friendly_id"].as_str().unwrap_or_default().to_string();
         let (name_en, qualifier) = split_qualifier(&friendly);
@@ -87,13 +91,28 @@ pub fn load(path: &Path, books: &Books) -> Result<Vec<Place>> {
         } else {
             seen_slugs.insert(id.clone(), 1);
         }
-        let article = d["preceding_article"].as_str().unwrap_or_default().to_string();
-        let types: Vec<String> = d["types"].as_array().map(|a| a.iter().filter_map(|t| t.as_str().map(String::from)).collect()).unwrap_or_default();
+        let article = d["preceding_article"]
+            .as_str()
+            .unwrap_or_default()
+            .to_string();
+        let types: Vec<String> = d["types"]
+            .as_array()
+            .map(|a| {
+                a.iter()
+                    .filter_map(|t| t.as_str().map(String::from))
+                    .collect()
+            })
+            .unwrap_or_default();
 
         let ident = d["identifications"].as_array().and_then(|a| a.first());
-        let class = ident.and_then(|i| i["class"].as_str()).unwrap_or("").to_string();
+        let class = ident
+            .and_then(|i| i["class"].as_str())
+            .unwrap_or("")
+            .to_string();
         let id_source = ident.and_then(|i| i["id_source"].as_str()).unwrap_or("");
-        let res = ident.and_then(|i| i["resolutions"].as_array()).and_then(|a| a.first());
+        let res = ident
+            .and_then(|i| i["resolutions"].as_array())
+            .and_then(|a| a.first());
         let mut lon = None;
         let mut lat = None;
         let mut lonlat_type = String::new();
@@ -110,7 +129,9 @@ pub fn load(path: &Path, books: &Books) -> Result<Vec<Place>> {
             lon = None;
             lat = None;
             "unlocated"
-        } else if types.iter().any(|t| t == "region" || t == "people group" || t == "natural area" || t == "mountain range") {
+        } else if types.iter().any(|t| {
+            t == "region" || t == "people group" || t == "natural area" || t == "mountain range"
+        }) {
             "area"
         } else if lonlat_type == "point" {
             "point"
@@ -133,10 +154,19 @@ pub fn load(path: &Path, books: &Books) -> Result<Vec<Place>> {
 
         let mut alt: Vec<(i64, String)> = d["translation_name_counts"]
             .as_object()
-            .map(|o| o.iter().map(|(k, v)| (v.as_i64().unwrap_or(0), k.clone())).collect())
+            .map(|o| {
+                o.iter()
+                    .map(|(k, v)| (v.as_i64().unwrap_or(0), k.clone()))
+                    .collect()
+            })
             .unwrap_or_default();
         alt.sort_by(|a, b| b.0.cmp(&a.0).then_with(|| a.1.cmp(&b.1)));
-        let alt_en: Vec<String> = alt.into_iter().map(|(_, n)| n).filter(|n| n != &name_en).take(6).collect();
+        let alt_en: Vec<String> = alt
+            .into_iter()
+            .map(|(_, n)| n)
+            .filter(|n| n != &name_en)
+            .take(6)
+            .collect();
 
         let mut verses: BTreeSet<(u32, u32, u32, String)> = BTreeSet::new();
         if let Some(vs) = d["verses"].as_array() {

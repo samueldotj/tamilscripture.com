@@ -41,7 +41,8 @@ pub fn load(path: &Path) -> Result<Vec<JourneyIn>> {
     if !path.exists() {
         return Ok(Vec::new());
     }
-    let text = std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    let text =
+        std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
     let f: File = toml::from_str(&text).with_context(|| format!("parsing {}", path.display()))?;
     let mut ids = std::collections::HashSet::new();
     for j in &f.journey {

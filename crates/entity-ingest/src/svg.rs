@@ -38,7 +38,10 @@ pub struct MapSpec<'a> {
 }
 
 fn esc(s: &str) -> String {
-    s.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;").replace('"', "&quot;")
+    s.replace('&', "&amp;")
+        .replace('<', "&lt;")
+        .replace('>', "&gt;")
+        .replace('"', "&quot;")
 }
 
 fn fmt(v: f64) -> String {
@@ -78,7 +81,17 @@ impl Rect {
 /// Rough text width: Latin ~0.55em, Tamil ~0.75em per letter (signs ~0.25em).
 fn text_width(s: &str, px: f64) -> f64 {
     s.chars()
-        .map(|c| if ('\u{0B80}'..='\u{0BFF}').contains(&c) { if matches!(c, '\u{0BBE}'..='\u{0BCD}') { 0.25 * px } else { 0.75 * px } } else { 0.55 * px })
+        .map(|c| {
+            if ('\u{0B80}'..='\u{0BFF}').contains(&c) {
+                if matches!(c, '\u{0BBE}'..='\u{0BCD}') {
+                    0.25 * px
+                } else {
+                    0.75 * px
+                }
+            } else {
+                0.55 * px
+            }
+        })
         .sum()
 }
 
@@ -106,7 +119,12 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
         esc(&spec.title),
         esc(&spec.title)
     );
-    let _ = write!(svg, "<rect class=\"water\" width=\"{}\" height=\"{}\"/>", fmt(spec.w), fmt(spec.h));
+    let _ = write!(
+        svg,
+        "<rect class=\"water\" width=\"{}\" height=\"{}\"/>",
+        fmt(spec.w),
+        fmt(spec.h)
+    );
 
     // Land
     let mut rings: Vec<Vec<(f64, f64)>> = Vec::new();
@@ -114,45 +132,73 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
         for ring in poly {
             let c = clip_ring(ring, &view);
             if c.len() >= 3 {
-                rings.push(thin(&c.iter().map(|p| proj.xy(*p)).collect::<Vec<_>>(), 0.6));
+                rings.push(thin(
+                    &c.iter().map(|p| proj.xy(*p)).collect::<Vec<_>>(),
+                    0.6,
+                ));
             }
         }
     }
-    let _ = write!(svg, "<path class=\"land\" fill-rule=\"evenodd\" d=\"{}\"/>", path_of(&rings, true));
+    let _ = write!(
+        svg,
+        "<path class=\"land\" fill-rule=\"evenodd\" d=\"{}\"/>",
+        path_of(&rings, true)
+    );
     // Lakes
     let mut rings: Vec<Vec<(f64, f64)>> = Vec::new();
     for poly in &base.lakes.polygons {
         for ring in poly {
             let c = clip_ring(ring, &view);
             if c.len() >= 3 {
-                rings.push(thin(&c.iter().map(|p| proj.xy(*p)).collect::<Vec<_>>(), 0.6));
+                rings.push(thin(
+                    &c.iter().map(|p| proj.xy(*p)).collect::<Vec<_>>(),
+                    0.6,
+                ));
             }
         }
     }
     if !rings.is_empty() {
-        let _ = write!(svg, "<path class=\"lake\" fill-rule=\"evenodd\" d=\"{}\"/>", path_of(&rings, true));
+        let _ = write!(
+            svg,
+            "<path class=\"lake\" fill-rule=\"evenodd\" d=\"{}\"/>",
+            path_of(&rings, true)
+        );
     }
     // Rivers
     let mut lines: Vec<Vec<(f64, f64)>> = Vec::new();
     for line in &base.rivers.lines {
         for part in clip_line(line, &view) {
-            lines.push(thin(&part.iter().map(|p| proj.xy(*p)).collect::<Vec<_>>(), 0.6));
+            lines.push(thin(
+                &part.iter().map(|p| proj.xy(*p)).collect::<Vec<_>>(),
+                0.6,
+            ));
         }
     }
     if !lines.is_empty() {
-        let _ = write!(svg, "<path class=\"river\" d=\"{}\"/>", path_of(&lines, false));
+        let _ = write!(
+            svg,
+            "<path class=\"river\" d=\"{}\"/>",
+            path_of(&lines, false)
+        );
     }
     // Route
     if let Some(r) = spec.route {
         let pts: Vec<(f64, f64)> = r.iter().map(|p| proj.xy(*p)).collect();
-        let _ = write!(svg, "<path class=\"route\" d=\"{}\"/>", path_of(&[pts], false));
+        let _ = write!(
+            svg,
+            "<path class=\"route\" d=\"{}\"/>",
+            path_of(&[pts], false)
+        );
     }
 
     // Places: emphasised first, then by weight, so labels favour what matters.
     let mut order: Vec<usize> = (0..spec.points.len()).collect();
     order.sort_by(|&a, &b| {
         let (pa, pb) = (&spec.points[a], &spec.points[b]);
-        pb.emphasis.cmp(&pa.emphasis).then_with(|| pb.weight.cmp(&pa.weight)).then_with(|| pa.id.cmp(&pb.id))
+        pb.emphasis
+            .cmp(&pa.emphasis)
+            .then_with(|| pb.weight.cmp(&pa.weight))
+            .then_with(|| pa.id.cmp(&pb.id))
     });
     let mut taken: Vec<Rect> = Vec::new();
     let mut groups = String::new();
@@ -160,27 +206,85 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
         let p = &spec.points[i];
         let (x, y) = proj.xy([p.lon, p.lat]);
         let r = if p.emphasis { 6.0 } else { 4.5 };
-        taken.push(Rect { x: x - r, y: y - r, w: 2.0 * r, h: 2.0 * r });
+        taken.push(Rect {
+            x: x - r,
+            y: y - r,
+            w: 2.0 * r,
+            h: 2.0 * r,
+        });
         let label_ta = p.label_ta.clone().unwrap_or_default();
         let width = text_width(&p.label_en, px).max(text_width(&label_ta, px)) + 4.0;
         let height = px * 1.25;
         // Candidate anchors: right, left, above, below.
         let cands = [
-            (x + r + 4.0, y + px * 0.38, "start", Rect { x: x + r + 3.0, y: y - height / 2.0, w: width, h: height }),
-            (x - r - 4.0, y + px * 0.38, "end", Rect { x: x - r - 3.0 - width, y: y - height / 2.0, w: width, h: height }),
-            (x, y - r - 5.0, "middle", Rect { x: x - width / 2.0, y: y - r - 5.0 - px, w: width, h: height }),
-            (x, y + r + px + 2.0, "middle", Rect { x: x - width / 2.0, y: y + r + 3.0, w: width, h: height }),
+            (
+                x + r + 4.0,
+                y + px * 0.38,
+                "start",
+                Rect {
+                    x: x + r + 3.0,
+                    y: y - height / 2.0,
+                    w: width,
+                    h: height,
+                },
+            ),
+            (
+                x - r - 4.0,
+                y + px * 0.38,
+                "end",
+                Rect {
+                    x: x - r - 3.0 - width,
+                    y: y - height / 2.0,
+                    w: width,
+                    h: height,
+                },
+            ),
+            (
+                x,
+                y - r - 5.0,
+                "middle",
+                Rect {
+                    x: x - width / 2.0,
+                    y: y - r - 5.0 - px,
+                    w: width,
+                    h: height,
+                },
+            ),
+            (
+                x,
+                y + r + px + 2.0,
+                "middle",
+                Rect {
+                    x: x - width / 2.0,
+                    y: y + r + 3.0,
+                    w: width,
+                    h: height,
+                },
+            ),
         ];
         let mut placed = None;
         for (lx, ly, anchor, rect) in cands {
-            let inside = rect.x >= 0.0 && rect.y >= 0.0 && rect.x + rect.w <= spec.w && rect.y + rect.h <= spec.h;
+            let inside = rect.x >= 0.0
+                && rect.y >= 0.0
+                && rect.x + rect.w <= spec.w
+                && rect.y + rect.h <= spec.h;
             if inside && !taken.iter().any(|t| t.hits(&rect)) {
                 placed = Some((lx, ly, anchor, rect));
                 break;
             }
         }
         let crowded = placed.is_none();
-        let (lx, ly, anchor, rect) = placed.unwrap_or((x + r + 4.0, y + px * 0.38, "start", Rect { x: x + r + 3.0, y: y - height / 2.0, w: width, h: height }));
+        let (lx, ly, anchor, rect) = placed.unwrap_or((
+            x + r + 4.0,
+            y + px * 0.38,
+            "start",
+            Rect {
+                x: x + r + 3.0,
+                y: y - height / 2.0,
+                w: width,
+                h: height,
+            },
+        ));
         if !crowded {
             taken.push(rect);
         }
@@ -197,10 +301,23 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
             fmt(r)
         );
         if let Some(n) = p.number {
-            let _ = write!(groups, "<text class=\"n\" x=\"{}\" y=\"{}\" text-anchor=\"middle\">{}</text>", fmt(x), fmt(y + 3.2), n);
+            let _ = write!(
+                groups,
+                "<text class=\"n\" x=\"{}\" y=\"{}\" text-anchor=\"middle\">{}</text>",
+                fmt(x),
+                fmt(y + 3.2),
+                n
+            );
         }
         if !label_ta.is_empty() {
-            let _ = write!(groups, "<text class=\"ta\" lang=\"ta\" x=\"{}\" y=\"{}\" text-anchor=\"{}\">{}</text>", fmt(lx), fmt(ly), anchor, esc(&label_ta));
+            let _ = write!(
+                groups,
+                "<text class=\"ta\" lang=\"ta\" x=\"{}\" y=\"{}\" text-anchor=\"{}\">{}</text>",
+                fmt(lx),
+                fmt(ly),
+                anchor,
+                esc(&label_ta)
+            );
         }
         let _ = write!(
             groups,

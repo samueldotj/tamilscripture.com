@@ -187,7 +187,9 @@ fn label_ta(names: &NamesTa, name_en: &str, versions: &[String]) -> Option<Strin
             return Some(f.label.clone());
         }
     }
-    per.values().find(|f| f.display_ok()).map(|f| f.label.clone())
+    per.values()
+        .find(|f| f.display_ok())
+        .map(|f| f.label.clone())
 }
 
 fn main() -> Result<()> {
@@ -196,8 +198,17 @@ fn main() -> Result<()> {
 
     // Manifest: build id and versions of the current content build.
     let manifest_path = args.content.join("manifest.json");
-    let manifest: Value = serde_json::from_str(&fs::read_to_string(&manifest_path).with_context(|| format!("reading {} (run usfm-ingest first)", manifest_path.display()))?)?;
-    let build = manifest["build"].as_str().context("manifest.build")?.to_string();
+    let manifest: Value =
+        serde_json::from_str(&fs::read_to_string(&manifest_path).with_context(|| {
+            format!(
+                "reading {} (run usfm-ingest first)",
+                manifest_path.display()
+            )
+        })?)?;
+    let build = manifest["build"]
+        .as_str()
+        .context("manifest.build")?
+        .to_string();
     let build_dir = args.content.join(&build);
     let mut tamil_versions: Vec<String> = manifest["versions"]
         .as_array()
@@ -210,12 +221,19 @@ fn main() -> Result<()> {
     tamil_versions.sort_by_key(|v| if v == "IRVTAM" { 0 } else { 1 });
 
     let places = openbible::load(&args.entities.join("openbible-geo/ancient.jsonl"), &books)?;
-    eprintln!("places: {} ({} located)", places.len(), places.iter().filter(|p| p.lon.is_some()).count());
+    eprintln!(
+        "places: {} ({} located)",
+        places.len(),
+        places.iter().filter(|p| p.lon.is_some()).count()
+    );
 
     // Verses per English name (same-named places share Tamil forms).
     let mut verses_by_name: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
     for p in &places {
-        verses_by_name.entry(p.name_en.clone()).or_default().extend(p.verses.iter().cloned());
+        verses_by_name
+            .entry(p.name_en.clone())
+            .or_default()
+            .extend(p.verses.iter().cloned());
     }
 
     let corpora: Vec<Corpus> = tamil_versions
@@ -238,21 +256,34 @@ fn main() -> Result<()> {
                     continue;
                 }
                 if let Some(form) = names::draft_one(&verses, c) {
-                    names.entry(name.clone()).or_default().insert(c.version.clone(), form);
+                    names
+                        .entry(name.clone())
+                        .or_default()
+                        .insert(c.version.clone(), form);
                     added += 1;
                 }
             }
         }
         names::save(&names_path, &names)?;
-        let review = names.values().flat_map(|m| m.values()).filter(|f| f.review).count();
-        eprintln!("names-ta.toml: {added} drafted, {kept} kept, {review} marked review → {}", names_path.display());
+        let review = names
+            .values()
+            .flat_map(|m| m.values())
+            .filter(|f| f.review)
+            .count();
+        eprintln!(
+            "names-ta.toml: {added} drafted, {kept} kept, {review} marked review → {}",
+            names_path.display()
+        );
         return Ok(());
     }
 
     // ---- build ----
     let names = names::load(&names_path)?;
     if names.is_empty() {
-        eprintln!("warning: {} missing or empty; maps carry English labels only", names_path.display());
+        eprintln!(
+            "warning: {} missing or empty; maps carry English labels only",
+            names_path.display()
+        );
     }
     let mut problems: Vec<String> = Vec::new();
     for (name, per) in &names {
@@ -283,7 +314,11 @@ fn main() -> Result<()> {
         rivers: geo::load_layer(&args.entities.join("geo/base/rivers.geojson"))?,
     };
     for f in ["land", "lakes", "rivers", "LICENSE", "SOURCE.md"] {
-        let name = if f.ends_with(".md") || f == "LICENSE" { f.to_string() } else { format!("{f}.geojson") };
+        let name = if f.ends_with(".md") || f == "LICENSE" {
+            f.to_string()
+        } else {
+            format!("{f}.geojson")
+        };
         let src = args.entities.join("geo/base").join(&name);
         if src.exists() {
             fs::create_dir_all(out.join("geo/base"))?;
@@ -301,10 +336,17 @@ fn main() -> Result<()> {
         let mut stops = Vec::new();
         let mut bbox = geo::BBox::empty();
         for s in &j.stops {
-            let Some(p) = by_id.get(s.place.as_str()) else { bail!("journey {}: unknown place {}", j.id, s.place) };
-            let (Some(lon), Some(lat)) = (p.lon, p.lat) else { bail!("journey {}: place {} has no coordinates", j.id, s.place) };
+            let Some(p) = by_id.get(s.place.as_str()) else {
+                bail!("journey {}: unknown place {}", j.id, s.place)
+            };
+            let (Some(lon), Some(lat)) = (p.lon, p.lat) else {
+                bail!("journey {}: place {} has no coordinates", j.id, s.place)
+            };
             bbox.add([lon, lat]);
-            journeys_by_place.entry(p.id.clone()).or_default().push(j.id.clone());
+            journeys_by_place
+                .entry(p.id.clone())
+                .or_default()
+                .push(j.id.clone());
             stops.push(journeys::StopOut {
                 place: p.id.clone(),
                 name_en: p.name_en.clone(),
@@ -325,7 +367,12 @@ fn main() -> Result<()> {
             summary_ta: j.summary_ta.clone(),
             passages: j.passages.clone(),
             stops,
-            bbox: [round5(bbox.min_lon), round5(bbox.min_lat), round5(bbox.max_lon), round5(bbox.max_lat)],
+            bbox: [
+                round5(bbox.min_lon),
+                round5(bbox.min_lat),
+                round5(bbox.max_lon),
+                round5(bbox.max_lat),
+            ],
         });
     }
     for v in journeys_by_place.values_mut() {
@@ -336,7 +383,8 @@ fn main() -> Result<()> {
     // Glossary (place types, precision, periods) in both languages, for the app.
     let glossary_path = args.entities.join("glossary-ta.toml");
     if glossary_path.exists() {
-        let g: toml::Value = toml::from_str(&fs::read_to_string(&glossary_path)?).context("parsing glossary-ta.toml")?;
+        let g: toml::Value = toml::from_str(&fs::read_to_string(&glossary_path)?)
+            .context("parsing glossary-ta.toml")?;
         write_json(&out.join("glossary.json"), &g)?;
     }
 
@@ -347,18 +395,38 @@ fn main() -> Result<()> {
     for p in &places {
         for v in &p.verses {
             let mut it = v.split('.');
-            let (Some(code), Some(ch)) = (it.next(), it.next()) else { continue };
-            let Some(book) = books.by_code(code) else { continue };
+            let (Some(code), Some(ch)) = (it.next(), it.next()) else {
+                continue;
+            };
+            let Some(book) = books.by_code(code) else {
+                continue;
+            };
             let ch: u32 = ch.parse().unwrap_or(0);
-            mentions.entry((book.order, ch)).or_default().entry(v.clone()).or_default().push(p.id.clone());
-            chapter_places.entry((book.order, ch)).or_default().insert(p.id.clone());
+            mentions
+                .entry((book.order, ch))
+                .or_default()
+                .entry(v.clone())
+                .or_default()
+                .push(p.id.clone());
+            chapter_places
+                .entry((book.order, ch))
+                .or_default()
+                .insert(p.id.clone());
         }
     }
     for ((order, ch), m) in &mentions {
         let book = &books.list[(*order - 1) as usize];
         let mut entries: Vec<(&String, &Vec<String>)> = m.iter().collect();
-        entries.sort_by_key(|(k, _)| k.rsplit('.').next().and_then(|v| v.parse::<u32>().ok()).unwrap_or(0));
-        let verses: Vec<Value> = entries.iter().map(|(k, v)| serde_json::json!({ "verse": k, "places": v })).collect();
+        entries.sort_by_key(|(k, _)| {
+            k.rsplit('.')
+                .next()
+                .and_then(|v| v.parse::<u32>().ok())
+                .unwrap_or(0)
+        });
+        let verses: Vec<Value> = entries
+            .iter()
+            .map(|(k, v)| serde_json::json!({ "verse": k, "places": v }))
+            .collect();
         let summary: BTreeMap<&str, Value> = chapter_places[&(*order, *ch)]
             .iter()
             .filter_map(|id| by_id.get(id.as_str()))
@@ -374,7 +442,9 @@ fn main() -> Result<()> {
             })
             .collect();
         write_json(
-            &out.join("mentions").join(&book.code).join(format!("{ch}.json")),
+            &out.join("mentions")
+                .join(&book.code)
+                .join(format!("{ch}.json")),
             &serde_json::json!({ "book": book.code, "chapter": ch, "verses": verses, "places": summary, "map": !summary.values().all(|p| p["lat"].is_null()) }),
         )?;
     }
@@ -388,7 +458,17 @@ fn main() -> Result<()> {
             .get(&p.name_en)
             .map(|per| {
                 per.iter()
-                    .map(|(v, f): (&String, &NameForm)| (v.clone(), NameTaOut { label: f.label.clone(), forms: f.forms.clone(), confidence: f.confidence, draft: f.review }))
+                    .map(|(v, f): (&String, &NameForm)| {
+                        (
+                            v.clone(),
+                            NameTaOut {
+                                label: f.label.clone(),
+                                forms: f.forms.clone(),
+                                confidence: f.confidence,
+                                draft: f.review,
+                            },
+                        )
+                    })
                     .collect()
             })
             .unwrap_or_default();
@@ -399,7 +479,8 @@ fn main() -> Result<()> {
                 if q.id == p.id {
                     continue;
                 }
-                let d = ((q.lon.unwrap() - lon) * lat.to_radians().cos()).hypot(q.lat.unwrap() - lat);
+                let d =
+                    ((q.lon.unwrap() - lon) * lat.to_radians().cos()).hypot(q.lat.unwrap() - lat);
                 if d < 1.2 {
                     nearby.push((d, q.id.as_str()));
                 }
@@ -435,7 +516,10 @@ fn main() -> Result<()> {
                 attribution: "OpenBible.info Bible Geocoding, CC BY 4.0",
             },
         };
-        write_json(&out.join("place").join(format!("{}.json", p.id)), &out_place)?;
+        write_json(
+            &out.join("place").join(format!("{}.json", p.id)),
+            &out_place,
+        )?;
         let name_ta = label_ta(&names, &p.name_en, &tamil_versions);
         index_entries.push(IndexEntry {
             id: &p.id,
@@ -450,20 +534,38 @@ fn main() -> Result<()> {
         });
         let all_ta: BTreeSet<String> = names
             .get(&p.name_en)
-            .map(|per| per.values().flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned())).collect())
+            .map(|per| {
+                per.values()
+                    .flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned()))
+                    .collect()
+            })
             .unwrap_or_default();
         let weight = ((1 + p.verses.len()) as f64).ln();
         csv.push_str(&format!(
             "{},place,{},{},{},{},{:.3}\n",
             csv_field(&p.id),
             csv_field(&p.id),
-            csv_field(&format!("{}{}", p.name_en, p.qualifier.as_ref().map(|q| format!(" {q}")).unwrap_or_default())),
+            csv_field(&format!(
+                "{}{}",
+                p.name_en,
+                p.qualifier
+                    .as_ref()
+                    .map(|q| format!(" {q}"))
+                    .unwrap_or_default()
+            )),
             csv_field(&all_ta.into_iter().collect::<Vec<_>>().join(" ")),
             csv_field(&p.alt_en.join(" ")),
             weight
         ));
     }
-    write_json(&out.join("places.json"), &Index { build: &build, count: places.len(), places: index_entries })?;
+    write_json(
+        &out.join("places.json"),
+        &Index {
+            build: &build,
+            count: places.len(),
+            places: index_entries,
+        },
+    )?;
     write_text(&build_dir.join("search/entities.csv"), &csv)?;
 
     // GeoJSON for the explore map.
@@ -480,7 +582,10 @@ fn main() -> Result<()> {
             })
         })
         .collect();
-    write_json(&out.join("geo/places.geojson"), &serde_json::json!({ "type": "FeatureCollection", "features": feats }))?;
+    write_json(
+        &out.join("geo/places.geojson"),
+        &serde_json::json!({ "type": "FeatureCollection", "features": feats }),
+    )?;
     let jfeats: Vec<Value> = journeys_out
         .iter()
         .map(|j| {
@@ -491,7 +596,10 @@ fn main() -> Result<()> {
             })
         })
         .collect();
-    write_json(&out.join("geo/journeys.geojson"), &serde_json::json!({ "type": "FeatureCollection", "features": jfeats }))?;
+    write_json(
+        &out.join("geo/journeys.geojson"),
+        &serde_json::json!({ "type": "FeatureCollection", "features": jfeats }),
+    )?;
 
     // Static maps.
     let point_of = |p: &Place, emphasis: bool, number: Option<u32>| svg::MapPoint {
@@ -508,14 +616,33 @@ fn main() -> Result<()> {
     let mut n_maps = 0usize;
     for ((order, ch), ids) in &chapter_places {
         let book = &books.list[(*order - 1) as usize];
-        let pts: Vec<svg::MapPoint> = ids.iter().filter_map(|id| by_id.get(id.as_str())).filter(|p| p.lon.is_some()).map(|p| point_of(p, false, None)).collect();
+        let pts: Vec<svg::MapPoint> = ids
+            .iter()
+            .filter_map(|id| by_id.get(id.as_str()))
+            .filter(|p| p.lon.is_some())
+            .map(|p| point_of(p, false, None))
+            .collect();
         if pts.is_empty() {
             continue;
         }
         let title = format!("{} {} · {} {}", book.name_ta, ch, book.name_en, ch);
         // Chapter maps are drawn at the size of the context panel so labels stay legible.
-        let svg_text = svg::render(&base, &svg::MapSpec { title, points: &pts, route: None, w: 360.0, h: 225.0, min_span: 2.5, small: true });
-        write_text(&out.join("maps").join(&book.code).join(format!("{ch}.svg")), &svg_text)?;
+        let svg_text = svg::render(
+            &base,
+            &svg::MapSpec {
+                title,
+                points: &pts,
+                route: None,
+                w: 360.0,
+                h: 225.0,
+                min_span: 2.5,
+                small: true,
+            },
+        );
+        write_text(
+            &out.join("maps").join(&book.code).join(format!("{ch}.svg")),
+            &svg_text,
+        )?;
         n_maps += 1;
     }
     for p in &located {
@@ -524,10 +651,20 @@ fn main() -> Result<()> {
             let mut v: Vec<(f64, &Place)> = located
                 .iter()
                 .filter(|q| q.id != p.id)
-                .map(|q| (((q.lon.unwrap() - p.lon.unwrap()) * p.lat.unwrap().to_radians().cos()).hypot(q.lat.unwrap() - p.lat.unwrap()), *q))
+                .map(|q| {
+                    (
+                        ((q.lon.unwrap() - p.lon.unwrap()) * p.lat.unwrap().to_radians().cos())
+                            .hypot(q.lat.unwrap() - p.lat.unwrap()),
+                        *q,
+                    )
+                })
                 .filter(|(d, _)| *d < 1.2)
                 .collect();
-            v.sort_by(|a, b| a.0.partial_cmp(&b.0).unwrap().then_with(|| a.1.id.cmp(&b.1.id)));
+            v.sort_by(|a, b| {
+                a.0.partial_cmp(&b.0)
+                    .unwrap()
+                    .then_with(|| a.1.id.cmp(&b.1.id))
+            });
             v.into_iter().take(12).map(|(_, q)| q).collect()
         };
         pts.extend(nearby.iter().map(|q| point_of(q, false, None)));
@@ -536,8 +673,19 @@ fn main() -> Result<()> {
             None => p.name_en.clone(),
         };
         // Keep the place central: fit to it plus the nearest few, with a minimum span.
-        let spec = svg::MapSpec { title, points: &pts, route: None, w: 800.0, h: 480.0, min_span: 2.0, small: false };
-        write_text(&out.join("maps/place").join(format!("{}.svg", p.id)), &svg::render(&base, &spec))?;
+        let spec = svg::MapSpec {
+            title,
+            points: &pts,
+            route: None,
+            w: 800.0,
+            h: 480.0,
+            min_span: 2.0,
+            small: false,
+        };
+        write_text(
+            &out.join("maps/place").join(format!("{}.svg", p.id)),
+            &svg::render(&base, &spec),
+        )?;
         n_maps += 1;
     }
     for j in &journeys_out {
@@ -553,8 +701,19 @@ fn main() -> Result<()> {
                 point_of(p, true, Some(i as u32 + 1))
             })
             .collect();
-        let spec = svg::MapSpec { title: format!("{} · {}", j.name_ta, j.name_en), points: &pts, route: Some(&route), w: 800.0, h: 520.0, min_span: 3.0, small: false };
-        write_text(&out.join("maps/journey").join(format!("{}.svg", j.id)), &svg::render(&base, &spec))?;
+        let spec = svg::MapSpec {
+            title: format!("{} · {}", j.name_ta, j.name_en),
+            points: &pts,
+            route: Some(&route),
+            w: 800.0,
+            h: 520.0,
+            min_span: 3.0,
+            small: false,
+        };
+        write_text(
+            &out.join("maps/journey").join(format!("{}.svg", j.id)),
+            &svg::render(&base, &spec),
+        )?;
         n_maps += 1;
     }
 

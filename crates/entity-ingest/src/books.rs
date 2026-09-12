@@ -31,7 +31,8 @@ pub struct Books {
 
 impl Books {
     pub fn load(path: &Path) -> Result<Books> {
-        let text = std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+        let text =
+            std::fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
         let file: File = toml::from_str(&text).context("parsing books.toml")?;
         let mut by_openbible = HashMap::new();
         let mut by_code = HashMap::new();
@@ -39,7 +40,11 @@ impl Books {
             by_openbible.insert(b.openbible.clone(), i);
             by_code.insert(b.code.clone(), i);
         }
-        Ok(Books { list: file.book, by_openbible, by_code })
+        Ok(Books {
+            list: file.book,
+            by_openbible,
+            by_code,
+        })
     }
 
     pub fn by_openbible(&self, abbr: &str) -> Option<&Book> {
