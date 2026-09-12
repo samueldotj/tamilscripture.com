@@ -191,7 +191,7 @@ Effort is rough calendar time at the pace of the earlier milestones, excluding t
 | A1b.1 | Migration: `profiles.role`, `entity_suggestions`, `entity_accepted`, `moderation_log`; RLS; `set_role`, `accept_suggestion`, `reject_suggestion` functions; rate limits | §5 |
 | A1b.2 | RLS test suite covering reader, reviewer and moderator (closes M3 task 3.4) | design §5 |
 | A1b.3 | Suggestion control on every Tamil name and article paragraph for signed-in users; CC BY consent line; `/me/contributions` | §5 |
-| A1b.4 | `/mod` queue: open suggestions with current text, suggestion and English source side by side; accept, edit-then-accept, reject with reason; per-entity grouping | §5 |
+| A1b.4 | `/mod` queue: open suggestions with current text, English source and an editable field pre-filled with the suggestion; accept publishes the edited text; reject with reason; per-entity grouping; direct-correction form for reviewers on any name or paragraph | §5 |
 | A1b.5 | `/mod/roles` for moderators: appoint and remove reviewers | §5 |
 | A1b.6 | Export workflow: every 12 hours and on dispatch, read accepted rows with the service key, write `data/entities/overrides/`, commit if changed; deploy follows | §5 |
 | A1b.7 | "Publish now" in `/mod`: server route verifies the moderator's session and dispatches the export workflow through a fine-grained GitHub token | §5 |
@@ -252,8 +252,10 @@ The site keeps its rule that scripture and reference content are static. The dat
 | Role | Can |
 |---|---|
 | reader (default, signed in) | Suggest a correction to a Tamil name or an article paragraph; see own suggestions and their status under `/me/contributions` |
-| reviewer | Everything above; open the `/mod` queue; accept, edit-then-accept, or reject suggestions with a reason |
+| reviewer | Everything above; open the `/mod` queue; accept a suggestion as written, **edit its text and accept the edited version**, or reject it with a reason; make a direct correction to any Tamil name or paragraph without a prior suggestion |
 | moderator | Everything above; appoint and remove reviewers; trigger "Publish now" |
+
+Editing before acceptance is the normal case, not the exception: the queue opens every suggestion in an editable field pre-filled with the suggested text, next to the current text and the English source. What is saved is the reviewer's final text. The suggestion keeps the reader's original wording, so the record shows what was proposed, what was published, and who changed it; the reader is still credited as the contributor under `/me/contributions`. A direct correction by a reviewer is stored as a suggestion authored and accepted by the same person in one step, so it appears in the same history and export.
 
 The owner sets moderators directly in the database. Moderators cannot create other moderators. Role changes go through a `set_role(target_user, role)` function that checks the caller is a moderator and the target role is `reader` or `reviewer`, so the rule is enforced in Postgres, not in the UI.
 
@@ -276,7 +278,8 @@ create table entity_suggestions (
   created_at timestamptz not null default now(),
   decided_by uuid references auth.users,
   decided_at timestamptz,
-  decision_note text
+  decision_note text,
+  final_text text                       -- what the reviewer published; equals suggested_text when accepted unchanged
 );
 
 -- current accepted text per target; replaced on each acceptance, history in the log
@@ -299,7 +302,7 @@ create table moderation_log (
 );
 ```
 
-Policies: readers insert suggestions for themselves and select their own; reviewers and moderators select all suggestions and call `accept_suggestion(id, final_text)` and `reject_suggestion(id, note)`, which are `security definer` functions that write `entity_accepted` and the log; nobody updates rows directly; anon has no access. A suggestion whose `current_text` no longer matches the live text is shown to the reviewer as stale. Limits: twenty open suggestions per user, and a suggested text must contain Tamil letters unless the target is a transliterated foreign word, checked in the insert function.
+Policies: readers insert suggestions for themselves and select their own; reviewers and moderators select all suggestions and call `accept_suggestion(id, final_text)`, `reject_suggestion(id, note)` and `correct_directly(target, text)`, which are `security definer` functions that write `entity_suggestions.final_text`, `entity_accepted` and the log; nobody updates rows directly; anon has no access. `accept_suggestion` requires `final_text`, so the edited text is what gets published whether or not it differs from the reader's wording, and the log records both. A suggestion whose `current_text` no longer matches the live text is shown to the reviewer as stale. Limits: twenty open suggestions per user, and a suggested text must contain Tamil letters unless the target is a transliterated foreign word, checked in the insert function.
 
 ### Export
 
