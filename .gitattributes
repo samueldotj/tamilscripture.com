@@ -1,0 +1,11 @@
+# Shell scripts and workflow files must stay LF: bash rejects CRLF (`set: pipefail`).
+*.sh text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.sql text eol=lf
+*.md text eol=lf
+*.rs text eol=lf
+*.ts text eol=lf
+*.svelte text eol=lf
+*.json text eol=lf
+*.mjs text eol=lf
