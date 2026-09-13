@@ -221,7 +221,7 @@ Design: [docs/feature_maps.md](docs/feature_maps.md). Rough effort: five to six 
 | 6.11 | Base map: Natural Earth land, lakes and rivers clipped to the biblical world (`scripts/build-basemap.py`), served as static GeoJSON; PMTiles deferred (design ADR-11) | maps §4 | ☑ |
 | 6.12 | MapLibre style: land, water, rivers, our labels; light and dark from the theme tokens | maps §4 | ☑ |
 | 6.13 | `/atlas/explore` client-only route, code-split, layer toggles; own size-limit and Lighthouse entries | maps §4, §7 | ☑ |
-| 6.14 | Journeys: Exodus, ministry of Jesus, Paul's four journeys hand-authored with Tamil names; `/atlas` and `/atlas/{journey}` pages with static maps and ordered stops ☑; regions deferred (no open data at usable quality) | maps §4, §5 | ◧ |
+| 6.14 | Journeys: 31 hand-authored with Tamil names (patriarchs, Exodus, conquest, judges, kings, prophets, exile and return, life of Jesus, Acts); 30 drawn on UBS Project MARBLE routes (CC BY-SA 4.0) instead of straight legs, 13 Sep 2026; `/atlas` and `/atlas/{journey}` pages with static maps and ordered stops ☑; regions deferred (no open data at usable quality) | maps §4, §5 | ◧ |
 | 6.15 | "Explore map" links from the panel, place pages and journey pages | maps §6 | ☑ |
 | 6.16 | Period selector on the explore map once two or more region periods exist | maps §4 | ☐ |
 

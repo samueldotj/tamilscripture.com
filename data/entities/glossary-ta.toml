@@ -54,6 +54,7 @@ unlocated = { ta = "இடம் அறியப்படவில்லை", en
 [periods]
 patriarchs = { ta = "முற்பிதாக்கள்", en = "Patriarchs" }
 exodus = { ta = "எகிப்திலிருந்து புறப்பாடு", en = "Exodus" }
+conquest = { ta = "கானான் வெற்றி", en = "Conquest of Canaan" }
 judges = { ta = "நியாயாதிபதிகள்", en = "Judges" }
 "united-monarchy" = { ta = "ஒன்றுபட்ட அரசு", en = "United monarchy" }
 "divided-kingdom" = { ta = "பிரிந்த அரசு", en = "Divided kingdom" }

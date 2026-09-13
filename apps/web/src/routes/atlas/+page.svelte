@@ -52,7 +52,7 @@
 	</section>
 {/if}
 
-<p class="credit">OpenBible.info Bible Geocoding, CC BY 4.0 · Natural Earth</p>
+<p class="credit">OpenBible.info Bible Geocoding, CC BY 4.0 · Natural Earth · Routes: UBS Project MARBLE (Leen Ritmeyer), © United Bible Societies 2023, CC BY-SA 4.0</p>
 
 <style>
 	.hero { margin: 0.5rem 0 2rem; display: grid; gap: 0.6rem; justify-items: start; }

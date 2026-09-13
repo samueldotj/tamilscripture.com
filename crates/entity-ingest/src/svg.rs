@@ -28,7 +28,10 @@ pub struct MapPoint {
 pub struct MapSpec<'a> {
     pub title: String,
     pub points: &'a [MapPoint],
-    pub route: Option<&'a [Pt]>,
+    /// Route lines (each a polyline); empty for no route.
+    pub routes: &'a [Vec<Pt>],
+    /// Appended to the credit line, e.g. for ShareAlike route data.
+    pub credit_extra: Option<&'a str>,
     pub w: f64,
     pub h: f64,
     /// Minimum longitude span in degrees, so a single place still shows context.
@@ -100,7 +103,7 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
     for p in spec.points {
         bbox.add([p.lon, p.lat]);
     }
-    if let Some(r) = spec.route {
+    for r in spec.routes {
         for p in r {
             bbox.add(*p);
         }
@@ -181,13 +184,17 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
             path_of(&lines, false)
         );
     }
-    // Route
-    if let Some(r) = spec.route {
-        let pts: Vec<(f64, f64)> = r.iter().map(|p| proj.xy(*p)).collect();
+    // Route(s)
+    if !spec.routes.is_empty() {
+        let lines: Vec<Vec<(f64, f64)>> = spec
+            .routes
+            .iter()
+            .map(|r| r.iter().map(|p| proj.xy(*p)).collect())
+            .collect();
         let _ = write!(
             svg,
             "<path class=\"route\" d=\"{}\"/>",
-            path_of(&[pts], false)
+            path_of(&lines, false)
         );
     }
 
@@ -332,9 +339,10 @@ pub fn render(base: &Base, spec: &MapSpec) -> String {
     let _ = write!(svg, "<g class=\"places\">{groups}</g>");
     let _ = write!(
         svg,
-        "<text class=\"credit\" x=\"{}\" y=\"{}\" text-anchor=\"end\">Natural Earth · OpenBible.info</text></svg>",
+        "<text class=\"credit\" x=\"{}\" y=\"{}\" text-anchor=\"end\">Natural Earth · OpenBible.info{}</text></svg>",
         fmt(spec.w - 6.0),
         fmt(spec.h - 6.0)
-    );
+    ,
+        spec.credit_extra.unwrap_or(""));
     svg
 }

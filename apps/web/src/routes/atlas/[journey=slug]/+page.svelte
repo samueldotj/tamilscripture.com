@@ -86,7 +86,11 @@
 		</ol>
 	</section>
 
-	<p class="credit" lang={ta ? 'ta' : 'en'}>{ta ? 'வழிகள் நிறுத்தங்களுக்கு இடையே நேர்கோடுகளாகக் காட்டப்படுகின்றன; இடங்கள் OpenBible.info (CC BY 4.0), நிலப்படம் Natural Earth.' : 'Routes are drawn as straight legs between stops; places from OpenBible.info (CC BY 4.0), base map from Natural Earth.'}</p>
+	{#if j.route_source === 'ubs'}
+		<p class="credit" lang={ta ? 'ta' : 'en'}>{ta ? 'வழி: UBS Project MARBLE (Leen Ritmeyer), © United Bible Societies 2023, CC BY-SA 4.0 — இந்த வரைபடமும் CC BY-SA 4.0. இடங்கள் OpenBible.info (CC BY 4.0), நிலப்படம் Natural Earth.' : 'Route: UBS Project MARBLE (Leen Ritmeyer), © United Bible Societies 2023, CC BY-SA 4.0; this map is CC BY-SA 4.0 too. Places from OpenBible.info (CC BY 4.0), base map from Natural Earth.'}</p>
+	{:else}
+		<p class="credit" lang={ta ? 'ta' : 'en'}>{ta ? 'வழி நிறுத்தங்களுக்கு இடையே நேர்கோடுகளாகக் காட்டப்படுகிறது; இடங்கள் OpenBible.info (CC BY 4.0), நிலப்படம் Natural Earth.' : 'The route is drawn as straight legs between stops; places from OpenBible.info (CC BY 4.0), base map from Natural Earth.'}</p>
+	{/if}
 </article>
 
 <style>

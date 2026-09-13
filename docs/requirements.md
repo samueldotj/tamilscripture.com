@@ -451,9 +451,9 @@ Added 12 Sep 2026 for milestone M6 (design: [feature_maps.md](feature_maps.md)).
 | R-14.1 | Each chapter that names a located place has a static outline map (coastline, water, rivers, our labels) with those places marked; each place and journey has one too. Maps are SVG inlined into the page so they follow the theme and show labels in the interface language. | Must |
 | R-14.2 | The base map is public-domain Natural Earth clipped to the biblical world; no external map or tile service is called from the site. | Must |
 | R-14.3 | An interactive map at `/atlas/explore` lets a reader pan, zoom, and tap places; it loads only on request and has its own size budget, never affecting the reader. | Must |
-| R-14.4 | Journeys are ordered stops with passage references and a route; version 1 draws straight legs between stops. `/atlas` lists journeys and the most-mentioned places; `/atlas/{journey}` shows the map, stops and passages. | Must |
+| R-14.4 | Journeys are ordered stops with passage references and a route drawn from UBS Project MARBLE's route data where a matching route exists (CC BY-SA 4.0), otherwise as straight legs between stops. `/atlas` lists journeys and the most-mentioned places; `/atlas/{journey}` shows the map, stops and passages. | Must |
 | R-14.5 | Historical regions carry period metadata; a period selector appears only once two or more periods exist. | Could |
-| R-14.6 | Every map carries its attribution (OpenBible.info CC BY 4.0, Natural Earth). | Must |
+| R-14.6 | Every map carries its attribution (OpenBible.info CC BY 4.0, Natural Earth, and UBS Project MARBLE CC BY-SA 4.0 on maps that include its routes; those maps are CC BY-SA 4.0). | Must |
 
 ## 18. Dictionary, people and community review
 

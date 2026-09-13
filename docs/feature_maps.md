@@ -27,6 +27,7 @@ Every source lives under `data/entities/<source>/` with `LICENSE`, `SOURCE.md` (
 | OpenBible Geocoding | Place identity, coordinates, precision, verse-to-place links, alternate names | CC BY 4.0 | `data/entities/openbible-geo/` |
 | TIPNR (STEP Bible) | Place identity cross-check, original-language names, verse links; the same file supplies people for M7 | Open, attribution terms to check per file | `data/entities/tipnr/` |
 | Natural Earth | Coastline, ocean, lakes, rivers for the tile archive and the static maps | Public domain | Downloaded in CI, not committed |
+| UBS Bible Routes (Project MARBLE, Leen Ritmeyer) | 179 GeoJSON route files for Bible stories, drawn instead of straight legs on journey maps; added 13 Sep 2026 | CC BY-SA 4.0 (verified); ShareAlike kept in its own directory, journey maps that include the lines are CC BY-SA | `data/entities/geo/ubs-routes-sa/` |
 | Journeys and regions GeoJSON | Routes and historical borders from open sources or hand-authored | Per file; our own work is CC BY | `data/entities/geo/` |
 
 ## 3. Entity foundation

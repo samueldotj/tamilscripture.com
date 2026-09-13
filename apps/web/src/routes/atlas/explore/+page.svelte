@@ -172,7 +172,7 @@
 				}
 			}
 			map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
-			map.addControl(new maplibre.AttributionControl({ compact: true, customAttribution: 'Places: OpenBible.info CC BY 4.0 · Base map: Natural Earth' }));
+			map.addControl(new maplibre.AttributionControl({ compact: true, customAttribution: 'Places: OpenBible.info CC BY 4.0 · Base map: Natural Earth · Routes: UBS Project MARBLE CC BY-SA 4.0' }));
 			map.on('load', async () => {
 				status = 'ready';
 				await focusFromQuery();

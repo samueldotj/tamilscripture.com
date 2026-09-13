@@ -690,11 +690,20 @@ fn main() -> Result<()> {
 
     // Journeys resolve stops to places.
     let journeys_in = journeys::load(&args.entities.join("geo/journeys.toml"))?;
+    let routes_dir = args.entities.join("geo/ubs-routes-sa/GeoJsonRoutes");
     let mut journeys_out: Vec<journeys::JourneyOut> = Vec::new();
+    // Drawn route lines per journey (same index as journeys_out); empty → straight legs.
+    let mut journey_routes: Vec<Vec<Vec<geo::Pt>>> = Vec::new();
     let mut journeys_by_place: BTreeMap<String, Vec<String>> = BTreeMap::new();
     for j in &journeys_in {
         let mut stops = Vec::new();
         let mut bbox = geo::BBox::empty();
+        let lines = journeys::load_routes(&routes_dir, &j.id, &j.routes)?;
+        for l in &lines {
+            for p in l {
+                bbox.add(*p);
+            }
+        }
         for s in &j.stops {
             let Some(p) = by_id.get(s.place.as_str()) else {
                 bail!("journey {}: unknown place {}", j.id, s.place)
@@ -733,7 +742,10 @@ fn main() -> Result<()> {
                 round5(bbox.max_lon),
                 round5(bbox.max_lat),
             ],
+            route_source: (!lines.is_empty()).then_some(journeys::UBS_ROUTES.key),
+            route_attribution: (!lines.is_empty()).then_some(journeys::UBS_ROUTES.attribution),
         });
+        journey_routes.push(lines);
     }
     for v in journeys_by_place.values_mut() {
         v.dedup();
@@ -1059,11 +1071,17 @@ fn main() -> Result<()> {
     )?;
     let jfeats: Vec<Value> = journeys_out
         .iter()
-        .map(|j| {
+        .zip(&journey_routes)
+        .map(|(j, lines)| {
+            let geometry = if lines.is_empty() {
+                serde_json::json!({ "type": "LineString", "coordinates": j.stops.iter().map(|s| [s.lon, s.lat]).collect::<Vec<_>>() })
+            } else {
+                serde_json::json!({ "type": "MultiLineString", "coordinates": lines.iter().map(|l| l.iter().map(|p| [round5(p[0]), round5(p[1])]).collect::<Vec<_>>()).collect::<Vec<_>>() })
+            };
             serde_json::json!({
                 "type": "Feature",
-                "properties": { "id": j.id, "name_en": j.name_en, "name_ta": j.name_ta, "period": j.period },
-                "geometry": { "type": "LineString", "coordinates": j.stops.iter().map(|s| [s.lon, s.lat]).collect::<Vec<_>>() }
+                "properties": { "id": j.id, "name_en": j.name_en, "name_ta": j.name_ta, "period": j.period, "route_source": j.route_source },
+                "geometry": geometry
             })
         })
         .collect();
@@ -1104,7 +1122,8 @@ fn main() -> Result<()> {
             &svg::MapSpec {
                 title,
                 points: &pts,
-                route: None,
+                routes: &[],
+            credit_extra: None,
                 w: 360.0,
                 h: 225.0,
                 min_span: 2.5,
@@ -1147,7 +1166,8 @@ fn main() -> Result<()> {
         let spec = svg::MapSpec {
             title,
             points: &pts,
-            route: None,
+            routes: &[],
+            credit_extra: None,
             w: 800.0,
             h: 480.0,
             min_span: 2.0,
@@ -1159,8 +1179,9 @@ fn main() -> Result<()> {
         )?;
         n_maps += 1;
     }
-    for j in &journeys_out {
-        let route: Vec<geo::Pt> = j.stops.iter().map(|s| [s.lon, s.lat]).collect();
+    for (j, lines) in journeys_out.iter().zip(&journey_routes) {
+        let straight: Vec<geo::Pt> = j.stops.iter().map(|s| [s.lon, s.lat]).collect();
+        let routes: Vec<Vec<geo::Pt>> = if lines.is_empty() { vec![straight] } else { lines.clone() };
         let mut seen = BTreeSet::new();
         let pts: Vec<svg::MapPoint> = j
             .stops
@@ -1172,7 +1193,8 @@ fn main() -> Result<()> {
         let spec = svg::MapSpec {
             title: format!("{} · {}", j.name_ta, j.name_en),
             points: &pts,
-            route: Some(&route),
+            routes: &routes,
+            credit_extra: (!lines.is_empty()).then_some(" · Routes: UBS/Ritmeyer CC BY-SA 4.0"),
             w: 800.0,
             h: 520.0,
             min_span: 3.0,

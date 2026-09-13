@@ -230,6 +230,9 @@ export interface Journey {
 	stops: JourneyStop[];
 	/** [min_lon, min_lat, max_lon, max_lat] */
 	bbox: [number, number, number, number];
+	/** "ubs" when the drawn route comes from UBS Project MARBLE (CC BY-SA 4.0) */
+	route_source?: 'ubs';
+	route_attribution?: string;
 }
 
 export type Bilingual = { ta: string; en: string };
