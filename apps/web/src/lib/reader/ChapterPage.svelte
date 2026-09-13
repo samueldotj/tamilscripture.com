@@ -7,7 +7,7 @@
 	import XrefPanel from './XrefPanel.svelte';
 	import NoteSheet from './NoteSheet.svelte';
 	import BookRail from './BookRail.svelte';
-	import ContextPanel from './ContextPanel.svelte';
+	import ContextPanel, { type PanelTab } from './ContextPanel.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
@@ -77,8 +77,8 @@
 		selected = idsFromRange();
 	});
 	// Context panel tab (desktop column) and overlay sheet (narrow screens).
-	let panelTab = $state<'related' | 'places'>('places');
-	let sheet = $state<'related' | 'places' | null>(null);
+	let panelTab = $state<PanelTab>('places');
+	let sheet = $state<PanelTab | null>(null);
 	function toggle(id: string) {
 		const s = new Set(selected);
 		if (s.has(id)) s.delete(id); else s.add(id);
@@ -152,6 +152,7 @@
 		return () => { cancelled = true; };
 	});
 	const placeCount = $derived(mentions ? Object.keys(mentions.places).length : 0);
+	const peopleCount = $derived(mentions?.people ? Object.keys(mentions.people).length : 0);
 
 	// Desktop context panel: the verse whose ‡ was pressed, else the first
 	// selected verse. Hidden by CSS below the wide breakpoint.
@@ -311,6 +312,12 @@
 					<button type="button" class="chip places-chip" onclick={() => (sheet = 'places')} aria-label={isTamil ? `இடங்கள்: ${placeCount}` : `Places: ${placeCount}`}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
 						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'இடங்கள்' : 'Places'}</span> <span class="n">{placeCount}</span>
+					</button>
+				{/if}
+				{#if !dual && peopleCount}
+					<button type="button" class="chip places-chip" onclick={() => (sheet = 'people')} aria-label={isTamil ? `நபர்கள்: ${peopleCount}` : `People: ${peopleCount}`}>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'நபர்கள்' : 'People'}</span> <span class="n">{peopleCount}</span>
 					</button>
 				{/if}
 				<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>

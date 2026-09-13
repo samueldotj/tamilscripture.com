@@ -50,6 +50,15 @@
 		{/if}
 	</p>
 
+	<h2>{ta ? 'நபர்களும் அகராதியும்' : 'People and dictionary'}</h2>
+	<p>
+		{#if ta}
+			நபர்கள், அவர்களின் உறவுகள், சுருக்க விளக்கங்கள் மற்றும் இடங்களின் விளக்கங்கள்: <a href="https://www.stepbible.org">STEP Bible</a> (Tyndale House, Cambridge) வெளியிட்ட TIPNR (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>). அகராதிக் கட்டுரைகள்: <a href="/dictionary">Easton’s Bible Dictionary</a> (1897, பொது உரிமை); JSON தரவுத்தொகுப்பு <a href="https://github.com/neuu-org/bible-dictionary-dataset">NEUU</a> (CC BY 4.0). ஆங்கிலக் கட்டுரைகளின் தமிழ் வடிவங்கள் முதலில் வரைவாகவும், சமூக மதிப்பாய்வுக்குப் பின் திருத்தப்பட்டவையாகவும் குறிக்கப்படுகின்றன.
+		{:else}
+			People, their relations and short descriptions, and the place descriptions, come from TIPNR by <a href="https://www.stepbible.org">STEP Bible</a> (Tyndale House, Cambridge), <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Dictionary articles are from <a href="/dictionary">Easton’s Bible Dictionary</a> (1897, public domain), using the JSON dataset by <a href="https://github.com/neuu-org/bible-dictionary-dataset">NEUU</a> (CC BY 4.0). Tamil versions of the English articles are marked as drafts first and as community-corrected once reviewed.
+		{/if}
+	</p>
+
 	<h2>{ta ? 'தனியுரிமை' : 'Privacy'}</h2>
 	<p>
 		{#if ta}

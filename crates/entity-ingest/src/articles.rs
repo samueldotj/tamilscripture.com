@@ -67,6 +67,19 @@ pub fn fnv8(s: &str) -> String {
 
 /// Split an entry into reviewable paragraphs: at numbered senses `(1.)`,
 /// then at sentence ends when a piece runs past ~700 characters.
+/// True when the text ends in an abbreviation rather than a sentence: "2 Sam."
+/// "Chr." "Gen." "comp." "i.e." "B.C." — a final word of at most four letters,
+/// or one containing an inner period.
+fn ends_in_abbreviation(s: &str) -> bool {
+    let t = s.trim_end();
+    let Some(word) = t.rsplit(char::is_whitespace).next() else {
+        return false;
+    };
+    let word = word.trim_end_matches(['.', '?', '!']);
+    let letters = word.trim_start_matches(|c: char| !c.is_alphabetic());
+    letters.contains('.') || letters.chars().filter(|c| c.is_alphabetic()).count() <= 4
+}
+
 pub fn paragraphs(text: &str) -> Vec<String> {
     let text = text.split_whitespace().collect::<Vec<_>>().join(" ");
     // Sense markers like "(1.)" "(2.)" start a new paragraph (keep the marker).
@@ -111,8 +124,10 @@ pub fn paragraphs(text: &str) -> Vec<String> {
             sentence.push(*c);
             let end = matches!(c, '.' | '?' | '!')
                 && pc.get(n + 1).is_none_or(|nx| nx.is_whitespace())
-                && !sentence.trim_end().ends_with("B.C.")
-                && !sentence.trim_end().ends_with("A.D.");
+                && !ends_in_abbreviation(&sentence)
+                && pc
+                    .get(n + 2)
+                    .is_none_or(|nx| nx.is_uppercase() || matches!(nx, '"' | '\u{201C}' | '('));
             if end {
                 if para.chars().count() + sentence.chars().count() > 700 && !para.is_empty() {
                     out.push(para.trim().to_string());

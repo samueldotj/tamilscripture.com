@@ -149,15 +149,27 @@ fn names_ta_out(names: &NamesTa, name_en: &str) -> BTreeMap<String, NameTaOut> {
 }
 
 fn all_ta_forms(names: &NamesTa, name_en: &str) -> String {
-    let set: BTreeSet<String> = names
-        .get(name_en)
-        .map(|per| {
-            per.values()
-                .flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned()))
-                .collect()
-        })
-        .unwrap_or_default();
-    set.into_iter().collect::<Vec<_>>().join(" ")
+    // The first token is what the search box shows as the Tamil label, so the
+    // display-worthy label of the default version leads; the rest follow sorted.
+    let Some(per) = names.get(name_en) else {
+        return String::new();
+    };
+    let mut out: Vec<String> = Vec::new();
+    let lead = per
+        .get("IRVTAM")
+        .filter(|f| f.display_ok())
+        .or_else(|| per.values().find(|f| f.display_ok()))
+        .map(|f| f.label.clone());
+    if let Some(l) = &lead {
+        out.push(l.clone());
+    }
+    let set: BTreeSet<String> = per
+        .values()
+        .flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned()))
+        .filter(|s| Some(s) != lead.as_ref())
+        .collect();
+    out.extend(set);
+    out.join(" ")
 }
 
 /// Tamil label for a name: the default Tamil version first, then any other,
