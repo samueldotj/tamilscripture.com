@@ -21,6 +21,7 @@
 //!   search/entities.csv                  id,type,slug,name_en,names_ta,alt_en,weight
 //! `--draft-names` instead proposes Tamil forms into data/entities/names-ta.toml.
 
+mod aquifer;
 mod articles;
 mod books;
 mod community;
@@ -540,9 +541,18 @@ fn main() -> Result<()> {
     // ---- dictionary articles, linked to entities by name ----
     let blocklist = articles::load_blocklist(&args.entities.join("blocklist.toml"))?;
     let mut all_articles: Vec<articles::Article> = Vec::new();
-    let eastons_dir = args.entities.join("eastons");
-    if eastons_dir.join("src").exists() {
-        all_articles.extend(articles::load_eastons(&eastons_dir)?);
+    for (dir, src) in [
+        ("eastons", &articles::EASTONS),
+        ("smiths", &articles::SMITHS),
+    ] {
+        let dir = args.entities.join(dir);
+        if dir.join("src").exists() {
+            all_articles.extend(articles::load_neuu(&dir, src)?);
+        }
+    }
+    let aquifer_dir = args.entities.join("aquifer");
+    if aquifer_dir.join("src/eng/json").exists() {
+        all_articles.extend(aquifer::load(&aquifer_dir)?);
     }
     let before = all_articles.len();
     all_articles.retain(|a| {
@@ -571,10 +581,25 @@ fn main() -> Result<()> {
     }
     let mut articles_by_entity: HashMap<String, Vec<usize>> = HashMap::new();
     for (i, a) in all_articles.iter_mut().enumerate() {
-        if let Some(ents) = entity_by_name.get(&a.title.to_lowercase()) {
+        // Source hints (Aquifer's ACAI ids) first, filtered by kind; else the title.
+        let mut ents: Vec<String> = Vec::new();
+        for (kind, name) in &a.hints {
+            if let Some(found) = entity_by_name.get(name) {
+                let prefix = format!("{kind}/");
+                ents.extend(found.iter().filter(|e| e.starts_with(&prefix)).cloned());
+            }
+        }
+        if ents.is_empty() {
+            if let Some(found) = entity_by_name.get(&a.title.to_lowercase()) {
+                ents = found.clone();
+            }
+        }
+        ents.sort();
+        ents.dedup();
+        if !ents.is_empty() {
             a.entities = ents.clone();
             for e in ents {
-                articles_by_entity.entry(e.clone()).or_default().push(i);
+                articles_by_entity.entry(e).or_default().push(i);
             }
         }
     }

@@ -231,9 +231,9 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 7.1 | Download Easton and ISBE with licence files; generate ten sample articles each from Smith's and Aquifer for the owner's doctrinal review; record the decision. *Easton (NEUU dataset) downloaded and licensed ☑; ISBE deferred (scans only); Smith's/Aquifer samples await the owner* | dictionary §2 | ◧ |
+| 7.1 | Dictionary sources with licence files: Easton (NEUU dataset) ☑, Smith's (NEUU dataset) ☑, Aquifer Open Bible Dictionary (CC BY-SA, own directory) ☑; Smith's and Aquifer approved by the owner 13 Sep 2026; ISBE deferred (scans only) | dictionary §2 | ☑ |
 | 7.2 | Requirement IDs R-12.x (dictionary), R-13.x (people), R-15.x (community review) in `docs/requirements.md`; design ADRs: static drafts plus exported overrides, moderation in Postgres | dictionary §1, ADR-13, ADR-14 | ☑ |
-| 7.3 | Parse Easton into `articles/{source}/{id}.json` with stable paragraph ids and attribution; link to entities by name; `blocklist.toml` honoured; `articles/index.json` (3,962 articles, 1,651 linked) | dictionary §3 | ☑ |
+| 7.3 | Parse Easton, Smith's and Aquifer into `articles/{source}/{id}.json` with stable paragraph ids and attribution; link to entities by ACAI hints or title; `blocklist.toml` honoured; `articles/index.json` (13,147 articles) | dictionary §3 | ☑ |
 | 7.4 | Ingest `data/entities/drafts/ta/` with the validation rules; per-paragraph fallback to English when stale; glossary check against accepted names (`community.rs`; drafts themselves await the owner) | dictionary §5 | ☑ |
 | 7.5 | `/dictionary` index and `/dictionary/{source}/{id}` pages with language badge and licence; Dictionary tab with "Read more"; articles searchable by title | dictionary §7, §8 | ☑ |
 | 7.6 | TIPNR people: identity, disambiguation, relations, mentions; Tamil name drafts; `/person/{slug}` pages; People tab; people in search and reference box | dictionary §4 | ☑ |

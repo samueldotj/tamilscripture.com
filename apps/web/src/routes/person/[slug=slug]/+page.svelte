@@ -5,6 +5,7 @@
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { nameTarget } from '$lib/community/repo';
+	import { sourceOf } from '$lib/entities/sources';
 
 	let { data } = $props();
 	const ui = $derived(settings.value.uiLang);
@@ -158,7 +159,7 @@
 					<h2 class="kicker"><span lang="ta">அகராதி</span> · Dictionary</h2>
 					<ul class="plain">
 						{#each p.articles as a (a.id)}
-							<li><a href="/dictionary/{a.id}">{a.title}</a> <span class="muted small">Easton</span></li>
+							<li><a href="/dictionary/{a.id}">{a.title}</a> <span class="muted small">{sourceOf(a.source).short}</span></li>
 						{/each}
 					</ul>
 				</section>

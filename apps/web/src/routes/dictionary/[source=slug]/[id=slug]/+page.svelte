@@ -4,11 +4,13 @@
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { articleTarget } from '$lib/community/repo';
+	import { sourceOf } from '$lib/entities/sources';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
 	const a = $derived(data.article);
-	const sourceName = $derived(a.source === 'eastons' ? 'Easton’s Bible Dictionary (1897)' : a.source);
+	const src = $derived(sourceOf(a.source));
+	const sourceName = $derived(`${src.name} (${src.year})`);
 	const hasTa = $derived(a.paragraphs.some((p) => p.ta));
 	const description = $derived((a.paragraphs[0]?.ta ?? a.paragraphs[0]?.text ?? '').slice(0, 160));
 </script>
@@ -24,12 +26,12 @@
 <article class="art">
 	<nav class="crumbs" aria-label="Breadcrumb">
 		<a href="/">Bible</a> <span aria-hidden="true">›</span>
-		<a href="/dictionary?l={a.title[0]?.toUpperCase()}" lang={ta ? 'ta' : 'en'}>{ta ? 'அகராதி' : 'Dictionary'}</a> <span aria-hidden="true">›</span>
+		<a href="/dictionary?l={a.title[0]?.toUpperCase()}&s={a.source}" lang={ta ? 'ta' : 'en'}>{ta ? 'அகராதி' : 'Dictionary'}</a> <span aria-hidden="true">›</span>
 		<span aria-current="page">{a.title}</span>
 	</nav>
 
 	<header class="head">
-		<div class="kicker">{sourceName} <span class="badge" title={hasTa ? (ta ? 'தமிழ் வரைவு உள்ளது' : 'Tamil draft available') : (ta ? 'ஆங்கிலம் மட்டும்' : 'English only')}>{hasTa ? 'TA' : 'EN'}</span></div>
+		<div class="kicker">{sourceName} · {ta ? src.licence_ta : src.licence_en} <span class="badge" title={hasTa ? (ta ? 'தமிழ் வரைவு உள்ளது' : 'Tamil draft available') : (ta ? 'ஆங்கிலம் மட்டும்' : 'English only')}>{hasTa ? 'TA' : 'EN'}</span></div>
 		<h1>{a.title}{#if a.title_ta} <span class="title-ta" lang="ta">{a.title_ta}</span>{/if}</h1>
 		{#if data.linked.length}
 			<ul class="chips" aria-label={ta ? 'இணைக்கப்பட்ட பெயர்கள்' : 'Linked names'}>
@@ -49,8 +51,10 @@
 
 	<div class="body">
 		{#each a.paragraphs as p (p.id)}
-			<div class="para" id={p.id.split('#')[1]}>
-				{#if p.ta}
+			<div class="para" class:heading={p.heading} id={p.id.split('#')[1]}>
+				{#if p.heading}
+					<h2 lang={p.ta ? 'ta' : 'en'}>{p.ta ?? p.text}</h2>
+				{:else if p.ta}
 					<p lang="ta" class="ta">{p.ta}</p>
 					<details class="src"><summary lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கில மூலம்' : 'English source'}</summary><p lang="en">{p.text}</p></details>
 					<Provenance kind={p.ta_source ?? 'draft'} lang={ta ? 'ta' : 'en'} />
@@ -64,6 +68,7 @@
 
 	<footer class="foot">
 		<p class="source">{a.attribution}</p>
+		{#if src.sharealike}<p class="note" lang={ta ? 'ta' : 'en'}>{ta ? 'இக்கட்டுரையின் தமிழ் வடிவங்களும் திருத்தங்களும் CC BY-SA 4.0 உரிமத்திலேயே வெளியிடப்படும்.' : 'Tamil versions and corrections of this article are released under the same CC BY-SA 4.0 licence.'}</p>{/if}
 		<p class="note" lang={ta ? 'ta' : 'en'}>{ta ? 'தமிழ் வடிவம் இன்னும் இல்லை. வரைவுகள் சமூக மதிப்பாய்வுக்குப் பின் இங்கே வெளியிடப்படும்.' : hasTa ? 'Tamil text is an unreviewed draft; corrections are published after community review.' : 'No Tamil version yet. Drafts are published here after community review.'}</p>
 	</footer>
 </article>
@@ -82,6 +87,8 @@
 	.body { display: grid; gap: 1.1rem; }
 	.para { position: relative; }
 	.para p { margin: 0; line-height: 1.75; font-size: 1.05rem; }
+	.para h2 { margin: 0.6rem 0 0; font-size: 1.15rem; font-weight: 700; }
+	.para h2[lang='ta'] { font-family: var(--tamil); }
 	.para p.ta { font-family: var(--tamil); font-size: 1.15rem; line-height: 1.9; }
 	.src { margin-top: 0.4rem; font-size: 0.92rem; color: var(--ink-2); }
 	.src summary { cursor: pointer; color: var(--muted); font-size: 0.8rem; }

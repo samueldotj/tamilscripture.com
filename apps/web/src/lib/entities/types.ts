@@ -174,6 +174,8 @@ export interface Paragraph {
 	/** `{source}/{article}#p{n}-{hash8}`, stable across rebuilds */
 	id: string;
 	text: string;
+	/** a section heading inside the article */
+	heading?: boolean;
 	/** Tamil draft or accepted correction, when present */
 	ta?: string;
 	ta_source?: 'draft' | 'community' | 'owner';

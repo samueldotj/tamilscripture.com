@@ -12,6 +12,9 @@ use std::path::Path;
 pub struct Paragraph {
     pub id: String,
     pub text: String,
+    /// A section heading inside the article (Aquifer's h2–h4).
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub heading: bool,
     /// Tamil text: an AI draft or an accepted correction (community.rs)
     #[serde(skip_serializing_if = "Option::is_none")]
     pub ta: Option<String>,
@@ -34,6 +37,9 @@ pub struct Article {
     pub attribution: &'static str,
     /// `{type}/{id}` of linked entities, filled in by the build
     pub entities: Vec<String>,
+    /// Entity hints from the source as (kind, lowercase name), e.g. ("person", "aaron")
+    #[serde(skip)]
+    pub hints: Vec<(String, String)>,
     pub paragraphs: Vec<Paragraph>,
     /// Scripture references as `Book 1:2` strings from the source
     #[serde(skip_serializing_if = "Vec::is_empty")]
@@ -153,8 +159,25 @@ pub fn paragraphs(text: &str) -> Vec<String> {
     out
 }
 
-/// Easton's Bible Dictionary from `data/entities/eastons/src/{a..z}.json`.
-pub fn load_eastons(dir: &Path) -> Result<Vec<Article>> {
+/// A dictionary in the NEUU dataset shape (`src/{a..z}.json`, entries with
+/// `name`, `slug`, `definitions[].text`, `scripture_refs`): Easton's (1897)
+/// and Smith's (1863), both public domain.
+pub struct NeuuSource {
+    /// `eastons`, `smiths`: the id prefix and the URL segment
+    pub key: &'static str,
+    pub attribution: &'static str,
+}
+
+pub const EASTONS: NeuuSource = NeuuSource {
+    key: "eastons",
+    attribution: "Easton's Bible Dictionary (1897), public domain; dataset by NEUU, CC BY 4.0",
+};
+pub const SMITHS: NeuuSource = NeuuSource {
+    key: "smiths",
+    attribution: "Smith's Bible Dictionary (1863), public domain; dataset by NEUU, CC BY 4.0",
+};
+
+pub fn load_neuu(dir: &Path, src: &NeuuSource) -> Result<Vec<Article>> {
     let mut out = Vec::new();
     let mut entries = std::fs::read_dir(dir.join("src"))
         .with_context(|| format!("reading {}", dir.display()))?
@@ -204,7 +227,7 @@ pub fn load_eastons(dir: &Path) -> Result<Vec<Article>> {
             if full_text.is_empty() {
                 continue;
             }
-            let id = format!("eastons/{slug}");
+            let id = format!("{}/{slug}", src.key);
             let mut n = 0;
             let paragraphs = full
                 .iter()
@@ -214,6 +237,7 @@ pub fn load_eastons(dir: &Path) -> Result<Vec<Article>> {
                     Paragraph {
                         id: format!("{id}#p{n}-{}", fnv8(&p)),
                         text: p,
+                        heading: false,
                         ta: None,
                         ta_source: None,
                     }
@@ -226,16 +250,16 @@ pub fn load_eastons(dir: &Path) -> Result<Vec<Article>> {
                 .filter_map(|r| r["reference"].as_str().map(String::from))
                 .collect();
             out.push(Article {
-                source: "eastons".to_string(),
+                source: src.key.to_string(),
                 id,
                 slug,
                 title,
                 title_ta: None,
                 lang: "en",
                 licence: "PD",
-                attribution:
-                    "Easton's Bible Dictionary (1897), public domain; dataset by NEUU, CC BY 4.0",
+                attribution: src.attribution,
                 entities: Vec::new(),
+                hints: Vec::new(),
                 paragraphs,
                 refs,
                 hash: fnv8(&full_text),

@@ -4,6 +4,7 @@
 	// loaded on demand.
 	import type { ChapterMentions, Article } from '$lib/entities/types';
 	import { loadArticle } from '$lib/entities/load';
+	import { sourceOf } from '$lib/entities/sources';
 
 	let {
 		mentions,
@@ -56,11 +57,11 @@
 	{:else if items.length === 0}
 		<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? (selected.size ? 'தேர்ந்த வசனத்தின் பெயர்களுக்கு அகராதிக் கட்டுரைகள் இல்லை.' : 'இந்த அதிகாரத்தின் பெயர்களுக்கு அகராதிக் கட்டுரைகள் இல்லை.') : (selected.size ? 'No dictionary articles for the names in the selected verse.' : 'No dictionary articles for the names in this chapter.')}</p>
 	{:else}
-		<h3 class="kicker"><span lang="ta">அகராதி</span> · Easton's Bible Dictionary <span class="n">{items.length}</span></h3>
+		<h3 class="kicker"><span lang="ta">அகராதி</span> · Dictionary <span class="n">{items.length}</span></h3>
 		<ul class="list">
 			{#each items.slice(0, 12) as it (it.article)}
 				<li>
-					<a class="title" href="/dictionary/{it.article}">{it.name}</a>
+					<a class="title" href="/dictionary/{it.article}">{it.name} <span class="src">{sourceOf(it.article.split('/')[0]).short}</span></a>
 					{#await article(it.article)}
 						<p class="snippet muted">…</p>
 					{:then a}
@@ -73,7 +74,7 @@
 			{/each}
 		</ul>
 		{#if items.length > 12}<p class="muted small">+{items.length - 12}</p>{/if}
-		<p class="credit">Easton's Bible Dictionary (1897), public domain · dataset by NEUU, CC BY 4.0</p>
+		<p class="credit">Aquifer Open Bible Dictionary (CC BY-SA 4.0) · Easton (1897) and Smith (1863), public domain</p>
 	{/if}
 </div>
 
@@ -88,6 +89,7 @@
 	.list li { padding: 0.7rem 0; border-top: 1px solid var(--line); display: grid; gap: 0.25rem; }
 	.list li:first-child { border-top: 0; }
 	.title { font-weight: 700; text-decoration: none; font-size: 1rem; }
+	.title .src { font-size: 0.68rem; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0 0.4rem; margin-left: 0.3rem; vertical-align: middle; }
 	.snippet { margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--ink-2); font-family: var(--en); }
 	.snippet[lang='ta'] { font-family: var(--tamil); font-size: 1rem; }
 	.more { font-size: 0.82rem; font-weight: 600; text-decoration: none; }

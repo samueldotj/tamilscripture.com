@@ -8,7 +8,7 @@ Builds on the entity foundation in [feature_maps.md](feature_maps.md) §3: the `
 
 | Question | Decision |
 |---|---|
-| Sources | Reformed sources only. Public-domain candidates: Easton (Matthew George Easton, Presbyterian) and ISBE 1915 (James Orr, United Free Church of Scotland). Smith's (Anglican) and Aquifer are held for the owner's review of sample articles before inclusion. |
+| Sources | Reformed-compatible sources approved by the owner: Easton (1897, Presbyterian), Smith's (1863, Anglican; approved 13 Sep 2026) and the Aquifer Open Bible Dictionary (Mission Mutual's adaptation of the Tyndale Open Bible Dictionary; approved 13 Sep 2026). ISBE 1915 deferred: no machine-readable edition. |
 | ShareAlike sources | Allowed, kept in their own directories with their own licence files, never merged into a public-domain file. |
 | Tamil articles | Drafted in Tamil by an AI process run outside this repository from the English articles, committed as drafts, corrected by the community. English shows only where no Tamil draft exists. |
 | Review | Crowdsourced and paragraph-level. Signed-in readers suggest corrections; reviewers edit and accept or reject; moderators also manage roles. Readers see nothing until acceptance. |
@@ -25,15 +25,15 @@ Same conventions as feature_maps.md §2: one directory per source with `LICENSE`
 | Easton's Bible Dictionary | Readable articles for people, places, terms | Public domain text; NEUU JSON dataset CC BY 4.0 (verified) | `data/entities/eastons/` |
 | ISBE, 1915 edition | Deferred: only page scans are available; revisit when a parsed edition appears | Public domain (US) | `data/entities/isbe/` (not present) |
 | TIPNR (STEP Bible) | People: identity, disambiguation of same-named people, relations, original-language names, verse links; short place descriptions | CC BY 4.0 (verified) | `data/entities/tipnr/` |
-| Smith's Bible Dictionary | Additional articles | Public domain edition to confirm | Held pending owner review |
-| Aquifer Open Bible Dictionary | Modern readable articles | CC BY-SA, to confirm | Held pending owner review; own directory if approved |
+| Smith's Bible Dictionary | 4,488 articles (1863 one-volume edition) | Public domain text; NEUU JSON dataset CC BY 4.0 (verified) | `data/entities/smiths/` |
+| Aquifer Open Bible Dictionary | 4,697 modern readable articles with ACAI entity links; shown first | CC BY-SA 4.0 (verified, release v2026-09-01) | `data/entities/aquifer/` (ShareAlike; Tamil drafts under `drafts/ta-sa/`) |
 | Theographic knowledge graph | Events, periods, relationships | CC BY-SA, to confirm | Optional, own directory |
 | Tamil drafts | AI translations produced outside the repository (§5) | CC BY as translations of public-domain text; `drafts/ta-sa/` for ShareAlike sources | `data/entities/drafts/ta/` |
 | Community overrides | Accepted corrections exported from the database (§6) | CC BY | `data/entities/overrides/` |
 
 ### Reformed-content gate
 
-Inclusion is decided per source. `data/entities/blocklist.toml` lets the owner exclude individual articles by source and id with a reason; the build drops them and the site never links to them. Ten sample articles each from Smith's and Aquifer are generated for the owner's review before either source is added.
+Inclusion is decided per source. `data/entities/blocklist.toml` lets the owner exclude individual articles by source and id with a reason; the build drops them and the site never links to them. Smith's and Aquifer were approved by the owner on 13 Sep 2026.
 
 ## 3. Articles
 
@@ -225,7 +225,7 @@ The context panel and bottom sheet gain **People** and **Dictionary** tabs besid
 
 ## 11. Owner items
 
-1. Approve or reject Smith's and Aquifer after reading the sample articles (task 7.1).
+1. ~~Approve or reject Smith's and Aquifer~~ — both approved 13 Sep 2026.
 2. Produce Tamil drafts outside the repository in the §5 shape once the English articles are emitted (task 7.4).
 3. Secrets, entered by the owner and never handled in chat:
    - GitHub repository secret `SUPABASE_SERVICE_KEY` (the project's service-role key) for `export-overrides.yml`.

@@ -24,6 +24,8 @@
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
+	// Aquifer articles are CC BY-SA; a correction to them stays ShareAlike.
+	const sharealike = $derived(target.startsWith('article:aquifer/'));
 	let open = $state(false);
 	let text = $state('');
 	let reason = $state('');
@@ -77,7 +79,11 @@
 					<input type="text" bind:value={reason} maxlength="500" lang={ta ? 'ta' : 'en'} />
 				</label>
 				<p class="consent" lang={ta ? 'ta' : 'en'}>
-					{ta ? 'பரிந்துரைகள் மதிப்பாய்வுக்குப் பின்னரே வெளியிடப்படும்; உங்கள் பங்களிப்பு CC BY 4.0 உரிமத்தில் வெளியிடப்படும்.' : 'Suggestions are published only after review. Your contribution is released under CC BY 4.0.'}
+					{#if sharealike}
+						{ta ? 'பரிந்துரைகள் மதிப்பாய்வுக்குப் பின்னரே வெளியிடப்படும்; இக்கட்டுரை CC BY-SA 4.0 என்பதால் உங்கள் பங்களிப்பும் CC BY-SA 4.0 உரிமத்தில் வெளியிடப்படும்.' : 'Suggestions are published only after review. This article is CC BY-SA 4.0, so your contribution is released under CC BY-SA 4.0 as well.'}
+					{:else}
+						{ta ? 'பரிந்துரைகள் மதிப்பாய்வுக்குப் பின்னரே வெளியிடப்படும்; உங்கள் பங்களிப்பு CC BY 4.0 உரிமத்தில் வெளியிடப்படும்.' : 'Suggestions are published only after review. Your contribution is released under CC BY 4.0.'}
+					{/if}
 				</p>
 				{#if error}<p class="err" role="alert">{error}</p>{/if}
 				<div class="row">
