@@ -48,8 +48,9 @@ if [[ -f "$entities" ]]; then
 begin;
 create temp table estage (id text, type text, slug text, name_en text, names_ta text, alt_en text, weight real) on commit drop;
 \copy estage (id, type, slug, name_en, names_ta, alt_en, weight) from '$entities' with (format csv, header true, encoding 'UTF8')
+-- Empty CSV fields arrive as NULL; the table wants '' for the generated columns.
 insert into public.entity_search (id, type, slug, name_en, names_ta, alt_en, weight)
-  select id, type, slug, name_en, names_ta, alt_en, weight from estage
+  select id, type, slug, name_en, coalesce(names_ta, ''), coalesce(alt_en, ''), coalesce(weight, 0) from estage
   on conflict (id) do update
     set type = excluded.type, slug = excluded.slug, name_en = excluded.name_en,
         names_ta = excluded.names_ta, alt_en = excluded.alt_en, weight = excluded.weight
