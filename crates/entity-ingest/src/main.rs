@@ -1,4 +1,5 @@
-//! entity-ingest: biblical places for tamilscripture.com (M6).
+//! entity-ingest: biblical places, people and dictionary articles for
+//! tamilscripture.com (M6, M7).
 //!
 //! Usage:
 //!   entity-ingest --books data/books.toml --entities data/entities \
@@ -9,17 +10,18 @@
 //! Output (under `{content}/{build}/`):
 //!   entities/places.json                 index of every place
 //!   entities/place/{id}.json             one place
-//!   entities/mentions/{BOOK}/{ch}.json   verse id → place ids
+//!   entities/people.json                 index of every person
+//!   entities/person/{id}.json            one person
+//!   entities/mentions/{BOOK}/{ch}.json   verse id → place and person ids, with summaries
+//!   entities/articles/index.json         every dictionary article (title, source, hash)
+//!   entities/articles/{source}/{id}.json one article with stable paragraph ids
 //!   entities/journeys.json               journeys with resolved stops
-//!   entities/geo/places.geojson          points for the explore map
-//!   entities/geo/journeys.geojson        routes for the explore map
-//!   entities/geo/base/*.geojson          Natural Earth outline layers (copied)
-//!   entities/maps/{BOOK}/{ch}.svg        static chapter maps
-//!   entities/maps/place/{id}.svg         static place maps
-//!   entities/maps/journey/{id}.svg       static journey maps
+//!   entities/geo/*.geojson               points, routes and the Natural Earth base
+//!   entities/maps/**.svg                 static chapter, place and journey maps
 //!   search/entities.csv                  id,type,slug,name_en,names_ta,alt_en,weight
 //! `--draft-names` instead proposes Tamil forms into data/entities/names-ta.toml.
 
+mod articles;
 mod books;
 mod corpus;
 mod geo;
@@ -27,6 +29,7 @@ mod journeys;
 mod names;
 mod openbible;
 mod svg;
+mod tipnr;
 
 use anyhow::{bail, Context, Result};
 use books::Books;
@@ -35,7 +38,7 @@ use names::{NameForm, NamesTa};
 use openbible::Place;
 use serde::Serialize;
 use serde_json::Value;
-use std::collections::{BTreeMap, BTreeSet};
+use std::collections::{BTreeMap, BTreeSet, HashMap};
 use std::fs;
 use std::path::{Path, PathBuf};
 
@@ -97,6 +100,22 @@ fn csv_field(s: &str) -> String {
     }
 }
 
+fn round5(v: f64) -> f64 {
+    (v * 1e5).round() / 1e5
+}
+
+/// `1Ch.24.25` → `1Ch 24:25`, the qualifier shown for same-named people.
+fn ref_label(r: &str) -> String {
+    let mut it = r.splitn(3, '.');
+    match (it.next(), it.next(), it.next()) {
+        (Some(b), Some(c), Some(v)) => format!("{b} {c}:{v}"),
+        _ => r.to_string(),
+    }
+}
+
+/// Per verse: place ids, person ids.
+type VerseMentions = (Vec<String>, Vec<String>);
+
 // ---- output shapes (mirrored in apps/web/src/lib/entities/types.ts) ----
 
 #[derive(Serialize)]
@@ -106,6 +125,74 @@ struct NameTaOut {
     confidence: f32,
     #[serde(skip_serializing_if = "std::ops::Not::not")]
     draft: bool,
+}
+
+fn names_ta_out(names: &NamesTa, name_en: &str) -> BTreeMap<String, NameTaOut> {
+    names
+        .get(name_en)
+        .map(|per| {
+            per.iter()
+                .map(|(v, f): (&String, &NameForm)| {
+                    (
+                        v.clone(),
+                        NameTaOut {
+                            label: f.label.clone(),
+                            forms: f.forms.clone(),
+                            confidence: f.confidence,
+                            draft: f.review,
+                        },
+                    )
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+fn all_ta_forms(names: &NamesTa, name_en: &str) -> String {
+    let set: BTreeSet<String> = names
+        .get(name_en)
+        .map(|per| {
+            per.values()
+                .flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned()))
+                .collect()
+        })
+        .unwrap_or_default();
+    set.into_iter().collect::<Vec<_>>().join(" ")
+}
+
+/// Tamil label for a name: the default Tamil version first, then any other,
+/// only where the draft is trustworthy enough to show.
+fn label_ta(names: &NamesTa, name_en: &str, versions: &[String]) -> Option<String> {
+    let per = names.get(name_en)?;
+    for v in versions {
+        if let Some(f) = per.get(v).filter(|f| f.display_ok()) {
+            return Some(f.label.clone());
+        }
+    }
+    per.values()
+        .find(|f| f.display_ok())
+        .map(|f| f.label.clone())
+}
+
+#[derive(Serialize)]
+struct DescriptionOut<'a> {
+    #[serde(skip_serializing_if = "str::is_empty")]
+    brief: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    short: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    article: &'a str,
+    source: &'static str,
+    licence: &'static str,
+    url: &'static str,
+}
+
+#[derive(Serialize)]
+struct ArticleRef<'a> {
+    source: &'a str,
+    id: &'a str,
+    title: &'a str,
+    paragraphs: usize,
 }
 
 #[derive(Serialize)]
@@ -140,6 +227,13 @@ struct PlaceOut<'a> {
     /// Nearby located places (within the place map's view), nearest first.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     nearby: Vec<Value>,
+    /// STEP Bible description when a TIPNR place matches.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    description: Option<DescriptionOut<'a>>,
+    /// People linked to this place through the TIPNR name forms (founders etc.) are
+    /// not resolved yet; dictionary articles are.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    articles: Vec<ArticleRef<'a>>,
     source: SourceOut,
 }
 
@@ -175,22 +269,99 @@ struct Index<'a> {
     places: Vec<IndexEntry<'a>>,
 }
 
-fn round5(v: f64) -> f64 {
-    (v * 1e5).round() / 1e5
+#[derive(Serialize)]
+struct RelationOut {
+    id: String,
+    name_en: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    name_ta: Option<String>,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    brief: String,
 }
 
-/// Tamil label for a place: the default Tamil version first, then any other.
-fn label_ta(names: &NamesTa, name_en: &str, versions: &[String]) -> Option<String> {
-    let per = names.get(name_en)?;
-    for v in versions {
-        if let Some(f) = per.get(v).filter(|f| f.display_ok()) {
-            return Some(f.label.clone());
-        }
-    }
-    per.values()
-        .find(|f| f.display_ok())
-        .map(|f| f.label.clone())
+#[derive(Serialize)]
+struct OriginalForm<'a> {
+    significance: &'a str,
+    original: &'a str,
+    script: &'a str,
+    strongs: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    translated: &'a str,
+    verses: usize,
 }
+
+#[derive(Serialize)]
+struct PersonOut<'a> {
+    id: &'a str,
+    #[serde(rename = "type")]
+    kind: &'static str,
+    name_en: &'a str,
+    /// First reference, shown when several people share the name.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    qualifier: Option<String>,
+    gender: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    description: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    tribe: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    summary: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    brief: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    short: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    article: &'a str,
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    uncertain: bool,
+    names_ta: BTreeMap<String, NameTaOut>,
+    forms: Vec<OriginalForm<'a>>,
+    relations: BTreeMap<&'static str, Vec<RelationOut>>,
+    verses: &'a [String],
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    articles: Vec<ArticleRef<'a>>,
+    source: DescriptionSource,
+}
+
+#[derive(Serialize)]
+struct DescriptionSource {
+    name: &'static str,
+    url: &'static str,
+    licence: &'static str,
+    attribution: &'static str,
+}
+
+#[derive(Serialize)]
+struct PersonIndexEntry<'a> {
+    id: &'a str,
+    name_en: &'a str,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    qualifier: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    name_ta: Option<String>,
+    gender: &'a str,
+    #[serde(skip_serializing_if = "str::is_empty")]
+    brief: &'a str,
+    mentions: usize,
+}
+
+#[derive(Serialize)]
+struct ArticleIndexEntry<'a> {
+    id: &'a str,
+    source: &'a str,
+    title: &'a str,
+    hash: &'a str,
+    paragraphs: usize,
+    #[serde(skip_serializing_if = "<[String]>::is_empty")]
+    entities: &'a [String],
+}
+
+const STEP: DescriptionSource = DescriptionSource {
+    name: "STEP Bible",
+    url: "https://www.stepbible.org",
+    licence: "CC BY 4.0",
+    attribution: "Names, relations and descriptions from TIPNR by STEP Bible / Tyndale House Cambridge, CC BY 4.0",
+};
 
 fn main() -> Result<()> {
     let args = parse_args()?;
@@ -226,10 +397,23 @@ fn main() -> Result<()> {
         places.len(),
         places.iter().filter(|p| p.lon.is_some()).count()
     );
+    let tipnr = tipnr::load(&args.entities.join("tipnr/TIPNR.txt"), &books)?;
+    let person_slug = tipnr::person_slugs(&tipnr.people);
+    eprintln!(
+        "people: {} (TIPNR), place descriptions: {}",
+        tipnr.people.len(),
+        tipnr.places.len()
+    );
 
-    // Verses per English name (same-named places share Tamil forms).
+    // Verses per English name string (same-named places and people share Tamil forms).
     let mut verses_by_name: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
     for p in &places {
+        verses_by_name
+            .entry(p.name_en.clone())
+            .or_default()
+            .extend(p.verses.iter().cloned());
+    }
+    for p in &tipnr.people {
         verses_by_name
             .entry(p.name_en.clone())
             .or_default()
@@ -288,7 +472,7 @@ fn main() -> Result<()> {
     let mut problems: Vec<String> = Vec::new();
     for (name, per) in &names {
         let Some(verses) = verses_by_name.get(name) else {
-            problems.push(format!("{name}: not a place name in the OpenBible data"));
+            problems.push(format!("{name}: not a place or person name in the sources"));
             continue;
         };
         let verses: Vec<String> = verses.iter().cloned().collect();
@@ -327,6 +511,103 @@ fn main() -> Result<()> {
     }
 
     let by_id: BTreeMap<&str, &Place> = places.iter().map(|p| (p.id.as_str(), p)).collect();
+
+    // ---- dictionary articles, linked to entities by name ----
+    let blocklist = articles::load_blocklist(&args.entities.join("blocklist.toml"))?;
+    let mut all_articles: Vec<articles::Article> = Vec::new();
+    let eastons_dir = args.entities.join("eastons");
+    if eastons_dir.join("src").exists() {
+        all_articles.extend(articles::load_eastons(&eastons_dir)?);
+    }
+    let before = all_articles.len();
+    all_articles.retain(|a| {
+        !blocklist
+            .iter()
+            .any(|(s, i)| s == &a.source && (i == &a.slug || i == &a.id))
+    });
+    eprintln!(
+        "articles: {} ({} blocked)",
+        all_articles.len(),
+        before - all_articles.len()
+    );
+    // name (lowercase) → entity refs
+    let mut entity_by_name: HashMap<String, Vec<String>> = HashMap::new();
+    for p in &places {
+        entity_by_name
+            .entry(p.name_en.to_lowercase())
+            .or_default()
+            .push(format!("place/{}", p.id));
+    }
+    for p in &tipnr.people {
+        entity_by_name
+            .entry(p.name_en.to_lowercase())
+            .or_default()
+            .push(format!("person/{}", person_slug[&p.key]));
+    }
+    let mut articles_by_entity: HashMap<String, Vec<usize>> = HashMap::new();
+    for (i, a) in all_articles.iter_mut().enumerate() {
+        if let Some(ents) = entity_by_name.get(&a.title.to_lowercase()) {
+            a.entities = ents.clone();
+            for e in ents {
+                articles_by_entity.entry(e.clone()).or_default().push(i);
+            }
+        }
+    }
+    let article_refs = |key: &str| -> Vec<ArticleRef<'_>> {
+        articles_by_entity
+            .get(key)
+            .map(|ix| {
+                ix.iter()
+                    .map(|&i| {
+                        let a = &all_articles[i];
+                        ArticleRef {
+                            source: &a.source,
+                            id: &a.id,
+                            title: &a.title,
+                            paragraphs: a.paragraphs.len(),
+                        }
+                    })
+                    .collect()
+            })
+            .unwrap_or_default()
+    };
+    for a in &all_articles {
+        write_json(&out.join("articles").join(format!("{}.json", a.id)), a)?;
+    }
+    let article_index: Vec<ArticleIndexEntry> = all_articles
+        .iter()
+        .map(|a| ArticleIndexEntry {
+            id: &a.id,
+            source: &a.source,
+            title: &a.title,
+            hash: &a.hash,
+            paragraphs: a.paragraphs.len(),
+            entities: &a.entities,
+        })
+        .collect();
+    write_json(&out.join("articles/index.json"), &article_index)?;
+
+    // ---- TIPNR place descriptions matched to OpenBible places ----
+    let mut tipnr_places_by_name: HashMap<String, Vec<&tipnr::TipnrPlace>> = HashMap::new();
+    for tp in &tipnr.places {
+        tipnr_places_by_name
+            .entry(tp.name_en.to_lowercase())
+            .or_default()
+            .push(tp);
+    }
+    let description_for = |p: &Place| -> Option<&tipnr::TipnrPlace> {
+        let cands = tipnr_places_by_name.get(&p.name_en.to_lowercase())?;
+        if cands.len() == 1 {
+            return Some(cands[0]);
+        }
+        let mine: BTreeSet<&String> = p.verses.iter().collect();
+        cands
+            .iter()
+            .map(|tp| (tp.verses.iter().filter(|v| mine.contains(v)).count(), *tp))
+            .filter(|(n, _)| *n > 0)
+            .max_by_key(|(n, tp)| (*n, std::cmp::Reverse(tp.name_en.clone())))
+            .map(|(_, tp)| tp)
+    };
 
     // Journeys resolve stops to places.
     let journeys_in = journeys::load(&args.entities.join("geo/journeys.toml"))?;
@@ -388,35 +669,144 @@ fn main() -> Result<()> {
         write_json(&out.join("glossary.json"), &g)?;
     }
 
-    // Mentions per chapter: verse id → place ids, plus a summary of every
-    // place named in the chapter so the reader panel needs no second fetch.
-    let mut mentions: BTreeMap<(u32, u32), BTreeMap<String, Vec<String>>> = BTreeMap::new();
-    let mut chapter_places: BTreeMap<(u32, u32), BTreeSet<String>> = BTreeMap::new();
+    // ---- people ----
+    let person_by_key: HashMap<&str, &tipnr::Person> =
+        tipnr.people.iter().map(|p| (p.key.as_str(), p)).collect();
+    let name_count: HashMap<String, usize> =
+        tipnr.people.iter().fold(HashMap::new(), |mut m, p| {
+            *m.entry(p.name_en.to_lowercase()).or_insert(0) += 1;
+            m
+        });
+    let relation = |keys: &[String]| -> Vec<RelationOut> {
+        keys.iter()
+            .filter_map(|k| person_by_key.get(k.as_str()))
+            .map(|q| RelationOut {
+                id: person_slug[&q.key].clone(),
+                name_en: q.name_en.clone(),
+                name_ta: label_ta(&names, &q.name_en, &tamil_versions),
+                brief: q.brief.clone(),
+            })
+            .collect()
+    };
+    let mut people_index = Vec::new();
+    let mut csv = String::from("id,type,slug,name_en,names_ta,alt_en,weight\n");
+    for p in &tipnr.people {
+        let slug = &person_slug[&p.key];
+        let qualifier = if name_count[&p.name_en.to_lowercase()] > 1 {
+            Some(ref_label(&p.first_ref))
+        } else {
+            None
+        };
+        let mut relations: BTreeMap<&'static str, Vec<RelationOut>> = BTreeMap::new();
+        for (k, list) in [
+            ("parents", &p.parents),
+            ("siblings", &p.siblings),
+            ("partners", &p.partners),
+            ("children", &p.children),
+        ] {
+            let r = relation(list);
+            if !r.is_empty() {
+                relations.insert(k, r);
+            }
+        }
+        let person_out = PersonOut {
+            id: slug,
+            kind: "person",
+            name_en: &p.name_en,
+            qualifier: qualifier.clone(),
+            gender: &p.gender,
+            description: &p.description,
+            tribe: &p.tribe,
+            summary: &p.summary,
+            brief: &p.brief,
+            short: &p.short,
+            article: &p.article,
+            uncertain: p.uncertain,
+            names_ta: names_ta_out(&names, &p.name_en),
+            forms: p
+                .forms
+                .iter()
+                .map(|f| OriginalForm {
+                    significance: &f.significance,
+                    original: &f.original,
+                    script: &f.script,
+                    strongs: &f.strongs,
+                    translated: &f.translated,
+                    verses: f.verses.len(),
+                })
+                .collect(),
+            relations,
+            verses: &p.verses,
+            articles: article_refs(&format!("person/{slug}")),
+            source: STEP,
+        };
+        write_json(
+            &out.join("person").join(format!("{slug}.json")),
+            &person_out,
+        )?;
+        people_index.push(PersonIndexEntry {
+            id: slug,
+            name_en: &p.name_en,
+            qualifier,
+            name_ta: label_ta(&names, &p.name_en, &tamil_versions),
+            gender: &p.gender,
+            brief: &p.brief,
+            mentions: p.verses.len(),
+        });
+        let weight = ((1 + p.verses.len()) as f64).ln();
+        csv.push_str(&format!(
+            "{},person,{},{},{},{},{:.3}\n",
+            csv_field(&format!("person/{slug}")),
+            csv_field(slug),
+            csv_field(&p.name_en),
+            csv_field(&all_ta_forms(&names, &p.name_en)),
+            csv_field(&p.brief),
+            weight
+        ));
+    }
+    write_json(&out.join("people.json"), &people_index)?;
+
+    // ---- mentions per chapter: verse → place and person ids, with summaries ----
+    #[derive(Default)]
+    struct ChapterMentions {
+        verses: BTreeMap<String, VerseMentions>,
+        places: BTreeSet<String>,
+        people: BTreeSet<String>,
+    }
+    let mut mentions: BTreeMap<(u32, u32), ChapterMentions> = BTreeMap::new();
+    let chapter_of = |v: &str| -> Option<(u32, u32)> {
+        let mut it = v.split('.');
+        let (code, ch) = (it.next()?, it.next()?);
+        let book = books.by_code(code)?;
+        Some((book.order, ch.parse().ok()?))
+    };
     for p in &places {
         for v in &p.verses {
-            let mut it = v.split('.');
-            let (Some(code), Some(ch)) = (it.next(), it.next()) else {
-                continue;
-            };
-            let Some(book) = books.by_code(code) else {
-                continue;
-            };
-            let ch: u32 = ch.parse().unwrap_or(0);
-            mentions
-                .entry((book.order, ch))
-                .or_default()
-                .entry(v.clone())
-                .or_default()
-                .push(p.id.clone());
-            chapter_places
-                .entry((book.order, ch))
-                .or_default()
-                .insert(p.id.clone());
+            if let Some(k) = chapter_of(v) {
+                let m = mentions.entry(k).or_default();
+                m.verses.entry(v.clone()).or_default().0.push(p.id.clone());
+                m.places.insert(p.id.clone());
+            }
         }
     }
+    for p in &tipnr.people {
+        let slug = &person_slug[&p.key];
+        for v in &p.verses {
+            if let Some(k) = chapter_of(v) {
+                let m = mentions.entry(k).or_default();
+                m.verses.entry(v.clone()).or_default().1.push(slug.clone());
+                m.people.insert(slug.clone());
+            }
+        }
+    }
+    let person_by_slug: HashMap<&str, &tipnr::Person> = tipnr
+        .people
+        .iter()
+        .map(|p| (person_slug[&p.key].as_str(), p))
+        .collect();
     for ((order, ch), m) in &mentions {
         let book = &books.list[(*order - 1) as usize];
-        let mut entries: Vec<(&String, &Vec<String>)> = m.iter().collect();
+        let mut entries: Vec<(&String, &VerseMentions)> = m.verses.iter().collect();
         entries.sort_by_key(|(k, _)| {
             k.rsplit('.')
                 .next()
@@ -425,9 +815,10 @@ fn main() -> Result<()> {
         });
         let verses: Vec<Value> = entries
             .iter()
-            .map(|(k, v)| serde_json::json!({ "verse": k, "places": v }))
+            .map(|(k, (pl, pe))| serde_json::json!({ "verse": k, "places": pl, "people": pe }))
             .collect();
-        let summary: BTreeMap<&str, Value> = chapter_places[&(*order, *ch)]
+        let place_summary: BTreeMap<&str, Value> = m
+            .places
             .iter()
             .filter_map(|id| by_id.get(id.as_str()))
             .map(|p| {
@@ -436,7 +827,23 @@ fn main() -> Result<()> {
                     serde_json::json!({
                         "name_en": p.name_en, "qualifier": p.qualifier, "name_ta": label_ta(&names, &p.name_en, &tamil_versions),
                         "type": p.types.first().cloned().unwrap_or_default(), "precision": p.precision,
-                        "lat": p.lat.map(round5), "lon": p.lon.map(round5), "mentions": p.verses.len()
+                        "lat": p.lat.map(round5), "lon": p.lon.map(round5), "mentions": p.verses.len(),
+                        "article": articles_by_entity.get(&format!("place/{}", p.id)).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone())
+                    }),
+                )
+            })
+            .collect();
+        let people_summary: BTreeMap<&str, Value> = m
+            .people
+            .iter()
+            .filter_map(|id| person_by_slug.get(id.as_str()).map(|p| (id.as_str(), *p)))
+            .map(|(id, p)| {
+                (
+                    id,
+                    serde_json::json!({
+                        "name_en": p.name_en, "qualifier": if name_count[&p.name_en.to_lowercase()] > 1 { Some(ref_label(&p.first_ref)) } else { None },
+                        "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "gender": p.gender, "brief": p.brief, "mentions": p.verses.len(),
+                        "article": articles_by_entity.get(&format!("person/{id}")).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone())
                     }),
                 )
             })
@@ -445,33 +852,14 @@ fn main() -> Result<()> {
             &out.join("mentions")
                 .join(&book.code)
                 .join(format!("{ch}.json")),
-            &serde_json::json!({ "book": book.code, "chapter": ch, "verses": verses, "places": summary, "map": !summary.values().all(|p| p["lat"].is_null()) }),
+            &serde_json::json!({ "book": book.code, "chapter": ch, "verses": verses, "places": place_summary, "people": people_summary, "map": !place_summary.values().all(|p| p["lat"].is_null()) }),
         )?;
     }
 
-    // Place files and index.
+    // ---- place files and index ----
     let mut index_entries = Vec::new();
-    let mut csv = String::from("id,type,slug,name_en,names_ta,alt_en,weight\n");
     let located: Vec<&Place> = places.iter().filter(|p| p.lon.is_some()).collect();
     for p in &places {
-        let names_ta: BTreeMap<String, NameTaOut> = names
-            .get(&p.name_en)
-            .map(|per| {
-                per.iter()
-                    .map(|(v, f): (&String, &NameForm)| {
-                        (
-                            v.clone(),
-                            NameTaOut {
-                                label: f.label.clone(),
-                                forms: f.forms.clone(),
-                                confidence: f.confidence,
-                                draft: f.review,
-                            },
-                        )
-                    })
-                    .collect()
-            })
-            .unwrap_or_default();
         // Nearby places: within ~1.2° for the place map, nearest first, up to 12.
         let mut nearby: Vec<(f64, &str)> = Vec::new();
         if let (Some(lon), Some(lat)) = (p.lon, p.lat) {
@@ -489,6 +877,7 @@ fn main() -> Result<()> {
             nearby.truncate(12);
         }
         let place_type = p.types.first().map(String::as_str).unwrap_or("place");
+        let desc = description_for(p);
         let out_place = PlaceOut {
             id: &p.id,
             kind: "place",
@@ -496,7 +885,7 @@ fn main() -> Result<()> {
             qualifier: &p.qualifier,
             article: &p.article,
             alt_en: &p.alt_en,
-            names_ta,
+            names_ta: names_ta_out(&names, &p.name_en),
             place_type,
             types: &p.types,
             class: &p.class,
@@ -509,6 +898,8 @@ fn main() -> Result<()> {
                 .filter_map(|(_, id)| by_id.get(id))
                 .map(|q| serde_json::json!({ "id": q.id, "name_en": q.name_en, "qualifier": q.qualifier, "name_ta": label_ta(&names, &q.name_en, &tamil_versions) }))
                 .collect(),
+            description: desc.map(|tp| DescriptionOut { brief: &tp.brief, short: &tp.short, article: &tp.article, source: STEP.name, licence: STEP.licence, url: STEP.url }),
+            articles: article_refs(&format!("place/{}", p.id)),
             source: SourceOut {
                 openbible_id: p.ob_id.clone(),
                 url: format!("https://www.openbible.info/geo/ancient/{}/{}", p.ob_id, p.id.trim_end_matches(|c: char| c.is_ascii_digit() || c == '-')),
@@ -520,30 +911,21 @@ fn main() -> Result<()> {
             &out.join("place").join(format!("{}.json", p.id)),
             &out_place,
         )?;
-        let name_ta = label_ta(&names, &p.name_en, &tamil_versions);
         index_entries.push(IndexEntry {
             id: &p.id,
             name_en: &p.name_en,
             qualifier: &p.qualifier,
-            name_ta: name_ta.clone(),
+            name_ta: label_ta(&names, &p.name_en, &tamil_versions),
             place_type,
             lat: p.lat.map(round5),
             lon: p.lon.map(round5),
             precision: &p.precision,
             mentions: p.verses.len(),
         });
-        let all_ta: BTreeSet<String> = names
-            .get(&p.name_en)
-            .map(|per| {
-                per.values()
-                    .flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned()))
-                    .collect()
-            })
-            .unwrap_or_default();
         let weight = ((1 + p.verses.len()) as f64).ln();
         csv.push_str(&format!(
             "{},place,{},{},{},{},{:.3}\n",
-            csv_field(&p.id),
+            csv_field(&format!("place/{}", p.id)),
             csv_field(&p.id),
             csv_field(&format!(
                 "{}{}",
@@ -553,7 +935,7 @@ fn main() -> Result<()> {
                     .map(|q| format!(" {q}"))
                     .unwrap_or_default()
             )),
-            csv_field(&all_ta.into_iter().collect::<Vec<_>>().join(" ")),
+            csv_field(&all_ta_forms(&names, &p.name_en)),
             csv_field(&p.alt_en.join(" ")),
             weight
         ));
@@ -566,9 +948,18 @@ fn main() -> Result<()> {
             places: index_entries,
         },
     )?;
+    for a in &all_articles {
+        csv.push_str(&format!(
+            "{},article,{},{},,,{:.3}\n",
+            csv_field(&format!("article/{}", a.id)),
+            csv_field(&a.id),
+            csv_field(&a.title),
+            ((1 + a.paragraphs.len()) as f64).ln()
+        ));
+    }
     write_text(&build_dir.join("search/entities.csv"), &csv)?;
 
-    // GeoJSON for the explore map.
+    // ---- GeoJSON for the explore map ----
     let feats: Vec<Value> = located
         .iter()
         .map(|p| {
@@ -601,7 +992,7 @@ fn main() -> Result<()> {
         &serde_json::json!({ "type": "FeatureCollection", "features": jfeats }),
     )?;
 
-    // Static maps.
+    // ---- static maps ----
     let point_of = |p: &Place, emphasis: bool, number: Option<u32>| svg::MapPoint {
         id: p.id.clone(),
         lon: p.lon.unwrap(),
@@ -614,9 +1005,10 @@ fn main() -> Result<()> {
         number,
     };
     let mut n_maps = 0usize;
-    for ((order, ch), ids) in &chapter_places {
+    for ((order, ch), m) in &mentions {
         let book = &books.list[(*order - 1) as usize];
-        let pts: Vec<svg::MapPoint> = ids
+        let pts: Vec<svg::MapPoint> = m
+            .places
             .iter()
             .filter_map(|id| by_id.get(id.as_str()))
             .filter(|p| p.lon.is_some())
@@ -672,7 +1064,6 @@ fn main() -> Result<()> {
             Some(ta) => format!("{ta} · {}", p.name_en),
             None => p.name_en.clone(),
         };
-        // Keep the place central: fit to it plus the nearest few, with a minimum span.
         let spec = svg::MapSpec {
             title,
             points: &pts,
@@ -696,10 +1087,7 @@ fn main() -> Result<()> {
             .iter()
             .enumerate()
             .filter(|(_, s)| seen.insert(s.place.clone()))
-            .map(|(i, s)| {
-                let p = by_id[s.place.as_str()];
-                point_of(p, true, Some(i as u32 + 1))
-            })
+            .map(|(i, s)| point_of(by_id[s.place.as_str()], true, Some(i as u32 + 1)))
             .collect();
         let spec = svg::MapSpec {
             title: format!("{} · {}", j.name_ta, j.name_en),
@@ -717,9 +1105,16 @@ fn main() -> Result<()> {
         n_maps += 1;
     }
 
+    let described = places
+        .iter()
+        .filter(|p| description_for(p).is_some())
+        .count();
     eprintln!(
-        "entities: {} places, {} chapters with mentions, {} journeys, {} maps → {}",
+        "entities: {} places ({described} with STEP descriptions), {} people, {} articles ({} linked), {} chapters with mentions, {} journeys, {} maps → {}",
         places.len(),
+        tipnr.people.len(),
+        all_articles.len(),
+        all_articles.iter().filter(|a| !a.entities.is_empty()).count(),
         mentions.len(),
         journeys_out.len(),
         n_maps,

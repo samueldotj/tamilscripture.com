@@ -165,9 +165,14 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
         .map(|(s, _)| *s)
         .unwrap_or(0.0);
 
+    // Inflections start with the stem; the bare base form may be a hair shorter
+    // than the stem the scoring preferred (மோசே next to the stem மோசேய).
+    let stem_len = stem.chars().count();
     let mut forms: BTreeMap<String, u32> = BTreeMap::new();
     for (k, spellings) in &raws {
-        if k.starts_with(stem.as_str()) {
+        let klen = k.chars().count();
+        let base_of_stem = stem.starts_with(k.as_str()) && klen >= 4 && stem_len - klen <= 2;
+        if k.starts_with(stem.as_str()) || base_of_stem {
             for (raw, c) in spellings {
                 *forms.entry(raw.clone()).or_insert(0) += c;
             }
@@ -186,11 +191,13 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
     } else {
         attested
     };
-    // A vocative (…ே) or a form carrying a following clitic is never the base
-    // form when any other spelling is attested.
-    let is_vocative = |s: &str| s.ends_with('\u{0BC7}');
-    if pool.iter().any(|(s, _)| !is_vocative(s)) {
-        pool.retain(|(s, _)| !is_vocative(s));
+    // A vocative (…ே) is never the base form when any other spelling is
+    // attested — unless the ே-final form is itself the dominant spelling, as
+    // with names that simply end in ே (மோசே).
+    let top = pool.iter().map(|(_, c)| **c).max().unwrap_or(0);
+    let is_vocative = |s: &str, c: u32| s.ends_with('\u{0BC7}') && c * 2 < top;
+    if pool.iter().any(|(s, c)| !is_vocative(s, **c)) {
+        pool.retain(|(s, c)| !is_vocative(s, **c));
     }
     let label = pool
         .iter()
@@ -208,7 +215,7 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
         confidence = confidence.min(0.5);
     }
     let review =
-        confidence < 0.7 || texts.len() < 2 || (runner > 0.0 && runner / score.max(1e-6) > 0.85);
+        confidence < 0.7 || texts.len() < 3 || (runner > 0.0 && runner / score.max(1e-6) > 0.85);
     let mut list: Vec<(u32, String)> = forms.into_iter().map(|(r, c)| (c, r)).collect();
     list.sort_by(|a, b| b.0.cmp(&a.0).then_with(|| a.1.cmp(&b.1)));
     Some(NameForm {
