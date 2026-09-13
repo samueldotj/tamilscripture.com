@@ -455,7 +455,7 @@ flowchart LR
 
 ## 9. Offline and PWA
 
-The service worker makes the reader installable and keeps recently read chapters available without a network. Personal edits made offline are queued and replayed.
+The service worker makes the reader installable and keeps recently read chapters available without a network. Personal edits made offline are queued and replayed. Chapter JSON is cached first because its URL carries the build id, which hashes the Bible sources; entity files under `/content/{build}/entities/` change between deploys without a new id, so the worker fetches them network-first (a 304 when unchanged) and falls back to the cache offline.
 
 | Area | Behaviour |
 |---|---|

@@ -48,6 +48,24 @@ sw.addEventListener('fetch', (event) => {
 		return;
 	}
 
+	// Entity files (places, people, articles, maps) change between deploys
+	// without a new build id, because the id hashes only the Bible sources.
+	// Network first (the server answers 304 when unchanged), cache as fallback.
+	if (/^\/content\/[^/]+\/entities\//.test(url.pathname)) {
+		event.respondWith(
+			caches.open(CONTENT).then(async (cache) => {
+				try {
+					const res = await fetch(request);
+					if (res.ok) cache.put(request, res.clone());
+					return res;
+				} catch {
+					return (await cache.match(request)) ?? Response.error();
+				}
+			})
+		);
+		return;
+	}
+
 	// Chapter and cross-reference JSON: immutable per build id, cache first.
 	if (url.pathname.startsWith('/content/')) {
 		event.respondWith(
