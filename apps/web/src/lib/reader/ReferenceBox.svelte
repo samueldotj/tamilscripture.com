@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { ready, referencePath, suggestBooks } from '$lib/ref/client';
 	import type { BookSuggestion } from '@tamilscripture/bible-wasm';
-	import { entityLabelTa, searchEntities, type EntityHit } from '$lib/search/api';
+	import { entityHref, entityKind, entityLabelTa, searchEntities, type EntityHit } from '$lib/search/api';
 
 	let { versionPath, lang = 'ta' }: { versionPath: string; lang?: 'ta' | 'en' } = $props();
 
@@ -34,12 +34,12 @@
 		const bookPart = text.replace(/^\s*[1-3]\s*/, '').split(/\d/)[0].trim();
 		books = bookPart.length >= 1 && !/\d/.test(text) ? suggestBooks(text, 5) : [];
 		active = -1;
-		// Places (M6): debounced lookup in either script, at most three rows.
+		// Places, people and articles: debounced lookup in either script, four rows.
 		clearTimeout(placeTimer);
 		const seq = ++placeSeq;
 		if (text.trim().length >= 2 && !/\d/.test(text)) {
 			placeTimer = setTimeout(async () => {
-				const hits = await searchEntities(fetch, text, 3).catch(() => []);
+				const hits = await searchEntities(fetch, text, 4).catch(() => []);
 				if (seq === placeSeq && value === text) places = hits;
 			}, 180);
 		} else {
@@ -76,7 +76,7 @@
 			books = [];
 			places = [];
 			input.blur();
-			goto(`/place/${item.place.slug}`);
+			goto(entityHref(item.place));
 		}
 	}
 
@@ -115,9 +115,9 @@
 		autocomplete="off"
 		spellcheck="false"
 		enterkeyhint="go"
-		aria-label={lang === 'ta' ? 'வசனம், இடம் அல்லது சொல் தேடு' : 'Go to a reference, a place, or search a word'}
+		aria-label={lang === 'ta' ? 'வசனம், பெயர் அல்லது சொல் தேடு' : 'Go to a reference, a name, or search a word'}
 		aria-invalid={notFound}
-		placeholder={lang === 'ta' ? 'யோவான் 3:16 · புத்தகம், இடம், சொல்' : 'John 3:16 · book, place, word'}
+		placeholder={lang === 'ta' ? 'யோவான் 3:16 · புத்தகம், பெயர், சொல்' : 'John 3:16 · book, name, word'}
 		onfocus={ensure}
 		oninput={onInput}
 		onkeydown={onKey}
@@ -133,9 +133,13 @@
 							<span lang="ta">{item.book.name_ta}</span> <span class="en">{item.book.name_en}</span>
 						{:else}
 							{@const ta = entityLabelTa(item.place)}
-							<svg class="pin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+							<svg class="pin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								{#if item.place.type === 'place'}<path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
+								{:else if item.place.type === 'person'}<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>
+								{:else}<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/>{/if}
+							</svg>
 							{#if ta}<span lang="ta">{ta}</span>{/if} <span class="en">{item.place.name_en}</span>
-							<span class="kind" lang={lang}>{lang === 'ta' ? 'இடம்' : 'place'}</span>
+							<span class="kind" lang={lang}>{entityKind(item.place.type, lang)}</span>
 						{/if}
 					</button>
 				</li>

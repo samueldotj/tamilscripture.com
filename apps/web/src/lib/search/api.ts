@@ -34,9 +34,13 @@ export async function commonSearches(fetchFn: typeof fetch, lang: 'ta' | 'en'): 
 	return res.json();
 }
 
+export type EntityType = 'place' | 'person' | 'article';
+
 export interface EntityHit {
+	/** `place/damascus`, `person/paul`, `article/eastons/damascus` */
 	id: string;
-	type: 'place';
+	type: EntityType;
+	/** `damascus`, `paul`, `eastons/damascus` */
 	slug: string;
 	name_en: string;
 	/** space-joined Tamil forms; the first is the label */
@@ -44,7 +48,18 @@ export interface EntityHit {
 	rank: number;
 }
 
-/** Places (later people and articles) matching a query in either script. */
+/** Page for an entity hit. */
+export function entityHref(h: Pick<EntityHit, 'type' | 'slug'>): string {
+	return h.type === 'article' ? `/dictionary/${h.slug}` : `/${h.type}/${h.slug}`;
+}
+
+/** Kind label for an entity hit in the interface language. */
+export function entityKind(type: EntityType, lang: 'ta' | 'en'): string {
+	const labels = { place: ['இடம்', 'place'], person: ['நபர்', 'person'], article: ['அகராதி', 'dictionary'] } as const;
+	return labels[type][lang === 'ta' ? 0 : 1];
+}
+
+/** Places, people and dictionary articles matching a query in either script. */
 export async function searchEntities(fetchFn: typeof fetch, q: string, limit = 6): Promise<EntityHit[]> {
 	if (q.trim().length < 2) return [];
 	const res = await fetchFn(`/api/entities/search?${new URLSearchParams({ q: q.trim(), limit: String(limit) })}`);

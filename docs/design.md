@@ -585,6 +585,16 @@ flowchart LR
 - **Options:** Model transliteration from English or Hebrew · manual entry · co-occurrence over the verses the place appears in.
 - **Chosen:** Co-occurrence: candidate stems are shared prefixes of normalised tokens in the place's verses, scored by coverage and rarity, so every form is a word that actually occurs in that version. The base form is the shortest well-attested spelling. Confidence and a review flag are stored; the build rejects a form absent from the text.
 - **Consequence:** rare names and same-named places need human review, which the community review flow in M7 provides; no Tamil form on the site can fail to link to a verse.
+
+### ADR-13 · Tamil drafts and accepted corrections are build inputs, not database reads
+- **Options:** Pages read Tamil text from Postgres · pages read static JSON and the database holds only the review workspace · a hybrid with edge cache invalidation.
+- **Chosen:** Static only. AI drafts live in `data/entities/drafts/ta/` (produced outside the repository), accepted corrections in `data/entities/overrides/` (written by an export workflow every 12 hours or on "Publish now"). `entity-ingest` applies drafts, then overrides, over the English source and emits provenance per paragraph and name.
+- **Consequence:** the reader's performance budgets and the ISR caching model are untouched; a correction reaches the site with the next deploy rather than instantly, which the owner accepted. Community-accepted name forms skip the corpus check that guards machine drafts, because a reviewer verified them.
+
+### ADR-14 · Moderation lives in Postgres behind security-definer functions
+- **Options:** Moderation in a separate admin app · GitHub pull requests as the review surface · Postgres tables with RLS and functions, exposed through PostgREST.
+- **Chosen:** Postgres. `profiles.role` (column-level revoke stops self-promotion), `entity_suggestions`, `entity_accepted`, `moderation_log`; `suggest_correction`, `accept_suggestion(id, final_text)`, `reject_suggestion`, `correct_directly`, `set_role` enforce every rule; tables accept no direct writes from the API. A pgTAP suite runs in CI against the local stack.
+- **Consequence:** the same rules hold for every client; the export job reads with the service key and nothing else has one. A moderator cannot create moderators, so the owner remains the root of trust.
 ---
 
 ## 13. Risks and mitigations

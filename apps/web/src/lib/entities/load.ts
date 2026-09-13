@@ -1,7 +1,7 @@
-// Loaders for the entity content written by entity-ingest (M6). All static
+// Loaders for the entity content written by entity-ingest (M6, M7). All static
 // files under /content/{build}/entities/, so they cache like chapter JSON.
 import { contentUrl, findBook } from '$lib/content/manifest';
-import type { ChapterMentions, Glossary, Journey, Place, PlaceIndex } from './types';
+import type { Article, ArticleIndexEntry, ChapterMentions, Glossary, Journey, Person, PersonIndexEntry, Place, PlaceIndex } from './types';
 
 type Fetch = typeof fetch;
 
@@ -28,7 +28,28 @@ export function loadPlace(fetch: Fetch, id: string): Promise<Place> {
 	return getJson<Place>(fetch, `entities/place/${id}.json`);
 }
 
-/** Mentions for a chapter; null when the chapter names no places. */
+let peoplePromise: Promise<PersonIndexEntry[]> | null = null;
+export function loadPeopleIndex(fetch: Fetch): Promise<PersonIndexEntry[]> {
+	if (!peoplePromise) peoplePromise = getJson<PersonIndexEntry[]>(fetch, 'entities/people.json');
+	return peoplePromise;
+}
+
+export function loadPerson(fetch: Fetch, id: string): Promise<Person> {
+	return getJson<Person>(fetch, `entities/person/${id}.json`);
+}
+
+let articleIndexPromise: Promise<ArticleIndexEntry[]> | null = null;
+export function loadArticleIndex(fetch: Fetch): Promise<ArticleIndexEntry[]> {
+	if (!articleIndexPromise) articleIndexPromise = getJson<ArticleIndexEntry[]>(fetch, 'entities/articles/index.json');
+	return articleIndexPromise;
+}
+
+/** `id` is `{source}/{slug}`. */
+export function loadArticle(fetch: Fetch, id: string): Promise<Article> {
+	return getJson<Article>(fetch, `entities/articles/${id}.json`);
+}
+
+/** Mentions for a chapter; null when the chapter names no places or people. */
 export async function loadMentions(fetch: Fetch, book: string, chapter: number): Promise<ChapterMentions | null> {
 	const res = await fetch(contentUrl(`entities/mentions/${book}/${chapter}.json`));
 	if (!res.ok) return null;
@@ -47,14 +68,14 @@ export function loadGlossary(fetch: Fetch): Promise<Glossary> {
 	return glossaryPromise;
 }
 
-/** Display name for a place in the interface language. */
-export function placeName(p: { name_en: string; name_ta?: string; qualifier?: string }, lang: 'ta' | 'en'): string {
+/** Display name for a place or person in the interface language. */
+export function placeName(p: { name_en: string; name_ta?: string | null; qualifier?: string | null }, lang: 'ta' | 'en'): string {
 	const base = lang === 'ta' && p.name_ta ? p.name_ta : p.name_en;
 	return p.qualifier ? `${base} (${p.qualifier})` : base;
 }
 
-/** Tamil label for a full place record: default Tamil version first. */
-export function placeLabelTa(p: Place, preferred = 'IRVTAM'): string | undefined {
+/** Tamil label for a full entity record: default Tamil version first. */
+export function placeLabelTa(p: { names_ta: Record<string, { label: string }> }, preferred = 'IRVTAM'): string | undefined {
 	return p.names_ta[preferred]?.label ?? Object.values(p.names_ta)[0]?.label;
 }
 
@@ -75,4 +96,9 @@ export function groupByBook(verses: string[]): [string, string[]][] {
 		map.get(code)!.push(v);
 	}
 	return [...map.entries()].sort((a, b) => (findBook(a[0])?.order ?? 0) - (findBook(b[0])?.order ?? 0));
+}
+
+/** Path for an entity reference like `place/damascus` or `person/paul`. */
+export function entityHref(ref: string): string {
+	return `/${ref}`;
 }

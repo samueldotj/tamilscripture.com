@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
-	import { entityLabelTa, queryTokens } from '$lib/search/api';
+	import { entityHref, entityKind, entityLabelTa, queryTokens } from '$lib/search/api';
 	import { settings } from '$lib/settings/store.svelte';
 
 	let { data } = $props();
@@ -73,16 +73,20 @@
 	</div>
 
 	{#if data.entities?.length}
-		<section class="entities" aria-label={ta ? 'இடங்கள்' : 'Places'}>
-			<h2 class="kicker"><span lang="ta">இடங்கள்</span> · Places</h2>
+		<section class="entities" aria-label={ta ? 'பெயர்களும் கட்டுரைகளும்' : 'Names and articles'}>
+			<h2 class="kicker"><span lang="ta">பெயர்களும் கட்டுரைகளும்</span> · Names and articles</h2>
 			<ul>
 				{#each data.entities as e (e.id)}
 					{@const label = entityLabelTa(e)}
 					<li>
-						<a class="card ent" href="/place/{e.slug}">
-							<span class="pin" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+						<a class="card ent" href={entityHref(e)}>
+							<span class="pin" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+								{#if e.type === 'place'}<path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
+								{:else if e.type === 'person'}<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>
+								{:else}<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/>{/if}
+							</svg></span>
 							<span class="ename" lang={ta && label ? 'ta' : 'en'}>{ta && label ? label : e.name_en}</span>
-							<span class="ealt" lang={ta ? 'en' : 'ta'}>{ta ? e.name_en : (label ?? '')}</span>
+							<span class="ealt" lang={ta ? 'en' : 'ta'}>{ta ? e.name_en : (label ?? '')}<span class="ekind" lang={ta ? 'ta' : 'en'}>{entityKind(e.type, ta ? 'ta' : 'en')}</span></span>
 						</a>
 					</li>
 				{/each}
@@ -189,6 +193,8 @@
 	.ename[lang='ta'] { font-family: var(--tamil); }
 	.ealt { font-size: 0.78rem; color: var(--muted); }
 	.ealt[lang='ta'] { font-family: var(--tamil); }
+	.ekind { margin-left: 0.5rem; font-size: 0.7rem; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.45rem; }
+	.ekind[lang='ta'] { font-family: var(--tamil); }
 	.hint { color: var(--muted); max-width: 42rem; margin-top: 1.5rem; line-height: 1.7; }
 	.hint[lang='ta'] { font-family: var(--tamil); }
 	.error { color: var(--amber); }

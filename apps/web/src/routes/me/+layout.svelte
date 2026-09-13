@@ -13,6 +13,7 @@
 		['/me/history', ta ? 'வரலாறு' : 'History'],
 		['/me/highlights', ta ? 'அடிக்கோடுகள்' : 'Highlights'],
 		['/me/notes', ta ? 'குறிப்புகள்' : 'Notes'],
+		['/me/contributions', ta ? 'பங்களிப்புகள்' : 'Contributions'],
 		['/me/account', ta ? 'கணக்கு' : 'Account']
 	]);
 </script>
