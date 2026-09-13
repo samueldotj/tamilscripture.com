@@ -88,7 +88,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Code shipped 7 Sep 2026; blocked on owner's Supabase Auth URL setup (3.1); 3.4, 3.8, 3.9 open |
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Code shipped 7 Sep 2026; 4.7 alerting open |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
-| **M6 · Places and maps** | Every verse knows its places: Tamil and English place names, verse links, a static map in the reader, place and journey pages, and an interactive atlas. Design in [docs/feature_maps.md](docs/feature_maps.md). | R-11.x, R-14.x (to be written) | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. | Design proposed 12 Sep 2026 |
+| **M6 · Places and maps** | Every verse knows its places: Tamil and English place names, verse links, a static map in the reader, place and journey pages, and an interactive atlas. Design in [docs/feature_maps.md](docs/feature_maps.md). | R-11.1–11.8, R-14.1–14.6 | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. | Built 12 Sep 2026 on branch `m6-places-maps`; regions and the period selector (6.16) deferred |
 | **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.x, R-13.x, R-15.x (to be written) | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Design proposed 12 Sep 2026 |
 
 ### M0 · Foundations
@@ -208,21 +208,21 @@ Design: [docs/feature_maps.md](docs/feature_maps.md). Rough effort: five to six 
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 6.1 | Download OpenBible Geocoding and TIPNR; record `LICENSE`, `SOURCE.md` with hashes under `data/entities/`; build fails without a licence file | maps §2 | ☐ |
-| 6.2 | Requirement IDs R-11.x (places) and R-14.x (maps) in `docs/requirements.md`; design ADRs: content-build entities, ISR entity pages, PMTiles on Vercel Blob | maps §1 | ☐ |
-| 6.3 | `crates/entity-ingest`: parse OpenBible Geocoding and TIPNR places, reconcile identities, emit `entities/place/*.json` and per-chapter `mentions/` | maps §3 | ☐ |
-| 6.4 | `--draft-names` co-occurrence aligner over IRVTAM and TCV writing `data/entities/names-ta.toml` with confidence; model only breaks ties; build fails on forms absent from the text | maps §3 | ☐ |
-| 6.5 | Validation: coordinates or `unlocated`, every mention resolves, determinism diff in CI | maps §3 | ☐ |
-| 6.6 | Static map renderer in CI: Natural Earth outline, labelled places per chapter, WebP and PNG, light and dark; size and time budget | maps §4 | ☐ |
-| 6.7 | `/place/{slug}` ISR page: names, map, verses by book, attribution; Tamil path redirects | maps §5, ADR-1, ADR-7 | ☐ |
-| 6.8 | Places tab in the context panel and bottom sheet; mentions fetched on open | maps §6 | ☐ |
-| 6.9 | `entity_search` table and loader; `/api/entities/search`; entity cards on the search page; entity rows in reference box suggestions | maps §3, ADR-2 | ☐ |
-| 6.10 | Sitemap for places; About page source table | maps §3 | ☐ |
-| 6.11 | PMTiles archive from Natural Earth built in the deploy workflow and uploaded to Vercel Blob; public URL as env var; cache headers | maps §4 | ☐ |
-| 6.12 | MapLibre style: land, water, rivers, our labels; light and dark from the theme tokens | maps §4 | ☐ |
-| 6.13 | `/atlas/explore` client-only route, code-split, layer toggles; own size-limit and Lighthouse entries | maps §4, §7 | ☐ |
-| 6.14 | Journeys and regions GeoJSON from available open data or hand-authored minimum; `/atlas` and `/atlas/{journey}` pages with static maps and ordered stops | maps §4, §5 | ☐ |
-| 6.15 | "Explore map" links from the panel, place pages and journey pages | maps §6 | ☐ |
+| 6.1 | Download OpenBible Geocoding and TIPNR; record `LICENSE`, `SOURCE.md` with hashes under `data/entities/`; build fails without a licence file | maps §2 | ☑ |
+| 6.2 | Requirement IDs R-11.x (places) and R-14.x (maps) in `docs/requirements.md`; design ADRs: content-build entities, ISR entity pages, PMTiles on Vercel Blob | maps §1 | ☑ |
+| 6.3 | `crates/entity-ingest`: parse OpenBible Geocoding and TIPNR places, reconcile identities, emit `entities/place/*.json` and per-chapter `mentions/` | maps §3 | ☑ |
+| 6.4 | `--draft-names` co-occurrence aligner over IRVTAM and TCV writing `data/entities/names-ta.toml` with confidence; model only breaks ties; build fails on forms absent from the text | maps §3 | ☑ |
+| 6.5 | Validation: coordinates or `unlocated`, every mention resolves, determinism diff in CI | maps §3 | ☑ |
+| 6.6 | Static map renderer in the content build: Natural Earth outline, labelled places per chapter, place and journey, as theme-aware inline SVG with labels in both scripts (SVG replaces the planned WebP; see feature_maps.md) | maps §4 | ☑ |
+| 6.7 | `/place/{slug}` ISR page: names, map, verses by book, attribution; Tamil path redirects | maps §5, ADR-1, ADR-7 | ☑ |
+| 6.8 | Places tab in the context panel and bottom sheet; mentions fetched on open | maps §6 | ☑ |
+| 6.9 | `entity_search` table and loader; `/api/entities/search`; entity cards on the search page; entity rows in reference box suggestions | maps §3, ADR-2 | ☑ |
+| 6.10 | Sitemap for places; About page source table | maps §3 | ☑ |
+| 6.11 | Base map: Natural Earth land, lakes and rivers clipped to the biblical world (`scripts/build-basemap.py`), served as static GeoJSON; PMTiles deferred (design ADR-11) | maps §4 | ☑ |
+| 6.12 | MapLibre style: land, water, rivers, our labels; light and dark from the theme tokens | maps §4 | ☑ |
+| 6.13 | `/atlas/explore` client-only route, code-split, layer toggles; own size-limit and Lighthouse entries | maps §4, §7 | ☑ |
+| 6.14 | Journeys: Exodus, ministry of Jesus, Paul's four journeys hand-authored with Tamil names; `/atlas` and `/atlas/{journey}` pages with static maps and ordered stops ☑; regions deferred (no open data at usable quality) | maps §4, §5 | ◧ |
+| 6.15 | "Explore map" links from the panel, place pages and journey pages | maps §6 | ☑ |
 | 6.16 | Period selector on the explore map once two or more region periods exist | maps §4 | ☐ |
 
 ### M7 · Dictionary, people and community review

@@ -38,3 +38,24 @@ commit;
 SQL
 done
 psql "$db" -Atc "select version, count(*) from public.verse_search group by 1 order by 1"
+
+# Entities (M6): places from entity-ingest, one table, replaced as a whole.
+entities="$dir/entities.csv"
+if [[ -f "$entities" ]]; then
+  echo "loading entities from $entities"
+  psql "$db" -v ON_ERROR_STOP=1 -q <<SQL
+begin;
+create temp table estage (id text, type text, slug text, name_en text, names_ta text, alt_en text, weight real) on commit drop;
+\copy estage (id, type, slug, name_en, names_ta, alt_en, weight) from '$entities' with (format csv, header true, encoding 'UTF8')
+insert into public.entity_search (id, type, slug, name_en, names_ta, alt_en, weight)
+  select id, type, slug, name_en, names_ta, alt_en, weight from estage
+  on conflict (id) do update
+    set type = excluded.type, slug = excluded.slug, name_en = excluded.name_en,
+        names_ta = excluded.names_ta, alt_en = excluded.alt_en, weight = excluded.weight
+    where (public.entity_search.name_en, public.entity_search.names_ta, public.entity_search.alt_en, public.entity_search.weight)
+          is distinct from (excluded.name_en, excluded.names_ta, excluded.alt_en, excluded.weight);
+delete from public.entity_search e where not exists (select 1 from estage s where s.id = e.id);
+commit;
+SQL
+  psql "$db" -Atc "select type, count(*) from public.entity_search group by 1 order by 1"
+fi

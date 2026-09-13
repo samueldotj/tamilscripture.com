@@ -41,6 +41,15 @@
 	<h2>{ta ? 'ஒப்புவசனங்கள்' : 'Cross-references'}</h2>
 	<p>Cross-references from <a href="https://www.openbible.info/labs/cross-references/">OpenBible.info</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY</a>.</p>
 
+	<h2>{ta ? 'இடங்களும் வரைபடங்களும்' : 'Places and maps'}</h2>
+	<p>
+		{#if ta}
+			இடங்கள், அவற்றின் அமைவிடங்கள், வசன இணைப்புகள்: <a href="https://www.openbible.info/geo/">OpenBible.info Bible Geocoding</a> (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>). நிலப்படம்: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (பொது உரிமை). தமிழ்ப் பெயர்கள் வசனங்களிலிருந்து தானாக இணைக்கப்பட்டு, மதிப்பாய்வு நிலுவையில் உள்ளவை “வரைவு” எனக் குறிக்கப்படுகின்றன. பயணங்களின் வழிகள் நிறுத்தங்களுக்கு இடையே நேர்கோடுகள்.
+		{:else}
+			Places, their locations and verse links come from <a href="https://www.openbible.info/geo/">OpenBible.info Bible Geocoding</a> (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>). The base map is <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain). Tamil place names are aligned automatically from the verses and marked “draft” until reviewed. Journey routes are drawn as straight legs between stops. Our own alignment table and journey data are CC BY 4.0.
+		{/if}
+	</p>
+
 	<h2>{ta ? 'தனியுரிமை' : 'Privacy'}</h2>
 	<p>
 		{#if ta}

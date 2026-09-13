@@ -96,6 +96,7 @@
 
 <footer class="site-foot">
 	<a href="/about">{ui === 'ta' ? 'பற்றி · உரிமங்கள்' : 'About · licences'}</a>
+	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>
 	<a href="/heatmap">{ui === 'ta' ? 'வெப்ப வரைபடம்' : 'Heatmap'}</a>
 	<a href="https://github.com/samueldotj/tamilscripture.com">GitHub</a>
 </footer>

@@ -161,6 +161,48 @@ h1, h2, h3 { text-wrap: balance; }
 .field:focus-visible { outline: 0; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .field::placeholder { color: var(--muted); }
 
+/* ---- Static maps (entity-ingest SVG, inlined) ----
+   Outline map on the theme's tokens; labels in both scripts, the interface
+   language shown via the ui-* class on <html>. */
+:root {
+	--map-water: #E6EEF5;
+	--map-land: #F5EFE3;
+	--map-coast: #C9BFB1;
+	--map-river: #9FBFDA;
+	--map-lake: #D7E5F0;
+}
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) { --map-water: #1F2A36; --map-land: #2B2D34; --map-coast: #4A505C; --map-river: #3E5D78; --map-lake: #24354A; }
+}
+:root[data-theme='dark'] { --map-water: #1F2A36; --map-land: #2B2D34; --map-coast: #4A505C; --map-river: #3E5D78; --map-lake: #24354A; }
+.map { display: block; width: 100%; height: auto; border-radius: var(--r-l); border: var(--bw) solid var(--line); background: var(--map-water); font-family: var(--sans); }
+.map .water { fill: var(--map-water); }
+.map .land { fill: var(--map-land); stroke: var(--map-coast); stroke-width: 1; stroke-linejoin: round; }
+.map .lake { fill: var(--map-lake); stroke: var(--map-coast); stroke-width: 0.6; }
+.map .river { fill: none; stroke: var(--map-river); stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+.map .route { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-dasharray: 6 4; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+.map .place circle { fill: var(--accent); stroke: var(--surface); stroke-width: 1.6; }
+.map .place.em circle { fill: var(--amber); }
+.map .place text { fill: var(--ink); font-size: 12px; font-weight: 600; paint-order: stroke; stroke: var(--map-land); stroke-width: 3px; stroke-linejoin: round; }
+.map .place text.ta { font-family: var(--tamil); font-size: 12.5px; }
+.map[data-size='small'] .place text { font-size: 14px; }
+.map[data-size='small'] .place text.ta { font-family: var(--tamil); font-size: 14.5px; }
+.map[data-size='small'] .credit { font-size: 10px; }
+.map .place text.n { fill: var(--on-accent); stroke: none; font-size: 9px; font-weight: 700; }
+.map .place.em text.n { fill: var(--surface); }
+.map .place.crowded text { display: none; }
+.map .place:hover circle { fill: var(--amber); }
+.map .place:hover text { display: block; }
+.map .place.selected circle { fill: var(--amber); r: 7; }
+.map .place.selected text { display: block; fill: var(--amber); }
+.map .credit { fill: var(--muted); font-size: 9px; letter-spacing: 0.04em; }
+.map text.ta { display: none; }
+.map text.en.only { display: block; }
+html.ui-ta .map text.ta { display: block; }
+html.ui-ta .map text.en:not(.only) { display: none; }
+html.ui-ta .map .place.crowded text { display: none; }
+html.ui-ta .map .place.crowded:hover text.ta, html.ui-ta .map .place.selected text.ta { display: block; }
+
 /* ---- User highlights (R-10.12) ---- */
 .verse.hl-yellow { background: var(--hl-yellow); }
 .verse.hl-green { background: var(--hl-green); }

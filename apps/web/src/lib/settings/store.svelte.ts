@@ -51,7 +51,7 @@ function read(): Settings {
 
 /** Class list for <html>; kept in sync with the inline script in app.html. */
 export function htmlClasses(s: Settings): string[] {
-	const c = [`fmt-${s.format}`, `fs-${s.fontSize}`, `tf-${s.tamilFont}`];
+	const c = [`fmt-${s.format}`, `fs-${s.fontSize}`, `tf-${s.tamilFont}`, `ui-${s.uiLang}`];
 	if (!s.headings) c.push('no-headings');
 	if (!s.intro) c.push('no-intro');
 	if (!s.footnotes) c.push('no-footnotes');
@@ -87,7 +87,7 @@ class SettingsStore {
 		if (!browser) return;
 		const html = document.documentElement;
 		const keep = [...html.classList].filter(
-			(c) => !/^(fmt-|fs-|tf-|no-headings$|no-intro$|no-footnotes$|no-xrefs$)/.test(c)
+			(c) => !/^(fmt-|fs-|tf-|ui-|no-headings$|no-intro$|no-footnotes$|no-xrefs$)/.test(c)
 		);
 		html.className = [...keep, ...htmlClasses(this.value)].join(' ');
 		if (this.value.theme === 'system') html.removeAttribute('data-theme');

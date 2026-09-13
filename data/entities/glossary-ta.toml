@@ -1,0 +1,64 @@
+# Bilingual labels for place kinds (OpenBible `types`), location precision
+# and historical periods. Shown as captions under place names and in the
+# atlas. Tamil drafted by the maintainers; corrections welcome.
+# Licence: CC BY 4.0 (tamilscripture.com contributors).
+
+[types]
+settlement = { ta = "நகரம்", en = "settlement" }
+region = { ta = "பகுதி", en = "region" }
+mountain = { ta = "மலை", en = "mountain" }
+campsite = { ta = "பாளையம்", en = "campsite" }
+river = { ta = "ஆறு", en = "river" }
+valley = { ta = "பள்ளத்தாக்கு", en = "valley" }
+gate = { ta = "வாசல்", en = "gate" }
+island = { ta = "தீவு", en = "island" }
+hill = { ta = "குன்று", en = "hill" }
+"natural area" = { ta = "இயற்கைப் பகுதி", en = "natural area" }
+spring = { ta = "ஊற்று", en = "spring" }
+structure = { ta = "கட்டிடம்", en = "structure" }
+"body of water" = { ta = "நீர்நிலை", en = "body of water" }
+road = { ta = "பாதை", en = "road" }
+pool = { ta = "குளம்", en = "pool" }
+"people group" = { ta = "மக்கள் குழு", en = "people group" }
+tree = { ta = "மரம்", en = "tree" }
+well = { ta = "கிணறு", en = "well" }
+wadi = { ta = "ஓடை", en = "wadi" }
+"mountain range" = { ta = "மலைத்தொடர்", en = "mountain range" }
+"district in settlement" = { ta = "நகரப் பகுதி", en = "district" }
+field = { ta = "வயல்", en = "field" }
+altar = { ta = "பலிபீடம்", en = "altar" }
+hall = { ta = "மண்டபம்", en = "hall" }
+canal = { ta = "கால்வாய்", en = "canal" }
+cliff = { ta = "செங்குத்துப் பாறை", en = "cliff" }
+ford = { ta = "ஆற்றுத் துறை", en = "ford" }
+forest = { ta = "காடு", en = "forest" }
+fortification = { ta = "கோட்டை", en = "fortification" }
+garden = { ta = "தோட்டம்", en = "garden" }
+mine = { ta = "சுரங்கம்", en = "mine" }
+"mountain pass" = { ta = "கணவாய்", en = "mountain pass" }
+"mountain ridge" = { ta = "மலைமுகடு", en = "mountain ridge" }
+promontory = { ta = "கடல்முனை", en = "promontory" }
+rock = { ta = "பாறை", en = "rock" }
+room = { ta = "அறை", en = "room" }
+"settlement and spring" = { ta = "நகரமும் ஊற்றும்", en = "settlement and spring" }
+special = { ta = "சிறப்பு இடம்", en = "special" }
+"stone heap" = { ta = "கற்குவியல்", en = "stone heap" }
+place = { ta = "இடம்", en = "place" }
+
+[precision]
+point = { ta = "இடம் அறியப்பட்டது", en = "location known" }
+area = { ta = "பகுதி", en = "area" }
+approximate = { ta = "தோராயமான இடம்", en = "approximate location" }
+unlocated = { ta = "இடம் அறியப்படவில்லை", en = "location unknown" }
+
+[periods]
+patriarchs = { ta = "முற்பிதாக்கள்", en = "Patriarchs" }
+exodus = { ta = "எகிப்திலிருந்து புறப்பாடு", en = "Exodus" }
+judges = { ta = "நியாயாதிபதிகள்", en = "Judges" }
+"united-monarchy" = { ta = "ஒன்றுபட்ட அரசு", en = "United monarchy" }
+"divided-kingdom" = { ta = "பிரிந்த அரசு", en = "Divided kingdom" }
+exile = { ta = "சிறையிருப்பு", en = "Exile" }
+persian = { ta = "பாரசீகக் காலம்", en = "Persian period" }
+hellenistic = { ta = "கிரேக்கக் காலம்", en = "Hellenistic period" }
+gospels = { ta = "இயேசுவின் காலம்", en = "Time of Jesus" }
+acts = { ta = "ஆதித் திருச்சபை", en = "Early church" }

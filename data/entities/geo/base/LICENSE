@@ -1,0 +1,7 @@
+Natural Earth base map layers (land, lakes, rivers) in this directory are
+derived from Natural Earth 1:10m physical vectors, which are in the public
+domain. No permission is needed to use Natural Earth; credit is appreciated.
+https://www.naturalearthdata.com/about/terms-of-use/
+
+The clipping and simplification (scripts/build-basemap.py) is released under
+the MIT licence of this repository.
