@@ -7,14 +7,12 @@
 	import XrefPanel from './XrefPanel.svelte';
 	import NoteSheet from './NoteSheet.svelte';
 	import BookRail from './BookRail.svelte';
-	import ContextPanel, { type PanelTab } from './ContextPanel.svelte';
+	import ContextPanel from './ContextPanel.svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
 	import type { XrefChapter } from '$lib/content/types';
-	import { loadMapSvg, loadMentions } from '$lib/entities/load';
-	import type { ChapterMentions } from '$lib/entities/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
 	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, type Highlight, type HighlightColor, type Note } from '$lib/personal/repo';
@@ -76,20 +74,17 @@
 		void data.canonical;
 		selected = idsFromRange();
 	});
-	// Context panel tab (desktop column) and overlay sheet (narrow screens).
-	let panelTab = $state<PanelTab>('places');
-	let sheet = $state<PanelTab | null>(null);
+	// Related-verses sheet on screens without the desktop column.
+	let sheet = $state(false);
 	function toggle(id: string) {
 		const s = new Set(selected);
 		if (s.has(id)) s.delete(id); else s.add(id);
 		selected = s;
 		xrefOpen = null; // the context panel follows the selection again
-		if (s.size) panelTab = 'related';
 	}
 	function clearSelection() {
 		selected = new Set();
 		xrefOpen = null;
-		panelTab = 'places';
 	}
 	const verseNum = (id: string) => Number(id.split('.')[2]);
 	const selectedNumbers = $derived([...selected].map(verseNum).filter((n) => !isNaN(n)).sort((a, b) => a - b));
@@ -115,7 +110,7 @@
 		const key = data.canonical;
 		fetched = null;
 		xrefOpen = null;
-		sheet = null;
+		sheet = false;
 		if (data.xrefs || !settings.value.xrefs) return;
 		let cancelled = false;
 		loadXrefs(fetch, data.book.code, data.chapter)
@@ -125,34 +120,8 @@
 	});
 	function openXref(id: string) {
 		xrefOpen = id;
-		panelTab = 'related';
-		sheet = 'related';
+		sheet = true;
 	}
-
-	// Places named in the chapter (M6): mentions and the static chapter map,
-	// fetched after paint into the panel, which has its own scroll box.
-	let mentions = $state<ChapterMentions | null>(null);
-	let mapSvg = $state<string | null>(null);
-	let placesLoading = $state(true);
-	$effect(() => {
-		const key = `${data.book.code}.${data.chapter}`;
-		mentions = null;
-		mapSvg = null;
-		placesLoading = true;
-		let cancelled = false;
-		loadMentions(fetch, data.book.code, data.chapter)
-			.then(async (m) => {
-				if (cancelled) return;
-				mentions = m;
-				if (m?.map) mapSvg = await loadMapSvg(fetch, `${data.book.code}/${data.chapter}`).catch(() => null);
-			})
-			.catch(() => {})
-			.finally(() => { if (!cancelled) placesLoading = false; });
-		void key;
-		return () => { cancelled = true; };
-	});
-	const placeCount = $derived(mentions ? Object.keys(mentions.places).length : 0);
-	const peopleCount = $derived(mentions?.people ? Object.keys(mentions.people).length : 0);
 
 	// Desktop context panel: the verse whose ‡ was pressed, else the first
 	// selected verse. Hidden by CSS below the wide breakpoint.
@@ -163,7 +132,6 @@
 		: ''
 	);
 	const panelTargets = $derived(panelVerse && xrefs ? xrefs[panelVerse] ?? [] : null);
-	const chapterLabel = $derived(`${uiBookName} ${data.chapter}`);
 
 	// Community heat (R-2.1, R-2.3): counts for tooltips and the action bar always;
 	// the background tint only when the setting is on. Loaded after paint from
@@ -266,7 +234,7 @@
 		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
 		else if (e.key === 'Escape') {
 			if (sizeOpen) sizeOpen = false;
-			else if (sheet) sheet = null;
+			else if (sheet) sheet = false;
 			else if (xrefOpen) xrefOpen = null;
 			else if (selected.size) clearSelection();
 		}
@@ -308,18 +276,6 @@
 		<div class="toolbar">
 			<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
 			<div class="right">
-				{#if !dual && placeCount}
-					<button type="button" class="chip places-chip" onclick={() => (sheet = 'places')} aria-label={isTamil ? `இடங்கள்: ${placeCount}` : `Places: ${placeCount}`}>
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'இடங்கள்' : 'Places'}</span> <span class="n">{placeCount}</span>
-					</button>
-				{/if}
-				{#if !dual && peopleCount}
-					<button type="button" class="chip places-chip" onclick={() => (sheet = 'people')} aria-label={isTamil ? `நபர்கள்: ${peopleCount}` : `People: ${peopleCount}`}>
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'நபர்கள்' : 'People'}</span> <span class="n">{peopleCount}</span>
-					</button>
-				{/if}
 				<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 				{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
 				{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
@@ -372,7 +328,7 @@
 
 	{#if !dual}
 		<aside class="panel">
-			<ContextPanel bind:tab={panelTab} label={panelLabel} {chapterLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} versionPath={primary.code.toLowerCase()} lang={ui} {mentions} {mapSvg} {placesLoading} {selected}>
+			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui}>
 				{#snippet actions()}
 					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 				{/snippet}
@@ -385,7 +341,7 @@
 <div class="overlays" class:dual>
 	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 	{#if sheet}
-		<XrefPanel bind:tab={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} versionPath={primary.code.toLowerCase()} lang={ui} {chapterLabel} {mentions} {mapSvg} {placesLoading} {selected} onclose={() => { sheet = null; xrefOpen = null; }} />
+		<XrefPanel verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = false; xrefOpen = null; }} />
 	{/if}
 </div>
 
@@ -422,8 +378,6 @@
 	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }
 	.aa { font-family: var(--sans); font-weight: 700; color: var(--accent); gap: 0; }
 	.aa span { font-size: 0.72em; }
-	.places-chip [lang='ta'] { font-family: var(--tamil); }
-	.places-chip .n { font-size: 0.75rem; color: var(--muted); font-weight: 600; }
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
 	.crumbs a { color: var(--accent); font-weight: 600; text-decoration: none; }
 	.crumbs a[lang='ta'] { font-family: var(--tamil); }
@@ -456,7 +410,7 @@
 	}
 	@media (max-width: 640px) {
 		.toolbar .right { width: 100%; margin-left: 0; }
-		.toolbar .right .chip:not(.aa):not(.places-chip) { flex: 1; }
+		.toolbar .right .chip:not(.aa) { flex: 1; }
 	}
 
 	/* Rail joins */
@@ -467,12 +421,11 @@
 		/* The rail covers book and chapter navigation */
 		.reader:not(.dual) :global(.picker select.nav) { display: none; }
 	}
-	/* Context panel joins; the floating action bar, the overlay sheet and its chip step aside */
+	/* Context panel joins; the floating action bar and the overlay sheet step aside */
 	@media (min-width: 1180px) {
 		.reader:not(.dual) { grid-template-columns: 16.75rem minmax(0, 1fr) 21.5rem; }
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); scrollbar-width: thin; }
 		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
-		.reader:not(.dual) .places-chip { display: none; }
 		.overlays:not(.dual) { display: none; }
 	}
 </style>

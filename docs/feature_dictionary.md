@@ -204,7 +204,7 @@ Text carries a small badge for its provenance: AI draft, community-corrected, ow
 
 Articles are searchable by title through the entity search table (feature_maps.md §3); Tamil article bodies join the existing full-text search with `tamil_tsvector` once drafts exist. People appear in the search box and reference box suggestions like places.
 
-The context panel and bottom sheet gain **People** and **Dictionary** tabs beside Related verses and Places. The Dictionary tab shows the Easton article for the selected verse's entities with "Read more" for ISBE.
+**Withdrawn 13 Sep 2026** by the owner: the reader shows only the text and related verses, so there are no People or Dictionary tabs; names are reached through search, the entity pages and the atlas. Original design for the record: the context panel and bottom sheet were to gain **People** and **Dictionary** tabs beside Related verses and Places. The Dictionary tab shows the Easton article for the selected verse's entities with "Read more" for ISBE.
 
 ## 9. Performance
 

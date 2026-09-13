@@ -145,7 +145,7 @@ Place pages are ISR, not prerendered, for the same reason chapters are (design A
 
 ## 6. Reader integration
 
-The context panel (desktop) and bottom sheet (phones) gain a **Places** tab when a verse is selected: the static chapter map with the selected verse's places emphasised, then the list. A row opens the place page, or on desktop swaps the panel to that place. An "Explore map" link opens the interactive tier focused on the chapter's places. Verse text is not decorated; the optional name underline belongs to the dictionary design.
+**Withdrawn 13 Sep 2026:** the owner decided the reading page shows only the text and related verses, so the reader has no Places tab. Mentions and chapter maps are still built for a later use. The original design follows for the record. The context panel (desktop) and bottom sheet (phones) were to gain a **Places** tab when a verse is selected: the static chapter map with the selected verse's places emphasised, then the list. A row opens the place page, or on desktop swaps the panel to that place. An "Explore map" link opens the interactive tier focused on the chapter's places. Verse text is not decorated; the optional name underline belongs to the dictionary design.
 
 ## 7. Performance
 

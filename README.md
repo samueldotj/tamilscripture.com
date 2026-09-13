@@ -215,7 +215,7 @@ Design: [docs/feature_maps.md](docs/feature_maps.md). Rough effort: five to six 
 | 6.5 | Validation: coordinates or `unlocated`, every mention resolves, determinism diff in CI | maps §3 | ☑ |
 | 6.6 | Static map renderer in the content build: Natural Earth outline, labelled places per chapter, place and journey, as theme-aware inline SVG with labels in both scripts (SVG replaces the planned WebP; see feature_maps.md) | maps §4 | ☑ |
 | 6.7 | `/place/{slug}` ISR page: names, map, verses by book, attribution; Tamil path redirects | maps §5, ADR-1, ADR-7 | ☑ |
-| 6.8 | Places tab in the context panel and bottom sheet; mentions fetched on open | maps §6 | ☑ |
+| 6.8 | ~~Places tab in the context panel and bottom sheet~~ — built, then withdrawn 13 Sep 2026 by the owner: the reading page stays text and related verses only (R-11.4). Per-chapter mentions and chapter maps are still produced for later use. | maps §6 | ☒ |
 | 6.9 | `entity_search` table and loader; `/api/entities/search`; entity cards on the search page; entity rows in reference box suggestions | maps §3, ADR-2 | ☑ |
 | 6.10 | Sitemap for places; About page source table | maps §3 | ☑ |
 | 6.11 | Base map: Natural Earth land, lakes and rivers clipped to the biblical world (`scripts/build-basemap.py`), served as static GeoJSON; PMTiles deferred (design ADR-11) | maps §4 | ☑ |
@@ -235,8 +235,8 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 | 7.2 | Requirement IDs R-12.x (dictionary), R-13.x (people), R-15.x (community review) in `docs/requirements.md`; design ADRs: static drafts plus exported overrides, moderation in Postgres | dictionary §1, ADR-13, ADR-14 | ☑ |
 | 7.3 | Parse Easton, Smith's and Aquifer into `articles/{source}/{id}.json` with stable paragraph ids and attribution; link to entities by ACAI hints or title; `blocklist.toml` honoured; `articles/index.json` (13,147 articles) | dictionary §3 | ☑ |
 | 7.4 | Ingest `data/entities/drafts/ta/` with the validation rules; per-paragraph fallback to English when stale; glossary check against accepted names (`community.rs`; drafts themselves await the owner) | dictionary §5 | ☑ |
-| 7.5 | `/dictionary` index and `/dictionary/{source}/{id}` pages with language badge and licence; Dictionary tab with "Read more"; articles searchable by title | dictionary §7, §8 | ☑ |
-| 7.6 | TIPNR people: identity, disambiguation, relations, mentions; Tamil name drafts; `/person/{slug}` pages; People tab; people in search and reference box | dictionary §4 | ☑ |
+| 7.5 | `/dictionary` index and `/dictionary/{source}/{id}` pages with language badge and licence; articles searchable by title (the Dictionary tab in the reader was withdrawn, R-12.6) | dictionary §7, §8 | ☑ |
+| 7.6 | TIPNR people: identity, disambiguation, relations, mentions; Tamil name drafts; `/person/{slug}` pages; people in search and reference box (the People tab was withdrawn, R-13.4) | dictionary §4 | ☑ |
 | 7.7 | Migration: `profiles.role`, `entity_suggestions`, `entity_accepted`, `moderation_log`; RLS; `set_role`, `accept_suggestion`, `reject_suggestion`, `correct_directly`; rate limits | dictionary §6 | ☑ |
 | 7.8 | RLS test suite covering anon, reader, reviewer and moderator: `supabase/tests/community_review.test.sql` (pgTAP), CI job `rls` (closes 3.4) | dictionary §6 | ☑ |
 | 7.9 | Suggestion control on every Tamil name and article paragraph for signed-in users; CC BY consent line; `/me/contributions` | dictionary §6, §7 | ☑ |
