@@ -20,6 +20,7 @@ dir="$content/$build/search"
 
 for csv in "$dir"/*.csv; do
   version=$(basename "$csv" .csv)
+  [[ "$version" == "entities" ]] && continue   # places: loaded below into entity_search
   echo "loading $version from $csv"
   psql "$db" -v ON_ERROR_STOP=1 -q <<SQL
 begin;
