@@ -3,7 +3,9 @@
 // cookie read by the shorthand redirector. Signed-in sync to `profiles` is M3.
 import { browser } from '$app/environment';
 
+/** 'xref' is the Study Bible format: one verse per line with study aids (kept as the class name fmt-xref). */
 export type Format = 'reader' | 'standard' | 'xref';
+export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language';
 export type Theme = 'system' | 'light' | 'dark';
 export type TamilFont = 'mukta' | 'sans' | 'serif' | 'system';
 
@@ -16,6 +18,12 @@ export interface Settings {
 	xrefs: boolean;
 	/** Tint verses by community highlight count (R-2.3), off by default. */
 	heat: boolean;
+	/** Study Bible format aids (R-8.4): shown only when format is 'xref'. */
+	places: boolean;
+	persons: boolean;
+	maps: boolean;
+	/** Original-language (Hebrew/Greek) name forms beside people. */
+	language: boolean;
 	/** 1..5, 3 is the default 17px */
 	fontSize: number;
 	theme: Theme;
@@ -31,6 +39,10 @@ export const DEFAULTS: Settings = {
 	footnotes: true,
 	xrefs: true,
 	heat: false,
+	places: true,
+	persons: true,
+	maps: true,
+	language: true,
 	fontSize: 3,
 	theme: 'system',
 	uiLang: 'ta',
@@ -67,7 +79,7 @@ class SettingsStore {
 		this.persist();
 	}
 
-	toggle(key: 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat') {
+	toggle(key: ToggleKey) {
 		this.update({ [key]: !this.value[key] } as Partial<Settings>);
 	}
 

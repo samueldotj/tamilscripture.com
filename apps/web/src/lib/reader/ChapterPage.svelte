@@ -8,6 +8,9 @@
 	import NoteSheet from './NoteSheet.svelte';
 	import BookRail from './BookRail.svelte';
 	import ContextPanel from './ContextPanel.svelte';
+	import StudyPanel from './StudyPanel.svelte';
+	import { loadMapSvg, loadMentions } from '$lib/entities/load';
+	import type { ChapterMentions } from '$lib/entities/types';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
@@ -74,8 +77,9 @@
 		void data.canonical;
 		selected = idsFromRange();
 	});
-	// Related-verses sheet on screens without the desktop column.
-	let sheet = $state(false);
+	// Overlay sheet on screens without the desktop column: related verses
+	// (‡ marker) or the study aids (Study chip, Study Bible format only).
+	let sheet = $state<'related' | 'study' | null>(null);
 	function toggle(id: string) {
 		const s = new Set(selected);
 		if (s.has(id)) s.delete(id); else s.add(id);
@@ -110,7 +114,7 @@
 		const key = data.canonical;
 		fetched = null;
 		xrefOpen = null;
-		sheet = false;
+		sheet = null;
 		if (data.xrefs || !settings.value.xrefs) return;
 		let cancelled = false;
 		loadXrefs(fetch, data.book.code, data.chapter)
@@ -120,8 +124,35 @@
 	});
 	function openXref(id: string) {
 		xrefOpen = id;
-		sheet = true;
+		sheet = 'related';
 	}
+
+	// Study Bible format (R-8.4): the chapter's places, persons and map,
+	// fetched after paint and only while that format is active.
+	const isStudy = $derived(settings.value.format === 'xref');
+	const studyShow = $derived({ places: settings.value.places, persons: settings.value.persons, maps: settings.value.maps, language: settings.value.language });
+	const studyWanted = $derived(isStudy && !dual && (studyShow.places || studyShow.persons || studyShow.maps));
+	let mentions = $state<ChapterMentions | null>(null);
+	let mapSvg = $state<string | null>(null);
+	let studyLoading = $state(false);
+	$effect(() => {
+		const key = `${data.book.code}.${data.chapter}`;
+		if (!studyWanted) return;
+		mentions = null;
+		mapSvg = null;
+		studyLoading = true;
+		let cancelled = false;
+		loadMentions(fetch, data.book.code, data.chapter)
+			.then(async (m) => {
+				if (cancelled) return;
+				mentions = m;
+				if (m?.map && studyShow.maps) mapSvg = await loadMapSvg(fetch, `${data.book.code}/${data.chapter}`).catch(() => null);
+			})
+			.catch(() => {})
+			.finally(() => { if (!cancelled) studyLoading = false; });
+		void key;
+		return () => { cancelled = true; };
+	});
 
 	// Desktop context panel: the verse whose ‡ was pressed, else the first
 	// selected verse. Hidden by CSS below the wide breakpoint.
@@ -234,7 +265,7 @@
 		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
 		else if (e.key === 'Escape') {
 			if (sizeOpen) sizeOpen = false;
-			else if (sheet) sheet = false;
+			else if (sheet) sheet = null;
 			else if (xrefOpen) xrefOpen = null;
 			else if (selected.size) clearSelection();
 		}
@@ -276,6 +307,12 @@
 		<div class="toolbar">
 			<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
 			<div class="right">
+				{#if studyWanted}
+					<button type="button" class="chip study-chip" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/></svg>
+						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
+					</button>
+				{/if}
 				<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 				{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
 				{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
@@ -329,6 +366,11 @@
 	{#if !dual}
 		<aside class="panel">
 			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui}>
+				{#snippet study()}
+					{#if studyWanted}
+						<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={studyShow} loading={studyLoading} />
+					{/if}
+				{/snippet}
 				{#snippet actions()}
 					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 				{/snippet}
@@ -341,7 +383,11 @@
 <div class="overlays" class:dual>
 	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 	{#if sheet}
-		<XrefPanel verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = false; xrefOpen = null; }} />
+		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
+			{#snippet study()}
+				<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={studyShow} loading={studyLoading} />
+			{/snippet}
+		</XrefPanel>
 	{/if}
 </div>
 
@@ -377,6 +423,7 @@
 	.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 1rem; margin: 0 0 1.5rem; border-bottom: var(--bw) solid var(--line); }
 	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }
 	.aa { font-family: var(--sans); font-weight: 700; color: var(--accent); gap: 0; }
+	.study-chip [lang='ta'] { font-family: var(--tamil); }
 	.aa span { font-size: 0.72em; }
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
 	.crumbs a { color: var(--accent); font-weight: 600; text-decoration: none; }
@@ -410,7 +457,7 @@
 	}
 	@media (max-width: 640px) {
 		.toolbar .right { width: 100%; margin-left: 0; }
-		.toolbar .right .chip:not(.aa) { flex: 1; }
+		.toolbar .right .chip:not(.aa):not(.study-chip) { flex: 1; }
 	}
 
 	/* Rail joins */
@@ -421,11 +468,12 @@
 		/* The rail covers book and chapter navigation */
 		.reader:not(.dual) :global(.picker select.nav) { display: none; }
 	}
-	/* Context panel joins; the floating action bar and the overlay sheet step aside */
+	/* Context panel joins; the floating action bar, the overlay sheet and the Study chip step aside */
 	@media (min-width: 1180px) {
 		.reader:not(.dual) { grid-template-columns: 16.75rem minmax(0, 1fr) 21.5rem; }
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); scrollbar-width: thin; }
 		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
+		.reader:not(.dual) .study-chip { display: none; }
 		.overlays:not(.dual) { display: none; }
 	}
 </style>

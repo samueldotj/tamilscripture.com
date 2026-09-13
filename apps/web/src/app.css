@@ -225,7 +225,7 @@ html.ui-ta .map .place.crowded:hover text.ta, html.ui-ta .map .place.selected te
 .fmt-reader .chapter[lang='ta'] { line-height: 2.05; }
 .fmt-reader .chapter[lang='en'] { line-height: 1.9; }
 
-/* Cross-reference: one verse per line, bold leading numbers */
+/* Study Bible (fmt-xref): one verse per line, bold leading numbers */
 .fmt-xref .chapter .verse { display: block; padding: 0.2em 0 0.2em 2.4em; text-indent: -2.4em; }
 .fmt-xref .chapter .verse .vn { display: inline-block; width: 2.1em; text-indent: 0; font-size: 0.7em; vertical-align: baseline; font-weight: 700; }
 .fmt-xref .chapter .para { margin: 0 0 0.5em; }

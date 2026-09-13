@@ -48,7 +48,7 @@ The Vercel project should have its Git integration's production deploys disabled
 - Search words with Tamil-aware fuzzy matching; exact phrases in quotes.
 - Every verse and range has a stable, human-readable link, e.g. `https://www.tamilscripture.com/irvtam/john/3/16`.
 - Cross-references, section headings and introductions, each switchable on or off.
-- Reader, Standard and Cross-reference display formats.
+- Reader, Standard and Study Bible display formats (Study Bible: one verse per line with the chapter's places, persons and map).
 - Sign in with Google or Facebook to keep history, notes and colour highlights.
 - See which verses the community highlights most, as counts and heatmaps.
 
@@ -84,7 +84,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 |---|---|---|---|---|
 | **M0 · Foundations** | Repository, pipeline and deploy path exist end to end. | R-3.1, R-3.5 | A chapter is visible on the production URL, built by CI from USFM. | Done except 0.11, 0.12 spikes and books.toml review |
 | **M1 · Read** | Anyone can read IRVTAM, TCV and an English version of their choice on a phone, fast, at a shareable URL. | R-3.1–3.3, 3.5, R-1.1–1.5, 1.7–1.8, 1.10, 1.12–1.14, R-8.1, 8.3 | Every chapter loads under budget on the 4G profile. A Tamil user can reach any verse by typing its Tamil abbreviation. | Shipped 7 Sep 2026 except 1.17 font choice, 1.18 self-hosted subset, 1.19 i18n module, 1.23 CI guards, 1.24 a11y pass, 1.25 Sentry |
-| **M2 · Study** | Word search, cross-references, the Cross-reference format and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Shipped 7 Sep 2026; 2.14 (log review) ongoing |
+| **M2 · Study** | Word search, cross-references, the Study Bible format (then called Cross-reference) and dual version display. | R-5.1–5.6, 5.9, R-7.1–7.4, R-8.2, R-9.1–9.5, R-3.4 | Search p75 under one second on real queries from the log. | Shipped 7 Sep 2026; 2.14 (log review) ongoing |
 | **M3 · Remember** | Sign-in with history, notes and highlights that sync across devices. | R-10.1–10.2, 10.4–10.5, 10.7–10.10, 10.12–10.14, R-1.9 | RLS test suite passes; one user's data is invisible to another through the API. | Code shipped 7 Sep 2026; blocked on owner's Supabase Auth URL setup (3.1); 3.4, 3.8, 3.9 open |
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Code shipped 7 Sep 2026; 4.7 alerting open |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
@@ -215,7 +215,7 @@ Design: [docs/feature_maps.md](docs/feature_maps.md). Rough effort: five to six 
 | 6.5 | Validation: coordinates or `unlocated`, every mention resolves, determinism diff in CI | maps §3 | ☑ |
 | 6.6 | Static map renderer in the content build: Natural Earth outline, labelled places per chapter, place and journey, as theme-aware inline SVG with labels in both scripts (SVG replaces the planned WebP; see feature_maps.md) | maps §4 | ☑ |
 | 6.7 | `/place/{slug}` ISR page: names, map, verses by book, attribution; Tamil path redirects | maps §5, ADR-1, ADR-7 | ☑ |
-| 6.8 | ~~Places tab in the context panel and bottom sheet~~ — built, then withdrawn 13 Sep 2026 by the owner: the reading page stays text and related verses only (R-11.4). Per-chapter mentions and chapter maps are still produced for later use. | maps §6 | ☒ |
+| 6.8 | Places in the reader: shown only in the Study Bible format behind the Places and Maps toggles (owner decision 13 Sep 2026; the Reader and Standard formats stay text and related verses only) | R-8.4, R-11.4 | ☑ |
 | 6.9 | `entity_search` table and loader; `/api/entities/search`; entity cards on the search page; entity rows in reference box suggestions | maps §3, ADR-2 | ☑ |
 | 6.10 | Sitemap for places; About page source table | maps §3 | ☑ |
 | 6.11 | Base map: Natural Earth land, lakes and rivers clipped to the biblical world (`scripts/build-basemap.py`), served as static GeoJSON; PMTiles deferred (design ADR-11) | maps §4 | ☑ |

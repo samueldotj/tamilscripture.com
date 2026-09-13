@@ -1,9 +1,8 @@
 <script lang="ts">
 	// Desktop context column (design 3A): related verses for the selection,
-	// with the verse actions underneath. Rendered permanently on wide screens
-	// so opening it pushes nothing around. Places, people and dictionary
-	// articles stay off the reading page by the owner's decision (13 Sep 2026);
-	// they are reached from search and the entity pages.
+	// the Study Bible aids when that format is on, and the verse actions
+	// underneath. Rendered permanently on wide screens so opening it pushes
+	// nothing around.
 	import type { Snippet } from 'svelte';
 	import type { XrefTarget } from '$lib/content/types';
 	import XrefList from './XrefList.svelte';
@@ -14,6 +13,7 @@
 		xrefsEnabled = true,
 		version,
 		lang,
+		study,
 		actions
 	}: {
 		/** verse or range label for the header; empty when nothing is selected */
@@ -22,6 +22,8 @@
 		xrefsEnabled?: boolean;
 		version: string;
 		lang: 'ta' | 'en';
+		/** Study Bible aids (places, persons, map); renders nothing in other formats */
+		study?: Snippet;
 		actions?: Snippet;
 	} = $props();
 
@@ -48,6 +50,11 @@
 		{:else}
 			<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'இந்த வசனத்திற்கு தொடர்புள்ள வசனங்கள் பட்டியலிடப்படவில்லை.' : 'No related verses are listed for this verse.'}</p>
 		{/if}
+		{#if study}
+			<div class="study">
+				{@render study()}
+			</div>
+		{/if}
 	</div>
 
 	{#if actions && label}
@@ -68,5 +75,6 @@
 	.body { flex: 1; padding: 0.6rem 1.4rem 1.4rem; }
 	.hint { color: var(--muted); line-height: 1.7; margin: 0.8rem 0 0; font-size: 0.95rem; }
 	.hint[lang='ta'] { font-family: var(--tamil); }
+	.study:not(:empty) { margin-top: 1.4rem; padding-top: 1rem; border-top: var(--bw) solid var(--line); }
 	footer { position: sticky; bottom: 0; padding: 1rem 1.4rem; border-top: var(--bw) solid var(--line); background: var(--surface); }
 </style>

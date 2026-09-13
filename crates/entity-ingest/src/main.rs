@@ -184,6 +184,15 @@ fn all_ta_forms(names: &NamesTa, name_en: &str) -> String {
 
 /// Tamil label for a name: the default Tamil version first, then any other,
 /// only where the draft is trustworthy enough to show.
+/// The form to show as "the" original-language name: the first "Named"
+/// form with the most verses, else the first form with any text.
+fn primary_form(forms: &[tipnr::NameForm]) -> Option<&tipnr::NameForm> {
+    forms
+        .iter()
+        .filter(|f| !f.original.is_empty())
+        .max_by_key(|f| (f.significance == "Named", f.verses.len()))
+}
+
 fn label_ta(names: &NamesTa, name_en: &str, versions: &[String]) -> Option<String> {
     let per = names.get(name_en)?;
     for v in versions {
@@ -913,7 +922,8 @@ fn main() -> Result<()> {
                     serde_json::json!({
                         "name_en": p.name_en, "qualifier": if name_count[&p.name_en.to_lowercase()] > 1 { Some(ref_label(&p.first_ref)) } else { None },
                         "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "gender": p.gender, "brief": p.brief, "mentions": p.verses.len(),
-                        "article": articles_by_entity.get(&format!("person/{id}")).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone())
+                        "article": articles_by_entity.get(&format!("person/{id}")).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone()),
+                        "original": primary_form(&p.forms).map(|f| serde_json::json!({ "text": f.original, "script": f.script, "strongs": f.strongs }))
                     }),
                 )
             })

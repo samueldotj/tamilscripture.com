@@ -249,7 +249,7 @@ The prerendered chapter HTML contains every verse, heading and marker once. The 
 .no-xrefs     .xref, .no-xrefs .xref-list { display: none; }
 ```
 
-The Cross-reference format needs the cross-reference JSON, which is fetched when that format is active or when the user opens a marker. In the other two formats no cross-reference bytes are downloaded at all, which satisfies the requirement that turning them off stops the fetch.
+The Study Bible format (class `fmt-xref`, formerly Cross-reference) needs the cross-reference JSON, which is fetched when that format is active or when the user opens a marker; it also fetches the chapter's mentions and map after paint, and only while its Places, Persons or Maps toggles are on. In the other two formats no cross-reference bytes are downloaded at all, which satisfies the requirement that turning them off stops the fetch.
 
 ### Client-side navigation
 

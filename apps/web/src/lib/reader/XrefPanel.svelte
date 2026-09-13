@@ -1,25 +1,32 @@
 <script lang="ts">
-	// Related-verses overlay for screens without the desktop column: a
-	// right-hand drawer on tablets and a bottom sheet on phones (design 04).
+	// Overlay for screens without the desktop column: a right-hand drawer on
+	// tablets and a bottom sheet on phones (design 04). Shows related verses
+	// for the ‡ marker that was pressed, or the Study Bible aids.
+	import type { Snippet } from 'svelte';
 	import { findBook } from '$lib/content/manifest';
 	import type { XrefTarget } from '$lib/content/types';
 	import XrefList from './XrefList.svelte';
 
 	let {
+		view = 'related',
 		verseId = null,
 		targets = null,
 		version,
 		lang,
+		study,
 		onclose
 	}: {
+		view?: 'related' | 'study' | null;
 		verseId?: string | null;
 		targets?: XrefTarget[] | null;
 		version: string;
 		lang: 'ta' | 'en';
+		study?: Snippet;
 		onclose: () => void;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
+	const isStudy = $derived(view === 'study');
 	const verseLabel = $derived.by(() => {
 		if (!verseId) return '';
 		const [code, ch, v] = verseId.split('.');
@@ -33,20 +40,27 @@
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="backdrop" onclick={onclose} onkeydown={onKey}></div>
-<div class="xref-panel" aria-label={ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses'} role="dialog" tabindex="-1" onkeydown={onKey}>
+<div class="xref-panel" aria-label={isStudy ? (ta ? 'ஆய்வு' : 'Study') : (ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses')} role="dialog" tabindex="-1" onkeydown={onKey}>
 	<span class="grab" aria-hidden="true"></span>
 	<header>
 		<div>
-			<div class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses'}</div>
-			{#if verseId}
-				<h2 lang={ta ? 'ta' : 'en'}>{verseLabel} <span class="n">· {targets?.length ?? 0} {ta ? 'குறிப்புகள்' : 'refs'}</span></h2>
+			{#if isStudy}
+				<div class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'ஆய்வு' : 'Study'}</div>
+				<h2 lang={ta ? 'ta' : 'en'}>{ta ? 'இடங்கள், நபர்கள், வரைபடம்' : 'Places, persons, map'}</h2>
 			{:else}
-				<h2 class="empty" lang={ta ? 'ta' : 'en'}>{ta ? 'வசனத்தின் ‡ குறியைத் தொடுங்கள்' : 'Tap a verse’s ‡ marker'}</h2>
+				<div class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses'}</div>
+				{#if verseId}
+					<h2 lang={ta ? 'ta' : 'en'}>{verseLabel} <span class="n">· {targets?.length ?? 0} {ta ? 'குறிப்புகள்' : 'refs'}</span></h2>
+				{:else}
+					<h2 class="empty" lang={ta ? 'ta' : 'en'}>{ta ? 'வசனத்தின் ‡ குறியைத் தொடுங்கள்' : 'Tap a verse’s ‡ marker'}</h2>
+				{/if}
 			{/if}
 		</div>
 		<button type="button" class="close" onclick={onclose} aria-label={ta ? 'மூடு' : 'Close'}>✕</button>
 	</header>
-	{#if verseId && targets?.length}
+	{#if isStudy}
+		{#if study}{@render study()}{/if}
+	{:else if verseId && targets?.length}
 		<XrefList {targets} {version} {lang} onnavigate={onclose} />
 	{:else if verseId}
 		<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'இந்த வசனத்திற்கு தொடர்புள்ள வசனங்கள் பட்டியலிடப்படவில்லை.' : 'No related verses are listed for this verse.'}</p>

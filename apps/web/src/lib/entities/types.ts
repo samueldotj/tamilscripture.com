@@ -156,6 +156,8 @@ export interface PersonSummary {
 	brief?: string;
 	mentions: number;
 	article?: string | null;
+	/** primary original-language form, for the Study Bible's Language toggle */
+	original?: { text: string; script: 'he' | 'el'; strongs: string; translit?: string } | null;
 }
 
 /** `entities/mentions/{BOOK}/{ch}.json` */

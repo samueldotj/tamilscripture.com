@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { settings, type Format, type TamilFont, type Theme } from '$lib/settings/store.svelte';
+	import { settings, type Format, type TamilFont, type Theme, type ToggleKey } from '$lib/settings/store.svelte';
 	import { manifest } from '$lib/content/manifest';
 
 	let { open = $bindable(false) }: { open?: boolean } = $props();
@@ -9,15 +9,23 @@
 	const formats: { id: Format; ta: string; en: string; hint: string }[] = [
 		{ id: 'reader', ta: 'வாசிப்பு', en: 'Reader', hint: 'no verse numbers' },
 		{ id: 'standard', ta: 'நிலையான', en: 'Standard', hint: 'like a printed Bible' },
-		{ id: 'xref', ta: 'ஒரு வரி', en: 'Verse per line', hint: 'one verse per line' }
+		{ id: 'xref', ta: 'ஆய்வு', en: 'Study Bible', hint: 'one verse per line with places, persons and maps' }
 	];
-	const toggles: { key: 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat'; ta: string; en: string }[] = [
+	const baseToggles: { key: ToggleKey; ta: string; en: string }[] = [
 		{ key: 'headings', ta: 'பகுதித் தலைப்புகள்', en: 'Section headings' },
 		{ key: 'intro', ta: 'புத்தக முன்னுரை', en: 'Book introductions' },
 		{ key: 'footnotes', ta: 'குறிப்பு எண்கள்', en: 'Footnote markers' },
 		{ key: 'xrefs', ta: 'ஒப்புவசனங்கள்', en: 'Cross-references' },
 		{ key: 'heat', ta: 'சமூக அடிக்கோட்டு வெப்பம்', en: 'Community highlight heat' }
 	];
+	// Study aids appear only in the Study Bible format.
+	const studyToggles: { key: ToggleKey; ta: string; en: string }[] = [
+		{ key: 'places', ta: 'இடங்கள்', en: 'Places' },
+		{ key: 'persons', ta: 'நபர்கள்', en: 'Persons' },
+		{ key: 'maps', ta: 'வரைபடங்கள்', en: 'Maps' },
+		{ key: 'language', ta: 'மூல மொழி', en: 'Language (Hebrew and Greek names)' }
+	];
+	const toggles = $derived(s.format === 'xref' ? [...baseToggles, ...studyToggles] : baseToggles);
 	const fonts = $derived<{ id: TamilFont; label: string }[]>([
 		{ id: 'mukta', label: 'Mukta Malar' },
 		{ id: 'sans', label: 'Noto Sans' },
@@ -65,6 +73,9 @@
 					</button>
 				{/each}
 			</div>
+			{#if s.format === 'xref'}
+				<p class="note" lang={ta ? 'ta' : 'en'}>{ta ? 'ஒரு வரிக்கு ஒரு வசனம்; அதிகாரத்தின் இடங்கள், நபர்கள், வரைபடம் பக்கவாட்டில் (அல்லது “ஆய்வு” பொத்தானில்).' : 'One verse per line, with the chapter’s places, persons and map in the side panel (or behind the Study button on small screens).'}</p>
+			{/if}
 		</section>
 
 		<section>
@@ -141,6 +152,8 @@
 	.seg button { flex: 1; border: 0; border-radius: 10px; padding: 0.65rem 0.3rem; background: transparent; color: var(--muted); font-weight: 600; font-size: 0.9rem; cursor: pointer; min-height: 44px; }
 	.seg button[lang='ta'] { font-family: var(--tamil); }
 	.seg button.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(28, 26, 24, 0.1); }
+	.note { margin: 0; font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+	.note[lang='ta'] { font-family: var(--tamil); }
 	.list { padding: 0; overflow: hidden; }
 	.row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 1.1rem; }
 	.row + .row { border-top: var(--bw) solid var(--line); }

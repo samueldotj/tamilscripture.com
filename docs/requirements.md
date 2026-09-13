@@ -207,13 +207,14 @@ Three formats, switchable with one control that remembers the choice. The script
 |---|---|---|---|---|---|
 | **Reader** | Flowing paragraphs following USFM paragraph and poetry marks. Generous line height, one column. | Hidden, or faint on hover / tap | Optional | Off | Off |
 | **Standard** | Paragraphs with superscript verse numbers, as in a printed Bible. | Superscript | On by default | Markers, panel on tap | Markers |
-| **Cross-reference** | One verse per line, with its cross-references listed inline beneath or in a right-hand column on wide screens. | Leading, bold | On | Inline, always visible | Markers |
+| **Study Bible** (renamed from Cross-reference / Verse per line, 13 Sep 2026) | One verse per line, with its cross-references listed inline beneath or in a right-hand column on wide screens, and the chapter's places, persons and map in the context panel (a Study sheet on phones). | Leading, bold | On | Inline, always visible | Markers |
 
 | ID | Requirement | Priority |
 |---|---|---|
-| R-8.1 | Reader, Standard and Cross-reference formats as defined above. The format persists per user and applies to any passage opened, including from a shared link. | Must |
+| R-8.1 | Reader, Standard and Study Bible formats as defined above. The format persists per user and applies to any passage opened, including from a shared link. | Must |
 | R-8.2 | Switching format does not reload the page or lose the current scroll position beyond the nearest verse. | Should |
 | R-8.3 | Highlights, notes and verse selection behave identically in all formats. | Must |
+| R-8.4 | In the Study Bible format only, the Show list gains Places, Persons, Maps and Language toggles (all on by default). Places and Persons list the chapter's names with their verses, the selected verse's names first; Maps shows the static chapter map; Language adds the Hebrew or Greek name form with its Strong's number beside each person. In the other two formats none of this is shown or fetched. | Must |
 
 ---
 
@@ -442,7 +443,7 @@ Added 12 Sep 2026 for milestone M6 (design: [feature_maps.md](feature_maps.md)).
 | R-11.1 | Every place in the OpenBible geocoding data is an entity with a stable English slug at `/place/{slug}`; same-named places carry a qualifier ("Antioch (1)"). | Must |
 | R-11.2 | A place page shows the name in both scripts, its kind (city, river, region…), coordinates and location precision, every verse that names it grouped by book with links, related journeys, nearby places, and the data attribution. | Must |
 | R-11.3 | Tamil place names are aligned per Tamil version from the verse text itself, never invented: every published form occurs in that version's text for the place's verses, and the build fails otherwise. Unreviewed alignments are shown with a "draft" badge. | Must |
-| R-11.4 | ~~A Places tab in the reader's context panel and sheet.~~ Withdrawn 13 Sep 2026 by the owner: the reading page shows only the text and related verses; places are reached from search, the place pages and the atlas. | Withdrawn |
+| R-11.4 | Places named in the chapter, with their verses, appear in the reader only in the Study Bible format behind the Places toggle (R-8.4); the Reader and Standard formats show text and related verses alone (owner decision, 13 Sep 2026). | Must |
 | R-11.5 | Places are found by the search box and offered in the reference box suggestions, in either script, with the same Tamil folding as verse search. | Must |
 | R-11.6 | Entity pages are cached at the edge like chapters and listed in a sitemap. | Must |
 | R-11.7 | The reading pages gain no blocking request: mentions and maps load when the panel opens; the layout-shift budget is unchanged. | Must |
@@ -465,12 +466,12 @@ Added 13 Sep 2026 for milestone M7 (design: [feature_dictionary.md](feature_dict
 | R-12.3 | Every paragraph has an id `{source}/{slug}#p{n}-{hash8}` derived from the English text so a correction detaches when the English changes; the build reports orphaned corrections. | Must |
 | R-12.4 | Tamil paragraphs come from drafts produced outside the repository in the shape fixed in the design; the build validates ids, Tamil script and absence of markup and falls back to English per paragraph. | Must |
 | R-12.5 | Tamil text carries a provenance badge: AI draft, community-corrected or owner-authored. English text carries a language badge. | Must |
-| R-12.6 | ~~A Dictionary tab in the reader's context panel and sheet.~~ Withdrawn 13 Sep 2026 by the owner; articles are reached from search, `/dictionary` and the entity pages. | Withdrawn |
+| R-12.6 | ~~A Dictionary tab in the reader's context panel and sheet.~~ Withdrawn 13 Sep 2026 by the owner; articles are reached from search, `/dictionary` and the entity pages (the Study Bible format shows places and persons, not articles). | Withdrawn |
 | R-12.7 | Articles are found by title in the search box, the search page and the reference box. | Must |
 | R-13.1 | Every person in TIPNR is an entity with a stable slug at `/person/{slug}`; same-named people are distinguished by their first reference ("Zechariah (1Ch 24:25)"). | Must |
 | R-13.2 | A person page shows the name in both scripts, gender or group, tribe, the STEP description, original-language forms with Strong's numbers, family relations as links, every verse that names them grouped by book, and linked dictionary articles. | Must |
 | R-13.3 | Tamil person names are aligned from the corpus by the same rule as places (R-11.3) and shown with the same draft badge until reviewed. | Must |
-| R-13.4 | ~~A People tab and chip in the reader.~~ Withdrawn 13 Sep 2026 by the owner; people are reached from search and the person pages. | Withdrawn |
+| R-13.4 | People named in the chapter appear in the reader only in the Study Bible format behind the Persons toggle, with the original-language form behind the Language toggle (R-8.4). | Must |
 | R-13.5 | People are found by the search box, the search page and the reference box in either script. | Must |
 | R-13.6 | People and place descriptions carry the STEP Bible attribution (CC BY 4.0). | Must |
 | R-15.1 | A signed-in reader can suggest a correction to any Tamil name form and any article paragraph; the form shows the current text, requires Tamil script, and states that contributions are CC BY 4.0. Readers never see open suggestions. | Must |
