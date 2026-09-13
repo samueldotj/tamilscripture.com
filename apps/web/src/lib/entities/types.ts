@@ -8,6 +8,8 @@ export interface NameTa {
 	confidence: number;
 	/** True until a reviewer has confirmed the entry. */
 	draft?: boolean;
+	/** "community" when an accepted correction replaced the draft. */
+	provenance?: 'community' | 'owner';
 }
 
 export type Precision = 'point' | 'area' | 'approximate' | 'unlocated';
@@ -174,6 +176,7 @@ export interface Paragraph {
 	text: string;
 	/** Tamil draft or accepted correction, when present */
 	ta?: string;
+	ta_source?: 'draft' | 'community' | 'owner';
 }
 
 export interface Article {
@@ -181,6 +184,7 @@ export interface Article {
 	id: string;
 	slug: string;
 	title: string;
+	title_ta?: string;
 	lang: 'en';
 	licence: string;
 	attribution: string;

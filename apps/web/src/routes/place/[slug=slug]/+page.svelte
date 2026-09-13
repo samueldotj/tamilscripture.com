@@ -2,6 +2,9 @@
 	import { chapterUrl, findBook, manifest } from '$lib/content/manifest';
 	import { groupByBook, placeLabelTa } from '$lib/entities/load';
 	import { settings } from '$lib/settings/store.svelte';
+	import SuggestControl from '$lib/community/SuggestControl.svelte';
+	import Provenance from '$lib/community/Provenance.svelte';
+	import { nameTarget } from '$lib/community/repo';
 
 	let { data } = $props();
 	const ui = $derived(settings.value.uiLang);
@@ -105,8 +108,17 @@
 									<dt>{v.short}</dt>
 									<dd>
 										<strong lang="ta">{n.label}</strong>
-										{#if n.draft}<span class="draft" title={ta ? 'தானியங்கி வரைவு, மதிப்பாய்வு நிலுவையில்' : 'Automatic draft, awaiting review'} lang={ta ? 'ta' : 'en'}>{ta ? 'வரைவு' : 'draft'}</span>{/if}
+										{#if n.provenance}<Provenance kind={n.provenance} lang={ui} />{:else if n.draft}<Provenance kind="auto" lang={ui} />{/if}
 										{#if n.forms.length > 1}<span class="forms" lang="ta">{n.forms.filter((f) => f !== n.label).slice(0, 6).join(' · ')}</span>{/if}
+										<SuggestControl target={nameTarget(v.code, p.name_en)} current={n.label} lang={ui} compact />
+									</dd>
+								</div>
+							{:else}
+								<div>
+									<dt>{v.short}</dt>
+									<dd>
+										<span class="muted" lang={ta ? 'ta' : 'en'}>{ta ? 'இல்லை' : 'none yet'}</span>
+										<SuggestControl target={nameTarget(v.code, p.name_en)} current="" lang={ui} compact />
 									</dd>
 								</div>
 							{/if}
@@ -114,6 +126,9 @@
 					</dl>
 				{:else}
 					<p class="muted" lang={ta ? 'ta' : 'en'}>{ta ? 'தமிழ் வடிவம் இன்னும் இணைக்கப்படவில்லை.' : 'No Tamil form has been aligned yet.'}</p>
+					{#each tamilVersions as v (v.code)}
+						<SuggestControl target={nameTarget(v.code, p.name_en)} current="" lang={ui} compact />
+					{/each}
 				{/if}
 			</section>
 
@@ -188,10 +203,9 @@
 	dl div { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.5rem; align-items: baseline; }
 	dt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
 	dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem; align-items: baseline; }
+	dd :global(.suggest) { flex-basis: 100%; }
 	dd strong { font-family: var(--tamil); font-size: 1.15rem; }
 	.forms { font-family: var(--tamil); font-size: 0.85rem; color: var(--muted); }
-	.draft { font-size: 0.7rem; color: var(--amber); border: 1px solid var(--amber); border-radius: 999px; padding: 0 0.45rem; }
-	.draft[lang='ta'] { font-family: var(--tamil); }
 	.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
 	.plain a { font-weight: 600; text-decoration: none; }
 	.plain a[lang='ta'] { font-family: var(--tamil); }

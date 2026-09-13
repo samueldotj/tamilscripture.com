@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { settings } from '$lib/settings/store.svelte';
 	import { placeName } from '$lib/entities/load';
+	import SuggestControl from '$lib/community/SuggestControl.svelte';
+	import Provenance from '$lib/community/Provenance.svelte';
+	import { articleTarget } from '$lib/community/repo';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -27,7 +30,7 @@
 
 	<header class="head">
 		<div class="kicker">{sourceName} <span class="badge" title={hasTa ? (ta ? 'தமிழ் வரைவு உள்ளது' : 'Tamil draft available') : (ta ? 'ஆங்கிலம் மட்டும்' : 'English only')}>{hasTa ? 'TA' : 'EN'}</span></div>
-		<h1>{a.title}</h1>
+		<h1>{a.title}{#if a.title_ta} <span class="title-ta" lang="ta">{a.title_ta}</span>{/if}</h1>
 		{#if data.linked.length}
 			<ul class="chips" aria-label={ta ? 'இணைக்கப்பட்ட பெயர்கள்' : 'Linked names'}>
 				{#each data.linked as l (l.ref)}
@@ -50,10 +53,11 @@
 				{#if p.ta}
 					<p lang="ta" class="ta">{p.ta}</p>
 					<details class="src"><summary lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கில மூலம்' : 'English source'}</summary><p lang="en">{p.text}</p></details>
-					<span class="prov" lang={ta ? 'ta' : 'en'}>{ta ? 'AI வரைவு' : 'AI draft'}</span>
+					<Provenance kind={p.ta_source ?? 'draft'} lang={ta ? 'ta' : 'en'} />
 				{:else}
 					<p lang="en">{p.text}</p>
 				{/if}
+				<SuggestControl target={articleTarget(p.id)} current={p.ta ?? ''} source={p.text} lang={ta ? 'ta' : 'en'} />
 			</div>
 		{/each}
 	</div>
@@ -83,8 +87,7 @@
 	.src summary { cursor: pointer; color: var(--muted); font-size: 0.8rem; }
 	.src summary[lang='ta'] { font-family: var(--tamil); }
 	.src p { margin-top: 0.3rem; font-size: 0.95rem; }
-	.prov { display: inline-block; margin-top: 0.3rem; font-size: 0.7rem; color: var(--amber); border: 1px solid var(--amber); border-radius: 999px; padding: 0 0.45rem; }
-	.prov[lang='ta'] { font-family: var(--tamil); }
+	.title-ta { font-family: var(--tamil); color: var(--muted); font-weight: 500; font-size: 0.7em; margin-left: 0.4em; }
 	.foot { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 0.9rem; display: grid; gap: 0.4rem; }
 	.source, .note { margin: 0; font-size: 0.78rem; color: var(--muted); }
 	.note[lang='ta'] { font-family: var(--tamil); }

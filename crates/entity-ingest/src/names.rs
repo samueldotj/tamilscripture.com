@@ -28,6 +28,12 @@ pub struct NameForm {
     /// True until a reviewer has confirmed the entry.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")]
     pub review: bool,
+    /// Set by an accepted correction from `overrides/names.toml` (never saved here).
+    #[serde(skip)]
+    pub community: bool,
+    /// Owner-authored override (`owner = true` in the override file).
+    #[serde(skip)]
+    pub owner: bool,
 }
 
 impl NameForm {
@@ -224,6 +230,8 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
         confidence,
         n: texts.len() as u32,
         review,
+        community: false,
+        owner: false,
     })
 }
 

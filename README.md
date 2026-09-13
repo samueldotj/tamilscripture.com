@@ -89,7 +89,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Code shipped 7 Sep 2026; 4.7 alerting open |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
 | **M6 · Places and maps** | Every verse knows its places: Tamil and English place names, verse links, a static map in the reader, place and journey pages, and an interactive atlas. Design in [docs/feature_maps.md](docs/feature_maps.md). | R-11.1–11.8, R-14.1–14.6 | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. | Built 12 Sep 2026 on branch `m6-places-maps`; regions and the period selector (6.16) deferred |
-| **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.x, R-13.x, R-15.x (to be written) | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Design proposed 12 Sep 2026 |
+| **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.1–12.7, R-13.1–13.6, R-15.1–15.7 | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Built 13 Sep 2026 on `m7-dictionary-people`; owner items open (secrets, first moderator, Tamil drafts, Smith's/Aquifer decision); ISBE deferred |
 
 ### M0 · Foundations
 
@@ -164,7 +164,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 3.1 | Supabase Auth: magic link ☑ and Google button ☑ in the app; Google provider credentials and Site URL / redirect URLs to be entered in the Supabase dashboard by the owner ☐; Facebook deferred (open question 4) | R-10.1, R-10.2 | ◧ |
 | 3.2 | Client-side PKCE: `/auth/callback` exchanges the code in the browser; public pages never read the session on the server (ADR-9); supabase-js loads lazily only for signed-in visitors | design §7 | ☑ |
 | 3.3 | Migration `20260907200000_personal`: `profiles` (auto-created on signup), `highlights`, `notes`, `history` with RLS, `record_visit`, `export_my_data`, `delete_my_account` | ADR-5, design §7 | ☑ |
-| 3.4 | RLS test suite (two users through PostgREST) in CI; needs the M3 development project and a service key in secrets | design §7 | ☐ |
+| 3.4 | RLS test suite in CI: pgTAP against the local Supabase stack (`supabase/tests/`), no secrets needed; covers personal tables indirectly through the community-review suite (7.8) | design §7 | ☑ |
 | 3.5 | Highlights: four colours in the action bar, contiguous runs stored as rows, remove or recolour, rendered in every format and both themes, `/me/highlights` grouped by book with colour filter | R-10.12, R-10.13 | ☑ |
 | 3.6 | Notes: bottom sheet with autosave and delete, ✎ markers on verses, `/me/notes` with full-text search | R-10.8, R-10.9, R-10.10 | ☑ |
 | 3.7 | History: `record_visit` collapses repeats within 10 minutes, `/me/history` grouped by day with book filter, pause and clear | R-10.5, R-10.7 | ☑ |
@@ -231,22 +231,22 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 7.1 | Download Easton and ISBE with licence files; generate ten sample articles each from Smith's and Aquifer for the owner's doctrinal review; record the decision | dictionary §2 | ☐ |
-| 7.2 | Requirement IDs R-12.x (dictionary), R-13.x (people), R-15.x (community review) in `docs/requirements.md`; design ADRs: static drafts plus exported overrides, moderation in Postgres | dictionary §1 | ☐ |
-| 7.3 | Parse Easton and ISBE into `articles/{source}/{id}.json` with stable paragraph ids and attribution; link to entities by name with a review list for ambiguous matches; `blocklist.toml` honoured; `articles/index.json` | dictionary §3 | ☐ |
-| 7.4 | Ingest `data/entities/drafts/ta/` with the validation rules; per-paragraph fallback to English when stale; glossary check against accepted names | dictionary §5 | ☐ |
-| 7.5 | `/dictionary` index and `/dictionary/{source}/{id}` pages with language badge and licence; Dictionary tab with "Read more" for ISBE; articles searchable by title | dictionary §7, §8 | ☐ |
-| 7.6 | TIPNR people: identity, disambiguation, relations, mentions; Tamil name drafts; `/person/{slug}` pages; People tab; people in search and reference box | dictionary §4 | ☐ |
-| 7.7 | Migration: `profiles.role`, `entity_suggestions`, `entity_accepted`, `moderation_log`; RLS; `set_role`, `accept_suggestion`, `reject_suggestion`, `correct_directly`; rate limits | dictionary §6 | ☐ |
-| 7.8 | RLS test suite covering reader, reviewer and moderator (closes 3.4) | dictionary §6 | ☐ |
-| 7.9 | Suggestion control on every Tamil name and article paragraph for signed-in users; CC BY consent line; `/me/contributions` | dictionary §6, §7 | ☐ |
-| 7.10 | `/mod` queue: current text, English source and an editable field pre-filled with the suggestion; accept publishes the edited text; reject with reason; per-entity grouping; direct-correction form | dictionary §6 | ☐ |
-| 7.11 | `/mod/roles` for moderators | dictionary §6 | ☐ |
-| 7.12 | Export workflow every 12 hours and on dispatch: read accepted rows with the service key, write `data/entities/overrides/`, commit if changed | dictionary §6 | ☐ |
-| 7.13 | "Publish now": server route verifies the moderator session and dispatches the export workflow through a fine-grained GitHub token | dictionary §6 | ☐ |
-| 7.14 | Build applies overrides over drafts; provenance badges for draft, community-corrected and owner-authored text | dictionary §6 | ☐ |
+| 7.1 | Download Easton and ISBE with licence files; generate ten sample articles each from Smith's and Aquifer for the owner's doctrinal review; record the decision. *Easton (NEUU dataset) downloaded and licensed ☑; ISBE deferred (scans only); Smith's/Aquifer samples await the owner* | dictionary §2 | ◧ |
+| 7.2 | Requirement IDs R-12.x (dictionary), R-13.x (people), R-15.x (community review) in `docs/requirements.md`; design ADRs: static drafts plus exported overrides, moderation in Postgres | dictionary §1, ADR-13, ADR-14 | ☑ |
+| 7.3 | Parse Easton into `articles/{source}/{id}.json` with stable paragraph ids and attribution; link to entities by name; `blocklist.toml` honoured; `articles/index.json` (3,962 articles, 1,651 linked) | dictionary §3 | ☑ |
+| 7.4 | Ingest `data/entities/drafts/ta/` with the validation rules; per-paragraph fallback to English when stale; glossary check against accepted names (`community.rs`; drafts themselves await the owner) | dictionary §5 | ☑ |
+| 7.5 | `/dictionary` index and `/dictionary/{source}/{id}` pages with language badge and licence; Dictionary tab with "Read more"; articles searchable by title | dictionary §7, §8 | ☑ |
+| 7.6 | TIPNR people: identity, disambiguation, relations, mentions; Tamil name drafts; `/person/{slug}` pages; People tab; people in search and reference box | dictionary §4 | ☑ |
+| 7.7 | Migration: `profiles.role`, `entity_suggestions`, `entity_accepted`, `moderation_log`; RLS; `set_role`, `accept_suggestion`, `reject_suggestion`, `correct_directly`; rate limits | dictionary §6 | ☑ |
+| 7.8 | RLS test suite covering anon, reader, reviewer and moderator: `supabase/tests/community_review.test.sql` (pgTAP), CI job `rls` (closes 3.4) | dictionary §6 | ☑ |
+| 7.9 | Suggestion control on every Tamil name and article paragraph for signed-in users; CC BY consent line; `/me/contributions` | dictionary §6, §7 | ☑ |
+| 7.10 | `/mod` queue: current text, English source and an editable field pre-filled with the suggestion; accept publishes the edited text; reject with reason; per-entity grouping; stale flag; direct-correction form; `/mod/history` | dictionary §6 | ☑ |
+| 7.11 | `/mod/roles` for moderators (appoint by email, remove) | dictionary §6 | ☑ |
+| 7.12 | Export workflow every 12 hours and on dispatch: read accepted rows with the service key, write `data/entities/overrides/`, commit if changed, start the deploy (`export-overrides.yml`, `scripts/export-overrides.mjs`); needs the `SUPABASE_SERVICE_KEY` secret from the owner | dictionary §6 | ◧ |
+| 7.13 | "Publish now": `/api/mod/publish` verifies the moderator session and dispatches the export workflow through a fine-grained GitHub token; needs `GITHUB_DISPATCH_TOKEN` on Vercel from the owner | dictionary §6 | ◧ |
+| 7.14 | Build applies overrides over drafts; provenance badges for draft, community-corrected and owner-authored text | dictionary §6 | ☑ |
 | 7.15 | "Underline names" setting, off by default, pre-paint class, CLS check in CI | dictionary §4 | ☐ |
-| 7.16 | Full-text search over Tamil articles with `tamil_tsvector` | dictionary §8 | ☐ |
+| 7.16 | Full-text search over Tamil articles with `tamil_tsvector` (after the first Tamil drafts exist) | dictionary §8 | ☐ |
 | 7.17 | Optional: Theographic events and periods in their own directory if licence and value justify it; events on entity pages | dictionary §2 | ☐ |
 
 ## Licences

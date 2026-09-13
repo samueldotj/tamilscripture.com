@@ -1,6 +1,6 @@
 # Feature design: dictionary, people and community review
 
-Milestone M7 in the [README](../README.md#milestones). Status: design, 12 Sep 2026. Nothing here is built.
+Milestone M7 in the [README](../README.md#milestones). Status: implemented on branch `m7-dictionary-people`, 13 Sep 2026, except the items listed under §11 that need the owner (Smith's/Aquifer decision, Tamil drafts, secrets, first moderator). ISBE is deferred: no machine-readable public-domain edition was found.
 
 Builds on the entity foundation in [feature_maps.md](feature_maps.md) §3: the `entity-ingest` crate, the entity model, Tamil name alignment and entity search. This document adds dictionary articles, people, Tamil drafts produced outside the repository, and the community review flow that corrects Tamil names and paragraphs.
 
@@ -22,9 +22,9 @@ Same conventions as feature_maps.md §2: one directory per source with `LICENSE`
 
 | Source | Role | Licence to verify | Directory |
 |---|---|---|---|
-| Easton's Bible Dictionary | Readable articles for people, places, terms | Public domain | `data/entities/eastons/` |
-| ISBE, 1915 edition | Long-form reference articles, shown behind "Read more" | Public domain (US) | `data/entities/isbe/` |
-| TIPNR (STEP Bible) | People: identity, disambiguation of same-named people, relations, original-language names, verse links | Open, terms to check per file | `data/entities/tipnr/` (shared with M6) |
+| Easton's Bible Dictionary | Readable articles for people, places, terms | Public domain text; NEUU JSON dataset CC BY 4.0 (verified) | `data/entities/eastons/` |
+| ISBE, 1915 edition | Deferred: only page scans are available; revisit when a parsed edition appears | Public domain (US) | `data/entities/isbe/` (not present) |
+| TIPNR (STEP Bible) | People: identity, disambiguation of same-named people, relations, original-language names, verse links; short place descriptions | CC BY 4.0 (verified) | `data/entities/tipnr/` |
 | Smith's Bible Dictionary | Additional articles | Public domain edition to confirm | Held pending owner review |
 | Aquifer Open Bible Dictionary | Modern readable articles | CC BY-SA, to confirm | Held pending owner review; own directory if approved |
 | Theographic knowledge graph | Events, periods, relationships | CC BY-SA, to confirm | Optional, own directory |
@@ -81,7 +81,7 @@ Output the external process must produce, one file per article:
 {
   "id": "eastons/damascus",
   "lang": "ta",
-  "source_hash": "sha256:…",                       // of the English article file it translated
+  "source_hash": "d7cd2b5a",                       // the article's `hash` from articles/index.json (fnv8 of the English text)
   "generator": { "name": "claude", "model": "…", "prompt_version": "1", "generated_at": "2026-09-20" },
   "title": "தமஸ்கு",
   "paragraphs": [
@@ -94,7 +94,7 @@ Output the external process must produce, one file per article:
 Rules the build enforces on drafts:
 
 - same paragraph ids and count as the English source;
-- `source_hash` matches the current English file, otherwise the draft is stale and the English paragraph is shown for the changed paragraphs;
+- `source_hash` matches the article's current `hash`, otherwise the draft is reported stale; paragraphs are matched by id regardless, so unchanged paragraphs keep their Tamil and changed ones show English;
 - Tamil script present, no HTML;
 - names inside a draft should use the accepted Tamil forms from `names-ta.toml`; the external process can read that file as its glossary, and the build reports paragraphs whose names differ so reviewers fix them first.
 
@@ -165,16 +165,21 @@ The RLS test suite deferred from M3 (task 3.4) becomes part of this milestone, b
 `.github/workflows/export-overrides.yml` runs every 12 hours (`0 */12 * * *`), on `workflow_dispatch` (the Run workflow button in GitHub) and on `repository_dispatch` from the site. It reads `entity_accepted` with the Supabase service key held as a GitHub secret, writes one file per entity under `data/entities/overrides/`, marks the rows `exported_at`, and commits as a bot if anything changed. The commit triggers the normal deploy, so the site changes about ten minutes after an export. Override files are the third input to the build, applied over drafts.
 
 ```toml
-# data/entities/overrides/place/damascus.toml
-[names.IRVTAM]
+# data/entities/overrides/names.toml — one table per name and Tamil version.
+# Names are shared by same-named entities (29 Zechariahs), so the file is keyed
+# by the English name string, like names-ta.toml.
+[Damascus.IRVTAM]
 forms = ["தமஸ்கு"]
-accepted_at = 2026-10-03T14:12:00Z
+accepted_at = "2026-10-03T14:12:00Z"
 
+# data/entities/overrides/articles/eastons/damascus.toml
 [[paragraphs]]
 id = "eastons/damascus#p3-4f2a9c1b"
 text = "…"
-accepted_at = 2026-10-03T14:20:00Z
+accepted_at = "2026-10-03T14:20:00Z"
 ```
+
+`scripts/export-overrides.mjs` writes both shapes deterministically (sorted, JSON-escaped strings), so a run with no new acceptances produces no diff. An `owner = true` flag on an entry marks it owner-authored for the badge.
 
 **Publish now** in `/mod` calls a server route on the site that verifies the caller's Supabase session and moderator role, then sends a `repository_dispatch` to GitHub using a fine-grained personal access token scoped to this repository's Actions, stored as a Vercel environment variable. The action is logged. Because publishing is export-only, a corrected name becomes searchable when the deploy reloads the search table, on the same cadence.
 
@@ -191,6 +196,7 @@ Text carries a small badge for its provenance: AI draft, community-corrected, ow
 | `/dictionary/{source}/{id}` | ISR | Article with attribution and licence, links to entities, suggestion controls per paragraph |
 | `/me/contributions` | Client-only | A reader's suggestions and their status |
 | `/mod` | Client-only, role-gated | Review queue, direct corrections, Publish now |
+| `/mod/history` | Client-only, role-gated | Decided suggestions: proposed text, published text, who decided |
 | `/mod/roles` | Client-only, moderators | Appoint and remove reviewers |
 | `/api/mod/publish` | Server | Verifies the moderator session and dispatches the export workflow |
 
@@ -221,4 +227,8 @@ The context panel and bottom sheet gain **People** and **Dictionary** tabs besid
 
 1. Approve or reject Smith's and Aquifer after reading the sample articles (task 7.1).
 2. Produce Tamil drafts outside the repository in the §5 shape once the English articles are emitted (task 7.4).
-3. When the review flow starts (task 7.7): create the fine-grained GitHub token for Publish now and the Supabase service key secret for the export job. Both are entered by the owner, never handled in chat.
+3. Secrets, entered by the owner and never handled in chat:
+   - GitHub repository secret `SUPABASE_SERVICE_KEY` (the project's service-role key) for `export-overrides.yml`.
+   - Vercel environment variable `GITHUB_DISPATCH_TOKEN`: a fine-grained personal access token for this repository with **Contents: read** and **Actions: write** (repository_dispatch), used only by `/api/mod/publish`. Optional `GITHUB_REPO` if the repository moves.
+4. Appoint the first moderator in the database: `update public.profiles set role = 'moderator' where user_id = '<uuid>';` (moderators cannot create moderators).
+5. Optional: run the export workflow once by hand (Actions → Export accepted corrections → Run workflow) to confirm the secret works before reviewers start.

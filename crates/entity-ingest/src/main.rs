@@ -23,6 +23,7 @@
 
 mod articles;
 mod books;
+mod community;
 mod corpus;
 mod geo;
 mod journeys;
@@ -125,6 +126,9 @@ struct NameTaOut {
     confidence: f32,
     #[serde(skip_serializing_if = "std::ops::Not::not")]
     draft: bool,
+    /// "community" when an accepted correction replaced the draft
+    #[serde(skip_serializing_if = "Option::is_none")]
+    provenance: Option<&'static str>,
 }
 
 fn names_ta_out(names: &NamesTa, name_en: &str) -> BTreeMap<String, NameTaOut> {
@@ -140,6 +144,11 @@ fn names_ta_out(names: &NamesTa, name_en: &str) -> BTreeMap<String, NameTaOut> {
                             forms: f.forms.clone(),
                             confidence: f.confidence,
                             draft: f.review,
+                            provenance: if f.owner {
+                                Some("owner")
+                            } else {
+                                f.community.then_some("community")
+                            },
                         },
                     )
                 })
@@ -474,7 +483,7 @@ fn main() -> Result<()> {
     }
 
     // ---- build ----
-    let names = names::load(&names_path)?;
+    let mut names = names::load(&names_path)?;
     if names.is_empty() {
         eprintln!(
             "warning: {} missing or empty; maps carry English labels only",
@@ -502,6 +511,10 @@ fn main() -> Result<()> {
             bail!("{} name problems", problems.len());
         }
     }
+    // Accepted corrections (exported from the review queue) win over drafts.
+    // They are applied after the corpus check: reviewers verified them.
+    let overrides = community::load_overrides(&args.entities.join("overrides"))?;
+    let names_overridden = community::apply_names(&mut names, &overrides);
 
     let out = build_dir.join("entities");
     let base = svg::Base {
@@ -564,6 +577,26 @@ fn main() -> Result<()> {
                 articles_by_entity.entry(e.clone()).or_default().push(i);
             }
         }
+    }
+    // Tamil drafts from outside the repository, then accepted corrections.
+    let drafts = community::load_drafts(&args.entities.join("drafts/ta"))?;
+    let label_of = |title: &str| label_ta(&names, title, &tamil_versions);
+    let report = community::apply_articles(&mut all_articles, &drafts, &overrides, &label_of);
+    eprintln!(
+        "community: {} name corrections; {} drafts ({} stale) covering {} paragraphs; {} paragraph corrections",
+        names_overridden, report.drafts, report.stale_drafts, report.draft_paragraphs, report.overridden
+    );
+    for x in &report.invalid {
+        eprintln!("warning: draft rejected {x}");
+    }
+    for x in &report.unmatched {
+        eprintln!("warning: draft paragraph no longer in source: {x}");
+    }
+    for x in &report.orphans {
+        eprintln!("warning: orphaned correction (paragraph re-segmented): {x}");
+    }
+    for x in &report.glossary_misses {
+        eprintln!("warning: draft does not use the accepted name: {x}");
     }
     let article_refs = |key: &str| -> Vec<ArticleRef<'_>> {
         articles_by_entity

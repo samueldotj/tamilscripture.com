@@ -1,0 +1,65 @@
+name: Export accepted corrections
+
+# Publishing is export-only (feature_dictionary.md §6): accepted Tamil text is
+# written from Postgres into data/entities/overrides/ every 12 hours, on the
+# "Run workflow" button, or when a moderator presses "Publish now" on the site
+# (repository_dispatch from /api/mod/publish). A change is committed and the
+# normal deploy is started, so the site updates about ten minutes later.
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [export-overrides]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: export-overrides
+  cancel-in-progress: false
+
+jobs:
+  export:
+    name: Export and commit
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Export overrides
+        env:
+          SUPABASE_URL: https://zytgmnqmrvgspjdokajp.supabase.co
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node scripts/export-overrides.mjs data/entities/overrides
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name "tamilscripture-bot"
+          git config user.email "bot@tamilscripture.com"
+          git add -A data/entities/overrides
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "no new corrections"
+          else
+            git commit -m "Export accepted corrections ($(date -u +%Y-%m-%dT%H:%MZ))" \
+              -m "Triggered by ${{ github.event_name }}${{ github.event.client_payload.by && format(' for {0}', github.event.client_payload.by) || '' }}."
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A push made with GITHUB_TOKEN does not start other workflows, so the
+      # deploy is dispatched explicitly.
+      - name: Start deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

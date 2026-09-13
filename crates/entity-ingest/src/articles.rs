@@ -12,6 +12,12 @@ use std::path::Path;
 pub struct Paragraph {
     pub id: String,
     pub text: String,
+    /// Tamil text: an AI draft or an accepted correction (community.rs)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub ta: Option<String>,
+    /// "draft" | "community" | "owner"
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub ta_source: Option<&'static str>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -21,6 +27,8 @@ pub struct Article {
     pub id: String,
     pub slug: String,
     pub title: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub title_ta: Option<String>,
     pub lang: &'static str,
     pub licence: &'static str,
     pub attribution: &'static str,
@@ -206,6 +214,8 @@ pub fn load_eastons(dir: &Path) -> Result<Vec<Article>> {
                     Paragraph {
                         id: format!("{id}#p{n}-{}", fnv8(&p)),
                         text: p,
+                        ta: None,
+                        ta_source: None,
                     }
                 })
                 .collect();
@@ -220,6 +230,7 @@ pub fn load_eastons(dir: &Path) -> Result<Vec<Article>> {
                 id,
                 slug,
                 title,
+                title_ta: None,
                 lang: "en",
                 licence: "PD",
                 attribution:

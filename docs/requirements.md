@@ -453,3 +453,30 @@ Added 12 Sep 2026 for milestone M6 (design: [feature_maps.md](feature_maps.md)).
 | R-14.4 | Journeys are ordered stops with passage references and a route; version 1 draws straight legs between stops. `/atlas` lists journeys and the most-mentioned places; `/atlas/{journey}` shows the map, stops and passages. | Must |
 | R-14.5 | Historical regions carry period metadata; a period selector appears only once two or more periods exist. | Could |
 | R-14.6 | Every map carries its attribution (OpenBible.info CC BY 4.0, Natural Earth). | Must |
+
+## 18. Dictionary, people and community review
+
+Added 13 Sep 2026 for milestone M7 (design: [feature_dictionary.md](feature_dictionary.md)). Reformed reference content linked to the text, Tamil versions drafted outside the repository, and a review flow that lets readers correct Tamil names and paragraphs without any page reading from the database.
+
+| ID | Requirement | Priority |
+|---|---|---|
+| R-12.1 | Dictionary articles come only from sources the owner has approved for doctrinal fit; individual articles can be excluded by a blocklist with a reason, and the site never links to an excluded article. | Must |
+| R-12.2 | Each article has a stable id `{source}/{slug}` and a page at `/dictionary/{source}/{slug}` with title, paragraphs, attribution, licence and links to the places and people it describes; `/dictionary` lists every article with letter navigation. | Must |
+| R-12.3 | Every paragraph has an id `{source}/{slug}#p{n}-{hash8}` derived from the English text so a correction detaches when the English changes; the build reports orphaned corrections. | Must |
+| R-12.4 | Tamil paragraphs come from drafts produced outside the repository in the shape fixed in the design; the build validates ids, Tamil script and absence of markup and falls back to English per paragraph. | Must |
+| R-12.5 | Tamil text carries a provenance badge: AI draft, community-corrected or owner-authored. English text carries a language badge. | Must |
+| R-12.6 | A Dictionary tab in the reader's context panel and sheet shows the articles for the selected verse's names, or the chapter's names when nothing is selected, with the opening paragraph and "Read more". | Must |
+| R-12.7 | Articles are found by title in the search box, the search page and the reference box. | Must |
+| R-13.1 | Every person in TIPNR is an entity with a stable slug at `/person/{slug}`; same-named people are distinguished by their first reference ("Zechariah (1Ch 24:25)"). | Must |
+| R-13.2 | A person page shows the name in both scripts, gender or group, tribe, the STEP description, original-language forms with Strong's numbers, family relations as links, every verse that names them grouped by book, and linked dictionary articles. | Must |
+| R-13.3 | Tamil person names are aligned from the corpus by the same rule as places (R-11.3) and shown with the same draft badge until reviewed. | Must |
+| R-13.4 | A People tab in the context panel and sheet lists the people named in the chapter with their verses, emphasising the selected verse's people; a People chip opens it on phones. | Must |
+| R-13.5 | People are found by the search box, the search page and the reference box in either script. | Must |
+| R-13.6 | People and place descriptions carry the STEP Bible attribution (CC BY 4.0). | Must |
+| R-15.1 | A signed-in reader can suggest a correction to any Tamil name form and any article paragraph; the form shows the current text, requires Tamil script, and states that contributions are CC BY 4.0. Readers never see open suggestions. | Must |
+| R-15.2 | Roles are reader (default), reviewer and moderator, stored on the profile and unchangeable by the user; moderators appoint and remove reviewers; only the owner sets moderators. | Must |
+| R-15.3 | Reviewers see a queue of open suggestions grouped by entity with the text the reader saw, the English source and an editable field pre-filled with the suggestion; accepting publishes the edited text, rejecting takes a note, and reviewers can correct directly without a suggestion. | Must |
+| R-15.4 | Every accept, reject, direct correction, role change and publish is logged with actor and time; the reader keeps credit for an edited suggestion under `/me/contributions`. | Must |
+| R-15.5 | Every write goes through `security definer` functions; no table accepts direct inserts or updates from the API; a pgTAP suite in CI proves the rules for anon, reader, reviewer and moderator. | Must |
+| R-15.6 | Publishing is export-only: a workflow every 12 hours, or on a moderator's "Publish now", writes accepted text into `data/entities/overrides/` and starts the normal deploy; the site never reads entity text from Postgres. | Must |
+| R-15.7 | Limits: twenty open suggestions per user; suggestion text 1–4000 characters; reason 500 characters. | Should |

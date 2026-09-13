@@ -59,6 +59,22 @@ jobs:
         working-directory: apps/web
         run: pnpm exec size-limit && node scripts/size-check.mjs
 
+  rls:
+    name: Database policies (pgTAP)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Start local Postgres with migrations
+        run: pnpm exec supabase db start
+      - name: Run supabase/tests
+        run: pnpm exec supabase test db
+
   lighthouse:
     name: Lighthouse budgets
     runs-on: ubuntu-latest
