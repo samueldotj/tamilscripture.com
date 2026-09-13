@@ -34,7 +34,22 @@ jobs:
         with:
           node-version: 22
 
+      # Until the owner adds the service key the scheduled run is a no-op
+      # rather than a red run (docs/feature_dictionary.md §11).
+      - name: Check secret
+        id: secret
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          if [ -z "$SUPABASE_SERVICE_KEY" ]; then
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::SUPABASE_SERVICE_KEY is not set; nothing exported. Add the repository secret to enable the export."
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Export overrides
+        if: steps.secret.outputs.present == 'true'
         env:
           SUPABASE_URL: https://zytgmnqmrvgspjdokajp.supabase.co
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
@@ -42,6 +57,7 @@ jobs:
 
       - name: Commit if changed
         id: commit
+        if: steps.secret.outputs.present == 'true'
         run: |
           git config user.name "tamilscripture-bot"
           git config user.email "bot@tamilscripture.com"
