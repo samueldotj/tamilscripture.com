@@ -1,0 +1,779 @@
+{
+ "sites": [
+  {
+   "id": "nicaea",
+   "name_en": "Nicaea",
+   "lat": 40.429,
+   "lon": 29.7195,
+   "wikidata": "Q739037",
+   "wikipedia": "Nicaea",
+   "name_ta": "நைசியா",
+   "draft_ta": true
+  },
+  {
+   "id": "constantinople",
+   "name_en": "Constantinople",
+   "lat": 41.01224,
+   "lon": 28.97602,
+   "wikidata": "Q16869",
+   "wikipedia": "Constantinople",
+   "name_ta": "கான்ஸ்டண்டினோபில்",
+   "draft_ta": true
+  },
+  {
+   "id": "chalcedon",
+   "name_en": "Chalcedon",
+   "lat": 40.98333,
+   "lon": 29.03333,
+   "wikidata": "Q337381",
+   "wikipedia": "Chalcedon"
+  },
+  {
+   "id": "hippo-regius",
+   "name_en": "Hippo Regius",
+   "lat": 36.8825,
+   "lon": 7.75,
+   "wikidata": "Q858024",
+   "wikipedia": "Hippo Regius"
+  },
+  {
+   "id": "lugdunum",
+   "name_en": "Lugdunum",
+   "lat": 45.75972,
+   "lon": 4.81944,
+   "wikidata": "Q665",
+   "wikipedia": "Lugdunum",
+   "name_ta": "லக்டுனம்",
+   "draft_ta": true
+  },
+  {
+   "id": "mediolanum",
+   "name_en": "Mediolanum",
+   "lat": 45.46291,
+   "lon": 9.18532,
+   "wikidata": "Q729978",
+   "wikipedia": "Mediolanum"
+  },
+  {
+   "id": "edessa",
+   "name_en": "Edessa",
+   "lat": 37.15833,
+   "lon": 38.79167,
+   "wikidata": "Q133118",
+   "wikipedia": "Urfa",
+   "modern": "Şanlıurfa"
+  },
+  {
+   "id": "nisibis",
+   "name_en": "Nisibis",
+   "lat": 37.08333,
+   "lon": 41.21667,
+   "wikidata": "Q1553052",
+   "wikipedia": "Nusaybin",
+   "modern": "Nusaybin"
+  },
+  {
+   "id": "caesarea-mazaca",
+   "name_en": "Caesarea in Cappadocia",
+   "lat": 38.7225,
+   "lon": 35.4875,
+   "wikidata": "Q48338",
+   "wikipedia": "Kayseri",
+   "modern": "Kayseri"
+  },
+  {
+   "id": "nazianzus",
+   "name_en": "Nazianzus",
+   "lat": 38.39444,
+   "lon": 34.38139,
+   "wikidata": "Q1336978",
+   "wikipedia": "Nazianzus"
+  },
+  {
+   "id": "poitiers",
+   "name_en": "Poitiers",
+   "lat": 46.58111,
+   "lon": 0.33528,
+   "wikidata": "Q6616",
+   "wikipedia": "Poitiers",
+   "name_ta": "போயிட்டர்ஸ்",
+   "draft_ta": true
+  },
+  {
+   "id": "serdica",
+   "name_en": "Serdica",
+   "lat": 42.698,
+   "lon": 23.322,
+   "wikidata": "Q4067160",
+   "wikipedia": "Serdica"
+  },
+  {
+   "id": "arelate",
+   "name_en": "Arles",
+   "lat": 43.67694,
+   "lon": 4.62861,
+   "wikidata": "Q48292",
+   "wikipedia": "Arles"
+  },
+  {
+   "id": "nicomedia",
+   "name_en": "Nicomedia",
+   "lat": 40.77188,
+   "lon": 29.94978,
+   "wikidata": "Q129649",
+   "wikipedia": "İzmit",
+   "modern": "İzmit"
+  },
+  {
+   "id": "elvira",
+   "name_en": "Elvira",
+   "lat": 37.175,
+   "lon": -3.6,
+   "wikidata": "Q8810",
+   "wikipedia": "Granada",
+   "modern": "Granada"
+  }
+ ],
+ "fathers": [
+  {
+   "id": "clement-of-rome",
+   "name_en": "Clement",
+   "tradition": "apostolic",
+   "role": "bishop",
+   "place": "rome",
+   "anchor": null,
+   "born": null,
+   "died": 99,
+   "wikidata": "Q42887",
+   "wikipedia": "Clement of Rome",
+   "name_ta": "முதலாம் கிளமெண்ட்",
+   "draft_ta": true
+  },
+  {
+   "id": "ignatius-of-antioch",
+   "name_en": "Ignatius of Antioch",
+   "tradition": "apostolic",
+   "role": "bishop",
+   "place": "antioch-1",
+   "anchor": null,
+   "born": 35,
+   "died": 108,
+   "wikidata": "Q44170",
+   "wikipedia": "Ignatius of Antioch",
+   "name_ta": "அந்தியோக்கு இஞ்ஞாசியார்",
+   "draft_ta": true
+  },
+  {
+   "id": "polycarp",
+   "name_en": "Polycarp",
+   "tradition": "apostolic",
+   "role": "bishop",
+   "place": "smyrna",
+   "anchor": null,
+   "born": 69,
+   "died": 155,
+   "wikidata": "Q192371",
+   "wikipedia": "Polycarp",
+   "name_ta": "பொலிகார்ப்பு",
+   "draft_ta": true
+  },
+  {
+   "id": "papias",
+   "name_en": "Papias of Hierapolis",
+   "tradition": "apostolic",
+   "role": "bishop",
+   "place": "hierapolis",
+   "anchor": null,
+   "born": 70,
+   "died": 150,
+   "wikidata": "Q273053",
+   "wikipedia": "Papias of Hierapolis"
+  },
+  {
+   "id": "justin-martyr",
+   "name_en": "Justin Martyr",
+   "tradition": "apologist",
+   "role": "teacher",
+   "place": "rome",
+   "anchor": null,
+   "born": 100,
+   "died": 165,
+   "wikidata": "Q185117",
+   "wikipedia": "Justin Martyr"
+  },
+  {
+   "id": "irenaeus",
+   "name_en": "Irenaeus",
+   "tradition": "apologist",
+   "role": "bishop",
+   "place": "lugdunum",
+   "anchor": null,
+   "born": 130,
+   "died": 202,
+   "wikidata": "Q182123",
+   "wikipedia": "Irenaeus",
+   "name_ta": "இரனேயு",
+   "draft_ta": true
+  },
+  {
+   "id": "athenagoras",
+   "name_en": "Athenagoras of Athens",
+   "tradition": "apologist",
+   "role": "teacher",
+   "place": "athens",
+   "anchor": null,
+   "born": null,
+   "died": null,
+   "wikidata": "Q309772",
+   "wikipedia": "Athenagoras of Athens"
+  },
+  {
+   "id": "theophilus-of-antioch",
+   "name_en": "Theophilus of Antioch",
+   "tradition": "apologist",
+   "role": "bishop",
+   "place": "antioch-1",
+   "anchor": null,
+   "born": null,
+   "died": 183,
+   "wikidata": "Q220787",
+   "wikipedia": "Theophilus of Antioch"
+  },
+  {
+   "id": "melito-of-sardis",
+   "name_en": "Melito of Sardis",
+   "tradition": "apologist",
+   "role": "bishop",
+   "place": "sardis",
+   "anchor": null,
+   "born": 100,
+   "died": 180,
+   "wikidata": "Q359945",
+   "wikipedia": "Melito of Sardis"
+  },
+  {
+   "id": "clement-of-alexandria",
+   "name_en": "Clement of Alexandria",
+   "tradition": "greek",
+   "role": "teacher",
+   "place": "alexandria",
+   "anchor": null,
+   "born": 150,
+   "died": 215,
+   "wikidata": "Q188883",
+   "wikipedia": "Clement of Alexandria"
+  },
+  {
+   "id": "origen",
+   "name_en": "Origen",
+   "tradition": "greek",
+   "role": "teacher",
+   "place": "alexandria",
+   "anchor": null,
+   "born": 185,
+   "died": 254,
+   "wikidata": "Q170472",
+   "wikipedia": "Origen"
+  },
+  {
+   "id": "hippolytus",
+   "name_en": "Hippolytus",
+   "tradition": "greek",
+   "role": "presbyter",
+   "place": "rome",
+   "anchor": null,
+   "born": 150,
+   "died": 235,
+   "wikidata": "Q207113",
+   "wikipedia": "Hippolytus of Rome"
+  },
+  {
+   "id": "tertullian",
+   "name_en": "Tertullian",
+   "tradition": "latin",
+   "role": "teacher",
+   "place": "carthage",
+   "anchor": null,
+   "born": 150,
+   "died": 220,
+   "wikidata": "Q174929",
+   "wikipedia": "Tertullian"
+  },
+  {
+   "id": "cyprian",
+   "name_en": "Cyprian",
+   "tradition": "latin",
+   "role": "bishop",
+   "place": "carthage",
+   "anchor": null,
+   "born": 200,
+   "died": 258,
+   "wikidata": "Q190240",
+   "wikipedia": "Cyprian"
+  },
+  {
+   "id": "lactantius",
+   "name_en": "Lactantius",
+   "tradition": "latin",
+   "role": "teacher",
+   "place": "nicomedia",
+   "anchor": null,
+   "born": 240,
+   "died": 317,
+   "wikidata": "Q209102",
+   "wikipedia": "Lactantius"
+  },
+  {
+   "id": "eusebius",
+   "name_en": "Eusebius of Caesarea",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "caesarea",
+   "anchor": null,
+   "born": 265,
+   "died": 339,
+   "wikidata": "Q142999",
+   "wikipedia": "Eusebius"
+  },
+  {
+   "id": "athanasius",
+   "name_en": "Athanasius of Alexandria",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "alexandria",
+   "anchor": null,
+   "born": 296,
+   "died": 373,
+   "wikidata": "Q44024",
+   "wikipedia": "Athanasius of Alexandria",
+   "name_ta": "அலெக்சாந்திரியா நகர அத்தனாசியார்",
+   "draft_ta": true
+  },
+  {
+   "id": "ephrem",
+   "name_en": "Ephrem the Syrian",
+   "tradition": "syriac",
+   "role": "deacon",
+   "place": "edessa",
+   "anchor": null,
+   "born": 306,
+   "died": 373,
+   "wikidata": "Q200608",
+   "wikipedia": "Ephrem the Syrian",
+   "name_ta": "சிரியனான எபிரேம்",
+   "draft_ta": true
+  },
+  {
+   "id": "aphrahat",
+   "name_en": "Aphrahat",
+   "tradition": "syriac",
+   "role": "teacher",
+   "place": "nisibis",
+   "anchor": null,
+   "born": 270,
+   "died": 346,
+   "wikidata": "Q434222",
+   "wikipedia": "Aphrahat"
+  },
+  {
+   "id": "hilary-of-poitiers",
+   "name_en": "Hilary of Poitiers",
+   "tradition": "latin",
+   "role": "bishop",
+   "place": "poitiers",
+   "anchor": null,
+   "born": 315,
+   "died": 367,
+   "wikidata": "Q44344",
+   "wikipedia": "Hilary of Poitiers"
+  },
+  {
+   "id": "cyril-of-jerusalem",
+   "name_en": "Cyril of Jerusalem",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "jerusalem",
+   "anchor": null,
+   "born": 313,
+   "died": 386,
+   "wikidata": "Q298654",
+   "wikipedia": "Cyril of Jerusalem"
+  },
+  {
+   "id": "basil-the-great",
+   "name_en": "Basil of Caesarea",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "caesarea-mazaca",
+   "anchor": null,
+   "born": 329,
+   "died": 379,
+   "wikidata": "Q44258",
+   "wikipedia": "Basil of Caesarea",
+   "name_ta": "செசாரியா நகர பசீல்",
+   "draft_ta": true
+  },
+  {
+   "id": "gregory-of-nazianzus",
+   "name_en": "Gregory of Nazianzus",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "nazianzus",
+   "anchor": null,
+   "born": 329,
+   "died": 389,
+   "wikidata": "Q44011",
+   "wikipedia": "Gregory of Nazianzus",
+   "name_ta": "நசியான் கிரகோரி",
+   "draft_ta": true
+  },
+  {
+   "id": "gregory-of-nyssa",
+   "name_en": "Gregory of Nyssa",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": null,
+   "anchor": {
+    "name_en": "Nyssa",
+    "lat": 38.9543,
+    "lon": 33.95923,
+    "wikidata": "Q3563362"
+   },
+   "born": 335,
+   "died": 395,
+   "wikidata": "Q191734",
+   "wikipedia": "Gregory of Nyssa"
+  },
+  {
+   "id": "ambrose",
+   "name_en": "Ambrose",
+   "tradition": "latin",
+   "role": "bishop",
+   "place": "mediolanum",
+   "anchor": null,
+   "born": 339,
+   "died": 397,
+   "wikidata": "Q43689",
+   "wikipedia": "Ambrose",
+   "name_ta": "அம்புரோசு",
+   "draft_ta": true
+  },
+  {
+   "id": "john-chrysostom",
+   "name_en": "John Chrysostom",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "constantinople",
+   "anchor": null,
+   "born": 349,
+   "died": 407,
+   "wikidata": "Q43706",
+   "wikipedia": "John Chrysostom",
+   "name_ta": "யோவான் கிறிசோஸ்தோம்",
+   "draft_ta": true
+  },
+  {
+   "id": "jerome",
+   "name_en": "Jerome",
+   "tradition": "latin",
+   "role": "teacher",
+   "place": "bethlehem-1",
+   "anchor": null,
+   "born": 345,
+   "died": 420,
+   "wikidata": "Q44248",
+   "wikipedia": "Jerome",
+   "name_ta": "ஜெரோம்",
+   "draft_ta": true
+  },
+  {
+   "id": "augustine",
+   "name_en": "Augustine of Hippo",
+   "tradition": "latin",
+   "role": "bishop",
+   "place": "hippo-regius",
+   "anchor": null,
+   "born": 354,
+   "died": 430,
+   "wikidata": "Q8018",
+   "wikipedia": "Augustine of Hippo",
+   "name_ta": "ஹிப்போவின் அகஸ்டீன்",
+   "draft_ta": true
+  },
+  {
+   "id": "cyril-of-alexandria",
+   "name_en": "Cyril of Alexandria",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "alexandria",
+   "anchor": null,
+   "born": 376,
+   "died": 444,
+   "wikidata": "Q44079",
+   "wikipedia": "Cyril of Alexandria",
+   "name_ta": "அலெக்சாந்திரியா நகர சிரில்",
+   "draft_ta": true
+  },
+  {
+   "id": "epiphanius",
+   "name_en": "Epiphanius of Salamis",
+   "tradition": "greek",
+   "role": "bishop",
+   "place": "salamis",
+   "anchor": null,
+   "born": 315,
+   "died": 403,
+   "wikidata": "Q313922",
+   "wikipedia": "Epiphanius of Salamis"
+  },
+  {
+   "id": "leo-the-great",
+   "name_en": "Leo I",
+   "tradition": "latin",
+   "role": "bishop",
+   "place": "rome",
+   "anchor": null,
+   "born": 390,
+   "died": 461,
+   "wikidata": "Q43954",
+   "wikipedia": "Pope Leo I",
+   "name_ta": "முதலாம் லியோ",
+   "draft_ta": true
+  },
+  {
+   "id": "gregory-the-great",
+   "name_en": "Gregory I",
+   "tradition": "latin",
+   "role": "bishop",
+   "place": "rome",
+   "anchor": null,
+   "born": 540,
+   "died": 604,
+   "wikidata": "Q42827",
+   "wikipedia": "Pope Gregory I",
+   "name_ta": "முதலாம் கிரகோரி",
+   "draft_ta": true
+  },
+  {
+   "id": "john-of-damascus",
+   "name_en": "John of Damascus",
+   "tradition": "greek",
+   "role": "monk",
+   "place": "damascus",
+   "anchor": null,
+   "born": 675,
+   "died": 749,
+   "wikidata": "Q51884",
+   "wikipedia": "John of Damascus",
+   "name_ta": "தமாஸ்கஸ் நகர யோவான்",
+   "draft_ta": true
+  },
+  {
+   "id": "vincent-of-lerins",
+   "name_en": "Vincent of Lérins",
+   "tradition": "latin",
+   "role": "monk",
+   "place": null,
+   "anchor": {
+    "name_en": "Lérins Islands",
+    "lat": 43.5175,
+    "lon": 7.045,
+    "wikidata": "Q292642"
+   },
+   "born": null,
+   "died": 445,
+   "wikidata": "Q644057",
+   "wikipedia": "Vincent of Lérins"
+  }
+ ],
+ "councils": [
+  {
+   "id": "jerusalem-50",
+   "name_en": "Council of Jerusalem",
+   "year": 50,
+   "place": "jerusalem",
+   "kind": "apostolic",
+   "wikidata": "Q619950",
+   "wikipedia": "Council of Jerusalem"
+  },
+  {
+   "id": "elvira-305",
+   "name_en": "Synod of Elvira",
+   "year": 305,
+   "place": "elvira",
+   "kind": "council",
+   "wikidata": "Q1262455",
+   "wikipedia": "Synod of Elvira"
+  },
+  {
+   "id": "arles-314",
+   "name_en": "Council of Arles",
+   "year": 314,
+   "place": "arelate",
+   "kind": "council",
+   "wikidata": null,
+   "wikipedia": null
+  },
+  {
+   "id": "nicaea-325",
+   "name_en": "First Council of Nicaea",
+   "year": 325,
+   "place": "nicaea",
+   "kind": "ecumenical",
+   "wikidata": "Q133331",
+   "wikipedia": "First Council of Nicaea"
+  },
+  {
+   "id": "serdica-343",
+   "name_en": "Council of Sardica",
+   "year": 343,
+   "place": "serdica",
+   "kind": "council",
+   "wikidata": "Q1277136",
+   "wikipedia": "Council of Serdica"
+  },
+  {
+   "id": "laodicea-363",
+   "name_en": "Council of Laodicea",
+   "year": 363,
+   "place": "laodicea",
+   "kind": "council",
+   "wikidata": "Q1264941",
+   "wikipedia": "Council of Laodicea"
+  },
+  {
+   "id": "constantinople-381",
+   "name_en": "First Council of Constantinople",
+   "year": 381,
+   "place": "constantinople",
+   "kind": "ecumenical",
+   "wikidata": "Q179826",
+   "wikipedia": "First Council of Constantinople"
+  },
+  {
+   "id": "hippo-393",
+   "name_en": "Synod of Hippo",
+   "year": 393,
+   "place": "hippo-regius",
+   "kind": "council",
+   "wikidata": "Q2745306",
+   "wikipedia": "Synod of Hippo"
+  },
+  {
+   "id": "carthage-397",
+   "name_en": "Council of Carthage",
+   "year": 397,
+   "place": "carthage",
+   "kind": "council",
+   "wikidata": null,
+   "wikipedia": null
+  },
+  {
+   "id": "ephesus-431",
+   "name_en": "First Council of Ephesus",
+   "year": 431,
+   "place": "ephesus",
+   "kind": "ecumenical",
+   "wikidata": "Q184332",
+   "wikipedia": "Council of Ephesus"
+  },
+  {
+   "id": "chalcedon-451",
+   "name_en": "Council of Chalcedon",
+   "year": 451,
+   "place": "chalcedon",
+   "kind": "ecumenical",
+   "wikidata": "Q170531",
+   "wikipedia": "Council of Chalcedon"
+  },
+  {
+   "id": "constantinople-553",
+   "name_en": "Second Council of Constantinople",
+   "year": 553,
+   "place": "constantinople",
+   "kind": "ecumenical",
+   "wikidata": "Q205227",
+   "wikipedia": "Second Council of Constantinople"
+  },
+  {
+   "id": "constantinople-681",
+   "name_en": "Third Council of Constantinople",
+   "year": 681,
+   "place": "constantinople",
+   "kind": "ecumenical",
+   "wikidata": "Q208037",
+   "wikipedia": "Third Council of Constantinople"
+  },
+  {
+   "id": "nicaea-787",
+   "name_en": "Second Council of Nicaea",
+   "year": 787,
+   "place": "nicaea",
+   "kind": "ecumenical",
+   "wikidata": "Q187201",
+   "wikipedia": "Second Council of Nicaea"
+  }
+ ],
+ "sees": [
+  {
+   "id": "rome",
+   "place": "rome",
+   "rank": "patriarchate"
+  },
+  {
+   "id": "constantinople",
+   "place": "constantinople",
+   "rank": "patriarchate"
+  },
+  {
+   "id": "alexandria",
+   "place": "alexandria",
+   "rank": "patriarchate"
+  },
+  {
+   "id": "antioch",
+   "place": "antioch-1",
+   "rank": "patriarchate"
+  },
+  {
+   "id": "jerusalem",
+   "place": "jerusalem",
+   "rank": "patriarchate"
+  },
+  {
+   "id": "carthage",
+   "place": "carthage",
+   "rank": "metropolitan"
+  },
+  {
+   "id": "ephesus",
+   "place": "ephesus",
+   "rank": "metropolitan"
+  },
+  {
+   "id": "caesarea",
+   "place": "caesarea",
+   "rank": "metropolitan"
+  },
+  {
+   "id": "mediolanum",
+   "place": "mediolanum",
+   "rank": "metropolitan"
+  },
+  {
+   "id": "lugdunum",
+   "place": "lugdunum",
+   "rank": "metropolitan"
+  },
+  {
+   "id": "edessa",
+   "place": "edessa",
+   "rank": "metropolitan"
+  },
+  {
+   "id": "hippo-regius",
+   "place": "hippo-regius",
+   "rank": "see"
+  }
+ ]
+}

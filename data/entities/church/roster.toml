@@ -1,0 +1,468 @@
+# The early church on the atlas: the fathers, the councils that wrote the
+# creeds, and the sees. Curated here: who is on the list, the city each belongs
+# to, and how they are grouped. Everything datable — years, coordinates and
+# Tamil labels — is resolved from Wikidata (CC0) by `scripts/build-church.py`
+# into `church.json`, so no date in this repository is typed from memory.
+# `place` is an id in entities/places.json where scripture names the city, and
+# otherwise an id in [[site]] below.
+# Licence: CC BY 4.0 (tamilscripture.com contributors).
+
+# Cities the biblical gazetteer does not carry.
+[[site]]
+id = "nicaea"
+wikidata = "Q739037"
+
+[[site]]
+id = "constantinople"
+wikidata = "Q16869"
+
+[[site]]
+id = "chalcedon"
+wikidata = "Q337381"
+
+[[site]]
+id = "hippo-regius"
+wikidata = "Q858024"
+
+[[site]]
+id = "lugdunum"
+wikidata = "Q665"
+
+[[site]]
+id = "mediolanum"
+wikidata = "Q729978"
+
+[[site]]
+id = "edessa"
+name = "Edessa"
+wikidata = "Q133118"
+
+[[site]]
+id = "nisibis"
+name = "Nisibis"
+wikidata = "Q1553052"
+
+[[site]]
+id = "caesarea-mazaca"
+name = "Caesarea in Cappadocia"
+wikidata = "Q48338"
+
+[[site]]
+id = "nazianzus"
+wikidata = "Q1336978"
+
+[[site]]
+id = "poitiers"
+wikidata = "Q6616"
+
+[[site]]
+id = "serdica"
+wikidata = "Q4067160"
+
+[[site]]
+id = "arelate"
+wikidata = "Q48292"
+
+[[site]]
+id = "nicomedia"
+name = "Nicomedia"
+wikidata = "Q129649"  # modern İzmit
+
+[[site]]
+id = "elvira"
+name = "Elvira"
+wikidata = "Q8810"  # Illiberis; modern Granada stands on it
+
+[[father]]
+id = "clement-of-rome"
+wikidata = "Q42887"
+tradition = "apostolic"
+role = "bishop"
+place = "rome"
+
+[[father]]
+id = "ignatius-of-antioch"
+wikidata = "Q44170"
+tradition = "apostolic"
+role = "bishop"
+place = "antioch-1"
+
+[[father]]
+id = "polycarp"
+wikidata = "Q192371"
+tradition = "apostolic"
+role = "bishop"
+place = "smyrna"
+
+[[father]]
+id = "papias"
+wikidata = "Q273053"
+tradition = "apostolic"
+role = "bishop"
+place = "hierapolis"
+
+[[father]]
+id = "justin-martyr"
+wikidata = "Q185117"
+tradition = "apologist"
+role = "teacher"
+place = "rome"
+
+[[father]]
+id = "irenaeus"
+wikidata = "Q182123"
+tradition = "apologist"
+role = "bishop"
+place = "lugdunum"
+
+[[father]]
+id = "athenagoras"
+wikidata = "Q309772"
+tradition = "apologist"
+role = "teacher"
+place = "athens"
+
+[[father]]
+id = "theophilus-of-antioch"
+wikidata = "Q220787"
+tradition = "apologist"
+role = "bishop"
+place = "antioch-1"
+
+[[father]]
+id = "melito-of-sardis"
+wikidata = "Q359945"
+tradition = "apologist"
+role = "bishop"
+place = "sardis"
+
+[[father]]
+id = "clement-of-alexandria"
+wikidata = "Q188883"
+tradition = "greek"
+role = "teacher"
+place = "alexandria"
+
+[[father]]
+id = "origen"
+wikidata = "Q170472"
+tradition = "greek"
+role = "teacher"
+place = "alexandria"
+
+[[father]]
+id = "hippolytus"
+wikidata = "Q207113"
+tradition = "greek"
+role = "presbyter"
+place = "rome"
+
+[[father]]
+id = "tertullian"
+wikidata = "Q174929"
+tradition = "latin"
+role = "teacher"
+place = "carthage"
+
+[[father]]
+id = "cyprian"
+wikidata = "Q190240"
+tradition = "latin"
+role = "bishop"
+place = "carthage"
+
+[[father]]
+id = "lactantius"
+wikidata = "Q209102"
+tradition = "latin"
+role = "teacher"
+place = "nicomedia"
+
+[[father]]
+id = "eusebius"
+wikidata = "Q142999"
+tradition = "greek"
+role = "bishop"
+place = "caesarea"
+
+[[father]]
+id = "athanasius"
+wikidata = "Q44024"
+tradition = "greek"
+role = "bishop"
+place = "alexandria"
+
+[[father]]
+id = "ephrem"
+wikidata = "Q200608"
+tradition = "syriac"
+role = "deacon"
+place = "edessa"
+
+[[father]]
+id = "aphrahat"
+wikidata = "Q434222"
+tradition = "syriac"
+role = "teacher"
+place = "nisibis"
+
+[[father]]
+id = "hilary-of-poitiers"
+wikidata = "Q44344"
+tradition = "latin"
+role = "bishop"
+place = "poitiers"
+
+[[father]]
+id = "cyril-of-jerusalem"
+wikidata = "Q298654"
+tradition = "greek"
+role = "bishop"
+place = "jerusalem"
+
+[[father]]
+id = "basil-the-great"
+wikidata = "Q44258"
+tradition = "greek"
+role = "bishop"
+place = "caesarea-mazaca"
+
+[[father]]
+id = "gregory-of-nazianzus"
+wikidata = "Q44011"
+tradition = "greek"
+role = "bishop"
+place = "nazianzus"
+
+[[father]]
+id = "gregory-of-nyssa"
+wikidata = "Q191734"
+tradition = "greek"
+role = "bishop"
+
+[[father]]
+id = "ambrose"
+wikidata = "Q43689"
+tradition = "latin"
+role = "bishop"
+place = "mediolanum"
+
+[[father]]
+id = "john-chrysostom"
+wikidata = "Q43706"
+tradition = "greek"
+role = "bishop"
+place = "constantinople"
+
+[[father]]
+id = "jerome"
+wikidata = "Q44248"
+tradition = "latin"
+role = "teacher"
+place = "bethlehem-1"
+
+[[father]]
+id = "augustine"
+wikidata = "Q8018"
+tradition = "latin"
+role = "bishop"
+place = "hippo-regius"
+
+[[father]]
+id = "cyril-of-alexandria"
+wikidata = "Q44079"
+tradition = "greek"
+role = "bishop"
+place = "alexandria"
+
+[[father]]
+id = "epiphanius"
+wikidata = "Q313922"
+tradition = "greek"
+role = "bishop"
+place = "salamis"
+
+[[father]]
+id = "leo-the-great"
+wikidata = "Q43954"
+tradition = "latin"
+role = "bishop"
+place = "rome"
+
+[[father]]
+id = "gregory-the-great"
+wikidata = "Q42827"
+tradition = "latin"
+role = "bishop"
+place = "rome"
+
+[[father]]
+id = "john-of-damascus"
+wikidata = "Q51884"
+tradition = "greek"
+role = "monk"
+place = "damascus"
+
+[[father]]
+id = "vincent-of-lerins"
+wikidata = "Q644057"
+tradition = "latin"
+role = "monk"
+
+[[council]]
+id = "jerusalem-50"
+year = 50
+place = "jerusalem"
+kind = "apostolic"
+wikidata = "Q619950"
+
+[[council]]
+id = "elvira-305"
+year = 305
+place = "elvira"
+kind = "council"
+wikidata = "Q1262455"
+
+[[council]]
+id = "arles-314"
+name = "Council of Arles"
+year = 314
+place = "arelate"
+kind = "council"
+
+[[council]]
+id = "nicaea-325"
+year = 325
+place = "nicaea"
+kind = "ecumenical"
+wikidata = "Q133331"
+
+[[council]]
+id = "serdica-343"
+year = 343
+place = "serdica"
+kind = "council"
+wikidata = "Q1277136"
+
+[[council]]
+id = "laodicea-363"
+year = 363
+place = "laodicea"
+kind = "council"
+wikidata = "Q1264941"
+
+[[council]]
+id = "constantinople-381"
+year = 381
+place = "constantinople"
+kind = "ecumenical"
+wikidata = "Q179826"
+
+[[council]]
+id = "hippo-393"
+year = 393
+place = "hippo-regius"
+kind = "council"
+wikidata = "Q2745306"
+
+[[council]]
+id = "carthage-397"
+name = "Council of Carthage"
+year = 397
+place = "carthage"
+kind = "council"
+
+[[council]]
+id = "ephesus-431"
+year = 431
+place = "ephesus"
+kind = "ecumenical"
+wikidata = "Q184332"
+
+[[council]]
+id = "chalcedon-451"
+year = 451
+place = "chalcedon"
+kind = "ecumenical"
+wikidata = "Q170531"
+
+[[council]]
+id = "constantinople-553"
+year = 553
+place = "constantinople"
+kind = "ecumenical"
+wikidata = "Q205227"
+
+[[council]]
+id = "constantinople-681"
+year = 681
+place = "constantinople"
+kind = "ecumenical"
+wikidata = "Q208037"
+
+[[council]]
+id = "nicaea-787"
+year = 787
+place = "nicaea"
+kind = "ecumenical"
+wikidata = "Q187201"
+
+[[see]]
+id = "rome"
+place = "rome"
+rank = "patriarchate"
+
+[[see]]
+id = "constantinople"
+place = "constantinople"
+rank = "patriarchate"
+
+[[see]]
+id = "alexandria"
+place = "alexandria"
+rank = "patriarchate"
+
+[[see]]
+id = "antioch"
+place = "antioch-1"
+rank = "patriarchate"
+
+[[see]]
+id = "jerusalem"
+place = "jerusalem"
+rank = "patriarchate"
+
+[[see]]
+id = "carthage"
+place = "carthage"
+rank = "metropolitan"
+
+[[see]]
+id = "ephesus"
+place = "ephesus"
+rank = "metropolitan"
+
+[[see]]
+id = "caesarea"
+place = "caesarea"
+rank = "metropolitan"
+
+[[see]]
+id = "mediolanum"
+place = "mediolanum"
+rank = "metropolitan"
+
+[[see]]
+id = "lugdunum"
+place = "lugdunum"
+rank = "metropolitan"
+
+[[see]]
+id = "edessa"
+place = "edessa"
+rank = "metropolitan"
+
+[[see]]
+id = "hippo-regius"
+place = "hippo-regius"
+rank = "see"

@@ -28,6 +28,7 @@ Every source lives under `data/entities/<source>/` with `LICENSE`, `SOURCE.md` (
 | TIPNR (STEP Bible) | Place identity cross-check, original-language names, verse links; the same file supplies people for M7 | Open, attribution terms to check per file | `data/entities/tipnr/` |
 | Natural Earth | Coastline, ocean, lakes, rivers for the tile archive and the static maps | Public domain | Downloaded in CI, not committed |
 | UBS Bible Routes (Project MARBLE, Leen Ritmeyer) | 179 GeoJSON route files for Bible stories, drawn instead of straight legs on journey maps; added 13 Sep 2026 | CC BY-SA 4.0 (verified); ShareAlike kept in its own directory, journey maps that include the lines are CC BY-SA | `data/entities/geo/ubs-routes-sa/` |
+| Wikidata | Years, coordinates and Tamil labels for the early-church roster (fathers, councils, sees and the cities scripture does not name); added 14 Sep 2026 | CC0 | resolved into `data/entities/church/church.json` |
 | Cliopatria (Seshat Global History Databank) | Polity borders with the years they apply to; the atlas timeline, 3400 BCE onward. 1,148 rows and 174 polities inside Europe, the Middle East, Egypt and India; added 14 Sep 2026 | CC BY 4.0 (verified) | `data/entities/geo/polities/` |
 | Journeys and regions GeoJSON | Routes and historical borders from open sources or hand-authored | Per file; our own work is CC BY | `data/entities/geo/` |
 
@@ -143,6 +144,14 @@ Tamil names for the polities live in `data/entities/geo/polities-ta.toml`, seede
 
 These polygons sit on a present-day coastline, like everything else here: the Nile delta, the head of the Persian Gulf and the Dead Sea were all a different shape in 2000 BCE.
 
+### The early church
+
+`data/entities/church/roster.toml` is the editorial part: who is on the list of fathers, which councils are shown, which sees, and the city each belongs to. Everything datable is resolved from Wikidata by `scripts/build-church.py` — the years a father lived, the year of a council, the coordinates of a city — so no date is typed from memory; where a father's city is left open, his Wikidata work location supplies it. The result is `church.json`, committed, and `entity-ingest` joins it to the gazetteer: an entry names a place in `places.json` when scripture names the city, and otherwise one of the fifteen sites the church data carries of its own (Nicaea, Chalcedon, Hippo Regius, Lugdunum and so on). Anything that cannot be located is reported and dropped rather than drawn at (0, 0).
+
+Several of those sites only have coordinates through the item for the modern city, so the roster gives the ancient name and the build keeps the modern one to show beside it: Edessa (today Şanlıurfa), Nisibis (Nusaybin), Caesarea in Cappadocia (Kayseri), Nicomedia (İzmit), Elvira (Granada).
+
+On the map, the early church is one pin per city — Rome holds four fathers and a see — with a creed mark where a council met, and a popup listing what the city holds with its dates and Wikipedia links. The sidebar lists the councils by year and the fathers by tradition. Tamil names come from `church-ta.toml`, seeded from Wikidata and drafts until confirmed, the same arrangement as the polities.
+
 ## 5. URLs
 
 | Route | Rendering | Content |
@@ -150,7 +159,7 @@ These polygons sit on a present-day coastline, like everything else here: the Ni
 | `/place/{slug}` | ISR | Names in both scripts, static map, verses that mention it grouped by book, related people and journeys, articles |
 | `/atlas` | Prerender | Map index: journeys and regions, entry to the interactive map |
 | `/atlas/{journey}` | ISR | Journey page: static map, ordered stops, passages |
-| `/atlas/explore` | Client-only | Interactive MapLibre map: journey checkboxes, the places toggle, the Kingdoms timeline, and an optional `?journey=`, `?place=` or `?chapter=` |
+| `/atlas/explore` | Client-only | Interactive MapLibre map: journey checkboxes, the places toggle, the Kingdoms timeline, the early church, and an optional `?journey=`, `?place=` or `?chapter=` |
 | `/api/entities/search` | Server | Entity search for the search box and reference box |
 
 Place pages are ISR, not prerendered, for the same reason chapters are (design ADR-1, the Vercel route cap). Tamil paths such as `/இடம்/தமஸ்கு` redirect to the English slug (ADR-7).

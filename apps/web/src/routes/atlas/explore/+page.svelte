@@ -10,6 +10,8 @@
 	import { contentUrl } from '$lib/content/manifest';
 	import { DASHES, HUES, byPeriod, journeyStyle, sortJourneys } from '$lib/entities/journeys';
 	import { loadGlossary, loadJourneys, loadMentions, loadPlaceIndex, placeName } from '$lib/entities/load';
+	import { COUNCIL_KINDS, RANKS, ROLES, TRADITIONS, churchName, lifeLabel, loadChurch, wikipediaUrl } from '$lib/entities/church';
+	import type { ChurchData, ChurchEntry } from '$lib/entities/church';
 	import { FIRST_YEAR, at, loadTimeline, polityHue, polityName, yearLabel } from '$lib/entities/polities';
 	import type { Polity, Timeline } from '$lib/entities/polities';
 	import type { Glossary, Journey, PlaceIndexEntry } from '$lib/entities/types';
@@ -42,6 +44,12 @@
 	let step = $state(0);
 	let hoveredPolity = $state<string | null>(null);
 	let polityMarkers: import('maplibre-gl').Marker[] = [];
+	/** The early church: fathers, councils and sees, off until asked for. */
+	let church = $state<ChurchData | null>(null);
+	let churchOn = $state(false);
+	let churchState = $state<'off' | 'loading' | 'on' | 'error'>('off');
+	let hoveredChurch = $state<string | null>(null);
+	let churchMarkers: import('maplibre-gl').Marker[] = [];
 	let map: import('maplibre-gl').Map | null = null;
 	let maplibre: typeof import('maplibre-gl') | null = null;
 	let popup: import('maplibre-gl').Popup | null = null;
@@ -64,6 +72,25 @@
 	const emphasised = $derived(
 		new Set([...focused, ...(journeys.find((j) => j.id === hovered)?.stops.map((s) => s.place) ?? [])])
 	);
+
+	/** Church entries gathered by city: Rome holds four fathers and a see. */
+	const churchPlaces = $derived.by(() => {
+		const out = new Map<string, { place: string; name_en: string; name_ta?: string; lat: number; lon: number; entries: ChurchEntry[] }>();
+		for (const e of church?.entries ?? []) {
+			const key = `${e.lat},${e.lon}`;
+			const at = out.get(key) ?? { place: e.place, name_en: e.place_name_en, name_ta: e.place_name_ta, lat: e.lat, lon: e.lon, entries: [] };
+			at.entries.push(e);
+			out.set(key, at);
+		}
+		// Councils first inside a city, then sees, then the fathers by date.
+		const rank = { council: 0, see: 1, father: 2 };
+		for (const c of out.values()) {
+			c.entries.sort((a, b) => rank[a.type] - rank[b.type] || (a.year ?? a.born ?? 0) - (b.year ?? b.born ?? 0));
+		}
+		return [...out.values()];
+	});
+	const councils = $derived((church?.entries ?? []).filter((e) => e.type === 'council').sort((a, b) => (a.year ?? 0) - (b.year ?? 0)));
+	const fathers = $derived((church?.entries ?? []).filter((e) => e.type === 'father').sort((a, b) => (a.born ?? a.died ?? 0) - (b.born ?? b.died ?? 0)));
 
 	const year = $derived(timeline?.years[Math.min(step, timeline.years.length - 1)] ?? FIRST_YEAR);
 	/** The polities on the map in the chosen year, largest first: the legend. */
@@ -194,6 +221,84 @@
 		}
 	}
 
+	async function addChurch() {
+		if (church) return;
+		churchState = 'loading';
+		try {
+			church = await loadChurch(fetch);
+			churchState = 'on';
+			paint();
+		} catch (e) {
+			console.error(e);
+			churchState = 'error';
+		}
+	}
+
+	/** One marker per city, because Rome holds four fathers, a see and a creed. */
+	function churchMarkersDraw() {
+		if (!map || !maplibre) return;
+		for (const m of churchMarkers) m.remove();
+		churchMarkers = [];
+		if (!churchOn) return;
+		const bounds = map.getBounds();
+		// Constantinople, Chalcedon, Nicaea and Nicomedia sit within a few pixels
+		// of each other: a city whose name would land on one already placed keeps
+		// its pin and loses its label.
+		const taken: { x: number; y: number; w: number; h: number }[] = [];
+		const order = [...churchPlaces].sort(
+			(a, b) => Number(b.entries.some((e) => e.type === 'council')) - Number(a.entries.some((e) => e.type === 'council')) || b.entries.length - a.entries.length
+		);
+		for (const c of order) {
+			if (!bounds.contains([c.lon, c.lat])) continue;
+			const el = document.createElement('button');
+			const hasCouncil = c.entries.some((e) => e.type === 'council');
+			const pt = map.project([c.lon, c.lat]);
+			const nm = ta && c.name_ta ? c.name_ta : c.name_en;
+			const w = [...nm].reduce((acc, ch) => acc + (/[஀-௿]/.test(ch) ? (/[ா-்]/.test(ch) ? 3 : 9) : 6.5), 0) + 26;
+			const box = { x: pt.x + 8, y: pt.y - 9, w, h: 19 };
+			const clash = taken.some((t) => box.x < t.x + t.w && t.x < box.x + box.w && box.y < t.y + t.h && t.y < box.y + box.h);
+			if (!clash) taken.push(box);
+			el.className = 'church' + (hasCouncil ? ' creed' : '') + (clash ? ' nolabel' : '') + (c.place === hoveredChurch ? ' em' : '');
+			el.type = 'button';
+			const name = ta && c.name_ta ? c.name_ta : c.name_en;
+			el.lang = ta && c.name_ta ? 'ta' : 'en';
+			el.innerHTML = `<span class="pin" aria-hidden="true">${hasCouncil ? '✡' : '†'}</span><span class="nm">${name}</span>`;
+			el.title = c.entries.map((e) => churchName(e, lang)).join(' · ');
+			// Without this the click bubbles to the map, whose own handler closes
+			// the popup the moment this one opens it.
+			el.onclick = (ev) => {
+				ev.stopPropagation();
+				showChurch(c);
+			};
+			churchMarkers.push(new maplibre.Marker({ element: el, anchor: 'left', offset: [8, 0] }).setLngLat([c.lon, c.lat]).addTo(map));
+		}
+	}
+
+	/** What the early church left in one city, as a popup. */
+	function showChurch(c: { place: string; name_en: string; name_ta?: string; lat: number; lon: number; entries: ChurchEntry[] }) {
+		if (!map || !maplibre) return;
+		popup?.remove();
+		const rows = c.entries
+			.map((e) => {
+				const href = wikipediaUrl(e.wikipedia);
+				const name = churchName(e, lang);
+				const label = href ? `<a href="${href}" target="_blank" rel="noreferrer">${name}</a>` : name;
+				const what =
+					e.type === 'council'
+						? (COUNCIL_KINDS[e.kind ?? 'council'] ?? COUNCIL_KINDS.council)[lang]
+						: e.type === 'see'
+							? (RANKS[e.rank ?? 'see'] ?? RANKS.see)[lang]
+							: (ROLES[e.role ?? 'teacher'] ?? ROLES.teacher)[lang];
+				return `<li class="crow"><span class="cwhat">${what}</span>${label}<span class="cyr">${lifeLabel(e, ta)}</span></li>`;
+			})
+			.join('');
+		const title = ta && c.name_ta ? c.name_ta : c.name_en;
+		popup = new maplibre.Popup({ closeButton: true, offset: 14, maxWidth: '22rem' })
+			.setLngLat([c.lon, c.lat])
+			.setHTML(`<strong class="pop" lang="${ta && c.name_ta ? 'ta' : 'en'}">${title}</strong><ul class="clist">${rows}</ul>`)
+			.addTo(map);
+	}
+
 	/** Push the current selection, place filter and hover into the map's layers. */
 	function paint() {
 		if (!map?.getLayer('places')) return;
@@ -219,6 +324,7 @@
 		}
 		labelMarkers();
 		polityLabels();
+		churchMarkersDraw();
 	}
 
 	/** Colours come from CSS custom properties, so they follow the theme. */
@@ -378,6 +484,7 @@
 			map.on('moveend', () => {
 				labelMarkers();
 				polityLabels();
+				churchMarkersDraw();
 			});
 			map.on('click', onMapClick);
 			map.on('mousemove', (e) => {
@@ -483,9 +590,23 @@
 		hovered = id;
 		paint();
 	}
+	async function toggleChurch() {
+		churchOn = !churchOn;
+		if (churchOn && !church) await addChurch();
+		else paint();
+	}
+	function flyToEntry(e: ChurchEntry) {
+		hoveredChurch = e.place;
+		map?.flyTo({ center: [e.lon, e.lat], zoom: Math.max(map.getZoom(), 6.5), duration: 600 });
+		paint();
+	}
 	function hoverPolity(id: string | null) {
 		hoveredPolity = id;
 		paint();
+	}
+	function hoverChurch(place: string | null) {
+		hoveredChurch = place;
+		churchMarkersDraw();
 	}
 	async function toggleTimeline() {
 		timelineOn = !timelineOn;
@@ -523,6 +644,9 @@
 		</div>
 		<button class="chip" class:on={timelineOn} aria-pressed={timelineOn} disabled={status !== 'ready'} onclick={toggleTimeline} lang={ta ? 'ta' : 'en'}>
 			{ta ? 'இராச்சியங்கள்' : 'Kingdoms'}{timelineState === 'loading' ? '…' : ''}
+		</button>
+		<button class="chip" class:on={churchOn} aria-pressed={churchOn} disabled={status !== 'ready'} onclick={toggleChurch} lang={ta ? 'ta' : 'en'}>
+			{ta ? 'ஆதித் திருச்சபை' : 'Early church'}{churchState === 'loading' ? '…' : ''}
 		</button>
 		{#if focusLabel}<span class="focus" lang={ta ? 'ta' : 'en'}>{focusLabel}</span>{/if}
 	</div>
@@ -564,6 +688,39 @@
 			</div>
 		</div>
 		<div class="scroll">
+			{#if churchOn && church}
+				<h3 class="per" lang={ta ? 'ta' : 'en'}>{ta ? 'சங்கங்களும் விசுவாசப் பிரமாணங்களும்' : 'Councils and creeds'}</h3>
+				<ul>
+					{#each councils as c (c.id)}
+						<li class="row pol" onmouseenter={() => hoverChurch(c.place)} onmouseleave={() => hoverChurch(null)}>
+							<button class="polbtn" onclick={() => flyToEntry(c)}>
+								<span class="glyph" class:ecum={c.kind === 'ecumenical'} aria-hidden="true">{c.kind === 'ecumenical' ? '✡' : '†'}</span>
+								<span class="nm" lang={ta && c.name_ta ? 'ta' : 'en'}>{churchName(c, lang)}</span>
+								{#if c.draft_ta && ta && c.name_ta}<span class="draft" title="வரைவுப் பெயர்">*</span>{/if}
+								<span class="n">{c.year}</span>
+							</button>
+						</li>
+					{/each}
+				</ul>
+				{#each TRADITIONS as t (t.id)}
+					{@const list = fathers.filter((f) => f.tradition === t.id)}
+					{#if list.length}
+						<h3 class="per" lang={ta ? 'ta' : 'en'}>{ta ? t.ta : t.en}</h3>
+						<ul>
+							{#each list as f (f.id)}
+								<li class="row pol" onmouseenter={() => hoverChurch(f.place)} onmouseleave={() => hoverChurch(null)}>
+									<button class="polbtn" onclick={() => flyToEntry(f)}>
+										<span class="glyph" aria-hidden="true">†</span>
+										<span class="nm" lang={ta && f.name_ta ? 'ta' : 'en'}>{churchName(f, lang)}</span>
+										{#if f.draft_ta && ta && f.name_ta}<span class="draft" title="வரைவுப் பெயர்">*</span>{/if}
+										<span class="n">{lifeLabel(f, ta)}</span>
+									</button>
+								</li>
+							{/each}
+						</ul>
+					{/if}
+				{/each}
+			{/if}
 			{#if timelineOn && onNow.length}
 				<h3 class="per" lang={ta ? 'ta' : 'en'}>{yearLabel(year, ta)}</h3>
 				<ul>
@@ -640,6 +797,21 @@
 	.canvas :global(.plbl) { font: 600 11px var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; white-space: nowrap; text-shadow: 0 0 4px var(--map-land), 0 0 4px var(--map-land), 0 0 4px var(--map-land); pointer-events: auto; opacity: 0.9; }
 	.canvas :global(.plbl[lang='ta']) { font-family: var(--tamil); font-size: 12px; text-transform: none; letter-spacing: 0.04em; }
 	.canvas :global(.plbl.em) { color: var(--ink); opacity: 1; }
+	/* Early-church pins: a cross for a father or a see, a creed mark where a
+	   council met. The label rides beside the pin, like the place labels. */
+	.canvas :global(.church) { display: inline-flex; align-items: center; gap: 0.25rem; background: none; border: 0; padding: 0; cursor: pointer; font: 600 11.5px var(--sans); color: var(--ink-2); white-space: nowrap; pointer-events: auto; }
+	.canvas :global(.church[lang='ta']) { font-family: var(--tamil); font-size: 12px; }
+	.canvas :global(.church .pin) { display: inline-grid; place-content: center; width: 15px; height: 15px; border-radius: 999px; background: var(--surface); border: 1.5px solid var(--accent); color: var(--accent); font-size: 9px; line-height: 1; }
+	.canvas :global(.church.creed .pin) { border-color: var(--amber); color: var(--amber); font-size: 10px; }
+	.canvas :global(.church.nolabel .nm) { display: none; }
+	.canvas :global(.church .nm) { text-shadow: 0 0 3px var(--map-land), 0 0 3px var(--map-land), 0 0 3px var(--map-land); }
+	.canvas :global(.church:hover .nm), .canvas :global(.church.em .nm) { color: var(--accent); }
+	.canvas :global(.church.em .pin) { box-shadow: 0 0 0 3px var(--accent-soft); }
+	.canvas :global(.clist) { list-style: none; margin: 0.35rem 0 0; padding: 0; display: grid; gap: 0.28rem; }
+	.canvas :global(.crow) { display: grid; grid-template-columns: auto 1fr auto; gap: 0.4rem; align-items: baseline; font-size: 0.85rem; }
+	.canvas :global(.cwhat) { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+	.canvas :global(.crow a) { text-decoration: none; font-weight: 600; }
+	.canvas :global(.cyr) { font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 	.canvas :global(.maplibregl-popup-content) { background: var(--surface); color: var(--ink); border-radius: var(--r); padding: 0.55rem 0.8rem; box-shadow: var(--shadow); display: grid; gap: 0.1rem; font-family: var(--sans); }
 	.canvas :global(.maplibregl-popup-tip) { border-top-color: var(--surface); border-bottom-color: var(--surface); }
 	.canvas :global(.pop) { font-weight: 700; text-decoration: none; }
@@ -680,6 +852,8 @@
 	.dot { width: 11px; height: 11px; border-radius: 3px; flex: none; opacity: 0.85; }
 	/* An unreviewed Tamil name is marked, quietly. */
 	.draft { flex: none; color: var(--muted); font-size: 0.85rem; line-height: 1; cursor: help; }
+	.glyph { flex: none; width: 12px; text-align: center; color: var(--accent); font-size: 0.8rem; }
+	.glyph.ecum { color: var(--amber); }
 
 	@media (max-width: 60rem) {
 		.explore { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(18rem, 60vh) auto; height: auto; }

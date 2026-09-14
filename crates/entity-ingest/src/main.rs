@@ -24,6 +24,7 @@
 mod aquifer;
 mod articles;
 mod books;
+mod church;
 mod community;
 mod corpus;
 mod geo;
@@ -1106,6 +1107,73 @@ fn main() -> Result<()> {
         &out.join("geo/journeys.geojson"),
         &serde_json::json!({ "type": "FeatureCollection", "features": jfeats }),
     )?;
+
+    // ---- the early church: fathers, councils and sees ----
+    if let Some(ch) = church::load(&args.entities.join("church/church.json"))? {
+        // Tamil for a city the gazetteer knows comes from the aligned names, the
+        // same as everywhere else; the church data only names its own sites.
+        let place_ta: BTreeMap<&str, String> = places
+            .iter()
+            .filter(|p| p.lat.is_some())
+            .filter_map(|p| {
+                label_ta(&names, &p.name_en, &tamil_versions).map(|t| (p.id.as_str(), t))
+            })
+            .collect();
+        let gaz = church::Gazetteer {
+            places: places
+                .iter()
+                .filter(|p| p.lat.is_some())
+                .map(|p| {
+                    (
+                        p.id.as_str(),
+                        (
+                            p.name_en.as_str(),
+                            place_ta.get(p.id.as_str()).map(String::as_str),
+                            p.lat.unwrap(),
+                            p.lon.unwrap(),
+                        ),
+                    )
+                })
+                .collect(),
+        };
+        let mut church_problems: Vec<String> = Vec::new();
+        let resolved = ch.resolve(&gaz, &mut church_problems);
+        for p in &church_problems {
+            eprintln!("{p}");
+        }
+        let cfeats: Vec<Value> = resolved
+            .entries
+            .iter()
+            .map(|e| {
+                serde_json::json!({
+                    "type": "Feature",
+                    "properties": {
+                        "id": e.id, "type": e.kind, "name_en": e.name_en, "name_ta": e.name_ta,
+                        "place": e.place, "year": e.year, "born": e.born, "died": e.died,
+                        "tradition": e.tradition, "rank": e.rank, "kind": e.kind_of_council
+                    },
+                    "geometry": { "type": "Point", "coordinates": [round5(e.lon), round5(e.lat)] }
+                })
+            })
+            .collect();
+        write_json(
+            &out.join("geo/church.geojson"),
+            &serde_json::json!({ "type": "FeatureCollection", "features": cfeats }),
+        )?;
+        write_json(&out.join("church.json"), &resolved)?;
+        let n_f = resolved
+            .entries
+            .iter()
+            .filter(|e| e.kind == "father")
+            .count();
+        let n_c = resolved
+            .entries
+            .iter()
+            .filter(|e| e.kind == "council")
+            .count();
+        let n_s = resolved.entries.iter().filter(|e| e.kind == "see").count();
+        println!("church: {n_f} fathers, {n_c} councils, {n_s} sees");
+    }
 
     // ---- static maps ----
     let point_of = |p: &Place, emphasis: bool, number: Option<u32>| svg::MapPoint {

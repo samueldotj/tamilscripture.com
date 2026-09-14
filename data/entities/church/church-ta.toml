@@ -1,0 +1,31 @@
+# Tamil names for the early church: the fathers, the councils and the
+# cities this dataset adds. Seeded from Wikidata labels by
+# `python scripts/build-church.py`; `draft = true` means no one has checked
+# it yet. Clear `draft` once a maintainer confirms it, and edit `ta` freely —
+# the build takes this file as the authority.
+# Licence: CC BY 4.0 (tamilscripture.com contributors); Wikidata labels are CC0.
+
+[name.father]
+ambrose = { ta = "அம்புரோசு", draft = true }  # Ambrose
+athanasius = { ta = "அலெக்சாந்திரியா நகர அத்தனாசியார்", draft = true }  # Athanasius of Alexandria
+augustine = { ta = "ஹிப்போவின் அகஸ்டீன்", draft = true }  # Augustine of Hippo
+basil-the-great = { ta = "செசாரியா நகர பசீல்", draft = true }  # Basil of Caesarea
+clement-of-rome = { ta = "முதலாம் கிளமெண்ட்", draft = true }  # Clement
+cyril-of-alexandria = { ta = "அலெக்சாந்திரியா நகர சிரில்", draft = true }  # Cyril of Alexandria
+ephrem = { ta = "சிரியனான எபிரேம்", draft = true }  # Ephrem the Syrian
+gregory-of-nazianzus = { ta = "நசியான் கிரகோரி", draft = true }  # Gregory of Nazianzus
+gregory-the-great = { ta = "முதலாம் கிரகோரி", draft = true }  # Gregory I
+ignatius-of-antioch = { ta = "அந்தியோக்கு இஞ்ஞாசியார்", draft = true }  # Ignatius of Antioch
+irenaeus = { ta = "இரனேயு", draft = true }  # Irenaeus
+jerome = { ta = "ஜெரோம்", draft = true }  # Jerome
+john-chrysostom = { ta = "யோவான் கிறிசோஸ்தோம்", draft = true }  # John Chrysostom
+john-of-damascus = { ta = "தமாஸ்கஸ் நகர யோவான்", draft = true }  # John of Damascus
+leo-the-great = { ta = "முதலாம் லியோ", draft = true }  # Leo I
+polycarp = { ta = "பொலிகார்ப்பு", draft = true }  # Polycarp
+
+[name.site]
+constantinople = { ta = "கான்ஸ்டண்டினோபில்", draft = true }  # Constantinople
+lugdunum = { ta = "லக்டுனம்", draft = true }  # Lugdunum
+nicaea = { ta = "நைசியா", draft = true }  # Nicaea
+poitiers = { ta = "போயிட்டர்ஸ்", draft = true }  # Poitiers
+

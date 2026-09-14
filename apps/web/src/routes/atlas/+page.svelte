@@ -25,6 +25,11 @@
 		<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>
 		<span lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடத்தை ஆராய்' : 'Explore the map'}</span>
 	</a>
+	<p class="layers" lang={ta ? 'ta' : 'en'}>
+		{ta
+			? 'வரைபடத்தில் ஆதித் திருச்சபையின் பிதாக்கள், சங்கங்கள், மறைமாவட்டங்கள், மற்றும் கி.மு. 3400 முதல் கி.பி. 350 வரையிலான இராச்சியங்களையும் காணலாம்.'
+			: 'The map also carries the early church — its fathers, councils and sees — and the kingdoms of the world from 3400 BC to AD 350.'}
+	</p>
 </section>
 
 <section>
@@ -61,6 +66,8 @@
 	h1[lang='ta'] { font-family: var(--tamil); }
 	.lede { color: var(--ink-2); max-width: 40rem; margin: 0 0 0.4rem; font-size: 1.02rem; line-height: 1.65; }
 	.lede[lang='ta'] { font-family: var(--tamil); }
+	.layers { color: var(--muted); font-size: 0.88rem; max-width: 36rem; margin: 0.2rem 0 0; line-height: 1.6; }
+	.layers[lang='ta'] { font-family: var(--tamil); }
 	.hero .chip { min-height: 48px; border-radius: var(--r-l); padding: 0 1.2rem; font-size: 1rem; }
 	section { margin-bottom: 2rem; }
 	h2.kicker { margin: 0 0 0.8rem; }
