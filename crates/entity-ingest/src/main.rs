@@ -552,6 +552,15 @@ fn main() -> Result<()> {
             fs::copy(&src, out.join("geo/base").join(&name))?;
         }
     }
+    // Polity borders for the atlas timeline, built by scripts/build-polities.py
+    // and passed through as they are.
+    for f in ["polities.geojson", "SOURCE.md"] {
+        let src = args.entities.join("geo/polities").join(f);
+        if src.exists() {
+            fs::create_dir_all(out.join("geo/polities"))?;
+            fs::copy(&src, out.join("geo/polities").join(f))?;
+        }
+    }
 
     let by_id: BTreeMap<&str, &Place> = places.iter().map(|p| (p.id.as_str(), p)).collect();
 

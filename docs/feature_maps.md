@@ -28,6 +28,7 @@ Every source lives under `data/entities/<source>/` with `LICENSE`, `SOURCE.md` (
 | TIPNR (STEP Bible) | Place identity cross-check, original-language names, verse links; the same file supplies people for M7 | Open, attribution terms to check per file | `data/entities/tipnr/` |
 | Natural Earth | Coastline, ocean, lakes, rivers for the tile archive and the static maps | Public domain | Downloaded in CI, not committed |
 | UBS Bible Routes (Project MARBLE, Leen Ritmeyer) | 179 GeoJSON route files for Bible stories, drawn instead of straight legs on journey maps; added 13 Sep 2026 | CC BY-SA 4.0 (verified); ShareAlike kept in its own directory, journey maps that include the lines are CC BY-SA | `data/entities/geo/ubs-routes-sa/` |
+| Cliopatria (Seshat Global History Databank) | Polity borders with the years they apply to; the atlas timeline, 3400 BCE onward. 1,148 rows and 174 polities inside Europe, the Middle East, Egypt and India; added 14 Sep 2026 | CC BY 4.0 (verified) | `data/entities/geo/polities/` |
 | Journeys and regions GeoJSON | Routes and historical borders from open sources or hand-authored | Per file; our own work is CC BY | `data/entities/geo/` |
 
 ## 3. Entity foundation
@@ -134,6 +135,14 @@ region
 
 Regions carry period metadata so a period selector can come later; the selector is built only when at least two periods exist. Version 1 ships whatever open data passes review; the Exodus, Jesus' ministry and Paul's four journeys are the hand-authored minimum if no open file qualifies.
 
+### The timeline
+
+Kingdoms and regions come from Cliopatria rather than being hand-drawn. `scripts/build-polities.py` clips it to lon −12…92, lat 5…62 and to 4000 BCE – 350 CE, simplifies to 0.05°, and writes one `polities.geojson` in which every row carries the `from`/`to` years it applies to, a point and bbox span to hang its name on, and its Wikipedia and Wikidata ids. Because the years are in the data, the explore map fetches the file once and filters it in the browser: the slider has one step per year at which a border actually changes (147 of them), and moving it costs no request. The file is 2.9 MB, so it is fetched only when a reader turns Kingdoms on, never on the first paint.
+
+Tamil names for the polities live in `data/entities/geo/polities-ta.toml`, seeded from Wikidata labels by `build-polities.py --fetch-ta` and merged into the GeoJSON as `name_ta`. They are drafts (`draft = true`, and `draft_ta` on the feature) until a maintainer confirms them, and the map marks a drafted name; Wikidata is not a reliable namer on its own. Where the Tamil Bible has a spelling — Assyria, Elam, Phoenicia, Babylonia, Israel, Judah — that spelling wins.
+
+These polygons sit on a present-day coastline, like everything else here: the Nile delta, the head of the Persian Gulf and the Dead Sea were all a different shape in 2000 BCE.
+
 ## 5. URLs
 
 | Route | Rendering | Content |
@@ -141,7 +150,7 @@ Regions carry period metadata so a period selector can come later; the selector 
 | `/place/{slug}` | ISR | Names in both scripts, static map, verses that mention it grouped by book, related people and journeys, articles |
 | `/atlas` | Prerender | Map index: journeys and regions, entry to the interactive map |
 | `/atlas/{journey}` | ISR | Journey page: static map, ordered stops, passages |
-| `/atlas/explore` | Client-only | Interactive MapLibre map: journey checkboxes, the places toggle, and an optional `?journey=`, `?place=` or `?chapter=` |
+| `/atlas/explore` | Client-only | Interactive MapLibre map: journey checkboxes, the places toggle, the Kingdoms timeline, and an optional `?journey=`, `?place=` or `?chapter=` |
 | `/api/entities/search` | Server | Entity search for the search box and reference box |
 
 Place pages are ISR, not prerendered, for the same reason chapters are (design ADR-1, the Vercel route cap). Tamil paths such as `/இடம்/தமஸ்கு` redirect to the English slug (ADR-7).
