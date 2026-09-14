@@ -34,9 +34,20 @@ ZIP_URL = "https://raw.githubusercontent.com/Seshat-Global-History-Databank/clio
 ZIP_NAME = "cliopatria.geojson.zip"
 MEMBER = "cliopatria_polities_only.geojson"
 
-# Europe, the Middle East, Egypt and India — the ground the atlas covers, wider
-# than the biblical world the base map is clipped to.
-REGION = box(-12.0, 5.0, 92.0, 62.0)
+# Europe, the Middle East and Egypt — the ground the atlas covers, wider than
+# the biblical world the base map is clipped to. The eastern edge is the Indus:
+# past it lie the Indian dynasties and the Chinese and Central Asian empires,
+# which are not this atlas's subject, and whose territory here is in any case
+# only the clipped western sliver of an empire centred off the map.
+REGION = box(-12.0, 5.0, 68.0, 62.0)
+# To ask whether a kingdom belongs here, its territory inside REGION is compared
+# with its territory in this wider window — the same box, opened out east. A
+# kingdom with less than MIN_SHARE of itself on our side is one whose centre is
+# elsewhere, showing only a clipped edge: the Maurya and Gupta empires reach
+# Gandhara and the Tang held the Tarim basin, but drawing those slivers would
+# label the edge of the map with an empire that is not on it.
+EAST_WINDOW = box(-12.0, 5.0, 120.0, 62.0)
+MIN_SHARE = 0.15
 # 4000 BCE is the ask; Cliopatria itself starts at 3400 BCE. The end is set by
 # the last thing the timeline carries, which is the second council of Nicaea in
 # 787, not by the kingdoms.
@@ -88,6 +99,16 @@ def rows():
         if not g.intersects(REGION):
             continue
         out.append((p, g))
+
+    # Judged over the whole life of a kingdom, not row by row, so that one does
+    # not flicker in and out of the timeline as its borders move.
+    share = {}
+    for p, g in out:
+        wide = g.intersection(EAST_WINDOW).area
+        here = g.intersection(REGION).area / wide if wide else 0.0
+        share[p["Name"]] = max(share.get(p["Name"], 0.0), here)
+    out = [(p, g) for p, g in out if share[p["Name"]] >= MIN_SHARE]
+
     out.sort(key=lambda r: (r[0]["FromYear"], r[0]["Name"]))
     return out
 

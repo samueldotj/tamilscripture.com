@@ -27,8 +27,8 @@
 	</a>
 	<p class="layers" lang={ta ? 'ta' : 'en'}>
 		{ta
-			? 'வரைபடத்தில் ஆதித் திருச்சபையின் பிதாக்கள், சங்கங்கள், மறைமாவட்டங்கள், மற்றும் கி.மு. 3400 முதல் கி.பி. 350 வரையிலான இராச்சியங்களையும் காணலாம்.'
-			: 'The map also carries the early church — its fathers, councils and sees — and the kingdoms of the world from 3400 BC to AD 350.'}
+			? 'வரைபடத்தில் ஆதித் திருச்சபையின் பிதாக்கள், சங்கங்கள், மறைமாவட்டங்கள், மற்றும் கி.மு. 3400 முதல் கி.பி. 800 வரையிலான இராச்சியங்களையும் காணலாம்.'
+			: 'The map also carries the early church — its fathers, councils and sees — and the kingdoms of the biblical world from 3400 BC to AD 800.'}
 	</p>
 </section>
 
