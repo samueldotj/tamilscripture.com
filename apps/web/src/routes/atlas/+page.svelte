@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { journeyStyle } from '$lib/entities/journeys';
 	import { placeName } from '$lib/entities/load';
 	import { settings } from '$lib/settings/store.svelte';
 
@@ -29,9 +30,9 @@
 <section>
 	<h2 class="kicker"><span lang="ta">பயணங்கள்</span> · Journeys</h2>
 	<ul class="journeys">
-		{#each data.journeys as j (j.id)}
+		{#each data.journeys as j, i (j.id)}
 			<li>
-				<a class="card journey" href="/atlas/{j.id}">
+				<a class="card journey" href="/atlas/{j.id}" style="--j: {journeyStyle(i).color}">
 					<span class="period" lang={ta ? 'ta' : 'en'}>{period(j.period)}</span>
 					<span class="name" lang={ta ? 'ta' : 'en'}>{ta ? j.name_ta : j.name_en}</span>
 					<span class="meta" lang={ta ? 'ta' : 'en'}>{j.stops.length} {ta ? 'இடங்கள்' : 'stops'}</span>
@@ -65,7 +66,9 @@
 	h2.kicker { margin: 0 0 0.8rem; }
 	.kicker [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
 	.journeys { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.75rem; }
-	.journey { display: grid; gap: 0.25rem; padding: 1rem 1.1rem; text-decoration: none; color: inherit; }
+	/* The stripe is the journey's colour on the explore map. */
+	.journey { display: grid; gap: 0.25rem; padding: 1rem 1.1rem 1rem 1.4rem; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
+	.journey::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--j); }
 	.journey:hover { border-color: var(--accent); }
 	.period { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
 	.period[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.03em; }

@@ -1,4 +1,5 @@
 import type { PageLoad } from './$types';
+import { sortJourneys } from '$lib/entities/journeys';
 import { loadGlossary, loadJourneys, loadPlaceIndex } from '$lib/entities/load';
 
 // Index of journeys and the most-mentioned places. Cached at the edge until
@@ -16,5 +17,5 @@ export const load: PageLoad = async ({ fetch }) => {
 		.filter((p) => p.lat !== undefined)
 		.sort((a, b) => b.mentions - a.mentions)
 		.slice(0, 40);
-	return { journeys, glossary, top, count: index?.count ?? 0 };
+	return { journeys: sortJourneys(journeys, glossary), glossary, top, count: index?.count ?? 0 };
 };

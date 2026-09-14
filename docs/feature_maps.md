@@ -112,7 +112,9 @@ The render step has a time budget of five minutes in CI; if entity data grows pa
 
 ### Interactive tier
 
-MapLibre GL JS, loaded only when a reader taps "Explore map". The base map is a PMTiles archive built in the deploy workflow from Natural Earth (coastline, ocean, lakes, rivers; zooms 3–10 over the biblical world) and uploaded to Vercel Blob; its public URL is an environment variable. Places, journeys and regions are our own GeoJSON layers fetched from `content/…/entities/geo/`. The style has light and dark variants derived from the theme tokens. MapLibre is code-split so the reader route budget (120 kB gzipped) is untouched; the explore route gets its own size-limit entry and Lighthouse URL.
+MapLibre GL JS, loaded only when a reader taps "Explore map". There is no tile service: the base map is our own GeoJSON, built by `scripts/build-basemap.py` from Natural Earth and served from `content/…/entities/geo/base/` — land, coastline, lakes and rivers at 1:10m over the biblical world, plus a 1:110m `world` silhouette for everything outside it, so the map zooms out to the whole globe (no names out there) instead of stopping at the clip. Places and journeys are our own GeoJSON layers from `content/…/entities/geo/`. Colours are read from the theme tokens and re-read when the theme changes. MapLibre is code-split so the reader route budget (120 kB gzipped) is untouched; the explore route gets its own size-limit entry and Lighthouse URL.
+
+The journeys are listed down the right of the map, grouped by period in chronological order, each a checkbox with the colour and line style it is drawn in (eight hues from `--j-1 … --j-8` crossed with four dash patterns, so no two journeys share an appearance) and a link to its own page. Hovering a row picks its route out and lights up its stops. Above the map, a pair of buttons switches the dots between every located place and only the stops of the journeys that are switched on. Clicking a route names it and links to the journey page; clicking a place enlarges it and names it. `?journey=`, `?place=` and `?chapter=` set the opening view.
 
 ### Journeys and regions
 
@@ -139,7 +141,7 @@ Regions carry period metadata so a period selector can come later; the selector 
 | `/place/{slug}` | ISR | Names in both scripts, static map, verses that mention it grouped by book, related people and journeys, articles |
 | `/atlas` | Prerender | Map index: journeys and regions, entry to the interactive map |
 | `/atlas/{journey}` | ISR | Journey page: static map, ordered stops, passages |
-| `/atlas/explore` | Client-only | Interactive MapLibre map with layer toggles and an optional `?focus=place/damascus` |
+| `/atlas/explore` | Client-only | Interactive MapLibre map: journey checkboxes, the places toggle, and an optional `?journey=`, `?place=` or `?chapter=` |
 | `/api/entities/search` | Server | Entity search for the search box and reference box |
 
 Place pages are ISR, not prerendered, for the same reason chapters are (design ADR-1, the Vercel route cap). Tamil paths such as `/இடம்/தமஸ்கு` redirect to the English slug (ADR-7).

@@ -7,161 +7,6 @@
 # maintainers; corrections welcome.
 
 [[journey]]
-id = "exodus"
-name_en = "The Exodus from Egypt"
-name_ta = "எகிப்திலிருந்து புறப்பாடு"
-period = "exodus"
-routes = ["042. Exodus Route1", "043. Exodus Route2", "046. 38 years wandering", "047. Transjordan"]
-summary_en = "From Rameses to the plains of Moab: the route of Israel out of Egypt, to Sinai, and through the wilderness to the Jordan."
-summary_ta = "ராமசேசிலிருந்து மோவாபின் சமவெளிகள் வரை: இஸ்ரவேலர் எகிப்திலிருந்து புறப்பட்டு, சீனாய்க்கு வந்து, வனாந்திரம் வழியாக யோர்தானுக்குச் சென்ற வழி."
-passages = ["EXO.12.37-EXO.19.2", "NUM.20.1-NUM.22.1", "NUM.33.1-NUM.33.49"]
-stops = [
-  { place = "rameses", ref = "EXO.12.37" },
-  { place = "succoth-2", ref = "EXO.12.37" },
-  { place = "etham", ref = "EXO.13.20" },
-  { place = "pi-hahiroth", ref = "EXO.14.2" },
-  { place = "marah", ref = "EXO.15.23" },
-  { place = "elim", ref = "EXO.15.27" },
-  { place = "rephidim", ref = "EXO.17.1" },
-  { place = "mount-sinai", ref = "EXO.19.1" },
-  { place = "kadesh-barnea", ref = "NUM.13.26" },
-  { place = "mount-hor-1", ref = "NUM.20.22" },
-  { place = "moab-1", ref = "NUM.22.1" },
-  { place = "jericho-1", ref = "JOS.6.1" },
-]
-
-[[journey]]
-id = "jesus-ministry"
-name_en = "Places in the ministry of Jesus"
-name_ta = "இயேசுவின் ஊழிய இடங்கள்"
-period = "gospels"
-summary_en = "From Bethlehem and Nazareth through Galilee to Jerusalem: the towns the Gospels name most often."
-summary_ta = "பெத்லகேம், நாசரேத்திலிருந்து கலிலேயா வழியாக எருசலேம் வரை: நற்செய்திகள் அடிக்கடி குறிப்பிடும் ஊர்கள்."
-passages = ["MAT.2.1", "LUK.2.39", "MAT.4.13", "JHN.2.1", "LUK.7.11", "JHN.4.5", "LUK.19.1", "JHN.11.1", "LUK.24.13"]
-stops = [
-  { place = "bethlehem-1", ref = "MAT.2.1" },
-  { place = "nazareth", ref = "LUK.2.39" },
-  { place = "capernaum", ref = "MAT.4.13" },
-  { place = "cana", ref = "JHN.2.1" },
-  { place = "nain", ref = "LUK.7.11" },
-  { place = "bethsaida-1", ref = "MRK.8.22" },
-  { place = "sychar", ref = "JHN.4.5" },
-  { place = "jericho-1", ref = "LUK.19.1" },
-  { place = "bethany-1", ref = "JHN.11.1" },
-  { place = "jerusalem", ref = "LUK.19.28" },
-  { place = "emmaus", ref = "LUK.24.13" },
-]
-
-[[journey]]
-id = "paul-1"
-name_en = "Paul's first missionary journey"
-name_ta = "பவுலின் முதல் மிஷனரிப் பயணம்"
-period = "acts"
-routes = ["202. First Missionary Journey"]
-summary_en = "Antioch to Cyprus and the cities of Galatia, and back."
-summary_ta = "அந்தியோகியாவிலிருந்து சீப்புரு தீவுக்கும் கலாத்தியா நகரங்களுக்கும் சென்று திரும்பிய பயணம்."
-passages = ["ACT.13.1-ACT.14.28"]
-stops = [
-  { place = "antioch-1", ref = "ACT.13.1" },
-  { place = "seleucia", ref = "ACT.13.4" },
-  { place = "salamis", ref = "ACT.13.5" },
-  { place = "paphos", ref = "ACT.13.6" },
-  { place = "perga", ref = "ACT.13.13" },
-  { place = "antioch-2", ref = "ACT.13.14" },
-  { place = "iconium", ref = "ACT.13.51" },
-  { place = "lystra", ref = "ACT.14.6" },
-  { place = "derbe", ref = "ACT.14.6" },
-  { place = "lystra", ref = "ACT.14.21" },
-  { place = "iconium", ref = "ACT.14.21" },
-  { place = "antioch-2", ref = "ACT.14.21" },
-  { place = "perga", ref = "ACT.14.25" },
-  { place = "attalia", ref = "ACT.14.25" },
-  { place = "antioch-1", ref = "ACT.14.26" },
-]
-
-[[journey]]
-id = "paul-2"
-name_en = "Paul's second missionary journey"
-name_ta = "பவுலின் இரண்டாம் மிஷனரிப் பயணம்"
-period = "acts"
-routes = ["203. Second Missionary Journey"]
-summary_en = "Through Asia Minor to Macedonia and Greece: Philippi, Thessalonica, Athens and Corinth."
-summary_ta = "ஆசியா மைனர் வழியாக மக்கெதோனியா, கிரேக்கம் வரை: பிலிப்பி, தெசலோனிக்கே, அத்தேனே, கொரிந்து."
-passages = ["ACT.15.36-ACT.18.22"]
-stops = [
-  { place = "antioch-1", ref = "ACT.15.35" },
-  { place = "derbe", ref = "ACT.16.1" },
-  { place = "lystra", ref = "ACT.16.1" },
-  { place = "troas", ref = "ACT.16.8" },
-  { place = "neapolis", ref = "ACT.16.11" },
-  { place = "philippi", ref = "ACT.16.12" },
-  { place = "amphipolis", ref = "ACT.17.1" },
-  { place = "apollonia", ref = "ACT.17.1" },
-  { place = "thessalonica", ref = "ACT.17.1" },
-  { place = "berea", ref = "ACT.17.10" },
-  { place = "athens", ref = "ACT.17.15" },
-  { place = "corinth", ref = "ACT.18.1" },
-  { place = "cenchreae", ref = "ACT.18.18" },
-  { place = "ephesus", ref = "ACT.18.19" },
-  { place = "caesarea", ref = "ACT.18.22" },
-  { place = "jerusalem", ref = "ACT.18.22" },
-  { place = "antioch-1", ref = "ACT.18.22" },
-]
-
-[[journey]]
-id = "paul-3"
-name_en = "Paul's third missionary journey"
-name_ta = "பவுலின் மூன்றாம் மிஷனரிப் பயணம்"
-period = "acts"
-routes = ["204. Third Missionary Journey"]
-summary_en = "Three years centred on Ephesus, then Macedonia and Greece, and the voyage back to Jerusalem."
-summary_ta = "எபேசுவை மையமாகக் கொண்ட மூன்று ஆண்டுகள், பின்னர் மக்கெதோனியா, கிரேக்கம், எருசலேமுக்குத் திரும்பிய கடற்பயணம்."
-passages = ["ACT.18.23-ACT.21.17"]
-stops = [
-  { place = "antioch-1", ref = "ACT.18.23" },
-  { place = "ephesus", ref = "ACT.19.1" },
-  { place = "troas", ref = "ACT.20.6" },
-  { place = "philippi", ref = "ACT.20.6" },
-  { place = "corinth", ref = "ACT.20.2" },
-  { place = "philippi", ref = "ACT.20.6" },
-  { place = "troas", ref = "ACT.20.6" },
-  { place = "assos", ref = "ACT.20.13" },
-  { place = "mitylene", ref = "ACT.20.14" },
-  { place = "chios", ref = "ACT.20.15" },
-  { place = "samos", ref = "ACT.20.15" },
-  { place = "miletus", ref = "ACT.20.15" },
-  { place = "cos", ref = "ACT.21.1" },
-  { place = "rhodes-1", ref = "ACT.21.1" },
-  { place = "patara", ref = "ACT.21.1" },
-  { place = "tyre", ref = "ACT.21.3" },
-  { place = "ptolemais", ref = "ACT.21.7" },
-  { place = "caesarea", ref = "ACT.21.8" },
-  { place = "jerusalem", ref = "ACT.21.17" },
-]
-
-[[journey]]
-id = "paul-rome"
-name_en = "Paul's journey to Rome"
-name_ta = "பவுல் ரோமுக்குச் சென்ற பயணம்"
-period = "acts"
-routes = ["205. Paul's Voyage to Rome"]
-summary_en = "The voyage as a prisoner from Caesarea, the storm and shipwreck at Malta, and the road to Rome."
-summary_ta = "செசரியாவிலிருந்து கைதியாகச் சென்ற கடற்பயணம், மெலித்தா தீவில் புயலும் கப்பல் உடைவும், ரோமுக்கான சாலை."
-passages = ["ACT.27.1-ACT.28.16"]
-stops = [
-  { place = "caesarea", ref = "ACT.27.1" },
-  { place = "sidon", ref = "ACT.27.3" },
-  { place = "myra", ref = "ACT.27.5" },
-  { place = "cnidus", ref = "ACT.27.7" },
-  { place = "fair-havens", ref = "ACT.27.8" },
-  { place = "malta", ref = "ACT.28.1" },
-  { place = "syracuse", ref = "ACT.28.12" },
-  { place = "rhegium", ref = "ACT.28.13" },
-  { place = "puteoli", ref = "ACT.28.13" },
-  { place = "rome", ref = "ACT.28.14" },
-]
-
-[[journey]]
 id = "abraham"
 name_en = "Abraham's journeys"
 name_ta = "ஆபிரகாமின் பயணங்கள்"
@@ -255,6 +100,30 @@ stops = [
   { place = "midian", ref = "EXO.2.15" },
   { place = "mount-sinai", ref = "EXO.3.1" },
   { place = "egypt", ref = "EXO.4.20" },
+]
+
+[[journey]]
+id = "exodus"
+name_en = "The Exodus from Egypt"
+name_ta = "எகிப்திலிருந்து புறப்பாடு"
+period = "exodus"
+routes = ["042. Exodus Route1", "043. Exodus Route2", "046. 38 years wandering", "047. Transjordan"]
+summary_en = "From Rameses to the plains of Moab: the route of Israel out of Egypt, to Sinai, and through the wilderness to the Jordan."
+summary_ta = "ராமசேசிலிருந்து மோவாபின் சமவெளிகள் வரை: இஸ்ரவேலர் எகிப்திலிருந்து புறப்பட்டு, சீனாய்க்கு வந்து, வனாந்திரம் வழியாக யோர்தானுக்குச் சென்ற வழி."
+passages = ["EXO.12.37-EXO.19.2", "NUM.20.1-NUM.22.1", "NUM.33.1-NUM.33.49"]
+stops = [
+  { place = "rameses", ref = "EXO.12.37" },
+  { place = "succoth-2", ref = "EXO.12.37" },
+  { place = "etham", ref = "EXO.13.20" },
+  { place = "pi-hahiroth", ref = "EXO.14.2" },
+  { place = "marah", ref = "EXO.15.23" },
+  { place = "elim", ref = "EXO.15.27" },
+  { place = "rephidim", ref = "EXO.17.1" },
+  { place = "mount-sinai", ref = "EXO.19.1" },
+  { place = "kadesh-barnea", ref = "NUM.13.26" },
+  { place = "mount-hor-1", ref = "NUM.20.22" },
+  { place = "moab-1", ref = "NUM.22.1" },
+  { place = "jericho-1", ref = "JOS.6.1" },
 ]
 
 [[journey]]
@@ -566,6 +435,28 @@ stops = [
 ]
 
 [[journey]]
+id = "jesus-ministry"
+name_en = "Places in the ministry of Jesus"
+name_ta = "இயேசுவின் ஊழிய இடங்கள்"
+period = "gospels"
+summary_en = "From Bethlehem and Nazareth through Galilee to Jerusalem: the towns the Gospels name most often."
+summary_ta = "பெத்லகேம், நாசரேத்திலிருந்து கலிலேயா வழியாக எருசலேம் வரை: நற்செய்திகள் அடிக்கடி குறிப்பிடும் ஊர்கள்."
+passages = ["MAT.2.1", "LUK.2.39", "MAT.4.13", "JHN.2.1", "LUK.7.11", "JHN.4.5", "LUK.19.1", "JHN.11.1", "LUK.24.13"]
+stops = [
+  { place = "bethlehem-1", ref = "MAT.2.1" },
+  { place = "nazareth", ref = "LUK.2.39" },
+  { place = "capernaum", ref = "MAT.4.13" },
+  { place = "cana", ref = "JHN.2.1" },
+  { place = "nain", ref = "LUK.7.11" },
+  { place = "bethsaida-1", ref = "MRK.8.22" },
+  { place = "sychar", ref = "JHN.4.5" },
+  { place = "jericho-1", ref = "LUK.19.1" },
+  { place = "bethany-1", ref = "JHN.11.1" },
+  { place = "jerusalem", ref = "LUK.19.28" },
+  { place = "emmaus", ref = "LUK.24.13" },
+]
+
+[[journey]]
 id = "philip"
 name_en = "The travels of Philip"
 name_ta = "பிலிப்புவின் பயணங்கள்"
@@ -612,4 +503,113 @@ stops = [
   { place = "jerusalem", ref = "ACT.9.32" },
   { place = "joppa", ref = "ACT.9.36" },
   { place = "caesarea", ref = "ACT.10.24" },
+]
+
+[[journey]]
+id = "paul-1"
+name_en = "Paul's first missionary journey"
+name_ta = "பவுலின் முதல் மிஷனரிப் பயணம்"
+period = "acts"
+routes = ["202. First Missionary Journey"]
+summary_en = "Antioch to Cyprus and the cities of Galatia, and back."
+summary_ta = "அந்தியோகியாவிலிருந்து சீப்புரு தீவுக்கும் கலாத்தியா நகரங்களுக்கும் சென்று திரும்பிய பயணம்."
+passages = ["ACT.13.1-ACT.14.28"]
+stops = [
+  { place = "antioch-1", ref = "ACT.13.1" },
+  { place = "seleucia", ref = "ACT.13.4" },
+  { place = "salamis", ref = "ACT.13.5" },
+  { place = "paphos", ref = "ACT.13.6" },
+  { place = "perga", ref = "ACT.13.13" },
+  { place = "antioch-2", ref = "ACT.13.14" },
+  { place = "iconium", ref = "ACT.13.51" },
+  { place = "lystra", ref = "ACT.14.6" },
+  { place = "derbe", ref = "ACT.14.6" },
+  { place = "lystra", ref = "ACT.14.21" },
+  { place = "iconium", ref = "ACT.14.21" },
+  { place = "antioch-2", ref = "ACT.14.21" },
+  { place = "perga", ref = "ACT.14.25" },
+  { place = "attalia", ref = "ACT.14.25" },
+  { place = "antioch-1", ref = "ACT.14.26" },
+]
+
+[[journey]]
+id = "paul-2"
+name_en = "Paul's second missionary journey"
+name_ta = "பவுலின் இரண்டாம் மிஷனரிப் பயணம்"
+period = "acts"
+routes = ["203. Second Missionary Journey"]
+summary_en = "Through Asia Minor to Macedonia and Greece: Philippi, Thessalonica, Athens and Corinth."
+summary_ta = "ஆசியா மைனர் வழியாக மக்கெதோனியா, கிரேக்கம் வரை: பிலிப்பி, தெசலோனிக்கே, அத்தேனே, கொரிந்து."
+passages = ["ACT.15.36-ACT.18.22"]
+stops = [
+  { place = "antioch-1", ref = "ACT.15.35" },
+  { place = "derbe", ref = "ACT.16.1" },
+  { place = "lystra", ref = "ACT.16.1" },
+  { place = "troas", ref = "ACT.16.8" },
+  { place = "neapolis", ref = "ACT.16.11" },
+  { place = "philippi", ref = "ACT.16.12" },
+  { place = "amphipolis", ref = "ACT.17.1" },
+  { place = "apollonia", ref = "ACT.17.1" },
+  { place = "thessalonica", ref = "ACT.17.1" },
+  { place = "berea", ref = "ACT.17.10" },
+  { place = "athens", ref = "ACT.17.15" },
+  { place = "corinth", ref = "ACT.18.1" },
+  { place = "cenchreae", ref = "ACT.18.18" },
+  { place = "ephesus", ref = "ACT.18.19" },
+  { place = "caesarea", ref = "ACT.18.22" },
+  { place = "jerusalem", ref = "ACT.18.22" },
+  { place = "antioch-1", ref = "ACT.18.22" },
+]
+
+[[journey]]
+id = "paul-3"
+name_en = "Paul's third missionary journey"
+name_ta = "பவுலின் மூன்றாம் மிஷனரிப் பயணம்"
+period = "acts"
+routes = ["204. Third Missionary Journey"]
+summary_en = "Three years centred on Ephesus, then Macedonia and Greece, and the voyage back to Jerusalem."
+summary_ta = "எபேசுவை மையமாகக் கொண்ட மூன்று ஆண்டுகள், பின்னர் மக்கெதோனியா, கிரேக்கம், எருசலேமுக்குத் திரும்பிய கடற்பயணம்."
+passages = ["ACT.18.23-ACT.21.17"]
+stops = [
+  { place = "antioch-1", ref = "ACT.18.23" },
+  { place = "ephesus", ref = "ACT.19.1" },
+  { place = "troas", ref = "ACT.20.6" },
+  { place = "philippi", ref = "ACT.20.6" },
+  { place = "corinth", ref = "ACT.20.2" },
+  { place = "philippi", ref = "ACT.20.6" },
+  { place = "troas", ref = "ACT.20.6" },
+  { place = "assos", ref = "ACT.20.13" },
+  { place = "mitylene", ref = "ACT.20.14" },
+  { place = "chios", ref = "ACT.20.15" },
+  { place = "samos", ref = "ACT.20.15" },
+  { place = "miletus", ref = "ACT.20.15" },
+  { place = "cos", ref = "ACT.21.1" },
+  { place = "rhodes-1", ref = "ACT.21.1" },
+  { place = "patara", ref = "ACT.21.1" },
+  { place = "tyre", ref = "ACT.21.3" },
+  { place = "ptolemais", ref = "ACT.21.7" },
+  { place = "caesarea", ref = "ACT.21.8" },
+  { place = "jerusalem", ref = "ACT.21.17" },
+]
+
+[[journey]]
+id = "paul-rome"
+name_en = "Paul's journey to Rome"
+name_ta = "பவுல் ரோமுக்குச் சென்ற பயணம்"
+period = "acts"
+routes = ["205. Paul's Voyage to Rome"]
+summary_en = "The voyage as a prisoner from Caesarea, the storm and shipwreck at Malta, and the road to Rome."
+summary_ta = "செசரியாவிலிருந்து கைதியாகச் சென்ற கடற்பயணம், மெலித்தா தீவில் புயலும் கப்பல் உடைவும், ரோமுக்கான சாலை."
+passages = ["ACT.27.1-ACT.28.16"]
+stops = [
+  { place = "caesarea", ref = "ACT.27.1" },
+  { place = "sidon", ref = "ACT.27.3" },
+  { place = "myra", ref = "ACT.27.5" },
+  { place = "cnidus", ref = "ACT.27.7" },
+  { place = "fair-havens", ref = "ACT.27.8" },
+  { place = "malta", ref = "ACT.28.1" },
+  { place = "syracuse", ref = "ACT.28.12" },
+  { place = "rhegium", ref = "ACT.28.13" },
+  { place = "puteoli", ref = "ACT.28.13" },
+  { place = "rome", ref = "ACT.28.14" },
 ]

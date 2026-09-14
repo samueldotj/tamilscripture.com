@@ -175,6 +175,26 @@ h1, h2, h3 { text-wrap: balance; }
 	:root:not([data-theme='light']) { --map-water: #1F2A36; --map-land: #2B2D34; --map-coast: #4A505C; --map-river: #3E5D78; --map-lake: #24354A; }
 }
 :root[data-theme='dark'] { --map-water: #1F2A36; --map-land: #2B2D34; --map-coast: #4A505C; --map-river: #3E5D78; --map-lake: #24354A; }
+
+/* Journey hues, in fixed order: routes on the explore map and the swatches in
+   its journey list read from these. Eight hues checked against both map grounds
+   (worst adjacent CVD ΔE 9.1 light / 8.4 dark, normal-vision 19.6 / 19.3); with
+   more journeys than hues, the line style varies too, and every route carries a
+   named swatch in the list, so colour is never the only cue. */
+:root {
+	--j-1: #2A78D6; --j-2: #EB6834; --j-3: #1BAF7A; --j-4: #EDA100;
+	--j-5: #E87BA4; --j-6: #008300; --j-7: #4A3AA7; --j-8: #E34948;
+}
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		--j-1: #3987E5; --j-2: #D95926; --j-3: #199E70; --j-4: #C98500;
+		--j-5: #D55181; --j-6: #008300; --j-7: #9085E9; --j-8: #E66767;
+	}
+}
+:root[data-theme='dark'] {
+	--j-1: #3987E5; --j-2: #D95926; --j-3: #199E70; --j-4: #C98500;
+	--j-5: #D55181; --j-6: #008300; --j-7: #9085E9; --j-8: #E66767;
+}
 .map { display: block; width: 100%; height: auto; border-radius: var(--r-l); border: var(--bw) solid var(--line); background: var(--map-water); font-family: var(--sans); }
 .map .water { fill: var(--map-water); }
 .map .land { fill: var(--map-land); stroke: var(--map-coast); stroke-width: 1; stroke-linejoin: round; }

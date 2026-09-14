@@ -532,7 +532,7 @@ fn main() -> Result<()> {
         lakes: geo::load_layer(&args.entities.join("geo/base/lakes.geojson"))?,
         rivers: geo::load_layer(&args.entities.join("geo/base/rivers.geojson"))?,
     };
-    for f in ["land", "lakes", "rivers", "LICENSE", "SOURCE.md"] {
+    for f in ["land", "coast", "lakes", "rivers", "world", "LICENSE", "SOURCE.md"] {
         let name = if f.ends_with(".md") || f == "LICENSE" {
             f.to_string()
         } else {
