@@ -17,7 +17,8 @@ pub struct RouteSource {
 
 pub const UBS_ROUTES: RouteSource = RouteSource {
     key: "ubs",
-    attribution: "Routes: UBS Project MARBLE (Leen Ritmeyer), © United Bible Societies 2023, CC BY-SA 4.0",
+    attribution:
+        "Routes: UBS Project MARBLE (Leen Ritmeyer), © United Bible Societies 2023, CC BY-SA 4.0",
 };
 
 #[derive(Debug, Clone, Deserialize)]

@@ -532,7 +532,15 @@ fn main() -> Result<()> {
         lakes: geo::load_layer(&args.entities.join("geo/base/lakes.geojson"))?,
         rivers: geo::load_layer(&args.entities.join("geo/base/rivers.geojson"))?,
     };
-    for f in ["land", "coast", "lakes", "rivers", "world", "LICENSE", "SOURCE.md"] {
+    for f in [
+        "land",
+        "coast",
+        "lakes",
+        "rivers",
+        "world",
+        "LICENSE",
+        "SOURCE.md",
+    ] {
         let name = if f.ends_with(".md") || f == "LICENSE" {
             f.to_string()
         } else {
@@ -1123,7 +1131,7 @@ fn main() -> Result<()> {
                 title,
                 points: &pts,
                 routes: &[],
-            credit_extra: None,
+                credit_extra: None,
                 w: 360.0,
                 h: 225.0,
                 min_span: 2.5,
@@ -1181,7 +1189,11 @@ fn main() -> Result<()> {
     }
     for (j, lines) in journeys_out.iter().zip(&journey_routes) {
         let straight: Vec<geo::Pt> = j.stops.iter().map(|s| [s.lon, s.lat]).collect();
-        let routes: Vec<Vec<geo::Pt>> = if lines.is_empty() { vec![straight] } else { lines.clone() };
+        let routes: Vec<Vec<geo::Pt>> = if lines.is_empty() {
+            vec![straight]
+        } else {
+            lines.clone()
+        };
         let mut seen = BTreeSet::new();
         let pts: Vec<svg::MapPoint> = j
             .stops
