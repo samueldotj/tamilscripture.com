@@ -31,23 +31,22 @@
 	let glossary = $state<Glossary | null>(null);
 	/** Journey ids drawn on the map. Reassigned, never mutated, so it stays reactive. */
 	let selected = $state(new Set<string>());
-	/** 'all' every located place, 'journey' only the stops of the drawn journeys. */
-	let placesMode = $state<'all' | 'journey'>('all');
+	/** Every located place, or only the stops of the journeys that are ticked. */
+	let allPlaces = $state(true);
 	let selectedPlace = $state<string | null>(null);
 	let hovered = $state<string | null>(null);
 	let focusLabel = $state('');
-	/** The timeline is off until asked for: its file is 2.9 MB. */
+	/** The timeline is always on the page; its file is fetched once the map is
+	 *  drawn, so the first paint does not wait for it. */
 	let timeline = $state<Timeline | null>(null);
-	let timelineOn = $state(false);
-	let timelineState = $state<'off' | 'loading' | 'on' | 'error'>('off');
+	let timelineState = $state<'loading' | 'on' | 'error'>('loading');
 	/** Index into timeline.years, so every step of the slider changes the map. */
 	let step = $state(0);
 	let hoveredPolity = $state<string | null>(null);
 	let polityMarkers: import('maplibre-gl').Marker[] = [];
-	/** The early church: fathers, councils and sees, off until asked for. */
+	/** The early church: fathers, councils and sees, on the same timeline. */
 	let church = $state<ChurchData | null>(null);
-	let churchOn = $state(false);
-	let churchState = $state<'off' | 'loading' | 'on' | 'error'>('off');
+	let churchState = $state<'loading' | 'on' | 'error'>('loading');
 	let hoveredChurch = $state<string | null>(null);
 	let churchMarkers: import('maplibre-gl').Marker[] = [];
 	let map: import('maplibre-gl').Map | null = null;
@@ -77,7 +76,7 @@
 	 *  timeline off, all of it; with it on, only what had happened by then, so
 	 *  the church arrives city by city from Pentecost onward. */
 	const churchNow = $derived(
-		(church?.entries ?? []).filter((e) => !timelineOn || (e.from !== undefined && e.from !== null && e.from <= year))
+		(church?.entries ?? []).filter((e) => e.from !== undefined && e.from !== null && e.from <= year)
 	);
 	/** Church entries gathered by city: Rome holds four fathers and a see. */
 	const churchPlaces = $derived.by(() => {
@@ -101,7 +100,7 @@
 	const year = $derived(timeline?.years[Math.min(step, timeline.years.length - 1)] ?? FIRST_YEAR);
 	/** The polities on the map in the chosen year, largest first: the legend. */
 	const onNow = $derived(
-		timeline && timelineOn ? at(timeline.rows, year).sort((a, b) => b.span - a.span) : []
+		timeline ? at(timeline.rows, year).sort((a, b) => b.span - a.span) : []
 	);
 
 	function period(id: string) {
@@ -125,7 +124,7 @@
 	}
 
 	function shown(p: PlaceIndexEntry) {
-		return placesMode === 'all' || journeyPlaces.has(p.id) || focused.has(p.id);
+		return allPlaces || journeyPlaces.has(p.id) || focused.has(p.id);
 	}
 
 	function labelMarkers() {
@@ -206,7 +205,6 @@
 		if (!map || !maplibre) return;
 		for (const m of polityMarkers) m.remove();
 		polityMarkers = [];
-		if (!timelineOn) return;
 		const bounds = map.getBounds();
 		for (const p of onNow) {
 			if (!bounds.contains([p.lon, p.lat])) continue;
@@ -245,7 +243,6 @@
 		if (!map || !maplibre) return;
 		for (const m of churchMarkers) m.remove();
 		churchMarkers = [];
-		if (!churchOn) return;
 		const bounds = map.getBounds();
 		// Constantinople, Chalcedon, Nicaea and Nicomedia sit within a few pixels
 		// of each other: a city whose name would land on one already placed keeps
@@ -312,17 +309,15 @@
 			const ids = journeys.filter((j, i) => Math.floor(i / HUES) % DASHES.length === d && selected.has(j.id)).map((j) => j.id);
 			map.setFilter(layer, anyOf(ids));
 			map.setPaintProperty(layer, 'line-width', ['case', ['==', ['get', 'id'], hovered ?? ''], 5.5, 3] as ExpressionSpecification);
-			// Routes step back while the kingdoms are drawn, so both stay readable.
-			const rest = hovered ? 0.35 : timelineOn ? 0.5 : 0.9;
+			// Routes step back from the kingdoms beneath them, so both stay readable.
+			const rest = hovered ? 0.35 : 0.55;
 			map.setPaintProperty(layer, 'line-opacity', ['case', ['==', ['get', 'id'], hovered ?? ''], 1, rest] as ExpressionSpecification);
 		}
-		map.setFilter('places', placesMode === 'all' ? null : anyOf([...journeyPlaces, ...focused]));
+		map.setFilter('places', allPlaces ? null : anyOf([...journeyPlaces, ...focused]));
 		map.setFilter('places-em', anyOf([...emphasised]));
 		map.setFilter('places-sel', ['==', ['get', 'id'], selectedPlace ?? ''] as FilterSpecification);
 		if (map.getLayer('polities-fill')) {
-			const shownYear: FilterSpecification = timelineOn
-				? (['all', ['<=', ['get', 'from'], year], ['>=', ['get', 'to'], year]] as FilterSpecification)
-				: anyOf([]);
+			const shownYear = ['all', ['<=', ['get', 'from'], year], ['>=', ['get', 'to'], year]] as FilterSpecification;
 			map.setFilter('polities-fill', shownYear);
 			map.setFilter('polities-line', shownYear);
 			map.setPaintProperty('polities-fill', 'fill-opacity', ['case', ['==', ['get', 'id'], hoveredPolity ?? ''], 0.36, 0.18] as ExpressionSpecification);
@@ -481,6 +476,10 @@
 				status = 'ready';
 				await focusFromQuery();
 				paint();
+				// The timeline and the church are always on the page, so they are
+				// fetched as soon as the map itself is drawn — not before, so the
+				// first paint is the map and not a wait for four megabytes.
+				void Promise.all([addTimeline(), addChurch()]);
 				// A journey asked for by name is far down the list: show it there too.
 				if (selected.size === 1) {
 					await tick();
@@ -516,7 +515,7 @@
 		const line = map.queryRenderedFeatures(around(9), { layers: JOURNEY_LAYERS.filter((l) => map!.getLayer(l)) })[0];
 		if (line) return { kind: 'journey' as const, props: line.properties as { id: string } };
 		// Last: the fills are the size of empires, so anything else beats them.
-		if (timelineOn && map.getLayer('polities-fill')) {
+		if (map.getLayer('polities-fill')) {
 			const area = map.queryRenderedFeatures(around(1), { layers: ['polities-fill'] })[0];
 			if (area) return { kind: 'polity' as const, props: area.properties as unknown as Polity };
 		}
@@ -588,18 +587,13 @@
 		selected = on ? new Set(journeys.map((j) => j.id)) : new Set();
 		paint();
 	}
-	function setMode(m: 'all' | 'journey') {
-		placesMode = m;
+	function setAllPlaces(on: boolean) {
+		allPlaces = on;
 		paint();
 	}
 	function hover(id: string | null) {
 		hovered = id;
 		paint();
-	}
-	async function toggleChurch() {
-		churchOn = !churchOn;
-		if (churchOn && !church) await addChurch();
-		else paint();
 	}
 	function flyToEntry(e: ChurchEntry) {
 		hoveredChurch = e.place;
@@ -613,11 +607,6 @@
 	function hoverChurch(place: string | null) {
 		hoveredChurch = place;
 		churchMarkersDraw();
-	}
-	async function toggleTimeline() {
-		timelineOn = !timelineOn;
-		if (timelineOn && !timeline) await addTimeline();
-		else paint();
 	}
 	function setStep(n: number) {
 		step = Math.max(0, Math.min(n, (timeline?.years.length ?? 1) - 1));
@@ -644,21 +633,14 @@
 <div class="explore">
 	<div class="bar">
 		<a class="chip" href="/atlas">‹ <span lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடம்' : 'Atlas'}</span></a>
-		<div class="seg" role="group" aria-label={ta ? 'எந்த இடங்கள்' : 'Which places'}>
-			<button class="chip" class:on={placesMode === 'all'} aria-pressed={placesMode === 'all'} onclick={() => setMode('all')} lang={ta ? 'ta' : 'en'}>{ta ? 'எல்லா இடங்களும்' : 'All places'}</button>
-			<button class="chip" class:on={placesMode === 'journey'} aria-pressed={placesMode === 'journey'} onclick={() => setMode('journey')} lang={ta ? 'ta' : 'en'}>{ta ? 'பயண இடங்கள் மட்டும்' : 'Journey places only'}</button>
-		</div>
-		<button class="chip" class:on={timelineOn} aria-pressed={timelineOn} disabled={status !== 'ready'} onclick={toggleTimeline} lang={ta ? 'ta' : 'en'}>
-			{ta ? 'இராச்சியங்கள்' : 'Kingdoms'}{timelineState === 'loading' ? '…' : ''}
-		</button>
-		<button class="chip" class:on={churchOn} aria-pressed={churchOn} disabled={status !== 'ready'} onclick={toggleChurch} lang={ta ? 'ta' : 'en'}>
-			{ta ? 'ஆதித் திருச்சபை' : 'Early church'}{churchState === 'loading' ? '…' : ''}
-		</button>
+		<label class="toggle">
+			<input type="checkbox" checked={allPlaces} onchange={(e) => setAllPlaces((e.currentTarget as HTMLInputElement).checked)} />
+			<span lang={ta ? 'ta' : 'en'}>{ta ? 'எல்லா இடங்களும்' : 'All places'}</span>
+		</label>
 		{#if focusLabel}<span class="focus" lang={ta ? 'ta' : 'en'}>{focusLabel}</span>{/if}
 	</div>
 
-	{#if timelineOn}
-		<div class="timeline">
+	<div class="timeline">
 			{#if timeline}
 				<button class="nudge" onclick={() => setStep(step - 1)} disabled={step === 0} aria-label={ta ? 'முந்தைய காலம்' : 'Earlier'}>‹</button>
 				<input
@@ -672,14 +654,16 @@
 				/>
 				<button class="nudge" onclick={() => setStep(step + 1)} disabled={step === timeline.years.length - 1} aria-label={ta ? 'அடுத்த காலம்' : 'Later'}>›</button>
 				<output class="yr" lang={ta ? 'ta' : 'en'}>{yearLabel(year, ta)}</output>
-				<span class="cnt" lang={ta ? 'ta' : 'en'}>{onNow.length} {ta ? 'இராச்சியங்கள்' : 'kingdoms'}</span>
+				<span class="cnt" lang={ta ? 'ta' : 'en'}>
+					{onNow.length}&nbsp;{ta ? 'இராச்சியங்கள்' : 'kingdoms'}{#if churchNow.length},
+						{churchNow.length}&nbsp;{ta ? 'திருச்சபை இடங்கள்' : 'church'}{/if}
+				</span>
 			{:else if timelineState === 'error'}
 				<span class="cnt" lang={ta ? 'ta' : 'en'}>{ta ? 'காலவரிசையை ஏற்ற முடியவில்லை.' : 'The timeline could not be loaded.'}</span>
 			{:else}
 				<span class="cnt" lang={ta ? 'ta' : 'en'}>{ta ? 'காலவரிசை ஏற்றப்படுகிறது…' : 'Loading the timeline…'}</span>
 			{/if}
-		</div>
-	{/if}
+	</div>
 	<div class="canvas" bind:this={container} aria-label={ta ? 'வேதாகம வரைபடம்' : 'Bible map'}>
 		{#if status === 'loading'}<p class="state" lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடம் ஏற்றப்படுகிறது…' : 'Loading the map…'}</p>{/if}
 		{#if status === 'error'}<p class="state" lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடத்தை ஏற்ற முடியவில்லை.' : 'The map could not be loaded.'} <a href="/atlas">{ta ? 'வரைபடப் பட்டியல்' : 'Atlas index'}</a></p>{/if}
@@ -694,7 +678,7 @@
 			</div>
 		</div>
 		<div class="scroll">
-			{#if churchOn && church}
+			{#if church}
 				<h3 class="per" lang={ta ? 'ta' : 'en'}>{ta ? 'சங்கங்களும் விசுவாசப் பிரமாணங்களும்' : 'Councils and creeds'}</h3>
 				<ul>
 					{#each councils as c (c.id)}
@@ -727,7 +711,7 @@
 					{/if}
 				{/each}
 			{/if}
-			{#if timelineOn && onNow.length}
+			{#if onNow.length}
 				<h3 class="per" lang={ta ? 'ta' : 'en'}>{yearLabel(year, ta)}</h3>
 				<ul>
 					{#each onNow as p (p.id + p.from)}
@@ -788,9 +772,8 @@
 	.cnt[lang='ta'] { font-family: var(--tamil); }
 	.bar .chip { min-height: 40px; }
 	.bar [lang='ta'] { font-family: var(--tamil); }
-	.seg { display: inline-flex; flex-wrap: wrap; gap: 0.35rem; }
-	.seg .chip { cursor: pointer; }
-	.seg .chip.on { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+	.toggle { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 40px; cursor: pointer; font-size: 0.92rem; }
+	.toggle input { accent-color: var(--accent); width: 17px; height: 17px; }
 	.focus { margin-left: auto; font-weight: 600; color: var(--amber); }
 	.canvas { position: relative; border: var(--bw) solid var(--line); border-radius: var(--r-l); overflow: hidden; background: var(--map-water); }
 	.state { position: absolute; inset: 0; display: grid; place-content: center; margin: 0; color: var(--muted); text-align: center; gap: 0.4rem; }
