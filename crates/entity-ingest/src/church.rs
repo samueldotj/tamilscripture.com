@@ -127,6 +127,12 @@ pub struct Entry {
     pub died: Option<i32>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub year: Option<i32>,
+    /// The year this enters the story, for the timeline: a father's birth (or
+    /// his death, when that is all there is), the year a council met, and for a
+    /// see either the apostolic age when the New Testament names the city or
+    /// the earliest father or council it holds.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub from: Option<i32>,
     /// "kind" on the wire: `kind` above is the entry type.
     #[serde(rename = "kind", skip_serializing_if = "Option::is_none")]
     pub kind_of_council: Option<String>,
@@ -154,7 +160,12 @@ pub fn load(path: &Path) -> Result<Option<Church>> {
 pub struct Gazetteer<'a> {
     /// place id → (name_en, name_ta, lat, lon)
     pub places: BTreeMap<&'a str, (&'a str, Option<&'a str>, f64, f64)>,
+    /// Place ids the New Testament names: their churches date from the start.
+    pub new_testament: std::collections::BTreeSet<&'a str>,
 }
+
+/// Pentecost, and the first year the early church can be on the map.
+pub const APOSTOLIC_YEAR: i32 = 33;
 
 impl Church {
     /// Join every entry to a place. `problems` collects what could not be found.
@@ -198,6 +209,7 @@ impl Church {
                 born: f.born,
                 died: f.died,
                 year: None,
+                from: f.born.or(f.died),
                 kind_of_council: None,
                 wikipedia: f.wikipedia.clone(),
             });
@@ -228,6 +240,7 @@ impl Church {
                 born: None,
                 died: None,
                 year: Some(c.year),
+                from: Some(c.year),
                 kind_of_council: Some(c.kind.clone()),
                 wikipedia: c.wikipedia.clone(),
             });
@@ -258,10 +271,34 @@ impl Church {
                 born: None,
                 died: None,
                 year: None,
+                from: gaz
+                    .new_testament
+                    .contains(s.place.as_str())
+                    .then_some(APOSTOLIC_YEAR),
                 kind_of_council: None,
                 wikipedia: None,
             });
         }
+        // A see the New Testament does not name enters when the first father or
+        // council it holds does.
+        let mut earliest: BTreeMap<String, i32> = BTreeMap::new();
+        for e in &entries {
+            if e.kind == "see" {
+                continue;
+            }
+            if let Some(y) = e.from {
+                earliest
+                    .entry(e.place.clone())
+                    .and_modify(|m| *m = (*m).min(y))
+                    .or_insert(y);
+            }
+        }
+        for e in entries.iter_mut() {
+            if e.kind == "see" && e.from.is_none() {
+                e.from = earliest.get(&e.place).copied();
+            }
+        }
+
         ChurchOut {
             sites: self.sites.clone(),
             entries,

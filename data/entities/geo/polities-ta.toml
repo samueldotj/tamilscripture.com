@@ -6,31 +6,47 @@
 # Licence: CC BY 4.0 (tamilscripture.com contributors); Wikidata labels are CC0.
 
 [polity]
+abbasid-caliphate = { ta = "அப்பாசியக் கலீபகம்", draft = true }  # Abbasid Caliphate
 achaemenid-empire = { ta = "அக்கீமெனிட் பேரரசு", draft = true }  # Achaemenid Empire
 akkadian-empire = { ta = "அக்காடியப் பேரரசு", draft = true }  # Akkadian Empire
+alans = { ta = "ஆலன்கள்", draft = true }  # Alans
 alodia = { ta = "அலோடியா", draft = true }  # Alodia
 anuradhapura = { ta = "அனுராதபுரம்", draft = true }  # Anurādhapura
-assyria = { ta = "அசீரியா", draft = true }  # Assyria
-athenian-coalition = { ta = "ஏதென்சுக் கூட்டணி", draft = true }  # Athenian Coalition
-babylonia = { ta = "பாபிலோனியா", draft = true }  # Babylonia
+aquitaine = { ta = "அகுவிடெய்ன்", draft = true }  # Aquitaine
+assyria = { ta = "அசீரியா", draft = true, keep = true }  # Assyria
+athenian-coalition = { ta = "ஏதென்சுக் கூட்டணி", draft = true, keep = true }  # Athenian Coalition
+babylonia = { ta = "பாபிலோனியா", draft = true, keep = true }  # Babylonia
+barghawata-conference = { ta = "காசாபிளாங்கா", draft = true }  # Barghawata Conference
+brythons = { ta = "பிரிட்டனியர் (பழங்காலம்)", draft = true }  # Brythons
+chalukya-dynasty = { ta = "சாளுக்கியர்", draft = true }  # Chalukya Dynasty
+cornwall = { ta = "கோர்ன்வால்", draft = true }  # Cornwall
+cyprus-condominium = { ta = "சைப்பிரஸ்", draft = true }  # Cyprus Condominium
 early-cheras = { ta = "சேரர்", draft = true }  # Early Cheras
 early-cholas = { ta = "முற்காலச் சோழர்கள்", draft = true }  # Early Cholas
 early-pandyas = { ta = "சங்ககாலப் பாண்டியர்", draft = true }  # Early Pandyas
-eastern-kushans = { ta = "கிழக்குக் குசானர்", draft = true }  # Eastern Kushans
-elam = { ta = "ஏலாம்", draft = true }  # Elam
+eastern-gokturks = { ta = "கோக் துருக்கியர்கள்", draft = true }  # Eastern Göktürks
+eastern-kushans = { ta = "கிழக்குக் குசானர்", draft = true, keep = true }  # Eastern Kushans
+eastern-roman-empire = { ta = "பைசாந்தியப் பேரரசு", draft = true }  # Eastern Roman Empire
+elam = { ta = "ஏலாம்", draft = true, keep = true }  # Elam
 fifteenth-dynasty-of-egypt = { ta = "எகிப்தின் பதினைந்தாம் வம்சம்", draft = true }  # Fifteenth Dynasty of Egypt
+first-bulgarian-empire = { ta = "முதலாம் பல்கேரிய பேரரசு", draft = true }  # First Bulgarian Empire
+gauda-kingdom = { ta = "கௌடப் பேரரசு", draft = true }  # Gauda Kingdom
+ghassanids = { ta = "கசானித்து இராச்சியம்", draft = true }  # Ghassanids
+gokturk-khaganate = { ta = "முதல் துருக்கியக் ககானரசு", draft = true }  # Göktürk Khaganate
 goths = { ta = "கோத்துகள்", draft = true }  # Goths
 great-yuan = { ta = "யுவான்", draft = true }  # Great Yuan
 greco-bactrian-kingdom = { ta = "கிரேக்க பாக்திரியா பேரரசு", draft = true }  # Greco-Bactrian Kingdom
 gupta-empire = { ta = "குப்தப் பேரரசு", draft = true }  # Gupta Empire
-han-dynasty = { ta = "ஹான் அரசமரபு", draft = true }  # Han Dynasty
+gurjara-pratihara-dynasty = { ta = "கூர்ஜர-பிரதிகாரப் பேரரசு", draft = true }  # Gurjara-Pratihara Dynasty
+han-dynasty = { ta = "ஹான் அரசமரபு", draft = true, keep = true }  # Han Dynasty
+harsha-s-empire = { ta = "ஹர்ஷவர்தனர்", draft = true }  # Harsha's Empire
 hittites = { ta = "இட்டைட்டு பேரரசு", draft = true }  # Hittites
 hyksos = { ta = "ஐக்சோஸ்", draft = true }  # Hyksos
 indo-greeks = { ta = "இந்தோ கிரேக்க நாடு", draft = true }  # Indo-Greeks
 indo-parthians = { ta = "இந்தோ-பார்த்தியப் பேரரசு", draft = true }  # Indo-Parthians
 indo-sasanian-empire = { ta = "குசான-சாசானிய இராச்சியம்", draft = true }  # Indo-Sasanian Empire
 indo-scythians = { ta = "இந்தோ சிதியன் பேரரசு", draft = true }  # Indo-Scythians
-indus-valley-civilization = { ta = "சிந்துவெளி நாகரிகம்", draft = true }  # Indus Valley Civilization
+indus-valley-civilization = { ta = "சிந்துவெளி நாகரிகம்", draft = true, keep = true }  # Indus Valley Civilization
 janapada-of-anga = { ta = "அங்க நாடு", draft = true }  # Janapada of Anga
 janapada-of-asmaka = { ta = "அஸ்மகம்", draft = true }  # Janapada of Aśmaka
 janapada-of-avanti = { ta = "அவந்தி நாடு", draft = true }  # Janapada of Avanti
@@ -45,14 +61,23 @@ janapada-of-surasena = { ta = "சூரசேனம்", draft = true }  # Jana
 janapada-of-vajji = { ta = "வஜ்ஜி நாடு", draft = true }  # Janapada of Vajji
 janapada-of-vatsa = { ta = "வத்ச நாடு", draft = true }  # Janapada of Vatsa
 judea = { ta = "யூதேயா", draft = true }  # Judea
+kadamba-empire = { ta = "கதம்பர் வம்சம்", draft = true }  # Kadamba Empire
+kalabhra-dynasty = { ta = "களப்பிரர்", draft = true }  # Kalabhra Dynasty
 kalinga = { ta = "கலிங்கா", draft = true }  # Kalinga
+kamarupa-kingdom = { ta = "காமரூப பேரரசு", draft = true }  # Kamarupa Kingdom
+kannauj-varman-dynasty = { ta = "கன்னோசி", draft = true }  # Kannauj-Varman Dynasty
 kanva-dynasty = { ta = "கண்வ குலம்", draft = true }  # Kanva Dynasty
+karkota-dynasty = { ta = "கார்கோடப் பேரரசு", draft = true }  # Karkota Dynasty
+kashmir = { ta = "காஷ்மீர்", draft = true }  # Kashmir
+kidarites = { ta = "கிடாரைட்டுகள்", draft = true }  # Kidarites
+kimek-kipchak-confederation = { ta = "கிமேக்-கிப்சாக் கூட்டமைப்பு", draft = true }  # Kimek-Kipchak confederation
 kingdom-of-armenia = { ta = "ஆர்மீனியா இராச்சியம்", draft = true }  # Kingdom of Armenia
 kingdom-of-axum = { ta = "அக்சும் பேரரசு", draft = true }  # Kingdom of Axum
-kingdom-of-israel = { ta = "இஸ்ரவேல் ராஜ்யம்", draft = true }  # Kingdom of Israel
-kingdom-of-judah = { ta = "யூதா ராஜ்யம்", draft = true }  # Kingdom of Judah
+kingdom-of-israel = { ta = "இஸ்ரவேல் ராஜ்யம்", draft = true, keep = true }  # Kingdom of Israel
+kingdom-of-italy = { ta = "இத்தாலி இராச்சியம்", draft = true }  # Kingdom of Italy
+kingdom-of-judah = { ta = "யூதா ராஜ்யம்", draft = true, keep = true }  # Kingdom of Judah
 kingdom-of-kush = { ta = "குஷ் இராச்சியம்", draft = true }  # Kingdom of Kush
-kingdom-of-lysimachus = { ta = "லிசிமாக்கசின் இராச்சியம்", draft = true }  # Kingdom of Lysimachus
+kingdom-of-lysimachus = { ta = "லிசிமாக்கசின் இராச்சியம்", draft = true, keep = true }  # Kingdom of Lysimachus
 kingdom-of-pergamon = { ta = "பெர்காமோன் இராச்சியம்", draft = true }  # Kingdom of Pergamon
 kingdom-of-urartu = { ta = "அரராத்து இராச்சியம்", draft = true }  # Kingdom of Urartu
 kushan-empire = { ta = "குசான் பேரரசு", draft = true }  # Kushan Empire
@@ -64,7 +89,9 @@ magadha-haryanka-dynasty = { ta = "ஹரியங்கா வம்சம்",
 magadha-shaishunaga-dynasty = { ta = "சிசுநாக வம்சம்", draft = true }  # Magadha - Shaishunaga dynasty
 mahajanapadas = { ta = "மகா ஜனபதங்கள்", draft = true }  # Mahajanapadas
 mahameghavahana-dynasty = { ta = "மகாமேகவாகன வம்சம்", draft = true }  # Mahameghavahana Dynasty
+maitraka-dynasty = { ta = "மைத்திரகப் பேரரசு", draft = true }  # Maitraka Dynasty
 makuria = { ta = "மகுரியா", draft = true }  # Makuria
+maukhari-dynasty = { ta = "மௌகரி வம்சம்", draft = true }  # Maukhari Dynasty
 maurya-empire = { ta = "மௌரியப் பேரரசு", draft = true }  # Maurya Empire
 middle-kingdom-of-egypt = { ta = "எகிப்தின் மத்தியகால இராச்சியம்", draft = true }  # Middle Kingdom of Egypt
 minoan-civilization = { ta = "மினோவன் நாகரிகம்", draft = true }  # Minoan civilization
@@ -72,35 +99,52 @@ mitanni = { ta = "மித்தானி இராச்சியம்", draf
 mycenaean-greece = { ta = "மைசீனிய கிரீசு", draft = true }  # Mycenaean Greece
 nabataeans = { ta = "நபாத்தியர்", draft = true }  # Nabataeans
 nanda-empire = { ta = "நந்தர்", draft = true }  # Nanda Empire
-neo-assyrian-empire = { ta = "புது அசீரியப் பேரரசு", draft = true }  # Neo-Assyrian Empire
+neo-assyrian-empire = { ta = "புது அசீரியப் பேரரசு", draft = true, keep = true }  # Neo-Assyrian Empire
 neo-babylonian-empire = { ta = "புது பாபிலோனியப் பேரரசு", draft = true }  # Neo-Babylonian Empire
 new-kingdom-of-egypt = { ta = "புது எகிப்து இராச்சியம்", draft = true }  # New Kingdom of Egypt
 nobatia = { ta = "நோபாடியா", draft = true }  # Nobatia
 old-kingdom-of-egypt = { ta = "பழைய எகிப்து இராச்சியம்", draft = true }  # Old Kingdom of Egypt
+pala-empire = { ta = "பாலப் பேரரசு", draft = true }  # Pala Empire
 palmyrene-empire = { ta = "பல்மைரேனிய இராச்சியம்", draft = true }  # Palmyrene Empire
+pandya-dynasty = { ta = "பாண்டியர்", draft = true }  # Pandya Dynasty
+papal-states = { ta = "திருத்தந்தை நாடுகள்", draft = true }  # Papal States
 paphlagonia = { ta = "பாப்லகோனியா", draft = true }  # Paphlagonia
 parthian-empire = { ta = "பார்த்தியப் பேரரசு", draft = true }  # Parthian Empire
 peloponnesian-league = { ta = "பெலோபொன்னேசியன் கூட்டணி", draft = true }  # Peloponnesian League
-phoenicia = { ta = "பெனிக்கே", draft = true }  # Phoenicia
+phoenicia = { ta = "பெனிக்கே", draft = true, keep = true }  # Phoenicia
 ptolemaic-kingdom = { ta = "தாலமைக் பேரரசு", draft = true }  # Ptolemaic Kingdom
+qarlugs = { ta = "நடு ஆசியா மீதான மங்கோலியப் படையெடுப்பு", draft = true }  # Qarlugs
+rashidun-caliphate = { ta = "ராசிதீன் கலீபாக்கள்", draft = true }  # Rashidun Caliphate
+rashtrakuta-dynasty = { ta = "இராட்டிரகூடர்", draft = true }  # Rashtrakuta Dynasty
 rhodes = { ta = "ரோட்ஸ்", draft = true }  # Rhodes
-roman-empire = { ta = "ரோமப் பேரரசு", draft = true }  # Roman Empire
-sacred-band-of-thebes = { ta = "தீப்சின் புனிதப் படை", draft = true }  # Sacred Band of Thebes
-sasanian-empire = { ta = "சாசானியப் பேரரசு", draft = true }  # Sasanian Empire
+roman-empire = { ta = "ரோமப் பேரரசு", draft = true, keep = true }  # Roman Empire
+rouran-khaganate = { ta = "உரூரன் ககானரசு", draft = true }  # Rouran Khaganate
+sacred-band-of-thebes = { ta = "தீப்சின் புனிதப் படை", draft = true, keep = true }  # Sacred Band of Thebes
+sasanian-empire = { ta = "சாசானியப் பேரரசு", draft = true, keep = true }  # Sasanian Empire
 satavahana-dynasty = { ta = "சாதவாகனர்", draft = true }  # Satavahana Dynasty
+scandinavian-minor-kingdoms = { ta = "வைக்கிங் காலம்", draft = true }  # Scandinavian minor kingdoms
 scythia = { ta = "சிதியர்கள்", draft = true }  # Scythia
 second-athenian-league = { ta = "ஏதெனியன் இரண்டாவது கூட்டணி", draft = true }  # Second Athenian League
 seventeenth-dynasty-of-egypt = { ta = "எகிப்தின் பதினேழாம் வம்சம்", draft = true }  # Seventeenth Dynasty of Egypt
 shunga-empire = { ta = "சுங்கர்", draft = true }  # Shunga Empire
 sixteenth-dynasty-of-egypt = { ta = "எகிப்தின் பதினாறாம் வம்சம்", draft = true }  # Sixteenth Dynasty of Egypt
+tang-dynasty = { ta = "தாங் அரசமரபு", draft = true }  # Tang Dynasty
 thirtieth-dynasty-of-egypt = { ta = "எகிப்தின் முப்பதாம் வம்சம்", draft = true }  # Thirtieth Dynasty of Egypt
+tibetan-empire = { ta = "திபெத்தியப் பேரரசு", draft = true }  # Tibetan Empire
+turk-shahis = { ta = "காபூல் சாகி", draft = true }  # Turk Shahis
 twenty-second-dynasty-of-egypt = { ta = "எகிப்தின் இருபத்தி இரண்டாம் வம்சம்", draft = true }  # Twenty-second Dynasty of Egypt
 twenty-sixth-dynasty-of-egypt = { ta = "எகிப்தின் இருபத்தி ஆறாம் வம்சம்", draft = true }  # Twenty-sixth Dynasty of Egypt
 twenty-third-dynasty-of-egypt = { ta = "எகிப்தின் இருபத்தி மூன்றாம் வம்சம்", draft = true }  # Twenty-third Dynasty of Egypt
+umayyad-caliphate = { ta = "உமையா கலீபகம்", draft = true }  # Umayyad Caliphate
 upper-egypt = { ta = "மேல் எகிப்து", draft = true }  # Upper Egypt
+uyghur-khaganate = { ta = "உய்குர் ககானேடு", draft = true }  # Uyghur Khaganate
 vakataka-kingdom = { ta = "வாகாடகப் பேரரசு", draft = true }  # Vakataka Kingdom
-western-jin = { ta = "மேற்கு சின் அரசமரபு", draft = true }  # Western Jin
-western-kushans = { ta = "மேற்குக் குசானர்", draft = true }  # Western Kushans
+viking-settlements = { ta = "வைக்கிங்", draft = true }  # Viking settlements
+volga-bulgaria = { ta = "வோல்கா பல்கேரியா", draft = true }  # Volga Bulgaria
+western-gokturks = { ta = "கோக் துருக்கியர்கள்", draft = true }  # Western Göktürks
+western-jin = { ta = "மேற்கு சின் அரசமரபு", draft = true, keep = true }  # Western Jin
+western-kushans = { ta = "மேற்குக் குசானர்", draft = true, keep = true }  # Western Kushans
+western-roman-empire = { ta = "மேற்கு உரோமைப் பேரரசு", draft = true }  # Western Roman Empire
 western-satraps = { ta = "மேற்கு சத்ரபதிகள்", draft = true }  # Western Satraps
 xianbei = { ta = "சியான்பே", draft = true }  # Xianbei
 xiongnu = { ta = "சியோங்னு", draft = true }  # Xiongnu

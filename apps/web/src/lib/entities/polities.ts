@@ -35,9 +35,10 @@ export interface Timeline {
 	years: number[];
 }
 
-/** The era the atlas covers. Cliopatria itself starts at 3400 BCE. */
+/** The era the atlas covers. Cliopatria itself starts at 3400 BCE, and the end
+ *  is set by the last council on the timeline, the second of Nicaea in 787. */
 export const FIRST_YEAR = -4000;
-export const LAST_YEAR = 350;
+export const LAST_YEAR = 800;
 
 let promise: Promise<Timeline> | null = null;
 export function loadTimeline(fetch: typeof globalThis.fetch): Promise<Timeline> {

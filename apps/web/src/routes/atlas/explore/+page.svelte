@@ -73,10 +73,16 @@
 		new Set([...focused, ...(journeys.find((j) => j.id === hovered)?.stops.map((s) => s.place) ?? [])])
 	);
 
+	/** What the early church has reached by the year on the timeline. With the
+	 *  timeline off, all of it; with it on, only what had happened by then, so
+	 *  the church arrives city by city from Pentecost onward. */
+	const churchNow = $derived(
+		(church?.entries ?? []).filter((e) => !timelineOn || (e.from !== undefined && e.from !== null && e.from <= year))
+	);
 	/** Church entries gathered by city: Rome holds four fathers and a see. */
 	const churchPlaces = $derived.by(() => {
 		const out = new Map<string, { place: string; name_en: string; name_ta?: string; lat: number; lon: number; entries: ChurchEntry[] }>();
-		for (const e of church?.entries ?? []) {
+		for (const e of churchNow) {
 			const key = `${e.lat},${e.lon}`;
 			const at = out.get(key) ?? { place: e.place, name_en: e.place_name_en, name_ta: e.place_name_ta, lat: e.lat, lon: e.lon, entries: [] };
 			at.entries.push(e);
@@ -89,8 +95,8 @@
 		}
 		return [...out.values()];
 	});
-	const councils = $derived((church?.entries ?? []).filter((e) => e.type === 'council').sort((a, b) => (a.year ?? 0) - (b.year ?? 0)));
-	const fathers = $derived((church?.entries ?? []).filter((e) => e.type === 'father').sort((a, b) => (a.born ?? a.died ?? 0) - (b.born ?? b.died ?? 0)));
+	const councils = $derived(churchNow.filter((e) => e.type === 'council').sort((a, b) => (a.year ?? 0) - (b.year ?? 0)));
+	const fathers = $derived(churchNow.filter((e) => e.type === 'father').sort((a, b) => (a.born ?? a.died ?? 0) - (b.born ?? b.died ?? 0)));
 
 	const year = $derived(timeline?.years[Math.min(step, timeline.years.length - 1)] ?? FIRST_YEAR);
 	/** The polities on the map in the chosen year, largest first: the legend. */

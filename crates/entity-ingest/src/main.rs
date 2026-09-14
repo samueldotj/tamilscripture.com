@@ -1119,7 +1119,21 @@ fn main() -> Result<()> {
                 label_ta(&names, &p.name_en, &tamil_versions).map(|t| (p.id.as_str(), t))
             })
             .collect();
+        // A place the New Testament names had a church from the apostolic age.
+        let nt_places: BTreeSet<&str> = places
+            .iter()
+            .filter(|p| {
+                p.verses.iter().any(|v| {
+                    v.split('.')
+                        .next()
+                        .and_then(|code| books.by_code(code))
+                        .is_some_and(|b| b.testament == "NT")
+                })
+            })
+            .map(|p| p.id.as_str())
+            .collect();
         let gaz = church::Gazetteer {
+            new_testament: nt_places,
             places: places
                 .iter()
                 .filter(|p| p.lat.is_some())

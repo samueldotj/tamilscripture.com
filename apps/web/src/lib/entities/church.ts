@@ -45,6 +45,11 @@ export interface ChurchEntry {
 	year?: number;
 	/** council: ecumenical | apostolic | council */
 	kind?: string;
+	/** The year this enters the story: a father's birth, a council's year, and
+	 *  for a see the apostolic age when the New Testament names the city. The
+	 *  timeline shows an entry from this year on; an entry with no year at all
+	 *  (Athenagoras, whom Wikidata cannot date) is left off it. */
+	from?: number;
 	wikipedia?: string;
 }
 

@@ -16,7 +16,9 @@ filters it by year in the browser — no request per step of the timeline.
 data/entities/geo/polities-ta.toml. Those are drafts: Wikidata labels are not
 always the name a reader wants (it returned the Indus *script* for the Indus
 Valley Civilisation), so they are marked `draft = true` until a maintainer
-confirms them, the same as the Tamil place names.
+confirms them, the same as the Tamil place names. `keep = true` marks a name
+that must survive a refresh — a correction to a label Wikidata got wrong —
+while still showing as a draft until someone confirms it.
 """
 import json, os, re, sys, time, unicodedata, urllib.parse, urllib.request, zipfile
 
@@ -35,10 +37,13 @@ MEMBER = "cliopatria_polities_only.geojson"
 # Europe, the Middle East, Egypt and India — the ground the atlas covers, wider
 # than the biblical world the base map is clipped to.
 REGION = box(-12.0, 5.0, 92.0, 62.0)
-# 4000 BCE is the ask; Cliopatria itself starts at 3400 BCE.
-FROM_YEAR, TO_YEAR = -4000, 350
-# 0.05° is about 5 km: empire outlines, not coastlines.
-TOLERANCE, DP = 0.05, 2
+# 4000 BCE is the ask; Cliopatria itself starts at 3400 BCE. The end is set by
+# the last thing the timeline carries, which is the second council of Nicaea in
+# 787, not by the kingdoms.
+FROM_YEAR, TO_YEAR = -4000, 800
+# 0.1° is about 11 km: empire outlines, not coastlines. Coarse enough that the
+# extra four centuries cost nothing — the file is no bigger than it was at 350.
+TOLERANCE, DP = 0.1, 2
 
 WIKIDATA = "https://www.wikidata.org/w/api.php"
 UA = "tamilscripture-atlas/0.1 (https://www.tamilscripture.com)"
@@ -95,7 +100,10 @@ def read_ta():
 
     with open(TA_PATH, "rb") as fh:
         d = tomllib.load(fh)
-    return {k: (v.get("ta", ""), bool(v.get("draft"))) for k, v in d.get("polity", {}).items()}
+    return {
+        k: (v.get("ta", ""), bool(v.get("draft")), bool(v.get("keep")))
+        for k, v in d.get("polity", {}).items()
+    }
 
 
 def fetch_ta(names):
@@ -128,16 +136,17 @@ def fetch_ta(names):
     kept = 0
     for pid in sorted(names):
         name_en, q = names[pid]
-        label, draft = existing.get(pid, ("", True))
-        # A label a maintainer has confirmed is never overwritten from Wikidata.
-        if draft:
+        label, draft, keep = existing.get(pid, ("", True, False))
+        # A label a maintainer has confirmed, or one corrected here because
+        # Wikidata named the wrong thing, is never overwritten by a refresh.
+        if draft and not keep:
             label = by_q.get(q, label)
         if not label:
             continue
         kept += 1
         esc = label.replace('"', '\\"')
-        flag = ", draft = true" if draft else ""
-        lines.append(f'{pid} = {{ ta = "{esc}"{flag} }}  # {name_en}')
+        flags = "".join([", draft = true" if draft else "", ", keep = true" if keep else ""])
+        lines.append(f'{pid} = {{ ta = "{esc}"{flags} }}  # {name_en}')
     body = "[polity]\n" + "\n".join(lines[7:]) + "\n"
     with open(TA_PATH, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("\n".join(lines[:7]) + "\n" + body)
@@ -156,7 +165,7 @@ def build():
         gm = mapping(g)
         if gm["type"] != "GeometryCollection":
             gm["coordinates"] = rnd(gm["coordinates"])
-        label_ta, draft = ta.get(pid, ("", False))
+        label_ta, draft, _keep = ta.get(pid, ("", False, False))
         # Where to hang the name, and how wide the polity is, so the map can
         # label only the ones with room for it. representative_point is inside
         # the polygon even when the centroid is not (Egypt along the Nile).
