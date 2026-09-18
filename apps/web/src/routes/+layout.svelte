@@ -112,7 +112,6 @@
 	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>
 	<a href="/dictionary">{ui === 'ta' ? 'அகராதி' : 'Dictionary'}</a>
 	<a href="/heatmap">{ui === 'ta' ? 'வெப்ப வரைபடம்' : 'Heatmap'}</a>
-	<a href="https://github.com/samueldotj/tamilscripture.com">GitHub</a>
 </footer>
 {/if}
 

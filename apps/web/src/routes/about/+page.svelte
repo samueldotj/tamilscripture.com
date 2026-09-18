@@ -67,9 +67,6 @@
 			No account is needed to read. Your reader settings are stored on your own device. There are no advertising or third-party tracking scripts. To improve the site we keep our own anonymous visit counts: the page viewed, verses tapped, an estimated country and city, device type and screen size. No cookies are used, no IP address or account id is stored, and no one can be followed beyond a single day. If your browser sends Global Privacy Control or Do Not Track, nothing is counted.
 		{/if}
 	</p>
-
-	<h2>{ta ? 'திறந்த மூலம்' : 'Open source'}</h2>
-	<p>The code is MIT-licensed at <a href="https://github.com/samueldotj/tamilscripture.com">github.com/samueldotj/tamilscripture.com</a>. Bible texts keep their own licences listed above.</p>
 </article>
 
 <style>
