@@ -96,6 +96,51 @@
 	function clearSelection() {
 		selected = new Set();
 		xrefOpen = null;
+		if (fromText) getSelection()?.removeAllRanges();
+		fromText = false;
+	}
+
+	// Drag-select (or long-press and drag on phones) across the text: the verses the browser's
+	// own selection touches become the verse selection, so the colour bar appears while copy,
+	// right-click and the phone's selection menu keep working untouched.
+	let measure: HTMLDivElement | undefined = $state();
+	let fromText = false;
+	let pressed: Element | null = null;
+	let pending = 0;
+	function onPointerDown(e: PointerEvent) {
+		pressed = e.target as Element | null;
+	}
+	function onSelectionChange() {
+		clearTimeout(pending);
+		pending = window.setTimeout(readSelection, 50);
+	}
+	function readSelection() {
+		const sel = getSelection();
+		const range = sel && sel.rangeCount && !sel.isCollapsed ? sel.getRangeAt(0) : null;
+		if (!range || !measure || !measure.contains(range.commonAncestorContainer)) {
+			// Clicking a colour or the note sheet collapses the text selection on some browsers;
+			// the verses stay selected so the action still applies to them.
+			if (fromText && !pressed?.closest('[role="toolbar"], [role="dialog"], aside.panel')) {
+				fromText = false;
+				selected = new Set();
+			}
+			return;
+		}
+		const ids = new Set<string>();
+		for (const el of measure.querySelectorAll<HTMLElement>('[data-verse]')) {
+			const id = el.dataset.verse;
+			if (id && !isNaN(verseNum(id)) && range.intersectsNode(el)) ids.add(id);
+		}
+		if (!ids.size) {
+			if (fromText) {
+				fromText = false;
+				selected = new Set();
+			}
+			return;
+		}
+		fromText = true;
+		xrefOpen = null;
+		if (ids.size !== selected.size || [...ids].some((id) => !selected.has(id))) selected = ids;
 	}
 	const verseNum = (id: string) => Number(id.split('.')[2]);
 	const selectedNumbers = $derived([...selected].map(verseNum).filter((n) => !isNaN(n)).sort((a, b) => a - b));
@@ -333,6 +378,7 @@
 </script>
 
 <svelte:window onkeydown={onKey} onscroll={onScrollProgress} />
+<svelte:document onselectionchange={onSelectionChange} onpointerdowncapture={onPointerDown} />
 
 <svelte:head>
 	<title>{title} · Tamil Scripture</title>
@@ -379,7 +425,7 @@
 			</div>
 		</div>
 
-		<div class="measure">
+		<div class="measure" bind:this={measure}>
 			<nav class="crumbs" aria-label="Breadcrumb">
 				<a href="/">Bible</a>
 				<span aria-hidden="true">›</span>

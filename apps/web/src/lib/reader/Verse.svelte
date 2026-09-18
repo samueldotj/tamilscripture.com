@@ -118,6 +118,8 @@
 	.note-mark, .xref { border: 0; background: none; padding: 0 0.15em; margin-left: 0.1em; color: var(--muted); font-size: 0.66em; vertical-align: super; line-height: 1; cursor: pointer; font-family: var(--sans); }
 	.note-mark { color: var(--accent); }
 	.xref:hover, .note-mark:hover { color: var(--accent); }
+	/* Kept out of copied text: a copy holds the verse numbers and words only. */
+	.note-mark, .xref, .xref-list { -webkit-user-select: none; user-select: none; }
 	.xref-list { display: none; font-family: var(--sans); font-size: 0.72em; color: var(--muted); text-indent: 0; margin-top: 0.1em; }
 	.xref-list a { color: var(--muted); text-decoration: none; margin-right: 0.7em; }
 	.xref-list a:hover { color: var(--accent); }
