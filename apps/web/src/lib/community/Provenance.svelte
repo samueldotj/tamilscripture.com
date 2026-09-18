@@ -20,7 +20,7 @@
 
 <style>
 	.prov { display: inline-block; font-size: 0.7rem; border: 1px solid currentColor; border-radius: 999px; padding: 0 0.45rem; color: var(--amber); line-height: 1.5; vertical-align: middle; }
-	.prov.community { color: var(--green, #2e7d32); }
+	.prov.community { color: var(--good); }
 	.prov.owner { color: var(--accent); }
 	.prov[lang='ta'] { font-family: var(--tamil); }
 </style>

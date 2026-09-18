@@ -22,6 +22,22 @@ export interface Suggestion {
 export interface QueueItem extends Suggestion {
 	author: string;
 	decided_by_name: string | null;
+	/** What this contributor has had accepted and rejected before. */
+	author_accepted: number;
+	author_rejected: number;
+}
+
+export interface ModCounts {
+	open: number;
+	accepted: number;
+	rejected: number;
+}
+
+export interface ModStats {
+	accepted_this_month: number;
+	/** Over the last hundred decisions, so one stale row does not stand for all. */
+	avg_wait_hours: number | null;
+	contributors: number;
 }
 
 export interface StaffMember {
@@ -45,6 +61,33 @@ export function nameTarget(version: string, nameEn: string): string {
 /** `article:eastons/damascus#p1-ee1db5fc` */
 export function articleTarget(paragraphId: string): string {
 	return `article:${paragraphId}`;
+}
+
+/** Why a correction is being suggested (design 8A). The id is what goes into
+ *  `reason`, so the queue can show it as a tag; a free note may follow after
+ *  ": ". Reasons written before this existed are plain text and still read. */
+export const REASONS = [
+	{ id: 'wrong-word', en: 'Wrong word', ta: 'பிழையான சொல்' },
+	{ id: 'grammar', en: 'Grammar', ta: 'இலக்கணம்' },
+	{ id: 'missing', en: 'Missing text', ta: 'விடுபட்டது' },
+	{ id: 'phrasing', en: 'Sentence structure', ta: 'வாக்கிய அமைப்பு' }
+] as const;
+
+export type ReasonId = (typeof REASONS)[number]['id'];
+
+/** Split a stored reason into its tag and the note after it. */
+export function parseReason(reason: string | null): { tag: (typeof REASONS)[number] | null; note: string } {
+	if (!reason) return { tag: null, note: '' };
+	const [head, ...rest] = reason.split(':');
+	const tag = REASONS.find((r) => r.id === head.trim()) ?? null;
+	return tag ? { tag, note: rest.join(':').trim() } : { tag: null, note: reason };
+}
+
+/** Put a tag and an optional note back together for storage. */
+export function formatReason(tag: ReasonId | '', note: string): string | undefined {
+	const n = note.trim();
+	if (!tag) return n || undefined;
+	return n ? `${tag}: ${n}` : tag;
 }
 
 export type ParsedTarget =
@@ -87,6 +130,16 @@ export async function myContributions(): Promise<Suggestion[]> {
 		.limit(200);
 	if (error) throw new Error(friendly(error.message));
 	return data as Suggestion[];
+}
+
+export async function modCounts(): Promise<ModCounts> {
+	const rows = await rpc<ModCounts[]>('mod_counts');
+	return rows?.[0] ?? { open: 0, accepted: 0, rejected: 0 };
+}
+
+export async function modStats(): Promise<ModStats> {
+	const rows = await rpc<ModStats[]>('mod_stats');
+	return rows?.[0] ?? { accepted_this_month: 0, avg_wait_hours: null, contributors: 0 };
 }
 
 export async function queue(status: SuggestionStatus | 'all' = 'open', limit = 200): Promise<QueueItem[]> {

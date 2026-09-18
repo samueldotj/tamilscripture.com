@@ -150,6 +150,7 @@ pub fn load(dir: &Path) -> Result<Vec<Article>> {
                 paragraphs: paras,
                 refs,
                 hash: fnv8(&full),
+                also_in: Vec::new(),
             });
         }
     }

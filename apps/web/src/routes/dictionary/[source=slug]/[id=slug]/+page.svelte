@@ -4,7 +4,7 @@
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { articleTarget } from '$lib/community/repo';
-	import { sourceOf } from '$lib/entities/sources';
+	import { byEntryOrder, sourceOf } from '$lib/entities/sources';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -12,6 +12,15 @@
 	const src = $derived(sourceOf(a.source));
 	const sourceName = $derived(`${src.name} (${src.year})`);
 	const hasTa = $derived(a.paragraphs.some((p) => p.ta));
+	/** This entry and its siblings, in entry order: the source switcher. */
+	const sources = $derived(
+		byEntryOrder(
+			[{ source: a.source, id: a.id }, ...(a.also_in ?? []).map((x) => ({ source: x.source, id: x.id }))],
+			(x) => x.source
+		)
+	);
+	/** How many community corrections stand in the Tamil of this entry. */
+	const corrections = $derived(a.paragraphs.filter((p) => p.ta_source === 'community' || p.ta_source === 'owner').length);
 	const description = $derived((a.paragraphs[0]?.ta ?? a.paragraphs[0]?.text ?? '').slice(0, 160));
 </script>
 
@@ -47,6 +56,24 @@
 				{/each}
 			</ul>
 		{/if}
+		{#if sources.length > 1}
+			<div class="sources">
+				<div class="srow">
+					<span class="slabel" lang={ta ? 'ta' : 'en'}>{ta ? 'மூலம் · Source' : 'Source'}</span>
+					<span class="scount" lang={ta ? 'ta' : 'en'}>{ta ? `${sources.length} அகராதிகளில்` : `in ${sources.length} dictionaries`}</span>
+				</div>
+				<div class="pills" role="group" aria-label={ta ? 'அகராதி மூலம்' : 'Dictionary source'}>
+					{#each sources as s, i (s.id)}
+						{@const so = sourceOf(s.source)}
+						{#if s.id === a.id}
+							<span class="pill on" aria-current="true">{so.short}{#if i === 0}<span class="def" lang={ta ? 'ta' : 'en'}>{ta ? 'இயல்பு' : 'default'}</span>{/if}</span>
+						{:else}
+							<a class="pill" href="/dictionary/{s.id}">{so.short}</a>
+						{/if}
+					{/each}
+				</div>
+			</div>
+		{/if}
 	</header>
 
 	<div class="body">
@@ -65,6 +92,40 @@
 			</div>
 		{/each}
 	</div>
+
+	<div class="prov">
+		<div class="pmeta">
+			<div class="pname">{src.name}, {src.year}</div>
+			<div class="pta" lang={ta ? 'ta' : 'en'}>
+				{#if hasTa}
+					{ta ? 'தமிழாக்கம்' : 'Tamil translation'}{#if corrections} · <span class="ok">✓ {corrections} {ta ? 'சமூக திருத்தங்கள்' : corrections === 1 ? 'community correction' : 'community corrections'}</span>{/if}
+				{:else}
+					{ta ? 'தமிழாக்கம் இன்னும் இல்லை' : 'no Tamil translation yet'}
+				{/if}
+			</div>
+		</div>
+		<a class="pedit" href="#{a.paragraphs[0]?.id.split('#')[1] ?? ''}" lang={ta ? 'ta' : 'en'}>✎ {ta ? (hasTa ? 'திருத்து' : 'தமிழாக்கம் பரிந்துரை') : hasTa ? 'Suggest a correction' : 'Suggest a translation'}</a>
+	</div>
+
+	{#if a.also_in?.length}
+		<section class="also">
+			<h2 class="alabel" lang={ta ? 'ta' : 'en'}>{ta ? 'மற்ற அகராதிகளில் · Also in' : 'Also in'}</h2>
+			<ul>
+				{#each a.also_in as s (s.id)}
+					{@const so = sourceOf(s.source)}
+					<li>
+						<a href="/dictionary/{s.id}">
+							<div class="atext">
+								<div class="ahead">{so.short} <span class="ayear">· {so.year}</span></div>
+								<div class="aprev" lang={s.preview_ta ? 'ta' : 'en'}>{s.preview}</div>
+							</div>
+							<span class="achev" aria-hidden="true">›</span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
 
 	<footer class="foot">
 		<p class="source">{a.attribution}</p>
@@ -94,6 +155,43 @@
 	.src summary { cursor: pointer; color: var(--muted); font-size: 0.8rem; }
 	.src summary[lang='ta'] { font-family: var(--tamil); }
 	.src p { margin-top: 0.3rem; font-size: 0.95rem; }
+	/* Source switcher: the same headword in the other dictionaries (design 8A). */
+	.sources { margin-top: 1rem; display: grid; gap: 0.45rem; }
+	.srow { display: flex; align-items: baseline; gap: 0.6rem; }
+	.slabel { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+	.slabel[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.02em; font-size: 0.78rem; }
+	.scount { font-size: 0.78rem; color: var(--muted); }
+	.scount[lang='ta'] { font-family: var(--tamil); }
+	.pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+	.pill { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 34px; padding: 0.2rem 0.8rem; border: var(--bw) solid var(--line-2); border-radius: 999px; font-size: 0.88rem; font-weight: 600; color: var(--ink-2); text-decoration: none; }
+	.pill:hover { border-color: var(--accent); color: var(--accent); }
+	.pill.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+	.def { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; opacity: 0.8; }
+	.def[lang='ta'] { font-family: var(--tamil); letter-spacing: 0; }
+
+	/* Provenance: which dictionary, and what has happened to its Tamil. */
+	.prov { margin-top: 1.6rem; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap; padding: 0.7rem 0.9rem; border: var(--bw) solid var(--line); border-radius: var(--r); background: var(--surface-2); }
+	.pname { font-size: 0.84rem; font-weight: 600; }
+	.pta { font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+	.pta[lang='ta'] { font-family: var(--tamil); }
+	.ok { color: var(--good); font-weight: 600; }
+	.pedit { font-size: 0.85rem; font-weight: 600; text-decoration: none; color: var(--accent); white-space: nowrap; }
+	.pedit[lang='ta'] { font-family: var(--tamil); }
+
+	/* One line from each of the other dictionaries. */
+	.also { margin-top: 1.2rem; }
+	.alabel { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.5rem; }
+	.alabel[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.02em; font-size: 0.8rem; }
+	.also ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; }
+	.also a { display: flex; align-items: center; gap: 0.7rem; padding: 0.65rem 0.85rem; border: var(--bw) solid var(--line); border-radius: var(--r); text-decoration: none; color: inherit; }
+	.also a:hover { border-color: var(--accent); }
+	.atext { min-width: 0; flex: 1; }
+	.ahead { font-size: 0.82rem; font-weight: 700; }
+	.ayear { font-weight: 500; color: var(--muted); }
+	.aprev { font-size: 0.85rem; color: var(--ink-2); margin-top: 0.1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	.aprev[lang='ta'] { font-family: var(--tamil); }
+	.achev { color: var(--muted); flex: none; }
+
 	.title-ta { font-family: var(--tamil); color: var(--muted); font-weight: 500; font-size: 0.7em; margin-left: 0.4em; }
 	.foot { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 0.9rem; display: grid; gap: 0.4rem; }
 	.source, .note { margin: 0; font-size: 0.78rem; color: var(--muted); }

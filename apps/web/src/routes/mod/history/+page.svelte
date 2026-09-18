@@ -78,7 +78,7 @@
 	.top { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: baseline; font-size: 0.85rem; }
 	.ref { font-weight: 600; text-decoration: none; }
 	.status { font-size: 0.72rem; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.5rem; color: var(--muted); }
-	.status.accepted { color: var(--green, #2e7d32); border-color: currentColor; }
+	.status.accepted { color: var(--good); border-color: currentColor; }
 	.who { color: var(--muted); }
 	time { color: var(--muted); margin-left: auto; }
 	.text { margin: 0; font-family: var(--tamil); line-height: 1.7; }

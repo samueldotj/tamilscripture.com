@@ -46,6 +46,63 @@ pub struct Article {
     pub refs: Vec<String>,
     /// FNV-1a of the full source text, for draft staleness checks
     pub hash: String,
+    /// The same headword in the other dictionaries, in entry order. 3,576 of
+    /// the 8,122 headwords are in more than one, so an entry is not an island.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub also_in: Vec<Sibling>,
+}
+
+/// One line about the same headword in another dictionary: enough to decide
+/// whether to open it, without fetching it.
+#[derive(Debug, Clone, Serialize)]
+pub struct Sibling {
+    pub source: String,
+    /// `smiths/jehovah`
+    pub id: String,
+    pub title: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub title_ta: Option<String>,
+    pub paragraphs: usize,
+    /// The opening of the article, Tamil where there is Tamil, else English.
+    pub preview: String,
+    /// True when `preview` is the Tamil text.
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub preview_ta: bool,
+}
+
+/// Headwords are matched across dictionaries on a folded title: lowercase,
+/// with the bracketed disambiguators and punctuation the sources differ on
+/// removed, so "Abel (1)", "Abel," and "abel" are one headword.
+pub fn headword_key(title: &str) -> String {
+    let t = title.split('(').next().unwrap_or(title);
+    t.chars()
+        .filter(|c| c.is_alphanumeric() || c.is_whitespace())
+        .collect::<String>()
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ")
+        .to_lowercase()
+}
+
+/// The opening of an article, trimmed to a line.
+pub fn preview_of(a: &Article) -> (String, bool) {
+    let first = a.paragraphs.iter().find(|p| !p.heading);
+    let Some(p) = first else {
+        return (String::new(), false);
+    };
+    let (text, is_ta) = match &p.ta {
+        Some(ta) => (ta.as_str(), true),
+        None => (p.text.as_str(), false),
+    };
+    let mut out: String = text.chars().take(96).collect();
+    if text.chars().count() > 96 {
+        // Cut at the last space so a word is not split.
+        if let Some(i) = out.rfind(' ') {
+            out.truncate(i);
+        }
+        out.push('…');
+    }
+    (out, is_ta)
 }
 
 #[derive(Debug, Deserialize)]
@@ -263,6 +320,7 @@ pub fn load_neuu(dir: &Path, src: &NeuuSource) -> Result<Vec<Article>> {
                 paragraphs,
                 refs,
                 hash: fnv8(&full_text),
+                also_in: Vec::new(),
             });
         }
     }

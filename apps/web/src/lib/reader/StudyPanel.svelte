@@ -14,7 +14,8 @@
 		lang,
 		versionPath,
 		show,
-		loading = false
+		loading = false,
+		only = null
 	}: {
 		mentions: ChapterMentions | null;
 		mapSvg?: string | null;
@@ -23,6 +24,10 @@
 		versionPath: string;
 		show: { places: boolean; persons: boolean; maps: boolean; language: boolean };
 		loading?: boolean;
+		/** Render one aid alone, without its heading — the context panel puts
+		 *  each behind a tab and the tab is the heading. Null keeps all three
+		 *  stacked, which is what the mobile sheet wants. */
+		only?: 'map' | 'places' | 'persons' | null;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
@@ -76,17 +81,17 @@
 	const exploreHref = $derived(mentions ? `/atlas/explore?chapter=${mentions.book}.${mentions.chapter}` : '/atlas/explore');
 </script>
 
-<div class="study">
-	{#if nothing}
+<div class="study" class:only={!!only}>
+	{#if nothing && !only}
 		<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'அமைப்புகளில் “காட்டு” பகுதியில் இடங்கள், நபர்கள் அல்லது வரைபடங்களை இயக்குங்கள்.' : 'Turn on Places, Persons or Maps under Show in the settings.'}</p>
 	{:else if loading}
 		<p class="hint">…</p>
 	{:else if !mentions}
 		<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'இந்த அதிகாரத்தில் பெயரிடப்பட்ட இடங்களோ நபர்களோ இல்லை.' : 'No places or people are named in this chapter.'}</p>
 	{:else}
-		{#if show.maps}
+		{#if only === 'map' || (!only && show.maps)}
 			<section>
-				<h3 class="kicker"><span lang="ta">வரைபடம்</span> · Map</h3>
+				{#if !only}<h3 class="kicker"><span lang="ta">வரைபடம்</span> · Map</h3>{/if}
 				{#if mapSvg}
 					<div class="mapwrap" bind:this={mapEl}>{@html mapSvg}</div>
 					<a class="chip explore" href={exploreHref}>
@@ -99,9 +104,9 @@
 			</section>
 		{/if}
 
-		{#if show.places}
+		{#if only === 'places' || (!only && show.places)}
 			<section>
-				<h3 class="kicker"><span lang="ta">இடங்கள்</span> · Places <span class="n">{placeRows.length}</span></h3>
+				{#if !only}<h3 class="kicker"><span lang="ta">இடங்கள்</span> · Places <span class="n">{placeRows.length}</span></h3>{/if}
 				{#if placeRows.length}
 					<ul class="list">
 						{#each placeRows as r (r.id)}
@@ -126,9 +131,9 @@
 			</section>
 		{/if}
 
-		{#if show.persons}
+		{#if only === 'persons' || (!only && show.persons)}
 			<section>
-				<h3 class="kicker"><span lang="ta">நபர்கள்</span> · Persons <span class="n">{peopleRows.length}</span></h3>
+				{#if !only}<h3 class="kicker"><span lang="ta">நபர்கள்</span> · Persons <span class="n">{peopleRows.length}</span></h3>{/if}
 				{#if peopleRows.length}
 					<ul class="list">
 						{#each peopleRows as r (r.id)}
@@ -157,12 +162,20 @@
 			</section>
 		{/if}
 
-		<p class="credit">{#if show.maps || show.places}OpenBible.info · CC BY · Natural Earth{/if}{#if show.persons} · STEP Bible TIPNR · CC BY 4.0{/if}</p>
+		{#if !only}
+			<p class="credit">{#if show.maps || show.places}OpenBible.info · CC BY · Natural Earth{/if}{#if show.persons} · STEP Bible TIPNR · CC BY 4.0{/if}</p>
+		{:else if only === 'persons'}
+			<p class="credit">STEP Bible TIPNR · CC BY 4.0</p>
+		{:else}
+			<p class="credit">OpenBible.info · CC BY · Natural Earth</p>
+		{/if}
 	{/if}
 </div>
 
 <style>
 	.study { display: grid; gap: 1.2rem; padding-top: 0.6rem; }
+	/* Behind a tab there is one section, so it starts at the top. */
+	.study.only { padding-top: 0; gap: 0.7rem; }
 	section { display: grid; gap: 0.6rem; }
 	.hint { color: var(--muted); line-height: 1.7; margin: 0.4rem 0 0; font-size: 0.95rem; }
 	.hint[lang='ta'] { font-family: var(--tamil); }

@@ -197,6 +197,21 @@ export interface Article {
 	paragraphs: Paragraph[];
 	refs?: string[];
 	hash: string;
+	/** The same headword in the other dictionaries, in entry order. */
+	also_in?: Sibling[];
+}
+
+/** The same headword in another dictionary: one line, enough to choose by. */
+export interface Sibling {
+	source: string;
+	/** `smiths/jehovah` */
+	id: string;
+	title: string;
+	title_ta?: string;
+	paragraphs: number;
+	/** The opening of that article, Tamil where there is Tamil. */
+	preview: string;
+	preview_ta?: boolean;
 }
 
 export interface ArticleIndexEntry {

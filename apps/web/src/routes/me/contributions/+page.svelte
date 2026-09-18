@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { myContributions, myRole, parseTarget, type Role, type Suggestion } from '$lib/community/repo';
+	import { myContributions, myRole, parseReason, parseTarget, type Role, type Suggestion } from '$lib/community/repo';
 	import { settings } from '$lib/settings/store.svelte';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -28,6 +28,13 @@
 	function statusText(s: Suggestion['status']) {
 		return s === 'open' ? (ta ? 'மதிப்பாய்வில்' : 'awaiting review') : s === 'accepted' ? (ta ? 'ஏற்கப்பட்டது' : 'accepted') : (ta ? 'நிராகரிக்கப்பட்டது' : 'not accepted');
 	}
+	/** The summary 8A puts at the top: accepted, waiting, and the share of
+	 *  decided suggestions that were accepted. */
+	const accepted = $derived(items.filter((s) => s.status === 'accepted').length);
+	const pending = $derived(items.filter((s) => s.status === 'open').length);
+	const decided = $derived(items.filter((s) => s.status !== 'open').length);
+	const rate = $derived(decided ? Math.round((accepted / decided) * 100) : null);
+
 	function when(d: string) {
 		return new Date(d).toLocaleDateString(ta ? 'ta-IN' : 'en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 	}
@@ -41,6 +48,16 @@
 		<a class="chip" href="/mod" lang={ta ? 'ta' : 'en'}>{ta ? 'மதிப்பாய்வு வரிசை' : 'Review queue'} ›</a>
 	{/if}
 </div>
+
+{#if !loading && !error && items.length}
+	<ul class="tiles">
+		<li><div class="tn">{accepted}</div><div class="tl" lang={ta ? 'ta' : 'en'}>{ta ? 'ஏற்றவை' : 'accepted'}</div></li>
+		<li><div class="tn">{pending}</div><div class="tl" lang={ta ? 'ta' : 'en'}>{ta ? 'நிலுவை' : 'pending'}</div></li>
+		{#if rate !== null}
+			<li><div class="tn">{rate}%</div><div class="tl" lang={ta ? 'ta' : 'en'}>{ta ? 'ஏற்பு விகிதம்' : 'acceptance rate'}</div></li>
+		{/if}
+	</ul>
+{/if}
 
 {#if loading}
 	<p class="muted">…</p>
@@ -58,6 +75,13 @@
 					<span class="status {s.status}" lang={ta ? 'ta' : 'en'}>{statusText(s.status)}</span>
 					<time datetime={s.created_at}>{when(s.created_at)}</time>
 				</div>
+				{#if parseReason(s.reason).tag}
+					{@const r = parseReason(s.reason)}
+					<div class="why">
+						<span class="tag" lang={ta ? 'ta' : 'en'}>{ta ? r.tag!.ta : r.tag!.en}</span>
+						{#if r.note}<span class="note" lang={ta ? 'ta' : 'en'}>{r.note}</span>{/if}
+					</div>
+				{/if}
 				<p class="text" lang="ta">{s.suggested_text}</p>
 				{#if s.status === 'accepted' && s.final_text && s.final_text !== s.suggested_text}
 					<p class="final"><span class="k" lang={ta ? 'ta' : 'en'}>{ta ? 'வெளியிடப்பட்டது' : 'Published as'}:</span> <span lang="ta">{s.final_text}</span></p>
@@ -76,13 +100,25 @@
 	h1 { font-family: var(--tamil); font-size: 1.5rem; margin: 0; }
 	h1 .n { color: var(--muted); font-size: 1rem; font-weight: 400; }
 	.chip[lang='ta'] { font-family: var(--tamil); }
+	/* The summary 8A puts above the list. */
+	.tiles { list-style: none; margin: 0 0 1.2rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; max-width: 44rem; }
+	.tiles li { border: var(--bw) solid var(--line); border-radius: var(--r); padding: 0.6rem 1rem; display: grid; gap: 0.1rem; min-width: 7rem; }
+	.tn { font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
+	.tl { font-size: 0.75rem; color: var(--muted); }
+	.tl[lang='ta'] { font-family: var(--tamil); }
+	/* Why the correction was suggested, as the tag the contributor chose. */
+	.why { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: baseline; }
+	.tag { font-size: 0.7rem; font-weight: 700; color: var(--amber); border: 1px solid currentColor; border-radius: 999px; padding: 0 0.5rem; }
+	.tag[lang='ta'] { font-family: var(--tamil); }
+	.why .note { font-size: 0.82rem; color: var(--ink-2); }
+	.why .note[lang='ta'] { font-family: var(--tamil); }
 	ul { list-style: none; padding: 0; margin: 0; max-width: 44rem; }
 	li { padding: 0.8rem 0; border-top: 1px solid var(--line); display: grid; gap: 0.3rem; }
 	.top { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: baseline; }
 	.ref { font-weight: 600; text-decoration: none; }
-	.status { font-size: 0.72rem; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.5rem; color: var(--muted); }
-	.status.accepted { color: var(--green, #2e7d32); border-color: currentColor; }
-	.status.rejected { color: var(--muted); }
+	.status { font-size: 0.72rem; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.5rem; color: var(--warn); border-color: currentColor; }
+	.status.accepted { color: var(--good); border-color: currentColor; }
+	.status.rejected { color: var(--bad); border-color: currentColor; }
 	.status[lang='ta'] { font-family: var(--tamil); }
 	time { color: var(--muted); font-size: 0.8rem; margin-left: auto; }
 	.text { margin: 0; font-family: var(--tamil); line-height: 1.7; }

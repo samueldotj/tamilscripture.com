@@ -650,6 +650,60 @@ fn main() -> Result<()> {
     for x in &report.glossary_misses {
         eprintln!("warning: draft does not use the accepted name: {x}");
     }
+    // ---- the same headword across dictionaries ----
+    // Easton's leads: it is the concise public-domain source, and an entry that
+    // opened on the ShareAlike one would carry that licence into everything
+    // quoting it. Computed after the Tamil is applied so a preview can be Tamil.
+    const ENTRY_ORDER: [&str; 3] = ["eastons", "smiths", "aquifer"];
+    let source_rank = |src: &str| {
+        ENTRY_ORDER
+            .iter()
+            .position(|s| *s == src)
+            .unwrap_or(ENTRY_ORDER.len())
+    };
+    let mut by_headword: BTreeMap<String, Vec<usize>> = BTreeMap::new();
+    for (i, a) in all_articles.iter().enumerate() {
+        by_headword
+            .entry(articles::headword_key(&a.title))
+            .or_default()
+            .push(i);
+    }
+    let mut siblings: Vec<Vec<articles::Sibling>> = vec![Vec::new(); all_articles.len()];
+    for ids in by_headword.values() {
+        if ids.len() < 2 {
+            continue;
+        }
+        let mut ordered = ids.clone();
+        ordered.sort_by_key(|&i| (source_rank(&all_articles[i].source), i));
+        for &i in &ordered {
+            siblings[i] = ordered
+                .iter()
+                .filter(|&&j| j != i)
+                .map(|&j| {
+                    let a = &all_articles[j];
+                    let (preview, preview_ta) = articles::preview_of(a);
+                    articles::Sibling {
+                        source: a.source.clone(),
+                        id: a.id.clone(),
+                        title: a.title.clone(),
+                        title_ta: a.title_ta.clone(),
+                        paragraphs: a.paragraphs.len(),
+                        preview,
+                        preview_ta,
+                    }
+                })
+                .collect();
+        }
+    }
+    let shared = siblings.iter().filter(|s| !s.is_empty()).count();
+    for (i, s) in siblings.into_iter().enumerate() {
+        all_articles[i].also_in = s;
+    }
+    println!(
+        "dictionary: {shared} of {} articles share a headword with another dictionary",
+        all_articles.len()
+    );
+
     let article_refs = |key: &str| -> Vec<ArticleRef<'_>> {
         articles_by_entity
             .get(key)

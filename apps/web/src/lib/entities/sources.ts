@@ -54,8 +54,23 @@ export const SOURCES: Record<string, DictionarySource> = {
 	}
 };
 
-/** Preferred display order: the modern readable source first. */
+/** Preferred display order for the index filter: the modern readable source first. */
 export const SOURCE_ORDER = ['aquifer', 'eastons', 'smiths'];
+
+/** Order of the source switcher on an entry, and so which source an entry
+ *  opens on when a headword is in several. Easton's leads: it is the concise
+ *  public-domain one, and an entry opening on the ShareAlike source would carry
+ *  that licence into everything quoting it (design 8A). */
+export const ENTRY_ORDER = ['eastons', 'smiths', 'aquifer'];
+
+/** Sort sources into entry order. */
+export function byEntryOrder<T>(items: T[], key: (t: T) => string): T[] {
+	const rank = (s: string) => {
+		const i = ENTRY_ORDER.indexOf(s);
+		return i < 0 ? ENTRY_ORDER.length : i;
+	};
+	return [...items].sort((a, b) => rank(key(a)) - rank(key(b)));
+}
 
 export function sourceOf(key: string): DictionarySource {
 	return SOURCES[key] ?? { key, name: key, short: key, year: '', licence: '', licence_ta: '', licence_en: '', sharealike: false, attribution: '', url: '' };

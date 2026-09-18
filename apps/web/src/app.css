@@ -40,6 +40,13 @@
 	--hl-green: #CFE6C2;
 	--hl-blue: #C9DCF2;
 	--hl-pink: #F4CBD8;
+	/* Review states (design 8A): accepted, waiting, not accepted. Reserved for
+	   status — never reused as a decorative colour. */
+	--good: #2F7D4F;
+	--good-soft: #E4F1E7;
+	--warn: #8A6100;
+	--bad: #B3261E;
+	--bad-soft: #F7E3E1;
 	--accent-rgb: 43, 91, 140;
 	--heat-rgb: var(--accent-rgb);
 	--shadow: 0 14px 34px rgba(28, 26, 24, 0.14);
@@ -89,6 +96,11 @@ html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam
 		--hl-green: #2F4F2C;
 		--hl-blue: #29405A;
 		--hl-pink: #5A2E3C;
+		--good: #8FCB9B;
+		--good-soft: #24352A;
+		--warn: #E39A5F;
+		--bad: #F0A9A9;
+		--bad-soft: #3A2626;
 		--accent-rgb: 217, 178, 92;
 		--shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 		--shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
@@ -117,6 +129,11 @@ html.tf-system { --tamil: 'Tamil Fallback', 'Nirmala UI', 'Latha', 'Tamil Sangam
 	--hl-green: #2F4F2C;
 	--hl-blue: #29405A;
 	--hl-pink: #5A2E3C;
+	--good: #8FCB9B;
+	--good-soft: #24352A;
+	--warn: #E39A5F;
+	--bad: #F0A9A9;
+	--bad-soft: #3A2626;
 	--accent-rgb: 217, 178, 92;
 	--shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 	--shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);

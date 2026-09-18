@@ -84,6 +84,6 @@
 	th { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 	.muted { color: var(--muted); margin: 0.5rem 0 0; }
 	.small { font-size: 0.8rem; }
-	.err { color: var(--red, #b3261e); }
-	.ok { color: var(--green, #2e7d32); }
+	.err { color: var(--bad); }
+	.ok { color: var(--good); }
 </style>

@@ -8,6 +8,7 @@
 	import NoteSheet from './NoteSheet.svelte';
 	import BookRail from './BookRail.svelte';
 	import ContextPanel from './ContextPanel.svelte';
+	import type { TabId } from './ContextPanel.svelte';
 	import StudyPanel from './StudyPanel.svelte';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
 	import type { ChapterMentions } from '$lib/entities/types';
@@ -127,31 +128,77 @@
 		sheet = 'related';
 	}
 
-	// Study Bible format (R-8.4): the chapter's places, persons and map,
-	// fetched after paint and only while that format is active.
+	// The context panel's aids: the chapter's places, persons and map. Fetched
+	// after paint in every reading format — the panel offers them as tabs
+	// whatever the format, so the Study Bible Show toggles govern the stacked
+	// mobile sheet and the original-language forms, not whether a tab exists.
 	const isStudy = $derived(settings.value.format === 'xref');
 	const studyShow = $derived({ places: settings.value.places, persons: settings.value.persons, maps: settings.value.maps, language: settings.value.language });
-	const studyWanted = $derived(isStudy && !dual && (studyShow.places || studyShow.persons || studyShow.maps));
+	/** The panel is where the aids live, and there is no panel in compare view. */
+	const panelWanted = $derived(!dual);
+	/** The Show toggles belong to the Study Bible format and are only offered
+	 *  there; in the other formats the aids are simply available, so a reader
+	 *  is not left with a tab they cannot switch back on. */
+	const aidShow = $derived(isStudy ? studyShow : { ...studyShow, places: true, persons: true, maps: true });
 	let mentions = $state<ChapterMentions | null>(null);
 	let mapSvg = $state<string | null>(null);
 	let studyLoading = $state(false);
+	/** How many distinct places and people the chapter names, for the tab counts. */
+	const aidCounts = $derived.by(() => {
+		const places = new Set<string>();
+		const persons = new Set<string>();
+		for (const v of mentions?.verses ?? []) {
+			for (const id of v.places ?? []) if (mentions?.places[id]) places.add(id);
+			for (const id of v.people ?? []) if ((mentions?.people ?? {})[id]) persons.add(id);
+		}
+		return { places: places.size, persons: persons.size };
+	});
+	/** The panel's tabs beside Related: whatever this chapter actually has. */
+	const aids = $derived([
+		...(mentions?.map ? [{ id: 'map' as const, ta: 'வரைபடம்', en: 'Map' }] : []),
+		...(aidCounts.places ? [{ id: 'places' as const, ta: 'இடங்கள்', en: 'Places', n: aidCounts.places }] : []),
+		...(aidCounts.persons ? [{ id: 'persons' as const, ta: 'நபர்கள்', en: 'Persons', n: aidCounts.persons }] : [])
+	]);
+	let panelTab = $state<TabId>('related');
+
 	$effect(() => {
 		const key = `${data.book.code}.${data.chapter}`;
-		if (!studyWanted) return;
+		if (!panelWanted) return;
 		mentions = null;
 		mapSvg = null;
+		mapRequested = '';
 		studyLoading = true;
 		let cancelled = false;
+		// The mentions are a couple of kilobytes; the chapter map is bigger and
+		// most readers never open that tab, so it waits until one does.
 		loadMentions(fetch, data.book.code, data.chapter)
-			.then(async (m) => {
-				if (cancelled) return;
-				mentions = m;
-				if (m?.map && studyShow.maps) mapSvg = await loadMapSvg(fetch, `${data.book.code}/${data.chapter}`).catch(() => null);
+			.then((m) => {
+				if (!cancelled) mentions = m;
 			})
 			.catch(() => {})
 			.finally(() => { if (!cancelled) studyLoading = false; });
 		void key;
 		return () => { cancelled = true; };
+	});
+
+	// The chapter map is fetched the first time the Map tab is opened, and kept
+	// for as long as the chapter is on screen.
+	let mapLoading = $state(false);
+	// Which chapter's map has been asked for. A plain variable, not state: the
+	// effect below would otherwise invalidate itself the moment it recorded the
+	// request, cancel its own fetch on the re-run, and never finish.
+	let mapRequested = '';
+	$effect(() => {
+		const key = `${data.book.code}.${data.chapter}`;
+		if (panelTab !== 'map' || !mentions?.map || mapRequested === key) return;
+		mapRequested = key;
+		mapLoading = true;
+		loadMapSvg(fetch, `${data.book.code}/${data.chapter}`)
+			.then((svg) => {
+				if (mapRequested === key) mapSvg = svg;
+			})
+			.catch(() => {})
+			.finally(() => { if (mapRequested === key) mapLoading = false; });
 	});
 
 	// Desktop context panel: the verse whose ‡ was pressed, else the first
@@ -307,7 +354,7 @@
 		<div class="toolbar">
 			<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
 			<div class="right">
-				{#if studyWanted}
+				{#if aids.length}
 					<button type="button" class="chip study-chip" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/></svg>
 						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
@@ -365,11 +412,9 @@
 
 	{#if !dual}
 		<aside class="panel">
-			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui}>
-				{#snippet study()}
-					{#if studyWanted}
-						<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={studyShow} loading={studyLoading} />
-					{/if}
+			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab}>
+				{#snippet study(only)}
+					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
 				{#snippet actions()}
 					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
@@ -385,7 +430,7 @@
 	{#if sheet}
 		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
 			{#snippet study()}
-				<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={studyShow} loading={studyLoading} />
+				<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading} />
 			{/snippet}
 		</XrefPanel>
 	{/if}
