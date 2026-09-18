@@ -108,7 +108,8 @@
 
 {#if !bleed}
 <footer class="site-foot">
-	<a href="/about">{ui === 'ta' ? 'பற்றி · உரிமங்கள்' : 'About · licences'}</a>
+	<a href="/about">{ui === 'ta' ? 'பற்றி' : 'About'}</a>
+	<a href="/licences">{ui === 'ta' ? 'உரிமங்கள்' : 'Licences'}</a>
 	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>
 	<a href="/dictionary">{ui === 'ta' ? 'அகராதி' : 'Dictionary'}</a>
 	<a href="/heatmap">{ui === 'ta' ? 'வெப்ப வரைபடம்' : 'Heatmap'}</a>
