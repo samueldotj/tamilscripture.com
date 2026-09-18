@@ -13,7 +13,11 @@ export function sb(): Promise<SupabaseClient> {
 	if (!clientPromise) {
 		clientPromise = import('@supabase/supabase-js').then(({ createClient }) =>
 			createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-				auth: { flowType: 'pkce', persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+				// /auth/callback exchanges the PKCE code itself. Letting the client
+				// also pick it up from the URL exchanged it twice: the second
+				// exchange found its code verifier already spent and failed with
+				// "PKCE code verifier not found in storage".
+				auth: { flowType: 'pkce', persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
 			})
 		);
 	}

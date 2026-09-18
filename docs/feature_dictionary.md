@@ -229,6 +229,6 @@ Articles are searchable by title through the entity search table (feature_maps.m
 2. Produce Tamil drafts outside the repository in the §5 shape once the English articles are emitted (task 7.4).
 3. Secrets, entered by the owner and never handled in chat:
    - GitHub repository secret `SUPABASE_SERVICE_KEY` (the project's service-role key) for `export-overrides.yml`.
-   - Vercel environment variable `GITHUB_DISPATCH_TOKEN`: a fine-grained personal access token for this repository with **Contents: read** and **Actions: write** (repository_dispatch), used only by `/api/mod/publish`. Optional `GITHUB_REPO` if the repository moves.
+   - Vercel environment variable `GITHUB_DISPATCH_TOKEN`: a fine-grained personal access token for this repository with **Contents: read and write** (GitHub requires it for repository_dispatch; Metadata read-only is added automatically), used only by `/api/mod/publish`. Optional `GITHUB_REPO` if the repository moves.
 4. Appoint the first moderator in the database: `update public.profiles set role = 'moderator' where user_id = '<uuid>';` (moderators cannot create moderators).
 5. Optional: run the export workflow once by hand (Actions → Export accepted corrections → Run workflow) to confirm the secret works before reviewers start.
