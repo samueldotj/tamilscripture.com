@@ -5,3 +5,4 @@ Disallow: /me/
 Disallow: /api/
 
 Sitemap: https://www.tamilscripture.com/sitemap.xml
+Sitemap: https://www.tamilscripture.com/sitemap.txt
