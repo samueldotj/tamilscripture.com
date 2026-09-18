@@ -2,6 +2,8 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
+	import { afterNavigate } from '$app/navigation';
+	import { track } from '$lib/analytics/track';
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
 	import { settings } from '$lib/settings/store.svelte';
@@ -24,6 +26,13 @@
 	const versionPath = $derived(page.params.versions ?? settings.value.version);
 	const ui = $derived(settings.value.uiLang);
 	const signinHref = $derived(`/signin?next=${encodeURIComponent(page.url.pathname)}`);
+
+	// One page view per navigation, including the first load (docs/feature_analytics.md).
+	afterNavigate(() => {
+		// Chapter pages carry their book and chapter, for the reading insight on /mod/traffic.
+		const d = page.data as { book?: { code?: string }; chapter?: number };
+		track('view', { route: page.route.id, lang: ui, user: session.user?.id, book: d.book?.code, chapter: typeof d.chapter === 'number' ? d.chapter : undefined });
+	});
 
 	onMount(() => {
 		settings.stamp();

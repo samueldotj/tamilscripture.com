@@ -62,9 +62,9 @@
 	<h2>{ta ? 'தனியுரிமை' : 'Privacy'}</h2>
 	<p>
 		{#if ta}
-			வாசிக்க கணக்கு தேவையில்லை. உங்கள் வாசிப்பு அமைப்புகள் உங்கள் சாதனத்திலேயே சேமிக்கப்படுகின்றன. மூன்றாம் தரப்பு விளம்பரம் அல்லது கண்காணிப்பு ஸ்கிரிப்ட்கள் இல்லை.
+			வாசிக்க கணக்கு தேவையில்லை. உங்கள் வாசிப்பு அமைப்புகள் உங்கள் சாதனத்திலேயே சேமிக்கப்படுகின்றன. மூன்றாம் தரப்பு விளம்பரம் அல்லது கண்காணிப்பு ஸ்கிரிப்ட்கள் இல்லை. தளத்தை மேம்படுத்த, நாங்களே அநாமதேய வருகை எண்ணிக்கைகளைச் சேகரிக்கிறோம்: பார்த்த பக்கம், தொட்ட வசனம், நாடு மற்றும் நகரம் (மதிப்பீடு), சாதன வகை, திரை அளவு. குக்கீகள் இல்லை; IP முகவரியோ கணக்கு அடையாளமோ சேமிக்கப்படுவதில்லை; ஒரு நாளுக்கு மேல் யாரையும் பின்தொடர முடியாது. உங்கள் உலாவி “கண்காணிக்க வேண்டாம்” (Global Privacy Control / Do Not Track) அனுப்பினால் எதுவும் எண்ணப்படாது.
 		{:else}
-			No account is needed to read. Your reader settings are stored on your own device. There are no advertising or third-party tracking scripts; anonymous page-view counts are collected to keep the site fast.
+			No account is needed to read. Your reader settings are stored on your own device. There are no advertising or third-party tracking scripts. To improve the site we keep our own anonymous visit counts: the page viewed, verses tapped, an estimated country and city, device type and screen size. No cookies are used, no IP address or account id is stored, and no one can be followed beyond a single day. If your browser sends Global Privacy Control or Do Not Track, nothing is counted.
 		{/if}
 	</p>
 

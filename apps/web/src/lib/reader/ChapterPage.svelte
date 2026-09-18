@@ -19,6 +19,7 @@
 	import type { XrefChapter } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
+	import { track } from '$lib/analytics/track';
 	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, type Highlight, type HighlightColor, type Note } from '$lib/personal/repo';
 
 	let { data }: { data: ChapterPageData } = $props();
@@ -83,7 +84,11 @@
 	let sheet = $state<'related' | 'study' | null>(null);
 	function toggle(id: string) {
 		const s = new Set(selected);
-		if (s.has(id)) s.delete(id); else s.add(id);
+		if (s.has(id)) s.delete(id); else {
+			s.add(id);
+			// A verse click, for the moderators' traffic page (docs/feature_analytics.md).
+			track('verse', { verse: id, lang: settings.value.uiLang, user: session.user?.id });
+		}
 		selected = s;
 		xrefOpen = null; // the context panel follows the selection again
 	}

@@ -481,3 +481,17 @@ Added 13 Sep 2026 for milestone M7 (design: [feature_dictionary.md](feature_dict
 | R-15.5 | Every write goes through `security definer` functions; no table accepts direct inserts or updates from the API; a pgTAP suite in CI proves the rules for anon, reader, reviewer and moderator. | Must |
 | R-15.6 | Publishing is export-only: a workflow every 12 hours, or on a moderator's "Publish now", writes accepted text into `data/entities/overrides/` and starts the normal deploy; the site never reads entity text from Postgres. | Must |
 | R-15.7 | Limits: twenty open suggestions per user; suggestion text 1–4000 characters; reason 500 characters. | Should |
+
+## 19. Site analytics
+
+Added 18 Sep 2026 for milestone M8 (design: [feature_analytics.md](feature_analytics.md)). Moderators see how the site is used without any reader being identified.
+
+| ID | Requirement | Priority |
+|---|---|---|
+| R-16.1 | Page views, visitors, unique page views, signed-in users and verse clicks are counted per day, with country, region and city, device class, operating system, browser, screen resolution, referring site and interface language. | Must |
+| R-16.2 | No cookies and no third-party script. No IP address, user-agent string or user id is stored: visitors and signed-in users are daily-rotating salted hashes, and each day's salt is deleted the next day. | Must |
+| R-16.3 | Browsers sending Global Privacy Control or Do Not Track are not counted; known bots are dropped. | Must |
+| R-16.4 | Only reviewers and moderators can read analytics, enforced in Postgres; the raw tables accept no reads or writes through the API. | Must |
+| R-16.5 | `/mod/traffic` shows totals, a daily chart of a chosen measure, and ranked tables for pages, verses, countries, cities, devices, resolutions, operating systems, browsers, referrers and language, for 7, 30 or 90 days or a year, with a live 30-minute panel, change against the previous period, a books grid, parts of the site, search terms, and CSV export. | Must |
+| R-16.6 | Raw events are kept 90 days; daily rollups two years (phase A3). | Should |
+| R-16.7 | The collector adds no more than about 1 kB to pages and never blocks or breaks them. | Must |

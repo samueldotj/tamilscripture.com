@@ -90,6 +90,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
 | **M6 · Places and maps** | Every verse knows its places: Tamil and English place names, verse links, a static map in the reader, place and journey pages, and an interactive atlas. Design in [docs/feature_maps.md](docs/feature_maps.md). | R-11.1–11.8, R-14.1–14.6 | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. | Built 12 Sep 2026 on branch `m6-places-maps`; regions and the period selector (6.16) deferred |
 | **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.1–12.7, R-13.1–13.6, R-15.1–15.7 | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Built 13 Sep 2026 on `m7-dictionary-people`; owner items open (secrets, first moderator, Tamil drafts, Smith's/Aquifer decision); ISBE deferred |
+| **M8 · Site analytics** | First-party, cookie-free visit counts for moderators: page views, visitors, unique views, signed-in users, verse clicks, country and city, device and resolution, in `/mod/traffic`. Design in [docs/feature_analytics.md](docs/feature_analytics.md). | R-16.1–16.7 | A moderator opens Traffic and sees yesterday's views by page and country; no stored row identifies a reader. | A1–A6 built 18 Sep 2026 |
 
 ### M0 · Foundations
 
@@ -248,6 +249,21 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 | 7.15 | "Underline names" setting, off by default, pre-paint class, CLS check in CI | dictionary §4 | ☐ |
 | 7.16 | Full-text search over Tamil articles with `tamil_tsvector` (after the first Tamil drafts exist) | dictionary §8 | ☐ |
 | 7.17 | Optional: Theographic events and periods in their own directory if licence and value justify it; events on entity pages | dictionary §2 | ☐ |
+
+### M8 · Site analytics
+
+Design: [docs/feature_analytics.md](docs/feature_analytics.md).
+
+| # | Task | Refs | Done |
+|---|---|---|---|
+| 8.1 | A1: migration `20260918000000_site_analytics.sql` (`analytics_salt`, `analytics_events`, `track()`, salt and 90-day retention jobs) | R-16.1–16.4 | ☑ |
+| 8.2 | A1: `/api/t` collector with bot filter, Vercel geo headers and user-agent parsing; page-view beacon after each navigation and a verse-click event; GPC/DNT opt-out; About page privacy text | R-16.1–16.3, R-16.7 | ☑ |
+| 8.3 | A2: `analytics_report(from, to)` (staff only) and `/mod/traffic` with range switch, tiles, daily chart and ranked tables | R-16.4, R-16.5 | ☑ |
+| 8.4 | A2: pgTAP suite `site_analytics.test.sql` (anon records, only staff read, nothing identifying stored) | R-16.2, R-16.4 | ☑ |
+| 8.5 | A3: daily rollups kept two years; report reads rollups beyond 90 days | R-16.6 | ☑ |
+| 8.6 | A4: reading insight — books and chapters read, reading heatmap by book, most-tapped verses per book, search terms, atlas and dictionary usage | feature_analytics §6 | ☑ |
+| 8.7 | A5: live "now" panel, CSV export, week-over-week deltas | feature_analytics §6 | ☑ |
+| 8.8 | A6: edge rate limit, spike note, bot list review, collector load test | feature_analytics §5 | ☑ |
 
 ## Licences
 
