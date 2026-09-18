@@ -1,13 +1,15 @@
 <script lang="ts">
-	// Explore map (design 3A "Explore interactive map"): MapLibre GL over our
-	// own GeoJSON layers. Base map is the Natural Earth outline clipped by
-	// the content build, with a coarse whole-world silhouette under it so the
-	// map can zoom out past the biblical world; there are no tiles and no
-	// external map service. Labels are HTML markers so they use the site's
-	// Tamil face, not a glyph server.
+	// Explore map, map-first (design 9A): MapLibre GL over our own GeoJSON
+	// layers, edge to edge under the header, with the layer switches, the
+	// timeline and the journeys drawer floating over it as glass panels. Base
+	// map is the Natural Earth outline clipped by the content build, with a
+	// coarse whole-world silhouette under it so the map can zoom out past the
+	// biblical world; there are no tiles and no external map service. Labels
+	// are HTML markers so they use the site's Tamil face, not a glyph server.
 	import { onMount, tick } from 'svelte';
 	import { page } from '$app/state';
 	import { contentUrl } from '$lib/content/manifest';
+	import { ATTRIBUTION, baseLayers, baseSources, css, loadMapLibre, paintBase, readPalette } from '$lib/atlas/basemap';
 	import { DASHES, HUES, byPeriod, journeyStyle, sortJourneys } from '$lib/entities/journeys';
 	import { loadGlossary, loadJourneys, loadMentions, loadPlaceIndex, placeName } from '$lib/entities/load';
 	import { COUNCIL_KINDS, RANKS, ROLES, TRADITIONS, churchName, lifeLabel, loadChurch, wikipediaUrl } from '$lib/entities/church';
@@ -33,6 +35,12 @@
 	let selected = $state(new Set<string>());
 	/** Every located place, or only the stops of the journeys that are ticked. */
 	let allPlaces = $state(true);
+	/** The two historical layers, each behind its own switch (design 9A). */
+	let kingdomsOn = $state(true);
+	let churchOn = $state(true);
+	/** The journeys drawer; it collapses to a tab so the map can have the width.
+	 *  Closed from the start on narrow screens, where it would cover the map. */
+	let drawerOpen = $state(true);
 	let selectedPlace = $state<string | null>(null);
 	let hovered = $state<string | null>(null);
 	let focusLabel = $state('');
@@ -102,6 +110,15 @@
 	const onNow = $derived(
 		timeline ? at(timeline.rows, year).sort((a, b) => b.span - a.span) : []
 	);
+	/** Six labels under the slider. The slider steps through the years at which
+	 *  a border changes, not evenly through time, so the labels are spaced by
+	 *  step and name the year at each. */
+	const ticks = $derived.by(() => {
+		const ys = timeline?.years ?? [];
+		if (ys.length < 2) return [];
+		return Array.from({ length: 6 }, (_, k) => yearLabel(ys[Math.round((k * (ys.length - 1)) / 5)], ta));
+	});
+	const pct = $derived(timeline && timeline.years.length > 1 ? (step / (timeline.years.length - 1)) * 100 : 0);
 
 	function period(id: string) {
 		const g = glossary?.periods[id];
@@ -111,10 +128,6 @@
 		return ta ? j.name_ta : j.name_en;
 	}
 
-	function css(name: string, fallback: string) {
-		const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-		return v || fallback;
-	}
 	/** Journey id → its hue for the theme in force, as a style expression. */
 	function journeyColours(): string | ExpressionSpecification {
 		const hues = Array.from({ length: HUES }, (_, i) => css(`--j-${i + 1}`, '#2A78D6'));
@@ -205,6 +218,7 @@
 		if (!map || !maplibre) return;
 		for (const m of polityMarkers) m.remove();
 		polityMarkers = [];
+		if (!kingdomsOn) return;
 		const bounds = map.getBounds();
 		for (const p of onNow) {
 			if (!bounds.contains([p.lon, p.lat])) continue;
@@ -243,6 +257,7 @@
 		if (!map || !maplibre) return;
 		for (const m of churchMarkers) m.remove();
 		churchMarkers = [];
+		if (!churchOn) return;
 		const bounds = map.getBounds();
 		// Constantinople, Chalcedon, Nicaea and Nicomedia sit within a few pixels
 		// of each other: a city whose name would land on one already placed keeps
@@ -317,6 +332,9 @@
 		map.setFilter('places-em', anyOf([...emphasised]));
 		map.setFilter('places-sel', ['==', ['get', 'id'], selectedPlace ?? ''] as FilterSpecification);
 		if (map.getLayer('polities-fill')) {
+			const vis = kingdomsOn ? 'visible' : 'none';
+			map.setLayoutProperty('polities-fill', 'visibility', vis);
+			map.setLayoutProperty('polities-line', 'visibility', vis);
 			const shownYear = ['all', ['<=', ['get', 'from'], year], ['>=', ['get', 'to'], year]] as FilterSpecification;
 			map.setFilter('polities-fill', shownYear);
 			map.setFilter('polities-line', shownYear);
@@ -331,17 +349,8 @@
 	/** Colours come from CSS custom properties, so they follow the theme. */
 	function applyPalette() {
 		if (!map?.getLayer('places')) return;
-		const accent = css('--accent', '#2B5B8C');
-		const amber = css('--amber', '#A2600F');
-		const surface = css('--surface', '#FFFFFF');
-		const land = css('--map-land', '#F5EFE3');
-		const coast = css('--map-coast', '#C9BFB1');
-		map.setPaintProperty('bg', 'background-color', css('--map-water', '#E6EEF5'));
-		map.setPaintProperty('world', 'fill-color', land);
-		map.setPaintProperty('land', 'fill-color', land);
-		map.setPaintProperty('coast', 'line-color', coast);
-		map.setPaintProperty('lakes', 'fill-color', css('--map-lake', '#D7E5F0'));
-		map.setPaintProperty('rivers', 'line-color', css('--map-river', '#9FBFDA'));
+		const { accent, amber, surface } = readPalette();
+		paintBase(map, readPalette());
 		const colour = journeyColours();
 		for (const layer of JOURNEY_LAYERS) map.setPaintProperty(layer, 'line-color', colour);
 		for (const layer of ['places', 'places-em', 'places-sel']) map.setPaintProperty(layer, 'circle-stroke-color', surface);
@@ -350,11 +359,25 @@
 		map.setPaintProperty('places-sel', 'circle-color', amber);
 	}
 
+	/** Room the floating panels take from the map, so a fitted journey lands in
+	 *  the part the reader can see. */
+	function panelPadding() {
+		const narrow = typeof window !== 'undefined' && window.innerWidth < 960;
+		return {
+			top: narrow ? 120 : 80,
+			bottom: narrow ? 150 : 110,
+			left: narrow ? 30 : 60,
+			right: drawerOpen && !narrow ? 380 : narrow ? 30 : 80
+		};
+	}
 	function fit(coords: [number, number][], maxZoom = 9, duration = 0) {
 		if (!map || !coords.length) return;
 		const lons = coords.map((c) => c[0]);
 		const lats = coords.map((c) => c[1]);
-		map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: 70, maxZoom, duration });
+		map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: panelPadding(), maxZoom, duration });
+	}
+	function zoom(by: number) {
+		if (map) map.easeTo({ zoom: map.getZoom() + by, duration: 250 });
 	}
 
 	async function focusFromQuery() {
@@ -392,14 +415,14 @@
 	}
 
 	onMount(() => {
+		if (window.innerWidth < 960) drawerOpen = false;
 		init();
 		return () => map?.remove();
 	});
 
 	async function init() {
 		try {
-			maplibre = await import('maplibre-gl');
-			maplibre.setWorkerUrl(workerUrl);
+			maplibre = await loadMapLibre(workerUrl);
 			const [index, js, gl] = await Promise.all([
 				loadPlaceIndex(fetch),
 				loadJourneys(fetch).catch(() => []),
@@ -408,36 +431,20 @@
 			places = index.places;
 			glossary = gl;
 			journeys = sortJourneys(js, gl);
-			const water = css('--map-water', '#E6EEF5');
-			const land = css('--map-land', '#F5EFE3');
-			const coast = css('--map-coast', '#C9BFB1');
-			const river = css('--map-river', '#9FBFDA');
-			const lake = css('--map-lake', '#D7E5F0');
-			const accent = css('--accent', '#2B5B8C');
-			const amber = css('--amber', '#A2600F');
-			const surface = css('--surface', '#FFFFFF');
+			const pal = readPalette();
+			const { accent, amber, surface } = pal;
 			const colour = journeyColours();
 			map = new maplibre.Map({
 				container,
 				style: {
 					version: 8,
 					sources: {
-						world: { type: 'geojson', data: contentUrl('entities/geo/base/world.geojson') },
-						land: { type: 'geojson', data: contentUrl('entities/geo/base/land.geojson') },
-						coast: { type: 'geojson', data: contentUrl('entities/geo/base/coast.geojson') },
-						lakes: { type: 'geojson', data: contentUrl('entities/geo/base/lakes.geojson') },
-						rivers: { type: 'geojson', data: contentUrl('entities/geo/base/rivers.geojson') },
+						...baseSources(),
 						journeys: { type: 'geojson', data: contentUrl('entities/geo/journeys.geojson') },
 						places: { type: 'geojson', data: contentUrl('entities/geo/places.geojson') }
 					},
 					layers: [
-						{ id: 'bg', type: 'background', paint: { 'background-color': water } },
-						// The rest of the world: a silhouette, no detail and no names.
-						{ id: 'world', type: 'fill', source: 'world', paint: { 'fill-color': land } },
-						{ id: 'land', type: 'fill', source: 'land', paint: { 'fill-color': land } },
-						{ id: 'coast', type: 'line', source: 'coast', paint: { 'line-color': coast, 'line-width': 1 } },
-						{ id: 'lakes', type: 'fill', source: 'lakes', paint: { 'fill-color': lake, 'fill-outline-color': coast } },
-						{ id: 'rivers', type: 'line', source: 'rivers', paint: { 'line-color': river, 'line-width': 1.2 } },
+						...baseLayers(pal),
 						// One layer per line style: dasharray cannot vary by feature,
 						// so the style is what tells two journeys of a hue apart.
 						...DASHES.map((dash, d): LayerSpecification => ({
@@ -470,8 +477,7 @@
 					bus.on(ev, (e) => console.log('maplibre-debug', ev, e.dataType ?? '', e.sourceId ?? ''));
 				}
 			}
-			map.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-right');
-			map.addControl(new maplibre.AttributionControl({ compact: true, customAttribution: 'Places: OpenBible.info CC BY 4.0 · Base map: Natural Earth · Routes: UBS Project MARBLE CC BY-SA 4.0' }));
+			// Zoom buttons and the attribution are the page's own glass panels.
 			map.on('load', async () => {
 				status = 'ready';
 				await focusFromQuery();
@@ -591,6 +597,16 @@
 		allPlaces = on;
 		paint();
 	}
+	function setKingdoms(on: boolean) {
+		kingdomsOn = on;
+		if (!on) hoveredPolity = null;
+		paint();
+	}
+	function setChurch(on: boolean) {
+		churchOn = on;
+		if (!on) popup?.remove();
+		paint();
+	}
 	function hover(id: string | null) {
 		hovered = id;
 		paint();
@@ -630,160 +646,283 @@
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
-<div class="explore">
-	<div class="bar">
-		<a class="chip" href="/atlas">‹ <span lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடம்' : 'Atlas'}</span></a>
-		<label class="toggle">
-			<input type="checkbox" checked={allPlaces} onchange={(e) => setAllPlaces((e.currentTarget as HTMLInputElement).checked)} />
-			<span lang={ta ? 'ta' : 'en'}>{ta ? 'எல்லா இடங்களும்' : 'All places'}</span>
-		</label>
-		{#if focusLabel}<span class="focus" lang={ta ? 'ta' : 'en'}>{focusLabel}</span>{/if}
-	</div>
-
-	<div class="timeline">
-			{#if timeline}
-				<button class="nudge" onclick={() => setStep(step - 1)} disabled={step === 0} aria-label={ta ? 'முந்தைய காலம்' : 'Earlier'}>‹</button>
-				<input
-					type="range"
-					min="0"
-					max={timeline.years.length - 1}
-					value={step}
-					oninput={(e) => setStep(Number((e.currentTarget as HTMLInputElement).value))}
-					aria-label={ta ? 'ஆண்டு' : 'Year'}
-					aria-valuetext={yearLabel(year, ta)}
-				/>
-				<button class="nudge" onclick={() => setStep(step + 1)} disabled={step === timeline.years.length - 1} aria-label={ta ? 'அடுத்த காலம்' : 'Later'}>›</button>
-				<output class="yr" lang={ta ? 'ta' : 'en'}>{yearLabel(year, ta)}</output>
-				<span class="cnt" lang={ta ? 'ta' : 'en'}>
-					{onNow.length}&nbsp;{ta ? 'இராச்சியங்கள்' : 'kingdoms'}{#if churchNow.length},
-						{churchNow.length}&nbsp;{ta ? 'திருச்சபை இடங்கள்' : 'church'}{/if}
-				</span>
-			{:else if timelineState === 'error'}
-				<span class="cnt" lang={ta ? 'ta' : 'en'}>{ta ? 'காலவரிசையை ஏற்ற முடியவில்லை.' : 'The timeline could not be loaded.'}</span>
-			{:else}
-				<span class="cnt" lang={ta ? 'ta' : 'en'}>{ta ? 'காலவரிசை ஏற்றப்படுகிறது…' : 'Loading the timeline…'}</span>
-			{/if}
-	</div>
+<div class="explore" class:drawer-open={drawerOpen}>
 	<div class="canvas" bind:this={container} aria-label={ta ? 'வேதாகம வரைபடம்' : 'Bible map'}>
 		{#if status === 'loading'}<p class="state" lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடம் ஏற்றப்படுகிறது…' : 'Loading the map…'}</p>{/if}
 		{#if status === 'error'}<p class="state" lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடத்தை ஏற்ற முடியவில்லை.' : 'The map could not be loaded.'} <a href="/atlas">{ta ? 'வரைபடப் பட்டியல்' : 'Atlas index'}</a></p>{/if}
 	</div>
 
-	<aside class="side">
-		<div class="side-head">
-			<h2 lang={ta ? 'ta' : 'en'}>{ta ? 'பயணங்கள்' : 'Journeys'} <span class="n">{selected.size}/{journeys.length}</span></h2>
-			<div class="acts">
+	<!-- Top left: back to the atlas, and the three layer switches. -->
+	<div class="controls">
+		<a class="pill back" href="/atlas">‹ <span lang={ta ? 'ta' : 'en'}>{ta ? 'வரைபடம்' : 'Atlas'}</span></a>
+		<label class="pill switch">
+			<input type="checkbox" checked={allPlaces} onchange={(e) => setAllPlaces((e.currentTarget as HTMLInputElement).checked)} />
+			<span class="box" aria-hidden="true"></span>
+			<span lang={ta ? 'ta' : 'en'}>{ta ? 'எல்லா இடங்களும்' : 'All places'}</span>
+		</label>
+		<label class="pill switch">
+			<input type="checkbox" checked={kingdomsOn} onchange={(e) => setKingdoms((e.currentTarget as HTMLInputElement).checked)} />
+			<span class="box" aria-hidden="true"></span>
+			<span lang={ta ? 'ta' : 'en'}>{ta ? 'இராச்சியங்கள்' : 'Kingdoms'}</span>
+		</label>
+		<label class="pill switch">
+			<input type="checkbox" checked={churchOn} onchange={(e) => setChurch((e.currentTarget as HTMLInputElement).checked)} />
+			<span class="box" aria-hidden="true"></span>
+			<span lang={ta ? 'ta' : 'en'}>{ta ? 'திருச்சபைகள்' : 'Churches'}</span>
+		</label>
+		{#if focusLabel}<span class="pill focus" lang={ta ? 'ta' : 'en'}>{focusLabel}</span>{/if}
+	</div>
+
+	<!-- Bottom: the timeline, floating. One step per year at which a border changes. -->
+	<div class="timeline-wrap">
+		<div class="glass timeline">
+			{#if timeline}
+				<button class="nudge" onclick={() => setStep(step - 1)} disabled={step === 0} aria-label={ta ? 'முந்தைய காலம்' : 'Earlier'}>‹</button>
+				<div class="track">
+					<input
+						type="range"
+						min="0"
+						max={timeline.years.length - 1}
+						value={step}
+						style="--pct: {pct}%"
+						oninput={(e) => setStep(Number((e.currentTarget as HTMLInputElement).value))}
+						aria-label={ta ? 'ஆண்டு' : 'Year'}
+						aria-valuetext={yearLabel(year, ta)}
+					/>
+					<div class="ticks" aria-hidden="true">{#each ticks as t, i (i)}<span lang={ta ? 'ta' : 'en'}>{t}</span>{/each}</div>
+				</div>
+				<button class="nudge" onclick={() => setStep(step + 1)} disabled={step === timeline.years.length - 1} aria-label={ta ? 'அடுத்த காலம்' : 'Later'}>›</button>
+				<div class="now">
+					<output class="yr" lang={ta ? 'ta' : 'en'}>{yearLabel(year, ta)}</output>
+					<span class="cnt" lang={ta ? 'ta' : 'en'}>
+						{#if kingdomsOn}{onNow.length}&nbsp;{ta ? 'இராச்சியங்கள்' : 'kingdoms'}{/if}{#if churchOn && churchNow.length}{kingdomsOn ? ', ' : ''}{churchNow.length}&nbsp;{ta ? 'திருச்சபை இடங்கள்' : 'church'}{/if}
+					</span>
+				</div>
+			{:else if timelineState === 'error'}
+				<span class="cnt" lang={ta ? 'ta' : 'en'}>{ta ? 'காலவரிசையை ஏற்ற முடியவில்லை.' : 'The timeline could not be loaded.'}</span>
+			{:else}
+				<span class="cnt" lang={ta ? 'ta' : 'en'}>{ta ? 'காலவரிசை ஏற்றப்படுகிறது…' : 'Loading the timeline…'}</span>
+			{/if}
+		</div>
+	</div>
+
+	<!-- Zoom and attribution. -->
+	<div class="glass zoom">
+		<button onclick={() => zoom(1)} aria-label={ta ? 'பெரிதாக்கு' : 'Zoom in'}>+</button>
+		<button onclick={() => zoom(-1)} aria-label={ta ? 'சிறிதாக்கு' : 'Zoom out'}>−</button>
+	</div>
+	<p class="attrib" lang={ta ? 'ta' : 'en'}><span class="i" aria-hidden="true">i</span>{ta ? ATTRIBUTION.ta : ATTRIBUTION.en}</p>
+
+	<!-- Right: the journeys drawer, or its tab when collapsed. -->
+	{#if drawerOpen}
+		<aside class="glass strong drawer" aria-label={ta ? 'பயணங்கள்' : 'Journeys'}>
+			<div class="drawer-head">
+				<h2 lang={ta ? 'ta' : 'en'}>{ta ? 'பயணங்கள்' : 'Journeys'}</h2>
+				<span class="n">{selected.size}/{journeys.length}</span>
+				<span class="grow"></span>
 				<button class="mini" onclick={() => setAll(true)} lang={ta ? 'ta' : 'en'}>{ta ? 'எல்லாம்' : 'All'}</button>
 				<button class="mini" onclick={() => setAll(false)} lang={ta ? 'ta' : 'en'}>{ta ? 'எதுவும் இல்லை' : 'None'}</button>
+				<button class="collapse" onclick={() => (drawerOpen = false)} aria-label={ta ? 'பட்டியலை மறை' : 'Hide the list'} aria-expanded="true">›</button>
 			</div>
-		</div>
-		<div class="scroll">
-			{#if church}
-				<h3 class="per" lang={ta ? 'ta' : 'en'}>{ta ? 'சங்கங்களும் விசுவாசப் பிரமாணங்களும்' : 'Councils and creeds'}</h3>
-				<ul>
-					{#each councils as c (c.id)}
-						<li class="row pol" onmouseenter={() => hoverChurch(c.place)} onmouseleave={() => hoverChurch(null)}>
-							<button class="polbtn" onclick={() => flyToEntry(c)}>
-								<span class="glyph" class:ecum={c.kind === 'ecumenical'} aria-hidden="true">{c.kind === 'ecumenical' ? '✡' : '†'}</span>
-								<span class="nm" lang={ta && c.name_ta ? 'ta' : 'en'}>{churchName(c, lang)}</span>
-								{#if c.draft_ta && ta && c.name_ta}<span class="draft" title="வரைவுப் பெயர்">*</span>{/if}
-								<span class="n">{c.year}</span>
-							</button>
-						</li>
-					{/each}
-				</ul>
-				{#each TRADITIONS as t (t.id)}
-					{@const list = fathers.filter((f) => f.tradition === t.id)}
-					{#if list.length}
-						<h3 class="per" lang={ta ? 'ta' : 'en'}>{ta ? t.ta : t.en}</h3>
+			<div class="scroll">
+				{#each groups as g (g.period)}
+					<h3 class="per" lang={ta ? 'ta' : 'en'}>{period(g.period)}</h3>
+					<ul>
+						{#each g.journeys as j (j.id)}
+							{@const s = styles.get(j.id)}
+							<li
+								class="row"
+								class:on={selected.has(j.id)}
+								data-journey={j.id}
+								onmouseenter={() => hover(j.id)}
+								onmouseleave={() => hover(null)}
+								onfocusin={() => hover(j.id)}
+								onfocusout={() => hover(null)}
+							>
+								<label>
+									<input type="checkbox" checked={selected.has(j.id)} onchange={() => toggle(j.id)} />
+									<span class="box" aria-hidden="true"></span>
+									<svg class="swatch" width="24" height="10" viewBox="0 0 24 10" aria-hidden="true">
+										<line x1="1" y1="5" x2="23" y2="5" stroke={s?.color} stroke-width="3" stroke-linecap="round" stroke-dasharray={s?.swatchDash} />
+									</svg>
+									<span class="nm" lang={ta ? 'ta' : 'en'}>{journeyName(j)}</span>
+									<span class="n">{j.stops.length}</span>
+								</label>
+								<a class="go" href="/atlas/{j.id}" title={ta ? 'பயணப் பக்கம்' : 'Journey page'} aria-label={`${journeyName(j)} — ${ta ? 'பயணப் பக்கம்' : 'journey page'}`}>↗</a>
+							</li>
+						{/each}
+					</ul>
+				{/each}
+
+				{#if kingdomsOn && onNow.length}
+					<h3 class="per sec" lang={ta ? 'ta' : 'en'}>{ta ? 'இராச்சியங்கள்' : 'Kingdoms'} · {yearLabel(year, ta)}</h3>
+					<ul>
+						{#each onNow as p (p.id + p.from)}
+							<li class="row pol" onmouseenter={() => hoverPolity(p.id)} onmouseleave={() => hoverPolity(null)}>
+								<button class="polbtn" onclick={() => flyToPolity(p)}>
+									<span class="dot" style="background: var(--j-{polityHue(p.id) + 1})"></span>
+									<span class="nm" lang={ta && p.name_ta ? 'ta' : 'en'}>{polityName(p, lang)}</span>
+									{#if p.draft_ta && ta && p.name_ta}<span class="draft" title="வரைவுப் பெயர் — இன்னும் சரிபார்க்கப்படவில்லை" aria-label="வரைவுப் பெயர்">*</span>{/if}
+								</button>
+							</li>
+						{/each}
+					</ul>
+				{/if}
+
+				{#if churchOn && church && (councils.length || fathers.length)}
+					{#if councils.length}
+						<h3 class="per sec" lang={ta ? 'ta' : 'en'}>{ta ? 'சங்கங்களும் விசுவாசப் பிரமாணங்களும்' : 'Councils and creeds'}</h3>
 						<ul>
-							{#each list as f (f.id)}
-								<li class="row pol" onmouseenter={() => hoverChurch(f.place)} onmouseleave={() => hoverChurch(null)}>
-									<button class="polbtn" onclick={() => flyToEntry(f)}>
-										<span class="glyph" aria-hidden="true">†</span>
-										<span class="nm" lang={ta && f.name_ta ? 'ta' : 'en'}>{churchName(f, lang)}</span>
-										{#if f.draft_ta && ta && f.name_ta}<span class="draft" title="வரைவுப் பெயர்">*</span>{/if}
-										<span class="n">{lifeLabel(f, ta)}</span>
+							{#each councils as c (c.id)}
+								<li class="row pol" onmouseenter={() => hoverChurch(c.place)} onmouseleave={() => hoverChurch(null)}>
+									<button class="polbtn" onclick={() => flyToEntry(c)}>
+										<span class="glyph" class:ecum={c.kind === 'ecumenical'} aria-hidden="true">{c.kind === 'ecumenical' ? '✡' : '†'}</span>
+										<span class="nm" lang={ta && c.name_ta ? 'ta' : 'en'}>{churchName(c, lang)}</span>
+										{#if c.draft_ta && ta && c.name_ta}<span class="draft" title="வரைவுப் பெயர்">*</span>{/if}
+										<span class="n">{c.year}</span>
 									</button>
 								</li>
 							{/each}
 						</ul>
 					{/if}
-				{/each}
-			{/if}
-			{#if onNow.length}
-				<h3 class="per" lang={ta ? 'ta' : 'en'}>{yearLabel(year, ta)}</h3>
-				<ul>
-					{#each onNow as p (p.id + p.from)}
-						<li class="row pol" onmouseenter={() => hoverPolity(p.id)} onmouseleave={() => hoverPolity(null)}>
-							<button class="polbtn" onclick={() => flyToPolity(p)}>
-								<span class="dot" style="background: var(--j-{polityHue(p.id) + 1})"></span>
-								<span class="nm" lang={ta && p.name_ta ? 'ta' : 'en'}>{polityName(p, lang)}</span>
-								{#if p.draft_ta && ta && p.name_ta}<span class="draft" title="வரைவுப் பெயர் — இன்னும் சரிபார்க்கப்படவில்லை" aria-label="வரைவுப் பெயர்">*</span>{/if}
-							</button>
-						</li>
+					{#each TRADITIONS as t (t.id)}
+						{@const list = fathers.filter((f) => f.tradition === t.id)}
+						{#if list.length}
+							<h3 class="per" lang={ta ? 'ta' : 'en'}>{ta ? t.ta : t.en}</h3>
+							<ul>
+								{#each list as f (f.id)}
+									<li class="row pol" onmouseenter={() => hoverChurch(f.place)} onmouseleave={() => hoverChurch(null)}>
+										<button class="polbtn" onclick={() => flyToEntry(f)}>
+											<span class="glyph" aria-hidden="true">†</span>
+											<span class="nm" lang={ta && f.name_ta ? 'ta' : 'en'}>{churchName(f, lang)}</span>
+											{#if f.draft_ta && ta && f.name_ta}<span class="draft" title="வரைவுப் பெயர்">*</span>{/if}
+											<span class="n">{lifeLabel(f, ta)}</span>
+										</button>
+									</li>
+								{/each}
+							</ul>
+						{/if}
 					{/each}
-				</ul>
-			{/if}
-			{#each groups as g (g.period)}
-				<h3 class="per" lang={ta ? 'ta' : 'en'}>{period(g.period)}</h3>
-				<ul>
-					{#each g.journeys as j (j.id)}
-						{@const s = styles.get(j.id)}
-						<li
-							class="row"
-							class:on={selected.has(j.id)}
-							data-journey={j.id}
-							onmouseenter={() => hover(j.id)}
-							onmouseleave={() => hover(null)}
-							onfocusin={() => hover(j.id)}
-							onfocusout={() => hover(null)}
-						>
-							<label>
-								<input type="checkbox" checked={selected.has(j.id)} onchange={() => toggle(j.id)} />
-								<svg class="swatch" width="26" height="12" viewBox="0 0 26 12" aria-hidden="true">
-									<line x1="1" y1="6" x2="25" y2="6" stroke={s?.color} stroke-width="3" stroke-linecap="round" stroke-dasharray={s?.swatchDash} />
-								</svg>
-								<span class="nm" lang={ta ? 'ta' : 'en'}>{journeyName(j)}</span>
-								<span class="n">{j.stops.length}</span>
-							</label>
-							<a class="go" href="/atlas/{j.id}" title={ta ? 'பயணப் பக்கம்' : 'Journey page'} aria-label={`${journeyName(j)} — ${ta ? 'பயணப் பக்கம்' : 'journey page'}`}>↗</a>
-						</li>
-					{/each}
-				</ul>
-			{/each}
-		</div>
-	</aside>
+				{/if}
+			</div>
+		</aside>
+	{:else}
+		<button class="glass tab" onclick={() => (drawerOpen = true)} aria-expanded="false" aria-label={ta ? 'பயணங்களைக் காட்டு' : 'Show the journeys'}>
+			‹ <span lang={ta ? 'ta' : 'en'}>{ta ? 'பயணங்கள்' : 'Journeys'}</span> <span class="n">{selected.size}/{journeys.length}</span>
+		</button>
+	{/if}
 </div>
 
 <style>
-	.explore { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; grid-template-rows: auto auto minmax(0, 1fr); gap: 0 0.8rem; height: calc(100vh - var(--header-h, 4.4rem) - 3rem); min-height: 30rem; margin: -0.5rem 0 0; }
-	.bar { grid-column: 1 / -1; display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 0.8rem; }
-
-	/* The timeline: one step per year at which a border actually changes. */
-	.timeline { grid-column: 1 / -1; display: flex; align-items: center; gap: 0.5rem; padding: 0 0.8rem 0.8rem; }
-	.timeline input[type='range'] { flex: 1; min-width: 8rem; accent-color: var(--accent); height: 24px; }
-	.nudge { border: var(--bw) solid var(--line-2); background: var(--surface); color: var(--ink-2); border-radius: 999px; width: 28px; height: 28px; font-size: 1rem; line-height: 1; cursor: pointer; flex: none; }
-	.nudge:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
-	.nudge:disabled { opacity: 0.4; cursor: default; }
-	.yr { font-weight: 700; color: var(--amber); min-width: 6.5rem; text-align: right; font-variant-numeric: tabular-nums; }
-	.yr[lang='ta'] { font-family: var(--tamil); }
-	.cnt { font-size: 0.8rem; color: var(--muted); min-width: 7rem; }
-	.cnt[lang='ta'] { font-family: var(--tamil); }
-	.bar .chip { min-height: 40px; }
-	.bar [lang='ta'] { font-family: var(--tamil); }
-	.toggle { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 40px; cursor: pointer; font-size: 0.92rem; }
-	.toggle input { accent-color: var(--accent); width: 17px; height: 17px; }
-	.focus { margin-left: auto; font-weight: 600; color: var(--amber); }
-	.canvas { position: relative; border: var(--bw) solid var(--line); border-radius: var(--r-l); overflow: hidden; background: var(--map-water); }
+	/* The map is the page (design 9A): it fills the viewport under the header
+	   and everything else floats on it. */
+	.explore { --gap: 20px; --drawer: 332px; position: relative; height: calc(100vh - var(--header-h, 4.4rem)); min-height: 32rem; overflow: hidden; background: var(--map-water); }
+	.canvas { position: absolute; inset: 0; }
 	.state { position: absolute; inset: 0; display: grid; place-content: center; margin: 0; color: var(--muted); text-align: center; gap: 0.4rem; }
 	.state[lang='ta'] { font-family: var(--tamil); }
+
+	/* Glass panels */
+	.glass { background: var(--glass); border: var(--bw) solid var(--line-2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+	.glass.strong { background: var(--glass-strong); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
+	/* Top-left switches */
+	.controls { position: absolute; top: 18px; left: var(--gap); right: calc(var(--drawer) + 2 * var(--gap)); display: flex; flex-wrap: wrap; gap: 10px; align-items: center; pointer-events: none; }
+	.explore:not(.drawer-open) .controls { right: 150px; }
+	.pill { pointer-events: auto; display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; padding: 10px 16px 10px 12px; min-height: 44px; box-sizing: border-box; border-radius: var(--r); background: var(--glass); border: var(--bw) solid var(--line-2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: 0.875rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+	.pill [lang='ta'] { font-family: var(--tamil); font-size: 0.95rem; }
+	.pill.back { font-weight: 700; gap: 6px; }
+	.pill.back:hover { border-color: var(--accent); }
+	.pill.focus { color: var(--amber); }
+	.switch { cursor: pointer; position: relative; }
+	.switch:has(input:not(:checked)) { color: var(--muted); }
+	.switch:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+	/* The checkbox is drawn, the input stays for keyboard and screen readers. */
+	input[type='checkbox'] { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+	.box { width: 18px; height: 18px; border-radius: 5px; border: var(--bw) solid var(--tick); flex: none; box-sizing: border-box; display: inline-grid; place-content: center; }
+	input:checked + .box { background: var(--accent); border-color: var(--accent); }
+	input:checked + .box::after { content: '✓'; color: var(--on-accent); font-size: 12px; font-weight: 800; line-height: 1; }
+
+	/* Timeline */
+	.timeline-wrap { position: absolute; left: var(--gap); right: calc(var(--drawer) + 2 * var(--gap)); bottom: var(--gap); display: flex; justify-content: center; pointer-events: none; }
+	.explore:not(.drawer-open) .timeline-wrap { right: calc(var(--gap) + 60px); }
+	.timeline { pointer-events: auto; display: flex; align-items: center; gap: 16px; width: 100%; max-width: 760px; padding: 12px 16px 12px 20px; border-radius: var(--r-l); box-sizing: border-box; }
+	.nudge { width: 32px; height: 32px; border-radius: 999px; border: var(--bw) solid var(--line-2); background: var(--surface); color: var(--ink-2); font-size: 0.9rem; line-height: 1; cursor: pointer; flex: none; display: grid; place-content: center; }
+	.nudge:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+	.nudge:disabled { opacity: 0.4; cursor: default; }
+	.track { flex: 1; min-width: 8rem; position: relative; padding-bottom: 14px; }
+	.track input[type='range'] { -webkit-appearance: none; appearance: none; width: 100%; height: 32px; margin: 0; background: transparent; cursor: pointer; display: block; }
+	.track input[type='range']::-webkit-slider-runnable-track { height: 4px; border-radius: 999px; background: linear-gradient(to right, var(--accent) 0 var(--pct), var(--line-2) var(--pct) 100%); }
+	.track input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7px; border-radius: 999px; background: var(--accent); border: 0; box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.25); }
+	.track input[type='range']::-moz-range-track { height: 4px; border-radius: 999px; background: var(--line-2); }
+	.track input[type='range']::-moz-range-progress { height: 4px; border-radius: 999px; background: var(--accent); }
+	.track input[type='range']::-moz-range-thumb { width: 18px; height: 18px; border-radius: 999px; background: var(--accent); border: 0; box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.25); }
+	.track input[type='range']:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 6px; }
+	.ticks { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.08em; color: var(--tick); font-weight: 600; white-space: nowrap; }
+	.ticks [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.02em; font-size: 10.5px; }
+	.now { display: flex; align-items: baseline; gap: 8px; padding-left: 12px; border-left: var(--bw) solid var(--line-2); flex: none; }
+	.yr { font-size: 1.125rem; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+	.yr[lang='ta'] { font-family: var(--tamil); }
+	.cnt { font-size: 0.8125rem; color: var(--muted); white-space: nowrap; }
+	.cnt[lang='ta'] { font-family: var(--tamil); }
+
+	/* Zoom, attribution */
+	.zoom { position: absolute; right: calc(var(--drawer) + 2 * var(--gap)); bottom: var(--gap); display: flex; flex-direction: column; border-radius: var(--r); overflow: hidden; }
+	.explore:not(.drawer-open) .zoom { right: var(--gap); }
+	.zoom button { width: 40px; height: 40px; border: 0; background: transparent; color: var(--ink); font-size: 1.25rem; line-height: 1; cursor: pointer; }
+	.zoom button + button { border-top: var(--bw) solid var(--line-2); }
+	.zoom button:hover { color: var(--accent); }
+	.attrib { position: absolute; left: var(--gap); bottom: 104px; margin: 0; max-width: calc(100% - var(--drawer) - 4 * var(--gap)); display: flex; gap: 6px; align-items: center; font-size: 11px; color: var(--tick); pointer-events: none; }
+	.attrib[lang='ta'] { font-family: var(--tamil); }
+	.explore:not(.drawer-open) .attrib { max-width: calc(100% - 2 * var(--gap)); }
+	.attrib .i { width: 14px; height: 14px; border-radius: 999px; border: var(--bw) solid var(--tick); font-size: 9px; font-weight: 700; display: inline-grid; place-content: center; flex: none; font-family: var(--sans); }
+
+	/* Journeys drawer */
+	.drawer { position: absolute; top: 18px; right: var(--gap); bottom: var(--gap); width: var(--drawer); display: flex; flex-direction: column; border-radius: var(--r-l); overflow: hidden; }
+	.drawer-head { display: flex; align-items: center; gap: 10px; padding: 14px 14px 12px 18px; border-bottom: var(--bw) solid var(--line); }
+	.drawer-head h2 { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); }
+	.drawer-head h2[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.02em; font-size: 0.9rem; }
+	.drawer-head .n { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+	.grow { flex: 1; }
+	.mini { font: inherit; font-size: 0.75rem; font-weight: 700; color: var(--ink-2); border: var(--bw) solid var(--line-2); border-radius: 999px; padding: 4px 10px; background: transparent; cursor: pointer; }
+	.mini[lang='ta'] { font-family: var(--tamil); }
+	.mini:hover { border-color: var(--accent); color: var(--accent); }
+	.collapse { width: 28px; height: 28px; border-radius: var(--r-s); border: var(--bw) solid var(--line-2); background: var(--surface); color: var(--ink-2); font-size: 0.9rem; cursor: pointer; flex: none; display: grid; place-content: center; }
+	.collapse:hover { border-color: var(--accent); color: var(--accent); }
+	.tab { position: absolute; top: 18px; right: var(--gap); display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border-radius: var(--r); font: inherit; font-size: 0.875rem; font-weight: 700; color: var(--ink); cursor: pointer; }
+	.tab [lang='ta'] { font-family: var(--tamil); }
+	.tab .n { font-weight: 600; color: var(--muted); }
+	.tab:hover { border-color: var(--accent); }
+	.scroll { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 6px 8px 10px 12px; scrollbar-width: thin; }
+	.per { margin: 0; padding: 8px 6px 4px; font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); }
+	.per[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.02em; font-size: 0.8rem; }
+	.per.sec { margin-top: 10px; padding-top: 12px; border-top: var(--bw) solid var(--line); }
+	.drawer ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+	.row { display: flex; align-items: center; border-radius: var(--r-s); position: relative; }
+	.row:hover { background: color-mix(in srgb, var(--surface) 70%, transparent); }
+	.row.on { background: var(--surface); }
+	.row label { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; padding: 8px 6px; cursor: pointer; position: relative; }
+	.row label:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: var(--r-s); }
+	.swatch { flex: none; }
+	.nm { flex: 1; min-width: 0; font-size: 0.875rem; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	.nm[lang='ta'] { font-family: var(--tamil); font-size: 0.925rem; }
+	.row.on .nm { color: var(--ink); font-weight: 700; }
+	.row .n { flex: none; font-size: 0.75rem; color: var(--tick); font-variant-numeric: tabular-nums; }
+	.go { flex: none; text-decoration: none; color: var(--muted); font-size: 0.8rem; padding: 4px 6px; border-radius: var(--r-s); opacity: 0; }
+	.row:hover .go, .go:focus-visible { opacity: 1; }
+	.go:hover { color: var(--accent); background: var(--accent-soft); }
+	.polbtn { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; padding: 7px 6px; background: none; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+	.dot { width: 11px; height: 11px; border-radius: 3px; flex: none; opacity: 0.85; }
+	.draft { flex: none; color: var(--muted); font-size: 0.85rem; line-height: 1; cursor: help; }
+	.glyph { flex: none; width: 12px; text-align: center; color: var(--accent); font-size: 0.8rem; }
+	.glyph.ecum { color: var(--amber); }
+
+	/* Map labels and popups (HTML markers) */
 	.canvas :global(.lbl) { font: 600 12px var(--sans); color: var(--ink); text-decoration: none; white-space: nowrap; text-shadow: 0 0 3px var(--map-land), 0 0 3px var(--map-land), 0 0 3px var(--map-land); pointer-events: auto; }
-	.canvas :global(.lbl[lang='ta']) { font-family: var(--tamil); font-size: 12.5px; }
+	.canvas :global(.lbl[lang='ta']) { font-family: var(--tamil); font-size: 13px; }
 	.canvas :global(.lbl.em) { color: var(--amber); font-size: 13px; }
 	.canvas :global(.lbl.sel) { color: var(--amber); font-size: 15px; font-weight: 700; }
 	/* Polity names sit in the fill, the way an atlas letters a territory. */
-	.canvas :global(.plbl) { font: 600 11px var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; white-space: nowrap; text-shadow: 0 0 4px var(--map-land), 0 0 4px var(--map-land), 0 0 4px var(--map-land); pointer-events: auto; opacity: 0.9; }
+	.canvas :global(.plbl) { font: 600 11px var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; white-space: nowrap; text-shadow: 0 0 4px var(--map-land), 0 0 4px var(--map-land), 0 0 4px var(--map-land); pointer-events: auto; opacity: 0.9; }
 	.canvas :global(.plbl[lang='ta']) { font-family: var(--tamil); font-size: 12px; text-transform: none; letter-spacing: 0.04em; }
 	.canvas :global(.plbl.em) { color: var(--ink); opacity: 1; }
 	/* Early-church pins: a cross for a father or a see, a creed mark where a
@@ -801,53 +940,27 @@
 	.canvas :global(.cwhat) { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
 	.canvas :global(.crow a) { text-decoration: none; font-weight: 600; }
 	.canvas :global(.cyr) { font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-	.canvas :global(.maplibregl-popup-content) { background: var(--surface); color: var(--ink); border-radius: var(--r); padding: 0.55rem 0.8rem; box-shadow: var(--shadow); display: grid; gap: 0.1rem; font-family: var(--sans); }
-	.canvas :global(.maplibregl-popup-tip) { border-top-color: var(--surface); border-bottom-color: var(--surface); }
+	.canvas :global(.maplibregl-popup-content) { background: var(--glass-strong); backdrop-filter: blur(10px); color: var(--ink); border: var(--bw) solid var(--line-2); border-radius: var(--r); padding: 0.6rem 0.85rem; box-shadow: var(--shadow); display: grid; gap: 0.1rem; font-family: var(--sans); }
+	.canvas :global(.maplibregl-popup-tip) { border-top-color: var(--line-2); border-bottom-color: var(--line-2); }
+	.canvas :global(.maplibregl-popup-close-button) { color: var(--muted); font-size: 1.1rem; padding: 0 0.4rem; }
 	.canvas :global(.pop) { font-weight: 700; text-decoration: none; }
 	.canvas :global(.pop[lang='ta']) { font-family: var(--tamil); font-size: 1.05rem; }
 	.canvas :global(.pop-n) { font-size: 0.75rem; color: var(--muted); }
-	.canvas :global(.maplibregl-ctrl-group) { background: var(--surface); border-radius: var(--r-s); box-shadow: none; border: var(--bw) solid var(--line-2); }
-	.canvas :global(.maplibregl-ctrl-group button + button) { border-top-color: var(--line); }
-	.canvas :global(.maplibregl-ctrl-attrib) { background: color-mix(in srgb, var(--surface) 85%, transparent); color: var(--muted); font-size: 10px; }
-	.canvas :global(.maplibregl-ctrl-attrib a) { color: var(--muted); }
 
-	/* Journey list: the map's colour key, and the switch for each route. */
-	.side { display: flex; flex-direction: column; min-height: 0; border: var(--bw) solid var(--line); border-radius: var(--r-l); background: var(--surface); overflow: hidden; }
-	.side-head { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; border-bottom: var(--bw) solid var(--line); }
-	.side-head h2 { margin: 0; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-	.side-head h2[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.02em; font-size: 0.9rem; }
-	.side-head .n { color: var(--muted); font-weight: 600; letter-spacing: 0; }
-	.acts { margin-left: auto; display: flex; gap: 0.3rem; }
-	.mini { border: var(--bw) solid var(--line-2); background: var(--surface); color: var(--ink-2); border-radius: 999px; font-size: 0.75rem; padding: 0.2rem 0.6rem; cursor: pointer; font-family: inherit; }
-	.mini:hover { border-color: var(--accent); color: var(--accent); }
-	.mini[lang='ta'] { font-family: var(--tamil); }
-	.scroll { overflow-y: auto; padding: 0.3rem 0 0.6rem; }
-	.per { margin: 0.6rem 0 0.2rem; padding: 0 0.75rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
-	.per[lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.02em; font-size: 0.8rem; }
-	.side ul { list-style: none; margin: 0; padding: 0; }
-	.row { display: flex; align-items: center; gap: 0.2rem; padding: 0 0.4rem 0 0.35rem; border-radius: var(--r-s); }
-	.row:hover { background: var(--surface-2); }
-	.row.on .nm { color: var(--ink); font-weight: 600; }
-	.row label { display: flex; align-items: center; gap: 0.45rem; flex: 1; min-width: 0; padding: 0.32rem 0.25rem; cursor: pointer; }
-	.row input { accent-color: var(--accent); width: 16px; height: 16px; flex: none; }
-	.swatch { flex: none; }
-	.nm { flex: 1; min-width: 0; font-size: 0.85rem; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-	.nm[lang='ta'] { font-family: var(--tamil); font-size: 0.9rem; }
-	.row .n { flex: none; font-size: 0.7rem; color: var(--muted); }
-	.go { flex: none; text-decoration: none; color: var(--muted); font-size: 0.85rem; padding: 0.25rem 0.3rem; border-radius: var(--r-s); }
-	.go:hover { color: var(--accent); background: var(--accent-soft); }
-	/* The legend for the year on the timeline: click one to fly to it. */
-	.polbtn { display: flex; align-items: center; gap: 0.45rem; flex: 1; min-width: 0; padding: 0.32rem 0.25rem; background: none; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
-	.dot { width: 11px; height: 11px; border-radius: 3px; flex: none; opacity: 0.85; }
-	/* An unreviewed Tamil name is marked, quietly. */
-	.draft { flex: none; color: var(--muted); font-size: 0.85rem; line-height: 1; cursor: help; }
-	.glyph { flex: none; width: 12px; text-align: center; color: var(--accent); font-size: 0.8rem; }
-	.glyph.ecum { color: var(--amber); }
-
+	/* Narrow screens: the panels stack at the edges and the drawer, when open,
+	   covers the map from the right like a sheet. */
 	@media (max-width: 60rem) {
-		.explore { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(18rem, 60vh) auto; height: auto; }
-		.side { max-height: 22rem; }
-		.timeline { flex-wrap: wrap; padding-inline: 0; }
-		.yr { min-width: 0; text-align: left; }
+		.explore { --gap: 12px; --drawer: min(332px, calc(100vw - 24px)); height: calc(100svh - var(--header-h, 4.4rem)); }
+		/* One scrollable row of switches across the top; the journeys tab below it. */
+		.controls, .explore:not(.drawer-open) .controls { right: 0; left: 0; top: 12px; gap: 8px; flex-wrap: nowrap; overflow-x: auto; padding: 0 var(--gap); scrollbar-width: none; }
+		.controls::-webkit-scrollbar { display: none; }
+		.pill { min-height: 40px; padding: 8px 12px 8px 10px; }
+		.timeline-wrap, .explore:not(.drawer-open) .timeline-wrap { right: var(--gap); }
+		.timeline { flex-wrap: wrap; gap: 8px 12px; padding: 10px 12px; }
+		.now { order: -1; flex-basis: 100%; border-left: 0; padding-left: 0; }
+		.zoom, .explore:not(.drawer-open) .zoom { right: var(--gap); bottom: 150px; }
+		.attrib, .explore:not(.drawer-open) .attrib { bottom: 150px; max-width: calc(100% - 80px); }
+		.drawer { top: 12px; z-index: 2; }
+		.tab { top: 64px; min-height: 40px; padding: 8px 12px; }
 	}
 </style>

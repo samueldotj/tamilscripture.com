@@ -188,10 +188,19 @@ h1, h2, h3 { text-wrap: balance; }
 	--map-river: #9FBFDA;
 	--map-lake: #D7E5F0;
 }
+/* Night map (design 9A): a deep slate sea so land and routes carry the page. */
 @media (prefers-color-scheme: dark) {
-	:root:not([data-theme='light']) { --map-water: #1F2A36; --map-land: #2B2D34; --map-coast: #4A505C; --map-river: #3E5D78; --map-lake: #24354A; }
+	:root:not([data-theme='light']) { --map-water: #161A21; --map-land: #262B35; --map-coast: #3D4554; --map-river: #3E5D78; --map-lake: #1E2B3B; }
 }
-:root[data-theme='dark'] { --map-water: #1F2A36; --map-land: #2B2D34; --map-coast: #4A505C; --map-river: #3E5D78; --map-lake: #24354A; }
+:root[data-theme='dark'] { --map-water: #161A21; --map-land: #262B35; --map-coast: #3D4554; --map-river: #3E5D78; --map-lake: #1E2B3B; }
+
+/* Glass panels that float over a full-bleed map (design 9A): the timeline,
+   the journeys drawer, the journey card and the map buttons. */
+:root { --glass: rgba(255, 255, 255, 0.9); --glass-strong: rgba(255, 255, 255, 0.95); --tick: #8A8177; }
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) { --glass: rgba(32, 35, 42, 0.92); --glass-strong: rgba(32, 35, 42, 0.94); --tick: #7E8798; }
+}
+:root[data-theme='dark'] { --glass: rgba(32, 35, 42, 0.92); --glass-strong: rgba(32, 35, 42, 0.94); --tick: #7E8798; }
 
 /* Journey hues, in fixed order: routes on the explore map and the swatches in
    its journey list read from these. Eight hues checked against both map grounds

@@ -16,6 +16,9 @@
 	let headerH = $state(0);
 	// Chapter pages run edge to edge so the reader can lay out its own columns.
 	const wide = $derived(page.route.id?.includes('[chapter=int]') ?? false);
+	// Map pages (design 9A): the map is the page, edge to edge under the header,
+	// with its attribution on the map itself, so the site footer steps aside.
+	const bleed = $derived(page.route.id === '/atlas/explore' || page.route.id === '/atlas/[journey=slug]');
 
 	// Keep the reader's current version(s) when jumping by reference.
 	const versionPath = $derived(page.params.versions ?? settings.value.version);
@@ -90,10 +93,11 @@
 
 <SettingsPanel bind:open={settingsOpen} />
 
-<main class="page" class:wide style={headerH ? `--header-h: ${headerH}px` : undefined}>
+<main class="page" class:wide class:bleed style={headerH ? `--header-h: ${headerH}px` : undefined}>
 	{@render children()}
 </main>
 
+{#if !bleed}
 <footer class="site-foot">
 	<a href="/about">{ui === 'ta' ? 'பற்றி · உரிமங்கள்' : 'About · licences'}</a>
 	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>
@@ -101,6 +105,7 @@
 	<a href="/heatmap">{ui === 'ta' ? 'வெப்ப வரைபடம்' : 'Heatmap'}</a>
 	<a href="https://github.com/samueldotj/tamilscripture.com">GitHub</a>
 </footer>
+{/if}
 
 <style>
 	.site { border-bottom: var(--bw) solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 5; }
@@ -128,7 +133,7 @@
 	   header (46px search field + 0.8rem padding each side + border) so the
 	   measured value only fine-tunes it and nothing jumps after hydration. */
 	.page { --header-h: 4.4rem; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
-	.page.wide { max-width: none; padding: 0; }
+	.page.wide, .page.bleed { max-width: none; padding: 0; }
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
 	.site-foot a:hover { color: var(--accent); }
@@ -136,6 +141,6 @@
 		.bar { padding: 0.6rem 1rem; gap: 0.6rem 0.75rem; }
 		.brand .en { display: none; }
 		.ref { order: 3; flex-basis: 100%; max-width: none; }
-		.page:not(.wide), .site-foot { padding-left: 1rem; padding-right: 1rem; }
+		.page:not(.wide):not(.bleed), .site-foot { padding-left: 1rem; padding-right: 1rem; }
 	}
 </style>
