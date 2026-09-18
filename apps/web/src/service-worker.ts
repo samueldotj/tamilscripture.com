@@ -10,7 +10,9 @@ import { build, files, version } from '$service-worker';
 
 const sw = self as unknown as ServiceWorkerGlobalScope;
 const SHELL = `shell-${version}`;
-const CONTENT = 'content-v1';
+// v2: v1 cached entity files cache-first, so browsers kept the six-journey
+// atlas after new journeys shipped. Bumping the name drops those copies.
+const CONTENT = 'content-v2';
 const PAGES = 'pages-v1';
 const MAX_PAGES = 20;
 
@@ -25,7 +27,11 @@ sw.addEventListener('install', (event) => {
 sw.addEventListener('activate', (event) => {
 	event.waitUntil(
 		caches.keys().then((keys) =>
-			Promise.all(keys.filter((k) => k.startsWith('shell-') && k !== SHELL).map((k) => caches.delete(k)))
+			Promise.all(
+				keys
+					.filter((k) => (k.startsWith('shell-') && k !== SHELL) || (k.startsWith('content-') && k !== CONTENT))
+					.map((k) => caches.delete(k))
+			)
 		).then(() => sw.clients.claim())
 	);
 });
