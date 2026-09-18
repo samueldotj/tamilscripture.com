@@ -6,6 +6,12 @@
 	import { track } from '$lib/analytics/track';
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
+	import MobileMenu from '$lib/reader/MobileMenu.svelte';
+	import { chrome } from '$lib/chrome.svelte';
+	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
+	import { manifest } from '$lib/content/manifest';
+	import type { Book, VersionMeta } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
 	import { dev } from '$app/environment';
@@ -28,11 +34,68 @@
 	const signinHref = $derived(`/signin?next=${encodeURIComponent(page.url.pathname)}`);
 
 	// One page view per navigation, including the first load (docs/feature_analytics.md).
-	afterNavigate(() => {
+	afterNavigate((nav) => {
+		if (nav.from) inApp = true;
+		chrome.hidden = false;
+		chapterMenu = false;
+		searchOpen = false;
 		// Chapter pages carry their book and chapter, for the reading insight on /mod/traffic.
 		const d = page.data as { book?: { code?: string }; chapter?: number };
 		track('view', { route: page.route.id, lang: ui, user: session.user?.id, book: d.book?.code, chapter: typeof d.chapter === 'number' ? d.chapter : undefined });
 	});
+
+	// ---- Phone header (design 10A): one 56px bar that slides away while reading ----
+	let chapterMenu = $state(false);
+	let searchOpen = $state(false);
+	let inApp = false;
+	const pd = $derived(page.data as { book?: Book; chapter?: number; versions?: VersionMeta[] });
+	const curBook = $derived(pd.book && typeof pd.book === 'object' && 'slug' in pd.book ? pd.book : undefined);
+	const curChapter = $derived(curBook && typeof pd.chapter === 'number' ? pd.chapter : undefined);
+	const curVersions = $derived(Array.isArray(pd.versions) ? pd.versions : undefined);
+	const pillLang = $derived(curVersions?.[0]?.lang ?? ui);
+	const pillTitle = $derived(
+		curBook ? `${pillLang === 'ta' ? curBook.name_ta : curBook.name_en}${curChapter ? ` ${curChapter}` : ''}` : 'தமிழ் வேதாகமம்'
+	);
+	const pillVersion = $derived(
+		curVersions?.map((v) => v.short).join(' + ') ??
+			manifest.versions.find((v) => v.code.toLowerCase() === versionPath.split('+')[0].toLowerCase())?.short ??
+			''
+	);
+	const isHome = $derived(page.route.id === '/');
+
+	function back() {
+		if (inApp) history.back();
+		else goto(curBook && curChapter ? `/${versionPath}/${curBook.slug}` : '/');
+	}
+	async function toggleSearch() {
+		searchOpen = !searchOpen;
+		chapterMenu = false;
+		if (searchOpen) {
+			await tick();
+			focusSearch();
+		}
+	}
+
+	// Scrolling down past the bar hides it; any scroll up, or reaching the top, shows it.
+	let lastY = 0;
+	function onScroll() {
+		const y = window.scrollY;
+		const dy = y - lastY;
+		if (Math.abs(dy) < 6) return;
+		lastY = y;
+		if (!matchMedia('(max-width: 720px)').matches || chapterMenu || searchOpen || settingsOpen) {
+			chrome.hidden = false;
+			return;
+		}
+		chrome.hidden = dy > 0 && y > 80;
+	}
+	// A tap on the text (not on a control) brings the bars back.
+	function onPageTap(e: MouseEvent) {
+		if (!chrome.hidden) return;
+		const t = e.target as HTMLElement | null;
+		if (t?.closest('a, button, input, select, textarea, label, [role="button"], [role="dialog"]')) return;
+		chrome.hidden = false;
+	}
 
 	onMount(() => {
 		settings.stamp();
@@ -59,10 +122,29 @@
 	}
 </script>
 
-<svelte:window onkeydown={onKey} />
+<svelte:window onkeydown={onKey} onscroll={onScroll} />
 
-<header class="site" bind:clientHeight={headerH}>
+<header class="site" class:hidden={chrome.hidden} class:searching={searchOpen} bind:clientHeight={headerH}>
 	<div class="bar">
+		{#if isHome}
+			<span class="m-only m-icon" aria-hidden="true"></span>
+		{:else}
+			<button type="button" class="m-only m-icon back" aria-label={ui === 'ta' ? 'பின்செல்' : 'Back'} onclick={back}>
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+			</button>
+		{/if}
+		<button type="button" class="m-only pill" class:open={chapterMenu} aria-expanded={chapterMenu} aria-haspopup="dialog" onclick={() => { chapterMenu = !chapterMenu; searchOpen = false; }}>
+			<span class="t" lang={curBook ? pillLang : 'ta'}>{pillTitle}</span>
+			{#if pillVersion}<span class="v">{pillVersion}</span>{/if}
+			<span class="caret" aria-hidden="true">{chapterMenu ? '▴' : '▾'}</span>
+		</button>
+		<button type="button" class="m-only m-icon" aria-label={ui === 'ta' ? 'தேடு' : 'Search'} aria-expanded={searchOpen} onclick={toggleSearch}>
+			{#if searchOpen}
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+			{:else}
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20 20"/></svg>
+			{/if}
+		</button>
 		<a class="brand" href="/">
 			<span class="ta" lang="ta">தமிழ் வேதாகமம்</span>
 			<span class="en">Tamil Bible</span>
@@ -101,8 +183,10 @@
 </header>
 
 <SettingsPanel bind:open={settingsOpen} />
+<MobileMenu bind:open={chapterMenu} lang={ui} book={curBook} chapter={curChapter} versions={curVersions} {versionPath} {signinHref} top={headerH} onsettings={() => (settingsOpen = true)} />
 
-<main class="page" class:wide class:bleed style={headerH ? `--header-h: ${headerH}px` : undefined}>
+<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -- a tap on the text is a shortcut; the bars also return on scroll up -->
+<main class="page" class:wide class:bleed onclick={onPageTap} style={headerH ? `--header-h: ${headerH}px` : undefined}>
 	{@render children()}
 </main>
 
@@ -117,7 +201,8 @@
 {/if}
 
 <style>
-	.site { border-bottom: var(--bw) solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 5; }
+	.site { border-bottom: var(--bw) solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 5; transition: transform 0.22s ease; }
+	.m-only { display: none; }
 	.bar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem 1.5rem; max-width: 74rem; margin: 0 auto; padding: 0.8rem 1.5rem; }
 	.brand { display: flex; flex-direction: column; text-decoration: none; color: inherit; line-height: 1.15; flex: none; }
 	.brand .ta { font-family: var(--tamil); font-weight: 600; font-size: 1.3rem; color: var(--ink); }
@@ -146,10 +231,28 @@
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
 	.site-foot a:hover { color: var(--accent); }
+	/* Phones (design 10A): back, chapter pill, search in one 56px bar. Language,
+	   sign-in and settings live in the chapter menu's footer. */
 	@media (max-width: 720px) {
-		.bar { padding: 0.6rem 1rem; gap: 0.6rem 0.75rem; }
-		.brand .en { display: none; }
-		.ref { order: 3; flex-basis: 100%; max-width: none; }
+		.bar { padding: 6px 14px 8px; gap: 8px 10px; flex-wrap: wrap; }
+		.brand, .tools { display: none; }
+		.m-only { display: flex; }
+		.m-icon { width: 44px; height: 44px; flex: none; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; padding: 0; }
+		.m-icon:hover { background: var(--surface-2); }
+		.pill { flex: 1; min-width: 0; height: 44px; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: var(--surface); border: var(--bw) solid var(--line-2); color: var(--ink); cursor: pointer; }
+		.pill.open { background: var(--accent-soft); border-color: var(--accent); }
+		.pill .t { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+		.pill .t[lang='ta'] { font-family: var(--tamil); font-size: 1.12rem; }
+		.pill .v { font-size: 0.75rem; color: var(--muted); white-space: nowrap; flex: none; }
+		.pill .caret { font-size: 0.7rem; color: var(--muted); margin-left: -4px; flex: none; }
+		.pill.open .v, .pill.open .caret { color: var(--accent); }
+		.ref { display: none; order: 3; flex-basis: 100%; max-width: none; }
+		.site.searching .ref { display: block; }
+		.site { z-index: 20; }
+		.site.hidden { transform: translateY(-100%); }
 		.page:not(.wide):not(.bleed), .site-foot { padding-left: 1rem; padding-right: 1rem; }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.site { transition: none; }
 	}
 </style>

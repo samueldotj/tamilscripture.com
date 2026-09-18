@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { chrome } from '$lib/chrome.svelte';
 	import { afterNavigate, goto } from '$app/navigation';
 	import Chapter from './Chapter.svelte';
 	import DualChapter from './DualChapter.svelte';
@@ -322,9 +323,16 @@
 			else if (selected.size) clearSelection();
 		}
 	}
+
+	// Phones (design 10A): how far through the chapter, shown as a hairline while the bars are hidden.
+	let progress = $state(0);
+	function onScrollProgress() {
+		const max = document.documentElement.scrollHeight - innerHeight;
+		progress = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+	}
 </script>
 
-<svelte:window onkeydown={onKey} />
+<svelte:window onkeydown={onKey} onscroll={onScrollProgress} />
 
 <svelte:head>
 	<title>{title} · Tamil Scripture</title>
@@ -391,6 +399,13 @@
 			<div class="titles">
 				<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
 				<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}</span>
+				{#if aids.length}
+					<!-- On phones the toolbar gives way to the header pill and the thumb bar; Study stays here. -->
+					<button type="button" class="chip study-chip m-study" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/></svg>
+						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
+					</button>
+				{/if}
 			</div>
 
 			{#if !dual}
@@ -430,6 +445,20 @@
 </div>
 
 <!-- Overlays for screens without the context panel -->
+<!-- Phones (design 10A): the thumb bar, and while reading only a floating AA and a progress hairline. -->
+<div class="thumb" class:hidden={chrome.hidden || selected.size > 0}>
+	{#if navUrl(prev)}<a class="tb" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{:else}<span class="tb spacer" aria-hidden="true"></span>{/if}
+	<button type="button" class="tb-aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
+	{#if navUrl(next)}<a class="tb" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{:else}<span class="tb spacer" aria-hidden="true"></span>{/if}
+</div>
+{#if chrome.hidden}
+	<div class="progress" aria-hidden="true"><span style="width: {Math.round(progress * 100)}%"></span></div>
+	<div class="fade" aria-hidden="true"></div>
+	{#if selected.size === 0}
+		<button type="button" class="float-aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
+	{/if}
+{/if}
+
 <div class="overlays" class:dual>
 	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 	{#if sheet}
@@ -502,12 +531,25 @@
 	.sample { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border: var(--bw) solid var(--accent); background: var(--accent-soft); border-radius: 14px; font-family: var(--tamil); font-size: 1.3rem; }
 	.sample .n { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
+	.thumb, .float-aa, .progress, .fade, .m-study { display: none; }
 	@media (max-width: 720px) {
-		.main { padding: 1.25rem 1rem 4rem; }
+		/* Room at the end of the chapter for the thumb bar */
+		.main { padding: 1.25rem 1rem 7.5rem; }
+		.toolbar { display: none; }
+		.m-study { display: inline-flex; margin-left: auto; align-self: center; }
+		.thumb { display: flex; position: fixed; z-index: 14; left: 0; right: 0; bottom: 0; align-items: center; gap: 12px; padding: 14px 18px max(26px, env(safe-area-inset-bottom)); background: var(--bg); border-top: var(--bw) solid var(--line); transition: transform 0.22s ease; }
+		.thumb.hidden { transform: translateY(100%); }
+		.tb { flex: 1; height: 56px; border-radius: 16px; border: var(--bw) solid var(--line-2); background: var(--surface); display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--tamil); font-size: 1rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+		.tb.spacer { visibility: hidden; }
+		.tb-aa { width: 56px; height: 56px; flex: none; border-radius: 999px; border: 0; background: var(--accent); color: var(--on-accent); font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer; }
+		.tb-aa span, .float-aa span { font-size: 11px; }
+		.float-aa { display: flex; align-items: center; justify-content: center; position: fixed; z-index: 14; right: 22px; bottom: max(30px, env(safe-area-inset-bottom)); width: 52px; height: 52px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 92%, transparent); border: var(--bw) solid var(--line-2); color: var(--accent); font-family: var(--sans); font-size: 15px; font-weight: 700; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: var(--shadow); cursor: pointer; }
+		.progress { display: block; position: fixed; z-index: 14; top: max(4px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); width: 120px; height: 3px; border-radius: 999px; background: var(--line-2); overflow: hidden; pointer-events: none; }
+		.progress span { display: block; height: 100%; background: var(--accent); }
+		.fade { display: block; position: fixed; z-index: 13; left: 0; right: 0; bottom: 0; height: 80px; background: linear-gradient(to top, var(--bg) 45%, transparent); pointer-events: none; }
 	}
-	@media (max-width: 640px) {
-		.toolbar .right { width: 100%; margin-left: 0; }
-		.toolbar .right .chip:not(.aa):not(.study-chip) { flex: 1; }
+	@media (prefers-reduced-motion: reduce) {
+		.thumb { transition: none; }
 	}
 
 	/* Rail joins */
