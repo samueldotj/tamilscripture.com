@@ -44,10 +44,23 @@
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
-	// An aid can go away under you — turning Places off in settings, or moving
-	// to a chapter that names none. Fall back rather than show an empty tab.
+	// Related verses belong to a selection, so the tab only exists while a verse
+	// is selected. With nothing selected the panel opens on the first aid, and
+	// goes back to Related when a verse is picked, if that is where it was.
+	const hasRelated = $derived(!!label);
+	let leftRelated = false;
 	$effect(() => {
-		if (tab !== 'related' && !aids.some((a) => a.id === tab)) tab = 'related';
+		if (tab === 'related' && !hasRelated && aids.length) {
+			tab = aids[0].id;
+			leftRelated = true;
+		} else if (hasRelated && leftRelated) {
+			tab = 'related';
+			leftRelated = false;
+		} else if (tab !== 'related' && !aids.some((a) => a.id === tab)) {
+			// An aid can go away under you (Places off in settings, or a chapter
+			// that names none). Fall back rather than show an empty tab.
+			tab = 'related';
+		}
 	});
 </script>
 
@@ -62,16 +75,18 @@
 
 	{#if aids.length}
 		<div class="tabs" role="tablist" aria-label={ta ? 'சூழல்' : 'Context'}>
-			<button type="button" role="tab" class="tab" class:on={tab === 'related'} aria-selected={tab === 'related'} onclick={() => (tab = 'related')} lang={ta ? 'ta' : 'en'}>
-				{ta ? 'தொடர்பு' : 'Related'}{#if targets?.length}<span class="tn">{targets.length}</span>{/if}
-			</button>
+			{#if hasRelated}
+				<button type="button" role="tab" class="tab" class:on={tab === 'related'} aria-selected={tab === 'related'} onclick={() => { tab = 'related'; leftRelated = false; }} lang={ta ? 'ta' : 'en'}>
+					{ta ? 'தொடர்பு' : 'Related'}{#if targets?.length}<span class="tn">{targets.length}</span>{/if}
+				</button>
+			{/if}
 			{#each aids as a (a.id)}
 				<button type="button" role="tab" class="tab" class:on={tab === a.id} aria-selected={tab === a.id} onclick={() => (tab = a.id)} lang={ta ? 'ta' : 'en'}>
 					{ta ? a.ta : a.en}{#if a.n}<span class="tn">{a.n}</span>{/if}
 				</button>
 			{/each}
 		</div>
-	{:else}
+	{:else if hasRelated}
 		<div class="kicker solo" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses'}{#if targets?.length} <span class="n">· {targets.length} {ta ? 'குறிப்புகள்' : 'refs'}</span>{/if}</div>
 	{/if}
 

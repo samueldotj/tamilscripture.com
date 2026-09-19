@@ -7,6 +7,7 @@
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
 	import MobileMenu from '$lib/reader/MobileMenu.svelte';
+	import VersePreview from '$lib/reader/VersePreview.svelte';
 	import { chrome } from '$lib/chrome.svelte';
 	import { goto } from '$app/navigation';
 	import { tick } from 'svelte';
@@ -183,6 +184,7 @@
 </header>
 
 <SettingsPanel bind:open={settingsOpen} />
+<VersePreview />
 <MobileMenu bind:open={chapterMenu} lang={ui} book={curBook} chapter={curChapter} versions={curVersions} {versionPath} {signinHref} top={headerH} onsettings={() => (settingsOpen = true)} />
 
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -- a tap on the text is a shortcut; the bars also return on scroll up -->

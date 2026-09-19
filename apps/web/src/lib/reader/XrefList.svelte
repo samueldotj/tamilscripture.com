@@ -71,7 +71,7 @@
 {#await items}
 	<p class="loading">…</p>
 {:then list}
-	<ol>
+	<ol data-no-preview>
 		{#each list as { t, txt } (t.to + (t.end ?? ''))}
 			<li>
 				<div class="ref">
