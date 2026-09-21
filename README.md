@@ -89,7 +89,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M4 · Community** | Highlight counts and heatmaps, anonymous and opt-out. | R-2.1–2.4 | Aggregates refresh hourly and never show counts under the threshold. | Code shipped 7 Sep 2026; 4.7 alerting open |
 | **M5 · Later** | Could-priority items, scheduled by demand. | R-1.6, 1.11, 5.7–5.8, 7.5, 10.3, 10.6, 10.11, 10.15, 2.5, 3.6 | | Not started |
 | **M6 · Places and maps** | Every verse knows its places: Tamil and English place names, verse links, a static map in the reader, place and journey pages, and an interactive atlas. Design in [docs/feature_maps.md](docs/feature_maps.md). | R-11.1–11.8, R-14.1–14.6 | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. | Built 12 Sep 2026 on branch `m6-places-maps`; regions and the period selector (6.16) deferred |
-| **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.1–12.7, R-13.1–13.6, R-15.1–15.7 | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Built 13 Sep 2026 on `m7-dictionary-people`; owner items open (secrets, first moderator, Tamil drafts, Smith's/Aquifer decision); ISBE deferred |
+| **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.1–12.7, R-13.1–13.6, R-15.1–15.7 | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Built 13 Sep 2026 on `m7-dictionary-people`; Smith's and Aquifer approved 13 Sep 2026; the scheduled export ran for the first time 18 Sep 2026, so `SUPABASE_SERVICE_KEY` works; owner items open (first moderator, Tamil drafts, `GITHUB_DISPATCH_TOKEN` for "Publish now"); ISBE deferred |
 | **M8 · Site analytics** | First-party, cookie-free visit counts for moderators: page views, visitors, unique views, signed-in users, verse clicks, country and city, device and resolution, in `/mod/traffic`. Design in [docs/feature_analytics.md](docs/feature_analytics.md). | R-16.1–16.7 | A moderator opens Traffic and sees yesterday's views by page and country; no stored row identifies a reader. | A1–A6 built 18 Sep 2026 |
 
 ### M0 · Foundations
@@ -113,9 +113,9 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 1.1 | `usfm-ingest`: full paratext support (introductions, headings, poetry, paragraphs, footnotes, `\x` markers) | R-3.2 | ☐ |
-| 1.2 | `usfm-ingest`: verse bridges and split verses, `bridges` map in chapter JSON | R-3.3 | ☐ |
-| 1.3 | Ingest IRVTAM, TCV, BSB, WEB and KJV; golden-file tests; English version selector (BSB default) | R-3.1 | ☐ |
+| 1.1 | `usfm-ingest`: full paratext support (introductions, headings, poetry, paragraphs, footnotes, `\x` markers) | R-3.2 | ☑ |
+| 1.2 | `usfm-ingest`: verse bridges and split verses, `bridges` map in chapter JSON | R-3.3 | ☑ |
+| 1.3 | All five versions ingested (IRVTAM, TCV, BSB, WEB, KJV) ☑; English version selector, BSB default ☑; unit tests in `usfm.rs` and the CI determinism diff cover the parser, dedicated golden-file fixtures ☐ | R-3.1 | ◧ |
 | 1.4 | `bible-ref` crate: grammar, English and Tamil book matching, Tamil numerals, canonical URL builder; fixture suite (190 cases, grow to 500) | R-1.2, R-1.13 | ☑ |
 | 1.5 | `packages/bible-wasm`: wasm-pack build (31 kB gzipped), lazy loader in `src/lib/ref` | ADR-3 | ☑ |
 | 1.6 | Chapter route rendered from JSON via ISR; `Chapter`, `Verse` components | R-1.1, ADR-1 | ☑ |
@@ -126,18 +126,19 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.11 | History handling: SvelteKit client navigation per passage (one history entry each), settings changes never navigate, scroll restored on back | R-1.3 | ☑ |
 | 1.12 | Breadcrumbs with JSON-LD `BreadcrumbList` | R-1.4 | ☑ |
 | 1.13 | Previous and next chapter controls, swipe on touch, ← → keys, hover prefetch | R-1.5 | ☑ |
-| 1.14 | Verse selection (tap verse numbers) and action bar: copy text with reference and link, share via Web Share or link copy | R-1.7 | ☑ |
+| 1.14 | Verse selection (tap verse numbers, or drag across the text / long-press on phones) and action bar: copy text with reference and link, share via Web Share or link copy; ‡ and ✎ marks stay out of copied text | R-1.7 | ☑ |
 | 1.15 | Reader, Standard and Cross-reference formats as CSS classes on `<html>`; inline pre-paint stamp in `app.html` | R-8.1, R-8.3, ADR-6 | ☑ |
 | 1.16 | Paratext toggles (introductions, headings, footnotes, cross-ref markers) persisted in local storage; default version cookie for the shorthand redirector | R-1.8, R-1.14 | ☑ |
 | 1.17 | Reader settings: text size (5 steps), theme, UI language, Tamil typeface (Mukta Malar, Noto Sans, Noto Serif, system) ☑; low-end Android check ☐ | R-1.10, open question 6 | ◧ |
 | 1.18 | Self-hosted subset fonts via `scripts/subset-fonts.py` (Tamil faces ~40 kB each, `unicode-range`, `font-display: optional`, preload, fallback metrics); Google Fonts removed | design §10 | ☑ |
-| 1.19 | Tamil and English interface strings; default from browser language | requirements §12 | ☐ |
+| 1.19 | Tamil and English interface strings throughout, switchable in the header and the phone menu ☑; first visit always starts in Tamil rather than following the browser language ☐ | requirements §12 | ◧ |
 | 1.20 | PWA shell: web manifest with icons, service worker (shell precache, content JSON cache-first, last 20 reader pages offline) | requirements §12, design §9 | ☑ |
-| 1.21 | About page with licences and attribution; footer notice on reading pages; site footer link | R-3.5 | ☑ |
-| 1.22 | Sitemap index plus one sitemap per version, `robots.txt`, `rel="canonical"`, Tamil page titles | R-1.12, requirements §12 | ☑ |
+| 1.21 | About page (purpose, who is behind the site, privacy) and a separate `/licences` page with sources and attribution; footer notice on reading pages; site footer links | R-3.5 | ☑ |
+| 1.22 | Sitemap index plus one sitemap per version and one for entities, plain-text `/sitemap.txt` with all 23,932 URLs, `robots.txt`, `rel="canonical"`, Tamil page titles | R-1.12, requirements §12 | ☑ |
 | 1.23 | CI guards: Lighthouse CI (a11y ≥ 0.95 and CLS < 0.05 as errors, performance ≥ 0.9 as warning) ☑, `size-limit` (reader route ≤ 120 kB, all chunks ≤ 200 kB, wasm, font) ☑; Playwright text-visible-under-500 ms ☐ | design §10 | ◧ |
 | 1.24 | Accessibility pass: `lang` attributes, focus states, 44 px targets, WCAG 2.2 AA contrast | requirements §12 | ☐ |
 | 1.25 | Production deploy on `www.tamilscripture.com` ☑; Vercel Analytics ☑; Sentry ☐ (needs DSN); uptime probe ☐ | design §11 | ◧ |
+| 1.26 | Phone header, design 10A: the three header rows become one 56px auto-hiding bar (back, chapter pill, search); book/chapter/version menu with language, sign-in and settings in its footer; reader thumb bar with floating text size and a progress hairline while reading | design 10A, R-1.10 | ☑ |
 
 ### M2 · Study
 
@@ -162,7 +163,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 
 | # | Task | Refs | Done |
 |---|---|---|---|
-| 3.1 | Supabase Auth: magic link ☑ and Google button ☑ in the app; Google provider credentials and Site URL / redirect URLs to be entered in the Supabase dashboard by the owner ☐; Facebook deferred (open question 4) | R-10.1, R-10.2 | ◧ |
+| 3.1 | Supabase Auth: magic link ☑, Google button ☑, Google provider credentials and redirect URLs entered by the owner ☑ (18 Sep 2026); Google app-name and logo verification with Google still to be submitted ☐; Facebook deferred (open question 4) | R-10.1, R-10.2 | ◧ |
 | 3.2 | Client-side PKCE: `/auth/callback` exchanges the code in the browser; public pages never read the session on the server (ADR-9); supabase-js loads lazily only for signed-in visitors | design §7 | ☑ |
 | 3.3 | Migration `20260907200000_personal`: `profiles` (auto-created on signup), `highlights`, `notes`, `history` with RLS, `record_visit`, `export_my_data`, `delete_my_account` | ADR-5, design §7 | ☑ |
 | 3.4 | RLS test suite in CI: pgTAP against the local Supabase stack (`supabase/tests/`), no secrets needed; covers personal tables indirectly through the community-review suite (7.8) | design §7 | ☑ |
@@ -195,7 +196,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 5.3 | Autocomplete for book names and recent searches | R-5.7 | ☐ |
 | 5.4 | Restrict search to testament, book or chapter range | R-5.8 | ☐ |
 | 5.5 | Romanised Tamil search input | R-5.4 stretch | ☐ |
-| 5.6 | Cross-reference hover preview on desktop | R-7.5 | ☐ |
+| 5.6 | Verse preview on hover: resting the mouse on any verse link for half a second shows the verse underneath it (cross-references, entity pages, dictionary articles) | R-7.5 | ☑ |
 | 5.7 | Import anonymous highlights and notes at first sign-in | R-10.3 | ☐ |
 | 5.8 | "Continue reading" shortcut on the home page | R-10.6 | ☐ |
 | 5.9 | Markdown in notes | R-10.11 | ☐ |
