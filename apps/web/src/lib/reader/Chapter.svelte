@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ChapterJson, Segment, XrefChapter } from '$lib/content/types';
 	import Verse from './Verse.svelte';
+	import type { NameHit, VerseNames } from './names';
 
 	let {
 		chapter,
@@ -13,7 +14,9 @@
 		highlights = new Map<string, string>(),
 		noted = new Set<string>(),
 		onnote,
-		heat = null
+		heat = null,
+		names = null,
+		onname
 	}: {
 		chapter: ChapterJson;
 		lang: 'ta' | 'en';
@@ -29,6 +32,9 @@
 		onnote?: (id: string) => void;
 		/** verse number → { bucket, users } for the community heat overlay */
 		heat?: Map<number, { bucket: number; users: number }> | null;
+		/** verse id → names to mark; null when the Dictionary words setting is off */
+		names?: Map<string, VerseNames> | null;
+		onname?: (hit: NameHit) => void;
 	} = $props();
 	function heatFor(seg: Segment) {
 		if (!heat || !seg.id) return { bucket: 0, users: 0 };
@@ -98,6 +104,8 @@
 						{onnote}
 						heat={heatFor(seg).bucket}
 						users={heatFor(seg).users}
+						names={seg.id && names ? names.get(seg.id) ?? null : null}
+						{onname}
 					/>
 				{/each}
 			</p>

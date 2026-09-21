@@ -8,7 +8,7 @@
 	import XrefList from './XrefList.svelte';
 
 	export type AidId = 'map' | 'places' | 'persons';
-	export type TabId = 'related' | AidId;
+	export type TabId = 'related' | AidId | 'entry';
 	export interface Aid {
 		id: AidId;
 		ta: string;
@@ -26,7 +26,8 @@
 		aids = [],
 		tab = $bindable('related'),
 		study,
-		actions
+		actions,
+		entry
 	}: {
 		/** verse or range label for the header; empty when nothing is selected */
 		label?: string;
@@ -41,6 +42,8 @@
 		/** Renders one aid, named by the tab in view. */
 		study?: Snippet<[AidId]>;
 		actions?: Snippet;
+		/** A name tapped in the text (design 7A): its card, under the அகராதி tab. */
+		entry?: Snippet;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
@@ -50,6 +53,11 @@
 	const hasRelated = $derived(!!label);
 	let leftRelated = false;
 	$effect(() => {
+		// The அகராதி tab lives as long as a name is picked.
+		if (tab === 'entry') {
+			if (entry) return;
+			tab = 'related';
+		}
 		if (tab === 'related' && !hasRelated && aids.length) {
 			// Not the map: it fetches the map engine, and nobody asked for it yet.
 			tab = (aids.find((a) => a.id !== 'map') ?? aids[0]).id;
@@ -74,8 +82,11 @@
 		{/if}
 	</header>
 
-	{#if aids.length}
+	{#if aids.length || entry}
 		<div class="tabs" role="tablist" aria-label={ta ? 'சூழல்' : 'Context'}>
+			{#if entry}
+				<button type="button" role="tab" class="tab" class:on={tab === 'entry'} aria-selected={tab === 'entry'} onclick={() => (tab = 'entry')} lang="ta">அகராதி</button>
+			{/if}
 			{#if hasRelated}
 				<button type="button" role="tab" class="tab" class:on={tab === 'related'} aria-selected={tab === 'related'} onclick={() => { tab = 'related'; leftRelated = false; }} lang={ta ? 'ta' : 'en'}>
 					{ta ? 'தொடர்பு' : 'Related'}{#if targets?.length}<span class="tn">{targets.length}</span>{/if}
@@ -92,7 +103,9 @@
 	{/if}
 
 	<div class="body" class:fill={tab === 'map'}>
-		{#if tab !== 'related' && study}
+		{#if tab === 'entry' && entry}
+			{@render entry()}
+		{:else if tab !== 'related' && tab !== 'entry' && study}
 			{@render study(tab)}
 		{:else if !label}
 			<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'ஒரு வசன எண்ணைத் தொட்டால் அதன் தொடர்புள்ள வசனங்கள் இங்கே காட்டப்படும். அடிக்கோடிட, குறிப்பு எழுத, நகலெடுக்க, பகிர இங்கேயே செய்யலாம்.' : 'Tap a verse number to see its related verses here, and to highlight, note, copy or share it.'}</p>

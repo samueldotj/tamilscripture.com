@@ -247,7 +247,7 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 | 7.12 | Export workflow every 12 hours and on dispatch: read accepted rows with the service key, write `data/entities/overrides/`, commit if changed, start the deploy (`export-overrides.yml`, `scripts/export-overrides.mjs`); needs the `SUPABASE_SERVICE_KEY` secret from the owner | dictionary §6 | ◧ |
 | 7.13 | "Publish now": `/api/mod/publish` verifies the moderator session and dispatches the export workflow through a fine-grained GitHub token; needs `GITHUB_DISPATCH_TOKEN` on Vercel from the owner | dictionary §6 | ◧ |
 | 7.14 | Build applies overrides over drafts; provenance badges for draft, community-corrected and owner-authored text | dictionary §6 | ☑ |
-| 7.15 | "Underline names" setting, off by default, pre-paint class, CLS check in CI | dictionary §4 | ☐ |
+| 7.15 | "Dictionary words" setting (design 7A), off by default, pre-paint class: people and places named in the text carry a dotted underline in Tamil and English versions; a tap opens the name's card (original form, Strong's number, verse count, description, article and full-entry links) under a new அகராதி tab in the context panel, or as a half-sheet on phones. The chapter mentions carry the Tamil forms that occur in each chapter | dictionary §4, design 7A | ☑ |
 | 7.16 | Full-text search over Tamil articles with `tamil_tsvector` (after the first Tamil drafts exist) | dictionary §8 | ☐ |
 | 7.17 | Optional: Theographic events and periods in their own directory if licence and value justify it; events on entity pages | dictionary §2 | ☐ |
 

@@ -5,7 +5,7 @@ import { browser } from '$app/environment';
 
 /** 'xref' is the Study Bible format: one verse per line with study aids (kept as the class name fmt-xref). */
 export type Format = 'reader' | 'standard' | 'xref';
-export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language';
+export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language' | 'names';
 export type Theme = 'system' | 'light' | 'dark';
 export type TamilFont = 'mukta' | 'sans' | 'serif' | 'system';
 
@@ -24,6 +24,8 @@ export interface Settings {
 	maps: boolean;
 	/** Original-language (Hebrew/Greek) name forms beside people. */
 	language: boolean;
+	/** Dotted underline on people and place names in the text (design 7A, task 7.15). */
+	names: boolean;
 	/** 1..5, 3 is the default 17px */
 	fontSize: number;
 	theme: Theme;
@@ -43,6 +45,7 @@ export const DEFAULTS: Settings = {
 	persons: true,
 	maps: true,
 	language: true,
+	names: false,
 	fontSize: 3,
 	theme: 'system',
 	uiLang: 'ta',
@@ -68,6 +71,7 @@ export function htmlClasses(s: Settings): string[] {
 	if (!s.intro) c.push('no-intro');
 	if (!s.footnotes) c.push('no-footnotes');
 	if (!s.xrefs) c.push('no-xrefs');
+	if (s.names) c.push('nm-on');
 	return c;
 }
 

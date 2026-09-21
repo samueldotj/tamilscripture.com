@@ -11,6 +11,8 @@
 	import ContextPanel from './ContextPanel.svelte';
 	import type { TabId } from './ContextPanel.svelte';
 	import StudyPanel from './StudyPanel.svelte';
+	import NameCard from './NameCard.svelte';
+	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
 	import type { ChapterMentions } from '$lib/entities/types';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
@@ -212,10 +214,35 @@
 	]);
 	let panelTab = $state<TabId>('related');
 
+	// Dictionary words (design 7A, task 7.15): people and places named in the
+	// text carry a dotted underline when the setting is on; tapping one opens
+	// its card in the context panel's அகராதி tab, or as a sheet on phones.
+	const nameMap = $derived(settings.value.names && !dual ? nameIndex(mentions, primary) : null);
+	let picked = $state<NameHit | null>(null);
+	let nameSheet = $state(false);
+	const pickedSummary = $derived(
+		picked ? ((picked.kind === 'person' ? mentions?.people?.[picked.id] : mentions?.places[picked.id]) ?? null) : null
+	);
+	function pickName(hit: NameHit) {
+		picked = hit;
+		if (matchMedia('(min-width: 1180px)').matches) {
+			panelTab = 'entry';
+			nameSheet = false;
+		} else {
+			nameSheet = true;
+		}
+	}
+	function closeName() {
+		picked = null;
+		nameSheet = false;
+	}
+
 	$effect(() => {
 		const key = `${data.book.code}.${data.chapter}`;
 		if (!panelWanted) return;
 		mentions = null;
+		picked = null;
+		nameSheet = false;
 		mapSvg = null;
 		mapRequested = '';
 		studyLoading = true;
@@ -455,7 +482,7 @@
 			</div>
 
 			{#if !dual}
-				<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} />
+				<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} />
 			{:else}
 				<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 			{/if}
@@ -478,7 +505,7 @@
 
 	{#if !dual}
 		<aside class="panel">
-			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab}>
+			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab} entry={picked && pickedSummary ? nameEntry : undefined}>
 				{#snippet study(only)}
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
@@ -489,6 +516,21 @@
 		</aside>
 	{/if}
 </div>
+
+{#snippet nameEntry()}
+	{#if picked && pickedSummary}
+		<NameCard hit={picked} summary={pickedSummary} lang={ui} onclose={closeName} />
+	{/if}
+{/snippet}
+
+<!-- A name tapped on a phone or tablet: its card as a half-sheet (design 7A). -->
+{#if nameSheet && picked && pickedSummary}
+	<button type="button" class="name-scrim" aria-label={isTamil ? 'மூடு' : 'Close'} onclick={closeName}></button>
+	<div class="name-sheet" role="dialog" aria-label={isTamil ? 'அகராதி' : 'Dictionary'}>
+		<span class="grip" aria-hidden="true"></span>
+		<NameCard hit={picked} summary={pickedSummary} lang={ui} onclose={closeName} />
+	</div>
+{/if}
 
 <!-- Overlays for screens without the context panel -->
 <!-- Phones (design 10A): the thumb bar, and while reading only a floating AA and a progress hairline. -->
@@ -577,6 +619,9 @@
 	.sample { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border: var(--bw) solid var(--accent); background: var(--accent-soft); border-radius: 14px; font-family: var(--tamil); font-size: 1.3rem; }
 	.sample .n { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
+	.name-scrim { position: fixed; inset: 0; z-index: 21; border: 0; padding: 0; background: var(--scrim); cursor: default; }
+	.name-sheet { position: fixed; z-index: 22; left: 50%; bottom: 0; transform: translateX(-50%); width: min(40rem, 100%); max-height: 70vh; overflow-y: auto; background: var(--surface); border: var(--bw) solid var(--line-2); border-bottom: 0; border-radius: 26px 26px 0 0; padding: 0.6rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); box-shadow: var(--shadow-lg); }
+	.name-sheet .grip { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.6rem; }
 	.thumb, .float-aa, .progress, .fade, .m-study { display: none; }
 	@media (max-width: 720px) {
 		/* Room at the end of the chapter for the thumb bar */

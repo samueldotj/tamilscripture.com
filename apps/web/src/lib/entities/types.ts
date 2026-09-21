@@ -146,6 +146,8 @@ export interface PlaceSummary {
 	mentions: number;
 	/** first linked dictionary article id */
 	article?: string | null;
+	/** version code → the Tamil forms of the name that occur in this chapter */
+	forms?: Record<string, string[]> | null;
 }
 
 export interface PersonSummary {
@@ -158,6 +160,8 @@ export interface PersonSummary {
 	article?: string | null;
 	/** primary original-language form, for the Study Bible's Language toggle */
 	original?: { text: string; script: 'he' | 'el'; strongs: string; translit?: string } | null;
+	/** version code → the Tamil forms of the name that occur in this chapter */
+	forms?: Record<string, string[]> | null;
 }
 
 /** `entities/mentions/{BOOK}/{ch}.json` */

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Segment, XrefTarget } from '$lib/content/types';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
+	import { splitNames, type NameHit, type VerseNames } from './names';
 
 	let {
 		seg,
@@ -15,7 +16,9 @@
 		hasNote = false,
 		onnote,
 		heat = 0,
-		users = 0
+		users = 0,
+		names = null,
+		onname
 	}: {
 		seg: Segment;
 		lang: 'ta' | 'en';
@@ -31,7 +34,17 @@
 		/** community heat bucket 0..4 (overlay) and raw user count (tooltip) */
 		heat?: number;
 		users?: number;
+		/** People and places to mark in this verse (the Dictionary words setting). */
+		names?: VerseNames | null;
+		onname?: (hit: NameHit) => void;
 	} = $props();
+
+	function openName(e: MouseEvent, hit: NameHit) {
+		// A plain link without script or with a modifier key; the card otherwise.
+		if (!onname || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+		e.preventDefault();
+		onname(hit);
+	}
 
 	// Split the text into runs at span boundaries and note anchors so that
 	// words-of-Jesus spans and footnote markers land at the right characters.
@@ -79,6 +92,12 @@
 	}
 </script>
 
+{#snippet text(t: string)}
+	{#each splitNames(t, names) as piece, j (j)}
+		{#if piece.hit}<a class="nm" href="/{piece.hit.kind}/{piece.hit.id}" onclick={(e) => openName(e, piece.hit!)}>{piece.t}</a>{:else}{piece.t}{/if}
+	{/each}
+{/snippet}
+
 <span class="verse {highlight ? `hl-${highlight}` : ''} {heat ? `heat-${heat}` : ''}" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
 	{#if seg.n}
 		{#if onselect && seg.id}
@@ -88,7 +107,7 @@
 		{/if}
 	{/if}
 	{#each runs as run, i (i)}
-		{#if run.wj}<span class="wj">{run.text}</span>{:else}{run.text}{/if}
+		{#if run.wj}<span class="wj">{@render text(run.text)}</span>{:else}{@render text(run.text)}{/if}
 		{#if run.noteAfter}<sup class="fn"><a href="#{chapterId}.n{run.noteAfter}" aria-label="footnote {run.noteAfter}">{run.noteAfter}</a></sup>{/if}
 	{/each}
 	{#if hasNote && seg.n && seg.id}
@@ -120,6 +139,9 @@
 	.xref:hover, .note-mark:hover { color: var(--accent); }
 	/* Kept out of copied text: a copy holds the verse numbers and words only. */
 	.note-mark, .xref, .xref-list { -webkit-user-select: none; user-select: none; }
+	/* Dictionary words (7A): a dotted gold underline, nothing that moves the text. */
+	.nm { color: inherit; text-decoration: underline dotted var(--amber); text-decoration-thickness: 1.5px; text-underline-offset: 0.28em; cursor: pointer; border-radius: 3px; }
+	.nm:hover, .nm:focus-visible { background: var(--accent-soft); }
 	.xref-list { display: none; font-family: var(--sans); font-size: 0.72em; color: var(--muted); text-indent: 0; margin-top: 0.1em; }
 	.xref-list a { color: var(--muted); text-decoration: none; margin-right: 0.7em; }
 	.xref-list a:hover { color: var(--accent); }

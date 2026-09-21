@@ -194,6 +194,39 @@ fn primary_form(forms: &[tipnr::NameForm]) -> Option<&tipnr::NameForm> {
         .max_by_key(|f| (f.significance == "Named", f.verses.len()))
 }
 
+/// The inflected Tamil forms of a name that occur in the given verses, per
+/// version, where the draft is trustworthy enough to show; the reader
+/// underlines these words in the text. Only the chapter's own forms are kept,
+/// which keeps each chapter's file small and the matching exact.
+fn forms_ta(
+    names: &NamesTa,
+    name_en: &str,
+    verse_ids: &[&String],
+    corpora: &[Corpus],
+) -> Option<BTreeMap<String, Vec<String>>> {
+    let per = names.get(name_en)?;
+    let out: BTreeMap<String, Vec<String>> = per
+        .iter()
+        .filter(|(_, f)| f.display_ok())
+        .filter_map(|(v, f)| {
+            let corpus = corpora.iter().find(|c| &c.version == v)?;
+            let texts: Vec<&String> = verse_ids
+                .iter()
+                .filter_map(|id| corpus.verses.get(id.as_str()))
+                .collect();
+            let mut found: Vec<String> = std::iter::once(&f.label)
+                .chain(f.forms.iter())
+                .filter(|w| texts.iter().any(|t| t.contains(w.as_str())))
+                .cloned()
+                .collect();
+            found.sort();
+            found.dedup();
+            (!found.is_empty()).then(|| (v.clone(), found))
+        })
+        .collect();
+    (!out.is_empty()).then_some(out)
+}
+
 fn label_ta(names: &NamesTa, name_en: &str, versions: &[String]) -> Option<String> {
     let per = names.get(name_en)?;
     for v in versions {
@@ -984,6 +1017,19 @@ fn main() -> Result<()> {
             .iter()
             .map(|(k, (pl, pe))| serde_json::json!({ "verse": k, "places": pl, "people": pe }))
             .collect();
+        let verses_of = |id: &str, place: bool| -> Vec<&String> {
+            m.verses
+                .iter()
+                .filter(|(_, (pl, pe))| {
+                    if place {
+                        pl.iter().any(|x| x == id)
+                    } else {
+                        pe.iter().any(|x| x == id)
+                    }
+                })
+                .map(|(k, _)| k)
+                .collect()
+        };
         let place_summary: BTreeMap<&str, Value> = m
             .places
             .iter()
@@ -993,6 +1039,7 @@ fn main() -> Result<()> {
                     p.id.as_str(),
                     serde_json::json!({
                         "name_en": p.name_en, "qualifier": p.qualifier, "name_ta": label_ta(&names, &p.name_en, &tamil_versions),
+                        "forms": forms_ta(&names, &p.name_en, &verses_of(&p.id, true), &corpora),
                         "type": p.types.first().cloned().unwrap_or_default(), "precision": p.precision,
                         "lat": p.lat.map(round5), "lon": p.lon.map(round5), "mentions": p.verses.len(),
                         "article": articles_by_entity.get(&format!("place/{}", p.id)).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone())
@@ -1009,7 +1056,8 @@ fn main() -> Result<()> {
                     id,
                     serde_json::json!({
                         "name_en": p.name_en, "qualifier": if name_count[&p.name_en.to_lowercase()] > 1 { Some(ref_label(&p.first_ref)) } else { None },
-                        "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "gender": p.gender, "brief": p.brief, "mentions": p.verses.len(),
+                        "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "forms": forms_ta(&names, &p.name_en, &verses_of(id, false), &corpora),
+                        "gender": p.gender, "brief": p.brief, "mentions": p.verses.len(),
                         "article": articles_by_entity.get(&format!("person/{id}")).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone()),
                         "original": primary_form(&p.forms).map(|f| serde_json::json!({ "text": f.original, "script": f.script, "strongs": f.strongs }))
                     }),

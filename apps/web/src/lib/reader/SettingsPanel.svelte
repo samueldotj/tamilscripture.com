@@ -16,6 +16,7 @@
 		{ key: 'intro', ta: 'புத்தக முன்னுரை', en: 'Book introductions' },
 		{ key: 'footnotes', ta: 'குறிப்பு எண்கள்', en: 'Footnote markers' },
 		{ key: 'xrefs', ta: 'ஒப்புவசனங்கள்', en: 'Cross-references' },
+		{ key: 'names', ta: 'அகராதி சொற்கள்', en: 'Dictionary words (people and places)' },
 		{ key: 'heat', ta: 'சமூக அடிக்கோட்டு வெப்பம்', en: 'Community highlight heat' }
 	];
 	// Study aids appear only in the Study Bible format.
