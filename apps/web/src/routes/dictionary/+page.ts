@@ -1,16 +1,19 @@
 import type { PageLoad } from './$types';
-import { loadArticleIndex } from '$lib/entities/load';
+import type { BrowseRow, BrowseType } from '../api/dictionary/browse/+server';
 
-// One index page: rendered on first request and cached until the next deploy.
+// The alphabetical index is merged on the server (design 7A): one letter at a
+// time, so the page never downloads the 2 MB of entity indexes.
 export const prerender = false;
 export const config = { isr: { expiration: false } };
 
 export const load: PageLoad = async ({ fetch, url }) => {
-	const articles = await loadArticleIndex(fetch).catch(() => []);
-	const letters = [...new Set(articles.map((a) => a.title[0]?.toUpperCase() ?? '#'))].sort();
-	const letter = url.searchParams.get('l')?.toUpperCase() ?? letters[0] ?? 'A';
-	const source = url.searchParams.get('s') ?? 'all';
-	const counts: Record<string, number> = {};
-	for (const a of articles) counts[a.source] = (counts[a.source] ?? 0) + 1;
-	return { articles, letters, letter, source, counts };
+	const type = (url.searchParams.get('t') ?? 'all') as BrowseType;
+	const letter = url.searchParams.get('l') ?? '';
+	const lang = url.searchParams.get('lang') === 'en' ? 'en' : 'ta';
+	const source = url.searchParams.get('s') ?? '';
+	const res = await fetch(`/api/dictionary/browse?${new URLSearchParams({ t: type, l: letter, lang, s: source })}`);
+	const data = res.ok
+		? ((await res.json()) as { letters: string[]; letter: string; rows: BrowseRow[]; total: number })
+		: { letters: [], letter: '', rows: [], total: 0 };
+	return { ...data, type, lang, source };
 };
