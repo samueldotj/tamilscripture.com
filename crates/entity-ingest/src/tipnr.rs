@@ -116,6 +116,19 @@ fn relation_key(token: &str) -> Option<String> {
     Some(format!("{name}@{first}"))
 }
 
+/// A TIPNR identifier as a reader should see it: underscores are word gaps, and
+/// a designation such as "a wife of Eliphaz" starts a line, so it starts upper.
+fn display_name(ident: &str) -> String {
+    let spaced = ident.replace('_', " ");
+    let mut chars = spaced.chars();
+    match chars.next() {
+        Some(first) if first.is_lowercase() => {
+            first.to_uppercase().collect::<String>() + chars.as_str()
+        }
+        _ => spaced,
+    }
+}
+
 fn relation_list(field: &str) -> Vec<String> {
     field.split([',', '+']).filter_map(relation_key).collect()
 }
@@ -165,6 +178,9 @@ pub fn load(path: &Path, books: &Books) -> Result<Tipnr> {
         let Some((name_en, rest)) = ident.split_once('@') else {
             continue;
         };
+        // TIPNR joins a designation's words with underscores ("a_wife_of_Eliphaz",
+        // "Queen_of_Sheba"). Those are for its own keys, not for reading.
+        let display = display_name(name_en);
         let first_ref = rest.split('-').next().unwrap_or(rest).to_string();
         let col = |n: usize| head.get(n).map(|s| s.trim()).unwrap_or("");
 
@@ -236,7 +252,7 @@ pub fn load(path: &Path, books: &Books) -> Result<Tipnr> {
             .to_string();
             people.push(Person {
                 key: format!("{name_en}@{first_ref}"),
-                name_en: name_en.to_string(),
+                name_en: display,
                 first_ref,
                 gender,
                 description: col(1).to_string(),
@@ -255,7 +271,7 @@ pub fn load(path: &Path, books: &Books) -> Result<Tipnr> {
             });
         } else {
             places.push(TipnrPlace {
-                name_en: name_en.to_string(),
+                name_en: display,
                 description: col(1).to_string(),
                 brief,
                 short,
