@@ -58,6 +58,10 @@ export interface ExportStatus {
 export function nameTarget(version: string, nameEn: string): string {
 	return `name:${version}:${nameEn}`;
 }
+/** `gloss:G0026`: the Tamil meaning of a Strong's number (concordance C5) */
+export function glossTarget(num: string): string {
+	return `gloss:${num}`;
+}
 /** `article:eastons/damascus#p1-ee1db5fc` */
 export function articleTarget(paragraphId: string): string {
 	return `article:${paragraphId}`;
@@ -93,6 +97,7 @@ export function formatReason(tag: ReasonId | '', note: string): string | undefin
 export type ParsedTarget =
 	| { kind: 'name'; version: string; name_en: string; href: null }
 	| { kind: 'article'; article: string; paragraph: string; href: string }
+	| { kind: 'gloss'; strongs: string; href: string }
 	| { kind: 'unknown'; href: null };
 
 export function parseTarget(t: string): ParsedTarget {
@@ -100,6 +105,8 @@ export function parseTarget(t: string): ParsedTarget {
 	if (n) return { kind: 'name', version: n[1], name_en: n[2], href: null };
 	const a = /^article:([a-z0-9]+\/[a-z0-9-]+)#(p[0-9]+-[0-9a-f]{8})$/.exec(t);
 	if (a) return { kind: 'article', article: a[1], paragraph: a[2], href: `/dictionary/${a[1]}#${a[2]}` };
+	const g = /^gloss:([HG][0-9]{4}[A-Za-z]?)$/.exec(t);
+	if (g) return { kind: 'gloss', strongs: g[1], href: `/strongs/${g[1]}` };
 	return { kind: 'unknown', href: null };
 }
 

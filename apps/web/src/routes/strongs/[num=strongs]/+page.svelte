@@ -7,6 +7,9 @@
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import { decodeVerses, describePos } from '$lib/concordance';
+	import Provenance from '$lib/community/Provenance.svelte';
+	import SuggestControl from '$lib/community/SuggestControl.svelte';
+	import { glossTarget } from '$lib/community/repo';
 
 	let { data } = $props();
 	const e = $derived(data.entry);
@@ -121,6 +124,16 @@
 			{#if e.translit}<span class="translit">{e.translit}</span>{/if}
 		</h1>
 		<p class="gloss" lang="en">{e.gloss}</p>
+		<!-- Tamil meaning (C5): drafted outside the repository, corrected through the review queue. -->
+		<div class="gloss-ta">
+			{#if e.gloss_ta}
+				<span lang="ta">{e.gloss_ta}</span>
+				<Provenance kind={e.gloss_ta_source ?? 'draft'} lang={ta ? 'ta' : 'en'} />
+			{:else}
+				<span class="none" lang={ta ? 'ta' : 'en'}>{ta ? 'தமிழ்ப் பொருள் இன்னும் இல்லை' : 'No Tamil meaning yet'}</span>
+			{/if}
+			<SuggestControl target={glossTarget(e.s)} current={e.gloss_ta ?? ''} source={e.gloss} lang={ta ? 'ta' : 'en'} compact />
+		</div>
 		<p class="sub" lang={ta ? 'ta' : 'en'}>
 			{[describePos(e.pos, ta), `${verses.length.toLocaleString('en-IN')} ${verseWord}`, e.count !== verses.length ? (ta ? `${e.count.toLocaleString('en-IN')} முறை` : `${e.count.toLocaleString('en-IN')} times`) : ''].filter(Boolean).join(' · ')}
 		</p>
@@ -201,6 +214,9 @@
 	.word { font-size: 2.6rem; line-height: 1.2; }
 	.translit { font-family: var(--sans); font-size: 1.1rem; color: var(--ink-2); font-style: italic; }
 	.gloss { margin: 0; font-size: 1.2rem; font-weight: 600; }
+	.gloss-ta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; }
+	.gloss-ta [lang='ta'] { font-family: var(--tamil); font-size: 1.15rem; font-weight: 600; }
+	.gloss-ta .none { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
 	.sub { margin: 0; color: var(--muted); font-size: 0.9rem; }
 	.sub[lang='ta'] { font-family: var(--tamil); }
 	.def { white-space: pre-line; line-height: 1.6; color: var(--ink-2); font-size: 0.92rem; max-height: 7.5em; overflow: hidden; }

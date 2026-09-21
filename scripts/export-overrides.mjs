@@ -7,6 +7,7 @@
 // Output (deterministic, sorted):
 //   overrides/names.toml                       [Name.VERSION] forms = ["…"]
 //   overrides/articles/{source}/{slug}.toml    [[paragraphs]] id/text
+//   overrides/lexicon.toml                     [H0430G] ta = "…" (Tamil glosses, concordance C5)
 import { mkdir, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -33,6 +34,7 @@ const key_ = (k) => (/^[A-Za-z0-9_-]+$/.test(k) ? k : str(k));
 
 const names = new Map(); // name_en → Map(version → row)
 const articles = new Map(); // article id → rows
+const glosses = new Map(); // Strong's number → row
 let skipped = 0;
 for (const r of rows) {
 	if (r.target.startsWith('name:')) {
@@ -45,6 +47,10 @@ for (const r of rows) {
 		if (!m) { skipped++; continue; }
 		if (!articles.has(m[1])) articles.set(m[1], []);
 		articles.get(m[1]).push({ id: `${m[1]}#${m[2]}`, ...r });
+	} else if (r.target.startsWith('gloss:')) {
+		const m = /^gloss:([HG][0-9]{4}[A-Za-z]?)$/.exec(r.target);
+		if (!m) { skipped++; continue; }
+		glosses.set(m[1], r);
 	} else {
 		skipped++;
 	}
@@ -60,6 +66,17 @@ for (const name of [...names.keys()].sort()) {
 	}
 }
 await writeFile(path.join(root, 'names.toml'), namesToml);
+
+let lexiconToml = header;
+for (const num of [...glosses.keys()].sort()) {
+	const r = glosses.get(num);
+	lexiconToml += `
+[${num}]
+ta = ${str(r.text)}
+accepted_at = ${str(r.accepted_at)}
+`;
+}
+await writeFile(path.join(root, 'lexicon.toml'), lexiconToml);
 
 // Rebuild the articles tree so nothing stale survives.
 await rm(path.join(root, 'articles'), { recursive: true, force: true });
@@ -85,4 +102,4 @@ if (!mark.ok) {
 }
 
 const files = (await readdir(root, { recursive: true })).filter((f) => f.endsWith('.toml')).length;
-console.log(`exported ${rows.length} accepted corrections (${names.size} names, ${articles.size} articles, ${skipped} skipped) into ${files} files under ${root}`);
+console.log(`exported ${rows.length} accepted corrections (${names.size} names, ${articles.size} articles, ${glosses.size} glosses, ${skipped} skipped) into ${files} files under ${root}`);

@@ -1,6 +1,7 @@
 import type { PageLoad } from './$types';
 import { search, commonSearches, searchEntities } from '$lib/search/api';
 import { DEFAULT_VERSION, findVersion, manifest, matchBooks } from '$lib/content/manifest';
+import type { BrowseRow } from '../api/dictionary/browse/+server';
 
 export const prerender = false;
 export const ssr = true;
@@ -22,12 +23,21 @@ export const load: PageLoad = async ({ url, fetch }) => {
 
 	if (q.length < 2) {
 		const common = await commonSearches(fetch, primary.lang).catch(() => []);
-		return { q, scope, primary, versions, offset, result: null, entities: [], books, common, error: null, widened: false };
+		return { q, scope, primary, versions, offset, result: null, entities: [], books, words: [] as BrowseRow[], common, error: null, widened: false };
 	}
 	// Entity cards ride alongside the first page of verse hits.
 	const entitiesPromise = offset === 0 ? searchEntities(fetch, q, 6).catch(() => []) : Promise.resolve([]);
+	// Hebrew and Greek words: a Strong's number, the word, its transliteration or its meaning.
+	const wordsPromise: Promise<BrowseRow[]> =
+		offset === 0
+			? fetch(`/api/dictionary/browse?${new URLSearchParams({ t: 'strongs', q })}`)
+					.then((r) => (r.ok ? r.json() : { rows: [] }))
+					.then((d) => (d.rows as BrowseRow[]).slice(0, 8))
+					.catch(() => [])
+			: Promise.resolve([]);
 	try {
 		let [result, entities] = await Promise.all([search(fetch, q, versions, offset), entitiesPromise]);
+		const words = await wordsPromise;
 		// An English word against a Tamil version (or the other way round) finds
 		// nothing in that version alone; look in every version rather than stop.
 		let widened = false;
@@ -39,9 +49,9 @@ export const load: PageLoad = async ({ url, fetch }) => {
 				widened = true;
 			}
 		}
-		return { q, scope, primary, versions, offset, result, entities, books, common: [], error: null, widened };
+		return { q, scope, primary, versions, offset, result, entities, books, words, common: [], error: null, widened };
 	} catch (e) {
 		const entities = await entitiesPromise;
-		return { q, scope, primary, versions, offset, result: null, entities, books, common: [], error: (e as Error).message, widened: false };
+		return { q, scope, primary, versions, offset, result: null, entities, books, words: await wordsPromise, common: [], error: (e as Error).message, widened: false };
 	}
 };

@@ -1128,6 +1128,20 @@ fn main() -> Result<()> {
         occ.insert(num.clone(), stepbible::Occurrences { verses, count });
     }
     let empty = StrongsWord::default();
+    // Tamil glosses (concordance C5): an accepted correction wins over a draft.
+    let gloss_drafts = community::load_gloss_drafts(&args.entities.join("drafts/lexicon-ta.toml"))?;
+    let gloss_ta = |num: &str| -> (Option<String>, Option<&'static str>) {
+        if let Some(o) = overrides.lexicon.get(num) {
+            return (
+                Some(o.ta.clone()),
+                Some(if o.owner { "owner" } else { "community" }),
+            );
+        }
+        match gloss_drafts.get(num) {
+            Some(t) => (Some(t.clone()), Some("draft")),
+            None => (None, None),
+        }
+    };
     let mut strongs_index: Vec<Value> = Vec::new();
     for (num, o) in &occ {
         if o.verses.is_empty() || stepbible::is_grammar(num) {
@@ -1178,6 +1192,7 @@ fn main() -> Result<()> {
                 "pos": lex.map(|l| l.pos.clone()).unwrap_or_default(),
                 "gloss": gloss, "def": lex.map(|l| l.def.clone()).unwrap_or_default(),
                 "count": o.count, "books": books_count, "v": v, "f": forms, "fi": fi,
+                "gloss_ta": gloss_ta(num).0, "gloss_ta_source": gloss_ta(num).1,
                 "names": names_for(tip), "renderings": tip.renderings
             }),
         )?;
@@ -1186,7 +1201,8 @@ fn main() -> Result<()> {
             lemma,
             lex.map(|l| l.translit.clone()).unwrap_or_default(),
             gloss,
-            o.verses.len()
+            o.verses.len(),
+            gloss_ta(num).0.unwrap_or_default()
         ]));
     }
     write_json(&out.join("strongs/index.json"), &strongs_index)?;

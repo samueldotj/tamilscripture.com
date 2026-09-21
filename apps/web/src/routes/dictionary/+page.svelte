@@ -31,9 +31,15 @@
 		{ id: 'all', ta: 'எல்லாம்', en: 'All' },
 		{ id: 'people', ta: 'நபர்கள்', en: 'People' },
 		{ id: 'places', ta: 'இடங்கள்', en: 'Places' },
-		{ id: 'words', ta: 'சொற்கள்', en: 'Words' }
+		{ id: 'words', ta: 'சொற்கள்', en: 'Words' },
+		{ id: 'strongs', ta: 'மூலச்சொற்கள்', en: 'Hebrew & Greek' }
 	];
-	const kinds = { person: ['நபர்', 'person'], place: ['இடம்', 'place'], book: ['புத்தகம்', 'book'], article: ['அகராதி', 'dictionary'] } as const;
+	const kinds = { person: ['நபர்', 'person'], place: ['இடம்', 'place'], book: ['புத்தகம்', 'book'], article: ['அகராதி', 'dictionary'], strongs: ['மூலச்சொல்', 'Hebrew / Greek'] } as const;
+	/** Script of a row's name: Hebrew and Greek words carry their own. */
+	function scriptOf(r: BrowseRow): string {
+		if (r.type === 'strongs') return r.id.startsWith('strongs/H') ? 'he' : 'el';
+		return /[a-z]/i.test(r.name[0]) ? 'en' : 'ta';
+	}
 
 	async function browse(next: { letter?: string; type?: BrowseType } = {}) {
 		const nextType = next.type ?? type;
@@ -106,12 +112,12 @@
 {#snippet row(r: BrowseRow)}
 					<a class="row" href={r.href}>
 						<span class="text">
-							<span class="name" lang={/[a-z]/i.test(r.name[0]) ? 'en' : 'ta'}>{r.name}</span>
+							<span class="name" lang={scriptOf(r)} dir={scriptOf(r) === 'he' ? 'rtl' : undefined}>{r.name}</span>
 							<span class="meta" lang={ta ? 'ta' : 'en'}>
-								{#if r.alt}<span class="alt" lang={/[a-z]/i.test(r.alt[0]) ? 'en' : 'ta'}>{r.alt}&nbsp;·&nbsp;</span>{/if}<span>{ta ? kinds[r.type][0] : kinds[r.type][1]}</span>{#if r.gloss}<span class="gloss" lang={r.type === 'person' || r.type === 'place' ? 'en' : undefined}>&nbsp;·&nbsp;{r.gloss}</span>{/if}
+								{#if r.alt}<span class="alt" lang={/[a-z]/i.test(r.alt[0]) ? 'en' : 'ta'}>{r.alt}&nbsp;·&nbsp;</span>{/if}<span>{ta ? kinds[r.type][0] : kinds[r.type][1]}</span>{#if r.gloss}<span class="gloss" lang={r.type === 'person' || r.type === 'place' || r.type === 'strongs' ? 'en' : undefined}>&nbsp;·&nbsp;{r.gloss}</span>{/if}
 							</span>
 						</span>
-						{#if r.n && (r.type === 'person' || r.type === 'place')}<span class="n" title={ta ? 'வசனங்கள்' : 'verses'}>{r.n.toLocaleString('en-IN')}</span>{/if}
+						{#if r.n && (r.type === 'person' || r.type === 'place' || r.type === 'strongs')}<span class="n" title={ta ? 'வசனங்கள்' : 'verses'}>{r.n.toLocaleString('en-IN')}</span>{/if}
 						<span class="go" aria-hidden="true">›</span>
 					</a>
 {/snippet}

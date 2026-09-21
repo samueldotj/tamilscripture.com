@@ -8,7 +8,7 @@
 	import XrefList from './XrefList.svelte';
 
 	export type AidId = 'map' | 'places' | 'persons';
-	export type TabId = 'related' | AidId | 'entry';
+	export type TabId = 'related' | AidId | 'entry' | 'original';
 	export interface Aid {
 		id: AidId;
 		ta: string;
@@ -27,7 +27,8 @@
 		tab = $bindable('related'),
 		study,
 		actions,
-		entry
+		entry,
+		original
 	}: {
 		/** verse or range label for the header; empty when nothing is selected */
 		label?: string;
@@ -44,6 +45,8 @@
 		actions?: Snippet;
 		/** A name tapped in the text (design 7A): its card, under the அகராதி tab. */
 		entry?: Snippet;
+		/** The selected verses' Hebrew or Greek words (concordance C3), under the மூலம் tab. */
+		original?: Snippet;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
@@ -56,6 +59,11 @@
 		// The அகராதி tab lives as long as a name is picked.
 		if (tab === 'entry') {
 			if (entry) return;
+			tab = 'related';
+		}
+		// The மூலம் tab belongs to a selection, like Related.
+		if (tab === 'original') {
+			if (original && hasRelated) return;
 			tab = 'related';
 		}
 		if (tab === 'related' && !hasRelated && aids.length) {
@@ -82,7 +90,7 @@
 		{/if}
 	</header>
 
-	{#if aids.length || entry}
+	{#if aids.length || entry || (hasRelated && original)}
 		<div class="tabs" role="tablist" aria-label={ta ? 'சூழல்' : 'Context'}>
 			{#if entry}
 				<button type="button" role="tab" class="tab" class:on={tab === 'entry'} aria-selected={tab === 'entry'} onclick={() => (tab = 'entry')} lang="ta">அகராதி</button>
@@ -91,6 +99,9 @@
 				<button type="button" role="tab" class="tab" class:on={tab === 'related'} aria-selected={tab === 'related'} onclick={() => { tab = 'related'; leftRelated = false; }} lang={ta ? 'ta' : 'en'}>
 					{ta ? 'தொடர்பு' : 'Related'}{#if targets?.length}<span class="tn">{targets.length}</span>{/if}
 				</button>
+			{/if}
+			{#if hasRelated && original}
+				<button type="button" role="tab" class="tab" class:on={tab === 'original'} aria-selected={tab === 'original'} onclick={() => (tab = 'original')} lang="ta">மூலம்</button>
 			{/if}
 			{#each aids as a (a.id)}
 				<button type="button" role="tab" class="tab" class:on={tab === a.id} aria-selected={tab === a.id} onclick={() => (tab = a.id)} lang={ta ? 'ta' : 'en'}>
@@ -105,7 +116,9 @@
 	<div class="body" class:fill={tab === 'map'}>
 		{#if tab === 'entry' && entry}
 			{@render entry()}
-		{:else if tab !== 'related' && tab !== 'entry' && study}
+		{:else if tab === 'original' && original}
+			{@render original()}
+		{:else if tab !== 'related' && tab !== 'entry' && tab !== 'original' && study}
 			{@render study(tab)}
 		{:else if !label}
 			<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'ஒரு வசன எண்ணைத் தொட்டால் அதன் தொடர்புள்ள வசனங்கள் இங்கே காட்டப்படும். அடிக்கோடிட, குறிப்பு எழுத, நகலெடுக்க, பகிர இங்கேயே செய்யலாம்.' : 'Tap a verse number to see its related verses here, and to highlight, note, copy or share it.'}</p>

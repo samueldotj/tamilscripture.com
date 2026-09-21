@@ -237,6 +237,26 @@
 		nameSheet = false;
 	}
 
+	// The selected verses' Hebrew or Greek words (concordance C3): a மூலம் tab in
+	// the panel, a sheet on phones. The component is its own chunk, fetched the
+	// first time a reader asks, and it loads the chapter's words (median 7 kB).
+	let OriginalView = $state<typeof import('./OriginalWords.svelte').default | null>(null);
+	let originalSheet = $state(false);
+	const selectedIds = $derived(selectedNumbers.map((n) => `${data.book.code}.${data.chapter}.${n}`));
+	async function ensureOriginal() {
+		if (!OriginalView) OriginalView = (await import('./OriginalWords.svelte')).default;
+	}
+	function openOriginal() {
+		void ensureOriginal();
+		originalSheet = true;
+	}
+	$effect(() => {
+		if (panelTab === 'original') void ensureOriginal();
+	});
+	$effect(() => {
+		if (!selected.size) originalSheet = false;
+	});
+
 	$effect(() => {
 		const key = `${data.book.code}.${data.chapter}`;
 		if (!panelWanted) return;
@@ -505,7 +525,7 @@
 
 	{#if !dual}
 		<aside class="panel">
-			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab} entry={picked && pickedSummary ? nameEntry : undefined}>
+			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab} entry={picked && pickedSummary ? nameEntry : undefined} original={selected.size ? originalWords : undefined}>
 				{#snippet study(only)}
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
@@ -516,6 +536,27 @@
 		</aside>
 	{/if}
 </div>
+
+{#snippet originalWords()}
+	{#if OriginalView}
+		<OriginalView book={data.book.code} chapter={data.chapter} verses={selectedIds} lang={ui} />
+	{:else}
+		<p class="hint">…</p>
+	{/if}
+{/snippet}
+
+<!-- The selection's original words on phones and tablets (concordance C3). -->
+{#if originalSheet && selected.size}
+	<button type="button" class="name-scrim" aria-label={isTamil ? 'மூடு' : 'Close'} onclick={() => (originalSheet = false)}></button>
+	<div class="name-sheet" role="dialog" aria-label={isTamil ? 'மூலச் சொற்கள்' : 'Original words'}>
+		<span class="grip" aria-hidden="true"></span>
+		<div class="sheet-head">
+			<strong lang="ta">மூலம்</strong>
+			<button type="button" class="x" onclick={() => (originalSheet = false)} aria-label={isTamil ? 'மூடு' : 'Close'}>✕</button>
+		</div>
+		{@render originalWords()}
+	</div>
+{/if}
 
 {#snippet nameEntry()}
 	{#if picked && pickedSummary}
@@ -548,7 +589,7 @@
 {/if}
 
 <div class="overlays" class:dual>
-	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
+	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} onoriginal={openOriginal} />
 	{#if sheet}
 		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
 			{#snippet study()}
@@ -621,6 +662,7 @@
 
 	.name-scrim { position: fixed; inset: 0; z-index: 21; border: 0; padding: 0; background: var(--scrim); cursor: default; }
 	.name-sheet { position: fixed; z-index: 22; left: 50%; bottom: 0; transform: translateX(-50%); width: min(40rem, 100%); max-height: 70vh; overflow-y: auto; background: var(--surface); border: var(--bw) solid var(--line-2); border-bottom: 0; border-radius: 26px 26px 0 0; padding: 0.6rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); box-shadow: var(--shadow-lg); }
+	.sheet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-family: var(--tamil); }
 	.name-sheet .grip { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.6rem; }
 	.thumb, .float-aa, .progress, .fade, .m-study { display: none; }
 	@media (max-width: 720px) {

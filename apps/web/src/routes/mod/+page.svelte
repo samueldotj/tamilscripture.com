@@ -90,12 +90,13 @@
 	/** Group header: the entity part of the target. */
 	function groupKey(t: string) {
 		const p = parseTarget(t);
-		return p.kind === 'name' ? p.name_en : p.kind === 'article' ? p.article : t;
+		return p.kind === 'name' ? p.name_en : p.kind === 'article' ? p.article : p.kind === 'gloss' ? p.strongs : t;
 	}
 	function label(t: string) {
 		const p = parseTarget(t);
 		if (p.kind === 'name') return `${ta ? 'பெயர்' : 'Name'} · ${p.version}`;
 		if (p.kind === 'article') return `${ta ? 'பத்தி' : 'Paragraph'} ${p.paragraph.split('-')[0].slice(1)}`;
+		if (p.kind === 'gloss') return `${ta ? 'தமிழ்ப் பொருள்' : 'Tamil meaning'} · ${p.strongs}`;
 		return t;
 	}
 	async function doAccept(it: QueueItem) {

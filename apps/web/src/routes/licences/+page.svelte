@@ -50,6 +50,14 @@
 			People, their relations and short descriptions, and the place descriptions, come from TIPNR by <a href="https://www.stepbible.org">STEP Bible</a> (Tyndale House, Cambridge), <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. Dictionary articles come from the <a href="https://github.com/BibleAquifer/AquiferOpenBibleDictionary">Aquifer Open Bible Dictionary</a> © 2026 Mission Mutual (<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>, an adaptation of Tyndale Open Bible Dictionary © 2023 Tyndale House Publishers; Tamil versions of it are CC BY-SA 4.0 too), and from <a href="/dictionary?s=eastons">Easton’s Bible Dictionary</a> (1897) and <a href="/dictionary?s=smiths">Smith’s Bible Dictionary</a> (1863), both public domain, using the JSON dataset by <a href="https://github.com/neuu-org/bible-dictionary-dataset">NEUU</a> (CC BY 4.0). Tamil versions of the English articles are marked as drafts first and as community-corrected once reviewed.
 		{/if}
 	</p>
+	<h2>{ta ? 'எபிரெய, கிரேக்கச் சொற்கள்' : 'Hebrew and Greek words'}</h2>
+	<p>
+		{#if ta}
+			ஒத்த வசன அகராதி, ஒவ்வொரு வசனத்தின் மூலச் சொற்கள், அவற்றின் Strong's எண்கள், அகராதிப் பொருள்கள்: <a href="https://github.com/STEPBible/STEPBible-Data">STEPBible.org</a> (Tyndale House, Cambridge) வெளியிட்ட TAHOT, TAGNT, TBESH, TBESG (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>). மூலக் கோப்புகள் இங்கு மறுபகிர்வு செய்யப்படவில்லை; அவற்றிலிருந்து பெறப்பட்ட தரவு மட்டுமே. தமிழ்ப் பொருள்கள் வரைவாக வந்து சமூக மதிப்பாய்வுக்குப் பின் திருத்தப்படுகின்றன.
+		{:else}
+			The concordance, the Hebrew and Greek words of each verse, their Strong's numbers and lexicon meanings come from TAHOT, TAGNT, TBESH and TBESG by <a href="https://github.com/STEPBible/STEPBible-Data">STEPBible.org</a> (Tyndale House, Cambridge), <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. The source files are not redistributed here, only data derived from them. Tamil meanings arrive as drafts and are corrected through community review.
+		{/if}
+	</p>
 </article>
 
 <style>

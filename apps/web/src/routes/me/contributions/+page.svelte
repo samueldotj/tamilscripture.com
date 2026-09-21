@@ -23,6 +23,7 @@
 		const p = parseTarget(t);
 		if (p.kind === 'name') return `${p.name_en} · ${p.version}`;
 		if (p.kind === 'article') return `${p.article} · ${p.paragraph}`;
+		if (p.kind === 'gloss') return `${p.strongs} · ${ta ? 'தமிழ்ப் பொருள்' : 'Tamil meaning'}`;
 		return t;
 	}
 	function statusText(s: Suggestion['status']) {

@@ -91,6 +91,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | **M6 · Places and maps** | Every verse knows its places: Tamil and English place names, verse links, a static map in the reader, place and journey pages, and an interactive atlas. Design in [docs/feature_maps.md](docs/feature_maps.md). | R-11.1–11.8, R-14.1–14.6 | Acts 13 shows its places on a map in the panel; "தமஸ்கு" in the search box opens Damascus; Explore loads under budget on 4G. | Built 12 Sep 2026 on branch `m6-places-maps`; regions and the period selector (6.16) deferred |
 | **M7 · Dictionary, people and community review** | Reformed dictionary articles and people linked to verses, Tamil drafts from outside the repository, and crowdsourced paragraph-level review with roles and export-only publishing. Design in [docs/feature_dictionary.md](docs/feature_dictionary.md). | R-12.1–12.7, R-13.1–13.6, R-15.1–15.7 | A reviewer edits and accepts a suggested Tamil paragraph; after "Publish now" the text is on the site with its badge; the RLS suite passes for every role. | Built 13 Sep 2026 on `m7-dictionary-people`; Smith's and Aquifer approved 13 Sep 2026; the scheduled export ran for the first time 18 Sep 2026, so `SUPABASE_SERVICE_KEY` works; owner items open (first moderator, Tamil drafts, `GITHUB_DISPATCH_TOKEN` for "Publish now"); ISBE deferred |
 | **M8 · Site analytics** | First-party, cookie-free visit counts for moderators: page views, visitors, unique views, signed-in users, verse clicks, country and city, device and resolution, in `/mod/traffic`. Design in [docs/feature_analytics.md](docs/feature_analytics.md). | R-16.1–16.7 | A moderator opens Traffic and sees yesterday's views by page and country; no stored row identifies a reader. | A1–A6 built 18 Sep 2026 |
+| **M9 · Concordance** | Every Hebrew and Greek word with its Strong's number: a concordance page per number with all its verses, loaded as you scroll; the original words of any verse in the reader; search by number, word, transliteration or meaning; Tamil meanings through the review queue. Design in [docs/feature_concordance.md](docs/feature_concordance.md). | — | Tapping ἠγάπησεν in John 3:16 opens G0025 with all 110 verses; "agape", "G26" and "அன்பு" find G0026. | C1–C5 built 20 Sep 2026; Tamil gloss drafts open |
 
 ### M0 · Foundations
 
@@ -248,7 +249,7 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 | 7.13 | "Publish now": `/api/mod/publish` verifies the moderator session and dispatches the export workflow through a fine-grained GitHub token; needs `GITHUB_DISPATCH_TOKEN` on Vercel from the owner | dictionary §6 | ◧ |
 | 7.14 | Build applies overrides over drafts; provenance badges for draft, community-corrected and owner-authored text | dictionary §6 | ☑ |
 | 7.15 | "Dictionary words" setting (design 7A), off by default, pre-paint class: people and places named in the text carry a dotted underline in Tamil and English versions; a tap opens the name's card (original form, Strong's number, verse count, description, article and full-entry links) under a new அகராதி tab in the context panel, or as a half-sheet on phones. The chapter mentions carry the Tamil forms that occur in each chapter | dictionary §4, design 7A | ☑ |
-| 7.18 | Concordance for name words: every Strong's number shown on the site (name cards, study panel, person pages) links to `/strongs/{number}`, listing every verse the word occurs in, grouped by book, with the text in the reader's version, 50 verses at a time. Built from TIPNR's per-form verse lists (4,994 numbers); `/api/verses` serves the text | design 7A | ☑ |
+| 7.18 | Concordance for name words: every Strong's number shown on the site (name cards, study panel, person pages) links to `/strongs/{number}`, listing every verse the word occurs in, grouped by book, with the text in the reader's version, 50 verses at a time. Built from TIPNR's per-form verse lists (4,994 numbers); `/api/verses` serves the text | design 7A | ☑ (superseded by M9) |
 | 7.16 | Full-text search over Tamil articles with `tamil_tsvector` (after the first Tamil drafts exist) | dictionary §8 | ☐ |
 | 7.17 | Optional: Theographic events and periods in their own directory if licence and value justify it; events on entity pages | dictionary §2 | ☐ |
 
@@ -266,6 +267,19 @@ Design: [docs/feature_analytics.md](docs/feature_analytics.md).
 | 8.6 | A4: reading insight — books and chapters read, reading heatmap by book, most-tapped verses per book, search terms, atlas and dictionary usage | feature_analytics §6 | ☑ |
 | 8.7 | A5: live "now" panel, CSV export, week-over-week deltas | feature_analytics §6 | ☑ |
 | 8.8 | A6: edge rate limit, spike note, bot list review, collector load test | feature_analytics §5 | ☑ |
+
+### M9 · Concordance
+
+Design: [docs/feature_concordance.md](docs/feature_concordance.md). Sources: STEPBible TAHOT, TAGNT, TBESH, TBESG (CC BY 4.0), fetched at build time and never committed.
+
+| # | Task | Refs | Done |
+|---|---|---|---|
+| 9.1 | C1: `scripts/fetch-stepbible.mjs` (pinned commits, SHA-256, CI cache); TIPNR moved to the same fetch and untracked; `stepbible.rs` parses every tagged word, maps NRSV numbering onto ours and fails on an unmapped verse; one file per Strong's number (17,125) and the original words of every chapter | concordance §5, §8 | ☑ |
+| 9.2 | C2: `/strongs/{n}` with lemma, transliteration, meaning, definition, names, book strip, every verse with its original form; text 50 verses at a time as you scroll; words in over 1,000 verses open on one book; `?b=` keeps a book | concordance §6–7 | ☑ |
+| 9.3 | C3: மூலம் tab (desktop) and sheet (phones) listing the selected verses' Hebrew or Greek words with Strong's links; its own chunk, loaded on first use with the chapter's words | concordance §6 | ☑ |
+| 9.4 | C4: Hebrew & Greek filter in `/dictionary`; search by number, word, transliteration or meaning on the server; results in `/search`; a number typed in the header box opens its page | concordance §7 | ☑ |
+| 9.5 | C5: Tamil meaning per number, from `drafts/lexicon-ta.toml` or an accepted `gloss:` correction (export writes `overrides/lexicon.toml`), shown with its badge and a suggest control; searchable | concordance §10 | ☑ |
+| 9.6 | Tamil gloss drafts for the lexicon (owner) | concordance §12 | ☐ |
 
 ## Licences
 

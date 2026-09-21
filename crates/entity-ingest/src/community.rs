@@ -83,12 +83,34 @@ pub struct ParagraphOverride {
     pub owner: bool,
 }
 
+/// An accepted Tamil gloss for a Strong's number (concordance C5).
+#[derive(Debug, Deserialize)]
+pub struct GlossOverride {
+    pub ta: String,
+    #[allow(dead_code)]
+    pub accepted_at: Option<toml::Value>,
+    #[serde(default)]
+    pub owner: bool,
+}
+
 #[derive(Debug, Default)]
 pub struct Overrides {
     /// name_en → version → override (`overrides/names.toml`)
     pub names: BTreeMap<String, BTreeMap<String, NameOverride>>,
     /// article id → override (`overrides/articles/{source}/{slug}.toml`)
     pub articles: BTreeMap<String, ArticleOverride>,
+    /// Strong's number → Tamil gloss (`overrides/lexicon.toml`)
+    pub lexicon: BTreeMap<String, GlossOverride>,
+}
+
+/// Tamil gloss drafts made outside the repository, one line per number:
+/// `H0430G = "தேவன்"` in `drafts/lexicon-ta.toml`. Missing file, no drafts.
+pub fn load_gloss_drafts(path: &Path) -> Result<BTreeMap<String, String>> {
+    if !path.exists() {
+        return Ok(BTreeMap::new());
+    }
+    let text = fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    toml::from_str(&text).with_context(|| format!("parsing {}", path.display()))
 }
 
 pub fn load_overrides(dir: &Path) -> Result<Overrides> {
@@ -99,6 +121,13 @@ pub fn load_overrides(dir: &Path) -> Result<Overrides> {
             .with_context(|| format!("reading {}", names_path.display()))?;
         ov.names =
             toml::from_str(&text).with_context(|| format!("parsing {}", names_path.display()))?;
+    }
+    let lexicon_path = dir.join("lexicon.toml");
+    if lexicon_path.exists() {
+        let text = fs::read_to_string(&lexicon_path)
+            .with_context(|| format!("reading {}", lexicon_path.display()))?;
+        ov.lexicon =
+            toml::from_str(&text).with_context(|| format!("parsing {}", lexicon_path.display()))?;
     }
     let articles_dir = dir.join("articles");
     if articles_dir.is_dir() {
@@ -312,6 +341,21 @@ mod tests {
     }
 
     #[test]
+    fn lexicon_overrides_parse() {
+        let t = "[G0026]
+ta = \"அன்பு\"
+accepted_at = \"2026-09-20T10:00:00Z\"
+
+[H1121a]
+ta = \"மகன்\"
+owner = true
+";
+        let lex: BTreeMap<String, GlossOverride> = toml::from_str(t).unwrap();
+        assert_eq!(lex["G0026"].ta, "அன்பு");
+        assert!(!lex["G0026"].owner && lex["H1121a"].owner);
+    }
+
+    #[test]
     fn name_override_leads_with_label_and_keeps_forms() {
         let mut names = NamesTa::new();
         names.entry("Damascus".into()).or_default().insert(
@@ -332,6 +376,7 @@ mod tests {
         let ov = Overrides {
             names: toml::from_str(toml_text).unwrap(),
             articles: BTreeMap::new(),
+            lexicon: BTreeMap::new(),
         };
         assert_eq!(apply_names(&mut names, &ov), 1);
         let f = &names["Damascus"]["IRVTAM"];

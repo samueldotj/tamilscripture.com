@@ -1,6 +1,6 @@
 # Feature design: full Strong's concordance
 
-Status: plan, 20 Sep 2026. Not started. Supersedes the names-only concordance (README 7.18), whose pages and links it keeps.
+Status: C1–C5 built 20 Sep 2026 (sources approved by the owner the same day). Supersedes the names-only concordance (README 7.18), whose pages and links it keeps. Tamil glosses await drafts (§12).
 
 A reader who taps a Strong's number, or a Hebrew or Greek word, sees every verse that word occurs in, in the Tamil or English version they are reading. Today only proper names have Strong's numbers, from TIPNR. This plan adds every word of the Hebrew Old Testament and Greek New Testament, and says what loads when, so a phone on a slow connection never waits for the whole concordance.
 
@@ -71,6 +71,8 @@ flowchart LR
 
 About 35,000 new files and roughly 20 MB gzipped (verse lists 1.5 MB, original words 9.1 MB, lexicon entries the rest). Every file is immutable per build, like chapter JSON.
 
+**As built:** the lexicon entry and the verse list share one file per number, `entities/strongs/{n}.json` (17,125 files, largest 9.8 kB gzipped), since even the largest list is small enough to arrive with the page, which saves a request. The original words are `entities/original/{BOOK}/{ch}.json`; the search index is `entities/strongs/index.json`. STEP distinguishes some numbers only by a lower-case letter (H1121A, H1121a); their files carry an underscore (`H1121_a.json`) so case-insensitive file systems keep both. The files sit under `entities/`, which the service worker serves network-first with the cache as fallback, so a word already looked up still opens offline.
+
 ## 6. Progressive loading
 
 What arrives, in order, when a reader taps a Strong's number:
@@ -128,6 +130,10 @@ STEP's TVTMS file documents these traditions if more cases appear.
 
 | Phase | What | Done when |
 |---|---|---|
+| Phase | Built |
+|---|---|
+| C1–C5 | 20 Sep 2026: `scripts/fetch-stepbible.mjs`, `crates/entity-ingest/src/stepbible.rs`, `/strongs/{n}`, the மூலம் tab and sheet, Strong's search in `/dictionary` and `/search`, `gloss:` corrections (migration `20260920000000_lexicon_glosses.sql`, pgTAP `lexicon_glosses.test.sql`) |
+
 | **C1 · Data** | `scripts/fetch-stepbible.mjs` (pinned commit, SHA-256); `stepbible.rs` in `entity-ingest` parsing TAHOT, TAGNT, TBESH, TBESG; versification mapping with a failing test for unmapped verses; outputs of §5; deploy-size check; TIPNR moved to the same fetch | Every one of our 31,103 verses has its words; `conc/H0430G.json` lists the verses of אֱלֹהִים; CI green, output deterministic |
 | **C2 · Concordance page** | Lexicon header, book strip, whole id list, text streaming as you scroll, book filter, original form per verse, credit | Opening G3588 (7,075 verses) shows the first verses within a second on 4G and never downloads more than it shows |
 | **C3 · Original words in the reader** | மூலம் tab and sheet for the selected verse, lazy chunk and chapter file, words link to the concordance | Selecting John 3:16 lists its Greek words; tapping ἠγάπησεν opens G0025 |
@@ -149,4 +155,6 @@ STEP's TVTMS file documents these traditions if more cases appear.
 
 1. Approve STEPBible TAHOT, TAGNT, TBESH and TBESG as sources (CC BY 4.0, same publisher as TIPNR).
 2. Whether to rewrite git history to remove the committed TIPNR file, or only stop tracking it from now on.
-3. Tamil glosses (C5): who drafts them, as with the dictionary's Tamil drafts.
+3. Tamil glosses (C5): who drafts them, as with the dictionary's Tamil drafts. The build reads `data/entities/drafts/lexicon-ta.toml`, one line per number (`G0026 = "அன்பு"`), shown with the draft badge until a reviewer accepts or corrects it.
+
+Decided 20 Sep 2026: sources approved; TIPNR untracked from now on, history left as it is.

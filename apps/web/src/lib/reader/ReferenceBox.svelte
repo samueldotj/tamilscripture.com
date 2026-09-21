@@ -51,6 +51,19 @@
 		const trimmed = text.trim();
 		if (!trimmed) return;
 		await ensure();
+		// A Strong's number ("G26", "H430") opens the concordance for it.
+		if (/^[HG]\d{1,4}[A-Za-z]?$/i.test(trimmed)) {
+			const res = await fetch(`/api/dictionary/browse?${new URLSearchParams({ t: 'strongs', q: trimmed })}`).catch(() => null);
+			const first = res?.ok ? ((await res.json()).rows?.[0] as { href: string } | undefined) : undefined;
+			if (first) {
+				value = '';
+				books = [];
+				places = [];
+				input.blur();
+				await goto(first.href);
+				return;
+			}
+		}
 		const path = referencePath(trimmed, versionPath);
 		books = [];
 		places = [];

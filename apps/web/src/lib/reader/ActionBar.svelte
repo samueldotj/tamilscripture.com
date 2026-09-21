@@ -19,7 +19,8 @@
 		variant = 'floating',
 		onclear,
 		onhighlight,
-		onnote
+		onnote,
+		onoriginal
 	}: {
 		selected: Set<string>;
 		chapter: ChapterJson;
@@ -35,6 +36,8 @@
 		onclear: () => void;
 		onhighlight?: (color: HighlightColor | null) => void;
 		onnote?: () => void;
+		/** Opens the Hebrew or Greek words of the selection (phones; the panel has a tab). */
+		onoriginal?: () => void;
 	} = $props();
 
 	let toast = $state('');
@@ -102,6 +105,9 @@
 			<button type="button" class="chip primary" onclick={() => onnote?.()}>{ta ? 'குறிப்பு' : 'Note'}</button>
 		{:else}
 			<a class="chip primary" href={signinHref}>{ta ? 'அடிக்கோடு · குறிப்பு' : 'Highlight · Note'}</a>
+		{/if}
+		{#if onoriginal}
+			<button type="button" class="chip" onclick={() => onoriginal?.()} lang="ta" title={ta ? 'எபிரெய / கிரேக்கச் சொற்கள்' : 'Hebrew / Greek words'}>மூலம்</button>
 		{/if}
 		<button type="button" class="chip" onclick={copy}>{ta ? 'நகல்' : 'Copy'}</button>
 		<button type="button" class="chip" onclick={share}>{ta ? 'பகிர்' : 'Share'}</button>

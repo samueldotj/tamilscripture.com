@@ -50,6 +50,9 @@ export interface StrongsEntry {
 	fi: number[];
 	names: { kind: 'person' | 'place'; id: string; name_en: string; name_ta?: string | null; brief?: string }[];
 	renderings: string[];
+	/** Tamil meaning (concordance C5), with where it came from */
+	gloss_ta?: string | null;
+	gloss_ta_source?: 'draft' | 'community' | 'owner' | null;
 }
 
 /** STEP disambiguates past Z with lower-case letters; those files carry an underscore. */
@@ -62,8 +65,27 @@ export function loadStrongs(fetch: Fetch, num: string): Promise<StrongsEntry> {
 	return getJson<StrongsEntry>(fetch, `entities/strongs/${strongsFile(num)}.json`);
 }
 
-/** [number, lemma, transliteration, gloss, verses] for every page; server-side search and sitemaps. */
-export function loadStrongsIndex(fetch: Fetch): Promise<[string, string, string, string, number][]> {
+/** A chapter's original words: verse number → [text, transliteration, gloss, Strong's, morphology][]. */
+export interface OriginalChapter {
+	book: string;
+	chapter: number;
+	lang: 'he' | 'el';
+	verses: Record<string, [string, string, string, string, string][]>;
+}
+
+const originalCache = new Map<string, Promise<OriginalChapter>>();
+export function loadOriginal(fetch: Fetch, book: string, chapter: number): Promise<OriginalChapter> {
+	const key = `${book}.${chapter}`;
+	if (!originalCache.has(key)) {
+		const p = getJson<OriginalChapter>(fetch, `entities/original/${book}/${chapter}.json`);
+		p.catch(() => originalCache.delete(key));
+		originalCache.set(key, p);
+	}
+	return originalCache.get(key)!;
+}
+
+/** [number, lemma, transliteration, gloss, verses, Tamil gloss] for every page; server-side search and sitemaps. */
+export function loadStrongsIndex(fetch: Fetch): Promise<[string, string, string, string, number, string?][]> {
 	return getJson(fetch, 'entities/strongs/index.json');
 }
 

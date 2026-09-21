@@ -88,6 +88,23 @@
 		</section>
 	{/if}
 
+	{#if data.words?.length}
+		<section class="words" aria-label={ta ? 'எபிரெய, கிரேக்கச் சொற்கள்' : 'Hebrew and Greek words'}>
+			<h2 class="kicker"><span lang="ta">மூலச்சொற்கள்</span> · Hebrew and Greek</h2>
+			<ul>
+				{#each data.words as w (w.id)}
+					{@const he = w.id.startsWith('strongs/H')}
+					<li>
+						<a class="card word" href={w.href}>
+							<span class="lemma" lang={he ? 'he' : 'el'} dir={he ? 'rtl' : 'ltr'}>{w.name}</span>
+							<span class="ealt" lang="en">{w.alt} · {w.gloss}<span class="ekind">{w.n} {ta ? 'வசனங்கள்' : 'verses'}</span></span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	{#if data.entities?.length}
 		<section class="entities" aria-label={ta ? 'பெயர்களும் கட்டுரைகளும்' : 'Names and articles'}>
 			<h2 class="kicker"><span lang="ta">பெயர்களும் கட்டுரைகளும்</span> · Names and articles</h2>
@@ -202,6 +219,10 @@
 	.entities { margin: 0 0 1.4rem; }
 	.entities h2 { margin: 0 0 0.6rem; }
 	.entities h2 [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
+	.words ul { list-style: none; margin: 0 0 1.4rem; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+	.card.word { display: grid; gap: 0.15rem; padding: 0.7rem 0.9rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-l); background: var(--surface); text-decoration: none; color: inherit; }
+	.card.word:hover { border-color: var(--accent); }
+	.lemma { font-size: 1.35rem; line-height: 1.3; }
 	.books ul { list-style: none; margin: 0 0 1.4rem; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); }
 	.card.book { display: grid; gap: 0.15rem; padding: 0.7rem 0.9rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-l); background: var(--surface); text-decoration: none; color: inherit; }
 	.card.book:hover { border-color: var(--accent); }
