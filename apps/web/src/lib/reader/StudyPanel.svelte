@@ -6,6 +6,7 @@
 	import type { ChapterMentions } from '$lib/entities/types';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { placeName } from '$lib/entities/load';
+	import PanelMap from './PanelMap.svelte';
 
 	let {
 		mentions,
@@ -81,7 +82,7 @@
 	const exploreHref = $derived(mentions ? `/atlas/explore?chapter=${mentions.book}.${mentions.chapter}` : '/atlas/explore');
 </script>
 
-<div class="study" class:only={!!only}>
+<div class="study" class:only={!!only} class:tall={only === 'map'}>
 	{#if nothing && !only}
 		<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'அமைப்புகளில் “காட்டு” பகுதியில் இடங்கள், நபர்கள் அல்லது வரைபடங்களை இயக்குங்கள்.' : 'Turn on Places, Persons or Maps under Show in the settings.'}</p>
 	{:else if loading}
@@ -92,7 +93,11 @@
 		{#if only === 'map' || (!only && show.maps)}
 			<section>
 				{#if !only}<h3 class="kicker"><span lang="ta">வரைபடம்</span> · Map</h3>{/if}
-				{#if mapSvg}
+				{#if only === 'map' && mentions.map}
+					<!-- Behind the tab the map has the panel's full height, which no
+					     fixed landscape drawing fits: draw it live instead. -->
+					<PanelMap {mentions} selected={selectedPlaces} {lang} />
+				{:else if mapSvg}
 					<div class="mapwrap" bind:this={mapEl}>{@html mapSvg}</div>
 					<a class="chip explore" href={exploreHref}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg>
@@ -180,6 +185,9 @@
 	.hint { color: var(--muted); line-height: 1.7; margin: 0.4rem 0 0; font-size: 0.95rem; }
 	.hint[lang='ta'] { font-family: var(--tamil); }
 	.mapwrap { aspect-ratio: 8 / 5; }
+	/* Behind the Map tab the map takes the whole panel height. */
+	.study.tall { display: flex; flex-direction: column; min-height: 0; }
+	.study.tall section { display: flex; flex-direction: column; flex: 1; min-height: 0; }
 	.mapwrap :global(svg) { width: 100%; height: 100%; }
 	.kicker { margin: 0; }
 	.kicker [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }

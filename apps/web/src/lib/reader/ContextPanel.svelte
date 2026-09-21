@@ -51,7 +51,8 @@
 	let leftRelated = false;
 	$effect(() => {
 		if (tab === 'related' && !hasRelated && aids.length) {
-			tab = aids[0].id;
+			// Not the map: it fetches the map engine, and nobody asked for it yet.
+			tab = (aids.find((a) => a.id !== 'map') ?? aids[0]).id;
 			leftRelated = true;
 		} else if (hasRelated && leftRelated) {
 			tab = 'related';
@@ -90,7 +91,7 @@
 		<div class="kicker solo" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses'}{#if targets?.length} <span class="n">· {targets.length} {ta ? 'குறிப்புகள்' : 'refs'}</span>{/if}</div>
 	{/if}
 
-	<div class="body">
+	<div class="body" class:fill={tab === 'map'}>
 		{#if tab !== 'related' && study}
 			{@render study(tab)}
 		{:else if !label}
@@ -130,6 +131,9 @@
 	.n { font-size: 0.8rem; color: var(--muted); font-weight: 400; font-family: var(--sans); }
 	.kicker[lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
 	.body { flex: 1; padding: 0.6rem 1.4rem 1.4rem; }
+	/* The Map tab fills the column: its map takes the height that is left. */
+	.body.fill { display: flex; flex-direction: column; min-height: 0; }
+	.body.fill > :global(.study) { flex: 1; min-height: 0; }
 	.hint { color: var(--muted); line-height: 1.7; margin: 0.8rem 0 0; font-size: 0.95rem; }
 	.hint[lang='ta'] { font-family: var(--tamil); }
 	footer { position: sticky; bottom: 0; padding: 1rem 1.4rem; border-top: var(--bw) solid var(--line); background: var(--surface); }
