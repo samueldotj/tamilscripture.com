@@ -43,7 +43,7 @@
 
 	<div class="chips">
 		<span class="chip-s" lang={ta ? 'ta' : 'en'}>{kind}</span>
-		{#if person?.original?.strongs}<span class="chip-s">{person.original.script === 'he' ? (ta ? 'எபிரெயம்' : 'Hebrew') : ta ? 'கிரேக்கம்' : 'Greek'} · {person.original.strongs}</span>{/if}
+		{#if person?.original?.strongs}<a class="chip-s link" href="/strongs/{person.original.strongs}" title={ta ? 'இச்சொல் வரும் எல்லா வசனங்களும்' : 'Every verse this word is used in'}>{person.original.script === 'he' ? (ta ? 'எபிரெயம்' : 'Hebrew') : ta ? 'கிரேக்கம்' : 'Greek'} · {person.original.strongs}</a>{/if}
 		<span class="chip-s" lang={ta ? 'ta' : 'en'}>{summary.mentions.toLocaleString('en-IN')} {ta ? 'வசனங்கள்' : summary.mentions === 1 ? 'verse' : 'verses'}</span>
 	</div>
 
@@ -77,6 +77,8 @@
 	.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 	.chip-s { font-size: 0.75rem; font-weight: 600; color: var(--ink-2); border: var(--bw) solid var(--line-2); border-radius: 999px; padding: 0.2rem 0.65rem; }
 	.chip-s[lang='ta'] { font-family: var(--tamil); }
+	.chip-s.link { color: var(--accent); text-decoration: none; }
+	.chip-s.link:hover { border-color: var(--accent); }
 	.brief { margin: 0; line-height: 1.6; color: var(--ink); }
 	.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 	.actions [lang='ta'] { font-family: var(--tamil); }

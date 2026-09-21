@@ -135,7 +135,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.20 | PWA shell: web manifest with icons, service worker (shell precache, content JSON cache-first, last 20 reader pages offline) | requirements §12, design §9 | ☑ |
 | 1.21 | About page (purpose, who is behind the site, privacy) and a separate `/licences` page with sources and attribution; footer notice on reading pages; site footer links | R-3.5 | ☑ |
 | 1.22 | Sitemap index plus one sitemap per version and one for entities, plain-text `/sitemap.txt` with all 23,932 URLs, `robots.txt`, `rel="canonical"`, Tamil page titles | R-1.12, requirements §12 | ☑ |
-| 1.23 | CI guards: Lighthouse CI (a11y ≥ 0.95 and CLS < 0.05 as errors, performance ≥ 0.9 as warning) ☑, `size-limit` (reader route ≤ 120 kB, all chunks ≤ 200 kB, wasm, font) ☑; Playwright text-visible-under-500 ms ☐ | design §10 | ◧ |
+| 1.23 | CI guards: Lighthouse CI (a11y ≥ 0.95 and CLS < 0.05 as errors, performance ≥ 0.9 as warning) ☑, `size-limit` (reader route ≤ 120 kB, all chunks ≤ 240 kB summed over every page (200 kB until 20 Sep 2026), wasm, font) ☑; Playwright text-visible-under-500 ms ☐ | design §10 | ◧ |
 | 1.24 | Accessibility pass: `lang` attributes, focus states, 44 px targets, WCAG 2.2 AA contrast | requirements §12 | ☐ |
 | 1.25 | Production deploy on `www.tamilscripture.com` ☑; Vercel Analytics ☑; Sentry ☐ (needs DSN); uptime probe ☐ | design §11 | ◧ |
 | 1.26 | Phone header, design 10A: the three header rows become one 56px auto-hiding bar (back, chapter pill, search); book/chapter/version menu with language, sign-in and settings in its footer; reader thumb bar with floating text size and a progress hairline while reading | design 10A, R-1.10 | ☑ |
@@ -248,6 +248,7 @@ Design: [docs/feature_dictionary.md](docs/feature_dictionary.md). Rough effort: 
 | 7.13 | "Publish now": `/api/mod/publish` verifies the moderator session and dispatches the export workflow through a fine-grained GitHub token; needs `GITHUB_DISPATCH_TOKEN` on Vercel from the owner | dictionary §6 | ◧ |
 | 7.14 | Build applies overrides over drafts; provenance badges for draft, community-corrected and owner-authored text | dictionary §6 | ☑ |
 | 7.15 | "Dictionary words" setting (design 7A), off by default, pre-paint class: people and places named in the text carry a dotted underline in Tamil and English versions; a tap opens the name's card (original form, Strong's number, verse count, description, article and full-entry links) under a new அகராதி tab in the context panel, or as a half-sheet on phones. The chapter mentions carry the Tamil forms that occur in each chapter | dictionary §4, design 7A | ☑ |
+| 7.18 | Concordance for name words: every Strong's number shown on the site (name cards, study panel, person pages) links to `/strongs/{number}`, listing every verse the word occurs in, grouped by book, with the text in the reader's version, 50 verses at a time. Built from TIPNR's per-form verse lists (4,994 numbers); `/api/verses` serves the text | design 7A | ☑ |
 | 7.16 | Full-text search over Tamil articles with `tamil_tsvector` (after the first Tamil drafts exist) | dictionary §8 | ☐ |
 | 7.17 | Optional: Theographic events and periods in their own directory if licence and value justify it; events on entity pages | dictionary §2 | ☐ |
 

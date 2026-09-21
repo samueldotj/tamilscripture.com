@@ -1,7 +1,7 @@
 // The site's public URLs, shared by the XML sitemaps and /sitemap.txt so the two never drift.
 import { chapterUrl, manifest } from '$lib/content/manifest';
 import type { VersionMeta } from '$lib/content/types';
-import { loadArticleIndex, loadJourneys, loadPeopleIndex, loadPlaceIndex } from '$lib/entities/load';
+import { loadArticleIndex, loadJourneys, loadPeopleIndex, loadPlaceIndex, loadStrongsIndex } from '$lib/entities/load';
 
 export const ORIGIN = 'https://www.tamilscripture.com';
 
@@ -24,11 +24,12 @@ export function chapterPaths(version: VersionMeta): string[] {
 
 /** Atlas, journeys, places, people and dictionary articles, from the content indexes. */
 export async function entityPaths(fetch: Fetch): Promise<string[]> {
-	const [index, journeys, people, articles] = await Promise.all([
+	const [index, journeys, people, articles, strongs] = await Promise.all([
 		loadPlaceIndex(fetch).catch(() => null),
 		loadJourneys(fetch).catch(() => []),
 		loadPeopleIndex(fetch).catch(() => []),
-		loadArticleIndex(fetch).catch(() => [])
+		loadArticleIndex(fetch).catch(() => []),
+		loadStrongsIndex(fetch).catch(() => [])
 	]);
 	return [
 		'/atlas',
@@ -36,7 +37,8 @@ export async function entityPaths(fetch: Fetch): Promise<string[]> {
 		...journeys.map((j) => `/atlas/${j.id}`),
 		...(index?.places ?? []).map((p) => `/place/${p.id}`),
 		...people.map((p) => `/person/${p.id}`),
-		...articles.map((a) => `/dictionary/${a.id}`)
+		...articles.map((a) => `/dictionary/${a.id}`),
+		...strongs.map((s) => `/strongs/${s.s}`)
 	];
 }
 

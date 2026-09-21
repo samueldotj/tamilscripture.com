@@ -1004,6 +1004,110 @@ fn main() -> Result<()> {
         .iter()
         .map(|p| (person_slug[&p.key].as_str(), p))
         .collect();
+    // ---- Strong's concordance for names ----
+    // TIPNR gives every name form with its Strong's number and the verses it
+    // occurs in, so clicking a Strong's number can list every verse the word
+    // is used in. People and places that share a word share its page.
+    #[derive(Default)]
+    struct StrongsWord {
+        script: String,
+        words: BTreeSet<String>,
+        renderings: BTreeSet<String>,
+        people: BTreeSet<String>,
+        places: BTreeSet<String>,
+        verses: BTreeSet<String>,
+    }
+    let mut strongs: BTreeMap<String, StrongsWord> = BTreeMap::new();
+    let valid = |s: &str| {
+        s.len() >= 2
+            && (s.starts_with('H') || s.starts_with('G'))
+            && s.chars().all(|c| c.is_ascii_alphanumeric())
+    };
+    let mut add_forms = |forms: &[tipnr::NameForm], person: Option<&str>, place: Option<&str>| {
+        for f in forms.iter().filter(|f| valid(&f.strongs)) {
+            let w = strongs.entry(f.strongs.clone()).or_default();
+            w.script = f.script.clone();
+            if !f.original.is_empty() {
+                w.words.insert(f.original.clone());
+            }
+            for r in f.translated.split(';') {
+                // TIPNR marks untranslated occurrences as "[ ]"; only real words count.
+                let r = r
+                    .split('=')
+                    .next()
+                    .unwrap_or("")
+                    .trim()
+                    .trim_matches(['[', ']', ' ']);
+                if r.chars().any(char::is_alphabetic) {
+                    w.renderings.insert(r.to_string());
+                }
+            }
+            if let Some(id) = person {
+                w.people.insert(id.to_string());
+            }
+            if let Some(id) = place {
+                w.places.insert(id.to_string());
+            }
+            w.verses.extend(f.verses.iter().cloned());
+        }
+    };
+    for p in &tipnr.people {
+        add_forms(&p.forms, Some(person_slug[&p.key].as_str()), None);
+    }
+    for p in &places {
+        if let Some(tp) = description_for(p) {
+            add_forms(&tp.forms, None, Some(p.id.as_str()));
+        }
+    }
+    let verse_key = |v: &String| -> (u32, u32, u32) {
+        let mut it = v.split('.');
+        let order = it
+            .next()
+            .and_then(|c| books.by_code(c))
+            .map(|b| b.order)
+            .unwrap_or(99);
+        let ch = it.next().and_then(|x| x.parse().ok()).unwrap_or(0);
+        let vs = it.next().and_then(|x| x.parse().ok()).unwrap_or(0);
+        (order, ch, vs)
+    };
+    let place_by_id: HashMap<&str, &Place> = places.iter().map(|p| (p.id.as_str(), p)).collect();
+    let mut strongs_index: Vec<Value> = Vec::new();
+    for (num, w) in &strongs {
+        let mut verses: Vec<&String> = w.verses.iter().collect();
+        verses.sort_by_key(|v| verse_key(v));
+        let people_out: Vec<Value> = w
+            .people
+            .iter()
+            .filter_map(|id| person_by_slug.get(id.as_str()).map(|p| (id, *p)))
+            .map(|(id, p)| serde_json::json!({ "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "brief": p.brief }))
+            .collect();
+        let places_out: Vec<Value> = w
+            .places
+            .iter()
+            .filter_map(|id| place_by_id.get(id.as_str()))
+            .map(|p| serde_json::json!({ "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions) }))
+            .collect();
+        let name = people_out
+            .first()
+            .or(places_out.first())
+            .and_then(|v| v.get("name_en"))
+            .cloned()
+            .unwrap_or(Value::Null);
+        write_json(
+            &out.join("strongs").join(format!("{num}.json")),
+            &serde_json::json!({
+                "strongs": num, "script": w.script, "words": w.words, "renderings": w.renderings,
+                "people": people_out, "places": places_out, "verses": verses
+            }),
+        )?;
+        strongs_index.push(serde_json::json!({ "s": num, "n": verses.len(), "name": name }));
+    }
+    write_json(&out.join("strongs/index.json"), &strongs_index)?;
+    eprintln!(
+        "strongs: {} name words with their verses",
+        strongs_index.len()
+    );
+
     for ((order, ch), m) in &mentions {
         let book = &books.list[(*order - 1) as usize];
         let mut entries: Vec<(&String, &VerseMentions)> = m.verses.iter().collect();

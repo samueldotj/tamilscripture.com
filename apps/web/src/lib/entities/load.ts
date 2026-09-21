@@ -29,6 +29,25 @@ export function loadPlace(fetch: Fetch, id: string): Promise<Place> {
 }
 
 let peoplePromise: Promise<PersonIndexEntry[]> | null = null;
+/** One Strong's number of a biblical name, with every verse it occurs in. */
+export interface StrongsEntry {
+	strongs: string;
+	script: 'he' | 'el';
+	words: string[];
+	renderings: string[];
+	people: { id: string; name_en: string; name_ta?: string | null; brief?: string }[];
+	places: { id: string; name_en: string; name_ta?: string | null }[];
+	verses: string[];
+}
+
+export function loadStrongs(fetch: Fetch, num: string): Promise<StrongsEntry> {
+	return getJson<StrongsEntry>(fetch, `entities/strongs/${num}.json`);
+}
+
+export function loadStrongsIndex(fetch: Fetch): Promise<{ s: string; n: number; name: string | null }[]> {
+	return getJson(fetch, 'entities/strongs/index.json');
+}
+
 export function loadPeopleIndex(fetch: Fetch): Promise<PersonIndexEntry[]> {
 	if (!peoplePromise) peoplePromise = getJson<PersonIndexEntry[]>(fetch, 'entities/people.json');
 	return peoplePromise;

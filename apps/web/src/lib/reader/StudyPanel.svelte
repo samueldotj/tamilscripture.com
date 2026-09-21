@@ -149,7 +149,7 @@
 									{#if r.p.gender === 'group'}<span class="tag" lang={ta ? 'ta' : 'en'}>{ta ? 'மக்கள் குழு' : 'people group'}</span>{/if}
 								</div>
 								{#if show.language && r.p.original}
-									<p class="orig"><span lang={r.p.original.script}>{r.p.original.text}</span> <span class="strongs">{r.p.original.strongs}</span>{#if r.p.original.translit} <span class="translit">{r.p.original.translit}</span>{/if}</p>
+									<p class="orig"><span lang={r.p.original.script}>{r.p.original.text}</span> <a class="strongs" href="/strongs/{r.p.original.strongs}">{r.p.original.strongs}</a>{#if r.p.original.translit} <span class="translit">{r.p.original.translit}</span>{/if}</p>
 								{/if}
 								{#if r.p.brief}<p class="brief">{r.p.brief}</p>{/if}
 								<div class="verses">
@@ -205,7 +205,8 @@
 	.tag[lang='ta'] { font-family: var(--tamil); }
 	.orig { margin: 0; font-size: 0.95rem; display: flex; gap: 0.5rem; align-items: baseline; flex-wrap: wrap; }
 	.orig [lang='he'] { font-size: 1.1rem; }
-	.strongs { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; }
+	.strongs { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; text-decoration: none; }
+	a.strongs:hover { color: var(--accent); text-decoration: underline; }
 	.translit { font-size: 0.82rem; color: var(--ink-2); font-style: italic; }
 	.brief { margin: 0; font-size: 0.85rem; color: var(--ink-2); line-height: 1.5; }
 	.verses { display: flex; flex-wrap: wrap; gap: 0.3rem; }

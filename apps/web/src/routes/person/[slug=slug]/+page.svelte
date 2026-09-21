@@ -137,7 +137,7 @@
 					<h2 class="kicker"><span lang="ta">மூல மொழியில்</span> · Original</h2>
 					<ul class="plain orig">
 						{#each p.forms.slice(0, 6) as f (f.strongs + f.original + f.significance)}
-							<li><span lang={f.script} class="orig-word">{f.original}</span> <span class="strongs">{f.strongs}</span>{#if f.translated && f.translated !== p.name_en} <span class="muted">{f.translated}</span>{/if}</li>
+							<li><span lang={f.script} class="orig-word">{f.original}</span> <a class="strongs" href="/strongs/{f.strongs}" title="Every verse this word is used in">{f.strongs}</a>{#if f.translated && f.translated !== p.name_en} <span class="muted">{f.translated}</span>{/if}</li>
 						{/each}
 					</ul>
 				</section>
@@ -213,7 +213,8 @@
 	.plain a { font-weight: 600; text-decoration: none; }
 	.orig li { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
 	.orig-word { font-size: 1.15rem; }
-	.strongs { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+	.strongs { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.04em; text-decoration: none; }
+	.strongs:hover { text-decoration: underline; }
 	.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
 	.chips .chip { min-height: 36px; font-weight: 500; font-size: 0.88rem; padding: 0.3rem 0.8rem; }
 	.chips .chip[lang='ta'] { font-family: var(--tamil); }

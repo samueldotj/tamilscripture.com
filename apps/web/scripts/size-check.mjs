@@ -10,7 +10,11 @@ import { gzipSync } from 'node:zlib';
 const toPath = (u) => new URL(u, import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const client = toPath('../.svelte-kit/output/client/');
 const root = join(client, '_app/immutable/');
-const SITE_LIMIT = 200 * 1024; // gzip, every chunk a reader can load, except the map engine
+// gzip, every chunk a reader can load except the map engine, summed over all
+// pages; it grows with each new page, so the per-page limits in .size-limit
+// (reader route 120 kB) are the guard on what one visit downloads. Raised from
+// 200 kB to 240 kB on 20 Sep 2026 when the concordance pages were added.
+const SITE_LIMIT = 240 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 
