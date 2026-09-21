@@ -8,7 +8,9 @@ import { SOURCES } from '$lib/entities/sources';
 // (design 7A). The three content indexes are 2 MB together, far too much for a
 // phone, so the merging happens here and a page asks for one letter at a time.
 export const prerender = false;
-export const config = { isr: { expiration: false } };
+// The cached copy must vary by query: without allowQuery every filter and
+// letter would be served the first answer Vercel cached.
+export const config = { isr: { expiration: false, allowQuery: ['t', 'l', 'lang', 'q', 's'] } };
 
 export type BrowseType = 'all' | 'people' | 'places' | 'words';
 

@@ -4,7 +4,7 @@ import type { BrowseRow, BrowseType } from '../api/dictionary/browse/+server';
 // The alphabetical index is merged on the server (design 7A): one letter at a
 // time, so the page never downloads the 2 MB of entity indexes.
 export const prerender = false;
-export const config = { isr: { expiration: false } };
+export const config = { isr: { expiration: false, allowQuery: ['t', 'l', 'lang', 's'] } };
 
 export const load: PageLoad = async ({ fetch, url }) => {
 	const type = (url.searchParams.get('t') ?? 'all') as BrowseType;
