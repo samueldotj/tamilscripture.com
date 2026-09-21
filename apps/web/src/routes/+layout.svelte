@@ -139,6 +139,9 @@
 			{#if pillVersion}<span class="v">{pillVersion}</span>{/if}
 			<span class="caret" aria-hidden="true">{chapterMenu ? '▴' : '▾'}</span>
 		</button>
+		<button type="button" class="m-only m-icon" aria-label={ui === 'ta' ? 'வாசிப்பு அமைப்பு' : 'Reading settings'} aria-expanded={settingsOpen} onclick={() => { settingsOpen = true; chapterMenu = false; }}>
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+		</button>
 		<button type="button" class="m-only m-icon" aria-label={ui === 'ta' ? 'தேடு' : 'Search'} aria-expanded={searchOpen} onclick={toggleSearch}>
 			{#if searchOpen}
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -236,10 +239,10 @@
 	/* Phones (design 10A): back, chapter pill, search in one 56px bar. Language,
 	   sign-in and settings live in the chapter menu's footer. */
 	@media (max-width: 720px) {
-		.bar { padding: 6px 14px 8px; gap: 8px 10px; flex-wrap: wrap; }
+		.bar { padding: 6px 10px 8px; gap: 8px 4px; flex-wrap: wrap; }
 		.brand, .tools { display: none; }
 		.m-only { display: flex; }
-		.m-icon { width: 44px; height: 44px; flex: none; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; padding: 0; }
+		.m-icon { width: 40px; height: 44px; flex: none; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; padding: 0; }
 		.m-icon:hover { background: var(--surface-2); }
 		.pill { flex: 1; min-width: 0; height: 44px; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: var(--surface); border: var(--bw) solid var(--line-2); color: var(--ink); cursor: pointer; }
 		.pill.open { background: var(--accent-soft); border-color: var(--accent); }
