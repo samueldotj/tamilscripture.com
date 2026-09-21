@@ -28,6 +28,14 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
+      - name: STEPBible data (fetched, never committed)
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/cache/stepbible
+            data/entities/tipnr/TIPNR.txt
+          key: stepbible-${{ hashFiles('scripts/fetch-stepbible.mjs') }}
+      - run: node scripts/fetch-stepbible.mjs
       - name: Build content from USFM
         run: pnpm content
 

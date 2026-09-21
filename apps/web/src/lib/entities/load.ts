@@ -29,22 +29,41 @@ export function loadPlace(fetch: Fetch, id: string): Promise<Place> {
 }
 
 let peoplePromise: Promise<PersonIndexEntry[]> | null = null;
-/** One Strong's number of a biblical name, with every verse it occurs in. */
+/** One Strong's number with every verse it occurs in (docs/feature_concordance.md). */
 export interface StrongsEntry {
-	strongs: string;
+	s: string;
 	script: 'he' | 'el';
-	words: string[];
+	lemma: string;
+	translit: string;
+	/** STEP's part-of-speech code, e.g. `H:N-M`, `G:V` */
+	pos: string;
+	gloss: string;
+	def: string;
+	/** words carrying the number (a verse can hold it more than once) */
+	count: number;
+	/** [book code, verses] in canonical order */
+	books: [string, number][];
+	/** verse keys (book order × 10⁶ + chapter × 10³ + verse), delta-encoded */
+	v: number[];
+	/** surface forms, and for each verse the index of the form it uses */
+	f: string[];
+	fi: number[];
+	names: { kind: 'person' | 'place'; id: string; name_en: string; name_ta?: string | null; brief?: string }[];
 	renderings: string[];
-	people: { id: string; name_en: string; name_ta?: string | null; brief?: string }[];
-	places: { id: string; name_en: string; name_ta?: string | null }[];
-	verses: string[];
+}
+
+/** STEP disambiguates past Z with lower-case letters; those files carry an underscore. */
+export function strongsFile(num: string): string {
+	const last = num.slice(-1);
+	return /[a-z]/.test(last) ? `${num.slice(0, -1)}_${last}` : num;
 }
 
 export function loadStrongs(fetch: Fetch, num: string): Promise<StrongsEntry> {
-	return getJson<StrongsEntry>(fetch, `entities/strongs/${num}.json`);
+	return getJson<StrongsEntry>(fetch, `entities/strongs/${strongsFile(num)}.json`);
 }
 
-export function loadStrongsIndex(fetch: Fetch): Promise<{ s: string; n: number; name: string | null }[]> {
+/** [number, lemma, transliteration, gloss, verses] for every page; server-side search and sitemaps. */
+export function loadStrongsIndex(fetch: Fetch): Promise<[string, string, string, string, number][]> {
 	return getJson(fetch, 'entities/strongs/index.json');
 }
 

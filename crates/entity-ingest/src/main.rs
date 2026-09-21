@@ -31,6 +31,7 @@ mod geo;
 mod journeys;
 mod names;
 mod openbible;
+mod stepbible;
 mod svg;
 mod tipnr;
 
@@ -41,7 +42,7 @@ use names::{NameForm, NamesTa};
 use openbible::Place;
 use serde::Serialize;
 use serde_json::Value;
-use std::collections::{BTreeMap, BTreeSet, HashMap};
+use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
 use std::fs;
 use std::path::{Path, PathBuf};
 
@@ -49,6 +50,8 @@ struct Args {
     books: PathBuf,
     entities: PathBuf,
     content: PathBuf,
+    /// STEPBible tagged texts and lexicons, fetched by scripts/fetch-stepbible.mjs.
+    stepbible: PathBuf,
     draft_names: bool,
     strict: bool,
 }
@@ -58,6 +61,7 @@ fn parse_args() -> Result<Args> {
         books: PathBuf::from("data/books.toml"),
         entities: PathBuf::from("data/entities"),
         content: PathBuf::from("apps/web/static/content"),
+        stepbible: PathBuf::from("data/cache/stepbible"),
         draft_names: false,
         strict: true,
     };
@@ -67,10 +71,11 @@ fn parse_args() -> Result<Args> {
             "--books" => a.books = it.next().context("--books needs a path")?.into(),
             "--entities" => a.entities = it.next().context("--entities needs a path")?.into(),
             "--content" => a.content = it.next().context("--content needs a path")?.into(),
+            "--stepbible" => a.stepbible = it.next().context("--stepbible needs a path")?.into(),
             "--draft-names" => a.draft_names = true,
             "--lenient" => a.strict = false,
             "-h" | "--help" => {
-                eprintln!("entity-ingest --books B --entities DIR --content DIR [--draft-names] [--lenient]");
+                eprintln!("entity-ingest --books B --entities DIR --content DIR [--stepbible DIR] [--draft-names] [--lenient]");
                 std::process::exit(0);
             }
             other => bail!("unknown argument {other}"),
@@ -1059,53 +1064,178 @@ fn main() -> Result<()> {
             add_forms(&tp.forms, None, Some(p.id.as_str()));
         }
     }
-    let verse_key = |v: &String| -> (u32, u32, u32) {
-        let mut it = v.split('.');
-        let order = it
-            .next()
-            .and_then(|c| books.by_code(c))
-            .map(|b| b.order)
-            .unwrap_or(99);
-        let ch = it.next().and_then(|x| x.parse().ok()).unwrap_or(0);
-        let vs = it.next().and_then(|x| x.parse().ok()).unwrap_or(0);
-        (order, ch, vs)
-    };
+    // ---- The concordance (docs/feature_concordance.md) ----
+    // With STEP's tagged texts fetched, every Strong's number of the Hebrew OT
+    // and Greek NT gets a file with all its verses; without them (a build that
+    // skipped the fetch), the name words from TIPNR alone, in the same shape.
     let place_by_id: HashMap<&str, &Place> = places.iter().map(|p| (p.id.as_str(), p)).collect();
-    let mut strongs_index: Vec<Value> = Vec::new();
-    for (num, w) in &strongs {
-        let mut verses: Vec<&String> = w.verses.iter().collect();
-        verses.sort_by_key(|v| verse_key(v));
-        let people_out: Vec<Value> = w
+    let ours: HashSet<String> = corpora
+        .iter()
+        .find(|c| c.version == "IRVTAM")
+        .or(corpora.first())
+        .map(|c| c.verses.keys().cloned().collect())
+        .unwrap_or_default();
+    let step = stepbible::load(&args.stepbible, &books, &ours)?;
+    if let Some(s) = &step {
+        if !s.unmapped.is_empty() {
+            let sample: Vec<&String> = s.unmapped.iter().take(10).collect();
+            let msg = format!(
+                "{} tagged verses have no verse in our text: {sample:?}",
+                s.unmapped.len()
+            );
+            if args.strict {
+                bail!(msg);
+            }
+            eprintln!("warning: {msg}");
+        }
+    } else {
+        eprintln!(
+            "warning: {} has no STEPBible files (run node scripts/fetch-stepbible.mjs); concordance covers names only",
+            args.stepbible.display()
+        );
+    }
+    let names_for = |w: &StrongsWord| -> Vec<Value> {
+        let people = w
             .people
             .iter()
             .filter_map(|id| person_by_slug.get(id.as_str()).map(|p| (id, *p)))
-            .map(|(id, p)| serde_json::json!({ "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "brief": p.brief }))
-            .collect();
-        let places_out: Vec<Value> = w
+            .map(|(id, p)| serde_json::json!({ "kind": "person", "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "brief": p.brief }));
+        let places = w
             .places
             .iter()
             .filter_map(|id| place_by_id.get(id.as_str()))
-            .map(|p| serde_json::json!({ "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions) }))
+            .map(|p| serde_json::json!({ "kind": "place", "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions) }));
+        people.chain(places).collect()
+    };
+    // (verse sort key, verse id, surface form) per number, and how many words carry it.
+    let mut occ: BTreeMap<String, stepbible::Occurrences> = match &step {
+        Some(s) => stepbible::occurrences(&books, &s.words),
+        None => BTreeMap::new(),
+    };
+    for (num, w) in &strongs {
+        if occ.contains_key(num) || stepbible::is_grammar(num) {
+            continue;
+        }
+        let form = w.words.iter().next().cloned().unwrap_or_default();
+        let mut verses: Vec<(u32, String, String)> = w
+            .verses
+            .iter()
+            .filter(|v| ours.is_empty() || ours.contains(*v))
+            .map(|v| (stepbible::verse_key(&books, v), v.clone(), form.clone()))
             .collect();
-        let name = people_out
-            .first()
-            .or(places_out.first())
-            .and_then(|v| v.get("name_en"))
-            .cloned()
-            .unwrap_or(Value::Null);
+        verses.sort_by_key(|(k, _, _)| *k);
+        let count = verses.len();
+        occ.insert(num.clone(), stepbible::Occurrences { verses, count });
+    }
+    let empty = StrongsWord::default();
+    let mut strongs_index: Vec<Value> = Vec::new();
+    for (num, o) in &occ {
+        if o.verses.is_empty() || stepbible::is_grammar(num) {
+            continue;
+        }
+        let lex = step
+            .as_ref()
+            .and_then(|s| stepbible::lookup(&s.lexicon, num));
+        let tip = strongs.get(num).unwrap_or(&empty);
+        let lemma = lex
+            .map(|l| l.lemma.clone())
+            .or_else(|| tip.words.iter().next().cloned())
+            .unwrap_or_default();
+        let script = if num.starts_with('G') { "el" } else { "he" };
+        // Verse keys delta-encoded, and each verse's surface form as an index
+        // into a forms table: even the Greek article's 7,000 verses stay small.
+        let mut forms: Vec<String> = Vec::new();
+        let mut form_ix: HashMap<String, usize> = HashMap::new();
+        let (mut v, mut fi, mut last) = (Vec::new(), Vec::new(), 0u32);
+        let mut books_count: Vec<(String, usize)> = Vec::new();
+        for (k, id, form) in &o.verses {
+            v.push(k - last);
+            last = *k;
+            let ix = *form_ix.entry(form.clone()).or_insert_with(|| {
+                forms.push(form.clone());
+                forms.len() - 1
+            });
+            fi.push(ix);
+            let code = id.split('.').next().unwrap_or("").to_string();
+            match books_count.last_mut() {
+                Some((c, n)) if *c == code => *n += 1,
+                _ => books_count.push((code, 1)),
+            }
+        }
+        let gloss = lex.map(|l| l.gloss.clone()).unwrap_or_else(|| {
+            tip.renderings
+                .iter()
+                .cloned()
+                .collect::<Vec<_>>()
+                .join(", ")
+        });
         write_json(
-            &out.join("strongs").join(format!("{num}.json")),
+            &out.join("strongs")
+                .join(format!("{}.json", stepbible::file_name(num))),
             &serde_json::json!({
-                "strongs": num, "script": w.script, "words": w.words, "renderings": w.renderings,
-                "people": people_out, "places": places_out, "verses": verses
+                "s": num, "script": script, "lemma": lemma,
+                "translit": lex.map(|l| l.translit.clone()).unwrap_or_default(),
+                "pos": lex.map(|l| l.pos.clone()).unwrap_or_default(),
+                "gloss": gloss, "def": lex.map(|l| l.def.clone()).unwrap_or_default(),
+                "count": o.count, "books": books_count, "v": v, "f": forms, "fi": fi,
+                "names": names_for(tip), "renderings": tip.renderings
             }),
         )?;
-        strongs_index.push(serde_json::json!({ "s": num, "n": verses.len(), "name": name }));
+        strongs_index.push(serde_json::json!([
+            num,
+            lemma,
+            lex.map(|l| l.translit.clone()).unwrap_or_default(),
+            gloss,
+            o.verses.len()
+        ]));
     }
     write_json(&out.join("strongs/index.json"), &strongs_index)?;
+
+    // The original words of every chapter, for the reader's மூலம் view.
+    let mut chapters_written = 0usize;
+    if let Some(s) = &step {
+        let mut by_chapter: BTreeMap<(u32, u32), BTreeMap<u32, Vec<Value>>> = BTreeMap::new();
+        for w in &s.words {
+            let mut it = w.verse.split('.');
+            let (Some(code), Some(ch), Some(vn)) = (it.next(), it.next(), it.next()) else {
+                continue;
+            };
+            let (Some(book), Ok(ch), Ok(vn)) =
+                (books.by_code(code), ch.parse::<u32>(), vn.parse::<u32>())
+            else {
+                continue;
+            };
+            by_chapter
+                .entry((book.order, ch))
+                .or_default()
+                .entry(vn)
+                .or_default()
+                .push(serde_json::json!([
+                    w.text,
+                    w.translit,
+                    w.gloss,
+                    w.strongs.first().cloned().unwrap_or_default(),
+                    w.morph
+                ]));
+        }
+        for ((order, ch), verses) in &by_chapter {
+            let book = &books.list[(*order - 1) as usize];
+            let verses: BTreeMap<String, &Vec<Value>> =
+                verses.iter().map(|(v, w)| (v.to_string(), w)).collect();
+            write_json(
+                &out.join("original")
+                    .join(&book.code)
+                    .join(format!("{ch}.json")),
+                &serde_json::json!({ "book": book.code, "chapter": ch, "lang": if *order <= 39 { "he" } else { "el" }, "verses": verses }),
+            )?;
+            chapters_written += 1;
+        }
+    }
     eprintln!(
-        "strongs: {} name words with their verses",
-        strongs_index.len()
+        "concordance: {} Strong's numbers{}; original words for {} chapters",
+        strongs_index.len(),
+        if step.is_some() { "" } else { " (names only)" },
+        chapters_written
     );
 
     for ((order, ch), m) in &mentions {

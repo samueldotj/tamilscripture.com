@@ -20,6 +20,14 @@ jobs:
       - run: cargo test --workspace
       - name: Generated SQL is current
         run: cargo run -q -p tamil-norm --bin tamil-norm-sql | diff - supabase/generated/tamil_norm.sql
+      - name: STEPBible data (fetched, never committed)
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/cache/stepbible
+            data/entities/tipnr/TIPNR.txt
+          key: stepbible-${{ hashFiles('scripts/fetch-stepbible.mjs') }}
+      - run: node scripts/fetch-stepbible.mjs
       - name: Build full content (strict validation)
         run: |
           cargo run --release -p usfm-ingest -- \

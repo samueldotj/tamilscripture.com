@@ -7,9 +7,9 @@
     "node": ">=22"
   },
   "scripts": {
-    "content": "cargo run --release -p usfm-ingest -- --books data/books.toml --xrefs data/xrefs/cross_references.txt --out apps/web/static/content data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv && cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content apps/web/static/content",
-    "content:names": "cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content apps/web/static/content --draft-names",
-    "content:fixture": "cargo run -p usfm-ingest -- --books data/books.toml --xrefs data/xrefs/cross_references.txt --out apps/web/static/content data/fixtures/versions/irvtam data/fixtures/versions/bsb && cargo run -p entity-ingest -- --books data/books.toml --entities data/entities --content apps/web/static/content",
+    "content": "node scripts/fetch-stepbible.mjs && cargo run --release -p usfm-ingest -- --books data/books.toml --xrefs data/xrefs/cross_references.txt --out apps/web/static/content data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv && cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content apps/web/static/content",
+    "content:names": "node scripts/fetch-stepbible.mjs && cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content apps/web/static/content --draft-names",
+    "content:fixture": "node scripts/fetch-stepbible.mjs && cargo run -p usfm-ingest -- --books data/books.toml --xrefs data/xrefs/cross_references.txt --out apps/web/static/content data/fixtures/versions/irvtam data/fixtures/versions/bsb && cargo run -p entity-ingest -- --books data/books.toml --entities data/entities --content apps/web/static/content",
     "dev": "pnpm --filter web dev",
     "build": "pnpm --filter web build",
     "check": "pnpm --filter web check",

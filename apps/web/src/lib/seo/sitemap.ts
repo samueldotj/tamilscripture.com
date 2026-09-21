@@ -38,7 +38,7 @@ export async function entityPaths(fetch: Fetch): Promise<string[]> {
 		...(index?.places ?? []).map((p) => `/place/${p.id}`),
 		...people.map((p) => `/person/${p.id}`),
 		...articles.map((a) => `/dictionary/${a.id}`),
-		...strongs.map((s) => `/strongs/${s.s}`)
+		...strongs.map((s) => `/strongs/${s[0]}`)
 	];
 }
 

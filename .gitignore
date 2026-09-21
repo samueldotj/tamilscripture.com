@@ -163,3 +163,7 @@ apps/web/build/
 data/fonts-src/
 data/basemap-src/
 data/polities-src/
+
+# STEPBible data: fetched by scripts/fetch-stepbible.mjs, never committed (STEP asks not to redistribute)
+data/cache/
+data/entities/tipnr/TIPNR.txt
