@@ -86,7 +86,7 @@ Rules that keep it light:
 
 - **Ids first, text second.** The list is complete from step 2, so the book strip, counts and "jump to Romans" work before any text arrives. Rows show their reference immediately and fill in their text.
 - **Only visible text.** An `IntersectionObserver` requests the next batch when the reader nears the end of the list; nothing loads for rows nobody scrolls to. Rows keep a fixed minimum height so arriving text does not move the page (CLS budget).
-- **Very common words.** For a word in more than 1,000 verses (66 numbers), the page opens on the book strip and the first book's verses rather than the start of Genesis, and says how many verses there are.
+- **Very common words.** For a word in more than 1,000 verses (66 numbers), the page leads with the book strip and its counts, loads only the first book's verses, and lets the reader pick another book instead of scrolling through thousands of rows.
 - **Changing version** reuses the id list and refetches only the visible text.
 - **Offline.** The service worker keeps `conc/` and `original/` files cache-first like chapter JSON, so a word already looked up reopens without a network; text batches already fetched are cached like reader pages.
 
