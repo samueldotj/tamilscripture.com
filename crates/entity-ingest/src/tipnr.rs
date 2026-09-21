@@ -116,10 +116,16 @@ fn relation_key(token: &str) -> Option<String> {
     Some(format!("{name}@{first}"))
 }
 
-/// A TIPNR identifier as a reader should see it: underscores are word gaps, and
-/// a designation such as "a wife of Eliphaz" starts a line, so it starts upper.
+/// A TIPNR identifier as a reader should see it: underscores are word gaps, a
+/// leading "a"/"an" is dropped ("a_wife_of_Eliphaz" is "Wife of Eliphaz"), and
+/// the designation starts a line, so it starts upper.
 fn display_name(ident: &str) -> String {
     let spaced = ident.replace('_', " ");
+    let spaced = spaced
+        .strip_prefix("a ")
+        .or_else(|| spaced.strip_prefix("an "))
+        .map(str::to_string)
+        .unwrap_or(spaced);
     let mut chars = spaced.chars();
     match chars.next() {
         Some(first) if first.is_lowercase() => {

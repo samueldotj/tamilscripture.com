@@ -11106,39 +11106,39 @@ TCV = { label = "செலூமியேல்", forms = ["செலூமி�
 IRVTAM = { label = "அஸ்தரோத்கர்னாயீமிலே", forms = ["அஸ்தரோத்கர்னாயீமிலே"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "கூட்டுச்சேர்ந்த", forms = ["கூட்டுச்சேர்ந்த"], confidence = 0.50, n = 1, review = true }
 
-["A wife of Eliphaz"]
+["Wife of Eliphaz"]
 IRVTAM = { label = "எலிப்பாசின்", forms = ["எலிப்பாசினுடைய", "எலிப்பாசின்", "எலிப்பாசுடைய"], confidence = 1.00, n = 3, review = true }
 TCV = { label = "எலிப்பாஸின்", forms = ["எலிப்பாஸின்"], confidence = 1.00, n = 3, review = true }
 
-["A wife of Ezekiel"]
+["Wife of Ezekiel"]
 IRVTAM = { label = "கட்டளையிட்டபடியே", forms = ["கட்டளையிட்டபடியே"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "கட்டளைப்படியே", forms = ["கட்டளைப்படியே"], confidence = 0.50, n = 1, review = true }
 
-["A wife of Hezron"]
+["Wife of Hezron"]
 IRVTAM = { label = "எஸ்ரோனுக்குப்", forms = ["எஸ்ரோனுக்குப்"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "யெராமியேல்", forms = ["யெராமியேல்"], confidence = 0.50, n = 1, review = true }
 
-["A wife of Jerahmeel"]
+["Wife of Jerahmeel"]
 IRVTAM = { label = "யெர்மெயேலுக்கு", forms = ["யெர்மெயேலுக்கு"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "யெராமியேலுக்கு", forms = ["யெராமியேலுக்கு"], confidence = 0.50, n = 1, review = true }
 
-["A wife of Josiah"]
+["Wife of Josiah"]
 IRVTAM = { label = "சிதேக்கியா", forms = ["சிதேக்கியா"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "சிதேக்கியா", forms = ["சிதேக்கியா"], confidence = 0.50, n = 1, review = true }
 
-["A wife of Lot"]
+["Wife of Lot"]
 IRVTAM = { label = "மனைவியோ", forms = ["மனைவியையும்", "மனைவியோ"], confidence = 0.79, n = 2, review = true }
 TCV = { label = "லோத்தின்", forms = ["லோத்தின்", "லோத்தைப்"], confidence = 1.00, n = 2, review = true }
 
-["A wife of Peter"]
+["Wife of Peter"]
 IRVTAM = { label = "கூட்டிக்கொண்டுபோக", forms = ["கூட்டிக்கொண்டுபோக"], confidence = 0.50, n = 2, review = true }
 TCV = { label = "கொண்டுபோகிறதுபோல்", forms = ["கொண்டுபோகிறதுபோல்"], confidence = 0.50, n = 2, review = true }
 
-["A wife of Simeon"]
+["Wife of Simeon"]
 IRVTAM = { label = "எமுவேல்", forms = ["எமுவேல்"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "எமுயேல்", forms = ["எமுயேல்"], confidence = 0.50, n = 1, review = true }
 
-["A wife of Solomon"]
+["Wife of Solomon"]
 IRVTAM = { label = "நாட்டுப்புறம்", forms = ["நாட்டுப்புறம்"], confidence = 0.50, n = 1, review = true }
 TCV = { label = "செய்திருந்தான்", forms = ["செய்திருந்தான்"], confidence = 0.50, n = 1, review = true }
 

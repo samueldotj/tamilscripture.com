@@ -146,7 +146,7 @@ export const GET: RequestHandler = async ({ url, fetch }) => {
 			.sort((a, b) => b.score - a.score || (b.row.n ?? 0) - (a.row.n ?? 0) || a.row.name.localeCompare(b.row.name))
 			.slice(0, 60)
 			.map((x) => x.row);
-		return json({ letters: [], letter: '', rows, total: wanted.length, query: q }, { headers: { 'cache-control': 'public, max-age=3600' } });
+		return json({ letters: [], letter: '', rows, total: wanted.length, query: q }, { headers: { 'cache-control': 'public, max-age=0, must-revalidate' } });
 	}
 
 	const counts = new Map<string, number>();
@@ -165,6 +165,6 @@ export const GET: RequestHandler = async ({ url, fetch }) => {
 
 	return json(
 		{ letters, letter: pick, rows, total: wanted.length },
-		{ headers: { 'cache-control': 'public, max-age=3600' } }
+		{ headers: { 'cache-control': 'public, max-age=0, must-revalidate' } }
 	);
 };
