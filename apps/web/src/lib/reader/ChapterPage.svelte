@@ -598,9 +598,11 @@
 		.thumb { transition: none; }
 	}
 
-	/* Rail joins */
+	/* Rail joins. The side columns grow with the window up to 312px (rail) and
+	   420px (panel); the clamps keep a 1180-1440px screen from squeezing the
+	   reading column, which stays centred on its 40rem measure. */
 	@media (min-width: 960px) {
-		.reader:not(.dual) { grid-template-columns: 16.75rem minmax(0, 1fr); }
+		.reader:not(.dual) { grid-template-columns: clamp(16.75rem, 21vw, 19.5rem) minmax(0, 1fr); }
 		.reader:not(.dual) .rail { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); }
 		.reader:not(.dual) .main { max-width: none; padding: 1.5rem 2.5rem 4rem; }
 		/* The rail covers book and chapter navigation */
@@ -608,7 +610,7 @@
 	}
 	/* Context panel joins; the floating action bar, the overlay sheet and the Study chip step aside */
 	@media (min-width: 1180px) {
-		.reader:not(.dual) { grid-template-columns: 16.75rem minmax(0, 1fr) 21.5rem; }
+		.reader:not(.dual) { grid-template-columns: clamp(16.75rem, 21vw, 19.5rem) minmax(0, 1fr) clamp(21.5rem, 27vw, 26.25rem); }
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); scrollbar-width: thin; }
 		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
 		.reader:not(.dual) .study-chip { display: none; }
