@@ -147,6 +147,7 @@ pub fn apply_names(names: &mut NamesTa, ov: &Overrides) -> usize {
                     review: false,
                     community: false,
                     owner: false,
+                    borrowed: false,
                 });
             let mut forms = o.forms.clone();
             for f in &entry.forms {
@@ -158,6 +159,7 @@ pub fn apply_names(names: &mut NamesTa, ov: &Overrides) -> usize {
             entry.forms = forms;
             entry.review = false;
             entry.community = true;
+            entry.borrowed = false;
             entry.owner = o.owner;
             n += 1;
         }
@@ -322,6 +324,7 @@ mod tests {
                 review: true,
                 community: false,
                 owner: false,
+                borrowed: false,
             },
         );
         let toml_text =

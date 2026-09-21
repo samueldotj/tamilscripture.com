@@ -34,14 +34,89 @@ pub struct NameForm {
     /// Owner-authored override (`owner = true` in the override file).
     #[serde(skip)]
     pub owner: bool,
+    /// Set at build time when the draft for a descriptive name is really
+    /// another name's word (see `mark_borrowed`); never saved.
+    #[serde(skip)]
+    pub borrowed: bool,
 }
 
 impl NameForm {
     /// Whether the label is trustworthy enough to show without review:
     /// reviewed, or well attested across several verses.
     pub fn display_ok(&self) -> bool {
+        if self.community || self.owner {
+            return true;
+        }
+        if self.borrowed {
+            return false;
+        }
         !self.review || (self.n >= 3 && self.confidence >= 0.4)
     }
+}
+
+/// A descriptive English name ("Queen of Sheba", "Canaanite woman", "A wife of
+/// Eliphaz") rather than a proper name: it has a connective, or a later word in
+/// lower case.
+pub fn is_descriptive(name: &str) -> bool {
+    let words: Vec<&str> = name.split_whitespace().collect();
+    words.len() >= 2
+        && words.iter().enumerate().any(|(i, w)| {
+            matches!(w.to_lowercase().as_str(), "of" | "the" | "a" | "an")
+                || (i > 0 && w.chars().next().is_some_and(char::is_lowercase))
+        })
+}
+
+/// A descriptive name has no single Tamil word of its own, so when its drafted
+/// label is another name's label, or one of that name's inflected forms, the
+/// aligner picked up a neighbour: "Queen of Sheba" became சாலொமோன் (Solomon),
+/// "Forum of Appius" a verb. Those drafts are hidden and the English name shows
+/// until a reviewer supplies a Tamil one. Returns how many names were hidden.
+pub fn mark_borrowed(names: &mut NamesTa) -> usize {
+    // version → word → the names that use it as a label, or among their forms
+    let mut labels: HashMap<String, HashMap<String, HashSet<String>>> = HashMap::new();
+    let mut forms: HashMap<String, HashMap<String, HashSet<String>>> = HashMap::new();
+    for (name, per) in names.iter() {
+        for (version, f) in per {
+            labels
+                .entry(version.clone())
+                .or_default()
+                .entry(f.label.clone())
+                .or_default()
+                .insert(name.clone());
+            for w in &f.forms {
+                forms
+                    .entry(version.clone())
+                    .or_default()
+                    .entry(w.clone())
+                    .or_default()
+                    .insert(name.clone());
+            }
+        }
+    }
+    let mut marked = 0;
+    for (name, per) in names.iter_mut() {
+        if !is_descriptive(name) {
+            continue;
+        }
+        let borrowed = per.iter().any(|(version, f)| {
+            let elsewhere = |m: &HashMap<String, HashMap<String, HashSet<String>>>| {
+                m.get(version)
+                    .and_then(|w| w.get(&f.label))
+                    .is_some_and(|owners| owners.iter().any(|o| o != name))
+            };
+            elsewhere(&labels) || elsewhere(&forms)
+        });
+        // One version caught borrowing means the aligner found no word of the
+        // name's own, so the other versions' single words are no better
+        // ("Queen of Sheba" fell back to அரசி, just "queen"): hide them all.
+        if borrowed {
+            marked += 1;
+            for f in per.values_mut() {
+                f.borrowed = true;
+            }
+        }
+    }
+    marked
 }
 
 /// English name → version code → form.
@@ -232,6 +307,7 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
         review,
         community: false,
         owner: false,
+        borrowed: false,
     })
 }
 
@@ -266,4 +342,66 @@ pub fn validate(name: &str, form: &NameForm, verse_ids: &[String], corpus: &Corp
         }
     }
     problems
+}
+
+#[cfg(test)]
+mod borrowed_tests {
+    use super::*;
+
+    fn form(label: &str, forms: &[&str]) -> NameForm {
+        NameForm {
+            label: label.into(),
+            forms: forms.iter().map(|f| f.to_string()).collect(),
+            confidence: 0.8,
+            n: 10,
+            review: false,
+            community: false,
+            owner: false,
+            borrowed: false,
+        }
+    }
+
+    #[test]
+    fn descriptive_names() {
+        assert!(is_descriptive("Queen of Sheba"));
+        assert!(is_descriptive("Canaanite woman"));
+        assert!(is_descriptive("A wife of Eliphaz"));
+        assert!(!is_descriptive("Mary Magdalene"));
+        assert!(!is_descriptive("Jerusalem"));
+    }
+
+    #[test]
+    fn a_descriptive_name_using_another_names_word_is_hidden() {
+        let mut names = NamesTa::new();
+        names
+            .entry("Solomon".into())
+            .or_default()
+            .insert("IRVTAM".into(), form("சாலொமோன்", &["சாலொமோன்", "சாலொமோனின்"]));
+        names
+            .entry("Queen of Sheba".into())
+            .or_default()
+            .insert("IRVTAM".into(), form("சாலொமோன்", &["சாலொமோன்"]));
+        names
+            .entry("Eliphaz".into())
+            .or_default()
+            .insert("IRVTAM".into(), form("எலிப்பாஸ்", &["எலிப்பாஸ்", "எலிப்பாசின்"]));
+        names
+            .entry("A wife of Eliphaz".into())
+            .or_default()
+            .insert("IRVTAM".into(), form("எலிப்பாசின்", &["எலிப்பாசின்"]));
+        names
+            .entry("Mary Magdalene".into())
+            .or_default()
+            .insert("IRVTAM".into(), form("மரியாள்", &["மரியாள்"]));
+        names
+            .entry("Mary".into())
+            .or_default()
+            .insert("IRVTAM".into(), form("மரியாள்", &["மரியாள்"]));
+        assert_eq!(mark_borrowed(&mut names), 2);
+        assert!(!names["Queen of Sheba"]["IRVTAM"].display_ok());
+        assert!(!names["A wife of Eliphaz"]["IRVTAM"].display_ok());
+        // Proper names keep their Tamil, even when shared.
+        assert!(names["Solomon"]["IRVTAM"].display_ok());
+        assert!(names["Mary Magdalene"]["IRVTAM"].display_ok());
+    }
 }

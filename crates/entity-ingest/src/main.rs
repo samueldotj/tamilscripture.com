@@ -522,6 +522,10 @@ fn main() -> Result<()> {
             bail!("{} name problems", problems.len());
         }
     }
+    let borrowed = names::mark_borrowed(&mut names);
+    eprintln!(
+        "names: {borrowed} descriptive names drafted with another name's word; shown in English"
+    );
     // Accepted corrections (exported from the review queue) win over drafts.
     // They are applied after the corpus check: reviewers verified them.
     let overrides = community::load_overrides(&args.entities.join("overrides"))?;
