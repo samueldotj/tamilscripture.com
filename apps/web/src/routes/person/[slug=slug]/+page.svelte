@@ -1,4 +1,5 @@
 <script lang="ts">
+	import RefText from '$lib/refs/RefText.svelte';
 	import { chapterUrl, findBook, manifest } from '$lib/content/manifest';
 	import { groupByBook, placeLabelTa } from '$lib/entities/load';
 	import { settings } from '$lib/settings/store.svelte';
@@ -70,9 +71,9 @@
 			{#if p.short || paragraphs.length}
 				<section class="about card">
 					<h2 class="kicker"><span lang="ta">பற்றி</span> · About</h2>
-					{#if p.short && !paragraphs.length}<p>{p.short}</p>{/if}
+					{#if p.short && !paragraphs.length}<p><RefText text={p.short} /></p>{/if}
 					{#each paragraphs as para, i (i)}
-						<p>{para}</p>
+						<p><RefText text={para} /></p>
 					{/each}
 					<p class="source"><a href={p.source.url} rel="license">{p.source.attribution}</a></p>
 				</section>

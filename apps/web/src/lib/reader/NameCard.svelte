@@ -4,6 +4,7 @@
 	// names it, and the way on to the full entry and the dictionary article.
 	// The desktop context panel shows it under its அகராதி tab; phones get it
 	// as a half-sheet.
+	import RefText from '$lib/refs/RefText.svelte';
 	import type { PersonSummary, PlaceSummary } from '$lib/entities/types';
 	import type { NameHit } from './names';
 
@@ -48,7 +49,7 @@
 	</div>
 
 	{#if person?.brief}
-		<p class="brief" lang="en">{person.brief}</p>
+		<p class="brief" lang="en"><RefText text={person.brief} /></p>
 	{:else if place?.type}
 		<p class="brief" lang="en">{place.type}</p>
 	{/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import RefText from '$lib/refs/RefText.svelte';
 	import { onMount } from 'svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { allNotes, type Note } from '$lib/personal/repo';
@@ -40,7 +41,7 @@
 			<li>
 				<a class="ref" href={href(n)} lang={ta ? 'ta' : 'en'}>{label(n)}</a>
 				<time datetime={n.updated_at}>{new Date(n.updated_at).toLocaleDateString(ta ? 'ta-IN' : 'en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</time>
-				<p lang={ta ? 'ta' : 'en'}>{n.body}</p>
+				<p lang={ta ? 'ta' : 'en'}><RefText text={n.body} /></p>
 			</li>
 		{/each}
 	</ul>

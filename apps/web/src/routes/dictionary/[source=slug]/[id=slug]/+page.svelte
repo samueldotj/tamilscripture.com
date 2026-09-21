@@ -1,4 +1,5 @@
 <script lang="ts">
+	import RefText from '$lib/refs/RefText.svelte';
 	import { settings } from '$lib/settings/store.svelte';
 	import { placeName } from '$lib/entities/load';
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
@@ -82,11 +83,11 @@
 				{#if p.heading}
 					<h2 lang={p.ta ? 'ta' : 'en'}>{p.ta ?? p.text}</h2>
 				{:else if p.ta}
-					<p lang="ta" class="ta">{p.ta}</p>
-					<details class="src"><summary lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கில மூலம்' : 'English source'}</summary><p lang="en">{p.text}</p></details>
+					<p lang="ta" class="ta"><RefText text={p.ta} /></p>
+					<details class="src"><summary lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கில மூலம்' : 'English source'}</summary><p lang="en"><RefText text={p.text} /></p></details>
 					<Provenance kind={p.ta_source ?? 'draft'} lang={ta ? 'ta' : 'en'} />
 				{:else}
-					<p lang="en">{p.text}</p>
+					<p lang="en"><RefText text={p.text} /></p>
 				{/if}
 				<SuggestControl target={articleTarget(p.id)} current={p.ta ?? ''} source={p.text} lang={ta ? 'ta' : 'en'} />
 			</div>

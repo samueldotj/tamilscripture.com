@@ -4,6 +4,7 @@
 	// arrives with the page; the text follows 50 verses at a time as the reader
 	// scrolls, in their own version. A word in more than 1,000 verses opens on
 	// its first book, so nobody scrolls through thousands of rows.
+	import RefText from '$lib/refs/RefText.svelte';
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import { decodeVerses, describePos } from '$lib/concordance';
@@ -138,7 +139,7 @@
 			{[describePos(e.pos, ta), `${verses.length.toLocaleString('en-IN')} ${verseWord}`, e.count !== verses.length ? (ta ? `${e.count.toLocaleString('en-IN')} முறை` : `${e.count.toLocaleString('en-IN')} times`) : ''].filter(Boolean).join(' · ')}
 		</p>
 		{#if e.def}
-			<div class="def" class:open={showDef || !longDef} lang="en">{e.def}</div>
+			<div class="def" class:open={showDef || !longDef} lang="en"><RefText text={e.def} /></div>
 			{#if longDef}
 				<button type="button" class="link" onclick={() => (showDef = !showDef)} lang={ta ? 'ta' : 'en'}>{showDef ? (ta ? 'சுருக்கு' : 'Less') : ta ? 'முழு விளக்கம்' : 'Full definition'}</button>
 			{/if}

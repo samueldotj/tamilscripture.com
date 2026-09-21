@@ -4,6 +4,7 @@
 	// editable field pre-filled with the suggestion. Accept publishes the
 	// edited text; reject takes a note. Direct corrections and "Publish now"
 	// live at the bottom.
+	import RefText from '$lib/refs/RefText.svelte';
 	import { onMount, getContext } from 'svelte';
 	import { accept, correctDirectly, exportStatus, modCounts, modStats, parseTarget, publishNow, queue, reject, nameTarget, articleTarget, type ExportStatus, type ModCounts, type ModStats, type QueueItem, type Role, type SuggestionStatus, parseReason } from '$lib/community/repo';
 	import { added, changed, diffWords, removed } from '$lib/community/diff';
@@ -242,7 +243,7 @@
 						{#if !para}
 							<p class="stale" lang={ta ? 'ta' : 'en'}>{ta ? 'இந்தப் பத்தி மூலத்தில் இப்போது இல்லை (மறுபிரிவு).' : 'This paragraph no longer exists in the source (re-segmented).'}</p>
 						{:else}
-							<p class="src" lang="en">{para.text}</p>
+							<p class="src" lang="en"><RefText text={para.text} /></p>
 							{#if (para.ta ?? '') !== it.current_text}
 								<p class="stale" lang={ta ? 'ta' : 'en'}>{ta ? 'நிலுவை: தளத்தின் தற்போதைய உரை பரிந்துரை செய்யப்பட்டபோது இருந்ததிலிருந்து மாறியுள்ளது.' : 'Stale: the live text has changed since this was suggested.'}</p>
 							{/if}
