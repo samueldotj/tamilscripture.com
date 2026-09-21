@@ -72,6 +72,22 @@
 		<button type="button" role="radio" aria-checked={data.scope === 'all'} class:on={data.scope === 'all'} onclick={() => setScope('all')}>{ta ? 'எல்லாம்' : 'All versions'}</button>
 	</div>
 
+	{#if data.books?.length}
+		<section class="books" aria-label={ta ? 'புத்தகங்கள்' : 'Books'}>
+			<h2 class="kicker"><span lang="ta">புத்தகங்கள்</span> · Books</h2>
+			<ul>
+				{#each data.books as b (b.code)}
+					<li>
+						<a class="card book" href={chapterUrl(data.primary.code.toLowerCase(), b)}>
+							<span class="ename" lang={ta ? 'ta' : 'en'}>{ta ? b.name_ta : b.name_en}</span>
+							<span class="ealt" lang={ta ? 'en' : 'ta'}>{ta ? b.name_en : b.name_ta}<span class="ekind">{b.chapters} {ta ? 'அதிகாரங்கள்' : 'chapters'}</span></span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	{#if data.entities?.length}
 		<section class="entities" aria-label={ta ? 'பெயர்களும் கட்டுரைகளும்' : 'Names and articles'}>
 			<h2 class="kicker"><span lang="ta">பெயர்களும் கட்டுரைகளும்</span> · Names and articles</h2>
@@ -111,6 +127,7 @@
 	{:else}
 		<p class="summary kicker" role="status">
 			<span lang={ta ? 'ta' : 'en'}>{ta ? 'முடிவுகள்' : 'Results'}</span> · {data.result.total.toLocaleString()} {ta ? 'வசனங்கள்' : 'verses'}
+			{#if data.widened}<span class="badge" lang={ta ? 'ta' : 'en'}>{ta ? `${data.primary.short}-இல் இல்லை · எல்லா பதிப்புகளிலும்` : `none in ${data.primary.short} · all versions`}</span>{/if}
 			{#if data.result.exact}<span class="badge">{ta ? 'சரியான சொற்றொடர்' : 'exact phrase'}</span>{/if}
 			<span class="took">{data.result.took_ms} ms</span>
 		</p>
@@ -185,6 +202,9 @@
 	.entities { margin: 0 0 1.4rem; }
 	.entities h2 { margin: 0 0 0.6rem; }
 	.entities h2 [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
+	.books ul { list-style: none; margin: 0 0 1.4rem; padding: 0; display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); }
+	.card.book { display: grid; gap: 0.15rem; padding: 0.7rem 0.9rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-l); background: var(--surface); text-decoration: none; color: inherit; }
+	.card.book:hover { border-color: var(--accent); }
 	.entities ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 0.6rem; }
 	.ent { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 0.6rem; align-items: baseline; padding: 0.7rem 0.9rem; text-decoration: none; color: inherit; border-radius: 14px; }
 	.ent:hover { border-color: var(--accent); }

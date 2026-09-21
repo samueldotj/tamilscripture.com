@@ -25,6 +25,30 @@ export function findBook(text: string): Book | undefined {
 	return bookByKey.get(key(text));
 }
 
+/** Books whose name, alias or abbreviation matches the text, best first.
+ *  Used by the search page so "John" or "யோவான்" offers the books themselves. */
+export function matchBooks(text: string, limit = 4): Book[] {
+	const k = key(text);
+	if (!k) return [];
+	const scored: { book: Book; score: number }[] = [];
+	for (const b of manifest.books) {
+		const names = [b.name_en, b.name_ta, b.slug, ...b.slugs, ...b.abbr_en, ...b.alias_ta, ...b.abbr_ta].map(key);
+		let best = 0;
+		for (const n of names) {
+			if (!n) continue;
+			// Whole name, then "john" inside "1john", then a prefix such as "jo".
+			if (n === k) best = Math.max(best, 3);
+			else if (n.includes(k)) best = Math.max(best, k.length >= 3 ? 2 : 0);
+			else if (n.startsWith(k)) best = Math.max(best, 1);
+		}
+		if (best) scored.push({ book: b, score: best });
+	}
+	return scored
+		.sort((a, c) => c.score - a.score || a.book.order - c.book.order)
+		.slice(0, limit)
+		.map((x) => x.book);
+}
+
 export function findVersion(code: string): VersionMeta | undefined {
 	return versionByCode.get(code.toUpperCase());
 }
