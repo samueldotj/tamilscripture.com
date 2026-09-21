@@ -1,6 +1,6 @@
 # Feature design: dictionary, people and community review
 
-Milestone M7 in the [README](../README.md#milestones). Status: implemented on branch `m7-dictionary-people`, 13 Sep 2026, except the items listed under §11 that need the owner (Smith's/Aquifer decision, Tamil drafts, secrets, first moderator). ISBE is deferred: no machine-readable public-domain edition was found.
+Milestone M7 in the [README](../README.md#milestones). Status: implemented on branch `m7-dictionary-people`, 13 Sep 2026. Smith's and Aquifer were approved on 13 Sep 2026 and the export secret is in place; §11 lists what still needs the owner (Tamil drafts, the first moderator, the publish token). ISBE is deferred: no machine-readable public-domain edition was found.
 
 Builds on the entity foundation in [feature_maps.md](feature_maps.md) §3: the `entity-ingest` crate, the entity model, Tamil name alignment and entity search. This document adds dictionary articles, people, Tamil drafts produced outside the repository, and the community review flow that corrects Tamil names and paragraphs.
 
@@ -225,10 +225,13 @@ Articles are searchable by title through the entity search table (feature_maps.m
 
 ## 11. Owner items
 
-1. ~~Approve or reject Smith's and Aquifer~~ — both approved 13 Sep 2026.
-2. Produce Tamil drafts outside the repository in the §5 shape once the English articles are emitted (task 7.4).
-3. Secrets, entered by the owner and never handled in chat:
-   - GitHub repository secret `SUPABASE_SERVICE_KEY` (the project's service-role key) for `export-overrides.yml`.
-   - Vercel environment variable `GITHUB_DISPATCH_TOKEN`: a fine-grained personal access token for this repository with **Contents: read and write** (GitHub requires it for repository_dispatch; Metadata read-only is added automatically), used only by `/api/mod/publish`. Optional `GITHUB_REPO` if the repository moves.
-4. Appoint the first moderator in the database: `update public.profiles set role = 'moderator' where user_id = '<uuid>';` (moderators cannot create moderators).
-5. Optional: run the export workflow once by hand (Actions → Export accepted corrections → Run workflow) to confirm the secret works before reviewers start.
+Still open:
+
+1. Produce Tamil drafts outside the repository in the §5 shape once the English articles are emitted (task 7.4).
+2. Appoint the first moderator in the database: `update public.profiles set role = 'moderator' where user_id = '<uuid>';` (moderators cannot create moderators). Nothing in the review queue or the traffic report can be seen until this is done.
+3. Vercel environment variable `GITHUB_DISPATCH_TOKEN`, entered by the owner and never handled in chat: a fine-grained personal access token for this repository with **Contents: read and write** (GitHub requires it for repository_dispatch; Metadata read-only is added automatically), used only by `/api/mod/publish`. Without it the "Publish now" button answers 503 and accepted corrections still reach the site through the scheduled export. Optional `GITHUB_REPO` if the repository moves.
+
+Done:
+
+4. ~~Approve or reject Smith's and Aquifer~~ — both approved 13 Sep 2026.
+5. ~~GitHub repository secret `SUPABASE_SERVICE_KEY`~~ — in place. The scheduled export ran on its own for the first time on 18 Sep 2026 and committed `data/entities/overrides/names.toml`, which confirms the secret works. No corrections had been accepted yet, so the file holds only its header.
