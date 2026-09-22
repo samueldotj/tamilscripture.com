@@ -15,7 +15,8 @@
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
 	import type { ChapterMentions } from '$lib/entities/types';
-	import { chapterUrl, findBook } from '$lib/content/manifest';
+	import { chapterUrl, DEFAULT_ENGLISH, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
+	import { versesText } from '$lib/content/verses';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
@@ -38,18 +39,32 @@
 	const rangeLabel = $derived(
 		data.range ? `${data.range.start}${data.range.end !== data.range.start ? `-${data.range.end}` : ''}` : ''
 	);
-	const title = $derived(`${bookName} ${data.chapter}${rangeLabel ? `:${rangeLabel}` : ''} · ${primary.short}`);
-
-	// Description: the selected verses if any, else the chapter opening.
+	// ---- Search engines (requirements §12): the passage in Tamil comes first ----
+	// One canonical page per passage, the default (Tamil) version's, whatever
+	// version is being read, so every version's copy strengthens the Tamil page
+	// that a search for "John 1:1" should land on (ADR-15). Titles name the
+	// passage in Tamil and in English; the description is the verse itself.
+	const refTa = $derived(`${data.book.name_ta} ${data.chapter}${rangeLabel ? `:${rangeLabel}` : ''}`);
+	const refEn = $derived(`${data.book.name_en} ${data.chapter}${rangeLabel ? `:${rangeLabel}` : ''}`);
+	const title = $derived(
+		primary.lang === 'ta' ? `${refTa} – ${refEn} in Tamil (${primary.short})` : `${refEn} (${primary.short}) – ${refTa}`
+	);
+	const seoVersion = $derived(
+		[findVersion(DEFAULT_VERSION), ...data.versions].find((v) => v && v.books.includes(data.book.code)) ?? primary
+	);
+	const seoUrl = $derived(`https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter, rangeLabel || undefined)}`);
+	const enVersion = $derived(findVersion(DEFAULT_ENGLISH));
+	const enUrl = $derived(
+		enVersion && enVersion.books.includes(data.book.code)
+			? `https://www.tamilscripture.com${chapterUrl(enVersion.code.toLowerCase(), data.book, data.chapter, rangeLabel || undefined)}`
+			: null
+	);
+	/** The selected verses' words, shown first on a verse page and used as its description. */
+	const leadText = $derived(data.range ? versesText(data.chapters[0], data.range.start, data.range.end) : '');
 	const description = $derived.by(() => {
-		const segs = data.chapters[0].blocks.flatMap((b) => (b.type === 'para' ? b.segments : []));
-		const picked = data.range
-			? segs.filter((s) => {
-					const n = Number(s.id?.split('.')[2]);
-					return n >= data.range!.start && n <= data.range!.end;
-				})
-			: segs;
-		return picked.map((s) => s.text).join(' ').slice(0, 200);
+		const text = leadText || versesText(data.chapters[0], 1, 999);
+		if (text.length <= 160) return text;
+		return text.slice(0, 160).replace(/\s\S*$/, '') + '…';
 	});
 
 	const prev = $derived(data.chapters[0].prev);
@@ -430,20 +445,36 @@
 <svelte:head>
 	<title>{title} · Tamil Scripture</title>
 	<meta name="description" content={description} />
-	<link rel="canonical" href={`https://www.tamilscripture.com${data.canonical}`} />
+	<link rel="canonical" href={seoUrl} />
+	<link rel="alternate" hreflang="ta" href={seoUrl} />
+	{#if enUrl}<link rel="alternate" hreflang="en" href={enUrl} />{/if}
+	<link rel="alternate" hreflang="x-default" href={seoUrl} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content={`https://www.tamilscripture.com${data.canonical}`} />
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		itemListElement: [
-			{ '@type': 'ListItem', position: 1, name: 'Bible', item: 'https://www.tamilscripture.com/' },
-			{ '@type': 'ListItem', position: 2, name: data.book.name_en, item: `https://www.tamilscripture.com${chapterUrl(versionPath, data.book)}` },
-			{ '@type': 'ListItem', position: 3, name: `${data.book.name_en} ${data.chapter}`, item: `https://www.tamilscripture.com${chapterUrl(versionPath, data.book, data.chapter)}` }
-		]
-	})}</script>`}
+	<meta property="og:url" content={seoUrl} />
+	<meta property="og:site_name" content="Tamil Scripture · தமிழ் வேதாகமம்" />
+	<meta property="og:locale" content={primary.lang === 'ta' ? 'ta_IN' : 'en_IN'} />
+	{@html `<script type="application/ld+json">${JSON.stringify([
+		{
+			'@context': 'https://schema.org',
+			'@type': 'BreadcrumbList',
+			itemListElement: [
+				{ '@type': 'ListItem', position: 1, name: primary.lang === 'ta' ? 'தமிழ் வேதாகமம்' : 'Tamil Bible', item: 'https://www.tamilscripture.com/' },
+				{ '@type': 'ListItem', position: 2, name: bookName, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book)}` },
+				{ '@type': 'ListItem', position: 3, name: `${bookName} ${data.chapter}`, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter)}` }
+			]
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'WebPage',
+			name: title,
+			description,
+			url: seoUrl,
+			inLanguage: primary.lang,
+			isPartOf: { '@type': 'WebSite', name: 'Tamil Scripture · தமிழ் வேதாகமம்', url: 'https://www.tamilscripture.com/' }
+		}
+	])}</script>`}
 </svelte:head>
 
 <!-- Three columns on wide screens for a single version (design 3A): book rail,
@@ -490,8 +521,8 @@
 			</nav>
 
 			<div class="titles">
-				<h1 lang={primary.lang}>{bookName} {data.chapter}</h1>
-				<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}</span>
+				<h1 lang={primary.lang}>{bookName} {data.chapter}{rangeLabel ? `:${rangeLabel}` : ''}</h1>
+				<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}{rangeLabel ? `:${rangeLabel}` : ''}{primary.lang === 'ta' ? ' in Tamil' : ''}</span>
 				{#if aids.length}
 					<!-- On phones the toolbar gives way to the header pill and the thumb bar; Study stays here. -->
 					<button type="button" class="chip study-chip m-study" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
@@ -500,6 +531,14 @@
 					</button>
 				{/if}
 			</div>
+			{#if leadText}
+				<!-- The shared verse first, in words, before the chapter it sits in: what a reader
+				     (and a search engine) came for. -->
+				<blockquote class="lead" lang={primary.lang}>
+					<p>{leadText}</p>
+					<cite>{bookName} {data.chapter}:{rangeLabel} · {primary.short}</cite>
+				</blockquote>
+			{/if}
 
 			{#if !dual}
 				<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} />
@@ -640,6 +679,11 @@
 	h1 { font-family: var(--sans); font-weight: 600; font-size: 2.2rem; margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
 	h1[lang='ta'] { font-family: var(--tamil); }
 	.alt { font-size: 0.9rem; color: var(--muted); }
+	.lead { margin: 0 0 1.2rem; padding: 0.9rem 1.1rem; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 var(--r) var(--r) 0; font-size: 1.15rem; line-height: 1.75; color: var(--ink); }
+	.lead[lang='ta'] { font-family: var(--tamil); font-size: 1.3rem; line-height: 1.85; }
+	.lead[lang='en'] { font-family: var(--en); color: var(--ink-en); }
+	.lead p { margin: 0; text-wrap: pretty; }
+	.lead cite { display: block; margin-top: 0.45rem; font-style: normal; font-size: 0.8rem; color: var(--muted); font-family: var(--sans); }
 	.alt[lang='ta'] { font-family: var(--tamil); }
 	.pager { display: flex; align-items: center; gap: 0.75rem; margin: 2.5rem 0 0; padding-top: 1rem; border-top: var(--bw) solid var(--line); }
 	.pager .chip { flex: 1; min-height: 56px; border-radius: var(--r-l); font-size: 1rem; }

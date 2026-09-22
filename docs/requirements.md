@@ -338,9 +338,9 @@ Budgets are measured, not aspirational. Each is checked in CI with Lighthouse an
 - Numbers in UI use Western digits by default with a Tamil-numeral option.
 
 ### Search engine visibility
-- Every chapter page is server-rendered HTML with title, description, canonical, breadcrumb and Open Graph tags.
-- Sitemaps per version, split by testament.
-- Tamil-language titles so Tamil queries rank.
+- Every chapter and verse page is server-rendered HTML with title, description, canonical, hreflang, breadcrumb and Open Graph tags.
+- One canonical page per passage: the default Tamil version's. Every other version's copy of a chapter or verse names that page as its canonical, so a search for "John 1:1" lands on யோவான் 1:1 in Tamil (ADR-15). Sitemaps list the canonical version's chapters and the entity pages.
+- Titles name the passage in Tamil and in English ("யோவான் 1:1 – John 1:1 in Tamil"); the description is the verse itself, and a verse page shows the verse's words first, before the chapter.
 
 ### Privacy and security
 - Row-level security on every personal table; users can read and write only their own rows.
