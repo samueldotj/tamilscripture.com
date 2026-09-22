@@ -50,9 +50,10 @@ select pg_temp.logout();
 -- ---- another signed-in user ----
 select pg_temp.login('00000000-0000-0000-0000-0000000000d2');
 select is((select count(*) from public.presentations), 0::bigint, 'another user sees no rows through the table');
-select is((with u as (update public.presentations set title = 'hijack' where slug = 'abcd2345' returning 1) select count(*) from u), 0::bigint, 'another user changes nothing');
 select is((public.presentation_by_slug('abcd2345'))->>'title', 'தேவ அன்பு', 'a signed-in viewer opens a shared presentation by its link');
+update public.presentations set title = 'hijack' where slug = 'abcd2345';  -- silently touches no rows under RLS
 select pg_temp.logout();
+select is((select title from public.presentations where slug = 'abcd2345'), 'தேவ அன்பு', 'another user changes nothing');
 
 -- ---- the audience (anon) ----
 select set_config('role', 'anon', true);
