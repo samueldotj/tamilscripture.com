@@ -232,15 +232,15 @@
 				</div>
 				<a class="chip primary present" href={presentHref} target="_blank" rel="noopener"><span class="play" aria-hidden="true">▶</span><span lang="ta">வழங்கு</span> · Present <kbd>⧉ {ta ? 'புதிய தாவல்' : 'new tab'}</kbd></a>
 			</div>
+			<label class="slide-title">
+				<span class="kicker"><span lang="ta">தலைப்பு</span> · Header</span>
+				<input class="field" value={slide.title ?? ''} oninput={(e) => { slide.title = e.currentTarget.value; touch(); }} maxlength={LIMITS.title} placeholder={ta ? 'ஒரு வரி, ஸ்லைடின் மேலே · வசனம் இல்லாத தலைப்புப் பக்கத்தில் பெரிதாக' : 'One line across the top · large on a title page without verses'} />
+			</label>
 			<div class="canvas-wrap">
 				<div class="canvas">
 					<SlideView {slide} version={doc.version} {lang} />
 				</div>
 			</div>
-			<label class="slide-title">
-				<span class="kicker"><span lang="ta">தலைப்பு</span> · Header</span>
-				<input class="field" value={slide.title ?? ''} oninput={(e) => { slide.title = e.currentTarget.value; touch(); }} maxlength={LIMITS.title} placeholder={ta ? 'ஒரு வரி, ஸ்லைடின் மேலே · வசனம் இல்லாத தலைப்புப் பக்கத்தில் பெரிதாக' : 'One line across the top · large on a title page without verses'} />
-			</label>
 			<div class="notes-wrap">
 				<NotesEditor bind:value={slide.notes} version={doc.version} {lang} {insertLabel} onchange={touch} />
 			</div>
@@ -291,9 +291,9 @@
 	.link input { flex: 1; min-width: 0; font: inherit; font-size: 0.82rem; padding: 0.5rem 0.7rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-s); background: var(--surface-2); color: var(--ink); }
 	.vis { display: grid; gap: 0.3rem; font-size: 0.9rem; }
 	.vis [lang='ta'] { font-family: var(--tamil); }
-	.canvas-wrap { padding: 24px 32px 0; }
+	.canvas-wrap { padding: 14px 32px 0; }
 	.canvas { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: var(--bw) solid var(--line); overflow: hidden; background: #0E1015; }
-	.slide-title { display: grid; gap: 0.35rem; padding: 16px 32px 0; }
+	.slide-title { display: grid; gap: 0.35rem; padding: 18px 32px 0; }
 	.slide-title .kicker [lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.06em; }
 	.slide-title .field { font-size: 0.95rem; padding: 0.55rem 0.9rem; border-radius: var(--r); }
 	.notes-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 16px 32px 24px; }

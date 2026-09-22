@@ -159,7 +159,7 @@
 		color: var(--ink);
 	}
 	/* One line across the top, whatever the slide holds. */
-	.head { flex: none; padding: 2.4cqmax 6.1cqmax 0; font-size: 2cqmax; font-weight: 600; line-height: 1.3; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.head { flex: none; margin: 0 6.1cqmax; padding: 2.4cqmax 0 1.2cqmax; border-bottom: 1.5px solid #3A3F4A; font-size: 2cqmax; font-weight: 600; line-height: 1.3; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 	.head[lang='ta'] { font-family: var(--tamil); }
 	/* The flex layout lives one level down: a container query cannot style the
 	   container itself, only what is inside it. */
