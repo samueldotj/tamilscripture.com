@@ -4,7 +4,7 @@
 -- shape is checked in the database.
 begin;
 create extension if not exists pgtap with schema extensions;
-select plan(20);
+select plan(25);
 
 insert into auth.users (id, instance_id, aud, role, email, raw_user_meta_data, created_at, updated_at)
 values
@@ -59,12 +59,20 @@ select is((select title from public.presentations where slug = 'abcd2345'), 'த
 select set_config('role', 'anon', true);
 select throws_ok($$ select * from public.presentations $$, '42501', null, 'anon cannot read the table');
 select ok((public.presentation_by_slug('abcd2345')) ? 'slides' and not ((public.presentation_by_slug('abcd2345')) ? 'user_id'), 'the permalink returns the slides and never the owner');
+-- votes from the closing slide
+select is(public.presentation_vote('abcd2345', true), '{"up":1,"down":0}'::jsonb, 'anon votes thumbs up');
+select is(public.presentation_vote('abcd2345', false, true), '{"up":0,"down":1}'::jsonb, 'changing a vote moves it, never doubles it');
+select is((public.presentation_by_slug('abcd2345'))->>'votes_down', '1', 'the permalink carries the counts');
+select pg_temp.logout();
+select pg_temp.login('00000000-0000-0000-0000-0000000000d1');
+select throws_ok($$ update public.presentations set votes_up = 99 where slug = 'abcd2345' $$, '42501', null, 'the owner cannot edit the counters');
 select pg_temp.logout();
 
 -- ---- private presentations ----
 update public.presentations set visibility = 'private' where slug = 'abcd2345';
 select set_config('role', 'anon', true);
 select is(public.presentation_by_slug('abcd2345'), null, 'a private presentation is invisible from its link');
+select is(public.presentation_vote('abcd2345', true), null, 'a private presentation takes no votes');
 select pg_temp.logout();
 
 select * from finish();

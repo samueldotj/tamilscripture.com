@@ -5,7 +5,7 @@ import { sb } from '$lib/supabase/client';
 import { SUPABASE_ANON_KEY, SUPABASE_URL } from '$lib/supabase/config';
 import { newId, newSlide, type Presentation, type Slide, type Visibility } from './types';
 
-const COLS = 'id, slug, title, subtitle, version, visibility, slides, created_at, updated_at';
+const COLS = 'id, slug, title, subtitle, version, visibility, slides, votes_up, votes_down, created_at, updated_at';
 
 export async function myPresentations(): Promise<Presentation[]> {
 	const { data, error } = await (await sb()).from('presentations').select(COLS).order('updated_at', { ascending: false });
@@ -63,6 +63,19 @@ export async function sharedPresentation(fetchFn: typeof fetch, slug: string): P
 	if (!res.ok) throw new Error(`presentation lookup failed: ${res.status}`);
 	const doc = (await res.json()) as Presentation | null;
 	return doc && Array.isArray(doc.slides) ? doc : null;
+}
+
+/** Thumbs up or down from the closing slide. `previous` is this browser's earlier
+ *  vote, if any, so changing one's mind moves the vote instead of doubling it.
+ *  Returns the new counts, or null when the presentation is not shared. */
+export async function votePresentation(fetchFn: typeof fetch, slug: string, up: boolean, previous: boolean | null): Promise<{ up: number; down: number } | null> {
+	const res = await fetchFn(`${SUPABASE_URL}/rest/v1/rpc/presentation_vote`, {
+		method: 'POST',
+		headers: { apikey: SUPABASE_ANON_KEY, authorization: `Bearer ${SUPABASE_ANON_KEY}`, 'content-type': 'application/json' },
+		body: JSON.stringify({ p_slug: slug, p_up: up, p_previous: previous })
+	});
+	if (!res.ok) throw new Error(`vote failed: ${res.status}`);
+	return (await res.json()) as { up: number; down: number } | null;
 }
 
 export function presentUrl(slug: string, slide?: number): string {

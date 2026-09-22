@@ -237,8 +237,8 @@
 				</div>
 			</div>
 			<label class="slide-title">
-				<span class="kicker"><span lang="ta">ஸ்லைடு தலைப்பு</span> · Slide title</span>
-				<input class="field" value={slide.title ?? ''} oninput={(e) => { slide.title = e.currentTarget.value; touch(); }} maxlength={LIMITS.title} placeholder={ta ? 'விருப்பம் · வசனம் இல்லாத ஸ்லைடில் பெரிதாகக் காட்டப்படும்' : 'Optional · shown large on a slide without verses'} />
+				<span class="kicker"><span lang="ta">தலைப்பு</span> · Header</span>
+				<input class="field" value={slide.title ?? ''} oninput={(e) => { slide.title = e.currentTarget.value; touch(); }} maxlength={LIMITS.title} placeholder={ta ? 'ஒரு வரி, ஸ்லைடின் மேலே · வசனம் இல்லாத தலைப்புப் பக்கத்தில் பெரிதாக' : 'One line across the top · large on a title page without verses'} />
 			</label>
 			<div class="notes-wrap">
 				<NotesEditor bind:value={slide.notes} version={doc.version} {lang} {insertLabel} onchange={touch} />

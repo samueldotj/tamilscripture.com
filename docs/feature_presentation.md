@@ -1,6 +1,6 @@
 # Feature design: verse presentations
 
-Status: P1–P3 built 21 Sep 2026 from design 11A (Claude Design handoff, "Tamil Bible Site Redesign", turn 11).
+Status: P1–P3 built 21 Sep 2026 from design 11A (Claude Design handoff, "Tamil Bible Site Redesign", turn 11); P4 (headers, title pages, linked references, closing slide with votes) 22 Sep 2026.
 
 A preacher or Bible study leader makes a presentation of slides. Each slide holds one or more verses and optional notes written in Markdown. "Present" opens the slides in their own tab, full screen if wanted, driven from the keyboard. Every presentation has a permanent link that can be shared. Slides hold verse *references*, never verse text, so the translation can be changed later, by the author or by whoever opens the link.
 
@@ -30,9 +30,10 @@ A preacher or Bible study leader makes a presentation of slides. Each slide hold
 | `version` | Default version code for the verses, `IRVTAM` |
 | `visibility` | `link` (anyone with the link) or `private` (only the owner) |
 | `slides` | JSON array, checked by `check_slides()` |
+| `votes_up`, `votes_down` | Thumbs up and down from the closing slide. Only `presentation_vote()` moves them (the owner's update grant excludes them); a private presentation takes no votes |
 | `created_at`, `updated_at` | |
 
-A slide:
+A slide (`title` is the one-line header across the top; on a slide without verses it is the title page's heading):
 
 ```json
 { "id": "k4m2p7qx", "title": "அன்பின் அளவு",
@@ -61,7 +62,8 @@ flowchart LR
 ## 4. Screens
 
 - **Editor** (`/present/{slug}/edit`, design 11A "Presentation editor"): three columns under the site header. Left: title, subtitle, "saved just now", the slides as small cards (drag or Alt+↑/↓ to reorder), "new slide". Centre: slide n of N, default version, duplicate, delete, share (link, copy, anyone-with-link or only-me), Present (new tab); a 16:9 preview drawn by the same component as the presenter; the slide's title; notes with a formatting toolbar and Write / Split / Preview. Right: the verses on this slide, each with its version and a remove control; a box that takes a reference, a chapter (which lists its verses to pick from) or a word to search; the slide's cross-references, recently read verses and the author's highlights as one-tap additions. Saves 800 ms after the last change; warns before the tab closes with a save in flight.
-- **Presenter** (`/present/{slug}`, design 11A "Presenter fullscreen"): the slide fills the window; a progress hairline at the top; a control pill at the bottom (previous, n / N, next, fullscreen, notes, version, ?) that fades after three seconds without the mouse; a shortcut hint bottom-left on opening; title bottom-right. Notes sit in a column on the right and drop below the verses on a portrait screen. A passage too long for the frame is shrunk until it fits. Taps on the right two thirds advance, on the left third go back; a swipe does the same.
+- **Presenter** (`/present/{slug}`, design 11A "Presenter fullscreen"): the slide fills the window, with its header on one line across the top; the reference and, in a range, each verse number link to the reader in the version shown; a slide without verses is a title page, its header large and its notes centred under it; a progress hairline at the top; a control pill at the bottom (previous, n / N, next, fullscreen, notes, version, ?) that fades after three seconds without the mouse; a shortcut hint bottom-left on opening; title bottom-right. Notes sit in a column on the right and drop below the verses on a portrait screen. A passage too long for the frame is shrunk until it fits. Taps on the right two thirds advance, on the left third go back; a swipe does the same.
+- **Closing slide**, after the last stored slide of every presentation and never stored: thanks and the title, thumbs up and down with the counts (`presentation_vote()`, one vote per browser kept in `localStorage`, a change moves the vote), and a share button (Web Share, else the link copied). Only a presentation shared by link takes votes, so a private one gives nothing away. The editor's rail shows it as a fixed last card.
 - **List** (`/me/presentations`): every presentation with its slide count, version and date; new, edit, present, copy link, delete.
 
 Keys in the presenter:
@@ -78,7 +80,7 @@ Keys in the presenter:
 
 ## 5. Budgets
 
-The editor is one chunk (10.9 kB gzipped) fetched when its page opens, so the route node stays tiny; the presenter and the list are ordinary route nodes; the reference parser (wasm) loads on the first keystroke in the verse box, as in the header. Measured on 21 Sep 2026 (`pnpm size`): route nodes 104.7 → 110.7 kB of 120; site JavaScript 207.9 → 236.0 kB of 240, which leaves 4 kB, so the next feature of any size will need the budget raised as the concordance did. The reader route itself is unchanged.
+The editor is one chunk (10.9 kB gzipped) fetched when its page opens, so the route node stays tiny; the presenter and the list are ordinary route nodes; the reference parser (wasm) loads on the first keystroke in the verse box, as in the header. Measured on 21 Sep 2026 (`pnpm size`): route nodes 104.7 → 110.7 kB of 120; site JavaScript 207.9 → 238.3 kB of 240 after P4, which leaves under 2 kB, so the next feature of any size will need the budget raised as the concordance did. The reader route itself is unchanged.
 
 ## 6. Roadmap
 
@@ -87,6 +89,7 @@ The editor is one chunk (10.9 kB gzipped) fetched when its page opens, so the ro
 | **P1 · Data** | Migration, `check_slides()`, `presentation_by_slug()`, export; pgTAP `presentations.test.sql` | Built 21 Sep 2026 |
 | **P2 · Editor** | List page, editor with rail, preview, notes, picker, autosave, share | Built 21 Sep 2026 |
 | **P3 · Presenter** | Permalink page with server-rendered title, keys, fullscreen, auto-hide, version switch, follow-along channel | Built 21 Sep 2026 |
+| **P4 · Headers, title pages, votes** | One-line header per slide; title pages with centred Markdown; references and verse numbers link to the reader; closing slide with thumbs up / down (`20260922100000_presentation_votes.sql`) and share | Built 22 Sep 2026 |
 | **Later** | "Add to presentation" from the reader's verse action bar; a dual-version slide (Tamil beside English); a printed handout; duplicating a whole presentation; a presenter view with the next slide and a clock on the speaker's screen | Ideas |
 
 ## 7. Risks and checks
@@ -94,6 +97,7 @@ The editor is one chunk (10.9 kB gzipped) fetched when its page opens, so the ro
 | Risk | Check |
 |---|---|
 | Notes are shown on a projector, so they must render without scripts or HTML | The renderer builds elements from a tree; `{@html}` is never used; links are limited to http, https, site paths, anchors and mailto |
+| Vote stuffing | One vote per browser is all the page enforces; the counters can only move through `presentation_vote()`, never be set, and a private presentation ignores votes. Noise is accepted, as for the analytics |
 | A shared link leaks the owner | `presentation_by_slug()` builds its own object without `user_id`; the pgTAP test asserts the key is absent and that anon cannot read the table |
 | Verse text stored in a slide would go stale with a new Bible build | `check_slides()` allows only known keys, so `text` is refused on write (tested) |
 | A long passage overflows the screen | `SlideView` shrinks the type until the column fits, on every size change and after fonts load |

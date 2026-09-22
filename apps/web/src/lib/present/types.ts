@@ -33,6 +33,9 @@ export interface Presentation {
 	version: string;
 	visibility: Visibility;
 	slides: Slide[];
+	/** Thumbs up and down from the closing slide; only presentation_vote() moves them. */
+	votes_up: number;
+	votes_down: number;
 	created_at: string;
 	updated_at: string;
 }

@@ -14,6 +14,7 @@
 	import { myPresentation, presentChannel, type PresentMessage } from '$lib/present/repo';
 	import { verseVersion, type Presentation } from '$lib/present/types';
 	import SlideView from '$lib/present/SlideView.svelte';
+	import ClosingSlide from '$lib/present/ClosingSlide.svelte';
 
 	let { data } = $props();
 	const slug = $derived(page.params.slug!);
@@ -34,8 +35,11 @@
 	let channel: BroadcastChannel | null = null;
 	let hideTimer: ReturnType<typeof setTimeout> | undefined;
 
-	const total = $derived(doc?.slides.length ?? 0);
-	const slide = $derived(doc && total ? doc.slides[Math.min(index, total - 1)] : null);
+	// The stored slides plus the closing slide (thanks, votes, share) after them.
+	const total = $derived(doc ? doc.slides.length + 1 : 0);
+	const closing = $derived(!!doc && index >= doc.slides.length);
+	const slide = $derived(doc && !closing ? doc.slides[index] : null);
+	const shareUrl = $derived(`https://www.tamilscripture.com/present/${slug}`);
 	const version = $derived(findVersion(override ?? '')?.code ?? findVersion(doc?.version ?? '')?.code ?? 'IRVTAM');
 	const title = $derived(doc?.title?.trim() || (ta ? 'விளக்கக்காட்சி' : 'Presentation'));
 	const description = $derived(
@@ -61,7 +65,7 @@
 		const v = page.url.searchParams.get('v');
 		if (v && findVersion(v)) override = findVersion(v)!.code;
 		const h = Number(location.hash.slice(1));
-		if (h >= 1) index = h - 1;
+		if (h >= 1) index = Math.min(h - 1, total - 1);
 		channel = presentChannel(slug);
 		if (channel) channel.onmessage = (e: MessageEvent<PresentMessage>) => {
 			if (e.data.type === 'doc' && e.data.presentation.slug === slug) doc = e.data.presentation;
@@ -149,12 +153,16 @@
 <svelte:window onkeydown={onKey} onmousemove={wake} onpointerdown={wake} />
 
 <div class="presenter" class:idle={!controls}>
-	{#if doc && slide}
+	{#if doc && (slide || closing)}
 		<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -- keys are handled on the window; a tap is the touch shortcut -->
 		<div class="stage" onclick={onTap} ontouchstart={onTouchStart} ontouchend={onTouchEnd}>
-			{#key slide.id + version}
-				<SlideView {slide} {version} showNotes={notes} mode="present" {lang} />
-			{/key}
+			{#if slide}
+				{#key slide.id + version}
+					<SlideView {slide} {version} showNotes={notes} mode="present" {lang} />
+				{/key}
+			{:else}
+				<ClosingSlide {slug} title={doc.title} subtitle={doc.subtitle} votes={{ up: doc.votes_up ?? 0, down: doc.votes_down ?? 0 }} shared={doc.visibility === 'link'} {shareUrl} {lang} />
+			{/if}
 		</div>
 
 		<!-- progress hairline -->
@@ -197,8 +205,6 @@
 			{#if !session.signedIn}<p><a href={`/signin?next=${encodeURIComponent(page.url.pathname)}`} lang={ta ? 'ta' : 'en'}>{ta ? 'உங்களுடையதா? உள்நுழையவும்' : 'Yours? Sign in'}</a></p>{/if}
 			<p><a href="/" lang="ta">‹ தமிழ் வேதாகமம்</a></p>
 		</div>
-	{:else if doc && !total}
-		<div class="message"><p lang={ta ? 'ta' : 'en'}>{ta ? 'ஸ்லைடுகள் இல்லை.' : 'No slides yet.'}</p></div>
 	{:else}
 		<div class="message" aria-busy="true"><p>…</p></div>
 	{/if}

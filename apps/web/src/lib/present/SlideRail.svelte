@@ -77,6 +77,11 @@
 			</button>
 		</li>
 	{/each}
+	<!-- Every presentation ends with this slide; it is not stored and not editable. -->
+	<li class="closing">
+		<span class="n">{slides.length + 1}</span>
+		<span class="thumb"><span class="title" lang="ta">நன்றி · 👍 👎</span><span class="note muted">{ta ? 'வாக்கு · பகிர்' : 'votes · share'}</span></span>
+	</li>
 </ol>
 <button type="button" class="chip dashed add" onclick={onadd}>+ <span lang={ta ? 'ta' : 'en'}>{ta ? 'புதிய ஸ்லைடு' : 'New slide'}</span></button>
 
@@ -86,6 +91,8 @@
 	li.current { border-color: var(--accent); background: var(--surface); }
 	li.over { border-color: var(--accent); border-style: dashed; }
 	li.dragging { opacity: 0.5; }
+	li.closing { display: flex; gap: 10px; padding: 8px; border-style: dashed; opacity: 0.8; }
+	li.closing .thumb { text-align: center; }
 	li button { display: flex; gap: 10px; align-items: stretch; width: 100%; padding: 8px; border: 0; background: none; color: inherit; cursor: pointer; text-align: left; border-radius: 12px; }
 	li button:hover .thumb { outline: 1px solid var(--line-2); }
 	.n { width: 18px; font-size: 0.75rem; font-weight: 700; color: var(--muted); display: flex; align-items: center; justify-content: center; flex: none; }
