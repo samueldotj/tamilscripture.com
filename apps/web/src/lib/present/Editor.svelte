@@ -214,6 +214,7 @@
 				</label>
 				<button type="button" class="chip" onclick={duplicate} disabled={doc.slides.length >= LIMITS.slides}><span lang="ta">நகல்</span> · Duplicate</button>
 				<button type="button" class="chip" onclick={remove} aria-label={ta ? 'ஸ்லைடை நீக்கு' : 'Delete slide'}>{ta ? 'நீக்கு' : 'Delete'}</button>
+				<a class="chip" href={`/present/${slug}/stats`} title={ta ? 'பார்வைகள், வாக்குகள்' : 'Views and votes'}><span lang="ta">புள்ளிவிவரம்</span></a>
 				<div class="share-wrap">
 					<button type="button" class="chip" aria-expanded={shareOpen} onclick={() => (shareOpen = !shareOpen)} lang="ta">பகிர்</button>
 					{#if shareOpen}

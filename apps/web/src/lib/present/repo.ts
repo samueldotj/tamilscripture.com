@@ -78,6 +78,35 @@ export async function votePresentation(fetchFn: typeof fetch, slug: string, up: 
 	return (await res.json()) as { up: number; down: number } | null;
 }
 
+// ---- statistics, owner only (presentation_stats(), my_presentations_stats()) ----
+export interface StatRow { key: string; n: number; u: number }
+export interface PresentationStats {
+	views: number;
+	visitors: number;
+	days: number;
+	first_day: string | null;
+	last_at: string | null;
+	daily: { day: string; n: number; u: number }[];
+	countries: StatRow[];
+	devices: StatRow[];
+	votes_up: number;
+	votes_down: number;
+	created_at: string;
+}
+export interface StatsSummary { views: number; visitors: number; last_at: string | null }
+
+export async function presentationStats(id: string): Promise<PresentationStats | null> {
+	const { data, error } = await (await sb()).rpc('presentation_stats', { p_id: id });
+	if (error) throw error;
+	return data as PresentationStats | null;
+}
+
+export async function myPresentationsStats(): Promise<Record<string, StatsSummary>> {
+	const { data, error } = await (await sb()).rpc('my_presentations_stats');
+	if (error) throw error;
+	return (data ?? {}) as Record<string, StatsSummary>;
+}
+
 export function presentUrl(slug: string, slide?: number): string {
 	return `/present/${slug}${slide && slide > 1 ? `#${slide}` : ''}`;
 }

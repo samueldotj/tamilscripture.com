@@ -4,17 +4,19 @@
 	import { goto } from '$app/navigation';
 	import { settings } from '$lib/settings/store.svelte';
 	import { findVersion } from '$lib/content/manifest';
-	import { createPresentation, deletePresentation, myPresentations, presentUrl } from '$lib/present/repo';
+	import { createPresentation, deletePresentation, myPresentations, myPresentationsStats, presentUrl, type StatsSummary } from '$lib/present/repo';
 	import type { Presentation } from '$lib/present/types';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
 	let items = $state<Presentation[]>([]);
+	let stats = $state<Record<string, StatsSummary>>({});
 	let loading = $state(true);
 	let busy = $state(false);
 	let toast = $state('');
 
 	onMount(async () => {
 		try { items = await myPresentations(); } finally { loading = false; }
+		try { stats = await myPresentationsStats(); } catch { /* the list still works without numbers */ }
 	});
 	async function create() {
 		busy = true;
@@ -38,6 +40,7 @@
 		try { await navigator.clipboard.writeText(url); flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied'); } catch { flash(url); }
 	}
 	function flash(msg: string) { toast = msg; setTimeout(() => (toast = ''), 1800); }
+	const nf = $derived(new Intl.NumberFormat(ta ? 'ta-IN' : 'en-IN'));
 	const when = (iso: string) => new Date(iso).toLocaleDateString(ta ? 'ta-IN' : 'en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 </script>
 
@@ -60,9 +63,13 @@
 				<div class="main">
 					<a class="title" href={`/present/${p.slug}/edit`} lang={/[஀-௿]/.test(p.title) || !p.title ? 'ta' : 'en'}>{p.title || (ta ? 'தலைப்பில்லா விளக்கக்காட்சி' : 'Untitled presentation')}</a>
 					<span class="meta">{p.subtitle ? `${p.subtitle} · ` : ''}{p.slides.length} {ta ? 'ஸ்லைடுகள்' : 'slides'} · {findVersion(p.version)?.short ?? p.version} · {when(p.updated_at)}{p.visibility === 'private' ? ` · ${ta ? 'நான் மட்டும்' : 'only me'}` : ''}</span>
+					{#if stats[p.id]}
+						<a class="stats" href={`/present/${p.slug}/stats`} lang={ta ? 'ta' : 'en'}>👁 {nf.format(stats[p.id].views)} {ta ? 'பார்வைகள்' : 'views'} · {nf.format(stats[p.id].visitors)} {ta ? 'பார்வையாளர்கள்' : 'visitors'} · 👍 {nf.format(p.votes_up ?? 0)} · 👎 {nf.format(p.votes_down ?? 0)}{stats[p.id].last_at ? ` · ${ta ? 'கடைசியாக' : 'last'} ${when(stats[p.id].last_at!)}` : ''}</a>
+					{/if}
 				</div>
 				<div class="actions">
 					<a class="chip" href={`/present/${p.slug}/edit`}>{ta ? 'திருத்து' : 'Edit'}</a>
+					<a class="chip" href={`/present/${p.slug}/stats`}>{ta ? 'புள்ளிவிவரம்' : 'Stats'}</a>
 					<a class="chip primary" href={presentUrl(p.slug)} target="_blank" rel="noopener">▶ {ta ? 'வழங்கு' : 'Present'}</a>
 					<button type="button" class="chip" onclick={() => copy(p)}>{ta ? 'இணைப்பு' : 'Link'}</button>
 					<button type="button" class="chip danger" onclick={() => remove(p)} aria-label={ta ? 'நீக்கு' : 'Delete'}>×</button>
@@ -86,6 +93,9 @@
 	.title { font-size: 1.15rem; font-weight: 600; text-decoration: none; color: var(--ink); }
 	.title[lang='ta'] { font-family: var(--tamil); }
 	.meta { font-size: 0.82rem; color: var(--muted); }
+	.stats { font-size: 0.8rem; color: var(--ink-2); text-decoration: none; font-variant-numeric: tabular-nums; }
+	.stats[lang='ta'] { font-family: var(--tamil); }
+	.stats:hover { color: var(--accent); }
 	.actions { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 	.actions .chip { min-height: 38px; font-size: 0.85rem; }
 	.danger:hover { border-color: var(--bad); color: var(--bad); }

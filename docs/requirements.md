@@ -516,3 +516,4 @@ Added 21 Sep 2026 for milestone M10 (design: [feature_presentation.md](feature_p
 | R-17.7 | Presentations appear in the user's data export and are deleted with the account. | Must |
 | R-17.8 | Every slide can carry a one-line header. A slide without verses is a title page whose header and notes are centred. On a slide, the reference and each verse number link to the verse in the reader. | Must |
 | R-17.9 | Every presentation ends with a closing slide where the audience votes thumbs up or down, anonymously and once per browser, and can share the link. Votes are counted only for presentations shared by link, and the owner cannot alter the counts. | Should |
+| R-17.10 | The owner sees statistics for each presentation: views and visitors over time, votes, when the link was last opened, and countries and devices, drawn from the site's analytics under its privacy rules (R-16.2, R-16.3). Nobody else can see them. | Should |

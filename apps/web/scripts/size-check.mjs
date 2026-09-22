@@ -13,8 +13,9 @@ const root = join(client, '_app/immutable/');
 // gzip, every chunk a reader can load except the map engine, summed over all
 // pages; it grows with each new page, so the per-page limits in .size-limit
 // (reader route 120 kB) are the guard on what one visit downloads. Raised from
-// 200 kB to 240 kB on 20 Sep 2026 when the concordance pages were added.
-const SITE_LIMIT = 240 * 1024;
+// 200 kB to 240 kB on 20 Sep 2026 when the concordance pages were added, and
+// to 260 kB on 22 Sep 2026 for the presentation pages (editor, presenter, stats).
+const SITE_LIMIT = 260 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 

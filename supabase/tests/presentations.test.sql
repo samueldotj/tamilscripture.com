@@ -4,7 +4,7 @@
 -- shape is checked in the database.
 begin;
 create extension if not exists pgtap with schema extensions;
-select plan(25);
+select plan(31);
 
 insert into auth.users (id, instance_id, aud, role, email, raw_user_meta_data, created_at, updated_at)
 values
@@ -66,6 +66,20 @@ select is((public.presentation_by_slug('abcd2345'))->>'votes_down', '1', 'the pe
 select pg_temp.logout();
 select pg_temp.login('00000000-0000-0000-0000-0000000000d1');
 select throws_ok($$ update public.presentations set votes_up = 99 where slug = 'abcd2345' $$, '42501', null, 'the owner cannot edit the counters');
+select pg_temp.logout();
+
+-- ---- statistics for the owner ----
+select set_config('role', 'anon', true);
+select lives_ok($$ select public.track('view', '/present/abcd2345', '/present/[slug=slug]', null, '203.0.113.9', 'Mozilla/5.0 (iPhone)', null, 'IN', 'TN', 'Chennai', 'mobile', 'iOS', 'Safari', '390x844', null, 'ta') $$, 'a view of the permalink is recorded like any page');
+select throws_ok($$ select public.presentation_stats((select id from public.presentations where slug = 'abcd2345')) $$, '42501', null, 'anon cannot ask for statistics');
+select pg_temp.logout();
+select pg_temp.login('00000000-0000-0000-0000-0000000000d1');
+select is((public.presentation_stats((select id from public.presentations where slug = 'abcd2345')))->>'views', '1', 'the owner sees the view');
+select is((public.presentation_stats((select id from public.presentations where slug = 'abcd2345')))->'countries'->0->>'key', 'IN', 'with where it came from');
+select is((public.my_presentations_stats())->(select id::text from public.presentations where slug = 'abcd2345')->>'visitors', '1', 'the list summary counts the visitor');
+select pg_temp.logout();
+select pg_temp.login('00000000-0000-0000-0000-0000000000d2');
+select is(public.presentation_stats((select id from public.presentations where slug = 'abcd2345')), null, 'another user gets nothing');
 select pg_temp.logout();
 
 -- ---- private presentations ----
