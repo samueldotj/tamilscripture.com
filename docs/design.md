@@ -190,6 +190,9 @@ src/routes/
 │  ├─ search/+server.ts                   POST → rpc search_verses · s-maxage=60
 │  ├─ heat/[book].json/+server.ts         GET  → verse_highlight_counts · s-maxage=3600
 │  └─ common-searches/+server.ts          GET  → common_searches · s-maxage=3600
+├─ present/[slug=slug]/
+│  ├─ +page.server.ts                     permalink · server render from presentation_by_slug(), never cached
+│  └─ edit/+page.svelte                   editor · browser only, owner
 ├─ me/(auth)/
 │  ├─ +layout.server.ts                   requires session, else redirect to /signin
 │  ├─ history/+page.server.ts

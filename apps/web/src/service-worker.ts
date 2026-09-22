@@ -87,8 +87,11 @@ sw.addEventListener('fetch', (event) => {
 	}
 
 	// Reader pages: network first, fall back to the last copy read offline.
+	// (/present/{slug} has the same shape but is a person's presentation, not a chapter.)
 	const isReaderPage =
-		request.mode === 'navigate' && /^\/[a-z]+(\+[a-z]+)?\/[a-z0-9-]+(\/\d+(\/[\d-]+)?)?$/.test(url.pathname);
+		request.mode === 'navigate' &&
+		!url.pathname.startsWith('/present/') &&
+		/^\/[a-z]+(\+[a-z]+)?\/[a-z0-9-]+(\/\d+(\/[\d-]+)?)?$/.test(url.pathname);
 	if (isReaderPage) {
 		event.respondWith(
 			fetch(request)

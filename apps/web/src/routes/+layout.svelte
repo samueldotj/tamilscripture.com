@@ -23,11 +23,14 @@
 	let menuOpen = $state(false);
 	// Header height feeds the sticky rail/panel offsets of the reader layout.
 	let headerH = $state(0);
-	// Chapter pages run edge to edge so the reader can lay out its own columns.
-	const wide = $derived(page.route.id?.includes('[chapter=int]') ?? false);
+	// Chapter pages run edge to edge so the reader can lay out its own columns;
+	// so does the presentation editor (design 11A) with its three columns.
+	const wide = $derived((page.route.id?.includes('[chapter=int]') ?? false) || page.route.id === '/present/[slug=slug]/edit');
 	// Map pages (design 9A): the map is the page, edge to edge under the header,
 	// with its attribution on the map itself, so the site footer steps aside.
 	const bleed = $derived(page.route.id === '/atlas/explore' || page.route.id === '/atlas/[journey=slug]');
+	// The presenter (design 11A) is a screen, not a page: no header, no footer.
+	const bare = $derived(page.route.id === '/present/[slug=slug]');
 
 	// Keep the reader's current version(s) when jumping by reference.
 	const versionPath = $derived(page.params.versions ?? settings.value.version);
@@ -125,6 +128,7 @@
 
 <svelte:window onkeydown={onKey} onscroll={onScroll} />
 
+{#if !bare}
 <header class="site" class:hidden={chrome.hidden} class:searching={searchOpen} bind:clientHeight={headerH}>
 	<div class="bar">
 		{#if isHome}
@@ -171,6 +175,7 @@
 							<a role="menuitem" href="/me/history" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'வரலாறு' : 'History'}</a>
 							<a role="menuitem" href="/me/highlights" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'அடிக்கோடுகள்' : 'Highlights'}</a>
 							<a role="menuitem" href="/me/notes" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'குறிப்புகள்' : 'Notes'}</a>
+							<a role="menuitem" href="/me/presentations" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'விளக்கக்காட்சிகள்' : 'Presentations'}</a>
 							<a role="menuitem" href="/me/account" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'கணக்கு' : 'Account'}</a>
 							<button role="menuitem" type="button" onclick={() => { menuOpen = false; session.signOut(); }}>{ui === 'ta' ? 'வெளியேறு' : 'Sign out'}</button>
 						</div>
@@ -185,17 +190,18 @@
 		</div>
 	</div>
 </header>
+{/if}
 
 <SettingsPanel bind:open={settingsOpen} />
 <VersePreview />
 <MobileMenu bind:open={chapterMenu} lang={ui} book={curBook} chapter={curChapter} versions={curVersions} {versionPath} {signinHref} top={headerH} onsettings={() => (settingsOpen = true)} />
 
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -- a tap on the text is a shortcut; the bars also return on scroll up -->
-<main class="page" class:wide class:bleed onclick={onPageTap} style={headerH ? `--header-h: ${headerH}px` : undefined}>
+<main class="page" class:wide class:bleed class:bare onclick={onPageTap} style={headerH ? `--header-h: ${headerH}px` : undefined}>
 	{@render children()}
 </main>
 
-{#if !bleed}
+{#if !bleed && !bare}
 <footer class="site-foot">
 	<a href="/about">{ui === 'ta' ? 'பற்றி' : 'About'}</a>
 	<a href="/licences">{ui === 'ta' ? 'உரிமங்கள்' : 'Licences'}</a>
@@ -232,7 +238,7 @@
 	   header (46px search field + 0.8rem padding each side + border) so the
 	   measured value only fine-tunes it and nothing jumps after hydration. */
 	.page { --header-h: 4.4rem; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
-	.page.wide, .page.bleed { max-width: none; padding: 0; }
+	.page.wide, .page.bleed, .page.bare { max-width: none; padding: 0; }
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
 	.site-foot a:hover { color: var(--accent); }

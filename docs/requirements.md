@@ -34,6 +34,9 @@ Companion document: [design.md](design.md).
 15. [Delivery phases](#15-delivery-phases)
 16. [Open questions and assumptions](#16-open-questions-and-assumptions)
 17. [Places and maps](#17-places-and-maps)
+18. [Dictionary, people and community review](#18-dictionary-people-and-community-review)
+19. [Site analytics](#19-site-analytics)
+20. [Verse presentations](#20-verse-presentations)
 
 Requirement IDs follow the numbering of the original feature list (R-1.x reading, R-2.x stats, R-3.x sources, R-5.x search, R-7.x cross-references, R-8.x formats, R-9.x dual display, R-10.x accounts, R-11.x places, R-14.x maps).
 
@@ -495,3 +498,19 @@ Added 18 Sep 2026 for milestone M8 (design: [feature_analytics.md](feature_analy
 | R-16.5 | `/mod/traffic` shows totals, a daily chart of a chosen measure, and ranked tables for pages, verses, countries, cities, devices, resolutions, operating systems, browsers, referrers and language, for 7, 30 or 90 days or a year, with a live 30-minute panel, change against the previous period, a books grid, parts of the site, search terms, and CSV export. | Must |
 | R-16.6 | Raw events are kept 90 days; daily rollups two years (phase A3). | Should |
 | R-16.7 | The collector adds no more than about 1 kB to pages and never blocks or breaks them. | Must |
+
+---
+
+## 20. Verse presentations
+
+Added 21 Sep 2026 for milestone M10 (design: [feature_presentation.md](feature_presentation.md)). For sermons and Bible studies: slides of verses with notes, shown from a link.
+
+| ID | Requirement | Priority |
+|---|---|---|
+| R-17.1 | A signed-in user creates a presentation of slides. Each slide holds one or more verses (a verse or a range, in any book) and optional notes; a slide may instead carry only a title, or only notes. | Must |
+| R-17.2 | Notes are written in Markdown: headings, bold, italics, lists, quotes, links. They render on the slide, in the editor's preview and never as raw HTML. | Must |
+| R-17.3 | Slides store verse references, never verse text. The words come from the site's content when a slide is shown, in the presentation's default version, a version chosen per verse, or a version the viewer picks; changing a translation changes every slide. | Must |
+| R-17.4 | "Present" opens the slides in a separate tab with a full-screen option. Space and the arrow keys move between slides; keys also toggle notes and full screen and show the key list. Controls hide after a few seconds without the mouse. | Must |
+| R-17.5 | Every presentation has a permanent link that opens the presenter, on any device, without an account. The owner can make it private again. A link never reveals who made the presentation. | Must |
+| R-17.6 | The editor saves automatically; a presenter tab opened from it shows changes as they are made. | Should |
+| R-17.7 | Presentations appear in the user's data export and are deleted with the account. | Must |

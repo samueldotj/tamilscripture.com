@@ -156,6 +156,7 @@
 			<nav class="mine" aria-label={ta ? 'என் பக்கங்கள்' : 'My pages'}>
 				<a href="/me/history" onclick={close}>{ta ? 'வரலாறு' : 'History'}</a>
 				<a href="/me/highlights" onclick={close}>{ta ? 'அடிக்கோடுகள்' : 'Highlights'}</a>
+				<a href="/me/presentations" onclick={close}>{ta ? 'விளக்கக்காட்சிகள்' : 'Presentations'}</a>
 				<a href="/me/notes" onclick={close}>{ta ? 'குறிப்புகள்' : 'Notes'}</a>
 				<button type="button" onclick={() => { close(); session.signOut(); }}>{ta ? 'வெளியேறு' : 'Sign out'}</button>
 			</nav>

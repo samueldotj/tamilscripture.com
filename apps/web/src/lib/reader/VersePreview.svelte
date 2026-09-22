@@ -4,7 +4,7 @@
 	// underneath it. Mouse only; on touch a tap simply follows the link.
 	// Lists that already print the verse text opt out with data-no-preview.
 	import { findBook, findVersion } from '$lib/content/manifest';
-	import { loadChapter } from '$lib/content/load';
+	import { chapterCached, versesText } from '$lib/content/verses';
 	import type { ChapterJson } from '$lib/content/types';
 
 	const DELAY = 500;
@@ -13,7 +13,6 @@
 	let preview = $state<{ label: string; text: string; lang: 'ta' | 'en'; top: number; left: number; above: boolean } | null>(null);
 	let link: HTMLAnchorElement | null = null;
 	let timer = 0;
-	const chapters = new Map<string, Promise<ChapterJson>>();
 
 	/** `/irvtam/john/3/16` or `/irvtam+bsb/john/3/16-18` → what to show; null for any other link. */
 	function parse(a: HTMLAnchorElement) {
@@ -30,25 +29,14 @@
 	async function show(a: HTMLAnchorElement) {
 		const ref = parse(a);
 		if (!ref) return;
-		const key = `${ref.version.code}.${ref.book.code}.${ref.chapter}`;
-		if (!chapters.has(key)) chapters.set(key, loadChapter(fetch, ref.version.code, ref.book.code, ref.chapter));
 		let ch: ChapterJson;
 		try {
-			ch = await chapters.get(key)!;
+			ch = await chapterCached(fetch, ref.version.code, ref.book.code, ref.chapter);
 		} catch {
-			chapters.delete(key);
 			return;
 		}
 		if (link !== a) return; // the mouse moved on while the chapter loaded
-		const parts: string[] = [];
-		for (const b of ch.blocks) {
-			if (b.type !== 'para') continue;
-			for (const s of b.segments) {
-				const n = Number(s.id?.split('.')[2]);
-				if (n >= ref.start && n <= ref.end) parts.push((s.n && ref.end > ref.start ? `${s.n} ` : '') + s.text);
-			}
-		}
-		let text = parts.join(' ').replace(/\s+/g, ' ').trim();
+		let text = versesText(ch, ref.start, ref.end);
 		if (!text) return;
 		if (text.length > MAX) text = text.slice(0, MAX).replace(/\s\S*$/, '') + ' …';
 		const name = ref.version.lang === 'ta' ? ref.book.name_ta : ref.book.name_en;
