@@ -10,7 +10,8 @@ export const prerender = false;
 // address, user agent and user id with the day's salt and stores no raw value.
 // Always answers 204: a beacon has nobody to read an error.
 
-const BOTS = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|headless|lighthouse|pagespeed|preview|monitor|uptime|curl|wget|python|axios|node-fetch|go-http|java\//i;
+// "Cubot" is a phone brand, not a crawler.
+const BOTS = /(?<!cu)bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|headless|lighthouse|pagespeed|preview|monitor|uptime|curl|wget|python|axios|node-fetch|go-http|java\//i;
 
 function device(ua: string): 'mobile' | 'tablet' | 'desktop' {
 	if (/iPad|Tablet|PlayBook|Silk|(Android(?!.*Mobile))/i.test(ua)) return 'tablet';
@@ -66,19 +67,21 @@ function str(v: unknown, max: number): string | null {
 }
 
 export const POST: RequestHandler = async ({ request, getClientAddress, url, fetch }) => {
-	const done = new Response(null, { status: 204 });
+	// Always 204, but the x-analytics header says what happened, so a failure
+	// is visible when testing: stored, skipped:<why> or error:<status>.
+	const done = (outcome: string) => new Response(null, { status: 204, headers: { 'x-analytics': outcome } });
 	const ua = request.headers.get('user-agent') ?? '';
-	if (!ua || BOTS.test(ua)) return done;
+	if (!ua || BOTS.test(ua)) return done('skipped:bot');
 	// A prefetch is not a visit.
 	const purpose = request.headers.get('sec-purpose') ?? request.headers.get('purpose') ?? '';
-	if (/prefetch|prerender/i.test(purpose)) return done;
+	if (/prefetch|prerender/i.test(purpose)) return done('skipped:prefetch');
 	let body: Record<string, unknown>;
 	try {
 		const text = await request.text();
-		if (text.length > 2000) return done;
+		if (text.length > 2000) return done('skipped:size');
 		body = JSON.parse(text);
 	} catch {
-		return done;
+		return done('skipped:body');
 	}
 	// The referring site's host, only when it is another site.
 	let referrer: string | null = null;
@@ -100,7 +103,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 	// Load testing (scripts/analytics-load.mjs) exercises everything but the
 	// limiter and the write, and only on a development server.
 	const dryRun = dev && request.headers.get('x-analytics-dry-run') === '1';
-	if (!dryRun && limited(ip || ua)) return done;
+	if (!dryRun && limited(ip || ua)) return done('skipped:limited');
 	const args = {
 		p_kind: body.k === 'verse' ? 'verse' : 'view',
 		p_path: str(body.p, 200),
@@ -121,16 +124,21 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 		p_book: str(body.b, 3),
 		p_chapter: typeof body.c === 'number' && Number.isInteger(body.c) ? body.c : null
 	};
-	if (!args.p_path || dryRun) return done;
+	if (!args.p_path) return done('skipped:path');
+	if (dryRun) return done('dry-run');
 	try {
 		const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/track`, {
 			method: 'POST',
 			headers: { apikey: SUPABASE_ANON_KEY, authorization: `Bearer ${SUPABASE_ANON_KEY}`, 'content-type': 'application/json' },
 			body: JSON.stringify(args)
 		});
-		if (!res.ok) console.error('track failed', res.status, await res.text());
+		if (!res.ok) {
+			console.error('track failed', res.status, await res.text());
+			return done(`error:${res.status}`);
+		}
 	} catch (e) {
 		console.error('track failed', e);
+		return done('error:fetch');
 	}
-	return done;
+	return done('stored');
 };
