@@ -5,7 +5,6 @@
 	// fetched only when this component mounts, that is when the tab is opened.
 	import { onMount } from 'svelte';
 	import { ATTRIBUTION, baseLayers, baseSources, loadMapLibre, paintBase, readPalette } from '$lib/atlas/basemap';
-	import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 	import type { ChapterMentions } from '$lib/entities/types';
 	import { placeName } from '$lib/entities/load';
 
@@ -74,7 +73,10 @@
 			try {
 				// The stylesheet rides with the engine, so neither reaches a reader who
 				// never opens this tab.
+				// So does the worker's URL: imported at the top of the file, the bundler
+				// put it in the engine's chunk and every chapter page downloaded MapLibre.
 				await import('maplibre-gl/dist/maplibre-gl.css');
+				const { default: workerUrl } = await import('maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url');
 				maplibre = await loadMapLibre(workerUrl);
 				const pal = readPalette();
 				map = new maplibre.Map({

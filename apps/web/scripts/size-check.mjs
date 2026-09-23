@@ -1,7 +1,8 @@
 // Client JavaScript budgets that size-limit cannot express: SvelteKit names
-// chunks by hash, so the atlas map engine (MapLibre) is found by content and
-// the moderation pages by the build manifest, each budgeted on its own, and
-// everything else — what readers can load — must fit the site budget.
+// chunks by hash, so the reader route, the moderation pages (both from the
+// build manifest) and the atlas map engine (MapLibre, found by content) are
+// each budgeted on their own, and everything else — what readers can load —
+// must fit the site budget.
 //   node scripts/size-check.mjs        (after `pnpm build`)
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -10,9 +11,15 @@ import { gzipSync } from 'node:zlib';
 const toPath = (u) => new URL(u, import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const client = toPath('../.svelte-kit/output/client/');
 const root = join(client, '_app/immutable/');
+// gzip, what a chapter page downloads before any lazy import: the client entry,
+// the root layout, the chapter route and every chunk they import statically.
+// Until 23 Sep 2026 this was a size-limit entry summing every route's node file
+// and no shared chunk, so it grew with each new page yet missed MapLibre, which
+// a static import of its worker URL had pulled into every chapter page.
+const READER_LIMIT = 120 * 1024;
 // gzip, every chunk a reader can load except the map engine, summed over all
-// pages; it grows with each new page, so the per-page limits in .size-limit
-// (reader route 120 kB) are the guard on what one visit downloads. Raised from
+// pages; it grows with each new page, so READER_LIMIT is the guard on what one
+// visit downloads. Raised from
 // 200 kB to 240 kB on 20 Sep 2026 when the concordance pages were added, and
 // to 260 kB on 22 Sep 2026 for the presentation pages (editor, presenter, stats).
 const SITE_LIMIT = 260 * 1024;
@@ -65,6 +72,42 @@ function staffFiles() {
 	return new Set([...staff].map((k) => join(client, manifest[k].file)));
 }
 
+/** Output files a chapter page loads up front: the static import closure of the
+ *  client entry, the root layout and the chapter route. */
+function readerFiles() {
+	const manifestPath = join(client, '.vite/manifest.json');
+	const nodesDir = toPath('../.svelte-kit/generated/client-optimized/nodes/');
+	if (!existsSync(manifestPath) || !existsSync(nodesDir)) return new Set();
+	const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+	const roots = [];
+	let chapter = false;
+	for (const [key, entry] of Object.entries(manifest)) {
+		const m = /nodes\/(\d+)\.js$/.exec(key);
+		if (!m) {
+			if (entry.isEntry) roots.push(key);
+			continue;
+		}
+		const src = readFileSync(join(nodesDir, `${m[1]}.js`), 'utf8');
+		if (m[1] === '0') roots.push(key);
+		else if (/\[chapter=int\]\/\+page\.svelte/.test(src)) {
+			roots.push(key);
+			chapter = true;
+		}
+	}
+	if (!chapter) return new Set();
+	const seen = new Set();
+	const visit = (key) => {
+		if (seen.has(key)) return;
+		seen.add(key);
+		for (const dep of manifest[key].imports ?? []) visit(dep);
+	};
+	roots.forEach(visit);
+	return new Set([...seen].map((k) => join(client, manifest[k].file)));
+}
+
+const readerSet = readerFiles();
+let reader = 0;
+for (const file of readerSet) reader += gzipSync(readFileSync(file)).length;
 const staffSet = staffFiles();
 let site = 0;
 let map = 0;
@@ -83,10 +126,18 @@ for (const file of walk(root)) {
 	}
 }
 const kb = (n) => `${(n / 1024).toFixed(1)} kB`;
+console.log(`reader route (gzip, loaded before any lazy import): ${kb(reader)} / ${kb(READER_LIMIT)} in ${readerSet.size} files`);
 console.log(`site JavaScript (gzip, excluding map engine and /mod): ${kb(site)} / ${kb(SITE_LIMIT)}`);
 console.log(`moderation pages (gzip, /mod only): ${kb(staff)} / ${kb(STAFF_LIMIT)} in ${staffSet.size} chunks`);
 console.log(`map engine (gzip): ${kb(map)} / ${kb(MAP_LIMIT)}${mapFiles.length ? ` in ${mapFiles.join(', ')}` : ' (chunk not found)'}`);
 let ok = true;
+if (!readerSet.size) {
+	console.error('FAIL: chapter route not found; has the manifest layout changed?');
+	ok = false;
+} else if (reader > READER_LIMIT) {
+	console.error('FAIL: reader route exceeds its budget');
+	ok = false;
+}
 if (site > SITE_LIMIT) {
 	console.error('FAIL: site JavaScript exceeds its budget');
 	ok = false;

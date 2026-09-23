@@ -1,14 +1,5 @@
 [
   {
-    "name": "Reader route JavaScript excluding lazy chunks (gzip)",
-    "path": [
-      ".svelte-kit/output/client/_app/immutable/entry/*.js",
-      ".svelte-kit/output/client/_app/immutable/nodes/*.js"
-    ],
-    "limit": "120 kB",
-    "gzip": true
-  },
-  {
     "name": "Reference parser wasm",
     "path": "../../packages/bible-wasm/pkg/bible_wasm_bg.wasm",
     "limit": "45 kB",

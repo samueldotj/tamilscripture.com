@@ -478,7 +478,7 @@ Each budget from the requirements maps to a specific mechanism, and each mechani
 | Home LCP 300 ms desktop, 1.2 s mobile | Prerendered, no data fetch, inline critical CSS, one preloaded font subset, hero text not image. | Lighthouse CI on every PR, fails over budget |
 | Verse visible ≤ 500 ms | Edge cache hit, text in HTML, personal fetches deferred until after paint. | Playwright trace asserts text node visible < 500 ms on throttled profile |
 | Search ≤ 1 s | Single RPC, GIN indexes, 60 s CDN cache, results limited to 50 with paging. | `pg_stat_statements` p95 alert at 200 ms; synthetic probe |
-| JS ≤ 120 kB gzipped on reader route | Svelte compiled output, no UI framework runtime, WebAssembly and supabase-js loaded lazily. | `size-limit` in CI |
+| JS ≤ 120 kB gzipped on reader route | Svelte compiled output, no UI framework runtime, WebAssembly, supabase-js and MapLibre loaded lazily. | `scripts/size-check.mjs` in CI: the static import closure of the entry, root layout and chapter route |
 | CLS < 0.05 | Font `size-adjust` fallback metrics, fixed-height action bar slots, counts render into reserved space. | Lighthouse CI |
 | Tamil font | Mukta Malar (display and scripture; Noto Sans Tamil and Noto Serif Tamil selectable) subset to corpus glyphs with fontTools at build, unhinted, preloaded, `font-display: optional`. Latin strings use Noto Sans. | Build fails if the regular subset exceeds 80 kB |
 
