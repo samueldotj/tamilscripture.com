@@ -1,5 +1,5 @@
 <script lang="ts">
-	import RefText from '$lib/refs/RefText.svelte';
+	import Markdown from '$lib/md/Markdown.svelte';
 	import { onMount } from 'svelte';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { allNotes, type Note } from '$lib/personal/repo';
@@ -41,7 +41,7 @@
 			<li>
 				<a class="ref" href={href(n)} lang={ta ? 'ta' : 'en'}>{label(n)}</a>
 				<time datetime={n.updated_at}>{new Date(n.updated_at).toLocaleDateString(ta ? 'ta-IN' : 'en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</time>
-				<p lang={ta ? 'ta' : 'en'}><RefText text={n.body} /></p>
+				<div class="body"><Markdown source={n.body} version={settings.value.version} lang={ta ? 'ta' : 'en'} /></div>
 			</li>
 		{/each}
 	</ul>
@@ -56,6 +56,7 @@
 	li { padding: 0.8rem 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
 	.ref { font-family: var(--tamil); text-decoration: none; font-weight: 600; }
 	time { color: var(--muted); font-size: 0.85rem; }
-	li p { grid-column: 1 / -1; margin: 0; white-space: pre-wrap; font-family: var(--tamil); line-height: 1.7; }
+	/* Notes are Markdown (R-10.11): bold, italics, lists, links. */
+	.body { grid-column: 1 / -1; font-family: var(--tamil); line-height: 1.7; }
 	.muted { color: var(--muted); }
 </style>

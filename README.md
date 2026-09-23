@@ -202,7 +202,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 5.6 | Verse preview on hover: resting the mouse on any verse link for half a second shows the verse underneath it (cross-references, entity pages, dictionary articles) | R-7.5 | ☑ |
 | 5.7 | Import anonymous highlights and notes at first sign-in | R-10.3 | ☐ |
 | 5.8 | "Continue reading" shortcut on the home page: the passage last opened in this browser (any reader), else the newest history entry of a signed-in reader | R-10.6 | ☑ |
-| 5.9 | Markdown in notes | R-10.11 | ☐ |
+| 5.9 | Markdown in notes (bold, italics, lists, links, verse references) on `/me/notes`, with a Preview in the note sheet; the in-house parser used by presentations | R-10.11 | ☑ |
 | 5.10 | Sub-verse highlights stored as per-version offsets | R-10.15 | ☐ |
 | 5.11 | "Most highlighted this month" list on the home page | R-2.5 | ☐ |
 | 5.12 | Add a version by config only; first additional Indian language | R-3.6 | ☐ |

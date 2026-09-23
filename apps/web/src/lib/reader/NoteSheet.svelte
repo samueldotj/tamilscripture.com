@@ -1,5 +1,7 @@
 <script lang="ts">
-	// Bottom sheet for writing a note on the selected verses. Autosaves.
+	// Bottom sheet for writing a note on the selected verses. Autosaves. Notes are
+	// Markdown (R-10.11); Preview shows them as they read on the notes page.
+	import Markdown from '$lib/md/Markdown.svelte';
 	import type { Note } from '$lib/personal/repo';
 	import { saveNote, deleteNote } from '$lib/personal/repo';
 
@@ -32,6 +34,7 @@
 	// svelte-ignore state_referenced_locally
 	let id = $state<string | undefined>(existing?.id);
 	let status = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
+	let preview = $state(false);
 	let timer: ReturnType<typeof setTimeout> | undefined;
 
 	function schedule() {
@@ -73,10 +76,16 @@
 		</span>
 		<button type="button" class="close" onclick={close} aria-label={ta ? 'மூடு' : 'Close'}>✕</button>
 	</header>
-	<!-- svelte-ignore a11y_autofocus -->
-	<textarea class="field" bind:value={body} oninput={schedule} maxlength="5000" rows="6" lang={lang} placeholder={ta ? 'உங்கள் குறிப்பு…' : 'Your note…'} autofocus></textarea>
+	{#if preview}
+		<div class="preview field">{#if body.trim()}<Markdown source={body} {lang} />{:else}<span class="empty">{ta ? 'எதுவும் இல்லை' : 'Nothing yet'}</span>{/if}</div>
+	{:else}
+		<!-- svelte-ignore a11y_autofocus -->
+		<textarea class="field" bind:value={body} oninput={schedule} maxlength="5000" rows="6" lang={lang} placeholder={ta ? 'உங்கள் குறிப்பு…' : 'Your note…'} autofocus></textarea>
+	{/if}
 	<footer>
 		<span class="count">{body.length} / 5000</span>
+		<span class="hint" aria-hidden={preview}>**{ta ? 'தடித்த' : 'bold'}** *{ta ? 'சாய்வு' : 'italic'}* - {ta ? 'பட்டியல்' : 'list'} [{ta ? 'இணைப்பு' : 'link'}](url)</span>
+		<button type="button" class="chip" aria-pressed={preview} onclick={() => (preview = !preview)}>{preview ? (ta ? 'திருத்து' : 'Edit') : (ta ? 'முன்னோட்டம்' : 'Preview')}</button>
 		{#if id}<button type="button" class="chip danger" onclick={async () => { body = ''; await save(); onclose(); }}>{ta ? 'நீக்கு' : 'Delete'}</button>{/if}
 	</footer>
 </div>
@@ -90,6 +99,11 @@
 	.status { color: var(--muted); font-size: 0.85rem; margin-left: auto; }
 	.close { flex: none; width: 40px; height: 40px; border-radius: 999px; border: 0; background: var(--surface-2); color: var(--ink-2); font-size: 0.95rem; cursor: pointer; }
 	textarea.field { line-height: 1.7; resize: vertical; background: var(--bg); border-radius: 14px; }
-	footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.6rem; font-size: 0.8rem; color: var(--muted); }
+	footer { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; margin-top: 0.6rem; font-size: 0.8rem; color: var(--muted); }
+	.hint { flex: 1 1 12rem; font-family: var(--sans); opacity: 0.85; }
+	.preview { min-height: 9.6rem; max-height: 50vh; overflow: auto; padding: 0.7rem 0.9rem; border: 1px solid var(--line); background: var(--bg); border-radius: 14px; line-height: 1.7; }
+	.preview :global(.md[lang='ta']) { font-family: var(--tamil); }
+	.preview .empty { color: var(--muted); }
+	footer .chip { min-height: 40px; }
 	.danger { color: var(--amber); min-height: 40px; }
 </style>
