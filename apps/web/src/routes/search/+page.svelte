@@ -3,11 +3,14 @@
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 	import { entityHref, entityKind, entityLabelTa, queryTokens } from '$lib/search/api';
 	import { settings } from '$lib/settings/store.svelte';
+	import { addRecent } from '$lib/search/recent';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
 	let q = $state('');
 	$effect(() => { q = data.q; });
+	// Every search that reaches this page, however it was started, joins the recent list.
+	$effect(() => { if (data.q) addRecent(data.q); });
 
 	function submit(e: Event) {
 		e.preventDefault();

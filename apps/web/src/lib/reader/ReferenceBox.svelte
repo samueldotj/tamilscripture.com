@@ -3,6 +3,7 @@
 	import { ready, referencePath, suggestBooks } from '$lib/ref/client';
 	import type { BookSuggestion } from '@tamilscripture/bible-wasm';
 	import { entityHref, entityKind, entityLabelTa, searchEntities, type EntityHit } from '$lib/search/api';
+	import { addRecent, clearRecent, matchRecent } from '$lib/search/recent';
 
 	let { versionPath, lang = 'ta' }: { versionPath: string; lang?: 'ta' | 'en' } = $props();
 
@@ -10,14 +11,29 @@
 	let loaded = $state(false);
 	let books = $state<BookSuggestion[]>([]);
 	let places = $state<EntityHit[]>([]);
+	/** Recent searches (R-5.7): the latest on an empty box, matches while typing. */
+	let recent = $state<string[]>([]);
 	let active = $state(-1);
 	let notFound = $state(false);
 	let input: HTMLInputElement;
 	let placeTimer: ReturnType<typeof setTimeout> | undefined;
 	let placeSeq = 0;
 
-	type Item = { kind: 'book'; book: BookSuggestion } | { kind: 'place'; place: EntityHit };
-	const items = $derived<Item[]>([...books.map((b) => ({ kind: 'book' as const, book: b })), ...places.map((p) => ({ kind: 'place' as const, place: p }))]);
+	type Item = { kind: 'recent'; q: string } | { kind: 'book'; book: BookSuggestion } | { kind: 'place'; place: EntityHit };
+	const items = $derived<Item[]>([
+		...recent.map((q) => ({ kind: 'recent' as const, q })),
+		...books.map((b) => ({ kind: 'book' as const, book: b })),
+		...places.map((p) => ({ kind: 'place' as const, place: p }))
+	]);
+	function hide() {
+		books = [];
+		places = [];
+		recent = [];
+	}
+	function onFocus() {
+		ensure();
+		if (!value.trim()) recent = matchRecent('', 6);
+	}
 
 	async function ensure() {
 		if (!loaded) {
@@ -29,6 +45,7 @@
 	async function onInput() {
 		notFound = false;
 		const text = value;
+		recent = matchRecent(text, text.trim() ? 3 : 6);
 		await ensure();
 		// Suggest books only while the user is still typing letters.
 		const bookPart = text.replace(/^\s*[1-3]\s*/, '').split(/\d/)[0].trim();
@@ -50,6 +67,7 @@
 	async function submit(text = value) {
 		const trimmed = text.trim();
 		if (!trimmed) return;
+		addRecent(trimmed);
 		await ensure();
 		// A Strong's number ("G26", "H430") opens the concordance for it.
 		if (/^[HG]\d{1,4}[A-Za-z]?$/i.test(trimmed)) {
@@ -57,16 +75,14 @@
 			const first = res?.ok ? ((await res.json()).rows?.[0] as { href: string } | undefined) : undefined;
 			if (first) {
 				value = '';
-				books = [];
-				places = [];
+				hide();
 				input.blur();
 				await goto(first.href);
 				return;
 			}
 		}
 		const path = referencePath(trimmed, versionPath);
-		books = [];
-		places = [];
+		hide();
 		input.blur();
 		if (path) {
 			value = '';
@@ -79,15 +95,16 @@
 	}
 
 	function pick(item: Item) {
-		if (item.kind === 'book') {
+		if (item.kind === 'recent') {
+			value = item.q;
+			submit(item.q);
+		} else if (item.kind === 'book') {
 			value = (lang === 'ta' ? item.book.name_ta : item.book.name_en) + ' ';
-			books = [];
-			places = [];
+			hide();
 			input.focus();
 		} else {
 			value = '';
-			books = [];
-			places = [];
+			hide();
 			input.blur();
 			goto(entityHref(item.place));
 		}
@@ -105,16 +122,12 @@
 			if (active >= 0) pick(items[active]);
 			else submit();
 		} else if (e.key === 'Escape') {
-			books = [];
-			places = [];
+			hide();
 			input.blur();
 		}
 	}
 	function close() {
-		setTimeout(() => {
-			books = [];
-			places = [];
-		}, 150);
+		setTimeout(hide, 150);
 	}
 </script>
 
@@ -131,7 +144,7 @@
 		aria-label={lang === 'ta' ? 'வசனம், பெயர் அல்லது சொல் தேடு' : 'Go to a reference, a name, or search a word'}
 		aria-invalid={notFound}
 		placeholder={lang === 'ta' ? 'யோவான் 3:16 · புத்தகம், பெயர், சொல்' : 'John 3:16 · book, name, word'}
-		onfocus={ensure}
+		onfocus={onFocus}
 		oninput={onInput}
 		onkeydown={onKey}
 		onblur={close}
@@ -139,10 +152,19 @@
 	<kbd class="kbd" aria-hidden="true">Ctrl K</kbd>
 	{#if items.length}
 		<ul class="suggest" role="listbox">
-			{#each items as item, i (item.kind === 'book' ? `b-${item.book.code}` : `p-${item.place.id}`)}
+			{#if recent.length}
+				<li class="group" role="presentation">
+					<span lang={lang}>{lang === 'ta' ? 'சமீபத்தியவை' : 'Recent'}</span>
+					<button type="button" class="clear" onmousedown={(e) => { e.preventDefault(); clearRecent(); recent = []; }} lang={lang}>{lang === 'ta' ? 'அழி' : 'Clear'}</button>
+				</li>
+			{/if}
+			{#each items as item, i (item.kind === 'recent' ? `r-${item.q}` : item.kind === 'book' ? `b-${item.book.code}` : `p-${item.place.id}`)}
 				<li role="option" aria-selected={i === active} class:active={i === active}>
 					<button type="button" onmousedown={(e) => { e.preventDefault(); pick(item); }}>
-						{#if item.kind === 'book'}
+						{#if item.kind === 'recent'}
+							<svg class="pin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+							<span class="q">{item.q}</span>
+						{:else if item.kind === 'book'}
 							<span lang="ta">{item.book.name_ta}</span> <span class="en">{item.book.name_en}</span>
 						{:else}
 							{@const ta = entityLabelTa(item.place)}
@@ -177,6 +199,10 @@
 	.suggest .en { color: var(--muted); font-size: 0.85em; }
 	.suggest [lang='ta'] { font-family: var(--tamil); font-weight: 600; }
 	.suggest .pin { color: var(--accent); align-self: center; flex: none; }
+	.suggest .q { font-family: var(--tamil), var(--sans); }
+	.suggest .group { display: flex; align-items: center; justify-content: space-between; padding: 0.25rem 0.75rem 0.1rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+	.suggest .group [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.02em; text-transform: none; font-weight: 600; }
+	.suggest .group .clear { width: auto; padding: 0.2rem 0.4rem; font-size: 0.75rem; font-weight: 600; color: var(--accent); text-transform: none; letter-spacing: 0; }
 	.suggest .kind { margin-left: auto; font-size: 0.7rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0 0.45rem; font-weight: 500; }
 	.hint { position: absolute; margin: 4px 0 0 1rem; font-size: 0.8rem; color: var(--amber); }
 	@media (max-width: 720px) {
