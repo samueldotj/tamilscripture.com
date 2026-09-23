@@ -3,7 +3,7 @@
 	// `floating` is the pill over the text (phones, tablets); `panel` lays the
 	// same controls out inside the desktop context column.
 	import type { ChapterJson, Book } from '$lib/content/types';
-	import { chapterUrl } from '$lib/content/manifest';
+	import { chapterUrl, verseUrl } from '$lib/content/manifest';
 	import { COLORS, type HighlightColor } from '$lib/personal/repo';
 
 	let {
@@ -60,9 +60,10 @@
 	const contiguous = $derived(numbers.length > 0 && numbers[numbers.length - 1] - numbers[0] === numbers.length - 1);
 	const bookName = $derived(ta ? book.name_ta : book.name_en);
 	const label = $derived(`${bookName} ${chapter.chapter}:${rangeText}`);
-	const url = $derived(
-		`https://www.tamilscripture.com${chapterUrl(versionPath, book, chapter.chapter, contiguous ? (numbers.length === 1 ? `${numbers[0]}` : `${numbers[0]}-${numbers[numbers.length - 1]}`) : `${numbers[0]}`)}`
-	);
+	const verses = $derived(contiguous ? (numbers.length === 1 ? `${numbers[0]}` : `${numbers[0]}-${numbers[numbers.length - 1]}`) : `${numbers[0]}`);
+	const url = $derived(`https://www.tamilscripture.com${chapterUrl(versionPath, book, chapter.chapter, verses)}`);
+	/** The single-verse page: the selection alone, large, in Tamil and English. */
+	const largePath = $derived(verseUrl(versionPath, book, chapter.chapter, verses));
 
 	function selectedText(): string {
 		const out: string[] = [];
@@ -78,10 +79,18 @@
 		try { await navigator.clipboard.writeText(selectedText()); flash(ta ? 'நகலெடுக்கப்பட்டது' : 'Copied'); }
 		catch { flash(ta ? 'நகலெடுக்க முடியவில்லை' : 'Could not copy'); }
 	}
-	async function share() {
-		const data = { title: label, text: selectedText(), url };
+	// Share opens a small menu: the verse in its chapter, or the large single-verse page.
+	let shareOpen = $state(false);
+	let shareBox = $state<HTMLElement>();
+	async function share(large = false) {
+		shareOpen = false;
+		const link = large ? `https://www.tamilscripture.com${largePath}` : url;
+		const data = large ? { title: label, text: label, url: link } : { title: label, text: selectedText(), url };
 		if (navigator.share) { try { await navigator.share(data); } catch { /* cancelled */ } }
-		else { try { await navigator.clipboard.writeText(url); flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied'); } catch { flash(url); } }
+		else { try { await navigator.clipboard.writeText(link); flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied'); } catch { flash(link); } }
+	}
+	function closeShare(e: Event) {
+		if (shareOpen && shareBox && !shareBox.contains(e.target as Node)) shareOpen = false;
 	}
 	function flash(msg: string) { toast = msg; setTimeout(() => (toast = ''), 1800); }
 	const colorNames: Record<HighlightColor, [string, string]> = {
@@ -89,6 +98,8 @@
 	};
 	const signinHref = $derived(`/signin?next=${encodeURIComponent(location.pathname)}`);
 </script>
+
+<svelte:window onpointerdown={closeShare} onkeydown={(e) => { if (e.key === 'Escape') shareOpen = false; }} />
 
 {#if selected.size}
 	<div class="bar" class:card={variant === 'floating'} class:floating={variant === 'floating'} class:panel={variant === 'panel'} role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
@@ -110,7 +121,22 @@
 			<button type="button" class="chip" onclick={() => onoriginal?.()} lang="ta" title={ta ? 'எபிரெய / கிரேக்கச் சொற்கள்' : 'Hebrew / Greek words'}>மூலம்</button>
 		{/if}
 		<button type="button" class="chip" onclick={copy}>{ta ? 'நகல்' : 'Copy'}</button>
-		<button type="button" class="chip" onclick={share}>{ta ? 'பகிர்' : 'Share'}</button>
+		<span class="share" bind:this={shareBox}>
+			<button type="button" class="chip" aria-haspopup="menu" aria-expanded={shareOpen} onclick={() => (shareOpen = !shareOpen)}>{ta ? 'பகிர்' : 'Share'} <span aria-hidden="true">▾</span></button>
+			{#if shareOpen}
+				<div class="menu card" role="menu" lang={lang}>
+					<button type="button" role="menuitem" onclick={() => share()}>
+						{ta ? 'அதிகாரத்தில் வசனம்' : 'Verse in its chapter'}
+						<small>{ta ? 'சுற்றியுள்ள வசனங்களுடன்' : 'With the verses around it'}</small>
+					</button>
+					<button type="button" role="menuitem" onclick={() => share(true)}>
+						{ta ? 'பெரிய எழுத்தில்' : 'Large text'}
+						<small>{ta ? 'இந்த வசனம் மட்டும், தமிழும் ஆங்கிலமும்' : 'Just this verse, in Tamil and English'}</small>
+					</button>
+					<a role="menuitem" href={largePath} onclick={() => (shareOpen = false)}>{ta ? 'பெரிய எழுத்தில் திற' : 'Open large text'} <span aria-hidden="true">↗</span></a>
+				</div>
+			{/if}
+		</span>
 		<button type="button" class="ghost" onclick={onclear} aria-label={ta ? 'தெரிவை நீக்கு' : 'Clear selection'}>✕</button>
 		{#if toast}<span class="toast" role="status">{toast}</span>{/if}
 	</div>
@@ -135,5 +161,17 @@
 	.panel .swatch { width: 32px; height: 32px; min-height: 32px; }
 	.swatch.yellow { background: var(--hl-yellow); } .swatch.green { background: var(--hl-green); } .swatch.blue { background: var(--hl-blue); } .swatch.pink { background: var(--hl-pink); }
 	.swatch.on { border-color: var(--ink); }
+	.share { position: relative; display: inline-flex; }
+	.panel .share { flex: 1 1 auto; }
+	/* The floating pill is centred on screen; centring the menu over it keeps it on a phone's screen. */
+	.floating .share { position: static; }
+	.floating .menu { left: 50%; right: auto; transform: translateX(-50%); min-width: 0; width: min(18rem, calc(100vw - 1.5rem)); }
+	.panel .share > .chip { width: 100%; }
+	.menu { position: absolute; bottom: calc(100% + 0.5rem); right: 0; z-index: 20; min-width: 15rem; padding: 0.35rem; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+	.menu button, .menu a { display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem; min-height: 44px; padding: 0.55rem 0.75rem; border: 0; border-radius: var(--r-s); background: none; color: var(--ink); font: inherit; font-weight: 600; text-align: left; text-decoration: none; cursor: pointer; }
+	.menu a { flex-direction: row; align-items: center; gap: 0.35rem; color: var(--accent); border-top: 1px solid var(--line); border-radius: 0 0 var(--r-s) var(--r-s); }
+	.menu button:hover, .menu a:hover { background: var(--surface-2); }
+	.menu small { font-weight: 400; font-size: 0.8rem; color: var(--muted); }
+	.menu[lang='ta'] { font-family: var(--tamil); }
 	.toast { position: absolute; bottom: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: var(--r-s); white-space: nowrap; }
 </style>

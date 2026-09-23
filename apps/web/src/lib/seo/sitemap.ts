@@ -1,5 +1,6 @@
 // The site's public URLs, shared by the XML sitemaps and /sitemap.txt so the two never drift.
-import { chapterUrl, manifest } from '$lib/content/manifest';
+import { chapterUrl, manifest, verseUrl } from '$lib/content/manifest';
+import { loadChapter } from '$lib/content/load';
 import type { VersionMeta } from '$lib/content/types';
 import { loadArticleIndex, loadJourneys, loadPeopleIndex, loadPlaceIndex, loadStrongsIndex } from '$lib/entities/load';
 
@@ -21,6 +22,32 @@ export function chapterPaths(version: VersionMeta): string[] {
 		for (let c = 1; c <= book.chapters; c++) paths.push(chapterUrl(vp, book, c));
 	}
 	return paths;
+}
+
+/** Every single-verse page of one version (/irvtam/john/3.16), one per verse the text has.
+ *  Reads each chapter's JSON, so it runs at build time (the sitemap is prerendered). */
+export async function versePaths(fetch: Fetch, version: VersionMeta): Promise<string[]> {
+	const vp = version.code.toLowerCase();
+	const books = manifest.books.filter((b) => version.books.includes(b.code));
+	const perBook = await Promise.all(
+		books.map(async (book) => {
+			const paths: string[] = [];
+			for (let c = 1; c <= book.chapters; c++) {
+				const ch = await loadChapter(fetch, version.code, book.code, c);
+				const verses = new Set<number>();
+				for (const b of ch.blocks) {
+					if (b.type !== 'para') continue;
+					for (const seg of b.segments) {
+						const n = Number(seg.id?.split('.')[2]);
+						if (n) verses.add(n);
+					}
+				}
+				for (const v of [...verses].sort((a, b) => a - b)) paths.push(verseUrl(vp, book, c, `${v}`));
+			}
+			return paths;
+		})
+	);
+	return perBook.flat();
 }
 
 /** Atlas, journeys, places, people and dictionary articles, from the content indexes. */

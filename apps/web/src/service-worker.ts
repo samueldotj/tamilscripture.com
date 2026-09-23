@@ -91,7 +91,7 @@ sw.addEventListener('fetch', (event) => {
 	const isReaderPage =
 		request.mode === 'navigate' &&
 		!url.pathname.startsWith('/present/') &&
-		/^\/[a-z]+(\+[a-z]+)?\/[a-z0-9-]+(\/\d+(\/[\d-]+)?)?$/.test(url.pathname);
+		/^\/[a-z]+(\+[a-z]+)?\/[a-z0-9-]+(\/\d+(\/[\d-]+|\.[\d-]+)?)?$/.test(url.pathname);
 	if (isReaderPage) {
 		event.respondWith(
 			fetch(request)

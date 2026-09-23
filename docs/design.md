@@ -602,7 +602,7 @@ flowchart LR
 
 ### ADR-15 · One canonical page per passage: the default Tamil version's
 - **Options:** Every version's chapter and verse page canonical to itself, all in the sitemaps · one canonical per passage, the default Tamil version, with the other versions as alternates.
-- **Chosen:** One canonical (22 Sep 2026). Searches for "John 1:1" were landing on the BSB page with an English title and snippet; the site's purpose is the Tamil text. Every version's chapter, verse and book page names the IRVTAM page as `rel="canonical"`, carries `hreflang` links (ta and x-default → IRVTAM; no `en` link, since Google ignores an alternate whose own canonical is another page), a title that names the passage in both scripts, a description that is the verse itself, and shows the verse's words first on a verse page. Sitemaps list only the canonical version's chapters.
+- **Chosen:** One canonical (22 Sep 2026). Searches for "John 1:1" were landing on the BSB page with an English title and snippet; the site's purpose is the Tamil text. Every version's chapter, verse, single-verse (`/{version}/{book}/{chapter}.{verse}`) and book page names the IRVTAM page as `rel="canonical"`, carries `hreflang` links (ta and x-default → IRVTAM; no `en` link, since Google ignores an alternate whose own canonical is another page), a title that names the passage in both scripts, a description that is the verse itself, and shows the verse's words first on a verse page. Sitemaps list only the canonical version's chapters.
 - **Consequence:** English and TCV pages stay readable and linkable but drop out of the index in favour of the Tamil page; ranking signals gather on one URL per passage. Revisit if English-only queries matter.
 
 ## 13. Risks and mitigations

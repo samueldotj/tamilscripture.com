@@ -141,6 +141,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 1.24 | Accessibility pass: `lang` attributes, focus states, 44 px targets, WCAG 2.2 AA contrast | requirements §12 | ☐ |
 | 1.25 | Production deploy on `www.tamilscripture.com` ☑; Vercel Analytics ☑; Sentry ☐ (needs DSN); uptime probe ☐ | design §11 | ◧ |
 | 1.26 | Phone header, design 10A: the three header rows become one 56px auto-hiding bar (back, chapter pill, search); book/chapter/version menu with language, sign-in and settings in its footer; reader thumb bar with floating text size and a progress hairline while reading | design 10A, R-1.10 | ☑ |
+| 1.27 | Single-verse page `/irvtam/john/3.16` (and `3.16-18`; `3_16` redirects): the passage alone in large type, Tamil and English, with a link to the whole chapter; offered from the action bar's Share menu as "Large text"; listed in `/sitemap-verses.xml` | R-1.16 | ☑ |
 
 ### M2 · Study
 

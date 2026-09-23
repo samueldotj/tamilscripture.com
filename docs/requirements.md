@@ -113,7 +113,7 @@ The reader is the core of the product. It must work without an account, on a slo
 | R-1.4 | Show breadcrumbs above the text: Bible › Testament › Book › Chapter › Verse. Each crumb is a link. Breadcrumbs are emitted as structured data for search engines. | Must |
 | R-1.5 | Previous-chapter and next-chapter controls at the top and bottom of the text. On touch screens, horizontal swipe also moves between chapters. | Must |
 | R-1.6 | Keyboard shortcuts on desktop: `←` `→` chapters, `/` focuses the reference or search box, `Esc` closes panels. | Could |
-| R-1.7 | Tapping a verse number selects the verse and opens a small action bar: copy, share link, highlight, note, cross-references. Tapping more verse numbers extends the selection. | Must |
+| R-1.7 | Tapping a verse number selects the verse and opens a small action bar: copy, share link (the verse in its chapter, or the large single-verse page), highlight, note, cross-references. Tapping more verse numbers extends the selection. | Must |
 
 ### Paratext toggles
 
@@ -135,6 +135,7 @@ URLs are part of the interface. A reader should be able to type or read one alou
 | `/{version}/{book}/{chapter}` | `https://www.tamilscripture.com/irvtam/john/3` | Whole chapter |
 | `/{version}/{book}/{chapter}/{verse}` | `/irvtam/john/3/16` | Chapter scrolled to and highlighting one verse |
 | `/{version}/{book}/{chapter}/{from}-{to}` | `/irvtam/john/3/16-18` | Verse range |
+| `/{version}/{book}/{chapter}.{verse}` | `/irvtam/john/3.16`, `/irvtam/john/3.16-18` | Single-verse page: the verse or range alone, large, in Tamil and English (R-1.16); `3_16` redirects to `3.16` |
 | `/{v1}+{v2}/{book}/{chapter}` | `/irvtam+bsb/john/3` | Dual version display |
 | `/{book}/{chapter}` | `/john/3` | Uses the reader's default version, otherwise IRVTAM |
 | `/{ref}` shorthand | `/jn3.16`, `/John%203:16` | Parsed like the reference box, then 302 to canonical |
@@ -149,6 +150,7 @@ URLs are part of the interface. A reader should be able to type or read one alou
 | R-1.13 | Book slugs follow a published list (for example `gen`, `genesis`, `1co`, `1-corinthians`, `song-of-songs`). Common abbreviations resolve. The slug list is shared with the reference parser. | Must |
 | R-1.14 | Display options (format, paratext toggles) do not appear in the URL. They come from user settings, so a shared link opens the same passage in the recipient's own preferred layout. | Must |
 | R-1.15 | Shared links produce a rich preview: Open Graph title with the Tamil reference and version, and a description containing the first verse of the range. | Should |
+| R-1.16 | A single-verse page shows a verse or range alone in large type, in a Tamil and an English version (the URL's version paired with the default of the other language, or the two the URL names), with a link to the whole chapter. The action bar's Share menu offers it as "Large text" beside the verse in its chapter. | Should |
 
 ---
 
@@ -339,7 +341,7 @@ Budgets are measured, not aspirational. Each is checked in CI with Lighthouse an
 
 ### Search engine visibility
 - Every chapter and verse page is server-rendered HTML with title, description, canonical, hreflang, breadcrumb and Open Graph tags. Every page shares one default Open Graph image (`/og-default.png`).
-- One canonical page per passage: the default Tamil version's. Every other version's copy of a chapter or verse names that page as its canonical, so a search for "John 1:1" lands on யோவான் 1:1 in Tamil (ADR-15). Sitemaps list the canonical version's chapters and the entity pages.
+- One canonical page per passage: the default Tamil version's. Every other version's copy of a chapter or verse names that page as its canonical, so a search for "John 1:1" lands on யோவான் 1:1 in Tamil (ADR-15). Sitemaps list the canonical version's chapters, its single-verse pages (`/sitemap-verses.xml`, ~31,100 URLs, built at deploy) and the entity pages.
 - Titles name the passage in Tamil and in English ("யோவான் 1:1 – John 1:1 in Tamil"); the description is the verse itself, and a verse page shows the verse's words first, before the chapter.
 
 ### Privacy and security

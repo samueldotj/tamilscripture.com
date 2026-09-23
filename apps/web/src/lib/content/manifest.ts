@@ -69,6 +69,11 @@ export function contentUrl(path: string): string {
 }
 
 /** Parse a verse or range param like `16` or `16-18`. */
+/** The single-verse page: `/irvtam/john/3.16`, the verses alone in large type. */
+export function verseUrl(versionPath: string, book: Book, chapter: number, verses: string): string {
+	return `/${versionPath.toLowerCase()}/${book.slug}/${chapter}.${verses}`;
+}
+
 export function parseRange(verses: string | undefined): { start: number; end: number } | null {
 	if (!verses) return null;
 	const [a, b] = verses.split('-').map(Number);
