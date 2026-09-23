@@ -62,7 +62,8 @@
 		}
 		return [...map.entries()].sort((a, b) => a[0] - b[0]);
 	});
-	const tokens = $derived(queryTokens(data.q));
+	// Emphasis follows what was searched: the Tamil reading of a romanised query.
+	const tokens = $derived(queryTokens(data.shown));
 
 	// Split verse text into plain and matched runs for emphasis.
 	function mark(text: string): { t: string; hit: boolean }[] {
@@ -206,9 +207,21 @@
 			<span lang={ta ? 'ta' : 'en'}>{ta ? 'முடிவுகள்' : 'Results'}</span> · {data.result.total.toLocaleString()} {ta ? 'வசனங்கள்' : 'verses'}
 			{#if data.widened}<span class="badge" lang={ta ? 'ta' : 'en'}>{ta ? `${data.primary.short}-இல் இல்லை · எல்லா பதிப்புகளிலும்` : `none in ${data.primary.short} · all versions`}</span>{/if}
 			{#if data.result.exact}<span class="badge">{ta ? 'சரியான சொற்றொடர்' : 'exact phrase'}</span>{/if}
+			{#if data.fromRoman}<span class="badge" lang="ta">{data.q} → {data.shown}</span>{/if}
 			{#if data.range}<a class="badge range" href={searchHref({ range: null })} lang={ta ? 'ta' : 'en'} title={ta ? 'முழு வேதாகமத்திலும் தேடு' : 'Search the whole Bible'}>{rangeLabel(data.range, ta)} <span aria-hidden="true">✕</span></a>{/if}
 			<span class="took">{data.result.took_ms} ms</span>
 		</p>
+		{#if data.fromRoman}
+			<p class="roman" lang={ta ? 'ta' : 'en'}>
+				{ta ? `“${data.q}” என்பதைத் தமிழில் “${data.shown}” எனத் தேடினோம்.` : `Searched “${data.q}” as Tamil: “${data.shown}”.`}
+				<a href={`/search?${new URLSearchParams({ q: data.q, v: data.primary.code, scope: data.scope, lit: '1', ...rangeParams(data.range) })}`}>{ta ? `“${data.q}” என்றே தேடு` : `Search “${data.q}” as typed`}</a>
+			</p>
+		{:else if data.romanOffer}
+			<p class="roman" lang={ta ? 'ta' : 'en'}>
+				{ta ? 'தமிழ்ச் சொல்லா?' : 'Meant as Tamil?'}
+				<a href={searchHref({ q: data.romanOffer })} lang="ta">{data.romanOffer}</a>
+			</p>
+		{/if}
 		{#if groups.length}
 			<nav class="bookjump" aria-label={ta ? 'புத்தகங்கள்' : 'Books'}>
 				{#each groups as [ord, hits] (ord)}
@@ -261,6 +274,9 @@
 	.within select[lang='ta'] { font-family: var(--tamil); }
 	.within input { width: 4.2rem; min-height: 42px; padding: 0.3rem 0.5rem; }
 	.within .chip { min-height: 42px; }
+	.roman { margin: -0.3rem 0 1rem; font-size: 0.9rem; color: var(--muted); }
+	.roman[lang='ta'], .roman a[lang='ta'] { font-family: var(--tamil); }
+	.roman a { margin-left: 0.4rem; font-weight: 600; }
 	.badge.range { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 	.group h2 .only { margin-left: 0.6rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
 	.group h2 .only[lang='ta'] { font-family: var(--tamil); }

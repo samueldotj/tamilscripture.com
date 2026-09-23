@@ -198,7 +198,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 5.2 | Light, dark and system theme | R-1.11 | ☑ |
 | 5.3 | Autocomplete for book names in both scripts (header box, since 1.10) and recent searches: the last 8 searches and references kept in this browser, the latest six on focusing the empty box, matches while typing, a Clear button | R-5.7 | ☑ |
 | 5.4 | Restrict search to testament, book or chapter range: "Within" picker and chapter fields on `/search` (`in=ot\|nt\|{book}`, `ch=3-5`), "Search only here" on each book of the results; `search_verses` takes book and chapter bounds (pgTAP `search_filters`) | R-5.8 | ☑ |
-| 5.5 | Romanised Tamil search input | R-5.4 stretch | ☐ |
+| 5.5 | Romanised Tamil search input: with a Tamil primary version, a query in Latin letters that finds nothing as typed ("anbu") is searched as Tamil (அன்பு) with a "search as typed" link; one that does ("god") keeps its results and offers the Tamil reading (`lib/search/romanised.ts`) | R-5.4 stretch | ☑ |
 | 5.6 | Verse preview on hover: resting the mouse on any verse link for half a second shows the verse underneath it (cross-references, entity pages, dictionary articles) | R-7.5 | ☑ |
 | 5.7 | Import anonymous highlights and notes at first sign-in | R-10.3 | ☐ |
 | 5.8 | "Continue reading" shortcut on the home page: the passage last opened in this browser (any reader), else the newest history entry of a signed-in reader | R-10.6 | ☑ |
