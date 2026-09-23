@@ -24,6 +24,7 @@
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
 	import { track } from '$lib/analytics/track';
+	import { saveLastRead } from '$lib/personal/last-read';
 	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, type Highlight, type HighlightColor, type Note } from '$lib/personal/repo';
 
 	let { data }: { data: ChapterPageData } = $props();
@@ -364,6 +365,7 @@
 		userHighlights = [];
 		userNotes = [];
 		noteOpen = null;
+		saveLastRead({ versions: versionPath, book: data.book.code, chapter: data.chapter });
 		if (!session.ready || !session.signedIn) return;
 		loadPersonal();
 		recordVisit(data.book.code, data.chapter, primary.code, data.range).catch(() => {});
