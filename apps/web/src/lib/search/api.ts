@@ -20,9 +20,16 @@ export async function search(
 	fetchFn: typeof fetch,
 	q: string,
 	versions: string[],
-	offset = 0
+	offset = 0,
+	range: { bookMin: number; bookMax: number; chMin?: number; chMax?: number } | null = null
 ): Promise<SearchResponse> {
 	const params = new URLSearchParams({ q, v: versions.join(','), offset: String(offset) });
+	if (range) {
+		params.set('bmin', String(range.bookMin));
+		params.set('bmax', String(range.bookMax));
+		if (range.chMin) params.set('cmin', String(range.chMin));
+		if (range.chMax) params.set('cmax', String(range.chMax));
+	}
 	const res = await fetchFn(`/api/search?${params}`);
 	if (!res.ok) throw new Error(`search failed: ${res.status}`);
 	return res.json();

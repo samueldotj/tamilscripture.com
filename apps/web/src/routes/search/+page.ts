@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import { search, commonSearches, searchEntities } from '$lib/search/api';
 import { DEFAULT_VERSION, findVersion, manifest, matchBooks } from '$lib/content/manifest';
 import type { BrowseRow } from '../api/dictionary/browse/+server';
+import { parseSearchRange } from '$lib/search/range';
 
 export const prerender = false;
 export const ssr = true;
@@ -17,13 +18,14 @@ export const load: PageLoad = async ({ url, fetch }) => {
 				? manifest.versions.filter((v) => v.lang === primary.lang).map((v) => v.code)
 				: [primary.code];
 	const offset = Number(url.searchParams.get('offset') ?? 0) || 0;
+	const range = parseSearchRange(url.searchParams.get('in'), url.searchParams.get('ch'));
 
 	// A book of that name is the likeliest thing meant, so it heads the page.
 	const books = q.length >= 2 ? matchBooks(q) : [];
 
 	if (q.length < 2) {
 		const common = await commonSearches(fetch, primary.lang).catch(() => []);
-		return { q, scope, primary, versions, offset, result: null, entities: [], books, words: [] as BrowseRow[], common, error: null, widened: false };
+		return { q, scope, primary, versions, offset, range, result: null, entities: [], books, words: [] as BrowseRow[], common, error: null, widened: false };
 	}
 	// Entity cards ride alongside the first page of verse hits.
 	const entitiesPromise = offset === 0 ? searchEntities(fetch, q, 6).catch(() => []) : Promise.resolve([]);
@@ -36,22 +38,22 @@ export const load: PageLoad = async ({ url, fetch }) => {
 					.catch(() => [])
 			: Promise.resolve([]);
 	try {
-		let [result, entities] = await Promise.all([search(fetch, q, versions, offset), entitiesPromise]);
+		let [result, entities] = await Promise.all([search(fetch, q, versions, offset, range), entitiesPromise]);
 		const words = await wordsPromise;
 		// An English word against a Tamil version (or the other way round) finds
 		// nothing in that version alone; look in every version rather than stop.
 		let widened = false;
 		if (result.total === 0 && scope === 'version') {
 			const all = manifest.versions.map((v) => v.code);
-			const wider = await search(fetch, q, all, offset).catch(() => null);
+			const wider = await search(fetch, q, all, offset, range).catch(() => null);
 			if (wider && wider.total > 0) {
 				result = wider;
 				widened = true;
 			}
 		}
-		return { q, scope, primary, versions, offset, result, entities, books, words, common: [], error: null, widened };
+		return { q, scope, primary, versions, offset, range, result, entities, books, words, common: [], error: null, widened };
 	} catch (e) {
 		const entities = await entitiesPromise;
-		return { q, scope, primary, versions, offset, result: null, entities, books, words: await wordsPromise, common: [], error: (e as Error).message, widened: false };
+		return { q, scope, primary, versions, offset, range, result: null, entities, books, words: await wordsPromise, common: [], error: (e as Error).message, widened: false };
 	}
 };

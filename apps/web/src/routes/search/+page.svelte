@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
+	import { chapterUrl, findBook, findVersion, manifest } from '$lib/content/manifest';
+	import { rangeLabel, rangeParams, type SearchRange } from '$lib/search/range';
 	import { entityHref, entityKind, entityLabelTa, queryTokens } from '$lib/search/api';
 	import { settings } from '$lib/settings/store.svelte';
 	import { addRecent } from '$lib/search/recent';
@@ -12,14 +13,44 @@
 	// Every search that reaches this page, however it was started, joins the recent list.
 	$effect(() => { if (data.q) addRecent(data.q); });
 
+	/** A search URL that keeps the current query, version, scope and range unless told otherwise. */
+	function searchHref(over: { q?: string; scope?: string; range?: SearchRange | null; offset?: number } = {}) {
+		const range = over.range === undefined ? data.range : over.range;
+		const p = new URLSearchParams({ q: over.q ?? data.q, v: data.primary.code, scope: over.scope ?? data.scope, ...rangeParams(range) });
+		if (over.offset) p.set('offset', String(over.offset));
+		return `/search?${p}`;
+	}
 	function submit(e: Event) {
 		e.preventDefault();
 		if (q.trim().length < 2) return;
-		goto(`/search?${new URLSearchParams({ q: q.trim(), v: data.primary.code, scope: data.scope })}`);
+		goto(searchHref({ q: q.trim() }));
 	}
 	function setScope(scope: string) {
-		goto(`/search?${new URLSearchParams({ q: data.q, v: data.primary.code, scope })}`);
+		goto(searchHref({ scope }));
 	}
+
+	// ---- Search in (R-5.8): testament, book, chapters ----
+	function setIn(key: string) {
+		const p = new URLSearchParams({ q: data.q, v: data.primary.code, scope: data.scope });
+		if (key) p.set('in', key);
+		goto(`/search?${p}`);
+	}
+	let chFrom = $state('');
+	let chTo = $state('');
+	$effect(() => {
+		chFrom = data.range?.chMin ? String(data.range.chMin) : '';
+		chTo = data.range?.chMax && data.range.chMax !== data.range.chMin ? String(data.range.chMax) : '';
+	});
+	function setChapters(e: Event) {
+		e.preventDefault();
+		if (!data.range?.book) return;
+		const p = new URLSearchParams({ q: data.q, v: data.primary.code, scope: data.scope, in: data.range.key });
+		const a = Number(chFrom), b = Number(chTo || chFrom);
+		if (a >= 1) p.set('ch', b > a ? `${a}-${b}` : `${a}`);
+		goto(`/search?${p}`);
+	}
+	const otBooks = manifest.books.filter((b) => b.testament === 'OT');
+	const ntBooks = manifest.books.filter((b) => b.testament === 'NT');
 
 	// Group hits by book in canonical order.
 	const groups = $derived.by(() => {
@@ -73,6 +104,32 @@
 		<button type="button" role="radio" aria-checked={data.scope === 'version'} class:on={data.scope === 'version'} onclick={() => setScope('version')}>{data.primary.short}</button>
 		<button type="button" role="radio" aria-checked={data.scope === 'lang'} class:on={data.scope === 'lang'} onclick={() => setScope('lang')}>{data.primary.lang === 'ta' ? (ta ? 'எல்லா தமிழ்' : 'All Tamil') : (ta ? 'எல்லா ஆங்கிலம்' : 'All English')}</button>
 		<button type="button" role="radio" aria-checked={data.scope === 'all'} class:on={data.scope === 'all'} onclick={() => setScope('all')}>{ta ? 'எல்லாம்' : 'All versions'}</button>
+	</div>
+
+	<div class="within">
+		<label>
+			<span lang={ta ? 'ta' : 'en'}>{ta ? 'எதில்' : 'Within'}</span>
+			<select value={data.range?.key ?? ''} onchange={(e) => setIn(e.currentTarget.value)} lang={ta ? 'ta' : 'en'}>
+				<option value="">{ta ? 'முழு வேதாகமம்' : 'Whole Bible'}</option>
+				<option value="ot">{ta ? 'பழைய ஏற்பாடு' : 'Old Testament'}</option>
+				<option value="nt">{ta ? 'புதிய ஏற்பாடு' : 'New Testament'}</option>
+				<optgroup label={ta ? 'பழைய ஏற்பாடு' : 'Old Testament'}>
+					{#each otBooks as b (b.code)}<option value={b.slug}>{ta ? b.name_ta : b.name_en}</option>{/each}
+				</optgroup>
+				<optgroup label={ta ? 'புதிய ஏற்பாடு' : 'New Testament'}>
+					{#each ntBooks as b (b.code)}<option value={b.slug}>{ta ? b.name_ta : b.name_en}</option>{/each}
+				</optgroup>
+			</select>
+		</label>
+		{#if data.range?.book}
+			<form class="chapters" onsubmit={setChapters}>
+				<span lang={ta ? 'ta' : 'en'}>{ta ? 'அதிகாரம்' : 'Chapters'}</span>
+				<input type="number" inputmode="numeric" min="1" max={data.range.book.chapters} bind:value={chFrom} aria-label={ta ? 'முதல் அதிகாரம்' : 'From chapter'} placeholder="1" />
+				<span aria-hidden="true">–</span>
+				<input type="number" inputmode="numeric" min="1" max={data.range.book.chapters} bind:value={chTo} aria-label={ta ? 'கடைசி அதிகாரம்' : 'To chapter'} placeholder={String(data.range.book.chapters)} />
+				<button type="submit" class="chip">{ta ? 'சரி' : 'Apply'}</button>
+			</form>
+		{/if}
 	</div>
 
 	{#if data.books?.length}
@@ -138,7 +195,7 @@
 				<h2 class="kicker"><span lang="ta">அடிக்கடி தேடப்படுவை</span> · Common searches</h2>
 				<ul>
 					{#each data.common as c (c)}
-						<li><a class="chip round" href={`/search?${new URLSearchParams({ q: c, v: data.primary.code })}`} lang={data.primary.lang}>{c}</a></li>
+						<li><a class="chip round" href={searchHref({ q: c })} lang={data.primary.lang}>{c}</a></li>
 					{/each}
 				</ul>
 			</section>
@@ -149,6 +206,7 @@
 			<span lang={ta ? 'ta' : 'en'}>{ta ? 'முடிவுகள்' : 'Results'}</span> · {data.result.total.toLocaleString()} {ta ? 'வசனங்கள்' : 'verses'}
 			{#if data.widened}<span class="badge" lang={ta ? 'ta' : 'en'}>{ta ? `${data.primary.short}-இல் இல்லை · எல்லா பதிப்புகளிலும்` : `none in ${data.primary.short} · all versions`}</span>{/if}
 			{#if data.result.exact}<span class="badge">{ta ? 'சரியான சொற்றொடர்' : 'exact phrase'}</span>{/if}
+			{#if data.range}<a class="badge range" href={searchHref({ range: null })} lang={ta ? 'ta' : 'en'} title={ta ? 'முழு வேதாகமத்திலும் தேடு' : 'Search the whole Bible'}>{rangeLabel(data.range, ta)} <span aria-hidden="true">✕</span></a>{/if}
 			<span class="took">{data.result.took_ms} ms</span>
 		</p>
 		{#if groups.length}
@@ -162,7 +220,10 @@
 		{#each groups as [ord, hits] (ord)}
 			{@const book = findBook(hits[0].verse_id.split('.')[0])!}
 			<section class="group" id="b{ord}">
-				<h2 lang={data.primary.lang}>{data.primary.lang === 'ta' ? book.name_ta : book.name_en}</h2>
+				<h2 lang={data.primary.lang}>
+					{data.primary.lang === 'ta' ? book.name_ta : book.name_en}
+					{#if !data.range?.book}<a class="only" href={searchHref({ range: { key: book.slug, book, bookMin: book.order, bookMax: book.order } })} lang={ta ? 'ta' : 'en'}>{ta ? 'இதில் மட்டும் தேடு' : 'Search only here'}</a>{/if}
+				</h2>
 				<ol>
 					{#each hits as hit (hit.version + hit.verse_id)}
 						{@const r = refOf(hit)}
@@ -175,7 +236,7 @@
 			</section>
 		{/each}
 		{#if data.result.total > data.offset + pageSize}
-			<a class="chip more" href={`/search?${new URLSearchParams({ q: data.q, v: data.primary.code, scope: data.scope, offset: String(data.offset + pageSize) })}`}>{ta ? 'மேலும்' : 'More'} ›</a>
+			<a class="chip more" href={searchHref({ offset: data.offset + pageSize })}>{ta ? 'மேலும்' : 'More'} ›</a>
 		{/if}
 	{/if}
 </div>
@@ -193,6 +254,16 @@
 	.scope { display: inline-flex; gap: 0.3rem; margin: 1rem 0 1.4rem; background: var(--surface-3); border-radius: 14px; padding: 4px; }
 	.scope button { padding: 0.5rem 0.9rem; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; font-family: var(--tamil); font-weight: 600; min-height: 42px; }
 	.scope button.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(28, 26, 24, 0.1); }
+	.within { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; margin: -0.6rem 0 1.4rem; font-size: 0.9rem; color: var(--muted); }
+	.within label, .within .chapters { display: inline-flex; align-items: center; gap: 0.5rem; }
+	.within [lang='ta'] { font-family: var(--tamil); }
+	.within select { min-height: 42px; max-width: 16rem; padding: 0.3rem 0.6rem; border: var(--bw) solid var(--line); border-radius: var(--r-s); background: var(--surface); color: var(--ink); font: inherit; }
+	.within select[lang='ta'] { font-family: var(--tamil); }
+	.within input { width: 4.2rem; min-height: 42px; padding: 0.3rem 0.5rem; }
+	.within .chip { min-height: 42px; }
+	.badge.range { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+	.group h2 .only { margin-left: 0.6rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
+	.group h2 .only[lang='ta'] { font-family: var(--tamil); }
 	.summary { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin: 0 0 0.8rem; }
 	.summary [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
 	.badge { font-size: 0.7rem; border: var(--bw) solid var(--line-2); border-radius: 999px; padding: 0.1rem 0.6rem; text-transform: none; letter-spacing: 0; font-weight: 600; }
