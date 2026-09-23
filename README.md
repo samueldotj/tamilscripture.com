@@ -204,7 +204,7 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 5.8 | "Continue reading" shortcut on the home page: the passage last opened in this browser (any reader), else the newest history entry of a signed-in reader | R-10.6 | ☑ |
 | 5.9 | Markdown in notes (bold, italics, lists, links, verse references) on `/me/notes`, with a Preview in the note sheet; the in-house parser used by presentations | R-10.11 | ☑ |
 | 5.10 | Sub-verse highlights stored as per-version offsets | R-10.15 | ☐ |
-| 5.11 | "Most highlighted this month" list on the home page | R-2.5 | ☐ |
+| 5.11 | "Most highlighted this month" list on the home page: the top ten verses from `verse_highlight_month` (last 30 days, opted-in readers, three or more, refreshed hourly; pgTAP `highlights_this_month`), with their text in the reader's version; hidden until a verse qualifies | R-2.5 | ☑ |
 | 5.12 | Add a version by config only; first additional Indian language | R-3.6 | ☐ |
 
 ### M6 · Places and maps

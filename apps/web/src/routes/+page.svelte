@@ -5,6 +5,7 @@
 	import { session } from '$lib/supabase/session.svelte';
 	import { loadLastRead } from '$lib/personal/last-read';
 	import type { Book, VersionMeta } from '$lib/content/types';
+	import type { TopHighlight } from './api/top-highlights/+server';
 
 	const ot = manifest.books.filter((b) => b.testament === 'OT');
 	const nt = manifest.books.filter((b) => b.testament === 'NT');
@@ -25,7 +26,26 @@
 	onMount(() => {
 		const local = loadLastRead();
 		if (local) resume = toResume(local.versions, local.book, local.chapter);
+		loadTop();
 	});
+
+	// "Most highlighted this month" (R-2.5): the community's ten, with their text
+	// in the reader's version. Hidden until at least one verse has three readers.
+	let top = $state<(TopHighlight & { book_: Book; text: string })[]>([]);
+	const topVersion = $derived(findVersion(version.split('+')[0]) ?? manifest.versions[0]);
+	async function loadTop() {
+		try {
+			const rows = (await (await fetch('/api/top-highlights')).json()) as TopHighlight[];
+			if (!Array.isArray(rows) || !rows.length) return;
+			const v = topVersion;
+			const ids = rows.map((r) => `${r.book}.${r.chapter}.${r.verse}`);
+			const texts = (await (await fetch(`/api/verses?${new URLSearchParams({ v: v.code, ids: ids.join(',') })}`)).json()) as Record<string, string>;
+			top = rows.flatMap((r, i) => {
+				const book_ = findBook(r.book);
+				return book_ ? [{ ...r, book_, text: texts[ids[i]] ?? '' }] : [];
+			});
+		} catch { /* offline, or nothing yet */ }
+	}
 	$effect(() => {
 		if (resume || !session.ready || !session.signedIn) return;
 		import('$lib/personal/repo')
@@ -111,6 +131,23 @@
 	</ul>
 </div>
 
+{#if top.length}
+	<section class="top" aria-labelledby="top-h">
+		<h2 id="top-h" class="kicker"><span lang="ta">இந்த மாதம் அதிகம் அடிக்கோடிட்டவை</span> · Most highlighted this month</h2>
+		<ol>
+			{#each top as t (`${t.book}.${t.chapter}.${t.verse}`)}
+				<li>
+					<a href={chapterUrl(version.split('+')[0], t.book_, t.chapter, `${t.verse}`)}>
+						<span class="ref" lang={topVersion.lang}>{topVersion.lang === 'ta' ? t.book_.name_ta : t.book_.name_en} {t.chapter}:{t.verse}</span>
+						<span class="users" title={ta ? `${t.users} வாசகர்கள்` : `${t.users} readers`}>◉ {t.users}</span>
+						{#if t.text}<span class="text" lang={topVersion.lang}>{t.text}</span>{/if}
+					</a>
+				</li>
+			{/each}
+		</ol>
+	</section>
+{/if}
+
 <style>
 	.hero { margin: 0.5rem 0 1.5rem; }
 	h1 { font-family: var(--tamil); font-size: 2.2rem; font-weight: 600; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
@@ -136,6 +173,15 @@
 	.book .name[lang='ta'] { font-family: var(--tamil); }
 	.book .meta { font-size: 0.76rem; color: var(--muted); }
 	.book .meta[lang='ta'] { font-family: var(--tamil); }
+	.top { margin: 2.2rem 0 0; max-width: 44rem; }
+	.top h2 [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.02em; text-transform: none; }
+	.top ol { list-style: none; padding: 0; margin: 0.7rem 0 0; display: grid; gap: 0.5rem; }
+	.top a { display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 0.8rem; padding: 0.7rem 1rem; border: var(--bw) solid var(--line); border-radius: 14px; background: var(--surface); color: inherit; text-decoration: none; }
+	.top a:hover { border-color: var(--accent); }
+	.top .ref { font-weight: 600; }
+	.top .ref[lang='ta'], .top .text[lang='ta'] { font-family: var(--tamil); }
+	.top .users { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+	.top .text { grid-column: 1 / -1; color: var(--ink-2); font-size: 0.92rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 	@media (max-width: 480px) {
 		.books { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
 		.book { padding: 0.75rem 0.9rem; }
