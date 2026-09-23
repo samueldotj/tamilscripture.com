@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>{ta ? 'பற்றி' : 'About'} · Tamil Scripture</title>
+	<title>பற்றி · About · Tamil Scripture</title>
 	<meta name="description" content="About tamilscripture.com: why it exists, who is behind it, and how it treats your privacy." />
 	<link rel="canonical" href="https://www.tamilscripture.com/about" />
 </svelte:head>

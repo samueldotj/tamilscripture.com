@@ -128,6 +128,14 @@
 
 <svelte:window onkeydown={onKey} onscroll={onScroll} />
 
+<!-- One preview image for every shared link; pages add their own title and description. -->
+<svelte:head>
+	<meta property="og:image" content="https://www.tamilscripture.com/og-default.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
+
 {#if !bare}
 <header class="site" class:hidden={chrome.hidden} class:searching={searchOpen} bind:clientHeight={headerH}>
 	<div class="bar">

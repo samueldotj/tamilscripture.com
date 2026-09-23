@@ -15,6 +15,7 @@
 <svelte:head>
 	<title>{ta ? 'வெப்ப வரைபடம்' : 'Heatmap'} · Tamil Scripture</title>
 	<meta name="description" content="Which chapters of the Bible readers highlight most, across the whole community." />
+	<meta name="robots" content="noindex" />
 </svelte:head>
 
 <h1>{ta ? 'சமூக அடிக்கோட்டு வெப்ப வரைபடம்' : 'Community highlight heatmap'}</h1>

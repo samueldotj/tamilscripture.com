@@ -26,7 +26,7 @@
 </script>
 
 <svelte:head>
-	<title>{a.title} · {ta ? 'அகராதி' : 'Dictionary'} · Tamil Scripture</title>
+	<title>{a.title} · அகராதி · Dictionary · Tamil Scripture</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={`https://www.tamilscripture.com/dictionary/${a.id}`} />
 	<meta property="og:title" content={a.title} />

@@ -36,11 +36,20 @@
 </script>
 
 <svelte:head>
-	<title>{title}{qualifier} · {ta ? 'இடம்' : 'Place'} · Tamil Scripture</title>
+	<title>{labelTa ? `${labelTa} – ` : ''}{p.name_en}{qualifier} · இடம் · Place · Tamil Scripture</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={`https://www.tamilscripture.com/place/${p.id}`} />
 	<meta property="og:title" content={`${title}${qualifier}`} />
 	<meta property="og:description" content={description} />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Place',
+		name: p.name_en,
+		...(labelTa ? { alternateName: labelTa } : {}),
+		description,
+		url: `https://www.tamilscripture.com/place/${p.id}`,
+		...(p.geo ? { geo: { '@type': 'GeoCoordinates', latitude: p.geo.lat, longitude: p.geo.lon } } : {})
+	})}</script>`}
 </svelte:head>
 
 <article class="place">

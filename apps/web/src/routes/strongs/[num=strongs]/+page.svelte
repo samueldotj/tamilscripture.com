@@ -112,7 +112,7 @@
 </script>
 
 <svelte:head>
-	<title>{e.s} · {e.lemma} · {ta ? 'ஒத்த வசன அகராதி' : 'Concordance'} · Tamil Scripture</title>
+	<title>{e.s} · {e.lemma} · ஒத்த வசன அகராதி · Concordance · Tamil Scripture</title>
 	<meta name="description" content={`${e.s} ${e.lemma} (${e.translit}) “${e.gloss}”: ${verses.length} ${ta ? 'வசனங்கள்' : 'verses'}.`} />
 	<link rel="canonical" href="https://www.tamilscripture.com/strongs/{e.s}" />
 </svelte:head>

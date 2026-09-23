@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { chapterUrl } from '$lib/content/manifest';
+	import { chapterUrl, DEFAULT_VERSION, findVersion } from '$lib/content/manifest';
 
 	let { data } = $props();
 	const primary = $derived(data.versions[0]);
@@ -7,12 +7,24 @@
 	const bookName = $derived(isTamil ? data.book.name_ta : data.book.name_en);
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));
 	const chapters = $derived(Array.from({ length: data.book.chapters }, (_, i) => i + 1));
+	// Like chapter pages (ADR-15), every version's book page names the default
+	// (Tamil) version's as canonical when that version has the book.
+	const seoVersion = $derived(
+		[findVersion(DEFAULT_VERSION), ...data.versions].find((v) => v && v.books.includes(data.book.code)) ?? primary
+	);
+	const seoUrl = $derived(`https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book)}`);
+	const description = $derived(`${bookName}: ${data.book.chapters} ${isTamil ? 'அதிகாரங்கள்' : 'chapters'} · ${primary.name}`);
 </script>
 
 <svelte:head>
 	<title>{bookName} · {primary.short} · Tamil Scripture</title>
-	<link rel="canonical" href={`https://www.tamilscripture.com${data.canonical}`} />
-	<meta name="description" content={`${bookName}: ${data.book.chapters} ${isTamil ? 'அதிகாரங்கள்' : 'chapters'} · ${primary.name}`} />
+	<link rel="canonical" href={seoUrl} />
+	<meta name="description" content={description} />
+	<meta property="og:title" content={`${data.book.name_ta} – ${data.book.name_en}`} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={seoUrl} />
+	<meta property="og:locale" content={isTamil ? 'ta_IN' : 'en_IN'} />
 </svelte:head>
 
 <div class="book">

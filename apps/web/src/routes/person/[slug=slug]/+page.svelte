@@ -41,11 +41,19 @@
 </script>
 
 <svelte:head>
-	<title>{title}{qualifier} · {ta ? 'நபர்' : 'Person'} · Tamil Scripture</title>
+	<title>{labelTa ? `${labelTa} – ` : ''}{p.name_en}{qualifier} · நபர் · Person · Tamil Scripture</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={`https://www.tamilscripture.com/person/${p.id}`} />
 	<meta property="og:title" content={`${title}${qualifier}`} />
 	<meta property="og:description" content={description} />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: p.name_en,
+		...(labelTa ? { alternateName: labelTa } : {}),
+		description,
+		url: `https://www.tamilscripture.com/person/${p.id}`
+	})}</script>`}
 </svelte:head>
 
 <article class="person">

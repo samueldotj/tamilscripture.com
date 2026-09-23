@@ -14,6 +14,26 @@
 	<title>Tamil Scripture · தமிழ் வேதாகமம்</title>
 	<meta name="description" content="Read the Bible in Tamil (IRV, TCV) and English (BSB, WEB, KJV). Fast, free, shareable links to every verse." />
 	<link rel="canonical" href="https://www.tamilscripture.com/" />
+	<meta property="og:title" content="Tamil Scripture · தமிழ் வேதாகமம்" />
+	<meta property="og:description" content="Read the Bible in Tamil (IRV, TCV) and English (BSB, WEB, KJV). Fast, free, shareable links to every verse." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.tamilscripture.com/" />
+	<meta property="og:site_name" content="Tamil Scripture · தமிழ் வேதாகமம்" />
+	<meta property="og:locale" content="ta_IN" />
+	<!-- WebSite names the site in search results; SearchAction describes /search. -->
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Tamil Scripture',
+		alternateName: ['தமிழ் வேதாகமம்', 'TamilScripture.com'],
+		url: 'https://www.tamilscripture.com/',
+		inLanguage: ['ta', 'en'],
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: { '@type': 'EntryPoint', urlTemplate: 'https://www.tamilscripture.com/search?q={search_term_string}' },
+			'query-input': 'required name=search_term_string'
+		}
+	})}</script>`}
 </svelte:head>
 
 <section class="hero">

@@ -34,6 +34,7 @@
 <svelte:head>
 	<title>{name} · {ta ? 'வெப்ப வரைபடம்' : 'Heatmap'} · Tamil Scripture</title>
 	<meta name="description" content="Verses in {data.book.name_en} that readers highlight most." />
+	<meta name="robots" content="noindex" />
 </svelte:head>
 
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/heatmap">{ta ? 'வெப்ப வரைபடம்' : 'Heatmap'}</a> <span aria-hidden="true">›</span> <span aria-current="page" lang={ta ? 'ta' : 'en'}>{name}</span></nav>

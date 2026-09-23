@@ -15,7 +15,7 @@
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
 	import type { ChapterMentions } from '$lib/entities/types';
-	import { chapterUrl, DEFAULT_ENGLISH, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
+	import { chapterUrl, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
 	import { versesText } from '$lib/content/verses';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
@@ -53,12 +53,6 @@
 		[findVersion(DEFAULT_VERSION), ...data.versions].find((v) => v && v.books.includes(data.book.code)) ?? primary
 	);
 	const seoUrl = $derived(`https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter, rangeLabel || undefined)}`);
-	const enVersion = $derived(findVersion(DEFAULT_ENGLISH));
-	const enUrl = $derived(
-		enVersion && enVersion.books.includes(data.book.code)
-			? `https://www.tamilscripture.com${chapterUrl(enVersion.code.toLowerCase(), data.book, data.chapter, rangeLabel || undefined)}`
-			: null
-	);
 	/** The selected verses' words, shown first on a verse page and used as its description. */
 	const leadText = $derived(data.range ? versesText(data.chapters[0], data.range.start, data.range.end) : '');
 	const description = $derived.by(() => {
@@ -447,7 +441,6 @@
 	<meta name="description" content={description} />
 	<link rel="canonical" href={seoUrl} />
 	<link rel="alternate" hreflang="ta" href={seoUrl} />
-	{#if enUrl}<link rel="alternate" hreflang="en" href={enUrl} />{/if}
 	<link rel="alternate" hreflang="x-default" href={seoUrl} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
@@ -462,7 +455,10 @@
 			itemListElement: [
 				{ '@type': 'ListItem', position: 1, name: primary.lang === 'ta' ? 'தமிழ் வேதாகமம்' : 'Tamil Bible', item: 'https://www.tamilscripture.com/' },
 				{ '@type': 'ListItem', position: 2, name: bookName, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book)}` },
-				{ '@type': 'ListItem', position: 3, name: `${bookName} ${data.chapter}`, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter)}` }
+				{ '@type': 'ListItem', position: 3, name: `${bookName} ${data.chapter}`, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter)}` },
+				// The Testament crumb has no page of its own, and every crumb but the
+				// last needs a URL, so it stays out of the structured data.
+				...(rangeLabel ? [{ '@type': 'ListItem', position: 4, name: `${bookName} ${data.chapter}:${rangeLabel}`, item: seoUrl }] : [])
 			]
 		},
 		{

@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>{ta ? 'வேதாகம வரைபடம்' : 'Bible atlas'} · Tamil Scripture</title>
+	<title>வேதாகம வரைபடம் · Bible atlas · Tamil Scripture</title>
 	<meta name="description" content="Biblical places on outline maps: the Exodus, the ministry of Jesus and Paul's journeys, with every place linked to the verses that name it." />
 	<link rel="canonical" href="https://www.tamilscripture.com/atlas" />
 </svelte:head>

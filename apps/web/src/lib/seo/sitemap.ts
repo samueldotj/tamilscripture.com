@@ -7,8 +7,9 @@ export const ORIGIN = 'https://www.tamilscripture.com';
 
 type Fetch = typeof fetch;
 
-/** Pages that are not a chapter or an entity. */
-export const PAGE_PATHS = ['/', '/about', '/licences', '/heatmap', '/atlas/explore'];
+/** Pages that are not a chapter or an entity. The heatmaps and the map explorer
+ *  are noindex (they hold no text of their own), so they are left out. */
+export const PAGE_PATHS = ['/', '/about', '/licences'];
 
 /** Every book and chapter page of one version. */
 export function chapterPaths(version: VersionMeta): string[] {

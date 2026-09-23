@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{ta ? 'உரிமங்கள்' : 'Licences'} · Tamil Scripture</title>
+	<title>உரிமங்கள் · Licences · Tamil Scripture</title>
 	<meta name="description" content="The sources of the Bible texts, maps, people and dictionaries on tamilscripture.com, and their licences." />
 	<link rel="canonical" href="https://www.tamilscripture.com/licences" />
 </svelte:head>

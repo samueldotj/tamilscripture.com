@@ -99,7 +99,7 @@
 </script>
 
 <svelte:head>
-	<title>{ta ? 'வேதாகம அகராதி' : 'Bible Dictionary'} · Tamil Scripture</title>
+	<title>வேதாகம அகராதி · Bible Dictionary · Tamil Scripture</title>
 	<meta
 		name="description"
 		content={ta

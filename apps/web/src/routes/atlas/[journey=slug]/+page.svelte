@@ -187,7 +187,7 @@
 </script>
 
 <svelte:head>
-	<title>{name} · {ta ? 'வரைபடம்' : 'Atlas'} · Tamil Scripture</title>
+	<title>{j.name_ta} – {j.name_en} · வரைபடம் · Atlas · Tamil Scripture</title>
 	<meta name="description" content={j.summary_en ?? j.name_en} />
 	<link rel="canonical" href={`https://www.tamilscripture.com/atlas/${j.id}`} />
 </svelte:head>
