@@ -58,7 +58,13 @@ export interface IntroJson {
 
 export interface VersionMeta {
 	code: string;
-	lang: 'ta' | 'en';
+	/** BCP 47 language code of the text: `ta`, `en`, or any language added by config (R-3.6). */
+	lang: string;
+	/** The language's name in English and in itself ("Tamil", "தமிழ்"). */
+	language?: string;
+	language_native?: string;
+	/** The language's name in Tamil, for the Tamil interface ("ஆங்கிலம்"). */
+	language_ta?: string;
 	name: string;
 	name_native: string;
 	short: string;
@@ -68,6 +74,12 @@ export interface VersionMeta {
 	ebible_id?: string;
 	/** Book codes present in this version's content (all 66 for a full build). */
 	books: string[];
+	/** Place in pickers, lowest first. */
+	order?: number;
+	/** The version a reader of this language gets unless they choose. */
+	default?: boolean;
+	/** Book names from the version's own headers, for languages books.toml does not name. */
+	book_names?: Record<string, string>;
 }
 
 export interface Book {
@@ -87,6 +99,8 @@ export interface Book {
 
 export interface Manifest {
 	build: string;
+	/** The site's default version: the first default version by order. */
+	default_version: string;
 	versions: VersionMeta[];
 	books: Book[];
 }

@@ -1,5 +1,8 @@
 code = "IRVTAM"
 lang = "ta"
+language = "Tamil"
+language_native = "தமிழ்"
+language_ta = "தமிழ்"
 name = "Indian Revised Version, Tamil"
 name_native = "இண்டியன் ரிவைஸ்டு வெர்ஸன் (IRV) - தமிழ்"
 short = "IRV"
@@ -7,3 +10,5 @@ licence = "CC BY-SA 4.0"
 attribution = "Indian Revised Version Tamil, © 2017, 2019 Bridge Connectivity Solutions, CC BY-SA 4.0"
 source_url = "https://ebible.org/find/details.php?id=tam2017"
 ebible_id = "tam2017"
+order = 1
+default = true

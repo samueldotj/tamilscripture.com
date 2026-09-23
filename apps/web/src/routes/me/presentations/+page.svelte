@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { settings } from '$lib/settings/store.svelte';
-	import { findVersion } from '$lib/content/manifest';
+	import { DEFAULT_VERSION, findVersion } from '$lib/content/manifest';
 	import { createPresentation, deletePresentation, myPresentations, myPresentationsStats, presentUrl, type StatsSummary } from '$lib/present/repo';
 	import type { Presentation } from '$lib/present/types';
 
@@ -21,7 +21,7 @@
 	async function create() {
 		busy = true;
 		try {
-			const version = findVersion(settings.value.version.split('+')[0])?.code ?? 'IRVTAM';
+			const version = findVersion(settings.value.version.split('+')[0])?.code ?? DEFAULT_VERSION;
 			const p = await createPresentation(version);
 			await goto(`/present/${p.slug}/edit`);
 		} catch {

@@ -61,7 +61,7 @@
 	const listed = $derived(tab === 'xrefs' ? xrefs : tab === 'recent' ? (recent ?? []) : (highlights ?? []));
 	$effect(() => { for (const c of [...results, ...listed]) ensure(c.v); });
 
-	function label(v: SlideVerse) { return verseLabel(v, (findVersion(verseVersion(v, version))?.lang ?? meta.lang)); }
+	function label(v: SlideVerse) { return verseLabel(v, findVersion(verseVersion(v, version)) ?? meta); }
 	function readerHref(v: SlideVerse) {
 		const book = findBook(v.book);
 		return book ? chapterUrl(verseVersion(v, version), book, v.chapter, v.end > v.start ? `${v.start}-${v.end}` : `${v.start}`) : '/';

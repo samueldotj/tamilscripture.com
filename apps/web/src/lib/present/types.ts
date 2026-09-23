@@ -1,7 +1,8 @@
 // Verse presentations (docs/feature_presentation.md). A slide holds verse
 // references, never verse text: the words are read from the site's content in
 // whichever version is chosen when the slide is shown.
-import { findBook, findVersion } from '$lib/content/manifest';
+import { bookNameIn, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
+import type { VersionMeta } from '$lib/content/types';
 
 export interface SlideVerse {
 	/** USFM book code, `JHN` */
@@ -57,15 +58,16 @@ export function newSlide(): Slide {
 }
 
 /** `யோவான் 3:16` or `John 3:16-18`, in the language of the version the verse is shown in. */
-export function verseLabel(v: SlideVerse, lang: 'ta' | 'en'): string {
+/** A verse reference named for a version's text, or in an interface language. */
+export function verseLabel(v: SlideVerse, lang: VersionMeta | string): string {
 	const book = findBook(v.book);
-	const name = book ? (lang === 'ta' ? book.name_ta : book.name_en) : v.book;
+	const name = book ? bookNameIn(book, lang) : v.book;
 	return `${name} ${v.chapter}:${v.start}${v.end > v.start ? `-${v.end}` : ''}`;
 }
 
 /** The version a verse is shown in: its own, else the presentation's. */
 export function verseVersion(v: SlideVerse, fallback: string): string {
-	return (findVersion(v.version ?? '') ?? findVersion(fallback) ?? findVersion('IRVTAM'))!.code;
+	return (findVersion(v.version ?? '') ?? findVersion(fallback) ?? findVersion(DEFAULT_VERSION))!.code;
 }
 
 export function verseKey(v: SlideVerse): string {

@@ -164,15 +164,16 @@ fn names_ta_out(names: &NamesTa, name_en: &str) -> BTreeMap<String, NameTaOut> {
         .unwrap_or_default()
 }
 
-fn all_ta_forms(names: &NamesTa, name_en: &str) -> String {
+fn all_ta_forms(names: &NamesTa, name_en: &str, lead_version: &str) -> String {
     // The first token is what the search box shows as the Tamil label, so the
-    // display-worthy label of the default version leads; the rest follow sorted.
+    // display-worthy label of the lead (default Tamil) version leads; the rest
+    // follow sorted.
     let Some(per) = names.get(name_en) else {
         return String::new();
     };
     let mut out: Vec<String> = Vec::new();
     let lead = per
-        .get("IRVTAM")
+        .get(lead_version)
         .filter(|f| f.display_ok())
         .or_else(|| per.values().find(|f| f.display_ok()))
         .map(|f| f.label.clone());
@@ -450,6 +451,11 @@ fn main() -> Result<()> {
         .as_str()
         .context("manifest.build")?
         .to_string();
+    // The site's default version, from the version configs (R-3.6).
+    let default_version = manifest["default_version"]
+        .as_str()
+        .context("manifest.default_version (rebuild with the current usfm-ingest)")?
+        .to_string();
     let build_dir = args.content.join(&build);
     let mut tamil_versions: Vec<String> = manifest["versions"]
         .as_array()
@@ -458,8 +464,23 @@ fn main() -> Result<()> {
         .filter(|v| v["lang"].as_str() == Some("ta"))
         .filter_map(|v| v["code"].as_str().map(String::from))
         .collect();
-    // Default Tamil version first for labels.
-    tamil_versions.sort_by_key(|v| if v == "IRVTAM" { 0 } else { 1 });
+    // The default Tamil version (the site default when it is Tamil, else the
+    // first Tamil version marked default) leads for labels.
+    let lead_ta: String = manifest["versions"]
+        .as_array()
+        .into_iter()
+        .flatten()
+        .filter(|v| v["lang"].as_str() == Some("ta"))
+        .filter_map(|v| {
+            v["code"]
+                .as_str()
+                .map(|c| (c, v["default"].as_bool().unwrap_or(false)))
+        })
+        .find(|&(c, d)| c == default_version || d)
+        .map(|(c, _)| c.to_string())
+        .or_else(|| tamil_versions.first().cloned())
+        .unwrap_or_default();
+    tamil_versions.sort_by_key(|v| if *v == lead_ta { 0 } else { 1 });
 
     let places = openbible::load(&args.entities.join("openbible-geo/ancient.jsonl"), &books)?;
     eprintln!(
@@ -964,7 +985,7 @@ fn main() -> Result<()> {
             csv_field(&format!("person/{slug}")),
             csv_field(slug),
             csv_field(&p.name_en),
-            csv_field(&all_ta_forms(&names, &p.name_en)),
+            csv_field(&all_ta_forms(&names, &p.name_en, &lead_ta)),
             csv_field(&p.brief),
             weight
         ));
@@ -1071,7 +1092,7 @@ fn main() -> Result<()> {
     let place_by_id: HashMap<&str, &Place> = places.iter().map(|p| (p.id.as_str(), p)).collect();
     let ours: HashSet<String> = corpora
         .iter()
-        .find(|c| c.version == "IRVTAM")
+        .find(|c| c.version == default_version)
         .or(corpora.first())
         .map(|c| c.verses.keys().cloned().collect())
         .unwrap_or_default();
@@ -1401,7 +1422,7 @@ fn main() -> Result<()> {
                     .map(|q| format!(" {q}"))
                     .unwrap_or_default()
             )),
-            csv_field(&all_ta_forms(&names, &p.name_en)),
+            csv_field(&all_ta_forms(&names, &p.name_en, &lead_ta)),
             csv_field(&p.alt_en.join(" ")),
             weight
         ));

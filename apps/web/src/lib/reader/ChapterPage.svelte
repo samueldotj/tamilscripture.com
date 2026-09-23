@@ -15,7 +15,7 @@
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
 	import type { ChapterMentions } from '$lib/entities/types';
-	import { chapterUrl, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
 	import { versesText } from '$lib/content/verses';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
@@ -33,7 +33,7 @@
 	const dual = $derived(data.chapters.length > 1);
 	const ui = $derived(settings.value.uiLang);
 	const isTamil = $derived(ui === 'ta');
-	const bookName = $derived(primary.lang === 'ta' ? data.book.name_ta : data.book.name_en);
+	const bookName = $derived(bookNameIn(data.book, primary));
 	const altName = $derived(primary.lang === 'ta' ? data.book.name_en : data.book.name_ta);
 	const uiBookName = $derived(isTamil ? data.book.name_ta : data.book.name_en);
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));

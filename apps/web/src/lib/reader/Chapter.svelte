@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ChapterJson, Segment, XrefChapter } from '$lib/content/types';
 	import Verse from './Verse.svelte';
+	import { DEFAULT_VERSION } from '$lib/content/manifest';
 	import type { NameHit, VerseNames } from './names';
 
 	let {
@@ -10,7 +11,7 @@
 		onselect,
 		xrefs = null,
 		onxref,
-		versionPath = 'irvtam',
+		versionPath = DEFAULT_VERSION.toLowerCase(),
 		highlights = new Map<string, string>(),
 		noted = new Set<string>(),
 		onnote,
@@ -19,7 +20,7 @@
 		onname
 	}: {
 		chapter: ChapterJson;
-		lang: 'ta' | 'en';
+		lang: string;
 		selected?: Set<string>;
 		onselect?: (id: string) => void;
 		xrefs?: XrefChapter | null;

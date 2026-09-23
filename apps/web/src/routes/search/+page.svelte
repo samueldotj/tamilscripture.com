@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { chapterUrl, findBook, findVersion, manifest } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, findBook, findVersion, manifest } from '$lib/content/manifest';
 	import { rangeLabel, rangeParams, type SearchRange } from '$lib/search/range';
 	import { entityHref, entityKind, entityLabelTa, queryTokens } from '$lib/search/api';
 	import { settings } from '$lib/settings/store.svelte';
@@ -76,7 +76,7 @@
 		const book = findBook(code)!;
 		const version = findVersion(hit.version)!;
 		return {
-			label: `${version.lang === 'ta' ? book.name_ta : book.name_en} ${ch}:${v}`,
+			label: `${bookNameIn(book, version)} ${ch}:${v}`,
 			href: chapterUrl(hit.version.toLowerCase(), book, Number(ch), v),
 			lang: version.lang,
 			short: version.short
@@ -103,7 +103,7 @@
 
 	<div class="scope" role="radiogroup" aria-label={ta ? 'எங்கே தேட' : 'Search in'}>
 		<button type="button" role="radio" aria-checked={data.scope === 'version'} class:on={data.scope === 'version'} onclick={() => setScope('version')}>{data.primary.short}</button>
-		<button type="button" role="radio" aria-checked={data.scope === 'lang'} class:on={data.scope === 'lang'} onclick={() => setScope('lang')}>{data.primary.lang === 'ta' ? (ta ? 'எல்லா தமிழ்' : 'All Tamil') : (ta ? 'எல்லா ஆங்கிலம்' : 'All English')}</button>
+		<button type="button" role="radio" aria-checked={data.scope === 'lang'} class:on={data.scope === 'lang'} onclick={() => setScope('lang')}>{ta ? `எல்லா ${data.primary.language_ta ?? data.primary.language_native ?? data.primary.lang}` : `All ${data.primary.language ?? data.primary.lang}`}</button>
 		<button type="button" role="radio" aria-checked={data.scope === 'all'} class:on={data.scope === 'all'} onclick={() => setScope('all')}>{ta ? 'எல்லாம்' : 'All versions'}</button>
 	</div>
 
@@ -226,7 +226,7 @@
 			<nav class="bookjump" aria-label={ta ? 'புத்தகங்கள்' : 'Books'}>
 				{#each groups as [ord, hits] (ord)}
 					{@const book = findBook(hits[0].verse_id.split('.')[0])!}
-					<a href="#b{ord}" lang={data.primary.lang}>{data.primary.lang === 'ta' ? book.name_ta : book.name_en} <span class="n">{hits.length}</span></a>
+					<a href="#b{ord}" lang={data.primary.lang}>{bookNameIn(book, data.primary)} <span class="n">{hits.length}</span></a>
 				{/each}
 			</nav>
 		{/if}
@@ -234,7 +234,7 @@
 			{@const book = findBook(hits[0].verse_id.split('.')[0])!}
 			<section class="group" id="b{ord}">
 				<h2 lang={data.primary.lang}>
-					{data.primary.lang === 'ta' ? book.name_ta : book.name_en}
+					{bookNameIn(book, data.primary)}
 					{#if !data.range?.book}<a class="only" href={searchHref({ range: { key: book.slug, book, bookMin: book.order, bookMax: book.order } })} lang={ta ? 'ta' : 'en'}>{ta ? 'இதில் மட்டும் தேடு' : 'Search only here'}</a>{/if}
 				</h2>
 				<ol>

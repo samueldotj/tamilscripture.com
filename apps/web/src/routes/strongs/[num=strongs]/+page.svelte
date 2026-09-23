@@ -5,7 +5,7 @@
 	// scrolls, in their own version. A word in more than 1,000 verses opens on
 	// its first book, so nobody scrolls through thousands of rows.
 	import RefText from '$lib/refs/RefText.svelte';
-	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import { decodeVerses, describePos } from '$lib/concordance';
 	import Provenance from '$lib/community/Provenance.svelte';
@@ -15,7 +15,7 @@
 	let { data } = $props();
 	const e = $derived(data.entry);
 	const ta = $derived(settings.value.uiLang === 'ta');
-	const version = $derived(findVersion(settings.value.version) ?? findVersion('IRVTAM')!);
+	const version = $derived(findVersion(settings.value.version) ?? findVersion(DEFAULT_VERSION)!);
 	const PAGE = 50;
 	const COMMON = 1000;
 
@@ -99,7 +99,7 @@
 	function label(id: string) {
 		const [code, ch, v] = id.split('.');
 		const b = findBook(code);
-		const name = b ? (version.lang === 'ta' ? b.name_ta : b.name_en) : code;
+		const name = b ? bookNameIn(b, version) : code;
 		return `${name} ${ch}:${v}`;
 	}
 	function href(id: string) {

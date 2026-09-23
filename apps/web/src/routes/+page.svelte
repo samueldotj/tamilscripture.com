@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { chapterUrl, findBook, findVersion, manifest } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, findBook, findVersion, manifest } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
 	import { loadLastRead } from '$lib/personal/last-read';
@@ -13,6 +13,11 @@
 	const version = $derived(settings.value.version);
 	const ta = $derived(settings.value.uiLang === 'ta');
 	let testament = $state<'OT' | 'NT'>('OT');
+	// "Tamil (IRV, TCV) and English (BSB, WEB, KJV)", from the versions themselves.
+	const byLanguage = [...new Set(manifest.versions.map((v) => v.language ?? v.lang))].map(
+		(l) => `${l} (${manifest.versions.filter((v) => (v.language ?? v.lang) === l).map((v) => v.short).join(', ')})`
+	);
+	const blurb = `Read the Bible in ${byLanguage.length > 1 ? `${byLanguage.slice(0, -1).join(', ')} and ${byLanguage.at(-1)}` : byLanguage[0]}. Fast, free, shareable links to every verse.`;
 
 	// "Continue reading" (R-10.6): the passage last opened in this browser, or,
 	// for a signed-in reader new to this browser, the latest entry of their history.
@@ -57,10 +62,10 @@
 
 <svelte:head>
 	<title>Tamil Scripture · தமிழ் வேதாகமம்</title>
-	<meta name="description" content="Read the Bible in Tamil (IRV, TCV) and English (BSB, WEB, KJV). Fast, free, shareable links to every verse." />
+	<meta name="description" content={blurb} />
 	<link rel="canonical" href="https://www.tamilscripture.com/" />
 	<meta property="og:title" content="Tamil Scripture · தமிழ் வேதாகமம்" />
-	<meta property="og:description" content="Read the Bible in Tamil (IRV, TCV) and English (BSB, WEB, KJV). Fast, free, shareable links to every verse." />
+	<meta property="og:description" content={blurb} />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://www.tamilscripture.com/" />
 	<meta property="og:site_name" content="Tamil Scripture · தமிழ் வேதாகமம்" />
@@ -90,7 +95,7 @@
 	<a class="resume" href={resume.href}>
 		<span class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்ந்து வாசிக்க' : 'Continue reading'}</span>
 		<span class="ref">
-			<span lang={resume.versions[0].lang}>{resume.versions[0].lang === 'ta' ? resume.book.name_ta : resume.book.name_en} {resume.chapter}</span>
+			<span lang={resume.versions[0].lang}>{bookNameIn(resume.book, resume.versions[0])} {resume.chapter}</span>
 			<span class="ver">{resume.versions.map((v) => v.short).join(' + ')}</span>
 		</span>
 		<span class="go" aria-hidden="true">→</span>
@@ -138,7 +143,7 @@
 			{#each top as t (`${t.book}.${t.chapter}.${t.verse}`)}
 				<li>
 					<a href={chapterUrl(version.split('+')[0], t.book_, t.chapter, `${t.verse}`)}>
-						<span class="ref" lang={topVersion.lang}>{topVersion.lang === 'ta' ? t.book_.name_ta : t.book_.name_en} {t.chapter}:{t.verse}</span>
+						<span class="ref" lang={topVersion.lang}>{bookNameIn(t.book_, topVersion)} {t.chapter}:{t.verse}</span>
 						<span class="users" title={ta ? `${t.users} வாசகர்கள்` : `${t.users} readers`}>◉ {t.users}</span>
 						{#if t.text}<span class="text" lang={topVersion.lang}>{t.text}</span>{/if}
 					</a>

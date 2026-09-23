@@ -1,5 +1,8 @@
 code = "KJV"
 lang = "en"
+language = "English"
+language_native = "English"
+language_ta = "ஆங்கிலம்"
 name = "King James Version"
 name_native = "King James Version"
 short = "KJV"
@@ -7,3 +10,4 @@ licence = "Public domain"
 attribution = "King James (Authorized) Version, 1769 text, public domain"
 source_url = "https://ebible.org/find/details.php?id=eng-kjv2006"
 ebible_id = "eng-kjv2006"
+order = 5

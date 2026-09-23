@@ -11,7 +11,7 @@
 	import { chrome } from '$lib/chrome.svelte';
 	import { goto } from '$app/navigation';
 	import { tick } from 'svelte';
-	import { manifest } from '$lib/content/manifest';
+	import { bookNameIn, manifest } from '$lib/content/manifest';
 	import { pageLang } from '$lib/content/page-lang';
 	import type { Book, VersionMeta } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
@@ -63,7 +63,7 @@
 	const curVersions = $derived(Array.isArray(pd.versions) ? pd.versions : undefined);
 	const pillLang = $derived(curVersions?.[0]?.lang ?? ui);
 	const pillTitle = $derived(
-		curBook ? `${pillLang === 'ta' ? curBook.name_ta : curBook.name_en}${curChapter ? ` ${curChapter}` : ''}` : 'தமிழ் வேதாகமம்'
+		curBook ? `${bookNameIn(curBook, curVersions?.[0] ?? pillLang)}${curChapter ? ` ${curChapter}` : ''}` : 'தமிழ் வேதாகமம்'
 	);
 	const pillVersion = $derived(
 		curVersions?.map((v) => v.short).join(' + ') ??

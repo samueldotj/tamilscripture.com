@@ -3,8 +3,9 @@ import type { Book, Manifest, VersionMeta } from './types';
 
 export const manifest = raw as Manifest;
 export const BUILD = manifest.build;
-export const DEFAULT_VERSION = 'IRVTAM';
-export const DEFAULT_ENGLISH = 'BSB';
+// Versions, their order and defaults come from each version's version.toml
+// through the manifest, so adding a version needs no code (R-3.6).
+export const DEFAULT_VERSION = manifest.default_version || manifest.versions[0].code;
 
 /** Lookup key: NFC, lowercase, no spaces, dots or hyphens (same as bible-ref). */
 function key(s: string): string {
@@ -19,6 +20,36 @@ for (const b of manifest.books) {
 	}
 }
 const versionByCode = new Map<string, VersionMeta>(manifest.versions.map((v) => [v.code, v]));
+
+/** The version a reader of a language gets by default: the one marked default, else its first. */
+export function defaultFor(lang: string): VersionMeta | undefined {
+	return manifest.versions.find((v) => v.lang === lang && v.default) ?? manifest.versions.find((v) => v.lang === lang);
+}
+
+/** The version shown beside `v` where the site pairs two languages (the single-verse
+ *  page): the site's default version, or, for a version in the site's own language,
+ *  the default of the next language that has one. Undefined when there is none. */
+export function companionOf(v: VersionMeta, book?: string): VersionMeta | undefined {
+	const has = (c: VersionMeta | undefined) => (c && (!book || c.books.includes(book)) ? c : undefined);
+	const site = findVersion(DEFAULT_VERSION)!;
+	if (v.lang !== site.lang) return has(site);
+	const other = manifest.versions.find((c) => c.lang !== v.lang && c.default) ?? manifest.versions.find((c) => c.lang !== v.lang);
+	return has(other);
+}
+
+/** A book's name for text in a version (or a language): Tamil and English from
+ *  books.toml, any other language from that version's own headers. */
+export function bookNameIn(book: Book, v: VersionMeta | string): string {
+	const lang = typeof v === 'string' ? v : v.lang;
+	if (lang === 'ta') return book.name_ta;
+	if (lang === 'en' || typeof v === 'string') return book.name_en;
+	return v.book_names?.[book.code] ?? book.name_en;
+}
+
+/** The interface language that suits a version's text: Tamil for Tamil, English otherwise. */
+export function uiLangOf(lang: string): 'ta' | 'en' {
+	return lang === 'ta' ? 'ta' : 'en';
+}
 
 /** Resolve a book from a code, slug, name or abbreviation in either language. */
 export function findBook(text: string): Book | undefined {

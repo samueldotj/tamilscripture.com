@@ -1,5 +1,8 @@
 code = "BSB"
 lang = "en"
+language = "English"
+language_native = "English"
+language_ta = "ஆங்கிலம்"
 name = "Berean Standard Bible"
 name_native = "Berean Standard Bible"
 short = "BSB"
@@ -7,3 +10,5 @@ licence = "Public domain"
 attribution = "Berean Standard Bible, public domain, BSB Publishing"
 source_url = "https://ebible.org/find/details.php?id=engbsb"
 ebible_id = "engbsb"
+order = 3
+default = true

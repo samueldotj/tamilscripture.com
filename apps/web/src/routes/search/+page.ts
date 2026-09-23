@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import { search, commonSearches, searchEntities } from '$lib/search/api';
-import { DEFAULT_VERSION, findVersion, manifest, matchBooks } from '$lib/content/manifest';
+import { DEFAULT_VERSION, findVersion, manifest, matchBooks, uiLangOf } from '$lib/content/manifest';
 import type { BrowseRow } from '../api/dictionary/browse/+server';
 import { parseSearchRange } from '$lib/search/range';
 import { isRomanised, romanToTamil } from '$lib/search/romanised';
@@ -29,7 +29,7 @@ export const load: PageLoad = async ({ url, fetch }) => {
 	const books = q.length >= 2 ? matchBooks(q) : [];
 
 	if (q.length < 2) {
-		const common = await commonSearches(fetch, primary.lang).catch(() => []);
+		const common = await commonSearches(fetch, uiLangOf(primary.lang)).catch(() => []);
 		return { q, scope, primary, versions, offset, range, result: null, entities: [], books, words: [] as BrowseRow[], common, error: null, widened: false, shown: q, fromRoman: false, romanOffer: '' };
 	}
 	// Entity cards ride alongside the first page of verse hits.

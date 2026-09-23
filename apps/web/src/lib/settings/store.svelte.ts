@@ -2,6 +2,7 @@
 // classes on <html> (see app.html for the pre-paint stamp) and to a `version`
 // cookie read by the shorthand redirector. Signed-in sync to `profiles` is M3.
 import { browser } from '$app/environment';
+import { DEFAULT_VERSION } from '$lib/content/manifest';
 
 /** 'xref' is the Study Bible format: one verse per line with study aids (kept as the class name fmt-xref). */
 export type Format = 'reader' | 'standard' | 'xref';
@@ -49,7 +50,7 @@ export const DEFAULTS: Settings = {
 	fontSize: 3,
 	theme: 'system',
 	uiLang: 'ta',
-	version: 'irvtam'
+	version: DEFAULT_VERSION.toLowerCase()
 };
 
 const KEY = 'reader';

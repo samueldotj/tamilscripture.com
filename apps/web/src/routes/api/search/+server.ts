@@ -1,7 +1,7 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { SUPABASE_ANON_KEY, SUPABASE_URL } from '$lib/supabase/config';
-import { manifest } from '$lib/content/manifest';
+import { DEFAULT_VERSION, manifest } from '$lib/content/manifest';
 
 export const prerender = false;
 
@@ -20,7 +20,7 @@ export const GET: RequestHandler = async ({ url, fetch, setHeaders }) => {
 	if (!q) error(400, 'Empty query');
 
 	const known = new Set(manifest.versions.map((v) => v.code));
-	const versions = (url.searchParams.get('v') ?? 'IRVTAM')
+	const versions = (url.searchParams.get('v') ?? DEFAULT_VERSION)
 		.split(',')
 		.map((v) => v.trim().toUpperCase())
 		.filter((v) => known.has(v));

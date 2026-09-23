@@ -25,10 +25,10 @@
 		showNotes?: boolean;
 		mode?: 'preview' | 'present';
 		/** Interface language, for the notes' lang attribute and placeholders. */
-		lang?: 'ta' | 'en';
+		lang?: string;
 	} = $props();
 
-	type Loaded = { label: string; verses: { n: string; text: string }[]; lang: 'ta' | 'en'; short: string; code: string; failed?: boolean; ready?: boolean };
+	type Loaded = { label: string; verses: { n: string; text: string }[]; lang: string; short: string; code: string; failed?: boolean; ready?: boolean };
 	let loaded = $state<Record<string, Loaded>>({});
 	const items = $derived(slide.verses.map((v) => ({ v, code: verseVersion(v, version), key: `${verseKey(v)}@${verseVersion(v, version)}` })));
 	const title = $derived(slide.title?.trim() ?? '');
@@ -44,7 +44,7 @@
 		for (const { v, code, key } of items) {
 			if (key in loaded) continue;
 			const meta = findVersion(code)!;
-			const label = verseLabel(v, meta.lang);
+			const label = verseLabel(v, meta);
 			loaded[key] = { label, verses: [], lang: meta.lang, short: meta.short, code };
 			chapterCached(fetch, code, v.book, v.chapter)
 				.then((ch) => { loaded[key] = { label, verses: verseList(ch, v.start, v.end), lang: meta.lang, short: meta.short, code, ready: true }; })

@@ -9,7 +9,7 @@
 	import { beforeNavigate, goto, replaceState } from '$app/navigation';
 	import { session } from '$lib/supabase/session.svelte';
 	import { settings } from '$lib/settings/store.svelte';
-	import { findVersion, manifest } from '$lib/content/manifest';
+	import { DEFAULT_VERSION, findVersion, manifest } from '$lib/content/manifest';
 	import { myPresentation, presentChannel, presentUrl, savePresentation, type PresentMessage } from '$lib/present/repo';
 	import { LIMITS, newId, newSlide, verseLabel, verseVersion, type Presentation, type Slide, type SlideVerse } from '$lib/present/types';
 	import SlideRail from '$lib/present/SlideRail.svelte';
@@ -153,7 +153,7 @@
 		else delete slide.verses[i].version;
 		touch();
 	}
-	const insertLabel = $derived(slide?.verses.length ? verseLabel(slide.verses[0], findVersion(verseVersion(slide.verses[0], doc?.version ?? 'IRVTAM'))?.lang ?? lang) : null);
+	const insertLabel = $derived(slide?.verses.length ? verseLabel(slide.verses[0], findVersion(verseVersion(slide.verses[0], doc?.version ?? DEFAULT_VERSION)) ?? lang) : null);
 
 	// ---- share -----------------------------------------------------------------------
 	function flash(msg: string) { toast = msg; setTimeout(() => (toast = ''), 1800); }

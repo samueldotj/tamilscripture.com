@@ -3,14 +3,14 @@
 	// reference such as "1 பேது 1:5" for half a second and the verse appears
 	// underneath it. Mouse only; on touch a tap simply follows the link.
 	// Lists that already print the verse text opt out with data-no-preview.
-	import { findBook, findVersion } from '$lib/content/manifest';
+	import { bookNameIn, findBook, findVersion } from '$lib/content/manifest';
 	import { chapterCached, versesText } from '$lib/content/verses';
 	import type { ChapterJson } from '$lib/content/types';
 
 	const DELAY = 500;
 	const MAX = 420;
 
-	let preview = $state<{ label: string; text: string; lang: 'ta' | 'en'; top: number; left: number; above: boolean } | null>(null);
+	let preview = $state<{ label: string; text: string; lang: string; top: number; left: number; above: boolean } | null>(null);
 	let link: HTMLAnchorElement | null = null;
 	let timer = 0;
 
@@ -39,7 +39,7 @@
 		let text = versesText(ch, ref.start, ref.end);
 		if (!text) return;
 		if (text.length > MAX) text = text.slice(0, MAX).replace(/\s\S*$/, '') + ' …';
-		const name = ref.version.lang === 'ta' ? ref.book.name_ta : ref.book.name_en;
+		const name = bookNameIn(ref.book, ref.version);
 		const verses = ref.end > ref.start ? `${ref.start}-${ref.end}` : `${ref.start}`;
 		const r = a.getBoundingClientRect();
 		const width = Math.min(360, innerWidth - 16);

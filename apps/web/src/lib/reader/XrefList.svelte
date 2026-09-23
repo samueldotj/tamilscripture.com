@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Cross-reference targets for one verse with the target text in the given
 	// version. Shared by the overlay panel (phones) and the context panel (desktop).
-	import { chapterUrl, findBook } from '$lib/content/manifest';
+	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 	import { loadChapter } from '$lib/content/load';
 	import type { ChapterJson, XrefTarget } from '$lib/content/types';
 
@@ -61,7 +61,7 @@
 		}
 		return parts.join(' ');
 	}
-	const textLang = $derived(version.toUpperCase().endsWith('TAM') || version.toUpperCase() === 'TCV' ? 'ta' : 'en');
+	const textLang = $derived(findVersion(version)?.lang ?? 'en');
 
 	// Resolve every target's text before rendering the list, so items appear
 	// at their final height and nothing below them shifts (CLS budget).

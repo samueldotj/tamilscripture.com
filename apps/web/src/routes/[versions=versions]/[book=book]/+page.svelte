@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { chapterUrl, DEFAULT_VERSION, findVersion } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findVersion } from '$lib/content/manifest';
 
 	let { data } = $props();
 	const primary = $derived(data.versions[0]);
 	const isTamil = $derived(primary.lang === 'ta');
-	const bookName = $derived(isTamil ? data.book.name_ta : data.book.name_en);
+	const bookName = $derived(bookNameIn(data.book, primary));
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));
 	const chapters = $derived(Array.from({ length: data.book.chapters }, (_, i) => i + 1));
 	// Like chapter pages (ADR-15), every version's book page names the default

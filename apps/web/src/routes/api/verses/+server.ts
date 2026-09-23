@@ -1,7 +1,7 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { SUPABASE_ANON_KEY, SUPABASE_URL } from '$lib/supabase/config';
-import { manifest } from '$lib/content/manifest';
+import { DEFAULT_VERSION, manifest } from '$lib/content/manifest';
 
 export const prerender = false;
 
@@ -11,7 +11,7 @@ const MAX = 60;
 // The text of up to 60 verses in one version, from the public verse_search
 // table, for lists that name verses without their text (the concordance).
 export const GET: RequestHandler = async ({ url, fetch, setHeaders }) => {
-	const version = (url.searchParams.get('v') ?? 'IRVTAM').toUpperCase();
+	const version = (url.searchParams.get('v') ?? DEFAULT_VERSION).toUpperCase();
 	if (!manifest.versions.some((v) => v.code === version)) error(400, 'Unknown version');
 	const ids = (url.searchParams.get('ids') ?? '')
 		.split(',')

@@ -1,5 +1,8 @@
 code = "WEB"
 lang = "en"
+language = "English"
+language_native = "English"
+language_ta = "ஆங்கிலம்"
 name = "World English Bible"
 name_native = "World English Bible"
 short = "WEB"
@@ -7,3 +10,4 @@ licence = "Public domain"
 attribution = "World English Bible, public domain"
 source_url = "https://ebible.org/find/details.php?id=engwebp"
 ebible_id = "engwebp"
+order = 4

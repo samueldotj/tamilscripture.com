@@ -97,11 +97,21 @@ pub struct IntroBlock {
     pub text: String,
 }
 
-/// `content/{build}/versions.json` entry.
+/// A version: `version.toml` as written, plus what the pipeline fills in.
+/// Adding a version takes only its directory (USFM files and this file), R-3.6.
 #[derive(Debug, Serialize, Clone, serde::Deserialize)]
 pub struct VersionMeta {
     pub code: String,
+    /// BCP 47 language code of the text (`ta`, `en`, `ml`, ...).
     pub lang: String,
+    /// The language's name in English and in itself ("Tamil", "தமிழ்").
+    #[serde(default)]
+    pub language: String,
+    #[serde(default)]
+    pub language_native: String,
+    /// The language's name in Tamil, for the Tamil interface ("ஆங்கிலம்").
+    #[serde(default)]
+    pub language_ta: String,
     pub name: String,
     pub name_native: String,
     pub short: String,
@@ -110,15 +120,32 @@ pub struct VersionMeta {
     pub source_url: String,
     #[serde(default)]
     pub ebible_id: String,
+    /// Place in pickers and in the manifest, lowest first.
+    #[serde(default = "default_order")]
+    pub order: u32,
+    /// The version a reader of this language gets unless they choose; the
+    /// first default (by order) is the site's default version.
+    #[serde(default)]
+    pub default: bool,
     /// Book codes present in this version's content; filled in by the pipeline.
     #[serde(default)]
     pub books: Vec<String>,
+    /// Book names from the USFM `\h` headers, for languages that books.toml
+    /// does not name (it carries Tamil and English); filled in by the pipeline.
+    #[serde(default, skip_serializing_if = "std::collections::BTreeMap::is_empty")]
+    pub book_names: std::collections::BTreeMap<String, String>,
+}
+
+fn default_order() -> u32 {
+    100
 }
 
 /// `content/manifest.json`
 #[derive(Debug, Serialize)]
 pub struct Manifest {
     pub build: String,
+    /// The site's default version: the first `default = true` version by order.
+    pub default_version: String,
     pub versions: Vec<VersionMeta>,
     pub books: Vec<crate::books::Book>,
 }

@@ -33,14 +33,14 @@ jobs:
           cargo run --release -p usfm-ingest -- \
             --books data/books.toml --xrefs data/xrefs/cross_references.txt \
             --out /tmp/content \
-            data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv
+            data/versions
           cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content /tmp/content
       - name: Determinism check
         run: |
           cargo run --release -p usfm-ingest -- \
             --books data/books.toml --xrefs data/xrefs/cross_references.txt \
             --out /tmp/content2 \
-            data/versions/irvtam data/versions/tcv data/versions/bsb data/versions/web data/versions/kjv
+            data/versions
           cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content /tmp/content2
           diff -r /tmp/content /tmp/content2
 

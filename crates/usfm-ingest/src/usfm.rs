@@ -317,6 +317,9 @@ enum Pending {
     Label,
     Title,
     Meta,
+    /// The running header (`\h`): the book's short name, kept for languages
+    /// that books.toml does not name.
+    Header,
     Heading(&'static str, u8, String),
     Dropped(String),
 }
@@ -628,6 +631,7 @@ impl Parser {
                 let at = self.text_len();
                 self.inline.push((name.to_string(), at));
             }
+            "h" | "h1" if self.book.header.is_empty() => self.pending = Pending::Header,
             _ if is_meta(name) => self.pending = Pending::Meta,
             _ => {
                 if let Some(style) = para_style(name) {
@@ -729,6 +733,7 @@ impl Parser {
                     self.book.title = raw.trim().to_string();
                 }
             }
+            Pending::Header => self.book.header = raw.trim().to_string(),
             Pending::Meta => {
                 if self.book.code.is_empty() {
                     let (code, _) = split_number(&raw);
@@ -795,6 +800,7 @@ mod tests {
         let b = parse(SAMPLE);
         assert_eq!(b.code, "JHN");
         assert_eq!(b.title, "யோவான்");
+        assert_eq!(b.header, "யோவான்");
         assert_eq!(b.intro.len(), 2);
         assert_eq!(b.chapters.len(), 1);
         let ch = &b.chapters[0];

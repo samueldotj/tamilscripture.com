@@ -20,6 +20,34 @@ pnpm dev               # http://localhost:5173
 
 For features that talk to Supabase, copy `apps/web/.env.example` to `apps/web/.env` and fill in the anon key from the Supabase dashboard.
 
+### Adding a version
+
+A version is a directory under `data/versions/`; no code changes (R-3.6). The pipeline builds every directory there that has a `version.toml`.
+
+1. Create `data/versions/{dir}/` with one `.usfm` file per book, plus the source's `LICENSE`, `SOURCE.md` and `copr.htm`.
+2. Write `version.toml`:
+
+   ```toml
+   code = "IRVMAL"                 # upper case; the URL path is its lower case (/irvmal/john/3)
+   lang = "ml"                     # BCP 47 language code of the text
+   language = "Malayalam"          # the language's name in English,
+   language_native = "മലയാളം"      # in itself,
+   language_ta = "மலையாளம்"        # and in Tamil (the Tamil interface)
+   name = "Indian Revised Version, Malayalam"
+   name_native = "…"
+   short = "IRV-ML"                # shown beside references
+   licence = "CC BY-SA 4.0"
+   attribution = "…"               # the notice the licence requires
+   source_url = "https://ebible.org/find/details.php?id=…"
+   ebible_id = "…"
+   order = 6                       # place in pickers, lowest first
+   default = true                  # the version readers of this language get; one per language
+   ```
+
+3. Run `pnpm content`. Book names come from `data/books.toml` for Tamil and English and from each book's `\h` header for any other language. Books a version lacks answer 404.
+
+The first `default = true` version by `order` is the site's default (IRVTAM today). On the single-verse page a version is paired with the site default, or, in the site's own language, with the default of the next language. A new script without a bundled web font uses the reader's system font; references typed in the header box are parsed in Tamil and English only.
+
 ## Deploying
 
 Every push to `main` runs [deploy.yml](.github/workflows/deploy.yml): build content, apply migrations with `supabase db push`, load the search table, then build the site and upload it prebuilt to Vercel. The workflow needs these repository secrets, entered once by the owner:
@@ -200,12 +228,12 @@ Milestones follow the delivery phases in [docs/requirements.md](docs/requirement
 | 5.4 | Restrict search to testament, book or chapter range: "Within" picker and chapter fields on `/search` (`in=ot\|nt\|{book}`, `ch=3-5`), "Search only here" on each book of the results; `search_verses` takes book and chapter bounds (pgTAP `search_filters`) | R-5.8 | ☑ |
 | 5.5 | Romanised Tamil search input: with a Tamil primary version, a query in Latin letters that finds nothing as typed ("anbu") is searched as Tamil (அன்பு) with a "search as typed" link; one that does ("god") keeps its results and offers the Tamil reading (`lib/search/romanised.ts`) | R-5.4 stretch | ☑ |
 | 5.6 | Verse preview on hover: resting the mouse on any verse link for half a second shows the verse underneath it (cross-references, entity pages, dictionary articles) | R-7.5 | ☑ |
-| 5.7 | Import anonymous highlights and notes at first sign-in | R-10.3 | ☐ |
+| 5.7 | ~~Import anonymous highlights and notes at first sign-in~~ Withdrawn 23 Sep 2026 by the owner: highlights and notes stay sign-in only, so there is nothing to import | R-10.3 | Withdrawn |
 | 5.8 | "Continue reading" shortcut on the home page: the passage last opened in this browser (any reader), else the newest history entry of a signed-in reader | R-10.6 | ☑ |
 | 5.9 | Markdown in notes (bold, italics, lists, links, verse references) on `/me/notes`, with a Preview in the note sheet; the in-house parser used by presentations | R-10.11 | ☑ |
-| 5.10 | Sub-verse highlights stored as per-version offsets | R-10.15 | ☐ |
+| 5.10 | Sub-verse highlights stored as per-version offsets (deferred 23 Sep 2026 by the owner) | R-10.15 | ☐ |
 | 5.11 | "Most highlighted this month" list on the home page: the top ten verses from `verse_highlight_month` (last 30 days, opted-in readers, three or more, refreshed hourly; pgTAP `highlights_this_month`), with their text in the reader's version; hidden until a verse qualifies | R-2.5 | ☑ |
-| 5.12 | Add a version by config only; first additional Indian language | R-3.6 | ☐ |
+| 5.12 | Add a version by config only ☑: `usfm-ingest` builds every directory under `data/versions/` in `order`; `version.toml` carries the order, the per-language default and the language's names; other languages take book names from their `\h` headers; the app reads defaults and names from the manifest (no version codes in code) and `verse_search` accepts any language code; checked with a throwaway Malayalam version. First additional Indian language ☐ (the owner chooses the text and checks its licence) | R-3.6 | ◧ |
 
 ### M6 · Places and maps
 

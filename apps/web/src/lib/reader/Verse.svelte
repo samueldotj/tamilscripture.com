@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Segment, XrefTarget } from '$lib/content/types';
-	import { chapterUrl, findBook } from '$lib/content/manifest';
+	import { chapterUrl, DEFAULT_VERSION, findBook } from '$lib/content/manifest';
 	import { splitNames, type NameHit, type VerseNames } from './names';
 
 	let {
 		seg,
 		lang,
-		versionPath = 'irvtam',
+		versionPath = DEFAULT_VERSION.toLowerCase(),
 		noteStart = 0,
 		selected = false,
 		onselect,
@@ -21,7 +21,7 @@
 		onname
 	}: {
 		seg: Segment;
-		lang: 'ta' | 'en';
+		lang: string;
 		versionPath?: string;
 		noteStart?: number;
 		selected?: boolean;

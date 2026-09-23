@@ -9,7 +9,7 @@
 	import { replaceState } from '$app/navigation';
 	import { session } from '$lib/supabase/session.svelte';
 	import { settings } from '$lib/settings/store.svelte';
-	import { findVersion, manifest } from '$lib/content/manifest';
+	import { DEFAULT_VERSION, findVersion, manifest } from '$lib/content/manifest';
 	import { chapterCached } from '$lib/content/verses';
 	import { myPresentation, presentChannel, type PresentMessage } from '$lib/present/repo';
 	import { verseVersion, type Presentation } from '$lib/present/types';
@@ -40,7 +40,7 @@
 	const closing = $derived(!!doc && index >= doc.slides.length);
 	const slide = $derived(doc && !closing ? doc.slides[index] : null);
 	const shareUrl = $derived(`https://www.tamilscripture.com/present/${slug}`);
-	const version = $derived(findVersion(override ?? '')?.code ?? findVersion(doc?.version ?? '')?.code ?? 'IRVTAM');
+	const version = $derived(findVersion(override ?? '')?.code ?? findVersion(doc?.version ?? '')?.code ?? DEFAULT_VERSION);
 	const title = $derived(doc?.title?.trim() || (ta ? 'விளக்கக்காட்சி' : 'Presentation'));
 	const description = $derived(
 		doc ? `${doc.subtitle ? `${doc.subtitle} · ` : ''}${total} ${ta ? 'ஸ்லைடுகள்' : 'slides'} · Tamil Scripture` : 'Tamil Scripture'

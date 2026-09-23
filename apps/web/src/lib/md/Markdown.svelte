@@ -5,7 +5,7 @@
 	import RefText from '$lib/refs/RefText.svelte';
 	import { parseMarkdown, type Block, type Inline } from './parse';
 
-	let { source, version, lang }: { source: string; version?: string; lang?: 'ta' | 'en' } = $props();
+	let { source, version, lang }: { source: string; version?: string; lang?: string } = $props();
 	const blocks = $derived(parseMarkdown(source));
 </script>
 

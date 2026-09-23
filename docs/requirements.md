@@ -247,7 +247,7 @@ Reading never requires an account. Signing in adds memory: what you read, what y
 |---|---|---|
 | R-10.1 | Sign in with Google and Facebook through Supabase Auth. Apple sign-in is added if the PWA is promoted on iOS. Email magic link as a fallback for users without social accounts. | Must |
 | R-10.2 | Only the provider's user id, display name and email are stored. No contact import, no posting permission requested. | Must |
-| R-10.3 | Anonymous highlights and notes made before sign-in (kept in local storage) are offered for import at first sign-in. | Could |
+| R-10.3 | ~~Anonymous highlights and notes made before sign-in (kept in local storage) are offered for import at first sign-in.~~ Withdrawn 23 Sep 2026 by the owner: highlights and notes require sign-in. | Withdrawn |
 | R-10.4 | Users can export all their data as JSON and delete their account, which removes all personal rows within 24 hours. | Must |
 
 ### History

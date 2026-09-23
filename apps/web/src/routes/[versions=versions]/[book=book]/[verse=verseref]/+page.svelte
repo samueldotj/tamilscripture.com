@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { chapterUrl, DEFAULT_VERSION, findVersion, verseUrl } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findVersion, verseUrl } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 
 	let { data } = $props();
@@ -61,7 +61,7 @@
 					{#each s.verses as v, i (v.n)}{#if many}<sup>{v.n}</sup>{/if}{v.text}{#if i < s.verses.length - 1}{' '}{/if}{/each}
 				</p>
 			</blockquote>
-			<figcaption>{s.version.lang === 'ta' ? refTa : refEn} · <abbr title={s.version.name}>{s.version.short}</abbr></figcaption>
+			<figcaption>{bookNameIn(b, s.version)} {data.chapter}:{verses} · <abbr title={s.version.name}>{s.version.short}</abbr></figcaption>
 		</figure>
 	{/each}
 

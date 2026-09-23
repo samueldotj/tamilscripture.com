@@ -1,7 +1,7 @@
 // Load logic for the single-verse page (/irvtam/john/3.16): the verses alone,
 // in a Tamil and an English version, with a link out to the whole chapter.
 import { error, redirect } from '@sveltejs/kit';
-import { DEFAULT_ENGLISH, DEFAULT_VERSION, findBook, findVersion, verseUrl } from './manifest';
+import { companionOf, findBook, findVersion, verseUrl } from './manifest';
 import { loadChapter } from './load';
 import { lastVerse, verseList } from './verses';
 import type { Book, VersionMeta } from './types';
@@ -32,11 +32,11 @@ export async function loadVersePage(
 	const [a, b] = rest.split('-').map(Number);
 	let range = { start: Math.min(a, b ?? a), end: Math.max(a, b ?? a) };
 
-	// A single version is paired with the default version of the other language.
+	// A single version is paired with another language's default (companionOf).
 	const shownVersions = [...versions];
 	if (shownVersions.length === 1) {
-		const other = findVersion(versions[0].lang === 'ta' ? DEFAULT_ENGLISH : DEFAULT_VERSION);
-		if (other && other.books.includes(book.code)) shownVersions.push(other);
+		const other = companionOf(versions[0], book.code);
+		if (other) shownVersions.push(other);
 	}
 	const chapters = await Promise.all(shownVersions.map((v) => loadChapter(fetch, v.code, book.code, chapter)));
 

@@ -11,7 +11,7 @@
 	import { SOURCES } from '$lib/entities/sources';
 	import { loadArticle } from '$lib/entities/load';
 	import type { Article } from '$lib/entities/types';
-	import { manifest } from '$lib/content/manifest';
+	import { DEFAULT_VERSION, manifest } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -129,7 +129,7 @@
 	// Direct correction.
 	const tamilVersions = manifest.versions.filter((v) => v.lang === 'ta');
 	let dKind = $state<'name' | 'article'>('name');
-	let dVersion = $state(tamilVersions[0]?.code ?? 'IRVTAM');
+	let dVersion = $state(tamilVersions[0]?.code ?? DEFAULT_VERSION);
 	let dName = $state('');
 	let dParagraph = $state('');
 	let dText = $state('');

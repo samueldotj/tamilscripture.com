@@ -2,9 +2,11 @@
 //!
 //! Usage:
 //!   usfm-ingest --books data/books.toml --xrefs data/xrefs/cross_references.txt \
-//!               --out apps/web/static/content data/versions/irvtam data/versions/bsb ...
+//!               --out apps/web/static/content data/versions
 //!
 //! Each version directory holds `version.toml` and one `.usfm` file per book.
+//! A directory without `version.toml` stands for every version directory in
+//! it, taken in `order` (then code), so adding a version is adding a directory.
 //! Output (all under --out):
 //!   manifest.json                              build id, versions, books
 //!   {build}/{VERSION}/{BOOK}/{chapter}.json    chapter text
@@ -97,6 +99,33 @@ fn read_version(dir: &Path) -> Result<VersionInput> {
     Ok(VersionInput { meta, files })
 }
 
+/// Version directories named on the command line, with any parent directory
+/// replaced by its version subdirectories in `order`, then code.
+fn expand_versions(dirs: &[PathBuf]) -> Result<Vec<VersionInput>> {
+    let mut out = Vec::new();
+    for dir in dirs {
+        if dir.join("version.toml").exists() {
+            out.push(read_version(dir)?);
+            continue;
+        }
+        let mut found: Vec<VersionInput> = fs::read_dir(dir)
+            .with_context(|| format!("reading {}", dir.display()))?
+            .filter_map(|e| e.ok().map(|e| e.path()))
+            .filter(|p| p.join("version.toml").exists())
+            .map(|p| read_version(&p))
+            .collect::<Result<_>>()?;
+        if found.is_empty() {
+            bail!(
+                "{} has no version.toml and no version directories",
+                dir.display()
+            );
+        }
+        found.sort_by(|a, b| (a.meta.order, &a.meta.code).cmp(&(b.meta.order, &b.meta.code)));
+        out.extend(found);
+    }
+    Ok(out)
+}
+
 fn main() -> Result<()> {
     let args = parse_args()?;
     let books = Books::load(&args.books)?;
@@ -104,14 +133,12 @@ fn main() -> Result<()> {
     // Gather inputs and hash them for the build id.
     let mut hasher = hash::Fnv64::new();
     hasher.update(&fs::read(&args.books)?);
-    let mut inputs = Vec::new();
-    for dir in &args.versions {
-        let v = read_version(dir)?;
+    let inputs = expand_versions(&args.versions)?;
+    for v in &inputs {
         hasher.update(v.meta.code.as_bytes());
         for f in &v.files {
             hasher.update(&fs::read(f)?);
         }
-        inputs.push(v);
     }
     let xref_index = match &args.xrefs {
         Some(p) => {
@@ -130,6 +157,20 @@ fn main() -> Result<()> {
 
     let mut problems: Vec<String> = Vec::new();
     let mut versions_meta = Vec::new();
+    // One version per code, and at most one default per language.
+    let mut seen_codes = std::collections::BTreeSet::new();
+    let mut default_langs = std::collections::BTreeSet::new();
+    for input in &inputs {
+        if !seen_codes.insert(input.meta.code.clone()) {
+            problems.push(format!("{}: version code used twice", input.meta.code));
+        }
+        if input.meta.default && !default_langs.insert(input.meta.lang.clone()) {
+            problems.push(format!(
+                "{}: a second default version for language {}",
+                input.meta.code, input.meta.lang
+            ));
+        }
+    }
 
     for input in &inputs {
         let code = input.meta.code.clone();
@@ -267,6 +308,17 @@ fn main() -> Result<()> {
         fs::write(search_dir.join(format!("{code}.csv")), csv)?;
         let mut meta = input.meta.clone();
         meta.books = order.iter().map(|&i| books.list[i].code.clone()).collect();
+        // books.toml names the books in Tamil and English; any other language
+        // takes them from the version's own \h headers.
+        if meta.lang != "ta" && meta.lang != "en" {
+            for &idx in &order {
+                let header = parsed[&idx].header.trim();
+                if !header.is_empty() {
+                    meta.book_names
+                        .insert(books.list[idx].code.clone(), header.to_string());
+                }
+            }
+        }
         versions_meta.push(meta);
     }
 
@@ -285,10 +337,17 @@ fn main() -> Result<()> {
         eprintln!("[xref] {count} references in {} chapters", index.len());
     }
 
+    let default_version = versions_meta
+        .iter()
+        .find(|v| v.default)
+        .or(versions_meta.first())
+        .map(|v| v.code.clone())
+        .unwrap_or_default();
     write_json(
         &args.out.join("manifest.json"),
         &Manifest {
             build: build.clone(),
+            default_version,
             versions: versions_meta,
             books: books.list.clone(),
         },
