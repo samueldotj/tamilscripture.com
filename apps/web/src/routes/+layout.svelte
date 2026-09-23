@@ -12,6 +12,7 @@
 	import { goto } from '$app/navigation';
 	import { tick } from 'svelte';
 	import { manifest } from '$lib/content/manifest';
+	import { pageLang } from '$lib/content/page-lang';
 	import type { Book, VersionMeta } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
@@ -34,6 +35,10 @@
 
 	// Keep the reader's current version(s) when jumping by reference.
 	const versionPath = $derived(page.params.versions ?? settings.value.version);
+	// hooks.server.ts sets <html lang> on the first load; keep it right across navigations.
+	$effect(() => {
+		document.documentElement.lang = pageLang(page.params.versions);
+	});
 	const ui = $derived(settings.value.uiLang);
 	const signinHref = $derived(`/signin?next=${encodeURIComponent(page.url.pathname)}`);
 
