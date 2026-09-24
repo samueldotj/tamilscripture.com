@@ -25,7 +25,8 @@
 	import { session } from '$lib/supabase/session.svelte';
 	import { track } from '$lib/analytics/track';
 	import { saveLastRead } from '$lib/personal/last-read';
-	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, type Highlight, type HighlightColor, type Note } from '$lib/personal/repo';
+	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, setRangeHighlight, removeRangeHighlight, isPartial, rangesOverlap, type Highlight, type HighlightColor, type Note, type TextRange } from '$lib/personal/repo';
+	import { marksByVerse, selectionRange, sideNotesByVerse } from './marks';
 
 	let { data }: { data: ChapterPageData } = $props();
 
@@ -87,10 +88,13 @@
 		return ids;
 	}
 	let selected = $state<Set<string>>(new Set());
+	/** The words a drag-selection covers when it is less than whole verses (R-10.15). */
+	let textSel = $state<TextRange | null>(null);
 	$effect(() => {
 		// Reset when the passage changes.
 		void data.canonical;
 		selected = idsFromRange();
+		textSel = null;
 	});
 	// Overlay sheet on screens without the desktop column: related verses
 	// (‡ marker) or the study aids (Study chip, Study Bible format only).
@@ -103,10 +107,12 @@
 			track('verse', { verse: id, lang: settings.value.uiLang, user: session.user?.id });
 		}
 		selected = s;
+		textSel = null;
 		xrefOpen = null; // the context panel follows the selection again
 	}
 	function clearSelection() {
 		selected = new Set();
+		textSel = null;
 		xrefOpen = null;
 		if (fromText) getSelection()?.removeAllRanges();
 		fromText = false;
@@ -135,25 +141,45 @@
 			if (fromText && !pressed?.closest('[role="toolbar"], [role="dialog"], aside.panel')) {
 				fromText = false;
 				selected = new Set();
+				textSel = null;
 			}
 			return;
 		}
-		const ids = new Set<string>();
+		const touched: HTMLElement[] = [];
 		for (const el of measure.querySelectorAll<HTMLElement>('[data-verse]')) {
 			const id = el.dataset.verse;
-			if (id && !isNaN(verseNum(id)) && range.intersectsNode(el)) ids.add(id);
+			if (id && !isNaN(verseNum(id)) && range.intersectsNode(el)) touched.push(el);
 		}
+		// Words are marked in the primary version only; in compare view a
+		// selection stays whole verses.
+		const picked = dual ? { ids: touched.map((el) => el.dataset.verse!), range: null } : selectionRange(touched, range, primary.code, textOf);
+		const ids = new Set(picked.ids);
 		if (!ids.size) {
 			if (fromText) {
 				fromText = false;
 				selected = new Set();
+				textSel = null;
 			}
 			return;
 		}
 		fromText = true;
 		xrefOpen = null;
+		const r = picked.range;
+		if (!r || !textSel || r.verse_start !== textSel.verse_start || r.char_start !== textSel.char_start || r.verse_end !== textSel.verse_end || r.char_end !== textSel.char_end) textSel = r;
 		if (ids.size !== selected.size || [...ids].some((id) => !selected.has(id))) selected = ids;
 	}
+	/** Verse text by segment id, for the words of a text selection. */
+	const segText = $derived.by(() => {
+		const m = new Map<string, string>();
+		for (const b of data.chapters[0].blocks) if (b.type === 'para') for (const seg of b.segments) if (seg.id) m.set(seg.id, seg.text);
+		return m;
+	});
+	const textOf = (id: string) => segText.get(id) ?? '';
+	/** The segment that holds a verse, following bridges (a 17-18 bridge lives on 17). */
+	const segOf = (v: number) => {
+		const id = `${data.book.code}.${data.chapter}.${v}`;
+		return data.chapters[0].bridges?.[id] ?? id;
+	};
 	const verseNum = (id: string) => Number(id.split('.')[2]);
 	const selectedNumbers = $derived([...selected].map(verseNum).filter((n) => !isNaN(n)).sort((a, b) => a - b));
 	function rangeText(nums: number[]) {
@@ -344,12 +370,20 @@
 	// Personal data (R-10.x): loaded after paint, only when signed in.
 	let userHighlights = $state<Highlight[]>([]);
 	let userNotes = $state<Note[]>([]);
-	let noteOpen = $state<{ start: number; end: number; existing: Note | null } | null>(null);
+	let noteOpen = $state<{ start: number; end: number; existing: Note | null; range: TextRange | null } | null>(null);
 	const highlightMap = $derived.by(() => {
 		const m = new Map<string, string>();
-		for (const h of userHighlights) for (let v = h.verse_start; v <= h.verse_end; v++) m.set(`${data.book.code}.${data.chapter}.${v}`, h.color);
+		// A word range made in this version is drawn on its words (marks below);
+		// one made in another version colours its whole verses here.
+		for (const h of userHighlights) {
+			if (isPartial(h) && h.version === primary.code) continue;
+			for (let v = h.verse_start; v <= h.verse_end; v++) m.set(`${data.book.code}.${data.chapter}.${v}`, h.color);
+		}
 		return m;
 	});
+	const marks = $derived(marksByVerse(primary.code, userHighlights, userNotes, segOf));
+	/** The reader's own notes beside their verses (setting "My notes in the margin"). */
+	const sidenotes = $derived(settings.value.marginNotes && userNotes.length ? sideNotesByVerse(primary.code, userNotes, segOf) : null);
 	const notedSet = $derived.by(() => {
 		const s = new Set<string>();
 		for (const n of userNotes) for (let v = n.verse_start; v <= n.verse_end; v++) s.add(`${data.book.code}.${data.chapter}.${v}`);
@@ -372,11 +406,28 @@
 	});
 	const currentColor = $derived.by(() => {
 		if (!selected.size) return null;
+		if (textSel) {
+			// The colour of the word-range highlights under the selected words, if they agree.
+			const r = textSel;
+			const colors = new Set(userHighlights.filter((h) => isPartial(h) && rangesOverlap(h as TextRange, r)).map((h) => h.color));
+			return colors.size === 1 ? [...colors][0] : null;
+		}
 		const colors = new Set([...selected].map((id) => highlightMap.get(id) ?? null));
 		return colors.size === 1 ? ([...colors][0] as HighlightColor | null) : null;
 	});
 	async function applyHighlight(color: HighlightColor | null) {
 		if (!selectedNumbers.length) return;
+		if (textSel) {
+			const r = textSel;
+			try {
+				if (color) await setRangeHighlight(data.book.code, data.chapter, r, color);
+				else await removeRangeHighlight(data.book.code, data.chapter, r);
+				await loadPersonal();
+				// Let go of the browser's selection so the new colour shows.
+				clearSelection();
+			} catch { /* surface later via toast */ }
+			return;
+		}
 		try {
 			if (color) await setHighlight(data.book.code, data.chapter, selectedNumbers, color);
 			else await removeHighlight(data.book.code, data.chapter, selectedNumbers);
@@ -384,11 +435,24 @@
 		} catch { /* surface later via toast */ }
 	}
 	function openNote(forId?: string) {
+		if (!forId && textSel) {
+			// A note on the selected words: reopen the one on exactly these words, else start one.
+			const r = textSel;
+			const same = userNotes.find((n) => isPartial(n) && n.version === r.version && n.verse_start === r.verse_start && n.char_start === r.char_start && n.verse_end === r.verse_end && n.char_end === r.char_end) ?? null;
+			noteOpen = { start: r.verse_start, end: r.verse_end, existing: same, range: same ? null : r };
+			clearSelection();
+			return;
+		}
 		const nums = forId ? [verseNum(forId)] : selectedNumbers;
 		if (!nums.length) return;
 		const start = nums[0], end = nums[nums.length - 1];
-		const existing = userNotes.find((n) => n.verse_start <= start && n.verse_end >= start) ?? null;
-		noteOpen = existing ? { start: existing.verse_start, end: existing.verse_end, existing } : { start, end, existing: null };
+		const covers = (n: Note) => n.verse_start <= start && n.verse_end >= start;
+		// Whole verses reopen a whole-verse note; the ✎ marker opens any note on its verse.
+		const existing = userNotes.find((n) => !isPartial(n) && covers(n)) ?? (forId ? userNotes.find(covers) : null) ?? null;
+		noteOpen = existing ? { start: existing.verse_start, end: existing.verse_end, existing, range: null } : { start, end, existing: null, range: null };
+	}
+	function openNoteFor(n: Note) {
+		noteOpen = { start: n.verse_start, end: n.verse_end, existing: n, range: null };
 	}
 
 	// Text size popover ("AA" in the toolbar), per the redesign's reader screen.
@@ -501,7 +565,7 @@
 			</div>
 		</div>
 
-		<div class="measure" bind:this={measure}>
+		<div class="measure" class:with-margin={!dual && !!sidenotes} bind:this={measure}>
 			<nav class="crumbs" aria-label="Breadcrumb">
 				<a href="/">Bible</a>
 				<span aria-hidden="true">›</span>
@@ -539,7 +603,8 @@
 			{/if}
 
 			{#if !dual}
-				<Chapter chapter={data.chapters[0]} lang={primary.lang} {selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} />
+				<!-- While words are selected the browser's own selection shows them, not the whole-verse tint. -->
+				<Chapter chapter={data.chapters[0]} lang={primary.lang} selected={textSel ? new Set() : selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} {marks} {sidenotes} onopennote={openNoteFor} />
 			{:else}
 				<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 			{/if}
@@ -567,7 +632,7 @@
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
 				{#snippet actions()}
-					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
+					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 				{/snippet}
 			</ContextPanel>
 		</aside>
@@ -626,7 +691,7 @@
 {/if}
 
 <div class="overlays" class:dual>
-	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} onoriginal={openOriginal} />
+	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} onoriginal={openOriginal} />
 	{#if sheet}
 		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
 			{#snippet study()}
@@ -651,7 +716,7 @@
 {/if}
 
 {#if noteOpen}
-	<NoteSheet book={data.book.code} chapter={data.chapter} verseStart={noteOpen.start} verseEnd={noteOpen.end} existing={noteOpen.existing} lang={ui}
+	<NoteSheet book={data.book.code} chapter={data.chapter} verseStart={noteOpen.start} verseEnd={noteOpen.end} existing={noteOpen.existing} range={noteOpen.range} lang={ui}
 		label={`${bookName} ${data.chapter}:${noteOpen.start}${noteOpen.end !== noteOpen.start ? `-${noteOpen.end}` : ''}`}
 		onclose={() => (noteOpen = null)} onsaved={() => loadPersonal()} />
 {/if}
@@ -664,6 +729,8 @@
 	.main { width: 100%; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 	.measure { max-width: 40rem; margin: 0 auto; }
 	.reader.dual .measure { max-width: none; }
+	/* Room for margin notes beside the 40rem text (Chapter.svelte decides whether they fit). */
+	.measure.with-margin { max-width: 56rem; }
 
 	.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 1rem; margin: 0 0 1.5rem; border-bottom: var(--bw) solid var(--line); }
 	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }

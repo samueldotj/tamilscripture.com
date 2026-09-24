@@ -15,6 +15,7 @@
 		lang,
 		signedIn = false,
 		currentColor = null,
+		excerpt = '',
 		communityUsers = 0,
 		variant = 'floating',
 		onclear,
@@ -30,6 +31,8 @@
 		lang: 'ta' | 'en';
 		signedIn?: boolean;
 		currentColor?: HighlightColor | null;
+		/** The selected words when the selection is part of a verse (R-10.15); highlight and note apply to them. */
+		excerpt?: string;
 		/** readers who highlighted the selected verse (max over the selection); 0 when below the privacy threshold */
 		communityUsers?: number;
 		variant?: 'floating' | 'panel';
@@ -104,6 +107,9 @@
 {#if selected.size}
 	<div class="bar" class:card={variant === 'floating'} class:floating={variant === 'floating'} class:panel={variant === 'panel'} role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
 		<span class="label" lang={lang}>{label}</span>
+		{#if excerpt}
+			<span class="excerpt" title={excerpt}>“{excerpt}”</span>
+		{/if}
 		{#if communityUsers}
 			<span class="community" title={ta ? `${communityUsers} வாசகர்கள் அடிக்கோடிட்டனர்` : `${communityUsers} readers highlighted this`}>◉ {communityUsers}</span>
 		{/if}
@@ -153,6 +159,8 @@
 	.panel .chip { flex: 1 1 auto; min-height: 46px; }
 	.ghost { border: 0; background: none; color: var(--muted); font-size: 0.95rem; line-height: 1; min-width: 40px; min-height: 40px; padding: 0; cursor: pointer; border-radius: 999px; }
 	.ghost:hover { background: var(--surface-2); color: var(--ink); }
+	.excerpt { font-family: var(--tamil); font-style: italic; font-size: 0.85rem; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 14rem; }
+	.panel .excerpt { width: 100%; max-width: none; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; }
 	.community { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
 	.panel .community { width: 100%; }
 	.colors { display: inline-flex; gap: 0.35rem; padding: 0 0.2rem; }

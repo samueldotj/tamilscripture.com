@@ -266,6 +266,7 @@ Reading never requires an account. Signing in adds memory: what you read, what y
 | R-10.9 | Verses with a note show a small marker. Tapping it opens the note for reading or editing. A notes page lists all notes with their reference and a search box. | Must |
 | R-10.10 | Notes are private. Nothing in version 1 makes a note visible to anyone else. | Must |
 | R-10.11 | Basic Markdown (bold, italics, lists, links) renders in notes. | Could |
+| R-10.16 | A signed-in reader's own notes show beside the verses they belong to: in the margin, level with the noted words, where the reading column has room, otherwise under the verse. A reader setting turns this off (on by default). A note may belong to part of a verse, stored like R-10.15. | Should |
 
 ### Highlights
 

@@ -5,7 +5,27 @@ import { sb } from '$lib/supabase/client';
 export type HighlightColor = 'yellow' | 'green' | 'blue' | 'pink';
 export const COLORS: HighlightColor[] = ['yellow', 'green', 'blue', 'pink'];
 
-export interface Highlight {
+/** A word range (R-10.15): code-point offsets into one version's verse text,
+ *  `char_start` into `verse_start` and `char_end` (exclusive) into `verse_end`. */
+export interface TextRange {
+	version: string;
+	verse_start: number;
+	char_start: number;
+	verse_end: number;
+	char_end: number;
+	/** the marked words, for the notes and highlights pages */
+	quote: string;
+}
+
+/** Offsets and quote of a row: all null for a whole-verse row. */
+export interface RangeFields {
+	version: string | null;
+	char_start: number | null;
+	char_end: number | null;
+	quote: string | null;
+}
+
+export interface Highlight extends RangeFields {
 	id: string;
 	book: string;
 	chapter: number;
@@ -15,7 +35,7 @@ export interface Highlight {
 	updated_at: string;
 }
 
-export interface Note {
+export interface Note extends RangeFields {
 	id: string;
 	book: string;
 	chapter: number;
@@ -23,6 +43,14 @@ export interface Note {
 	verse_end: number;
 	body: string;
 	updated_at: string;
+}
+
+export const isPartial = (r: RangeFields): boolean => r.char_start !== null && r.char_end !== null && r.version !== null;
+
+/** Whether two word ranges in the same version share at least one character. */
+export function rangesOverlap(a: Omit<TextRange, 'quote'>, b: Omit<TextRange, 'quote'>): boolean {
+	const before = (v1: number, c1: number, v2: number, c2: number) => v1 < v2 || (v1 === v2 && c1 < c2);
+	return a.version === b.version && before(a.verse_start, a.char_start, b.verse_end, b.char_end) && before(b.verse_start, b.char_start, a.verse_end, a.char_end);
 }
 
 export interface Visit {
@@ -38,7 +66,7 @@ export interface Visit {
 export async function chapterHighlights(book: string, chapter: number): Promise<Highlight[]> {
 	const { data, error } = await (await sb())
 		.from('highlights')
-		.select('id, book, chapter, verse_start, verse_end, color, updated_at')
+		.select('id, book, chapter, verse_start, verse_end, color, version, char_start, char_end, quote, updated_at')
 		.eq('book', book)
 		.eq('chapter', chapter);
 	if (error) throw error;
@@ -53,7 +81,7 @@ export async function setHighlight(book: string, chapter: number, verses: number
 	const user_id = userRes.user?.id;
 	if (!user_id) throw new Error('not signed in');
 	await removeHighlight(book, chapter, sorted);
-	const rows: (Omit<Highlight, 'id' | 'updated_at'> & { user_id: string })[] = [];
+	const rows: { user_id: string; book: string; chapter: number; verse_start: number; verse_end: number; color: HighlightColor }[] = [];
 	let start = sorted[0], prev = sorted[0];
 	for (const v of sorted.slice(1).concat(NaN)) {
 		if (v === prev + 1) { prev = v; continue; }
@@ -66,7 +94,8 @@ export async function setHighlight(book: string, chapter: number, verses: number
 
 export async function removeHighlight(book: string, chapter: number, verses: number[]): Promise<void> {
 	// Delete rows overlapping any of the verses; rows partly overlapping are
-	// split so the untouched verses keep their colour.
+	// split so the untouched verses keep their colour. A word-range row that
+	// touches the verses goes whole: its offsets belong to its end verses.
 	const client = await sb();
 	const existing = await chapterHighlights(book, chapter);
 	const set = new Set(verses);
@@ -79,6 +108,7 @@ export async function removeHighlight(book: string, chapter: number, verses: num
 	const user_id = userRes.user!.id;
 	const keep: { user_id: string; book: string; chapter: number; verse_start: number; verse_end: number; color: HighlightColor }[] = [];
 	for (const h of touched) {
+		if (isPartial(h)) continue;
 		let s: number | null = null;
 		for (let v = h.verse_start; v <= h.verse_end + 1; v++) {
 			const inside = v <= h.verse_end && !set.has(v);
@@ -94,6 +124,26 @@ export async function removeHighlight(book: string, chapter: number, verses: num
 	}
 }
 
+/** Colour a word range; word-range highlights it overlaps are replaced. */
+export async function setRangeHighlight(book: string, chapter: number, r: TextRange, color: HighlightColor): Promise<void> {
+	const client = await sb();
+	const { data: userRes } = await client.auth.getUser();
+	const user_id = userRes.user?.id;
+	if (!user_id) throw new Error('not signed in');
+	await removeRangeHighlight(book, chapter, r);
+	const { error } = await client.from('highlights').insert({ user_id, book, chapter, ...r, color });
+	if (error) throw error;
+}
+
+/** Remove the word-range highlights that overlap a word range. */
+export async function removeRangeHighlight(book: string, chapter: number, r: Omit<TextRange, 'quote'>): Promise<void> {
+	const existing = await chapterHighlights(book, chapter);
+	const ids = existing.filter((h) => isPartial(h) && rangesOverlap(h as unknown as TextRange, r)).map((h) => h.id);
+	if (!ids.length) return;
+	const { error } = await (await sb()).from('highlights').delete().in('id', ids);
+	if (error) throw error;
+}
+
 export async function allHighlights(): Promise<Highlight[]> {
 	const { data, error } = await (await sb()).from('highlights').select('*').order('book').order('chapter').order('verse_start');
 	if (error) throw error;
@@ -106,7 +156,7 @@ export async function chapterNotes(book: string, chapter: number): Promise<Note[
 	return data as Note[];
 }
 
-export async function saveNote(note: { id?: string; book: string; chapter: number; verse_start: number; verse_end: number; body: string }): Promise<Note> {
+export async function saveNote(note: { id?: string; book: string; chapter: number; verse_start: number; verse_end: number; body: string; range?: TextRange | null }): Promise<Note> {
 	const client = await sb();
 	if (!note.body.trim() && note.id) {
 		await deleteNote(note.id);
@@ -118,7 +168,8 @@ export async function saveNote(note: { id?: string; book: string; chapter: numbe
 		return data as Note;
 	}
 	const { data: userRes } = await client.auth.getUser();
-	const { data, error } = await client.from('notes').insert({ ...note, user_id: userRes.user!.id }).select().single();
+	const { range, ...row } = note;
+	const { data, error } = await client.from('notes').insert({ ...row, ...(range ?? {}), user_id: userRes.user!.id }).select().single();
 	if (error) throw error;
 	return data as Note;
 }

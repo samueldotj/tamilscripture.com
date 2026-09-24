@@ -40,6 +40,7 @@
 		{#each items as n (n.id)}
 			<li>
 				<a class="ref" href={href(n)} lang={ta ? 'ta' : 'en'}>{label(n)}</a>
+				{#if n.quote}<q class="quote">{n.quote}</q>{/if}
 				<time datetime={n.updated_at}>{new Date(n.updated_at).toLocaleDateString(ta ? 'ta-IN' : 'en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</time>
 				<div class="body"><Markdown source={n.body} version={settings.value.version} lang={ta ? 'ta' : 'en'} /></div>
 			</li>
@@ -55,7 +56,9 @@
 	ul { list-style: none; padding: 0; margin: 0; max-width: 42rem; }
 	li { padding: 0.8rem 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
 	.ref { font-family: var(--tamil); text-decoration: none; font-weight: 600; }
-	time { color: var(--muted); font-size: 0.85rem; }
+	time { color: var(--muted); font-size: 0.85rem; grid-column: 2; grid-row: 1; }
+	/* A note on part of a verse shows the words it belongs to (R-10.15). */
+	.quote { grid-column: 1 / -1; font-family: var(--tamil); font-style: italic; color: var(--ink-2); border-left: 2px solid var(--accent); padding-left: 0.6rem; }
 	/* Notes are Markdown (R-10.11): bold, italics, lists, links. */
 	.body { grid-column: 1 / -1; font-family: var(--tamil); line-height: 1.7; }
 	.muted { color: var(--muted); }

@@ -2,7 +2,7 @@
 	// Bottom sheet for writing a note on the selected verses. Autosaves. Notes are
 	// Markdown (R-10.11); Preview shows them as they read on the notes page.
 	import Markdown from '$lib/md/Markdown.svelte';
-	import type { Note } from '$lib/personal/repo';
+	import type { Note, TextRange } from '$lib/personal/repo';
 	import { saveNote, deleteNote } from '$lib/personal/repo';
 
 	let {
@@ -11,6 +11,7 @@
 		verseStart,
 		verseEnd,
 		existing = null,
+		range = null,
 		label,
 		lang,
 		onclose,
@@ -21,6 +22,8 @@
 		verseStart: number;
 		verseEnd: number;
 		existing?: Note | null;
+		/** The words a new note belongs to, when it is on part of a verse (R-10.15). */
+		range?: TextRange | null;
 		label: string;
 		lang: 'ta' | 'en';
 		onclose: () => void;
@@ -35,6 +38,7 @@
 	let id = $state<string | undefined>(existing?.id);
 	let status = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
 	let preview = $state(false);
+	const quote = $derived(existing?.quote ?? range?.quote ?? '');
 	let timer: ReturnType<typeof setTimeout> | undefined;
 
 	function schedule() {
@@ -49,7 +53,7 @@
 				status = 'idle';
 				return;
 			}
-			const n = await saveNote({ id, book, chapter, verse_start: verseStart, verse_end: verseEnd, body });
+			const n = await saveNote({ id, book, chapter, verse_start: verseStart, verse_end: verseEnd, body, range });
 			id = n.id;
 			onsaved(n);
 			status = 'saved';
@@ -76,6 +80,7 @@
 		</span>
 		<button type="button" class="close" onclick={close} aria-label={ta ? 'மூடு' : 'Close'}>✕</button>
 	</header>
+	{#if quote}<blockquote class="quote">“{quote}”</blockquote>{/if}
 	{#if preview}
 		<div class="preview field">{#if body.trim()}<Markdown source={body} {lang} />{:else}<span class="empty">{ta ? 'எதுவும் இல்லை' : 'Nothing yet'}</span>{/if}</div>
 	{:else}
@@ -98,6 +103,7 @@
 	header strong[lang='ta'], .kicker[lang='ta'] { font-family: var(--tamil); }
 	.status { color: var(--muted); font-size: 0.85rem; margin-left: auto; }
 	.close { flex: none; width: 40px; height: 40px; border-radius: 999px; border: 0; background: var(--surface-2); color: var(--ink-2); font-size: 0.95rem; cursor: pointer; }
+	.quote { margin: 0 0 0.7rem; padding: 0.35rem 0.8rem; border-left: 3px solid var(--accent); font-family: var(--tamil); font-style: italic; color: var(--ink-2); max-height: 4.8em; overflow: auto; line-height: 1.6; }
 	textarea.field { line-height: 1.7; resize: vertical; background: var(--bg); border-radius: 14px; }
 	footer { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; margin-top: 0.6rem; font-size: 0.8rem; color: var(--muted); }
 	.hint { flex: 1 1 12rem; font-family: var(--sans); opacity: 0.85; }

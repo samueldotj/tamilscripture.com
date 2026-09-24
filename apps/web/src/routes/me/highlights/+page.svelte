@@ -47,7 +47,7 @@
 			<h2 lang={ta ? 'ta' : 'en'}>{ta ? findBook(code)!.name_ta : findBook(code)!.name_en}</h2>
 			<ul>
 				{#each hs as h (h.id)}
-					<li><span class="dot {h.color}"></span><a href={href(h)} lang={ta ? 'ta' : 'en'}>{label(h)}</a></li>
+					<li><span class="dot {h.color}"></span><a href={href(h)} lang={ta ? 'ta' : 'en'}>{label(h)}</a>{#if h.quote}<q class="quote">{h.quote}</q>{/if}</li>
 				{/each}
 			</ul>
 		</section>
@@ -67,6 +67,8 @@
 	ul { list-style: none; padding: 0; margin: 0; }
 	li { display: flex; gap: 0.6rem; align-items: center; padding: 0.4rem 0; border-top: 1px solid var(--line); }
 	.dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
-	li a { font-family: var(--tamil); text-decoration: none; font-weight: 600; }
+	li a { font-family: var(--tamil); text-decoration: none; font-weight: 600; flex: none; }
+	/* Highlighted words within a verse (R-10.15). */
+	.quote { font-family: var(--tamil); font-style: italic; color: var(--ink-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 	.muted { color: var(--muted); }
 </style>

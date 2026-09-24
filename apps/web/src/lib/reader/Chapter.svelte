@@ -3,6 +3,8 @@
 	import Verse from './Verse.svelte';
 	import { DEFAULT_VERSION } from '$lib/content/manifest';
 	import type { NameHit, VerseNames } from './names';
+	import type { Mark, SideNote } from './marks';
+	import type { Note } from '$lib/personal/repo';
 
 	let {
 		chapter,
@@ -17,7 +19,10 @@
 		onnote,
 		heat = null,
 		names = null,
-		onname
+		onname,
+		marks = null,
+		sidenotes = null,
+		onopennote
 	}: {
 		chapter: ChapterJson;
 		lang: string;
@@ -36,7 +41,13 @@
 		/** verse id → names to mark; null when the Dictionary words setting is off */
 		names?: Map<string, VerseNames> | null;
 		onname?: (hit: NameHit) => void;
+		/** verse id → word-range highlights and notes (R-10.15) */
+		marks?: Map<string, Mark[]> | null;
+		/** verse id → the reader's notes starting there; null when margin notes are off */
+		sidenotes?: Map<string, SideNote[]> | null;
+		onopennote?: (note: Note) => void;
 	} = $props();
+	const withNotes = $derived(!!sidenotes?.size);
 	function heatFor(seg: Segment) {
 		if (!heat || !seg.id) return { bucket: 0, users: 0 };
 		return heat.get(Number(seg.id.split('.')[2])) ?? { bucket: 0, users: 0 };
@@ -71,6 +82,9 @@
 	});
 </script>
 
+<!-- The frame is the container the margin notes measure: with room, the
+     chapter keeps a right margin and each note sits in it beside its verse. -->
+<div class="frame" class:with-notes={withNotes}>
 <article class="chapter" {lang} data-version={chapter.version} data-book={chapter.book} data-chapter={chapter.chapter}>
 	{#if chapter.label}<div class="chapter-label">{chapter.label}</div>{/if}
 	{#each chapter.blocks as block, i (i)}
@@ -107,6 +121,9 @@
 						users={heatFor(seg).users}
 						names={seg.id && names ? names.get(seg.id) ?? null : null}
 						{onname}
+						marks={seg.id && marks ? marks.get(seg.id) ?? null : null}
+						sidenotes={seg.id && sidenotes ? sidenotes.get(seg.id) ?? null : null}
+						{onopennote}
 					/>
 				{/each}
 			</p>
@@ -123,10 +140,15 @@
 		</aside>
 	{/if}
 </article>
+</div>
 
 <style>
 	/* Scripture measure follows the redesign: Tamil 22px/1.9, English 19px/1.8 at the default step. */
 	.chapter { max-width: 40rem; }
+	.frame { container: chapter / inline-size; --mw: clamp(11rem, 28cqi, 16rem); }
+	@container chapter (min-width: 41rem) {
+		.with-notes .chapter { max-width: none; padding-right: var(--mw); }
+	}
 	.chapter[lang='ta'] { font-family: var(--tamil); font-size: 1.3rem; line-height: 1.9; }
 	.chapter[lang='en'] { font-family: var(--en); font-size: 1.12rem; line-height: 1.8; color: var(--ink-en); }
 	.chapter-label { display: none; }
