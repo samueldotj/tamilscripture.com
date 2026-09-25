@@ -3,6 +3,13 @@ name: Deploy
 on:
   push:
     branches: [main]
+    # Every production deploy empties Vercel's ISR cache, so every page is
+    # rendered and written again; a change that cannot reach the site does not deploy.
+    # Not every Markdown file: data/**/SOURCE.md and LICENSE.md are shipped as attributions.
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - 'apps/web/README.md'
   workflow_dispatch:
 
 concurrency:

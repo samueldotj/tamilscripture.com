@@ -23,13 +23,15 @@ Moderators need to see how many people use the site and what they read: visitors
 
 ```mermaid
 flowchart LR
-  P["Page (after navigation)<br/>sendBeacon · ~1 kB"] -- "POST /api/t<br/>kind, path, route, verse, screen, referrer, lang, user id?" --> R["Vercel function /api/t<br/>drop bots · read geo headers · parse UA"]
+  P["Page (events queued in memory)<br/>sendBeacon when hidden · ≤ 20 events"] -- "POST /api/t<br/>[kind, path, route, verse, screen, referrer, lang, user id?]" --> R["Vercel function /api/t<br/>drop bots · read geo headers · parse UA"]
   R -- "rpc track(…, ip, ua, user)" --> F["Postgres track()<br/>hash with today's salt · rate limit"]
   F --> E[("analytics_events<br/>no IP · no user id")]
   S[("analytics_salt<br/>one row per day")] --> F
   E -- "analytics_report(from, to)<br/>staff only" --> M["/mod/traffic"]
   C["pg_cron"] -. "drop old salts · purge > 90 days" .-> E
 ```
+
+*Events are sent in one request per visit (when the tab is hidden or closed, or after 20 events) rather than one per event, which keeps Vercel edge requests and function calls down; the function still calls `track()` once per event.*
 
 *The IP address and user id travel to one database function and stop there: it stores only hashes salted with a value that is deleted the next day.*
 
