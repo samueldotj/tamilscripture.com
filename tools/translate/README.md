@@ -133,6 +133,22 @@ For each term the tool finds the Strong's numbers the BSB tags on its English wo
 
 On the review page every field is editable; Enter approves as shown, Ctrl+Enter approves from inside a field, `r` rejects, `s` skips, `u` undoes.
 
+## Pilot
+
+About 60 articles (`tools/translate/seed/pilot.txt`: doctrinal articles, well-known people and places, and a seeded random spread of short, medium and long ones) translated by two models, compared blind, then one model's drafts adopted.
+
+```bash
+translate pilot run --model claude-opus-5        # into .translate-work/pilot/claude-opus-5/
+translate pilot run --model claude-sonnet-5      # into .translate-work/pilot/claude-sonnet-5/
+translate pilot                                  # drafts, problems left, tokens and cost per model
+translate review-pilot --web                     # compare A and B blind, article by article
+translate pilot adopt --model claude-sonnet-5    # copy the chosen drafts into data/entities/drafts/
+```
+
+Each run sends 6 articles at a time (`--workers`), writes its drafts, report and saved replies in its own folder, and skips articles already done (`--force` redoes them). On the comparison page each article shows the English beside version A and version B with the checks' remaining problems; which model is A is fixed per article and revealed only on the results page. Keys: `a` A better, `b` B better, `g` both good, `w` both need work, ←/→ to move; a note is saved with each rating. `pilot` estimates the cost of all 13,147 articles from the pilot's own tokens.
+
+The glossary goes with each article: only the approved terms its text uses (a typical article: a few thousand characters), not all 278. Renderings to avoid are checked in their inflected forms too, leaving out those that are part of the term's own Tamil or another approved term's.
+
 ## What it writes
 
 - **Drafts:** `data/entities/drafts/ta/{source}/{slug}.json`, or `drafts/ta-sa/aquifer/{slug}.json` for Aquifer. A draft is written unless the build would reject it (missing paragraphs, no Tamil, markup).

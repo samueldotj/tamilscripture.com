@@ -28,7 +28,7 @@ class Context:
     system: list = field(init=False)
 
     def __post_init__(self):
-        self.system = prompts.system_blocks(self.terms)
+        self.system = prompts.system_blocks()
 
 
 def custom_id(article_id: str, part: int) -> str:
@@ -66,7 +66,7 @@ def requests_for(article: dict, ctx: Context) -> list[tuple[str, dict]]:
     hint = title_hint(article)
     out = []
     for k, paras in enumerate(parts, 1):
-        msg = prompts.user_message(article, paras, (k, len(parts)), ctx.names, hint)
+        msg = prompts.user_message(article, paras, (k, len(parts)), ctx.names, hint, ctx.terms)
         out.append((custom_id(article["id"], k), client.params(ctx.system, [{"role": "user", "content": msg}], ctx.model, ctx.effort)))
     return out
 

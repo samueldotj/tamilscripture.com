@@ -105,6 +105,21 @@ class CheckTests(unittest.TestCase):
         self.assertIn("“நியாயப்படுத்துதல்” is not used", joined)
         self.assertIn("name: Vashti", joined)
 
+    def test_avoid_ignores_own_and_other_terms_words(self):
+        terms = {
+            "baptism": Term("baptism", "ஞானஸ்நானம்", ["ஞானஸ்நானம்"], ["ஸ்நானம் (bathing)", "திருமுழுக்கு"], [], "", False),
+            "covenant": Term("covenant", "உடன்படிக்கை", ["உடன்படிக்கை"], ["வாக்குத்தத்தம்", "ஒப்பந்தம்"], [], "", False),
+            "promise": Term("promise", "வாக்குத்தத்தம்", ["வாக்குத்தத்தம்"], [], [], "", False),
+        }
+        self.assertEqual(checks.usable_avoid(terms["baptism"], terms), ["திருமுழுக்கு"])
+        self.assertEqual(checks.usable_avoid(terms["covenant"], terms), ["ஒப்பந்தம்"])
+        a = article(["The covenant and its promise; baptism."])
+        ok = "உடன்படிக்கையும் அதின் வாக்குத்தத்தமும்; ஞானஸ்நானம்."
+        self.assertEqual(checks.check_draft(a, "நீதி", [{"id": a["paragraphs"][0]["id"], "text": ok}], terms, {}), [])
+        bad = "ஒப்பந்தமும் வாக்குத்தத்தமும்; ஞானஸ்நானம்."
+        ps = [str(p) for p in checks.check_draft(a, "நீதி", [{"id": a["paragraphs"][0]["id"], "text": bad}], terms, {})]
+        self.assertTrue(any("ஒப்பந்தம்" in p for p in ps))
+
     def test_inflected_name_counts(self):
         self.assertTrue(checks.uses_any("வஸ்தியை அழைத்தான்", ["வஸ்தி"]))
 
@@ -126,11 +141,16 @@ class PromptTests(unittest.TestCase):
         self.assertEqual([len(p) for p in parts], [1, 2, 1])
         self.assertEqual(sum(parts, []), a["paragraphs"])
 
-    def test_system_prompt_is_deterministic(self):
-        t2 = dict(reversed(list({**TERMS, "grace": Term("grace", "கிருபை", ["கிருபை"], [], [], "", False)}.items())))
-        t1 = dict(sorted(t2.items()))
-        self.assertEqual(prompts.system_blocks(t1), prompts.system_blocks(t2))
-        self.assertIn("justification (justified, justify) → நீதிமானாக்கப்படுதல்", prompts.glossary_block(TERMS))
+    def test_system_prompt_is_fixed_and_glossary_goes_with_the_article(self):
+        self.assertEqual(prompts.system_blocks(), prompts.system_blocks())
+        self.assertNotIn("நீதிமானாக்கப்படுதல்", prompts.system_blocks()[0]["text"])
+        terms = {**TERMS, "grace": Term("grace", "கிருபை", ["கிருபை"], [], [], "[Claude: high] The IRV's word.", False)}
+        a = article(["Justification is by grace alone."])
+        msg = prompts.user_message(a, a["paragraphs"], (1, 1), {}, None, terms)
+        self.assertIn("justification (justified, justify) → நீதிமானாக்கப்படுதல்", msg)
+        self.assertIn("grace → கிருபை; note: The IRV's word.", msg)  # review tag stripped
+        other = {**article(["A city of Judah."]), "title": "Adullam"}
+        self.assertNotIn("Glossary", prompts.user_message(other, other["paragraphs"], (1, 1), {}, None, terms))
 
     def test_custom_id_shape(self):
         cid = translate.custom_id("aquifer/a-very-long-slug-" + "x" * 80, 12)
@@ -384,6 +404,58 @@ class ParallelRunTests(unittest.TestCase):
                 self.assertEqual(len(terms.load_file()), 5)
             finally:
                 repo.GLOSSARY, terms.LOG, repo.WORK = saved
+
+
+class PilotTests(unittest.TestCase):
+    """Two faked models on two articles: separate folders, blind order, adopt."""
+
+    def test_pilot_run_compare_and_adopt(self):
+        import json
+        from translate_tool import client, pilot, pilotweb, translate
+
+        def fake_for(tag):
+            def fake(p, cid):
+                msg = p["messages"][-1]["content"]
+                if "Article:\n" not in msg:
+                    return client.Reply(json.loads(p["messages"][1]["content"]), None, p["messages"][1]["content"])
+                art = json.loads(msg[msg.index("Article:\n") + 9:])
+                data = {"title": "சோதனை", "paragraphs": [{"id": x["id"], "text": f"{tag} சோதனை"} for x in art["paragraphs"]]}
+                return client.Reply(data, None, json.dumps(data, ensure_ascii=False))
+            return fake
+
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / "pilot.txt").write_text("# pilot\neastons/abagtha\naquifer/abagtha\n", encoding="utf-8")
+            saved = (pilot.LIST, pilot.ROOT, pilot.RATINGS, repo.DRAFTS, repo.ENTITIES, translate.REPORT, translate.FLAGGED)
+            pilot.LIST, pilot.ROOT, pilot.RATINGS = d / "pilot.txt", d / "pilot", d / "pilot" / "ratings.jsonl"
+            repo.ENTITIES = d / "entities"
+            try:
+                with unittest.mock.patch.object(client, "client", lambda: None), \
+                     unittest.mock.patch("sys.stdout", new=__import__("io").StringIO()):
+                    for m in ("model-one", "model-two"):
+                        with unittest.mock.patch.object(client, "run_direct", fake_for(m)):
+                            pilot.run(m, "low", 2)
+                self.assertEqual(pilot.models(), ["model-one", "model-two"])
+                # each model's drafts in its own folder; ShareAlike (Aquifer) under ta-sa
+                self.assertTrue((d / "pilot" / "model-one" / "drafts" / "ta" / "eastons" / "abagtha.json").exists())
+                self.assertTrue((d / "pilot" / "model-two" / "drafts" / "ta-sa" / "aquifer" / "abagtha.json").exists())
+                s = pilotweb.PilotSession(pilot.models())
+                v = s.view()
+                a_model, b_model = s.order(v["id"])
+                self.assertTrue(v["rows"][0]["a"].startswith(a_model))
+                s.rate("a", "better")
+                s.rate("w", "")
+                res = s.results()
+                self.assertEqual(res[a_model]["better"], 1)
+                self.assertEqual(res[b_model]["worse"], 1)
+                self.assertEqual(res[a_model]["both need work"], 1)
+                copied, skipped = pilot.adopt("model-two")
+                self.assertEqual((copied, skipped), (2, 0))
+                adopted = json.loads((d / "entities" / "drafts" / "ta" / "eastons" / "abagtha.json").read_text(encoding="utf-8"))
+                self.assertTrue(adopted["paragraphs"][0]["text"].startswith("model-two"))
+            finally:
+                (pilot.LIST, pilot.ROOT, pilot.RATINGS, repo.DRAFTS, repo.ENTITIES, translate.REPORT,
+                 translate.FLAGGED) = saved
 
 
 class GlossaryTermsTests(unittest.TestCase):

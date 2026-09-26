@@ -1,0 +1,69 @@
+# Pilot articles (docs/feature_dictionary_translation.md §5): doctrinal articles, well-known
+# people and places, and a seeded random spread of short, medium and long articles from each
+# source. One article id per line; edit freely.
+
+# doctrinal
+eastons/justification
+eastons/propitiation
+eastons/atonement
+eastons/sanctification
+eastons/adoption
+eastons/regeneration
+eastons/predestination
+eastons/covenant
+eastons/grace
+eastons/faith
+eastons/church
+eastons/lord-s-supper
+eastons/trinity
+aquifer/propitiation
+aquifer/baptism
+aquifer/predestination
+smiths/baptism
+smiths/covenant
+
+# people and places
+eastons/abraham
+smiths/david
+eastons/peter
+aquifer/moses
+eastons/jerusalem
+smiths/damascus
+eastons/bethlehem
+aquifer/bethlehem
+smiths/jordan
+aquifer/damascus
+eastons/jehovah
+aquifer/holy-spirit
+
+# random spread
+eastons/gibeah
+eastons/baal-zebub
+eastons/zemarite
+eastons/lime
+eastons/ammon
+eastons/genubath
+eastons/ephratah
+eastons/frontlets
+eastons/cormorant
+eastons/elijah
+smiths/etam-the-rock
+smiths/phalec
+smiths/sorek
+smiths/obed
+smiths/hazor
+smiths/nethinim
+smiths/philemon
+smiths/greece-greeks-grecians
+smiths/thorns
+smiths/noah
+aquifer/chaphenatha
+aquifer/horesh
+aquifer/jeziah
+aquifer/fords-of-the-jordan
+aquifer/kirjathhuzoth
+aquifer/dalmatia
+aquifer/marah
+aquifer/baanah
+aquifer/hall-of-judgment
+aquifer/astrology

@@ -77,6 +77,25 @@ def _stem(form: str) -> str:
     return form[: max(3, min(len(form), 4))]
 
 
+def usable_avoid(t: Term, terms: dict[str, Term]) -> list[str]:
+    """The avoid entries of a term that can be checked: without explanations
+    in brackets ("ஸ்நானம் (bathing)"), and leaving out any that are part of the
+    term's own Tamil (ஸ்நானம் inside ஞானஸ்நானம்) or another approved term's
+    Tamil (வாக்குத்தத்தம், avoided for covenant, is the word for promise):
+    those occur in correct drafts."""
+    own = [t.ta, *t.forms]
+    others = {f for o in terms.values() if o is not t for f in (o.ta, *o.forms) if f}
+    out = []
+    for a in t.avoid:
+        a = re.sub(r"\s*[(（][^)）]*[)）]", "", a).strip()
+        if not a or not re.search(r"[஀-௿]", a):
+            continue
+        if any(a in f for f in own) or a in others:
+            continue
+        out.append(a)
+    return out
+
+
 def uses_any(tamil: str, forms: list[str]) -> bool:
     return any(f and (f in tamil or _stem(f) in tamil) for f in forms)
 
@@ -120,8 +139,10 @@ def check_draft(
         for t in terms_in(en["text"], terms):
             if not uses_any(ta, t.forms):
                 out.append(Problem(where, f"glossary: “{t.en}” should be {t.ta}"))
-            for bad in t.avoid:
-                if bad and bad in ta:
+            for bad in usable_avoid(t, terms):
+                # Inflected too: ஒப்பந்தம் → ஒப்பந்தமும், so match without a final ்.
+                stem = bad[:-1] if bad.endswith("்") and len(bad) > 3 else bad
+                if re.search(rf"(?<![஀-௿]){re.escape(stem)}", ta):
                     out.append(Problem(where, f"glossary: “{bad}” is not used for “{t.en}”; use {t.ta}"))
         for n in names_in(en["text"], names):
             if not uses_any(ta, n.forms):

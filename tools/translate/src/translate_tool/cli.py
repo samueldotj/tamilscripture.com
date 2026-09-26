@@ -8,6 +8,8 @@
     ai-names   ask Claude for the Tamil of the names still in review
     ai-terms   ask Claude to propose the Tamil for the theological glossary
     review-terms  approve the glossary in the browser
+    pilot      the pilot: run a model on seed/pilot.txt, status, adopt the chosen drafts
+    review-pilot  compare the two models' pilot drafts blind, in the browser
     run        translate articles now, one request at a time (pilot, small sets)
     repair     retry flagged articles from their saved replies, with the problems listed
     check      re-check committed drafts against the current glossary and names
@@ -60,8 +62,9 @@ def cmd_show(a) -> int:
     if a.system:
         print(ctx.system[0]["text"])
         print("\n" + "=" * 72 + "\n")
-    print(f"system prompt: {len(ctx.system[0]['text'])} characters "
-          f"({len(ctx.terms)} glossary terms); {len(reqs)} request(s)\n")
+    used = checks.terms_in(" ".join([art["title"], *(p["text"] for p in art["paragraphs"])]), ctx.terms)
+    print(f"system prompt: {len(ctx.system[0]['text'])} characters; {len(reqs)} request(s); "
+          f"{len(used)} of the {len(ctx.terms)} approved glossary terms go with this article\n")
     for cid, req in reqs:
         print(f"--- {cid}")
         print(req["messages"][0]["content"])
@@ -132,6 +135,32 @@ def ai_report(rows: list[dict]) -> int:
     c = Counter(r["action"] for r in rows)
     print(f"\n{c['accept']} accepted, {c['draft']} written as drafts for review, {c['skip']} skipped"
           " (see .translate-work/ai-names.jsonl). Run `pnpm content` to check.")
+    return 0
+
+
+def cmd_pilot(a) -> int:
+    from . import pilot
+
+    if a.action == "run":
+        outcomes = pilot.run(a.model, a.effort, a.workers, a.force)
+        written = sum(o.written for o in outcomes)
+        print(f"\n{written}/{len(outcomes)} drafts written for {a.model}.")
+        print(pilot.status())
+        return 0
+    if a.action == "adopt":
+        if not a.model_given:
+            raise SystemExit("adopt needs --model: the model whose drafts go into data/entities/drafts/")
+        copied, skipped = pilot.adopt(a.model, keep_problems=not a.clean_only)
+        print(f"{copied} drafts copied into data/entities/drafts/, {skipped} left out. Run `pnpm content` to see them.")
+        return 0
+    print(pilot.status())
+    return 0
+
+
+def cmd_review_pilot(a) -> int:
+    from . import pilotweb
+
+    pilotweb.serve(port=a.port, open_browser=not a.no_open)
     return 0
 
 
@@ -458,6 +487,21 @@ def main(argv: list[str] | None = None) -> int:
     model_opts(p)
     p.set_defaults(fn=cmd_ai_names)
 
+    p = sub.add_parser("pilot", help="the pilot: two models on the same articles (seed/pilot.txt)")
+    p.add_argument("action", nargs="?", default="status", choices=["status", "run", "adopt"],
+                   help="status (default): drafts, problems, cost per model; run: translate the pilot with --model; "
+                        "adopt: copy --model's drafts into data/entities/drafts/")
+    p.add_argument("--force", action="store_true", help="run: redo articles that already have a pilot draft")
+    p.add_argument("--clean-only", action="store_true", help="adopt: leave out drafts the checks still flag")
+    model_opts(p)
+    p.set_defaults(fn=cmd_pilot)
+
+    p = sub.add_parser("review-pilot", help="compare the two models' pilot drafts blind, in the browser")
+    p.add_argument("--web", action="store_true", help="(the default)")
+    p.add_argument("--port", type=int, default=8767)
+    p.add_argument("--no-open", action="store_true")
+    p.set_defaults(fn=cmd_review_pilot)
+
     p = sub.add_parser("ai-terms", help="ask Claude to propose the Tamil for the theological glossary")
     p.add_argument("action", nargs="?", default="plan", choices=["plan", "show", "run", "submit", "collect"],
                    help="plan (default): count, no API call; show: print the first request; run: ask now; "
@@ -519,6 +563,8 @@ def main(argv: list[str] | None = None) -> int:
     p.set_defaults(fn=cmd_batch)
 
     a = ap.parse_args(argv)
+    args = argv if argv is not None else sys.argv[1:]
+    a.model_given = any(x == "--model" or x.startswith("--model=") for x in args)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     return a.fn(a)

@@ -1,8 +1,9 @@
 """What is sent to the model (feature_dictionary_translation.md §4).
 
 The system prompt is identical for every article in a run (style guide, the
-reviewed glossary, the Tamil book names) so it is cached; everything specific
-to an article goes in the user message. Bump PROMPT_VERSION whenever the
+Tamil book names) so it is cached; everything specific to an article goes in
+the user message, including the glossary terms the article uses: the whole
+glossary (278 terms with notes) would add ~100k characters to every request. Bump PROMPT_VERSION whenever the
 wording or the rules change: drafts record it, and a run redoes drafts made
 with an older version only when asked (--force).
 """
@@ -23,7 +24,7 @@ You translate articles from English Bible dictionaries (Easton's, Smith's and th
 How to translate:
 - Translate faithfully and completely. Do not summarise, explain, soften, add to, or correct what the article says, even where you would put it differently. Keep the author's reasoning and order.
 - Write formal written Tamil in the register of the IRV and of Tamil Protestant teaching, not colloquial Tamil and not Sanskritised or Hindu religious vocabulary where the IRV uses another word.
-- Theological terms: use the Tamil given in the glossary below whenever the English term or one of its forms occurs, inflecting it as the sentence needs. Never use a rendering listed under "avoid". For a theological term not in the glossary, use the word the IRV uses in the verses where that idea occurs; if the IRV has none, choose the term established in Tamil Protestant (Reformed) teaching.
+- Theological terms: use the Tamil given in the glossary with each article whenever the English term or one of its forms occurs, inflecting it as the sentence needs. Never use a rendering listed under "avoid". For a theological term not in the glossary, use the word the IRV uses in the verses where that idea occurs; if the IRV has none, choose the term established in Tamil Protestant (Reformed) teaching.
 - Names of people and places: use the Tamil names given with each article. Otherwise use the spelling the IRV uses; transliterate only a name the IRV does not contain.
 - The divine name: follow the IRV. Where the English article quotes or refers to a verse, the IRV text of that verse is supplied; use its wording for any quotation.
 - Scripture references: write the book in Tamil using the book names below and keep chapter and verse numbers exactly as in the English (Rom. 5:1-10 → ரோமர் 5:1-10). Keep every reference.
@@ -60,23 +61,29 @@ CHUNK_WORDS = 2500
 MAX_VERSES = 40
 
 
-def glossary_block(terms: dict[str, Term]) -> str:
-    if not terms:
-        return "Glossary: (none reviewed yet)"
-    lines = ["Glossary (English → Tamil; forms show accepted inflections; never use the avoid list):"]
-    for key in sorted(terms):
-        t = terms[key]
+NOTE_CHARS = 240  # of a glossary note sent with an article
+
+
+def glossary_block(terms: list[Term] | dict[str, Term]) -> str:
+    """The glossary terms given, one line each (sorted, for stable prompts)."""
+    items = sorted(terms.values() if isinstance(terms, dict) else terms, key=lambda t: t.en.lower())
+    if not items:
+        return ""
+    lines = ["Glossary for this article (English → Tamil; forms show accepted inflections; never use the avoid list):"]
+    for t in items:
         line = f"- {t.en}"
         if t.also:
             line += f" ({', '.join(t.also)})"
         line += f" → {t.ta}"
-        extra = [f for f in t.forms if f != t.ta]
+        extra = [f for f in t.forms if f != t.ta][:6]
         if extra:
             line += f"; forms: {', '.join(extra)}"
         if t.avoid:
             line += f"; avoid: {', '.join(t.avoid)}"
-        if t.note:
-            line += f"; note: {t.note}"
+        # The review's own tags are not for the translator.
+        note = re.sub(r"^\[Claude: \w+\]\s*|\s*\[Not in the IRV verses, dropped:[^\]]*\]", "", t.note or "").strip()
+        if note:
+            line += f"; note: {note[:NOTE_CHARS]}{'…' if len(note) > NOTE_CHARS else ''}"
         lines.append(line)
     return "\n".join(lines)
 
@@ -85,10 +92,10 @@ def books_block() -> str:
     return "Tamil book names (IRV):\n" + "\n".join(f"- {b.name_en} → {b.name_ta}" for b in repo.books())
 
 
-def system_blocks(terms: dict[str, Term]) -> list[dict]:
-    """The cached system prompt. Deterministic for a given glossary: sorted,
-    no dates or ids, so every request in a run shares the cache."""
-    text = "\n\n".join([STYLE, glossary_block(terms), books_block()])
+def system_blocks() -> list[dict]:
+    """The cached system prompt: the same for every request, with no dates,
+    ids or article-specific text, so every request in a run shares the cache."""
+    text = "\n\n".join([STYLE, books_block()])
     return [{"type": "text", "text": text, "cache_control": {"type": "ephemeral"}}]
 
 
@@ -130,10 +137,15 @@ def user_message(
     part: tuple[int, int],
     names: dict[str, Name],
     title_hint: str | None,
+    terms: dict[str, Term] | None = None,
 ) -> str:
-    """The article (or one part of it) with the names and verses it needs."""
+    """The article (or one part of it) with the glossary terms, names and
+    verses it needs."""
     english = " ".join([article["title"], *(p["text"] for p in paragraphs)])
     sections = []
+
+    if terms and (block := glossary_block(checks.terms_in(english, terms))):
+        sections.append(block)
 
     found = checks.names_in(english, names)
     if found:
