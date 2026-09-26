@@ -11,3 +11,6 @@ attribution = "King James (Authorized) Version, 1769 text, public domain"
 source_url = "https://ebible.org/find/details.php?id=eng-kjv2006"
 ebible_id = "eng-kjv2006"
 order = 5
+
+[audio]
+recording = "r1"

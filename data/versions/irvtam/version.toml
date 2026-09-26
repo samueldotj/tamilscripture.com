@@ -12,3 +12,6 @@ source_url = "https://ebible.org/find/details.php?id=tam2017"
 ebible_id = "tam2017"
 order = 1
 default = true
+
+[audio]
+recording = "r1"
