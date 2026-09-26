@@ -55,6 +55,16 @@ function listen() {
 	addEventListener('pagehide', flush);
 }
 
+/** ?utm_source=whatsapp on the landing URL: a tag for links shared where no
+ *  referrer is sent (WhatsApp on iOS, email clients, printed QR codes). */
+function utmSource(): string | undefined {
+	try {
+		return new URLSearchParams(location.search).get('utm_source') || undefined;
+	} catch {
+		return undefined;
+	}
+}
+
 export interface TrackData {
 	route?: string | null;
 	verse?: string;
@@ -86,8 +96,9 @@ export function track(kind: 'view' | 'verse' | 'audio', data: TrackData = {}) {
 		vr: data.version,
 		n: data.amount,
 		s: `${screen.width}x${screen.height}`,
-		// Only the landing page has a meaningful referrer.
-		ref: kind === 'view' && firstView ? document.referrer || undefined : undefined
+		// Only the landing page has a meaningful referrer; e marks it, so a
+		// landing with no referrer counts as a direct visit.
+		...(kind === 'view' && firstView ? { e: 1, ref: document.referrer || undefined, us: utmSource() } : {})
 	});
 	if (kind === 'view') firstView = false;
 	if (queue.length >= MAX_BATCH) flush();

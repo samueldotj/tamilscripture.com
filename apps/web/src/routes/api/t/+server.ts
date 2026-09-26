@@ -67,6 +67,31 @@ function str(v: unknown, max: number): string | null {
 	return typeof v === 'string' && v.length > 0 ? v.slice(0, max) : null;
 }
 
+/** Where a visit came from, for its landing page (A8): 'utm:<tag>' from
+ *  ?utm_source, the referring host when it is another site (Android apps
+ *  arrive as android-app://com.whatsapp, host 'com.whatsapp'), an in-app
+ *  browser that sends none, or '(direct)'. Null for every other event. */
+function landing(body: Record<string, unknown>, ua: string, self: string): string | null {
+	const utm = str(body.us, 60)?.toLowerCase().trim();
+	if (body.e === 1 && utm && /^[a-z0-9._-]{1,40}$/.test(utm)) return `utm:${utm}`;
+	const ref = str(body.ref, 500);
+	if (ref) {
+		try {
+			const host = new URL(ref).hostname.replace(/^www\./, '');
+			if (!host) return null;
+			if (host === self.replace(/^www\./, '') || host.endsWith('tamilscripture.com')) return null;
+			return host;
+		} catch {
+			return null;
+		}
+	}
+	if (body.e !== 1) return null;
+	if (/FBAN|FBAV|FB_IAB/.test(ua)) return 'facebook.com';
+	if (/Instagram/.test(ua)) return 'instagram.com';
+	if (/LinkedInApp/.test(ua)) return 'linkedin.com';
+	return '(direct)';
+}
+
 export const POST: RequestHandler = async ({ request, getClientAddress, url, fetch }) => {
 	// Always 204, but the x-analytics header says what happened, so a failure
 	// is visible when testing: stored, skipped:<why> or error:<status>.
@@ -99,17 +124,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 	const rows = [];
 	for (const body of events) {
 		if (!dryRun && limited(ip || ua)) break;
-		// The referring site's host, only when it is another site.
-		let referrer: string | null = null;
-		const ref = str(body.ref, 500);
-		if (ref) {
-			try {
-				const host = new URL(ref).hostname.replace(/^www\./, '');
-				if (host && host !== url.hostname.replace(/^www\./, '') && !host.endsWith('tamilscripture.com')) referrer = host;
-			} catch {
-				/* not a URL */
-			}
-		}
+		const referrer = landing(body, ua, url.hostname);
 		const args = {
 			p_kind: body.k === 'verse' || body.k === 'audio' ? body.k : 'view',
 			p_path: str(body.p, 200),

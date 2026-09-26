@@ -16,6 +16,8 @@ export interface Totals {
 	listen_seconds: number;
 	/** chapters heard to the end */
 	audio_ends: number;
+	/** accounts created (A8), merged in from analytics_accounts */
+	signups: number;
 }
 export type Measure = keyof Totals;
 export interface Day extends Totals {
@@ -44,12 +46,54 @@ export type Dimension =
 	| 'browsers'
 	| 'screens'
 	| 'referrers'
+	| 'sources'
 	| 'langs'
 	| 'audio_versions'
 	| 'audio_time'
 	| 'audio_chapters'
 	| 'audio_sources'
 	| 'audio_verses';
+/** Over the last 24 hours, 7 days and 30 days. */
+export interface Windows {
+	day: number;
+	week: number;
+	month: number;
+}
+export interface Accounts {
+	/** accounts that exist now */
+	total: number;
+	/** accounts created */
+	signups: Windows;
+	/** accounts that signed in at least once */
+	signins: Windows;
+	/** accounts with a session in use (the site refreshes it hourly while open) */
+	active: Windows;
+	peak_signups: { day: string; n: number } | null;
+	/** the day with the most signed-in users (analytics member hash) */
+	peak_members: { day: string; n: number } | null;
+}
+export interface PlanStat {
+	/** built-in key ('bible-1y') or a community plan's id */
+	key: string;
+	title_ta: string | null;
+	title_en: string | null;
+	readers: number;
+	/** joined in the range */
+	started: number;
+	/** ticked a passage in the last 7 days */
+	active: number;
+	passages: number;
+}
+export interface Plans {
+	/** signed-in readers following at least one plan */
+	readers: number;
+	subscriptions: number;
+	started: number;
+	started_previous: number;
+	active: number;
+	/** most-followed first */
+	plans: PlanStat[];
+}
 export interface Report {
 	from: string;
 	to: string;
@@ -58,8 +102,12 @@ export interface Report {
 	previous: Totals;
 	daily: Day[];
 	top: Partial<Record<Dimension, Row[]>>;
+	/** referrers summed by source (A8): google, whatsapp, direct, … */
+	sources: Row[];
 	searches: Row[];
 	searches_empty: Row[];
+	accounts: Accounts | null;
+	plans: Plans | null;
 }
 export interface Now {
 	views: number;
@@ -81,13 +129,37 @@ export function isoDay(d: Date): string {
 	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
+interface AccountsRpc extends Accounts {
+	range: number;
+	previous: number;
+	daily: { day: string; n: number }[];
+}
+
 export async function loadReport(days: number): Promise<Report | null> {
 	const to = istToday();
 	const from = new Date(to);
 	from.setDate(from.getDate() - (days - 1));
-	const { data, error } = await (await sb()).rpc('analytics_report', { p_from: isoDay(from), p_to: isoDay(to) });
-	if (error) throw new Error(error.message);
-	return (data as Report | null) ?? null;
+	const client = await sb();
+	const range = { p_from: isoDay(from), p_to: isoDay(to) };
+	// Accounts and plans are extras: until their migration is live the traffic
+	// report still loads without them.
+	const [main, acc, plans] = await Promise.all([
+		client.rpc('analytics_report', range),
+		client.rpc('analytics_accounts', range),
+		client.rpc('analytics_plans', range)
+	]);
+	if (main.error) throw new Error(main.error.message);
+	const report = (main.data as Report | null) ?? null;
+	if (!report) return null;
+	const a = acc.error ? null : ((acc.data as AccountsRpc | null) ?? null);
+	const signups = new Map((a?.daily ?? []).map((d) => [d.day, d.n]));
+	for (const d of report.daily) d.signups = signups.get(d.day) ?? 0;
+	report.totals.signups = a?.range ?? 0;
+	report.previous.signups = a?.previous ?? 0;
+	report.sources ??= [];
+	report.accounts = a;
+	report.plans = plans.error ? null : ((plans.data as Plans | null) ?? null);
+	return report;
 }
 
 export async function loadNow(): Promise<Now | null> {
