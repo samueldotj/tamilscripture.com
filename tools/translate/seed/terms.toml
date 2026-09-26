@@ -1,0 +1,349 @@
+# Seed list for the theological glossary (docs/feature_dictionary_translation.md §3, G1).
+# One line per term: "term | other English forms, comma-separated". The first
+# form is the glossary key; the others are how it also appears in the articles.
+# Strong's numbers are not listed here: `translate ai-terms` finds them from the
+# BSB's own tags for these words, then shows Claude the IRV text of those verses.
+# Terms marked `curated` below have no single Bible word (Trinity, sacrament);
+# for those Claude proposes the Tamil used in Reformed teaching, for review.
+# Terms in capitals (LORD) are matched case-sensitively: the IRV writes the
+# LORD (YHWH) as யெகோவா and the Lord as கர்த்தர்.
+# Everyday words with many senses (sign, judge, heart) are left out: the check
+# would demand one Tamil word wherever they occur.
+# Edit freely: add, remove, or move terms; `translate ai-terms` picks up changes.
+
+[god]
+terms = [
+  "God | gods",
+  "Lord | lords",
+  "LORD",
+  "Jehovah | Yahweh",
+  "Almighty",
+  "Most High",
+  "Creator | creation",
+  "glory | glorify, glorified, glorious",
+  "holiness | holy",
+  "righteousness | righteous",
+  "justice",
+  "mercy | merciful",
+  "grace | gracious",
+  "love | loved, loving",
+  "wrath",
+  "anger",
+  "jealousy | jealous",
+  "faithfulness | faithful",
+  "truth",
+  "wisdom | wise",
+  "sovereignty | sovereign",
+  "providence",
+  "omnipotence | omnipotent",
+  "omniscience | omniscient",
+  "omnipresence | omnipresent",
+  "eternal | eternity, everlasting",
+  "immutable | immutability",
+  "decree | decrees",
+  "will of God",
+  "worship | worshipped, worshiped",
+  "praise | praised",
+  "blessing | bless, blessed",
+  "curse | cursed",
+]
+
+[trinity]
+curated = true
+terms = [
+  "Trinity | triune",
+  "Godhead",
+  "incarnation | incarnate",
+  "hypostatic union",
+  "deity | divinity",
+]
+
+[christ]
+terms = [
+  "Christ",
+  "Messiah",
+  "Son of God",
+  "Son of man",
+  "Mediator | mediation",
+  "Redeemer",
+  "Saviour | Savior",
+  "Lamb of God",
+  "High Priest",
+  "Kingdom of God | kingdom of heaven",
+  "cross | crucify, crucified, crucifixion",
+  "resurrection",
+  "ascension | ascended",
+  "second coming",
+  "intercession | intercede",
+  "obedience | obey, obedient",
+  "humiliation",
+  "exaltation | exalted",
+]
+
+[spirit]
+terms = [
+  "Holy Spirit | Holy Ghost, Spirit of God",
+  "Comforter",
+  "fruit of the Spirit",
+  "baptism of the Spirit",
+  "filled with the Spirit",
+  "anointing | anoint, anointed",
+]
+
+[salvation]
+terms = [
+  "salvation | save, saved",
+  "redemption | redeem, redeemed",
+  "atonement | atone",
+  "propitiation",
+  "expiation",
+  "reconciliation | reconcile, reconciled",
+  "ransom",
+  "substitution | substitute, substitutionary",
+  "justification | justify, justified, justifies",
+  "imputation | impute, imputed",
+  "sanctification | sanctify, sanctified",
+  "adoption | adopted",
+  "glorification",
+  "regeneration | regenerate, regenerated",
+  "new birth | born again",
+  "conversion | convert, converted",
+  "repentance | repent, repented",
+  "faith | believe, believed, believer, believers",
+  "forgiveness | forgive, forgiven",
+  "remission",
+  "pardon",
+  "calling",
+  "election | elect",
+  "predestination | predestinate, predestined",
+  "foreknowledge | foreknow, foreknew",
+  "perseverance",
+  "assurance",
+  "union with Christ",
+  "good works",
+  "merit",
+  "eternal life | everlasting life",
+  "heaven",
+  "hell",
+  "judgment | judgement",
+  "condemnation | condemn, condemned",
+]
+
+[sin]
+terms = [
+  "sin | sins, sinned, sinner, sinners, sinful",
+  "iniquity | iniquities",
+  "transgression | transgress, transgressions",
+  "trespass | trespasses",
+  "guilt | guilty",
+  "original sin",
+  "depravity | depraved",
+  "corruption | corrupt",
+  "wickedness | wicked",
+  "unrighteousness | unrighteous",
+  "ungodly | ungodliness",
+  "idolatry | idol, idols, idolater",
+  "blasphemy | blaspheme",
+  "adultery | adulterer",
+  "fornication",
+  "Satan | devil",
+  "demon | demons",
+  "temptation | tempt, tempted",
+]
+
+[law]
+terms = [
+  "law | laws",
+  "commandment | commandments",
+  "Ten Commandments | Decalogue",
+  "statute | statutes",
+  "ordinance | ordinances",
+  "gospel",
+  "covenant | covenants",
+  "covenant of grace",
+  "covenant of works",
+  "old covenant",
+  "new covenant",
+  "testament",
+  "promise | promises, promised",
+  "sabbath",
+  "circumcision | circumcise, circumcised",
+  "uncircumcision | uncircumcised",
+  "unclean | uncleanness",
+  "purification | purify",
+  "holy of holies",
+]
+
+[worship]
+terms = [
+  "sacrifice | sacrifices, sacrificed",
+  "offering | offerings",
+  "burnt offering",
+  "sin offering",
+  "peace offering",
+  "trespass offering",
+  "meat offering | grain offering, meal offering",
+  "drink offering",
+  "wave offering",
+  "heave offering",
+  "firstfruits",
+  "tithe | tithes",
+  "altar | altars",
+  "tabernacle",
+  "temple",
+  "sanctuary",
+  "ark of the covenant",
+  "mercy seat",
+  "veil",
+  "incense",
+  "priest | priests, priesthood",
+  "Levite | Levites",
+  "passover",
+  "feast | feasts",
+  "Day of Atonement",
+  "Pentecost",
+  "prayer | pray, prayed",
+  "fasting",
+  "vow | vows",
+  "hymn | hymns",
+  "psalm | psalms",
+]
+
+[church]
+curated = true
+terms = [
+  "church | churches",
+  "congregation",
+  "saint | saints",
+  "disciple | disciples",
+  "apostle | apostles, apostleship",
+  "elder | elders",
+  "bishop | bishops, overseer",
+  "deacon | deacons",
+  "pastor | pastors",
+  "minister | ministry",
+  "evangelist",
+  "preaching | preach, preached, preacher",
+  "doctrine | doctrines",
+  "sacrament | sacraments",
+  "baptism | baptize, baptized, baptise, baptised",
+  "Lord's Supper | Lord's Table",
+  "communion",
+  "discipline",
+  "excommunication",
+  "fellowship",
+  "Lord's Day",
+  "confession | confess, confessed",
+  "creed",
+  "heresy | heretic, heretical",
+  "schism",
+  "Reformation | Reformers, Reformed",
+  "Protestant",
+  "Calvinism | Calvinist",
+  "Arminian | Arminianism",
+  "Catholic",
+  "Pope | papacy",
+  "Mass",
+]
+
+[doctrines_of_grace]
+curated = true
+terms = [
+  "total depravity",
+  "unconditional election",
+  "limited atonement | particular redemption, definite atonement",
+  "irresistible grace | effectual calling",
+  "perseverance of the saints",
+  "sola scriptura",
+  "justification by faith",
+  "free will",
+  "means of grace",
+  "common grace",
+  "covenant theology",
+  "federal headship",
+]
+
+[scripture]
+terms = [
+  "Scripture | Scriptures",
+  "word of God",
+  "revelation | reveal, revealed",
+  "inspiration | inspired",
+  "prophecy | prophesy, prophesied",
+  "prophet | prophets, prophetess",
+  "vision | visions",
+  "parable | parables",
+  "miracle | miracles",
+  "Old Testament",
+  "New Testament",
+  "canon | canonical",
+  "Apocrypha | apocryphal",
+  "Septuagint",
+  "Pentateuch",
+  "epistle | epistles",
+  "Gospels",
+  "Hebrew",
+  "Greek",
+  "Aramaic",
+  "allegory | allegorical",
+]
+
+[last_things]
+terms = [
+  "resurrection of the dead",
+  "last day | last days",
+  "day of the Lord",
+  "day of judgment",
+  "millennium",
+  "antichrist",
+  "tribulation",
+  "Paradise",
+  "Hades | Sheol",
+  "Gehenna",
+  "eternal punishment",
+  "new heavens and new earth | new heaven",
+  "new Jerusalem",
+  "angel | angels",
+  "archangel",
+  "cherub | cherubim",
+  "seraph | seraphim",
+]
+
+[people_and_groups]
+terms = [
+  "Israel | Israelites",
+  "Jew | Jews, Jewish",
+  "Gentile | Gentiles",
+  "Hebrews",
+  "Pharisee | Pharisees",
+  "Sadducee | Sadducees",
+  "scribe | scribes",
+  "Sanhedrin",
+  "synagogue | synagogues",
+  "Samaritan | Samaritans",
+  "proselyte | proselytes",
+  "tribe | tribes",
+  "patriarch | patriarchs",
+  "nation | nations",
+  "heathen",
+]
+
+[christian_life]
+terms = [
+  "godliness | godly",
+  "piety",
+  "charity",
+  "humility | humble",
+  "patience | patient",
+  "thanksgiving | thanks",
+  "conscience",
+  "soul | souls",
+  "flesh",
+  "spiritual",
+  "carnal",
+  "steward | stewardship",
+  "persecution | persecute",
+  "martyr | martyrs",
+  "witness | testimony",
+  "mission | missionary",
+]

@@ -113,6 +113,26 @@ translate review-names --order alpha --start Jabez
 
 `--web` serves the same review at http://127.0.0.1:8765/ and opens it: Tamil renders properly there, which Windows consoles do not manage. The keys are the same (Enter, 1–5, `c`, `r`, `s`, `u`, `m`, `t`), `/` jumps to the box for typing a name, and the page shows every answer's saved forms. Stop the server with Ctrl+C in the terminal; it prints the session's totals. It listens on this computer only.
 
+## Theological glossary
+
+`data/entities/glossary-theology-ta.toml` fixes the Tamil for about 280 theological terms (the seed list is `tools/translate/seed/terms.toml`; edit it to add or drop terms). Only entries you approve reach the translator.
+
+```bash
+translate ai-terms                               # plan: how many terms and requests; no API call
+translate ai-terms show --terms justification    # the request for those terms; no API call
+translate ai-terms submit                        # all of them as a batch (half price, about $5)
+translate batch status                           # until it says ended
+translate ai-terms collect msgbatch_…            # write Claude's proposals, all marked for review
+translate review-terms --web                     # approve, correct or reject each term
+translate ai-terms run --terms "Trinity"         # ask again about one term
+```
+
+A batch is half price but waits in a queue: usually under an hour, at most 24. `translate batch status` shows how long each has been running; `translate batch cancel msgbatch_…` stops one (requests already finished stay done and billed; collect it to keep them). Direct runs (`run`, for articles, `ai-names` and `ai-terms`) cost the full price but send 6 requests at a time (`--workers N` to change), so they finish in minutes.
+
+For each term the tool finds the Strong's numbers the BSB tags on its English words, picks up to six verses across the Bible (with the verse before and after, since the IRV often moves a clause), and counts how the dictionaries use it. Claude proposes the IRV's word (or, for terms like Trinity and sacrament with no single Bible word, the Tamil of Reformed teaching), its forms, and renderings to avoid; forms it reports for an IRV word must be in those verses. Capitalised terms are separate entries: the LORD (YHWH, யெகோவா in the IRV) is not the Lord.
+
+On the review page every field is editable; Enter approves as shown, Ctrl+Enter approves from inside a field, `r` rejects, `s` skips, `u` undoes.
+
 ## What it writes
 
 - **Drafts:** `data/entities/drafts/ta/{source}/{slug}.json`, or `drafts/ta-sa/aquifer/{slug}.json` for Aquifer. A draft is written unless the build would reject it (missing paragraphs, no Tamil, markup).

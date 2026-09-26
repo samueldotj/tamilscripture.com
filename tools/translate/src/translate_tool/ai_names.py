@@ -231,12 +231,16 @@ def say(rows: list[dict]) -> None:
 # ---- running ----
 
 
-def run_direct(todo: list[Item], model: str, effort: str, dry_run: bool) -> list[dict]:
+def run_direct(todo: list[Item], model: str, effort: str, dry_run: bool,
+               workers: int = client.DEFAULT_WORKERS) -> list[dict]:
+    """Ask now, `workers` requests at a time; answers are written as they come."""
     rows = []
     gs = groups(todo)
-    for k, g in enumerate(gs, 1):
-        print(f"group {k}/{len(gs)}: {len(g)} names", flush=True)
-        reply = client.run_direct(params(g, model, effort), f"names-{k}")
+    print(f"{len(gs)} requests, {workers} at a time", flush=True)
+    jobs = [(f"names-{k}", params(g, model, effort)) for k, g in enumerate(gs, 1)]
+    for done, (k, reply) in enumerate(client.run_many(jobs, workers), 1):
+        g = gs[k]
+        print(f"[{done}/{len(gs)}] {len(g)} names", flush=True)
         got = apply_group(g, reply.data, reply.error, dry_run)
         say(got)
         rows += got

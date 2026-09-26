@@ -5,7 +5,9 @@ half price). Credentials come from the environment (ANTHROPIC_API_KEY or an
 from __future__ import annotations
 
 import json
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
@@ -16,6 +18,8 @@ DEFAULT_EFFORT = "medium"
 MAX_TOKENS = 64000
 
 USAGE_LOG = repo.WORK / "usage.jsonl"
+_LOG_LOCK = threading.Lock()  # direct runs log from several threads
+DEFAULT_WORKERS = 6
 
 
 _CLIENT = None
@@ -81,7 +85,7 @@ def log_usage(kind: str, custom_id: str, msg) -> None:
         "cache_write": u.cache_creation_input_tokens or 0,
         "output": u.output_tokens,
     }
-    with open(USAGE_LOG, "a", encoding="utf-8", newline="\n") as f:
+    with _LOG_LOCK, open(USAGE_LOG, "a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(row) + "\n")
 
 
@@ -128,6 +132,23 @@ def submit_batch(requests: list[tuple[str, dict]], note: str) -> str:
 
 def batch_status(batch_id: str):
     return client().messages.batches.retrieve(batch_id)
+
+
+def cancel_batch(batch_id: str):
+    """Ask the API to cancel a batch. Requests already done stay done (and
+    billed); the rest are cancelled, and the batch ends with them marked so."""
+    return client().messages.batches.cancel(batch_id)
+
+
+def run_many(jobs: list[tuple[str, dict]], workers: int = DEFAULT_WORKERS):
+    """Run direct requests `workers` at a time; yield (index, Reply) as each
+    finishes, in whatever order. The caller writes results from its own
+    thread, so files are never written by two threads at once."""
+    client()  # make the one client before the threads share it
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        futures = {pool.submit(run_direct, p, cid): k for k, (cid, p) in enumerate(jobs)}
+        for f in as_completed(futures):
+            yield futures[f], f.result()
 
 
 def download_results(batch_id: str) -> list:

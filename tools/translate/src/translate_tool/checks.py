@@ -44,12 +44,19 @@ def check_text(text: str) -> str | None:
 def terms_in(english: str, terms: dict[str, Term]) -> list[Term]:
     """Glossary terms whose English (or one of its `also` forms) occurs in the
     text as a word or phrase; a plural or possessive ending is allowed."""
-    low = english.lower()
-    return [
-        t
-        for key, t in terms.items()
-        if any(re.search(rf"\b{re.escape(k.lower())}(?:s|es|'s|’s)?\b", low) for k in (key, *t.also))
-    ]
+    return [t for t in terms.values() if any(mentions(english, k) for k in (t.en, *t.also))]
+
+
+def mentions(english: str, form: str) -> bool:
+    """`form` occurs as a word or phrase (plural or possessive allowed). A form
+    in capitals (LORD) matches only in capitals; any other form matches in any
+    case except all capitals, so "Lord" does not match "LORD"."""
+    english = english.replace("’", "'")
+    form = form.replace("’", "'")
+    pat = rf"\b{re.escape(form)}(?:s|es|'s)?\b"
+    if form.isupper() and len(form) > 1:
+        return re.search(pat, english) is not None
+    return any(not (m[0].isupper() and len(m[0]) > 1) for m in re.finditer(pat, english, re.IGNORECASE))
 
 
 # Names that are also everyday English words at the start of a sentence.

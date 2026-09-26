@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import threading
 from dataclasses import dataclass, field
 from datetime import date
 
@@ -12,6 +13,7 @@ from . import checks, client, prompts, repo
 from .client import Reply
 
 REPORT = repo.WORK / "report.jsonl"
+_REPORT_LOCK = threading.Lock()  # articles run in parallel (translate run --workers)
 FLAGGED = repo.WORK / "flagged"
 
 
@@ -143,7 +145,7 @@ def record(article: dict, written: bool, problems: list[checks.Problem], replies
     """A report line per article; unwritten or flagged articles also keep
     their raw replies so `translate repair` can continue from them."""
     repo.WORK.mkdir(exist_ok=True)
-    with open(REPORT, "a", encoding="utf-8", newline="\n") as f:
+    with _REPORT_LOCK, open(REPORT, "a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps({"id": article["id"], "written": written,
                             "problems": [str(p) for p in problems]}, ensure_ascii=False) + "\n")
     path = FLAGGED / (article["id"].replace("/", "__") + ".json")

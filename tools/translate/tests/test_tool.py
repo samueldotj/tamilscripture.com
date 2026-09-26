@@ -333,5 +333,124 @@ class AiNamesTests(unittest.TestCase):
         self.assertEqual(d["action"], "skip")
 
 
+class ParallelRunTests(unittest.TestCase):
+    """client.run_many and the direct runs built on it; the API is faked."""
+
+    def test_requests_overlap_and_come_back_matched(self):
+        import threading
+        import time
+        from translate_tool import client
+
+        active, peak, lock = [0], [0], threading.Lock()
+
+        def fake(p, cid):
+            with lock:
+                active[0] += 1
+                peak[0] = max(peak[0], active[0])
+            time.sleep(0.2)
+            with lock:
+                active[0] -= 1
+            return client.Reply({"echo": p["n"]}, None, "")
+
+        with unittest.mock.patch.object(client, "run_direct", fake), \
+             unittest.mock.patch.object(client, "client", lambda: None):
+            start = time.time()
+            got = dict(client.run_many([(f"c{k}", {"n": k}) for k in range(12)], workers=6))
+            took = time.time() - start
+        self.assertEqual({k: r.data["echo"] for k, r in got.items()}, {k: k for k in range(12)})
+        self.assertEqual(peak[0], 6)
+        self.assertLess(took, 1.2)  # 12 × 0.2 s one at a time would be 2.4 s
+
+    def test_terms_direct_run_writes_every_answer(self):
+        from translate_tool import client, repo, terms
+
+        def fake(p, cid):
+            names = [l.split(". ", 1)[1].split("  (")[0] for l in p["messages"][0]["content"].splitlines()
+                     if l[:1].isdigit() and ". " in l]
+            return client.Reply({"answers": [{"term": n, "ta": "சோதனை", "forms": [], "avoid": [], "source": "curated",
+                                              "confidence": "low", "note": ""} for n in names]}, None, "")
+
+        with tempfile.TemporaryDirectory() as d:
+            saved = repo.GLOSSARY, terms.LOG, repo.WORK
+            repo.GLOSSARY, terms.LOG, repo.WORK = Path(d) / "g.toml", Path(d) / "t.jsonl", Path(d)
+            try:
+                seeds = {s.en: s for s in terms.load_seed()}
+                items = terms.evidence([seeds[t] for t in ["Trinity", "Godhead", "incarnation", "deity", "justification"]])
+                with unittest.mock.patch.object(client, "run_direct", fake), \
+                     unittest.mock.patch.object(client, "client", lambda: None), \
+                     unittest.mock.patch("sys.stdout", new=__import__("io").StringIO()):
+                    rows = terms.run_direct(items, "m", "low", False, workers=3)
+                self.assertEqual(sum(r["action"] == "draft" for r in rows), 5)
+                self.assertEqual(len(terms.load_file()), 5)
+            finally:
+                repo.GLOSSARY, terms.LOG, repo.WORK = saved
+
+
+class GlossaryTermsTests(unittest.TestCase):
+    """The theological glossary (translate ai-terms / review-terms); no API call."""
+
+    def test_seed_parses(self):
+        from translate_tool import terms
+        seeds = {s.en: s for s in terms.load_seed()}
+        self.assertIn("justification", seeds)
+        self.assertEqual(seeds["justification"].also, ["justify", "justified", "justifies"])
+        self.assertTrue(seeds["Trinity"].curated)
+        self.assertEqual(seeds["LORD"].key, "LORD")
+        self.assertEqual(seeds["Lord"].key, "lord")
+
+    def test_lord_and_LORD_stay_apart(self):
+        from translate_tool import checks
+        self.assertTrue(checks.mentions("The LORD is my shepherd", "LORD"))
+        self.assertFalse(checks.mentions("The LORD is my shepherd", "Lord"))
+        self.assertTrue(checks.mentions("the Lord Jesus", "Lord"))
+        self.assertTrue(checks.mentions("the Lord’s Supper", "Lord's Supper"))
+
+    def test_strongs_from_the_bsb(self):
+        from translate_tool import terms
+        seeds = {s.en: s for s in terms.load_seed()}
+        self.assertIn("G1344", terms.strongs_for(seeds["justification"]))
+        self.assertEqual(terms.strongs_for(seeds["LORD"]), ["H3068"])
+        self.assertNotIn("H3068", terms.strongs_for(seeds["Lord"]))
+
+    def test_entry_keeps_only_forms_in_the_irv(self):
+        from translate_tool import terms
+        seeds = {s.en: s for s in terms.load_seed()}
+        ev = terms.Evidence(seeds["justification"], ["G1344"], ["ROM.3.20", "ROM.8.30"], 68, "")
+        e = terms.entry_from(ev, {"ta": "நீதிமானாக்குதல்", "forms": ["நீதிமானாக்கப்படுவது", "நீதிமான்களாக்கினாரோ", "நியாயமாக்குதல்"],
+                                  "avoid": ["நியாயப்படுத்துதல்"], "source": "irv", "confidence": "high", "note": ""})
+        self.assertIn("நீதிமானாக்கப்படுவது", e["forms"])
+        self.assertNotIn("நியாயமாக்குதல்", e["forms"])
+        self.assertIn("dropped: நியாயமாக்குதல்", e["note"])
+        self.assertTrue(e["review"])
+
+    def test_file_round_trip_and_review_session(self):
+        from translate_tool import repo, terms, termweb
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "glossary.toml"
+            saved = repo.GLOSSARY
+            repo.GLOSSARY = path
+            try:
+                terms.save_file({
+                    "justification": {"en": "justification", "ta": "நீதிமானாக்குதல்", "forms": ["நீதிமானாக்குதல்"],
+                                      "also": ["justified"], "avoid": ["நியாயப்படுத்துதல்"], "source": "irv",
+                                      "note": "x \"quoted\"", "review": True},
+                    "LORD": {"en": "LORD", "ta": "யெகோவா", "forms": ["யெகோவா"], "source": "irv", "review": True},
+                })
+                self.assertEqual(set(terms.load_file()), {"justification", "LORD"})
+                self.assertEqual(repo.reviewed_terms(), {})  # nothing approved yet
+                s = termweb.TermSession(termweb.queue())
+                first = s.current
+                s.approve("நீதிமானாக்குதல்", ["நீதிமான்களாக்கினாரோ"], ["நியாயப்படுத்துதல்"], "ok")
+                approved = repo.reviewed_terms()
+                self.assertEqual(list(approved), [first])
+                s.undo()
+                self.assertEqual(repo.reviewed_terms(), {})
+                self.assertEqual(terms.load_file()["justification"]["note"], "x \"quoted\"")
+                with self.assertRaises(ValueError):
+                    s.approve("justification", [], [], "")
+            finally:
+                repo.GLOSSARY = saved
+
+
 if __name__ == "__main__":
     unittest.main()

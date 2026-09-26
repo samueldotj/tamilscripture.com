@@ -83,7 +83,7 @@ About 60 articles: doctrinal (Justification, Election, Covenant, Atonement, Grac
 | 2 | Strong's index from the BSB USFM and IRV verse lookup (in the tool; the reader JSON is unchanged) | done |
 | 3 | `tools/translate` core: data loading, API client with caching and structured output, checks, draft writer | done; not yet run against the API |
 | 3a | `names-ta.toml` one entry per English name; `translate verses` review tool | done |
-| 4 | Glossary G1–G2; the same step over unreviewed names | |
-| 5 | Glossary G3 and owner review | |
+| 4 | Glossary G1–G2; the same step over unreviewed names | names done (2,781 of 2,815 reviewed); terms: seed list of 278, `ai-terms` and `review-terms` built |
+| 5 | Glossary G3 and owner review | waiting for `ai-terms submit` and the owner's review |
 | 6 | Translation command and pilot | |
 | 7 | Batch runs: Easton, Smith's, Aquifer | |

@@ -223,14 +223,21 @@ class Term:
     review: bool
 
 
-def load_glossary(path: Path = GLOSSARY) -> dict[str, Term]:
-    """English term (lowercase) → entry. Missing file → empty."""
+def glossary_key(en: str) -> str:
+    """Lowercase, except a term in capitals (LORD), which is its own entry:
+    the IRV writes the LORD (YHWH) யெகோவா and the Lord கர்த்தர்."""
+    return en if en.isupper() and len(en) > 1 else en.lower()
+
+
+def load_glossary(path: Path | None = None) -> dict[str, Term]:
+    """Glossary key → entry. Missing file → empty."""
+    path = path or GLOSSARY
     if not path.exists():
         return {}
     with open(path, "rb") as f:
         raw = tomllib.load(f)
     return {
-        en.lower(): Term(
+        glossary_key(en): Term(
             en,
             e.get("ta", ""),
             list(e.get("forms", [])) or [e.get("ta", "")],
@@ -244,7 +251,7 @@ def load_glossary(path: Path = GLOSSARY) -> dict[str, Term]:
     }
 
 
-def reviewed_terms(path: Path = GLOSSARY) -> dict[str, Term]:
+def reviewed_terms(path: Path | None = None) -> dict[str, Term]:
     return {k: t for k, t in load_glossary(path).items() if not t.review}
 
 

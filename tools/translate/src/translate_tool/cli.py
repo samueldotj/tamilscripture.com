@@ -6,6 +6,8 @@
     auto-accept-names  accept suggestion 1 where it sounds like the name and the draft was fairly sure
     flag-names  send unchecked names whose Tamil does not sound like the name back to review
     ai-names   ask Claude for the Tamil of the names still in review
+    ai-terms   ask Claude to propose the Tamil for the theological glossary
+    review-terms  approve the glossary in the browser
     run        translate articles now, one request at a time (pilot, small sets)
     repair     retry flagged articles from their saved replies, with the problems listed
     check      re-check committed drafts against the current glossary and names
@@ -121,7 +123,7 @@ def cmd_ai_names(a) -> int:
         print(f"submitted {bid}: {len(todo)} names in {n} requests. "
               f"`translate batch status` shows progress; `translate ai-names collect {bid}` when it has ended.")
         return 0
-    return ai_report(ai_names.run_direct(todo, a.model, a.effort, a.dry_run))
+    return ai_report(ai_names.run_direct(todo, a.model, a.effort, a.dry_run, a.workers))
 
 
 def ai_report(rows: list[dict]) -> int:
@@ -130,6 +132,61 @@ def ai_report(rows: list[dict]) -> int:
     c = Counter(r["action"] for r in rows)
     print(f"\n{c['accept']} accepted, {c['draft']} written as drafts for review, {c['skip']} skipped"
           " (see .translate-work/ai-names.jsonl). Run `pnpm content` to check.")
+    return 0
+
+
+def cmd_ai_terms(a) -> int:
+    from . import terms
+
+    if a.action == "collect":
+        if not a.batch_id:
+            raise SystemExit("collect needs a batch id (translate batch status lists them)")
+        return terms_report(terms.collect(a.batch_id, a.dry_run))
+    print("gathering the Bible and dictionary evidence for each term…", flush=True)
+    items = terms.todo(a.terms, a.again)
+    if a.limit:
+        items = items[: a.limit]
+    if not items:
+        print("no terms to ask about (every seed term has an entry; --again asks again)")
+        return 0
+    groups = terms.groups(items)
+    if a.action == "show":
+        print(terms.SYSTEM)
+        print("\n" + "=" * 72 + "\n")
+        print(terms.group_message(groups[0]))
+        return 0
+    if a.action == "plan":
+        chars = sum(len(terms.group_message(g)) for g in groups)
+        no_verses = [ev.seed.en for ev in items if not ev.verses]
+        print(f"{len(items)} terms in {len(groups)} requests (up to {terms.GROUP_TERMS} terms each), "
+              f"about {chars:,} characters in all, sent with {a.model}. No API call made.")
+        print(f"{len(no_verses)} have no Bible verses (curated terms): {', '.join(no_verses[:20])}"
+              + (" …" if len(no_verses) > 20 else ""))
+        print("`translate ai-terms submit` sends them as a batch at half price; "
+              "`translate ai-terms run --limit 8` asks about 8 now.")
+        return 0
+    if a.action == "submit":
+        bid, n = terms.submit(items, a.model, a.effort)
+        print(f"submitted {bid}: {len(items)} terms in {n} requests. "
+              f"`translate batch status` shows progress; `translate ai-terms collect {bid}` when it has ended.")
+        return 0
+    return terms_report(terms.run_direct(items, a.model, a.effort, a.dry_run, a.workers))
+
+
+def terms_report(rows: list[dict]) -> int:
+    from collections import Counter
+
+    c = Counter(r["action"] for r in rows)
+    print(f"\n{c['draft']} proposals written to data/entities/glossary-theology-ta.toml for review, {c['skip']} skipped. "
+          "Approve them with `translate review-terms --web`.")
+    return 0
+
+
+def cmd_review_terms(a) -> int:
+    from . import termweb
+
+    keys = termweb.queue(a.all, a.include_rejected)
+    termweb.serve(termweb.TermSession(keys), port=a.port, open_browser=not a.no_open)
     return 0
 
 
@@ -220,11 +277,20 @@ def report(outcomes: list[translate.Outcome]) -> int:
 def cmd_run(a) -> int:
     ctx = ctx_from(a)
     arts = select(a)
-    print(f"{len(arts)} article(s) with {ctx.model} at effort {ctx.effort}")
+    print(f"{len(arts)} article(s) with {ctx.model} at effort {ctx.effort}, {a.workers} at a time")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    client.client()  # one client, shared by the threads
     outcomes = []
-    for art in arts:
-        print(f"{art['id']} ({len(art['paragraphs'])} paragraphs)", flush=True)
-        outcomes.append(translate.translate_direct(art, ctx))
+    # Each article is its own requests, repair and draft file, so articles run
+    # side by side; the report file is locked in translate.record.
+    with ThreadPoolExecutor(max_workers=max(1, a.workers)) as pool:
+        futures = {pool.submit(translate.translate_direct, art, ctx): art for art in arts}
+        for n, f in enumerate(as_completed(futures), 1):
+            o = f.result()
+            print(f"[{n}/{len(arts)}] {o.article_id}: {'written' if o.written else 'not written'}"
+                  + (f", {len(o.problems)} problem(s)" if o.problems else ""), flush=True)
+            outcomes.append(o)
     return report(outcomes)
 
 
@@ -286,12 +352,26 @@ def cmd_batch(a) -> int:
         return 0
 
     batches = [a.batch_id] if a.batch_id else [b["id"] for b in client.recorded_batches()]
+    if a.action == "cancel":
+        if not a.batch_id:
+            raise SystemExit("cancel needs a batch id (translate batch status lists them)")
+        b = client.cancel_batch(a.batch_id)
+        print(f"{a.batch_id}: {b.processing_status}. Requests already finished stay done and are billed; "
+              "the rest are cancelled. Collect it once it has ended to keep what finished.")
+        return 0
     if a.action == "status":
+        from datetime import datetime, timezone
+
+        notes = {b["id"]: b.get("note", "") for b in client.recorded_batches()}
         for bid in batches:
             b = client.batch_status(bid)
             c = b.request_counts
-            print(f"{bid}  {b.processing_status}  processing {c.processing}, succeeded {c.succeeded}, "
-                  f"errored {c.errored}, expired {c.expired}")
+            end = b.ended_at or datetime.now(timezone.utc)
+            mins = int((end - b.created_at).total_seconds() // 60)
+            took = f"took {mins} min" if b.ended_at else f"running {mins} min"
+            print(f"{bid}  {b.processing_status} ({took})  processing {c.processing}, succeeded {c.succeeded}, "
+                  f"errored {c.errored}, canceled {c.canceled}, expired {c.expired}"
+                  + (f"  · {notes[bid]}" if notes.get(bid) else ""))
         return 0
 
     # collect
@@ -321,6 +401,8 @@ def main(argv: list[str] | None = None) -> int:
     def model_opts(p):
         p.add_argument("--model", default=client.DEFAULT_MODEL)
         p.add_argument("--effort", default=client.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
+        p.add_argument("--workers", type=int, default=client.DEFAULT_WORKERS,
+                       help=f"direct runs: requests at a time (default {client.DEFAULT_WORKERS})")
 
     def select_opts(p, positional=True):
         if positional:
@@ -376,6 +458,26 @@ def main(argv: list[str] | None = None) -> int:
     model_opts(p)
     p.set_defaults(fn=cmd_ai_names)
 
+    p = sub.add_parser("ai-terms", help="ask Claude to propose the Tamil for the theological glossary")
+    p.add_argument("action", nargs="?", default="plan", choices=["plan", "show", "run", "submit", "collect"],
+                   help="plan (default): count, no API call; show: print the first request; run: ask now; "
+                        "submit/collect: as a batch at half price")
+    p.add_argument("batch_id", nargs="?")
+    p.add_argument("--terms", nargs="+", help="only these seed terms (asks again)")
+    p.add_argument("--limit", type=int)
+    p.add_argument("--again", action="store_true", help="also terms that already have an entry")
+    p.add_argument("--dry-run", action="store_true", help="ask, but write nothing")
+    model_opts(p)
+    p.set_defaults(fn=cmd_ai_terms)
+
+    p = sub.add_parser("review-terms", help="approve the glossary in the browser")
+    p.add_argument("--web", action="store_true", help="(the default: the review is always in the browser)")
+    p.add_argument("--port", type=int, default=8766)
+    p.add_argument("--no-open", action="store_true")
+    p.add_argument("--all", action="store_true", help="also terms already approved")
+    p.add_argument("--include-rejected", action="store_true")
+    p.set_defaults(fn=cmd_review_terms)
+
     p = sub.add_parser("flag-names", help="send unchecked names whose Tamil does not sound like the name back to review")
     p.add_argument("--below", type=float, default=0.5, help="flag when the Tamil sounds like the name below this")
     p.add_argument("--dry-run", action="store_true")
@@ -408,7 +510,8 @@ def main(argv: list[str] | None = None) -> int:
     p.set_defaults(fn=cmd_check)
 
     p = sub.add_parser("batch", help="bulk runs")
-    p.add_argument("action", choices=["submit", "status", "collect"])
+    p.add_argument("action", choices=["submit", "status", "collect", "cancel"],
+                   help="cancel: stop a batch still running (any batch: articles, names or terms)")
     p.add_argument("batch_id", nargs="?")
     select_opts(p, positional=False)
     model_opts(p)
