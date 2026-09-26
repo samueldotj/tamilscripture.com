@@ -2,7 +2,7 @@
 	// Site traffic for reviewers and moderators (docs/feature_analytics.md §4).
 	// Counts only: no visitor can be identified or followed across days.
 	import { onMount } from 'svelte';
-	import { findBook, chapterUrl, manifest } from '$lib/content/manifest';
+	import { findBook, findVersion, chapterUrl, manifest } from '$lib/content/manifest';
 	import { downloadCsv, loadNow, loadReport, spikes, toCsv, type Dimension, type Measure, type Now, type Report, type Row } from '$lib/analytics/report';
 	import { settings } from '$lib/settings/store.svelte';
 
@@ -54,7 +54,30 @@
 		{ id: 'members', ta: 'உள்நுழைந்தவர்கள்', en: 'Signed-in users', hint_ta: 'நாள்தோறும் எண்ணி, கூட்டியது', hint_en: 'Counted per day, summed' },
 		{ id: 'verse_clicks', ta: 'வசனத் தொடுதல்கள்', en: 'Verse clicks', hint_ta: 'வசன எண்ணைத் தொட்டுத் தேர்ந்தவை', hint_en: 'Verses selected by tapping the number' }
 	];
-	const measureLabel = $derived(MEASURES.find((m) => m.id === measure)!);
+	// Audio Bible listening (docs/feature_analytics.md A7): a second row of tiles, also chart switches.
+	const AUDIO: typeof MEASURES = [
+		{ id: 'audio_starts', ta: 'அதிகார இயக்கங்கள்', en: 'Chapter plays', hint_ta: 'வாசகர் தொடங்கியவை, தானாகத் தொடர்ந்தவை', hint_en: 'Started by readers or by continuing' },
+		{ id: 'listeners', ta: 'கேட்டவர்கள்', en: 'Listeners', hint_ta: 'நாள்தோறும் எண்ணி, கூட்டியது', hint_en: 'Counted per day, summed' },
+		{ id: 'listen_seconds', ta: 'கேட்ட நேரம்', en: 'Listening time', hint_ta: 'உண்மையில் ஒலித்த நேரம்', hint_en: 'Time audio actually played' },
+		{ id: 'audio_ends', ta: 'முழுதும் கேட்டவை', en: 'Chapters completed', hint_ta: 'முடிவு வரை கேட்ட அதிகாரங்கள்', hint_en: 'Heard to the end' }
+	];
+	const measureLabel = $derived([...MEASURES, ...AUDIO].find((m) => m.id === measure)!);
+	/** 3 h 20 m, 45 m, 30 s. */
+	function duration(seconds: number) {
+		if (seconds < 60) return `${seconds} s`;
+		const minutes = Math.round(seconds / 60);
+		const h = Math.floor(minutes / 60);
+		const m = minutes % 60;
+		if (h >= 100) return `${fmt.format(h)} h`;
+		if (h) return m ? `${h} h ${m} m` : `${h} h`;
+		return `${m} m`;
+	}
+	function tileValue(m: Measure, v: number) {
+		return m === 'listen_seconds' ? duration(v) : compact.format(v);
+	}
+	/** Listening time is charted in minutes; everything else as counted. */
+	const chartUnit = $derived(measure === 'listen_seconds' ? 60 : 1);
+	const completion = $derived(report && report.totals.audio_starts ? Math.round((report.totals.audio_ends / report.totals.audio_starts) * 100) : null);
 	const rangeLabel = $derived(RANGES.find((r) => r.n === days)!);
 
 	const fmt = $derived(new Intl.NumberFormat(locale));
@@ -94,7 +117,7 @@
 	const W = 720;
 	const H = 220;
 	const PAD = { top: 12, right: 8, bottom: 26, left: 44 };
-	const series = $derived((report?.daily ?? []).map((d) => ({ day: d.day, value: d[measure] })));
+	const series = $derived((report?.daily ?? []).map((d) => ({ day: d.day, value: Math.round(d[measure] / chartUnit) })));
 	const spikeDays = $derived(report ? spikes(report.daily, measure) : []);
 	function niceStep(max: number) {
 		if (max <= 4) return 1;
@@ -145,14 +168,29 @@
 	]);
 
 	// ---- ranked tables ----
-	type Section = { id: Dimension | 'searches' | 'searches_empty'; ta: string; en: string; n_ta: string; n_en: string; u_ta: string; u_en: string };
+	type Section = { id: Dimension | 'searches' | 'searches_empty'; ta: string; en: string; n_ta: string; n_en: string; u_ta: string; u_en: string; seconds?: boolean };
 	const V = { n_ta: 'பார்வைகள்', n_en: 'Views', u_ta: 'வருகையாளர்', u_en: 'Visitors' };
+	const A = { n_ta: 'இயக்கங்கள்', n_en: 'Plays', u_ta: 'கேட்டவர்', u_en: 'Listeners' };
+	const SOURCE_NAMES: Record<string, [string, string]> = {
+		play: ['அதிகாரத் தொடக்கத்திலிருந்து', 'From the start of a chapter'],
+		verse: ['ஒரு வசனத்திலிருந்து', 'From a verse'],
+		jump: ['கேட்கும்போது வசனத்துக்குத் தாவியது', 'Jumped to a verse while playing'],
+		next: ['அடுத்த அதிகாரம் (தானாக அல்லது ⏭)', 'Next chapter (by itself or ⏭)']
+	};
+	function versionShort(code: string | null) {
+		return (code && findVersion(code)?.short) || code || '?';
+	}
 	const SECTIONS: Section[] = [
 		{ id: 'pages', ta: 'அதிகம் பார்க்கப்பட்ட பக்கங்கள்', en: 'Top pages', ...V },
 		{ id: 'sections', ta: 'தளத்தின் பகுதிகள்', en: 'Parts of the site', ...V },
 		{ id: 'chapters', ta: 'அதிகம் வாசிக்கப்பட்ட அதிகாரங்கள்', en: 'Most-read chapters', ...V },
 		{ id: 'verses', ta: 'அதிகம் தொடப்பட்ட வசனங்கள்', en: 'Most-tapped verses', n_ta: 'தொடுதல்', n_en: 'Clicks', u_ta: 'வருகையாளர்', u_en: 'Visitors' },
 		{ id: 'verse_books', ta: 'புத்தகவாரியாக வசனத் தொடுதல்கள்', en: 'Verse clicks by book', n_ta: 'தொடுதல்', n_en: 'Clicks', u_ta: 'வருகையாளர்', u_en: 'Visitors' },
+		{ id: 'audio_chapters', ta: 'அதிகம் கேட்கப்பட்ட அதிகாரங்கள்', en: 'Most-played chapters', ...A },
+		{ id: 'audio_versions', ta: 'பதிப்புவாரியாக ஒலி இயக்கங்கள்', en: 'Plays by version', ...A },
+		{ id: 'audio_time', ta: 'பதிப்புவாரியாகக் கேட்ட நேரம்', en: 'Listening time by version', n_ta: 'நேரம்', n_en: 'Time', u_ta: 'கேட்டவர்', u_en: 'Listeners', seconds: true },
+		{ id: 'audio_sources', ta: 'இயக்கம் தொடங்கிய விதம்', en: 'How playback started', n_ta: 'முறை', n_en: 'Times', u_ta: 'கேட்டவர்', u_en: 'Listeners' },
+		{ id: 'audio_verses', ta: 'கேட்கத் தொடங்கிய வசனங்கள்', en: 'Verses played from', n_ta: 'முறை', n_en: 'Times', u_ta: 'கேட்டவர்', u_en: 'Listeners' },
 		{ id: 'searches', ta: 'தேடல் சொற்கள்', en: 'Search terms', n_ta: 'தேடல்கள்', n_en: 'Searches', u_ta: 'முடிவில்லை', u_en: 'No result' },
 		{ id: 'searches_empty', ta: 'முடிவு இல்லாத தேடல்கள்', en: 'Searches with no result', n_ta: 'முடிவில்லை', n_en: 'No result', u_ta: 'மொத்தம்', u_en: 'All' },
 		{ id: 'countries', ta: 'நாடுகள்', en: 'Countries', ...V },
@@ -203,6 +241,19 @@
 				return SECTION_NAMES[r.key]?.[ta ? 0 : 1] ?? r.key;
 			case 'verse_books':
 				return bookName(r.key);
+			case 'audio_chapters': {
+				const [code, ch] = r.key.split('.');
+				return `${bookName(code)} ${ch} · ${versionShort(r.extra)}`;
+			}
+			case 'audio_versions':
+			case 'audio_time':
+				return findVersion(r.key)?.name ?? r.key;
+			case 'audio_sources':
+				return SOURCE_NAMES[r.key]?.[ta ? 0 : 1] ?? r.key;
+			case 'audio_verses': {
+				const [code, ch, v] = r.key.split('.');
+				return `${bookName(code)} ${ch}:${v}`;
+			}
 			case 'chapters': {
 				const [code, ch] = r.key.split('.');
 				return `${bookName(code)} ${ch}`;
@@ -218,6 +269,12 @@
 	function rowHref(id: Section['id'], r: Row): string | null {
 		const version = settings.value.version;
 		if (id === 'pages') return r.key;
+		if (id === 'audio_chapters' || id === 'audio_verses') {
+			const [code, ch, v] = r.key.split('.');
+			const b = findBook(code);
+			const ver = id === 'audio_chapters' && r.extra && r.extra !== '?' ? r.extra.toLowerCase() : version;
+			return b ? chapterUrl(ver, b, Number(ch), v) : null;
+		}
 		if (id === 'verses' || id === 'chapters') {
 			const [code, ch, v] = r.key.split('.');
 			const b = findBook(code);
@@ -230,14 +287,17 @@
 		const rows = rowsFor(sec.id);
 		downloadCsv(
 			`traffic-${sec.id}-${report?.from}-${report?.to}.csv`,
-			toCsv([sec.en, sec.n_en, sec.u_en], rows.map((r) => [rowLabel(sec.id, r), r.n, r.u]))
+			toCsv([sec.en, sec.seconds ? 'seconds' : sec.n_en, sec.u_en], rows.map((r) => [rowLabel(sec.id, r), r.n, r.u]))
 		);
 	}
 	function exportDaily() {
 		if (!report) return;
 		downloadCsv(
 			`traffic-daily-${report.from}-${report.to}.csv`,
-			toCsv(['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks'], report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks]))
+			toCsv(
+				['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks', 'audio_plays', 'listeners', 'listen_seconds', 'audio_completed'],
+				report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks, d.audio_starts, d.listeners, d.listen_seconds, d.audio_ends])
+			)
 		);
 	}
 </script>
@@ -267,7 +327,10 @@
 				<h2 class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'இப்போது · கடந்த 30 நிமிடம்' : 'Now · last 30 minutes'}</h2>
 			</div>
 			<div class="now-body">
-				<p class="now-n"><strong>{fmt.format(now.visitors)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'வருகையாளர்கள்' : 'visitors'}</span> · <strong>{fmt.format(now.views)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'பார்வைகள்' : 'views'}</span> · <strong>{fmt.format(now.verse_clicks)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'தொடுதல்கள்' : 'verse clicks'}</span></p>
+				<p class="now-n"><strong>{fmt.format(now.visitors)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'வருகையாளர்கள்' : 'visitors'}</span> · <strong>{fmt.format(now.views)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'பார்வைகள்' : 'views'}</span> · <strong>{fmt.format(now.verse_clicks)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'தொடுதல்கள்' : 'verse clicks'}</span> · <strong>{fmt.format(now.listeners ?? 0)}</strong> <span lang={ta ? 'ta' : 'en'}>{ta ? 'கேட்கிறார்கள்' : 'listening'}</span></p>
+				{#if now.listening?.length}
+					<p class="now-c muted-n" lang={ta ? 'ta' : 'en'}>♪ {now.listening.map((l) => { const [code, ch] = l.key.split('.'); return `${bookName(code)} ${ch} · ${versionShort(l.extra)} (${fmt.format(l.n)})`; }).join(' · ')}</p>
+				{/if}
 				{#if now.pages.length}
 					<ul class="now-list">
 						{#each now.pages as p (p.key)}<li><a href={p.key}>{p.key}</a> <span class="muted-n">{fmt.format(p.n)}</span></li>{/each}
@@ -295,9 +358,27 @@
 		{/each}
 	</div>
 
+	<h2 class="group kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'ஒலி வேதாகமம்' : 'Audio Bible'}</h2>
+	<div class="tiles" class:dim={loading}>
+		{#each AUDIO as m (m.id)}
+			{@const d = delta(m.id)}
+			<button type="button" class="tile" class:on={measure === m.id} aria-pressed={measure === m.id} onclick={() => (measure = m.id)}>
+				<span class="label" lang={ta ? 'ta' : 'en'}>{ta ? m.ta : m.en}</span>
+				<span class="value">{tileValue(m.id, report.totals[m.id])}</span>
+				{#if m.id === 'audio_ends' && completion !== null}
+					<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? `இயக்கங்களில் ${completion}%` : `${completion}% of plays`}</span>
+				{:else if d}
+					<span class="delta {d.dir}" lang={ta ? 'ta' : 'en'}>{d.dir === 'up' ? '▲' : d.dir === 'down' ? '▼' : '■'} {d.text} <span class="vs">{ta ? `முந்தைய ${rangeLabel.ta} ஒப்பிட` : `vs previous ${rangeLabel.en}`}</span></span>
+				{:else}
+					<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? m.hint_ta : m.hint_en}</span>
+				{/if}
+			</button>
+		{/each}
+	</div>
+
 	<section class="card chart" class:dim={loading}>
 		<div class="sec-head">
-			<h2 class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? measureLabel.ta : measureLabel.en} · {ta ? 'நாள்தோறும்' : 'per day'}</h2>
+			<h2 class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? measureLabel.ta : measureLabel.en} · {chartUnit === 60 ? (ta ? 'நிமிடங்கள், நாள்தோறும்' : 'minutes per day') : ta ? 'நாள்தோறும்' : 'per day'}</h2>
 			<button type="button" class="csv" onclick={exportDaily}>CSV</button>
 		</div>
 		<div class="plot">
@@ -326,7 +407,7 @@
 			{#if hover !== null && series[hover]}
 				<div class="tip" style="left: {((PAD.left + hover * band + band / 2) / W) * 100}%; top: {(y(series[hover].value) / H) * 100}%">
 					<span class="tip-day">{dayLabel(series[hover].day, true)}</span>
-					<strong>{fmt.format(series[hover].value)}</strong>
+					<strong>{chartUnit === 60 ? duration(series[hover].value * 60) : fmt.format(series[hover].value)}</strong>
 				</div>
 			{/if}
 		</div>
@@ -387,7 +468,7 @@
 										<span class="bar" style="width: {(r.n / max) * 100}%" aria-hidden="true"></span>
 										{#if href}<a {href} class="name">{rowLabel(sec.id, r)}</a>{:else}<span class="name">{rowLabel(sec.id, r)}</span>{/if}
 									</td>
-									<td class="num">{fmt.format(r.n)}</td>
+									<td class="num">{sec.seconds ? duration(r.n) : fmt.format(r.n)}</td>
 									<td class="num muted-n">{fmt.format(r.u)}</td>
 								</tr>
 							{/each}
@@ -402,9 +483,9 @@
 
 	<p class="note" lang={ta ? 'ta' : 'en'}>
 		{#if ta}
-			குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
+			ஒலி வேதாகமம்: அதிகார இயக்கங்கள் வாசகர் தொடங்கியவையும் தானாகத் தொடர்ந்தவையும்; கேட்ட நேரம் ஒலி உண்மையில் ஒலித்த நேரம், பக்கம் பின்னணியில் இருந்தாலும் சேர்த்து. குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
 		{:else}
-			No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
+			Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
 		{/if}
 	</p>
 {/if}
@@ -445,6 +526,7 @@
 	.now-c { margin: 0.4rem 0 0; font-size: 0.8rem; }
 
 	/* Stat tiles: each is also the switch for the chart below. */
+	.group { margin: 0.4rem 0 0.6rem; }
 	.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
 	.tile { display: grid; gap: 0.2rem; text-align: left; padding: 0.9rem 1rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-l); background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; align-content: start; }
 	.tile:hover { border-color: var(--accent); }

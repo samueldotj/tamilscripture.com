@@ -108,7 +108,8 @@ Built 25 Sep 2026 from Claude Design turn 12B ("Audio in the main reader"), with
 - **Lock screen and headphones**: Media Session with title, version and artwork. Play, pause, ±10 s, seek, previous and next chapter.
 - **Keys**: K play/pause, J back 10 s, L forward 10 s. None were used by the reader before.
 - **Accessibility**: every control is labelled in the interface language. The track is an `input type=range` with `aria-valuetext`. The bar is a labelled `section`, and focus never moves into it on its own.
-- **Not done**: the `audio_play` analytics event, because the analytics code was being changed in another commit, and credits in the bar. The version's recording credits are in `manifest.json` (`audio`) ready for `/about`.
+- **Listening statistics** (26 Sep 2026): the player sends `audio` events (chapter started, next, verse jump, completed, seconds listened) through the site's own analytics, shown on `/mod/traffic` (docs/feature_analytics.md A7).
+- **Not done**: credits in the bar. The version's recording credits are in `manifest.json` (`audio`) ready for `/about`.
 
 ## 5. Stage 2: aligning verses to audio
 

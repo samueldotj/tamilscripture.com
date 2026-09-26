@@ -13,6 +13,12 @@ export const MAX_BATCH = 20;
 let firstView = true;
 let queue: Record<string, unknown>[] = [];
 let listening = false;
+/** Called just before a batch is sent, so a module can add what it has pending
+ *  (the audio player's listening time). */
+const beforeFlush: (() => void)[] = [];
+export function onFlush(fn: () => void) {
+	beforeFlush.push(fn);
+}
 
 function optedOut(): boolean {
 	const nav = navigator as Navigator & { globalPrivacyControl?: boolean };
@@ -20,6 +26,13 @@ function optedOut(): boolean {
 }
 
 function flush() {
+	for (const fn of beforeFlush) {
+		try {
+			fn();
+		} catch {
+			/* analytics never breaks the page */
+		}
+	}
 	if (queue.length === 0) return;
 	const body = JSON.stringify(queue);
 	queue = [];
@@ -42,10 +55,22 @@ function listen() {
 	addEventListener('pagehide', flush);
 }
 
-export function track(
-	kind: 'view' | 'verse',
-	data: { route?: string | null; verse?: string; lang?: string; user?: string | null; book?: string; chapter?: number } = {}
-) {
+export interface TrackData {
+	route?: string | null;
+	verse?: string;
+	lang?: string;
+	user?: string | null;
+	book?: string;
+	chapter?: number;
+	/** audio: play, next, jump, end or time */
+	action?: 'play' | 'next' | 'jump' | 'end' | 'time';
+	/** audio: the recording's version code */
+	version?: string;
+	/** audio: seconds listened, for `time` */
+	amount?: number;
+}
+
+export function track(kind: 'view' | 'verse' | 'audio', data: TrackData = {}) {
 	if (!browser || dev || optedOut()) return;
 	listen();
 	queue.push({
@@ -57,6 +82,9 @@ export function track(
 		u: data.user ?? undefined,
 		b: data.book,
 		c: data.chapter,
+		a: data.action,
+		vr: data.version,
+		n: data.amount,
 		s: `${screen.width}x${screen.height}`,
 		// Only the landing page has a meaningful referrer.
 		ref: kind === 'view' && firstView ? document.referrer || undefined : undefined

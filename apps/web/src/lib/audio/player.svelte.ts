@@ -5,6 +5,8 @@ import { goto } from '$app/navigation';
 import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 import { loadAudioTimings, loadChapter } from '$lib/content/load';
 import type { Book, ChapterJson, ChapterRef, VersionMeta } from '$lib/content/types';
+import { onFlush, track as trackEvent } from '$lib/analytics/track';
+import { settings } from '$lib/settings/store.svelte';
 
 export interface Track {
 	version: VersionMeta;
@@ -49,6 +51,9 @@ class Player {
 
 	#el: HTMLAudioElement | null = null;
 	#seq = 0;
+	/** Seconds heard on the current track since it was last reported, and when playing last resumed. */
+	#heard = 0;
+	#since: number | null = null;
 
 	get key(): string | null {
 		const t = this.track;
@@ -81,11 +86,16 @@ class Player {
 		el.addEventListener('timeupdate', () => (this.time = el.currentTime));
 		el.addEventListener('durationchange', () => { if (isFinite(el.duration)) this.duration = el.duration; });
 		el.addEventListener('play', () => (this.playing = true));
-		el.addEventListener('pause', () => (this.playing = false));
-		el.addEventListener('waiting', () => (this.loading = true));
-		el.addEventListener('playing', () => { this.loading = false; this.error = ''; });
+		el.addEventListener('pause', () => { this.playing = false; this.#accrue(false); });
+		el.addEventListener('waiting', () => { this.loading = true; this.#accrue(false); });
+		el.addEventListener('playing', () => { this.loading = false; this.error = ''; this.#since = performance.now(); });
 		el.addEventListener('canplay', () => (this.loading = false));
-		el.addEventListener('ended', () => void this.#advance());
+		el.addEventListener('ended', () => {
+			this.#accrue(false);
+			this.#event('end');
+			this.#report();
+			void this.#advance();
+		});
 		el.addEventListener('error', () => {
 			if (!el.getAttribute('src')) return;
 			this.loading = false;
@@ -98,13 +108,15 @@ class Player {
 		return el;
 	}
 
-	/** Start a chapter from its beginning, or from a verse once timings exist. */
-	async play(chapter: ChapterJson, version: VersionMeta, book: Book, fromVerse?: number) {
+	/** Start a chapter from its beginning, or from a verse once timings exist.
+	 *  `source` says who started it, for the moderators' traffic page. */
+	async play(chapter: ChapterJson, version: VersionMeta, book: Book, fromVerse?: number, source: 'play' | 'next' = 'play') {
 		if (!chapter.audio) return;
 		const el = this.#element();
 		const seq = ++this.#seq;
 		const same = this.key === trackKey(version.code, book.code, chapter.chapter);
 		if (!same) {
+			this.#report();
 			this.track = {
 				version, book, chapter: chapter.chapter, src: chapter.audio.src, ms: chapter.audio.ms,
 				verses: null, prev: chapter.prev, next: chapter.next
@@ -115,13 +127,16 @@ class Player {
 			el.src = chapter.audio.src;
 			el.playbackRate = this.rate;
 			this.#metadata();
+			this.#event(source, fromVerse);
 			if (chapter.audio.timed) {
 				loadAudioTimings(fetch, version.code, book.code, chapter.chapter)
-					.then((t) => { if (seq === this.#seq && this.track) this.track.verses = t.verses; if (fromVerse) this.playFrom(fromVerse); })
+					.then((t) => { if (seq === this.#seq && this.track) this.track.verses = t.verses; if (fromVerse) this.#toVerse(fromVerse); })
 					.catch(() => {});
 			}
+		} else if (fromVerse) {
+			this.#event('jump', fromVerse);
 		}
-		if (fromVerse && this.track?.verses) this.playFrom(fromVerse);
+		if (fromVerse && this.track?.verses) this.#toVerse(fromVerse);
 		else if (!same) el.currentTime = 0;
 		await this.#start(el);
 	}
@@ -164,6 +179,11 @@ class Player {
 
 	/** Jump to a verse's start (timed tracks only) and keep playing. */
 	playFrom(verse: number) {
+		if (this.track?.verses) this.#event('jump', verse);
+		this.#toVerse(verse);
+	}
+
+	#toVerse(verse: number) {
 		const v = this.track?.verses;
 		const hit = v?.find(([n]) => n === verse) ?? v?.filter(([n]) => n <= verse).at(-1);
 		if (!hit || !this.#el) return;
@@ -179,6 +199,8 @@ class Player {
 	}
 
 	close() {
+		this.#accrue(false);
+		this.#report();
 		this.#seq++;
 		const el = this.#el;
 		if (el) {
@@ -214,11 +236,49 @@ class Player {
 		try {
 			const next = await loadChapter(fetch, version.code, book.code, ref.chapter);
 			if (!next.audio) { this.playing = false; this.error = 'gap'; return; }
-			await this.play(next, version, book);
+			await this.play(next, version, book, undefined, 'next');
 			if (follow) void goto(chapterUrl(follow, book, ref.chapter), { noScroll: false, keepFocus: true });
 		} catch {
 			this.error = 'unavailable';
 		}
+	}
+
+	// ---- listening statistics (docs/feature_analytics.md A7) ----
+
+	/** Add the time heard since playing last resumed; keep counting if still playing. */
+	#accrue(stillPlaying: boolean) {
+		if (this.#since === null) return;
+		const now = performance.now();
+		this.#heard += Math.max(0, now - this.#since) / 1000;
+		this.#since = stillPlaying ? now : null;
+	}
+
+	/** One audio event for the current track. */
+	#event(action: 'play' | 'next' | 'jump' | 'end' | 'time', verse?: number, amount?: number) {
+		const t = this.track;
+		if (!t) return;
+		trackEvent('audio', {
+			action,
+			version: t.version.code,
+			book: t.book.code,
+			chapter: t.chapter,
+			verse: verse ? `${t.book.code}.${t.chapter}.${verse}` : undefined,
+			amount,
+			lang: settings.value.uiLang
+		});
+	}
+
+	/** Report the seconds heard on the current track since the last report. */
+	#report() {
+		this.#accrue(this.playing);
+		const s = Math.round(this.#heard);
+		if (s >= 1) this.#event('time', undefined, Math.min(3600, s));
+		this.#heard = 0;
+	}
+
+	/** Called when the analytics batch is sent (the tab is hidden or closed). */
+	flushStats() {
+		this.#report();
 	}
 
 	#metadata() {
@@ -248,3 +308,6 @@ class Player {
 }
 
 export const player = new Player();
+// Listening time is added to each analytics batch as it leaves, so time heard
+// with the tab in the background still counts.
+onFlush(() => player.flushStats());

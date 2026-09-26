@@ -111,7 +111,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 			}
 		}
 		const args = {
-			p_kind: body.k === 'verse' ? 'verse' : 'view',
+			p_kind: body.k === 'verse' || body.k === 'audio' ? body.k : 'view',
 			p_path: str(body.p, 200),
 			p_route: str(body.r, 200),
 			p_verse: str(body.v, 20),
@@ -128,7 +128,11 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 			p_referrer: referrer,
 			p_lang: str(body.l, 2),
 			p_book: str(body.b, 3),
-			p_chapter: typeof body.c === 'number' && Number.isInteger(body.c) ? body.c : null
+			p_chapter: typeof body.c === 'number' && Number.isInteger(body.c) ? body.c : null,
+			// Audio Bible listening (A7): Postgres checks the action and version.
+			p_action: str(body.a, 8),
+			p_version: str(body.vr, 12),
+			p_amount: typeof body.n === 'number' && Number.isInteger(body.n) ? body.n : null
 		};
 		if (args.p_path) rows.push(args);
 	}

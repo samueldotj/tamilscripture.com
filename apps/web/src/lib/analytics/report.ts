@@ -8,6 +8,14 @@ export interface Totals {
 	unique_views: number;
 	members: number;
 	verse_clicks: number;
+	/** Audio Bible (A7): chapters started, by a reader or by continuing */
+	audio_starts: number;
+	/** visitors who played audio, per day, summed */
+	listeners: number;
+	/** seconds heard */
+	listen_seconds: number;
+	/** chapters heard to the end */
+	audio_ends: number;
 }
 export type Measure = keyof Totals;
 export interface Day extends Totals {
@@ -36,7 +44,12 @@ export type Dimension =
 	| 'browsers'
 	| 'screens'
 	| 'referrers'
-	| 'langs';
+	| 'langs'
+	| 'audio_versions'
+	| 'audio_time'
+	| 'audio_chapters'
+	| 'audio_sources'
+	| 'audio_verses';
 export interface Report {
 	from: string;
 	to: string;
@@ -52,7 +65,10 @@ export interface Now {
 	views: number;
 	visitors: number;
 	verse_clicks: number;
+	listeners: number;
 	pages: { key: string; n: number }[];
+	/** chapters being heard: key BOOK.chapter, extra version, n listeners */
+	listening: { key: string; extra: string | null; n: number }[];
 	countries: { key: string; n: number }[];
 }
 

@@ -1,6 +1,6 @@
 # Feature design: site analytics for moderators
 
-Milestone M8 in the [README](../README.md#milestones). Status: phases A1 to A6 built 18 Sep 2026.
+Milestone M8 in the [README](../README.md#milestones). Status: phases A1 to A6 built 18 Sep 2026; A7 (audio listening) built 26 Sep 2026.
 
 Moderators need to see how many people use the site and what they read: visitors, page views, unique views, which verses people tap, and where readers are and on what devices. This document fixes what is collected, how it stays private, where it lives, and the order it is built in.
 
@@ -15,6 +15,7 @@ Moderators need to see how many people use the site and what they read: visitors
 | Country, region, city | From Vercel's edge geolocation headers (`x-vercel-ip-country`, `x-vercel-ip-country-region`, `x-vercel-ip-city`) on the collection request. The IP address is hashed with the day's salt inside Postgres and never written. |
 | Device and resolution | Device class, OS and browser from the user-agent on the server; screen resolution (CSS pixels) from the page. |
 | Verse clicks | One event when a reader selects a verse (taps its number), with the verse id. |
+| Audio listening (A7) | `audio` events from the player: a chapter started (by the reader, from its start or from a verse, or by continuing), a jump to a verse, a chapter heard to its end, and seconds actually listened. Listening time is sent when the chapter changes, the bar closes or the tab is hidden, so time heard in the background counts. Nothing identifies the listener beyond the same daily hash. |
 | Opt-out | Browsers that send Global Privacy Control or Do Not Track are not counted at all. |
 | Bots | Dropped on the server by user-agent (crawlers, previews, headless browsers, Lighthouse). |
 | Retention | Raw events 90 days; daily rollups kept two years (phase A3). A day's salt is deleted the day after, so its hashes become unlinkable. |
@@ -42,7 +43,7 @@ flowchart LR
 | Column | Meaning |
 |---|---|
 | `at`, `day` | Time; the day in India time (Asia/Kolkata), which is also the salt's day |
-| `kind` | `view` or `verse` |
+| `kind` | `view`, `verse` or `audio` |
 | `path`, `route` | URL path without query; SvelteKit route id, so "all chapter pages" can be grouped |
 | `verse` | For `verse` events: `JHN.3.16` |
 | `book`, `chapter` | For chapter-page views: `JHN`, `3` |
@@ -53,6 +54,9 @@ flowchart LR
 | `screen` | `390x844` (CSS pixels) |
 | `referrer` | The referring site's host only, and only when it is another site |
 | `lang` | Interface language, `ta` or `en` |
+| `action` | For `audio`: `play` (a reader started a chapter; `verse` is set when started from a verse), `next` (the next or previous chapter, by itself or by ⏮/⏭), `jump` (to a verse while playing), `end` (heard to the end), `time` (seconds listened) |
+| `version` | For `audio`: the recording's version code, `IRVTAM` |
+| `amount` | For `audio` `time`: seconds listened, 1 to 3,600 |
 
 Nothing in the table identifies a person. `analytics_salt(day, salt)` holds one random salt per day; the collector reads today's, and a daily job deletes older ones.
 
@@ -61,11 +65,12 @@ Nothing in the table identifies a person. `analytics_salt(day, salt)` holds one 
 `/mod/traffic`, a tab beside the queue:
 
 - a range of 7, 30 or 90 days, or a year;
-- a live panel: visitors, views and verse clicks in the last 30 minutes, the pages being read and where from, refreshed every minute;
+- a live panel: visitors, views, verse clicks and listeners in the last 30 minutes, the pages being read, the chapters being heard and where from, refreshed every minute;
 - tiles: page views, visitors, unique page views, signed-in users, verse clicks, each with its change against the previous period of the same length;
+- an Audio Bible row of tiles (A7): chapter plays (`play` + `next`), listeners (per day, summed), listening time, and chapters completed with their share of plays; each also switches the daily chart, which shows listening time in minutes;
 - a daily chart of one chosen measure, with a note on any day above three times the typical day;
 - a grid of the 66 books shaded by chapter-page views;
-- tables with bars and CSV export: top pages, parts of the site, most-read chapters, most-tapped verses, verse clicks by book, search terms, searches with no result, countries, cities, devices, screen resolutions, operating systems, browsers, referring sites, interface language.
+- tables with bars and CSV export: top pages, parts of the site, most-read chapters, most-tapped verses, verse clicks by book, search terms, searches with no result, most-played chapters (with version), plays by version, listening time by version, how playback started, verses played from, countries, cities, devices, screen resolutions, operating systems, browsers, referring sites, interface language.
 
 Definitions, shown on the page:
 
@@ -89,6 +94,7 @@ Definitions, shown on the page:
 | **A4 · Reading insight** | Book and chapter recorded with each chapter-page view; books grid, most-read chapters, verse clicks by book, parts of the site (reading, atlas, dictionary, places, people, search…), search terms and searches with no result from `search_log` | Built 18 Sep 2026 |
 | **A5 · Live and export** | `analytics_now()` live panel; CSV export of the daily series and every table; change against the previous period on each tile | Built 18 Sep 2026 |
 | **A6 · Hardening** | Per-address limit of 60 events a minute in the collector (plus 600 a visitor a day in Postgres), 2 kB body cap, prefetches skipped, wider bot list, spike note on the chart, `scripts/analytics-load.mjs` dry-run load test (about 1,800 requests a second locally) | Built 18 Sep 2026 |
+| **A7 · Audio listening** | `audio` events from the Audio Bible player (`action`, `version`, `amount` columns); audio dimensions and totals in the daily rollups; Audio Bible tiles, chart, live listeners and five tables on `/mod/traffic`; migration `20260926100000_audio_analytics.sql`, pgTAP `audio_analytics.test.sql` | Built 26 Sep 2026 |
 | **Next** | Countries on a map; per-page drill-down; alert moderators on the queue page when a day spikes | Ideas |
 
 ## 7. Owner items
