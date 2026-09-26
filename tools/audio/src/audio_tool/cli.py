@@ -129,10 +129,12 @@ def main(argv: list[str] | None = None) -> int:
     sp.add_argument("--probe", action="store_true", help="only probe: which text, headings read or not")
     sp.add_argument("--force", action="store_true", help="redo chapters already aligned, and replace edited rows")
     sp.add_argument("--accept", action="store_true", help="go on even if the probe says the recording reads another text")
+    sp.add_argument("--refs", help="only these chapters, e.g. GEN.5,PSA.29")
 
     def run_align(a):
         from . import align  # PyTorch loads only for this command
-        return align.run(a.version, a.recording, a.book, a.chapter, a.force, a.probe, a.accept)
+        refs = {(r.split('.')[0].upper(), int(r.split('.')[1])) for r in a.refs.split(',')} if a.refs else None
+        return align.run(a.version, a.recording, a.book, a.chapter, a.force, a.probe, a.accept, refs)
     sp.set_defaults(fn=run_align)
 
     sp = add("upload", "send MP3s and source zips to R2")

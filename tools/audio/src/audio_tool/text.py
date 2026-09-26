@@ -33,6 +33,7 @@ class Transcript:
     words: list[Word] = field(default_factory=list)
     verses: list[int] = field(default_factory=list)  # every verse in reading order, even one left without words
     bridges: set[int] = field(default_factory=set)  # first verse of each bridge (\\v 17-18)
+    worded: set[int] = field(default_factory=set)  # verses with at least one spoken word
     mid_headings: int = 0  # heading words after verse 1, for the probe
 
 
@@ -124,7 +125,10 @@ def transcript(chapter: dict, lang: str, romanize: Callable[[str], str], vocab: 
                 t.verses.append(n)
                 if '-' in (seg.get('n') or ''):
                     t.bridges.add(n)
-            t.words += [Word(w, n, number=num) for w, num in spoken_words(seg['text'], lang, romanize, vocab)]
+            ws = spoken_words(seg['text'], lang, romanize, vocab)
+            if ws:
+                t.worded.add(n)
+            t.words += [Word(w, n, number=num) for w, num in ws]
     return t
 
 

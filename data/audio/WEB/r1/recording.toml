@@ -23,3 +23,13 @@ bitrate_kbps = 64
 sample_rate  = 44100
 loudness     = -16.0
 true_peak    = -3.0
+
+[align]                       # written by `audio align --probe` (docs/feature_audio_tool.md §5)
+reads_text = "WEB"
+text_score = 0.948
+other_texts = { KJV = 0.76, BSB = 0.753 }
+reads_headings = false
+heading_score = -1.0
+opening_s = 4.1
+probe_chapters = 14
+model = "torchaudio MMS_FA (torch 2.11.0+cu128, torchaudio 2.11.0+cu128, cuda)"

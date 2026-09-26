@@ -90,6 +90,7 @@ class Transcripts(unittest.TestCase):
         self.assertEqual([w.verse for w in t.words].count(2), 6)
         self.assertFalse(any(w.heading for w in t.words))
         self.assertEqual(t.mid_headings, 2)  # "Mid heading"; the reference never counts
+        self.assertEqual(t.worded, {1, 2, 3})  # verse 5 is only a pilcrow
 
     def test_headings_included_and_marked(self):
         t = text.transcript(CHAPTER, "eng", rom, VOCAB, headings=True)

@@ -27,7 +27,9 @@ LANG3 = {"ta": "tam", "en": "eng"}
 PROBE = [("GEN", 1), ("EXO", 20), ("RUT", 1), ("PSA", 23), ("PSA", 119), ("ISA", 53), ("JER", 31),
          ("MAT", 5), ("MRK", 4), ("LUK", 15), ("JHN", 3), ("ACT", 2), ("ROM", 8), ("REV", 21)]
 LOW = 0.45  # a verse under this mean word score is flagged
-MISMATCH = 0.80  # a chapter under this mean word score gets no timings
+# A chapter under this mean word score gets no timings. A wrong file scores about 0.3 (BSB Psalm 142);
+# lists of names and short drama psalms with music, about 0.72. A wrong translation is the probe's job.
+MISMATCH = 0.60
 TEXT_MIN = 0.85  # the probe's best text must reach this
 HEADINGS_READ = 0.60  # mid-chapter heading words scoring this are being read
 # Bump when the transcript or the boundary rule changes in a way that should redo every chapter.
@@ -155,7 +157,9 @@ def align_chapter(m: Model, em, spf: float, duration: float, chapter: dict, lang
         sc = statistics.fmean(scores[n]) if n in scores else 0.0
         flag = "bridge" if n in t.bridges else ""
         rate_ok = n not in rates or not median_rate or lo_rate * median_rate <= rates[n] <= hi_rate * median_rate
-        if n not in scores or sc < low or not rate_ok:
+        if n not in t.worded:
+            flag = ""  # empty in this text (a footnote-only verse): it shares the next verse's start
+        elif n not in scores or sc < low or not rate_ok:
             flag = "low"
         rows.append(repo.TimingRow(chapter["chapter"], n, round(start * 1000), round(end * 1000), sc, flag))
     for a, b in zip(rows, rows[1:]):
@@ -245,7 +249,7 @@ def probe(m: Model, version: str, recording: str, rec: dict, manifest: dict) -> 
     return values
 
 
-def run(version: str, recording: str, book: str | None, chapter: int | None, force: bool, probe_only: bool, accept: bool) -> int:
+def run(version: str, recording: str, book: str | None, chapter: int | None, force: bool, probe_only: bool, accept: bool, refs: set[tuple[str, int]] | None = None) -> int:
     rec = repo.load_recording(version, recording)
     manifest = repo.content_manifest()
     build = manifest["build"]
@@ -273,7 +277,7 @@ def run(version: str, recording: str, book: str | None, chapter: int | None, for
     state = repo.State(version, recording)
     todo = []
     for r in repo.read_chapters(version, recording):
-        if (book and r.book != book) or (chapter and r.chapter != chapter):
+        if (book and r.book != book) or (chapter and r.chapter != chapter) or (refs and (r.book, r.chapter) not in refs):
             continue
         ch = repo.load_chapter_json(build, version, r.book, r.chapter)
         key = {"sha256": r.sha256, "text": text_hash(ch), "headings": headings, "v": ALIGN_VERSION}
