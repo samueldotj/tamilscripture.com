@@ -602,16 +602,7 @@
 						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
 					</button>
 				{/if}
-				{#if chapterAudio}
-					<button type="button" class="chip listen" class:on={listening} class:paused={listening && !player.playing} aria-pressed={listening && player.playing} onclick={listen} title={isTamil ? `${primary.short} ஒலி` : `${primary.short} audio`}>
-						{#if listening}
-							<span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
-						{:else}
-							<span class="tri" aria-hidden="true">▶</span>
-						{/if}
-						<span lang={isTamil ? 'ta' : 'en'}>{listening ? (isTamil ? 'கேட்கிறது' : 'Listening') : (isTamil ? 'கேள்' : 'Listen')}</span>
-					</button>
-				{/if}
+				{#if chapterAudio}{@render listenChip()}{/if}
 				<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 				{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
 				{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
@@ -638,13 +629,11 @@
 			<div class="titles">
 				<h1 lang={primary.lang}>{bookName} {data.chapter}{rangeLabel ? `:${rangeLabel}` : ''}</h1>
 				<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}{rangeLabel ? `:${rangeLabel}` : ''}{primary.lang === 'ta' ? ' in Tamil' : ''}</span>
-				{#if aids.length}
-					<!-- On phones the toolbar gives way to the header pill and the thumb bar; Study stays here. -->
-					<button type="button" class="chip study-chip m-study" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
+				<!-- On phones the toolbar gives way to the header pill and the thumb bar; Listen and Study stay here. -->
+				{#if chapterAudio || aids.length}<span class="m-chips">{#if chapterAudio}{@render listenChip()}{/if}{#if aids.length}<button type="button" class="chip study-chip m-study" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/></svg>
 						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
-					</button>
-				{/if}
+					</button>{/if}</span>{/if}
 			</div>
 			{#if leadText}
 				<!-- The shared verse first, in words, before the chapter it sits in: what a reader
@@ -691,6 +680,18 @@
 		</aside>
 	{/if}
 </div>
+
+<!-- கேள் (12B): in the toolbar on wide screens, beside the title on phones. -->
+{#snippet listenChip()}
+	<button type="button" class="chip listen" class:on={listening} class:paused={listening && !player.playing} aria-pressed={listening && player.playing} onclick={listen} title={isTamil ? `${primary.short} ஒலி` : `${primary.short} audio`}>
+		{#if listening}
+			<span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+		{:else}
+			<span class="tri" aria-hidden="true">▶</span>
+		{/if}
+		<span lang={isTamil ? 'ta' : 'en'}>{listening ? (isTamil ? 'கேட்கிறது' : 'Listening') : (isTamil ? 'கேள்' : 'Listen')}</span>
+	</button>
+{/snippet}
 
 {#snippet originalWords()}
 	{#if OriginalView}
@@ -839,12 +840,12 @@
 	.name-sheet { position: fixed; z-index: 22; left: 50%; bottom: 0; transform: translateX(-50%); width: min(40rem, 100%); max-height: 70vh; overflow-y: auto; background: var(--surface); border: var(--bw) solid var(--line-2); border-bottom: 0; border-radius: 26px 26px 0 0; padding: 0.6rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); box-shadow: var(--shadow-lg); }
 	.sheet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-family: var(--tamil); }
 	.name-sheet .grip { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.6rem; }
-	.thumb, .float-aa, .progress, .fade, .m-study { display: none; }
+	.thumb, .float-aa, .progress, .fade, .m-chips { display: none; }
 	@media (max-width: 720px) {
 		/* Room at the end of the chapter for the thumb bar */
 		.main { padding: 1.25rem 1rem 7.5rem; }
 		.toolbar { display: none; }
-		.m-study { display: inline-flex; margin-left: auto; align-self: center; }
+		.m-chips { display: inline-flex; gap: 0.5rem; margin-left: auto; align-self: center; }
 		.thumb { display: flex; position: fixed; z-index: 14; left: 0; right: 0; bottom: 0; align-items: center; gap: 12px; padding: 14px 18px max(26px, env(safe-area-inset-bottom)); background: var(--bg); border-top: var(--bw) solid var(--line); transition: transform 0.22s ease; }
 		.thumb.hidden { transform: translateY(100%); }
 		.tb { flex: 1; height: 56px; border-radius: 16px; border: var(--bw) solid var(--line-2); background: var(--surface); display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--tamil); font-size: 1rem; font-weight: 600; color: var(--ink); text-decoration: none; }
