@@ -1,6 +1,6 @@
 // Loaders for the entity content written by entity-ingest (M6, M7). All static
 // files under /content/{build}/entities/, so they cache like chapter JSON.
-import { contentUrl, DEFAULT_VERSION, defaultFor, findBook } from '$lib/content/manifest';
+import { contentUrl, findBook } from '$lib/content/manifest';
 import type { Article, ArticleIndexEntry, ChapterMentions, Glossary, Journey, Person, PersonIndexEntry, Place, PlaceIndex } from './types';
 
 type Fetch = typeof fetch;
@@ -134,9 +134,9 @@ export function placeName(p: { name_en: string; name_ta?: string | null; qualifi
 	return p.qualifier ? `${base} (${p.qualifier})` : base;
 }
 
-/** Tamil label for a full entity record: default Tamil version first. */
-export function placeLabelTa(p: { names_ta: Record<string, { label: string }> }, preferred = defaultFor('ta')?.code ?? DEFAULT_VERSION): string | undefined {
-	return p.names_ta[preferred]?.label ?? Object.values(p.names_ta)[0]?.label;
+/** Tamil label for a full entity record. */
+export function placeLabelTa(p: { tamil_name: { label: string } | null }): string | undefined {
+	return p.tamil_name?.label;
 }
 
 /** Human verse label from an id like `GEN.14.15`. */

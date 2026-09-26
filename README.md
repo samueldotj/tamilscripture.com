@@ -244,7 +244,7 @@ Design: [docs/feature_maps.md](docs/feature_maps.md). Rough effort: five to six 
 | 6.1 | Download OpenBible Geocoding and TIPNR; record `LICENSE`, `SOURCE.md` with hashes under `data/entities/`; build fails without a licence file | maps §2 | ☑ |
 | 6.2 | Requirement IDs R-11.x (places) and R-14.x (maps) in `docs/requirements.md`; design ADRs: content-build entities, ISR entity pages, PMTiles on Vercel Blob | maps §1 | ☑ |
 | 6.3 | `crates/entity-ingest`: parse OpenBible Geocoding and TIPNR places, reconcile identities, emit `entities/place/*.json` and per-chapter `mentions/` | maps §3 | ☑ |
-| 6.4 | `--draft-names` co-occurrence aligner over IRVTAM and TCV writing `data/entities/names-ta.toml` with confidence; model only breaks ties; build fails on forms absent from the text | maps §3 | ☑ |
+| 6.4 | `--draft-names` co-occurrence aligner over the IRV (other Tamil versions add their inflections) writing one entry per English name to `data/entities/names-ta.toml` with confidence; model only breaks ties; build fails on forms absent from the text | maps §3 | ☑ |
 | 6.5 | Validation: coordinates or `unlocated`, every mention resolves, determinism diff in CI | maps §3 | ☑ |
 | 6.6 | Static map renderer in the content build: Natural Earth outline, labelled places per chapter, place and journey, as theme-aware inline SVG with labels in both scripts (SVG replaces the planned WebP; see feature_maps.md) | maps §4 | ☑ |
 | 6.7 | `/place/{slug}` ISR page: names, map, verses by book, attribution; Tamil path redirects | maps §5, ADR-1, ADR-7 | ☑ |

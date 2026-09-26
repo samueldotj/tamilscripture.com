@@ -24,6 +24,9 @@ pub struct Draft {
     #[serde(default)]
     pub title: Option<String>,
     pub paragraphs: Vec<DraftParagraph>,
+    /// Read from `drafts/ta-sa/`: a translation of a ShareAlike source.
+    #[serde(skip)]
+    pub sharealike: bool,
 }
 
 #[derive(Debug, Deserialize)]
@@ -32,19 +35,28 @@ pub struct DraftParagraph {
     pub text: String,
 }
 
-/// `dir/{source}/{slug}.json` → draft by article id. Missing dir → empty.
-pub fn load_drafts(dir: &Path) -> Result<BTreeMap<String, Draft>> {
+/// `drafts/ta/{source}/{slug}.json` and `drafts/ta-sa/{source}/{slug}.json`
+/// → draft by article id. Missing dirs → empty. The same article in both
+/// folders is an error.
+pub fn load_drafts(drafts: &Path) -> Result<BTreeMap<String, Draft>> {
     let mut out = BTreeMap::new();
-    if !dir.is_dir() {
-        return Ok(out);
-    }
-    for source in sorted_dirs(dir)? {
-        for file in sorted_files(&source, "json")? {
-            let text =
-                fs::read_to_string(&file).with_context(|| format!("reading {}", file.display()))?;
-            let d: Draft = serde_json::from_str(&text)
-                .with_context(|| format!("parsing {}", file.display()))?;
-            out.insert(d.id.clone(), d);
+    for (sub, sharealike) in [("ta", false), ("ta-sa", true)] {
+        let dir = drafts.join(sub);
+        if !dir.is_dir() {
+            continue;
+        }
+        for source in sorted_dirs(&dir)? {
+            for file in sorted_files(&source, "json")? {
+                let text = fs::read_to_string(&file)
+                    .with_context(|| format!("reading {}", file.display()))?;
+                let mut d: Draft = serde_json::from_str(&text)
+                    .with_context(|| format!("parsing {}", file.display()))?;
+                d.sharealike = sharealike;
+                if out.contains_key(&d.id) {
+                    anyhow::bail!("draft {} is under both drafts/ta and drafts/ta-sa", d.id);
+                }
+                out.insert(d.id.clone(), d);
+            }
         }
     }
     Ok(out)
@@ -95,8 +107,8 @@ pub struct GlossOverride {
 
 #[derive(Debug, Default)]
 pub struct Overrides {
-    /// name_en → version → override (`overrides/names.toml`)
-    pub names: BTreeMap<String, BTreeMap<String, NameOverride>>,
+    /// name_en → override (`overrides/names.toml`)
+    pub names: BTreeMap<String, NameOverride>,
     /// article id → override (`overrides/articles/{source}/{slug}.toml`)
     pub articles: BTreeMap<String, ArticleOverride>,
     /// Strong's number → Tamil gloss (`overrides/lexicon.toml`)
@@ -159,39 +171,33 @@ pub fn load_overrides(dir: &Path) -> Result<Overrides> {
 /// Returns the number of (name, version) entries changed.
 pub fn apply_names(names: &mut NamesTa, ov: &Overrides) -> usize {
     let mut n = 0;
-    for (name, per) in &ov.names {
-        for (version, o) in per {
-            let Some(label) = o.forms.first().filter(|f| has_tamil(f)) else {
-                continue;
-            };
-            let entry = names
-                .entry(name.clone())
-                .or_default()
-                .entry(version.clone())
-                .or_insert_with(|| NameForm {
-                    label: label.clone(),
-                    forms: Vec::new(),
-                    confidence: 1.0,
-                    n: 0,
-                    review: false,
-                    community: false,
-                    owner: false,
-                    borrowed: false,
-                });
-            let mut forms = o.forms.clone();
-            for f in &entry.forms {
-                if !forms.contains(f) {
-                    forms.push(f.clone());
-                }
+    for (name, o) in &ov.names {
+        let Some(label) = o.forms.first().filter(|f| has_tamil(f)) else {
+            continue;
+        };
+        let entry = names.entry(name.clone()).or_insert_with(|| NameForm {
+            label: label.clone(),
+            forms: Vec::new(),
+            confidence: 1.0,
+            n: 0,
+            review: false,
+            community: false,
+            owner: false,
+            borrowed: false,
+        });
+        let mut forms = o.forms.clone();
+        for f in &entry.forms {
+            if !forms.contains(f) {
+                forms.push(f.clone());
             }
-            entry.label = label.clone();
-            entry.forms = forms;
-            entry.review = false;
-            entry.community = true;
-            entry.borrowed = false;
-            entry.owner = o.owner;
-            n += 1;
         }
+        entry.label = label.clone();
+        entry.forms = forms;
+        entry.review = false;
+        entry.community = true;
+        entry.borrowed = false;
+        entry.owner = o.owner;
+        n += 1;
     }
     n
 }
@@ -219,7 +225,23 @@ pub fn apply_articles(
 ) -> ArticleReport {
     let mut r = ArticleReport::default();
     for a in articles.iter_mut() {
-        if let Some(d) = drafts.get(&a.id) {
+        // ShareAlike translations stay apart from CC BY ones (§2).
+        let draft = drafts.get(&a.id).filter(|d| {
+            let ok = d.sharealike == is_sharealike(a.licence);
+            if !ok {
+                let want = if is_sharealike(a.licence) {
+                    "ta-sa"
+                } else {
+                    "ta"
+                };
+                r.invalid.push(format!(
+                    "{}: draft of a {} article belongs under drafts/{want}",
+                    a.id, a.licence
+                ));
+            }
+            ok
+        });
+        if let Some(d) = draft {
             r.drafts += 1;
             let h = d.source_hash.trim_start_matches("fnv8:");
             if !h.is_empty() && h != a.hash {
@@ -282,6 +304,10 @@ pub fn apply_articles(
     r
 }
 
+fn is_sharealike(licence: &str) -> bool {
+    licence.contains("SA")
+}
+
 pub fn has_tamil(s: &str) -> bool {
     s.chars().any(|c| ('\u{0B80}'..='\u{0BFF}').contains(&c))
 }
@@ -340,6 +366,70 @@ mod tests {
         assert_eq!(check_text("  "), Err("empty"));
     }
 
+    fn article(id: &str, licence: &'static str) -> Article {
+        Article {
+            source: id.split('/').next().unwrap().into(),
+            id: id.into(),
+            slug: id.split('/').nth(1).unwrap().into(),
+            title: "Abagtha".into(),
+            title_ta: None,
+            lang: "en",
+            licence,
+            attribution: "",
+            entities: vec![],
+            hints: vec![],
+            paragraphs: vec![crate::articles::Paragraph {
+                id: format!("{id}#p1-f448c73f"),
+                text: "One of the seven eunuchs".into(),
+                heading: false,
+                ta: None,
+                ta_source: None,
+            }],
+            refs: vec![],
+            hash: "f448c73f".into(),
+            also_in: vec![],
+        }
+    }
+
+    fn draft(id: &str, sharealike: bool) -> Draft {
+        Draft {
+            id: id.into(),
+            source_hash: "f448c73f".into(),
+            title: Some("அபக்தா".into()),
+            paragraphs: vec![DraftParagraph {
+                id: format!("{id}#p1-f448c73f"),
+                text: "ஏழு அண்ணகர்களில் ஒருவன்".into(),
+            }],
+            sharealike,
+        }
+    }
+
+    #[test]
+    fn drafts_stay_in_their_licence_folder() {
+        let mut arts = vec![
+            article("aquifer/abagtha", "CC BY-SA 4.0"),
+            article("eastons/abagtha", "PD"),
+        ];
+        let drafts: BTreeMap<_, _> = [
+            (
+                "aquifer/abagtha".to_string(),
+                draft("aquifer/abagtha", true),
+            ),
+            (
+                "eastons/abagtha".to_string(),
+                draft("eastons/abagtha", true),
+            ),
+        ]
+        .into_iter()
+        .collect();
+        let r = apply_articles(&mut arts, &drafts, &Overrides::default(), &|_| None);
+        assert_eq!(r.drafts, 1);
+        assert!(arts[0].paragraphs[0].ta.is_some());
+        assert!(arts[1].paragraphs[0].ta.is_none());
+        assert_eq!(r.invalid.len(), 1);
+        assert!(r.invalid[0].contains("belongs under drafts/ta"));
+    }
+
     #[test]
     fn lexicon_overrides_parse() {
         let t = "[G0026]
@@ -358,8 +448,8 @@ owner = true
     #[test]
     fn name_override_leads_with_label_and_keeps_forms() {
         let mut names = NamesTa::new();
-        names.entry("Damascus".into()).or_default().insert(
-            "IRVTAM".into(),
+        names.insert(
+            "Damascus".into(),
             NameForm {
                 label: "தமஸ்குவை".into(),
                 forms: vec!["தமஸ்குவை".into(), "தமஸ்குவின்".into()],
@@ -371,15 +461,14 @@ owner = true
                 borrowed: false,
             },
         );
-        let toml_text =
-            "[Damascus.IRVTAM]\nforms = [\"தமஸ்கு\"]\naccepted_at = \"2026-10-03T14:12:00Z\"\n";
+        let toml_text = "[Damascus]\nforms = [\"தமஸ்கு\"]\naccepted_at = \"2026-10-03T14:12:00Z\"\n";
         let ov = Overrides {
             names: toml::from_str(toml_text).unwrap(),
             articles: BTreeMap::new(),
             lexicon: BTreeMap::new(),
         };
         assert_eq!(apply_names(&mut names, &ov), 1);
-        let f = &names["Damascus"]["IRVTAM"];
+        let f = &names["Damascus"];
         assert_eq!(f.label, "தமஸ்கு");
         assert_eq!(f.forms, vec!["தமஸ்கு", "தமஸ்குவை", "தமஸ்குவின்"]);
         assert!(!f.review && f.community);

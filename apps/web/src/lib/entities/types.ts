@@ -3,7 +3,7 @@
 export interface NameTa {
 	/** Base form for labels and titles. */
 	label: string;
-	/** Every inflected form as it occurs in that version. */
+	/** Every inflected form as it occurs in the Tamil text. */
 	forms: string[];
 	confidence: number;
 	/** True until a reviewer has confirmed the entry. */
@@ -47,8 +47,8 @@ export interface Place {
 	/** "the" when English wants an article (the Jordan). */
 	article?: string;
 	alt_en?: string[];
-	/** version code → Tamil forms */
-	names_ta: Record<string, NameTa>;
+	/** One Tamil name for every Tamil version; null until one is aligned. */
+	tamil_name: NameTa | null;
 	place_type: string;
 	types: string[];
 	class: string;
@@ -115,7 +115,8 @@ export interface Person {
 	/** STEP Bible article; paragraphs separated by newlines. */
 	article?: string;
 	uncertain?: boolean;
-	names_ta: Record<string, NameTa>;
+	/** One Tamil name for every Tamil version; null until one is aligned. */
+	tamil_name: NameTa | null;
 	forms: OriginalForm[];
 	relations: Partial<Record<'parents' | 'siblings' | 'partners' | 'children', Relation[]>>;
 	verses: string[];

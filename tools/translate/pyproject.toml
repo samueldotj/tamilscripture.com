@@ -1,0 +1,18 @@
+[project]
+name = "tamilscripture-translate"
+version = "0.1.0"
+description = "Tamil drafts of the dictionary articles with an IRV-based Reformed glossary (docs/feature_dictionary_translation.md)"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.8",
+]
+
+[project.scripts]
+translate = "translate_tool.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/translate_tool"]

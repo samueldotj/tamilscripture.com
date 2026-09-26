@@ -1,13 +1,16 @@
-//! Tamil surface forms for English place names, per Tamil version.
+//! Tamil surface forms for English place and person names: one entry per
+//! English name, shared by every Tamil version.
 //!
 //! `draft_one()` proposes forms by co-occurrence: a word stem that recurs
 //! across the verses where the name occurs and is rare elsewhere is the name.
 //! Tamil case suffixes (தமஸ்கு, தமஸ்குவில், தமஸ்குவுக்கு) are handled by
 //! scoring shared prefixes of the normalised tokens rather than whole tokens,
 //! so every inflection counts towards one candidate. Candidates are always
-//! words present in the text. The reviewed file `data/entities/names-ta.toml`
-//! is the build input; `validate()` refuses a form that does not occur in the
-//! name's verses.
+//! words present in the text. The draft is made from the lead Tamil version
+//! (the IRV); `add_forms()` adds the other versions' inflections of the same
+//! name. The reviewed file `data/entities/names-ta.toml` is the build input;
+//! `validate()` refuses a form that occurs in none of the Tamil versions'
+//! text for the name's verses.
 
 use crate::corpus::{norm, tokens, Corpus};
 use anyhow::{Context, Result};
@@ -22,7 +25,7 @@ pub struct NameForm {
     /// Every inflected form as it occurs in the text.
     pub forms: Vec<String>,
     pub confidence: f32,
-    /// Verses of this version the name occurs in (evidence behind the draft).
+    /// Verses of the lead version the name occurs in (evidence behind the draft).
     #[serde(default)]
     pub n: u32,
     /// True until a reviewer has confirmed the entry.
@@ -72,55 +75,31 @@ pub fn is_descriptive(name: &str) -> bool {
 /// "Forum of Appius" a verb. Those drafts are hidden and the English name shows
 /// until a reviewer supplies a Tamil one. Returns how many names were hidden.
 pub fn mark_borrowed(names: &mut NamesTa) -> usize {
-    // version → word → the names that use it as a label, or among their forms
-    let mut labels: HashMap<String, HashMap<String, HashSet<String>>> = HashMap::new();
-    let mut forms: HashMap<String, HashMap<String, HashSet<String>>> = HashMap::new();
-    for (name, per) in names.iter() {
-        for (version, f) in per {
-            labels
-                .entry(version.clone())
-                .or_default()
-                .entry(f.label.clone())
-                .or_default()
-                .insert(name.clone());
-            for w in &f.forms {
-                forms
-                    .entry(version.clone())
-                    .or_default()
-                    .entry(w.clone())
-                    .or_default()
-                    .insert(name.clone());
-            }
+    // word → the names that use it as a label, or among their forms
+    let mut used: HashMap<String, HashSet<String>> = HashMap::new();
+    for (name, f) in names.iter() {
+        for w in std::iter::once(&f.label).chain(f.forms.iter()) {
+            used.entry(w.clone()).or_default().insert(name.clone());
         }
     }
     let mut marked = 0;
-    for (name, per) in names.iter_mut() {
+    for (name, f) in names.iter_mut() {
         if !is_descriptive(name) {
             continue;
         }
-        let borrowed = per.iter().any(|(version, f)| {
-            let elsewhere = |m: &HashMap<String, HashMap<String, HashSet<String>>>| {
-                m.get(version)
-                    .and_then(|w| w.get(&f.label))
-                    .is_some_and(|owners| owners.iter().any(|o| o != name))
-            };
-            elsewhere(&labels) || elsewhere(&forms)
-        });
-        // One version caught borrowing means the aligner found no word of the
-        // name's own, so the other versions' single words are no better
-        // ("Queen of Sheba" fell back to அரசி, just "queen"): hide them all.
+        let borrowed = used
+            .get(&f.label)
+            .is_some_and(|owners| owners.iter().any(|o| o != name));
         if borrowed {
             marked += 1;
-            for f in per.values_mut() {
-                f.borrowed = true;
-            }
+            f.borrowed = true;
         }
     }
     marked
 }
 
-/// English name → version code → form.
-pub type NamesTa = BTreeMap<String, BTreeMap<String, NameForm>>;
+/// English name → its Tamil form, used for every Tamil version.
+pub type NamesTa = BTreeMap<String, NameForm>;
 
 pub fn load(path: &Path) -> Result<NamesTa> {
     if !path.exists() {
@@ -135,36 +114,43 @@ fn toml_str(s: &str) -> String {
     format!("\"{}\"", s.replace('\\', "\\\\").replace('"', "\\\""))
 }
 
-/// Writes one `["Name"]` table per English name with an inline table per
-/// version, so a reviewer edits one line per language.
+/// One line per English name, so a reviewer edits one line per name.
 pub fn save(path: &Path, names: &NamesTa) -> Result<()> {
     let mut out = String::new();
-    out.push_str("# Tamil forms of biblical place names, per Tamil version.\n");
-    out.push_str("# Drafted by `entity-ingest --draft-names` from the verses where each name\n");
-    out.push_str("# occurs; edit `label` (the base form shown on maps) and `forms` (every\n");
-    out.push_str("# inflected form in the text), then delete `review = true`. Every entry in\n");
-    out.push_str("# `forms` must occur in that version's text for the name's verses, or the\n");
-    out.push_str("# build fails; `n` is the number of verses the draft was made from.\n");
-    out.push_str("# Licence: CC BY 4.0 (tamilscripture.com contributors).\n\n");
-    for (name, versions) in names {
-        out.push_str(&format!("[{}]\n", toml_str(name)));
-        for (version, f) in versions {
-            let forms: Vec<String> = f.forms.iter().map(|s| toml_str(s)).collect();
-            out.push_str(&format!(
-                "{version} = {{ label = {}, forms = [{}], confidence = {:.2}, n = {}{} }}\n",
-                toml_str(&f.label),
-                forms.join(", "),
-                f.confidence,
-                f.n,
-                if f.review { ", review = true" } else { "" }
-            ));
-        }
+    for line in [
+        "# Tamil names of biblical people and places: one entry per English name,",
+        "# used for every Tamil version. Drafted by `entity-ingest --draft-names` from",
+        "# the IRV verses where each name occurs; edit `label` (the base form shown on",
+        "# maps and titles) and `forms` (every inflected form in the text), then delete",
+        "# `review = true`. Every entry in `forms` must occur in the name's verses in",
+        "# at least one Tamil version, or the build fails; `n` is the number of verses",
+        "# the draft was made from. `translate verses NAME` (tools/translate) shows the",
+        "# English and IRV verses side by side.",
+        "# Licence: CC BY 4.0 (tamilscripture.com contributors).",
+        "",
+    ] {
+        out.push_str(line);
         out.push('\n');
+    }
+    for (name, f) in names {
+        out.push_str(&format!("{} = {}\n", toml_str(name), entry_line(f)));
     }
     if let Some(parent) = path.parent() {
         std::fs::create_dir_all(parent)?;
     }
     std::fs::write(path, out).with_context(|| format!("writing {}", path.display()))
+}
+
+fn entry_line(f: &NameForm) -> String {
+    let forms: Vec<String> = f.forms.iter().map(|s| toml_str(s)).collect();
+    format!(
+        "{{ label = {}, forms = [{}], confidence = {:.2}, n = {}{} }}",
+        toml_str(&f.label),
+        forms.join(", "),
+        f.confidence,
+        f.n,
+        if f.review { ", review = true" } else { "" }
+    )
 }
 
 fn is_tamil_word(s: &str) -> bool {
@@ -180,10 +166,26 @@ fn char_prefix(s: &str, n: usize) -> &str {
 
 /// Draft a form for one name from the verses it occurs in. `None` when the
 /// corpus has none of those verses.
-pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
-    let texts: Vec<&String> = verse_ids
+///
+/// With `window`, each of the name's verses is read together with the verse
+/// either side, since Tamil often carries a clause, and the name, across the
+/// verse boundary (Esther 1:10–11).
+pub fn draft_one(verse_ids: &[String], corpus: &Corpus, window: bool) -> Option<NameForm> {
+    let texts: Vec<String> = verse_ids
         .iter()
-        .filter_map(|v| corpus.verses.get(v))
+        .filter(|v| corpus.verses.contains_key(*v))
+        .map(|v| {
+            if window {
+                with_neighbours(std::slice::from_ref(v))
+                    .iter()
+                    .filter_map(|x| corpus.verses.get(x))
+                    .map(String::as_str)
+                    .collect::<Vec<_>>()
+                    .join(" ")
+            } else {
+                corpus.verses[v].clone()
+            }
+        })
         .collect();
     if texts.is_empty() {
         return None;
@@ -311,37 +313,112 @@ pub fn draft_one(verse_ids: &[String], corpus: &Corpus) -> Option<NameForm> {
     })
 }
 
-/// Checks that every inflected form occurs in the version's text for the
-/// name's verses. The label itself may be a base form a reviewer chose that
-/// the text never uses uninflected. Verses absent from the corpus (fixture
-/// builds) are not checked.
-pub fn validate(name: &str, form: &NameForm, verse_ids: &[String], corpus: &Corpus) -> Vec<String> {
-    let mut problems = Vec::new();
-    let texts: Vec<&String> = verse_ids
-        .iter()
-        .filter_map(|v| corpus.verses.get(v))
-        .collect();
-    // A partial corpus (fixture build) cannot judge forms drawn from chapters
-    // it does not have; only a full corpus validates.
-    if texts.is_empty() || texts.len() < verse_ids.len() {
-        return problems;
+/// Adds to a draft the inflections another Tamil version uses for the same
+/// name: words in that version's verses for the name that start with the
+/// draft label's stem (the label less its last letter). Returns how many were
+/// added.
+pub fn add_forms(form: &mut NameForm, verse_ids: &[String], corpus: &Corpus) -> usize {
+    let label = norm(&form.label);
+    let len = label.chars().count();
+    if len < 3 {
+        return 0;
     }
-    let mut present = HashSet::new();
-    for t in &texts {
+    let stem = char_prefix(&label, (len - 1).max(3)).to_string();
+    let mut added = 0;
+    for v in verse_ids {
+        let Some(t) = corpus.verses.get(v) else {
+            continue;
+        };
         for raw in tokens(t) {
-            present.insert(raw);
+            if is_tamil_word(&raw)
+                && norm(&raw).starts_with(stem.as_str())
+                && !form.forms.contains(&raw)
+            {
+                form.forms.push(raw);
+                added += 1;
+            }
         }
     }
-    for f in form.forms.iter() {
-        let nfc: String = unicode_normalization::UnicodeNormalization::nfc(f.as_str()).collect();
-        if !present.contains(&nfc) {
-            problems.push(format!(
-                "{name} [{}]: form {f:?} does not occur in the name's verses",
-                corpus.version
-            ));
+    added
+}
+
+/// NFC with runs of whitespace as one space, for matching phrases.
+fn squash(s: &str) -> String {
+    let nfc: String = unicode_normalization::UnicodeNormalization::nfc(s).collect();
+    nfc.split_whitespace().collect::<Vec<_>>().join(" ")
+}
+
+/// The verses and the verse either side of each. Tamil puts the verb last and
+/// often moves a clause across a verse boundary: the IRV names Esther's seven
+/// chamberlains in 1:11 where the English has them in 1:10.
+pub fn with_neighbours(verse_ids: &[String]) -> Vec<String> {
+    let mut out = Vec::with_capacity(verse_ids.len() * 3);
+    for id in verse_ids {
+        out.push(id.clone());
+        let mut parts = id.rsplitn(2, '.');
+        if let (Some(v), Some(chapter)) = (parts.next(), parts.next()) {
+            if let Ok(n) = v.parse::<u32>() {
+                if n > 1 {
+                    out.push(format!("{chapter}.{}", n - 1));
+                }
+                out.push(format!("{chapter}.{}", n + 1));
+            }
         }
     }
-    problems
+    out
+}
+
+/// Checks that every inflected form occurs in the name's verses, or the verse
+/// either side, in at least one Tamil version. The label itself may be a base
+/// form a reviewer chose that the text never uses uninflected. A corpus missing some of the verses
+/// (fixture builds) cannot judge; with no complete corpus nothing is checked.
+pub fn validate(
+    name: &str,
+    form: &NameForm,
+    verse_ids: &[String],
+    corpora: &[Corpus],
+) -> Vec<String> {
+    let mut present = HashSet::new();
+    // Whole verse texts too, for a form of several words (a reviewer's
+    // "பரிசுத்த ஸ்தலத்திற்குள்" for Holy Place), matched as a phrase.
+    let mut phrases: Vec<String> = Vec::new();
+    let mut judged = false;
+    for corpus in corpora {
+        let texts: Vec<&String> = verse_ids
+            .iter()
+            .filter_map(|v| corpus.verses.get(v))
+            .collect();
+        if texts.is_empty() || texts.len() < verse_ids.len() {
+            continue;
+        }
+        judged = true;
+        for t in with_neighbours(verse_ids)
+            .iter()
+            .filter_map(|v| corpus.verses.get(v))
+        {
+            for raw in tokens(t) {
+                present.insert(raw);
+            }
+            phrases.push(squash(t));
+        }
+    }
+    if !judged {
+        return Vec::new();
+    }
+    form.forms
+        .iter()
+        .filter(|f| {
+            let nfc = squash(f);
+            if nfc.contains(' ') {
+                !phrases.iter().any(|t| t.contains(&nfc))
+            } else {
+                !present.contains(&nfc)
+            }
+        })
+        .map(|f| {
+            format!("{name}: form {f:?} does not occur in the name's verses in any Tamil version")
+        })
+        .collect()
 }
 
 #[cfg(test)]
@@ -362,6 +439,47 @@ mod borrowed_tests {
     }
 
     #[test]
+    fn forms_are_checked_as_words_or_phrases_in_nearby_verses() {
+        let corpus = Corpus {
+            version: "IRVTAM".into(),
+            verses: [
+                (
+                    "EXO.26.33".to_string(),
+                    "அது பரிசுத்த ஸ்தலத்திற்கும் இடையே".to_string(),
+                ),
+                (
+                    "EXO.26.34".to_string(),
+                    "மகா பரிசுத்த  ஸ்தலத்திலே வைப்பாயாக".to_string(),
+                ),
+            ]
+            .into_iter()
+            .collect(),
+            df_sorted: Default::default(),
+            n_verses: 2,
+        };
+        let verses = ["EXO.26.33".to_string()];
+        let ok = form(
+            "பரிசுத்த ஸ்தலம்",
+            &["பரிசுத்த ஸ்தலத்திற்கும்", "மகா பரிசுத்த ஸ்தலத்திலே", "ஸ்தலத்திலே"],
+        );
+        assert!(validate("Holy Place", &ok, &verses, std::slice::from_ref(&corpus)).is_empty());
+        let bad = form("பரிசுத்த", &["பரிசுத்த இடம்", "ஸ்தலம்"]);
+        assert_eq!(
+            validate("Holy Place", &bad, &verses, std::slice::from_ref(&corpus)).len(),
+            2
+        );
+    }
+
+    #[test]
+    fn neighbours_stay_in_the_chapter() {
+        let got = with_neighbours(&["EST.1.10".to_string(), "GEN.1.1".to_string()]);
+        assert_eq!(
+            got,
+            ["EST.1.10", "EST.1.9", "EST.1.11", "GEN.1.1", "GEN.1.2"]
+        );
+    }
+
+    #[test]
     fn descriptive_names() {
         assert!(is_descriptive("Queen of Sheba"));
         assert!(is_descriptive("Canaanite woman"));
@@ -373,35 +491,17 @@ mod borrowed_tests {
     #[test]
     fn a_descriptive_name_using_another_names_word_is_hidden() {
         let mut names = NamesTa::new();
-        names
-            .entry("Solomon".into())
-            .or_default()
-            .insert("IRVTAM".into(), form("சாலொமோன்", &["சாலொமோன்", "சாலொமோனின்"]));
-        names
-            .entry("Queen of Sheba".into())
-            .or_default()
-            .insert("IRVTAM".into(), form("சாலொமோன்", &["சாலொமோன்"]));
-        names
-            .entry("Eliphaz".into())
-            .or_default()
-            .insert("IRVTAM".into(), form("எலிப்பாஸ்", &["எலிப்பாஸ்", "எலிப்பாசின்"]));
-        names
-            .entry("A wife of Eliphaz".into())
-            .or_default()
-            .insert("IRVTAM".into(), form("எலிப்பாசின்", &["எலிப்பாசின்"]));
-        names
-            .entry("Mary Magdalene".into())
-            .or_default()
-            .insert("IRVTAM".into(), form("மரியாள்", &["மரியாள்"]));
-        names
-            .entry("Mary".into())
-            .or_default()
-            .insert("IRVTAM".into(), form("மரியாள்", &["மரியாள்"]));
+        names.insert("Solomon".into(), form("சாலொமோன்", &["சாலொமோன்", "சாலொமோனின்"]));
+        names.insert("Queen of Sheba".into(), form("சாலொமோன்", &["சாலொமோன்"]));
+        names.insert("Eliphaz".into(), form("எலிப்பாஸ்", &["எலிப்பாஸ்", "எலிப்பாசின்"]));
+        names.insert("A wife of Eliphaz".into(), form("எலிப்பாசின்", &["எலிப்பாசின்"]));
+        names.insert("Mary Magdalene".into(), form("மரியாள்", &["மரியாள்"]));
+        names.insert("Mary".into(), form("மரியாள்", &["மரியாள்"]));
         assert_eq!(mark_borrowed(&mut names), 2);
-        assert!(!names["Queen of Sheba"]["IRVTAM"].display_ok());
-        assert!(!names["A wife of Eliphaz"]["IRVTAM"].display_ok());
+        assert!(!names["Queen of Sheba"].display_ok());
+        assert!(!names["A wife of Eliphaz"].display_ok());
         // Proper names keep their Tamil, even when shared.
-        assert!(names["Solomon"]["IRVTAM"].display_ok());
-        assert!(names["Mary Magdalene"]["IRVTAM"].display_ok());
+        assert!(names["Solomon"].display_ok());
+        assert!(names["Mary Magdalene"].display_ok());
     }
 }

@@ -64,7 +64,7 @@ Outputs land in `content/{build}/entities/…` and are served like chapter JSON.
   "type": "place",
   "names": {
     "en": "Damascus",
-    "ta": { "IRVTAM": ["தமஸ்கு"], "TCV": ["தமஸ்கு"] },
+    "ta": ["தமஸ்கு", "தமஸ்குவில்"],
     "he": "דַּמֶּשֶׂק", "el": "Δαμασκός",
     "alt": ["Darmesek"]
   },
@@ -88,11 +88,11 @@ Per-chapter mentions, fetched only when the context panel opens:
 
 ### Tamil name alignment
 
-`data/entities/names-ta.toml` maps each **name string** (not each entity: the thirty people called Zechariah share one Tamil form, and TIPNR's verse lists tell them apart) to its Tamil surface forms per version.
+`data/entities/names-ta.toml` maps each **name string** (not each entity: the thirty people called Zechariah share one Tamil form, and TIPNR's verse lists tell them apart) to one Tamil name and its inflected forms, used for every Tamil version. The label is the IRV's; the forms include the other versions' inflections of the same name, so the reader underlines the name in each version's text. (Until 26 Sep 2026 the file held a separate entry per version; see [feature_dictionary_translation.md](feature_dictionary_translation.md) §3.)
 
 `entity-ingest --draft-names` proposes forms by co-occurrence: for each name, collect the verses it appears in, tokenise the Tamil text of those verses, apply the existing `tamil-norm` folding and suffix stripping, and rank tokens that recur across the name's verses and rarely elsewhere. Candidates are therefore always words present in the text. A model may only break ties between candidates, never transliterate from English or Hebrew, because a form that differs by one letter links to no verse and no search hit. Each row carries a confidence; low-confidence rows show a "draft" badge until a reviewer accepts them through the community review flow.
 
-Build rule: every accepted form must occur in at least one of that name's verses in that version, or the build fails. Expect roughly 1,200 place names and 2,500 names in total once people are added.
+Build rule: every accepted form must occur in the name's verses in at least one Tamil version, or the build fails. `translate verses NAME` in `tools/translate` shows the English and IRV verses side by side for review. Expect roughly 1,200 place names and 2,500 names in total once people are added.
 
 ### Entity search
 

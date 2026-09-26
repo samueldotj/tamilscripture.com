@@ -4,7 +4,8 @@ Written by `scripts/export-overrides.mjs` (workflow `export-overrides.yml`) from
 the `entity_accepted` table every 12 hours or on "Publish now". Do not edit by
 hand: the next export overwrites these files.
 
-- `names.toml` — `[Name.VERSION] forms = ["…"]`, applied over `names-ta.toml`.
+- `names.toml` — `[Name] forms = ["…"]`, applied over `names-ta.toml`; one
+  Tamil name per English name, used for every Tamil version.
 - `articles/{source}/{slug}.toml` — `[[paragraphs]] id / text`, applied over
   the English article and any draft in `../drafts/ta/`.
 

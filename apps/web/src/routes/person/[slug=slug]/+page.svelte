@@ -1,6 +1,6 @@
 <script lang="ts">
 	import RefText from '$lib/refs/RefText.svelte';
-	import { chapterUrl, findBook, manifest } from '$lib/content/manifest';
+	import { chapterUrl, findBook } from '$lib/content/manifest';
 	import { groupByBook, placeLabelTa } from '$lib/entities/load';
 	import { settings } from '$lib/settings/store.svelte';
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
@@ -18,7 +18,6 @@
 	const qualifier = $derived(p.qualifier ? ` (${p.qualifier})` : '');
 	const version = $derived(settings.value.version);
 	const groups = $derived(groupByBook(p.verses));
-	const tamilVersions = $derived(manifest.versions.filter((v) => v.lang === 'ta'));
 	const kind = $derived(p.gender === 'group' ? { ta: 'மக்கள் குழு', en: 'People group' } : p.gender === 'female' ? { ta: 'பெண்', en: 'Woman' } : { ta: 'ஆண்', en: 'Man' });
 	const relationLabels = { parents: ['பெற்றோர்', 'Parents'], partners: ['துணை', 'Spouse'], siblings: ['உடன்பிறந்தோர்', 'Siblings'], children: ['பிள்ளைகள்', 'Children'] } as const;
 	const relationOrder = ['parents', 'partners', 'siblings', 'children'] as const;
@@ -107,37 +106,18 @@
 
 		<aside class="side">
 			<section class="card names">
-				<h2 class="kicker"><span lang="ta">தமிழ்ப் பெயர்கள்</span> · Tamil names</h2>
-				{#if Object.keys(p.names_ta).length}
-					<dl>
-						{#each tamilVersions as v (v.code)}
-							{@const n = p.names_ta[v.code]}
-							{#if n}
-								<div>
-									<dt>{v.short}</dt>
-									<dd>
-										<strong lang="ta">{n.label}</strong>
-										{#if n.provenance}<Provenance kind={n.provenance} lang={ui} />{:else if n.draft}<Provenance kind="auto" lang={ui} />{/if}
-										{#if n.forms.length > 1}<span class="forms" lang="ta">{n.forms.filter((f) => f !== n.label).slice(0, 6).join(' · ')}</span>{/if}
-										<SuggestControl target={nameTarget(v.code, p.name_en)} current={n.label} lang={ui} compact />
-									</dd>
-								</div>
-							{:else}
-								<div>
-									<dt>{v.short}</dt>
-									<dd>
-										<span class="muted" lang={ta ? 'ta' : 'en'}>{ta ? 'இல்லை' : 'none yet'}</span>
-										<SuggestControl target={nameTarget(v.code, p.name_en)} current="" lang={ui} compact />
-									</dd>
-								</div>
-							{/if}
-						{/each}
-					</dl>
+				<h2 class="kicker"><span lang="ta">தமிழ்ப் பெயர்</span> · Tamil name</h2>
+				{#if p.tamil_name}
+					{@const n = p.tamil_name}
+					<p class="tamil-name">
+						<strong lang="ta">{n.label}</strong>
+						{#if n.provenance}<Provenance kind={n.provenance} lang={ui} />{:else if n.draft}<Provenance kind="auto" lang={ui} />{/if}
+						{#if n.forms.length > 1}<span class="forms" lang="ta">{n.forms.filter((f) => f !== n.label).slice(0, 6).join(' · ')}</span>{/if}
+						<SuggestControl target={nameTarget(p.name_en)} current={n.label} lang={ui} compact />
+					</p>
 				{:else}
 					<p class="muted" lang={ta ? 'ta' : 'en'}>{ta ? 'தமிழ் வடிவம் இன்னும் இணைக்கப்படவில்லை.' : 'No Tamil form has been aligned yet.'}</p>
-					{#each tamilVersions as v (v.code)}
-						<SuggestControl target={nameTarget(v.code, p.name_en)} current="" lang={ui} compact />
-					{/each}
+					<SuggestControl target={nameTarget(p.name_en)} current="" lang={ui} compact />
 				{/if}
 			</section>
 
@@ -211,12 +191,9 @@
 	.side { display: grid; gap: 1rem; align-content: start; }
 	.card { padding: 1rem 1.2rem; }
 	.card h2 { margin: 0 0 0.6rem; }
-	dl { margin: 0; display: grid; gap: 0.6rem; }
-	dl div { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.5rem; align-items: baseline; }
-	dt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); }
-	dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem; align-items: baseline; }
-	dd :global(.suggest) { flex-basis: 100%; }
-	dd strong { font-family: var(--tamil); font-size: 1.15rem; }
+	.tamil-name { margin: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem; align-items: baseline; }
+	.tamil-name :global(.suggest) { flex-basis: 100%; }
+	.tamil-name strong { font-family: var(--tamil); font-size: 1.15rem; }
 	.forms { font-family: var(--tamil); font-size: 0.85rem; color: var(--muted); }
 	.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
 	.plain a { font-weight: 600; text-decoration: none; }

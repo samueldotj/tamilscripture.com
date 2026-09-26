@@ -175,3 +175,7 @@ audio_bibles/
 # audio tool: local virtualenv and bytecode
 tools/audio/.venv/
 __pycache__/
+
+# translate tool: local virtualenv and work folder (batch ids, usage log, raw replies)
+tools/translate/.venv/
+.translate-work/

@@ -3,7 +3,7 @@
 -- Three users: a reader, a reviewer and a moderator, plus anon.
 begin;
 create extension if not exists pgtap with schema extensions;
-select plan(25);
+select plan(26);
 
 -- Fixed ids keep the assertions readable.
 insert into auth.users (id, instance_id, aud, role, email, raw_user_meta_data, created_at, updated_at)
@@ -31,7 +31,7 @@ end $$;
 -- ---- anon ----
 select set_config('role', 'anon', true);
 select throws_ok(
-  $$ select public.suggest_correction('name:IRVTAM:Damascus', 'x', 'தமஸ்கு') $$,
+  $$ select public.suggest_correction('name:Damascus', 'x', 'தமஸ்கு') $$,
   '42501', null, 'anon cannot call suggest_correction');
 select throws_ok($$ select * from public.entity_suggestions $$, '42501', null, 'anon cannot read suggestions');
 select pg_temp.logout();
@@ -46,13 +46,16 @@ select lives_ok(
   $$ update public.profiles set display_name = 'Reader R' where user_id = '00000000-0000-0000-0000-00000000000a' $$,
   'a reader still edits the rest of their profile');
 select throws_ok(
-  $$ select public.suggest_correction('name:IRVTAM:Damascus', 'தமஸ்குவை', 'Damascus') $$,
+  $$ select public.suggest_correction('name:IRVTAM:Damascus', 'தமஸ்குவை', 'தமஸ்கு') $$,
+  '22023', null, 'a name target has no version: one Tamil name serves every version');
+select throws_ok(
+  $$ select public.suggest_correction('name:Damascus', 'தமஸ்குவை', 'Damascus') $$,
   '22023', null, 'a suggestion must contain Tamil script');
 select throws_ok(
   $$ select public.suggest_correction('bogus', 'x', 'தமஸ்கு') $$,
   '22023', null, 'target shape is enforced');
 select lives_ok(
-  $$ select public.suggest_correction('name:IRVTAM:Damascus', 'தமஸ்குவை', 'தமஸ்கு', 'base form') $$,
+  $$ select public.suggest_correction('name:Damascus', 'தமஸ்குவை', 'தமஸ்கு', 'base form') $$,
   'a reader suggests a name correction');
 select lives_ok(
   $$ select public.suggest_correction('article:eastons/damascus#p1-ee1db5fc', '', 'கிழக்கு நகரங்களில் மிகப் பழமையானது.') $$,
@@ -65,17 +68,17 @@ select throws_ok(
   $$ select public.set_role('00000000-0000-0000-0000-00000000000d', 'reviewer') $$,
   '42501', null, 'a reader cannot set roles');
 select throws_ok(
-  $$ insert into public.entity_suggestions (user_id, target, current_text, suggested_text) values ('00000000-0000-0000-0000-00000000000a', 'name:IRVTAM:X', '', 'x') $$,
+  $$ insert into public.entity_suggestions (user_id, target, current_text, suggested_text) values ('00000000-0000-0000-0000-00000000000a', 'name:X', '', 'x') $$,
   '42501', null, 'no direct inserts');
 select pg_temp.logout();
 
 -- Twenty open suggestions is the limit.
 select pg_temp.login('00000000-0000-0000-0000-00000000000d');
 select lives_ok($$
-  select public.suggest_correction('name:IRVTAM:Name' || i, '', 'பெயர்' || i) from generate_series(1, 20) i
+  select public.suggest_correction('name:Name' || i, '', 'பெயர்' || i) from generate_series(1, 20) i
 $$, 'twenty open suggestions are allowed');
 select throws_ok(
-  $$ select public.suggest_correction('name:IRVTAM:Name21', '', 'பெயர்') $$,
+  $$ select public.suggest_correction('name:Name21', '', 'பெயர்') $$,
   '54000', null, 'the twenty-first open suggestion is refused');
 select pg_temp.logout();
 
@@ -84,15 +87,15 @@ select pg_temp.login('00000000-0000-0000-0000-00000000000b');
 select is((select count(*) from public.entity_suggestions), 22::bigint, 'a reviewer sees every suggestion');
 select lives_ok($$
   select public.accept_suggestion(
-    (select id from public.entity_suggestions where target = 'name:IRVTAM:Damascus'),
+    (select id from public.entity_suggestions where target = 'name:Damascus'),
     'தமஸ்கு ')   -- edited: trailing space, trimmed on save
 $$, 'a reviewer accepts with a final text');
-select is((select text from public.entity_accepted where target = 'name:IRVTAM:Damascus'), 'தமஸ்கு', 'the final text is what gets exported');
-select is((select status from public.entity_suggestions where target = 'name:IRVTAM:Damascus'), 'accepted', 'the suggestion is marked accepted');
+select is((select text from public.entity_accepted where target = 'name:Damascus'), 'தமஸ்கு', 'the final text is what gets exported');
+select is((select status from public.entity_suggestions where target = 'name:Damascus'), 'accepted', 'the suggestion is marked accepted');
 select lives_ok($$
   select public.reject_suggestion((select id from public.entity_suggestions where target like 'article:%'), 'needs the full sentence')
 $$, 'a reviewer rejects with a note');
-select lives_ok($$ select public.correct_directly('name:TCV:Damascus', '', 'தமஸ்கு') $$, 'a reviewer corrects directly');
+select lives_ok($$ select public.correct_directly('name:Jerusalem', '', 'எருசலேம்') $$, 'a reviewer corrects directly');
 select throws_ok(
   $$ select public.set_role('00000000-0000-0000-0000-00000000000d', 'reviewer') $$,
   '42501', null, 'a reviewer cannot appoint reviewers');

@@ -53,6 +53,17 @@ struct Args {
     /// STEPBible tagged texts and lexicons, fetched by scripts/fetch-stepbible.mjs.
     stepbible: PathBuf,
     draft_names: bool,
+    /// With --draft-names: read each verse with the verse either side. Off by
+    /// default: measured against reviewed names it drafted fewer correctly
+    /// (more words, more rare neighbours to mistake for the name).
+    draft_window: bool,
+    /// With --draft-names: draft again the entries still marked review
+    /// (not rejected ones, whose confidence is 0).
+    redraft: bool,
+    /// With --draft-names: ignore the existing file (for comparing drafts).
+    fresh: bool,
+    /// With --draft-names: write here instead of names-ta.toml.
+    names_out: Option<PathBuf>,
     strict: bool,
 }
 
@@ -63,6 +74,10 @@ fn parse_args() -> Result<Args> {
         content: PathBuf::from("apps/web/static/content"),
         stepbible: PathBuf::from("data/cache/stepbible"),
         draft_names: false,
+        draft_window: false,
+        redraft: false,
+        fresh: false,
+        names_out: None,
         strict: true,
     };
     let mut it = std::env::args().skip(1);
@@ -73,9 +88,15 @@ fn parse_args() -> Result<Args> {
             "--content" => a.content = it.next().context("--content needs a path")?.into(),
             "--stepbible" => a.stepbible = it.next().context("--stepbible needs a path")?.into(),
             "--draft-names" => a.draft_names = true,
+            "--verse-window" => a.draft_window = true,
+            "--redraft" => a.redraft = true,
+            "--fresh" => a.fresh = true,
+            "--names-out" => {
+                a.names_out = Some(it.next().context("--names-out needs a path")?.into())
+            }
             "--lenient" => a.strict = false,
             "-h" | "--help" => {
-                eprintln!("entity-ingest --books B --entities DIR --content DIR [--stepbible DIR] [--draft-names] [--lenient]");
+                eprintln!("entity-ingest --books B --entities DIR --content DIR [--stepbible DIR] [--draft-names [--verse-window] [--redraft] [--fresh] [--names-out F]] [--lenient]");
                 std::process::exit(0);
             }
             other => bail!("unknown argument {other}"),
@@ -138,59 +159,36 @@ struct NameTaOut {
     provenance: Option<&'static str>,
 }
 
-fn names_ta_out(names: &NamesTa, name_en: &str) -> BTreeMap<String, NameTaOut> {
-    names
-        .get(name_en)
-        .map(|per| {
-            per.iter()
-                .map(|(v, f): (&String, &NameForm)| {
-                    (
-                        v.clone(),
-                        NameTaOut {
-                            label: f.label.clone(),
-                            forms: f.forms.clone(),
-                            confidence: f.confidence,
-                            draft: f.review,
-                            provenance: if f.owner {
-                                Some("owner")
-                            } else {
-                                f.community.then_some("community")
-                            },
-                        },
-                    )
-                })
-                .collect()
-        })
-        .unwrap_or_default()
+fn tamil_name_out(names: &NamesTa, name_en: &str) -> Option<NameTaOut> {
+    names.get(name_en).map(|f: &NameForm| NameTaOut {
+        label: f.label.clone(),
+        forms: f.forms.clone(),
+        confidence: f.confidence,
+        draft: f.review,
+        provenance: if f.owner {
+            Some("owner")
+        } else {
+            f.community.then_some("community")
+        },
+    })
 }
 
-fn all_ta_forms(names: &NamesTa, name_en: &str, lead_version: &str) -> String {
+fn all_ta_forms(names: &NamesTa, name_en: &str) -> String {
     // The first token is what the search box shows as the Tamil label, so the
-    // display-worthy label of the lead (default Tamil) version leads; the rest
-    // follow sorted.
-    let Some(per) = names.get(name_en) else {
+    // display-worthy label leads; the forms follow sorted.
+    let Some(f) = names.get(name_en) else {
         return String::new();
     };
-    let mut out: Vec<String> = Vec::new();
-    let lead = per
-        .get(lead_version)
-        .filter(|f| f.display_ok())
-        .or_else(|| per.values().find(|f| f.display_ok()))
-        .map(|f| f.label.clone());
-    if let Some(l) = &lead {
-        out.push(l.clone());
-    }
-    let set: BTreeSet<String> = per
-        .values()
-        .flat_map(|f| std::iter::once(f.label.clone()).chain(f.forms.iter().cloned()))
+    let lead = f.display_ok().then(|| f.label.clone());
+    let mut out: Vec<String> = lead.iter().cloned().collect();
+    let set: BTreeSet<String> = std::iter::once(f.label.clone())
+        .chain(f.forms.iter().cloned())
         .filter(|s| Some(s) != lead.as_ref())
         .collect();
     out.extend(set);
     out.join(" ")
 }
 
-/// Tamil label for a name: the default Tamil version first, then any other,
-/// only where the draft is trustworthy enough to show.
 /// The form to show as "the" original-language name: the first "Named"
 /// form with the most verses, else the first form with any text.
 fn primary_form(forms: &[tipnr::NameForm]) -> Option<&tipnr::NameForm> {
@@ -200,8 +198,8 @@ fn primary_form(forms: &[tipnr::NameForm]) -> Option<&tipnr::NameForm> {
         .max_by_key(|f| (f.significance == "Named", f.verses.len()))
 }
 
-/// The inflected Tamil forms of a name that occur in the given verses, per
-/// version, where the draft is trustworthy enough to show; the reader
+/// The inflected Tamil forms of a name that occur in the given verses of each
+/// Tamil version, where the entry is trustworthy enough to show; the reader
 /// underlines these words in the text. Only the chapter's own forms are kept,
 /// which keeps each chapter's file small and the matching exact.
 fn forms_ta(
@@ -210,12 +208,10 @@ fn forms_ta(
     verse_ids: &[&String],
     corpora: &[Corpus],
 ) -> Option<BTreeMap<String, Vec<String>>> {
-    let per = names.get(name_en)?;
-    let out: BTreeMap<String, Vec<String>> = per
+    let f = names.get(name_en).filter(|f| f.display_ok())?;
+    let out: BTreeMap<String, Vec<String>> = corpora
         .iter()
-        .filter(|(_, f)| f.display_ok())
-        .filter_map(|(v, f)| {
-            let corpus = corpora.iter().find(|c| &c.version == v)?;
+        .filter_map(|corpus| {
             let texts: Vec<&String> = verse_ids
                 .iter()
                 .filter_map(|id| corpus.verses.get(id.as_str()))
@@ -227,21 +223,17 @@ fn forms_ta(
                 .collect();
             found.sort();
             found.dedup();
-            (!found.is_empty()).then(|| (v.clone(), found))
+            (!found.is_empty()).then(|| (corpus.version.clone(), found))
         })
         .collect();
     (!out.is_empty()).then_some(out)
 }
 
-fn label_ta(names: &NamesTa, name_en: &str, versions: &[String]) -> Option<String> {
-    let per = names.get(name_en)?;
-    for v in versions {
-        if let Some(f) = per.get(v).filter(|f| f.display_ok()) {
-            return Some(f.label.clone());
-        }
-    }
-    per.values()
-        .find(|f| f.display_ok())
+/// Tamil label for a name, only where the entry is trustworthy enough to show.
+fn label_ta(names: &NamesTa, name_en: &str) -> Option<String> {
+    names
+        .get(name_en)
+        .filter(|f| f.display_ok())
         .map(|f| f.label.clone())
 }
 
@@ -285,7 +277,7 @@ struct PlaceOut<'a> {
     article: &'a str,
     #[serde(skip_serializing_if = "<[String]>::is_empty")]
     alt_en: &'a [String],
-    names_ta: BTreeMap<String, NameTaOut>,
+    tamil_name: Option<NameTaOut>,
     place_type: &'a str,
     types: &'a [String],
     class: &'a str,
@@ -385,7 +377,7 @@ struct PersonOut<'a> {
     article: &'a str,
     #[serde(skip_serializing_if = "std::ops::Not::not")]
     uncertain: bool,
-    names_ta: BTreeMap<String, NameTaOut>,
+    tamil_name: Option<NameTaOut>,
     forms: Vec<OriginalForm<'a>>,
     relations: BTreeMap<&'static str, Vec<RelationOut>>,
     verses: &'a [String],
@@ -521,33 +513,38 @@ fn main() -> Result<()> {
 
     let names_path = args.entities.join("names-ta.toml");
     if args.draft_names {
-        let mut names = names::load(&names_path)?;
+        let mut names = if args.fresh {
+            names::NamesTa::new()
+        } else {
+            names::load(&names_path)?
+        };
         let (mut added, mut kept) = (0usize, 0usize);
+        // Drafted from the lead Tamil version (corpora[0]); the others add
+        // their own inflections of the same name.
         for (name, verses) in &verses_by_name {
-            let verses: Vec<String> = verses.iter().cloned().collect();
-            for c in &corpora {
-                if names.get(name).and_then(|m| m.get(&c.version)).is_some() {
+            if let Some(f) = names.get(name) {
+                // Reviewed and rejected entries are never replaced.
+                if !(args.redraft && f.review && f.confidence > 0.0) {
                     kept += 1;
                     continue;
                 }
-                if let Some(form) = names::draft_one(&verses, c) {
-                    names
-                        .entry(name.clone())
-                        .or_default()
-                        .insert(c.version.clone(), form);
-                    added += 1;
+            }
+            let verses: Vec<String> = verses.iter().cloned().collect();
+            let Some(lead) = corpora.first() else { break };
+            if let Some(mut form) = names::draft_one(&verses, lead, args.draft_window) {
+                for c in &corpora[1..] {
+                    names::add_forms(&mut form, &verses, c);
                 }
+                names.insert(name.clone(), form);
+                added += 1;
             }
         }
-        names::save(&names_path, &names)?;
-        let review = names
-            .values()
-            .flat_map(|m| m.values())
-            .filter(|f| f.review)
-            .count();
+        let out_path = args.names_out.clone().unwrap_or_else(|| names_path.clone());
+        names::save(&out_path, &names)?;
+        let review = names.values().filter(|f| f.review).count();
         eprintln!(
             "names-ta.toml: {added} drafted, {kept} kept, {review} marked review → {}",
-            names_path.display()
+            out_path.display()
         );
         return Ok(());
     }
@@ -561,17 +558,13 @@ fn main() -> Result<()> {
         );
     }
     let mut problems: Vec<String> = Vec::new();
-    for (name, per) in &names {
+    for (name, form) in &names {
         let Some(verses) = verses_by_name.get(name) else {
             problems.push(format!("{name}: not a place or person name in the sources"));
             continue;
         };
         let verses: Vec<String> = verses.iter().cloned().collect();
-        for (version, form) in per {
-            if let Some(c) = corpora.iter().find(|c| &c.version == version) {
-                problems.extend(names::validate(name, form, &verses, c));
-            }
-        }
+        problems.extend(names::validate(name, form, &verses, &corpora));
     }
     if !problems.is_empty() {
         for p in &problems {
@@ -694,8 +687,8 @@ fn main() -> Result<()> {
         }
     }
     // Tamil drafts from outside the repository, then accepted corrections.
-    let drafts = community::load_drafts(&args.entities.join("drafts/ta"))?;
-    let label_of = |title: &str| label_ta(&names, title, &tamil_versions);
+    let drafts = community::load_drafts(&args.entities.join("drafts"))?;
+    let label_of = |title: &str| label_ta(&names, title);
     let report = community::apply_articles(&mut all_articles, &drafts, &overrides, &label_of);
     eprintln!(
         "community: {} name corrections; {} drafts ({} stale) covering {} paragraphs; {} paragraph corrections",
@@ -854,7 +847,7 @@ fn main() -> Result<()> {
             stops.push(journeys::StopOut {
                 place: p.id.clone(),
                 name_en: p.name_en.clone(),
-                name_ta: label_ta(&names, &p.name_en, &tamil_versions),
+                name_ta: label_ta(&names, &p.name_en),
                 lon: round5(lon),
                 lat: round5(lat),
                 r#ref: s.r#ref.clone(),
@@ -909,7 +902,7 @@ fn main() -> Result<()> {
             .map(|q| RelationOut {
                 id: person_slug[&q.key].clone(),
                 name_en: q.name_en.clone(),
-                name_ta: label_ta(&names, &q.name_en, &tamil_versions),
+                name_ta: label_ta(&names, &q.name_en),
                 brief: q.brief.clone(),
             })
             .collect()
@@ -948,7 +941,7 @@ fn main() -> Result<()> {
             short: &p.short,
             article: &p.article,
             uncertain: p.uncertain,
-            names_ta: names_ta_out(&names, &p.name_en),
+            tamil_name: tamil_name_out(&names, &p.name_en),
             forms: p
                 .forms
                 .iter()
@@ -974,7 +967,7 @@ fn main() -> Result<()> {
             id: slug,
             name_en: &p.name_en,
             qualifier,
-            name_ta: label_ta(&names, &p.name_en, &tamil_versions),
+            name_ta: label_ta(&names, &p.name_en),
             gender: &p.gender,
             brief: &p.brief,
             mentions: p.verses.len(),
@@ -985,7 +978,7 @@ fn main() -> Result<()> {
             csv_field(&format!("person/{slug}")),
             csv_field(slug),
             csv_field(&p.name_en),
-            csv_field(&all_ta_forms(&names, &p.name_en, &lead_ta)),
+            csv_field(&all_ta_forms(&names, &p.name_en)),
             csv_field(&p.brief),
             weight
         ));
@@ -1120,12 +1113,12 @@ fn main() -> Result<()> {
             .people
             .iter()
             .filter_map(|id| person_by_slug.get(id.as_str()).map(|p| (id, *p)))
-            .map(|(id, p)| serde_json::json!({ "kind": "person", "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "brief": p.brief }));
+            .map(|(id, p)| serde_json::json!({ "kind": "person", "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en), "brief": p.brief }));
         let places = w
             .places
             .iter()
             .filter_map(|id| place_by_id.get(id.as_str()))
-            .map(|p| serde_json::json!({ "kind": "place", "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions) }));
+            .map(|p| serde_json::json!({ "kind": "place", "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en) }));
         people.chain(places).collect()
     };
     // (verse sort key, verse id, surface form) per number, and how many words carry it.
@@ -1309,7 +1302,7 @@ fn main() -> Result<()> {
                 (
                     p.id.as_str(),
                     serde_json::json!({
-                        "name_en": p.name_en, "qualifier": p.qualifier, "name_ta": label_ta(&names, &p.name_en, &tamil_versions),
+                        "name_en": p.name_en, "qualifier": p.qualifier, "name_ta": label_ta(&names, &p.name_en),
                         "forms": forms_ta(&names, &p.name_en, &verses_of(&p.id, true), &corpora),
                         "type": p.types.first().cloned().unwrap_or_default(), "precision": p.precision,
                         "lat": p.lat.map(round5), "lon": p.lon.map(round5), "mentions": p.verses.len(),
@@ -1327,7 +1320,7 @@ fn main() -> Result<()> {
                     id,
                     serde_json::json!({
                         "name_en": p.name_en, "qualifier": if name_count[&p.name_en.to_lowercase()] > 1 { Some(ref_label(&p.first_ref)) } else { None },
-                        "name_ta": label_ta(&names, &p.name_en, &tamil_versions), "forms": forms_ta(&names, &p.name_en, &verses_of(id, false), &corpora),
+                        "name_ta": label_ta(&names, &p.name_en), "forms": forms_ta(&names, &p.name_en, &verses_of(id, false), &corpora),
                         "gender": p.gender, "brief": p.brief, "mentions": p.verses.len(),
                         "article": articles_by_entity.get(&format!("person/{id}")).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone()),
                         "original": primary_form(&p.forms).map(|f| serde_json::json!({ "text": f.original, "script": f.script, "strongs": f.strongs }))
@@ -1372,7 +1365,7 @@ fn main() -> Result<()> {
             qualifier: &p.qualifier,
             article: &p.article,
             alt_en: &p.alt_en,
-            names_ta: names_ta_out(&names, &p.name_en),
+            tamil_name: tamil_name_out(&names, &p.name_en),
             place_type,
             types: &p.types,
             class: &p.class,
@@ -1383,7 +1376,7 @@ fn main() -> Result<()> {
             nearby: nearby
                 .iter()
                 .filter_map(|(_, id)| by_id.get(id))
-                .map(|q| serde_json::json!({ "id": q.id, "name_en": q.name_en, "qualifier": q.qualifier, "name_ta": label_ta(&names, &q.name_en, &tamil_versions) }))
+                .map(|q| serde_json::json!({ "id": q.id, "name_en": q.name_en, "qualifier": q.qualifier, "name_ta": label_ta(&names, &q.name_en) }))
                 .collect(),
             description: desc.map(|tp| DescriptionOut { brief: &tp.brief, short: &tp.short, article: &tp.article, source: STEP.name, licence: STEP.licence, url: STEP.url }),
             articles: article_refs(&format!("place/{}", p.id)),
@@ -1402,7 +1395,7 @@ fn main() -> Result<()> {
             id: &p.id,
             name_en: &p.name_en,
             qualifier: &p.qualifier,
-            name_ta: label_ta(&names, &p.name_en, &tamil_versions),
+            name_ta: label_ta(&names, &p.name_en),
             place_type,
             lat: p.lat.map(round5),
             lon: p.lon.map(round5),
@@ -1422,7 +1415,7 @@ fn main() -> Result<()> {
                     .map(|q| format!(" {q}"))
                     .unwrap_or_default()
             )),
-            csv_field(&all_ta_forms(&names, &p.name_en, &lead_ta)),
+            csv_field(&all_ta_forms(&names, &p.name_en)),
             csv_field(&p.alt_en.join(" ")),
             weight
         ));
@@ -1453,7 +1446,7 @@ fn main() -> Result<()> {
             serde_json::json!({
                 "type": "Feature",
                 "properties": {
-                    "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en, &tamil_versions),
+                    "id": p.id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en),
                     "type": p.types.first().cloned().unwrap_or_default(), "precision": p.precision, "mentions": p.verses.len()
                 },
                 "geometry": { "type": "Point", "coordinates": [round5(p.lon.unwrap()), round5(p.lat.unwrap())] }
@@ -1492,9 +1485,7 @@ fn main() -> Result<()> {
         let place_ta: BTreeMap<&str, String> = places
             .iter()
             .filter(|p| p.lat.is_some())
-            .filter_map(|p| {
-                label_ta(&names, &p.name_en, &tamil_versions).map(|t| (p.id.as_str(), t))
-            })
+            .filter_map(|p| label_ta(&names, &p.name_en).map(|t| (p.id.as_str(), t)))
             .collect();
         // A place the New Testament names had a church from the apostolic age.
         let nt_places: BTreeSet<&str> = places
@@ -1572,7 +1563,7 @@ fn main() -> Result<()> {
         lon: p.lon.unwrap(),
         lat: p.lat.unwrap(),
         label_en: p.name_en.clone(),
-        label_ta: label_ta(&names, &p.name_en, &tamil_versions),
+        label_ta: label_ta(&names, &p.name_en),
         href: format!("/place/{}", p.id),
         emphasis,
         weight: p.verses.len() as u32,
@@ -1635,7 +1626,7 @@ fn main() -> Result<()> {
             v.into_iter().take(12).map(|(_, q)| q).collect()
         };
         pts.extend(nearby.iter().map(|q| point_of(q, false, None)));
-        let title = match label_ta(&names, &p.name_en, &tamil_versions) {
+        let title = match label_ta(&names, &p.name_en) {
             Some(ta) => format!("{ta} · {}", p.name_en),
             None => p.name_en.clone(),
         };

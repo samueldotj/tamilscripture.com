@@ -14,7 +14,7 @@
 		lang,
 		compact = false
 	}: {
-		/** `name:IRVTAM:Damascus` or `article:eastons/damascus#p1-…` */
+		/** `name:Damascus` or `article:eastons/damascus#p1-…` */
 		target: string;
 		/** the Tamil text the reader sees now ('' when none yet) */
 		current?: string;

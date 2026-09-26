@@ -54,9 +54,9 @@ export interface ExportStatus {
 	last_publish: string | null;
 }
 
-/** `name:IRVTAM:Damascus` */
-export function nameTarget(version: string, nameEn: string): string {
-	return `name:${version}:${nameEn}`;
+/** `name:Damascus`: the Tamil name used for every Tamil version */
+export function nameTarget(nameEn: string): string {
+	return `name:${nameEn}`;
 }
 /** `gloss:G0026`: the Tamil meaning of a Strong's number (concordance C5) */
 export function glossTarget(num: string): string {
@@ -95,14 +95,14 @@ export function formatReason(tag: ReasonId | '', note: string): string | undefin
 }
 
 export type ParsedTarget =
-	| { kind: 'name'; version: string; name_en: string; href: null }
+	| { kind: 'name'; name_en: string; href: null }
 	| { kind: 'article'; article: string; paragraph: string; href: string }
 	| { kind: 'gloss'; strongs: string; href: string }
 	| { kind: 'unknown'; href: null };
 
 export function parseTarget(t: string): ParsedTarget {
-	const n = /^name:([A-Z0-9]+):(.+)$/.exec(t);
-	if (n) return { kind: 'name', version: n[1], name_en: n[2], href: null };
+	const n = /^name:([^:]+)$/.exec(t);
+	if (n) return { kind: 'name', name_en: n[1], href: null };
 	const a = /^article:([a-z0-9]+\/[a-z0-9-]+)#(p[0-9]+-[0-9a-f]{8})$/.exec(t);
 	if (a) return { kind: 'article', article: a[1], paragraph: a[2], href: `/dictionary/${a[1]}#${a[2]}` };
 	const g = /^gloss:([HG][0-9]{4}[A-Za-z]?)$/.exec(t);

@@ -11,7 +11,6 @@
 	import { SOURCES } from '$lib/entities/sources';
 	import { loadArticle } from '$lib/entities/load';
 	import type { Article } from '$lib/entities/types';
-	import { DEFAULT_VERSION, manifest } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -95,7 +94,7 @@
 	}
 	function label(t: string) {
 		const p = parseTarget(t);
-		if (p.kind === 'name') return `${ta ? 'பெயர்' : 'Name'} · ${p.version}`;
+		if (p.kind === 'name') return ta ? 'பெயர்' : 'Name';
 		if (p.kind === 'article') return `${ta ? 'பத்தி' : 'Paragraph'} ${p.paragraph.split('-')[0].slice(1)}`;
 		if (p.kind === 'gloss') return `${ta ? 'தமிழ்ப் பொருள்' : 'Tamil meaning'} · ${p.strongs}`;
 		return t;
@@ -127,9 +126,7 @@
 	}
 
 	// Direct correction.
-	const tamilVersions = manifest.versions.filter((v) => v.lang === 'ta');
 	let dKind = $state<'name' | 'article'>('name');
-	let dVersion = $state(tamilVersions[0]?.code ?? DEFAULT_VERSION);
 	let dName = $state('');
 	let dParagraph = $state('');
 	let dText = $state('');
@@ -140,7 +137,7 @@
 		dMsg = '';
 		dErr = '';
 		try {
-			const target = dKind === 'name' ? nameTarget(dVersion, dName.trim()) : articleTarget(dParagraph.trim());
+			const target = dKind === 'name' ? nameTarget(dName.trim()) : articleTarget(dParagraph.trim());
 			await correctDirectly(target, '', dText);
 			dMsg = ta ? 'சேமிக்கப்பட்டது; அடுத்த ஏற்றுமதியில் வெளியிடப்படும்.' : 'Saved; it goes out with the next export.';
 			dName = ''; dParagraph = ''; dText = '';
@@ -296,7 +293,6 @@
 			<label><span lang={ta ? 'ta' : 'en'}>{ta ? 'வகை' : 'Kind'}</span>
 				<select bind:value={dKind}><option value="name">{ta ? 'பெயர்' : 'Name'}</option><option value="article">{ta ? 'அகராதிப் பத்தி' : 'Dictionary paragraph'}</option></select></label>
 			{#if dKind === 'name'}
-				<label><span>Version</span><select bind:value={dVersion}>{#each tamilVersions as v (v.code)}<option value={v.code}>{v.code}</option>{/each}</select></label>
 				<label class="grow"><span lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கிலப் பெயர் (பக்கத்தில் உள்ளபடி)' : 'English name (as on the page)'}</span><input type="text" bind:value={dName} required placeholder="Damascus" /></label>
 			{:else}
 				<label class="grow"><span lang={ta ? 'ta' : 'en'}>{ta ? 'பத்தி அடையாளம்' : 'Paragraph id'}</span><input type="text" bind:value={dParagraph} required placeholder="eastons/damascus#p1-ee1db5fc" /></label>

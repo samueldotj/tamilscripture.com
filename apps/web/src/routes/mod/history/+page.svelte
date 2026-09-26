@@ -19,7 +19,7 @@
 	const shown = $derived(filter === 'all' ? items : items.filter((x) => x.status === filter));
 	function label(t: string) {
 		const p = parseTarget(t);
-		if (p.kind === 'name') return `${p.name_en} · ${p.version}`;
+		if (p.kind === 'name') return p.name_en;
 		if (p.kind === 'article') return `${p.article} · ${p.paragraph.split('-')[0]}`;
 		return t;
 	}

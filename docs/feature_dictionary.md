@@ -72,7 +72,7 @@ An optional reader setting, **Underline names**, adds a dotted underline to alig
 
 ## 5. Tamil drafts produced outside this repository
 
-The AI translation runs outside the project. The build emits the English articles in the segmented form above; the external process reads them and writes Tamil drafts into `data/entities/drafts/ta/`. Both shapes are fixed here so the two sides can be developed independently.
+The AI translation runs outside the build, in `tools/translate/` ([feature_dictionary_translation.md](feature_dictionary_translation.md)). The build emits the English articles in the segmented form above; the external process reads them and writes Tamil drafts into `data/entities/drafts/ta/`. Both shapes are fixed here so the two sides can be developed independently.
 
 Output the external process must produce, one file per article:
 
@@ -125,7 +125,7 @@ alter table profiles add column role text not null default 'reader'
 create table entity_suggestions (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users,
-  target text not null,                 -- 'name:IRVTAM:Damascus' or 'article:eastons/damascus#p3-4f2a9c1b'
+  target text not null,                 -- 'name:Damascus' or 'article:eastons/damascus#p3-4f2a9c1b'
   current_text text not null,           -- what the user saw, so a stale suggestion is detectable
   suggested_text text not null,
   reason text,
@@ -165,10 +165,10 @@ The RLS test suite deferred from M3 (task 3.4) becomes part of this milestone, b
 `.github/workflows/export-overrides.yml` runs every 12 hours (`0 */12 * * *`), on `workflow_dispatch` (the Run workflow button in GitHub) and on `repository_dispatch` from the site. It reads `entity_accepted` with the Supabase service key held as a GitHub secret, writes one file per entity under `data/entities/overrides/`, marks the rows `exported_at`, and commits as a bot if anything changed. The commit triggers the normal deploy, so the site changes about ten minutes after an export. Override files are the third input to the build, applied over drafts.
 
 ```toml
-# data/entities/overrides/names.toml — one table per name and Tamil version.
-# Names are shared by same-named entities (29 Zechariahs), so the file is keyed
-# by the English name string, like names-ta.toml.
-[Damascus.IRVTAM]
+# data/entities/overrides/names.toml — one table per name, used for every
+# Tamil version. Names are shared by same-named entities (29 Zechariahs), so the
+# file is keyed by the English name string, like names-ta.toml.
+[Damascus]
 forms = ["தமஸ்கு"]
 accepted_at = "2026-10-03T14:12:00Z"
 
