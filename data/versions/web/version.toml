@@ -10,7 +10,7 @@ licence = "Public domain"
 attribution = "World English Bible, public domain"
 source_url = "https://ebible.org/find/details.php?id=engwebp"
 ebible_id = "engwebp"
-order = 4
+order = 5
 
 [audio]
 recording = "r1"

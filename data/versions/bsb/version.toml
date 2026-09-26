@@ -10,7 +10,7 @@ licence = "Public domain"
 attribution = "Berean Standard Bible, public domain, BSB Publishing"
 source_url = "https://ebible.org/find/details.php?id=engbsb"
 ebible_id = "engbsb"
-order = 3
+order = 4
 default = true
 
 [audio]

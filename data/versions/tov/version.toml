@@ -1,0 +1,12 @@
+code = "TOV"
+lang = "ta"
+language = "Tamil"
+language_native = "தமிழ்"
+language_ta = "தமிழ்"
+name = "Tamil Bible, Old Version (1957)"
+name_native = "சத்தியவேதம் - பழைய மொழிபெயர்ப்பு (1957)"
+short = "OV"
+licence = "Public domain"
+attribution = "Tamil Bible Old Version, Bible Society of India and Ceylon, 1957, public domain in India; digitised by The Free Bible Foundation (tfbf.in)"
+source_url = "https://github.com/tfbf/Bible-Tamil-Sathiyavedam-1957"
+order = 3
