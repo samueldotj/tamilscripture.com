@@ -21,7 +21,8 @@
 		onclear,
 		onhighlight,
 		onnote,
-		onoriginal
+		onoriginal,
+		onplayfrom
 	}: {
 		selected: Set<string>;
 		chapter: ChapterJson;
@@ -41,6 +42,8 @@
 		onnote?: () => void;
 		/** Opens the Hebrew or Greek words of the selection (phones; the panel has a tab). */
 		onoriginal?: () => void;
+		/** Play the recording from the first selected verse (timed recordings only, design 12A). */
+		onplayfrom?: () => void;
 	} = $props();
 
 	let toast = $state('');
@@ -107,6 +110,9 @@
 {#if selected.size}
 	<div class="bar" class:card={variant === 'floating'} class:floating={variant === 'floating'} class:panel={variant === 'panel'} role="toolbar" aria-label={ta ? 'வசனச் செயல்கள்' : 'Verse actions'}>
 		<span class="label" lang={lang}>{label}</span>
+		{#if onplayfrom && numbers.length}
+			<button type="button" class="chip primary play" onclick={() => onplayfrom?.()}><span aria-hidden="true">▶</span> {ta ? `${chapter.chapter}:${numbers[0]} முதல்` : `Play from ${chapter.chapter}:${numbers[0]}`}</button>
+		{/if}
 		{#if excerpt}
 			<span class="excerpt" title={excerpt}>“{excerpt}”</span>
 		{/if}
@@ -150,13 +156,15 @@
 
 <style>
 	.bar { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-	.floating { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 15; padding: 0.6rem 0.6rem 0.6rem 1rem; border-color: var(--line-2); border-radius: var(--r-2xl); box-shadow: var(--shadow); max-width: calc(100vw - 1.5rem); justify-content: center; }
+	.floating { position: fixed; left: 50%; bottom: calc(max(1rem, env(safe-area-inset-bottom)) + var(--player-h, 0px)); transform: translateX(-50%); z-index: 15; padding: 0.6rem 0.6rem 0.6rem 1rem; border-color: var(--line-2); border-radius: var(--r-2xl); box-shadow: var(--shadow); max-width: calc(100vw - 1.5rem); justify-content: center; }
 	.panel { position: relative; }
 	.panel .label { display: none; }
 	.label { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
 	.label[lang='ta'] { font-family: var(--tamil); }
 	.chip { min-height: 40px; padding: 0.4rem 0.85rem; border-radius: var(--r); }
 	.panel .chip { flex: 1 1 auto; min-height: 46px; }
+	.play { font-weight: 700; }
+	.panel .play { width: 100%; }
 	.ghost { border: 0; background: none; color: var(--muted); font-size: 0.95rem; line-height: 1; min-width: 40px; min-height: 40px; padding: 0; cursor: pointer; border-radius: 999px; }
 	.ghost:hover { background: var(--surface-2); color: var(--ink); }
 	.excerpt { font-family: var(--tamil); font-style: italic; font-size: 0.85rem; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 14rem; }

@@ -18,6 +18,8 @@
 	import { session } from '$lib/supabase/session.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
+	import { player, trackKey } from '$lib/audio/player.svelte';
+	import type { ChapterJson } from '$lib/content/types';
 
 	let { children } = $props();
 	let settingsOpen = $state(false);
@@ -71,6 +73,17 @@
 			''
 	);
 	const isHome = $derived(page.route.id === '/');
+
+	// Audio (design 12A): a ▶ in the phone header when the chapter has a recording;
+	// the player bar, a chunk of its own, once something plays.
+	const onChapter = $derived(page.route.id?.includes('[chapter=int]') ?? false);
+	const pageChapter = $derived(onChapter ? ((page.data as { chapters?: ChapterJson[] }).chapters?.[0] ?? null) : null);
+	const pageListening = $derived(
+		!!pageChapter && !!curBook && !!curVersions?.[0] && player.key === trackKey(curVersions[0].code, curBook.code, pageChapter.chapter)
+	);
+	function headerListen() {
+		if (pageChapter && curBook && curVersions?.[0]) player.listen(pageChapter, curVersions[0], curBook);
+	}
 
 	function back() {
 		if (inApp) history.back();
@@ -156,6 +169,15 @@
 			{#if pillVersion}<span class="v">{pillVersion}</span>{/if}
 			<span class="caret" aria-hidden="true">{chapterMenu ? '▴' : '▾'}</span>
 		</button>
+		{#if pageChapter?.audio}
+			<button type="button" class="m-only m-icon listen" class:on={pageListening} aria-label={pageListening ? (player.playing ? (ui === 'ta' ? 'இடைநிறுத்து' : 'Pause') : (ui === 'ta' ? 'தொடர்' : 'Resume')) : (ui === 'ta' ? 'கேள்' : 'Listen')} aria-pressed={pageListening && player.playing} onclick={headerListen}>
+				{#if pageListening && player.playing}
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4.5v16H6zM13.5 4H18v16h-4.5z"/></svg>
+				{:else}
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15L19.5 12z"/></svg>
+				{/if}
+			</button>
+		{/if}
 		<button type="button" class="m-only m-icon" aria-label={ui === 'ta' ? 'தேடு' : 'Search'} aria-expanded={searchOpen} onclick={toggleSearch}>
 			{#if searchOpen}
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -214,6 +236,11 @@
 	{@render children()}
 </main>
 
+{#if player.track && !bare}
+	{#await import('$lib/audio/PlayerBar.svelte') then { default: PlayerBar }}
+		<PlayerBar lang={ui} column={onChapter && (curVersions?.length ?? 1) === 1} />
+	{/await}
+{/if}
 {#if !bleed && !bare}
 <footer class="site-foot">
 	<a href="/about">{ui === 'ta' ? 'பற்றி' : 'About'}</a>
@@ -255,6 +282,8 @@
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
 	.site-foot a:hover { color: var(--accent); }
+	/* Room at the foot of every page for the player bar, while it is open. */
+	:global(html:has(section.player)) .site-foot { padding-bottom: calc(2.5rem + var(--player-h)); }
 	/* Phones (design 10A): back, chapter pill, search in one 56px bar. Language,
 	   sign-in and settings live in the chapter menu's footer. */
 	@media (max-width: 720px) {
@@ -263,6 +292,8 @@
 		.m-only { display: flex; }
 		.m-icon { width: 40px; height: 44px; flex: none; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; padding: 0; }
 		.m-icon:hover { background: var(--surface-2); }
+		.m-icon.listen { color: var(--accent); }
+		.m-icon.listen.on { background: var(--hl); }
 		.pill { flex: 1; min-width: 0; height: 44px; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: var(--surface); border: var(--bw) solid var(--line-2); color: var(--ink); cursor: pointer; }
 		.pill.open { background: var(--accent-soft); border-color: var(--accent); }
 		.pill .t { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }

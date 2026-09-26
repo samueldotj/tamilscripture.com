@@ -22,7 +22,9 @@
 		onname,
 		marks = null,
 		sidenotes = null,
-		onopennote
+		onopennote,
+		speaking = null,
+		onplay
 	}: {
 		chapter: ChapterJson;
 		lang: string;
@@ -46,6 +48,9 @@
 		/** verse id → the reader's notes starting there; null when margin notes are off */
 		sidenotes?: Map<string, SideNote[]> | null;
 		onopennote?: (note: Note) => void;
+		/** While a timed recording of this chapter plays: the verse being read, and play-from-verse. */
+		speaking?: string | null;
+		onplay?: (id: string) => void;
 	} = $props();
 	const withNotes = $derived(!!sidenotes?.size);
 	function heatFor(seg: Segment) {
@@ -124,6 +129,8 @@
 						marks={seg.id && marks ? marks.get(seg.id) ?? null : null}
 						sidenotes={seg.id && sidenotes ? sidenotes.get(seg.id) ?? null : null}
 						{onopennote}
+						audio={onplay && seg.n && seg.id ? (seg.id === speaking ? 'current' : 'play') : null}
+						{onplay}
 					/>
 				{/each}
 			</p>

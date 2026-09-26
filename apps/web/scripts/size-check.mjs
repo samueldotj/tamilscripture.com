@@ -21,8 +21,10 @@ const READER_LIMIT = 120 * 1024;
 // pages; it grows with each new page, so READER_LIMIT is the guard on what one
 // visit downloads. Raised from
 // 200 kB to 240 kB on 20 Sep 2026 when the concordance pages were added, and
-// to 260 kB on 22 Sep 2026 for the presentation pages (editor, presenter, stats).
-const SITE_LIMIT = 260 * 1024;
+// to 260 kB on 22 Sep 2026 for the presentation pages (editor, presenter, stats),
+// and to 270 kB on 25 Sep 2026 for the audio player (the store rides with the
+// reader, 97 of its 120 kB; the bar is a 2.4 kB chunk loaded on first play).
+const SITE_LIMIT = 270 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 

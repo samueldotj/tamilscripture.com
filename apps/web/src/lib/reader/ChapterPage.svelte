@@ -27,6 +27,7 @@
 	import { saveLastRead } from '$lib/personal/last-read';
 	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, setRangeHighlight, removeRangeHighlight, isPartial, rangesOverlap, type Highlight, type HighlightColor, type Note, type TextRange } from '$lib/personal/repo';
 	import { marksByVerse, selectionRange, sideNotesByVerse } from './marks';
+	import { player, trackKey } from '$lib/audio/player.svelte';
 
 	let { data }: { data: ChapterPageData } = $props();
 
@@ -193,6 +194,48 @@
 		}
 		return parts.join(',');
 	}
+
+	// Audio (docs/feature_audio.md, design 12B): the கேள் button plays the
+	// primary version's recording. Verse chips, the reading wash and play-from-
+	// verse need verse timings (stage 2); without them the bar alone plays.
+	const chapterAudio = $derived(data.chapters[0].audio);
+	const pageKey = $derived(trackKey(primary.code, data.book.code, data.chapter));
+	const listening = $derived(player.key === pageKey);
+	const timed = $derived(listening && !dual && !!player.track?.verses?.length);
+	const speakingId = $derived(timed && player.verse !== null ? segOf(player.verse) : null);
+	$effect(() => {
+		player.viewing = { key: pageKey, versionPath };
+		return () => {
+			player.viewing = null;
+		};
+	});
+	function listen() {
+		player.listen(data.chapters[0], primary, data.book);
+	}
+	function playFromId(id: string) {
+		if (listening && speakingId === id) player.toggle();
+		else if (listening) player.playFrom(verseNum(id));
+		else void player.play(data.chapters[0], primary, data.book, verseNum(id));
+	}
+	function playFromSelection() {
+		if (!selectedNumbers.length) return;
+		const id = segOf(selectedNumbers[0]);
+		clearSelection();
+		playFromId(id);
+	}
+	// The page follows the reading, unless the reader has scrolled by hand in the last few seconds.
+	let handScrollAt = 0;
+	const markHandScroll = () => (handScrollAt = Date.now());
+	$effect(() => {
+		const id = speakingId;
+		if (!id || !player.playing || Date.now() - handScrollAt < 4000) return;
+		const el = measure?.querySelector<HTMLElement>(`[data-verse="${id}"]`);
+		if (!el) return;
+		const r = el.getBoundingClientRect();
+		const barH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--player-h')) || 0;
+		if (r.top >= 90 && r.bottom <= innerHeight - barH - 24) return;
+		el.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+	});
 
 	// Cross-references arrive with the page data (markers present at first
 	// paint, hidden by CSS when off). If the toggle is switched on for a page
@@ -499,7 +542,7 @@
 	}
 </script>
 
-<svelte:window onkeydown={onKey} onscroll={onScrollProgress} />
+<svelte:window onkeydown={onKey} onscroll={onScrollProgress} onwheel={markHandScroll} ontouchmove={markHandScroll} />
 <svelte:document onselectionchange={onSelectionChange} onpointerdowncapture={onPointerDown} />
 
 <svelte:head>
@@ -559,6 +602,16 @@
 						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
 					</button>
 				{/if}
+				{#if chapterAudio}
+					<button type="button" class="chip listen" class:on={listening} class:paused={listening && !player.playing} aria-pressed={listening && player.playing} onclick={listen} title={isTamil ? `${primary.short} ஒலி` : `${primary.short} audio`}>
+						{#if listening}
+							<span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+						{:else}
+							<span class="tri" aria-hidden="true">▶</span>
+						{/if}
+						<span lang={isTamil ? 'ta' : 'en'}>{listening ? (isTamil ? 'கேட்கிறது' : 'Listening') : (isTamil ? 'கேள்' : 'Listen')}</span>
+					</button>
+				{/if}
 				<button type="button" class="chip aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 				{#if navUrl(prev)}<a class="chip" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{/if}
 				{#if navUrl(next)}<a class="chip primary" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{/if}
@@ -604,7 +657,7 @@
 
 			{#if !dual}
 				<!-- While words are selected the browser's own selection shows them, not the whole-verse tint. -->
-				<Chapter chapter={data.chapters[0]} lang={primary.lang} selected={textSel ? new Set() : selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} {marks} {sidenotes} onopennote={openNoteFor} />
+				<Chapter chapter={data.chapters[0]} lang={primary.lang} selected={textSel ? new Set() : selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} {marks} {sidenotes} onopennote={openNoteFor} speaking={speakingId} onplay={timed ? playFromId : undefined} />
 			{:else}
 				<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 			{/if}
@@ -632,7 +685,7 @@
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
 				{#snippet actions()}
-					<ActionBar variant="panel" {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
+					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 				{/snippet}
 			</ContextPanel>
 		</aside>
@@ -677,21 +730,22 @@
 
 <!-- Overlays for screens without the context panel -->
 <!-- Phones (design 10A): the thumb bar, and while reading only a floating AA and a progress hairline. -->
-<div class="thumb" class:hidden={chrome.hidden || selected.size > 0}>
+<!-- While audio is on, its bar takes the thumb bar's place (12A). -->
+<div class="thumb" class:hidden={chrome.hidden || selected.size > 0 || !!player.track}>
 	{#if navUrl(prev)}<a class="tb" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{:else}<span class="tb spacer" aria-hidden="true"></span>{/if}
 	<button type="button" class="tb-aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 	{#if navUrl(next)}<a class="tb" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{:else}<span class="tb spacer" aria-hidden="true"></span>{/if}
 </div>
 {#if chrome.hidden}
 	<div class="progress" aria-hidden="true"><span style="width: {Math.round(progress * 100)}%"></span></div>
-	<div class="fade" aria-hidden="true"></div>
+	{#if !player.track}<div class="fade" aria-hidden="true"></div>{/if}
 	{#if selected.size === 0}
 		<button type="button" class="float-aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 	{/if}
 {/if}
 
 <div class="overlays" class:dual>
-	<ActionBar {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} onoriginal={openOriginal} />
+	<ActionBar onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} onoriginal={openOriginal} />
 	{#if sheet}
 		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
 			{#snippet study()}
@@ -735,6 +789,18 @@
 	.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 1rem; margin: 0 0 1.5rem; border-bottom: var(--bw) solid var(--line); }
 	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }
 	.aa { font-family: var(--sans); font-weight: 700; color: var(--accent); gap: 0; }
+	/* கேள் (12B): ▶ in gold; while listening a gold border, the selected-verse fill and three bars. */
+	.listen { font-weight: 700; gap: 8px; }
+	.listen .tri { color: var(--accent); font-size: 11px; }
+	.listen.on { border-color: var(--accent); background: var(--hl); }
+	.bars { display: flex; gap: 2px; align-items: flex-end; height: 12px; }
+	.bars span { display: block; width: 3px; border-radius: 2px; background: var(--accent); animation: eq 0.9s ease-in-out infinite alternate; }
+	.bars span:nth-child(1) { height: 7px; }
+	.bars span:nth-child(2) { height: 12px; animation-delay: -0.3s; }
+	.bars span:nth-child(3) { height: 5px; animation-delay: -0.6s; }
+	.listen.paused .bars span { animation-play-state: paused; }
+	@keyframes eq { from { transform: scaleY(0.45); } to { transform: scaleY(1); } }
+	.bars span { transform-origin: bottom; }
 	.study-chip [lang='ta'] { font-family: var(--tamil); }
 	.aa span { font-size: 0.72em; }
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
@@ -758,7 +824,7 @@
 	.attribution a { color: inherit; }
 	.attribution p { margin: 0.2rem 0; }
 
-	.size { position: fixed; z-index: 16; left: 50%; bottom: max(1.25rem, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(24rem, calc(100vw - 2rem)); padding: 1.1rem; box-shadow: var(--shadow); border-radius: var(--r-2xl); border-color: var(--line-2); display: grid; gap: 0.9rem; }
+	.size { position: fixed; z-index: 17; left: 50%; bottom: calc(max(1.25rem, env(safe-area-inset-bottom)) + var(--player-h, 0px)); transform: translateX(-50%); width: min(24rem, calc(100vw - 2rem)); padding: 1.1rem; box-shadow: var(--shadow); border-radius: var(--r-2xl); border-color: var(--line-2); display: grid; gap: 0.9rem; }
 	.size-head { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; }
 	.size-head [lang='ta'] { font-family: var(--tamil); }
 	.muted { color: var(--muted); font-weight: 400; }
@@ -785,13 +851,14 @@
 		.tb.spacer { visibility: hidden; }
 		.tb-aa { width: 56px; height: 56px; flex: none; border-radius: 999px; border: 0; background: var(--accent); color: var(--on-accent); font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer; }
 		.tb-aa span, .float-aa span { font-size: 11px; }
-		.float-aa { display: flex; align-items: center; justify-content: center; position: fixed; z-index: 14; right: 22px; bottom: max(30px, env(safe-area-inset-bottom)); width: 52px; height: 52px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 92%, transparent); border: var(--bw) solid var(--line-2); color: var(--accent); font-family: var(--sans); font-size: 15px; font-weight: 700; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: var(--shadow); cursor: pointer; }
+		.float-aa { display: flex; align-items: center; justify-content: center; position: fixed; z-index: 14; right: 22px; bottom: calc(max(30px, env(safe-area-inset-bottom)) + var(--player-h, 0px)); width: 52px; height: 52px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 92%, transparent); border: var(--bw) solid var(--line-2); color: var(--accent); font-family: var(--sans); font-size: 15px; font-weight: 700; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: var(--shadow); cursor: pointer; }
 		.progress { display: block; position: fixed; z-index: 14; top: max(4px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); width: 120px; height: 3px; border-radius: 999px; background: var(--line-2); overflow: hidden; pointer-events: none; }
 		.progress span { display: block; height: 100%; background: var(--accent); }
 		.fade { display: block; position: fixed; z-index: 13; left: 0; right: 0; bottom: 0; height: 80px; background: linear-gradient(to top, var(--bg) 45%, transparent); pointer-events: none; }
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.thumb { transition: none; }
+		.bars span { animation: none; }
 	}
 
 	/* Rail joins. The side columns grow with the window up to 312px (rail) and

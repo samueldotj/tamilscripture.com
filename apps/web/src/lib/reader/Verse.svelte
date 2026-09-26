@@ -24,7 +24,9 @@
 		onname,
 		marks = null,
 		sidenotes = null,
-		onopennote
+		onopennote,
+		audio = null,
+		onplay
 	}: {
 		seg: Segment;
 		lang: string;
@@ -48,6 +50,10 @@
 		/** The reader's notes that start in this verse, shown beside it; null when the setting is off. */
 		sidenotes?: SideNote[] | null;
 		onopennote?: (note: Note) => void;
+		/** While a timed recording of this chapter plays (design 12B): the verse number is a
+		 *  ▶ chip, and ❚❚ on the verse being read. */
+		audio?: 'play' | 'current' | null;
+		onplay?: (id: string) => void;
 	} = $props();
 
 	function openName(e: MouseEvent, hit: NameHit) {
@@ -126,9 +132,11 @@
 	{/each}
 {/snippet}
 
-<span class="verse {highlight ? `hl-${highlight}` : ''} {heat ? `heat-${heat}` : ''}" class:selected id={seg.n ? seg.id : undefined} data-verse={seg.id}>
+<span class="verse {highlight ? `hl-${highlight}` : ''} {heat ? `heat-${heat}` : ''}" class:selected class:speaking={audio === 'current'} id={seg.n ? seg.id : undefined} data-verse={seg.id}>
 	{#if seg.n}
-		{#if onselect && seg.id}
+		{#if audio && seg.id}
+			<button type="button" class="vchip" class:on={audio === 'current'} aria-label={audio === 'current' ? (lang === 'ta' ? `வசனம் ${seg.n}: இடைநிறுத்து` : `Verse ${seg.n}: pause`) : (lang === 'ta' ? `வசனம் ${seg.n} முதல் கேள்` : `Play from verse ${seg.n}`)} onclick={() => onplay?.(seg.id!)}><span aria-hidden="true">{audio === 'current' ? '❚❚' : '▶'}</span> {seg.n}</button>
+		{:else if onselect && seg.id}
 			<button type="button" class="vn" aria-label="verse {seg.n}{users ? `, highlighted by ${users} readers` : ''}" title={users ? `${users} readers highlighted this verse` : undefined} aria-pressed={selected} onclick={() => onselect(seg.id!)}>{seg.n}</button>
 		{:else}
 			<sup class="vn" aria-label="verse {seg.n}">{seg.n}</sup>
@@ -155,6 +163,12 @@
 	.verse { scroll-margin-top: 6rem; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 	/* Selected verse: the design's amber block, bled 6px past the text box */
 	.verse.selected { background: var(--hl); box-shadow: 0 0 0 6px var(--hl); }
+	/* The verse being read (12B): a soft gold wash, not a highlight colour. */
+	.verse.speaking { background: color-mix(in srgb, var(--accent) 16%, transparent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 16%, transparent); border-radius: 4px; }
+	/* Verse numbers as play chips while listening (12B): 22px pills, ▶ n, and ❚❚ n filled on the verse being read. */
+	.vchip { display: inline-flex; align-items: center; gap: 4px; vertical-align: 0.15em; margin: 0 6px 0 2px; padding: 0 8px 0 6px; height: 22px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--surface)); background: none; font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--accent); line-height: 1; cursor: pointer; text-indent: 0; -webkit-user-select: none; user-select: none; }
+	.vchip:hover { background: var(--accent-soft); }
+	.vchip.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 800; }
 	.vn { font-family: var(--sans); font-size: 0.58em; color: var(--accent); margin-right: 0.25em; font-weight: 700; vertical-align: super; line-height: 1; }
 	button.vn { border: 0; background: none; padding: 0.15em 0.25em; margin-left: -0.25em; cursor: pointer; border-radius: 4px; }
 	button.vn:hover { background: var(--accent-soft); }
