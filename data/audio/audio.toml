@@ -1,0 +1,2 @@
+# Where the MP3s are served from; usfm-ingest joins it with each object key.
+base = "https://stream.tamilaudiobible.com"

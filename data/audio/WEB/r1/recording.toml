@@ -1,0 +1,29 @@
+# One recording of a version, for tools/audio and usfm-ingest (docs/feature_audio_tool.md §3).
+# Text: World English Bible, public domain
+version     = "WEB"
+recording   = "r1"
+fileset     = ["EN1WEBN2DA", "EN1WEBO2DA"]
+narrator    = ""
+publisher   = "winfred-henson"
+licence     = "℗ Winfred Henson"
+attribution = "World English Bible. Text: public domain. Audio: ℗ Winfred Henson"
+source_url  = ""
+sources     = [
+  { name = "EN1WEBO2DA.zip", sha256 = "fdba7c0e319273a0879b6e77823c27ad4575a63b9a72fa82253cd28090b22fa6" },
+  { name = "EN1WEBN2DA.zip", sha256 = "b2d2bcbb6fcaa3e9d40beaab84562450ae2c07ed087062fb88cae3a20075f087" },
+]
+
+# How the narrator reads (used by `audio align`)
+drama          = true
+reads_headings = false
+intro          = "announce"
+outro          = "none"
+
+[source]
+preset = "fcbh"
+
+[encode]
+bitrate_kbps = 64
+sample_rate  = 44100
+loudness     = -16.0
+true_peak    = -3.0

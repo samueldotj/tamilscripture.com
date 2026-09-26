@@ -167,3 +167,11 @@ data/polities-src/
 # STEPBible data: fetched by scripts/fetch-stepbible.mjs, never committed (STEP asks not to redistribute)
 data/cache/
 data/entities/tipnr/TIPNR.txt
+
+# Audio Bible sources (zips, ~12 GB) and the audio tool's work folder: never committed (docs/feature_audio_tool.md)
+audio_bibles/
+.audio-work/
+
+# audio tool: local virtualenv and bytecode
+tools/audio/.venv/
+__pycache__/

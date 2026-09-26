@@ -12,3 +12,6 @@ source_url = "https://ebible.org/find/details.php?id=engbsb"
 ebible_id = "engbsb"
 order = 3
 default = true
+
+[audio]
+recording = "r1"

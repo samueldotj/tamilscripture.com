@@ -1,5 +1,5 @@
 import { contentUrl } from './manifest';
-import type { ChapterJson, IntroJson, XrefChapter } from './types';
+import type { AudioTimings, ChapterJson, IntroJson, XrefChapter } from './types';
 
 type Fetch = typeof fetch;
 
@@ -19,4 +19,9 @@ export function loadIntro(fetch: Fetch, version: string, book: string) {
 
 export function loadXrefs(fetch: Fetch, book: string, chapter: number) {
 	return getJson<XrefChapter>(fetch, `xref/${book}/${chapter}.json`);
+}
+
+/** Verse start times for a chapter's recording, fetched only when it is played (stage 2). */
+export function loadAudioTimings(fetch: Fetch, version: string, book: string, chapter: number) {
+	return getJson<AudioTimings>(fetch, `${version}/${book}/${chapter}.audio.json`);
 }

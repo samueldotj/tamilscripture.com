@@ -605,6 +605,11 @@ flowchart LR
 - **Chosen:** One canonical (22 Sep 2026). Searches for "John 1:1" were landing on the BSB page with an English title and snippet; the site's purpose is the Tamil text. Every version's chapter, verse, single-verse (`/{version}/{book}/{chapter}.{verse}`) and book page names the IRVTAM page as `rel="canonical"`, carries `hreflang` links (ta and x-default → IRVTAM; no `en` link, since Google ignores an alternate whose own canonical is another page), a title that names the passage in both scripts, a description that is the verse itself, and shows the verse's words first on a verse page. Sitemaps list only the canonical version's chapters.
 - **Consequence:** English and TCV pages stay readable and linkable but drop out of the index in favour of the Tamil page; ranking signals gather on one URL per passage. Revisit if English-only queries matter.
 
+### ADR-16 · The audio tool is Python, run offline; audio data is committed files, not database rows
+- **Options:** Extend the Rust pipeline · a Python tool beside it · verse timings in Postgres read at request time · committed files built into static content.
+- **Chosen:** `tools/audio` in Python (25 Sep 2026), the one exception to ADR-3. Verse alignment (stage 2) needs PyTorch and the MMS aligner, which have no Rust equivalent, and ingest and upload share its state. It runs on the owner's machine, never in CI, because the audio (12 GB of sources) and the R2 key live there. Its output is committed: `data/audio/{VERSION}/{recording}/` holds `recording.toml`, `chapters.tsv` and, from stage 2, timings per book. `usfm-ingest --audio` builds them into chapter JSON and hashes them into the build id. The MP3s live in R2 behind `stream.tamilaudiobible.com`, a Cloudflare zone kept separate so the site never depends on Cloudflare.
+- **Consequence:** Audio follows the text's model (static, CDN-cached, offline-capable, versioned in git), and playback never waits on Postgres. A timing correction reaches the site with the next deploy. Uploads are one-way and never overwrite an object, so a changed recording needs a new recording id. See docs/feature_audio.md and docs/feature_audio_tool.md.
+
 ## 13. Risks and mitigations
 
 | Risk | Impact | Mitigation |

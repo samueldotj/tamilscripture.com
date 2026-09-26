@@ -42,6 +42,34 @@ export interface ChapterJson {
 	bridges?: Record<string, string>;
 	prev: ChapterRef | null;
 	next: ChapterRef | null;
+	/** The chapter's recording, when its version has one (docs/feature_audio.md). */
+	audio?: ChapterAudio;
+}
+
+export interface ChapterAudio {
+	/** The MP3 on the audio CDN. */
+	src: string;
+	/** Duration in milliseconds. */
+	ms: number;
+	/** Verse start times are in `{chapter}.audio.json` beside the chapter (stage 2). */
+	timed?: boolean;
+}
+
+/** `{chapter}.audio.json`: each verse's start in ms, `[verse, ms]` in order. */
+export interface AudioTimings {
+	verses: [number, number][];
+}
+
+/** A version's live recording, for the player's credits and /about. */
+export interface VersionAudio {
+	recording: string;
+	narrator?: string;
+	publisher?: string;
+	licence: string;
+	attribution: string;
+	source_url?: string;
+	/** Several voices with music under them, rather than one narrator. */
+	drama?: boolean;
 }
 
 export interface IntroBlock {
@@ -80,6 +108,8 @@ export interface VersionMeta {
 	default?: boolean;
 	/** Book names from the version's own headers, for languages books.toml does not name. */
 	book_names?: Record<string, string>;
+	/** The live recording, when the version has audio. */
+	audio?: VersionAudio;
 }
 
 export interface Book {

@@ -18,6 +18,8 @@ jobs:
       - run: cargo fmt --all --check
       - run: cargo clippy --workspace --all-targets -- -D warnings
       - run: cargo test --workspace
+      - name: Audio tool unit tests (standard library only)
+        run: python3 -m unittest discover -s tools/audio/tests
       - name: Generated SQL is current
         run: cargo run -q -p tamil-norm --bin tamil-norm-sql | diff - supabase/generated/tamil_norm.sql
       - name: STEPBible data (fetched, never committed)
@@ -31,14 +33,14 @@ jobs:
       - name: Build full content (strict validation)
         run: |
           cargo run --release -p usfm-ingest -- \
-            --books data/books.toml --xrefs data/xrefs/cross_references.txt \
+            --books data/books.toml --xrefs data/xrefs/cross_references.txt --audio data/audio \
             --out /tmp/content \
             data/versions
           cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content /tmp/content
       - name: Determinism check
         run: |
           cargo run --release -p usfm-ingest -- \
-            --books data/books.toml --xrefs data/xrefs/cross_references.txt \
+            --books data/books.toml --xrefs data/xrefs/cross_references.txt --audio data/audio \
             --out /tmp/content2 \
             data/versions
           cargo run --release -p entity-ingest -- --books data/books.toml --entities data/entities --content /tmp/content2

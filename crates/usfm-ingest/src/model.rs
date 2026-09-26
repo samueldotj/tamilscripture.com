@@ -20,6 +20,20 @@ pub struct ChapterJson {
     pub bridges: std::collections::BTreeMap<String, String>,
     pub prev: Option<ChapterRef>,
     pub next: Option<ChapterRef>,
+    /// The chapter's recording, when the version has one (docs/feature_audio.md).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub audio: Option<ChapterAudio>,
+}
+
+/// `audio` in a chapter file: where the MP3 is and how long it runs.
+#[derive(Debug, Serialize, Clone, PartialEq)]
+pub struct ChapterAudio {
+    pub src: String,
+    pub ms: u64,
+    /// Verse start times exist in `{chapter}.audio.json` beside the chapter
+    /// (stage 2, docs/feature_audio_tool.md T7); false until then.
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub timed: bool,
 }
 
 #[derive(Debug, Serialize, Clone)]
@@ -134,6 +148,29 @@ pub struct VersionMeta {
     /// does not name (it carries Tamil and English); filled in by the pipeline.
     #[serde(default, skip_serializing_if = "std::collections::BTreeMap::is_empty")]
     pub book_names: std::collections::BTreeMap<String, String>,
+    /// `[audio] recording = "r1"` names the live recording; the pipeline fills
+    /// in the rest from that recording's `recording.toml`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub audio: Option<VersionAudio>,
+}
+
+/// A version's live recording, for the player's credits and `/about`.
+#[derive(Debug, Serialize, Clone, Default, serde::Deserialize)]
+pub struct VersionAudio {
+    pub recording: String,
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub narrator: String,
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub publisher: String,
+    #[serde(default)]
+    pub licence: String,
+    #[serde(default)]
+    pub attribution: String,
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub source_url: String,
+    /// Several voices with music under them, rather than one narrator.
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub drama: bool,
 }
 
 fn default_order() -> u32 {

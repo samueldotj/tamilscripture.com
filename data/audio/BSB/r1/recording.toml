@@ -1,0 +1,29 @@
+# One recording of a version, for tools/audio and usfm-ingest (docs/feature_audio_tool.md §3).
+# Text: Berean Standard Bible, public domain, BSB Publishing
+version     = "BSB"
+recording   = "r1"
+fileset     = ["ENGBERN1DA", "ENGBERO1DA"]
+narrator    = ""
+publisher   = ""
+licence     = "Public domain"
+attribution = "Berean Standard Bible audio, ℗ public domain"
+source_url  = ""
+sources     = [
+  { name = "ENGBERO1DA.zip", sha256 = "4fd98e2260542ff46058ea3ecb6018e4b2750b0447c781181919d5bf27177528" },
+  { name = "ENGBERN1DA.zip", sha256 = "1ef42ea6a59704ea835e5bd004a5abbce1b9212c522d9345cd72da29b06ae43d" },
+]
+
+# How the narrator reads (used by `audio align`)
+drama          = false
+reads_headings = false
+intro          = "announce"
+outro          = "none"
+
+[source]
+preset = "dbp"
+
+[encode]
+bitrate_kbps = 64
+sample_rate  = 44100
+loudness     = -16.0
+true_peak    = -3.0

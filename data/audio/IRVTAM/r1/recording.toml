@@ -1,0 +1,29 @@
+# One recording of a version, for tools/audio and usfm-ingest (docs/feature_audio_tool.md §3).
+# Text: Indian Revised Version Tamil, © 2017, 2019 Bridge Connectivity Solutions, CC BY-SA 4.0
+version     = "IRVTAM"
+recording   = "r1"
+fileset     = ["TAMDPIN1DA", "TAMDPIO1DA"]
+narrator    = ""
+publisher   = "davar-partners-international"
+licence     = "CC BY-SA 4.0"
+attribution = "Indian Revised Version (IRV) Tamil, CC-BY-SA-4.0, Bridge Connectivity Solutions, 2019 (Text), Tamil Indian Revised Audio Version, CC-BY-SA-4.0, Davar Partners International, 2021 (Audio)"
+source_url  = ""
+sources     = [
+  { name = "IRV-TAMDPIO1DA.zip", sha256 = "1249ad558d0806656ceeeb32134ad106982deaae23c3426f219744203e330162" },
+  { name = "IRV-TAMDPIN1DA.zip", sha256 = "6d900c5d55191ea0f66c05670c92389fb6071da4f6f4c6415fa3aa86af49905c" },
+]
+
+# How the narrator reads (used by `audio align`)
+drama          = false
+reads_headings = false
+intro          = "announce"
+outro          = "none"
+
+[source]
+preset = "fcbh"
+
+[encode]
+bitrate_kbps = 64
+sample_rate  = 44100
+loudness     = -16.0
+true_peak    = -3.0

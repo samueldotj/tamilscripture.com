@@ -2,7 +2,7 @@
 //!
 //! Usage:
 //!   usfm-ingest --books data/books.toml --xrefs data/xrefs/cross_references.txt \
-//!               --out apps/web/static/content data/versions
+//!               --audio data/audio --out apps/web/static/content data/versions
 //!
 //! Each version directory holds `version.toml` and one `.usfm` file per book.
 //! A directory without `version.toml` stands for every version directory in
@@ -13,8 +13,11 @@
 //!   {build}/{VERSION}/{BOOK}/intro.json        book introduction, when present
 //!   {build}/xref/{BOOK}/{chapter}.json         cross-references
 //!   {build}/search/{VERSION}.csv               verse_id,version,lang,book_ord,text
+//! A version whose `version.toml` has `[audio] recording = "…"` takes that
+//! recording from --audio (see audio.rs) into its manifest entry and chapters.
 //! Exit status is non-zero if any input fails validation.
 
+mod audio;
 mod books;
 mod hash;
 mod model;
@@ -31,6 +34,7 @@ use std::path::{Path, PathBuf};
 struct Args {
     books: PathBuf,
     xrefs: Option<PathBuf>,
+    audio: Option<PathBuf>,
     out: PathBuf,
     versions: Vec<PathBuf>,
     strict: bool,
@@ -40,6 +44,7 @@ fn parse_args() -> Result<Args> {
     let mut a = Args {
         books: PathBuf::from("data/books.toml"),
         xrefs: None,
+        audio: None,
         out: PathBuf::from("out"),
         versions: Vec::new(),
         strict: true,
@@ -49,10 +54,11 @@ fn parse_args() -> Result<Args> {
         match arg.as_str() {
             "--books" => a.books = it.next().context("--books needs a path")?.into(),
             "--xrefs" => a.xrefs = Some(it.next().context("--xrefs needs a path")?.into()),
+            "--audio" => a.audio = Some(it.next().context("--audio needs a path")?.into()),
             "--out" => a.out = it.next().context("--out needs a path")?.into(),
             "--lenient" => a.strict = false,
             "-h" | "--help" => {
-                eprintln!("usfm-ingest --books B --xrefs X --out DIR [--lenient] VERSION_DIR...");
+                eprintln!("usfm-ingest --books B --xrefs X [--audio A] --out DIR [--lenient] VERSION_DIR...");
                 std::process::exit(0);
             }
             other if other.starts_with("--") => bail!("unknown flag {other}"),
@@ -140,6 +146,29 @@ fn main() -> Result<()> {
             hasher.update(&fs::read(f)?);
         }
     }
+    // Recordings, for versions that name one; their files join the build id.
+    let mut problems: Vec<String> = Vec::new();
+    let mut recordings: Vec<Option<audio::Recording>> = Vec::new();
+    for v in &inputs {
+        let Some(want) = &v.meta.audio else {
+            recordings.push(None);
+            continue;
+        };
+        let Some(dir) = &args.audio else {
+            problems.push(format!(
+                "{}: version.toml names recording {} but --audio was not given",
+                v.meta.code, want.recording
+            ));
+            recordings.push(None);
+            continue;
+        };
+        let (rec, rec_problems) = audio::Recording::load(dir, &v.meta.code, &want.recording)?;
+        problems.extend(rec_problems);
+        for f in &rec.files {
+            hasher.update(&fs::read(f)?);
+        }
+        recordings.push(Some(rec));
+    }
     let xref_index = match &args.xrefs {
         Some(p) => {
             hasher.update(&fs::read(p)?);
@@ -155,7 +184,6 @@ fn main() -> Result<()> {
     }
     fs::create_dir_all(&build_dir)?;
 
-    let mut problems: Vec<String> = Vec::new();
     let mut versions_meta = Vec::new();
     // One version per code, and at most one default per language.
     let mut seen_codes = std::collections::BTreeSet::new();
@@ -172,7 +200,7 @@ fn main() -> Result<()> {
         }
     }
 
-    for input in &inputs {
+    for (input, recording) in inputs.iter().zip(&recordings) {
         let code = input.meta.code.clone();
         eprintln!("[{code}] {} files", input.files.len());
         let mut parsed: BTreeMap<usize, usfm::ParsedBook> = BTreeMap::new();
@@ -203,6 +231,25 @@ fn main() -> Result<()> {
                 ));
             }
             parsed.insert(idx, book);
+        }
+        if let Some(rec) = recording {
+            for (book, chapter) in rec.chapter_keys() {
+                let known = books
+                    .index(book)
+                    .and_then(|i| parsed.get(&i))
+                    .is_some_and(|b| b.chapters.iter().any(|c| c.number == *chapter));
+                if !known {
+                    problems.push(format!(
+                        "{code} recording {}: {book} {chapter} is not in the text",
+                        rec.meta.recording
+                    ));
+                }
+            }
+            eprintln!(
+                "[{code}] audio {}: {} chapters",
+                rec.meta.recording,
+                rec.chapter_keys().count()
+            );
         }
 
         // Chapter files, intro files, search CSV.
@@ -260,6 +307,9 @@ fn main() -> Result<()> {
                     bridges: ch.bridges.clone(),
                     prev,
                     next,
+                    audio: recording
+                        .as_ref()
+                        .and_then(|r| r.chapter(&code, &meta.code, ch.number)),
                 };
                 write_json(
                     &build_dir
@@ -307,6 +357,7 @@ fn main() -> Result<()> {
         fs::create_dir_all(&search_dir)?;
         fs::write(search_dir.join(format!("{code}.csv")), csv)?;
         let mut meta = input.meta.clone();
+        meta.audio = recording.as_ref().map(|r| r.meta.clone());
         meta.books = order.iter().map(|&i| books.list[i].code.clone()).collect();
         // books.toml names the books in Tamil and English; any other language
         // takes them from the version's own \h headers.

@@ -1,0 +1,29 @@
+# One recording of a version, for tools/audio and usfm-ingest (docs/feature_audio_tool.md §3).
+# Text: King James (Authorized) Version, 1769 text, public domain
+version     = "KJV"
+recording   = "r1"
+fileset     = ["ENGKJVN1DA", "ENGKJVO1DA"]
+narrator    = ""
+publisher   = "hosanna"
+licence     = "℗ 1997 Hosanna"
+attribution = "King James Version. Text: public domain. Audio: ℗ 1997 Hosanna"
+source_url  = ""
+sources     = [
+  { name = "ENGKJVO1DA.zip", sha256 = "32a28a3ed06b257a25dfef816303f6d879bca57735752559486fc05f026020b1" },
+  { name = "ENGKJVN1DA.zip", sha256 = "e2981f69faa616baad9af2ef474c7842066169ea88a1dedb3ddd9f8cdbabe57e" },
+]
+
+# How the narrator reads (used by `audio align`)
+drama          = false
+reads_headings = false
+intro          = "announce"
+outro          = "none"
+
+[source]
+preset = "fcbh"
+
+[encode]
+bitrate_kbps = 64
+sample_rate  = 44100
+loudness     = -16.0
+true_peak    = -3.0
