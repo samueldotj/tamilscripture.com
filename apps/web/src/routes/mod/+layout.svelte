@@ -27,7 +27,7 @@
 		['/mod', ta ? 'வரிசை' : 'Queue'],
 		['/mod/history', ta ? 'வரலாறு' : 'History'],
 		['/mod/traffic', ta ? 'வருகை' : 'Traffic'],
-		...(role === 'moderator' ? [['/mod/roles', ta ? 'பங்குகள்' : 'Roles']] : [])
+		...(role === 'moderator' ? [['/mod/plans', ta ? 'திட்டங்கள்' : 'Plans'], ['/mod/roles', ta ? 'பங்குகள்' : 'Roles']] : [])
 	]);
 </script>
 

@@ -154,6 +154,7 @@
 		</div>
 		{#if session.ready && session.signedIn}
 			<nav class="mine" aria-label={ta ? 'என் பக்கங்கள்' : 'My pages'}>
+				<a href="/plans" onclick={close}>{ta ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'}</a>
 				<a href="/me/history" onclick={close}>{ta ? 'வரலாறு' : 'History'}</a>
 				<a href="/me/highlights" onclick={close}>{ta ? 'அடிக்கோடுகள்' : 'Highlights'}</a>
 				<a href="/me/presentations" onclick={close}>{ta ? 'விளக்கக்காட்சிகள்' : 'Presentations'}</a>

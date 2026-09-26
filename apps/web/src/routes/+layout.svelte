@@ -207,6 +207,7 @@
 						<!-- svelte-ignore a11y_no_static_element_interactions -->
 						<div class="menu" role="menu" tabindex="-1" onmouseleave={() => (menuOpen = false)}>
 							<span class="who">{session.user?.email}</span>
+							<a role="menuitem" href="/plans" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'}</a>
 							<a role="menuitem" href="/me/history" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'வரலாறு' : 'History'}</a>
 							<a role="menuitem" href="/me/highlights" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'அடிக்கோடுகள்' : 'Highlights'}</a>
 							<a role="menuitem" href="/me/notes" onclick={() => (menuOpen = false)}>{ui === 'ta' ? 'குறிப்புகள்' : 'Notes'}</a>
@@ -244,6 +245,7 @@
 {#if !bleed && !bare}
 <footer class="site-foot">
 	<a href="/about">{ui === 'ta' ? 'பற்றி' : 'About'}</a>
+	<a href="/plans">{ui === 'ta' ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'}</a>
 	<a href="/licences">{ui === 'ta' ? 'உரிமங்கள்' : 'Licences'}</a>
 	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>
 	<a href="/dictionary">{ui === 'ta' ? 'அகராதி' : 'Dictionary'}</a>
