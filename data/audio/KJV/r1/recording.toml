@@ -23,3 +23,13 @@ bitrate_kbps = 64
 sample_rate  = 44100
 loudness     = -16.0
 true_peak    = -3.0
+
+[align]                       # written by `audio align --probe` (docs/feature_audio_tool.md §5)
+reads_text = "KJV"
+text_score = 0.965
+other_texts = { WEB = 0.801, BSB = 0.713 }
+reads_headings = false
+heading_score = 0.35
+opening_s = 3.5
+probe_chapters = 14
+model = "torchaudio MMS_FA (torch 2.11.0+cu128, torchaudio 2.11.0+cu128, cuda)"
