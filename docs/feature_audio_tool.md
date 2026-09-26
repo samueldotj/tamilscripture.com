@@ -76,11 +76,7 @@ source_url  = "…"
 sources     = [{ name = "IRV-TAMDPIO1DA.zip", sha256 = "…" },
                { name = "IRV-TAMDPIN1DA.zip", sha256 = "…" }]
 
-# How the narrator reads
-drama          = false        # true: several voices with music and effects under them (FCBH "2DA")
-reads_headings = false        # section headings spoken aloud?
-intro          = "announce"   # "announce": each file opens with "யோவான், மூன்றாம் அதிகாரம்"; "none"
-outro          = "none"       # "music" or "announce" if something follows the last verse
+drama       = false            # several voices with music and effects under them (FCBH "2DA")
 
 # How source files are named: a preset, or a regex with named groups
 [source]
@@ -93,10 +89,12 @@ bitrate_kbps = 64
 sample_rate  = 44100
 loudness     = -16.0          # LUFS, EBU R128
 
-[align]
-model     = "torchaudio MMS_FA"
-torch     = "2.x.y"           # written by the tool on each run, for reproducibility
-threshold = 0.45              # verse score below this is flagged
+[align]                       # written by `audio align --probe`, then used by every run (§5)
+reads_text     = "IRVTAM"     # the text the recording matched best
+text_score     = 0.96         # its mean word score over the probe chapters
+reads_headings = false        # mid-chapter headings spoken aloud?
+model          = "torchaudio MMS_FA"
+torch          = "2.11.0+cu128"
 ```
 
 `chapters.tsv`, one row per encoded chapter:
@@ -156,47 +154,75 @@ chapter	verse	start_ms	end_ms	score	flag
 
 ## 5. Align
 
-### Method
+### What the spike established (25 Sep 2026)
 
-This is forced alignment with Meta's MMS model (`torchaudio.pipelines.MMS_FA`, with the star token). The text is known, so the model only has to place each romanised character in time; it never has to guess the words. MMS was trained on read Bible audio in more than 1,100 languages, Tamil and English among them, which is as close a match to this task as exists. The reasons for choosing it over aeneas and Whisper are in feature_audio.md §5.
+A throwaway script ran MMS forced alignment on the owner's RTX 5090 (PyTorch 2.11, CUDA 12.8) against the encoded MP3s and the built chapter JSON:
+
+| Audio | Text | Words | Mean word score | Verses under 0.45 | GPU time for the chapter |
+|---|---|---|---|---|---|
+| BSB John 3 (5:12) | BSB | 732 | **0.972** | 0 of 36 | 1.5 s emissions + 0.8 s alignment |
+| IRV John 3 (6:03) | IRV | 453 | **0.962** | 0 of 36 | 1.1 s + 0.9 s |
+| IRV Genesis 1 (5:43) | IRV | 437 | **0.964** | 0 of 31 | 1.2 s + 1.2 s |
+| "TCV" Genesis 1 | TCV | 458 | 0.599 | 2 of 31 | — |
+| "TCV" Genesis 1 | IRV | 437 | **0.960** | 0 of 31 | — |
+| "TCV" Genesis 2, Psalm 23, Matthew 5 | TCV | — | 0.56–0.60 | — | — |
+| the same three | IRV | — | **0.93–0.96** | — | — |
+
+What follows from it:
+
+- **Accuracy is high enough to ship without a person checking every verse.** Matched text scores 0.93–0.97, with no verse under the flag threshold.
+- **A wrong text is obvious.** A mismatched text scores about 0.6, a gap no borderline chapter comes near. The chapter-level mismatch test is therefore a mean word score under **0.80**, not a count of flagged verses.
+- **The "TCV" recording reads the IRV text** throughout the OT and NT (§14), whatever its tags say. The mismatch test found it on the first chapter tried.
+- **Headings can be detected rather than configured.** Forcing BSB's section heading into the transcript gave its words a score of 0.002: the narrator skips it. IRV John 3's heading scored 0.29. `reads_headings` therefore becomes a measured value (below), not a guess in `recording.toml`.
+- **Every file opens with 4–8 s before verse 1** (the chapter announcement). Wildcards at both ends absorb it without any setting, so `intro` and `outro` are dropped from `recording.toml`.
+- **Speed is not a concern on this GPU.** About 200–300× real time plus a one-off 5–30 s model load, so a whole version of about 90 hours of audio aligns in roughly 20–30 minutes. A CPU run would take hours, as estimated before.
+
+### Model and licence
+
+| Option | Licence | Status |
+|---|---|---|
+| **`torchaudio.pipelines.MMS_FA`** (MMS 300M, 1,130 languages, uroman input, star token) | Weights **CC BY-NC 4.0**; torchaudio BSD | Chosen. torchaudio had planned to remove `forced_align` in 2.9, then kept it after 2.10 ([pytorch/audio#3902](https://github.com/pytorch/audio/issues/3902)); 2.11 ships it |
+| `ctc-forced-aligner` (the same MMS weights, with windowing built in) | BSD code; the default model is CC BY-NC 4.0 too | A fallback wrapper; no licence advantage |
+| Per-language wav2vec2 CTC models fine-tuned on Tamil or English (for example the XLSR-53 fine-tunes on Hugging Face) | Several are Apache-2.0 or MIT | The fallback if the non-commercial licence is unacceptable. Weaker on Tamil, native-script vocabularies, no star token, so the ends need trimming by silence detection instead |
+
+**The weights' non-commercial licence is accepted** (owner, 25 Sep 2026): the site is non-commercial. The model runs offline, and only its output (verse start times) is published.
+
+### Probe: what a recording does (`audio align --probe`)
+
+Before a full run, align about 12 chapters spread across the canon (Genesis 1, Psalm 23, Isaiah 53, Matthew 5, John 3, Romans 8, Revelation 21, and so on) three ways, and write the answers into `recording.toml` under `[align]`:
+
+1. **Which text it reads.** Score against every same-language version's text. The best mean must be at least 0.85, belong to this version, and beat the runner-up by 0.2. Otherwise the probe stops and names the text it matched ("this recording reads IRVTAM").
+2. **Whether headings are read.** Align with mid-chapter section headings in the transcript (`s` and `ms` headings after verse 1; the one before verse 1 sits against the announcement and is ambiguous). If their words score a mean of at least 0.6, set `reads_headings = true`; otherwise false.
+3. **How long the openings are**, for the report only: the median time to the first word of verse 1.
 
 ### Per chapter
 
-1. **Build the transcript** from the chapter JSON:
-   - verse text in order, keeping each word's verse number
-   - headings only if `reads_headings`
-   - footnotes and cross-references never, since they aren't in the verse text
-2. **Normalise** each word so it is spoken the way it is written:
+1. **Transcript** from the built chapter JSON: verse segments in order, each word tagged with its verse. Headings go in only if the probe found them read, and never `r`, `mr` or `sr` references. Footnotes are never included; they aren't in the segment text.
+2. **Normalise** each word so it matches what is spoken:
 
    | Step | Tamil | English |
    |---|---|---|
-   | Unicode | NFC; zero-width joiners and non-joiners removed | NFC |
-   | Punctuation | removed, including quotes, brackets, dashes and `…` | the same; hyphenated words split |
-   | Numbers | digits to words with the tool's Tamil number speller (up to 999,999; `144,000` → நூற்றி நாற்பத்து நான்காயிரம்) | `num2words` |
-   | Case | — | lower case (`LORD` → `lord`) |
-   | Romanise | `uroman` | `uroman`, which leaves Latin letters as they are |
-   | Characters | only those in the MMS vocabulary are kept; a word left empty is dropped but its verse keeps its other words | the same |
+   | Unicode | NFC; drop U+200C/U+200D (IRV has them) | NFC |
+   | Marks | drop `¶ [ ] ( )`, quotes, dashes, `/` | the same (KJV has `¶` and `[ ]`); split hyphenated words |
+   | Numbers | the Tamil number speller (below): 484 IRV and 377 TCV verses contain digits | `num2words` on 512 BSB verses; WEB and KJV spell numbers out |
+   | Romanise | `uroman` (the `uroman` Python package, `lcode="tam"`) | `uroman`, which leaves Latin letters as they are |
+   | Filter | keep only characters in the MMS vocabulary, lower case; a word left empty is dropped, but its verse keeps its other words | the same |
 
-   A verse whose words all vanish, which is rare (a verse of only a number or a symbol), gets no timing of its own and takes the start of the next word.
-3. **Wrap** the transcript in wildcards: a star token at the start when `intro = announce`, and at the end when `outro` is not `none`. The chapter announcement and any closing music are absorbed there, not stretched over verse 1 or the last verse.
-4. **Emissions.** Run the model over the 16 kHz audio in 30-second windows with a 2-second overlap, keeping the centre of each overlap, so long chapters (Psalm 119 runs to about 25 minutes) fit in memory. This gives 50 frames a second.
-5. **Align** with `torchaudio.functional.forced_align`. Merge the token spans into words (`merge_tokens`, then group by word), and convert frames to milliseconds.
-6. **Verse starts.** For verse *n*, let *a* be the end of the last word of verse *n − 1* and *b* the start of the first word of verse *n*. The start is `max((a + b) / 2, b − 300 ms)`. A seek then lands in the breath between verses, never on a clipped first sound. Verse 1 uses the end of the intro wildcard as *a*. Each verse's `end_ms` is the next verse's start; for the last verse it is the end of its last word plus 300 ms, capped at the file length.
-7. **Score** each verse by the mean probability of its aligned tokens, from 0 to 1.
-8. **Check and flag.** A verse is flagged `low` if any of these fail:
-   - its score is under `threshold`
-   - its speaking rate (romanised characters per second) is more than 2.5× or less than 0.4× the chapter median
-   - its start does not increase on the previous verse's start
-   - it is the last verse and its end is more than 5 s before the end of the file, with `outro = none`
+3. **Tamil number speller** (`tools/audio/src/audio_tool/tamil_numbers.py`): cardinals to 10⁷ in the combining forms narrators use (`1,400` → ஆயிரத்து நானூறு, `144,000` → இலட்சத்து நாற்பத்து நான்காயிரம்), with commas and full stops as separators. A digit run followed by a case suffix (`12-ல்`, `3ஆம்`) is spelled and the suffix attached. Where the spoken form differs anyway, the word's low score lands in that verse alone and the verse boundaries either side still hold, because the words round it align.
+4. **Wildcards** at both ends, always: one star word before the transcript and one after.
+5. **Emissions** in 30 s windows with 2 s of context either side, the context frames trimmed off, concatenated. This is what the spike did; Psalm 119, at 17 minutes, fits in memory. It runs in fp16 on CUDA.
+6. **Align** with `torchaudio.functional.forced_align` through the bundle's aligner, and group token spans into words.
+7. **Verse starts:** `max((a + b) / 2, b − 300 ms)`, where *a* is the end of the previous verse's last word (for verse 1, 600 ms before its first word) and *b* is the start of this verse's first word. `end_ms` is the next verse's start; for the last verse, its last word's end plus 300 ms, capped at the file length.
+8. **Score** each verse by the frame-weighted mean of its tokens' probabilities.
+9. **Check and flag:**
+   - A verse is flagged `low` if its score is under 0.45, or if its rate (romanised characters per second) is outside 0.4–2.5× the chapter median (0.33–3× for `drama`). The spike found none.
+   - The chapter is marked **mismatch** if its mean word score is under 0.80. It then gets no rows, and the reader falls back to playing from the chapter start.
+   - Starts must increase; a failure here is a bug, so the run stops.
+10. **Write** `timings/{BOOK}.tsv`, keeping rows flagged `edited`, and `align/{BOOK}_{ccc}.json` with every word's span and score, for the review page.
 
-   For a `drama` recording, the score threshold is lowered by 0.1 and the rate limits widened to 3× and 0.33×. Music under the voice lowers every score a little, and several readers vary the pace more than one narrator does.
+### Dependencies
 
-   A chapter where more than 30% of verses are flagged is marked **mismatch** in the report and gets no timings file rows. This almost always means the recording follows another edition of the text, or the file is the wrong chapter.
-9. **Write** that book's `timings/{BOOK}.tsv`, keeping rows flagged `edited`, and `align/{BOOK}_{ccc}.json` with every word's span and score.
-
-### Speed
-
-MMS is a 300-million-parameter model. On a recent 8-core laptop CPU, expect roughly 5–10 hours for a whole Bible of about 80 hours of audio. On a mid-range NVIDIA GPU, expect under an hour. Because chapters are resumable, an overnight CPU run is the plan. `--book` makes it easy to try one book first.
+An optional extra in `pyproject.toml`: `pip install -e "tools/audio[align]"`, with `torch` and `torchaudio` from the CUDA 12.8 index (the RTX 5090 needs it), plus `uroman` and `num2words`. The extra keeps T1–T4 installable without PyTorch. The model (1.2 GB) is cached under `~/.cache/torch/hub`.
 
 ### Report
 
@@ -319,7 +345,7 @@ Then set `[audio] recording = "r1"` in `data/versions/irvtam/version.toml`, comm
 | **T2 · Ingest** | unzip, presets and patterns, mapping checks, two-pass encode, `chapters.tsv`. **Built 25 Sep 2026**; `run` (ingest + align) waits for T5 | T1, a sample zip |
 | **T3 · Upload and verify** | boto3 upload with hash checks, masters, verify. **Built 25 Sep 2026**, not yet run against R2 | T2, R2 key |
 | **T4 · Build** | `usfm-ingest --audio`, `audio` in chapter JSON and the manifest, build id, validation, fixture recording (`data/fixtures/audio`). **Built 25 Sep 2026** | T2 |
-| **T5 · Align** | normaliser, number speller, windowed emissions, forced alignment, boundary rule, checks, timings TSV, report | T2 |
+| **T5 · Align** | `[align]` extra; probe (text match, headings); normaliser and Tamil number speller; windowed emissions; forced alignment; boundary rule; checks; timings TSV; report. Spike done 25 Sep 2026 (§5) | T2 |
 | **T6 · Review** | local review page | T5 |
 | **T7 · Verse files** | `.audio.json` output and fallback rules | T4, T5 |
 
@@ -334,6 +360,8 @@ T1–T4 are all stage 1 needs. T5–T7 are stage 2.
 | The narrator adds words that aren't in the text, such as "the Gospel according to John" or a chapter summary | The wildcards absorb speech at either end. Speech in the middle lowers the scores and is flagged |
 | The Tamil text has words MMS rarely heard, such as Sanskrit-derived names | Romanisation keeps them pronounceable, alignment is forced rather than recognised, and a low score only flags the verse |
 | PyTorch or torchaudio changes the aligner | Versions are locked in `uv.lock` and recorded in `recording.toml`. The slow test catches drift |
+| The MMS weights are licensed CC BY-NC 4.0 | Accepted by the owner on 25 Sep 2026: the site is non-commercial. If that ever changes, the fallback is permissively licensed per-language wav2vec2 models (§5), at some cost in accuracy |
+| A recording reads a different text from its label (found: "TCV" reads IRV) | The probe compares every same-language text before any timing is written, and refuses to go on unless the recording's own version wins clearly |
 | The R2 key leaks | It lives only in the environment or `.env.audio`. It can reach only the two buckets and can be revoked in the dashboard without touching the site |
 
 ## 14. Sources on hand (25 Sep 2026)
@@ -346,7 +374,7 @@ Ten zips in `audio_bibles/` (git-ignored, about 12 GB): an OT and an NT zip for 
 | WEB | `EN1WEBO2DA`, `EN1WEBN2DA` | `fcbh` | **Drama** | Text public domain; "Audio: ℗ Winfred Henson" |
 | KJV | `ENGKJVO1DA`, `ENGKJVN1DA` | `fcbh` | Narrated | Text public domain; "Audio: ℗ 1997 & 2000 Hosanna" (Faith Comes By Hearing) |
 | IRVTAM | `IRV-TAMDPIO1DA`, `IRV-TAMDPIN1DA` | `fcbh` | Narrated | none |
-| TCV | `TCV-TAMDIPO1DA`, `TCV-TAMDIPN1DA` | `fcbh` | Narrated | none |
+| ~~TCV~~ | `TCV-TAMDIPO1DA`, `TCV-TAMDIPN1DA` | `fcbh` | Narrated | none; **reads the IRV text, removed** (below) |
 
 What this means for publishing (feature_audio.md §9: nothing is uploaded until its licence permits rehosting):
 
@@ -360,9 +388,10 @@ Credits supplied by the owner on 25 Sep 2026, now in each `recording.toml`:
 |---|---|---|---|
 | BSB | Public domain | Berean Standard Bible audio, ℗ public domain (from the zip) | — |
 | IRVTAM | CC BY-SA 4.0 | Indian Revised Version (IRV) Tamil, CC-BY-SA-4.0, Bridge Connectivity Solutions, 2019 (Text), Tamil Indian Revised Audio Version, CC-BY-SA-4.0, Davar Partners International, 2021 (Audio) | `davar-partners-international` |
-| TCV | CC BY-SA 4.0 | Biblica® Open Indian Tamil Contemporary Version™, Audio Edition. Copyright ℗ 2024 Biblica, Inc. and Davar Partners International, with the text's CC BY-SA 4.0 notice | `davar-partners-international` |
 | KJV | ℗ 1997 Hosanna | Text: public domain. Audio: ℗ 1997 Hosanna | `hosanna` |
 | WEB | ℗ Winfred Henson | Text: public domain. Audio: ℗ Winfred Henson | `winfred-henson` |
 
 All ten zips map completely (1,189 chapters each) with the `fcbh` or `dbp` preset.
+
+**The "TCV" recording is not TCV** (found by the T5 spike, 25 Sep 2026). Its ID3 tags carry the *Biblica Open Indian Tamil Contemporary Version, Audio Edition, ℗ 2024 Biblica and Davar Partners* notice. Yet aligned against the TCV text it scores 0.56–0.60 in Genesis 1 and 2, Psalm 23 and Matthew 5, and against the IRV text 0.93–0.96. Its files are not copies of the IRV recording: every hash differs and chapters run about 1 s longer, so it is most likely the same narration remastered and issued under the TCV name. **Owner's decision, 25 Sep 2026: TCV audio removed.** `data/audio/TCV/` and its encodes were deleted, and TCV has no audio until a recording of the TCV text is found. The owner may want to tell Davar Partners or Faith Comes By Hearing about the mislabelled fileset (`TAMDIP`).
 - The tool can run `ingest` and `align` on any of them locally meanwhile. Only `upload` waits for the licence.

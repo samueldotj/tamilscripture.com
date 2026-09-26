@@ -162,7 +162,7 @@ The details are in [feature_audio_tool.md §5–6](feature_audio_tool.md#5-align
 |---|---|---|
 | **A1 · Storage and tool** | Buckets, custom domain, CORS, cache rule (done 24 Sep 2026); tool steps T1–T4 (skeleton, ingest, upload and verify, build) | Storage done; T1–T4 built 25 Sep 2026; first upload pending |
 | **A2 · Player** | கேள் button, docked bar (12B), phone bar (12A), controls, speed, Media Session, continuous play, keys; verse chips, wash and play-from-verse ready for timings | Built 25 Sep 2026; analytics event and /about credits to do |
-| **A3 · Alignment tool** | Tool steps T5–T7 (align, review page, `.audio.json`); timings for the first version | Designed |
+| **A3 · Alignment tool** | Tool steps T5–T7 (align, review page, `.audio.json`); timings for the first version | T5 spike done 25 Sep 2026: 0.96–0.97 word scores on BSB and IRV, about 25 minutes a version on the owner's GPU |
 | **A4 · Verse playback** | The UI is built with A2 and waits for T5–T7 timings; `?listen` links remain | Waiting on timings |
 | **Later** | Save a book's audio for offline use; repeat a verse or passage (memorisation); a sleep timer; audio slides in presentations; synthesised narration for versions with no recording | Ideas |
 
@@ -173,7 +173,7 @@ A1 and A2 can ship with a single version as soon as one recording is cleared.
 | Risk | Check |
 |---|---|
 | **No rehostable Tamil recording** of IRV or TCV. Commercial ministry recordings usually allow streaming only through their own API, not copying. | The owner confirms the licence for each recording before `ingest` is run (§10). Fallback: a neural Tamil voice, licensed for publication, reading the CC BY-SA text. That output is also timestamped per verse by construction, so stage 2 comes free for it. |
-| A recording follows a different edition or revision of the text | Stage 2 checks score the whole chapter low. Stage 1 cannot detect it, so the licence check includes confirming the edition. |
+| A recording follows a different edition or revision of the text | **It happened**: the "TCV" recording reads the IRV text, so TCV audio was removed (feature_audio_tool.md §14). Alignment against the wrong text scores about 0.6 against 0.96, and the T5 probe checks every same-language text before any timing is written. Stage 1 alone cannot tell, so no version turns audio on before its probe passes. |
 | VBR or badly muxed sources make seeks drift | Everything is re-encoded to CBR with an Xing header, and `verify` checks headers. |
 | A URL is reused for different audio | Keys are never overwritten (`upload` refuses to). A change means a new recording id. |
 | An iOS background tab stops at the end of a chapter | One reused `<audio>` element. Tested on a physical iPhone as part of A2's exit test. |
