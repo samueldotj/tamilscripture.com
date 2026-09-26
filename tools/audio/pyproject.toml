@@ -7,6 +7,16 @@ dependencies = [
     "boto3>=1.34",
 ]
 
+[project.optional-dependencies]
+# `audio align`. Install PyTorch from the CUDA index first (the RTX 5090 needs CUDA 12.8):
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+align = [
+    "torch>=2.7",
+    "torchaudio>=2.7",
+    "uroman>=1.3",
+    "numpy",
+]
+
 [project.scripts]
 audio = "audio_tool.cli:main"
 

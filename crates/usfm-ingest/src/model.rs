@@ -36,6 +36,13 @@ pub struct ChapterAudio {
     pub timed: bool,
 }
 
+/// `content/{build}/{VERSION}/{BOOK}/{chapter}.audio.json`: each verse's start
+/// in the recording, `[verse, ms]` in order, fetched only when playback starts.
+#[derive(Debug, Serialize)]
+pub struct AudioTimingsJson<'a> {
+    pub verses: &'a [(u32, u64)],
+}
+
 #[derive(Debug, Serialize, Clone)]
 pub struct ChapterRef {
     pub book: String,

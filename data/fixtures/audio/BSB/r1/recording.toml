@@ -13,11 +13,7 @@ sources     = [
   { name = "ENGBERN1DA.zip", sha256 = "1ef42ea6a59704ea835e5bd004a5abbce1b9212c522d9345cd72da29b06ae43d" },
 ]
 
-# How the narrator reads (used by `audio align`)
-drama          = false
-reads_headings = false
-intro          = "announce"
-outro          = "none"
+drama       = false  # several voices with music under them (FCBH 2DA)
 
 [source]
 preset = "dbp"

@@ -13,11 +13,7 @@ sources     = [
   { name = "IRV-TAMDPIN1DA.zip", sha256 = "6d900c5d55191ea0f66c05670c92389fb6071da4f6f4c6415fa3aa86af49905c" },
 ]
 
-# How the narrator reads (used by `audio align`)
-drama          = false
-reads_headings = false
-intro          = "announce"
-outro          = "none"
+drama       = false  # several voices with music under them (FCBH 2DA)
 
 [source]
 preset = "fcbh"
@@ -27,3 +23,13 @@ bitrate_kbps = 64
 sample_rate  = 44100
 loudness     = -16.0
 true_peak    = -3.0
+
+[align]                       # written by `audio align --probe` (docs/feature_audio_tool.md §5)
+reads_text = "IRVTAM"
+text_score = 0.957
+other_texts = { TCV = 0.557 }
+reads_headings = false
+heading_score = 0.226
+opening_s = 6.9
+probe_chapters = 14
+model = "torchaudio MMS_FA (torch 2.11.0+cu128, torchaudio 2.11.0+cu128, cuda)"

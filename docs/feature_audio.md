@@ -162,7 +162,7 @@ The details are in [feature_audio_tool.md §5–6](feature_audio_tool.md#5-align
 |---|---|---|
 | **A1 · Storage and tool** | Buckets, custom domain, CORS, cache rule (done 24 Sep 2026); tool steps T1–T4 (skeleton, ingest, upload and verify, build) | Storage done; T1–T4 built 25 Sep 2026; first upload pending |
 | **A2 · Player** | கேள் button, docked bar (12B), phone bar (12A), controls, speed, Media Session, continuous play, keys; verse chips, wash and play-from-verse ready for timings | Built 25 Sep 2026; analytics event and /about credits to do |
-| **A3 · Alignment tool** | Tool steps T5–T7 (align, review page, `.audio.json`); timings for the first version | T5 spike done 25 Sep 2026: 0.96–0.97 word scores on BSB and IRV, about 25 minutes a version on the owner's GPU |
+| **A3 · Alignment tool** | Tool steps T5–T7 (align, review page, `.audio.json`); timings for the first version | T5 and T7 built 25 Sep 2026; T6 (review page) to do |
 | **A4 · Verse playback** | The UI is built with A2 and waits for T5–T7 timings; `?listen` links remain | Waiting on timings |
 | **Later** | Save a book's audio for offline use; repeat a verse or passage (memorisation); a sleep timer; audio slides in presentations; synthesised narration for versions with no recording | Ideas |
 

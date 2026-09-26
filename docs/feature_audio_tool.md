@@ -1,6 +1,6 @@
 # Feature design: audio processing tool
 
-Status: design 25 Sep 2026. T1–T4 (ingest, upload, verify, build) built 25 Sep 2026; T5–T7 (alignment) not started. Companion to [feature_audio.md](feature_audio.md).
+Status: design 25 Sep 2026. T1–T4 (ingest, upload, verify, build) T5 (align) and T7 (`.audio.json` in the build) built 25 Sep 2026; T6 (review page) not started. Companion to [feature_audio.md](feature_audio.md).
 
 `tools/audio` is an offline command-line tool that the owner runs on their own machine. Its input is a zipped recording of a Bible version, one MP3 per chapter. It:
 
@@ -204,7 +204,7 @@ Before a full run, align about 12 chapters spread across the canon (Genesis 1, P
    |---|---|---|
    | Unicode | NFC; drop U+200C/U+200D (IRV has them) | NFC |
    | Marks | drop `¶ [ ] ( )`, quotes, dashes, `/` | the same (KJV has `¶` and `[ ]`); split hyphenated words |
-   | Numbers | the Tamil number speller (below): 484 IRV and 377 TCV verses contain digits | `num2words` on 512 BSB verses; WEB and KJV spell numbers out |
+   | Numbers | the Tamil number speller (below): 484 IRV and 377 TCV verses contain digits | the tool's English speller (`text.english_number`) on 512 BSB verses; WEB and KJV spell numbers out |
    | Romanise | `uroman` (the `uroman` Python package, `lcode="tam"`) | `uroman`, which leaves Latin letters as they are |
    | Filter | keep only characters in the MMS vocabulary, lower case; a word left empty is dropped, but its verse keeps its other words | the same |
 
@@ -222,7 +222,7 @@ Before a full run, align about 12 chapters spread across the canon (Genesis 1, P
 
 ### Dependencies
 
-An optional extra in `pyproject.toml`: `pip install -e "tools/audio[align]"`, with `torch` and `torchaudio` from the CUDA 12.8 index (the RTX 5090 needs it), plus `uroman` and `num2words`. The extra keeps T1–T4 installable without PyTorch. The model (1.2 GB) is cached under `~/.cache/torch/hub`.
+An optional extra in `pyproject.toml`: `pip install -e "tools/audio[align]"`, with `torch` and `torchaudio` from the CUDA 12.8 index (the RTX 5090 needs it), plus `uroman`; both number spellers are the tool's own, so the tests need nothing installed. The extra keeps T1–T4 installable without PyTorch. The model (1.2 GB) is cached under `~/.cache/torch/hub`.
 
 ### Report
 
@@ -345,9 +345,9 @@ Then set `[audio] recording = "r1"` in `data/versions/irvtam/version.toml`, comm
 | **T2 · Ingest** | unzip, presets and patterns, mapping checks, two-pass encode, `chapters.tsv`. **Built 25 Sep 2026**; `run` (ingest + align) waits for T5 | T1, a sample zip |
 | **T3 · Upload and verify** | boto3 upload with hash checks, masters, verify. **Built 25 Sep 2026**, not yet run against R2 | T2, R2 key |
 | **T4 · Build** | `usfm-ingest --audio`, `audio` in chapter JSON and the manifest, build id, validation, fixture recording (`data/fixtures/audio`). **Built 25 Sep 2026** | T2 |
-| **T5 · Align** | `[align]` extra; probe (text match, headings); normaliser and Tamil number speller; windowed emissions; forced alignment; boundary rule; checks; timings TSV; report. Spike done 25 Sep 2026 (§5) | T2 |
+| **T5 · Align** | `[align]` extra; probe (text match, headings); normaliser and Tamil number speller; windowed emissions; forced alignment; boundary rule; checks; timings TSV; report. **Built 25 Sep 2026** | T2 |
 | **T6 · Review** | local review page | T5 |
-| **T7 · Verse files** | `.audio.json` output and fallback rules | T4, T5 |
+| **T7 · Verse files** | `timings/*.tsv` read, checked against `chapters.tsv` and the text, hashed into the build id; `timed` in chapter JSON; `{ch}.audio.json` with `low` rows left out. **Built 25 Sep 2026** | T4, T5 |
 
 T1–T4 are all stage 1 needs. T5–T7 are stage 2.
 

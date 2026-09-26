@@ -11,6 +11,7 @@
 //!   manifest.json                              build id, versions, books
 //!   {build}/{VERSION}/{BOOK}/{chapter}.json    chapter text
 //!   {build}/{VERSION}/{BOOK}/intro.json        book introduction, when present
+//!   {build}/{VERSION}/{BOOK}/{chapter}.audio.json verse starts, when the recording is timed
 //!   {build}/xref/{BOOK}/{chapter}.json         cross-references
 //!   {build}/search/{VERSION}.csv               verse_id,version,lang,book_ord,text
 //! A version whose `version.toml` has `[audio] recording = "…"` takes that
@@ -245,10 +246,36 @@ fn main() -> Result<()> {
                     ));
                 }
             }
+            for ((book, chapter), verses) in rec.timed_verses() {
+                let Some(ch) = books
+                    .index(book)
+                    .and_then(|i| parsed.get(&i))
+                    .and_then(|b| b.chapters.iter().find(|c| c.number == *chapter))
+                else {
+                    continue; // reported above
+                };
+                let in_text: std::collections::BTreeSet<u32> = ch
+                    .blocks
+                    .iter()
+                    .filter_map(|b| match b {
+                        Block::Para { segments, .. } => Some(segments),
+                        _ => None,
+                    })
+                    .flatten()
+                    .filter_map(|s| s.id.as_deref()?.rsplit('.').next()?.parse().ok())
+                    .collect();
+                for v in verses.iter().filter(|v| !in_text.contains(v)) {
+                    problems.push(format!(
+                        "{code} recording {}: timings for {book} {chapter}:{v}, which the text lacks",
+                        rec.meta.recording
+                    ));
+                }
+            }
             eprintln!(
-                "[{code}] audio {}: {} chapters",
+                "[{code}] audio {}: {} chapters, {} timed",
                 rec.meta.recording,
-                rec.chapter_keys().count()
+                rec.chapter_keys().count(),
+                rec.timed_verses().filter(|(_, v)| !v.is_empty()).count()
             );
         }
 
@@ -318,6 +345,18 @@ fn main() -> Result<()> {
                         .join(format!("{}.json", ch.number)),
                     &json,
                 )?;
+                if let Some(starts) = recording
+                    .as_ref()
+                    .and_then(|r| r.verse_starts(&meta.code, ch.number))
+                {
+                    write_json(
+                        &build_dir
+                            .join(&code)
+                            .join(&meta.code)
+                            .join(format!("{}.audio.json", ch.number)),
+                        &AudioTimingsJson { verses: starts },
+                    )?;
+                }
 
                 // Search rows: one per verse id, text joined across segments.
                 let mut verse_text: BTreeMap<String, String> = BTreeMap::new();

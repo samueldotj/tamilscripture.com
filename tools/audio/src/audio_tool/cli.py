@@ -2,6 +2,7 @@
 
     init     write data/audio/{VERSION}/{recording}/recording.toml
     ingest   unzip, map files to chapters, encode, write chapters.tsv
+    align    find where each verse starts (needs the align extra and a GPU)
     upload   send the MP3s (and source zips) to R2; never overwrites
     verify   check every chapter through the public domain
     status   per-book progress
@@ -45,11 +46,7 @@ def cmd_init(a) -> int:
         f"source_url  = {v(a.source_url)}",
         "sources     = [" + "".join(f"\n  {v(s)}," for s in sources) + ("\n]" if sources else "]"),
         "",
-        "# How the narrator reads (used by `audio align`)",
-        f"drama          = {v(a.drama)}",
-        "reads_headings = false",
-        'intro          = "announce"',
-        'outro          = "none"',
+        f"drama       = {v(a.drama)}  # several voices with music under them (FCBH 2DA)",
         "",
         "[source]",
         f"preset = {v(a.preset)}",
@@ -74,10 +71,13 @@ def cmd_status(a) -> int:
     books = repo.load_books()
     rows = {(r.book, r.chapter): r for r in repo.read_chapters(a.version, a.recording)}
     state = repo.State(a.version, a.recording)
-    tot = [0, 0, 0, 0, 0]
-    print("book  chapters  encoded  in tsv  uploaded  verified")
+    tot = [0, 0, 0, 0, 0, 0, 0]
+    print("book  chapters  encoded  in tsv  uploaded  verified  timed  low")
     for b in books:
-        n = [b.chapters, 0, 0, 0, 0]
+        n = [b.chapters, 0, 0, 0, 0, 0, 0]
+        timings = repo.read_timings(a.version, a.recording, b.code)
+        n[5] = len({t.chapter for t in timings})
+        n[6] = sum(t.flag == "low" for t in timings)
         for c in range(1, b.chapters + 1):
             e = state.data["chapters"].get(f"{b.code}.{c}", {})
             r = rows.get((b.code, c))
@@ -87,8 +87,8 @@ def cmd_status(a) -> int:
             n[4] += bool(r and e.get("verified") == r.sha256)
         tot = [x + y for x, y in zip(tot, n)]
         if a.all or any(n[1:]):
-            print(f"{b.code:4}  {n[0]:8}  {n[1]:7}  {n[2]:6}  {n[3]:8}  {n[4]:8}")
-    print(f"{'all':4}  {tot[0]:8}  {tot[1]:7}  {tot[2]:6}  {tot[3]:8}  {tot[4]:8}")
+            print(f"{b.code:4}  {n[0]:8}  {n[1]:7}  {n[2]:6}  {n[3]:8}  {n[4]:8}  {n[5]:5}  {n[6]:3}")
+    print(f"{'all':4}  {tot[0]:8}  {tot[1]:7}  {tot[2]:6}  {tot[3]:8}  {tot[4]:8}  {tot[5]:5}  {tot[6]:3}")
     return 0
 
 
@@ -122,6 +122,18 @@ def main(argv: list[str] | None = None) -> int:
     sp.add_argument("--allow-gaps", action="store_true", help="accept books with some chapters missing")
     sp.add_argument("--jobs", type=int, default=ingest.default_jobs())
     sp.set_defaults(fn=lambda a: ingest.run(a.version, a.recording, a.zip, a.dry_run, a.allow_gaps, a.jobs))
+
+    sp = add("align", "find where each verse starts")
+    sp.add_argument("--book", type=str.upper, help="only this book (USFM code)")
+    sp.add_argument("--chapter", type=int, help="only this chapter (with --book)")
+    sp.add_argument("--probe", action="store_true", help="only probe: which text, headings read or not")
+    sp.add_argument("--force", action="store_true", help="redo chapters already aligned, and replace edited rows")
+    sp.add_argument("--accept", action="store_true", help="go on even if the probe says the recording reads another text")
+
+    def run_align(a):
+        from . import align  # PyTorch loads only for this command
+        return align.run(a.version, a.recording, a.book, a.chapter, a.force, a.probe, a.accept)
+    sp.set_defaults(fn=run_align)
 
     sp = add("upload", "send MP3s and source zips to R2")
     sp.add_argument("--dry-run", action="store_true", help="check what would be sent, send nothing")

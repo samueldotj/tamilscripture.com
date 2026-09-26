@@ -13,11 +13,7 @@ sources     = [
   { name = "ENGBERN1DA.zip", sha256 = "1ef42ea6a59704ea835e5bd004a5abbce1b9212c522d9345cd72da29b06ae43d" },
 ]
 
-# How the narrator reads (used by `audio align`)
-drama          = false
-reads_headings = false
-intro          = "announce"
-outro          = "none"
+drama       = false  # several voices with music under them (FCBH 2DA)
 
 [source]
 preset = "dbp"
@@ -27,3 +23,13 @@ bitrate_kbps = 64
 sample_rate  = 44100
 loudness     = -16.0
 true_peak    = -3.0
+
+[align]                       # written by `audio align --probe` (docs/feature_audio_tool.md §5)
+reads_text = "BSB"
+text_score = 0.97
+other_texts = { WEB = 0.754, KJV = 0.676 }
+reads_headings = false
+heading_score = 0.008
+opening_s = 4.3
+probe_chapters = 14
+model = "torchaudio MMS_FA (torch 2.11.0+cu128, torchaudio 2.11.0+cu128, cuda)"

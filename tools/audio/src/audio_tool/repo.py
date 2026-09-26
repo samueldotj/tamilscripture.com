@@ -47,6 +47,21 @@ def load_version(code: str) -> dict:
     raise SystemExit(f"no version {code} under data/versions")
 
 
+CONTENT = ROOT / "apps" / "web" / "static" / "content"
+
+
+def content_manifest() -> dict:
+    """The built content's manifest; `pnpm content` makes it."""
+    path = CONTENT / "manifest.json"
+    if not path.exists():
+        raise SystemExit(f"{path} is missing; run `pnpm content` first")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_chapter_json(build: str, version: str, book: str, chapter: int) -> dict:
+    return json.loads((CONTENT / build / version / book / f"{chapter}.json").read_text(encoding="utf-8"))
+
+
 def check_id(recording: str) -> str:
     if not re.fullmatch(r"[a-z0-9-]+", recording):
         raise SystemExit(f"recording id {recording!r} must be lower-case letters, digits and -")
@@ -119,6 +134,82 @@ def write_chapters(version: str, recording: str, rows: list[ChapterRow], books: 
     body = ["\t".join(CHAPTERS_HEADER)]
     body += [f"{r.book}\t{r.chapter}\t{r.ms}\t{r.bytes}\t{r.sha256}" for r in rows]
     path.write_text("\n".join(body) + "\n", encoding="utf-8", newline="\n")
+    return path
+
+
+# ---- timings/{BOOK}.tsv ------------------------------------------------------
+
+TIMINGS_HEADER = ["chapter", "verse", "start_ms", "end_ms", "score", "flag"]
+
+
+@dataclass
+class TimingRow:
+    chapter: int
+    verse: int
+    start_ms: int
+    end_ms: int
+    score: float
+    flag: str = ""  # "", "low", "edited" or "bridge"
+
+
+def timings_path(version: str, recording: str, book: str) -> Path:
+    return rec_dir(version, recording) / "timings" / f"{book}.tsv"
+
+
+def read_timings(version: str, recording: str, book: str) -> list[TimingRow]:
+    path = timings_path(version, recording, book)
+    if not path.exists():
+        return []
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if not lines or lines[0].split("\t") != TIMINGS_HEADER:
+        raise SystemExit(f"{path}: unexpected header")
+    rows = []
+    for line in lines[1:]:
+        if line:
+            c, v, s, e, sc, *flag = line.split("\t")
+            rows.append(TimingRow(int(c), int(v), int(s), int(e), float(sc), flag[0] if flag else ""))
+    return rows
+
+
+def merge_timings(old: list[TimingRow], chapter: int, new: list[TimingRow], force: bool) -> list[TimingRow]:
+    """Replace one chapter's rows, keeping rows a person edited unless forced."""
+    kept_edits = {r.verse: r for r in old if r.chapter == chapter and r.flag == "edited" and not force}
+    rows = [r for r in old if r.chapter != chapter]
+    rows += [kept_edits.get(r.verse, r) for r in new]
+    return sorted(rows, key=lambda r: (r.chapter, r.verse))
+
+
+def write_timings(version: str, recording: str, book: str, rows: list[TimingRow]) -> Path:
+    path = timings_path(version, recording, book)
+    if not rows:
+        path.unlink(missing_ok=True)
+        return path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    body = ["\t".join(TIMINGS_HEADER)]
+    body += [f"{r.chapter}\t{r.verse}\t{r.start_ms}\t{r.end_ms}\t{r.score:.3f}\t{r.flag}".rstrip("\t") for r in rows]
+    path.write_text("\n".join(body) + "\n", encoding="utf-8", newline="\n")
+    return path
+
+
+def set_align_section(version: str, recording: str, values: dict) -> Path:
+    """Replace the [align] table at the end of recording.toml with `values`."""
+    path = rec_dir(version, recording) / "recording.toml"
+    text = path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    out, skipping = [], False
+    for line in lines:
+        header = line.strip().startswith("[") and not line.strip().startswith("[[")
+        if header:
+            skipping = line.strip() == "[align]"
+            if skipping:
+                continue
+        if not skipping:
+            out.append(line)
+    while out and not out[-1].strip():
+        out.pop()
+    out += ["", "[align]                       # written by `audio align --probe` (docs/feature_audio_tool.md §5)"]
+    out += [f"{k} = {toml_value(v)}" for k, v in values.items()]
+    path.write_text("\n".join(out) + "\n", encoding="utf-8", newline="\n")
     return path
 
 

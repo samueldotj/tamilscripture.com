@@ -53,6 +53,28 @@ recording = "r1"
 
 The deploy's `pnpm content` builds the audio into the chapter JSON.
 
+## Verse timings (`align`, stage 2)
+
+`align` needs PyTorch and a GPU (it runs on a CPU too, many times slower). Install the extra into the venv, CUDA build first:
+
+```bash
+tools/audio/.venv/Scripts/pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+```
+
+```bash
+tools/audio/.venv/Scripts/pip install -e "tools/audio[align]"
+```
+
+It reads the chapter text from the built content, so run `pnpm content` first. Then:
+
+```bash
+audio align --version BSB --probe
+audio align --version BSB
+audio status --version BSB
+```
+
+`--probe` aligns 14 sample chapters against every text in the version's language. It records in `recording.toml` which text the recording reads and whether its narrator reads section headings. A full run probes first if that hasn't been done. It stops if the recording reads another version's text; pass `--accept` to override. `--book` and `--chapter` narrow a run, and `--force` redoes chapters already aligned. Results go to `data/audio/{VERSION}/{recording}/timings/{BOOK}.tsv`, with a report in `.audio-work/{VERSION}/{recording}/report-align.md`.
+
 ## Tests
 
 ```bash

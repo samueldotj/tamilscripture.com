@@ -4,6 +4,7 @@
 //! {audio}/audio.toml                         base = "https://stream.tamilaudiobible.com"
 //! {audio}/{VERSION}/{recording}/recording.toml
 //! {audio}/{VERSION}/{recording}/chapters.tsv  book  chapter  ms  bytes  sha256
+//! {audio}/{VERSION}/{recording}/timings/{BOOK}.tsv  chapter  verse  start_ms  end_ms  score  flag
 //! ```
 //!
 //! A version opts in with `[audio] recording = "r1"` in its `version.toml`; the
@@ -44,6 +45,8 @@ pub struct Recording {
     base: String,
     /// (book code, chapter) -> duration in ms.
     chapters: BTreeMap<(String, u32), u64>,
+    /// (book code, chapter) -> `(verse, start ms)` in order, rows flagged `low` left out.
+    timings: BTreeMap<(String, u32), Vec<(u32, u64)>>,
     /// Every file read, for the build id.
     pub files: Vec<PathBuf>,
 }
@@ -89,12 +92,30 @@ impl Recording {
         );
 
         let mut files = vec![audio_toml, rec_toml, tsv];
-        let timings = rec_dir.join("timings");
-        if timings.is_dir() {
-            let mut t: Vec<PathBuf> = fs::read_dir(&timings)?
+        let mut timings = BTreeMap::new();
+        let timings_dir = rec_dir.join("timings");
+        if timings_dir.is_dir() {
+            let mut t: Vec<PathBuf> = fs::read_dir(&timings_dir)?
                 .filter_map(|e| e.ok().map(|e| e.path()))
+                .filter(|p| p.extension().is_some_and(|x| x == "tsv"))
                 .collect();
             t.sort();
+            for path in &t {
+                let book = path
+                    .file_stem()
+                    .unwrap_or_default()
+                    .to_string_lossy()
+                    .to_string();
+                let text = fs::read_to_string(path)
+                    .with_context(|| format!("reading {}", path.display()))?;
+                let (rows, row_problems) = parse_timings(&text, &book, &chapters);
+                problems.extend(
+                    row_problems
+                        .into_iter()
+                        .map(|p| format!("{}:{p}", path.display())),
+                );
+                timings.extend(rows);
+            }
             files.extend(t);
         }
         Ok((
@@ -110,6 +131,7 @@ impl Recording {
                 },
                 base: base.base.trim_end_matches('/').to_string(),
                 chapters,
+                timings,
                 files,
             },
             problems,
@@ -119,6 +141,20 @@ impl Recording {
     /// Every (book, chapter) the recording has, for checking against the text.
     pub fn chapter_keys(&self) -> impl Iterator<Item = &(String, u32)> {
         self.chapters.keys()
+    }
+
+    /// Every timed chapter with its verse numbers, for checking against the text.
+    pub fn timed_verses(&self) -> impl Iterator<Item = (&(String, u32), Vec<u32>)> {
+        self.timings
+            .iter()
+            .map(|(k, rows)| (k, rows.iter().map(|&(v, _)| v).collect()))
+    }
+
+    /// `[verse, start ms]` for the chapter's `.audio.json`, when it is timed.
+    pub fn verse_starts(&self, book: &str, chapter: u32) -> Option<&Vec<(u32, u64)>> {
+        self.timings
+            .get(&(book.to_string(), chapter))
+            .filter(|rows| !rows.is_empty())
     }
 
     /// The chapter's `audio` field, if the recording has it.
@@ -136,7 +172,7 @@ impl Recording {
                 object_key(version, &self.meta.recording, book, chapter)
             ),
             ms,
-            timed: false,
+            timed: self.verse_starts(book, chapter).is_some(),
         })
     }
 }
@@ -150,6 +186,81 @@ fn is_id(s: &str) -> bool {
     !s.is_empty()
         && s.bytes()
             .all(|b| b.is_ascii_lowercase() || b.is_ascii_digit() || b == b'-')
+}
+
+type Timings = BTreeMap<(String, u32), Vec<(u32, u64)>>;
+
+/// `timings/{BOOK}.tsv`: a header, then `chapter verse start_ms end_ms score [flag]`.
+/// Checked against `chapters.tsv`: the chapter must be recorded, starts must
+/// increase and fall inside the recording. Rows flagged `low` are dropped; a
+/// chapter the tool found mismatched has no rows at all.
+fn parse_timings(
+    text: &str,
+    book: &str,
+    chapters: &BTreeMap<(String, u32), u64>,
+) -> (Timings, Vec<String>) {
+    let mut out: Timings = BTreeMap::new();
+    let mut problems = Vec::new();
+    let mut last: Option<(u32, u32, u64)> = None;
+    for (i, line) in text.lines().enumerate() {
+        let n = i + 1;
+        if i == 0 {
+            let head: Vec<&str> = line.split('\t').collect();
+            if head != ["chapter", "verse", "start_ms", "end_ms", "score", "flag"] {
+                problems.push(format!(
+                    "{n}: header must be chapter, verse, start_ms, end_ms, score, flag"
+                ));
+            }
+            continue;
+        }
+        if line.is_empty() {
+            continue;
+        }
+        let f: Vec<&str> = line.split('\t').collect();
+        let parsed = (|| {
+            if !(5..=6).contains(&f.len()) {
+                return None;
+            }
+            let chapter: u32 = f[0].parse().ok().filter(|&c| c > 0)?;
+            let verse: u32 = f[1].parse().ok().filter(|&v| v > 0)?;
+            let start: u64 = f[2].parse().ok()?;
+            let end: u64 = f[3].parse().ok().filter(|&e| e >= start)?;
+            f[4].parse::<f64>().ok()?;
+            let flag = f.get(5).copied().unwrap_or("");
+            ["", "low", "edited", "bridge"]
+                .contains(&flag)
+                .then_some((chapter, verse, start, end, flag))
+        })();
+        let Some((chapter, verse, start, end, flag)) = parsed else {
+            problems.push(format!("{n}: malformed row {line:?}"));
+            continue;
+        };
+        let Some(&ms) = chapters.get(&(book.to_string(), chapter)) else {
+            problems.push(format!(
+                "{n}: {book} {chapter} has no recording in chapters.tsv"
+            ));
+            continue;
+        };
+        if end > ms + 1000 {
+            problems.push(format!(
+                "{n}: {book} {chapter}:{verse} ends at {end} ms, after the recording ({ms} ms)"
+            ));
+        }
+        if let Some((c, v, s)) = last {
+            if c == chapter && (verse <= v || start < s) {
+                problems.push(format!("{n}: {book} {chapter}:{verse} is out of order"));
+            }
+            if chapter < c {
+                problems.push(format!("{n}: chapter {chapter} after chapter {c}"));
+            }
+        }
+        last = Some((chapter, verse, start));
+        let entry = out.entry((book.to_string(), chapter)).or_default();
+        if flag != "low" {
+            entry.push((verse, start));
+        }
+    }
+    (out, problems)
 }
 
 /// `chapters.tsv`: a header, then `book chapter ms bytes sha256` per row.
@@ -235,6 +346,20 @@ mod tests {
         assert_eq!(rows.len(), 2);
         assert_eq!(problems.len(), 3, "{problems:?}");
         assert!(problems[0].starts_with("3: JHN 3 listed twice"));
+    }
+
+    #[test]
+    fn timings_rows_are_checked() {
+        let chapters = BTreeMap::from([(("JHN".to_string(), 3), 312_480u64)]);
+        let tsv = "chapter\tverse\tstart_ms\tend_ms\tscore\tflag\n3\t1\t3700\t9700\t0.970\n3\t2\t9700\t20000\t0.300\tlow\n3\t3\t20000\t25000\t0.950\tbridge\n3\t2\t25000\t26000\t0.9\n4\t1\t0\t10\t0.9\n";
+        let (rows, problems) = parse_timings(tsv, "JHN", &chapters);
+        assert_eq!(
+            rows[&("JHN".to_string(), 3)],
+            vec![(1, 3700), (3, 20000), (2, 25000)]
+        );
+        assert_eq!(problems.len(), 2, "{problems:?}");
+        assert!(problems[0].contains("out of order"));
+        assert!(problems[1].contains("no recording"));
     }
 
     #[test]
