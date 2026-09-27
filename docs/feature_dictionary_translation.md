@@ -13,6 +13,7 @@ Produces the Tamil drafts that [feature_dictionary.md](feature_dictionary.md) §
 | Scripture quoted in articles | Given the IRV text of each cited verse so quotations use IRV wording rather than a new translation. |
 | Doctrine | Translation is faithful. It fixes terminology, never rewrites what an article says. Articles the owner disagrees with go in `data/entities/blocklist.toml`. |
 | Licence folders | Drafts of public-domain sources go to `drafts/ta/` (CC BY); drafts of Aquifer go to `drafts/ta-sa/` (CC BY-SA). The build loads both and rejects a draft in the wrong folder. |
+| Search engines | One URL per article, rendered in Tamil (the site's default language); the English original shows only for readers who choose EN and is not indexed separately, as with the Bible pages (design.md ADR-15). The page title is in both scripts, the description is the Tamil text, `hreflang` ta and x-default point at the article, and Article structured data names the source dictionary. Revisit with separate English URLs if English searches matter. |
 | Bulk runs | Message Batches API (half price) with the fixed part of the prompt cached. Direct requests for the pilot and prompt tuning. |
 
 ## 2. Scale

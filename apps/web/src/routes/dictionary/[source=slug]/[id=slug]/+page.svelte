@@ -37,15 +37,41 @@
 	);
 	/** How many community corrections stand in the Tamil of this entry. */
 	const corrections = $derived(a.paragraphs.filter((p) => p.ta_source === 'community' || p.ta_source === 'owner').length);
-	const description = $derived((a.paragraphs[0]?.ta ?? a.paragraphs[0]?.text ?? '').slice(0, 160));
+	// Search engines get the Tamil page (the server renders the default
+	// language): a title in both scripts and a Tamil description, as the Bible
+	// pages do (ADR-15). The English original is not indexed separately.
+	const seoUrl = $derived(`https://www.tamilscripture.com/dictionary/${a.id}`);
+	const seoTitle = $derived(a.title_ta && a.title_ta !== a.title ? `${a.title_ta} · ${a.title}` : a.title);
+	const lead = $derived(a.paragraphs.find((p) => !p.heading) ?? a.paragraphs[0]);
+	const description = $derived(((lead?.ta ?? lead?.text) || '').replace(/\s+/g, ' ').slice(0, 160));
+	const jsonLd = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Article',
+			headline: a.title_ta ?? a.title,
+			alternativeHeadline: a.title,
+			inLanguage: hasTa ? 'ta' : 'en',
+			url: seoUrl,
+			description,
+			isBasedOn: { '@type': 'Book', name: src.name, datePublished: String(src.year), inLanguage: 'en' },
+			isPartOf: { '@type': 'WebSite', name: 'Tamil Scripture · தமிழ் வேதாகமம்', url: 'https://www.tamilscripture.com/' }
+		}).replace(/</g, '\\u003c')
+	);
 </script>
 
 <svelte:head>
-	<title>{a.title} · அகராதி · Dictionary · Tamil Scripture</title>
+	<title>{seoTitle} · அகராதி · Dictionary · Tamil Scripture</title>
 	<meta name="description" content={description} />
-	<link rel="canonical" href={`https://www.tamilscripture.com/dictionary/${a.id}`} />
-	<meta property="og:title" content={a.title} />
+	<link rel="canonical" href={seoUrl} />
+	<link rel="alternate" hreflang="ta" href={seoUrl} />
+	<link rel="alternate" hreflang="x-default" href={seoUrl} />
+	<meta property="og:title" content={seoTitle} />
 	<meta property="og:description" content={description} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={seoUrl} />
+	<meta property="og:site_name" content="Tamil Scripture · தமிழ் வேதாகமம்" />
+	<meta property="og:locale" content={hasTa ? 'ta_IN' : 'en_IN'} />
+	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
 <article class="art">
