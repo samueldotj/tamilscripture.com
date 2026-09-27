@@ -128,7 +128,10 @@ def finish(article: dict, replies: list[Reply], ctx: Context, allow_repair: bool
     written = not any(is_hard(p) for p in problems)
     if written:
         title = next((r.data["title"].strip() for r in final if r.data and r.data.get("title")), "")
-        paragraphs = [{"id": p["id"], "text": p["text"].strip()} for r in final for p in r.data["paragraphs"]]
+        # Paragraphs left untranslated because there was nothing to translate
+        # ("538") stay out of the draft; the build would reject them (no Tamil).
+        paragraphs = [{"id": p["id"], "text": p["text"].strip()} for r in final for p in r.data["paragraphs"]
+                      if checks.check_text(p["text"]) is None]
         repo.write_draft(article, {
             "id": article["id"],
             "lang": "ta",

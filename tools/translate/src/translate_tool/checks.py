@@ -27,6 +27,12 @@ class Problem:
         return f"{self.where}: {self.what}"
 
 
+def untranslatable(english: str) -> bool:
+    """No word to translate: numbers, references and sigla only (no lowercase
+    word of three or more letters)."""
+    return not re.search(r"\b[a-z]{3,}\b", english)
+
+
 def check_text(text: str) -> str | None:
     """The build's rule: Tamil script, no markup, not empty, not too long."""
     t = text.strip()
@@ -128,7 +134,11 @@ def check_draft(
         ta = p["text"]
         where = p["id"]
         if why := check_text(ta):
-            out.append(Problem(where, why))
+            # A label with nothing to translate ("538", "37:1–2", "P1 (P. Oxy. 2)")
+            # comes back unchanged: no Tamil, but nothing wrong. The draft leaves
+            # it out and the site shows the original, which is the same text.
+            if not (why == "no Tamil script" and untranslatable(en["text"])):
+                out.append(Problem(where, why))
             continue
         if m := ENGLISH_RUN.search(ta):
             out.append(Problem(where, f"untranslated English: {m[0]!r}"))
