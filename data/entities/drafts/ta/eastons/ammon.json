@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ammon",
+  "lang": "ta",
+  "source_hash": "eafcb82f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-26"
+  },
+  "title": "அம்மோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/ammon#p1-eafcb82f",
+      "text": "லோத்தின் மகனாகிய பேன்-அம்மி (பென்னம்மி) என்னும் பெயரின் மற்றொரு வடிவம் (ஆதியாகமம் 19:38). இந்தப் பெயர் அவனுடைய சந்ததியினருக்கும் பயன்படுத்தப்படுகிறது (சங்கீதங்கள் 83:7)."
+    }
+  ]
+}

@@ -60,14 +60,16 @@ def mentions(english: str, form: str) -> bool:
 
 
 # Names that are also everyday English words at the start of a sentence.
-COMMON_WORDS = {"On", "No", "So", "Am", "As", "Job", "Will", "Mark", "Hope"}
+COMMON_WORDS = {"On", "No", "So", "Am", "As", "Job", "Will", "Mark", "Hope", "River", "East", "North", "South"}
 
 
 def names_in(english: str, names: dict[str, Name]) -> list[Name]:
+    """Names mentioned as themselves: not part of a hyphenated name (Ben in
+    Ben-hadad, Hur in Beth-hur), and not an everyday word (River, South)."""
     return [
         n
         for en, n in names.items()
-        if en not in COMMON_WORDS and re.search(rf"\b{re.escape(en)}\b", english)
+        if en not in COMMON_WORDS and re.search(rf"(?<![\w-]){re.escape(en)}(?![\w-])", english)
     ]
 
 

@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import threading
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import date
 
@@ -108,17 +109,21 @@ def finish(article: dict, replies: list[Reply], ctx: Context, allow_repair: bool
     still has a problem the build would reject."""
     parts = prompts.chunks(article)
     reqs = requests_for(article, ctx) if allow_repair else []
-    final: list[Reply] = []
+    first = [part_problems(article, paras, reply, ctx) for paras, reply in zip(parts, replies)]
+    final: list[Reply] = list(replies)
+    # Repair the parts that need it side by side: a long article (Aquifer's
+    # Moses, 3 parts) would otherwise wait for each repair in turn.
+    todo = [k for k, ps in enumerate(first) if ps and allow_repair]
+    for k in todo:
+        print(f"  part {k + 1}: {len(first[k])} problem(s); repairing", flush=True)
+    if todo:
+        with ThreadPoolExecutor(max_workers=len(todo)) as pool:
+            fixed = pool.map(lambda k: repair(reqs[k][1], replies[k], first[k], reqs[k][0]), todo)
+            for k, reply in zip(todo, fixed):
+                final[k] = reply
     problems: list[checks.Problem] = []
-    for k, (paras, reply) in enumerate(zip(parts, replies)):
-        ps = part_problems(article, paras, reply, ctx)
-        if ps and allow_repair:
-            cid, req = reqs[k]
-            print(f"  part {k + 1}: {len(ps)} problem(s); repairing", flush=True)
-            reply = repair(req, reply, ps, cid)
-            ps = part_problems(article, paras, reply, ctx)
-        final.append(reply)
-        problems += ps
+    for k, paras in enumerate(parts):
+        problems += part_problems(article, paras, final[k], ctx) if k in todo else first[k]
 
     written = not any(is_hard(p) for p in problems)
     if written:
@@ -170,5 +175,12 @@ def flagged_replies(article_id: str) -> list[Reply] | None:
 
 
 def translate_direct(article: dict, ctx: Context) -> Outcome:
-    replies = [client.run_direct(req, cid) for cid, req in requests_for(article, ctx)]
+    """All parts of the article at once, then one repair turn for the parts
+    that need it (also at once)."""
+    reqs = requests_for(article, ctx)
+    if len(reqs) == 1:
+        replies = [client.run_direct(reqs[0][1], reqs[0][0])]
+    else:
+        with ThreadPoolExecutor(max_workers=len(reqs)) as pool:
+            replies = list(pool.map(lambda r: client.run_direct(r[1], r[0]), reqs))
     return finish(article, replies, ctx, allow_repair=True)

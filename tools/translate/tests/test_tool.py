@@ -458,6 +458,75 @@ class PilotTests(unittest.TestCase):
                  translate.FLAGGED) = saved
 
 
+class FullRunTests(unittest.TestCase):
+    """translate full-run against a fake batch API: translate, repair, resume."""
+
+    def test_full_run_translates_repairs_and_resumes(self):
+        import json
+        from types import SimpleNamespace
+        from translate_tool import client, fullrun, translate
+
+        batches: dict[str, list] = {}
+
+        def submit(reqs, note):
+            bid = f"msgbatch_{len(batches) + 1}"
+            batches[bid] = reqs
+            return bid
+
+        def status(bid):
+            return SimpleNamespace(processing_status="ended",
+                                   request_counts=SimpleNamespace(succeeded=len(batches[bid]), errored=0))
+
+        def results(bid):
+            for cid, p in batches[bid]:
+                msg = p["messages"][0]["content"]
+                art = json.loads(msg[msg.index("Article:\n") + 9:])
+                repaired = cid.endswith("-r")
+                # the first answer leaves English in one paragraph; the repair fixes it
+                paras = [{"id": x["id"], "text": "சோதனை உரை" if repaired or k else "left in plain English words here for sure"}
+                         for k, x in enumerate(art["paragraphs"])]
+                data = {"title": "சோதனை", "paragraphs": paras}
+                yield cid, client.Reply(data, None, json.dumps(data, ensure_ascii=False))
+
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            saved = (repo.DRAFTS, repo.WORK, translate.REPORT, translate.FLAGGED, fullrun.STATE)
+            repo.DRAFTS, repo.WORK = d / "drafts", d
+            translate.REPORT, translate.FLAGGED, fullrun.STATE = d / "report.jsonl", d / "flagged", d / "state.json"
+            arts = [repo.load_article(i) for i in ("eastons/abagtha", "aquifer/abagtha", "smiths/abana")]
+            try:
+                with unittest.mock.patch.object(client, "submit_batch", submit), \
+                     unittest.mock.patch.object(client, "batch_status", status), \
+                     unittest.mock.patch.object(client, "batch_results", results), \
+                     unittest.mock.patch.object(fullrun, "keep_awake", lambda: None), \
+                     unittest.mock.patch.object(fullrun, "pending_articles",
+                                                lambda state: {"eastons": arts[:1], "smiths": arts[2:], "aquifer": arts[1:2]}
+                                                if not state["batches"] else {"eastons": [], "smiths": [], "aquifer": []}), \
+                     unittest.mock.patch("sys.stdout", new=__import__("io").StringIO()):
+                    fullrun.run("m", "low", poll=0)
+                    state = json.loads(fullrun.STATE.read_text(encoding="utf-8"))
+                    kinds = [b["kind"] for b in state["batches"]]
+                    self.assertEqual(kinds.count("translate"), 3)
+                    self.assertEqual(kinds.count("repair"), 3)
+                    self.assertTrue(all(b["status"] == "collected" for b in state["batches"]))
+                    for art in arts:
+                        draft = repo.load_draft(art)
+                        self.assertTrue(draft and all(p["text"] == "சோதனை உரை" for p in draft["paragraphs"]))
+                    # the repair fixed the English left in; what remains is only the
+                    # names the fake Tamil leaves out, which the name check reports
+                    last = {}
+                    for line in translate.REPORT.read_text(encoding="utf-8").splitlines():
+                        r = json.loads(line)
+                        last[r["id"]] = r["problems"]
+                    self.assertEqual(set(last), {a["id"] for a in arts})
+                    self.assertFalse(any("untranslated English" in p for ps in last.values() for p in ps))
+                    before = len(batches)
+                    fullrun.run("m", "low", poll=0)  # a restart submits nothing again
+                    self.assertEqual(len(batches), before)
+            finally:
+                repo.DRAFTS, repo.WORK, translate.REPORT, translate.FLAGGED, fullrun.STATE = saved
+
+
 class GlossaryTermsTests(unittest.TestCase):
     """The theological glossary (translate ai-terms / review-terms); no API call."""
 

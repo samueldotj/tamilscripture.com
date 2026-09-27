@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jeziah",
+  "lang": "ta",
+  "source_hash": "1b21527d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-26"
+  },
+  "title": "யெசியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jeziah#p1-f91d5982",
+      "text": "யெசியா என்பது எஸ்றா 10:25-ல் காணப்படும் பாரோஷின் சந்ததியாரான யெசியா என்பதற்கு ராஜா யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jeziah#p2-f08cca0b",
+      "text": "யெசியா என்பதைக் காண்க."
+    }
+  ]
+}

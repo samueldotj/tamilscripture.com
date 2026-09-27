@@ -1,0 +1,18 @@
+{
+  "id": "smiths/david",
+  "lang": "ta",
+  "source_hash": "0277f20c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-26"
+  },
+  "title": "தாவீது",
+  "paragraphs": [
+    {
+      "id": "smiths/david#p1-0277f20c",
+      "text": "(மிகவும் பிரியமானவன்), ஈசாயின் மகன். அவனுடைய வாழ்க்கையை மூன்று பகுதிகளாகப் பிரிக்கலாம்:"
+    }
+  ]
+}

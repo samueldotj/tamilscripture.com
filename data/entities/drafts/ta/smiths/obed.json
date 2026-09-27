@@ -1,0 +1,18 @@
+{
+  "id": "smiths/obed",
+  "lang": "ta",
+  "source_hash": "844bfb24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-26"
+  },
+  "title": "ஓபேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/obed#p1-844bfb24",
+      "text": "(பணிசெய்கிறவன்)."
+    }
+  ]
+}

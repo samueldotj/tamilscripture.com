@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 
 from . import prompts, repo
 
-DEFAULT_MODEL = "claude-opus-5"
+DEFAULT_MODEL = "claude-sonnet-5"  # chosen in the pilot (docs/feature_dictionary_translation.md §5)
 DEFAULT_EFFORT = "medium"
 MAX_TOKENS = 64000
 

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hazor",
+  "lang": "ta",
+  "source_hash": "795bc163",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-26"
+  },
+  "title": "ஆத்சோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/hazor#p1-795bc163",
+      "text": "(கோட்டை)."
+    }
+  ]
+}

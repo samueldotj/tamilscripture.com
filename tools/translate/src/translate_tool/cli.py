@@ -138,6 +138,19 @@ def ai_report(rows: list[dict]) -> int:
     return 0
 
 
+def cmd_full_run(a) -> int:
+    from . import fullrun
+
+    if a.plan:
+        pending = fullrun.pending_articles(fullrun.load_state())
+        for s, arts in pending.items():
+            words = sum(sum(len(p["text"].split()) for p in x["paragraphs"]) for x in arts)
+            print(f"{s}: {len(arts)} articles, {words:,} English words")
+        print("No API call made. `translate full-run` submits them.")
+        return 0
+    return fullrun.run(a.model, a.effort, a.poll)
+
+
 def cmd_pilot(a) -> int:
     from . import pilot
 
@@ -486,6 +499,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--dry-run", action="store_true", help="ask, but write nothing")
     model_opts(p)
     p.set_defaults(fn=cmd_ai_names)
+
+    p = sub.add_parser("full-run", help="translate every article: batches, repairs, drafts; resumable")
+    p.add_argument("--plan", action="store_true", help="count what is left; no API call")
+    p.add_argument("--poll", type=int, default=300, help="seconds between batch checks")
+    model_opts(p)
+    p.set_defaults(fn=cmd_full_run)
 
     p = sub.add_parser("pilot", help="the pilot: two models on the same articles (seed/pilot.txt)")
     p.add_argument("action", nargs="?", default="status", choices=["status", "run", "adopt"],

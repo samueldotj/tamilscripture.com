@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phalec",
+  "lang": "ta",
+  "source_hash": "7561e74a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-26"
+  },
+  "title": "பாலெக்",
+  "paragraphs": [
+    {
+      "id": "smiths/phalec#p1-7561e74a",
+      "text": "(பிரிவு). ஏபேரின் குமாரனாகிய பேலேகு. (லூக்கா 3:35)"
+    }
+  ]
+}
