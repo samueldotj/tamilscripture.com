@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bridechamber",
+  "lang": "ta",
+  "source_hash": "436c03cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மணவறை",
+  "paragraphs": [
+    {
+      "id": "aquifer/bridechamber#p1-645d136f",
+      "text": "மணவறை என்பது திருமண விழாக்கள் நடத்தப்பட்ட அறையாகும்."
+    },
+    {
+      "id": "aquifer/bridechamber#p2-e8b33856",
+      "text": "திருமணம், திருமண வழக்கங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

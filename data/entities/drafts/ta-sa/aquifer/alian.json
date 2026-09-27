@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/alian",
+  "lang": "ta",
+  "source_hash": "450d4596",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலியான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/alian#p1-f3c5ee62",
+      "text": "சோபாலின் மகனான அல்வானுக்கு வேறு ஒரு பெயர் (1 நாளாகமம் 1:40)."
+    },
+    {
+      "id": "aquifer/alian#p2-5bfbda3e",
+      "text": "அல்வான் காண்க."
+    }
+  ]
+}

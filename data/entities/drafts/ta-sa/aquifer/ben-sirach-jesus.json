@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ben-sirach-jesus",
+  "lang": "ta",
+  "source_hash": "7acf994c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேன் சீராக், இயேசு",
+  "paragraphs": [
+    {
+      "id": "aquifer/ben-sirach-jesus#p1-5745a488",
+      "text": "சீராக்கின் மகனும், பேன் சீராக்கின் இயேசுவின் ஞானம் (எக்கிலசியாஸ்திகஸ் என்றும் அறியப்படுகிறது) என்ற நூலின் ஆசிரியரும் ஆவார்."
+    },
+    {
+      "id": "aquifer/ben-sirach-jesus#p2-9090882e",
+      "text": "பேன் சீராக்கின் இயேசுவின் ஞானம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/old-man",
+  "lang": "ta",
+  "source_hash": "34b2bc65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பழைய மனுஷன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/old-man#p1-34b2bc65",
+      "text": "மனுஷன், பழைய மற்றும் புதிய என்பதைக் காண்க."
+    }
+  ]
+}

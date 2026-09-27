@@ -1,0 +1,18 @@
+{
+  "id": "eastons/helek",
+  "lang": "ta",
+  "source_hash": "eab20820",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேக்",
+  "paragraphs": [
+    {
+      "id": "eastons/helek#p1-eab20820",
+      "text": "ஒரு பங்கு, (யோசுவா 17:2), மனாசேயிலிருந்து வந்தவன்."
+    }
+  ]
+}

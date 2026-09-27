@@ -1,0 +1,18 @@
+{
+  "id": "smiths/thara",
+  "lang": "ta",
+  "source_hash": "c92121c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேராகு",
+  "paragraphs": [
+    {
+      "id": "smiths/thara#p1-c92121c1",
+      "text": "தேராகு ஆபிரகாமின் தகப்பன். (லூக்கா 3:34)"
+    }
+  ]
+}

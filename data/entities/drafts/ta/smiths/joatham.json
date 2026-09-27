@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joatham",
+  "lang": "ta",
+  "source_hash": "6fe25577",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவாதாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/joatham#p1-6fe25577",
+      "text": "= உசியாவின் மகனாகிய யோதாம். (மத்தேயு 1:9)"
+    }
+  ]
+}

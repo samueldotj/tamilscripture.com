@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jakeh",
+  "lang": "ta",
+  "source_hash": "47cc2f08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கே",
+  "paragraphs": [
+    {
+      "id": "aquifer/jakeh#p1-47cc2f08",
+      "text": "யாக்கே ஆகூருடைய தகப்பன் ஆவான். ஆகூர் ஈத்தியேலுக்கும் ஊகாலுக்கும் உரையாற்றப்பட்ட தொடர்ச்சியான நீதிமொழிகளை எழுதினான் (நீதிமொழிகள் 30:1)."
+    }
+  ]
+}

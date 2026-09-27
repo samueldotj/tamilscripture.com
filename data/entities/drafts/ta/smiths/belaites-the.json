@@ -1,0 +1,18 @@
+{
+  "id": "smiths/belaites-the",
+  "lang": "ta",
+  "source_hash": "eabe2765",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலாவியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/belaites-the#p1-eabe2765",
+      "text": "(எண்ணாகமம் 26:38) [பேலா, 3]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/wood",
+  "lang": "ta",
+  "source_hash": "bd2da6dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/wood#p1-bd2da6dc",
+      "text": "காடு என்பதைக் காண்க."
+    }
+  ]
+}

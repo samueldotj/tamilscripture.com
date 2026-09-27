@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amon",
+  "lang": "ta",
+  "source_hash": "4f8dea82",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/amon#p1-4f8dea82",
+      "text": "(கட்டுபவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/simri",
+  "lang": "ta",
+  "source_hash": "6cb9fc79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரி",
+  "paragraphs": [
+    {
+      "id": "eastons/simri#p1-6cb9fc79",
+      "text": "காவல்காரன், மெராரியின் குடும்பத்தைச் சேர்ந்த ஒரு லேவியன் (1 நாளாகமம் 26:10)."
+    }
+  ]
+}

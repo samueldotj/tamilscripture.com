@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jose",
+  "lang": "ta",
+  "source_hash": "062d8f50",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசே",
+  "paragraphs": [
+    {
+      "id": "smiths/jose#p1-062d8f50",
+      "text": "(யோசேயின் மறு வடிவம்), இயேசுகிறிஸ்துவின் வம்சவரலாற்றில் எலியேசருடைய குமாரன். (லூக்கா 3:29)"
+    }
+  ]
+}

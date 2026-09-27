@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shedeur",
+  "lang": "ta",
+  "source_hash": "48577c70",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேதேயூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shedeur#p1-48577c70",
+      "text": "(வெளிச்சத்தை எறியுங்கவன்), எகிப்திலிருந்து வெளியேறின காலத்தில் ரூபன் கோத்திரத்தின் தலைவனாகிய எலிசூரின் தகப்பன். (எண்ணாகமம் 1:5; 2:10; 7:30,35; 10:18) (கி.மு. 1491.)"
+    }
+  ]
+}

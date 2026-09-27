@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hali",
+  "lang": "ta",
+  "source_hash": "3c02dd7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hali#p1-3c02dd7c",
+      "text": "ஆசேருடைய கோத்திரத்திற்குரிய எல்லையை உருவாக்கிய பட்டணங்களில் குறிப்பிடப்பட்டுள்ள ஒரு பட்டணம் (யோசுவா 19:25). ஆலி கர்மேல் மலைக்கு மேற்கே அமைந்திருக்கலாம், ஆனால் இது உறுதியற்றதாக உள்ளது."
+    }
+  ]
+}

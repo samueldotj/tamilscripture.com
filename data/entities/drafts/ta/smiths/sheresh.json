@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sheresh",
+  "lang": "ta",
+  "source_hash": "88f3170c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/sheresh#p1-88f3170c",
+      "text": "(வேர்), மனாசேயின் மகனாகிய மாகீருக்கு அவனுடைய மனைவி மாக்காளால் பிறந்தவன். (1 நாளாகமம் 7:16) (கி.மு. 1419-க்கு முன்பு.)"
+    }
+  ]
+}

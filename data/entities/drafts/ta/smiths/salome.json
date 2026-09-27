@@ -1,0 +1,18 @@
+{
+  "id": "smiths/salome",
+  "lang": "ta",
+  "source_hash": "7e029ca3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சலோமே",
+  "paragraphs": [
+    {
+      "id": "smiths/salome#p1-7e029ca3",
+      "text": "(சமாதானமுள்ளவள்)."
+    }
+  ]
+}

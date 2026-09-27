@@ -1,0 +1,18 @@
+{
+  "id": "eastons/skull-the-place-of-a",
+  "lang": "ta",
+  "source_hash": "1b7c5a4a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கபாலம், இடம்",
+  "paragraphs": [
+    {
+      "id": "eastons/skull-the-place-of-a#p1-1b7c5a4a",
+      "text": "கொல்கொதா என்பதைக் காண்க."
+    }
+  ]
+}

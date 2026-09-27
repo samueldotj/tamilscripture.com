@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ibri",
+  "lang": "ta",
+  "source_hash": "145dc552",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/ibri#p1-145dc552",
+      "text": "(எபிரெயன்), தாவீதின் காலத்தில் இருந்த யாசியாவின் குடும்பத்தைச் சேர்ந்த ஒரு மெராரியனான லேவியன் (1 நாளாகமம் 24:27). (கி.மு. 1014.)"
+    }
+  ]
+}

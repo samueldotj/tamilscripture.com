@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shethar",
+  "lang": "ta",
+  "source_hash": "4b74d0e9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேதார்",
+  "paragraphs": [
+    {
+      "id": "eastons/shethar#p1-4b74d0e9",
+      "text": "நட்சத்திரம், அகாஸ்வேருவின் அரசவையிலிருந்த ஒரு பிரபு (எஸ்தர் 1:14)."
+    }
+  ]
+}

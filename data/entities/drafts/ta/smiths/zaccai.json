@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zaccai",
+  "lang": "ta",
+  "source_hash": "094b8b89",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சக்காய்",
+  "paragraphs": [
+    {
+      "id": "smiths/zaccai#p1-094b8b89",
+      "text": "(சுத்தமான). சக்காயின் வம்சத்தார் 760 பேர், செருபாபேலுடன் திரும்பி வந்தார்கள். (எஸ்றா 2:9; நெகேமியா 7:14) (கி.மு. 536க்கு முன்.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/egyptian-egyptians",
+  "lang": "ta",
+  "source_hash": "9ec13452",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகிப்தியன், எகிப்தியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/egyptian-egyptians#p1-9ec13452",
+      "text": "எகிப்தின் சொந்த ஜனம் அல்லது ஜனங்கள்."
+    }
+  ]
+}

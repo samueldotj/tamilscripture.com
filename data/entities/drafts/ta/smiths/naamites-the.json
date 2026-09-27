@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naamites-the",
+  "lang": "ta",
+  "source_hash": "156abe9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகமானியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/naamites-the#p1-156abe9b",
+      "text": "பென்யமீனின் பேரனாகிய நாகமானிடமிருந்து தோன்றிய குடும்பம். (எண்ணாகமம் 28:40) மட்டும்."
+    }
+  ]
+}

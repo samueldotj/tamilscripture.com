@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/dizahab",
+  "lang": "ta",
+  "source_hash": "e8b8885a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தி-சாகாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dizahab#p1-e8b8885a",
+      "text": "பாரான், தோப்பேல், லாபான், ஆஸ்ரோத் ஆகியவற்றுடன் குறிப்பிடப்பட்டுள்ள ஒரு பெயர், மோசே இஸ்ரவேலுக்கு விடுத்த இறுதி உரையின் இடத்தைக் குறிக்கும் பொருட்டு (உபாகமம் 1:1)."
+    }
+  ]
+}

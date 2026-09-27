@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shalim-land-of",
+  "lang": "ta",
+  "source_hash": "20ce7e02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலீம் நாடு",
+  "paragraphs": [
+    {
+      "id": "eastons/shalim-land-of#p1-20ce7e02",
+      "text": "நரிகளின் நாடு, எருசலேமுக்கு வடமேற்கே இருந்ததாகத் தோன்றும் ஒரு இடம் (1 சாமுவேல் 9:4), ஒருவேளை தாணுடைய பங்கிலுள்ள சாலாபீனுக்கு அருகில் இருந்திருக்கலாம் (யோசுவா 19:42)."
+    }
+  ]
+}

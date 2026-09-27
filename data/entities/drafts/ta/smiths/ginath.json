@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ginath",
+  "lang": "ta",
+  "source_hash": "96ee099e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீனாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ginath#p1-96ee099e",
+      "text": "(பாதுகாப்பு), திப்னியின் தகப்பன். (1 இராஜாக்கள் 16:21,22)"
+    }
+  ]
+}

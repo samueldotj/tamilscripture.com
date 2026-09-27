@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethrapha",
+  "lang": "ta",
+  "source_hash": "ba6d3e5e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்ராபா",
+  "paragraphs": [
+    {
+      "id": "smiths/bethrapha#p1-ba6d3e5e",
+      "text": "எஸ்தோனின் மகனாக யூதாவின் வம்சவரலாற்றில் காணப்படும் ஒரு பெயர். (1 நாளாகமம் 4:12)"
+    }
+  ]
+}

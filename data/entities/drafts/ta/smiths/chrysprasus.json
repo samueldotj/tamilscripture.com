@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chrysprasus",
+  "lang": "ta",
+  "source_hash": "790f6790",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிறிசோப்பிராஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/chrysprasus#p1-790f6790",
+      "text": "CHRYSOPRAS (கிறிசோப்பிராஸ்) என்பதன் லத்தீன் வடிவம்."
+    }
+  ]
+}

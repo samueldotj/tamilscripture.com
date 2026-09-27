@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meuzai",
+  "lang": "ta",
+  "source_hash": "44a9970a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேஊசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/meuzai#p1-44a9970a",
+      "text": "(எசேக்கியேல் 27:19) விளிம்புக்குறிப்பு [ஊசால் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/keziah",
+  "lang": "ta",
+  "source_hash": "b2c1ff18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெத்சீயாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/keziah#p1-b2c1ff18",
+      "text": "யோபுவின் இரண்டாம் மகள். தேவன் யோபுவின் செல்வத்தை மறுபடியும் அருளிய பின்பு அவள் பிறந்தாள் (யோபு 42:14)."
+    }
+  ]
+}

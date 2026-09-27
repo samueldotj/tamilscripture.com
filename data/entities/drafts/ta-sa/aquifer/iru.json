@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/iru",
+  "lang": "ta",
+  "source_hash": "ad20da81",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈரு",
+  "paragraphs": [
+    {
+      "id": "aquifer/iru#p1-ad20da81",
+      "text": "ஈரு யூதா கோத்திரத்திற்குரிய காலேபின் மகனாக இருந்தான் (1 நாளாகமம் 4:15)."
+    }
+  ]
+}

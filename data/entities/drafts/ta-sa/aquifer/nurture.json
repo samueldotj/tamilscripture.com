@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nurture",
+  "lang": "ta",
+  "source_hash": "ed7180be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பராமரிப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/nurture#p1-e04a3dfd",
+      "text": "எபேசியர் 6:4-ல் கிரேக்கு வார்த்தையான paideia-க்கு கிங் ஜேம்ஸ் வேர்ஷன் மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட சொல். இதை “தண்டனை” என்று மொழிபெயர்ப்பதே சிறந்தது."
+    },
+    {
+      "id": "aquifer/nurture#p2-38dd6485",
+      "text": "தண்டனை என்பதைக் காண்க."
+    }
+  ]
+}

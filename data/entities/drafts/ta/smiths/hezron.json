@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hezron",
+  "lang": "ta",
+  "source_hash": "16889fcd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hezron#p1-16889fcd",
+      "text": "(மதிலால் சூழப்பட்டவன்)."
+    }
+  ]
+}

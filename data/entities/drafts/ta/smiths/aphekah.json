@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aphekah",
+  "lang": "ta",
+  "source_hash": "49e4fb2e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆப்பெக்கா",
+  "paragraphs": [
+    {
+      "id": "smiths/aphekah#p1-49e4fb2e",
+      "text": "(பலமான இடம்), மலைநாட்டிலிருந்த யூதாவின் ஒரு பட்டணம் (யோசுவா 15:53) இது ஆப்பெக், 1 உடன் ஒன்றாக இருக்கலாம்."
+    }
+  ]
+}

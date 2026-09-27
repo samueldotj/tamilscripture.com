@@ -1,0 +1,26 @@
+{
+  "id": "eastons/joiada",
+  "lang": "ta",
+  "source_hash": "4fa0f944",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொயதா",
+  "paragraphs": [
+    {
+      "id": "eastons/joiada#p1-4e796a9e",
+      "text": "(யெகோவா தயை செய்கிறவர்) = யோய்தா."
+    },
+    {
+      "id": "eastons/joiada#p2-b9a37675",
+      "text": "(1.) நெகேமியா 3:6."
+    },
+    {
+      "id": "eastons/joiada#p3-f4b45832",
+      "text": "(2.) பிரதான ஆசாரியன்களில் ஒருவன் (12:10, 11, 22)."
+    }
+  ]
+}

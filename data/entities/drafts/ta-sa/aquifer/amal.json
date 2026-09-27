@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/amal",
+  "lang": "ta",
+  "source_hash": "c8832c25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/amal#p1-c8832c25",
+      "text": "ஆமால் என்பது ஏலேமின் மகனும், ஆசேருடைய சந்ததியனுமான ஒருவனின் பெயர். இவனுடைய பெயர் 1 நாளாகமம் 7:35-இல் காணப்படுகிறது."
+    }
+  ]
+}

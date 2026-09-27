@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benhanan",
+  "lang": "ta",
+  "source_hash": "4ede6933",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்கானான்",
+  "paragraphs": [
+    {
+      "id": "smiths/benhanan#p1-4ede6933",
+      "text": "(கிருபையுள்ளவனின் மகன்), யூதாவின் வம்சத்தில் ஷீமோனின் மகன். (1 நாளாகமம் 4:20)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gudgodah",
+  "lang": "ta",
+  "source_hash": "4fd57a7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குத்கோதா",
+  "paragraphs": [
+    {
+      "id": "smiths/gudgodah#p1-4fd57a7f",
+      "text": "(10:7) [ஓர்-அகித்காத் காண்க]"
+    }
+  ]
+}

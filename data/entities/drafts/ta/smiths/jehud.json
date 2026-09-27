@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehud",
+  "lang": "ta",
+  "source_hash": "40dae773",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யேகூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehud#p1-40dae773",
+      "text": "(புகழ்ச்சி), தாண் கோத்திரத்திற்குரிய பட்டணங்களில் ஒன்று, (யோசுவா 19:45) பாலாத்திற்கும் பெனபெராக்கிற்கும் இடையில் குறிக்கப்பட்டுள்ளது."
+    }
+  ]
+}

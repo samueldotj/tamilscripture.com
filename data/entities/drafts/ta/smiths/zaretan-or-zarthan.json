@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zaretan-or-zarthan",
+  "lang": "ta",
+  "source_hash": "370af332",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரெத்தான், அல்லது சார்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/zaretan-or-zarthan#p1-370af332",
+      "text": "(யோசுவா 3:16)"
+    }
+  ]
+}

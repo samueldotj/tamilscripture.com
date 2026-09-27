@@ -1,0 +1,18 @@
+{
+  "id": "eastons/adino",
+  "lang": "ta",
+  "source_hash": "3bef61d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதீனோ",
+  "paragraphs": [
+    {
+      "id": "eastons/adino#p1-3bef61d2",
+      "text": "தாவீதின் பலசாலிகளில் ஒருவனாகிய அதீனோஏஸ்னி ஊரைச்சேர்ந்தவன் (2 சாமுவேல் 23:8). (யோசேப்பாசெபெத் என்பதைக் காண்க.)"
+    }
+  ]
+}

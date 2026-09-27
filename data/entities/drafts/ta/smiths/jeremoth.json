@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeremoth",
+  "lang": "ta",
+  "source_hash": "abb5b16d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெரிமோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jeremoth#p1-abb5b16d",
+      "text": "(உயரங்கள்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jannes",
+  "lang": "ta",
+  "source_hash": "ec7e3ff2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யந்நே",
+  "paragraphs": [
+    {
+      "id": "smiths/jannes#p1-ec7e3ff2",
+      "text": "யாம்பிரே என்பவனும் சேர்ந்து, மோசேக்கு எதிர்த்து நின்ற இரு எகிப்திய மந்திரவாதிகளின் பெயர்கள். யாத்திராகமம் 7:9-13; 2 தீமோத்தேயு 3:8,9. (கி.மு. 1492.)"
+    }
+  ]
+}

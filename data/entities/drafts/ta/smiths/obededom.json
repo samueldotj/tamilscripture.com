@@ -1,0 +1,18 @@
+{
+  "id": "smiths/obededom",
+  "lang": "ta",
+  "source_hash": "787fbfbe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபேத்ஏதோம்",
+  "paragraphs": [
+    {
+      "id": "smiths/obededom#p1-787fbfbe",
+      "text": "(ஏதோமின் ஊழியக்காரன்)."
+    }
+  ]
+}

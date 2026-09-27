@@ -1,0 +1,18 @@
+{
+  "id": "eastons/arieh",
+  "lang": "ta",
+  "source_hash": "35db0931",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரியே",
+  "paragraphs": [
+    {
+      "id": "eastons/arieh#p1-35db0931",
+      "text": "சிங்கம், சமாரியாவில் பெக்காகியாவுடன் கொல்லப்பட்ட மேனாட்பிற்காவலரில் ஒருவனின் பெயர் (2 இராஜாக்கள் 15:25), இதைச் சதி செய்தவன் பெக்கா."
+    }
+  ]
+}

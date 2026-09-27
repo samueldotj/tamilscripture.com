@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/knife",
+  "lang": "ta",
+  "source_hash": "5fda2065",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கத்தி",
+  "paragraphs": [
+    {
+      "id": "aquifer/knife#p1-5fda2065",
+      "text": "கத்தி என்பது கையில் வைத்திருக்கக்கூடிய ஒரு சிறிய, ஒற்றை அல்லது இரட்டைக் கூர்முனையுள்ள வெட்டும் கருவியாகும். இது பெரும்பாலும் மூங்கல் கல்லினாலோ அல்லது உலோகத்தினாலோ செய்யப்படும்."
+    }
+  ]
+}

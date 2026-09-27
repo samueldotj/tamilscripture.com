@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bether",
+  "lang": "ta",
+  "source_hash": "abb72af6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்தேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/bether#p1-abb72af6",
+      "text": "பிளத்தல் அல்லது பிரிவினை, உன்னதப்பாட்டு 2:17-இல் குறிப்பிடப்பட்டுள்ள சில மலைகள்; லீபனோனுக்கு அருகில் இருக்கக்கூடும்."
+    }
+  ]
+}

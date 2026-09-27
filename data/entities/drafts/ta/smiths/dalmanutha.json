@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dalmanutha",
+  "lang": "ta",
+  "source_hash": "3d48a8e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தல்மனூத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/dalmanutha#p1-3d48a8e1",
+      "text": "கலிலேயாக்கடலின் மேற்குப் பக்கத்தில், மக்தலாவுக்கு அருகிலிருந்த ஒரு பட்டணம் (மத்தேயு 15:39, மாற்கு 8:10, மக்தலா காண்க). தல்மனூத்தா ’Ain-el-Barideh, “குளிர்ந்த ஊற்று” எனப்படும் இடத்தில் இருந்திருக்கக்கூடும்."
+    }
+  ]
+}

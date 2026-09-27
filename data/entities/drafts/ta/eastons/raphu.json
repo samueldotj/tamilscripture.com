@@ -1,0 +1,18 @@
+{
+  "id": "eastons/raphu",
+  "lang": "ta",
+  "source_hash": "1e7f9c8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்பூ",
+  "paragraphs": [
+    {
+      "id": "eastons/raphu#p1-1e7f9c8e",
+      "text": "குணமாக்கப்பட்டவன், பென்யமீன் கோத்திரத்தானாகிய இவனுடைய மகன் பல்த்தி பன்னிரண்டு ஒற்றர்களில் ஒருவனாக இருந்தான் (எண்ணாகமம் 13:9)."
+    }
+  ]
+}

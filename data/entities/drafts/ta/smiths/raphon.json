@@ -1,0 +1,18 @@
+{
+  "id": "smiths/raphon",
+  "lang": "ta",
+  "source_hash": "0a9ce825",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராப்போன்",
+  "paragraphs": [
+    {
+      "id": "smiths/raphon#p1-0a9ce825",
+      "text": "கீலேயாத்திலுள்ள ஒரு பட்டணம், 1 மக்கபேயர் 15:37; இது ப்ளினியால் தெக்கப்போலியின் பட்டணங்களில் ஒன்றாகக் குறிப்பிடப்பட்டுள்ள ராப்பானா என்பதோடு ஒத்ததாக இருக்கலாம்."
+    }
+  ]
+}

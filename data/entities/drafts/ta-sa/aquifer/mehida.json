@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mehida",
+  "lang": "ta",
+  "source_hash": "1228ad62",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகிதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mehida#p1-1228ad62",
+      "text": "மெகிதா என்பவன் எஸ்றாவின் காலத்தில் ஆலயப் பணிவிடையாட்களின் ஒரு வம்சத்தலைவனாக இருந்தான் (எஸ்றா 2:52; நெகேமியா 7:54)."
+    }
+  ]
+}

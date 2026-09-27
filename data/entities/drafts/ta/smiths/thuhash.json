@@ -1,0 +1,18 @@
+{
+  "id": "smiths/thuhash",
+  "lang": "ta",
+  "source_hash": "27589ff6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூகாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/thuhash#p1-27589ff6",
+      "text": "(கேழல்), நாகோருக்கு அவனுடைய மறுமனையாட்டியாகிய ரேயுமாள் மூலமாகப் பிறந்த மகன். (ஆதியாகமம் 22:24) (கி.மு. 1880.)"
+    }
+  ]
+}

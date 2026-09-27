@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ephraimite",
+  "lang": "ta",
+  "source_hash": "051c87c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பிராயீமன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ephraimite#p1-051c87c7",
+      "text": "எப்பிராயீம் கோத்திரத்தைச் சேர்ந்தவன்; வேறு இடங்களில் “எப்பிராத்தியன்” என்று அழைக்கப்படுகிறான். (நியாயாதிபதிகள் 12:5)"
+    }
+  ]
+}

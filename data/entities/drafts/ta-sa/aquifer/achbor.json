@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/achbor",
+  "lang": "ta",
+  "source_hash": "2ab101bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்போர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/achbor#p1-6f1787b3",
+      "text": "அக்போருக்கான வேறொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/achbor#p2-15d6e65b",
+      "text": "அக்போர் என்பதைக் காண்க."
+    }
+  ]
+}

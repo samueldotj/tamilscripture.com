@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shammua",
+  "lang": "ta",
+  "source_hash": "5215849a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்முவா",
+  "paragraphs": [
+    {
+      "id": "smiths/shammua#p1-5215849a",
+      "text": "(பிரசித்தம் பெற்றவன்)."
+    }
+  ]
+}

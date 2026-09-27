@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pit",
+  "lang": "ta",
+  "source_hash": "61f7b5d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குழி",
+  "paragraphs": [
+    {
+      "id": "smiths/pit#p1-61f7b5d7",
+      "text": "[நரகம்]"
+    }
+  ]
+}

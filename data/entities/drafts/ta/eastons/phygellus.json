@@ -1,0 +1,18 @@
+{
+  "id": "eastons/phygellus",
+  "lang": "ta",
+  "source_hash": "373b9a65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிகெல்லு",
+  "paragraphs": [
+    {
+      "id": "eastons/phygellus#p1-373b9a65",
+      "text": "ஓட்டமாகிய, ரோமாபுரிக்குப் பவுல் இரண்டாம்முறை சிறையிலடைக்கப்பட்டிருந்தபோது அவரை “விட்டு விலகின” ஆசியாவின் ஒரு கிறிஸ்தவன் (2 தீமோத்தேயு 1:15). இவனைப் பற்றி வேறு எதுவும் அறியப்படவில்லை."
+    }
+  ]
+}

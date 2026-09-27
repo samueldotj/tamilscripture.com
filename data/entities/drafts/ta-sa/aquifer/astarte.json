@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/astarte",
+  "lang": "ta",
+  "source_hash": "afb0c9f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்தார்தே",
+  "paragraphs": [
+    {
+      "id": "aquifer/astarte#p1-e7cd273c",
+      "text": "பூர்வ கிழக்கு நாடுகள் முழுவதும் பரவலாக தொழுதுகொள்ளப்பட்ட ஒரு பொய்யான தேவதையாகிய தாய் தேவதையாம். இவள் அஸ்தரோத் என்றும் அழைக்கப்பட்டாள்."
+    },
+    {
+      "id": "aquifer/astarte#p2-8b31edc8",
+      "text": "கானானிய தேவர்களும் மதமும் என்பதைக் காண்க."
+    }
+  ]
+}

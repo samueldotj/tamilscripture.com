@@ -1,0 +1,18 @@
+{
+  "id": "smiths/birzavith",
+  "lang": "ta",
+  "source_hash": "d2d5d546",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிர்சாவீத்",
+  "paragraphs": [
+    {
+      "id": "smiths/birzavith#p1-d2d5d546",
+      "text": "ஆசேரின் வம்சவரலாறுகளில் காணப்படும் ஒரு பெயர். (1 நாளாகமம் 7:31)"
+    }
+  ]
+}

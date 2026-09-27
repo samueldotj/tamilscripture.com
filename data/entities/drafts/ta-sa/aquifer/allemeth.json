@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/allemeth",
+  "lang": "ta",
+  "source_hash": "2311ce12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலமேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/allemeth#p1-a43c4812",
+      "text": "1 நாளாகமம் 6:60-ல் அலமேத் என்பதற்கு நியூ அமெரிக்கன் ஸ்டாண்டர்ட் பைபிள் பயன்படுத்தும் எழுத்துவரிவு."
+    },
+    {
+      "id": "aquifer/allemeth#p2-6693a870",
+      "text": "அலமேத் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

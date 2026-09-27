@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tabret",
+  "lang": "ta",
+  "source_hash": "bbb5b2ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தம்புரு",
+  "paragraphs": [
+    {
+      "id": "smiths/tabret#p1-bbb5b2ac",
+      "text": "[தம்புரு, தம்புரு காண்க]"
+    }
+  ]
+}

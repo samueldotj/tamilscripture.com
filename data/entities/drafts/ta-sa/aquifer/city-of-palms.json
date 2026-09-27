@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/city-of-palms",
+  "lang": "ta",
+  "source_hash": "463bd801",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரீச்சமரங்களின் பட்டணம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/city-of-palms#p1-87388b3d",
+      "text": "பேரீச்சமரங்களின் பட்டணம் என்பது எரிகோ நகருக்குரிய ஒரு பெயர். இந்தப் பெயர் அதிலிருந்த ஏராளமான பேரீச்சமரங்களிலிருந்து வந்தது (உபாகமம் 34:3)."
+    },
+    {
+      "id": "aquifer/city-of-palms#p2-b570a3d7",
+      "text": "எரிகோ காண்க."
+    }
+  ]
+}

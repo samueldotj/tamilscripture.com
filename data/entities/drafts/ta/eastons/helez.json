@@ -1,0 +1,26 @@
+{
+  "id": "eastons/helez",
+  "lang": "ta",
+  "source_hash": "ad21e5ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலெஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/helez#p1-95d3e292",
+      "text": "பலமான, அல்லது இடுப்பு (?)"
+    },
+    {
+      "id": "eastons/helez#p2-8d622efd",
+      "text": "(1.) யூதாவின் வம்சத்தாரில் ஒருவன் (1 நாளாகமம் 2:39)."
+    },
+    {
+      "id": "eastons/helez#p3-9d16b8b9",
+      "text": "(2.) தாவீதின் வலிமையான போர்வீரர்களில் ஒருவன் (2 சாமுவேல் 23:26)."
+    }
+  ]
+}

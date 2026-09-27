@@ -1,0 +1,18 @@
+{
+  "id": "eastons/seorim",
+  "lang": "ta",
+  "source_hash": "8079f2d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செயோரீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/seorim#p1-8079f2d2",
+      "text": "பார்லி என்று பொருள்படும், நான்காவது ஆசாரிய முறையின் தலைவன் (1 நாளாகமம் 24:8)."
+    }
+  ]
+}

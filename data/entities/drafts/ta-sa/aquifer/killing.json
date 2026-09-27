@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/killing",
+  "lang": "ta",
+  "source_hash": "a78c16be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொலை செய்தல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/killing#p1-5ae33b57",
+      "text": "கொலை செய்தல் என்பது இன்னொருவரை மரிக்கச் செய்யும் செயலாகும். கொலை, படுகொலை, நியாயம், தண்டனை ஆகியவற்றைப் பற்றிய நியாயப்பிரமாணங்கள் பரிசுத்த வேதாகமத்தில் அடங்கியுள்ளன."
+    },
+    {
+      "id": "aquifer/killing#p2-01211266",
+      "text": "காண்க: Civil Law and Justice (சிவில் நியாயப்பிரமாணமும் நியாயமும்); Criminal Law and Punishment (குற்றவியல் நியாயப்பிரமாணமும் தண்டனையும்); பத்துக் கற்பனைகள்."
+    }
+  ]
+}

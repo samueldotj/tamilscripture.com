@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bodily-presence",
+  "lang": "ta",
+  "source_hash": "0a4dcc4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சரீர சமூகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bodily-presence#p1-86ce5bd4",
+      "text": "இந்த சொற்றொடர் கிறிஸ்துவின் சரீரத்தையும், கர்த்தருடைய இராப்போஜனத்தில் இருக்கும் அப்பத்திற்கும் பாத்திரத்திற்கும் அது எவ்வாறு தொடர்புடையது என்பதைப் பற்றியும் பேசப் பயன்படுத்தப்படுகிறது."
+    },
+    {
+      "id": "aquifer/bodily-presence#p2-8d834315",
+      "text": "கர்த்தருடைய இராப்போஜனம் என்பதைக் காண்க."
+    }
+  ]
+}

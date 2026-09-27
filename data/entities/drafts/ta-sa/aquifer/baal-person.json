@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/baal-person",
+  "lang": "ta",
+  "source_hash": "f2e0b541",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகால் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/baal-person#p1-49317d20",
+      "text": "ராயாவின் மகனும், பேராவின் தகப்பனுமான ஒரு ரூபனியன் (1 நாளாகமம் 5:5)."
+    },
+    {
+      "id": "aquifer/baal-person#p2-d6ecdc85",
+      "text": "ஒரு பென்யமீனியன், கிபியோனின் தகப்பனான ஏயேலுக்கு அவனுடைய மனைவி மாகாவினால் பிறந்த பத்து மகன்களில் ஒருவன். அவனுடைய சகோதரன் சவுலின் தகப்பனான கீச் (1 நாளாகமம் 8:30; 9:36)."
+    }
+  ]
+}

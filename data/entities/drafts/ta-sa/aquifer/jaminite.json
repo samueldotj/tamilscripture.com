@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jaminite",
+  "lang": "ta",
+  "source_hash": "ffca0641",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாமினியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaminite#p1-bf562085",
+      "text": "சிமியோனுடைய கோத்திரத்தில் யாமினின் சந்ததியான எவரும் (எண்ணாகமம் 26:12)."
+    },
+    {
+      "id": "aquifer/jaminite#p2-0095f895",
+      "text": "யாமின் #1-ஐக் காண்க."
+    }
+  ]
+}

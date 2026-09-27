@@ -1,0 +1,18 @@
+{
+  "id": "eastons/amashai",
+  "lang": "ta",
+  "source_hash": "84f9f1e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அமாசாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/amashai#p1-84f9f1e6",
+      "text": "எருசலேமில் குடியிருந்து ஆலயத்தின் வேலையைச் செய்யும்படி நெகேமியாவினால் நியமிக்கப்பட்ட அசரெயேலின் மகன் (நெகேமியா 11:13)."
+    }
+  ]
+}

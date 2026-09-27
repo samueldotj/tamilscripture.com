@@ -1,0 +1,18 @@
+{
+  "id": "eastons/anvil",
+  "lang": "ta",
+  "source_hash": "d6270007",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடைகல்",
+  "paragraphs": [
+    {
+      "id": "eastons/anvil#p1-d6270007",
+      "text": "“அடிக்கப்பட்டது” என்று பொருள்படும் எபிரெய வார்த்தையின் மொழிபெயர்ப்பு, ஏசாயா 41:7 இல் மட்டும் காணப்படுகிறது."
+    }
+  ]
+}

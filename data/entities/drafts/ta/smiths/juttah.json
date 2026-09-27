@@ -1,0 +1,18 @@
+{
+  "id": "smiths/juttah",
+  "lang": "ta",
+  "source_hash": "ff7526d8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யுத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/juttah#p1-ff7526d8",
+      "text": "(நீட்டப்பட்டது), யூதாவின் மலைநாட்டிலே, மாகோனும் கர்மேலும் இருக்கும் அயலிலுள்ள ஒரு பட்டணம். (யோசுவா 15:55) அந்த இடம் இப்பொழுது யுட்டா என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

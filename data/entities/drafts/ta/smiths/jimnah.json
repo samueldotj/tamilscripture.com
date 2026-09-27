@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jimnah",
+  "lang": "ta",
+  "source_hash": "56bb3014",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/jimnah#p1-56bb3014",
+      "text": "= யிம்னா = இம்னா. (ஆதியாகமம் 46:17)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/river-of-gad",
+  "lang": "ta",
+  "source_hash": "1b0c77f2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்தின் நதி",
+  "paragraphs": [
+    {
+      "id": "eastons/river-of-gad#p1-1b0c77f2",
+      "text": "இது அர்னோன் ஆற்றாக இருக்கலாம் (2 சாமுவேல் 24:5)."
+    }
+  ]
+}

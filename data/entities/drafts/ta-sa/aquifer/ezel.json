@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ezel",
+  "lang": "ta",
+  "source_hash": "5e8a0d81",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ezel#p1-5e8a0d81",
+      "text": "தாவீது சவுலின் அரசவையை விட்டு விடைபெறுவதற்கு முன்பாக யோனத்தானும் தாவீதும் சந்தித்த ஒரு கல்லைக் குறிக்கும் எபிரெய வார்த்தை (1 சாமுவேல் 20:19, nlt mg)."
+    }
+  ]
+}

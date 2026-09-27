@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashem",
+  "lang": "ta",
+  "source_hash": "f234a725",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hashem#p1-f234a725",
+      "text": "(கொழுப்பு). கீசோனியனாகிய ஆசேமின் மகன்கள் தாவீதின் காவல் வீரர்களில் ஒருவராகக் குறிப்பிடப்பட்டுள்ளனர் (1 நாளாகமம் 11:34) (கி.மு. 1014க்கு முன்)."
+    }
+  ]
+}

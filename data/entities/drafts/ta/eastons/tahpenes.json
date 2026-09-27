@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tahpenes",
+  "lang": "ta",
+  "source_hash": "54df2381",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாப்பெனேஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/tahpenes#p1-54df2381",
+      "text": "ஏதோமியனான ஆதாத்துக்குத் தன்னுடைய சகோதரியைத் திருமணமாகக் கொடுத்த பார்வோனுடைய மனைவி (1 இராஜாக்கள் 11:19, 20)."
+    }
+  ]
+}

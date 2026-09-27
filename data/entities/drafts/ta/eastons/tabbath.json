@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tabbath",
+  "lang": "ta",
+  "source_hash": "cb5a28be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/tabbath#p1-cb5a28be",
+      "text": "பிரசித்தமானது, எப்பிராயீம் கோத்திரத்திற்குரிய ஒரு பட்டணம் (நியாயாதிபதிகள் 7:22), பெத்செயானுக்குத் தெற்கே, யோர்தானுக்கு அருகில் அமைந்துள்ளது."
+    }
+  ]
+}

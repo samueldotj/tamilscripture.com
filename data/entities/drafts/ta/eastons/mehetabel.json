@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mehetabel",
+  "lang": "ta",
+  "source_hash": "3f72359e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகேதபேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/mehetabel#p1-3f72359e",
+      "text": "ஏதோமின் அரசர்களில் ஒருவனாகிய ஆதாத்தின் மனைவி (ஆதியாகமம் 36:39)."
+    }
+  ]
+}

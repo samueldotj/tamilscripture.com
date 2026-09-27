@@ -1,0 +1,18 @@
+{
+  "id": "smiths/besom",
+  "lang": "ta",
+  "source_hash": "7fd4b378",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விளக்குமாறு",
+  "paragraphs": [
+    {
+      "id": "smiths/besom#p1-7fd4b378",
+      "text": "பெருக்குவதற்குப் பயன்படும் கிளைகளினால் செய்யப்பட்ட ஒரு துடைப்பம் அல்லது விளக்குமாறு (ஏசாயா 14:23)"
+    }
+  ]
+}

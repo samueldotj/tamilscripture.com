@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tachmonite",
+  "lang": "ta",
+  "source_hash": "11ad96af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தக்கெமோனியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/tachmonite#p1-11ad96af",
+      "text": "=ஆக்மோனியன், யாஷோபியாமுக்கு கொடுக்கப்பட்ட ஒரு பெயர் (2 சாமுவேல் 23:8; ஒப்பிடுக 1 நாளாகமம் 11:11)."
+    }
+  ]
+}

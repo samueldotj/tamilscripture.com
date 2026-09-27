@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abib",
+  "lang": "ta",
+  "source_hash": "f89b41df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபீப்",
+  "paragraphs": [
+    {
+      "id": "smiths/abib#p1-f89b41df",
+      "text": "(பச்சையான பழங்கள்). [மாதம் காண்க]"
+    }
+  ]
+}

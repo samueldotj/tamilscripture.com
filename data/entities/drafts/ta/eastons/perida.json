@@ -1,0 +1,18 @@
+{
+  "id": "eastons/perida",
+  "lang": "ta",
+  "source_hash": "b4eb5835",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரீதா",
+  "paragraphs": [
+    {
+      "id": "eastons/perida#p1-b4eb5835",
+      "text": "கருவூலம், நெகேமியா 7:57. (பெருதா என்பதைக் காண்க.)"
+    }
+  ]
+}

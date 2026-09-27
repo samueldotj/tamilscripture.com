@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ava",
+  "lang": "ta",
+  "source_hash": "5bf7a819",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ava#p1-b736d58e",
+      "text": "2 இராஜாக்கள் 17:24-ல் உள்ள ஆபா என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் வேறு எழுத்துப்பெயர்ப்பு இதுவாகும். ஆபா என்பது சீரியாவின் ஒரு பிரதேசமாக இருந்தது."
+    },
+    {
+      "id": "aquifer/ava#p2-d1426b67",
+      "text": "ஆபா என்பதைக் காண்க."
+    }
+  ]
+}

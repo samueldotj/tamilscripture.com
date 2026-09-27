@@ -1,0 +1,18 @@
+{
+  "id": "eastons/middin",
+  "lang": "ta",
+  "source_hash": "583be73d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மித்தீன்",
+  "paragraphs": [
+    {
+      "id": "eastons/middin#p1-583be73d",
+      "text": "அளவுகள் என்று பொருள்படும், சாக்கடலின் மேற்குப் பகுதியில், “வனாந்திரத்தில்” இருந்த ஆறு பட்டணங்களில் ஒன்று, ஏன்கேதியுடன் சேர்த்துக் குறிப்பிடப்பட்டுள்ளது (யோசுவா 15:61)."
+    }
+  ]
+}

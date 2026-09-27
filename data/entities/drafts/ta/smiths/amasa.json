@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amasa",
+  "lang": "ta",
+  "source_hash": "ed5dde0c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அமாசா",
+  "paragraphs": [
+    {
+      "id": "smiths/amasa#p1-ed5dde0c",
+      "text": "(ஒரு பாரம்)."
+    }
+  ]
+}

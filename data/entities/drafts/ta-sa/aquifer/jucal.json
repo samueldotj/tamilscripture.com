@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jucal",
+  "lang": "ta",
+  "source_hash": "e6fa3960",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூகால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jucal#p1-88f5faa1",
+      "text": "யூகால் என்பது எரேமியா 38:1-ல் காணப்படும் செலேமியாவின் மகனான யூகாலைக் குறிக்கும் மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/jucal#p2-8a8a5f76",
+      "text": "யூகால் என்பதைக் காண்க."
+    }
+  ]
+}

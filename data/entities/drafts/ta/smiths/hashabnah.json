@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashabnah",
+  "lang": "ta",
+  "source_hash": "1cb1b7ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஷபனா",
+  "paragraphs": [
+    {
+      "id": "smiths/hashabnah#p1-1cb1b7ee",
+      "text": "(யெகோவா கருதுகிறவர்) நெகேமியாவுடன் உடன்படிக்கையை முத்திரையிட்ட “ஜனத்தின்” தலைவர்களில் ஒருவன். (நெகேமியா 10:25) (கி.மு. 410.)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gazara",
+  "lang": "ta",
+  "source_hash": "b8e45b2d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கசாரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/gazara#p1-c6c28862",
+      "text": "1, 2 மக்கபேயர் புத்தகங்களில் கேசேர் என்ற பட்டணத்திற்குரிய மற்றொரு பெயராகும் கசாரா."
+    },
+    {
+      "id": "aquifer/gazara#p2-a118672b",
+      "text": "கேசேர் என்பதைக் காண்க."
+    }
+  ]
+}

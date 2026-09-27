@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/homer",
+  "lang": "ta",
+  "source_hash": "ffa3c62d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/homer#p1-acccbc49",
+      "text": "ஓமர் என்பது உலர்ந்த பொருட்களின் அளவை அளவிடப் பயன்படுத்தப்படும் ஒரு அளவு அலகு. இது தோராயமாக நான்கு முதல் ஆறரை பூசல் (bushel) அளவுக்கு சமமாக மதிப்பிடப்படுகிறது."
+    },
+    {
+      "id": "aquifer/homer#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

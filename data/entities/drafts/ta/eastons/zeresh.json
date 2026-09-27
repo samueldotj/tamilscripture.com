@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zeresh",
+  "lang": "ta",
+  "source_hash": "fff2c44f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிரேஷ்",
+  "paragraphs": [
+    {
+      "id": "eastons/zeresh#p1-fff2c44f",
+      "text": "வெள்ளி நட்சத்திரம், ஆமானின் மனைவி, இவளே மொர்தெகாய்க்காக தூக்குமரம் செய்யும்படி அவனைத் தூண்டினாள் (எஸ்தர் 5:10)."
+    }
+  ]
+}

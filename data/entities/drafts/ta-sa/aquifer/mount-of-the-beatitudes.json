@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mount-of-the-beatitudes",
+  "lang": "ta",
+  "source_hash": "00523f6b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாக்கியங்களின் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-of-the-beatitudes#p1-6c0e0efb",
+      "text": "பாக்கியங்களின் மலை என்பது இயேசு மலைப்பிரசங்கத்தைச் செய்த இடமாக பாரம்பரியமாகக் கருதப்படும் இடமாகும்."
+    },
+    {
+      "id": "aquifer/mount-of-the-beatitudes#p2-eedb5015",
+      "text": "பாக்கியங்கள் என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/berothite",
+  "lang": "ta",
+  "source_hash": "f5f9717f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரோத்தியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/berothite#p1-e37fdc4d",
+      "text": "1 நாளாகமம் 11:39-ல் வரும் Beerothite என்ற வார்த்தையின் கிங் யாக்கோபு மொழிபெயர்ப்பு வடிவமே இது, இதன் பொருள் பேரோத் ஊரைச் சேர்ந்த ஒருவன் என்பதாகும்."
+    },
+    {
+      "id": "aquifer/berothite#p2-e959aa6a",
+      "text": "பேரோத் காண்க."
+    }
+  ]
+}

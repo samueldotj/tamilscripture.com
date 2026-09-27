@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/makir",
+  "lang": "ta",
+  "source_hash": "6d20559d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகீர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/makir#p1-eb8386f0",
+      "text": "மாகீர் என்ற பெயருக்குரிய மற்றொரு உச்சரிப்பு."
+    },
+    {
+      "id": "aquifer/makir#p2-35eb9dd8",
+      "text": "மாகீரைக் காண்க."
+    }
+  ]
+}

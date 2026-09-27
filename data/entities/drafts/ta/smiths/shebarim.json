@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shebarim",
+  "lang": "ta",
+  "source_hash": "f6914e14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபாரீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shebarim#p1-f6914e14",
+      "text": "(உடைப்புகள்), யோசுவா 7:5-ல் மட்டும் குறிப்பிடப்பட்டிருக்கும் ஒரு இடம், ஆயீயிலிருந்து ஓடிப்போன வழியில் இருந்த இடங்களில் ஒன்று."
+    }
+  ]
+}

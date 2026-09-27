@@ -1,0 +1,18 @@
+{
+  "id": "smiths/walls",
+  "lang": "ta",
+  "source_hash": "7b0f9782",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சுவர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/walls#p1-7b0f9782",
+      "text": "சில குறிப்புகளை மட்டும் கவனிக்க வேண்டும்."
+    }
+  ]
+}

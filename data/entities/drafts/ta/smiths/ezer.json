@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezer",
+  "lang": "ta",
+  "source_hash": "729fe1dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏத்சேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ezer#p1-729fe1dc",
+      "text": "(பொக்கிஷம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/marsena",
+  "lang": "ta",
+  "source_hash": "cebb2c06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மர்சேனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/marsena#p1-cebb2c06",
+      "text": "அகாஸ்வேரு ராஜாவுக்குப் பணிவிடை செய்த பெர்சியாவின் மற்றும் மேதியாவின் ஏழு பிரபுக்களில் ஒருவன். இந்த அதிகாரிகள் ராஜாவுக்கு அடுத்தபடியாக ராஜ்யத்தில் மிகவும் வலிமையுள்ளவர்களாக இருந்தனர் (எஸ்தர் 1:14)."
+    }
+  ]
+}

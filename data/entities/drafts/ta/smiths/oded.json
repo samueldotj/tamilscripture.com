@@ -1,0 +1,18 @@
+{
+  "id": "smiths/oded",
+  "lang": "ta",
+  "source_hash": "b2e8afa1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/oded#p1-b2e8afa1",
+      "text": "(மீட்பது)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ox-person",
+  "lang": "ta",
+  "source_hash": "3aaed7e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓக்ஸ் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ox-person#p1-3aaed7e6",
+      "text": "ஓக்ஸ் என்பவர் யாக்கோபிலிருந்து வந்த ஒரு இஸ்ரவேலன். அவர் யூதீத் புத்தகத்தின் கதாநாயகியான யூதீத்தின் தாத்தா ஆவார் (யூதீத் 8:1)."
+    }
+  ]
+}

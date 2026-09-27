@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/decalogue",
+  "lang": "ta",
+  "source_hash": "74b0d2fd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பத்துக் கற்பனைகள் (Decalogue)",
+  "paragraphs": [
+    {
+      "id": "aquifer/decalogue#p1-09cf71de",
+      "text": "Decalogue என்பது “பத்து வார்த்தைகள்” என்று பொருள்படும் ஒரு கிரேக்கச் சொல். இது பத்துக் கற்பனைகளைக் குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/decalogue#p2-18f1189c",
+      "text": "பத்துக் கற்பனைகள் என்னும் கட்டுரையைக் காண்க."
+    }
+  ]
+}

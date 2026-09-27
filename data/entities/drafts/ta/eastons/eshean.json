@@ -1,0 +1,18 @@
+{
+  "id": "eastons/eshean",
+  "lang": "ta",
+  "source_hash": "f18812be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஷியான்",
+  "paragraphs": [
+    {
+      "id": "eastons/eshean#p1-f18812be",
+      "text": "யூதாவின் மலைநாட்டிலுள்ள ஒரு இடம் (யோசுவா 15:52), இது எப்ரோனுக்குத் தெற்கே, தூமாவுக்கு அருகிலுள்ள es-Simia என்னும் பாழிடம் என்று கருதப்படுகிறது."
+    }
+  ]
+}

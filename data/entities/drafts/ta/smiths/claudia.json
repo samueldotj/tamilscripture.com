@@ -1,0 +1,18 @@
+{
+  "id": "smiths/claudia",
+  "lang": "ta",
+  "source_hash": "bfe581c3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கலவுதியாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/claudia#p1-bfe581c3",
+      "text": "(நொண்டியானவள்) தீமோத்தேயுவை வாழ்த்துகிறவளாக (2 தீமோத்தேயு 4:21) இல் குறிப்பிடப்பட்டுள்ள ஒரு கிறிஸ்தவப் பெண்."
+    }
+  ]
+}

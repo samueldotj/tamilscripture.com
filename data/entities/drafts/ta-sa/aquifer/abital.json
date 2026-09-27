@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/abital",
+  "lang": "ta",
+  "source_hash": "4f793fdd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபித்தாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abital#p1-4f793fdd",
+      "text": "தாவீது அரசனின் ஐந்தாம் மகனாகிய செபத்தியாவின் தாய் (2 சாமுவேல் 3:4; 1 நாளாகமம் 3:3)."
+    }
+  ]
+}

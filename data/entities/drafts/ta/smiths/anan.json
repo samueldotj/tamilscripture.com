@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anan",
+  "lang": "ta",
+  "source_hash": "0a5010db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனான்",
+  "paragraphs": [
+    {
+      "id": "smiths/anan#p1-0a5010db",
+      "text": "(ஒரு மேகம்), நெகேமியாவுடன் உடன்படிக்கையில் கையெழுத்திட்ட “மக்களின் தலைவர்களில்” ஒருவன். (நெகேமியா 10:26) (கி.மு. 410.)"
+    }
+  ]
+}

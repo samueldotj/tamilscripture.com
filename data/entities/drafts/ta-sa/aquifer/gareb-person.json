@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gareb-person",
+  "lang": "ta",
+  "source_hash": "45832a17",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காரேப் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/gareb-person#p1-45832a17",
+      "text": "தாவீது அரசனின் பராக்கிரமசாலிகளில் ஒரு போர்வீரன் (2 சாமுவேல் 23:38; 1 நாளாகமம் 11:40)."
+    }
+  ]
+}

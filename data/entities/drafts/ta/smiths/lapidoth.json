@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lapidoth",
+  "lang": "ta",
+  "source_hash": "616511d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லபிதோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/lapidoth#p1-616511d1",
+      "text": "(தீவட்டிகள்), லவோதிக்கேயாவின் குடிமக்கள். (கொலோசெயர் 4:16; வெளிப்படுத்தின விசேஷம் 3:14)"
+    }
+  ]
+}

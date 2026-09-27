@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/melatiah",
+  "lang": "ta",
+  "source_hash": "4f840d90",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெலதீயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/melatiah#p1-4f840d90",
+      "text": "மெலதீயா கிதியோனின் சந்ததியாரில் ஒருவனாக இருந்தான். நெகேமியாவின் காலத்தில் மெலதீயா பழைய வாசலின் அருகே எருசலேமின் மதிலைப் பழுதுபார்த்துக் கட்ட உதவினான் (நெகேமியா 3:7)."
+    }
+  ]
+}

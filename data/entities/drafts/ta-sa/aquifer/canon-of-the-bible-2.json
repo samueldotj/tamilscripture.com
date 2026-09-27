@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/canon-of-the-bible-2",
+  "lang": "ta",
+  "source_hash": "041009ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரிசுத்த வேதாகமத்தின் வேதநியமம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/canon-of-the-bible-2#p1-b6287eff",
+      "text": "கிறிஸ்தவ வேதவாக்கியங்களை உருவாக்கும் புத்தகங்களின் அதிகாரப்பூர்வமாக ஏற்றுக்கொள்ளப்பட்ட பட்டியல்."
+    },
+    {
+      "id": "aquifer/canon-of-the-bible-2#p2-3786be6b",
+      "text": "காண்க: பரிசுத்த வேதாகமம், அதன் வேதநியமம்."
+    }
+  ]
+}

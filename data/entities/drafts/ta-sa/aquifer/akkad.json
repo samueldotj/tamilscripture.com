@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/akkad",
+  "lang": "ta",
+  "source_hash": "4526ff8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்காத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/akkad#p1-c6021588",
+      "text": "பூர்வ மெசொப்பொத்தாமிய பட்டணமாகிய அக்காத் என்பதற்கு மாற்றுப் பெயர்க்கோலம்."
+    },
+    {
+      "id": "aquifer/akkad#p2-e90db666",
+      "text": "அக்காத் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/adonai",
+  "lang": "ta",
+  "source_hash": "4a227adb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆண்டவர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/adonai#p1-c7711902",
+      "text": "ஆண்டவர் என்பது பொதுவாக “கர்த்தர்” என்று மொழிபெயர்க்கப்படும் தேவனுக்குரிய ஒரு பட்டப்பெயராகும். இது கனத்தையும், மகிமையையும், அரசராகிய தேவனுடைய அதிகாரத்தையும் வெளிப்படுத்துகிறது."
+    },
+    {
+      "id": "aquifer/adonai#p2-7bbc6dfe",
+      "text": "தேவனுடைய நாமங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

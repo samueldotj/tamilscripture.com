@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jaazer",
+  "lang": "ta",
+  "source_hash": "275d5426",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசேர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaazer#p1-b51bc658",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் யாசேர் என்பதற்கு மாற்று வடிவம். யாசேர் கீலேயாத்தில் இருந்த ஒரு எமோரியர் பட்டணமாகும் (எண்ணாகமம் 21:32 மற்றும் 32:35)."
+    },
+    {
+      "id": "aquifer/jaazer#p2-734c7228",
+      "text": "யாசேர் காண்க."
+    }
+  ]
+}

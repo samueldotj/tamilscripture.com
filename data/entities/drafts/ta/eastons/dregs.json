@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dregs",
+  "lang": "ta",
+  "source_hash": "36131ca2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வண்டல்",
+  "paragraphs": [
+    {
+      "id": "eastons/dregs#p1-36131ca2",
+      "text": "(சங்கீதங்கள் 75:8; ஏசாயா 51:17, 22), பாத்திரத்தின் அடியில் தங்கும் மதுபானத்தின் வண்டல்."
+    }
+  ]
+}

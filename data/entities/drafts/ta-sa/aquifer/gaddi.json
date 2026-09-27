@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gaddi",
+  "lang": "ta",
+  "source_hash": "004b68ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காதி",
+  "paragraphs": [
+    {
+      "id": "aquifer/gaddi#p1-004b68ba",
+      "text": "மனாசே கோத்திரத்தைச் சேர்ந்த ஒரு மனிதன். கானான் தேசத்தை வேவுபார்க்க மோசே இவனை அனுப்பினார் (எண்ணாகமம் 13:11)."
+    }
+  ]
+}

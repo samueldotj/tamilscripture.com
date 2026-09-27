@@ -1,0 +1,18 @@
+{
+  "id": "eastons/birsha",
+  "lang": "ta",
+  "source_hash": "3c889be7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிர்சா",
+  "paragraphs": [
+    {
+      "id": "eastons/birsha#p1-3c889be7",
+      "text": "துன்மார்க்கத்தின் மகன், கெதர்லாகோமேரின் படையெடுப்பின்போது ஆபிரகாம் உதவிசெய்த கொமோராவின் ராஜா (ஆதியாகமம் 14:2)."
+    }
+  ]
+}

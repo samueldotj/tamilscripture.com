@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hammothdor",
+  "lang": "ta",
+  "source_hash": "13fbfbb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மோத்தோர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hammothdor#p1-13fbfbb6",
+      "text": "அம்மோத்தோர் என்பது யோசுவா 21:32 இல் குறிப்பிடப்பட்டுள்ள லேவியரின் பட்டணமான அம்மாத்திற்கு மற்றொரு பெயராகும்."
+    }
+  ]
+}

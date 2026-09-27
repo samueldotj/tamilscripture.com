@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chuza",
+  "lang": "ta",
+  "source_hash": "364df269",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூசா",
+  "paragraphs": [
+    {
+      "id": "smiths/chuza#p1-364df269",
+      "text": "சரியாக கூசாஸ் (ஞானதிருஷ்டிக்காரன்), ஏரோது அந்திப்பாவின் வீட்டு விசாரணைக்காரன். (லூக்கா 8:3)"
+    }
+  ]
+}

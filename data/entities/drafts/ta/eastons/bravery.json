@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bravery",
+  "lang": "ta",
+  "source_hash": "803b27e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலங்காரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/bravery#p1-803b27e8",
+      "text": "(ஏசாயா 3:18), இது அழகு அல்லது எழில் என்று பொருள்படும் ஒரு பழைய ஆங்கில வார்த்தை."
+    }
+  ]
+}

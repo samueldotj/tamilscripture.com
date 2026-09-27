@@ -1,0 +1,18 @@
+{
+  "id": "eastons/conaniah",
+  "lang": "ta",
+  "source_hash": "2214f630",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொனனியா",
+  "paragraphs": [
+    {
+      "id": "eastons/conaniah#p1-2214f630",
+      "text": "யெகோவா ஏற்படுத்தினவர், ஆலயத்திற்குக் கொண்டுவரப்பட்ட தசமபாகங்களின்மேல் நியமிக்கப்பட்ட லேவியன் (2 நாளாகமம் 35:9)."
+    }
+  ]
+}

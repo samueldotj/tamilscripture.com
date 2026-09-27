@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harumaph",
+  "lang": "ta",
+  "source_hash": "3033ffcc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அருமாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/harumaph#p1-3033ffcc",
+      "text": "(மூக்கு பிளந்தவன்) யெதாயாவின் தகப்பன் அல்லது முற்பிதா. (நெகேமியா 3:10)"
+    }
+  ]
+}

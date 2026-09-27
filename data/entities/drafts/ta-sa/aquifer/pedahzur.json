@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pedahzur",
+  "lang": "ta",
+  "source_hash": "be600412",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெதாசூர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pedahzur#p1-be600412",
+      "text": "மனாசே கோத்திரத்திற்குரிய கமாலியேலின் தகப்பன் (எண்ணாகமம் 1:10; 2:20; 7:54, 59; 10:23)."
+    }
+  ]
+}

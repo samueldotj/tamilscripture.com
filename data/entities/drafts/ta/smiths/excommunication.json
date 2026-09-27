@@ -1,0 +1,18 @@
+{
+  "id": "smiths/excommunication",
+  "lang": "ta",
+  "source_hash": "324bd369",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சபைநீக்கம்",
+  "paragraphs": [
+    {
+      "id": "smiths/excommunication#p1-324bd369",
+      "text": "(ஐக்கியத்திலிருந்து விலக்குதல்)."
+    }
+  ]
+}

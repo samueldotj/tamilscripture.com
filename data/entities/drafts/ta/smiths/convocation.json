@@ -1,0 +1,18 @@
+{
+  "id": "smiths/convocation",
+  "lang": "ta",
+  "source_hash": "49869652",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சபைகூடுதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/convocation#p1-49869652",
+      "text": "இந்தச் சொல் (ஒரு விதிவிலக்கைத் தவிர)— (ஏசாயா 1:13) சபை என்பதற்கு வேறுபடுத்தி, எப்பொழுதும் மத ரீதியான கூட்டங்களுக்கு மட்டுமே பயன்படுத்தப்படுகிறது."
+    }
+  ]
+}

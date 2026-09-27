@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sosthenes",
+  "lang": "ta",
+  "source_hash": "746123d8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சொஸ்தெனே",
+  "paragraphs": [
+    {
+      "id": "smiths/sosthenes#p1-746123d8",
+      "text": "(தன் தேசத்தின் இரட்சகர்) என்பவன் கொரிந்துவில் இருந்த ஒரு யூதன், அவன் கல்லியோனுக்கு முன்பாக பிடிக்கப்பட்டு அடிக்கப்பட்டான். அப்போஸ்தலருடைய நடபடிகள் 18:12-17ஐ காண்க. (கி.பி. 49.)"
+    }
+  ]
+}

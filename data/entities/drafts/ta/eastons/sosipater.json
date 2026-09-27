@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sosipater",
+  "lang": "ta",
+  "source_hash": "bdf15581",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சொசிபத்தர்",
+  "paragraphs": [
+    {
+      "id": "eastons/sosipater#p1-bdf15581",
+      "text": "(சொப்பத்தர் காண்க.)"
+    }
+  ]
+}

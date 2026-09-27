@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ptolemais",
+  "lang": "ta",
+  "source_hash": "4151c45f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பித்தொலோமாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ptolemais#p1-ec4f8b30",
+      "text": "வட பாலஸ்தீனத்திலுள்ள அக்கோ என்னும் பட்டணத்திற்கு இருந்த மற்றொரு பெயர் (அப்போஸ்தலருடைய நடபடிகள் 21:7)."
+    },
+    {
+      "id": "aquifer/ptolemais#p2-49b824b0",
+      "text": "அக்கோ காண்க."
+    }
+  ]
+}

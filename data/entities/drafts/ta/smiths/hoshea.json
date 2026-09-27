@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hoshea",
+  "lang": "ta",
+  "source_hash": "c2ad9dc8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/hoshea#p1-c2ad9dc8",
+      "text": "(இரட்சிப்பு)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elmadam",
+  "lang": "ta",
+  "source_hash": "1ecabb30",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்மோதாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/elmadam#p1-1ecabb30",
+      "text": "திருத்தப்பட்ட பதிப்பில் (லூக்கா 3:28) எல்மோதாம் என்பதே."
+    }
+  ]
+}

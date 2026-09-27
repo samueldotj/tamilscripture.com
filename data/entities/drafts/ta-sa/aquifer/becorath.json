@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/becorath",
+  "lang": "ta",
+  "source_hash": "a258d6a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெகோராத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/becorath#p1-a258d6a4",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்தவனும், ராஜாவாகிய சவுலின் முற்பிதாக்களில் ஒருவனுமான சேரோரின் தகப்பன் (1 சாமுவேல் 9:1)."
+    }
+  ]
+}

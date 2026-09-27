@@ -1,0 +1,18 @@
+{
+  "id": "smiths/besai",
+  "lang": "ta",
+  "source_hash": "a9372fde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/besai#p1-a9372fde",
+      "text": "(வாள்). “பேசாயின் வம்சத்தார்” செருபாபேலுடன் யூதேயாவிற்குத் திரும்பிவந்த நிதனீமியரில் ஒருவராக இருந்தனர். (எஸ்றா 2:49; நெகேமியா 7:52)"
+    }
+  ]
+}

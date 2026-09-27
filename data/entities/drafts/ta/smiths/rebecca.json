@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rebecca",
+  "lang": "ta",
+  "source_hash": "221dc539",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெபெக்காள்",
+  "paragraphs": [
+    {
+      "id": "smiths/rebecca#p1-221dc539",
+      "text": "(ரோமர் 9:10) மட்டும். [ரெபெக்காள் காண்க]"
+    }
+  ]
+}

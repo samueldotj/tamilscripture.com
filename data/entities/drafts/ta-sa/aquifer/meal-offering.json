@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/meal-offering",
+  "lang": "ta",
+  "source_hash": "0d280059",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உணவுபலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/meal-offering#p1-0d280059",
+      "text": "தானியம் அல்லது மெல்லிய மாவினால் செலுத்தப்படும் ஒரு காணிக்கை. இது “grain offering” (nlt, niv), “cereal offering” (rsv) மற்றும் “உணவுபலி” (kjv) என்றும் மொழிபெயர்க்கப்பட்டுள்ளது. காணிக்கைகள் மற்றும் பலிகள் என்பதைக் காண்க."
+    }
+  ]
+}

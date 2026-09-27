@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/judas-barsabbas",
+  "lang": "ta",
+  "source_hash": "aa400304",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூதாஸ் பர்சபாஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/judas-barsabbas#p1-db753943",
+      "text": "யூதாஸ் பர்சபாஸ் எருசலேமிலிருந்த ஆரம்பகால சபையில் ஒரு தலைவராக இருந்தார்."
+    },
+    {
+      "id": "aquifer/judas-barsabbas#p2-a274a3c8",
+      "text": "யூதாஸ் #6-ஐ காண்க."
+    }
+  ]
+}

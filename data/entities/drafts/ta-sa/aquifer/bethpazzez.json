@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethpazzez",
+  "lang": "ta",
+  "source_hash": "e770b928",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்பாத்செஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethpazzez#p1-e770b928",
+      "text": "வாக்குத்தத்த தேசம் பங்கிடப்பட்டபோது இசக்கார் கோத்திரத்திற்கு கொடுக்கப்பட்ட ஒரு பட்டணம். இது தாபோரின் அருகில் இருந்தது (யோசுவா 19:21)."
+    }
+  ]
+}

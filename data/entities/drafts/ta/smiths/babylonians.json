@@ -1,0 +1,18 @@
+{
+  "id": "smiths/babylonians",
+  "lang": "ta",
+  "source_hash": "54bd4bd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாபிலோனியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/babylonians#p1-54bd4bd9",
+      "text": "பாபிலோனின் குடிமக்கள், சேமிய இனத்தைச் சார்ந்தவர்கள், வெற்றி பெற்ற அசீரிய அரசனால் சமாரியாவின் பட்டணங்களில் குடியேற்றப்பட்ட குடியேற்றக்காரர்களில் இவர்களும் அடங்கியிருந்தார்கள். (எஸ்றா 4:9)"
+    }
+  ]
+}

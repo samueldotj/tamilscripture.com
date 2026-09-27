@@ -1,0 +1,18 @@
+{
+  "id": "eastons/vision",
+  "lang": "ta",
+  "source_hash": "d485e301",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தரிசனம்",
+  "paragraphs": [
+    {
+      "id": "eastons/vision#p1-d485e301",
+      "text": "(லூக்கா 1:22), இது ஒரு தெளிவான காட்சியாகும், கனவு அல்ல (ஒப்பிடுக லூக்கா 24:23; அப்போஸ்தலருடைய நடபடிகள் 26:19; 2 கொரிந்தியர் 12:1)."
+    }
+  ]
+}

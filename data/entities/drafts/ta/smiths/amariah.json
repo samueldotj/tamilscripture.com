@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amariah",
+  "lang": "ta",
+  "source_hash": "07ceec85",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அமரியா",
+  "paragraphs": [
+    {
+      "id": "smiths/amariah#p1-07ceec85",
+      "text": "(கர்த்தர் சொல்கிறார், அதாவது வாக்குத்தத்தம் செய்கிறார்)."
+    }
+  ]
+}

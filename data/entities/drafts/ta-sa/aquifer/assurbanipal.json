@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/assurbanipal",
+  "lang": "ta",
+  "source_hash": "a73a7036",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூர்பானிபால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/assurbanipal#p1-487f8874",
+      "text": "அசூர்பானிபால் என்ற பெயரை எழுதும் மற்றொரு வழி. அசூர்பானிபால் ஒரு அசீரிய அரசன்."
+    },
+    {
+      "id": "aquifer/assurbanipal#p2-c83c3ab8",
+      "text": "அசூர்பானிபால் என்பதைக் காண்க."
+    }
+  ]
+}

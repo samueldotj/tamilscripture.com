@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ninevites",
+  "lang": "ta",
+  "source_hash": "98b78bf1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நினிவேயர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ninevites#p1-98b78bf1",
+      "text": "நினிவேயின் குடிமக்கள். (லூக்கா 11:30)"
+    }
+  ]
+}

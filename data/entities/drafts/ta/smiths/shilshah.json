@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shilshah",
+  "lang": "ta",
+  "source_hash": "d7ccff1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சில்சா",
+  "paragraphs": [
+    {
+      "id": "smiths/shilshah#p1-d7ccff1f",
+      "text": "(பலவான்), ஆசேர் கோத்திரத்தைச் சேர்ந்த சோபாக்கின் மகன். (1 நாளாகமம் 7:37) (கி.மு. 1015க்கு முன்)."
+    }
+  ]
+}

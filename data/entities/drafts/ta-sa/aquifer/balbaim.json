@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/balbaim",
+  "lang": "ta",
+  "source_hash": "c240c46b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்பாயீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/balbaim#p1-c240c46b",
+      "text": "தோத்தானுக்குத் தெற்கே இருந்த ஒரு பட்டணம். இது யூதீத் புத்தகத்தில் (யூதீத் 7:3) குறிப்பிடப்பட்டுள்ளது. இது பெல்மாயீம் (யூதீத் 4:4) என்பதே ஆகலாம்."
+    }
+  ]
+}

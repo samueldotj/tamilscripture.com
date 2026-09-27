@@ -1,0 +1,18 @@
+{
+  "id": "eastons/berodach-baladan",
+  "lang": "ta",
+  "source_hash": "d35b8bcf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரோதாக்பலாதான்",
+  "paragraphs": [
+    {
+      "id": "eastons/berodach-baladan#p1-d35b8bcf",
+      "text": "எசேக்கியாவுக்குச் சிநேகபூர்வமான தூதுக் குழுவை அனுப்பிய பாபிலோனின் ராஜா (2 இராஜாக்கள் 20:12). ஏசாயா 39:1இல் அவன் மெரோதாக்பலாதான் (காண்க) என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

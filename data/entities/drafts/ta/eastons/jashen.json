@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jashen",
+  "lang": "ta",
+  "source_hash": "bf27707b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசேன்",
+  "paragraphs": [
+    {
+      "id": "eastons/jashen#p1-bf27707b",
+      "text": "தூங்குகிறவன், ஆசேம் என்றும் அழைக்கப்படுகிறான் (1 நாளாகமம் 11:34); இவனுடைய பல மகன்கள் தாவீதின் மேலான காவலரில் இருந்தனர் (2 சாமுவேல் 23:32)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/admin",
+  "lang": "ta",
+  "source_hash": "2aaa41ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்மீன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/admin#p1-81181089",
+      "text": "இயேசுவின் வம்சவரலாற்றைக் குறித்த லூக்காவின் பதிவில் குறிப்பிடப்பட்டுள்ள இயேசுவின் ஒரு முற்பிதா (லூக்கா 3:33)."
+    },
+    {
+      "id": "aquifer/admin#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

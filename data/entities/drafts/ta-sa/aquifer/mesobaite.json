@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mesobaite",
+  "lang": "ta",
+  "source_hash": "d8bf9565",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெசோபாயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mesobaite#p1-a47b8794",
+      "text": "மெசோபாயா என்பது 1 நாளாகமம் 11:47-ல் யாசியேலுக்குக் கொடுக்கப்பட்ட மெசோபாயா என்ற பட்டப்பெயரின் கிங் யாக்கோபு மொழிபெயர்ப்பு எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/mesobaite#p2-f4fc60e1",
+      "text": "மெசோபாயா காண்க."
+    }
+  ]
+}

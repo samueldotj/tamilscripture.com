@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/moresheth",
+  "lang": "ta",
+  "source_hash": "102a59df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மொரேசா",
+  "paragraphs": [
+    {
+      "id": "aquifer/moresheth#p1-cfde8411",
+      "text": "மொரேசா என்பது மீகா தீர்க்கதரிசியின் சொந்த ஊராகும் (எரேமியா 26:18; மீகா 1:1). மொரேசா ஊரானாகிய ஒருவன் மொரேசி என்று அழைக்கப்பட்டான்."
+    },
+    {
+      "id": "aquifer/moresheth#p2-40caeb21",
+      "text": "மீகா (நபர்) #7-ஐக் காண்க."
+    }
+  ]
+}

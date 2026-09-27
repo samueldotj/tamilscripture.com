@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/castanet",
+  "lang": "ta",
+  "source_hash": "627d57c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கைத்தாளம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/castanet#p1-8a015f33",
+      "text": "கையில் வைத்து ஒலிக்கச் செய்யப்படும் ஒரு சிறிய தாள வாத்தியம், ஒரு விதமான சலசலப்பான கருவி போன்றது. இவை 2 சாமுவேல் 6:5-இல் \"கைத்தாளம்\" என்று அழைக்கப்படுகின்றன."
+    },
+    {
+      "id": "aquifer/castanet#p2-151af6e2",
+      "text": "காண்க: இசைக்கருவிகள்; இசை."
+    }
+  ]
+}

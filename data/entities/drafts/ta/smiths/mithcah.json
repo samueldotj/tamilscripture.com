@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mithcah",
+  "lang": "ta",
+  "source_hash": "4c57212c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மித்கா",
+  "paragraphs": [
+    {
+      "id": "smiths/mithcah#p1-4c57212c",
+      "text": "(இனிமை), இஸ்ரவேலரின் அறியப்படாத ஒரு வனாந்தர முகாமின் பெயர். (எண்ணாகமம் 33:28,29)"
+    }
+  ]
+}

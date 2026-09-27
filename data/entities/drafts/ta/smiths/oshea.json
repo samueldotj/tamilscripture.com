@@ -1,0 +1,18 @@
+{
+  "id": "smiths/oshea",
+  "lang": "ta",
+  "source_hash": "b7c2defa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/oshea#p1-b7c2defa",
+      "text": "(இரட்சிப்பு). [யோசுவா காண்க]"
+    }
+  ]
+}

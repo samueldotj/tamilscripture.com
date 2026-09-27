@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mekonah",
+  "lang": "ta",
+  "source_hash": "8804195e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேகோனா",
+  "paragraphs": [
+    {
+      "id": "smiths/mekonah#p1-8804195e",
+      "text": "(அஸ்திபாரம்), சிறையிருப்புக்குப் பின்பு யூதாவின் மனுஷர் மறுபடியும் குடியேறிய பட்டணங்களில் ஒன்று. (நெகேமியா 11:28)"
+    }
+  ]
+}

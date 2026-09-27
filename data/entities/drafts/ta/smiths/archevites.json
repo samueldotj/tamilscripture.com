@@ -1,0 +1,18 @@
+{
+  "id": "smiths/archevites",
+  "lang": "ta",
+  "source_hash": "56f3fdb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அற்கேவியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/archevites#p1-56f3fdb7",
+      "text": "இவர்கள் ஏரேக்கின் குடிமக்களாக இருக்கலாம், அவர்களில் சிலர் சமாரியாவில் குடியேற்றப்பட்டவர்களாக இருந்திருக்கலாம். (எஸ்றா 4:9)"
+    }
+  ]
+}

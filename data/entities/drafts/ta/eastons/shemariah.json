@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shemariah",
+  "lang": "ta",
+  "source_hash": "24364cd2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமரியா",
+  "paragraphs": [
+    {
+      "id": "eastons/shemariah#p1-60b04243",
+      "text": "யெகோவா காக்கிறவர்."
+    },
+    {
+      "id": "eastons/shemariah#p2-92da8541",
+      "text": "(1.) சிக்லாகில் தாவீதிடம் சேர்ந்தவன் (1 நாளாகமம் 12:5)."
+    },
+    {
+      "id": "eastons/shemariah#p3-caa249a0",
+      "text": "(2.) எஸ்றா 10:32, 41."
+    }
+  ]
+}

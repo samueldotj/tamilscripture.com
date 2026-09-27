@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eshean",
+  "lang": "ta",
+  "source_hash": "444ce674",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஷியான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eshean#p1-ffda1a64",
+      "text": "எஷியான் என்பது யோசுவா 15:52-ல் காணப்படும் எஷியான் என்ற ஊருக்கு யாக்கோபு ராஜாவின் மொழிபெயர்ப்பில் உள்ள எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/eshean#p2-ee86d3f1",
+      "text": "எஷியான் என்பதைக் காண்க."
+    }
+  ]
+}

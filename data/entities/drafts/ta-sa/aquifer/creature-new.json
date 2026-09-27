@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/creature-new",
+  "lang": "ta",
+  "source_hash": "344596e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புதிய படைப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/creature-new#p1-344596e1",
+      "text": "புதிய சிருஷ்டிப்பு, புதுப்படைப்பு என்பதைக் காண்க."
+    }
+  ]
+}

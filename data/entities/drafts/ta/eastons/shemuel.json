@@ -1,0 +1,30 @@
+{
+  "id": "eastons/shemuel",
+  "lang": "ta",
+  "source_hash": "5c91c7b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாமுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/shemuel#p1-4cc98578",
+      "text": "தேவனால் கேட்கப்பட்டவன்."
+    },
+    {
+      "id": "eastons/shemuel#p2-6e0b9d0e",
+      "text": "(1.) அம்மியூதின் மகன். நிலம் பங்கிடப்பட்டபோது சிமியோனுக்கு பிரதிநிதியாக இருந்தான் (எண்ணாகமம் 34:20)."
+    },
+    {
+      "id": "eastons/shemuel#p3-a6c62983",
+      "text": "(2.) “சாமுவேல்” என்பதற்குப் பயன்படுத்தப்பட்டது (1 நாளாகமம் 6:33, R.V.)."
+    },
+    {
+      "id": "eastons/shemuel#p4-fbd1bd7d",
+      "text": "(3.) இசக்கார் கோத்திரத்தின் ஒரு பிரபு (1 நாளாகமம் 7:2)."
+    }
+  ]
+}

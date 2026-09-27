@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kephirah",
+  "lang": "ta",
+  "source_hash": "e6d64d04",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெப்பீரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kephirah#p1-e6d64d04",
+      "text": "கெபிரா என்பதற்கு இன்னொரு எழுத்துவடிவம், இது ஏவியர் மக்களுக்கு தாயகமாக இருந்த ஒரு பழங்கால பட்டணம் (யோசுவா 9:17). கெபிரா என்பதைக் காண்க."
+    }
+  ]
+}

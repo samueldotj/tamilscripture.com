@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elzabad",
+  "lang": "ta",
+  "source_hash": "eba19639",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்சபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/elzabad#p1-eba19639",
+      "text": "(தேவன் கொடுத்தவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/remeth",
+  "lang": "ta",
+  "source_hash": "518908e5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெமேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/remeth#p1-518908e5",
+      "text": "ராமா (காண்க) அல்லது ராமோத்தின் (1 நாளாகமம் 6:73; யோசுவா 19:21) மற்றொரு வடிவம், மற்றும் யர்மூத்தின் (யோசுவா 21:29) வடிவமாகவும் இருக்கலாம்."
+    }
+  ]
+}

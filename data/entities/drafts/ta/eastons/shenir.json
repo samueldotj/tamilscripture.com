@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shenir",
+  "lang": "ta",
+  "source_hash": "cc48eed5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேனீர்",
+  "paragraphs": [
+    {
+      "id": "eastons/shenir#p1-cc48eed5",
+      "text": "=சேனீர், (உபாகமம் 3:9; உன்னதப்பாட்டு 4:8), சீதோனியர்களால் எர்மோன் மலைக்கு (காண்க) கொடுக்கப்பட்ட பெயர்."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hashub",
+  "lang": "ta",
+  "source_hash": "ef76f3ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசூப்",
+  "paragraphs": [
+    {
+      "id": "eastons/hashub#p1-b487aa11",
+      "text": "புத்திமான்."
+    },
+    {
+      "id": "eastons/hashub#p2-4e2cddc3",
+      "text": "(1.) மெராரியின் வம்சத்தைச் சேர்ந்த ஒரு லேவியன் (நெகேமியா 11:15; 1 நாளாகமம் 9:14)."
+    },
+    {
+      "id": "eastons/hashub#p3-73497923",
+      "text": "(2.) நெகேமியா 3:23. 3:11."
+    }
+  ]
+}

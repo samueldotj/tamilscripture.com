@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/apothecary",
+  "lang": "ta",
+  "source_hash": "e19aec06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தைலக்காரன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/apothecary#p1-e19aec06",
+      "text": "யாத்திராகமம் 30:25, 35; 37:29; 2 நாளாகமம் 16:14; நெகேமியா 3:8; பிரசங்கி 10:1 ஆகிய வசனங்களில் கிங் யாக்கோபு மொழிபெயர்ப்பு “perfumer” (நறுமணத் தைலம் தயாரிப்பவன்) என்பதற்குப் பயன்படுத்திய சொல் “apothecary” (தைலக்காரன்) ஆகும்."
+    }
+  ]
+}

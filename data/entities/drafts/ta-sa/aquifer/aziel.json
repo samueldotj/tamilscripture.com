@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aziel",
+  "lang": "ta",
+  "source_hash": "04493899",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aziel#p1-bd2787e0",
+      "text": "உடன்படிக்கைப் பெட்டி எருசலேமுக்குக் கொண்டுவரப்பட்டபோது இசைக்கருவிகளை வாசித்த லேவியனாகிய யாசியேலுக்கு வேறொரு பெயர் (1 நாளாகமம் 15:20)."
+    },
+    {
+      "id": "aquifer/aziel#p2-7b33fe35",
+      "text": "யாசியேலைக் காண்க."
+    }
+  ]
+}

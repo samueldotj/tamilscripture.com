@@ -1,0 +1,18 @@
+{
+  "id": "smiths/serah",
+  "lang": "ta",
+  "source_hash": "e20a02f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேராள்",
+  "paragraphs": [
+    {
+      "id": "smiths/serah#p1-e20a02f6",
+      "text": "ஆசேரின் மகள் (ஆதியாகமம் 46:17; 1 நாளாகமம் 7:30); எண்ணாகமம் 26:46-இல் சாராள் என்று அழைக்கப்படுகிறாள். (கிமு. 1700 அளவில்.)"
+    }
+  ]
+}

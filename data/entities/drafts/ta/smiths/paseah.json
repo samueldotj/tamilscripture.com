@@ -1,0 +1,18 @@
+{
+  "id": "smiths/paseah",
+  "lang": "ta",
+  "source_hash": "b5b8183c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசெயாகின்",
+  "paragraphs": [
+    {
+      "id": "smiths/paseah#p1-b5b8183c",
+      "text": "(சப்பாணி)."
+    }
+  ]
+}

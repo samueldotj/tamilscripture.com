@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cauda",
+  "lang": "ta",
+  "source_hash": "97638bd8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலவுதா",
+  "paragraphs": [
+    {
+      "id": "smiths/cauda#p1-97638bd8",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 27:16) கிரேத்தாவுக்குத் தெற்கே இருந்த ஒரு தீவாகிய கிலவுதாவுக்கு திருத்தப்பட்ட மொழிபெயர்ப்பில் (Revised Version) கொடுக்கப்பட்ட வடிவம் இது. இது கிரேக்கனுடைய நவீன பெயரான Gaudonesi உடனும், P. Mela யுடைய Gauda உடனும் நெருங்கிய தொடர்பைக் கொண்டுள்ளது. (Clauda.—ED.)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/marsh-hen",
+  "lang": "ta",
+  "source_hash": "fc33576c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கழிநாரை",
+  "paragraphs": [
+    {
+      "id": "aquifer/marsh-hen#p1-fb1b39b3",
+      "text": "லேவியராகமம் 11:18 மற்றும் உபாகமம் 14:16-ல் வரும் \"நீர்நாரை\"க்கு இன்னொரு பெயர்."
+    },
+    {
+      "id": "aquifer/marsh-hen#p2-50bc4f70",
+      "text": "பறவைகள் (நீர்நாரை) காண்க."
+    }
+  ]
+}

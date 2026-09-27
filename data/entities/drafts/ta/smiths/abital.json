@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abital",
+  "lang": "ta",
+  "source_hash": "06fe9d24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபித்தாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/abital#p1-06fe9d24",
+      "text": "(பனியின் தகப்பன்), தாவீதின் மனைவிகளில் ஒருத்தி. (2 சாமுவேல் 3:4; 1 நாளாகமம் 3:3)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ephod",
+  "lang": "ta",
+  "source_hash": "5a1be7a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எபோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ephod#p1-5a1be7a9",
+      "text": "(முதலில் பிரதான ஆசாரியனுக்குப் பொருந்திய ஒரு பரிசுத்த ஆடை. (யாத்திராகமம் 28:4) (படம்), மனாசே கோத்திரத்தைச் சேர்ந்த அன்னியேலின் தகப்பன். (எண்ணாகமம் 34:23)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dimnah",
+  "lang": "ta",
+  "source_hash": "9cef6ed3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திம்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/dimnah#p1-9cef6ed3",
+      "text": "(எருவை), செபுலோன் கோத்திரத்திற்குரிய ஒரு பட்டணம், மெராரியனான லேவியர்களுக்குக் கொடுக்கப்பட்டது. (யோசுவா 21:35)"
+    }
+  ]
+}

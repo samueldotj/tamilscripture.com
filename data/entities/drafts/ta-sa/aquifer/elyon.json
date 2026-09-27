@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elyon",
+  "lang": "ta",
+  "source_hash": "833a2370",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்யோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elyon#p1-9f44b018",
+      "text": "எல்யோன் என்பது தேவனைக் குறிக்கும் எபிரெய பெயராகும், இதன் அர்த்தம் “உன்னதமான தேவன்” என்பதாகும்."
+    },
+    {
+      "id": "aquifer/elyon#p2-7bbc6dfe",
+      "text": "தேவனுடைய நாமங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

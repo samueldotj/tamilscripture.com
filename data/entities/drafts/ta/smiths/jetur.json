@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jetur",
+  "lang": "ta",
+  "source_hash": "fd95dfb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெத்தூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/jetur#p1-fd95dfb6",
+      "text": "(வேலி அடைப்பு). (ஆதியாகமம் 25:15; 1 நாளாகமம் 1:31; 5:19) [இத்துரேயா காண்க]"
+    }
+  ]
+}

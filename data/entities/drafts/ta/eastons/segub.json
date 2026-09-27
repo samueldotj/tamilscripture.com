@@ -1,0 +1,26 @@
+{
+  "id": "eastons/segub",
+  "lang": "ta",
+  "source_hash": "1c233a79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செகூப்",
+  "paragraphs": [
+    {
+      "id": "eastons/segub#p1-8dfa7783",
+      "text": "உயர்த்தப்பட்டது."
+    },
+    {
+      "id": "eastons/segub#p2-941e9b3b",
+      "text": "(1.) பெத்தேலியனாகிய ஈயேலின் இளைய மகன். அவனுடைய மரணம் 1 இராஜாக்கள் 16:34இல் குறிக்கப்பட்டுள்ளது (ஒப்பிடுக யோசுவா 6:26)."
+    },
+    {
+      "id": "eastons/segub#p3-99e334d9",
+      "text": "(2.) யூதாவின் சந்ததியைச் சேர்ந்தவன் (1 நாளாகமம் 2:21, 22)."
+    }
+  ]
+}

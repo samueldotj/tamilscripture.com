@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/apame",
+  "lang": "ta",
+  "source_hash": "241d4950",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பாமே",
+  "paragraphs": [
+    {
+      "id": "aquifer/apame#p1-241d4950",
+      "text": "பெர்சியாவின் தரியு I-ன் ஒரு சம்பந்தி மனைவி. 1 எஸ்றா 4:29-இல் அவள் தரியுவின் வலது பக்கத்தில் உட்கார்ந்திருந்தவளாக விவரிக்கப்பட்டிருக்கிறாள்."
+    }
+  ]
+}

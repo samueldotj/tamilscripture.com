@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/diadem",
+  "lang": "ta",
+  "source_hash": "f0c1167e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முடிப்பட்டம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/diadem#p1-f0c1167e",
+      "text": "முடிப்பட்டம் என்பது ராஜாக்களும் ராஜாத்திகளும் தங்கள் தலையைச் சுற்றி ஒரு பட்டையாகவோ, நாடாவாகவோ அணிந்த ஒரு வித கிரீடமாகும். கிரீடம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zichri",
+  "lang": "ta",
+  "source_hash": "73b3871f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிக்ரி",
+  "paragraphs": [
+    {
+      "id": "eastons/zichri#p1-7724e990",
+      "text": "நினைக்கப்பட்டவன்; பிரசித்தி பெற்றவன்."
+    },
+    {
+      "id": "eastons/zichri#p2-1305107c",
+      "text": "(1.) பென்யமீன் கோத்திரத்தின் தலைவன் (1 நாளாகமம் 8:19)."
+    },
+    {
+      "id": "eastons/zichri#p3-bdf64a4e",
+      "text": "(2.) அதே கோத்திரத்தைச் சேர்ந்த வேறொருவன் (1 நாளாகமம் 8:23)."
+    }
+  ]
+}

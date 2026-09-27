@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gaddi",
+  "lang": "ta",
+  "source_hash": "30301e5e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காதி",
+  "paragraphs": [
+    {
+      "id": "smiths/gaddi#p1-30301e5e",
+      "text": "(அதாவது, பாக்கியசாலி), சூசியின் மகன்; கானானை ஆராய்ச்சி செய்ய மோசேயால் அனுப்பப்பட்ட மனாசே கோத்திரத்தைச் சேர்ந்த ஆள்வேவுக்காரன். (எண்ணாகமம் 13:11) (கி.மு. 1490.)"
+    }
+  ]
+}

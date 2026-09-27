@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alexandrians",
+  "lang": "ta",
+  "source_hash": "7287f0d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலெக்சந்திரியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/alexandrians#p1-7287f0d2",
+      "text": "அலெக்சந்திரியாவைச் சேர்ந்த யூதன் குடியேற்றக்காரர்கள், இவர்கள் குடிமை உரிமைகளைப் பெற்றவர்களாக இருந்தனர், மேலும் எருசலேமில் ஒரு ஜெப ஆலயத்தையும் கொண்டிருந்தனர். (அப்போஸ்தலருடைய நடபடிகள் 6:9)"
+    }
+  ]
+}

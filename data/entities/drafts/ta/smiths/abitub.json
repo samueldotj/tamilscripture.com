@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abitub",
+  "lang": "ta",
+  "source_hash": "247ad653",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிதூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/abitub#p1-247ad653",
+      "text": "(நன்மையின் தகப்பன்), சகராயீம் தன் மனைவியாகிய உசீம் வழியாக பெற்ற மகன். (1 நாளாகமம் 8:11)"
+    }
+  ]
+}

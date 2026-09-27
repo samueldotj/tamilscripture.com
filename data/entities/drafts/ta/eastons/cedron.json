@@ -1,0 +1,18 @@
+{
+  "id": "eastons/cedron",
+  "lang": "ta",
+  "source_hash": "c747d519",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதரோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/cedron#p1-c747d519",
+      "text": "கறுப்பான ஆறு, எருசலேமின் கிழக்குச் சுவரின் கீழேயுள்ள பள்ளத்தாக்கின் வழியாக ஓடும் ஆறு (யோவான் 18:1). (கிதரோன் என்பதைக் காண்க.)"
+    }
+  ]
+}

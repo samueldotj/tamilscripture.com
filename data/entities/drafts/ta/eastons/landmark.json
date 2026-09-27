@@ -1,0 +1,18 @@
+{
+  "id": "eastons/landmark",
+  "lang": "ta",
+  "source_hash": "a03963b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்லைக்குறி",
+  "paragraphs": [
+    {
+      "id": "eastons/landmark#p1-a03963b2",
+      "text": "ஒரு கல் அல்லது கூடு போன்றவற்றால் குறிக்கப்படும் எல்லைக் கோடு (உபாகமம் 19:14; 27:17; நீதிமொழிகள் 22:28; 23:10; யோபு 24:2). எல்லைக்குறிகளை தேவனுடைய கடுங்கோபத்தை அடையாமல் அகற்றமுடியாது."
+    }
+  ]
+}

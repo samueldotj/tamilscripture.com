@@ -1,0 +1,18 @@
+{
+  "id": "smiths/coos",
+  "lang": "ta",
+  "source_hash": "88286e18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/coos#p1-88286e18",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 21:1) [கோஸ், அல்லது கோஸ்]"
+    }
+  ]
+}

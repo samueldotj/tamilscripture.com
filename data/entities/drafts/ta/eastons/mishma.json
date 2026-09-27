@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mishma",
+  "lang": "ta",
+  "source_hash": "cfcd4e0c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஷ்மா",
+  "paragraphs": [
+    {
+      "id": "eastons/mishma#p1-5a94caff",
+      "text": "கேட்டல்."
+    },
+    {
+      "id": "eastons/mishma#p2-d0faf032",
+      "text": "(1.) இஸ்மவேலின் மகன்களில் ஒருவன் (ஆதியாகமம் 25:14), ஒரு அராப் கோத்திரத்தை உண்டாக்கினவன்."
+    },
+    {
+      "id": "eastons/mishma#p3-1b69a750",
+      "text": "(2.) ஒரு சிமியோனியன் (1 நாளாகமம் 4:25, 26)."
+    }
+  ]
+}

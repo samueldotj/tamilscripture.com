@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hemdan",
+  "lang": "ta",
+  "source_hash": "c43dfff2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எம்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/hemdan#p1-c43dfff2",
+      "text": "(இன்பமானவன்), ஓரியனாகிய ஆனாகின் மகன் திஷோனின் மூத்த மகன். (ஆதியாகமம் 36:26) [அம்ராம், 2] (கி.மு. 1500 ஆண்டளவில்.)"
+    }
+  ]
+}

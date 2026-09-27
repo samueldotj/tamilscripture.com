@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/children-of-the-east",
+  "lang": "ta",
+  "source_hash": "82b855db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிழக்குப்பகுதி மக்கள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/children-of-the-east#p1-6e81c975",
+      "text": "இந்த வாசகம் இஸ்ரவேலுக்குக் கிழக்கே வாழ்ந்த மக்களைக் குறிக்கிறது (உதாரணமாக, நியாயாதிபதிகள் 6:3, இது பெரியன் ஸ்டாண்டர்ட் பைபிளில் “கிழக்குப்பகுதி மக்கள்” என மொழிபெயர்க்கப்பட்டுள்ளது)."
+    },
+    {
+      "id": "aquifer/children-of-the-east#p2-2c9faee1",
+      "text": "கிழக்குப்பகுதி மக்கள் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/cogitations",
+  "lang": "ta",
+  "source_hash": "00049ad3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நினைவுகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/cogitations#p1-00049ad3",
+      "text": "(அல்லது தாண். 7:28-ல் உள்ள கல்தேய வார்த்தை அர்த்தப்படுத்துவது போல “எண்ணங்கள்”), ஆழ்ந்த தியானம்."
+    }
+  ]
+}

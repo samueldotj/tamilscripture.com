@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/helbah",
+  "lang": "ta",
+  "source_hash": "6fe42706",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/helbah#p1-6fe42706",
+      "text": "ஆசேர் கோத்திரத்தார் தேசத்தைச் சொந்தமாக்கிக்கொண்ட பின்பும் வெற்றிகொள்ளப்படாமல் இருந்த கானானியரின் கோட்டைப் பட்டணங்களில் ஒன்று (நியாயாதிபதிகள் 1:31)."
+    }
+  ]
+}

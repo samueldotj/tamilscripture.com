@@ -1,0 +1,18 @@
+{
+  "id": "smiths/coffer",
+  "lang": "ta",
+  "source_hash": "a65712d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெட்டி",
+  "paragraphs": [
+    {
+      "id": "smiths/coffer#p1-a65712d5",
+      "text": "(argaz), வண்டியின் பக்கத்தில் தொங்கவிடப்பட்ட ஒரு நகர்த்தக்கூடிய பெட்டி. (1 சாமுவேல் 6:8,11,15) இந்த வார்த்தை வேறு எங்கும் காணப்படவில்லை."
+    }
+  ]
+}

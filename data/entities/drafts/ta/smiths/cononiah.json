@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cononiah",
+  "lang": "ta",
+  "source_hash": "1ecc4a65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொனனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/cononiah#p1-1ecc4a65",
+      "text": "(கர்த்தரால் நியமிக்கப்பட்டவன்), எசேக்கியாவின் காலத்தில் காணிக்கைகளுக்கும் தசமபாகங்களுக்கும் விசாரிப்புக்காரனாக இருந்த லேவியன். (2 நாளாகமம் 31:12,13) (கி.மு. 726.)"
+    }
+  ]
+}

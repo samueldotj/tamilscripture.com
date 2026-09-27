@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maggot",
+  "lang": "ta",
+  "source_hash": "ce50112d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புழு",
+  "paragraphs": [
+    {
+      "id": "aquifer/maggot#p1-95782bcd",
+      "text": "புழு என்பது ஈயின் லார்வாவைக் குறிக்கும் (யோபு 25:6; ஏசாயா 14:11)."
+    },
+    {
+      "id": "aquifer/maggot#p2-089f4ab1",
+      "text": "ஈ என்பதைக் காண்க."
+    }
+  ]
+}

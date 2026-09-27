@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jezer",
+  "lang": "ta",
+  "source_hash": "60c2d8af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்செர்",
+  "paragraphs": [
+    {
+      "id": "smiths/jezer#p1-60c2d8af",
+      "text": "(வல்லமை), நப்தலியினுடைய மூன்றாம் மகன், (ஆதியாகமம் 46:24; எண்ணாகமம் 26:49; 1 நாளாகமம் 7:13) மற்றும் எத்செரியர்களின் குடும்பத்திற்குத் தலைவனாக இருந்தவன்."
+    }
+  ]
+}

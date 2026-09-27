@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ephron-place",
+  "lang": "ta",
+  "source_hash": "f761fbea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பெரோன் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ephron-place#p1-1106ba19",
+      "text": "1. யூதாவின் வடக்கு எல்லையிலிருக்கும் மலைப்பிரதேசம் (யோசுவா 15:9)."
+    },
+    {
+      "id": "aquifer/ephron-place#p2-7a89b6e5",
+      "text": "2. பெத்தேலுக்கு அருகில் இருந்த, அபியாவினால் பிடிக்கப்பட்ட ஒரு பட்டணம் (2 நாளாகமம் 13:19); ஒருவேளை இது யோசுவா 18:23 இல் குறிப்பிடப்பட்டுள்ள ஒப்ராவாக இருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "eastons/jerahmeel",
+  "lang": "ta",
+  "source_hash": "291b7a10",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெராமியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/jerahmeel#p1-164b77e2",
+      "text": "தேவனிடம் அன்பு செலுத்துகிறவன்."
+    },
+    {
+      "id": "eastons/jerahmeel#p2-f18d314a",
+      "text": "(1.) எஸ்ரோனின் மகன், காலேபின் சகோதரன் (1 நாளாகமம் 2:9, 25, 26, முதலியன)."
+    },
+    {
+      "id": "eastons/jerahmeel#p3-5db47bc5",
+      "text": "(2.) கீசின் மகன், லேவியன் (1 நாளாகமம் 24:29)."
+    },
+    {
+      "id": "eastons/jerahmeel#p4-bc879446",
+      "text": "(3.) அம்மெலேகின் மகன் (எரேமியா 36:26)."
+    }
+  ]
+}

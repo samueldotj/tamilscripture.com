@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dishon",
+  "lang": "ta",
+  "source_hash": "85ab8fcf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திஷோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/dishon#p1-85ab8fcf",
+      "text": "(மரையான்)"
+    }
+  ]
+}

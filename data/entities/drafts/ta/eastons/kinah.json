@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kinah",
+  "lang": "ta",
+  "source_hash": "89dccc1d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீனா",
+  "paragraphs": [
+    {
+      "id": "eastons/kinah#p1-89dccc1d",
+      "text": "ஒரு புலம்பல் பாட்டு; யூதாவின் தென்கடையிலுள்ள ஒரு பட்டணம் (யோசுவா 15:22). இது ஒருவேளை சவக்கடலுக்கு வெகு தொலைவில் இல்லாமல், வாடி ஃபிக்ரேயில் இருந்திருக்கலாம்."
+    }
+  ]
+}

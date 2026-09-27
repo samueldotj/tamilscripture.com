@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adadah",
+  "lang": "ta",
+  "source_hash": "669414a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/adadah#p1-669414a2",
+      "text": "(பண்டிகை அல்லது எல்லை), யூதாவின் தென்திசை கடைசி எல்லையிலுள்ள பட்டணங்களில் ஒன்று, திமோனா மற்றும் கேதேசுக்கு கூட பெயர் குறிப்பிடப்பட்டுள்ளது. (யோசுவா 15:22)"
+    }
+  ]
+}

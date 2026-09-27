@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zephon",
+  "lang": "ta",
+  "source_hash": "8c49f0ef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிப்போன்",
+  "paragraphs": [
+    {
+      "id": "smiths/zephon#p1-8c49f0ef",
+      "text": "(கண்காணிப்பு), காத்தின் மகன், (எண்ணாகமம் 26:15) மற்றும் சிப்போனியர் குடும்பத்தின் மூலவர். ஆதியாகமம் 46:16-ல் சிப்பியோன் என்று அழைக்கப்பட்டிருக்கிறார். (கி.மு. 1706.)"
+    }
+  ]
+}

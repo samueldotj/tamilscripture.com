@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zichri",
+  "lang": "ta",
+  "source_hash": "62ff68d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிக்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/zichri#p1-62ff68d1",
+      "text": "(நினைவுகூரப்படத்தக்கவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rama",
+  "lang": "ta",
+  "source_hash": "4e142f84",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராமா",
+  "paragraphs": [
+    {
+      "id": "smiths/rama#p1-4e142f84",
+      "text": "(மத்தேயு 2:15) இது (எரேமியா 31:15) குறிக்கிறது. இது ராமா என்பதின் கிரேக்க வடிவமாகும்."
+    }
+  ]
+}

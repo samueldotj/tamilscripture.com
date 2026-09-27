@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shaphat",
+  "lang": "ta",
+  "source_hash": "ba594153",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்பாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/shaphat#p1-ba594153",
+      "text": "(நியாயாதிபதி). 1. ஓரியின் மகனாகிய சிமியோன் கோத்திரத்து ஒற்றன். (எண்ணாகமம் 13:5) (கி.மு. 1490)."
+    }
+  ]
+}

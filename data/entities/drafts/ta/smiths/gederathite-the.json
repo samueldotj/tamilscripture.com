@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gederathite-the",
+  "lang": "ta",
+  "source_hash": "90f748a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதேரைச்சேர்ந்தவன்",
+  "paragraphs": [
+    {
+      "id": "smiths/gederathite-the#p1-90f748a8",
+      "text": "பென்யமீன் நிலப்பகுதியில் இருந்ததாகத் தோன்றும் கெதேரா என்னும் இடத்தைச் சேர்ந்தவன். (1 நாளாகமம் 12:4)"
+    }
+  ]
+}

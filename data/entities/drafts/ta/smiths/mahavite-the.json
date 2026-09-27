@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahavite-the",
+  "lang": "ta",
+  "source_hash": "f7153a2d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகாவியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/mahavite-the#p1-f7153a2d",
+      "text": "தாவீது ராஜாவின் காவற்படை வீரர்களில் ஒருவனாகிய ஏலியேலின் பட்டப்பெயர், இவனுடைய பெயர் 1 நாளாகமம் 11:46 இல் மட்டுமே காணப்படும் பட்டியலில் பாதுகாக்கப்பட்டுள்ளது."
+    }
+  ]
+}

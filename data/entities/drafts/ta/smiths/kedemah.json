@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kedemah",
+  "lang": "ta",
+  "source_hash": "04db5594",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேத்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/kedemah#p1-04db5594",
+      "text": "(கிழக்கு), இஸ்மவேலின் மகன்களில் இளையவன். (ஆதியாகமம் 25:15; 1 நாளாகமம் 1:31)"
+    }
+  ]
+}

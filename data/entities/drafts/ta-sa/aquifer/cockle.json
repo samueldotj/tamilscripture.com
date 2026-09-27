@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cockle",
+  "lang": "ta",
+  "source_hash": "33548652",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முட்செடி",
+  "paragraphs": [
+    {
+      "id": "aquifer/cockle#p1-6877a343",
+      "text": "முட்செடி என்பது யோபு 31:40-ல் “நாற்றமடிக்கும் புல்” என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பு பயன்படுத்தும் சொல்லாகும்."
+    },
+    {
+      "id": "aquifer/cockle#p2-f4587386",
+      "text": "முட்செடி; முள் என்பதைக் காண்க."
+    }
+  ]
+}

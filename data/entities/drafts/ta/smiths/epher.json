@@ -1,0 +1,18 @@
+{
+  "id": "smiths/epher",
+  "lang": "ta",
+  "source_hash": "b7602a32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏப்பேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/epher#p1-b7602a32",
+      "text": "(கன்று), மீதியானின் மகன்களில் ஒழுங்கில் இரண்டாமவன். (ஆதியாகமம் 25:4; 1 நாளாகமம் 1:33) (கி.மு. 1820)."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/beor",
+  "lang": "ta",
+  "source_hash": "8b552b70",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேயோர்",
+  "paragraphs": [
+    {
+      "id": "eastons/beor#p1-8c3c010f",
+      "text": "தீவட்டி."
+    },
+    {
+      "id": "eastons/beor#p2-2841e4ee",
+      "text": "(1.) ஏதோமின் அரசர்களில் ஒருவனாகிய பேலாவின் தகப்பன் (ஆதியாகமம் 36:32)."
+    },
+    {
+      "id": "eastons/beor#p3-c523f08c",
+      "text": "(2.) பிலேயாமின் தகப்பன் (எண்ணாகமம் 22:5; 24:3, 15; 31:8). 2 பேதுரு 2:15-ல் அவன் போசோர் என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

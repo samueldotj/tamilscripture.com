@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jethlah",
+  "lang": "ta",
+  "source_hash": "3b194d0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெத்லா",
+  "paragraphs": [
+    {
+      "id": "smiths/jethlah#p1-3b194d0e",
+      "text": "(உயரம்), தாண் கோத்திரத்திற்குரிய பட்டணங்களில் ஒன்று. (யோசுவா 19:42)"
+    }
+  ]
+}

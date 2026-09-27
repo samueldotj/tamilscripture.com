@@ -1,0 +1,18 @@
+{
+  "id": "smiths/irshemesh",
+  "lang": "ta",
+  "source_hash": "854e0428",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இர்செமேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/irshemesh#p1-854e0428",
+      "text": "(சூரியனுடைய நகரம்), தாண் கோத்திரத்தாருக்குரிய ஒரு நகரம் (யோசுவா 19:41), இது பெத்ஷிமேசோடு ஒன்றாக இருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/saul",
+  "lang": "ta",
+  "source_hash": "0248ceb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சவுல்",
+  "paragraphs": [
+    {
+      "id": "smiths/saul#p1-0248ceb7",
+      "text": "(விரும்பப்பட்டவன்), மிகச் சரியாக சவுல்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/plagues-the-ten",
+  "lang": "ta",
+  "source_hash": "d1f985de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பத்து வாதைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/plagues-the-ten#p1-d1f985de",
+      "text": "இந்த வாதைகள் அனுப்பப்பட்ட சந்தர்ப்பம் யாத்திராகமம் 3-12 இல் விவரிக்கப்பட்டுள்ளது."
+    }
+  ]
+}

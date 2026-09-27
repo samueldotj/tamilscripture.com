@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gedeon",
+  "lang": "ta",
+  "source_hash": "4f69ce5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிதியோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/gedeon#p1-4f69ce5d",
+      "text": "கிதியோன் என்ற எபிரெய பெயரின் கிரேக்கு வடிவம். (எபிரெயர் 11:32)"
+    }
+  ]
+}

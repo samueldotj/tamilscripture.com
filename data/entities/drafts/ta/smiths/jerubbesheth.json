@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jerubbesheth",
+  "lang": "ta",
+  "source_hash": "41ad171e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எருப்பேசேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jerubbesheth#p1-41ad171e",
+      "text": "(வெட்கத்தோடு போராடுகிறவன்), கிதியோனுடைய ஒரு பெயர். (2 சாமுவேல் 11:21)"
+    }
+  ]
+}

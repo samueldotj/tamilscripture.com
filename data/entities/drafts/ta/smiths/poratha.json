@@ -1,0 +1,18 @@
+{
+  "id": "smiths/poratha",
+  "lang": "ta",
+  "source_hash": "58bd7fdf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொராதா",
+  "paragraphs": [
+    {
+      "id": "smiths/poratha#p1-58bd7fdf",
+      "text": "சூசான் அரமனையில் யூதர்களால் கொலைசெய்யப்பட்ட ஆமானின் பத்து மகன்களில் ஒருவன். (எஸ்தர் 9:8)"
+    }
+  ]
+}

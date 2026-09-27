@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pitch",
+  "lang": "ta",
+  "source_hash": "656ed6f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pitch#p1-95ad5f88",
+      "text": "கீல் என்பது பொருள்களை மூடவும் அல்லது தண்ணீர் ஊடுருவாதபடி (தண்ணீரைத் தடுக்க) செய்யவும் பயன்படுத்தப்படும் ஒட்டும் தன்மையுள்ள, கருப்பான ஒரு பொருள் ஆகும்."
+    },
+    {
+      "id": "aquifer/pitch#p2-81b8ca15",
+      "text": "காண்க: அஸ்பால்ட்; பிட்யூமன்."
+    }
+  ]
+}

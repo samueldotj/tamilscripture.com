@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ethanim",
+  "lang": "ta",
+  "source_hash": "e56c7cfc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏத்தானீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ethanim#p1-4d77c4b1",
+      "text": "யூதர்களின் நாட்காட்டியில் ஏழாம் மாதத்திற்கு உரிய ஒரு பழைய பெயர் (1 இராஜாக்கள் 8:2). பிற்காலங்களில், இந்த மாதம் திஸ்ரி என்று அழைக்கப்பட்டது. இது ஆரம்ப சரத்காலத்தில், அதாவது செப்டம்பர் முதல் அக்டோபர் வரையிலான காலப்பகுதியில் வந்தது."
+    },
+    {
+      "id": "aquifer/ethanim#p2-ecc5c352",
+      "text": "பண்டைய மற்றும் நவீன நாட்காட்டிகள் (Calendars, Ancient and Modern) என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jiphtah",
+  "lang": "ta",
+  "source_hash": "a4c84d18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/jiphtah#p1-a4c84d18",
+      "text": "(தேவன் விடுதலையாக்குகிறவர்) கடலோர பள்ளத்தாக்கிலுள்ள, அதாவது செபேலாவிலுள்ள யூதாவின் பட்டணங்களில் ஒன்று. (யோசுவா 15:43) இது இன்னும் கண்டுபிடிக்கப்படவில்லை."
+    }
+  ]
+}

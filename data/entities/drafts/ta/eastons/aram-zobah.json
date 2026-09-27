@@ -1,0 +1,18 @@
+{
+  "id": "eastons/aram-zobah",
+  "lang": "ta",
+  "source_hash": "1e1f3d65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராம்-சோபா",
+  "paragraphs": [
+    {
+      "id": "eastons/aram-zobah#p1-1e1f3d65",
+      "text": "(சங்கீதங்கள் 60, தலைப்பு), ஐப்பிராத்து நதிக்கும் ஓரொந்தெஸ் நதிக்கும் இடையிலுள்ள பிரதேசமாக இருக்கலாம்."
+    }
+  ]
+}

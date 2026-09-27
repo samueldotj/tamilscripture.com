@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/keilah-person",
+  "lang": "ta",
+  "source_hash": "9b030b73",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேகிலா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/keilah-person#p1-9b030b73",
+      "text": "யூதாவின் கோத்திரத்திலுள்ள காலேபின் சந்ததியார், 1 நாளாகமம் 4:19-இல் கர்மியன் என்று அழைக்கப்படுகிறார். சிலர் இந்த குறிப்பை ஒரு நபராகக் கருதாமல், யூதாவிலுள்ள கேகிலா நகரத்துடன் இனங்கண்டுகொள்கிறார்கள்."
+    }
+  ]
+}

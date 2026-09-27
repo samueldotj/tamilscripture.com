@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mahath",
+  "lang": "ta",
+  "source_hash": "c262b2bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/mahath#p1-fd117ae4",
+      "text": "பிடித்துக்கொள்ளுதல்."
+    },
+    {
+      "id": "eastons/mahath#p2-af3291c1",
+      "text": "(1.) கோகாத்தியனான ஒரு லேவியன், எல்க்கானாவின் தகப்பன் (1 நாளாகமம் 6:35)."
+    },
+    {
+      "id": "eastons/mahath#p3-29a372c9",
+      "text": "(2.) எசேக்கியாவின் காலத்தில் இருந்த வேறொரு கோகாத்தியனான லேவியன் (2 நாளாகமம் 29:12)."
+    }
+  ]
+}

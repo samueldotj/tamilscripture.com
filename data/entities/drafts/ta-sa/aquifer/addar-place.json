@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/addar-place",
+  "lang": "ta",
+  "source_hash": "382f01dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/addar-place#p1-382f01dc",
+      "text": "காதேசுக்கு வடமேற்கே, யூதாவின் தென்மேற்கு எல்லையில் இருந்த ஒரு பட்டணம் (யோசுவா 15:3). எஸ்ரோன் மற்றும் ஆதார் என்னும் பட்டணங்கள் ஆத்சார் ஆதார் என்று அழைக்கப்பட்டன (எண்ணாகமம் 34:4)."
+    }
+  ]
+}

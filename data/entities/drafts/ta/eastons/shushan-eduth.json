@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shushan-eduth",
+  "lang": "ta",
+  "source_hash": "30d896c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூஷான்-ஏதுத்",
+  "paragraphs": [
+    {
+      "id": "eastons/shushan-eduth#p1-30d896c7",
+      "text": "சாட்சியின் லீலி (அல்லி), சங்கீதம் 60-இன் தலைப்பு. (சோஷன்னீம் காண்க.)"
+    }
+  ]
+}

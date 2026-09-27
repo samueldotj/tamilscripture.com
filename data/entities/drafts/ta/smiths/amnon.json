@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amnon",
+  "lang": "ta",
+  "source_hash": "22e463e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்னோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/amnon#p1-22e463e3",
+      "text": "(உண்மையுள்ளவர்)."
+    }
+  ]
+}

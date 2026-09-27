@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lasha",
+  "lang": "ta",
+  "source_hash": "5e8beb14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாசா",
+  "paragraphs": [
+    {
+      "id": "eastons/lasha#p1-5e8beb14",
+      "text": "பிளவு, சாக்கடல் கிழக்கே இருந்ததாகத் தோன்றும் ஒரு இடம் (ஆதியாகமம் 10:19). இது பின்பு கல்லீரோயி என்று அழைக்கப்பட்டது, இது சூடான நீரூற்றுகளுக்குப் புகழ்பெற்ற இடமாக இருந்தது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elpaal",
+  "lang": "ta",
+  "source_hash": "4414b743",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பால்",
+  "paragraphs": [
+    {
+      "id": "smiths/elpaal#p1-4414b743",
+      "text": "(தேவன் அவனுடைய கூலி), ஊசிமின் மகனும் அபிதூபின் சகோதரனுமான ஒரு பென்யமீனன். (1 நாளாகமம் 8:11) அவன் அநேக குடும்பங்களை உற்பத்தி செய்தவன்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/banner",
+  "lang": "ta",
+  "source_hash": "b164d7a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொடி",
+  "paragraphs": [
+    {
+      "id": "smiths/banner#p1-b164d7a3",
+      "text": "[கொடி (Ensign) என்பதைக் காண்க]"
+    }
+  ]
+}

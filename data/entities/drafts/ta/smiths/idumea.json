@@ -1,0 +1,18 @@
+{
+  "id": "smiths/idumea",
+  "lang": "ta",
+  "source_hash": "5b551d6c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இதுமேயா",
+  "paragraphs": [
+    {
+      "id": "smiths/idumea#p1-5b551d6c",
+      "text": "(சிவப்பு). [ஏதோம், இதுமேயா காண்க]"
+    }
+  ]
+}

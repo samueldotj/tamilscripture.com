@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zohar",
+  "lang": "ta",
+  "source_hash": "99ae05f2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோகார்",
+  "paragraphs": [
+    {
+      "id": "smiths/zohar#p1-99ae05f2",
+      "text": "(வெளிச்சம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elihoenai",
+  "lang": "ta",
+  "source_hash": "035741a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியோனாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/elihoenai#p1-035741a6",
+      "text": "(என் கண்கள் யெகோவாவை நோக்கியிருக்கிறது), செராகியாவின் மகன், இவன் எஸ்றாவுடன் சிறையிருப்பிலிருந்து 200 ஆண்மக்களுடன் திரும்பி வந்தான். (எஸ்றா 8:4) (கி.மு. 459.)"
+    }
+  ]
+}

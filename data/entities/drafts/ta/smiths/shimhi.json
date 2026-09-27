@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimhi",
+  "lang": "ta",
+  "source_hash": "ab697ab8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்கி",
+  "paragraphs": [
+    {
+      "id": "smiths/shimhi#p1-ab697ab8",
+      "text": "(புகழ்பெற்றவன்), பென்யமீன் வம்சத்தவன், எல்பாலின் மகனாகிய செமாவே இவனாக இருக்கலாம். (1 நாளாகமம் 8:21)"
+    }
+  ]
+}

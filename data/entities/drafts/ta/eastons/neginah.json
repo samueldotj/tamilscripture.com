@@ -1,0 +1,18 @@
+{
+  "id": "eastons/neginah",
+  "lang": "ta",
+  "source_hash": "06ddaab9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெகீனா",
+  "paragraphs": [
+    {
+      "id": "eastons/neginah#p1-06ddaab9",
+      "text": "சங்கீதம் 61-ன் தலைப்பில், இது நரம்பு வாத்தியங்களின் இசையைக் குறிக்கிறது (1 சாமுவேல் 16:16; ஏசாயா 38:20). இது நெகீனோத் என்பதின் ஒருமை வடிவமாகும்."
+    }
+  ]
+}

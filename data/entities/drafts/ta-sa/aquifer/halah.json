@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/halah",
+  "lang": "ta",
+  "source_hash": "da1cab52",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/halah#p1-da1cab52",
+      "text": "கிமு 722இல் சமாரியா வீழ்ச்சியடைந்த பின்பு அதன் மக்கள் கொண்டுபோகப்பட்ட அசீரியாவிலுள்ள ஒரு இடம் (2 இராஜாக்கள் 17:6; 18:11; ஒப்பிடுக 1 நாளாகமம் 5:26)."
+    }
+  ]
+}

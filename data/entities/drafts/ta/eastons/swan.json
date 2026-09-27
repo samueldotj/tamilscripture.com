@@ -1,0 +1,18 @@
+{
+  "id": "eastons/swan",
+  "lang": "ta",
+  "source_hash": "309e78e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னப்பறவை",
+  "paragraphs": [
+    {
+      "id": "eastons/swan#p1-309e78e4",
+      "text": "அசுத்தமான பறவைகளின் பட்டியலில் குறிப்பிடப்பட்டுள்ள இது (லேவியராகமம் 11:18; உபாகமம் 14:16), யோர்தானிலும் கலிலேயா கடலிலும் சில சமயங்களில் காணப்படுகிறது."
+    }
+  ]
+}

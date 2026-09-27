@@ -1,0 +1,18 @@
+{
+  "id": "smiths/net",
+  "lang": "ta",
+  "source_hash": "2153dc4d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வலை",
+  "paragraphs": [
+    {
+      "id": "smiths/net#p1-2153dc4d",
+      "text": "[மீன்பிடித்தல் காண்க]"
+    }
+  ]
+}

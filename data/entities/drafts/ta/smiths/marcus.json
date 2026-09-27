@@ -1,0 +1,18 @@
+{
+  "id": "smiths/marcus",
+  "lang": "ta",
+  "source_hash": "7035d9a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாற்கு (Marcus)",
+  "paragraphs": [
+    {
+      "id": "smiths/marcus#p1-7035d9a6",
+      "text": "சுவிசேஷகனாகிய மாற்கு. (கொலோசெயர் 4:10); பிலேமோன் 1:24; 1 பேதுரு 5:13 [மாற்கு]"
+    }
+  ]
+}

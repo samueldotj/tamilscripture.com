@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sethur",
+  "lang": "ta",
+  "source_hash": "7c3c1f38",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேத்தூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/sethur#p1-7c3c1f38",
+      "text": "(மறைந்திருக்கிறவன்), ஆசேர் கோத்திரத்தைச் சேர்ந்த வேவுகாரன், மிகாவேலின் மகன். (எண்ணாகமம் 13:13) (கி.மு. 1490.)"
+    }
+  ]
+}

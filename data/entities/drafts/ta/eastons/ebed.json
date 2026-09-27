@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ebed",
+  "lang": "ta",
+  "source_hash": "0e215787",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏபேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/ebed#p1-0e215787",
+      "text": "அடிமை; அபிமெலேக்குக்கு எதிரான சதித்திட்டத்தில் சீகேமின் மனிதர்கள் “நம்பி”, அவர்களைச் சார்ந்திருந்த காகாலின் தகப்பன் (நியாயாதிபதிகள் 9:26, 26, 30, 31)."
+    }
+  ]
+}

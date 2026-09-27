@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hiram-or-huram",
+  "lang": "ta",
+  "source_hash": "bf8c7046",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈராம் அல்லது ஹீராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hiram-or-huram#p1-bf8c7046",
+      "text": "(உயர்குடி)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chub",
+  "lang": "ta",
+  "source_hash": "cad8709e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chub#p1-494ea7c4",
+      "text": "யாக்கோபு அரசர் மொழிபெயர்ப்பில் காணப்படும் கூப் என்பதன் எழுத்துப்பெயர்ப்பு, இது எசேக்கியேல் 30:5-ல் லிபியாவாக அடையாளம் காணப்படும் ஒரு இடம்."
+    },
+    {
+      "id": "aquifer/chub#p2-5125d5da",
+      "text": "கூப் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zacchur",
+  "lang": "ta",
+  "source_hash": "1a5f1ef1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சக்கூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/zacchur#p1-1a5f1ef1",
+      "text": "மிஸ்மாவின் குடும்பத்தைச் சேர்ந்த ஒரு சிமியோனியன். (1 நாளாகமம் 4:26)"
+    }
+  ]
+}

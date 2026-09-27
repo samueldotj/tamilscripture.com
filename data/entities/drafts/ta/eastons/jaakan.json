@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jaakan",
+  "lang": "ta",
+  "source_hash": "ae940724",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கான்",
+  "paragraphs": [
+    {
+      "id": "eastons/jaakan#p1-ae940724",
+      "text": "அவன் திருகுகிறவன், ஓரியனான சேயீரின் மகன் ஏத்சேருடைய மகன்களில் ஒருவன் (1 நாளாகமம் 1:42)."
+    }
+  ]
+}

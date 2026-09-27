@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lodge-to",
+  "lang": "ta",
+  "source_hash": "53f3bf3d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தங்குதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/lodge-to#p1-53f3bf3d",
+      "text": "இந்த வார்த்தை, ஒரே ஒரு விதிவிலக்கைத் தவிர, குறைந்தபட்சம் வேதாகமத்தின் வர்ணனைப் பகுதிகளில், எப்பொழுதும் ஏறக்குறைய “இராத்தங்குதல்” என்ற பொருளையே கொண்டிருக்கிறது."
+    }
+  ]
+}

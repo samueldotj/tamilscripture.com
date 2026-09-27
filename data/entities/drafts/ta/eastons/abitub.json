@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abitub",
+  "lang": "ta",
+  "source_hash": "3b55a158",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிதூப்",
+  "paragraphs": [
+    {
+      "id": "eastons/abitub#p1-3b55a158",
+      "text": "நற்குணத்தின் தகப்பன், ஒரு பென்யமீனியன் (1 நாளாகமம் 8:11)."
+    }
+  ]
+}

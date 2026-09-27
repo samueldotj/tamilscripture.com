@@ -1,0 +1,18 @@
+{
+  "id": "eastons/senaah",
+  "lang": "ta",
+  "source_hash": "285544f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செனாகா",
+  "paragraphs": [
+    {
+      "id": "eastons/senaah#p1-285544f5",
+      "text": "முள்ளுள்ளது, செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பிய அதன் குடிகளில் அநேகர் சேர்ந்த ஒரு இடம் (எஸ்றா 2:35; நெகேமியா 7:38)."
+    }
+  ]
+}

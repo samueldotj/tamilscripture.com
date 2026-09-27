@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kehelathah",
+  "lang": "ta",
+  "source_hash": "f056b9b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேலத்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/kehelathah#p1-f056b9b0",
+      "text": "சபை, வனாந்தரத்தில் இஸ்ரவேலர்கள் தங்கிய இடங்களில் ஒன்று (எண்ணாகமம் 33:22, 23)."
+    }
+  ]
+}

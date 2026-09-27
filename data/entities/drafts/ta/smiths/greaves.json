@@ -1,0 +1,18 @@
+{
+  "id": "smiths/greaves",
+  "lang": "ta",
+  "source_hash": "a5783cbe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கவசத் துணிக்கை (Greaves)",
+  "paragraphs": [
+    {
+      "id": "smiths/greaves#p1-a5783cbe",
+      "text": "காலிலிருந்து முழங்காலுக்கு எட்டும் ஒரு பாதுகாப்பு ஆயுதம், இது அணிபவனின் கணைக்காலை பாதுகாத்தது. இது தோலினாலோ அல்லது வெண்கலத்தினாலோ செய்யப்பட்டிருந்தது (1 சாமுவேல் 17:6)."
+    }
+  ]
+}

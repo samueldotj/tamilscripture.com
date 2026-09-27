@@ -1,0 +1,18 @@
+{
+  "id": "smiths/leshem",
+  "lang": "ta",
+  "source_hash": "c8e583a5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லேசேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/leshem#p1-c8e583a5",
+      "text": "(விலையுள்ள கல்), லாயிசின் வேறொரு வடிவம், பின்பு தாண் என்று பெயரிடப்பட்டது, யோசுவா 19:47 இல் காணப்படுகிறது."
+    }
+  ]
+}

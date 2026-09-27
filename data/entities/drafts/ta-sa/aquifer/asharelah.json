@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/asharelah",
+  "lang": "ta",
+  "source_hash": "31fc9912",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஷாரேலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/asharelah#p1-c8494b7e",
+      "text": "1 நாளாகமம் 25:2-ல் உள்ள ஆசாப்பின் மகன் அஷாரேலாவுக்கு இது வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/asharelah#p2-6a176c73",
+      "text": "எசரேலா காண்க."
+    }
+  ]
+}

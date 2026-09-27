@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ananiah-place",
+  "lang": "ta",
+  "source_hash": "b59a5bc6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனனியா (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ananiah-place#p1-b59a5bc6",
+      "text": "பாபிலோனுக்குச் சிறையிருப்பிற்குப் பிறகு பென்யமீனுடைய பங்கிலிருந்த ஒரு ஊர் (நெகேமியா 11:32). இது புதிய ஏற்பாட்டின் பெத்தானியாவாக மாறியிருக்கலாம். “பெத்தானியா” என்பது பெத்-அனனியா என்பதன் சுருக்கமாகும்."
+    }
+  ]
+}

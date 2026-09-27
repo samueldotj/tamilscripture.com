@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/astaroth",
+  "lang": "ta",
+  "source_hash": "f8992be6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்தரோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/astaroth#p1-4d7b861c",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் அஸ்தரோத் என்ற பெயரின் ஒரு வடிவம். இது அஸ்தரேத் என்னும் தேவதையின் அஞ்ஞான தொழுதுகொள்ளுதலுக்குப் பெயர்பெற்ற ஒரு பட்டணமாக இருந்தது (உபாகமம் 1:4)."
+    },
+    {
+      "id": "aquifer/astaroth#p2-1fbec853",
+      "text": "அஸ்தரோத், அஸ்தரேத்தியன் என்பவற்றைக் காண்க."
+    }
+  ]
+}

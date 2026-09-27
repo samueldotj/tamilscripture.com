@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lebbaeus",
+  "lang": "ta",
+  "source_hash": "4a391f7e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லெபேயு",
+  "paragraphs": [
+    {
+      "id": "smiths/lebbaeus#p1-4a391f7e",
+      "text": "(இருதயமுள்ளவன்), பன்னிரண்டு அப்போஸ்தலர்களில் ஒருவனாகிய யூதாவின் மறுபெயர்களில் ஒன்று."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tebeth",
+  "lang": "ta",
+  "source_hash": "4ba5c37f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேபேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/tebeth#p1-4ba5c37f",
+      "text": "[மாதம்]"
+    }
+  ]
+}

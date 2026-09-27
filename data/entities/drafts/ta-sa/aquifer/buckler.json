@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/buckler",
+  "lang": "ta",
+  "source_hash": "8efbaa9c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேடகம் (சிறு பரிசை)",
+  "paragraphs": [
+    {
+      "id": "aquifer/buckler#p1-4bf72c56",
+      "text": "போரில் கையில் ஏந்தப்படும் அல்லது கையில் அணியப்படும் ஒரு சிறிய பரிசை. இது பொதுவாக வட்டவடிவமாக இருந்தது."
+    },
+    {
+      "id": "aquifer/buckler#p2-8d8ede60",
+      "text": "படைக்கவசம் மற்றும் ஆயுதங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

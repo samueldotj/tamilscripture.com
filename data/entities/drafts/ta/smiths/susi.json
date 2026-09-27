@@ -1,0 +1,18 @@
+{
+  "id": "smiths/susi",
+  "lang": "ta",
+  "source_hash": "8788d8e0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூசி",
+  "paragraphs": [
+    {
+      "id": "smiths/susi#p1-8788d8e0",
+      "text": "மனாசே கோத்திரத்தின் வேவுகாரனாகிய காதியின் தகப்பன். (எண்ணாகமம் 13:11)"
+    }
+  ]
+}

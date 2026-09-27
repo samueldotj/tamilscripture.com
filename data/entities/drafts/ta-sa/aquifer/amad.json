@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/amad",
+  "lang": "ta",
+  "source_hash": "c959273f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/amad#p1-c959273f",
+      "text": "இது கர்மேல் மலைக்கு அருகில் வடக்கு பாலஸ்தீனத்தில் இருந்த ஒரு பட்டணம். இது ஆசேரின் எல்லைக்குள் அடங்கியிருந்தது (யோசுவா 19:26)."
+    }
+  ]
+}

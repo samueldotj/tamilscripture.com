@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arza",
+  "lang": "ta",
+  "source_hash": "9cf72fc8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்சா",
+  "paragraphs": [
+    {
+      "id": "smiths/arza#p1-9cf72fc8",
+      "text": "திர்சாவிலே இஸ்ரவேலின் ராஜாவாகிய ஏலாவின் அரண்மனைப் பொறுப்பாளன்; இவனுடைய வீட்டிலே நடந்த ஒரு விருந்தில் ஏலா சிம்ரியினால் கொலைசெய்யப்பட்டான். (1 இராஜாக்கள் 16:9)"
+    }
+  ]
+}

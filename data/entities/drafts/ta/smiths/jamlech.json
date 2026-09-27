@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jamlech",
+  "lang": "ta",
+  "source_hash": "e59781b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யம்லேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/jamlech#p1-e59781b7",
+      "text": "(தேவன் ராஜாவாக்குகிறவர்), சிமியோன் கோத்திரத்தின் தலைவர்களில் ஒருவன். (1 நாளாகமம் 4:34)"
+    }
+  ]
+}

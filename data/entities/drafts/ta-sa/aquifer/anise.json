@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/anise",
+  "lang": "ta",
+  "source_hash": "a5be86ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனிஸி",
+  "paragraphs": [
+    {
+      "id": "aquifer/anise#p1-5ba85ca9",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் மத்தேயு 23:23-ல் \"dill\" (சீரகம்) என்பதற்குப் பயன்படுத்தப்பட்ட மொழிபெயர்ப்புச் சொல்."
+    },
+    {
+      "id": "aquifer/anise#p2-5db759d9",
+      "text": "தாவரங்கள் (சீரகம்) என்பதைக் காண்க."
+    }
+  ]
+}

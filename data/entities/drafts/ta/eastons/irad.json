@@ -1,0 +1,18 @@
+{
+  "id": "eastons/irad",
+  "lang": "ta",
+  "source_hash": "c2d5febb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈராத்",
+  "paragraphs": [
+    {
+      "id": "eastons/irad#p1-c2d5febb",
+      "text": "ஓட்டக்காரன்; காட்டுக் கழுதை, ஜலப்பிரவாகத்திற்கு முன்னிருந்த கோத்திரத்தலைவர்களில் ஒருவன், மெகுயவேலின் தகப்பன் (ஆதியாகமம் 4:18), காயீனுடைய பேரன்."
+    }
+  ]
+}

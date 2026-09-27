@@ -1,0 +1,18 @@
+{
+  "id": "smiths/irad",
+  "lang": "ta",
+  "source_hash": "5d161f55",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/irad#p1-5d161f55",
+      "text": "(விரைவானவன்), ஏனோக்குடைய மகன்; காயீனுடைய பேரன், மெகுயவேலின் தகப்பன். (ஆதியாகமம் 4:18)"
+    }
+  ]
+}

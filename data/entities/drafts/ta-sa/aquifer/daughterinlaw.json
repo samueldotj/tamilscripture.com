@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/daughterinlaw",
+  "lang": "ta",
+  "source_hash": "86d0a943",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மருமகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/daughterinlaw#p1-aeee8a69",
+      "text": "மருமகள் என்பவள் ஒருவரின் மகனுடைய நியாயப்பிரமாணத்தின்படி மனைவியாவாள்."
+    },
+    {
+      "id": "aquifer/daughterinlaw#p2-ba5a7b37",
+      "text": "குடும்ப வாழ்க்கையும் உறவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kings-pool",
+  "lang": "ta",
+  "source_hash": "d94e1f6c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராஜாவின் குளம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kings-pool#p1-d94e1f6c",
+      "text": "எருசலேமிலுள்ள ராஜாவின் தோட்டத்தில் இருந்த ஒரு நீர்த்தேக்கம் (நெகேமியா 2:14). இது சாலாவின் குளம் என்று அறியப்படுகிறது (3:15)."
+    }
+  ]
+}

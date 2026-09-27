@@ -1,0 +1,18 @@
+{
+  "id": "smiths/milcom",
+  "lang": "ta",
+  "source_hash": "e3ff17a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மில்கோம்",
+  "paragraphs": [
+    {
+      "id": "smiths/milcom#p1-e3ff17a8",
+      "text": "(பெரிய அரசன்). [மோளேக் காண்க]"
+    }
+  ]
+}

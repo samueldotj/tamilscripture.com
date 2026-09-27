@@ -1,0 +1,18 @@
+{
+  "id": "eastons/baalim",
+  "lang": "ta",
+  "source_hash": "bc4d61a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகாலீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/baalim#p1-bc4d61a6",
+      "text": "பாகால் என்பதன் பன்மை; பாகால் தேவனுடைய உருவங்கள் (நியாயாதிபதிகள் 2:11; 1 சாமுவேல் 7:4)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zabbud",
+  "lang": "ta",
+  "source_hash": "f2ceca9a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்பூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/zabbud#p1-f2ceca9a",
+      "text": "(கொடுக்கப்பட்டவன்) எஸ்றாவுடன் இரண்டாம் கூட்டமாக திரும்பிவந்த பிக்வாயின் மகன்களில் ஒருவன். (எஸ்றா 8:14) (கி.மு. 459.)"
+    }
+  ]
+}

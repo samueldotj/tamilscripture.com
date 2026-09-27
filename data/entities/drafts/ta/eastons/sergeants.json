@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sergeants",
+  "lang": "ta",
+  "source_hash": "3e1af56e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காவலர்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/sergeants#p1-3e1af56e",
+      "text": "அப்போஸ்தலருடைய நடபடிகள் 16:35, 38 (திருத்திய மொழிபெயர்ப்பில், “நடுத்தல்காரர்”), அதிகாரிகளுடன் இருந்து நியாயத்தை நிறைவேற்றுவதில் அவர்களுக்கு உதவி செய்த ஊழியர்கள்."
+    }
+  ]
+}

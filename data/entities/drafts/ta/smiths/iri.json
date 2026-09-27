@@ -1,0 +1,18 @@
+{
+  "id": "smiths/iri",
+  "lang": "ta",
+  "source_hash": "a14a0d3f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இரி",
+  "paragraphs": [
+    {
+      "id": "smiths/iri#p1-a14a0d3f",
+      "text": "இரி அல்லது ஈர் (ஒரு நகரத்திற்குச் சொந்தமானவன்), பேலாவின் மகனான ஒரு பென்யமீனியன். (1 நாளாகமம் 7:7,12)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sarai",
+  "lang": "ta",
+  "source_hash": "a4e5b784",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராய்",
+  "paragraphs": [
+    {
+      "id": "smiths/sarai#p1-a4e5b784",
+      "text": "(என் இராஜகுமாரி) என்பது ஆபிரகாமின் மனைவியாகிய சாராளுடைய மூலப் பெயராகும்."
+    }
+  ]
+}

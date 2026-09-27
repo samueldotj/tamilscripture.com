@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kelal",
+  "lang": "ta",
+  "source_hash": "6542a3e2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kelal#p1-6edae2dd",
+      "text": "பாகாத்மோவாபின் மகனாகிய கெலால் என்பதற்கு மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kelal#p2-f87553d8",
+      "text": "கெலால் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shepham",
+  "lang": "ta",
+  "source_hash": "45cec821",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேப்பாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/shepham#p1-45cec821",
+      "text": "மரங்களற்ற இடம், எண்ணாகமம் 34:10, 11: “சேப்பாமிலிருந்து எல்லையானது ஆயினுக்குக் கிழக்கிலுள்ள ரிப்லாவரையும்.”"
+    }
+  ]
+}

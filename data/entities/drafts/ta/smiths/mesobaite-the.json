@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mesobaite-the",
+  "lang": "ta",
+  "source_hash": "8751b255",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெசோபாயன்",
+  "paragraphs": [
+    {
+      "id": "smiths/mesobaite-the#p1-8751b255",
+      "text": "யாசீயேலின் பெயருடன் இணைக்கப்பட்ட ஒரு பட்டப்பெயர். (1 நாளாகமம் 11:47) இது எதைக் குறிக்கிறது என்பதை உறுதியாகச் சொல்வது சாத்தியமில்லை."
+    }
+  ]
+}

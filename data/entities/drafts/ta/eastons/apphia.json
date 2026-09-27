@@ -1,0 +1,18 @@
+{
+  "id": "eastons/apphia",
+  "lang": "ta",
+  "source_hash": "a460e86f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பியாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/apphia#p1-a460e86f",
+      "text": "பெருகுதல், கொலோசெயில் இருந்த ஒரு கிறிஸ்தவப் பெண் (பிலேமோன் 1:2), இவள் பிலேமோனுடைய மனைவியாக இருந்திருக்கலாம் என்று சிலர் கருதுகிறார்கள்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pelatiah",
+  "lang": "ta",
+  "source_hash": "d0848276",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலத்தியா",
+  "paragraphs": [
+    {
+      "id": "smiths/pelatiah#p1-d0848276",
+      "text": "(யெகோவாவினால் விடுவிக்கப்பட்டவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zereth",
+  "lang": "ta",
+  "source_hash": "37f0191f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/zereth#p1-37f0191f",
+      "text": "(மகிமை), தெக்கோவாவின் ஸ்தாபகனாகிய ஆசூருக்கு அவனுடைய மனைவியாகிய ஏலாளால் பிறந்த மகன். (1 நாளாகமம் 4:7) (கி.மு. 1440.)"
+    }
+  ]
+}

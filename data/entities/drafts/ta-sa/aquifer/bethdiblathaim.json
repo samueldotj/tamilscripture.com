@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethdiblathaim",
+  "lang": "ta",
+  "source_hash": "eff02151",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்திப்லாத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethdiblathaim#p1-260b99fa",
+      "text": "மோவாபிலுள்ள ஒரு பட்டணம் (எரேமியா 48:22). இது அல்மோன் திப்லத்தாயிமுடன் ஒத்ததாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/bethdiblathaim#p2-b66e73da",
+      "text": "அல்மோன் திப்லத்தாயிமைக் காண்க."
+    }
+  ]
+}

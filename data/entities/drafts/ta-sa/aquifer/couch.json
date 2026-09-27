@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/couch",
+  "lang": "ta",
+  "source_hash": "ec01f4a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "படுக்கை மேடை",
+  "paragraphs": [
+    {
+      "id": "aquifer/couch#p1-fbe54419",
+      "text": "படுக்கை மேடை என்பது தூக்கத்திற்காகவோ அல்லது ஓய்வெடுப்பதற்காகவோ சாய்ந்திருக்க மக்கள் பயன்படுத்தும் ஒரு வீட்டு உபயோகப் பொருள்."
+    },
+    {
+      "id": "aquifer/couch#p2-9f3a8250",
+      "text": "காண்க வீட்டு உபயோகப் பொருள்கள்."
+    }
+  ]
+}

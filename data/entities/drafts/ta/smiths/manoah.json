@@ -1,0 +1,18 @@
+{
+  "id": "smiths/manoah",
+  "lang": "ta",
+  "source_hash": "dcb43be0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனோவா",
+  "paragraphs": [
+    {
+      "id": "smiths/manoah#p1-dcb43be0",
+      "text": "(இளைப்பாறுதல்), சிம்சோனின் தகப்பன்; தாண் வம்சத்தானாகிய சோரா ஊரான். (நியாயாதிபதிகள் 13:2) (கி.மு. 1161) [சிம்சோன்]"
+    }
+  ]
+}

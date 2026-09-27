@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zif",
+  "lang": "ta",
+  "source_hash": "3c4f715f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீப்",
+  "paragraphs": [
+    {
+      "id": "smiths/zif#p1-3c4f715f",
+      "text": "(1 இராஜாக்கள் 6:1) [மாதம்]"
+    }
+  ]
+}

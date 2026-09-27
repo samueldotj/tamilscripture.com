@@ -1,0 +1,18 @@
+{
+  "id": "eastons/horem",
+  "lang": "ta",
+  "source_hash": "b38f4e44",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரேம்",
+  "paragraphs": [
+    {
+      "id": "eastons/horem#p1-b38f4e44",
+      "text": "பரிசுத்தப்படுத்தப்பட்டது, நப்தலியின் அரணான பட்டணங்களில் ஒன்று (யோசுவா 19:38)."
+    }
+  ]
+}

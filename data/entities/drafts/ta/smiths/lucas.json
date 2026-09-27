@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lucas",
+  "lang": "ta",
+  "source_hash": "fd0436e2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூக்கா",
+  "paragraphs": [
+    {
+      "id": "smiths/lucas#p1-fd0436e2",
+      "text": "(பிலேமோன் 1:24) [லூக்கா காண்க]"
+    }
+  ]
+}

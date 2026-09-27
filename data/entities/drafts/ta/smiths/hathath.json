@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hathath",
+  "lang": "ta",
+  "source_hash": "40e8ff87",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்தாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/hathath#p1-40e8ff87",
+      "text": "(பயமுள்ளவன்), கேனாசியனாகிய ஒத்னியேலின் மகன்களில் ஒருவன். (1 நாளாகமம் 4:13)"
+    }
+  ]
+}

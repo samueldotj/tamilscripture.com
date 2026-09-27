@@ -1,0 +1,42 @@
+{
+  "id": "eastons/jehohanan",
+  "lang": "ta",
+  "source_hash": "610d4d17",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகனான்",
+  "paragraphs": [
+    {
+      "id": "eastons/jehohanan#p1-25a10a1e",
+      "text": "யெகோவா அருளினார், யெரொபெயாம் II."
+    },
+    {
+      "id": "eastons/jehohanan#p2-13afedd9",
+      "text": "(1.) ஒரு கோராகியன், ஆலயத்தின் காவலர்களின் பிரிவுகளில் ஒன்றின் தலைவன் (1 நாளாகமம் 26:3)."
+    },
+    {
+      "id": "eastons/jehohanan#p3-13efd919",
+      "text": "(2.) யோசபாத்தின் “சேனாபதிகளில்” ஒருவன் (2 நாளாகமம் 17:15)."
+    },
+    {
+      "id": "eastons/jehohanan#p4-0f69bbff",
+      "text": "(3.) அசரியாவின் தகப்பன் (2 நாளாகமம் 28:12)."
+    },
+    {
+      "id": "eastons/jehohanan#p5-2f003ea2",
+      "text": "(4.) தொபியாவின் மகன், யூதர்களின் விரோதி (நெகேமியா 6:18)."
+    },
+    {
+      "id": "eastons/jehohanan#p6-6875fb4a",
+      "text": "(5.) நெகேமியா 12:42."
+    },
+    {
+      "id": "eastons/jehohanan#p7-d83438ef",
+      "text": "(6.) நெகேமியா 12:13."
+    }
+  ]
+}

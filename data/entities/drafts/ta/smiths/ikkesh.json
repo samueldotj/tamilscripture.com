@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ikkesh",
+  "lang": "ta",
+  "source_hash": "7cc57215",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இக்கேச்",
+  "paragraphs": [
+    {
+      "id": "smiths/ikkesh#p1-7cc57215",
+      "text": "(மாறுபாடானவன்), தெக்கோவியனான ஈராவின் தகப்பன். (2 சாமுவேல் 23:26; 1 நாளாகமம் 11:28; 27:9) (கி.மு. 1046க்கு முன்)"
+    }
+  ]
+}

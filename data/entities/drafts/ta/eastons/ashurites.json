@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ashurites",
+  "lang": "ta",
+  "source_hash": "ca1aa77a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஷூரியர்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/ashurites#p1-ca1aa77a",
+      "text": "இஸ்போசேத்தை ராஜாவாக்கின மக்களுக்குள் இவர்களும் குறிக்கப்பட்டிருக்கிறார்கள் (2 சாமுவேல் 2:9)."
+    }
+  ]
+}

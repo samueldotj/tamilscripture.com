@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jade",
+  "lang": "ta",
+  "source_hash": "cd7b4b60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாதே",
+  "paragraphs": [
+    {
+      "id": "aquifer/jade#p1-3800dc8c",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த ஓனாமின் மகனாகிய யாதாவின் மற்றொரு எழுத்துவடிவம் (1 நாளாகமம் 2:28, 32)."
+    },
+    {
+      "id": "aquifer/jade#p2-3c59268e",
+      "text": "யாதா என்பதைக் காண்க."
+    }
+  ]
+}

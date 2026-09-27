@@ -1,0 +1,18 @@
+{
+  "id": "smiths/muaz",
+  "lang": "ta",
+  "source_hash": "f333a0ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முவாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/muaz#p1-f333a0ea",
+      "text": "(கடுங்கோபம்), யெராமியேலின் முதற்பேறான ராமின் மகன். (1 நாளாகமம் 2:27)"
+    }
+  ]
+}

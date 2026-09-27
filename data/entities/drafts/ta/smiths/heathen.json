@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heathen",
+  "lang": "ta",
+  "source_hash": "e6996f8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்நியமக்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/heathen#p1-e6996f8b",
+      "text": "[யூதரல்லாதவர்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jeshanah",
+  "lang": "ta",
+  "source_hash": "b120d7f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஷானா",
+  "paragraphs": [
+    {
+      "id": "eastons/jeshanah#p1-b120d7f6",
+      "text": "இஸ்ரவேலின் ராஜ்ஜியத்திலுள்ள ஒரு பட்டணம் (2 நாளாகமம் 13:19)."
+    }
+  ]
+}

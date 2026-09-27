@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abner",
+  "lang": "ta",
+  "source_hash": "80269bcf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்னேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/abner#p1-80269bcf",
+      "text": "(ஒளியின் தகப்பன்)."
+    }
+  ]
+}

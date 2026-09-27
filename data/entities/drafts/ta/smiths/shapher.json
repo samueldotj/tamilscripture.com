@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shapher",
+  "lang": "ta",
+  "source_hash": "845fb6cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்பேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shapher#p1-845fb6cf",
+      "text": "(பிரகாசம்), மலை, (எண்ணாகமம் 33:23) இஸ்ரவேலர்கள் வனாந்தரத்தில் அலைந்து திரிந்த காலத்தில் முகாமிட்ட ஒரு பாலைவன தளத்தின் பெயர்."
+    }
+  ]
+}

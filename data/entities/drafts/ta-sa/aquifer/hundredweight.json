@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hundredweight",
+  "lang": "ta",
+  "source_hash": "36260f1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நூறு நிறை (Hundred-Weight)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hundredweight#p1-7abe4218",
+      "text": "நூறு நிறை என்பது ஒரு தாலந்துக்கு சமமான, அதாவது சுமார் 34 கிலோகிராம் (75 பவுண்டு) நிறையுள்ள ஒரு அளவு. இது வெளிப்படுத்தின விசேஷம் 16:21-ல் மட்டுமே குறிப்பிடப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/hundredweight#p2-db3bfff6",
+      "text": "நிறைகள் மற்றும் அளவைகள் என்பதைக் காண்க."
+    }
+  ]
+}

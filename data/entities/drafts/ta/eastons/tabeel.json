@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tabeel",
+  "lang": "ta",
+  "source_hash": "72bf409b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபெயேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/tabeel#p1-72bf409b",
+      "text": "எருசலேமைத் திரும்பக் கட்டுகிறதைத் தடுக்கும் முயற்சியில் மற்றவர்களுடன் இணைந்த சமாரியாவின் பெர்சிய அதிபதி (எஸ்றா 4:7)."
+    }
+  ]
+}

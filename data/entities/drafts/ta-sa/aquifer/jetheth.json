@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jetheth",
+  "lang": "ta",
+  "source_hash": "4369a7ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எதேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jetheth#p1-4369a7ac",
+      "text": "ஏதோமின் ஒரு வம்சத் தலைவன் (பிரபு) (ஆதியாகமம் 36:40; 1 நாளாகமம் 1:51)."
+    }
+  ]
+}

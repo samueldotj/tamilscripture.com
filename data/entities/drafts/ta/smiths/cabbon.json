@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cabbon",
+  "lang": "ta",
+  "source_hash": "8b8fff61",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காபோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/cabbon#p1-8b8fff61",
+      "text": "யூதாவின் தாழ்வான நாட்டில் இருந்த ஒரு பட்டணம். (யோசுவா 15:40)"
+    }
+  ]
+}

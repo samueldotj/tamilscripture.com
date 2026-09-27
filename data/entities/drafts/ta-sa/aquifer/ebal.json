@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ebal",
+  "lang": "ta",
+  "source_hash": "d1a771dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏபால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ebal#p1-02a71fd7",
+      "text": "1. சோபாலின் மகனும் சேயீரின் ஓரிய வம்சத்தவனும் (ஆதியாகமம் 36:23; 1 நாளாகமம் 1:40)."
+    },
+    {
+      "id": "aquifer/ebal#p2-3494dbc4",
+      "text": "2. யொக்தானின் மகனும் சேமின் வம்சத்தவனும் (1 நாளாகமம் 1:22). இவன் ஆதியாகமம் 10:28-ல் ஓபால் என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

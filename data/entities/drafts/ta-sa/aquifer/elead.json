@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elead",
+  "lang": "ta",
+  "source_hash": "dc39b65c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elead#p1-dc39b65c",
+      "text": "எலியாத் என்பவன் எப்பிராயீமின் சந்ததியாகும், அவன் பெலிஸ்தரின் காத் பட்டணத்திற்கு எதிரான ஒரு தாக்குதலில் கொல்லப்பட்டான் (1 நாளாகமம் 7:21)."
+    }
+  ]
+}

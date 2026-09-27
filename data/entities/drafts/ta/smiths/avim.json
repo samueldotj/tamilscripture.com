@@ -1,0 +1,18 @@
+{
+  "id": "smiths/avim",
+  "lang": "ta",
+  "source_hash": "61ac4fda",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/avim#p1-61ac4fda",
+      "text": "(பாழிடங்கள்), ஆவீம்கள் அல்லது ஆவியர்கள்."
+    }
+  ]
+}

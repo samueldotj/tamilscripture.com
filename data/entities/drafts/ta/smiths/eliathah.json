@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliathah",
+  "lang": "ta",
+  "source_hash": "1cd024a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/eliathah#p1-1cd024a4",
+      "text": "(தேவன் வருகிறவர்), தாவீது ராஜாவின் காலத்தில் ஆலயத்தில் இருந்த ஒரு பாடகன். (1 நாளாகமம் 25:4,27)"
+    }
+  ]
+}

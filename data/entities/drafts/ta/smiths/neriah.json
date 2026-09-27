@@ -1,0 +1,18 @@
+{
+  "id": "smiths/neriah",
+  "lang": "ta",
+  "source_hash": "65616240",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேரியா",
+  "paragraphs": [
+    {
+      "id": "smiths/neriah#p1-65616240",
+      "text": "(யெகோவாவின் விளக்கு), மாசெயாவின் மகனும் பாருக்கினுடையவும் செராயாவினுடையவும் தகப்பனும் ஆயிருந்தான்."
+    }
+  ]
+}

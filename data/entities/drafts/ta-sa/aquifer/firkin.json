@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/firkin",
+  "lang": "ta",
+  "source_hash": "7ffedc1e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்க்கின்",
+  "paragraphs": [
+    {
+      "id": "aquifer/firkin#p1-7ffedc1e",
+      "text": "சுமார் 10 காலன்கள் (37.9 லிட்டர்கள்) அளவுள்ள ஒரு அளவு. யோவான் 2:6-இல், ஒரு கிரேக்கு திரவ அளவின் பெயருக்கு கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் 'firkin' என்று பயன்படுத்தப்பட்டுள்ளது. நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

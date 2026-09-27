@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shelah",
+  "lang": "ta",
+  "source_hash": "dc93d9b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலா",
+  "paragraphs": [
+    {
+      "id": "eastons/shelah#p1-bdacd451",
+      "text": "வேண்டுகோள்."
+    },
+    {
+      "id": "eastons/shelah#p2-40fef995",
+      "text": "(1.) யூதாவின் மூன்றாம் மகன் (ஆதியாகமம் 38:2, 5, 11, 14)."
+    },
+    {
+      "id": "eastons/shelah#p3-22039d6d",
+      "text": "(2.) அர்பக்சாத்தின் மகன் (1 நாளாகமம் 1:18)."
+    }
+  ]
+}

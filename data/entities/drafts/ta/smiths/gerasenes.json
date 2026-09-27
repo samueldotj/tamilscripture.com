@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gerasenes",
+  "lang": "ta",
+  "source_hash": "4e27f58b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெராசேனர்",
+  "paragraphs": [
+    {
+      "id": "smiths/gerasenes#p1-4e27f58b",
+      "text": "(லூக்கா 8:26) திருத்தப்பட்ட மொழிபெயர்ப்பு; [காண்க: கதரேனர், கிர்கெசேனர், கெராசேனர்]"
+    }
+  ]
+}

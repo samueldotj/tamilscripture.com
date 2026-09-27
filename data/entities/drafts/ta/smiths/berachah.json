@@ -1,0 +1,18 @@
+{
+  "id": "smiths/berachah",
+  "lang": "ta",
+  "source_hash": "7c7a1857",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெராக்கா",
+  "paragraphs": [
+    {
+      "id": "smiths/berachah#p1-7c7a1857",
+      "text": "(ஆசீர்வாதம்), சிக்லாகிலே தாவீதுடன் சேர்ந்த ஒரு பென்யமீனியன். (1 நாளாகமம் 12:3) (கி.மு. 1054)"
+    }
+  ]
+}

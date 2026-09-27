@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahab",
+  "lang": "ta",
+  "source_hash": "fc33619b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahab#p1-fc33619b",
+      "text": "(மாமன்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gashmu",
+  "lang": "ta",
+  "source_hash": "9ff0d39c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கஷ்மு",
+  "paragraphs": [
+    {
+      "id": "aquifer/gashmu#p1-53532d6b",
+      "text": "கஷ்மு என்பது நெகேமியா 6:6-ல் உள்ள அராபியனாகிய கேஷேம் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துமுறையாகும்."
+    },
+    {
+      "id": "aquifer/gashmu#p2-a576cb3d",
+      "text": "கேஷேம் என்பதைக் காண்க."
+    }
+  ]
+}

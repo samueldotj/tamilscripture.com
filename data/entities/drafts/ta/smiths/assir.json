@@ -1,0 +1,18 @@
+{
+  "id": "smiths/assir",
+  "lang": "ta",
+  "source_hash": "24da7814",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/assir#p1-24da7814",
+      "text": "(சிறைபிடிக்கப்பட்டவன்)."
+    }
+  ]
+}

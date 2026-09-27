@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bebai",
+  "lang": "ta",
+  "source_hash": "72580a0b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெபாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/bebai#p1-72580a0b",
+      "text": "(தகப்பனுக்குரிய)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bukki",
+  "lang": "ta",
+  "source_hash": "28b8da61",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புக்கி",
+  "paragraphs": [
+    {
+      "id": "aquifer/bukki#p1-bc417570",
+      "text": "கானான் தேசத்தை இஸ்ரவேலருக்குள் பங்கிடுவதற்கு யோசுவாவுக்கு உதவி செய்த தாண் கோத்திரத்தின் தலைவனாகிய ஒருவன் (எண்ணாகமம் 34:22)."
+    },
+    {
+      "id": "aquifer/bukki#p2-21c865e4",
+      "text": "எஸ்றாவின் முற்பிதாக்களில் ஒருவன் (1 நாளாகமம் 6:5, 51; எஸ்றா 7:1, 4-5)."
+    }
+  ]
+}

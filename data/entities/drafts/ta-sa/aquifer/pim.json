@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pim",
+  "lang": "ta",
+  "source_hash": "e4fb4e55",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pim#p1-3376c8d2",
+      "text": "பீம் என்பது ஒரு சேக்கலின் மூன்றில் இரண்டு பங்குக்குச் சமமான ஒரு நிறை அளவாகும்."
+    },
+    {
+      "id": "aquifer/pim#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

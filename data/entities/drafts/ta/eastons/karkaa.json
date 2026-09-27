@@ -1,0 +1,18 @@
+{
+  "id": "eastons/karkaa",
+  "lang": "ta",
+  "source_hash": "d4ffaf1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்க்கா",
+  "paragraphs": [
+    {
+      "id": "eastons/karkaa#p1-d4ffaf1f",
+      "text": "தளம்; அடித்தளம், ஆதாருக்கும் அஸ்மோனுக்கும் இடையிலுள்ள ஒரு இடம், மத்திய தரைக்கடலுக்கும் சாக்கடலுக்கும் இடையில் நடுவாக அமைந்தது (யோசுவா 15:3)."
+    }
+  ]
+}

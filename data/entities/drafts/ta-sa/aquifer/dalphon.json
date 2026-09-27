@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/dalphon",
+  "lang": "ta",
+  "source_hash": "ae6a581c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தல்போன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dalphon#p1-ae6a581c",
+      "text": "மொர்தெகாய்க்கு எதிராகச் செய்யப்பட்ட சதித்திட்டத்திற்குப் பின்பு யூதர்களால் கொல்லப்பட்ட ஆமானின் மகன் (எஸ்தர் 9:7)."
+    }
+  ]
+}

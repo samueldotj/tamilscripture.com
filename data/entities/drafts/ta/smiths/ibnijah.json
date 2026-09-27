@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ibnijah",
+  "lang": "ta",
+  "source_hash": "42f4c853",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்னெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/ibnijah#p1-42f4c853",
+      "text": "(யெகோவா கட்டி எழுப்புவார்), ஒரு பென்யமீனியன். (1 நாளாகமம் 9:8)"
+    }
+  ]
+}

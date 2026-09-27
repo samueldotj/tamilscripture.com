@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shimhi",
+  "lang": "ta",
+  "source_hash": "8a8d18a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரி",
+  "paragraphs": [
+    {
+      "id": "eastons/shimhi#p1-8a8d18a1",
+      "text": "புகழ்பெற்றவன், ஒரு பென்யமீனியன் (1 நாளாகமம் 8:21)."
+    }
+  ]
+}

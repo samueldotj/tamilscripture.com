@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezbai",
+  "lang": "ta",
+  "source_hash": "36a44bfc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏஸ்பாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/ezbai#p1-36a44bfc",
+      "text": "(பிரகாசமான), தாவீதின் முப்பது பராக்கிரம வீரர்களில் ஒருவனாகிய நாராயியின் தகப்பன். (1 நாளாகமம் 11:37) (கி.மு. 1046.)"
+    }
+  ]
+}

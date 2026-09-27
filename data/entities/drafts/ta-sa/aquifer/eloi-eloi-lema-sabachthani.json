@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eloi-eloi-lema-sabachthani",
+  "lang": "ta",
+  "source_hash": "a604b5ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலோயீ, எலோயீ, லாமா சபக்தானி?",
+  "paragraphs": [
+    {
+      "id": "aquifer/eloi-eloi-lema-sabachthani#p1-a604b5ac",
+      "text": "இயேசு சிலுவையில் இருந்து கூப்பிட்ட சொற்றொடர்களில் ஒன்று (மாற்கு 15:34). ஏலி, ஏலி, லாமா சபக்தானி என்பதைக் காண்க."
+    }
+  ]
+}

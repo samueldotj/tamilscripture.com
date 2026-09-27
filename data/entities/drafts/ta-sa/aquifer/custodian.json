@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/custodian",
+  "lang": "ta",
+  "source_hash": "822737b3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வழிகாட்டி",
+  "paragraphs": [
+    {
+      "id": "aquifer/custodian#p1-53a81c3b",
+      "text": "தன் எஜமானுடைய மகன் வளர்ந்து முதிர்ச்சியடையும் வரை அவனுடன் சென்று, அவனைப் பாதுகாத்து, சில வேளைகளில் தண்டித்துத் திருத்தும் பொறுப்புள்ள ஒரு வேலையாள்."
+    },
+    {
+      "id": "aquifer/custodian#p2-d8538300",
+      "text": "பாதுகாவலன் என்பதைக் காண்க."
+    }
+  ]
+}

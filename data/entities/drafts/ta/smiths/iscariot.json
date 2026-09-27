@@ -1,0 +1,18 @@
+{
+  "id": "smiths/iscariot",
+  "lang": "ta",
+  "source_hash": "5c31a8f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்காரியோத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/iscariot#p1-5c31a8f8",
+      "text": "(கீரியோத்தின் மனிதன்). [யூதாஸ்காரியோத்து ISCARIOT]"
+    }
+  ]
+}

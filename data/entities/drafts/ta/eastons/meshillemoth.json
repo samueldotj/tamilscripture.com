@@ -1,0 +1,26 @@
+{
+  "id": "eastons/meshillemoth",
+  "lang": "ta",
+  "source_hash": "24311b43",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெஷிலெமோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/meshillemoth#p1-d1e6a93b",
+      "text": "பிரதிபலன்கள்."
+    },
+    {
+      "id": "eastons/meshillemoth#p2-106b86ba",
+      "text": "(1.) பெரகியாவின் தகப்பன் (2 நாளாகமம் 28:12)."
+    },
+    {
+      "id": "eastons/meshillemoth#p3-d31db1e7",
+      "text": "(2.) இம்மேரின் மகனாகிய ஒரு ஆசாரியன் (நெகேமியா 11:13)."
+    }
+  ]
+}

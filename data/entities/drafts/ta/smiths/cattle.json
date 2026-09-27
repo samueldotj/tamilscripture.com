@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cattle",
+  "lang": "ta",
+  "source_hash": "96bbbc59",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாடுகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/cattle#p1-96bbbc59",
+      "text": "[எருது, இளங்காளை காண்க]."
+    }
+  ]
+}

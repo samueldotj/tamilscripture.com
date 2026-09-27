@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dabbasheth",
+  "lang": "ta",
+  "source_hash": "bee363ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபசேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/dabbasheth#p1-bee363ac",
+      "text": "(ஒரு மேட்டு இடம்), செபுலோனின் எல்லையிலுள்ள ஒரு பட்டணம். (யோசுவா 19:11)"
+    }
+  ]
+}

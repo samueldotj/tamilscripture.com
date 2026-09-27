@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ardon",
+  "lang": "ta",
+  "source_hash": "23b63079",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்தோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ardon#p1-23b63079",
+      "text": "அசுபாளாலே காலேபுக்குப் பிறந்த மூன்றாவது மகன். காலேபின் மூலமாக, அர்தோன் யூதாவின் சந்ததியாக இருக்கிறான் (1 நாளாகமம் 2:18)."
+    }
+  ]
+}

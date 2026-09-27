@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/harhaiah",
+  "lang": "ta",
+  "source_hash": "92fd340b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அராயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/harhaiah#p1-92fd340b",
+      "text": "அராயா என்பவன் ஊசியேலின் தகப்பன்; இந்த ஊசியேல் ஒரு பொற்கொல்லனாக இருந்து, நெகேமியாவின் காலத்தில் எருசலேமின் மதிலைத் திருத்திக் கட்டுவதற்கு உதவினான் (நெகேமியா 3:8)."
+    }
+  ]
+}

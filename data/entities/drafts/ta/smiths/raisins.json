@@ -1,0 +1,18 @@
+{
+  "id": "smiths/raisins",
+  "lang": "ta",
+  "source_hash": "9d3c7350",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திராட்சைப்பழங்கள் (உலர்ந்தவை)",
+  "paragraphs": [
+    {
+      "id": "smiths/raisins#p1-9d3c7350",
+      "text": "[திராட்சைச்செடி]"
+    }
+  ]
+}

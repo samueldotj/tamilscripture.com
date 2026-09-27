@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/libation",
+  "lang": "ta",
+  "source_hash": "f82c29a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானபலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/libation#p1-153eda75",
+      "text": "பானபலி என்பது எண்ணெய் அல்லது திராட்சரசம் போன்ற ஒரு பானபொருள் பலியாக ஊற்றிச் செலுத்தப்படும் ஒரு காணிக்கையாகும்."
+    },
+    {
+      "id": "aquifer/libation#p2-1320f47c",
+      "text": "காணிக்கைகளும் பலிகளும் என்பதைக் காண்க."
+    }
+  ]
+}

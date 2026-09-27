@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chestnut-tree",
+  "lang": "ta",
+  "source_hash": "d7aa5ef4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்மோன் மரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/chestnut-tree#p1-d7aa5ef4",
+      "text": "(எபிரெயம். ’armon.) (ஆதியாகமம் 30:37; எசேக்கியேல் 31:8) இது “சயனேற் மரம்” (Platanus orientalis) என்று அர்த்தப்படுவதே இயலும். இந்த மரம் பாலஸ்தீனத்தின் வடபகுதியில் தாழ்ந்த மற்றும் ஈரமான இடங்களில் நல்ல வளர்ச்சி பெறுகிறது, மேலும் நமது சிகமோர் அல்லது பட்டன்வுட் (Platanus occidentalis) மரத்தை ஒத்திருக்கிறது."
+    }
+  ]
+}

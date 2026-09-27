@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gilonite-the",
+  "lang": "ta",
+  "source_hash": "3af71f21",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீலோனியனான",
+  "paragraphs": [
+    {
+      "id": "smiths/gilonite-the#p1-3af71f21",
+      "text": "கீலோ ஊரைச் சேர்ந்தவன். (2 சாமுவேல் 15:12; 23:34)"
+    }
+  ]
+}

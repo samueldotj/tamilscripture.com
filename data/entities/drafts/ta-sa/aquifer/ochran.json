@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ochran",
+  "lang": "ta",
+  "source_hash": "3bc2ff34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓகிரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ochran#p1-317282d0",
+      "text": "ஓகிரான் என்பது ஒக்ரான் என்ற பெயரின் மற்றொரு எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/ochran#p2-1f7e1c66",
+      "text": "ஒக்ரான் காண்க."
+    }
+  ]
+}

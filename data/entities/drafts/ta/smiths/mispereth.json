@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mispereth",
+  "lang": "ta",
+  "source_hash": "d1977852",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸ்பரெத்",
+  "paragraphs": [
+    {
+      "id": "smiths/mispereth#p1-d1977852",
+      "text": "செருபாபேலும் யெசுவாவும் பாபிலோனிலிருந்து திரும்பி வந்தபோது அவர்களுடன் வந்தவர்களில் ஒருவன். (நெகேமியா 7:7)"
+    }
+  ]
+}

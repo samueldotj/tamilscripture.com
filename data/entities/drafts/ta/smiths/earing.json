@@ -1,0 +1,18 @@
+{
+  "id": "smiths/earing",
+  "lang": "ta",
+  "source_hash": "445b2401",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உழுதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/earing#p1-445b2401",
+      "text": "(ஆதியாகமம் 45:6; யாத்திராகமம் 34:21) இது arare என்ற லத்தீன் சொல்லிலிருந்து பெறப்பட்டது, அதன் பொருள் உழுதல்; எனவே இது நிலத்தை உழுகிறதைக் குறிக்கிறது."
+    }
+  ]
+}

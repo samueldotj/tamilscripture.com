@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/azzah",
+  "lang": "ta",
+  "source_hash": "7436900f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்ஸா",
+  "paragraphs": [
+    {
+      "id": "aquifer/azzah#p1-b2ef5f64",
+      "text": "பெலிஸ்தரின் நகரமான காசாவைக் குறிக்கும் கிங் யாக்கோபு மொழிபெயர்ப்பின் வழக்கு (உபாகமம் 2:23; 1 இராஜாக்கள் 4:24; எரேமியா 25:20)."
+    },
+    {
+      "id": "aquifer/azzah#p2-d071b702",
+      "text": "காசா என்பதைக் காண்க."
+    }
+  ]
+}

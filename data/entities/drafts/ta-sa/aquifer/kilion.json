@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kilion",
+  "lang": "ta",
+  "source_hash": "aa2bd954",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலியோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kilion#p1-848beb3c",
+      "text": "எலிமெலேக்கு மற்றும் நகோமியின் இரண்டு மகன்களில் ஒருவனாகிய கிலியோனுக்கு (ரூத் 1:2) இருக்கும் மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kilion#p2-637a4dae",
+      "text": "கிலியோன் காண்க."
+    }
+  ]
+}

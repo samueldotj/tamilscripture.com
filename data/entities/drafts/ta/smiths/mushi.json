@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mushi",
+  "lang": "ta",
+  "source_hash": "2892581b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகேலி",
+  "paragraphs": [
+    {
+      "id": "smiths/mushi#p1-2892581b",
+      "text": "மகேலி (விட்டுக்கொடுக்கிறவன்), கோகாத்தின் மகனாகிய மெராரியின் மகன். (யாத்திராகமம் 6:19; எண்ணாகமம் 3:20; 1 நாளாகமம் 6:19,47; 23:21,23; 24:26,30)"
+    }
+  ]
+}

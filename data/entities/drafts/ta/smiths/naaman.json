@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naaman",
+  "lang": "ta",
+  "source_hash": "55b4b815",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகமான்",
+  "paragraphs": [
+    {
+      "id": "smiths/naaman#p1-55b4b815",
+      "text": "(மனநிறைவு)."
+    }
+  ]
+}

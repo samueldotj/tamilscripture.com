@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ashima",
+  "lang": "ta",
+  "source_hash": "2ffd0efc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசிமா",
+  "paragraphs": [
+    {
+      "id": "smiths/ashima#p1-2ffd0efc",
+      "text": "சமாரியாவிலே குடியேறின ஆமாத் தேசத்தாருடைய தேவன். (2 இராஜாக்கள் 17:30) இது கிரேக்கர்களின் பான் (Pan) தேவனுக்கு ஒத்ததாகக் கருதப்பட்டு வருகிறது."
+    }
+  ]
+}

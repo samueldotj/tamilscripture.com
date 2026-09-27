@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahi",
+  "lang": "ta",
+  "source_hash": "79fe2c01",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகி",
+  "paragraphs": [
+    {
+      "id": "smiths/ahi#p1-79fe2c01",
+      "text": "(ஒரு சகோதரன்)."
+    }
+  ]
+}

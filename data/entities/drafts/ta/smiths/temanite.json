@@ -1,0 +1,18 @@
+{
+  "id": "smiths/temanite",
+  "lang": "ta",
+  "source_hash": "f0142d1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேமானியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/temanite#p1-f0142d1f",
+      "text": "தேமான் என்னும் ஊரின் குடியிருப்பாளன்."
+    }
+  ]
+}

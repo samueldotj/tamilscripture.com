@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bilgah",
+  "lang": "ta",
+  "source_hash": "e653f800",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்கா",
+  "paragraphs": [
+    {
+      "id": "smiths/bilgah#p1-e653f800",
+      "text": "(முதற்பிறந்தவன்)."
+    }
+  ]
+}

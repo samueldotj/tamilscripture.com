@@ -1,0 +1,18 @@
+{
+  "id": "smiths/raphu",
+  "lang": "ta",
+  "source_hash": "f416eeb4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்பூ",
+  "paragraphs": [
+    {
+      "id": "smiths/raphu#p1-f416eeb4",
+      "text": "பென்யமீன் கோத்திர ஒற்றன் பல்த்தியின் தகப்பன். (எண்ணாகமம் 13:9) (கி.மு. 1490க்கு முன்பு.)"
+    }
+  ]
+}

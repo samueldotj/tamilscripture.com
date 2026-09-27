@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/phurah",
+  "lang": "ta",
+  "source_hash": "2f6699b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/phurah#p1-cf560499",
+      "text": "நியாயாதிபதிகள் 7:10-11-இல் கிதியோனுடைய வேலைக்காரனாகிய பூரா என்பதற்கு யாக்கோபு அரசர் மொழிபெயர்ப்பில் Phurah என்ற எழுத்துப்பெயர்ப்பு பயன்படுத்தப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/phurah#p2-54675f34",
+      "text": "பூரா என்பதைக் காண்க."
+    }
+  ]
+}

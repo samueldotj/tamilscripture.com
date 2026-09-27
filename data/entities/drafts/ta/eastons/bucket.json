@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bucket",
+  "lang": "ta",
+  "source_hash": "f865da83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வாளி",
+  "paragraphs": [
+    {
+      "id": "eastons/bucket#p1-f865da83",
+      "text": "தண்ணீர் இறைப்பதற்குரிய ஒரு பாத்திரம் (ஏசாயா 40:15); அநேகமாக, மிகுதியான பிறப்பைக் குறிக்க அடையாள அர்த்தத்தில் பயன்படுத்தப்படுகிறது (எண்ணாகமம் 24:7)."
+    }
+  ]
+}

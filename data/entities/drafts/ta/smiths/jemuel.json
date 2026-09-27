@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jemuel",
+  "lang": "ta",
+  "source_hash": "da787f17",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எமுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jemuel#p1-da787f17",
+      "text": "(தேவனுடைய நாள்), சிமியோனுடைய மூத்த மகன். (ஆதியாகமம் 46:10; யாத்திராகமம் 6:15) (கி.மு. 1706.)"
+    }
+  ]
+}

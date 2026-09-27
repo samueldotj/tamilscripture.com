@@ -1,0 +1,18 @@
+{
+  "id": "eastons/canneh",
+  "lang": "ta",
+  "source_hash": "ac5ee6f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கன்னே",
+  "paragraphs": [
+    {
+      "id": "eastons/canneh#p1-ac5ee6f1",
+      "text": "எசேக்கியேல் 27:23-ல் மட்டும் குறிப்பிடப்பட்டுள்ளது. (காணக் CALNEH.)"
+    }
+  ]
+}

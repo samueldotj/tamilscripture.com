@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jorai",
+  "lang": "ta",
+  "source_hash": "c2128974",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோராயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/jorai#p1-c2128974",
+      "text": "யோராயி காத் கோத்திரத்தைச் சேர்ந்தவன் (1 நாளாகமம் 5:13)."
+    }
+  ]
+}

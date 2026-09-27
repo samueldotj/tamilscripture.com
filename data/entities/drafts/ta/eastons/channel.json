@@ -1,0 +1,22 @@
+{
+  "id": "eastons/channel",
+  "lang": "ta",
+  "source_hash": "8a52d1cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கால்வாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/channel#p1-8412e83a",
+      "text": "(1.) கடலின் அல்லது நதியின் படுகை (சங்கீதங்கள் 18:15; ஏசாயா 8:7)."
+    },
+    {
+      "id": "eastons/channel#p2-8fef46a8",
+      "text": "(2.) “தோள்பட்டை எலும்பு” (யோபு 31:22 குறிப்பு), சரியாகச் சொன்னால் “குழாய்” அல்லது “தண்டு” என்பதற்குப் பழைய ஒரு சொல், இது தோள்எலும்பைக் குறிக்கும்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bald-locust",
+  "lang": "ta",
+  "source_hash": "15ca14f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மொட்டைத் தத்துப்பூச்சி",
+  "paragraphs": [
+    {
+      "id": "aquifer/bald-locust#p1-5e59cbf1",
+      "text": "சுத்தமானதாகவும், ஆகையால் உண்ணக்கூடியதாகவும் கருதப்பட்ட ஒரு வகை வெட்டுக்கிளி (லேவியராகமம் 11:22)."
+    },
+    {
+      "id": "aquifer/bald-locust#p2-4c71a758",
+      "text": "விலங்குகள் (வெட்டுக்கிளி) என்பதைக் காண்க."
+    }
+  ]
+}

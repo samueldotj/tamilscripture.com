@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hezro",
+  "lang": "ta",
+  "source_hash": "a95e7d1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏஸ்ரோ",
+  "paragraphs": [
+    {
+      "id": "eastons/hezro#p1-a95e7d1f",
+      "text": "கர்மேலியன், தாவீதின் யுத்த வீரர்களில் ஒருவன் (1 நாளாகமம் 11:37)."
+    }
+  ]
+}

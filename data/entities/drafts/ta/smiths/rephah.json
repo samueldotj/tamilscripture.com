@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rephah",
+  "lang": "ta",
+  "source_hash": "1ad95c02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேப்பாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/rephah#p1-1ad95c02",
+      "text": "எப்பிராயீமின் மகன், மற்றும் யோசுவாவின் மூதாதையர். (1 நாளாகமம் 7:26)"
+    }
+  ]
+}

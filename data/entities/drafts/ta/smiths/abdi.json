@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abdi",
+  "lang": "ta",
+  "source_hash": "1fb55edf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்தி",
+  "paragraphs": [
+    {
+      "id": "smiths/abdi#p1-1fb55edf",
+      "text": "(என் ஊழியக்காரன்)."
+    }
+  ]
+}

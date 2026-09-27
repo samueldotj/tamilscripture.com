@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zobebah",
+  "lang": "ta",
+  "source_hash": "fb26e35e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபேபாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/zobebah#p1-fb26e35e",
+      "text": "(மெதுவான), யூதாவின் கோத்திரத்தைச் சேர்ந்த கோசின் மகன். (1 நாளாகமம் 4:8)"
+    }
+  ]
+}

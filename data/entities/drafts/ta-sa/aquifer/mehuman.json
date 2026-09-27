@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mehuman",
+  "lang": "ta",
+  "source_hash": "54d0009d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகுமான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mehuman#p1-54d0009d",
+      "text": "ராணியாகிய வஸ்தியை அரச விருந்திற்கு அழைத்துவரும்படி அகாஸ்வேரு ராஜா அனுப்பிய ஏழு அதிகாரிகளில் ஒருவன் (எஸ்தர் 1:10)."
+    }
+  ]
+}

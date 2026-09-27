@@ -1,0 +1,18 @@
+{
+  "id": "eastons/cotes",
+  "lang": "ta",
+  "source_hash": "ede3f91c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தொழுவங்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/cotes#p1-ede3f91c",
+      "text": "மந்தைகளுக்கான தொழுவங்கள் அல்லது அடைப்புகள் (2 நாளாகமம் 32:28, “மந்தைகளுக்குத் தொழுவங்கள்;” ஆர்.வி., “தொழுவங்களிலுள்ள மந்தைகள்”)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimron",
+  "lang": "ta",
+  "source_hash": "73d3fc96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shimron#p1-73d3fc96",
+      "text": "(காவல்-மேடு)."
+    }
+  ]
+}

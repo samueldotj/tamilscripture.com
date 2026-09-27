@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shinab",
+  "lang": "ta",
+  "source_hash": "1e1f24cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிநெயா",
+  "paragraphs": [
+    {
+      "id": "eastons/shinab#p1-1e1f24cf",
+      "text": "குளிர்ச்சி, சித்தீமின் பள்ளத்தாக்கிலுள்ள ஆதமாவின் ராஜா, இவனும் இவனுடைய கூட்டாளிகளும் கெதர்லாகோமேரால் தோற்கடிக்கப்பட்டார்கள் (ஆதியாகமம் 14:2)."
+    }
+  ]
+}

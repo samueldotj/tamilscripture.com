@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hold",
+  "lang": "ta",
+  "source_hash": "11ef050e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோட்டை",
+  "paragraphs": [
+    {
+      "id": "eastons/hold#p1-11ef050e",
+      "text": "ஒரு கோட்டை; தாவீது ஒளித்திருந்த இடங்களுக்கு கொடுக்கப்பட்ட பெயர் (1 சாமுவேல் 22:4, 5; 24:22)."
+    }
+  ]
+}

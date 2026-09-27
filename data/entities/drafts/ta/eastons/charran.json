@@ -1,0 +1,18 @@
+{
+  "id": "eastons/charran",
+  "lang": "ta",
+  "source_hash": "c3c9b0c3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கார்ரான்",
+  "paragraphs": [
+    {
+      "id": "eastons/charran#p1-c3c9b0c3",
+      "text": "ஆரான் (காண்க) என்பதற்கு மற்றொரு வடிவம் (அப்போஸ்தலருடைய நடபடிகள் 7:2, 4)."
+    }
+  ]
+}

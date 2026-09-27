@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zabulon",
+  "lang": "ta",
+  "source_hash": "9c3d9144",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாபுலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/zabulon#p1-9c3d9144",
+      "text": "செபுலோன் என்னும் பெயரின் கிரேக்கு வடிவம். (மத்தேயு 4:13; 15; வெளிப்படுத்தின விசேஷம் 7:8)"
+    }
+  ]
+}

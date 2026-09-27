@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kenizzite",
+  "lang": "ta",
+  "source_hash": "a0295f07",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனிசியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/kenizzite#p1-a0295f07",
+      "text": "(ஆதியாகமம் 15:19) [கெனேசியன்]"
+    }
+  ]
+}

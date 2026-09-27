@@ -1,0 +1,18 @@
+{
+  "id": "eastons/barefoot",
+  "lang": "ta",
+  "source_hash": "26612bbf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெறுங்கால்",
+  "paragraphs": [
+    {
+      "id": "eastons/barefoot#p1-26612bbf",
+      "text": "வெறுங்காலாக நடப்பது கடும் துயரத்தின் அடையாளமாக இருந்தது (ஏசாயா 20:2, 3, 4), அல்லது ஒரு மனிதனுக்கு ஏதோ ஒரு பெரும் ஆபத்து நேர்ந்திருப்பதைக் குறிக்கும் (2 சாமுவேல் 15:30)."
+    }
+  ]
+}

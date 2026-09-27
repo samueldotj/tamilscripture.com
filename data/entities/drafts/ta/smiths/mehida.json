@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mehida",
+  "lang": "ta",
+  "source_hash": "bb1f287c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகிதா",
+  "paragraphs": [
+    {
+      "id": "smiths/mehida#p1-bb1f287c",
+      "text": "(பிரபலமான, உயர்குடி), மெகிதாவின் வம்சத்தினரான நிதனீமியரின் ஒரு குடும்பம், செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பி வந்தனர். (எஸ்றா 2:52; நெகேமியா 7:54)"
+    }
+  ]
+}

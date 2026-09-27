@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rakem",
+  "lang": "ta",
+  "source_hash": "6240200b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேகேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/rakem#p1-6240200b",
+      "text": "(மலர்த்தோட்டம்), மனாசேயின் மகனாகிய மாகீரின் சந்ததியார். (1 நாளாகமம் 7:16) (கி.மு. 1451க்கு முன்)."
+    }
+  ]
+}

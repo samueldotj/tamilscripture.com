@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hanameel",
+  "lang": "ta",
+  "source_hash": "dee3712f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாமெயேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/hanameel#p1-dee3712f",
+      "text": "தேவன் கிருபையாக அளித்தவன், எரேமியாவின் சொந்தத்தான், அவனுக்கே எரேமியா எருசலேமின் முற்றுகைக்கு முன்பாக ஆனதோத்தில் தான் வைத்திருந்த நிலத்தை விற்றான் (எரேமியா 32:6-12)."
+    }
+  ]
+}

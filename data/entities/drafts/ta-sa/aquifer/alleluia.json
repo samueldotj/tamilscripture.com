@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/alleluia",
+  "lang": "ta",
+  "source_hash": "da77d82d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்லேலூயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/alleluia#p1-97dece7c",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் ஆலேலூயா எனும் சொல்லுக்குரிய எழுத்துமுறை."
+    },
+    {
+      "id": "aquifer/alleluia#p2-6619f66e",
+      "text": "ஆலேலூயா என்பதைக் காண்க."
+    }
+  ]
+}

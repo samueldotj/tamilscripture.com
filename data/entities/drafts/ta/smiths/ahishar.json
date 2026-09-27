@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahishar",
+  "lang": "ta",
+  "source_hash": "ad785166",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகீஷார்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahishar#p1-ad785166",
+      "text": "சாலொமோனுடைய அரண்மனை அதிகாரி. (1 இராஜாக்கள் 4:6)"
+    }
+  ]
+}

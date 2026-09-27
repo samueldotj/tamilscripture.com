@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chorashan",
+  "lang": "ta",
+  "source_hash": "111d34e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொராசான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chorashan#p1-b2d41c0d",
+      "text": "1 சாமுவேல் 30:30-ல் இருக்கும் கொராசான் என்பதற்கு கிங் யாக்கோபு வெர்ஷனில் காணப்படும் வேறு வடிவமே Bor-ashan. Bor-ashan என்பது யூதாவின் நாட்டில் முதலில் இருந்த ஆஷான் என்னும் பட்டணத்திற்கு இடப்பட்ட மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/chorashan#p2-2381c7fc",
+      "text": "ஆஷான் காண்க."
+    }
+  ]
+}

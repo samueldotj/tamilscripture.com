@@ -1,0 +1,18 @@
+{
+  "id": "smiths/judgment-hall",
+  "lang": "ta",
+  "source_hash": "0fb0ef9d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நியாயத்தீர்ப்பு மண்டபம்",
+  "paragraphs": [
+    {
+      "id": "smiths/judgment-hall#p1-0fb0ef9d",
+      "text": "praetorium என்ற வார்த்தை புதிய ஏற்பாட்டின் அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) ஐந்து இடங்களில் 'நியாயத்தீர்ப்பு மண்டபம்' என்று மொழிபெயர்க்கப்பட்டுள்ளது; அந்த ஐந்து பகுதிகளிலும் அது இரண்டு வேறுபட்ட இடங்களைக் குறிக்கிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/javan-person",
+  "lang": "ta",
+  "source_hash": "eeed3957",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாவான் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/javan-person#p1-eeed3957",
+      "text": "யாவான் யாப்பேத்தின் மகன். அவனுடைய சந்ததியார் கடல் வழியாகப் பயணம் செய்து கானானின் வடக்கிலும் மேற்கிலும் குடியேறினார்கள் (ஆதியாகமம் 10:2-4; 1 நாளாகமம் 1:5-7)."
+    }
+  ]
+}

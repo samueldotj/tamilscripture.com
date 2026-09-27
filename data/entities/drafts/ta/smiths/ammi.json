@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ammi",
+  "lang": "ta",
+  "source_hash": "6e13df19",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மீ",
+  "paragraphs": [
+    {
+      "id": "smiths/ammi#p1-6e13df19",
+      "text": "அதாவது, அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பின் (Authorized Version) அடிக்குறிப்பில் விளக்கப்பட்டிருக்கிறபடி, என் மக்கள் என்று பொருள். (ஓசியா 2:1)"
+    }
+  ]
+}

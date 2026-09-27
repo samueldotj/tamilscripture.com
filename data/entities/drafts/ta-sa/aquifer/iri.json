@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/iri",
+  "lang": "ta",
+  "source_hash": "6a918037",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/iri#p1-6a918037",
+      "text": "இரி பென்யமீன் கோத்திரத்தைச் சேர்ந்த பேலாவின் மகனாக இருந்தார் (1 நாளாகமம் 7:7)."
+    }
+  ]
+}

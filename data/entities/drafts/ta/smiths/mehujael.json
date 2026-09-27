@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mehujael",
+  "lang": "ta",
+  "source_hash": "f3f808d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகுயவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/mehujael#p1-f3f808d7",
+      "text": "(தேவனால் அடிக்கப்பட்டவன்), ஈராத்தின் மகன், காயீனிலிருந்து நான்காம் தலைமுறையினன். (ஆதியாகமம் 4:18)"
+    }
+  ]
+}

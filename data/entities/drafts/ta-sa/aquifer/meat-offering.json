@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/meat-offering",
+  "lang": "ta",
+  "source_hash": "1b7c33a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உணவுபலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/meat-offering#p1-fa6999cb",
+      "text": "கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் “உணவுபலி” (Meat offering) என்ற சொல் “உணவு” காணிக்கை அல்லது “தானிய” காணிக்கையைக் குறிக்கப் பயன்படுத்தப்படுகிறது."
+    },
+    {
+      "id": "aquifer/meat-offering#p2-1320f47c",
+      "text": "காணிக்கைகள் மற்றும் பலிகள் (Offerings and Sacrifices) என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

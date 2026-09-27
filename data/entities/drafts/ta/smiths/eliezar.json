@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliezar",
+  "lang": "ta",
+  "source_hash": "d82cc26c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியேசர்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliezar#p1-d82cc26c",
+      "text": "(தேவன் அவனுடைய துணை)."
+    }
+  ]
+}

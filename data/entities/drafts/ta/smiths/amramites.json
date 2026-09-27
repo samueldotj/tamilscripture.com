@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amramites",
+  "lang": "ta",
+  "source_hash": "e7f18700",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்ராமியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/amramites#p1-e7f18700",
+      "text": "லேவி கோத்திரத்தில் கோகாத்தியரின் பெரிய வம்சத்தின் ஒரு பிரிவு, (எண்ணாகமம் 3:27; 1 நாளாகமம் 26:23) மோசேயின் தகப்பனாகிய அம்ராமிடமிருந்து தோன்றியவர்கள்."
+    }
+  ]
+}

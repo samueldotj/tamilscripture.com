@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kadmiel",
+  "lang": "ta",
+  "source_hash": "d257c467",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கத்மியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/kadmiel#p1-d257c467",
+      "text": "தேவனுக்கு முன்பாக; அதாவது, அவருடைய ஊழியக்காரன், செருபாபேலுடனும் சிறையிருப்பிலிருந்து திரும்பிவந்த லேவியர்களில் ஒருவன் (நெகேமியா 9:4; 10:9; 12:8)."
+    }
+  ]
+}

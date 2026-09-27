@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lubim",
+  "lang": "ta",
+  "source_hash": "ea81eb4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூபீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lubim#p1-50fae330",
+      "text": "லூபீம் என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் லிபியர்களைக் குறிக்கப் பயன்படுத்தப்பட்ட சொல், அதாவது 2 நாளாகமம் 12:3, 16:8, மற்றும் நாகூம் 3:9 ஆகிய வசனங்களில் லிபியாவைச் சேர்ந்த மக்கள்."
+    },
+    {
+      "id": "aquifer/lubim#p2-df0c6f79",
+      "text": "லிபியா, லிபியர்கள் என்பதைக் காண்க."
+    }
+  ]
+}

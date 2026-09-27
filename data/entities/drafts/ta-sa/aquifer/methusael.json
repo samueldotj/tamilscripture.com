@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/methusael",
+  "lang": "ta",
+  "source_hash": "0bee11d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெத்தூசவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/methusael#p1-39a0cbd7",
+      "text": "மெத்தூசவேல் என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் மெத்தூசவேல் என்பதற்குரிய எழுத்துப் பெயர்ப்பாகும். இவன் மெகுயவேலின் மகனாக இருந்தான் (ஆதியாகமம் 4:18). மெத்தூசவேல் மெத்தூசலாவைப் போன்ற ஒரு நபர் அல்ல."
+    },
+    {
+      "id": "aquifer/methusael#p2-42117b73",
+      "text": "மெத்தூசவேலைப் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/instruct-instructor",
+  "lang": "ta",
+  "source_hash": "b846af8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போதிக்க, போதகர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/instruct-instructor#p1-2f4d8e29",
+      "text": "\"போதிக்க\" என்ற வார்த்தை ஒருவருக்கு கற்பிப்பதையோ அல்லது தகவல் அளிப்பதையோ குறிக்கிறது. போதகர் என்பவர் கற்பிப்பவர் அல்லது அறிவுறுத்துபவர், அதாவது ஆசிரியருக்கு ஒப்பானவர்."
+    },
+    {
+      "id": "aquifer/instruct-instructor#p2-a5c4851f",
+      "text": "ஆசிரியர் என்பதைக் காண்க."
+    }
+  ]
+}

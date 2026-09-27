@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gebalite",
+  "lang": "ta",
+  "source_hash": "9cac96ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிப்லியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gebalite#p1-9e143a8f",
+      "text": "கிப்லியன் என்பவன் கிப்லியில் வாழ்ந்த ஒருவனாக இருந்தான் (யோசுவா 13:5)."
+    },
+    {
+      "id": "aquifer/gebalite#p2-eb26152f",
+      "text": "கிப்லி #1 ஐக் காண்க."
+    }
+  ]
+}

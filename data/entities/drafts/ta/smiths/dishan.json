@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dishan",
+  "lang": "ta",
+  "source_hash": "8177e85d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திஷான்",
+  "paragraphs": [
+    {
+      "id": "smiths/dishan#p1-8177e85d",
+      "text": "(வெளிமான்), சேயீரின் ஓரியனாகிய இளையகுமாரன். (ஆதியாகமம் 36:21,28,30; 1 நாளாகமம் 1:38,42)"
+    }
+  ]
+}

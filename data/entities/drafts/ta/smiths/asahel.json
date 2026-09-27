@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asahel",
+  "lang": "ta",
+  "source_hash": "dbbef837",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசகேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/asahel#p1-dbbef837",
+      "text": "(தேவனால் உண்டாக்கப்பட்டவன்)."
+    }
+  ]
+}

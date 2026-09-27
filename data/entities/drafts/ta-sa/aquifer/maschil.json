@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maschil",
+  "lang": "ta",
+  "source_hash": "773e7277",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாஸ்கீல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/maschil#p1-b644cdbb",
+      "text": "மாஸ்கீல் (Maschil) என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் maskil என்ற சொல்லின் வேறு வடிவமாகும். இது பல சங்கீதங்களின் தலைப்புகளில் பயன்படுத்தப்படும் ஒரு இசைக்குறிப்பான சொல்."
+    },
+    {
+      "id": "aquifer/maschil#p2-29d82e38",
+      "text": "மாஸ்கீல் (Maskil) என்பதைக் காண்க."
+    }
+  ]
+}

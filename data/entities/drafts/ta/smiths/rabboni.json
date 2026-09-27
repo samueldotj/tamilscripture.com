@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rabboni",
+  "lang": "ta",
+  "source_hash": "711188ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்போனி",
+  "paragraphs": [
+    {
+      "id": "smiths/rabboni#p1-711188ba",
+      "text": "(யோவான் 30:18) [ரபி]"
+    }
+  ]
+}

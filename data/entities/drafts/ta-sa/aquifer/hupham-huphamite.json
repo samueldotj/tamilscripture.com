@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hupham-huphamite",
+  "lang": "ta",
+  "source_hash": "2814f5f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உப்பாம், உப்பாமியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hupham-huphamite#p1-7f71dfb3",
+      "text": "பென்யமீனியனாகிய இவன் உப்பாமியர் குடும்பத்தின் மூலவன் (எண்ணாகமம் 26:39); இவன் ஒருவேளை உப்பீம் (ஆதியாகமம் 46:21; 1 நாளாகமம் 7:12, 15) மற்றும் ஊராம் (1 நாளாகமம் 8:5) என்பவனுடன் அடையாளம் காணப்படக்கூடியவனாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/hupham-huphamite#p2-8aa1524d",
+      "text": "இதையும் காண்க: உப்பீம்; ஊராம் #1."
+    }
+  ]
+}

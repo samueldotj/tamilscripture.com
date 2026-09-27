@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barsabbas",
+  "lang": "ta",
+  "source_hash": "d7d456ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சபா",
+  "paragraphs": [
+    {
+      "id": "smiths/barsabbas#p1-d7d456ac",
+      "text": "பார்'சபாஸ் என்பதற்கு பதிலாக (அப்போஸ்தலருடைய நடபடிகள் 1:23) இல் உள்ள திருத்தப்பட்ட மொழிபெயர்ப்பு (Revised Version)."
+    }
+  ]
+}

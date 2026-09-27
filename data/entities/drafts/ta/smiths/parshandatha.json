@@ -1,0 +1,18 @@
+{
+  "id": "smiths/parshandatha",
+  "lang": "ta",
+  "source_hash": "68dc4d89",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சான்தாத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/parshandatha#p1-68dc4d89",
+      "text": "(ஜெபத்தால் கொடுக்கப்பட்டவன்), சூசானில் யூதர்களால் கொலைசெய்யப்பட்ட ஆமானின் பத்து மகன்களில் மூத்தவன். (எஸ்தர் 9:7) (கிமு 473.)"
+    }
+  ]
+}

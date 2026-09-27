@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hermogenes",
+  "lang": "ta",
+  "source_hash": "6c95314e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எர்மொகெனே",
+  "paragraphs": [
+    {
+      "id": "smiths/hermogenes#p1-6c95314e",
+      "text": "பவுல் தமது கடிதங்கள் அனைத்திலும் கடைசியாக எழுதிய கடிதத்தில் (2 தீமோத்தேயு 1:15) குறிப்பிடும் ஒரு நபர், ஆசியாவில் இருந்த அனைவரும் அவரைவிட்டு விலகிய சமயத்தில் குறிப்பிடப்பட்டவர். (கி.பி. 64.)"
+    }
+  ]
+}

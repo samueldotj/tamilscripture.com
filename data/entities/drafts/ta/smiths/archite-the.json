@@ -1,0 +1,18 @@
+{
+  "id": "smiths/archite-the",
+  "lang": "ta",
+  "source_hash": "dd652236",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அற்கியன் (The Archite)",
+  "paragraphs": [
+    {
+      "id": "smiths/archite-the#p1-dd652236",
+      "text": "(எப்பிராயீமுடைய எல்லைகளிலுள்ள ஏரேக் என்னும் இடத்திலிருந்து வந்ததாகத் தோன்றுகிறது), தாவீதின் நண்பனாகிய ஊசாயைக் குறிக்கும் வழக்கமான பெயர். (2 சாமுவேல் 15:32; 17:5,14; 1 நாளாகமம் 27:33)"
+    }
+  ]
+}

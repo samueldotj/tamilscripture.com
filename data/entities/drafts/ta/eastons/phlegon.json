@@ -1,0 +1,18 @@
+{
+  "id": "eastons/phlegon",
+  "lang": "ta",
+  "source_hash": "d0fe3884",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலெகோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/phlegon#p1-d0fe3884",
+      "text": "எரிதல், பவுல் வாழ்த்துதல் அனுப்பிய ஒரு ரோம கிறிஸ்தவன் (ரோமர் 16:14)."
+    }
+  ]
+}

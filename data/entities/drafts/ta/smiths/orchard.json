@@ -1,0 +1,18 @@
+{
+  "id": "smiths/orchard",
+  "lang": "ta",
+  "source_hash": "c74b2b24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோட்டம்",
+  "paragraphs": [
+    {
+      "id": "smiths/orchard#p1-c74b2b24",
+      "text": "[தோட்டம் காண்க]"
+    }
+  ]
+}

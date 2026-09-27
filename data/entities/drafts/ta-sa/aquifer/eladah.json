@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eladah",
+  "lang": "ta",
+  "source_hash": "c0eff8e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/eladah#p1-2811a7f9",
+      "text": "எலாதா என்பது 1 நாளாகமம் 7:20இல் காணப்படும் எப்பிராயீமின் சந்ததியாரான எலாதாவின் கிங் யாக்கோபு வர்ஷன் வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/eladah#p2-1348b313",
+      "text": "எலாதாவைக் காண்க."
+    }
+  ]
+}

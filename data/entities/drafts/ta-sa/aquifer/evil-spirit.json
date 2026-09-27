@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/evil-spirit",
+  "lang": "ta",
+  "source_hash": "62694be0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீய ஆவி",
+  "paragraphs": [
+    {
+      "id": "aquifer/evil-spirit#p1-78aec5f8",
+      "text": "தீய ஆவி என்பது பிசாசு என்பதற்கான வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/evil-spirit#p2-b3eb4c70",
+      "text": "பிசாசு; பிசாசு பிடித்தல் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

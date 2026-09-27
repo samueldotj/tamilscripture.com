@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hazaiah",
+  "lang": "ta",
+  "source_hash": "edbb6130",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசாயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hazaiah#p1-edbb6130",
+      "text": "அசாயா யூதா கோத்திரத்திற்குரிய மாசெயாவின் சந்ததியாரில் ஒருவனாக இருந்தான். பாபிலோனுக்குச் சிறைப்பட்டுப் போன பின்பு எருசலேமில் இருந்த தலைவர்களில் இவனும் ஒருவனாக இருந்தான் (நெகேமியா 11:5)."
+    }
+  ]
+}

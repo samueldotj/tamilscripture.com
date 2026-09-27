@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/finger-measure",
+  "lang": "ta",
+  "source_hash": "929e09d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விரல் (அளவு)",
+  "paragraphs": [
+    {
+      "id": "aquifer/finger-measure#p1-6e98e8a6",
+      "text": "விரல் என்பது ஒரு விரலின் அகலத்திற்குச் சமமான நீள அளவாகும் (எரேமியா 52:21)."
+    },
+    {
+      "id": "aquifer/finger-measure#p2-db3bfff6",
+      "text": "நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "eastons/glorify",
+  "lang": "ta",
+  "source_hash": "3fbf2418",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகிமைப்படுத்துதல்",
+  "paragraphs": [
+    {
+      "id": "eastons/glorify#p1-258f69a4",
+      "text": "(1.) மகிமையுள்ளதாக்குதல், அல்லது அப்படித் தோன்றும்படி செய்தல் (யோவான் 12:28; 13:31, 32; 17:4, 5)."
+    },
+    {
+      "id": "eastons/glorify#p2-2a94da2a",
+      "text": "(2.) “அவருடைய துதியை வெளிப்படுத்தும்படி” தேவனைக் குறித்துச் சொல்லப்பட்டது (1 கொரிந்தியர் 6:20; 10:31)."
+    }
+  ]
+}

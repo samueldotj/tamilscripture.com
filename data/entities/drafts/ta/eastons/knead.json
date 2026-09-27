@@ -1,0 +1,18 @@
+{
+  "id": "eastons/knead",
+  "lang": "ta",
+  "source_hash": "6e6427bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிசைதல்",
+  "paragraphs": [
+    {
+      "id": "eastons/knead#p1-6e6427bd",
+      "text": "அப்பம் சுடும் செயல்பாட்டில் மாவைப் பிசைந்து தயார் செய்தல் (ஆதியாகமம் 18:6; 1 சாமுவேல் 28:24; ஓசியா 7:4)."
+    }
+  ]
+}

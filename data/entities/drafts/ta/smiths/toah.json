@@ -1,0 +1,18 @@
+{
+  "id": "smiths/toah",
+  "lang": "ta",
+  "source_hash": "51c479ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோவா",
+  "paragraphs": [
+    {
+      "id": "smiths/toah#p1-51c479ac",
+      "text": "(தாழ்மையானவன்) கோகாத்தியனான ஒரு லேவியன், சாமுவேலுக்கும் ஏமானுக்கும் மூதாதை. (1 நாளாகமம் 6:34) (கிமு 19)."
+    }
+  ]
+}

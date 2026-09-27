@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gemalli",
+  "lang": "ta",
+  "source_hash": "275fec92",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெமல்லி",
+  "paragraphs": [
+    {
+      "id": "aquifer/gemalli#p1-275fec92",
+      "text": "அம்மியேலின் தகப்பன். கானான் தேசத்தை உசாவும்படி மோசேயினால் அனுப்பப்பட்ட 12 ஒற்றர்களில் அம்மியேலும் ஒருவனாக இருந்தான் (எண்ணாகமம் 13:12)."
+    }
+  ]
+}

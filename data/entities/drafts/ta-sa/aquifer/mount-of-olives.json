@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mount-of-olives",
+  "lang": "ta",
+  "source_hash": "08967247",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒலிவமலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-of-olives#p1-08967247",
+      "text": "ஒலிவமலை என்பதைக் காண்க."
+    }
+  ]
+}

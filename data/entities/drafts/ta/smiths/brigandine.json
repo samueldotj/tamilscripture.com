@@ -1,0 +1,18 @@
+{
+  "id": "smiths/brigandine",
+  "lang": "ta",
+  "source_hash": "6bafc6ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கவசச் சட்டை",
+  "paragraphs": [
+    {
+      "id": "smiths/brigandine#p1-6bafc6ed",
+      "text": "(எரேமியா 46:4) மற்ற இடங்களில் “மேற்சட்டை” அல்லது “இரும்புக் கவசம்” என்று மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

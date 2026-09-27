@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shunammite",
+  "lang": "ta",
+  "source_hash": "db43a152",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூனேமியாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/shunammite#p1-db43a152",
+      "text": "சூனேம் ஊரைச் சேர்ந்த ஒரு நபர் (1 இராஜாக்கள் 1:3; 2 இராஜாக்கள் 4:12). சிரியன் மற்றும் அராப் மொழிபெயர்ப்புகள் “சூலமித்” என்று வாசிக்கின்றன."
+    }
+  ]
+}

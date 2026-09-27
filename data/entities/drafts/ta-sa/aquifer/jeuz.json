@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jeuz",
+  "lang": "ta",
+  "source_hash": "a4dd416a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எயூச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jeuz#p1-a4dd416a",
+      "text": "எயூச் என்பவன் பென்யமீன் கோத்திரத்திற்குரிய சகராயீம் தன் மனைவியாகிய ஓதேசால் பெற்ற மகனாக இருந்தான் (1 நாளாகமம் 8:10)."
+    }
+  ]
+}

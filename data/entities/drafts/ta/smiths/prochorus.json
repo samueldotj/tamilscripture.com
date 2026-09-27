@@ -1,0 +1,18 @@
+{
+  "id": "smiths/prochorus",
+  "lang": "ta",
+  "source_hash": "9142daf9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரொகோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/prochorus#p1-9142daf9",
+      "text": "(கூத்தணி தலைவன்), ஏழு உதவிக்காரர்களில் ஒருவன், பட்டியலில் மூன்றாமவனாக, ஸ்தேவானுக்கும் பிலிப்புவுக்கும் அடுத்து பெயரிடப்பட்டவன். (அப்போஸ்தலருடைய நடபடிகள் 6:5)"
+    }
+  ]
+}

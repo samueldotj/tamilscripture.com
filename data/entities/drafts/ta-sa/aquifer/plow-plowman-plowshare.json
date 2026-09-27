@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/plow-plowman-plowshare",
+  "lang": "ta",
+  "source_hash": "20bf25aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உழுகருவி, உழவன், உழுகருவியின் கூர்முனை",
+  "paragraphs": [
+    {
+      "id": "aquifer/plow-plowman-plowshare#p1-095f77fe",
+      "text": "உழுகருவி என்பது விதைப்பதற்கு முன் மண்ணை உடைத்து திருப்புவதற்குப் பயன்படுத்தப்படும் ஒரு கருவி. உழவன் என்பவன் உழுகருவியை நடத்தும் மனிதன். உழுகருவியின் கூர்முனை என்பது உழுகருவியின் வெட்டும் பகுதி."
+    },
+    {
+      "id": "aquifer/plow-plowman-plowshare#p2-54832bd8",
+      "text": "விவசாயம் என்பதைக் காண்க."
+    }
+  ]
+}

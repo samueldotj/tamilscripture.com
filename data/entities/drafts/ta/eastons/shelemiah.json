@@ -1,0 +1,42 @@
+{
+  "id": "eastons/shelemiah",
+  "lang": "ta",
+  "source_hash": "327bd8c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செலேமியா",
+  "paragraphs": [
+    {
+      "id": "eastons/shelemiah#p1-d6e0d787",
+      "text": "யெகோவா பதிலளிக்கிறவர்."
+    },
+    {
+      "id": "eastons/shelemiah#p2-bd6a3f2c",
+      "text": "(1.) எஸ்றா 10:39."
+    },
+    {
+      "id": "eastons/shelemiah#p3-b2153dd0",
+      "text": "(2.) அனனியாவின் தகப்பன் (நெகேமியா 3:30)."
+    },
+    {
+      "id": "eastons/shelemiah#p4-116b2399",
+      "text": "(3.) நெகேமியாவின் காலத்தில் இருந்த ஒரு ஆசாரியன் (13:13)."
+    },
+    {
+      "id": "eastons/shelemiah#p5-e222d4c9",
+      "text": "(4.) சிதேக்கியாவிடம் எரேமியாவைக் குற்றஞ்சாட்டியவர்களில் ஒருவனின் தகப்பன் (எரேமியா 37:3; 38:1)."
+    },
+    {
+      "id": "eastons/shelemiah#p6-2f5ac72e",
+      "text": "(5.) காவல் அதிபதியின் தகப்பன் (எரேமியா 37:13)."
+    },
+    {
+      "id": "eastons/shelemiah#p7-2a8d2b9f",
+      "text": "(6.) எரேமியா 36:14."
+    }
+  ]
+}

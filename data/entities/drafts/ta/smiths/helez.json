@@ -1,0 +1,18 @@
+{
+  "id": "smiths/helez",
+  "lang": "ta",
+  "source_hash": "d159e109",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலெஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/helez#p1-d159e109",
+      "text": "(பலம்)."
+    }
+  ]
+}

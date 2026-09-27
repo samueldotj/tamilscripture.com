@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hachmoni",
+  "lang": "ta",
+  "source_hash": "077d89ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்மோனி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hachmoni#p1-077d89ba",
+      "text": "அக்மோனி என்பது யெகியேலின் குடும்பத்தின் பெயராகும். யெகியேல் தாவீதின் பணியாளராக இருந்தார் (1 நாளாகமம் 27:32). அவர் தாவீதின் மகன்களுக்குத் தோழராகவோ அல்லது ஆசிரியராகவோ இருந்திருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/raamses",
+  "lang": "ta",
+  "source_hash": "6c76c38b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராமசேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/raamses#p1-6c76c38b",
+      "text": "(யாத்திராகமம் 1:11) [ராமசேஸ், அல்லது ராமசேஸ்]"
+    }
+  ]
+}

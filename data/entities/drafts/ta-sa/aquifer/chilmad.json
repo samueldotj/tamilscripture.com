@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/chilmad",
+  "lang": "ta",
+  "source_hash": "b46a9176",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கில்மாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chilmad#p1-b46a9176",
+      "text": "தீருவுடன் வியாபாரம் செய்தவர்களாக ஆரான், கன்னே, ஏதேன், அசூர் ஆகியோருடன் பட்டியலிடப்பட்டுள்ள ஒரு மேசொப்பொத்தேமிய பட்டணம் (எசேக்கியேல் 27:23)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cosam",
+  "lang": "ta",
+  "source_hash": "aea3dcac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோசாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/cosam#p1-aea3dcac",
+      "text": "(ஒரு குறிசொல்லுகிறவன்), மரியாளுடைய கணவனாகிய யோசேப்பின் வம்சாவளியில், எல்மோதாமின் குமாரன். (லூக்கா 3:28)"
+    }
+  ]
+}

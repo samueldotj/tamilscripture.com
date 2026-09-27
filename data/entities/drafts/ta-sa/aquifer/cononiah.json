@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cononiah",
+  "lang": "ta",
+  "source_hash": "4fd41580",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொனானியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/cononiah#p1-8663e10b",
+      "text": "கொனானியா என்பது யாக்கோபு அரசர் மொழிபெயர்ப்பில் லேவியனாகிய கொனனியா என்பதற்கு அளிக்கப்பட்ட எழுத்துவடிவமாகும், 2 நாளாகமம் 31:12-13 இல் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/cononiah#p2-e729c436",
+      "text": "கொனனியா #1-ஐ காண்க."
+    }
+  ]
+}

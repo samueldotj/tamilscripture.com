@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahasai",
+  "lang": "ta",
+  "source_hash": "f73317dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahasai#p1-f73317dd",
+      "text": "(யெகோவா பிடித்திருக்கிறவர்), ஆசாரியன், மாசாயின் முற்பிதா, (நெகேமியா 11:13) 1 நாளாகமம் 9:12 இல் யாசெரா என்று அழைக்கப்பட்டவர்"
+    }
+  ]
+}

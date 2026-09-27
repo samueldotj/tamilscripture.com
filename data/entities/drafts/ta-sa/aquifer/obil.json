@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/obil",
+  "lang": "ta",
+  "source_hash": "2ab30858",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபில்",
+  "paragraphs": [
+    {
+      "id": "aquifer/obil#p1-2ab30858",
+      "text": "ஓபில் தாவீது ராஜாவின் ஒட்டகங்களின்மேல் விசாரணைக்காரனாயிருந்த ஒரு இஸ்மவேலியன் (1 நாளாகமம் 27:30)."
+    }
+  ]
+}

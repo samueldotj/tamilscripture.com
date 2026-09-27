@@ -1,0 +1,26 @@
+{
+  "id": "eastons/nemuel",
+  "lang": "ta",
+  "source_hash": "09794490",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேமுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/nemuel#p1-2660405a",
+      "text": "தேவனுடைய நாள்."
+    },
+    {
+      "id": "eastons/nemuel#p2-ddc39df2",
+      "text": "(1.) சிமியோனுடைய ஐந்து மகன்களில் ஒருவன் (1 நாளாகமம் 4:24), எமுவேல் என்றும் அழைக்கப்பட்டான் (ஆதியாகமம் 46:10)."
+    },
+    {
+      "id": "eastons/nemuel#p3-807ce064",
+      "text": "(2.) ரூபனியன், எலியாபின் மகன், தாத்தானுக்கும் அபிராமுக்கும் சகோதரன் (எண்ணாகமம் 26:9)."
+    }
+  ]
+}

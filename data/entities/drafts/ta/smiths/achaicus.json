@@ -1,0 +1,18 @@
+{
+  "id": "smiths/achaicus",
+  "lang": "ta",
+  "source_hash": "4de40be0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகாயுக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/achaicus#p1-4de40be0",
+      "text": "(அகாயாவைச் சேர்ந்தவன்), ஒரு கிறிஸ்தவனுடைய பெயர். (1 கொரிந்தியர் 16:17)"
+    }
+  ]
+}

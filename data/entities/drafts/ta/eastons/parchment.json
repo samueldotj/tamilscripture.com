@@ -1,0 +1,18 @@
+{
+  "id": "eastons/parchment",
+  "lang": "ta",
+  "source_hash": "983c4513",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோல் சுருள்",
+  "paragraphs": [
+    {
+      "id": "eastons/parchment#p1-983c4513",
+      "text": "எழுதுவதற்காக ஆயத்தப்படுத்தப்பட்ட ஒரு தோல்; இது முதன்முதலில் செய்யப்பட்ட பெர்கமு (காண்க) என்ற இடத்தின் பெயரால் இப்படி அழைக்கப்படுகிறது (2 தீமோத்தேயு 4:13)."
+    }
+  ]
+}

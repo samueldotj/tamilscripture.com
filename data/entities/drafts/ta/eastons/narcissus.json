@@ -1,0 +1,18 @@
+{
+  "id": "eastons/narcissus",
+  "lang": "ta",
+  "source_hash": "898e9de8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நர்கீசு",
+  "paragraphs": [
+    {
+      "id": "eastons/narcissus#p1-898e9de8",
+      "text": "நர்கீசு (Daffodil), பவுல் வாழ்த்துகின்ற ஒரு ரோமானியன் (ரோமர் 16:11). இவன் கிலவுதியு பேரரசனுடைய அந்தரங்க செயலாளராக இருந்திருக்கலாம் என்று கருதப்படுகிறது. எனினும், இது முற்றிலும் நிச்சயமற்றது."
+    }
+  ]
+}

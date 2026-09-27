@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ador-or-adora",
+  "lang": "ta",
+  "source_hash": "93f21288",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதோர், அல்லது அதோரா",
+  "paragraphs": [
+    {
+      "id": "smiths/ador-or-adora#p1-93f21288",
+      "text": "[அதோராயீம்]"
+    }
+  ]
+}

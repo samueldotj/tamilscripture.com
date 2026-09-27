@@ -1,0 +1,18 @@
+{
+  "id": "eastons/serah",
+  "lang": "ta",
+  "source_hash": "40265118",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேராள்",
+  "paragraphs": [
+    {
+      "id": "eastons/serah#p1-40265118",
+      "text": "செழிப்பு; அரசி என்று பொருள்படும், ஆசேருடைய மகளும் யாக்கோபுடைய பேத்தியுமான சேராள் (ஆதியாகமம் 46:17); இவளுக்கு சாராள் என்றும் பெயர் (எண்ணாகமம் 26:46; R.V., “சேராள்”)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shaashgaz",
+  "lang": "ta",
+  "source_hash": "5fbb75b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாஸ்காச்",
+  "paragraphs": [
+    {
+      "id": "eastons/shaashgaz#p1-5fbb75b5",
+      "text": "அழகியவளின் ஊழியன், ராஜாவாகிய அகாஸ்வேருவின் அந்தப்புரத்தின் இரண்டாம் மாடத்தில் இருந்த பிரதான குறிஞ்சான் (எஸ்தர் 2:14)."
+    }
+  ]
+}

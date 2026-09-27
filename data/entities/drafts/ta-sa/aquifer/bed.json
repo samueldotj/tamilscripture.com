@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bed",
+  "lang": "ta",
+  "source_hash": "7000f911",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "படுக்கை",
+  "paragraphs": [
+    {
+      "id": "aquifer/bed#p1-3e9b852e",
+      "text": "தூங்குவதற்கும் ஓய்வெடுப்பதற்கும் பயன்படுத்தப்படும் ஒரு வீட்டுப் பொருள்."
+    },
+    {
+      "id": "aquifer/bed#p2-9f3a8250",
+      "text": "வீட்டுப் பொருட்கள் என்பதைக் காண்க."
+    }
+  ]
+}

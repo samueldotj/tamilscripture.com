@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chenaanah",
+  "lang": "ta",
+  "source_hash": "5eeea2be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனானா",
+  "paragraphs": [
+    {
+      "id": "smiths/chenaanah#p1-5eeea2be",
+      "text": "(வியாபாரி)."
+    }
+  ]
+}

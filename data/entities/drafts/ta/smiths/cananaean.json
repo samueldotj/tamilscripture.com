@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cananaean",
+  "lang": "ta",
+  "source_hash": "bd7bab7a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கானானியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/cananaean#p1-bd7bab7a",
+      "text": "(மத்தேயு 10:4) “கானானியன்” என்பதற்குப் பதிலாக ரிவைஸ்டு வேர்ஷனில் பயன்படுத்தப்பட்டுள்ளது. [கானானியன், தி என்பதைக் காண்க]"
+    }
+  ]
+}

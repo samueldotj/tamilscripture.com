@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mejarkon",
+  "lang": "ta",
+  "source_hash": "e2e8fb0f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேயார்கோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/mejarkon#p1-e2e8fb0f",
+      "text": "(மங்கல் நிற வேட்டைக்காரர்) தாணுடைய சுதந்தரத்திலுள்ள ஒரு பட்டணம் (யோசுவா 19:46) யோப்பா அல்லது யாப்போவின் அயலிலே மட்டுமே காணப்படுகிறது."
+    }
+  ]
+}

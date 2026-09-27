@@ -1,0 +1,18 @@
+{
+  "id": "smiths/agrippa",
+  "lang": "ta",
+  "source_hash": "5c48c721",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகிரிப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/agrippa#p1-5c48c721",
+      "text": "[ஏரோது]"
+    }
+  ]
+}

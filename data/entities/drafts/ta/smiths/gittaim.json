@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gittaim",
+  "lang": "ta",
+  "source_hash": "0b13a29d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தாயிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/gittaim#p1-0b13a29d",
+      "text": "[கித்தியர்]"
+    }
+  ]
+}

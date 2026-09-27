@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/chesed",
+  "lang": "ta",
+  "source_hash": "65e378eb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chesed#p1-65e378eb",
+      "text": "மில்க்காளும் நாகோரும் பெற்ற ஒரு மகன் (ஆதியாகமம் 22:22). நாகோர் கோத்திரத்தலைவனாகிய ஆபிரகாமின் சகோதரனாக இருந்தான்."
+    }
+  ]
+}

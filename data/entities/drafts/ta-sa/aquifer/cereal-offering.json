@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cereal-offering",
+  "lang": "ta",
+  "source_hash": "41282985",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உணவுபலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/cereal-offering#p1-6e463a36",
+      "text": "Cereal offering (தானியக் காணிக்கை) என்பது Revised Standard Version (RSV) மொழிபெயர்ப்பில் பெரும்பாலும் grain offering என்று அழைக்கப்படுவதற்குப் பயன்படுத்தப்படும் சொல். இது பழைய ஏற்பாட்டில் தேவனுக்குக் கொடுக்கப்பட்ட காணிக்கைகளில் ஒன்றாக இருந்தது. இந்த உணவுபலி ஒரு மனிதனுடைய பக்திசார்ந்த சமர்ப்பணத்தையும் தேவனுக்குரிய அர்ப்பணிப்பையும் காண்பித்தது."
+    },
+    {
+      "id": "aquifer/cereal-offering#p2-1320f47c",
+      "text": "காணிக்கைகளும் பலிகளும் என்பதைக் காண்க."
+    }
+  ]
+}

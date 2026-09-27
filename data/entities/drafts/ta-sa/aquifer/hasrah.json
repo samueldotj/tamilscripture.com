@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hasrah",
+  "lang": "ta",
+  "source_hash": "e0355063",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்ரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hasrah#p1-5e84903c",
+      "text": "அஸ்ரா என்பது 2 நாளாகமம் 34:22-ல் காணப்படும் சல்லூமின் பாட்டனாகிய அர்காசின் இன்னொரு உச்சரிப்பாகும்."
+    },
+    {
+      "id": "aquifer/hasrah#p2-a4f00e1a",
+      "text": "அர்காச் என்பதைக் காண்க."
+    }
+  ]
+}

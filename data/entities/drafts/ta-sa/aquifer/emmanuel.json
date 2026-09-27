@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/emmanuel",
+  "lang": "ta",
+  "source_hash": "b9784fdf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்மானுவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/emmanuel#p1-9857d74c",
+      "text": "மத்தேயு 1:23-ல் இம்மானுவேல் என்பதற்கு வேறு ஒரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/emmanuel#p2-7c4b6d50",
+      "text": "இம்மானுவேல் என்பதைக் காண்க."
+    }
+  ]
+}

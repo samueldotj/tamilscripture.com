@@ -1,0 +1,18 @@
+{
+  "id": "smiths/makheloth",
+  "lang": "ta",
+  "source_hash": "4d7c275b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்கெலோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/makheloth#p1-4d7c275b",
+      "text": "(சபைகூடும் இடம்), இஸ்ரவேலரின் வனாந்தர முகாமிடமாக (எண்ணாகமம் 33:26) இல் மட்டும் குறிப்பிடப்பட்டுள்ள ஒரு இடம்."
+    }
+  ]
+}

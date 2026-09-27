@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hezeki",
+  "lang": "ta",
+  "source_hash": "592f50c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசேக்கி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hezeki#p1-1fd11462",
+      "text": "எசேக்கி என்பது 1 நாளாகமம் 8:17-இல் எல்பாலின் மகனாகிய இஸ்கிக்கு ராஜா யாக்கோபு மொழிபெயர்ப்பில் உள்ள எழுத்துமுறையாகும்."
+    },
+    {
+      "id": "aquifer/hezeki#p2-20a59846",
+      "text": "இஸ்கி என்பதைக் காண்க."
+    }
+  ]
+}

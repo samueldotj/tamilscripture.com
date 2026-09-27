@@ -1,0 +1,26 @@
+{
+  "id": "eastons/bered",
+  "lang": "ta",
+  "source_hash": "66a71dd4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/bered#p1-374e65cf",
+      "text": "கல்மழை."
+    },
+    {
+      "id": "eastons/bered#p2-bd6b913d",
+      "text": "(1.) பாலஸ்தீனத்தின் தென்பகுதியிலுள்ள ஒரு ஊர் (ஆதியாகமம் 16:14), லகாய்ரோயீக்கு அருகில் சூர் என்னும் வனாந்தரத்தில் இருந்தது."
+    },
+    {
+      "id": "eastons/bered#p3-2a8a099d",
+      "text": "(2.) சுத்தெலாகின் மகன், எப்பிராயீமின் பேரன் (1 நாளாகமம் 7:20)."
+    }
+  ]
+}

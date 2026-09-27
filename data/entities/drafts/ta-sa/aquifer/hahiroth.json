@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hahiroth",
+  "lang": "ta",
+  "source_hash": "ab877823",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முகாமிட்டார்கள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hahiroth#p1-e740d2a8",
+      "text": "இஸ்ரவேலர்கள் எகிப்திலிருந்து வாக்குத்தத்த தேசத்திற்குச் சென்ற பயணத்தில் அவர்கள் சென்ற ஒரு இடமான \"முகாமிட்டார்கள்\"-தின் மற்றொரு பெயர் (எண்ணாகமம் 33:8)."
+    },
+    {
+      "id": "aquifer/hahiroth#p2-cb205d59",
+      "text": "முகாமிட்டார்கள் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adonijah",
+  "lang": "ta",
+  "source_hash": "bfae33f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதோனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/adonijah#p1-bfae33f4",
+      "text": "(என்னுடைய ஆண்டவர் யெகோவா)."
+    }
+  ]
+}

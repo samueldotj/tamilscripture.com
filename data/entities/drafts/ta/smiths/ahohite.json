@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahohite",
+  "lang": "ta",
+  "source_hash": "775d59a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகோகியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahohite#p1-775d59a1",
+      "text": "[அகோவா]"
+    }
+  ]
+}

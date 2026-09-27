@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nehushtan",
+  "lang": "ta",
+  "source_hash": "142369a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிகுஸ்தான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nehushtan#p1-2b36a347",
+      "text": "வனாந்தர பயணத்தின்போது மோசே செய்த வெண்கலச் சர்ப்பத்திற்குக் கொடுக்கப்பட்ட பெயர். ராஜா எசேக்கியா தன்னுடைய சீர்திருத்தங்களின்போது அதை அழித்தான் (2 இராஜாக்கள் 18:4)."
+    },
+    {
+      "id": "aquifer/nehushtan#p2-880ed5c3",
+      "text": "வெண்கலச் சர்ப்பம் என்பதைக் காண்க."
+    }
+  ]
+}

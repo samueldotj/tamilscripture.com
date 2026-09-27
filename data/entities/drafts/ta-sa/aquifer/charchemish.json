@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/charchemish",
+  "lang": "ta",
+  "source_hash": "b704f729",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கார்கேமிஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/charchemish#p1-9693cfe7",
+      "text": "2 நாளாகமம் 35:20-ல் வரும் கர்கேமிஸ் பட்டணத்தின் கிங் யாக்கோபு மொழிபெயர்ப்பின் எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/charchemish#p2-8ab71419",
+      "text": "கர்கேமிஸ் என்பதைக் காண்க."
+    }
+  ]
+}

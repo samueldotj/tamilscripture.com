@@ -1,0 +1,18 @@
+{
+  "id": "smiths/secundus",
+  "lang": "ta",
+  "source_hash": "14ae5652",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செக்குந்து",
+  "paragraphs": [
+    {
+      "id": "smiths/secundus#p1-14ae5652",
+      "text": "(பாக்கியமுள்ளவன்), தெசலோனிக்கேயனான ஒரு கிறிஸ்தவன். (அப்போஸ்தலருடைய நடபடிகள் 20:4) (கி.பி. 55). திரி: தீர்க்கதரிசி"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hammon",
+  "lang": "ta",
+  "source_hash": "26653454",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hammon#p1-26653454",
+      "text": "(வெந்நீர் ஊற்றுகள்)."
+    }
+  ]
+}

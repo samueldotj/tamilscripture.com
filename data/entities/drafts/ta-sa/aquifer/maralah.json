@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/maralah",
+  "lang": "ta",
+  "source_hash": "c9f343c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாராலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/maralah#p1-c9f343c6",
+      "text": "மாராலா செபுலோன் கோத்திரத்திற்குக் கொடுக்கப்பட்ட நாட்டின் மேற்கு எல்லையில் இருந்த ஒரு பட்டணமாக இருந்தது. அது சாரீதிற்கும் தாபசேத்திற்கும் இடையில் அமைந்திருந்தது (யோசுவா 19:11)."
+    }
+  ]
+}

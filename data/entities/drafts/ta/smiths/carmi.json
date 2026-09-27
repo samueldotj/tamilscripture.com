@@ -1,0 +1,18 @@
+{
+  "id": "smiths/carmi",
+  "lang": "ta",
+  "source_hash": "dbc1513f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்மீ",
+  "paragraphs": [
+    {
+      "id": "smiths/carmi#p1-dbc1513f",
+      "text": "(திராட்சைத்தோட்டக்காரன்)."
+    }
+  ]
+}

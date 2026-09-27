@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mattock",
+  "lang": "ta",
+  "source_hash": "7c953ea6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடப்பாரை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mattock#p1-0804ab5c",
+      "text": "நிலத்தைத் தோண்டுவதற்கும் உழுவதற்கும் பயன்படுத்தப்படும் ஒரு விவசாயக் கருவி (1 சாமுவேல் 13:20-21, புதிய வாழ்க்கை மொழிபெயர்ப்பில் “pick” என்று மொழிபெயர்க்கப்பட்டுள்ளது)."
+    },
+    {
+      "id": "aquifer/mattock#p2-54832bd8",
+      "text": "விவசாயம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/adin",
+  "lang": "ta",
+  "source_hash": "518ecfc1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதீன்",
+  "paragraphs": [
+    {
+      "id": "eastons/adin#p1-9168024c",
+      "text": "பெண்மைத் தன்மையுள்ளவன்."
+    },
+    {
+      "id": "eastons/adin#p2-8bf22249",
+      "text": "(1.) எஸ்றா 8:6."
+    },
+    {
+      "id": "eastons/adin#p3-e8d807f1",
+      "text": "(2.) நெகேமியா 10:16."
+    }
+  ]
+}

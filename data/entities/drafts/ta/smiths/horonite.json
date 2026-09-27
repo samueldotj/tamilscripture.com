@@ -1,0 +1,18 @@
+{
+  "id": "smiths/horonite",
+  "lang": "ta",
+  "source_hash": "09be5ffc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரோனியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/horonite#p1-09be5ffc",
+      "text": "(ஒரொனாயிமின் குடிமகன்) என்பது சன்பல்லாத்துக்கு வழங்கப்பட்ட பட்டப்பெயர். (நெகேமியா 2:10,19; 13:28) இது கெசேனியஸ் என்பவரால் ஒரொனாயிமிலிருந்து பெறப்பட்டதாகக் கருதப்படுகிறது."
+    }
+  ]
+}

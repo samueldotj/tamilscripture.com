@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/masrekah",
+  "lang": "ta",
+  "source_hash": "5bcd45bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மஸ்ரேக்கா",
+  "paragraphs": [
+    {
+      "id": "aquifer/masrekah#p1-5bcd45bd",
+      "text": "மஸ்ரேக்கா என்பது ஏதோமின் ராஜாவாகிய சம்லாவின் ஊராக இருந்தது (ஆதியாகமம் 36:36; 1 நாளாகமம் 1:47)."
+    }
+  ]
+}

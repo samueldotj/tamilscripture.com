@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shibmah",
+  "lang": "ta",
+  "source_hash": "51ed7e30",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிப்மா",
+  "paragraphs": [
+    {
+      "id": "eastons/shibmah#p1-51ed7e30",
+      "text": "நறுமணம், யோர்தானுக்குக் கிழக்கே இருந்த ரூபனுடைய ஒரு பட்டணம் (எண்ணாகமம் 32:38)."
+    }
+  ]
+}

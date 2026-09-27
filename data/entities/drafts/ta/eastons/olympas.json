@@ -1,0 +1,18 @@
+{
+  "id": "eastons/olympas",
+  "lang": "ta",
+  "source_hash": "9b94f644",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒலிம்பா",
+  "paragraphs": [
+    {
+      "id": "eastons/olympas#p1-9b94f644",
+      "text": "பவுல் வாழ்த்துகின்ற ஒரு ரோம கிறிஸ்தவன் (ரோமர் 16:15)."
+    }
+  ]
+}

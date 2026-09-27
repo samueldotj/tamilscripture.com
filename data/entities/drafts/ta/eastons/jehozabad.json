@@ -1,0 +1,30 @@
+{
+  "id": "eastons/jehozabad",
+  "lang": "ta",
+  "source_hash": "74b89d6c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசபாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/jehozabad#p1-b2c06bd7",
+      "text": "யெகோவா கொடுத்தவர்."
+    },
+    {
+      "id": "eastons/jehozabad#p2-a7f6d275",
+      "text": "(1.) ஓபேத்ஏதோமின் மகன் (1 நாளாகமம் 26:4), லேவியனான வாசல்காவலர்களில் ஒருவன்."
+    },
+    {
+      "id": "eastons/jehozabad#p3-1a8a935b",
+      "text": "(2.) சோமேரின் மகன், எருசலேமில் மில்லோவில் யோவாஸ் ராஜாவைக் கொலைசெய்த இரண்டு கட்டுப்பாடு செய்தவர்களில் ஒருவன் (2 இராஜாக்கள் 12:21)."
+    },
+    {
+      "id": "eastons/jehozabad#p4-273c65f0",
+      "text": "(3.) 2 நாளாகமம் 17:18."
+    }
+  ]
+}

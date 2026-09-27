@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naarah",
+  "lang": "ta",
+  "source_hash": "7a095784",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாராள்",
+  "paragraphs": [
+    {
+      "id": "smiths/naarah#p1-7a095784",
+      "text": "(கன்னிப்பெண்) அசூருடைய இரண்டாம் மனைவி; யூதாவின் சந்ததியினள். (1 நாளாகமம் 4:5,6)"
+    }
+  ]
+}

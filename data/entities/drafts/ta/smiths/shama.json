@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shama",
+  "lang": "ta",
+  "source_hash": "0293cab6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சமா",
+  "paragraphs": [
+    {
+      "id": "smiths/shama#p1-0293cab6",
+      "text": "(கீழ்ப்படிதலுடையவன்), தாவீதின் காவலரில் ஒருவன். (1 நாளாகமம் 11:44) (கி.மு. 1020.)"
+    }
+  ]
+}

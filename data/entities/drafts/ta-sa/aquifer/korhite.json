@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/korhite",
+  "lang": "ta",
+  "source_hash": "65cccdc9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோராகியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/korhite#p1-ea8ba276",
+      "text": "கோர்ஹைட் (Korhite) என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் கோராகியன் (Korahite) என்பதற்கான உச்சரிப்பு வடிவமாகும், இது 1 நாளாகமம் 12:6-ல் எப்ரோனின் மகனாகிய கோராகின் வழித்தோன்றலைக் குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/korhite#p2-3b57aa19",
+      "text": "கோராகு #4-ஐக் காண்க."
+    }
+  ]
+}

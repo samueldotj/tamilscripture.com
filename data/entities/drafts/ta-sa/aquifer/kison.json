@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kison",
+  "lang": "ta",
+  "source_hash": "f9f21a93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீசோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kison#p1-69daada5",
+      "text": "சங்கீதம் 83:9-ல் கீசோன் ஆற்றின் பெயருக்கு கிங் யாக்கோபு வேர்ஷனில் உள்ள எழுத்துப்பெயர் இது."
+    },
+    {
+      "id": "aquifer/kison#p2-a4c29d31",
+      "text": "கீசோன் #2-ஐ காண்க."
+    }
+  ]
+}

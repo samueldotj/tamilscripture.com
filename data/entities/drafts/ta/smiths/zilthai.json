@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zilthai",
+  "lang": "ta",
+  "source_hash": "9ee17adb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சில்தாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/zilthai#p1-9ee17adb",
+      "text": "(நிழலுள்ள)."
+    }
+  ]
+}

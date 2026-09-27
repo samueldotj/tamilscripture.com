@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bashanhavothjair",
+  "lang": "ta",
+  "source_hash": "9afb81b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசான்-ஆவோத்யாவீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bashanhavothjair#p1-9afb81b7",
+      "text": "(யாவீரின் கிராமங்களாகிய பாசான்), யாவீரினால் அர்கோப் வெற்றிகொள்ளப்பட்ட பின்பு அதற்குக் கொடுக்கப்பட்ட பெயர். (உபாகமம் 3:14)"
+    }
+  ]
+}

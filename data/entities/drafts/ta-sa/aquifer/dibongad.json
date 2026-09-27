@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dibongad",
+  "lang": "ta",
+  "source_hash": "5b361244",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீபோன்-காத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dibongad#p1-802ccbb9",
+      "text": "தீபோன் என்னும் மோவாபிய நகரத்திற்கு மற்றொரு பெயர் (எண்ணாகமம் 33:45-46)."
+    },
+    {
+      "id": "aquifer/dibongad#p2-430609e2",
+      "text": "தீபோன் #1-ஐ காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pau",
+  "lang": "ta",
+  "source_hash": "d9ad6358",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகு",
+  "paragraphs": [
+    {
+      "id": "aquifer/pau#p1-d9ad6358",
+      "text": "ஆதாத் என்னும் இராஜா ஆண்ட ஏதோமில் இருந்த ஒரு பட்டணம் (ஆதியாகமம் 36:39). இது \"பாகி\" என்றும் அழைக்கப்பட்டது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bachrites-the",
+  "lang": "ta",
+  "source_hash": "fec5bd99",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெகேரியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/bachrites-the#p1-fec5bd99",
+      "text": "எப்பிராயீமின் மகனாகிய பெகேரின் குடும்பம். (எண்ணாகமம் 26:35)"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "eastons/jarib",
+  "lang": "ta",
+  "source_hash": "44715c9d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாரீப்",
+  "paragraphs": [
+    {
+      "id": "eastons/jarib#p1-a91e4ca8",
+      "text": "எதிரி."
+    },
+    {
+      "id": "eastons/jarib#p2-863e4880",
+      "text": "(1.) சிமியோனின் ஒரு மகன் (1 நாளாகமம் 4:24)."
+    },
+    {
+      "id": "eastons/jarib#p3-3e3c2b2a",
+      "text": "(2.) ஆசாரியர்களை எருசலேமுக்கு அழைத்துவரும்படி எஸ்றாவால் அனுப்பப்பட்ட தலைவர்களில் ஒருவன் (எஸ்றா 8:16)."
+    },
+    {
+      "id": "eastons/jarib#p4-af1fba56",
+      "text": "(3.) எஸ்றா 10:18."
+    }
+  ]
+}

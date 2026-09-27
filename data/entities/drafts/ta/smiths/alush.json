@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alush",
+  "lang": "ta",
+  "source_hash": "79ea6d00",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலூச்",
+  "paragraphs": [
+    {
+      "id": "smiths/alush#p1-79ea6d00",
+      "text": "(மனிதர்களின் கூட்டம்) இஸ்ரவேலர்கள் சீனாய்க்குப் பயணமாக போகும்போது தங்கிய முகாம்களில் ஒன்று, ரெவிதீமுக்கு முன்னிருந்த கடைசி முகாம். (எண்ணாகமம் 33:13,14)"
+    }
+  ]
+}

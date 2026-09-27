@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ishtob",
+  "lang": "ta",
+  "source_hash": "09a2b0c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்தோப்",
+  "paragraphs": [
+    {
+      "id": "eastons/ishtob#p1-09a2b0c6",
+      "text": "தோப் மனிதன், ஆராமை ஒன்றுசேர்த்து அமைத்த சிறிய சீரிய அரசுகளில் ஒன்று (2 சாமுவேல் 10:6, 8)."
+    }
+  ]
+}

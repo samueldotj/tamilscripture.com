@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/adlai",
+  "lang": "ta",
+  "source_hash": "3b760d39",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்லாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/adlai#p1-3b760d39",
+      "text": "தாவீது இஸ்ரவேலின் அரசனாக இருந்தபோது, பள்ளத்தாக்குகளிலுள்ள ராஜாவின் மாடுகளைப் பராமரித்த சாப்பாத்தின் தகப்பன் (1 நாளாகமம் 27:29)."
+    }
+  ]
+}

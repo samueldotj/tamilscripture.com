@@ -1,0 +1,18 @@
+{
+  "id": "smiths/janum",
+  "lang": "ta",
+  "source_hash": "2b81c3c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானூம்",
+  "paragraphs": [
+    {
+      "id": "smiths/janum#p1-2b81c3c7",
+      "text": "(உறக்கம்), மலைநாட்டில் இருந்த யூதாவின் ஒரு பட்டணம், தோற்றத்தில் எப்ரோனுக்கு அதிக தூரமில்லாமல் இருந்தது. (யோசுவா 15:53)"
+    }
+  ]
+}

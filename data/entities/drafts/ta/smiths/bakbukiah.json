@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bakbukiah",
+  "lang": "ta",
+  "source_hash": "7cae2175",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பக்பூக்கியா",
+  "paragraphs": [
+    {
+      "id": "smiths/bakbukiah#p1-7cae2175",
+      "text": "(யெகோவாவுடைய வியர்த்தல்), நெகேமியாவின் காலத்தில் இருந்த ஒரு லேவியன். (நெகேமியா 11:17; 12:9) (கிறிஸ்துவுக்கு முன் 536-க்கு முன்.)"
+    }
+  ]
+}

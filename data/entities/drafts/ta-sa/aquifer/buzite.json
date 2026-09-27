@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/buzite",
+  "lang": "ta",
+  "source_hash": "8a2a2480",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூசியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/buzite#p1-1b3fbaa2",
+      "text": "பூசியன் என்பவன் பூஸ் ஊரின் குடியிருப்பவன். யோபுவின் நண்பர்களில் ஒருவனாகிய எலிகூ, பரகெயேலின் மகனாகிய பூசியன் என அறியப்படுகிறான் (யோபு 32:2, 6)."
+    },
+    {
+      "id": "aquifer/buzite#p2-d73cbfbc",
+      "text": "பூஸ் (இடம்) காண்க."
+    }
+  ]
+}

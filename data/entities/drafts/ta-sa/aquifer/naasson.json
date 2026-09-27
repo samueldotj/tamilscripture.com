@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/naasson",
+  "lang": "ta",
+  "source_hash": "bec5f81f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகசோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naasson#p1-08f82148",
+      "text": "மத்தேயு 1:4 மற்றும் லூக்கா 3:32-ல் அம்மினதாபின் மகனாகிய நகசோனுக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் கொடுக்கப்பட்ட வேறு வடிவம்."
+    },
+    {
+      "id": "aquifer/naasson#p2-14e86f93",
+      "text": "நகசோனைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/geliloth",
+  "lang": "ta",
+  "source_hash": "812da427",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலிலோத்து",
+  "paragraphs": [
+    {
+      "id": "eastons/geliloth#p1-812da427",
+      "text": "வட்டங்கள்; பிரதேசங்கள், பென்யமீனுடைய எல்லையிலிருந்த ஒரு இடம் (யோசுவா 18:17); இது 15:7-ல் கில்கால் என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

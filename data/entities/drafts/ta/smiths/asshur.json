@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asshur",
+  "lang": "ta",
+  "source_hash": "5bc3ccec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/asshur#p1-5bc3ccec",
+      "text": "சேமுடைய இரண்டாம் மகன், (ஆதியாகமம் 10:22) மேலும் இது அசீரியா என்பதற்குரிய எபிரெய வடிவமாகும். [அசீரியா, அசூர்]"
+    }
+  ]
+}

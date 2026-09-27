@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ara",
+  "lang": "ta",
+  "source_hash": "023c1081",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரா",
+  "paragraphs": [
+    {
+      "id": "smiths/ara#p1-023c1081",
+      "text": "(சிங்கம்), ஆசேரியரின் குடும்பத் தலைவனாகிய யெத்தெரின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:88)"
+    }
+  ]
+}

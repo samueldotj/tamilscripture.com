@@ -1,0 +1,18 @@
+{
+  "id": "smiths/melchiah",
+  "lang": "ta",
+  "source_hash": "7625f0e9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கியா",
+  "paragraphs": [
+    {
+      "id": "smiths/melchiah#p1-7625f0e9",
+      "text": "(யெகோவாவின் ராஜா), ஒரு ஆசாரியன், பஸ்கூரின் தகப்பன். (எரேமியா 21:1)"
+    }
+  ]
+}

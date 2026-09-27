@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beriites-the",
+  "lang": "ta",
+  "source_hash": "da364c54",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரியீட்டியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/beriites-the#p1-da364c54",
+      "text": "ஆபேலோடும் பெத்மாக்காவோடும் சேர்த்துக் குறிப்பிடப்பட்ட ஒரு கோத்திரத்தார்கள், ஆகவே அவர்கள் பாலஸ்தீனத்தின் வடபகுதியில் இருந்திருக்க வேண்டும் (2 சாமுவேல் 20:14)."
+    }
+  ]
+}

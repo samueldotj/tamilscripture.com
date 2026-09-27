@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eloah",
+  "lang": "ta",
+  "source_hash": "fd1d8cab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலோவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/eloah#p1-bd60eea8",
+      "text": "எலோவா என்பது தேவனுக்குரிய ஒரு எபிரெய நாமமாகும், இது அவர் ஒருவரே தொழுதுகொள்ளப்பட தகுதியுள்ளவர் என்பதை வலியுறுத்துகிறது."
+    },
+    {
+      "id": "aquifer/eloah#p2-7bbc6dfe",
+      "text": "தேவனுடைய நாமங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

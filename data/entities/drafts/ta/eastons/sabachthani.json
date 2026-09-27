@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sabachthani",
+  "lang": "ta",
+  "source_hash": "df9824dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சபக்தானி",
+  "paragraphs": [
+    {
+      "id": "eastons/sabachthani#p1-df9824dd",
+      "text": "நீர் என்னைக் கைவிட்டீர், சிலுவையில் இருக்கும்போது நம்முடைய கர்த்தர் உரைத்த அராமிக் மொழி வார்த்தைகளில் ஒன்று (மத்தேயு 27:46; மாற்கு 15:34)."
+    }
+  ]
+}

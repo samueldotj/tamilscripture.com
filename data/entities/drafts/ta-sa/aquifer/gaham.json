@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gaham",
+  "lang": "ta",
+  "source_hash": "1f7ccf5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காகாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gaham#p1-1f7ccf5b",
+      "text": "காகாம் ஆபிரகாமின் சகோதரனான நாகோருக்குப் பிறந்த மகன். அவனுடைய தாய் ரேயுமாள் ஆவாள், அவள் நாகோரின் மறுமனையாட்டி (ஆதியாகமம் 22:24)."
+    }
+  ]
+}

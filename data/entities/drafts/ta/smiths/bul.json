@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bul",
+  "lang": "ta",
+  "source_hash": "33f8427f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூல்",
+  "paragraphs": [
+    {
+      "id": "smiths/bul#p1-33f8427f",
+      "text": "(மழை). [மாதம்]"
+    }
+  ]
+}

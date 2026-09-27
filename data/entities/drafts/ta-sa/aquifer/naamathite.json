@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/naamathite",
+  "lang": "ta",
+  "source_hash": "3f38956f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாமாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naamathite#p1-3f38956f",
+      "text": "வடமேற்கு அரேபியாவிலுள்ள நாமா ஊரின் குடியேறிய எவனும் இப்படி அழைக்கப்படுவான். யோபுவின் சிநேகிதரில் ஒருவனான சோப்பார் ஒரு நாமாத்தியனாக இருந்தான் (யோபு 2:11; 11:1; 20:1; 42:9)."
+    }
+  ]
+}

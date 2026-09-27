@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zibiah",
+  "lang": "ta",
+  "source_hash": "72eddee7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிபியாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/zibiah#p1-72eddee7",
+      "text": "யோவாஸ் ராஜாவின் தாய் (2 இராஜாக்கள் 12:1; 2 நாளாகமம் 24:1)."
+    }
+  ]
+}

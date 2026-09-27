@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harem",
+  "lang": "ta",
+  "source_hash": "5ad2b308",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/harem#p1-5ad2b308",
+      "text": "[வீடு காண்க]"
+    }
+  ]
+}

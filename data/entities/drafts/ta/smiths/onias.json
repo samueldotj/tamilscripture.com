@@ -1,0 +1,18 @@
+{
+  "id": "smiths/onias",
+  "lang": "ta",
+  "source_hash": "da53da8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/onias#p1-da53da8b",
+      "text": "பழைய ஏற்பாடும் புதிய ஏற்பாடும் நடந்த காலப்பகுதிக்கு இடையிலான ஐவர் பிரதான ஆசாரியர்களுக்கு உரிய பெயர்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maul",
+  "lang": "ta",
+  "source_hash": "f13931a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடும் ஆயுதம்",
+  "paragraphs": [
+    {
+      "id": "smiths/maul#p1-f13931a4",
+      "text": "(அதாவது, ஒரு சுத்தியல்), யுத்தத்திற்குப் பயன்படுத்தப்பட்ட ஒரு வகையான போர்க்கோடரி அல்லது சுத்தியல் ஆயுதம். (நீதிமொழிகள் 25:18)"
+    }
+  ]
+}

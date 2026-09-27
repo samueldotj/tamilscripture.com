@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chesed",
+  "lang": "ta",
+  "source_hash": "424a4b24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/chesed#p1-424a4b24",
+      "text": "(விருத்தி), நாகோருக்குப் பிறந்த நான்காம் மகன். (ஆதியாகமம் 22:22)"
+    }
+  ]
+}

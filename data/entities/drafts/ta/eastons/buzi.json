@@ -1,0 +1,18 @@
+{
+  "id": "eastons/buzi",
+  "lang": "ta",
+  "source_hash": "12dbb608",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூசி",
+  "paragraphs": [
+    {
+      "id": "eastons/buzi#p1-12dbb608",
+      "text": "தீர்க்கதரிசியாகிய எசேக்கியேலின் தகப்பன் (எசேக்கியேல் 1:3)."
+    }
+  ]
+}

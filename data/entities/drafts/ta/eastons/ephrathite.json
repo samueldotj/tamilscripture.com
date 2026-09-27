@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ephrathite",
+  "lang": "ta",
+  "source_hash": "3c8c4646",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பிராத்தியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/ephrathite#p1-3c8c4646",
+      "text": "பெத்லெகேமின் பழைய பெயரான எப்பிராத்தா ஊரின் குடிமகன் (ரூத் 1:2; 1 சாமுவேல் 17:12), அல்லது பெத்லெகேம்-யூதா."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jattir",
+  "lang": "ta",
+  "source_hash": "d510d801",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாத்தீர்",
+  "paragraphs": [
+    {
+      "id": "eastons/jattir#p1-d510d801",
+      "text": "மேன்மையுள்ளது, யூதாவின் மலைகளில் இருக்கிற ஒரு பட்டணம் (யோசுவா 15:48; 21:14)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeuz",
+  "lang": "ta",
+  "source_hash": "7192c5d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எயூச்",
+  "paragraphs": [
+    {
+      "id": "smiths/jeuz#p1-7192c5d6",
+      "text": "(ஆலோசனைக்காரன்), பென்யமீன் வம்சத்தார் குடும்பத்தலைவன். (1 நாளாகமம் 8:10)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/berry",
+  "lang": "ta",
+  "source_hash": "2318dc2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பழம் (Berry)",
+  "paragraphs": [
+    {
+      "id": "aquifer/berry#p1-0ed85571",
+      "text": "பொதுவாக பல விதைகளையும், கடினமான விதை உறையில்லாத, சதைப்பற்றுள்ள ஒரு பழம்."
+    },
+    {
+      "id": "aquifer/berry#p2-297323bf",
+      "text": "தாவரங்கள் (முட்செடி; காப்பர் செடி) என்பதைக் காண்க."
+    }
+  ]
+}

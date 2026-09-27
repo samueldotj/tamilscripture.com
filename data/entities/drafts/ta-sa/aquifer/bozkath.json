@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bozkath",
+  "lang": "ta",
+  "source_hash": "d8ef9863",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போஸ்காத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bozkath#p1-d8ef9863",
+      "text": "யூதாவின் பகுதியில் லாகீசுக்கும் எக்லோனுக்கும் அருகில் இருந்த ஒரு பட்டணம் (யோசுவா 15:39). இது யோசியா ராஜாவின் தாயின் பிறந்த ஊராக இருந்தது (2 இராஜாக்கள் 22:1)."
+    }
+  ]
+}

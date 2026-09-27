@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hareth",
+  "lang": "ta",
+  "source_hash": "8fc74938",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/hareth#p1-8fc74938",
+      "text": "(புதர்வெளி), தாவீது காத் என்னும் தீர்க்கதரிசியின் தூண்டுதலினால் அதுல்லாம் குகையாகிய கோட்டையிலிருந்து புறப்பட்ட பின்பு, அடைக்கலம் புகுந்த காடு. (1 சாமுவேல் 22:6)"
+    }
+  ]
+}

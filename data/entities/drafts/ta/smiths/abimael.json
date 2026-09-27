@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abimael",
+  "lang": "ta",
+  "source_hash": "3ce98c78",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிமாவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/abimael#p1-3ce98c78",
+      "text": "(மாவேலின் தகப்பன்), யொக்தானின் சந்ததியார் (ஆதியாகமம் 10:28; 1 நாளாகமம் 1:22), மேலும் ஒரு அராப் கோத்திரத்தின் (மாலி) மூலவராக இருந்திருக்கலாம்."
+    }
+  ]
+}

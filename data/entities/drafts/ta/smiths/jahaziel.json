@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jahaziel",
+  "lang": "ta",
+  "source_hash": "807e0e82",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யகாசியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jahaziel#p1-807e0e82",
+      "text": "(தேவன் கண்ணோக்குகிறவர்)"
+    }
+  ]
+}

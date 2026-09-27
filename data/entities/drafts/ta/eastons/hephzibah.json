@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hephzibah",
+  "lang": "ta",
+  "source_hash": "bebfdaf9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்சிபாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/hephzibah#p1-dee299a1",
+      "text": "என் விருப்பம் அவளில் இருக்கிறது."
+    },
+    {
+      "id": "eastons/hephzibah#p2-7514c5e1",
+      "text": "(1.) எசேக்கியாவின் மனைவியும், மனாசே ராஜாவின் தாயும் (2 இராஜாக்கள் 21:1)."
+    },
+    {
+      "id": "eastons/hephzibah#p3-e42eaf58",
+      "text": "(2.) சீயோனுக்கு கர்த்தர் அவள்மேல் வைத்திருந்த பிரியத்தைக் குறிக்கும் ஒரு அடையாளப் பெயர் (ஏசாயா 62:4)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/menna",
+  "lang": "ta",
+  "source_hash": "5ae0391e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மயினான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/menna#p1-3d188acd",
+      "text": "லூக்கா 3:31-ன்படி, இயேசுவின் முற்பிதாக்களில் ஒருவன்."
+    },
+    {
+      "id": "aquifer/menna#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு காண்க."
+    }
+  ]
+}

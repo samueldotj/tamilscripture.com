@@ -1,0 +1,18 @@
+{
+  "id": "smiths/esli",
+  "lang": "ta",
+  "source_hash": "8d74c5d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்லி",
+  "paragraphs": [
+    {
+      "id": "smiths/esli#p1-8d74c5d7",
+      "text": "கிறிஸ்துவின் வம்சவரலாற்றில் காணப்படும் நாகே அல்லது நங்காயின் குமாரன். (லூக்கா 3:25)"
+    }
+  ]
+}

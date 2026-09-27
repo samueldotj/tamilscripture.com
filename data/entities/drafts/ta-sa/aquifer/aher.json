@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aher",
+  "lang": "ta",
+  "source_hash": "51582405",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகேர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aher#p1-b28085f9",
+      "text": "பென்யமீனுடைய மூன்றாம் மகனாகிய அகிராமின் வேறொரு பெயர் (1 நாளாகமம் 7:12)."
+    },
+    {
+      "id": "aquifer/aher#p2-1a0dfa43",
+      "text": "அகிராம், அகிராமியர் காண்க."
+    }
+  ]
+}

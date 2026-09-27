@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cleophas",
+  "lang": "ta",
+  "source_hash": "6aa9405b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலெயோப்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/cleophas#p1-018887b1",
+      "text": "கிலெயோப்பா என்பது யோவான் 19:25-இல் மரியாளுடைய கணவனாகிய கிலொப்பா என்ற பெயருக்கு கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் காணப்படும் வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/cleophas#p2-dd8ee0ed",
+      "text": "கிலொப்பா என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

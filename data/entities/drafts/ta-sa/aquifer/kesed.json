@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kesed",
+  "lang": "ta",
+  "source_hash": "7390511e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kesed#p1-7390511e",
+      "text": "கேசேத் என்பதற்கு மற்றொரு எழுத்துப்பெயர்ப்பு, மில்க்காளுக்கும் நாகோருக்கும் பிறந்த மகன் (ஆதியாகமம் 22:22). கேசேத் காண்க."
+    }
+  ]
+}

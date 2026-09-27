@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rechab",
+  "lang": "ta",
+  "source_hash": "333bae82",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேகாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/rechab#p1-333bae82",
+      "text": "(சவாரி செய்பவன்)."
+    }
+  ]
+}

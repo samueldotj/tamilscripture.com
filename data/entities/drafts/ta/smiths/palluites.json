@@ -1,0 +1,18 @@
+{
+  "id": "smiths/palluites",
+  "lang": "ta",
+  "source_hash": "ed063f5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்லூவியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/palluites#p1-ed063f5b",
+      "text": "(பல்லூவின் சந்ததியார்), இவர்கள். (எண்ணாகமம் 26:5)"
+    }
+  ]
+}

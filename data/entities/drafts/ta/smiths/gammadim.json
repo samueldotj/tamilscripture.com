@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gammadim",
+  "lang": "ta",
+  "source_hash": "9406fe30",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கம்மாதீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/gammadim#p1-9406fe30",
+      "text": "இந்த வார்த்தை எசேக்கியேல் 27:11 -ல் மட்டுமே காணப்படுகிறது. இந்தச் சொல்லுக்கு பல்வேறு விளக்கங்கள் கொடுக்கப்பட்டுள்ளன."
+    }
+  ]
+}

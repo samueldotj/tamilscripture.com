@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sered",
+  "lang": "ta",
+  "source_hash": "5254fa1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/sered#p1-5254fa1f",
+      "text": "(பயம்), செபுலோனின் முதற்பேறானவன். (ஆதியாகமம் 46:14; எண்ணாகமம் 26:26) கிமு. 1700.)"
+    }
+  ]
+}

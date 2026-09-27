@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asherites",
+  "lang": "ta",
+  "source_hash": "ecd4c05f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசேரியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/asherites#p1-ecd4c05f",
+      "text": "ஆசேரின் சந்ததியார், அவனுடைய கோத்திரத்தைச் சேர்ந்தவர்கள். (நியாயாதிபதிகள் 1:32)"
+    }
+  ]
+}

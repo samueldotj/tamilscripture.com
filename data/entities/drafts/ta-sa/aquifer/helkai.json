@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/helkai",
+  "lang": "ta",
+  "source_hash": "fddc2548",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்காய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/helkai#p1-fddc2548",
+      "text": "பிரதான ஆசாரியனாகிய யொயகீமின் காலத்தில் மெராயோத்தின் ஆசாரிய குடும்பத்தின் தலைவனாக எல்காய் இருந்தான் (நெகேமியா 12:15)."
+    }
+  ]
+}

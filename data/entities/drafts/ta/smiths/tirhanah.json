@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tirhanah",
+  "lang": "ta",
+  "source_hash": "ded1322a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திர்கானா",
+  "paragraphs": [
+    {
+      "id": "smiths/tirhanah#p1-ded1322a",
+      "text": "(தயை), எஸ்ரோனின் மகனாகிய காலேபுடைய மறுமனையாட்டியாகிய மாகாளுக்குப் பிறந்த மகன். (1 நாளாகமம் 2:48) (கி.மு. 1451 அளவில்)"
+    }
+  ]
+}

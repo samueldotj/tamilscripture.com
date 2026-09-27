@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hashum",
+  "lang": "ta",
+  "source_hash": "1c2ea44a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசூம்",
+  "paragraphs": [
+    {
+      "id": "eastons/hashum#p1-01a34238",
+      "text": "செல்வம் நிறைந்தவன்."
+    },
+    {
+      "id": "eastons/hashum#p2-f9cf336a",
+      "text": "(1.) எஸ்றா 2:19; நெகேமியா 7:22."
+    },
+    {
+      "id": "eastons/hashum#p3-04159a88",
+      "text": "(2.) எஸ்றா நியாயப்பிரமாணத்தை வாசித்தபோது அவனுடைய இடதுபக்கத்தில் நின்றவன் (நெகேமியா 8:4)."
+    }
+  ]
+}

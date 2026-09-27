@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bench",
+  "lang": "ta",
+  "source_hash": "3b04d1c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெஞ்சு",
+  "paragraphs": [
+    {
+      "id": "eastons/bench#p1-3b04d1c2",
+      "text": "தீரு நகரத்தின் கப்பலின் மேல்தளம், எசேக்கியேலினால் (27:6) பட்டாணிமரத்தால் மூடப்பட்டதாக விவரிக்கப்பட்டுள்ளது."
+    }
+  ]
+}

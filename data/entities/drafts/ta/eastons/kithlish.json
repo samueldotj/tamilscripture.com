@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kithlish",
+  "lang": "ta",
+  "source_hash": "eac74afa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்லீஷ்",
+  "paragraphs": [
+    {
+      "id": "eastons/kithlish#p1-eac74afa",
+      "text": "மனுஷனுடைய சுவர், யூதாவின் சமபூமியிலுள்ள ஒரு பட்டணம் (யோசுவா 15:40). இது ஜெலாமே என்பதோடு அடையாளம் காணப்பட்டுள்ளது."
+    }
+  ]
+}

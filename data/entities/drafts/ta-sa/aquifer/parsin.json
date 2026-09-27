@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/parsin",
+  "lang": "ta",
+  "source_hash": "3e3b686d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சின்",
+  "paragraphs": [
+    {
+      "id": "aquifer/parsin#p1-3e3b686d",
+      "text": "\"பிரிக்கப்பட்டது\" என்று விளக்கப்படும் ஒரு அராமிக் மொழிச் சொல் (தானியேல் 5:25, 28). மெனே, மெனே, தெக்கேல், உப்பார்சின் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phaltiel",
+  "lang": "ta",
+  "source_hash": "8805c466",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்தியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/phaltiel#p1-8805c466",
+      "text": "பல்தி என்பதே இதுவும் (2 சாமுவேல் 5:15)."
+    }
+  ]
+}

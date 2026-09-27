@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shemaah",
+  "lang": "ta",
+  "source_hash": "b437bda4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேமா",
+  "paragraphs": [
+    {
+      "id": "smiths/shemaah#p1-b437bda4",
+      "text": "(வதந்தி), கிபியா ஊரைச்சேர்ந்த ஒரு பென்யமீனியன், அகியேசர் மற்றும் யோவாஸ் என்பவர்களின் தகப்பன். (1 நாளாகமம் 12:3) (கி.மு. 1054க்கு முன்.)"
+    }
+  ]
+}

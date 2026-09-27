@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahio",
+  "lang": "ta",
+  "source_hash": "5e11cf90",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியோ",
+  "paragraphs": [
+    {
+      "id": "smiths/ahio#p1-5e11cf90",
+      "text": "(சகோதரத்துவமான)."
+    }
+  ]
+}

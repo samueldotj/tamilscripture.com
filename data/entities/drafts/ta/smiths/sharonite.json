@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sharonite",
+  "lang": "ta",
+  "source_hash": "1f082602",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரோனியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/sharonite#p1-1f082602",
+      "text": "(சாரோனுக்குச் சொந்தமானவன்), சாரோன் சமபூமியில் அரச மந்தைகளை மேற்பார்வை செய்த சித்ராய், (1 நாளாகமம் 27:29) வேதத்தில் குறிப்பிடப்பட்டுள்ள ஒரே சாரோனியன் ஆவான்."
+    }
+  ]
+}

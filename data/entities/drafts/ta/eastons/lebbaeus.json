@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lebbaeus",
+  "lang": "ta",
+  "source_hash": "c4d347d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லெபேயு",
+  "paragraphs": [
+    {
+      "id": "eastons/lebbaeus#p1-c4d347d3",
+      "text": "தைரியசாலி, பன்னிரண்டு பேரில் ஒருவனான யூதாஸின் (யூதா) மறுபெயர் (மத்தேயு 10:3), இவனை ததேயு என்றும் அழைத்தார்கள்; இவனை நம்முடைய கர்த்தருடைய சகோதரனான யூதாஸோடு குழப்பிக் கொள்ளக்கூடாது."
+    }
+  ]
+}

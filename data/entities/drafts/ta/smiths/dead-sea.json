@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dead-sea",
+  "lang": "ta",
+  "source_hash": "1f7b8065",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சவக்கடல்",
+  "paragraphs": [
+    {
+      "id": "smiths/dead-sea#p1-1f7b8065",
+      "text": "இந்தப் பெயர் வேதத்தில் எங்கும் வரவில்லை, மேலும் இது கிறிஸ்துவுக்குப் பின் இரண்டாம் நூற்றாண்டுவரை இருந்திருக்கவில்லை என்று தெரிகிறது. [உப்புக்கடல் என்பதைக் காண்க, THE SALT]"
+    }
+  ]
+}

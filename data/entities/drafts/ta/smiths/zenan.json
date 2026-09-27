@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zenan",
+  "lang": "ta",
+  "source_hash": "1bf723b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேனான்",
+  "paragraphs": [
+    {
+      "id": "smiths/zenan#p1-1bf723b8",
+      "text": "(குறிக்கப்பட்டது), யூதாவின் பங்கிலுள்ள ஒரு பட்டணம், அது ஷெபேலா என்ற பிரதேசத்தில் இருந்தது. (யோசுவா 15:37) இது சாயனானுடன் ஒன்றாக இருக்கலாம். (மீகா 1:11)"
+    }
+  ]
+}

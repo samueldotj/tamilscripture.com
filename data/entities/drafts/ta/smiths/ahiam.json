@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahiam",
+  "lang": "ta",
+  "source_hash": "fed1e0af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahiam#p1-fed1e0af",
+      "text": "ஆராரியனாகிய சாராரின் மகன் (அல்லது சாக்காரின் மகன்) (1 நாளாகமம் 11:35), தாவீதின் முப்பது பராக்கிரமசாலிகளில் ஒருவன். (2 சாமுவேல் 23:33) (கி.மு. 1050.)"
+    }
+  ]
+}

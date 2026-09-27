@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nod",
+  "lang": "ta",
+  "source_hash": "74262d9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/nod#p1-74262d9b",
+      "text": "(ஓட்டம்), ஆபேலைக் கொலைசெய்த பின்பு காயீன் தப்பியோடிய தேசம். [காயீன் காண்க]"
+    }
+  ]
+}

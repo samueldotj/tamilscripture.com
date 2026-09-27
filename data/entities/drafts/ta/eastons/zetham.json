@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zetham",
+  "lang": "ta",
+  "source_hash": "53cde56e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேத்தாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/zetham#p1-53cde56e",
+      "text": "ஒலிவமரம் நடுகிறவன், ஒரு லேவியன் (1 நாளாகமம் 23:8)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/salmone",
+  "lang": "ta",
+  "source_hash": "0272e02a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்மோனே",
+  "paragraphs": [
+    {
+      "id": "smiths/salmone#p1-0272e02a",
+      "text": "(உடுத்தப்பட்டது), கிரேத்தாதீவின் கிழக்குப் புள்ளி. (அப்போஸ்தலருடைய நடபடிகள் 27:7) இது ஒரு துணிச்சலான முனைத்தரையாகும், மேலும் நீண்ட தூரத்திற்கும் தெரியும்."
+    }
+  ]
+}

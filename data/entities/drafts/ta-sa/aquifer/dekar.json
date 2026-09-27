@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dekar",
+  "lang": "ta",
+  "source_hash": "1b4d1d20",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேக்கார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dekar#p1-cd887c06",
+      "text": "1 இராஜாக்கள் 4:9-ல் தேக்கேர் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துப்பெயர்ப்பு. தேக்கேர் சாலொமோனுடைய அதிகாரிகளில் ஒருவனாக இருந்தான்."
+    },
+    {
+      "id": "aquifer/dekar#p2-a18d84eb",
+      "text": "தேக்கேரின் மகன் என்பதைக் காண்க."
+    }
+  ]
+}

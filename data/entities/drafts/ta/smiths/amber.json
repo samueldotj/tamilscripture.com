@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amber",
+  "lang": "ta",
+  "source_hash": "7bff4809",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்பர்",
+  "paragraphs": [
+    {
+      "id": "smiths/amber#p1-7bff4809",
+      "text": "(எபிரெய chasmal) இது எசேக்கியேல் 1:4,27; 8:2 என்ற இடங்களில் மட்டும் காணப்படுகிறது. எபிரெய வார்த்தையாகிய chasmal ஒரு உலோகத்தைக் குறிக்கிறதென்றும், அம்பர் என்று அழைக்கப்படும் புதைபடிவ பசையை அல்ல என்றும் பொதுவாகக் கருதப்படுகிறது."
+    }
+  ]
+}

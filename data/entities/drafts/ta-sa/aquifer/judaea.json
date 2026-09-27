@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/judaea",
+  "lang": "ta",
+  "source_hash": "aef83c7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூதேயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/judaea#p1-aef5a51d",
+      "text": "யூதேயா என்பது யூதேயா (பூர்வ இஸ்ரவேலின் தென் பகுதியில் இருந்த ஒரு பிரதேசம்) என்பதற்கான வேறு எழுத்துவடிவம் ஆகும்."
+    },
+    {
+      "id": "aquifer/judaea#p2-b5c6ea2e",
+      "text": "யூதேயா, யூதேயாவினர் என்பதைக் காண்க."
+    }
+  ]
+}

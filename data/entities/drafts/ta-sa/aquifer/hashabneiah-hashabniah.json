@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hashabneiah-hashabniah",
+  "lang": "ta",
+  "source_hash": "f99c7723",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசாப்நெயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hashabneiah-hashabniah#p1-f94c138c",
+      "text": "1. அத்தூஸின் தகப்பன். நெகேமியாவின் நாட்களில் எருசலேமின் மதில்களைப் பழுதுபார்த்துக் கட்டும் பணியில் அத்தூஸ் உதவினான் (நெகேமியா 3:10)."
+    },
+    {
+      "id": "aquifer/hashabneiah-hashabniah#p2-d1ad136c",
+      "text": "2. உடன்படிக்கை கையொப்பமிடும் விழாவில் மற்றவர்களுடன் இணைந்து விண்ணப்பம் செய்த லேவியன் (நெகேமியா 9:5)."
+    }
+  ]
+}

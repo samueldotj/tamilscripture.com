@@ -1,0 +1,18 @@
+{
+  "id": "smiths/demetrius",
+  "lang": "ta",
+  "source_hash": "edda155d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெமேத்திரியு",
+  "paragraphs": [
+    {
+      "id": "smiths/demetrius#p1-edda155d",
+      "text": "(சீரிஸ் தேவதைக்கு உரியவன்)."
+    }
+  ]
+}

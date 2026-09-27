@@ -1,0 +1,18 @@
+{
+  "id": "eastons/adoram",
+  "lang": "ta",
+  "source_hash": "a492124b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதோராம்",
+  "paragraphs": [
+    {
+      "id": "eastons/adoram#p1-a492124b",
+      "text": "அதோனிராம் காண்க."
+    }
+  ]
+}

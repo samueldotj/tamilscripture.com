@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bani",
+  "lang": "ta",
+  "source_hash": "7114dcfb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானி",
+  "paragraphs": [
+    {
+      "id": "smiths/bani#p1-7114dcfb",
+      "text": "(கட்டப்பட்டது)."
+    }
+  ]
+}

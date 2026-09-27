@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tiras",
+  "lang": "ta",
+  "source_hash": "5bb8807b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீராஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/tiras#p1-5bb8807b",
+      "text": "யாப்பேத்தின் மகன்களில் இளையவன் (ஆதியாகமம் 10:2; 1 நாளாகமம் 1:5)."
+    }
+  ]
+}

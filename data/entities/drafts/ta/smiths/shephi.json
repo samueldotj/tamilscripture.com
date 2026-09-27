@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shephi",
+  "lang": "ta",
+  "source_hash": "2fa86c85",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செப்பி",
+  "paragraphs": [
+    {
+      "id": "smiths/shephi#p1-2fa86c85",
+      "text": "(வெறுமை), சேயீரின் மகன்களில் ஒருவனாகிய சோபாலின் மகன் (1 நாளாகமம் 1:40). செப்போ என்றும் அழைக்கப்பட்டான் (ஆதியாகமம் 36:23)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hazeroth",
+  "lang": "ta",
+  "source_hash": "aec7dfde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆஸ்ரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/hazeroth#p1-aec7dfde",
+      "text": "(கிராமங்கள்), (எண்ணாகமம் 11:35; 12:16; 33:17; 1:1) வனாந்திரத்தில் இஸ்ரவேலரின் ஒரு தங்குமிடம், மற்றும் சீனாய்க்கு வடகிழக்கே நாற்பது மைல் தூரத்தில் இருக்கும் அரபிக் ஆயீன் ஹுதேரா என்ற இடமாக இருக்கலாம் என அறியப்படுகிறது."
+    }
+  ]
+}

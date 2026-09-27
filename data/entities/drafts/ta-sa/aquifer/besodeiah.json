@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/besodeiah",
+  "lang": "ta",
+  "source_hash": "09705c1e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேசோதியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/besodeiah#p1-09705c1e",
+      "text": "மெசுல்லாமின் தகப்பன். பாபிலோனில் இருந்த சிறையிருப்புக்குப் பின்பு, யொயதாவுடன் சேர்ந்து மெசுல்லாம் எருசலேமின் மதிலின் ஒரு பகுதியைத் திருத்திக் கட்டுவதற்கு உதவினார் (நெகேமியா 3:6)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nahaliel",
+  "lang": "ta",
+  "source_hash": "f7a2e3b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகாலியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nahaliel#p1-f4d18573",
+      "text": "இஸ்ரவேலர்கள் வனாந்திர பயணத்தின்போது தங்கிய ஒரு தற்காலிக முகாமிடம். இது மோவாபின் பிரதேசத்தில், மாத்தனாவுக்கும் பாமோத்திற்கும் இடையே, சவக்கடலின் கிழக்கே இருந்தது (எண்ணாகமம் 21:19)."
+    },
+    {
+      "id": "aquifer/nahaliel#p2-5fd904a3",
+      "text": "வனாந்திர பயணங்கள் என்பதையும் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kelub",
+  "lang": "ta",
+  "source_hash": "c74eae8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேலூப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kelub#p1-94f7e5c8",
+      "text": "கேலூப் என்ற பெயருக்கான வேறொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kelub#p2-9061c7d7",
+      "text": "கேலூப்பின் விவரத்தைக் காண்க."
+    }
+  ]
+}

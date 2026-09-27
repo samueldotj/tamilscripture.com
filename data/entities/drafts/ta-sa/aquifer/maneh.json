@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maneh",
+  "lang": "ta",
+  "source_hash": "332836af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனே",
+  "paragraphs": [
+    {
+      "id": "aquifer/maneh#p1-0a4d56e3",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பு எசேக்கியேல் 45:12-இல் ஒரு நிறையளவைக் குறிக்கும் மினா என்ற வார்த்தையை மனே என்று மொழிபெயர்த்துள்ளது."
+    },
+    {
+      "id": "aquifer/maneh#p2-db3bfff6",
+      "text": "நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

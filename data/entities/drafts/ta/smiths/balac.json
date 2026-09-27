@@ -1,0 +1,18 @@
+{
+  "id": "smiths/balac",
+  "lang": "ta",
+  "source_hash": "82b0a8dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலேயாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/balac#p1-82b0a8dd",
+      "text": "(வெளிப்படுத்தின விசேஷம் 2:14) [பிலேயாம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/en-eglaim",
+  "lang": "ta",
+  "source_hash": "a5750efe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எனெக்லாயிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/en-eglaim#p1-a5750efe",
+      "text": "இரண்டு கன்றுக்குட்டிகளின் ஊற்று, எசேக்கியேல் 47:10 இல் மட்டும் குறிப்பிடப்பட்ட ஒரு இடம். சவக்கடலுக்கு அருகில் எங்கோ இருந்தது."
+    }
+  ]
+}

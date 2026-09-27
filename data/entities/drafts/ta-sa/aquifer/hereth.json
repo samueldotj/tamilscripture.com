@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hereth",
+  "lang": "ta",
+  "source_hash": "b431cb25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hereth#p1-b431cb25",
+      "text": "ஆரேத் என்பது யூதா தேசத்திலுள்ள ஒரு காட்டுப் பகுதியாகும், அங்கே தாவீதும் அவனுடைய மனிதர்களும் சவுல் ராஜாவினிடமிருந்து ஓடிப்போகும்போது சிலகாலம் ஒளிந்திருந்தனர் (1 சாமுவேல் 22:5)."
+    }
+  ]
+}

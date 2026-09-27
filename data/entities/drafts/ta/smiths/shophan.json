@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shophan",
+  "lang": "ta",
+  "source_hash": "78de3e59",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபான்",
+  "paragraphs": [
+    {
+      "id": "smiths/shophan#p1-78de3e59",
+      "text": "(வெறுமை), யோர்தானுக்கு கிழக்கே இருந்த பாதுகாக்கப்பட்ட பட்டணங்களில் ஒன்று, இது காத் கோத்திரத்தினரால் கைப்பற்றப்பட்டு மீண்டும் கட்டப்பட்டது. (எண்ணாகமம் 32:35)"
+    }
+  ]
+}

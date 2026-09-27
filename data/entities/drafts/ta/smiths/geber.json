@@ -1,0 +1,18 @@
+{
+  "id": "smiths/geber",
+  "lang": "ta",
+  "source_hash": "0102a09c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேபேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/geber#p1-0102a09c",
+      "text": "(ஆண்மையுள்ளவன்)."
+    }
+  ]
+}

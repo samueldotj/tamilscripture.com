@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eunice",
+  "lang": "ta",
+  "source_hash": "ac3c7700",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஐனிக்கேயாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/eunice#p1-ac3c7700",
+      "text": "(நல்ல வெற்றி), தீமோத்தேயுவின் தாய். (2 தீமோத்தேயு 1:5) (கி.பி. 47க்கு முன்பு.)"
+    }
+  ]
+}

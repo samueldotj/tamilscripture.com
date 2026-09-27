@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashub",
+  "lang": "ta",
+  "source_hash": "77c32638",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/hashub#p1-77c32638",
+      "text": "(புத்திக்கூர்மையுள்ளவன்)."
+    }
+  ]
+}

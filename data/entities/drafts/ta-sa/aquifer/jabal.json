@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jabal",
+  "lang": "ta",
+  "source_hash": "acd450a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாபால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jabal#p1-acd450a1",
+      "text": "காயீனுடைய சந்ததியான் மற்றும் லாமேக்குக்கும் ஆதாளுக்கும் பிறந்த முதற்குமாரன். அவன் கூடாரங்களில் குடியிருந்த நாடோடி மக்களுக்குத் தகப்பனானான் (ஆதியாகமம் 4:20)."
+    }
+  ]
+}

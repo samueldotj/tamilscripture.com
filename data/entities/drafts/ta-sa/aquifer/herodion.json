@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/herodion",
+  "lang": "ta",
+  "source_hash": "25179b80",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரோதியோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/herodion#p1-25179b80",
+      "text": "ஏரோதியோன் யூதன் வம்சாவளியைச் சேர்ந்த ஒரு கிறிஸ்தவனாக இருந்தான்; பவுல் தன் ரோமருக்கு எழுதிய நிருபத்தின் முடிவில் இவனுக்கு வாழ்த்துதல் அனுப்பினான் (ரோமர் 16:11)."
+    }
+  ]
+}

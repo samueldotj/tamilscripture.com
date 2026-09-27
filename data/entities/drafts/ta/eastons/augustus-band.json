@@ -1,0 +1,18 @@
+{
+  "id": "eastons/augustus-band",
+  "lang": "ta",
+  "source_hash": "7f75f129",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகுஸ்து படை",
+  "paragraphs": [
+    {
+      "id": "eastons/augustus-band#p1-7f75f129",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 27:1: எழுத்துப்படியாக, Sebaste என்னும், Augusta என்பதன் கிரேக்கு வடிவம், அகுஸ்து சீசரின் நினைவாக செசரியாவிற்குக் கொடுக்கப்பட்ட பெயர்). இந்த “படை” அல்லது கூட்டுப்படை செசரியாவைச் சேர்ந்த சமாரிய வீரர்களைக் கொண்டிருந்திருக்கலாம்."
+    }
+  ]
+}

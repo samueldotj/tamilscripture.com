@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mount-gaash",
+  "lang": "ta",
+  "source_hash": "7b91f164",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காயாஸ் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-gaash#p1-8a7be023",
+      "text": "காயாஸ் மலை என்பது, யோசுவா அடக்கம் செய்யப்பட்ட இடத்திற்கு அருகில் இருந்ததாக அறியப்படும் ஒரு குன்று அல்லது மலையாகும் (யோசுவா 24:30; நியாயாதிபதிகள் 2:9)."
+    },
+    {
+      "id": "aquifer/mount-gaash#p2-7e80172f",
+      "text": "காயாஸ் என்பதைக் காண்க."
+    }
+  ]
+}

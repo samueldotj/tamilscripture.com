@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shomer",
+  "lang": "ta",
+  "source_hash": "31ea5139",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோமேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/shomer#p1-45136de8",
+      "text": "காவற்காரன்."
+    },
+    {
+      "id": "eastons/shomer#p2-25a18147",
+      "text": "(1.) யோவாஸைக் கொன்ற யோசபாத்தின் தாய் (2 இராஜாக்கள் 12:21); மோவாபியப் பெண்ணான சிமிரீத் என்றும் அழைக்கப்படுகிறாள் (2 நாளாகமம் 24:26)."
+    },
+    {
+      "id": "eastons/shomer#p3-a93c2fa2",
+      "text": "(2.) ஆசேருடைய மனிதன் ஒருவன் (1 நாளாகமம் 7:32); சாமேர் என்றும் அழைக்கப்படுகிறான் (34)."
+    }
+  ]
+}

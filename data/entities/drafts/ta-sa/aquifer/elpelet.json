@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elpelet",
+  "lang": "ta",
+  "source_hash": "be46e7f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பெலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elpelet#p1-80802816",
+      "text": "1 நாளாகமம் 14:5-ல் எல்பெலேத் என்பது தாவீதின் மகனாகிய எலிப்பேலேத் என்பவரின் மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/elpelet#p2-a176f867",
+      "text": "எலிப்பெலேத் #3-ஐ காண்க."
+    }
+  ]
+}

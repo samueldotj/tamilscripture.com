@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nophah",
+  "lang": "ta",
+  "source_hash": "c49119bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோப்பா",
+  "paragraphs": [
+    {
+      "id": "eastons/nophah#p1-c49119bf",
+      "text": "ஊதுதல் என்பது பொருள்; இது எமோரியர்களால் ஆக்கிரமிக்கப்பட்ட மோவாபின் ஒரு பட்டணம் (எண்ணாகமம் 21:30)."
+    }
+  ]
+}

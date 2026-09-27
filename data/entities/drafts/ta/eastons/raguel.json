@@ -1,0 +1,18 @@
+{
+  "id": "eastons/raguel",
+  "lang": "ta",
+  "source_hash": "2b91bac6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெகுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/raguel#p1-2b91bac6",
+      "text": "தேவனுடைய நண்பன், (எண்.10:29)=ரெகுவேல் (காண்க), யாத்.2:18, மோசேயின் மாமனார், மற்றும் ஒருவேளை எத்திரோவுடன் (காண்க) ஒருவனாக இருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "eastons/kemuel",
+  "lang": "ta",
+  "source_hash": "f4862f3c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேமுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/kemuel#p1-ec55ef3b",
+      "text": "தேவனுடைய உதவியாளன், அல்லது தேவனுடைய சபை என்று பொருள்."
+    },
+    {
+      "id": "eastons/kemuel#p2-e38ed6e6",
+      "text": "(1.) நாகோரின் மூன்றாம் மகன் (ஆதியாகமம் 22:21)."
+    },
+    {
+      "id": "eastons/kemuel#p3-a1ba6f3b",
+      "text": "(2.) சிப்தானின் மகன், கானானின் தேசத்தைப் பங்கிடும்படி எப்பிராயீம் கோத்திரத்திற்காக நியமிக்கப்பட்டவன் (எண்ணாகமம் 34:24)."
+    },
+    {
+      "id": "eastons/kemuel#p4-c992c4a2",
+      "text": "(3.) ஒரு லேவியன் (1 நாளாகமம் 27:17)."
+    }
+  ]
+}

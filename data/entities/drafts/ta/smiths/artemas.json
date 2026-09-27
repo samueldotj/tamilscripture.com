@@ -1,0 +1,18 @@
+{
+  "id": "smiths/artemas",
+  "lang": "ta",
+  "source_hash": "0a20cfb9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்த்தெமா",
+  "paragraphs": [
+    {
+      "id": "smiths/artemas#p1-0a20cfb9",
+      "text": "(ஆர்த்தமிசின் அன்பளிப்பு), பவுலின் தோழன். (தீத்து 3:12) பாரம்பரியத்தின்படி இவன் லீஸ்திராவின் கண்காணியானவன் ஆயிருந்தான்."
+    }
+  ]
+}

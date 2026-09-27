@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jerah",
+  "lang": "ta",
+  "source_hash": "23974eaf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யேராகு",
+  "paragraphs": [
+    {
+      "id": "smiths/jerah#p1-23974eaf",
+      "text": "(சந்திரன்), யொக்தானின் மகன்களில் வரிசையில் நான்காமவன், (ஆதியாகமம் 10:26; 1 நாளாகமம் 1:20) மற்றும் தென் அரேபியாவின் ஒரு கோத்திரத்தின் மூலவன்."
+    }
+  ]
+}

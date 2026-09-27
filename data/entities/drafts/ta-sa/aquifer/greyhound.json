@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/greyhound",
+  "lang": "ta",
+  "source_hash": "ffc55738",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வேட்டை நாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/greyhound#p1-fb71eba8",
+      "text": "நீதிமொழிகள் 30:31-ல், கிங் யாக்கோபு மொழிபெயர்ப்பு துல்லியமாக அறியப்படாத ஒரு மிருகத்திற்கு “கிரேஹவுண்ட்” என்ற பதத்தைப் பயன்படுத்துகிறது. பெரியன் ஸ்டாண்டர்ட் பைபிள் எபிரெய சொற்றொடரை “பெருமையாய் நடக்கிற சேவல்” என்று மொழிபெயர்க்கிறது."
+    },
+    {
+      "id": "aquifer/greyhound#p2-e8eb4f0e",
+      "text": "Fowl என்பதைக் காண்க."
+    }
+  ]
+}

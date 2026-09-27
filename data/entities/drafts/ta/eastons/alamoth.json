@@ -1,0 +1,18 @@
+{
+  "id": "eastons/alamoth",
+  "lang": "ta",
+  "source_hash": "d974afdf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/alamoth#p1-d974afdf",
+      "text": "கன்னியர், ஒரு இசைச் சொல் (1 நாளாகமம் 15:20), இந்தத் தலைப்பையுடைய சங்கீதம் (சங்கீதம் 46) உயர்ஸ்வரத்திலான அல்லது பெண்குரல்களால் பாடப்படவேண்டியது என்பதைக் குறிக்கிறது."
+    }
+  ]
+}

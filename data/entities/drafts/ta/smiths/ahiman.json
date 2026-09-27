@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahiman",
+  "lang": "ta",
+  "source_hash": "22298170",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகீமான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahiman#p1-22298170",
+      "text": "(வலது கையின் சகோதரன்)."
+    }
+  ]
+}

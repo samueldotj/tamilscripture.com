@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pinon",
+  "lang": "ta",
+  "source_hash": "93041e80",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பினோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pinon#p1-93041e80",
+      "text": "கோத்திரத்தலைவனாகிய ஏசாவின் சந்ததியில் உள்ள பிரபுக்களில் ஒருவன் (ஆதியாகமம் 36:41; 1 நாளாகமம் 1:52)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zemira",
+  "lang": "ta",
+  "source_hash": "9d3e07a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமீரா",
+  "paragraphs": [
+    {
+      "id": "eastons/zemira#p1-9d3e07a2",
+      "text": "திராட்சைத் தோட்டக்காரன், ஒரு பென்யமீனியன்; பெகேரின் மகன்களில் ஒருவன் (1 நாளாகமம் 7:8)."
+    }
+  ]
+}

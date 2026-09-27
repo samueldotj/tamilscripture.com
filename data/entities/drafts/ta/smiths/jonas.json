@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jonas",
+  "lang": "ta",
+  "source_hash": "1c35bac2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோனாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/jonas#p1-1c35bac2",
+      "text": "(புறா)."
+    }
+  ]
+}

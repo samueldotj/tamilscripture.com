@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dabareh",
+  "lang": "ta",
+  "source_hash": "9f5f13af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/dabareh#p1-9f5f13af",
+      "text": "(மேய்ச்சல் நிலம்), (யோசுவா 21:28) அல்லது தாபராத், செபுலோனின் எல்லையிலுள்ள ஒரு பட்டணம். (யோசுவா 19:12) தெபாரியே என்ற பெயரின் கீழ் அது இன்றும் தாபோரின் மேற்குத் அடிவாரத்தில் இருக்கிறது."
+    }
+  ]
+}

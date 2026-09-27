@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/harodite",
+  "lang": "ta",
+  "source_hash": "b1c360f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோதியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/harodite#p1-c8777200",
+      "text": "தாவீது ராஜாவின் பராக்கிரமசாலிகளில் இருவராகிய சம்மா மற்றும் எலிக்கா ஆகியோருக்குக் கொடுக்கப்பட்ட பட்டப்பெயர் (2 சாமுவேல் 23:25). இந்தப் பெயர், அவர்கள் ஆரோத் என்னும் இடத்தைச் சேர்ந்தவர்கள் என்பதைக் குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/harodite#p2-7de2e6c2",
+      "text": "ஆரோத் #2 காண்க."
+    }
+  ]
+}

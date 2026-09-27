@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hananiel",
+  "lang": "ta",
+  "source_hash": "c672dd21",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/hananiel#p1-c672dd21",
+      "text": "(தேவனுடைய தயவு), எபோதின் மகனும் மனாசேயின் பிரபுவும். (எண்ணாகமம் 34:23)"
+    }
+  ]
+}

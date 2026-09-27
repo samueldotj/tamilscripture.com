@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arbathite",
+  "lang": "ta",
+  "source_hash": "c71aaa96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்பாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/arbathite#p1-c71aaa96",
+      "text": "அரபா அல்லது கோர் என்னும் இடத்தைச் சேர்ந்தவன். [அரபா காண்க] அர்பாத்தியனாகிய அபிஅல்பொன் தாவீதின் பராக்கிரமசாலிகளில் ஒருவனாக இருந்தான். (2 சாமுவேல் 23:31; 1 நாளாகமம் 11:32)"
+    }
+  ]
+}

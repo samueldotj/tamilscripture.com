@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ardon",
+  "lang": "ta",
+  "source_hash": "832c9c9f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்தோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ardon#p1-832c9c9f",
+      "text": "(தப்பியோடினவன்) எஸ்ரோனின் மகனாகிய காலேபுக்கு அவனுடைய மனைவி அசுபாளின்மூலம் பிறந்த மகன். (1 நாளாகமம் 2:18)"
+    }
+  ]
+}

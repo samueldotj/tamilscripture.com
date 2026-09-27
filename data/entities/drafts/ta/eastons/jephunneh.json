@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jephunneh",
+  "lang": "ta",
+  "source_hash": "1dbaf7d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்புனே",
+  "paragraphs": [
+    {
+      "id": "eastons/jephunneh#p1-f30193a0",
+      "text": "வேகமானவன், அல்லது பார்க்கிறவன்."
+    },
+    {
+      "id": "eastons/jephunneh#p2-b82d1396",
+      "text": "(1.) கானானை உசாவுவதில் யோசுவாவின் தோழனாயிருந்த காலேபின் தகப்பன் (எண்ணாகமம் 13:6), ஒரு கேனாசியன் (யோசுவா 14:14)."
+    },
+    {
+      "id": "eastons/jephunneh#p3-e66e70ab",
+      "text": "(2.) ஆசேரின் சந்ததியில் ஒருவன் (1 நாளாகமம் 7:38)."
+    }
+  ]
+}

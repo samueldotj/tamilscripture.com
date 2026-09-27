@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gederoth",
+  "lang": "ta",
+  "source_hash": "cc1da743",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதெரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/gederoth#p1-cc1da743",
+      "text": "(மந்தைத் தொழுவங்கள்), யூதாவின் சமபூமியில் இருந்த ஒரு பட்டணம். (யோசுவா 15:41; 2 நாளாகமம் 28:18)"
+    }
+  ]
+}

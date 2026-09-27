@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bithron",
+  "lang": "ta",
+  "source_hash": "e10d30ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பித்ரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/bithron#p1-e10d30ba",
+      "text": "மிகச் சரியாகச் சொன்னால் பித்ரோன் (பாறையான ஒரு பள்ளத்தாக்கு அல்லது கணவாய்), யோர்தான் பள்ளத்தாக்கில் நதிக்குக் கிழக்குப் புறத்தில் இருந்த ஒரு இடம், நிச்சயமாக ஒரு பிரதேசம். (2 சாமுவேல் 2:29)"
+    }
+  ]
+}

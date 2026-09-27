@@ -1,0 +1,18 @@
+{
+  "id": "eastons/diblaim",
+  "lang": "ta",
+  "source_hash": "1c75abe4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திப்லாயிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/diblaim#p1-1c75abe4",
+      "text": "இரட்டைப் அப்பங்கள், ஓசியாவின் மனைவியாகிய கோமருடைய தாய் (ஓசியா 1:3)."
+    }
+  ]
+}

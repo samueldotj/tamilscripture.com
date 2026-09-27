@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hul",
+  "lang": "ta",
+  "source_hash": "6fc5f2a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hul#p1-6fc5f2a1",
+      "text": "கூல் என்பவன் ஆராமுடைய மகனும், சேமுடைய பேரனும் ஆவான் (ஆதியாகமம் 10:23; 1 நாளாகமம் 1:17)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chanaan",
+  "lang": "ta",
+  "source_hash": "9b43e46b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கானான் (Chanaan)",
+  "paragraphs": [
+    {
+      "id": "aquifer/chanaan#p1-1723a1af",
+      "text": "அப்போஸ்தலருடைய நடபடிகள் 7:11 மற்றும் 13:19-ல் யாக்கோபு அரசர் மொழிபெயர்ப்பில் கானான் என்பதற்குப் பயன்படுத்தப்பட்ட எழுத்து வடிவம்."
+    },
+    {
+      "id": "aquifer/chanaan#p2-55facae5",
+      "text": "கானான், கானானியர் என்பதைக் காண்க."
+    }
+  ]
+}

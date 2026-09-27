@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shallun",
+  "lang": "ta",
+  "source_hash": "17347ed2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்லூன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shallun#p1-17347ed2",
+      "text": "(பரிகாரம்), கொல்லோசேயின் மகனும், மிஸ்பாவின் மாகாணத்தை ஆட்சி செய்பவனும் ஆவான். (நெகேமியா 3:15)"
+    }
+  ]
+}

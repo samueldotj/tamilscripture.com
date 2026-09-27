@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/malcam",
+  "lang": "ta",
+  "source_hash": "dd9449b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்காம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/malcam#p1-dd9449b8",
+      "text": "மல்காம் பென்யமீன் கோத்திரத்தைச் சேர்ந்த சகராயீமின் மகன் ஆவான் (1 நாளாகமம் 8:9)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/padan-aram",
+  "lang": "ta",
+  "source_hash": "6e93fa27",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பதான் அராம்",
+  "paragraphs": [
+    {
+      "id": "eastons/padan-aram#p1-6e93fa27",
+      "text": "ஆராமின் சமபூமி, அல்லது மேட்டு நிலங்களின் சமபூமி, (ஆதியாகமம் 25:20; 28:2, 5-7; 31:18, முதலியன), இது வழக்கமாக ஆரானைச் சுற்றிலும் இருந்த மெசொப்பொத்தாமியாவின் (காண்க) பகுதியாகக் கருதப்படுகிறது."
+    }
+  ]
+}

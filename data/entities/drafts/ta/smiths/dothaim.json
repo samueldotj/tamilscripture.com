@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dothaim",
+  "lang": "ta",
+  "source_hash": "d5b9eda4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/dothaim#p1-d5b9eda4",
+      "text": "[தோத்தான்]"
+    }
+  ]
+}

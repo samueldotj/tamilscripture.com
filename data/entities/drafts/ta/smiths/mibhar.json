@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mibhar",
+  "lang": "ta",
+  "source_hash": "adc3fb90",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிப்கார்",
+  "paragraphs": [
+    {
+      "id": "smiths/mibhar#p1-adc3fb90",
+      "text": "(தெரிந்தெடுக்கப்பட்டவன்), 1 நாளாகமம் 11:38 இல் கொடுக்கப்பட்டுள்ள பட்டியலில் காணப்படும் தாவீதின் பராக்கிரமசாலிகளில் ஒருவன்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/galaad",
+  "lang": "ta",
+  "source_hash": "54cb8798",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/galaad#p1-54cb8798",
+      "text": "கீலேயாத் என்ற வார்த்தையின் கிரேக்க வடிவம்."
+    }
+  ]
+}

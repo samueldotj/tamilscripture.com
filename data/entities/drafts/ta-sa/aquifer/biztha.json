@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/biztha",
+  "lang": "ta",
+  "source_hash": "b9bbcbf3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிஸ்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/biztha#p1-b9bbcbf3",
+      "text": "ராஜா அகாஸ்வேரு தன்னுடைய மதுவெறி விருந்திற்கு ராணியாகிய வஸ்தியைக் கொண்டுவரும்படி கட்டளையிட்ட ஏழு பிரதானிகளில் ஒருவன் (எஸ்தர் 1:10)."
+    }
+  ]
+}

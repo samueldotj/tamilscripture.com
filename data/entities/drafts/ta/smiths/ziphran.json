@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ziphran",
+  "lang": "ta",
+  "source_hash": "5bdcd899",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிப்ரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ziphran#p1-5bdcd899",
+      "text": "(நறுமணம்), மோசேயினால் குறிப்பிடப்பட்ட வாக்குத்தத்த தேசத்தின் வடபுறத்து எல்லையில் நியமிக்கப்பட்ட ஒரு இடம். (எண்ணாகமம் 34:9)"
+    }
+  ]
+}

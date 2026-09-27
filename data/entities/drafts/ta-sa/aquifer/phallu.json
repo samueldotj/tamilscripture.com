@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/phallu",
+  "lang": "ta",
+  "source_hash": "27e5617e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்லூ",
+  "paragraphs": [
+    {
+      "id": "aquifer/phallu#p1-e0a52541",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவம், இது ரூபனுடைய இரண்டாம் மகனான பல்லூவைக் குறிக்கும் (ஆதியாகமம் 46:9)."
+    },
+    {
+      "id": "aquifer/phallu#p2-687187cd",
+      "text": "பல்லூ, பல்லூவியர்கள் என்பதைக் காண்க."
+    }
+  ]
+}

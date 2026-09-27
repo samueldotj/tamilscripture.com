@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nephusim",
+  "lang": "ta",
+  "source_hash": "bfa25703",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெபுசீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/nephusim#p1-bfa25703",
+      "text": "(விரிவாக்கங்கள்), நெபிஷேசீம் என்னும் பெயருக்கு ஒத்தது; கெசெனியஸின் கருத்துப்படி இதுவே அதன் சரியான வடிவமாகும். (எஸ்றா 2:50)"
+    }
+  ]
+}

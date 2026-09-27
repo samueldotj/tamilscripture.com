@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joanna",
+  "lang": "ta",
+  "source_hash": "bf4d0815",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவன்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/joanna#p1-bf4d0815",
+      "text": "(தேவனுடைய கிருபை அல்லது வரம்) (திருத்தப்பட்ட மொழிபெயர்ப்பில் யோவன்னான் என்று உள்ளது)."
+    }
+  ]
+}

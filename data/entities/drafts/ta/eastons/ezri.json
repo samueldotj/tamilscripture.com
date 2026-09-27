@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ezri",
+  "lang": "ta",
+  "source_hash": "fac56b72",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரி",
+  "paragraphs": [
+    {
+      "id": "eastons/ezri#p1-fac56b72",
+      "text": "யெகோவாவின் உதவி, கேலூப்பின் மகன். இவன் தாவீதின் காலத்தில் “நிலத்தைப் பயிரிட வயல்வெளியின் வேலை செய்கிறவர்களின்மேல்” விசாரிப்புச் செய்தான் (1 நாளாகமம் 27:26)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/minni",
+  "lang": "ta",
+  "source_hash": "c1d15c12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மின்னி",
+  "paragraphs": [
+    {
+      "id": "smiths/minni#p1-c1d15c12",
+      "text": "(பிரிவு), (எரேமியா 51:27) ஆரமீனியாவின் ஒரு பகுதியாக ஏற்கனவே குறிப்பிடப்பட்டுள்ளது. [ஆரமீனியா]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mattatha",
+  "lang": "ta",
+  "source_hash": "0525c05c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தாத்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mattatha#p1-f93fab11",
+      "text": "லூக்கா 3:31-ன்படி இயேசுவின் ஒரு முற்பிதா."
+    },
+    {
+      "id": "aquifer/mattatha#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்ச வரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

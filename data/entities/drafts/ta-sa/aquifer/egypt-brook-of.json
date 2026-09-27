@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/egypt-brook-of",
+  "lang": "ta",
+  "source_hash": "b5d9e578",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகிப்தின் நதி",
+  "paragraphs": [
+    {
+      "id": "aquifer/egypt-brook-of#p1-b5d9e578",
+      "text": "எகிப்தின் நதி என்பதைக் காண்க."
+    }
+  ]
+}

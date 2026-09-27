@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/arrow",
+  "lang": "ta",
+  "source_hash": "8a9373fe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/arrow#p1-20fcb930",
+      "text": "கூரிய முனையுடைய மெலிந்த, நேரான குச்சி, வில்லில் இருந்து எய்யும்படி வடிவமைக்கப்பட்டது. அம்புகள் வேட்டைக்கும் யுத்தத்திற்கும் அடிக்கடி பயன்படுத்தப்படுகின்றன."
+    },
+    {
+      "id": "aquifer/arrow#p2-8d8ede60",
+      "text": "கவசமும் ஆயுதங்களும் என்பதைக் காண்க."
+    }
+  ]
+}

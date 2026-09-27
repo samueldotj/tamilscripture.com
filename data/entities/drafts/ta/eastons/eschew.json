@@ -1,0 +1,18 @@
+{
+  "id": "eastons/eschew",
+  "lang": "ta",
+  "source_hash": "1ba311f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விலகுதல்",
+  "paragraphs": [
+    {
+      "id": "eastons/eschew#p1-1ba311f6",
+      "text": "பழைய பிரெஞ்சு வார்த்தையான eschever என்பதிலிருந்து வந்தது, அதாவது “ஓடிவிலகுதல்” (யோபு 1:1, 8; 2:3; 1 பேதுரு 3:11)."
+    }
+  ]
+}

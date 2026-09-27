@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/naamah-place",
+  "lang": "ta",
+  "source_hash": "9933116e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாமா (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/naamah-place#p1-9933116e",
+      "text": "யூதாவின் கோத்திரத்திற்கு சொத்துரிமையாகக் கொடுக்கப்பட்ட செபேலாவிலிருந்த 16 பட்டணங்களில் ஒன்றாக, பெத்டாகோனுக்கும் மக்கெதாவிற்கும் இடையில் குறிப்பிடப்பட்டுள்ளது (யோசுவா 15:41)."
+    }
+  ]
+}

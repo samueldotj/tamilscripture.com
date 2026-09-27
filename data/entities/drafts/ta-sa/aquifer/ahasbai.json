@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahasbai",
+  "lang": "ta",
+  "source_hash": "a6abe1eb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகஸ்பாயிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahasbai#p1-a6abe1eb",
+      "text": "எலிப்பேலேத்தின் தகப்பன். எலிப்பேலேத் மாகா நகரத்தில் வாழ்ந்தான், மற்றும் \"முப்பது பேர்\" என்று அறியப்பட்ட தாவீதின் பராக்கிரமசாலிகளில் ஒரு போர்வீரனாக இருந்தான் (2 சாமுவேல் 23:34)."
+    }
+  ]
+}

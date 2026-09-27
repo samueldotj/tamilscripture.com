@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tikvath",
+  "lang": "ta",
+  "source_hash": "001cf628",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திக்வாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/tikvath#p1-001cf628",
+      "text": "(கூட்டம்) (சரியாக டொகேஹாத் அல்லது டொக்காத்), சல்லூமின் தகப்பனாகிய திக்வா. (2 நாளாகமம் 34:22)"
+    }
+  ]
+}

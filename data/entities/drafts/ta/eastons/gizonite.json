@@ -1,0 +1,18 @@
+{
+  "id": "eastons/gizonite",
+  "lang": "ta",
+  "source_hash": "2cc51373",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீசோனியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/gizonite#p1-2cc51373",
+      "text": "யூதாவின் மலைநாட்டில் எங்கோ இருந்த கீசோ என்னும் இடத்தில் வசித்த ஆசேம் என்பவனுக்குக் கொடுக்கப்பட்ட பெயர் (1 நாளாகமம் 11:34; 2 சாமுவேல் 23:32, 34)."
+    }
+  ]
+}

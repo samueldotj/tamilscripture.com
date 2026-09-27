@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ahira",
+  "lang": "ta",
+  "source_hash": "5755ffa3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகீரா",
+  "paragraphs": [
+    {
+      "id": "eastons/ahira#p1-5755ffa3",
+      "text": "தீமையின் சகோதரன் = துர்ப்பாக்கியமுள்ளவன், அல்லது என் சகோதரன் நண்பன், எகிப்திலிருந்து வெளியேறும்போது நப்தலி கோத்திரத்தின் தலைவனாக இருந்தவன் (எண்ணாகமம் 1:15; 2:29)."
+    }
+  ]
+}

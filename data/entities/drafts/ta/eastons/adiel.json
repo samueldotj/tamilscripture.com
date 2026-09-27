@@ -1,0 +1,30 @@
+{
+  "id": "eastons/adiel",
+  "lang": "ta",
+  "source_hash": "64a7513f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/adiel#p1-e04272c8",
+      "text": "தேவனுடைய அலங்காரம்."
+    },
+    {
+      "id": "eastons/adiel#p2-b77bcb3e",
+      "text": "(1.) தாவீது மற்றும் சாலொமோனின் காலத்தில் பொக்கிஷக்காரனாக இருந்த அஸ்மாவேத்தின் தகப்பன் (1 நாளாகமம் 27:25)."
+    },
+    {
+      "id": "eastons/adiel#p3-eecd35a1",
+      "text": "(2.) சிமியோன் கோத்திரத்தைச் சேர்ந்த ஒரு குடும்பத் தலைவன் (1 நாளாகமம் 4:36)."
+    },
+    {
+      "id": "eastons/adiel#p4-5b782119",
+      "text": "(3.) ஒரு ஆசாரியன் (1 நாளாகமம் 9:12)."
+    }
+  ]
+}

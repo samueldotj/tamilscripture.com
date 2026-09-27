@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bether",
+  "lang": "ta",
+  "source_hash": "07543587",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்தேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bether#p1-07543587",
+      "text": "(ஆழம்), மலைகள். (சாலொமோனின் உன்னதப்பாட்டு 2:17) இங்கே எந்த மலைகள் குறிப்பிடப்படுகின்றன என்பதைத் தெரிந்துகொள்ள நமக்கு எந்த ஆதாரமும் இல்லை."
+    }
+  ]
+}

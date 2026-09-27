@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hakkatan",
+  "lang": "ta",
+  "source_hash": "bb6a891a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்தான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hakkatan#p1-bb6a891a",
+      "text": "அஸ்காதின் குடும்பத்தைச் சேர்ந்தவன், யோகனானின் தகப்பன், மற்றும் எஸ்றாவுடன் எருசலேமுக்குத் திரும்பிவந்த சிறைப்பிடிக்கப்பட்டவர்களில் ஒருவன் (எஸ்றா 8:12)."
+    }
+  ]
+}

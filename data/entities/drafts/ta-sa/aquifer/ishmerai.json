@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ishmerai",
+  "lang": "ta",
+  "source_hash": "669dd26a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்மெராயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishmerai#p1-669dd26a",
+      "text": "இஸ்மெராயி எல்பாலின் மகனும் பென்யமீன் கோத்திரத்தில் ஒரு தலைவனுமாக இருந்தான் (1 நாளாகமம் 8:18)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/caterpillar",
+  "lang": "ta",
+  "source_hash": "09ba4664",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கம்பளிப்பூச்சி",
+  "paragraphs": [
+    {
+      "id": "smiths/caterpillar#p1-09ba4664",
+      "text": "இது எபிரெய வார்த்தையான chasil (பச்சைக்கிளி) மற்றும் yelek என்பவற்றுக்கு அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) கொடுக்கப்பட்டுள்ள தமிலாக்கமாகும்."
+    }
+  ]
+}

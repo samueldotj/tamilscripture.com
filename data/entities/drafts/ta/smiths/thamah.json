@@ -1,0 +1,18 @@
+{
+  "id": "smiths/thamah",
+  "lang": "ta",
+  "source_hash": "089aac8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாமா",
+  "paragraphs": [
+    {
+      "id": "smiths/thamah#p1-089aac8a",
+      "text": "(மகள்). “தாமாவின் வம்சத்தார்” என்பவர் செருபாபேலுடன் திரும்பிவந்த நேதினீமியரின் ஒரு குடும்பமாக இருந்தனர். (எஸ்றா 2:53)"
+    }
+  ]
+}

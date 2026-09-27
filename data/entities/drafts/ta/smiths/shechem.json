@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shechem",
+  "lang": "ta",
+  "source_hash": "99a5bd2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shechem#p1-99a5bd2b",
+      "text": "(முதுகு அல்லது தோள்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hadattah",
+  "lang": "ta",
+  "source_hash": "b636a72a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹதத்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hadattah#p1-1dc635fe",
+      "text": "யோசுவா 15:25-ல் இடப்பெயரான ஆத்சோர் அதாத்தா என்பதன் ஒரு பகுதிக்காக கிங் யாக்கோபு மொழிபெயர்ப்பில் தவறாகப் பயன்படுத்தப்பட்ட பெயர் ஹதத்தா."
+    },
+    {
+      "id": "aquifer/hadattah#p2-ac4f7f2d",
+      "text": "ஆத்சோர் அதாத்தா-வைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shaaph",
+  "lang": "ta",
+  "source_hash": "21f823cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாகாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/shaaph#p1-21f823cd",
+      "text": "(பிரிவு)."
+    }
+  ]
+}

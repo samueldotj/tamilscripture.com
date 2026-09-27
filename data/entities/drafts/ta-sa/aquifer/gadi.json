@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gadi",
+  "lang": "ta",
+  "source_hash": "53b466f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காதி",
+  "paragraphs": [
+    {
+      "id": "aquifer/gadi#p1-53b466f7",
+      "text": "மெனாகேமின் தகப்பன். மெனாகேம் கலகம் செய்து, இஸ்ரவேலின் ராஜாவாகிய சல்லூமைக் கொன்று, தானே ராஜாவாக அரியணையில் அமர்ந்தான் (2 இராஜாக்கள் 15:14, 17)."
+    }
+  ]
+}

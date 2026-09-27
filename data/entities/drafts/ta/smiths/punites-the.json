@@ -1,0 +1,18 @@
+{
+  "id": "smiths/punites-the",
+  "lang": "ta",
+  "source_hash": "e7134b65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவாவியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/punites-the#p1-e7134b65",
+      "text": "இசக்காரின் மகனாகிய பூவா, அல்லது புவாவின் சந்ததியார். (எண்ணாகமம் 26:23)"
+    }
+  ]
+}

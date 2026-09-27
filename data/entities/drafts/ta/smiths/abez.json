@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abez",
+  "lang": "ta",
+  "source_hash": "7b624d19",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/abez#p1-7b624d19",
+      "text": "(உயர்ந்தது), யோசுவாவின் புத்தகத்தில் மட்டும் (யோசுவா 19:20), கிஷியோனுக்கும் ரெமேத்திற்கும் இடையே குறிப்பிடப்பட்டுள்ள, இசக்காருடைய பங்கிலிருந்த ஒரு பட்டணம்."
+    }
+  ]
+}

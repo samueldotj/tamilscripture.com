@@ -1,0 +1,18 @@
+{
+  "id": "smiths/andronicus",
+  "lang": "ta",
+  "source_hash": "e8da9228",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்றோனீக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/andronicus#p1-e8da9228",
+      "text": "(மனித-வெற்றியாளன்)."
+    }
+  ]
+}

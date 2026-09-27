@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/immersion",
+  "lang": "ta",
+  "source_hash": "7df16fe6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நீரில் மூழ்கடித்தல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/immersion#p1-ce746fca",
+      "text": "நீரில் மூழ்கடித்தல் என்பது ஞானஸ்நானம் கொடுக்கும் முறையில் ஒன்றாகும், இதில் ஞானஸ்நானம் கொடுக்கிறவர் ஞானஸ்நானம் பெறுகிறவரை முழுவதுமாக தண்ணீருக்குள் மூழ்கடிக்கிறார்."
+    },
+    {
+      "id": "aquifer/immersion#p2-4cef24e9",
+      "text": "ஞானஸ்நானம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kelaiah",
+  "lang": "ta",
+  "source_hash": "b0c965e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/kelaiah#p1-b0c965e1",
+      "text": "(யெகோவாவின் வேகமான தூதன்) = கெலிதா. (எஸ்றா 10:23)"
+    }
+  ]
+}

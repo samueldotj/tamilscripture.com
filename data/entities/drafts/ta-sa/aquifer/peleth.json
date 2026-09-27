@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/peleth",
+  "lang": "ta",
+  "source_hash": "6b1a9dd8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/peleth#p1-5131f4d9",
+      "text": "ரூபன் கோத்திரத்தைச் சேர்ந்த ஒரு மனிதன், இவன் ஓனின் தகப்பன் (எண்ணாகமம் 16:1)."
+    },
+    {
+      "id": "aquifer/peleth#p2-32bce348",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த ஒரு மனிதன், இவன் யோனத்தானுடைய மகன். இவன் யெர்மெயேலின் வம்சத்தைச் சேர்ந்தவனாக இருந்தான் (1 நாளாகமம் 2:33)."
+    }
+  ]
+}

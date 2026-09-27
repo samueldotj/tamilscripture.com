@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jekabzeel",
+  "lang": "ta",
+  "source_hash": "1ba878f2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகாப்செயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jekabzeel#p1-1ba878f2",
+      "text": "(தேவன் சேர்க்கிறது) என்பது, யூதாவின் தென் எல்லையில் இருந்த மிகத் தூரமான பட்டணமாகிய கப்செயேல் என்ற பெயரின் நீட்டிக்கப்பட்ட வடிவமாகும். (நெகேமியா 11:25)"
+    }
+  ]
+}

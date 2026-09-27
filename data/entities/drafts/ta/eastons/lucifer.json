@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lucifer",
+  "lang": "ta",
+  "source_hash": "1355ad4f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூசிபர்",
+  "paragraphs": [
+    {
+      "id": "eastons/lucifer#p1-1355ad4f",
+      "text": "பிரகாசமான நட்சத்திரம், இது பாபிலோனின் ராஜாவுக்குக் கொடுக்கப்பட்ட ஒரு பட்டப்பெயராகும் (ஏசாயா 14:12), அது அவனுடைய மகிமையைக் குறிக்கிறது."
+    }
+  ]
+}

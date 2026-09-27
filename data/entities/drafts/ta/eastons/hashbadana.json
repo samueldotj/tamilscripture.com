@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hashbadana",
+  "lang": "ta",
+  "source_hash": "d4add768",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹஷ்பதானா",
+  "paragraphs": [
+    {
+      "id": "eastons/hashbadana#p1-d4add768",
+      "text": "நியாயம் விசாரிக்கும்போதுள்ள சிந்தனை என்று பொருள்; எஸ்றா நியாயப்பிரமாணத்தை வாசித்தபோது அவனுடைய இடதுபக்கத்தில் நின்றான் (நெகேமியா 8:4)."
+    }
+  ]
+}

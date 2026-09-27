@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/palal",
+  "lang": "ta",
+  "source_hash": "90cf281b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/palal#p1-90cf281b",
+      "text": "பாலால் ஊசாயின் மகன், நெகேமியாவின் நாட்களில் எருசலேமின் மதிலைத் திரும்பக் கட்டுவதற்கு உதவினவன் (நெகேமியா 3:25)."
+    }
+  ]
+}

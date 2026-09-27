@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bozrah",
+  "lang": "ta",
+  "source_hash": "c10341df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போஸ்றா",
+  "paragraphs": [
+    {
+      "id": "smiths/bozrah#p1-c10341df",
+      "text": "(அரண்)."
+    }
+  ]
+}

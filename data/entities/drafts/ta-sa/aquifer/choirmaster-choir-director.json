@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/choirmaster-choir-director",
+  "lang": "ta",
+  "source_hash": "67580478",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாடகர் தலைவன், பாடகர் குழு இயக்குனர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/choirmaster-choir-director#p1-2146a0ac",
+      "text": "பாடகர் தலைவன் அல்லது பாடகர் குழு இயக்குனர் என்பவர் இசையையும் பாடுதலையும் நடத்துகின்ற ஒரு நபர். இந்தத் தலைப்பு 55 சங்கீதங்களின் தலைப்புகளில் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/choirmaster-choir-director#p2-34b46bff",
+      "text": "இசை; இசைக்கருவிகள் என்பவற்றைக் காண்க."
+    }
+  ]
+}

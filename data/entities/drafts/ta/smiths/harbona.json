@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harbona",
+  "lang": "ta",
+  "source_hash": "c2bf5bad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அற்போனா",
+  "paragraphs": [
+    {
+      "id": "smiths/harbona#p1-c2bf5bad",
+      "text": "(கழுதை ஓட்டுபவன்) அகாஸ்வேரு ராஜாவுக்குப் பணிவிடை செய்த ஏழு பிரதானிகள் அல்லது பிரதிநிதிகளில் மூன்றாமவன். (எஸ்தர் 1:10) (கி.மு. 483-475.)"
+    }
+  ]
+}

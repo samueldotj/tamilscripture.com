@@ -1,0 +1,30 @@
+{
+  "id": "eastons/azaziah",
+  "lang": "ta",
+  "source_hash": "b8bfae2e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசசியா",
+  "paragraphs": [
+    {
+      "id": "eastons/azaziah#p1-7534fc77",
+      "text": "யெகோவா பலப்படுத்தினவர்."
+    },
+    {
+      "id": "eastons/azaziah#p2-64768e71",
+      "text": "(1.) ஆலயத்தில் வாத்தியம் வாசித்த லேவியரில் ஒருவன் (1 நாளாகமம் 15:21)."
+    },
+    {
+      "id": "eastons/azaziah#p3-d231a0b9",
+      "text": "(2.) எப்பிராயீமியர்மேல் அதிகாரியாக வைக்கப்பட்ட ஓசெயாவின் தகப்பன் (1 நாளாகமம் 27:20)."
+    },
+    {
+      "id": "eastons/azaziah#p4-5fc70d52",
+      "text": "(3.) ஆலயத்தின் காணிக்கைகளுக்குப் பொறுப்பாளராக இருந்தவன் (2 நாளாகமம் 31:13)."
+    }
+  ]
+}

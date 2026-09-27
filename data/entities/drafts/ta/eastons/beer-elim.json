@@ -1,0 +1,18 @@
+{
+  "id": "eastons/beer-elim",
+  "lang": "ta",
+  "source_hash": "f5f021fd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரேலீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/beer-elim#p1-f5f021fd",
+      "text": "வலியவர்களின் கிணறு, இஸ்ரவேலின் தலைவர்கள் ஒரு கிணறு துரப்பிய இடமான பேயேருக்கு அளிக்கப்பட்ட பெயராக இருக்கலாம் (எண்ணாகமம் 21:16; ஏசாயா 15:8)."
+    }
+  ]
+}

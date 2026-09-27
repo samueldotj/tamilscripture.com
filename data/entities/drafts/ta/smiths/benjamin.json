@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benjamin",
+  "lang": "ta",
+  "source_hash": "4924f338",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்யமீன்",
+  "paragraphs": [
+    {
+      "id": "smiths/benjamin#p1-4924f338",
+      "text": "(வலதுகையின் மகன், பாக்கியசாலி)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kittim",
+  "lang": "ta",
+  "source_hash": "4823e9e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/kittim#p1-4823e9e3",
+      "text": "(ஆதியாகமம் 10:4). (சித்தீம் என்பதைக் காண்க.)"
+    }
+  ]
+}

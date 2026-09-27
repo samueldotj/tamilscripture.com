@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ethkazin",
+  "lang": "ta",
+  "source_hash": "6c7dde97",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தாகாத்சீன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ethkazin#p1-6c7dde97",
+      "text": "இத்தாகாத்சீன் என்பது செபுலோன் கோத்திரத்தின் கிழக்கு எல்லையிலிருந்த ஊர்களில் ஒன்றாகும் (யோசுவா 19:13)."
+    }
+  ]
+}

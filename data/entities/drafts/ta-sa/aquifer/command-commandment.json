@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/command-commandment",
+  "lang": "ta",
+  "source_hash": "49171333",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கற்பனை",
+  "paragraphs": [
+    {
+      "id": "aquifer/command-commandment#p1-b1b1bd03",
+      "text": "கற்பனை என்பது தேவன் தம்முடைய மக்களுக்குக் கொடுக்கும் ஒரு போதனை அல்லது உத்தரவாகும். வேதத்தில், தேவனுடைய கற்பனைகள் அவருடைய திட்டத்தை வெளிப்படுத்துகின்றன, மற்றும் மக்கள் அவரோடும் ஒருவரோடொருவரும் எவ்வாறு உறவில் வாழவேண்டும் என்பதைக் காண்பிக்கின்றன."
+    },
+    {
+      "id": "aquifer/command-commandment#p2-e84a8737",
+      "text": "காண்க: புதிய கற்பனை; பத்துக் கற்பனைகள்."
+    }
+  ]
+}

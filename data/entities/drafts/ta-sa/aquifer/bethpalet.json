@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethpalet",
+  "lang": "ta",
+  "source_hash": "c1d1cb35",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்பாலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethpalet#p1-02146188",
+      "text": "யாக்கோபு அரசரின் மொழிபெயர்ப்பில் யோசுவா 15:27-ல் காணப்படும் யூதாவின் ஒரு பட்டணமாகிய பெத்பெலேத் என்பதற்குரிய எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/bethpalet#p2-82f51805",
+      "text": "பெத்பெலேத் என்பதைக் காண்க."
+    }
+  ]
+}

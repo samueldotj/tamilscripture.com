@@ -1,0 +1,26 @@
+{
+  "id": "eastons/sachar",
+  "lang": "ta",
+  "source_hash": "7a45db98",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாக்கார்",
+  "paragraphs": [
+    {
+      "id": "eastons/sachar#p1-4e054311",
+      "text": "கூலி."
+    },
+    {
+      "id": "eastons/sachar#p2-cd8c0c3d",
+      "text": "(1.) தாவீதின் பராக்கிரமசாலிகளில் ஒருவன் (1 நாளாகமம் 11:35); சாராரென்றும் அழைக்கப்பட்டான் (2 சாமுவேல் 23:33)."
+    },
+    {
+      "id": "eastons/sachar#p3-f415ffac",
+      "text": "(2.) கித்தியனாகிய ஓபேத்ஏதோமின் மகன், ஆலயத்தின் வாசல் காவலாளன் (1 நாளாகமம் 26:4)."
+    }
+  ]
+}

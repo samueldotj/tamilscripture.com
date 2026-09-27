@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ephraimite",
+  "lang": "ta",
+  "source_hash": "c2d6d222",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பிராயீமர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ephraimite#p1-f42da7e5",
+      "text": "எப்பிராயீமர் என்பவர் எப்பிராயீமின் கோத்திரப் பகுதியைச் சேர்ந்தவர்."
+    },
+    {
+      "id": "aquifer/ephraimite#p2-0266c4f7",
+      "text": "எப்பிராயீம் (இடம்) #1 காண்க."
+    }
+  ]
+}

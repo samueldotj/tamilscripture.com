@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ater",
+  "lang": "ta",
+  "source_hash": "799d9778",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ater#p1-799d9778",
+      "text": "(அடைக்கப்பட்டவன்)."
+    }
+  ]
+}

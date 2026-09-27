@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maharai",
+  "lang": "ta",
+  "source_hash": "55d8e287",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகராயி",
+  "paragraphs": [
+    {
+      "id": "smiths/maharai#p1-55d8e287",
+      "text": "(வேகமானவன்), (2 சாமுவேல் 23:28; 1 நாளாகமம் 11:30; 27:13) யூதா கோத்திரத்திற்குரிய நெத்தோபாத்தியனாகிய குடியிருப்பாளன், தாவீதின் தளபதிகளில் ஒருவன்."
+    }
+  ]
+}

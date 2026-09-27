@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jibsam",
+  "lang": "ta",
+  "source_hash": "d655d99a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யிப்சாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jibsam#p1-836b0a09",
+      "text": "1 நாளாகமம் 7:2-ல் தோலாவின் மகனாகிய இப்சாம் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் யிப்சாம் என்று அமைந்துள்ளது."
+    },
+    {
+      "id": "aquifer/jibsam#p2-5c85732c",
+      "text": "இப்சாம் என்பதைக் காண்க."
+    }
+  ]
+}

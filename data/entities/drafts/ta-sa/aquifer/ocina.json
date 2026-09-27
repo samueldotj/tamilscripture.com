@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ocina",
+  "lang": "ta",
+  "source_hash": "a1cb2985",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒக்கீனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ocina#p1-a1cb2985",
+      "text": "தீருவின் தெற்கே கடற்கரையில் இருந்த ஒரு பட்டணம் (யூதித் 2:28). இதன் இருப்பிடம் நிச்சயமற்றது, மேலும் இது சண்டாலியம் மற்றும் அக்கோ ஆகிய இரண்டோடும் அடையாளம் காணப்பட்டுள்ளது."
+    }
+  ]
+}

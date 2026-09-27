@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jabneel",
+  "lang": "ta",
+  "source_hash": "ea587330",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாப்னியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jabneel#p1-ea587330",
+      "text": "(தேவனுடைய கட்டிடம்)."
+    }
+  ]
+}

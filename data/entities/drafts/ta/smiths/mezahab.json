@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mezahab",
+  "lang": "ta",
+  "source_hash": "798881cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேசகா",
+  "paragraphs": [
+    {
+      "id": "smiths/mezahab#p1-798881cf",
+      "text": "(பொருள்: பொன்னின் தண்ணீர்கள்), மத்ரேத்தின் தகப்பனும், ஏதோமின் கடைசி அரசனாகிய ஆதார் அல்லது ஆதாதின் மனைவியாகிய மெகேதபேலின் தாத்தாவுமாவான். (ஆதியாகமம் 36:39; 1 நாளாகமம் 1:50)"
+    }
+  ]
+}

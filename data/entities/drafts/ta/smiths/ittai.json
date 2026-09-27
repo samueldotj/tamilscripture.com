@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ittai",
+  "lang": "ta",
+  "source_hash": "fefbef8c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/ittai#p1-fefbef8c",
+      "text": "(கர்த்தருடன்)."
+    }
+  ]
+}

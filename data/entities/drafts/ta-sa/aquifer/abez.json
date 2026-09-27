@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/abez",
+  "lang": "ta",
+  "source_hash": "c391e7d9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபெத்ஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abez#p1-c30d7f0b",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் அபெத்ஸ் என்பதன் எழுத்துவடிவமே இது, இது யோசுவா 19:20-இல் குறிப்பிடப்பட்டுள்ளபடி இசக்காரின் நாட்டிலுள்ள ஒரு இடமாகும்."
+    },
+    {
+      "id": "aquifer/abez#p2-957275a4",
+      "text": "அபெத்ஸ் என்பதைக் காண்க."
+    }
+  ]
+}

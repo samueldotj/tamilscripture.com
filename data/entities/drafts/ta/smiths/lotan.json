@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lotan",
+  "lang": "ta",
+  "source_hash": "68af3e34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோத்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/lotan#p1-68af3e34",
+      "text": "(மூடுதல்), ஓரியனான சேயீரின் மூத்த மகன். (ஆதியாகமம் 36:20,22,29; 1 நாளாகமம் 1:38,39)"
+    }
+  ]
+}

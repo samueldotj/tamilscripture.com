@@ -1,0 +1,18 @@
+{
+  "id": "smiths/balamo",
+  "lang": "ta",
+  "source_hash": "53f09d8f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலமோ",
+  "paragraphs": [
+    {
+      "id": "smiths/balamo#p1-53f09d8f",
+      "text": "[பாகால், புவியியல் எண். 6]"
+    }
+  ]
+}

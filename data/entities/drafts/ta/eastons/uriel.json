@@ -1,0 +1,30 @@
+{
+  "id": "eastons/uriel",
+  "lang": "ta",
+  "source_hash": "ee151dbd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊரியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/uriel#p1-5ca9fe99",
+      "text": "தேவன் என் ஒளி."
+    },
+    {
+      "id": "eastons/uriel#p2-9e9cca01",
+      "text": "(1.) கோகாத்தின் குடும்பத்தைச் சேர்ந்த ஒரு லேவியன் (1 நாளாகமம் 6:24)."
+    },
+    {
+      "id": "eastons/uriel#p3-3d86a4ca",
+      "text": "(2.) பெட்டியை எருசலேமுக்குக் கொண்டுவரும்போது கோகாத்தியரின் பிரபுவாக இருந்தவன் (1 நாளாகமம் 15:5, 11)."
+    },
+    {
+      "id": "eastons/uriel#p4-451bbdab",
+      "text": "(3.) ரெகொபெயாமின் மனைவிகளில் ஒருத்தியும் அபியாவின் தாயுமான மிகாயாளின் தகப்பன் (2 நாளாகமம் 13:2)."
+    }
+  ]
+}

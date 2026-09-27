@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jada",
+  "lang": "ta",
+  "source_hash": "4bd8d98d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jada#p1-4bd8d98d",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த ஓனாமின் மகன் (1 நாளாகமம் 2:28, 32)."
+    }
+  ]
+}

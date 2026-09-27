@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/daughter",
+  "lang": "ta",
+  "source_hash": "33ae619d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/daughter#p1-0dd443ee",
+      "text": "மகள் என்பவள் ஒரு குடும்பத்திலுள்ள பெண் பிள்ளையாவாள்."
+    },
+    {
+      "id": "aquifer/daughter#p2-ba5a7b37",
+      "text": "குடும்ப வாழ்க்கையும் உறவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

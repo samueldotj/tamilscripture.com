@@ -1,0 +1,18 @@
+{
+  "id": "eastons/timnite",
+  "lang": "ta",
+  "source_hash": "34776d75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திம்னாத்தான்",
+  "paragraphs": [
+    {
+      "id": "eastons/timnite#p1-34776d75",
+      "text": "திம்னாத்தானைச் சேர்ந்தவன். சிம்சோனின் மாமனார் இப்படி அழைக்கப்படுகிறார் (நியாயாதிபதிகள் 15:6)."
+    }
+  ]
+}

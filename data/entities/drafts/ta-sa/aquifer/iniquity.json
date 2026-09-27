@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/iniquity",
+  "lang": "ta",
+  "source_hash": "281c0a4d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்கிரமம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/iniquity#p1-38008472",
+      "text": "அக்கிரமம் என்பது வேதத்தில் கடுமையான தவறு அல்லது பாவத்தை விவரிக்கப் பயன்படுத்தப்படும் ஒரு சொல்லாகும்."
+    },
+    {
+      "id": "aquifer/iniquity#p2-f3bfea21",
+      "text": "சீன் என்பதைக் காண்க."
+    }
+  ]
+}

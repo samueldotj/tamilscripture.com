@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sceva",
+  "lang": "ta",
+  "source_hash": "24d6e429",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஸ்கேவா",
+  "paragraphs": [
+    {
+      "id": "smiths/sceva#p1-24d6e429",
+      "text": "பவுல் அந்த நகரத்திற்கு இரண்டாம் முறை வந்த காலத்தில் எபேசுவிலே குடியிருந்த ஒரு யூதன். (அப்போஸ்தலருடைய நடபடிகள் 19:14-16) (கி.பி. 52.)"
+    }
+  ]
+}

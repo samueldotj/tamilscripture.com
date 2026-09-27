@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harphite",
+  "lang": "ta",
+  "source_hash": "3448061b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரீப்பியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/harphite#p1-3448061b",
+      "text": "(ஆரீப் ஊரானவன்), சிக்லாகில் தாவீதிடம் சேர்ந்த கோராகியரில் ஒருவனான செபத்தியாவின் பட்டப்பெயர். (1 நாளாகமம் 12:5) (கி.மு. 1064.)"
+    }
+  ]
+}

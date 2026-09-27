@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mibhar",
+  "lang": "ta",
+  "source_hash": "28931a9a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிப்கார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mibhar#p1-28931a9a",
+      "text": "மிப்கார் தாவீதின் பராக்கிரமசாலிகளில் ஒருவனாக இருந்தான், அவர்கள் “முப்பது பேர்” என்று அறியப்பட்டனர் (1 நாளாகமம் 11:38)."
+    }
+  ]
+}

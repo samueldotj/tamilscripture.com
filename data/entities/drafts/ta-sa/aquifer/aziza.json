@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aziza",
+  "lang": "ta",
+  "source_hash": "fd98dc26",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசிசா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aziza#p1-fd98dc26",
+      "text": "சத்தூவின் சந்ததியார். எஸ்றாவின் கட்டளைக்குக் கீழ்ப்படிந்து தன் யூதப்பெண் அல்லாத மனைவியை விவாகரத்து செய்தான் (எஸ்றா 10:27)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arnan",
+  "lang": "ta",
+  "source_hash": "13afc5fb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்னான்",
+  "paragraphs": [
+    {
+      "id": "smiths/arnan#p1-13afc5fb",
+      "text": "பெறப்பட்ட எபிரெய பாடத்தில், செருபாபேலின் வம்சவரலாற்றில் “அர்னானின் மகன்கள்” குறிப்பிடப்பட்டுள்ளனர். (1 நாளாகமம் 3:21)"
+    }
+  ]
+}

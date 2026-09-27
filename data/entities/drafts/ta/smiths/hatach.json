@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hatach",
+  "lang": "ta",
+  "source_hash": "21caec92",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்தாகு",
+  "paragraphs": [
+    {
+      "id": "smiths/hatach#p1-21caec92",
+      "text": "(உண்மையானவன்), அகாஸ்வேருவின் அரண்மனையிலிருந்த பிரதானிகளில் ஒருவன். (எஸ்தர் 4:5,6,9,10) (கி.மு. 474.)"
+    }
+  ]
+}

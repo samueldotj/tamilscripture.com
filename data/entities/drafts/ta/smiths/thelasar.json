@@ -1,0 +1,18 @@
+{
+  "id": "smiths/thelasar",
+  "lang": "ta",
+  "source_hash": "81f2d05b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெலாசார்",
+  "paragraphs": [
+    {
+      "id": "smiths/thelasar#p1-81f2d05b",
+      "text": "[தெலாசார் காண்க]"
+    }
+  ]
+}

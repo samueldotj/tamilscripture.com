@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shaveh-kiriathaim",
+  "lang": "ta",
+  "source_hash": "eb3f4e8f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஷாவே-கிரியாதாயீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/shaveh-kiriathaim#p1-eb3f4e8f",
+      "text": "கெதர்லாகோமேர் மூல குடிகளாகிய ஏமியரை முறியடித்த கிரியாதாயீமின் சமபூமி (ஆதியாகமம் 14:5). இப்பொழுது இது மோவாபின் தேசத்தில், தீபோனுக்கு வடக்கே உள்ள குரெயாத் என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

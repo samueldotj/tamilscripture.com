@@ -1,0 +1,18 @@
+{
+  "id": "eastons/paltiel",
+  "lang": "ta",
+  "source_hash": "1a0d8f86",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்த்தியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/paltiel#p1-1a0d8f86",
+      "text": "தேவனுடைய விடுதலை, “நாட்டைச் சுதந்தரமாகப் பங்கிட” உதவிய இசக்காரின் பிரபு (எண்ணாகமம் 34:26)."
+    }
+  ]
+}

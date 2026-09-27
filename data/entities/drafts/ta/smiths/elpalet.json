@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elpalet",
+  "lang": "ta",
+  "source_hash": "e4e964db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பெலேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/elpalet#p1-e4e964db",
+      "text": "(தேவன் அவனுடைய விடுதலை), எருசலேமில் பிறந்த தாவீதின் மகன்களில் ஒருவன். (1 நாளாகமம் 14:5)"
+    }
+  ]
+}

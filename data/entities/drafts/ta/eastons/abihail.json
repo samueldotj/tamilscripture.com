@@ -1,0 +1,38 @@
+{
+  "id": "eastons/abihail",
+  "lang": "ta",
+  "source_hash": "584f2867",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியாயேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/abihail#p1-479efb6b",
+      "text": "பலத்தின் தகப்பன்."
+    },
+    {
+      "id": "eastons/abihail#p2-f06f892d",
+      "text": "(1.) எண்ணாகமம் 3:35."
+    },
+    {
+      "id": "eastons/abihail#p3-dff3b0ff",
+      "text": "(2.) 1 நாளாகமம் 2:29."
+    },
+    {
+      "id": "eastons/abihail#p4-c3bd370f",
+      "text": "(3.) 1 நாளாகமம் 5:14."
+    },
+    {
+      "id": "eastons/abihail#p5-3709b18e",
+      "text": "(4.) ரெகொபெயாம் ராஜாவின் இரண்டாம் மனைவி (2 நாளாகமம் 11:18), தாவீதின் மூத்த சகோதரனாகிய எலியாபின் வழித்தோன்றல்."
+    },
+    {
+      "id": "eastons/abihail#p6-d2d367bb",
+      "text": "(5.) எஸ்தரின் தகப்பனும் மொர்தெகாயின் சிறிய தகப்பனும் (எஸ்தர் 2:15)."
+    }
+  ]
+}

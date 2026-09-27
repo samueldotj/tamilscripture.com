@@ -1,0 +1,18 @@
+{
+  "id": "smiths/massah",
+  "lang": "ta",
+  "source_hash": "ffb585dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாசா",
+  "paragraphs": [
+    {
+      "id": "smiths/massah#p1-ffb585dd",
+      "text": "(சோதனை), இஸ்ரவேலர்கள் யெகோவாவை சோதித்த இடத்திற்கு இடப்பட்ட பெயர்; இந்த இடத்திற்கு மேரிபா என்றும் பெயரிடப்பட்டது. (யாத்திராகமம் 16:7; சங்கீதங்கள் 95:8,9; எபிரெயர் 3:8)"
+    }
+  ]
+}

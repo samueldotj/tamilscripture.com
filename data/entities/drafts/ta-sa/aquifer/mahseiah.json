@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mahseiah",
+  "lang": "ta",
+  "source_hash": "b44ceb9c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாசெயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mahseiah#p1-b44ceb9c",
+      "text": "மாசெயா, பாருக்கின் (எரேமியா 32:12) மற்றும் செராயாவின் (51:59) முற்பிதாவாக இருந்தான். மசெயா என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் மாசெயா என்ற பெயருக்கான எழுத்துவரிவாகும்."
+    }
+  ]
+}

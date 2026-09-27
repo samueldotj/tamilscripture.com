@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adar",
+  "lang": "ta",
+  "source_hash": "671be29d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார்",
+  "paragraphs": [
+    {
+      "id": "smiths/adar#p1-671be29d",
+      "text": "[மாதம்] (உயர்ந்தது), யூதாவின் தென் எல்லையில் இருக்கும் ஒரு இடம். (யோசுவா 15:3)"
+    }
+  ]
+}

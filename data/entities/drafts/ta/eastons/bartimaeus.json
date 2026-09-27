@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bartimaeus",
+  "lang": "ta",
+  "source_hash": "a3ce9527",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்திமேயு",
+  "paragraphs": [
+    {
+      "id": "eastons/bartimaeus#p1-a3ce9527",
+      "text": "திமேயுவின் மகன், எரிகோவின் பார்வையற்ற இரண்டு பிச்சைக்காரர்களில் ஒருவன் (மாற்கு 10:46; மத்தேயு 20:30). அவனுடைய பார்வையற்ற தன்மை அவனுடைய விசுவாசத்தின் அடிப்படையில் அற்புதமாகக் குணமாக்கப்பட்டது."
+    }
+  ]
+}

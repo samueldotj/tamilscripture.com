@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maath",
+  "lang": "ta",
+  "source_hash": "a043a4cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/maath#p1-a043a4cd",
+      "text": "(சிறியவன்), இயேசுகிறிஸ்துவின் வம்சவரலாற்றில் மத்தத்தியாவின் குமாரன். (லூக்கா 3:26)"
+    }
+  ]
+}

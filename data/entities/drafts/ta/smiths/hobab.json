@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hobab",
+  "lang": "ta",
+  "source_hash": "f26810ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/hobab#p1-f26810ce",
+      "text": "(பிரியமானவன்). இந்தப் பெயர் இரண்டு இடங்களில் மட்டுமே காணப்படுகிறது (எண்ணாகமம் 10:29; நியாயாதிபதிகள் 4:11) ஓபாப் மோசேயின் மைத்துனனாக இருந்தான். (கி.மு. 1530.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ocran",
+  "lang": "ta",
+  "source_hash": "0090eefa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓகிரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ocran#p1-0090eefa",
+      "text": "(கலங்கடிக்கப்பட்டவன்), ஆசேர் கோத்திரத்தான், பாகியேலின் தகப்பன். (எண்ணாகமம் 1:13; 2:27; 7:72,77; 10:26) (கி.மு. 1658 க்கு முன்)."
+    }
+  ]
+}

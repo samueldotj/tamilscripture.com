@@ -1,0 +1,18 @@
+{
+  "id": "eastons/gamul",
+  "lang": "ta",
+  "source_hash": "d8cb8220",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காமுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/gamul#p1-d8cb8220",
+      "text": "முடைந்தவன்; ஆசாரிய பணிவகுப்புகளில் ஒன்றின் தலைவன் (1 நாளாகமம் 24:17)."
+    }
+  ]
+}

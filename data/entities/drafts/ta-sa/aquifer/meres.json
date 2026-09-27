@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/meres",
+  "lang": "ta",
+  "source_hash": "a890fa69",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேரேஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/meres#p1-a890fa69",
+      "text": "ராஜா அகாஸ்வேருவுக்கு நேரடி ஆலோசகர்களாக இருந்த பெர்சியாவின் மற்றும் மேதியாவின் ஏழு பிரபுக்களில் ஒருவன் (எஸ்தர் 1:14)."
+    }
+  ]
+}

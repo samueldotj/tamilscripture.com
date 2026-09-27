@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joiarib",
+  "lang": "ta",
+  "source_hash": "17a5eec8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோயாரிப்",
+  "paragraphs": [
+    {
+      "id": "smiths/joiarib#p1-17a5eec8",
+      "text": "(யெகோவா காக்கிறவர்.)"
+    }
+  ]
+}

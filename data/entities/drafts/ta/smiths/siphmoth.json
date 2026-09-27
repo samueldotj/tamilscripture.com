@@ -1,0 +1,18 @@
+{
+  "id": "smiths/siphmoth",
+  "lang": "ta",
+  "source_hash": "ebf042b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிப்மோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/siphmoth#p1-ebf042b9",
+      "text": "(கனிதரும் இடம்), தாவீது தன்னுடைய கொள்ளையர் வாழ்க்கையின்போது அடிக்கடி சென்று தங்கிய யூதாவின் தென்பகுதியிலுள்ள இடங்களில் ஒன்று. (1 சாமுவேல் 30:28)"
+    }
+  ]
+}

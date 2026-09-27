@@ -1,0 +1,18 @@
+{
+  "id": "smiths/spearmen",
+  "lang": "ta",
+  "source_hash": "aa6d49e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈட்டிக்காரர்",
+  "paragraphs": [
+    {
+      "id": "smiths/spearmen#p1-aa6d49e3",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 23:23) இவர்கள் குதிரை வீரருடன் அணிவகுத்துச் செல்லும்போது வேகத்தில் ஈடு கொடுக்கும்படி இலகுவான ஆயுதங்களை அணிந்திருந்த வீரர்களாக இருந்திருக்கலாம்."
+    }
+  ]
+}

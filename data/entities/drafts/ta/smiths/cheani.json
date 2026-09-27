@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cheani",
+  "lang": "ta",
+  "source_hash": "d03ce096",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனானி",
+  "paragraphs": [
+    {
+      "id": "smiths/cheani#p1-d03ce096",
+      "text": "(கெனானியா என்பதன் சுருக்கம்), எஸ்றாவின் காலத்தில் மக்களை சுத்திகரிப்பதற்காக நடத்தப்பட்ட பரிசுத்த ஆராதனையின்போது உதவிசெய்த லேவியர்களில் ஒருவன். (நெகேமியா 9:4)"
+    }
+  ]
+}

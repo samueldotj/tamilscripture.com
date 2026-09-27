@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kor",
+  "lang": "ta",
+  "source_hash": "a5cd7e4f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kor#p1-e62af293",
+      "text": "கோர் என்பது உலர் பொருட்களை அளக்கும் அளவையாகும், அது ஒரு ஓமேருக்குச் சமமானது, அதாவது சுமார் 3.8 முதல் 7.5 பூஷல்கள் வரை இருக்கும்."
+    },
+    {
+      "id": "aquifer/kor#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

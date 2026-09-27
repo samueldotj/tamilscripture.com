@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/malkiram",
+  "lang": "ta",
+  "source_hash": "517fc5c3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கீராம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/malkiram#p1-d3ae03e4",
+      "text": "மல்கீராம் என்பது மல்கீராம் என்ற பெயரின் வேறொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/malkiram#p2-c8d7019a",
+      "text": "மல்கீராம் காண்க."
+    }
+  ]
+}

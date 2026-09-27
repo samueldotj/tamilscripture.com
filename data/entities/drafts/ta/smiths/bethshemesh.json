@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethshemesh",
+  "lang": "ta",
+  "source_hash": "5702be2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்ஷிமேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethshemesh#p1-5702be2b",
+      "text": "(சூரியனுடைய வீடு)."
+    }
+  ]
+}

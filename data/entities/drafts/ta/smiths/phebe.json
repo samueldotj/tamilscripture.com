@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phebe",
+  "lang": "ta",
+  "source_hash": "cb7b26f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெபேயாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/phebe#p1-cb7b26f9",
+      "text": "[பெபேயாள்]"
+    }
+  ]
+}

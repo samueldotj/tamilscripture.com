@@ -1,0 +1,18 @@
+{
+  "id": "eastons/adullamite",
+  "lang": "ta",
+  "source_hash": "2c76fede",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதுல்லாமியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/adullamite#p1-2c76fede",
+      "text": "அதுல்லாம் நகரத்தின் குடியிருப்பாளன் (ஆதியாகமம் 38:1, 12, 20)."
+    }
+  ]
+}

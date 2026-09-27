@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nymphas",
+  "lang": "ta",
+  "source_hash": "a0ebac21",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிம்பா",
+  "paragraphs": [
+    {
+      "id": "eastons/nymphas#p1-a0ebac21",
+      "text": "நிம்ப், பவுல் தன்னுடைய கொலோசெயருக்கு எழுதிய கடிதத்தில் லவோதிக்கேயா சபையின் உறுப்பினராக வாழ்த்தப்பட்டவர் (கொலோசெயர் 4:15)."
+    }
+  ]
+}

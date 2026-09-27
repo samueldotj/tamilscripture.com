@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ahiam",
+  "lang": "ta",
+  "source_hash": "7e2e0f86",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/ahiam#p1-7e2e0f86",
+      "text": "தாய் மாமன், தாவீதின் முப்பது பராக்கிரமசாலிகளில் ஒருவன் (2 சாமுவேல் 23:33; 1 நாளாகமம் 11:35)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kesil",
+  "lang": "ta",
+  "source_hash": "db15f8c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெசீல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kesil#p1-db15f8c7",
+      "text": "நேகேவிலுள்ள ஏதோமின் எல்லைகளில் இருந்த கெசீல் என்ற பட்டணத்திற்கு இது ஒரு வேறு எழுத்துருவாகும். கெசீல் என்பதைக் காண்க."
+    }
+  ]
+}

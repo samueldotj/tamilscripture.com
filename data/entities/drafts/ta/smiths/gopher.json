@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gopher",
+  "lang": "ta",
+  "source_hash": "c10c3d23",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொப்பேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/gopher#p1-c10c3d23",
+      "text": "(கீல் பூசப்பட்ட) மரம். இது ஒரே ஒரு முறை மட்டும் குறிப்பிடப்பட்டுள்ளது— (ஆதியாகமம் 6:14) இதைப் பற்றி இரண்டு முக்கிய கருத்துகள் முன்வைக்கப்பட்டுள்ளன—"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hezir",
+  "lang": "ta",
+  "source_hash": "2fe1bed1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/hezir#p1-2fe1bed1",
+      "text": "(பன்றி)."
+    }
+  ]
+}

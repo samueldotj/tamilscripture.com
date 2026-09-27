@@ -1,0 +1,18 @@
+{
+  "id": "smiths/karkor",
+  "lang": "ta",
+  "source_hash": "0475932e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்கோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/karkor#p1-0475932e",
+      "text": "(அஸ்திபாரம்), சேபாவும் சல்முனாவும் கிதியோனால் மீண்டும் தோற்கடிக்கப்பட்ட இடம் (நியாயாதிபதிகள் 8:10), யோர்தானுக்குக் கிழக்கே இருந்திருக்க வேண்டும்."
+    }
+  ]
+}

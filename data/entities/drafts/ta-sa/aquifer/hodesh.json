@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hodesh",
+  "lang": "ta",
+  "source_hash": "6dfe1c80",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதேச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hodesh#p1-6dfe1c80",
+      "text": "1 நாளாகமம் 8:9-ல் பென்யமீன் கோத்திரத்தைச் சேர்ந்த சகராயீமின் ஒரு மனைவிக்குக் கொடுக்கப்பட்ட பெயர் ஓதேச் ஆகும். இந்தப் பகுதியின் எபிரெய மொழிப் பாடம் தெளிவற்றதாக உள்ளது."
+    }
+  ]
+}

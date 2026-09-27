@@ -1,0 +1,18 @@
+{
+  "id": "eastons/harhur",
+  "lang": "ta",
+  "source_hash": "e85357c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்கூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/harhur#p1-e85357c1",
+      "text": "காய்ச்சல் என்று பொருள்; நேதினீமியர்களில் ஒருவன் (எஸ்றா 2:51)."
+    }
+  ]
+}

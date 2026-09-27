@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/emmor",
+  "lang": "ta",
+  "source_hash": "a224ab19",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எம்மோர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/emmor#p1-9c401bf9",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பு ஏமோர் என்பதைக் குறிக்கும் வண்ணம் இப்படிக் குறிப்பிடுகிறது. இவன் சீகேமின் தகப்பன் (அப்போஸ்தலருடைய நடபடிகள் 7:16)."
+    },
+    {
+      "id": "aquifer/emmor#p2-625494b9",
+      "text": "ஏமோரைக் காண்க."
+    }
+  ]
+}

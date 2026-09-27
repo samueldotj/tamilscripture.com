@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mount-horeb",
+  "lang": "ta",
+  "source_hash": "ff31a444",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரேப் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-horeb#p1-9954daba",
+      "text": "ஓரேப் மலை என்பது சீனாய் மலைக்கு இருக்கும் மற்றொரு பெயர். இந்த மலையிலேயே தேவன் மோசேக்குத் தரிசனமாகி, இஸ்ரவேல் மக்களுக்கு நியாயப்பிரமாணத்தைக் கொடுத்தார்."
+    },
+    {
+      "id": "aquifer/mount-horeb#p2-68c19b15",
+      "text": "சீனாய் என்பதைக் காண்க."
+    }
+  ]
+}

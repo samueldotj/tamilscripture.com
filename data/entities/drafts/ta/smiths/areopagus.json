@@ -1,0 +1,18 @@
+{
+  "id": "smiths/areopagus",
+  "lang": "ta",
+  "source_hash": "bfeb02f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மார்ஸ் மேடை",
+  "paragraphs": [
+    {
+      "id": "smiths/areopagus#p1-bfeb02f1",
+      "text": "['மார்ஸ் மேடை' காண்க, HILL என்ற தலைப்பின் கீழ்]"
+    }
+  ]
+}

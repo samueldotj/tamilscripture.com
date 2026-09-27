@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hoshama",
+  "lang": "ta",
+  "source_hash": "e2051820",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒசாமா",
+  "paragraphs": [
+    {
+      "id": "smiths/hoshama#p1-e2051820",
+      "text": "(யெகோவா கேட்கிறவர்), யூதாவின் இறுதி அரசர்களில் ஒருவருக்கு முன் ஆண்ட யோயாக்கீன் என்னும் யெகொனியாவின் மகன்களில் ஒருவன். (1 நாளாகமம் 3:18)"
+    }
+  ]
+}

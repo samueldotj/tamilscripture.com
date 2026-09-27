@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/haggeri",
+  "lang": "ta",
+  "source_hash": "b6a5350e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்கேரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/haggeri#p1-3b244602",
+      "text": "அக்கேரி என்பது 1 நாளாகமம் 11:38-ல் மிப்கார் என்பவரின் தந்தையான அகரியின் என்பதற்குரிய கிங் யாக்கோபு வெர்ஷன் வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/haggeri#p2-2157b7ea",
+      "text": "அகரி என்பதைக் காண்க."
+    }
+  ]
+}

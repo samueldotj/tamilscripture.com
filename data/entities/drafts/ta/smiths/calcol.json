@@ -1,0 +1,18 @@
+{
+  "id": "smiths/calcol",
+  "lang": "ta",
+  "source_hash": "58a6fe76",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்கோல்",
+  "paragraphs": [
+    {
+      "id": "smiths/calcol#p1-58a6fe76",
+      "text": "(ஆதரவு), யூதாவின் மனிதன், செராகுவின் மகன் அல்லது வழித்தோன்றல். (1 நாளாகமம் 2:6) கல்கோலோடு ஒத்திருக்கலாம்."
+    }
+  ]
+}

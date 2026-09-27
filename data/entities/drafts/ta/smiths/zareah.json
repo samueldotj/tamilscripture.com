@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zareah",
+  "lang": "ta",
+  "source_hash": "d27875a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரேயா",
+  "paragraphs": [
+    {
+      "id": "smiths/zareah#p1-d27875a2",
+      "text": "சோரா மற்றும் சோரியா என்பதற்குச் சமம். (நெகேமியா 11:29)"
+    }
+  ]
+}

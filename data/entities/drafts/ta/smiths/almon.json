@@ -1,0 +1,18 @@
+{
+  "id": "smiths/almon",
+  "lang": "ta",
+  "source_hash": "208b4e25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/almon#p1-208b4e25",
+      "text": "(மறைக்கப்பட்டது) பென்யமீன் கோத்திரத்திற்குரிய ஒரு பட்டணம், அதின் “வெளிநிலங்களுடன்” ஆசாரியர்களுக்குக் கொடுக்கப்பட்டது. (யோசுவா 21:18) [அலமேத்]"
+    }
+  ]
+}

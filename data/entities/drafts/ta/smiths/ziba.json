@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ziba",
+  "lang": "ta",
+  "source_hash": "e9990cd1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீபா",
+  "paragraphs": [
+    {
+      "id": "smiths/ziba#p1-e9990cd1",
+      "text": "(சிலை), தாவீது சவுலின் மகனான மேவிபோசேத்திற்கு விசாரணைக்காரனாக ஏற்படுத்திய சவுலின் வேலைக்காரன். (2 சாமுவேல் 9:2-18; 16:1-4; 19:17,29) [மேவிபோசேத் காண்க] (கி.மு. 1023.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/quarantania",
+  "lang": "ta",
+  "source_hash": "eee5b656",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குவாரண்டேனியா",
+  "paragraphs": [
+    {
+      "id": "eastons/quarantania#p1-eee5b656",
+      "text": "எரிகோவிற்கு வடமேற்கே சுமார் 7 மைல் தூரத்தில் இருக்கும் சுமார் 1,200 அடி உயரமுள்ள ஒரு மலை, இது நமது கர்த்தருடைய சோதனை நிகழ்ந்த இடம் என்று பாரம்பரியமாகக் கருதப்படுகிறது (மத்தேயு 4:8)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shiza",
+  "lang": "ta",
+  "source_hash": "797222fe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீசா",
+  "paragraphs": [
+    {
+      "id": "smiths/shiza#p1-797222fe",
+      "text": "(சிறப்பு), ஒரு ரூபனியன், அதினாவின் தகப்பன், (1 நாளாகமம் 11:42) தாவீதின் போராளிகளில் ஒருவன். (கி.மு. 1043.)"
+    }
+  ]
+}

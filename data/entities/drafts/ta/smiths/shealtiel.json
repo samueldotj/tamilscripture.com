@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shealtiel",
+  "lang": "ta",
+  "source_hash": "1309db8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செயல்தியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/shealtiel#p1-1309db8e",
+      "text": "(தேவனிடம் கேட்கப்பட்டவன்), செருபாபேலின் தகப்பன். (எஸ்றா 3:2,8; 5:2; நெகேமியா 12:1; ஆகாய் 1:1,12,14; 2:2,23) (கி.மு. 580 ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/westward",
+  "lang": "ta",
+  "source_hash": "64b139c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேற்கிலும்",
+  "paragraphs": [
+    {
+      "id": "eastons/westward#p1-64b139c8",
+      "text": "கடல் திசையாக, அதாவது, மத்தியதரைக் கடலின் நோக்கமாக (உபாகமம் 3:27)."
+    }
+  ]
+}

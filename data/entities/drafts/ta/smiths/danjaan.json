@@ -1,0 +1,18 @@
+{
+  "id": "smiths/danjaan",
+  "lang": "ta",
+  "source_hash": "7a42a2a0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாண்யான்",
+  "paragraphs": [
+    {
+      "id": "smiths/danjaan#p1-7a42a2a0",
+      "text": "(தானியன், அதாவது தாணுக்கு சொந்தமானது). (2 சாமுவேல் 24:6) இது தாண் என்பதாகவே இருக்கலாம்."
+    }
+  ]
+}

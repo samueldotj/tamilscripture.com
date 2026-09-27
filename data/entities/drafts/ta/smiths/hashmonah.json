@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashmonah",
+  "lang": "ta",
+  "source_hash": "e134fdd8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்மோனா",
+  "paragraphs": [
+    {
+      "id": "smiths/hashmonah#p1-e134fdd8",
+      "text": "(கொழுமை), இஸ்ரவேலரின் ஒரு பாளையம் இடம், மோசெரோத்திற்கு முன்பாக (எண்ணாகமம் 33:29) குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

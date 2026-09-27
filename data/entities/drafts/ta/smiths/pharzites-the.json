@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pharzites-the",
+  "lang": "ta",
+  "source_hash": "a6730a3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரேசியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/pharzites-the#p1-a6730a3a",
+      "text": "யூதாவின் மகனாகிய பாரேசின் சந்ததியார். (எண்ணாகமம் 26:20)"
+    }
+  ]
+}

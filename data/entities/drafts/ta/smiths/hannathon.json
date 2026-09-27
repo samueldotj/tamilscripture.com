@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hannathon",
+  "lang": "ta",
+  "source_hash": "181ed206",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னத்தோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hannathon#p1-181ed206",
+      "text": "(கிருபையுள்ள), செபுலோனின் பட்டணங்களில் ஒன்று. (யோசுவா 19:14)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bezaleel",
+  "lang": "ta",
+  "source_hash": "0d544167",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெசலெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/bezaleel#p1-0d544167",
+      "text": "(தேவனுடைய நிழலில்)."
+    }
+  ]
+}

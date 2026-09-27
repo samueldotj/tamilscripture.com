@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joed",
+  "lang": "ta",
+  "source_hash": "76f100b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/joed#p1-76f100b6",
+      "text": "(யெகோவா சாட்சி), ஒரு பென்யமீனியன், பெதாயாவின் மகன். (நெகேமியா 11:7)"
+    }
+  ]
+}

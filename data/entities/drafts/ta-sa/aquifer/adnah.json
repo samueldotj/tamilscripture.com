@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/adnah",
+  "lang": "ta",
+  "source_hash": "b4fb8e6d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/adnah#p1-1e1021fc",
+      "text": "சவுலை விட்டு சிக்லாகிலே தாவீதின் படையில் சேர்ந்த மனாசே கோத்திரத்தைச் சேர்ந்த ஒரு தலைவன் (1 நாளாகமம் 12:20)."
+    },
+    {
+      "id": "aquifer/adnah#p2-678ebbf2",
+      "text": "யூதாவின் ராஜாவாகிய யோசபாத்தின் கீழிருந்த ஒரு படைத்தலைவன் (2 நாளாகமம் 17:14)."
+    }
+  ]
+}

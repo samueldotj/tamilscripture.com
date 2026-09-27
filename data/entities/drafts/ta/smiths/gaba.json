@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gaba",
+  "lang": "ta",
+  "source_hash": "560a9395",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேபா",
+  "paragraphs": [
+    {
+      "id": "smiths/gaba#p1-560a9395",
+      "text": "கேபா என்பதே பெயர், அதைப் பார்க்கவும்."
+    }
+  ]
+}

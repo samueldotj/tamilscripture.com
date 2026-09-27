@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hammon",
+  "lang": "ta",
+  "source_hash": "07e2a0ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hammon#p1-49aaa1c1",
+      "text": "1. யோசுவா 19:28-ல் குறிப்பிடப்பட்டுள்ள ஆசேருடைய பட்டணங்களில் ஒன்று. அது தீருவுக்குத் தென்பகுதியில், ஆசேரின் மேற்கு எல்லையில் எங்கோ இருந்தது."
+    },
+    {
+      "id": "aquifer/hammon#p2-7e943154",
+      "text": "2. 1 நாளாகமம் 6:76-ல் அம்மாத்திற்கு மாற்றுப் பெயர். அம்மாத் (இடம்) காண்க."
+    }
+  ]
+}

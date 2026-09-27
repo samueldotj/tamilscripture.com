@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tob-adonijah",
+  "lang": "ta",
+  "source_hash": "5cc854da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோபத்தோனியா",
+  "paragraphs": [
+    {
+      "id": "eastons/tob-adonijah#p1-5cc854da",
+      "text": "நல்லவர் யெகோவா, என் கர்த்தர்; யூதா மக்களுக்கு நியாயப்பிரமாணத்தைப் போதிக்கும்படி யோசபாத்தால் அனுப்பப்பட்ட ஒரு லேவியன் (2 நாளாகமம் 17:8)."
+    }
+  ]
+}

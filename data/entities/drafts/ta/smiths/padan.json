@@ -1,0 +1,18 @@
+{
+  "id": "smiths/padan",
+  "lang": "ta",
+  "source_hash": "d134065d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/padan#p1-d134065d",
+      "text": "(வெளி). பதான்ஆராம். (ஆதியாகமம் 48:7)"
+    }
+  ]
+}

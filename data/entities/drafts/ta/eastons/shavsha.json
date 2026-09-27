@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shavsha",
+  "lang": "ta",
+  "source_hash": "739937e9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சவிஷா",
+  "paragraphs": [
+    {
+      "id": "eastons/shavsha#p1-739937e9",
+      "text": "(“செராயா,” 2 சாமுவேல் 8:17; “ஷீஷா,” 1 இராஜாக்கள் 4:3), தாவீதின் எழுத்தர்களில் ஒருவன் (1 நாளாகமம் 18:16)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/grizzled",
+  "lang": "ta",
+  "source_hash": "de45bf08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கலப்புநிறம்",
+  "paragraphs": [
+    {
+      "id": "eastons/grizzled#p1-de45bf08",
+      "text": "கலப்புநிறமுள்ள, அதாவது வெவ்வேறு நிறங்களால் கூடிய, வெள்ளாடுகளைப் போன்று (ஆதியாகமம் 31:10, 12), குதிரைகளைப் போன்று (சகரியா 6:3, 6)."
+    }
+  ]
+}

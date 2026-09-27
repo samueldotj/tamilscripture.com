@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hanun",
+  "lang": "ta",
+  "source_hash": "e53d9e52",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனூன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hanun#p1-e53d9e52",
+      "text": "(தயவு பெற்றவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mizzah",
+  "lang": "ta",
+  "source_hash": "08d6b789",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீசா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mizzah#p1-08d6b789",
+      "text": "ரெகுவேலின் மகனும், ஏதோமிய கோத்திரத்தின் தலைவனுமாக இருந்தவன் (ஆதியாகமம் 36:13, 17; 1 நாளாகமம் 1:37)."
+    }
+  ]
+}

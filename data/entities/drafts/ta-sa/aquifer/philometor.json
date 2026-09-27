@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/philometor",
+  "lang": "ta",
+  "source_hash": "e5650106",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலோமெத்தோர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/philometor#p1-2382efc0",
+      "text": "பிலோமெத்தோர் என்பது எகிப்தில் ஆண்ட ஒரு அரசனாகிய ஆறாம் பித்தலமிக்குப் பயன்படுத்தப்பட்ட ஒரு பெயராகும் (2 மக்கபேயர் 4:21)."
+    },
+    {
+      "id": "aquifer/philometor#p2-683248a3",
+      "text": "பித்தலமிக் அரசு என்பதைக் காண்க."
+    }
+  ]
+}

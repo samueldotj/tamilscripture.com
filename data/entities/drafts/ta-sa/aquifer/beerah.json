@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/beerah",
+  "lang": "ta",
+  "source_hash": "ead50dd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/beerah#p1-ead50dd9",
+      "text": "ரூபன் கோத்திரத்தின் ஒரு பிரபு (1 நாளாகமம் 5:6, 26). இவனை அசீரியா ராஜாவாகிய தில்காத்பில்நேசர் (திக்லாத்-பிலேசர் என்பதன் பிற்கால எழுத்துவடிவம்) சிறைபிடித்துப்போனான்."
+    }
+  ]
+}

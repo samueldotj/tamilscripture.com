@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alvah",
+  "lang": "ta",
+  "source_hash": "db140bea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்வா",
+  "paragraphs": [
+    {
+      "id": "smiths/alvah#p1-db140bea",
+      "text": "(தீமை), ஏதோமின் ஒரு பிரபு, (ஆதியாகமம் 36:40) இது (1 நாளாகமம் 1:51)-ல் அலியா என்று எழுதப்பட்டுள்ளது."
+    }
+  ]
+}

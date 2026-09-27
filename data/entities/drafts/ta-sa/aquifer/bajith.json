@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bajith",
+  "lang": "ta",
+  "source_hash": "7cf75c93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாயீத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bajith#p1-7cf75c93",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பின்படி ஏசாயா 15:2-இல் மோவாபிலுள்ள ஒரு பட்டணம். சில மொழிபெயர்ப்புகளில், இது “மகள்” அல்லது “ஆலயம்” என்று மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/vophsi",
+  "lang": "ta",
+  "source_hash": "ceaa6351",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒப்பேசி",
+  "paragraphs": [
+    {
+      "id": "smiths/vophsi#p1-ceaa6351",
+      "text": "(செல்வம் நிறைந்தவன்), நப்தலி கோத்திரத்தின் ஒற்றன் நாகபியின் தகப்பன். (எண்ணாகமம் 13:14) (கி.மு. 1490க்கு முன்)."
+    }
+  ]
+}

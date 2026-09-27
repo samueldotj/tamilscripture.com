@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zaanan",
+  "lang": "ta",
+  "source_hash": "d4be4958",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாயனான்",
+  "paragraphs": [
+    {
+      "id": "eastons/zaanan#p1-d4be4958",
+      "text": "மந்தைகளின் இடம், மீகா 1:11 இல் மாத்திரமே குறிப்பிடப்பட்டுள்ளது. இது யூதாவின் சமபூமியிலுள்ள சேனானுடன் (யோசுவா 15:37) அடையாளம் காணப்படலாம்."
+    }
+  ]
+}

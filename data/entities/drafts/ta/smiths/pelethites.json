@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pelethites",
+  "lang": "ta",
+  "source_hash": "d6e0a6a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலேத்தியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/pelethites#p1-d6e0a6a6",
+      "text": "(தூதுவர்கள்). [கிரேத்தியர்களைக் காண்க]"
+    }
+  ]
+}

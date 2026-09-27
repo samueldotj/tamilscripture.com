@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lahmam",
+  "lang": "ta",
+  "source_hash": "6b739a5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லகமாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/lahmam#p1-6b739a5d",
+      "text": "(ஆகாரம்), யூதாவின் சமபூமி நாட்டிலுள்ள ஒரு பட்டணம். (யோசுவா 15:40)"
+    }
+  ]
+}

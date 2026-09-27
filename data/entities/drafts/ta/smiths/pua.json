@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pua",
+  "lang": "ta",
+  "source_hash": "19d86fe6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/pua#p1-19d86fe6",
+      "text": "சரியாக பூவ்வா என்று சொல்லப்பட வேண்டியவன். இசக்காரின் மகனான பூவா. (எண்ணாகமம் 26:23) (கி.மு. 1452.)"
+    }
+  ]
+}

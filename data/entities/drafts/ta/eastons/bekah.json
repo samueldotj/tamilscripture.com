@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bekah",
+  "lang": "ta",
+  "source_hash": "0ef024d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெக்கா",
+  "paragraphs": [
+    {
+      "id": "eastons/bekah#p1-0ef024d4",
+      "text": "இப்பெயரும் அதன் விளக்கமான “அரைச்சேக்கல்” என்பதும் யாத்திராகமம் 38:26-இல் கொடுக்கப்பட்டுள்ளன. இந்த வார்த்தை உரிமையாக “பிரிவு,” “பங்கு” என்று பொருள்படுகிறது. (R.V., “beka.”)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazar-susah",
+  "lang": "ta",
+  "source_hash": "66f8265a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சார்சூசா",
+  "paragraphs": [
+    {
+      "id": "eastons/hazar-susah#p1-66f8265a",
+      "text": "குதிரையின் கிராமம், சன்சன்னா என்பதற்கு ஒப்பானது, சாலொமோனுடைய “இரதப் பட்டணங்களில்” ஒன்று (யோசுவா 15:31; 2 நாளாகமம் 1:14), யூதாவின் தென் எல்லையிலுள்ள ஒரு பண்டகசாலை."
+    }
+  ]
+}

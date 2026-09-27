@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/loammi",
+  "lang": "ta",
+  "source_hash": "d1577371",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோகம்மீ",
+  "paragraphs": [
+    {
+      "id": "aquifer/loammi#p1-3da8e055",
+      "text": "லோகம்மீ என்பது “என் மக்களல்ல” என்று அர்த்தமுள்ள ஒரு அடையாள பெயராகும் (ஓசியா 1:9). தீர்க்கதரிசியாகிய ஓசியா இந்தப் பெயரைத் தன் மகனுக்குச் சூட்டினார்."
+    },
+    {
+      "id": "aquifer/loammi#p2-171f5d38",
+      "text": "அம்மீ என்பதைக் காண்க."
+    }
+  ]
+}

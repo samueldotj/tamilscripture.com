@@ -1,0 +1,18 @@
+{
+  "id": "eastons/road",
+  "lang": "ta",
+  "source_hash": "5eaa9899",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாதை",
+  "paragraphs": [
+    {
+      "id": "eastons/road#p1-5eaa9899",
+      "text": "(1 சாமுவேல் 27:10; R.V., “ராணுவப் படையெடுப்பு”), ஒரு படையெடுப்பு, ஒரு தாக்குதல். இந்த வார்த்தை வேதவாக்கியத்தில் ஒருபோதும் ஒரு வழி அல்லது பாதை என்ற பொருளில் பயன்படுத்தப்படவில்லை."
+    }
+  ]
+}

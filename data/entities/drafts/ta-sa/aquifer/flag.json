@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/flag",
+  "lang": "ta",
+  "source_hash": "54b929e2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாணல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/flag#p1-03529a8c",
+      "text": "நாணல் என்பது யோபு 8:11-ல் காணப்படும் அறியப்படாத ஒரு சேற்று செடிக்காக கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட சொல்லாகும்."
+    },
+    {
+      "id": "aquifer/flag#p2-cb7366c5",
+      "text": "பாப்பிரஸ்; கோரைப்புல்; நாணல் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

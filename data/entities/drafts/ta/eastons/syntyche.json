@@ -1,0 +1,18 @@
+{
+  "id": "eastons/syntyche",
+  "lang": "ta",
+  "source_hash": "cc08a3e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிந்திகேயாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/syntyche#p1-cc08a3e1",
+      "text": "பாக்கியம் உள்ளவள்; இணக்கமானவள், பிலிப்பியில் இருந்த சபையின் பெண் அங்கத்தினராகிய இவளை, எயோதியாளுடன் ஒரே சிந்தையாக இருக்கும்படி பவுல் வேண்டிக்கொள்கிறார் (பிலிப்பியர் 4:2, 3)."
+    }
+  ]
+}

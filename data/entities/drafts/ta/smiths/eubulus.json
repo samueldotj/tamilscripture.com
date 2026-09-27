@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eubulus",
+  "lang": "ta",
+  "source_hash": "280a6517",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஐபூலு",
+  "paragraphs": [
+    {
+      "id": "smiths/eubulus#p1-280a6517",
+      "text": "(ஞானமுள்ளவன்), பவுல் குறிப்பிடும் ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவன். (2 தீமோத்தேயு 4:21) (கி.பி. 64)"
+    }
+  ]
+}

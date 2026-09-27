@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eshton",
+  "lang": "ta",
+  "source_hash": "e74fc113",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்தோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/eshton#p1-e74fc113",
+      "text": "(பெண்மைத்தன்மையுள்ளவன்), யூதாவின் வம்சவரலாறுகளில் காணப்படும் ஒரு பெயர். (1 நாளாகமம் 4:11,12)"
+    }
+  ]
+}

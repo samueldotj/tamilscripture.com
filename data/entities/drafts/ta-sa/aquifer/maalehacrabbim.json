@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maalehacrabbim",
+  "lang": "ta",
+  "source_hash": "0e651b23",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாலெ-அக்ராபீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/maalehacrabbim#p1-d0852e66",
+      "text": "மாலெ-அக்ராபீம் என்பது “அக்கராபீமின் மேடு” என்பதற்குரிய கிங் யாக்கோபு வெர்ஷன் வடிவமாகும், இது யோசுவா 15:3-இல் குறிப்பிடப்பட்டுள்ள கானானின் தென்பகுதி எல்லையிலுள்ள ஒரு இடமாகும்."
+    },
+    {
+      "id": "aquifer/maalehacrabbim#p2-f6089de9",
+      "text": "அக்கராபீம் காண்க."
+    }
+  ]
+}

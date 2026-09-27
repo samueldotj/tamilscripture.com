@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mash",
+  "lang": "ta",
+  "source_hash": "b6095393",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mash#p1-cc9bf419",
+      "text": "மாஸ் ஆராமுடைய நான்காம் மகனாக இருந்தான் (ஆதியாகமம் 10:23). அவன் நோவாவின் மகனான சேமின் சந்ததியாவான். அவன் 1 நாளாகமம் 1:17-இல் மேசேக் என்று அழைக்கப்படுகிறான்."
+    },
+    {
+      "id": "aquifer/mash#p2-e2cfa51b",
+      "text": "மேசேக் #2-ஐ காண்க."
+    }
+  ]
+}

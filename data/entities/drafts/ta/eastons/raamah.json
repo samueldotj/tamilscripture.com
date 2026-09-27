@@ -1,0 +1,26 @@
+{
+  "id": "eastons/raamah",
+  "lang": "ta",
+  "source_hash": "bcfc44ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராமா",
+  "paragraphs": [
+    {
+      "id": "eastons/raamah#p1-cf56c1af",
+      "text": "இடி."
+    },
+    {
+      "id": "eastons/raamah#p2-89d8a131",
+      "text": "(1.) கூஷின் மகன்களில் ஒருவன் (ஆதியாகமம் 10:7)."
+    },
+    {
+      "id": "eastons/raamah#p3-181bbd68",
+      "text": "(2.) தீருவுடன் வியாபாரம் செய்த ஒரு தேசம் (எசேக்கியேல் 27:22)."
+    }
+  ]
+}

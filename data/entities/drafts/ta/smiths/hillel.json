@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hillel",
+  "lang": "ta",
+  "source_hash": "94b1faa2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இல்லேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/hillel#p1-94b1faa2",
+      "text": "(துதி), எப்பிராயீமின் மலையிலுள்ள பிரத்தோனியனாகிய ஒருவன், இஸ்ரவேலின் நியாயாதிபதிகளில் ஒருவனாகிய அப்தோனின் தகப்பன். (நியாயாதிபதிகள் 12:13,15)"
+    }
+  ]
+}

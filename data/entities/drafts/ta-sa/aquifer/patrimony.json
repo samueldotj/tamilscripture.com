@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/patrimony",
+  "lang": "ta",
+  "source_hash": "8e2ef4fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரம்பரைச் சொத்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/patrimony#p1-86c1e452",
+      "text": "தகப்பனிடமிருந்து அல்லது முற்பிதாவிடமிருந்து வரும் சொத்துரிமை (உபாகமம் 18:8)."
+    },
+    {
+      "id": "aquifer/patrimony#p2-64dca953",
+      "text": "காண்க: வாரிசு; சொத்துரிமை."
+    }
+  ]
+}

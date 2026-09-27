@@ -1,0 +1,18 @@
+{
+  "id": "smiths/stomacher",
+  "lang": "ta",
+  "source_hash": "ab615f5f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேலாடை",
+  "paragraphs": [
+    {
+      "id": "smiths/stomacher#p1-ab615f5f",
+      "text": "இவ்வாறு மொழிபெயர்க்கப்பட்ட எபிரெய வார்த்தை, (ஏசாயா 3:24) பெண்களின் ஆடையின் ஒரு வகையை விவரிக்கிறது, அதன் தன்மை வெறும் ஊகத்தின் விஷயமாகும்."
+    }
+  ]
+}

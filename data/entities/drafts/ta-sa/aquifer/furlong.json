@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/furlong",
+  "lang": "ta",
+  "source_hash": "9b3ee309",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்லாங்",
+  "paragraphs": [
+    {
+      "id": "aquifer/furlong#p1-bc928e81",
+      "text": "பர்லாங் என்பது ஒரு நேரளவு அளவீடாகும், இது ஏறக்குறைய 184.6 மீட்டர் (202 யார்டு) ஆகும்."
+    },
+    {
+      "id": "aquifer/furlong#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

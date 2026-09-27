@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naphish",
+  "lang": "ta",
+  "source_hash": "3f51cb3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாபீஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/naphish#p1-3f51cb3a",
+      "text": "(புத்துணர்ச்சி), இஸ்மவேலின் மகன்களில் கடைசிக்கு முன்னானவன். (ஆதியாகமம் 25:15; 1 நாளாகமம் 1:31)"
+    }
+  ]
+}

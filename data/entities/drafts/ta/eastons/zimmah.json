@@ -1,0 +1,30 @@
+{
+  "id": "eastons/zimmah",
+  "lang": "ta",
+  "source_hash": "862ab36f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்மா",
+  "paragraphs": [
+    {
+      "id": "eastons/zimmah#p1-42ea0c20",
+      "text": "தீங்கு."
+    },
+    {
+      "id": "eastons/zimmah#p2-6084b967",
+      "text": "(1.) கெர்சோனியனாகிய ஒரு லேவியன் (1 நாளாகமம் 6:20)."
+    },
+    {
+      "id": "eastons/zimmah#p3-530a769e",
+      "text": "(2.) கெர்சோனியனாகிய இன்னொரு லேவியன் (1 நாளாகமம் 6:42)."
+    },
+    {
+      "id": "eastons/zimmah#p4-77dfc724",
+      "text": "(3.) யோவாகின் தகப்பன் (2 நாளாகமம் 29:12)."
+    }
+  ]
+}

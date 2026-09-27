@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jethlah",
+  "lang": "ta",
+  "source_hash": "fe2731f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஜெத்லா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jethlah#p1-cf8ba104",
+      "text": "ஜெத்லா என்பது யோசுவா 19:42-ல் காணப்படும் தாணியரின் நகரமான யெத்லாவின் கிங் யாக்கோபு மொழிபெயர்ப்பு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jethlah#p2-3e06fe57",
+      "text": "யெத்லா என்பதைக் காண்க."
+    }
+  ]
+}

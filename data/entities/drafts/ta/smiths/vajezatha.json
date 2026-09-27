@@ -1,0 +1,18 @@
+{
+  "id": "smiths/vajezatha",
+  "lang": "ta",
+  "source_hash": "01429845",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வாய்சாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/vajezatha#p1-01429845",
+      "text": "(காற்றைப் போல பலமானவன்), யூதர்கள் சூசானில் கொன்றுபோட்ட ஆமானின் பத்து மகன்களில் ஒருவன். (எஸ்தர் 9:9) (கி.மு. 473.)"
+    }
+  ]
+}

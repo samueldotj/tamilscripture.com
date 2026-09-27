@@ -1,0 +1,18 @@
+{
+  "id": "smiths/haggi",
+  "lang": "ta",
+  "source_hash": "8c5f6255",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகி",
+  "paragraphs": [
+    {
+      "id": "smiths/haggi#p1-8c5f6255",
+      "text": "(உற்சவம்), காத்தின் இரண்டாம் மகன். (ஆதியாகமம் 46:16; எண்ணாகமம் 26:15)"
+    }
+  ]
+}

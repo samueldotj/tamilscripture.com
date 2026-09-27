@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bulrush",
+  "lang": "ta",
+  "source_hash": "914b89bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாணல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bulrush#p1-7a32cdcb",
+      "text": "சேறு நிலங்களிலும் ஆறுகள் மற்றும் நதிக்கரைகளிலும் வளரும் பல வகையான நாணல் தாவரங்களில் ஒன்று."
+    },
+    {
+      "id": "aquifer/bulrush#p2-b569d4ad",
+      "text": "காண்க: நாணல்."
+    }
+  ]
+}

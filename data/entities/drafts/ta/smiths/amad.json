@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amad",
+  "lang": "ta",
+  "source_hash": "da95a1ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/amad#p1-da95a1ec",
+      "text": "(நிலைத்திருக்கிறது), ஆசேரிலும் அலம்மேலெக்கிற்கும் மிஷயாலுக்கும் இடையே இருந்த ஒரு அறியப்படாத இடம். (யோசுவா 19:26) இல் மட்டுமே காணப்படுகிறது."
+    }
+  ]
+}

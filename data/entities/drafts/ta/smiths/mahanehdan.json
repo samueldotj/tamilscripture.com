@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahanehdan",
+  "lang": "ta",
+  "source_hash": "91b44fb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்னிதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/mahanehdan#p1-91b44fb5",
+      "text": "(தாணின் முகாம்), \"கீரியாத்யாரீமின் பின்புறத்தில்\" இருந்ததாகவும் (நியாயாதிபதிகள் 18:12), சோராவுக்கும் எஸ்தாவோலுக்கும் நடுவில் இருந்ததாகவும் (நியாயாதிபதிகள் 13:25) குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

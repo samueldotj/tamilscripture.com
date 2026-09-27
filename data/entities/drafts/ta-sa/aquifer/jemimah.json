@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jemimah",
+  "lang": "ta",
+  "source_hash": "6a1cca4e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எமீமாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jemimah#p1-6a1cca4e",
+      "text": "தேவன் யோபுவின் செல்வத்தை திரும்பக் கொடுத்த பின்பு அவனுக்குப் பிறந்த மூன்று மகள்களில் எமீமாள் முதலாமவளாக இருந்தாள் (யோபு 42:14)."
+    }
+  ]
+}

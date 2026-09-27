@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tebaliah",
+  "lang": "ta",
+  "source_hash": "014ed7b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெபலியா",
+  "paragraphs": [
+    {
+      "id": "smiths/tebaliah#p1-014ed7b0",
+      "text": "(சுத்திகரிக்கப்பட்டவன்), மெராரியின் மகன்களிலுள்ள ஓசாவின் மூன்றாம் மகன். (1 நாளாகமம் 26:11) (கி.மு. 1014.)"
+    }
+  ]
+}

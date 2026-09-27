@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gareb-place",
+  "lang": "ta",
+  "source_hash": "8dd1fccb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காரேப் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/gareb-place#p1-8dd1fccb",
+      "text": "எரேமியா 31:39-ல் எருசலேமின் எதிர்கால எல்லையாகக் குறிப்பிடப்பட்டுள்ள எருசலேமுக்கு அருகிலுள்ள ஒரு மேடு, ஒருவேளை நகரத்தின் தென் அல்லது மேற்குப் பக்கத்தில் இருந்திருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/medium",
+  "lang": "ta",
+  "source_hash": "82732e8d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மந்திரவாதி",
+  "paragraphs": [
+    {
+      "id": "aquifer/medium#p1-c8c761c7",
+      "text": "மந்திரவாதி என்பவர் மனிதர்களுக்கும் ஆவி உலகத்திற்கும் இடையே தொடர்பு ஏற்படுத்தும் ஒரு நபராக செயல்படுகிறார்."
+    },
+    {
+      "id": "aquifer/medium#p2-2364c7a2",
+      "text": "காண்க: மந்திரம்; குறி சொல்பவர், குறிசொல்லுதல்; ஆவி வினவுபவர்கள்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shobi",
+  "lang": "ta",
+  "source_hash": "5484a4f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபி",
+  "paragraphs": [
+    {
+      "id": "eastons/shobi#p1-5484a4f1",
+      "text": "பிடித்தவன், அம்மோனியனான ரப்பாவின் நாகாசின் மகன். தாவீது எருசலேமிலிருந்து ஓடி மகனாயீமுக்குப் போனபோது, அவன் தாவீதுக்குக் கிருபை காண்பித்தான் (2 சாமுவேல் 17:27)."
+    }
+  ]
+}

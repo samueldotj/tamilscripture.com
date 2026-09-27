@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pileha",
+  "lang": "ta",
+  "source_hash": "2b51c9a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலகா",
+  "paragraphs": [
+    {
+      "id": "smiths/pileha#p1-2b51c9a8",
+      "text": "(தொழுதுகொள்), நெகேமியாவுடன் உடன்படிக்கையில் கையெழுத்திட்ட மக்களின் தலைவர்களில் ஒருவனின், ஒருவேளை ஒரு குடும்பத்தின், பெயர். (நெகேமியா 10:24) (கி.மு. 410.)"
+    }
+  ]
+}

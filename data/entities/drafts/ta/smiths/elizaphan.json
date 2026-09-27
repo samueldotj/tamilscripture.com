@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elizaphan",
+  "lang": "ta",
+  "source_hash": "ad053881",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிசாபான்",
+  "paragraphs": [
+    {
+      "id": "smiths/elizaphan#p1-ad053881",
+      "text": "(தேவன் காக்கிறவர்)."
+    }
+  ]
+}

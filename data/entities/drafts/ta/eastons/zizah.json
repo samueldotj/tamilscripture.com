@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zizah",
+  "lang": "ta",
+  "source_hash": "f638190f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீனா",
+  "paragraphs": [
+    {
+      "id": "eastons/zizah#p1-f638190f",
+      "text": "ஒரு கேர்சோனியனான லேவியன் (1 நாளாகமம் 23:11)."
+    }
+  ]
+}

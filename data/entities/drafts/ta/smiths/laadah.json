@@ -1,0 +1,18 @@
+{
+  "id": "smiths/laadah",
+  "lang": "ta",
+  "source_hash": "654fa6d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாதாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/laadah#p1-654fa6d4",
+      "text": "(ஒழுங்கு), சாலாவின் மகனும், யூதாவின் பேரனும். (1 நாளாகமம் 4:21)"
+    }
+  ]
+}

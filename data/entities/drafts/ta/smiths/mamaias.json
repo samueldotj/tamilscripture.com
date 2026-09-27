@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mamaias",
+  "lang": "ta",
+  "source_hash": "6f90cfe9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாமாயாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/mamaias#p1-6f90cfe9",
+      "text": "இது எஸ்றா 8:16 இல் காணப்படும் செமாயாவைக் குறிப்பதாகத் தெரிகிறது."
+    }
+  ]
+}

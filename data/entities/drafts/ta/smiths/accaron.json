@@ -1,0 +1,18 @@
+{
+  "id": "smiths/accaron",
+  "lang": "ta",
+  "source_hash": "97497541",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்காரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/accaron#p1-97497541",
+      "text": "[எக்ரோன்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gin",
+  "lang": "ta",
+  "source_hash": "67acecd6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கண்ணி",
+  "paragraphs": [
+    {
+      "id": "smiths/gin#p1-67acecd6",
+      "text": "பறவைகளையோ மிருகங்களையோ பிடிக்கும் ஒரு வலை; அது ஒரு வலையினாலும் (ஏசாயா 8:14), ஒரு சுருக்குக் கம்பியினாலும் ஸ்பிரிங்காக செயல்படும்படியாகவும் அமைந்திருந்தது. (ஆமோஸ் 3:5)"
+    }
+  ]
+}

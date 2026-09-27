@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zebudah",
+  "lang": "ta",
+  "source_hash": "2b91b6f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபுதாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/zebudah#p1-2b91b6f9",
+      "text": "கொடுக்கப்பட்டவள் என்று பொருள்; இவள் யோசியாவின் மனைவியும் யோயாக்கீமுடைய தாயும் ஆவாள் (2 இராஜாக்கள் 23:36)."
+    }
+  ]
+}

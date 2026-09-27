@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chelal",
+  "lang": "ta",
+  "source_hash": "5400d8d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலால்",
+  "paragraphs": [
+    {
+      "id": "smiths/chelal#p1-5400d8d5",
+      "text": "(முழுமை), (எஸ்றா 10:30) அந்நிய மனைவியைக் கொண்டிருந்த ஒருவன்."
+    }
+  ]
+}

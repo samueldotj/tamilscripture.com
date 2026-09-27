@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kona",
+  "lang": "ta",
+  "source_hash": "64540c1d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kona#p1-64540c1d",
+      "text": "கோனா என்பது இரண்டாம்கிரந்த யூதீத் புத்தகத்தில் குறிப்பிடப்பட்டுள்ள ஒரு பட்டணமாகும் (யூதீத் 4:4)."
+    }
+  ]
+}

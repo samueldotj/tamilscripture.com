@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/boaz-pillar",
+  "lang": "ta",
+  "source_hash": "b21b42b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போவாஸ் (தூண்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/boaz-pillar#p1-e2210cba",
+      "text": "போவாஸ் என்பது சாலொமோனுடைய ஆலயத்திற்கு முன்பாக நிறுத்தப்பட்ட இரண்டு தூண்களில் ஒன்றின் பெயர் (1 இராஜாக்கள் 7:21; 2 நாளாகமம் 3:17). போவாஸ் என்ற பெயர் “பலம்” என்பதைக் குறிக்கலாம்."
+    },
+    {
+      "id": "aquifer/boaz-pillar#p2-fad620ee",
+      "text": "ஆலயம்; யாகீன் மற்றும் போவாஸ் என்பதைக் காண்க."
+    }
+  ]
+}

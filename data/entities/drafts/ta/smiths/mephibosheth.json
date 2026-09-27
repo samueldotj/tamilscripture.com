@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mephibosheth",
+  "lang": "ta",
+  "source_hash": "e07f3c87",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேவிபோசேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/mephibosheth#p1-e07f3c87",
+      "text": "(விக்கிரகத்தை அழிக்கிறவன்), சவுலின் குடும்பத்தில் இரண்டு பேர் இப்பெயரைக் கொண்டிருந்தனர்—அவனுடைய மகனும் அவனுடைய பேரனும்."
+    }
+  ]
+}

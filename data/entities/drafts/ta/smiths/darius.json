@@ -1,0 +1,18 @@
+{
+  "id": "smiths/darius",
+  "lang": "ta",
+  "source_hash": "63e57171",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தரியு",
+  "paragraphs": [
+    {
+      "id": "smiths/darius#p1-63e57171",
+      "text": "(ஆண்டவன்), மேதியா மற்றும் பெர்சியாவின் பல ராஜாக்களின் பெயர்."
+    }
+  ]
+}

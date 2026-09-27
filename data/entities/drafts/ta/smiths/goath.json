@@ -1,0 +1,18 @@
+{
+  "id": "smiths/goath",
+  "lang": "ta",
+  "source_hash": "19311ece",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோவாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/goath#p1-19311ece",
+      "text": "(கதறல்), எருசலேமின் அருகில் இருந்ததாகத் தோன்றும் ஒரு இடம், காரேப் மேட்டுடன் தொடர்புபடுத்தப்பட்டு, எரேமியா 31:39ல் மட்டும் பெயரிடப்பட்டுள்ளது (எரேமியா 31:39)."
+    }
+  ]
+}

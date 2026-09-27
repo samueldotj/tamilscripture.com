@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nym-phas",
+  "lang": "ta",
+  "source_hash": "6469783c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிம்பாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/nym-phas#p1-6469783c",
+      "text": "(மணமகன்), லவோதிக்கேயாவில் இருந்த ஐசுவரியமும் ஊக்கமும் உள்ள ஒரு கிறிஸ்தவன். (கொலோசெயர் 4:15) (கி.பி. 60.)"
+    }
+  ]
+}

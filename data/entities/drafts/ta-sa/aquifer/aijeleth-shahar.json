@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aijeleth-shahar",
+  "lang": "ta",
+  "source_hash": "ff057393",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஐயெலெத் ஷாகார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aijeleth-shahar#p1-a23fc16c",
+      "text": "சங்கீதம் 22 இன் தலைப்பில் காணப்படும் ஒரு எபிரெய சொற்றொடர், இது “விடியற்காலைப் பெண்மான்” என்னும் பண்ணுக்கு பொருள்படும். இது இந்த சங்கீதத்துடன் இணைந்திருந்த நன்கு அறியப்பட்ட பழங்கால இராகமாக இருந்திருக்கலாம்."
+    },
+    {
+      "id": "aquifer/aijeleth-shahar#p2-c265f6ba",
+      "text": "இசை என்பதைக் காண்க."
+    }
+  ]
+}

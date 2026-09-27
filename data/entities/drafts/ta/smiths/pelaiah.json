@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pelaiah",
+  "lang": "ta",
+  "source_hash": "4ade4a7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/pelaiah#p1-4ade4a7f",
+      "text": "(யெகோவாவினால் வேறுபடுத்தப்பட்டவன்)."
+    }
+  ]
+}

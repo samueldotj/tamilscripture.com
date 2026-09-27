@@ -1,0 +1,18 @@
+{
+  "id": "eastons/heleph",
+  "lang": "ta",
+  "source_hash": "84ececec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "eastons/heleph#p1-84ececec",
+      "text": "பரிமாற்றம், நப்தலியின் வடக்கு எல்லையிலுள்ள ஒரு பட்டணம் (யோசுவா 19:33)."
+    }
+  ]
+}

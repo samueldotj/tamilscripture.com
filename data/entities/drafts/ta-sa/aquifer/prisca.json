@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/prisca",
+  "lang": "ta",
+  "source_hash": "a73cf3c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரிஸ்கா",
+  "paragraphs": [
+    {
+      "id": "aquifer/prisca#p1-fac4b7c0",
+      "text": "ஆக்கில்லாவின் மனைவியாகிய பிரிஸ்கில்லாள் என்ற பெயருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் (King James Version) கொடுக்கப்பட்டுள்ள வேறு எழுத்துவடிவம் (2 தீமோத்தேயு 4:19)."
+    },
+    {
+      "id": "aquifer/prisca#p2-d6bd76df",
+      "text": "பிரிஸ்கில்லாளும் ஆக்கில்லாவும் என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

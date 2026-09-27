@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jahzeel",
+  "lang": "ta",
+  "source_hash": "1d50bf32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாத்சியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/jahzeel#p1-1d50bf32",
+      "text": "தேவனால் பங்கிடப்பட்டவன், நப்தலியின் மகன்களில் முதன்மையானவன் (ஆதியாகமம் 46:24)."
+    }
+  ]
+}

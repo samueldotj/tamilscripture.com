@@ -1,0 +1,18 @@
+{
+  "id": "smiths/neballat",
+  "lang": "ta",
+  "source_hash": "26f3d59f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெபலாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/neballat#p1-26f3d59f",
+      "text": "(மறைந்த மதி), பென்யமீனின் ஒரு பட்டணம், சிறையிருப்புக்குப் பின்பு பென்யமீனியர் மீண்டும் குடியேறின பட்டணங்களில் ஒன்று. (நெகேமியா 11:34)"
+    }
+  ]
+}

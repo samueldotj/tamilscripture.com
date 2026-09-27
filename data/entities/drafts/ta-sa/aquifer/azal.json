@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/azal",
+  "lang": "ta",
+  "source_hash": "95547cb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/azal#p1-95547cb6",
+      "text": "அறியப்படாத ஒரு இடம். இது எருசலேமுக்கு கிழக்கே அமைந்திருக்கலாம் (சகரியா 14:5)."
+    }
+  ]
+}

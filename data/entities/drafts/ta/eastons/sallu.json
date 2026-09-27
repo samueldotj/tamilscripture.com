@@ -1,0 +1,26 @@
+{
+  "id": "eastons/sallu",
+  "lang": "ta",
+  "source_hash": "b0dca28b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்லு",
+  "paragraphs": [
+    {
+      "id": "eastons/sallu#p1-f7a6e1aa",
+      "text": "நிறுக்கப்பட்டவன்."
+    },
+    {
+      "id": "eastons/sallu#p2-5ee1a8a0",
+      "text": "(1.) ஒரு ஆசாரியன் (நெகேமியா 12:7)."
+    },
+    {
+      "id": "eastons/sallu#p3-eb8dabe0",
+      "text": "(2.) ஒரு பென்யமீனியன் (1 நாளாகமம் 9:7; நெகேமியா 11:7)."
+    }
+  ]
+}

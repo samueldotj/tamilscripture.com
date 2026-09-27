@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ithran",
+  "lang": "ta",
+  "source_hash": "28666f94",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ithran#p1-a6e9cab4",
+      "text": "1. திஷோனுடைய மகன், இவன் ஒரு ஓரியனுடைய தலைவனாக இருந்தான் (ஆதி 36:26; 1 நாளாகமம் 1:41)."
+    },
+    {
+      "id": "aquifer/ithran#p2-50c2c777",
+      "text": "2. சோபாக்கின் மகன்களில் ஒருவன் (1 நாளாகமம் 7:37). இவன் 1 நாளாகமம் 7:38-ல் குறிப்பிடப்பட்டுள்ள யெத்தெருடன் ஒருவனாகவே இருக்கலாம்."
+    }
+  ]
+}

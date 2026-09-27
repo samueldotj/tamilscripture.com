@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chileab",
+  "lang": "ta",
+  "source_hash": "95efac32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீலேயாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/chileab#p1-95efac32",
+      "text": "தகப்பனால் பாதுகாக்கப்பட்டவன், அபிகாயிலிடம் பிறந்த தாவீதின் இரண்டாம் மகன் (2 சாமுவேல் 3:3); தானியேல் என்றும் அழைக்கப்பட்டான் (1 நாளாகமம் 3:1). அவன் இளவயதிலேயே இறந்துவிட்டதாகத் தோன்றுகிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/asyncritus",
+  "lang": "ta",
+  "source_hash": "3cdcd902",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசிங்கிரீத்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/asyncritus#p1-3cdcd902",
+      "text": "பவுல் வாழ்த்துதல் தெரிவித்த ரோமாபுரிக்குப் இருந்த கிறிஸ்தவர்களில் ஒருவன் (ரோமர் 16:14)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gidom",
+  "lang": "ta",
+  "source_hash": "ab3f16f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீதோம்",
+  "paragraphs": [
+    {
+      "id": "smiths/gidom#p1-ab3f16f8",
+      "text": "(பாழாக்குதல்), நியாயாதிபதிகள் 20:45-இல் மட்டும் குறிப்பிடப்பட்ட ஒரு இடம். இது கிபியாவுக்கும் (துலியேல்-எல்-புல்) ரிம்மோன் கன்மலைக்கும் இடையில் அமைந்திருந்ததாகத் தோன்றுகிறது."
+    }
+  ]
+}

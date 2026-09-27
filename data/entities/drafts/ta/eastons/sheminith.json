@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sheminith",
+  "lang": "ta",
+  "source_hash": "f6262e7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமனீத்",
+  "paragraphs": [
+    {
+      "id": "eastons/sheminith#p1-f6262e7f",
+      "text": "எட்டு; ஆக்டேவ், ஒரு இசைச்சொல், ஆண்கள் குரலில் பாடப்படும் தாழ்ந்த குறிப்பைக் குறிக்கும் என்று கருதப்படுகிறது (1 நாளாகமம் 15:21; சங்கீதங்கள் 6; 12, தலைப்பு)."
+    }
+  ]
+}

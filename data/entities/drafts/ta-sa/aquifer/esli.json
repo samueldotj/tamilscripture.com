@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/esli",
+  "lang": "ta",
+  "source_hash": "ae728591",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்லி",
+  "paragraphs": [
+    {
+      "id": "aquifer/esli#p1-02c9fd04",
+      "text": "லூக்கா 3:25படி, நாகூமின் தகப்பனும் இயேசுவின் மூதாதையருமானவன்."
+    },
+    {
+      "id": "aquifer/esli#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

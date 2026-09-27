@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hat",
+  "lang": "ta",
+  "source_hash": "cdb9a14f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தலைப்பாகை",
+  "paragraphs": [
+    {
+      "id": "eastons/hat#p1-cdb9a14f",
+      "text": "கல்தேயம் karb’ela, (தானியேல் 3:21), உரிய பொருளில் மேலங்கி அல்லது பள்ளியம் (pallium) என்பதைக் குறிக்கிறது. திருத்தப்பட்ட மொழிபெயர்ப்பு (Revised Version) இதை \"உள்ளங்கி\" (tunic) என மொழிபெயர்க்கிறது."
+    }
+  ]
+}

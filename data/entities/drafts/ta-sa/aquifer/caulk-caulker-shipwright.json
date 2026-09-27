@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/caulk-caulker-shipwright",
+  "lang": "ta",
+  "source_hash": "c772c121",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீல் தீட்டுதல், கீல் தீட்டுபவர், கப்பல் தச்சன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/caulk-caulker-shipwright#p1-01967231",
+      "text": "கீல் என்பது தார் போன்ற ஒரு நீர்ப்புகா பொருளாகும், இது கப்பலின் பலகைகளுக்கு இடையேயுள்ள இணைப்புகளை மூடுவதற்குப் பயன்படுத்தப்படுகிறது. கீல் தீட்டுபவர் (அல்லது கப்பல் தச்சன்) என்பவர் கப்பலை நீர் புகாதவாறு செய்வதற்காக அதைப் பூசுகிறவர் ஆவார் (எசேக்கியேல் 27:9)."
+    },
+    {
+      "id": "aquifer/caulk-caulker-shipwright#p2-9a8c117b",
+      "text": "பயணம் என்பதையும் காண்க."
+    }
+  ]
+}

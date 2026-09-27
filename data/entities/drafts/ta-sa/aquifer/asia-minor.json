@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/asia-minor",
+  "lang": "ta",
+  "source_hash": "73aab89a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசியா மைனர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/asia-minor#p1-adb954c8",
+      "text": "புதிய ஏற்பாட்டில் குறிப்பிடப்பட்டுள்ள ஆசியாவிற்கு ஒத்திருக்கும் ஒரு தீபகற்பம். இன்று, இது நவீன துருக்கியின் ஒரு பகுதியாக உள்ளது."
+    },
+    {
+      "id": "aquifer/asia-minor#p2-3c257441",
+      "text": "ஆசியா என்பதைக் காண்க."
+    }
+  ]
+}

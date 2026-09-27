@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hakupha",
+  "lang": "ta",
+  "source_hash": "297ac2b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகுபா",
+  "paragraphs": [
+    {
+      "id": "smiths/hakupha#p1-297ac2b4",
+      "text": "(வளைந்தது). பேனெ-அகுபா என்பவர்கள் செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பிவந்த நிதனீமியரில் அடங்கியிருந்தனர். (எஸ்றா 2:61; நெகேமியா 7:63)"
+    }
+  ]
+}

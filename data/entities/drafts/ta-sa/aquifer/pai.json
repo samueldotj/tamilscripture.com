@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pai",
+  "lang": "ta",
+  "source_hash": "aa492a64",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகி",
+  "paragraphs": [
+    {
+      "id": "aquifer/pai#p1-57666bcf",
+      "text": "பாகி என்பது பாகு என்னும் ஏதோமிய பட்டணத்தின் மற்றொரு வடிவமாகும் (1 நாளாகமம் 1:50)."
+    },
+    {
+      "id": "aquifer/pai#p2-e9b04204",
+      "text": "பாகு என்பதைக் காண்க."
+    }
+  ]
+}

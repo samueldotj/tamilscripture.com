@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bestead",
+  "lang": "ta",
+  "source_hash": "a7f1ab10",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வருத்தப்பட்ட",
+  "paragraphs": [
+    {
+      "id": "eastons/bestead#p1-a7f1ab10",
+      "text": "ஏசாயா 8:21-ல் மட்டுமே காணப்படும், துன்பப்படுத்துதல் அல்லது கடினமான நிலைமையில் இருத்தல் என்று பொருள்படும் ஒரு எபிரெய வார்த்தையின் மொழிபெயர்ப்பு."
+    }
+  ]
+}

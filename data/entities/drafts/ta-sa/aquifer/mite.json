@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mite",
+  "lang": "ta",
+  "source_hash": "a12df36e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசு (Mite)",
+  "paragraphs": [
+    {
+      "id": "aquifer/mite#p1-a12df36e",
+      "text": "ஒரு சிறிய வெண்கல அல்லது செம்பு நாணயம். இது ஒரு காசின் மதிப்பில் ஒரு பங்கிற்குச் சமமானது. கிங் யாக்கோபு மொழிபெயர்ப்பில் மாற்கு 12:42 இல் இந்த சொல் பயன்படுத்தப்பட்டுள்ளது. காண்க நாணயங்கள்; பணம்."
+    }
+  ]
+}

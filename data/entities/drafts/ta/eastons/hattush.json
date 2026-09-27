@@ -1,0 +1,38 @@
+{
+  "id": "eastons/hattush",
+  "lang": "ta",
+  "source_hash": "7e244f36",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தூஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/hattush#p1-2a218714",
+      "text": "கூட்டப்பட்டவன்."
+    },
+    {
+      "id": "eastons/hattush#p2-046d841e",
+      "text": "(1.) செருபாபேலுடன் திரும்பி வந்த ஒரு ஆசாரியன் (நெகேமியா 12:2)."
+    },
+    {
+      "id": "eastons/hattush#p3-b910115e",
+      "text": "(2.) எஸ்றா 8:2."
+    },
+    {
+      "id": "eastons/hattush#p4-0d1624ec",
+      "text": "(3.) நெகேமியா 3:10."
+    },
+    {
+      "id": "eastons/hattush#p5-031a6be4",
+      "text": "(4.) நெகேமியா 10:4."
+    },
+    {
+      "id": "eastons/hattush#p6-0ce7c0c1",
+      "text": "(5.) 1 நாளாகமம் 3:22."
+    }
+  ]
+}

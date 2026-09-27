@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dara",
+  "lang": "ta",
+  "source_hash": "17216c03",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாரா",
+  "paragraphs": [
+    {
+      "id": "smiths/dara#p1-17216c03",
+      "text": "(1 நாளாகமம் 2:6) [தர்தா காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/prison-gate",
+  "lang": "ta",
+  "source_hash": "4744792c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காவல்வீட்டுவாசல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/prison-gate#p1-39d3ea3f",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் “காவல்வீட்டுவாசல்” என்பதற்கான மொழிபெயர்ப்பு இதுவே. இது எருசலேமிலிருந்த ஒரு வாசலாகும். இது அரண்மனை மைதானத்தில் இருந்திருக்கலாம் (நெகேமியா 12:39)."
+    },
+    {
+      "id": "aquifer/prison-gate#p2-ff6aafea",
+      "text": "காவல்வீட்டுவாசல் என்பதைக் காண்க."
+    }
+  ]
+}

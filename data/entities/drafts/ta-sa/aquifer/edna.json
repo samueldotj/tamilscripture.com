@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/edna",
+  "lang": "ta",
+  "source_hash": "6860abf1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்னா",
+  "paragraphs": [
+    {
+      "id": "aquifer/edna#p1-6860abf1",
+      "text": "எத்னாள் ரகுவேலின் மனைவியும், சாராளுடைய தாயுமாக இருந்தாள் (தொபியா 7:2; 10:12; 11:1). சாராள் தொபித்தின் மகனான தொபியாவை மணந்தாள் (7:13)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zara-or-zarah",
+  "lang": "ta",
+  "source_hash": "ba162779",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரா அல்லது சாரா",
+  "paragraphs": [
+    {
+      "id": "smiths/zara-or-zarah#p1-ba162779",
+      "text": "யூதாவின் மகன். (மத்தேயு 1:3)"
+    }
+  ]
+}

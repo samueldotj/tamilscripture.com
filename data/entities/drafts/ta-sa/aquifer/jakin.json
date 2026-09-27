@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jakin",
+  "lang": "ta",
+  "source_hash": "12e8ea12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாகீன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jakin#p1-fd5f2868",
+      "text": "யாகீன் என்பதற்கு இது மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/jakin#p2-7127d15d",
+      "text": "யாகீன் காண்க."
+    }
+  ]
+}

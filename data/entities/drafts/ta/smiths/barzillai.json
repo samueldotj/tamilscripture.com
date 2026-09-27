@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barzillai",
+  "lang": "ta",
+  "source_hash": "ca5a59b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சிலாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/barzillai#p1-ca5a59b4",
+      "text": "(இரும்பு, அதாவது, பலமானவன்)."
+    }
+  ]
+}

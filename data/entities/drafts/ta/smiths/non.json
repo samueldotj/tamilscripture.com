@@ -1,0 +1,18 @@
+{
+  "id": "smiths/non",
+  "lang": "ta",
+  "source_hash": "ba977bc1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/non#p1-ba977bc1",
+      "text": "(மீன்). நூனின், யோசுவாவின் தகப்பன். (1 நாளாகமம் 7:27)"
+    }
+  ]
+}

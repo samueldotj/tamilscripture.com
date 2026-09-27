@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jokdeam",
+  "lang": "ta",
+  "source_hash": "f2eb154e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொக்தெயாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jokdeam#p1-f2eb154e",
+      "text": "யூதாவின் கோத்திரத்திற்கு சுதந்தரமாகக் கொடுக்கப்பட்ட மலைநாட்டில் அமைந்திருந்த பட்டணங்களில் ஒன்று, யெஸ்ரயேலுக்கும் சனோகாவுக்கும் இடையில் குறிப்பிடப்பட்டுள்ளது (யோசுவா 15:56)."
+    }
+  ]
+}

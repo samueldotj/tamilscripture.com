@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/beraiah",
+  "lang": "ta",
+  "source_hash": "5e38c97b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெராயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/beraiah#p1-5e38c97b",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த சிமேயியின் மகன்களில் ஒருவன் (1 நாளாகமம் 8:21)."
+    }
+  ]
+}

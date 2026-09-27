@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/merodach",
+  "lang": "ta",
+  "source_hash": "0df76ed6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெரொடாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/merodach#p1-2d6933b0",
+      "text": "மெரொடாக் என்பது முதன்மையான பாபிலோனிய தேவனாகிய மார்டுக் என்பதின் எபிரெய உச்சரிப்பாகும்."
+    },
+    {
+      "id": "aquifer/merodach#p2-91614d34",
+      "text": "மார்டுக் காண்க."
+    }
+  ]
+}

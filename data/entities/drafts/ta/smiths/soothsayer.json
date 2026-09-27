@@ -1,0 +1,18 @@
+{
+  "id": "smiths/soothsayer",
+  "lang": "ta",
+  "source_hash": "85f38490",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குறிசொல்பவன்",
+  "paragraphs": [
+    {
+      "id": "smiths/soothsayer#p1-85f38490",
+      "text": "[குறிசொல்லுதல்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bel",
+  "lang": "ta",
+  "source_hash": "5db6e6d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/bel#p1-5db6e6d1",
+      "text": "பாகாலின் அராமிக் மொழி வடிவம், பாபிலோனியரின் தேசிய தேவன் (ஏசாயா 46:1; எரேமியா 50:2; 51:44). இது “கர்த்தர்” என்று அர்த்தங்கொள்கிறது. (பாகால் காண்க.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hadassah",
+  "lang": "ta",
+  "source_hash": "92258b6d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹதஸ்சா",
+  "paragraphs": [
+    {
+      "id": "eastons/hadassah#p1-92258b6d",
+      "text": "மிர்டில் மரம், எஸ்தரின் (காண்க) யூதப் பெயர், எஸ்தர் 2:7."
+    }
+  ]
+}

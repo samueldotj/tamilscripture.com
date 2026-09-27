@@ -1,0 +1,34 @@
+{
+  "id": "eastons/hepher",
+  "lang": "ta",
+  "source_hash": "ca0d4f96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/hepher#p1-b284dc8c",
+      "text": "ஒரு கிணறு அல்லது ஆறு."
+    },
+    {
+      "id": "eastons/hepher#p2-23baaa2c",
+      "text": "(1.) யோசுவாவால் கைப்பற்றப்பட்ட கானானியரின் ஒரு அரச நகரம் (யோசுவா 12:17)."
+    },
+    {
+      "id": "eastons/hepher#p3-9755fad3",
+      "text": "(2.) கீலேயாத்தின் இளையகுமாரன் (எண்ணாகமம் 26:32; 27:1)."
+    },
+    {
+      "id": "eastons/hepher#p4-305e94a7",
+      "text": "(3.) ஆசேரின் இரண்டாம் மகன் (1 நாளாகமம் 4:6)."
+    },
+    {
+      "id": "eastons/hepher#p5-bc3a2731",
+      "text": "(4.) தாவீதின் பராக்கிரமசாலிகளில் ஒருவன் (1 நாளாகமம் 11:36)."
+    }
+  ]
+}

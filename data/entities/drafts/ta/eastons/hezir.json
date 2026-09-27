@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hezir",
+  "lang": "ta",
+  "source_hash": "6c7f5560",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசீர்",
+  "paragraphs": [
+    {
+      "id": "eastons/hezir#p1-1c1a8a3a",
+      "text": "பன்றி அல்லது பலமுள்ளவன்."
+    },
+    {
+      "id": "eastons/hezir#p2-f2a99a21",
+      "text": "(1.) ஆசாரியர்களின் பதினேழாவது வகுப்பின் தலைவன் (1 நாளாகமம் 24:15)."
+    },
+    {
+      "id": "eastons/hezir#p3-e05f8e5b",
+      "text": "(2.) நெகேமியா 10:20, நெகேமியாவின் உடன்படிக்கையில் முத்திரையிட்டவர்களில் ஒருவன்."
+    }
+  ]
+}

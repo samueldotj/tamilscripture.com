@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ostraca",
+  "lang": "ta",
+  "source_hash": "3aba325f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓஸ்ட்ராகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ostraca#p1-f5b63233",
+      "text": "ஓஸ்ட்ராகா என்பது எழுத்து பொறிக்கப்பட்ட மண்பாண்ட ஓடுகளாகும். பைபிள் காலங்களில், மக்கள் சில சமயங்களில் இந்த ஓடுகளை எழுதுவதற்கான ஒரு பரப்பாக பயன்படுத்தினர்."
+    },
+    {
+      "id": "aquifer/ostraca#p2-07c6a3d1",
+      "text": "காண்க: கல்வெட்டுகள்; ஓடு; மண்பாண்டங்கள்; எழுத்து (ஓடுகள்)."
+    }
+  ]
+}

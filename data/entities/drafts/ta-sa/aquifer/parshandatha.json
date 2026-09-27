@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/parshandatha",
+  "lang": "ta",
+  "source_hash": "30f0ba75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சான்தாத்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/parshandatha#p1-30f0ba75",
+      "text": "யூதர்களால் கொல்லப்பட்ட ஆமானின் பத்து மகன்களில் ஒருவன் (எஸ்தர் 9:7)."
+    }
+  ]
+}

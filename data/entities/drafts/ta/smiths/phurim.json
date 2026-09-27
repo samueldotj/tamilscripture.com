@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phurim",
+  "lang": "ta",
+  "source_hash": "1af2270e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூரிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/phurim#p1-1af2270e",
+      "text": "(எஸ்தர் 11:1) [பூரீம்]"
+    }
+  ]
+}

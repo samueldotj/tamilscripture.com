@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazerim",
+  "lang": "ta",
+  "source_hash": "ef2ad55d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசெரிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/hazerim#p1-ef2ad55d",
+      "text": "கிராமங்கள், நாடோடிகளான ஆவியர் குடியிருந்த தற்காலிக கிராமங்களின் பெயராக இருக்கலாம் (உபாகமம் 2:23)."
+    }
+  ]
+}

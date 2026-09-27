@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pen",
+  "lang": "ta",
+  "source_hash": "5ecb42c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/pen#p1-755b1fe0",
+      "text": "பேனா என்பது மையுடன் பயன்படுத்தப்படும் ஒரு எழுதும் கருவியாகும்."
+    },
+    {
+      "id": "aquifer/pen#p2-b03f1863",
+      "text": "எழுதுதல் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jidlaph",
+  "lang": "ta",
+  "source_hash": "e403c849",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்லாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/jidlaph#p1-e403c849",
+      "text": "(அழுகை), நாகோரின் ஒரு மகன். (ஆதியாகமம் 22:22)"
+    }
+  ]
+}

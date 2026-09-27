@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/netaim",
+  "lang": "ta",
+  "source_hash": "46a546e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெத்தாயிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/netaim#p1-46a546e1",
+      "text": "நெத்தாயிம் என்பது குயவர்கள் குடியிருந்து ராஜாவின் வேலையை விசாரித்து வந்த ஓர் குடியிருப்பாகும் (1 நாளாகமம் 4:23)."
+    }
+  ]
+}

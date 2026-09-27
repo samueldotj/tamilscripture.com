@@ -1,0 +1,18 @@
+{
+  "id": "smiths/holon",
+  "lang": "ta",
+  "source_hash": "bfeb7792",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/holon#p1-bfeb7792",
+      "text": "(மணல் நிறைந்த)."
+    }
+  ]
+}

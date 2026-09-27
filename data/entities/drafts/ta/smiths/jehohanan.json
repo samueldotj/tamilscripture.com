@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehohanan",
+  "lang": "ta",
+  "source_hash": "2fdd1d49",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகனான்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehohanan#p1-2fdd1d49",
+      "text": "(யெகோவா அருளியவன்) என்பது, யோவான் என்பது சுருக்கமாக அமைந்த பெயராகும்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kithlish-kitlish",
+  "lang": "ta",
+  "source_hash": "a4023ea2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்லீஷ், கிட்லிஷ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kithlish-kitlish#p1-35b02b85",
+      "text": "கித்லீஷ் என்பதற்கு மாற்று எழுத்துவடிவங்கள், இது யூதா கோத்திரத்திற்குக் கொடுக்கப்பட்ட ஒரு பட்டணம் (யோசுவா 15:40)."
+    },
+    {
+      "id": "aquifer/kithlish-kitlish#p2-cf65e770",
+      "text": "கித்லீஷ் காண்க."
+    }
+  ]
+}

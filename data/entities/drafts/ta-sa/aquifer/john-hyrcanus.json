@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/john-hyrcanus",
+  "lang": "ta",
+  "source_hash": "2334f1e0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவான் ஹிற்கானு",
+  "paragraphs": [
+    {
+      "id": "aquifer/john-hyrcanus#p1-db4f0934",
+      "text": "யோவான் ஹிற்கானு கிமு 135 முதல் 105 வரை யூதர்களின் ஹஸ்மோனிய ஆட்சியாளராக இருந்தார்."
+    },
+    {
+      "id": "aquifer/john-hyrcanus#p2-6bb7fdcb",
+      "text": "ஹஸ்மோனியர் என்பதைக் காண்க."
+    }
+  ]
+}

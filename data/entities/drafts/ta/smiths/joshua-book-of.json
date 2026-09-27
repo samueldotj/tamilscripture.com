@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joshua-book-of",
+  "lang": "ta",
+  "source_hash": "192fc9f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசுவா ஆகமம்",
+  "paragraphs": [
+    {
+      "id": "smiths/joshua-book-of#p1-192fc9f0",
+      "text": "இந்த ஆகமத்தில் முதன்மையான பாத்திரமாக இருக்கிற நூனின் மகனாகிய யோசுவாவின் பெயரால் இது அழைக்கப்படுகிறது. இந்த ஆகமத்தை மூன்று பகுதிகளாகக் கருதலாம்:"
+    }
+  ]
+}

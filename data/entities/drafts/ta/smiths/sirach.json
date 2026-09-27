@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sirach",
+  "lang": "ta",
+  "source_hash": "440d3f3e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிராக்",
+  "paragraphs": [
+    {
+      "id": "smiths/sirach#p1-440d3f3e",
+      "text": "எக்லேசியாஸ்திகஸ் புத்தகத்தின் எபிரெய மூலத்தை எழுதிய இயேசுவின் (யோசுவா) தகப்பன். (கி.மு. 310-220.)"
+    }
+  ]
+}

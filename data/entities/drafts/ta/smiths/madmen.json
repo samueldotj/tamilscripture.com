@@ -1,0 +1,18 @@
+{
+  "id": "smiths/madmen",
+  "lang": "ta",
+  "source_hash": "579a1628",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்மேனே",
+  "paragraphs": [
+    {
+      "id": "smiths/madmen#p1-579a1628",
+      "text": "(எருக்குப்பிலம்), எரேமியாவின் தீர்க்கதரிசன வாக்குகளில் அழிவைக்குறித்து எச்சரிக்கப்பட்ட மோவாபிலுள்ள ஒரு இடம். (எரேமியா 48:2)"
+    }
+  ]
+}

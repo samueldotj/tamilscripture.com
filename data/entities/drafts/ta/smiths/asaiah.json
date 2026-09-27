@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asaiah",
+  "lang": "ta",
+  "source_hash": "dbc2b579",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/asaiah#p1-dbc2b579",
+      "text": "(கர்த்தர் உண்டாக்கினார்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meunim",
+  "lang": "ta",
+  "source_hash": "6c909c94",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெயூனீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/meunim#p1-6c909c94",
+      "text": "(வாசஸ்தலங்கள்). (நெகேமியா 7:52) வேறு இடங்களில் Authorized Version-ல் Mehunim மற்றும் Mehunims என்று கொடுக்கப்பட்டுள்ளது."
+    }
+  ]
+}

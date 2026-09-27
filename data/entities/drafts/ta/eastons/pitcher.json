@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pitcher",
+  "lang": "ta",
+  "source_hash": "6c6ea862",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குடம்",
+  "paragraphs": [
+    {
+      "id": "eastons/pitcher#p1-6c6ea862",
+      "text": "திரவங்களை வைத்திருப்பதற்கான ஒரு பாத்திரம். கிழக்கு தேசங்களில் குடங்கள் வழக்கமாகத் தலையின்மேலோ தோள்மேலோ சுமக்கப்பட்டன (ஆதியாகமம் 24:15-20; நியாயாதிபதிகள் 7:16, 19; மாற்கு 14:13)."
+    }
+  ]
+}

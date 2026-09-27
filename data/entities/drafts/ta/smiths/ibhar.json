@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ibhar",
+  "lang": "ta",
+  "source_hash": "486c09b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்பார்",
+  "paragraphs": [
+    {
+      "id": "smiths/ibhar#p1-486c09b8",
+      "text": "(தேவன் தெரிந்துகொள்பவன்), தாவீதின் மகன்களில் ஒருவன், (2 சாமுவேல் 5:15; 1 நாளாகமம் 3:6; 14:6) (எருசலேமில் பிறந்தான். கிமு 1044க்குப் பின்.)"
+    }
+  ]
+}

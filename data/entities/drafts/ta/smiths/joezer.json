@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joezer",
+  "lang": "ta",
+  "source_hash": "929d5a43",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொவேசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/joezer#p1-929d5a43",
+      "text": "(யாருடைய உதவி யெகோவா), ஒரு கோராகியன், தாவீதின் தலைவர்களில் ஒருவன். (1 நாளாகமம் 12:6) (கி.மு. 1155.)"
+    }
+  ]
+}

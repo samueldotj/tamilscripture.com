@@ -1,0 +1,18 @@
+{
+  "id": "smiths/twin-brothers",
+  "lang": "ta",
+  "source_hash": "a87efe98",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிதுனம்",
+  "paragraphs": [
+    {
+      "id": "smiths/twin-brothers#p1-a87efe98",
+      "text": "இந்த வார்த்தை (அப்போஸ்தலருடைய நடபடிகள் 28:11) இல் திருத்தப்பட்ட மொழிபெயர்ப்பில் காஸ்தோர் மற்றும் பொல்லூக்ஸ் என்பதற்குப் பயன்படுத்தப்பட்டுள்ளது, அதைக் காண்க."
+    }
+  ]
+}

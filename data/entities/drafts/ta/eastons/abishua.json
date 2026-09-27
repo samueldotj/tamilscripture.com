@@ -1,0 +1,26 @@
+{
+  "id": "eastons/abishua",
+  "lang": "ta",
+  "source_hash": "7fdf5938",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிசுவா",
+  "paragraphs": [
+    {
+      "id": "eastons/abishua#p1-6efe880b",
+      "text": "நலனின் தகப்பன்; அதாவது, “பாக்கியவான்.”"
+    },
+    {
+      "id": "eastons/abishua#p2-7a224c11",
+      "text": "(1.) பென்யமீனின் பேரன் (1 நாளாகமம் 8:4)."
+    },
+    {
+      "id": "eastons/abishua#p3-cec6a268",
+      "text": "(2.) பிரதான ஆசாரியனாகிய பினெகாசின் மகன் (1 நாளாகமம் 6:4, 5, 50; எஸ்றா 7:5)."
+    }
+  ]
+}

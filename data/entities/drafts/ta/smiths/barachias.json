@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barachias",
+  "lang": "ta",
+  "source_hash": "64166659",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/barachias#p1-64166659",
+      "text": "(மத்தேயு 23:35) [சகரியா]"
+    }
+  ]
+}

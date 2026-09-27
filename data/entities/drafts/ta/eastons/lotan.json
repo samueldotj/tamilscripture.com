@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lotan",
+  "lang": "ta",
+  "source_hash": "6fa99bc6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோத்தான்",
+  "paragraphs": [
+    {
+      "id": "eastons/lotan#p1-6fa99bc6",
+      "text": "மூடுகிறவன், ஓரியனான சேயீரின் மகன்களில் ஒருவன் (ஆதியாகமம் 36:20, 29)."
+    }
+  ]
+}

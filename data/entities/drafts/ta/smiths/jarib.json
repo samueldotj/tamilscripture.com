@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jarib",
+  "lang": "ta",
+  "source_hash": "117ce22c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாரிப்",
+  "paragraphs": [
+    {
+      "id": "smiths/jarib#p1-117ce22c",
+      "text": "(எதிரி)."
+    }
+  ]
+}

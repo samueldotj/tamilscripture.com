@@ -1,0 +1,18 @@
+{
+  "id": "smiths/viper",
+  "lang": "ta",
+  "source_hash": "cc9ac425",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/viper#p1-cc9ac425",
+      "text": "[சர்ப்பம் காண்க]"
+    }
+  ]
+}

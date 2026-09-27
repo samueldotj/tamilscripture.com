@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hashupha",
+  "lang": "ta",
+  "source_hash": "67a0ea14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசுபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hashupha#p1-4e7c08f3",
+      "text": "ஹஷுபா என்பது நெகேமியா 7:46-ல் உள்ள அசுபா என்பதற்கான கிங் யாக்கோபு மொழிபெயர்ப்பின் எழுத்துப்பெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/hashupha#p2-93652889",
+      "text": "அசுபா-ஐக் காண்க."
+    }
+  ]
+}

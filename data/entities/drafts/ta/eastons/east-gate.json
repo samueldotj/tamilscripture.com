@@ -1,0 +1,18 @@
+{
+  "id": "eastons/east-gate",
+  "lang": "ta",
+  "source_hash": "1d0a1b1c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிழக்கு வாசல்",
+  "paragraphs": [
+    {
+      "id": "eastons/east-gate#p1-1d0a1b1c",
+      "text": "(எரேமியா 19:2), சரியாகச் சொன்னால் குயவனுடைய வாசல், இன்னோமுடைய பள்ளத்தாக்கிலுள்ள குயவனுடைய நிலத்திற்குக் கொண்டுசெல்லும் வாசல்."
+    }
+  ]
+}

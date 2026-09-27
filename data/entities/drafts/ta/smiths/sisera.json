@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sisera",
+  "lang": "ta",
+  "source_hash": "c846bba2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிசெரா",
+  "paragraphs": [
+    {
+      "id": "smiths/sisera#p1-c846bba2",
+      "text": "(போர் அணிவகுப்பு)."
+    }
+  ]
+}

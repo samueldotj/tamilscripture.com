@@ -1,0 +1,26 @@
+{
+  "id": "eastons/oded",
+  "lang": "ta",
+  "source_hash": "98fd8f79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/oded#p1-6d5988d5",
+      "text": "திரும்பவும் நிலைநிறுத்துதல், அல்லது ஏற்படுத்துதல்."
+    },
+    {
+      "id": "eastons/oded#p2-2f6d2831",
+      "text": "(1.) தீர்க்கதரிசியாகிய அசரியாவின் தகப்பன் (2 நாளாகமம் 15:1, 8)."
+    },
+    {
+      "id": "eastons/oded#p3-9bbcf3c7",
+      "text": "(2.) ஆகாஸும் பெக்காவும் இருந்த காலத்தில் இருந்த ஒரு தீர்க்கதரிசி (2 நாளாகமம் 28:9-15)."
+    }
+  ]
+}

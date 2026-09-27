@@ -1,0 +1,18 @@
+{
+  "id": "smiths/scripture",
+  "lang": "ta",
+  "source_hash": "35c34094",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வேதவாக்கியம்",
+  "paragraphs": [
+    {
+      "id": "smiths/scripture#p1-35c34094",
+      "text": "[வேதம் என்பதைக் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hodijah",
+  "lang": "ta",
+  "source_hash": "ef8b1591",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒதியா",
+  "paragraphs": [
+    {
+      "id": "eastons/hodijah#p1-9d7ed9fd",
+      "text": "யெகோவாவின் மகிமை."
+    },
+    {
+      "id": "eastons/hodijah#p2-7456123e",
+      "text": "(1.) நியாயப்பிரமாணத்தை விளக்குவதில் எஸ்றாவுக்கு உதவிசெய்த லேவியர்களில் ஒருவன் (நெகேமியா 8:7; 9:5)."
+    },
+    {
+      "id": "eastons/hodijah#p3-df239d99",
+      "text": "(2.) நெகேமியா 10:18, உடன்படிக்கையை முத்திரையிட்ட ஒரு லேவியன்."
+    }
+  ]
+}

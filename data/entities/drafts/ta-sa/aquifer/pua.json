@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pua",
+  "lang": "ta",
+  "source_hash": "ea4f65f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/pua#p1-d5b69c9d",
+      "text": "இசக்காருடைய மகனான பூவாவுக்கு (எண்ணாகமம் 26:23) கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் வடிவம்."
+    },
+    {
+      "id": "aquifer/pua#p2-7dd5e710",
+      "text": "பூவா என்பதைக் காண்க."
+    }
+  ]
+}

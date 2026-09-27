@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elymas",
+  "lang": "ta",
+  "source_hash": "37d62f33",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிமா",
+  "paragraphs": [
+    {
+      "id": "aquifer/elymas#p1-1aa12c6e",
+      "text": "பார்-இயேசு என்பவனுடைய மற்றொரு பெயர். இவன் அப்போஸ்தலருடைய நடபடிகள் 13:8-இல் குறிப்பிடப்பட்டுள்ள ஒரு யூதனான மாயவித்தைக்காரனும் கள்ள தீர்க்கதரிசியுமாவான்."
+    },
+    {
+      "id": "aquifer/elymas#p2-f8d0f41e",
+      "text": "பார்-இயேசு என்பதைக் காண்க."
+    }
+  ]
+}

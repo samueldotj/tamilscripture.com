@@ -1,0 +1,18 @@
+{
+  "id": "eastons/baalath-beer",
+  "lang": "ta",
+  "source_hash": "962bd2f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலாத்பெயேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/baalath-beer#p1-962bd2f9",
+      "text": "கிணற்றின் பாலா, (யோசுவா 19:8), இது 1 நாளாகமம் 4:33-ல் குறிப்பிடப்பட்டுள்ள பாகால் என்பதே எனத் தோன்றுகிறது, இது சிமியோனுடைய ஒரு பட்டணம்."
+    }
+  ]
+}

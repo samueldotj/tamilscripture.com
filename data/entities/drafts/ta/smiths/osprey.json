@@ -1,0 +1,18 @@
+{
+  "id": "smiths/osprey",
+  "lang": "ta",
+  "source_hash": "e18033ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடலுராஞ்சி",
+  "paragraphs": [
+    {
+      "id": "smiths/osprey#p1-e18033ca",
+      "text": "எபிரெய வார்த்தை லேவியராகமம் 11:13, உபாகமம் 14:12 ஆகியவற்றில் வருகிறது. அது ஏதோ ஒரு அசுத்தமான பறவையின் பெயராகும். அது ஓஸ்ப்ரி எனப்படும் பருந்து இனத்தைச் சேர்ந்த கடலுராஞ்சி (Pandion haliaetus) அல்லது வெள்ளைவால் கழுகு (Haliaetus albicella) என இரண்டில் ஒன்றாக இருக்கக்கூடும்."
+    }
+  ]
+}

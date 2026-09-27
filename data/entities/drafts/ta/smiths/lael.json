@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lael",
+  "lang": "ta",
+  "source_hash": "30f9df96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/lael#p1-30f9df96",
+      "text": "(தேவனுடையவன்), எலியாசாபின் தகப்பன். (எண்ணாகமம் 3:24)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bealoth",
+  "lang": "ta",
+  "source_hash": "fe445aa5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெயாலோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bealoth#p1-fe445aa5",
+      "text": "(பெண்மணிகள்) யூதாவின் தென்கோடியில் இருந்த ஒரு பட்டணம். (யோசுவா 15:24)"
+    }
+  ]
+}

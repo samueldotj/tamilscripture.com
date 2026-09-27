@@ -1,0 +1,18 @@
+{
+  "id": "eastons/beth-tappuah",
+  "lang": "ta",
+  "source_hash": "6dbb0439",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தப்புவா",
+  "paragraphs": [
+    {
+      "id": "eastons/beth-tappuah#p1-6dbb0439",
+      "text": "அதாவது, ஆப்பிள்களின் வீடு, யூதாவில் உள்ள ஒரு பட்டணம், இப்பொழுது துஃபுஹ் என அழைக்கப்படுகிறது, எப்ரோனுக்கு 5 மைல் மேற்கே இருக்கிறது (யோசுவா 15:53)."
+    }
+  ]
+}

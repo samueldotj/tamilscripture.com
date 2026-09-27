@@ -1,0 +1,18 @@
+{
+  "id": "smiths/epaphroditus",
+  "lang": "ta",
+  "source_hash": "e71c1e57",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பாப்பிரோதீத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/epaphroditus#p1-e71c1e57",
+      "text": "(அழகானவன்), எப்பாப்பிரா என்பது இதன் சுருக்கப்பட்ட வடிவம். (பிலேமோன் 2:25; 4:18)"
+    }
+  ]
+}

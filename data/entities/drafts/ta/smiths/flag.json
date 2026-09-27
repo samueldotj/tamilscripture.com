@@ -1,0 +1,18 @@
+{
+  "id": "smiths/flag",
+  "lang": "ta",
+  "source_hash": "a2c14dd6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாணல்",
+  "paragraphs": [
+    {
+      "id": "smiths/flag#p1-a2c14dd6",
+      "text": "நமது பரிசுத்த வேதாகமத்தில் “நாணல்” என்று மொழிபெயர்க்கப்பட்டிருக்கும் இரண்டு எபிரெய வார்த்தைகள் உள்ளன:"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/nobah",
+  "lang": "ta",
+  "source_hash": "6dc2d68e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோபாக்",
+  "paragraphs": [
+    {
+      "id": "eastons/nobah#p1-f903f54a",
+      "text": "அலறுதல்."
+    },
+    {
+      "id": "eastons/nobah#p2-e7195ede",
+      "text": "(1.) எண்ணாகமம் 32:42."
+    },
+    {
+      "id": "eastons/nobah#p3-dc9b3898",
+      "text": "(2.) நோபாக் கேனாத்தை (காண்க) கட்டிக்கொண்டபோது அதற்குக் கொடுத்த பெயர். அது கீலேயாத்திற்குக் கிழக்கே இருந்தது (நியாயாதிபதிகள் 8:11)."
+    }
+  ]
+}

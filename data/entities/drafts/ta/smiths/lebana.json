@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lebana",
+  "lang": "ta",
+  "source_hash": "2dec3acd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லெபானா",
+  "paragraphs": [
+    {
+      "id": "smiths/lebana#p1-2dec3acd",
+      "text": "(வெண்மையானவன்), செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பிவந்த நேதினீமியரில் ஒருவனுடைய சந்ததியினர் (நெகேமியா 7:48). இவன் லெபானா என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

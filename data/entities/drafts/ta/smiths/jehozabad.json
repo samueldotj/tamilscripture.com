@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehozabad",
+  "lang": "ta",
+  "source_hash": "dd1364b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehozabad#p1-dd1364b5",
+      "text": "(யெகோவா அளித்தவன்)."
+    }
+  ]
+}

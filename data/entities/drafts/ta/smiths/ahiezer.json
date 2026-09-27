@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahiezer",
+  "lang": "ta",
+  "source_hash": "ea785c2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியேசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahiezer#p1-ea785c2b",
+      "text": "(உதவியின் சகோதரன்)."
+    }
+  ]
+}

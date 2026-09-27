@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adna",
+  "lang": "ta",
+  "source_hash": "54d04a16",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/adna#p1-54d04a16",
+      "text": "(இளைப்பாறுதல், மகிழ்ச்சி)."
+    }
+  ]
+}

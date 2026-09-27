@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jaasiel",
+  "lang": "ta",
+  "source_hash": "b3bb4d66",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaasiel#p1-530f07d8",
+      "text": "1. தாவீதின் பராக்கிரமசாலிகளில் ஒரு போராளி. இவன் “மேசோபாயா” என்று அழைக்கப்படுகிறான் (1 நாளாகமம் 11:47)."
+    },
+    {
+      "id": "aquifer/jaasiel#p2-e60174ec",
+      "text": "2. அப்னேரின் மகன் மற்றும் தாவீதின் ஆட்சிக்காலத்தில் பென்யமீன் கோத்திரத்திற்குத் தலைவனாக இருந்தவன் (1 நாளாகமம் 27:21)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/el-bethel",
+  "lang": "ta",
+  "source_hash": "4d2c4541",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பெத்தேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/el-bethel#p1-4d2c4541",
+      "text": "பெத்தேலின் தேவன் என்பது, யாக்கோபு ஏணியின் தரிசனத்தைக் கண்டு, அங்கே ஒரு பலிபீடத்தைக் கட்டிய இடத்தின் பெயராகும் (ஆதியாகமம் 31:13; 35:7)."
+    }
+  ]
+}

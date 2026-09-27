@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/emerod",
+  "lang": "ta",
+  "source_hash": "70d94d36",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடிந்தமூலம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/emerod#p1-531bb5e6",
+      "text": "1. உபாகமம் 28:27-ல் காணப்படும் மூலவியாதி என்ற வார்த்தைக்குரிய KJV மொழிபெயர்ப்பு. காண்க: புண்."
+    },
+    {
+      "id": "aquifer/emerod#p2-39081608",
+      "text": "2. 1 சாமுவேலின் 5:6-12 மற்றும் 6:4-17-ல் காணப்படும் கட்டி என்ற வார்த்தைக்குரிய KJV மொழிபெயர்ப்பு. காண்க: கட்டி."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/puah",
+  "lang": "ta",
+  "source_hash": "75ea6425",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவா",
+  "paragraphs": [
+    {
+      "id": "eastons/puah#p1-efb3edec",
+      "text": "சிறப்பானது."
+    },
+    {
+      "id": "eastons/puah#p2-59bc2de0",
+      "text": "(1.) தேவனுக்குப் பயந்து, பிறக்கும்போது எபிரெய ஆண் பிள்ளைகளைக் கொல்ல மறுத்த இரண்டு மருத்துவச்சிகளில் ஒருத்தி (யாத்திராகமம் 1:15-21)."
+    },
+    {
+      "id": "eastons/puah#p3-301d9fce",
+      "text": "(2.) இசக்காரின் சந்ததியில் ஒருவன் (நியாயாதிபதிகள் 10:1)."
+    }
+  ]
+}

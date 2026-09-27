@@ -1,0 +1,18 @@
+{
+  "id": "smiths/galal",
+  "lang": "ta",
+  "source_hash": "08e3acb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலால்",
+  "paragraphs": [
+    {
+      "id": "smiths/galal#p1-08e3acb7",
+      "text": "(செல்வாக்குள்ளவன்)"
+    }
+  ]
+}

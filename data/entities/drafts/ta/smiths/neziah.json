@@ -1,0 +1,18 @@
+{
+  "id": "smiths/neziah",
+  "lang": "ta",
+  "source_hash": "e7444a36",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெத்சியா",
+  "paragraphs": [
+    {
+      "id": "smiths/neziah#p1-e7444a36",
+      "text": "(மேன்மையான). நெத்சியாவின் வம்சத்தார் செருபாபேலுடன் திரும்பி வந்த நிதனீமியரில் ஒருவராக இருந்தனர். (எஸ்றா 2:54; நெகேமியா 7:56) (கி.மு. 536.)"
+    }
+  ]
+}

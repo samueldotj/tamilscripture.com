@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehoadah",
+  "lang": "ta",
+  "source_hash": "b5a55d3c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெகோவாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/jehoadah#p1-b5a55d3c",
+      "text": "(யெகோவா அலங்கரிக்கிறவர்), சவுலின் சந்ததியில் ஒருவன். (1 நாளாகமம் 8:36)"
+    }
+  ]
+}

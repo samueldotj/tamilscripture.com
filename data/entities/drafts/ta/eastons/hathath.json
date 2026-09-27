@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hathath",
+  "lang": "ta",
+  "source_hash": "511da7c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்தாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/hathath#p1-511da7c2",
+      "text": "பயங்கரம், ஒத்னியேலின் மகன் (1 நாளாகமம் 4:13)."
+    }
+  ]
+}

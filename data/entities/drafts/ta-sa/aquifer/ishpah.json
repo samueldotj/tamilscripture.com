@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ishpah",
+  "lang": "ta",
+  "source_hash": "f5fd9cd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishpah#p1-f5fd9cd9",
+      "text": "இஸ்பா பென்யமீன் கோத்திரத்தைச் சேர்ந்த பெரீயாவின் மகன் ஆவான் (1 நாளாகமம் 8:16)."
+    }
+  ]
+}

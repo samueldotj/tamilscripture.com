@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/drachma",
+  "lang": "ta",
+  "source_hash": "bad37ccb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "த்ராக்மா",
+  "paragraphs": [
+    {
+      "id": "aquifer/drachma#p1-cd708956",
+      "text": "த்ராக்மா என்பது ஒரு கிரேக்க வெள்ளிக் காசாகும், அது ஏறக்குறைய ஒரு ரோம பணத்தொகையான தெனாரியனுக்குச் சமமான மதிப்புடையதாக இருந்தது."
+    },
+    {
+      "id": "aquifer/drachma#p2-10692688",
+      "text": "காண்க: நாணயங்கள்."
+    }
+  ]
+}

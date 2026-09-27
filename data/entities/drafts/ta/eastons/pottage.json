@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pottage",
+  "lang": "ta",
+  "source_hash": "8d16a102",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூழ்",
+  "paragraphs": [
+    {
+      "id": "eastons/pottage#p1-8d16a102",
+      "text": "எபிரெயு nazid, “வேகவைக்கப்பட்டது”, பருப்பு போன்றவற்றைக் கொண்ட வேகவைக்கப்பட்ட உணவு வகை (ஆதியாகமம் 25:29; 2 இராஜாக்கள் 4:38)."
+    }
+  ]
+}

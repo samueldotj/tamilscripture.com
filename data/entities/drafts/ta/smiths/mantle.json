@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mantle",
+  "lang": "ta",
+  "source_hash": "359e1fb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சால்வை",
+  "paragraphs": [
+    {
+      "id": "smiths/mantle#p1-359e1fb5",
+      "text": "இது வழக்கத்திலுள்ள மொழிபெயர்ப்பில் (Authorized Version) நான்கு எபிரெய சொற்களைத் தமிழாக்கம் செய்யப் பயன்படுத்தப்பட்ட சொல்லாகும்; அந்த நான்கு சொற்களும் தோற்றத்திலும் பொருளிலும் முற்றிலும் வேறுபட்டவையும் சார்பற்றவையுமாக இருக்கின்றன."
+    }
+  ]
+}

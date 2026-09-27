@@ -1,0 +1,18 @@
+{
+  "id": "smiths/reed",
+  "lang": "ta",
+  "source_hash": "4930f958",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாணல்",
+  "paragraphs": [
+    {
+      "id": "smiths/reed#p1-4930f958",
+      "text": "இந்தப் பெயரின் கீழ் பின்வரும் எபிரெய வார்த்தைகளைக் குறிப்பிடலாம்:"
+    }
+  ]
+}

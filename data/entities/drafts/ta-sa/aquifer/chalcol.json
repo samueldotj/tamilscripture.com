@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chalcol",
+  "lang": "ta",
+  "source_hash": "c74cef4a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்கோல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chalcol#p1-e737677b",
+      "text": "1 இராஜாக்கள் 4:31-இல் கல்கோல் என்பதற்கு யாக்கோபு மன்னன் வேர்ஷனில் காணப்படும் பெயர் எழுத்துப்பிழை. கல்கோல் ஞானமுள்ள மனிதனாக இருந்தான்."
+    },
+    {
+      "id": "aquifer/chalcol#p2-cacc1567",
+      "text": "கல்கோல் என்பதைக் காண்க."
+    }
+  ]
+}

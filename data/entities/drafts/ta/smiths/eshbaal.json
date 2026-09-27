@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eshbaal",
+  "lang": "ta",
+  "source_hash": "aebf6fe4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்பால்",
+  "paragraphs": [
+    {
+      "id": "smiths/eshbaal#p1-aebf6fe4",
+      "text": "(பாகாலின் மனிதன்), (1 நாளாகமம் 8:33; 9:39) இஸ்போசேத்தை போலவே."
+    }
+  ]
+}

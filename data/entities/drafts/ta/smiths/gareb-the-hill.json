@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gareb-the-hill",
+  "lang": "ta",
+  "source_hash": "bf510b41",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காரேப், மேடு",
+  "paragraphs": [
+    {
+      "id": "smiths/gareb-the-hill#p1-bf510b41",
+      "text": "எருசலேமின் அருகில் இருந்த ஒரு மேடு, எரேமியா 31:39-ல் மட்டும் குறிக்கப்பட்டுள்ளது"
+    }
+  ]
+}

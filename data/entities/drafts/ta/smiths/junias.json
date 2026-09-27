@@ -1,0 +1,18 @@
+{
+  "id": "smiths/junias",
+  "lang": "ta",
+  "source_hash": "c81db102",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூனியாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/junias#p1-c81db102",
+      "text": "மேலே கூறப்பட்ட யூனியாவுக்கு பரிசோதிக்கப்பட்ட மொழிபெயர்ப்பு (Revised Version) இது. இது மிகவும் அப்படியே மொழிபெயர்க்கப்பட்ட வடிவமாகும்."
+    }
+  ]
+}

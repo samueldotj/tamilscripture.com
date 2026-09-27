@@ -1,0 +1,18 @@
+{
+  "id": "smiths/igal",
+  "lang": "ta",
+  "source_hash": "2c7d9380",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈகால்",
+  "paragraphs": [
+    {
+      "id": "smiths/igal#p1-2c7d9380",
+      "text": "(தேவன் பழிவாங்குவார்)."
+    }
+  ]
+}

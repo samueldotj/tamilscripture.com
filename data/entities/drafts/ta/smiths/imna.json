@@ -1,0 +1,18 @@
+{
+  "id": "smiths/imna",
+  "lang": "ta",
+  "source_hash": "ec881ffe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/imna#p1-ec881ffe",
+      "text": "(தடுத்து நிற்பவன்), ஆசேருடைய சந்ததியாகிய ஏலேமின் மகன். (1 நாளாகமம் 7:35) ஒப்பிடுக 1 நாளாகமம் 7:40 (கி.மு. 1461 க்கு அருகில்.)"
+    }
+  ]
+}

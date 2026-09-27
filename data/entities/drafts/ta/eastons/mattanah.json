@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mattanah",
+  "lang": "ta",
+  "source_hash": "f3eab775",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தனா",
+  "paragraphs": [
+    {
+      "id": "eastons/mattanah#p1-f3eab775",
+      "text": "ஒரு வெளிப்படையான பொருள் கொடை என்பதாகும், இது வனாந்திரத்திற்கும் மோவாபின் எல்லைகளுக்கும் இடையே, வாடி வாலேயில் உள்ள இஸ்ரவேலரின் ஒரு தங்கும் இடமாகும் (எண்ணாகமம் 21:18, 19)."
+    }
+  ]
+}

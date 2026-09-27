@@ -1,0 +1,46 @@
+{
+  "id": "eastons/shephatiah",
+  "lang": "ta",
+  "source_hash": "b1048351",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபத்தியா",
+  "paragraphs": [
+    {
+      "id": "eastons/shephatiah#p1-b8cc9324",
+      "text": "கர்த்தரால் நியாயம் தீர்க்கப்பட்டவன்."
+    },
+    {
+      "id": "eastons/shephatiah#p2-018ae6dd",
+      "text": "(1.) அபித்தாள் மூலம் தாவீதுக்குப் பிறந்த மகன் (2 சாமுவேல் 3:4)."
+    },
+    {
+      "id": "eastons/shephatiah#p3-a6a84ec5",
+      "text": "(2.) சிக்லாகில் தாவீதுடன் இணைந்த ஒரு பென்யமீனன் (1 நாளாகமம் 12:5)."
+    },
+    {
+      "id": "eastons/shephatiah#p4-1fc2ef23",
+      "text": "(3.) தாவீதின் காலத்தில் இருந்த ஒரு சிமியோனிய தலைவன் (1 நாளாகமம் 27:16)."
+    },
+    {
+      "id": "eastons/shephatiah#p5-f942bbe1",
+      "text": "(4.) யோசபாத்தின் மகன்களில் ஒருவன் (2 நாளாகமம் 21:2)."
+    },
+    {
+      "id": "eastons/shephatiah#p6-87179741",
+      "text": "(5.) எஸ்றா 2:4."
+    },
+    {
+      "id": "eastons/shephatiah#p7-b6f6572e",
+      "text": "(6.) எஸ்றா 2:57; நெகேமியா 7:59."
+    },
+    {
+      "id": "eastons/shephatiah#p8-5f42db05",
+      "text": "(7.) எரேமியாவைக் கொலைசெய்ய வலியுறுத்திய பிரபுக்களில் ஒருவன் (எரேமியா 38:1-4)."
+    }
+  ]
+}

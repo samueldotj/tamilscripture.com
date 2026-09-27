@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kanah",
+  "lang": "ta",
+  "source_hash": "27b51810",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கானா",
+  "paragraphs": [
+    {
+      "id": "smiths/kanah#p1-27b51810",
+      "text": "(நாணல் இடம்)."
+    }
+  ]
+}

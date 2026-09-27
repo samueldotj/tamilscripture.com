@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/annan",
+  "lang": "ta",
+  "source_hash": "e4583de5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/annan#p1-e4583de5",
+      "text": "எஸ்றா அறிவுறுத்தியபடி தங்களுடைய அந்நிய மனைவிகளை விவாகரத்து செய்த ஐந்து மகன்களின் தகப்பன் (1 எஸ்றா 9:32). இவர் ஆரிம் என்றும் அழைக்கப்படுகிறார் (எஸ்றா 10:31)."
+    }
+  ]
+}

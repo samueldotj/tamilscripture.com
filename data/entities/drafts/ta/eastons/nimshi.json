@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nimshi",
+  "lang": "ta",
+  "source_hash": "ece89d5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிம்சி",
+  "paragraphs": [
+    {
+      "id": "eastons/nimshi#p1-ece89d5d",
+      "text": "இரட்சிக்கப்பட்டவன். யெகூ “நிம்சியின் மகனான யோசபாத்தின் மகன்” ஆவான் (2 இராஜாக்கள் 9:2; ஒப்பிடுக 1 இராஜாக்கள் 19:16)."
+    }
+  ]
+}

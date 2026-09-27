@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ammizabad",
+  "lang": "ta",
+  "source_hash": "d03338bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அமிசபாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ammizabad#p1-d03338bd",
+      "text": "பெனாயாவின் மகன். பெனாயாவும் அமிசபாத்தும் தாவீது ராஜாவின் இராணுவத்தில் உயர் அதிகாரிகளாக இருந்தார்கள் (1 நாளாகமம் 27:5-6)."
+    }
+  ]
+}

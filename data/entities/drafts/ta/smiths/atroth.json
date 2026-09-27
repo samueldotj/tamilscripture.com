@@ -1,0 +1,18 @@
+{
+  "id": "smiths/atroth",
+  "lang": "ta",
+  "source_hash": "0cafc409",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்ரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/atroth#p1-0cafc409",
+      "text": "(கிரீடங்கள்), காத்தின் ஒரு நகரம். (எண்ணாகமம் 32:35)"
+    }
+  ]
+}

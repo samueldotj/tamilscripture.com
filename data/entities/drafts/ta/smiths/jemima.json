@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jemima",
+  "lang": "ta",
+  "source_hash": "ca54779d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எமீமாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/jemima#p1-ca54779d",
+      "text": "(புறா), யோபுவின் செழிப்பு திரும்பக் கொடுக்கப்பட்ட பின்பு அவனுக்குப் பிறந்த மூன்று மகள்களில் மூத்தவள். (யோபு 42:14)"
+    }
+  ]
+}

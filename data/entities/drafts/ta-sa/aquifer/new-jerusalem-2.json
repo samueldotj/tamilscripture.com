@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/new-jerusalem-2",
+  "lang": "ta",
+  "source_hash": "8bdce176",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புதிய எருசலேம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/new-jerusalem-2#p1-8bdce176",
+      "text": "புதிய எருசலேம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ink-inkhorn",
+  "lang": "ta",
+  "source_hash": "34631ba8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மசி, மசிக்கூடு",
+  "paragraphs": [
+    {
+      "id": "smiths/ink-inkhorn#p1-34631ba8",
+      "text": "[எழுத்து]"
+    }
+  ]
+}

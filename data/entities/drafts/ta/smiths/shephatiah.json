@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shephatiah",
+  "lang": "ta",
+  "source_hash": "8522048e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபத்தியா",
+  "paragraphs": [
+    {
+      "id": "smiths/shephatiah#p1-8522048e",
+      "text": "(யெகோவாவினால் நியாயம் தீர்க்கப்பட்டவன்)."
+    }
+  ]
+}

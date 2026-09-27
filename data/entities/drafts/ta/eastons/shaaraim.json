@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shaaraim",
+  "lang": "ta",
+  "source_hash": "1188a75c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராயீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/shaaraim#p1-8f920bcc",
+      "text": "இரண்டு வாசல்கள்."
+    },
+    {
+      "id": "eastons/shaaraim#p2-4c5f6d84",
+      "text": "(1.) யூதாவின் சமபூமியில் இருந்த ஒரு பட்டணம் (1 சாமுவேல் 17:52); இதற்கு சாராயீம் என்றும் பெயர் (யோசுவா 15:36)."
+    },
+    {
+      "id": "eastons/shaaraim#p3-0d191da4",
+      "text": "(2.) சிமியோனுக்குள் இருந்த ஒரு பட்டணம் (1 நாளாகமம் 4:31)."
+    }
+  ]
+}

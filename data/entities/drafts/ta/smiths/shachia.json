@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shachia",
+  "lang": "ta",
+  "source_hash": "563a692b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/shachia#p1-563a692b",
+      "text": "(அறிவிப்பு) சகராயீம் தன் மனைவியாகிய ஓதேசாலிடத்தில் பெற்ற ஒரு மகன். (1 நாளாகமம் 8:10)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pergamum",
+  "lang": "ta",
+  "source_hash": "33b20acc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெர்கமு",
+  "paragraphs": [
+    {
+      "id": "smiths/pergamum#p1-33b20acc",
+      "text": "திருத்தப்பட்ட மொழிபெயர்ப்பில் பெர்கமோஸ் என்பதற்குப் பதிலாக (வெளிப்படுத்தின விசேஷம் 1:11) பெர்கமு. பெர்கமு என்பதே பாரம்பரிய கிரேக்க எழுத்தாளர்களில் வழக்கமாகக் காணப்படும் வடிவம்."
+    }
+  ]
+}

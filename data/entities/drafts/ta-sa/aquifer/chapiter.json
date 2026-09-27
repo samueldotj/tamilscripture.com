@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chapiter",
+  "lang": "ta",
+  "source_hash": "5ec8c021",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிகரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chapiter#p1-4cd5bf15",
+      "text": "“சிகரம்” (chapiter) என்ற வார்த்தை கிங் யாக்கோபு மொழிபெயர்ப்பில் “தலைப்பு” (capital) என்பதைக் குறிக்கப் பயன்படுத்தப்பட்டுள்ளது. ஒரு தலைப்பு என்பது கட்டிடத்தில் ஒரு தூணின் அல்லது கம்பத்தின் மேற்பகுதியாகும்."
+    },
+    {
+      "id": "aquifer/chapiter#p2-51a5b575",
+      "text": "தலைப்பு (Capital) என்பதைக் காண்க."
+    }
+  ]
+}

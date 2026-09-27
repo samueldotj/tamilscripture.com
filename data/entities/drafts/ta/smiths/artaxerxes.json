@@ -1,0 +1,18 @@
+{
+  "id": "smiths/artaxerxes",
+  "lang": "ta",
+  "source_hash": "fca4d89c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்தசஷ்டா",
+  "paragraphs": [
+    {
+      "id": "smiths/artaxerxes#p1-fca4d89c",
+      "text": "(மகா யுத்தவீரன்)."
+    }
+  ]
+}

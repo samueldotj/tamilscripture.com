@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abram",
+  "lang": "ta",
+  "source_hash": "ba70e971",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபிராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/abram#p1-ba70e971",
+      "text": "(உயர்ந்த தகப்பன்), ஆபிரகாமின் முந்தின பெயர்."
+    }
+  ]
+}

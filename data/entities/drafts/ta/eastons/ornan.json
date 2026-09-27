@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ornan",
+  "lang": "ta",
+  "source_hash": "1a584c5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒர்னான்",
+  "paragraphs": [
+    {
+      "id": "eastons/ornan#p1-1a584c5b",
+      "text": "1 நாளாகமம் 21:15. (அரவுனா காண்க.)"
+    }
+  ]
+}

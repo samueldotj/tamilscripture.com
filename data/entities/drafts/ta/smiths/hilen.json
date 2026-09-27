@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hilen",
+  "lang": "ta",
+  "source_hash": "d19b266b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈலேன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hilen#p1-d19b266b",
+      "text": "(குகைகளின் இடம்), யூதாவில் உள்ள ஒரு பட்டணத்தின் பெயர், அது அதின் வெளிநிலங்களுடன் ஆசாரியர்களுக்கு பங்கிடப்பட்டது. (1 நாளாகமம் 6:58)"
+    }
+  ]
+}

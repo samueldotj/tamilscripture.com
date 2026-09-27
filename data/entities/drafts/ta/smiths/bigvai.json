@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bigvai",
+  "lang": "ta",
+  "source_hash": "747ee7c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிக்வாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/bigvai#p1-747ee7c1",
+      "text": "(சந்தோஷமானவன்)."
+    }
+  ]
+}

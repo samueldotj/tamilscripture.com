@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sapphira",
+  "lang": "ta",
+  "source_hash": "b204977a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்பீராள்",
+  "paragraphs": [
+    {
+      "id": "eastons/sapphira#p1-b204977a",
+      "text": "அழகுள்ளவள் என்பது பொருள்; அனனியாவின் (காண்க) மனைவி. அவள் அவனுடைய குற்றத்திற்குப் பங்காளியாகவும், அவனுடைய தண்டனையிலும் பங்குகொண்டவளாக இருந்தாள் (அப்போஸ்தலருடைய நடபடிகள் 5:1-11)."
+    }
+  ]
+}

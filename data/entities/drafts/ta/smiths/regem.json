@@ -1,0 +1,18 @@
+{
+  "id": "smiths/regem",
+  "lang": "ta",
+  "source_hash": "bda95e67",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேகேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/regem#p1-bda95e67",
+      "text": "(நண்பன்) யாதாயின் மகன் (1 நாளாகமம் 2:47)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kid",
+  "lang": "ta",
+  "source_hash": "f54f82b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெள்ளாட்டுக்குட்டி",
+  "paragraphs": [
+    {
+      "id": "aquifer/kid#p1-ea99aca6",
+      "text": "வெள்ளாட்டுக்குட்டி என்பது ஒரு இளம் வெள்ளாடு."
+    },
+    {
+      "id": "aquifer/kid#p2-15968a32",
+      "text": "வெள்ளாடு என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/melchiah",
+  "lang": "ta",
+  "source_hash": "ba7627a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெல்கியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/melchiah#p1-7ecb1af1",
+      "text": "மெல்கியா என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் மல்கியா என்பதற்குரிய எழுத்துவடிவமாகும், இவன் பஸ்கூரின் தகப்பன் (எரேமியா 21:1)."
+    },
+    {
+      "id": "aquifer/melchiah#p2-d07245bd",
+      "text": "மல்கியா #8-ஐக் காண்க."
+    }
+  ]
+}

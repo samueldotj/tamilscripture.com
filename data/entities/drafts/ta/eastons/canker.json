@@ -1,0 +1,18 @@
+{
+  "id": "eastons/canker",
+  "lang": "ta",
+  "source_hash": "2c2c4c3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கஞ்சரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/canker#p1-2c2c4c3a",
+      "text": "படிப்படியாக உடல் முழுவதும் பரவும் அழுகல் அல்லது சீழ்பிடிப்பு (2 தீமோத்தேயு 2:17). யாக்கோபு 5:3-ல் “கஞ்சரம் பிடித்த” என்பது “துருப்பிடித்த” (R.V.) அல்லது மங்கிப்போன என்று பொருள்படும்."
+    }
+  ]
+}

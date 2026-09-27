@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eldaah",
+  "lang": "ta",
+  "source_hash": "e1262cb9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்தாகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/eldaah#p1-e1262cb9",
+      "text": "எல்தாகா மீதியானின் ஐந்தாம் மகனும், ஆபிரகாமும் அவனுடைய மனைவி கேத்தூராளும் மூலமான சந்ததியாகவும் இருந்தான் (ஆதியாகமம் 25:4; 1 நாளாகமம் 1:33)."
+    }
+  ]
+}

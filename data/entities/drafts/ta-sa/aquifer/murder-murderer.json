@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/murder-murderer",
+  "lang": "ta",
+  "source_hash": "d8f5bc9a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொலை, கொலைகாரன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/murder-murderer#p1-0a952045",
+      "text": "கொலை என்பது மற்றொரு மனிதனை நியாயத்திற்குப் புறம்பாகக் கொலை செய்வதாகும். கொலைகாரன் என்பவன் கொலை செய்கிற மனிதனாகும்."
+    },
+    {
+      "id": "aquifer/murder-murderer#p2-01211266",
+      "text": "காண்க: குடிமை நியாயப்பிரமாணமும் நியாயமும்; குற்றவியல் நியாயப்பிரமாணமும் தண்டனையும்; பத்துக் கற்பனைகள்."
+    }
+  ]
+}

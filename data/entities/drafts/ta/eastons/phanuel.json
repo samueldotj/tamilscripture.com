@@ -1,0 +1,18 @@
+{
+  "id": "eastons/phanuel",
+  "lang": "ta",
+  "source_hash": "06bfed13",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/phanuel#p1-06bfed13",
+      "text": "தேவனுடைய முகம், தீர்க்கதரிசினியாகிய அன்னாளின் (காண்க) தகப்பன், லூக்கா 2:36."
+    }
+  ]
+}

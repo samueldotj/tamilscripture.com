@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jewel",
+  "lang": "ta",
+  "source_hash": "09808ae0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகை",
+  "paragraphs": [
+    {
+      "id": "smiths/jewel#p1-09808ae0",
+      "text": "[விலையேறப்பெற்ற கற்கள், விலையேறப்பெற்றவை, PRECIOUS என்பதைக் காண்க]"
+    }
+  ]
+}

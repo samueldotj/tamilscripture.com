@@ -1,0 +1,18 @@
+{
+  "id": "smiths/riusah",
+  "lang": "ta",
+  "source_hash": "d99f7dae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரீசா",
+  "paragraphs": [
+    {
+      "id": "smiths/riusah#p1-d99f7dae",
+      "text": "(ஒரு பாழ்நிலம்), வனாந்தரத்தில் இருந்த ஒரு பயண முகாம் நிலையம். (எண்ணாகமம் 33:21,22)"
+    }
+  ]
+}

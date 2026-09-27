@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tanhumeth",
+  "lang": "ta",
+  "source_hash": "ae6ff939",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தன்கூமேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/tanhumeth#p1-ae6ff939",
+      "text": "(ஆறுதல்), கெதலியாவின் காலத்தில் செராயாவின் தகப்பன். (2 இராஜாக்கள் 25:23; எரேமியா 40:8) (கி.மு. 582க்கு முன்)."
+    }
+  ]
+}

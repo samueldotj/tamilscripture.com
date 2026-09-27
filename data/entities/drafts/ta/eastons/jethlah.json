@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jethlah",
+  "lang": "ta",
+  "source_hash": "60f49e29",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெத்லா",
+  "paragraphs": [
+    {
+      "id": "eastons/jethlah#p1-60f49e29",
+      "text": "தொங்குகிறது; உயர்ந்தது, தாணுடைய எல்லைகளில் இருந்த ஒரு பட்டணம் (யோசுவா 19:42)."
+    }
+  ]
+}

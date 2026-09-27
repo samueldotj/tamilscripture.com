@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dust",
+  "lang": "ta",
+  "source_hash": "90307dc4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புழுதி",
+  "paragraphs": [
+    {
+      "id": "smiths/dust#p1-90307dc4",
+      "text": "[துக்கம்]"
+    }
+  ]
+}

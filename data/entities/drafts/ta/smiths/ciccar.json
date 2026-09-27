@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ciccar",
+  "lang": "ta",
+  "source_hash": "1f8fbe71",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிக்கார்",
+  "paragraphs": [
+    {
+      "id": "smiths/ciccar#p1-1f8fbe71",
+      "text": "[யோர்தான்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/targum",
+  "lang": "ta",
+  "source_hash": "34f39f8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தர்குமம்",
+  "paragraphs": [
+    {
+      "id": "smiths/targum#p1-34f39f8e",
+      "text": "[காண்க: பழைய மற்றும் புதிய ஏற்பாடுகளின் பழங்கால மொழிபெயர்ப்புகள், அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்புகள்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/humtah",
+  "lang": "ta",
+  "source_hash": "50490687",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உம்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/humtah#p1-50490687",
+      "text": "யோசுவா 15:54ன்படி, உம்தா என்பது எப்ரோனுக்கு அருகில் இருந்த யூதேயா மலைநாட்டிலுள்ள ஒரு பட்டணமாகும்."
+    }
+  ]
+}

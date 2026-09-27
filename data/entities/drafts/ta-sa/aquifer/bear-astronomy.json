@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bear-astronomy",
+  "lang": "ta",
+  "source_hash": "6043c2bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கரடி (வானசாஸ்திரம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bear-astronomy#p1-72d5cd01",
+      "text": "உர்சா மேஜர் அல்லது பெரிய கரடி எனவும் அழைக்கப்படும் நட்சத்திரக் கூட்டம். இது யோபு 9:9 மற்றும் 38:32 ஆகிய வசனங்களில் குறிப்பிடப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/bear-astronomy#p2-3ee0b4e5",
+      "text": "வானசாஸ்திரம் என்பதைக் காண்க."
+    }
+  ]
+}

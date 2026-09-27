@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shihor-of-egypt",
+  "lang": "ta",
+  "source_hash": "71b8c956",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகிப்தின் சீகோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shihor-of-egypt#p1-71b8c956",
+      "text": "[சீகோர்]"
+    }
+  ]
+}

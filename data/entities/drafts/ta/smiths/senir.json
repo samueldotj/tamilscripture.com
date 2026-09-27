@@ -1,0 +1,18 @@
+{
+  "id": "smiths/senir",
+  "lang": "ta",
+  "source_hash": "4f2dcecf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேனீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/senir#p1-4f2dcecf",
+      "text": "(உறைபனி மலை), (1 நாளாகமம் 5:23; எசேக்கியேல் 27:5) எர்மோன் மலைக்கு எமோரியர் கொடுத்த பெயர்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mizpah",
+  "lang": "ta",
+  "source_hash": "ebab6092",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸ்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/mizpah#p1-ebab6092",
+      "text": "மற்றும் மிஸ்பே (காவற்கோபுரம்), பாலஸ்தீனத்திலுள்ள பல இடங்களின் பெயர்."
+    }
+  ]
+}

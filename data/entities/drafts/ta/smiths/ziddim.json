@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ziddim",
+  "lang": "ta",
+  "source_hash": "dac915b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீத்திம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ziddim#p1-dac915b6",
+      "text": "(சரிவுகள்), நப்தலியின் பங்கிலுள்ள ஒரு பாதுகாப்பான பட்டணம், (யோசுவா 10:35)"
+    }
+  ]
+}

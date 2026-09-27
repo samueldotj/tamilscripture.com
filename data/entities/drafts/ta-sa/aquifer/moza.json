@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/moza",
+  "lang": "ta",
+  "source_hash": "a9cc50dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசா",
+  "paragraphs": [
+    {
+      "id": "aquifer/moza#p1-41d01047",
+      "text": "1. காலேபுடைய மறுமனையாட்டியாகிய எப்பாள் மூலமாகப் பெற்ற மகன் (1 நாளாகமம் 2:46)."
+    },
+    {
+      "id": "aquifer/moza#p2-0c5f538d",
+      "text": "2. சிம்ரியின் மகன், பினியாவின் தகப்பன், சவுலின் மற்றும் யோனத்தானின் சந்ததியன் (1 நாளாகமம் 8:36-37; 9:42-43)."
+    }
+  ]
+}

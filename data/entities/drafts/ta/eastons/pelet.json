@@ -1,0 +1,26 @@
+{
+  "id": "eastons/pelet",
+  "lang": "ta",
+  "source_hash": "98f72685",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/pelet#p1-3f571170",
+      "text": "விடுதலை."
+    },
+    {
+      "id": "eastons/pelet#p2-7f5cae72",
+      "text": "(1.) யூதாவின் ஒரு சந்ததியார் (1 நாளாகமம் 2:47)."
+    },
+    {
+      "id": "eastons/pelet#p3-72af58c5",
+      "text": "(2.) சிக்லாகில் தாவீதுடன் இணைந்த பென்யமீன் கோத்திரத்தானாகிய ஒருவன் (1 நாளாகமம் 12:3)."
+    }
+  ]
+}

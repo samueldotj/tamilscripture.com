@@ -1,0 +1,18 @@
+{
+  "id": "smiths/vaniah",
+  "lang": "ta",
+  "source_hash": "0d827ac0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/vaniah#p1-0d827ac0",
+      "text": "(யெகோவா துதி), பானியின் மகன்களில் ஒருவன், (எஸ்றா 10:36) (கி.மு. 458.)"
+    }
+  ]
+}

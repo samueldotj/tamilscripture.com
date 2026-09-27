@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hushathite",
+  "lang": "ta",
+  "source_hash": "94a513f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உஷாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hushathite#p1-94a513f5",
+      "text": "(உஷாவின் குடியிருப்பாளன்), தாவீதின் காவற் படையிலுள்ள வலிமையான வீரர்களில் இருவரின் பட்டப்பெயர்."
+    }
+  ]
+}

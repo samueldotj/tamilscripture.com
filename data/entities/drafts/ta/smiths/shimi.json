@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimi",
+  "lang": "ta",
+  "source_hash": "261084dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிமி",
+  "paragraphs": [
+    {
+      "id": "smiths/shimi#p1-261084dd",
+      "text": "= சீமேயி, 1. (யாத்திராகமம் 6:17)"
+    }
+  ]
+}

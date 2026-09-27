@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/almondiblathaim",
+  "lang": "ta",
+  "source_hash": "ff524f12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோன் திப்லத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/almondiblathaim#p1-b324f3b2",
+      "text": "இஸ்ரவேலர்கள் தங்கள் 40 வருட வனாந்தர பயணத்தின்போது முகாமிட்ட மோவாபிலுள்ள ஒரு இடம் (எண்ணாகமம் 33:46-47). இதை சிலர் பெத்திப்லாத்தாயீமுடன் (எரேமியா 48:22) அடையாளப்படுத்துகின்றனர்."
+    },
+    {
+      "id": "aquifer/almondiblathaim#p2-5fd904a3",
+      "text": "வனாந்தர பயணம் என்பதையும் காண்க."
+    }
+  ]
+}

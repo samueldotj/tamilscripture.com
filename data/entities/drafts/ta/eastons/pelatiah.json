@@ -1,0 +1,34 @@
+{
+  "id": "eastons/pelatiah",
+  "lang": "ta",
+  "source_hash": "919898a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலத்தியா",
+  "paragraphs": [
+    {
+      "id": "eastons/pelatiah#p1-d71ed3c3",
+      "text": "கர்த்தரின் விடுதலை."
+    },
+    {
+      "id": "eastons/pelatiah#p2-dda85a27",
+      "text": "(1.) அனனியாவின் மகனும், செருபாபேலின் மகனுமான ஒருவன் (1 நாளாகமம் 3:21)."
+    },
+    {
+      "id": "eastons/pelatiah#p3-b609a903",
+      "text": "(2.) “சிமியோனின் மகன்களில்” ஒரு தலைவன் (4:42)."
+    },
+    {
+      "id": "eastons/pelatiah#p4-ad763973",
+      "text": "(3.) நெகேமியா 10:22."
+    },
+    {
+      "id": "eastons/pelatiah#p5-7df0a73e",
+      "text": "(4.) தங்கள் துன்மார்க்கமான ஆலோசனையின் காரணமாக எசேக்கியேல் தீர்க்கதரிசனம் சொன்ன இருபத்தைந்து மக்களின் பிரபுக்களில் ஒருவன் (எசேக்கியேல் 11:1-13)."
+    }
+  ]
+}

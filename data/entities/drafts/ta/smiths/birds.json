@@ -1,0 +1,18 @@
+{
+  "id": "smiths/birds",
+  "lang": "ta",
+  "source_hash": "07c6f281",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பறவைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/birds#p1-07c6f281",
+      "text": "[குருவி]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meshullam",
+  "lang": "ta",
+  "source_hash": "f89e9295",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெசுல்லாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/meshullam#p1-f89e9295",
+      "text": "(நண்பன்)."
+    }
+  ]
+}

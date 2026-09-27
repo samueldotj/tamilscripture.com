@@ -1,0 +1,18 @@
+{
+  "id": "eastons/raamiah",
+  "lang": "ta",
+  "source_hash": "71bbb746",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராமியா",
+  "paragraphs": [
+    {
+      "id": "eastons/raamiah#p1-71bbb746",
+      "text": "கர்த்தருடைய முழக்கம், சிறையிருப்பிலிருந்து திரும்பிவந்த தலைவர்களில் ஒருவன் (நெகேமியா 7:7); இவன் ரெலாயா என்றும் அழைக்கப்படுகிறான் (எஸ்றா 2:2)."
+    }
+  ]
+}

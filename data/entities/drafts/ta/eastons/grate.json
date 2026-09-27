@@ -1,0 +1,18 @@
+{
+  "id": "eastons/grate",
+  "lang": "ta",
+  "source_hash": "871d58ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்லடை",
+  "paragraphs": [
+    {
+      "id": "eastons/grate#p1-871d58ac",
+      "text": "பலியிடும் பெரிய பலிபீடத்தின் அடிப்பாகத்திற்கு வெண்கலத்தால் செய்யப்பட்ட ஒரு வலைப்பின்னல் (யாத்திராகமம் 27:4; 35:16; 38:4, 5, 30)."
+    }
+  ]
+}

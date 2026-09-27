@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elioenai",
+  "lang": "ta",
+  "source_hash": "2287b211",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியோனாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/elioenai#p1-2287b211",
+      "text": "(என் கண்கள் கர்த்தரை நோக்கியிருக்கின்றன)."
+    }
+  ]
+}

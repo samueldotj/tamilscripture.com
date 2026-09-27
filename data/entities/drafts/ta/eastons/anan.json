@@ -1,0 +1,18 @@
+{
+  "id": "eastons/anan",
+  "lang": "ta",
+  "source_hash": "96c31824",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனான்",
+  "paragraphs": [
+    {
+      "id": "eastons/anan#p1-96c31824",
+      "text": "மேகம், பாபிலோனிலிருந்து திரும்பிய பின்பு உடன்படிக்கையின்மேல் முத்திரைப்போட்ட இஸ்ரவேலரில் ஒருவன் (நெகேமியா 10:26)."
+    }
+  ]
+}

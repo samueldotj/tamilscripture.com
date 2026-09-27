@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pontius-pilate",
+  "lang": "ta",
+  "source_hash": "3785e0f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொந்தியு பிலாத்து",
+  "paragraphs": [
+    {
+      "id": "eastons/pontius-pilate#p1-3785e0f0",
+      "text": "பிலாத்து என்பதைக் காண்க."
+    }
+  ]
+}

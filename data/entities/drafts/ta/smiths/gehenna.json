@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gehenna",
+  "lang": "ta",
+  "source_hash": "dfe0b945",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெஹென்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/gehenna#p1-dfe0b945",
+      "text": "[இன்னோம்]"
+    }
+  ]
+}

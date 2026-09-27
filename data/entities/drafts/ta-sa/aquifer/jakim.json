@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jakim",
+  "lang": "ta",
+  "source_hash": "aff17d14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jakim#p1-d8889aea",
+      "text": "1. பென்யமீன் கோத்திரத்தில் சீமேயின் சந்ததியினன் (1 நாளாகமம் 8:19)."
+    },
+    {
+      "id": "aquifer/jakim#p2-a5a4800b",
+      "text": "2. தாவீதின் காலத்தில் ஆலயத்தின் பணிக்கு நியமிக்கப்பட்ட ஆரோனின் சந்ததியாருள் பன்னிரெண்டாவது குழுவின் குடும்பத் தலைவன் (1 நாளாகமம் 24:12)."
+    }
+  ]
+}

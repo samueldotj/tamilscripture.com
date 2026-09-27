@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ephrath-person",
+  "lang": "ta",
+  "source_hash": "d9d867aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பிராத்தா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ephrath-person#p1-d9d867aa",
+      "text": "எப்பிராத்தா ஊரின் தாயும், காலேபின் இரண்டாம் மனைவியுமாக இருந்தாள் (1 நாளாகமம் 2:19, 50)."
+    }
+  ]
+}

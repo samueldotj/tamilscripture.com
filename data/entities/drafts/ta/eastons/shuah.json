@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shuah",
+  "lang": "ta",
+  "source_hash": "a47806c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூவா",
+  "paragraphs": [
+    {
+      "id": "eastons/shuah#p1-21f31a55",
+      "text": "தாழவிழுதல்; ஒரு குழி."
+    },
+    {
+      "id": "eastons/shuah#p2-8b09a5b0",
+      "text": "(1.) ஆபிரகாமுக்குக் கேத்தூராளால் பிறந்த மகன்களில் ஒருவன் (ஆதியாகமம் 25:2; 1 நாளாகமம் 1:32)."
+    },
+    {
+      "id": "eastons/shuah#p3-84338206",
+      "text": "(2.) 1 நாளாகமம் 4:11."
+    }
+  ]
+}

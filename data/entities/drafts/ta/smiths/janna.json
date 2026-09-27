@@ -1,0 +1,18 @@
+{
+  "id": "smiths/janna",
+  "lang": "ta",
+  "source_hash": "e5006a4c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யன்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/janna#p1-e5006a4c",
+      "text": "(செழிப்பாக இருக்கிறவன்), கிறிஸ்துவின் வம்சவரலாற்றில் யோசேப்பின் குமாரனும், மெல்கியின் தகப்பனும் ஆகும் (லூக்கா 3:24). திருத்தப்பட்ட ஆவிர்த்தியில் (Revised Version) இது யன்னாய் என்று எழுதப்பட்டுள்ளது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nahalol",
+  "lang": "ta",
+  "source_hash": "c77a1f7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகலோல்",
+  "paragraphs": [
+    {
+      "id": "smiths/nahalol#p1-c77a1f7c",
+      "text": "[நகலால், அல்லது நகலால்]"
+    }
+  ]
+}

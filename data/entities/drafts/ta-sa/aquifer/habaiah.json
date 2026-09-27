@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/habaiah",
+  "lang": "ta",
+  "source_hash": "2cfff4cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபாயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/habaiah#p1-c211dcfa",
+      "text": "நெகேமியா 7:63இல் வரும் ஓபாயா என்பதற்கு அபாயா என்பது மற்றொரு உச்சரிப்பு."
+    },
+    {
+      "id": "aquifer/habaiah#p2-fa8203b6",
+      "text": "ஓபாயா என்பதைக் காண்க."
+    }
+  ]
+}

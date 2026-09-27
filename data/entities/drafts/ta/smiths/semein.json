@@ -1,0 +1,18 @@
+{
+  "id": "smiths/semein",
+  "lang": "ta",
+  "source_hash": "0e9785e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேமேய்",
+  "paragraphs": [
+    {
+      "id": "smiths/semein#p1-0e9785e6",
+      "text": "திருத்தப்பட்ட மொழிபெயர்ப்பில் (லூக்கா 3:26) 'செமேயி' என்பதற்குப் பதிலாக 'சேமேய்' என்று வருகிறது."
+    }
+  ]
+}

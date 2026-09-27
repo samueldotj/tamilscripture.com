@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baladan",
+  "lang": "ta",
+  "source_hash": "c8d1a6c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பலாதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/baladan#p1-c8d1a6c8",
+      "text": "[மெரோதாக்பலாதான்]"
+    }
+  ]
+}

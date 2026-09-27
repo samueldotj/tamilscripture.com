@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jazer",
+  "lang": "ta",
+  "source_hash": "e576fb77",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/jazer#p1-e576fb77",
+      "text": "(யெகோவா உதவுகிறார்). [யாசேர், அல்லது யாசேர்]"
+    }
+  ]
+}

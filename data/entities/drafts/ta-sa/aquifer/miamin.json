@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/miamin",
+  "lang": "ta",
+  "source_hash": "764e71a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மியாமின்",
+  "paragraphs": [
+    {
+      "id": "aquifer/miamin#p1-e36046ee",
+      "text": "1. எஸ்றா 10:25 இல் பாரோஷின் மகனாகிய மியாமீனுக்கு KJV வழங்கும் பெயர். மியாமீன் #2 காண்க."
+    },
+    {
+      "id": "aquifer/miamin#p2-04660706",
+      "text": "2. நெகேமியா 12:5 இல் குடிமாற்றத்திற்குப் பின்பு வாழ்ந்த ஆசாரியனாகிய மியாமீனுக்கு KJV வழங்கும் பெயர். மியாமீன் #4 காண்க."
+    }
+  ]
+}

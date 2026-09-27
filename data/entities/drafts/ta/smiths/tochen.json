@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tochen",
+  "lang": "ta",
+  "source_hash": "eb2a8c9c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோகேன்",
+  "paragraphs": [
+    {
+      "id": "smiths/tochen#p1-eb2a8c9c",
+      "text": "(task), 1 நாளாகமம் 4:32-ல் மட்டும், சிமியோனுடைய பட்டணங்களில் ஒன்றாகக் குறிப்பிடப்பட்டுள்ள ஓர் இடம்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alvan",
+  "lang": "ta",
+  "source_hash": "ecdbbda1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்வான்",
+  "paragraphs": [
+    {
+      "id": "smiths/alvan#p1-ecdbbda1",
+      "text": "(உயரமான), சோபாலின் மகனாகிய ஒரு ஓரியனான இவன், (ஆதியாகமம் 36:23), 1 நாளாகமம் 1:40-ல் ஆலியான் என்று எழுதப்பட்டுள்ளான்."
+    }
+  ]
+}

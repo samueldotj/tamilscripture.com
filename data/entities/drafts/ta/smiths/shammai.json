@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shammai",
+  "lang": "ta",
+  "source_hash": "1fb4c129",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்மாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/shammai#p1-1fb4c129",
+      "text": "(பாழாக்கப்பட்டது)."
+    }
+  ]
+}

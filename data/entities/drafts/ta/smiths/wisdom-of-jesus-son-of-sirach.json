@@ -1,0 +1,18 @@
+{
+  "id": "smiths/wisdom-of-jesus-son-of-sirach",
+  "lang": "ta",
+  "source_hash": "f631fd46",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிராக்கின் குமாரன் இயேசுவின் ஞானம்",
+  "paragraphs": [
+    {
+      "id": "smiths/wisdom-of-jesus-son-of-sirach#p1-f631fd46",
+      "text": "[சபை உபதேசம் (Ecclesiasticus)]"
+    }
+  ]
+}

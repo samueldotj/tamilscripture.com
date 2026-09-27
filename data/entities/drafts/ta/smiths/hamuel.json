@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hamuel",
+  "lang": "ta",
+  "source_hash": "ae770363",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/hamuel#p1-ae770363",
+      "text": "(வெப்பம், அதாவது தேவனுடைய கடுங்கோபம்), சவுலின் குடும்பத்தில் சிமியோனுடைய ஒரு மனிதன். (1 நாளாகமம் 4:26)"
+    }
+  ]
+}

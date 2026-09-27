@@ -1,0 +1,18 @@
+{
+  "id": "smiths/casiphia",
+  "lang": "ta",
+  "source_hash": "c19f28bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கசிப்பியா",
+  "paragraphs": [
+    {
+      "id": "smiths/casiphia#p1-c19f28bd",
+      "text": "(வெள்ளி நிறமான, வெண்மையான), பாபிலோனுக்கும் எருசலேமுக்கும் இடையேயுள்ள வழியில் இருந்த, சரியான இருப்பிடம் உறுதியாக அறியப்படாத ஒரு இடம். (எஸ்றா 8:17)"
+    }
+  ]
+}

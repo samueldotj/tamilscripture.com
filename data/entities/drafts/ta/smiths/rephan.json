@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rephan",
+  "lang": "ta",
+  "source_hash": "a3a45d32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெம்பான்",
+  "paragraphs": [
+    {
+      "id": "smiths/rephan#p1-a3a45d32",
+      "text": "திருத்தப்பட்ட மொழிபெயர்ப்பில் ரெம்பான் என்பதற்குப் பதிலாக வரும் வாசகம் (அப்போஸ்தலருடைய நடபடிகள் 7:43)."
+    }
+  ]
+}

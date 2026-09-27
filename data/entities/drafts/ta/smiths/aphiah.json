@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aphiah",
+  "lang": "ta",
+  "source_hash": "2073cacb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியா",
+  "paragraphs": [
+    {
+      "id": "smiths/aphiah#p1-2073cacb",
+      "text": "(புதுப்பிக்கப்பட்டவன்), சவுல் ராஜாவின் மூதாதையர்களில் ஒருவன். (1 சாமுவேல் 9:1)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/engagement",
+  "lang": "ta",
+  "source_hash": "0e02db0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிச்சயதார்த்தம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/engagement#p1-70f41d26",
+      "text": "நிச்சயதார்த்தம் என்பது இருவர் ஒருவரையொருவர் திருமணம் செய்து கொள்வதற்கான வாக்குத்தத்தமாகும்."
+    },
+    {
+      "id": "aquifer/engagement#p2-e8b33856",
+      "text": "திருமணம், திருமண வழக்கங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

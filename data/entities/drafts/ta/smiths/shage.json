@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shage",
+  "lang": "ta",
+  "source_hash": "6deb14d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாகி",
+  "paragraphs": [
+    {
+      "id": "smiths/shage#p1-6deb14d6",
+      "text": "(தவறுசெய்கிறவன்), ஆராரியனாகிய யோனத்தானின் தகப்பன், தாவீதின் காவற்படையினரில் ஒருவன். (1 நாளாகமம் 11:34) [சம்மா, 5-ஐக் காண்க] (கி.மு. 1050 அளவில்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/admah",
+  "lang": "ta",
+  "source_hash": "7a3a40d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/admah#p1-7a3a40d1",
+      "text": "(மண், அரண்) என்பது “சமவெளியின் பட்டணங்களில்” ஒன்றாகும், எப்போதும் செபோயீமுடன் இணைந்து குறிப்பிடப்படுகிறது. (ஆதியாகமம் 10:19; 14:2,8; 29:23; ஓசியா 11:8)"
+    }
+  ]
+}

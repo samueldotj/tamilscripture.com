@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/naphothdor",
+  "lang": "ta",
+  "source_hash": "50f1376e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோரின்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naphothdor#p1-ca180056",
+      "text": "தோரின் என்பது நாப்பாத்தோர் என்பதின் மற்றொரு வடிவமாகும், இது மத்தியதரைக் கடலோரத்திலுள்ள ஒரு இடமாகும், இது யோசுவா 11:2இல் குறிப்பிடப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/naphothdor#p2-93b081a4",
+      "text": "தோர் என்பதைக் காண்க."
+    }
+  ]
+}

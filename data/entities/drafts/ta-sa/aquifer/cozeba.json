@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cozeba",
+  "lang": "ta",
+  "source_hash": "b67040ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோசேபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/cozeba#p1-7b069979",
+      "text": "கோசேபா என்பது யூதாவின் தேசத்திலுள்ள ஒரு பட்டணமான அக்சீப் என்பதற்கு வேறொரு பெயராகும், இது 1 நாளாகமம் 4:22-ல் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/cozeba#p2-65ba499b",
+      "text": "அக்சீப் #1-ஐ காண்க."
+    }
+  ]
+}

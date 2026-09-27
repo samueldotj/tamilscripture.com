@@ -1,0 +1,18 @@
+{
+  "id": "smiths/plains",
+  "lang": "ta",
+  "source_hash": "7757c966",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சமபூமிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/plains#p1-7757c966",
+      "text": "இந்த ஒரு சொல்லானது அங்கீகரிக்கப்பட்ட ஆங்கில மொழிபெயர்ப்பில் (Authorized Version) குறைந்தபட்சம் ஏழு வேறுபட்ட எபிரெய சொற்களுக்குப் பதிலாகப் பயன்படுத்தப்பட்டுள்ளது."
+    }
+  ]
+}

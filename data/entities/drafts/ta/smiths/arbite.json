@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arbite",
+  "lang": "ta",
+  "source_hash": "b6400faf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அராபியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/arbite#p1-b6400faf",
+      "text": "அராப் ஊரைச் சேர்ந்தவன். அர்பியனான பாராயி தாவீதின் காவலரில் ஒருவனாக இருந்தான். (2 சாமுவேல் 23:35)"
+    }
+  ]
+}

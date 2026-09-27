@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sheleph",
+  "lang": "ta",
+  "source_hash": "32d0a66b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/sheleph#p1-32d0a66b",
+      "text": "(இழுத்தல்), யொக்தானின் மகன்களில் வரிசையில் இரண்டாவது. (ஆதியாகமம் 10:26; 1 நாளாகமம் 1:20)"
+    }
+  ]
+}

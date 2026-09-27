@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/avith",
+  "lang": "ta",
+  "source_hash": "5201ba35",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவீத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/avith#p1-5201ba35",
+      "text": "ஏதோமின் நான்காம் ராஜாவாகிய ஆதாதுக்குப் பட்டணமாக இருந்தது (ஆதியாகமம் 36:35; 1 நாளாகமம் 1:46)."
+    }
+  ]
+}

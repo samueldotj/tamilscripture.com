@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehoash",
+  "lang": "ta",
+  "source_hash": "65dd323a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehoash#p1-65dd323a",
+      "text": "(கர்த்தரால் கொடுக்கப்பட்டவன்), யோவாஸ் என்னும் பெயரின் சுருக்கமடையாத வடிவம்."
+    }
+  ]
+}

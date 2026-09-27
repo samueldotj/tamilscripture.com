@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahian",
+  "lang": "ta",
+  "source_hash": "8c231150",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahian#p1-8c231150",
+      "text": "செமீதாவின் குடும்பத்தைச் சேர்ந்த மனாசே கோத்திரத்தான் (1 நாளாகமம் 7:19)."
+    }
+  ]
+}

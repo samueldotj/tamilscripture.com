@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/archives",
+  "lang": "ta",
+  "source_hash": "15c3973f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காப்பகங்கள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/archives#p1-bd9d6967",
+      "text": "வரலாற்று மதிப்புக்காகவோ அல்லது எதிர்கால உசாத்துணைக்காகவோ பாதுகாக்கப்படும் முக்கியமான ஆவணங்கள் அல்லது பதிவுகளின் தொகுப்புகள்."
+    },
+    {
+      "id": "aquifer/archives#p2-b8a7101c",
+      "text": "காப்பகங்களின் வீடு என்பதைக் காண்க."
+    }
+  ]
+}

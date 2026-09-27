@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/azmon",
+  "lang": "ta",
+  "source_hash": "eaff5fc5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்மோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/azmon#p1-eaff5fc5",
+      "text": "காதேஸுக்கும் “எகிப்தின் ஆற்று”க்கும் இடையில் யூதாவின் தென்பகுதியில் இருந்த ஒரு பட்டணம் (எண்ணாகமம் 34:4-5; யோசுவா 15:4)."
+    }
+  ]
+}

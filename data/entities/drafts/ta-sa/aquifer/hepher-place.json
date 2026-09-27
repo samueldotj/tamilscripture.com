@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hepher-place",
+  "lang": "ta",
+  "source_hash": "debda816",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பேர் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hepher-place#p1-debda816",
+      "text": "எருசலேமின் வடமேற்கே அமைந்திருந்த ஒரு கானானிய நகரம். இது யோசுவாவினால் கைப்பற்றப்பட்டது (யோசுவா 12:17), பின்னர் சாலொமோன் ராஜாவின் காலத்தில் ஒரு நிர்வாக மாவட்டமாகப் பயன்படுத்தப்பட்டது (1 இராஜாக்கள் 4:10)."
+    }
+  ]
+}

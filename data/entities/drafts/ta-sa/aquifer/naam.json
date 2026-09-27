@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/naam",
+  "lang": "ta",
+  "source_hash": "11e84ef8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naam#p1-11e84ef8",
+      "text": "நாகாம் யூதா கோத்திரத்தைச் சேர்ந்த காலேபின் வம்சத்தவனாக இருந்தான் (1 நாளாகமம் 4:15)."
+    }
+  ]
+}

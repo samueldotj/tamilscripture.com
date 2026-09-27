@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hushim",
+  "lang": "ta",
+  "source_hash": "7ac5ea26",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊசிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hushim#p1-7ac5ea26",
+      "text": "(விரைந்து செல்பவன்)."
+    }
+  ]
+}

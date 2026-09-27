@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gazites",
+  "lang": "ta",
+  "source_hash": "8df691e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசாவின் மக்கள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gazites#p1-b6d7eb09",
+      "text": "காசாவின் மக்கள் என்பவர்கள் காசாவில் வாழ்ந்தவர்கள் (நியாயாதிபதிகள் 16:2)."
+    },
+    {
+      "id": "aquifer/gazites#p2-9cd9b851",
+      "text": "காசா; காசாவின் மக்கள் (Gazathites) என்பதைக் காண்க."
+    }
+  ]
+}

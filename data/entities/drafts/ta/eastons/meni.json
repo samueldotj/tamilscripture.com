@@ -1,0 +1,18 @@
+{
+  "id": "eastons/meni",
+  "lang": "ta",
+  "source_hash": "aeb6da68",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேனி",
+  "paragraphs": [
+    {
+      "id": "eastons/meni#p1-aeb6da68",
+      "text": "ஏசாயா 65:11, குறிப்பு (A.V., “அந்த எண்;” R.V., “விதி”), பாபிலோனியரின் மாதிரியைப் பின்பற்றி சிறைப்பிடிக்கப்பட்ட இஸ்ரவேலர்கள் தொழுதுகொண்ட ஒரு விக்கிரகமாக இருக்கலாம். இது விதியின் சின்னமாக இருந்திருக்கலாம். LXX., tuche."
+    }
+  ]
+}

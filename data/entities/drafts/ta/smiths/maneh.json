@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maneh",
+  "lang": "ta",
+  "source_hash": "3440d46d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனே",
+  "paragraphs": [
+    {
+      "id": "smiths/maneh#p1-3440d46d",
+      "text": "(ஒரு பங்கு (எடையால்)). [நிறைகளும் அளவுகளும் காண்க]"
+    }
+  ]
+}

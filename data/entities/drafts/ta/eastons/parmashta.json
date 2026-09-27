@@ -1,0 +1,18 @@
+{
+  "id": "eastons/parmashta",
+  "lang": "ta",
+  "source_hash": "9a7c1898",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்மஷ்டா",
+  "paragraphs": [
+    {
+      "id": "eastons/parmashta#p1-9a7c1898",
+      "text": "பலமான கை என்று பொருள்படும், ஆமானின் மகன், சூசானில் கொல்லப்பட்டவன் (எஸ்தர் 9:9)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/punite",
+  "lang": "ta",
+  "source_hash": "c42e1f3e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூனியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/punite#p1-755d7f6c",
+      "text": "பூனியர் என்பவர் இசக்காரின் கோத்திரத்தில் ஒரு குடும்பக் குழுவைச் சேர்ந்தவர். இந்தக் குடும்பக் குழுவின் தலைவராக பூவா இருந்தார் (எண்ணாகமம் 26:23)."
+    },
+    {
+      "id": "aquifer/punite#p2-7dd5e710",
+      "text": "பூவா என்பதைக் காண்க."
+    }
+  ]
+}

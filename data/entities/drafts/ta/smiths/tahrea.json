@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tahrea",
+  "lang": "ta",
+  "source_hash": "ddf53f25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தரேயா",
+  "paragraphs": [
+    {
+      "id": "smiths/tahrea#p1-ddf53f25",
+      "text": "(தந்திரமான), மீகாவின் மகன், மேவிபோசேத்தின் பேரன். (1 நாளாகமம் 9:41) (கி.மு. 1057க்குப் பின்)."
+    }
+  ]
+}

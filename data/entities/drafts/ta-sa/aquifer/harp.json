@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/harp",
+  "lang": "ta",
+  "source_hash": "6730b209",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தந்தி வீணை",
+  "paragraphs": [
+    {
+      "id": "aquifer/harp#p1-60cfcad7",
+      "text": "தந்தி வீணை என்பது ஒரு நரம்புக் கருவியாகும். ஒருவன் விரல்களால் நரம்புகளைத் தீட்டி அதை வாசிக்கிறான்."
+    },
+    {
+      "id": "aquifer/harp#p2-f07e0f36",
+      "text": "இசைக்கருவிகள் (நேபல்) என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aphrah",
+  "lang": "ta",
+  "source_hash": "8fafb317",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்ரா",
+  "paragraphs": [
+    {
+      "id": "smiths/aphrah#p1-8fafb317",
+      "text": "(புழுதி), வீட்டின் (பெத் அப்ரா), மீகா 1:10-ல் குறிப்பிடப்பட்ட ஒரு இடம். இதன் இருப்பிடம் உறுதியாக அறியப்படவில்லை."
+    }
+  ]
+}

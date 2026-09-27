@@ -1,0 +1,18 @@
+{
+  "id": "smiths/thummim",
+  "lang": "ta",
+  "source_hash": "1d776522",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தும்மீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/thummim#p1-1d776522",
+      "text": "[ஊரீம் மற்றும் தும்மீம் என்பதைக் காண்க]"
+    }
+  ]
+}

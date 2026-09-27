@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lign-aloes",
+  "lang": "ta",
+  "source_hash": "75c8f47e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிக்ன் அலோஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/lign-aloes#p1-75c8f47e",
+      "text": "[அலோஸ், லிக்ன் அலோஸ் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azur",
+  "lang": "ta",
+  "source_hash": "eb54e6b3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/azur#p1-eb54e6b3",
+      "text": "சரியாகச் சொன்னால் அசூர் (உதவி செய்பவன்)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lasaea",
+  "lang": "ta",
+  "source_hash": "fff09a61",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லசேயா",
+  "paragraphs": [
+    {
+      "id": "eastons/lasaea#p1-fff09a61",
+      "text": "கிரேத்தாதீவின் ஒரு பட்டணம் (அப்போஸ்தலருடைய நடபடிகள் 27:8). அதன் இடிபாடுகள் இன்னும் லியொந்தா முனையருகில், “நல்ல துறைமுக”த்திலிருந்து கிழக்கே ஏறக்குறைய 5 மைல் தூரத்தில் காணப்படுகின்றன."
+    }
+  ]
+}

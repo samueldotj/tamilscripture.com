@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naham",
+  "lang": "ta",
+  "source_hash": "e22c6200",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/naham#p1-e22c6200",
+      "text": "(ஆறுதல்), எஸ்றாவின் மனைவியாகிய ஒதியாவுக்கு அல்லது யெகுதியாவுக்குச் சகோதரன். (1 நாளாகமம் 4:19)"
+    }
+  ]
+}

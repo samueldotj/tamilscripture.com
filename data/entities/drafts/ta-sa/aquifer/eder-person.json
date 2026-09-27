@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eder-person",
+  "lang": "ta",
+  "source_hash": "ced5c381",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏதேர் (ஒரு நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/eder-person#p1-3abd8bbd",
+      "text": "1. பென்யமீன் கோத்திரத்தைச் சேர்ந்தவனும், ஆயலோன் ஊரின் தலைவனாகிய பெரீயாவின் மகனும் (1 நாளாகமம் 8:15)."
+    },
+    {
+      "id": "aquifer/eder-person#p2-6f977b7e",
+      "text": "2. மெராரியின் வம்சத்தைச் சேர்ந்த லேவியனும், மகேலியின் மகனும் (1 நாளாகமம் 23:23; 24:30)."
+    }
+  ]
+}

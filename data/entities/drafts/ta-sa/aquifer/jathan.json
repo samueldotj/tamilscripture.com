@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jathan",
+  "lang": "ta",
+  "source_hash": "3d87f617",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாதான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jathan#p1-3d87f617",
+      "text": "யாதான் என்பவன் செமாயாவின் மகன்களில் ஒருவனாக இருந்தான், அவன் தொபியாவுடன் எருசலேமுக்கு தொழுதுகொள்ளும்படி சென்றிருந்தான் (தொபித் 5:14, புதிய வாழும் மொழிபெயர்ப்பு ஓரக் குறிப்பு)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/amon-place",
+  "lang": "ta",
+  "source_hash": "ebf43eaf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோன் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/amon-place#p1-ebf43eaf",
+      "text": "நோ என்னும் பட்டணத்தின் எபிரெய பெயரின் ஒரு பகுதி. நோ என்பது மேல் எகிப்தின் தலைநகரம் (எரேமியா 46:25). நோ என்பதைக் காண்க."
+    }
+  ]
+}

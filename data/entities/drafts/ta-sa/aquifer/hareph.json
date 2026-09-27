@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hareph",
+  "lang": "ta",
+  "source_hash": "df815934",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/hareph#p1-df815934",
+      "text": "ஆரேப்பு யூதா கோத்திரத்தைச் சேர்ந்த காலேபின் வம்சத்தானாக இருந்தான். அவன் பெத்காதேரின் ஸ்தாபகன் அல்லது தந்தையாக இருந்தான் (1 நாளாகமம் 2:51)."
+    }
+  ]
+}

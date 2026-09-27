@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kareah",
+  "lang": "ta",
+  "source_hash": "e1a1883d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கரேயா",
+  "paragraphs": [
+    {
+      "id": "eastons/kareah#p1-e1a1883d",
+      "text": "மொட்டையான, யோகனானும் யோனத்தானும் இவனுடைய மகன்கள்; அவர்கள் ஒரு காலத்திற்கு எருசலேமின் பாபிலோனிய ஆளுநனாகிய கெதலியாவிற்கு உண்மையாக இருந்தார்கள் (எரேமியா 40:8, 13, 15, 16)."
+    }
+  ]
+}

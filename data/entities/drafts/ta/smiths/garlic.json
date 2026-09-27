@@ -1,0 +1,18 @@
+{
+  "id": "smiths/garlic",
+  "lang": "ta",
+  "source_hash": "54ab5cde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெள்ளைப்பூண்டு",
+  "paragraphs": [
+    {
+      "id": "smiths/garlic#p1-54ab5cde",
+      "text": "(எண்ணாகமம் 11:5) இது லின்னேயஸின் Allium sativum ஆகும், இது எகிப்தில் மிகுதியாக விளைகிறது."
+    }
+  ]
+}

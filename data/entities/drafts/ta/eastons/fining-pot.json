@@ -1,0 +1,18 @@
+{
+  "id": "eastons/fining-pot",
+  "lang": "ta",
+  "source_hash": "004f2622",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புடம்",
+  "paragraphs": [
+    {
+      "id": "eastons/fining-pot#p1-004f2622",
+      "text": "ஒரு குகை, உருக்கும் பாத்திரம் (நீதிமொழிகள் 17:3; 27:21)."
+    }
+  ]
+}

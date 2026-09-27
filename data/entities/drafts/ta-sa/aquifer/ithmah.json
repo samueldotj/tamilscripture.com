@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ithmah",
+  "lang": "ta",
+  "source_hash": "9d219f02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்மா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ithmah#p1-9d219f02",
+      "text": "இத்மா ஒரு மோவாபியனான போராளியும், தாவீதின் பராக்கிரமசாலிகளில் ஒருவனுமாக இருந்தான் (1 நாளாகமம் 11:46)."
+    }
+  ]
+}

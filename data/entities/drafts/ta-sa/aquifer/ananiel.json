@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ananiel",
+  "lang": "ta",
+  "source_hash": "8723ccfc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனானியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ananiel#p1-8723ccfc",
+      "text": "தொபியாவின் பாட்டன். இவனுடைய பெயர் தொபியா 1:1-ல் காணப்படுகிறது."
+    }
+  ]
+}

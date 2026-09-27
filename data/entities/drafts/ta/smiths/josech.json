@@ -1,0 +1,18 @@
+{
+  "id": "smiths/josech",
+  "lang": "ta",
+  "source_hash": "3f4d41cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசேப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/josech#p1-3f4d41cf",
+      "text": "லூக்கா 3:26-ல் திருத்தப்பட்ட பதிப்பில் யோசேப்பு என்ற பெயருக்குக் கொடுக்கப்பட்டுள்ள வடிவம். இது பழைய ஏற்பாட்டில் காணப்படவில்லை."
+    }
+  ]
+}

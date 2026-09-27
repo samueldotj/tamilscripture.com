@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bimhal",
+  "lang": "ta",
+  "source_hash": "6f9a52a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிம்மால்",
+  "paragraphs": [
+    {
+      "id": "smiths/bimhal#p1-6f9a52a2",
+      "text": "(விருத்தசேதனம்செய்தான்), ஆசேருடைய வம்சத்தில் யப்லேத்தின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:33)"
+    }
+  ]
+}

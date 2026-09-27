@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ophrah",
+  "lang": "ta",
+  "source_hash": "ad32c547",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒப்ரா",
+  "paragraphs": [
+    {
+      "id": "smiths/ophrah#p1-ad32c547",
+      "text": "(மான் குட்டி)."
+    }
+  ]
+}

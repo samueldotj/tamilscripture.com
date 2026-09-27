@@ -1,0 +1,18 @@
+{
+  "id": "smiths/raamiah",
+  "lang": "ta",
+  "source_hash": "f2c0af2f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராமியா",
+  "paragraphs": [
+    {
+      "id": "smiths/raamiah#p1-f2c0af2f",
+      "text": "(யெகோவாவின் இடி), செருபாபேலுடன் திரும்பிவந்த தலைவர்களில் ஒருவன். (நெகேமியா 7:7) எஸ்றா 2:2ல் இவன் ரெலாயா என்று அழைக்கப்படுகிறான். (கிமு 445.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heath",
+  "lang": "ta",
+  "source_hash": "c91cd103",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூரை",
+  "paragraphs": [
+    {
+      "id": "smiths/heath#p1-c91cd103",
+      "text": "(எரேமியா 17:6) இது ஒருவித ஜூனிபர் மரமாக இருந்தது, அது ஒருவேளை ‘ஸாவின்’ எனப்படும், வனாந்திரத்தின் மிகவும் வறட்சியான இடங்களில் வளரும் குட்டையான, குறுகிய ஜூனிபர் மரமாக இருக்கலாம்."
+    }
+  ]
+}

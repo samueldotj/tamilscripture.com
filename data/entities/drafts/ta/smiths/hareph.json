@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hareph",
+  "lang": "ta",
+  "source_hash": "b6f9880e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/hareph#p1-b6f9880e",
+      "text": "(பறித்தெடுத்தல்), யூதாவின் வம்சவரலாறுகளில் காலேபின் மகனாகவும் “பெத்காதேரின் தகப்பன்” ஆகவும் காணப்படும் ஒரு பெயர். (1 நாளாகமம் 2:51) மட்டும்."
+    }
+  ]
+}

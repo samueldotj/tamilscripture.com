@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/barkoziba",
+  "lang": "ta",
+  "source_hash": "e38c63ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பார்-கோசிபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/barkoziba#p1-aab24de9",
+      "text": "பேரரசர் ஆதிரியானின் ஆட்சியின்போது பாலஸ்தீனத்தில் ரோமர்களுக்கு எதிராக நடந்த யூதர்களின் கலகத்தின் தலைவனாகிய சிமியோன் பார்-கோக்பாவின் மூல பெயர்."
+    },
+    {
+      "id": "aquifer/barkoziba#p2-9a8cb0a4",
+      "text": "பார்-கோக்பா, பார்-கோக்பா என்பதைக் காண்க."
+    }
+  ]
+}

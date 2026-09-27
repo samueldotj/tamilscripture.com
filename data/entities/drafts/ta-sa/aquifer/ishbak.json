@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ishbak",
+  "lang": "ta",
+  "source_hash": "4f3e9712",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்பாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishbak#p1-4f3e9712",
+      "text": "கேத்தூராளால் ஆபிரகாமுக்குப் பிறந்த மகன்களில் ஒருவன் (ஆதியாகமம் 25:2; 1 நாளாகமம் 1:32)."
+    }
+  ]
+}

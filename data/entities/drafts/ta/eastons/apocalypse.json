@@ -1,0 +1,18 @@
+{
+  "id": "eastons/apocalypse",
+  "lang": "ta",
+  "source_hash": "db83ee7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்போகலிப்ஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/apocalypse#p1-db83ee7b",
+      "text": "வெளிப்படுத்தின விசேஷம் புத்தகத்தின் (காண்க) கிரேக்கு பெயர்."
+    }
+  ]
+}

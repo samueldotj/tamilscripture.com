@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zuriel",
+  "lang": "ta",
+  "source_hash": "216c5748",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூரியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/zuriel#p1-216c5748",
+      "text": "தேவனுடைய கன்மலை, யாத்திராகம காலத்தில் மெராரியருடைய குடும்பத்தின் தலைவன் (எண்.3:35)."
+    }
+  ]
+}

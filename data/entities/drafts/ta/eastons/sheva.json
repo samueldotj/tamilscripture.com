@@ -1,0 +1,26 @@
+{
+  "id": "eastons/sheva",
+  "lang": "ta",
+  "source_hash": "48149a4e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேவா",
+  "paragraphs": [
+    {
+      "id": "eastons/sheva#p1-c51f47b6",
+      "text": "எபிரெயம் Shebher."
+    },
+    {
+      "id": "eastons/sheva#p2-0730498d",
+      "text": "(1.) காலேபின் மகன் (1 நாளாகமம் 2:49)."
+    },
+    {
+      "id": "eastons/sheva#p3-6e4e82d7",
+      "text": "(2.) எபிரெயம் Sheva’, தாவீதின் எழுத்தாளனாகவும் இருந்த சேவா (2 சாமுவேல் 20:25)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nereus",
+  "lang": "ta",
+  "source_hash": "3d90b573",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேரே",
+  "paragraphs": [
+    {
+      "id": "aquifer/nereus#p1-3d90b573",
+      "text": "நேரே ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவனாக இருந்தான், அவனுக்கு பவுல் ரோமருக்கு எழுதிய தன் நிருபத்தில் வாழ்த்துதல்களை அனுப்பினான் (ரோமர் 16:15)."
+    }
+  ]
+}

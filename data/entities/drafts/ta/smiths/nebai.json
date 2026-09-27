@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nebai",
+  "lang": "ta",
+  "source_hash": "03be55e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெபாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/nebai#p1-03be55e7",
+      "text": "(கனிதரும் என்று பொருள்), நெகேமியாவுடன் உடன்படிக்கையில் கையெழுத்திட்ட மக்களின் தலைவர்களில் ஒருவனான ஒரு குடும்பம். (நெகேமியா 10:19)"
+    }
+  ]
+}

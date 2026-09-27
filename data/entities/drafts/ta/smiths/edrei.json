@@ -1,0 +1,18 @@
+{
+  "id": "smiths/edrei",
+  "lang": "ta",
+  "source_hash": "3872aa3d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்ரேயி",
+  "paragraphs": [
+    {
+      "id": "smiths/edrei#p1-3872aa3d",
+      "text": "(கோட்டை)."
+    }
+  ]
+}

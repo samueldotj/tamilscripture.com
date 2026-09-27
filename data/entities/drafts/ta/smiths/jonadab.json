@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jonadab",
+  "lang": "ta",
+  "source_hash": "796c84c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோனதாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/jonadab#p1-796c84c8",
+      "text": "(யெகோவா தூண்டுகிறவர்)."
+    }
+  ]
+}

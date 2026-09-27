@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naasson",
+  "lang": "ta",
+  "source_hash": "b3f4f51d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகசோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/naasson#p1-b3f4f51d",
+      "text": "(மந்திரவாதி), நகசோன் என்ற பெயரின் கிரேக்கு வடிவம், அல்லது நாஷோன். (மத்தேயு 1:4; லூக்கா 3:32) மாத்திரம்."
+    }
+  ]
+}

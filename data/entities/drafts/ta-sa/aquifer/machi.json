@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/machi",
+  "lang": "ta",
+  "source_hash": "75d337ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகி",
+  "paragraphs": [
+    {
+      "id": "aquifer/machi#p1-75d337ea",
+      "text": "காத் கோத்திரத்தைச் சேர்ந்த கூவேலின் தகப்பன். கானான் தேசத்தை சோதித்து பார்க்க அனுப்பப்பட்ட பன்னிரண்டு உளவுகாரர்களில் கூவேலும் ஒருவனாக இருந்தான் (எண்ணாகமம் 13:15)."
+    }
+  ]
+}

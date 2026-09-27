@@ -1,0 +1,26 @@
+{
+  "id": "eastons/maaziah",
+  "lang": "ta",
+  "source_hash": "80caa1de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாசியா",
+  "paragraphs": [
+    {
+      "id": "eastons/maaziah#p1-36b33ae3",
+      "text": "யெகோவாவின் பலம் அல்லது ஆறுதல்."
+    },
+    {
+      "id": "eastons/maaziah#p2-dcd0705f",
+      "text": "(1.) தாவீதின் ஆட்சிக் காலத்தில் இருந்த இருபத்துநான்காவது ஆசாரிய வகுப்பின் தலைவன் (1 நாளாகமம் 24:18)."
+    },
+    {
+      "id": "eastons/maaziah#p3-eeab330c",
+      "text": "(2.) ஒரு ஆசாரியன் (நெகேமியா 10:8)."
+    }
+  ]
+}

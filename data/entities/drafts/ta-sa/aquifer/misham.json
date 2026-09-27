@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/misham",
+  "lang": "ta",
+  "source_hash": "544ef6aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீஷாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/misham#p1-544ef6aa",
+      "text": "மீஷாம் என்பவன் பென்யமீன் கோத்திரத்தைச் சேர்ந்த எல்பாலின் மகன், இவன் ஓனோவையும் லோதையும் அதின் கிராமங்களையும் உண்டாக்க உதவினான் (1 நாளாகமம் 8:12)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hagerite-the",
+  "lang": "ta",
+  "source_hash": "d36636ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகாரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hagerite-the#p1-d36636ac",
+      "text": "ஆகாரியனான யாசிச், அதாவது ஆகாரின் சந்ததியான, தாவீதின் ஆடுகளுக்கு விசாரிப்புக்காரனாக இருந்தான். (1 நாளாகமம் 27:31)"
+    }
+  ]
+}

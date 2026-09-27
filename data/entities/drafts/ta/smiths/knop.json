@@ -1,0 +1,18 @@
+{
+  "id": "smiths/knop",
+  "lang": "ta",
+  "source_hash": "8da3add6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நொப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/knop#p1-8da3add6",
+      "text": "கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் (Authorized Version) சில கட்டடக்கலை அல்லது அலங்கார பொருள்களைக் குறிக்கும் இரண்டு சொற்களைத் தமிழாக்கும் பொருட்டு பயன்படுத்தப்பட்ட ஒரு சொல் இது; ஆனால் இந்த இரண்டு மூல சொற்களுக்கும் ஒன்றுக்கொன்று எந்தத் தொடர்பும் இல்லை."
+    }
+  ]
+}

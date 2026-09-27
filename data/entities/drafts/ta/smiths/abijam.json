@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abijam",
+  "lang": "ta",
+  "source_hash": "76c7ee62",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/abijam#p1-76c7ee62",
+      "text": "[அபியா, அபியாள், அல்லது அபியா, அபியா அல்லது அபியாம், 1 - காண்க]"
+    }
+  ]
+}

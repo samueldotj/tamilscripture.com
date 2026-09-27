@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ibzan",
+  "lang": "ta",
+  "source_hash": "537eb43d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்சான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ibzan#p1-537eb43d",
+      "text": "(பிரகாசமானவன்), செபுலோனின் பெத்லெகேம் ஊரானாகிய இவன், யெப்தாவின்பின்பு ஏழு வருடங்கள் இஸ்ரவேலை நியாயம் விசாரித்தான். (நியாயாதிபதிகள் 12:8,10) (கி.மு. 1137.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/halah",
+  "lang": "ta",
+  "source_hash": "b0428f81",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலா",
+  "paragraphs": [
+    {
+      "id": "smiths/halah#p1-b0428f81",
+      "text": "இது ஆதியாகமம் 10:11-இல் குறிப்பிடப்பட்ட காலாகிலிருந்து வேறுபட்ட ஒரு இடமாக இருக்கலாம். இதைத் தொலமியின் கல்சிடிஸ் (Chalcitis) என்பதுடன் ஒப்பிடலாம்."
+    }
+  ]
+}

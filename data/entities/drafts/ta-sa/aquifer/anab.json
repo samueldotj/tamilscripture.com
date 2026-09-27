@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/anab",
+  "lang": "ta",
+  "source_hash": "32af92fa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/anab#p1-32af92fa",
+      "text": "பராக்கிரமமுள்ள போர்வீரர்கள் வாழ்ந்த எப்ரோனின் மலைத்தேசத்தில் இருந்த ஒரு பட்டணம். யோசுவா அந்த ஏனாக்கியரை அழித்தபின்பு, ஆனாப் யூதாவின் கோத்திரத்திற்கு பங்காக அளிக்கப்பட்டது (யோசுவா 11:21; 15:50). இன்று, ஆனாப் Khirbet ‘Anab el-Kebireh என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

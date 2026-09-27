@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pispa-pispah",
+  "lang": "ta",
+  "source_hash": "a10adcf3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிஸ்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/pispa-pispah#p1-a10adcf3",
+      "text": "பிஸ்பா என்பவன் ஆசேர் கோத்திரத்தைச் சேர்ந்த யெத்தெருடைய மகன் (1 நாளாகமம் 7:38)."
+    }
+  ]
+}

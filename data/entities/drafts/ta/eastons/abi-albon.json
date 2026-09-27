@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abi-albon",
+  "lang": "ta",
+  "source_hash": "a97fe6db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிஅல்பொன்",
+  "paragraphs": [
+    {
+      "id": "eastons/abi-albon#p1-a97fe6db",
+      "text": "பலத்தின் தகப்பன்; அதாவது, “பராக்கிரமசாலி”, தாவீதின் முப்பது பராக்கிரமசாலிகளான மெய்க்காவலரில் ஒருவன் (2 சாமுவேல் 23:31); அபீயேல் என்றும் அழைக்கப்பட்டான் (1 நாளாகமம் 11:32)."
+    }
+  ]
+}

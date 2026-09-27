@@ -1,0 +1,26 @@
+{
+  "id": "eastons/rechab",
+  "lang": "ta",
+  "source_hash": "f29f3b59",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேகாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/rechab#p1-e851425b",
+      "text": "குதிரைவீரன், அல்லது இரதம்."
+    },
+    {
+      "id": "eastons/rechab#p2-446df864",
+      "text": "(1.) இஸ்போசேத்தின் “படைத்தலைவர்களில்” ஒருவன், அதாவது கொள்ளைப்படைகளின் தலைவன் (2 சாமுவேல் 4:2)."
+    },
+    {
+      "id": "eastons/rechab#p3-8b510773",
+      "text": "(2.) யோனதாபின் தகப்பன், அவனே ரேகாபியருடைய தகப்பன் (2 இராஜாக்கள் 10:15, 23; எரேமியா 35:6-19)."
+    }
+  ]
+}

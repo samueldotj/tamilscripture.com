@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mozah",
+  "lang": "ta",
+  "source_hash": "b8378041",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசா",
+  "paragraphs": [
+    {
+      "id": "smiths/mozah#p1-b8378041",
+      "text": "(நீரூற்று), பென்யமீனுடைய சுதந்தரத்தில் இருந்த பட்டணங்களில் ஒன்று, (யோசுவா 18:26) இல் மட்டும், கேபீரா மற்றும் ரேக்கேமிற்கு இடையில் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kison",
+  "lang": "ta",
+  "source_hash": "6ac41278",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீசோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/kison#p1-6ac41278",
+      "text": "(வளைந்து செல்லுதல்), கீசோன் என்னும் பெயரைத் தவறாகக் குறிப்பிடும் ஒரு வழக்கம். (சங்கீதம் 83:9)"
+    }
+  ]
+}

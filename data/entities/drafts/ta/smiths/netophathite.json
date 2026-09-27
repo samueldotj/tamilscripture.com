@@ -1,0 +1,18 @@
+{
+  "id": "smiths/netophathite",
+  "lang": "ta",
+  "source_hash": "bd976c9c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெதொபாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/netophathite#p1-bd976c9c",
+      "text": "நெதொபா ஊரின் குடியிருப்பாளன்."
+    }
+  ]
+}

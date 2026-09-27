@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pontius-pilate",
+  "lang": "ta",
+  "source_hash": "9cb64488",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொந்தியு பிலாத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/pontius-pilate#p1-9cb64488",
+      "text": "[பிலாத்து]"
+    }
+  ]
+}

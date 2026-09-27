@@ -1,0 +1,18 @@
+{
+  "id": "eastons/elika",
+  "lang": "ta",
+  "source_hash": "2e2ea558",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிக்கா",
+  "paragraphs": [
+    {
+      "id": "eastons/elika#p1-2e2ea558",
+      "text": "தேவன் அவனை புறக்கணிக்கிறவர், தாவீதின் புகழ்பெற்ற முப்பத்தேழு பராக்கிரமசாலிகளில் ஒருவன் (2 சாமுவேல் 23:25)."
+    }
+  ]
+}

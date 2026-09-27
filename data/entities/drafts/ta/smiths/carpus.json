@@ -1,0 +1,18 @@
+{
+  "id": "smiths/carpus",
+  "lang": "ta",
+  "source_hash": "579a3a12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கார்ப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/carpus#p1-579a3a12",
+      "text": "துரோவாவிலிருக்கிற ஒரு கிறிஸ்தவன். (2 தீமோத்தேயு 4:13)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zelah",
+  "lang": "ta",
+  "source_hash": "7f89c2ff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேலா",
+  "paragraphs": [
+    {
+      "id": "eastons/zelah#p1-7f89c2ff",
+      "text": "சரிவு; பக்கம், சவுலும் அவனுடைய மகன் யோனத்தானும் அடக்கம்செய்யப்பட்ட பென்யமீனிலிருந்த ஒரு பட்டணம் (2 சாமுவேல் 21:14). இது சவுலின் பிறப்பிடமாக இருந்திருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gispa",
+  "lang": "ta",
+  "source_hash": "641c34f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிஸ்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/gispa#p1-641c34f3",
+      "text": "(அன்பு கூறுதல்), சிறையிருப்பிலிருந்து திரும்பிய பின்பு, “ஓபேலிலே” இருந்த நிதனீமியரின் கண்காணிகளில் ஒருவன். (நெகேமியா 11:21)"
+    }
+  ]
+}

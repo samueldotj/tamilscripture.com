@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kartah",
+  "lang": "ta",
+  "source_hash": "ed707a7d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/kartah#p1-ed707a7d",
+      "text": "(நகரம்), மெராரி லேவியர்களுக்கு ஒதுக்கப்பட்ட செபுலோனுடைய ஒரு பட்டணம். (யோசுவா 21:34)"
+    }
+  ]
+}

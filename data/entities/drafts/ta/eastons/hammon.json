@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hammon",
+  "lang": "ta",
+  "source_hash": "c6717874",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/hammon#p1-f291f39f",
+      "text": "வெதுவெதுப்பான நீரூற்றுகள்."
+    },
+    {
+      "id": "eastons/hammon#p2-5665b82d",
+      "text": "(1.) சீதோனுக்கு அருகில் ஆசேர் கோத்திரத்திற்குள் இருந்த ஒரு பட்டணம் (யோசுவா 19:28), இது ஆயீன் ஆமூல் என்று அடையாளம் காணப்படுகிறது."
+    },
+    {
+      "id": "eastons/hammon#p3-8914bddd",
+      "text": "(2.) நப்தலி கோத்திரத்திற்குரிய லேவியருடைய பட்டணம் (1 நாளாகமம் 6:76)."
+    }
+  ]
+}

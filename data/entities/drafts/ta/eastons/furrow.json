@@ -1,0 +1,18 @@
+{
+  "id": "eastons/furrow",
+  "lang": "ta",
+  "source_hash": "b735c9c4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உழவுசால்",
+  "paragraphs": [
+    {
+      "id": "eastons/furrow#p1-b735c9c4",
+      "text": "கலப்பையினால் நிலத்தில் உண்டாகும் ஒரு பிளவு (சங்கீதங்கள் 65:10; ஓசியா 10:4, 10)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/machi",
+  "lang": "ta",
+  "source_hash": "4d573e4c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகி",
+  "paragraphs": [
+    {
+      "id": "smiths/machi#p1-4d573e4c",
+      "text": "(குறைவு), காலேபும் யோசுவாவும் கானான் தேசத்தை உற்றுப்பார்க்கச் சென்றபோது அவர்களுடன் போன காத் கோத்திரத்தான் கூவேலுடைய தகப்பன். (எண்ணாகமம் 13:15)"
+    }
+  ]
+}

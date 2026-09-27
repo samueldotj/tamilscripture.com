@@ -1,0 +1,26 @@
+{
+  "id": "eastons/ozem",
+  "lang": "ta",
+  "source_hash": "72ed7664",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓத்சேம்",
+  "paragraphs": [
+    {
+      "id": "eastons/ozem#p1-97b6b1a2",
+      "text": "பலவான்."
+    },
+    {
+      "id": "eastons/ozem#p2-3e1e1237",
+      "text": "(1.) தாவீதின் சகோதரர்களில் ஒருவன்; ஈசாயின் ஆறாம் மகன் (1 நாளாகமம் 2:15)."
+    },
+    {
+      "id": "eastons/ozem#p3-7005fd7f",
+      "text": "(2.) யெராமியேலின் ஒரு மகன் (1 நாளாகமம் 2:25)."
+    }
+  ]
+}

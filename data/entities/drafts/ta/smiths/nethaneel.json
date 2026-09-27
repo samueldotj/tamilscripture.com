@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nethaneel",
+  "lang": "ta",
+  "source_hash": "f883b8da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெதனெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/nethaneel#p1-f883b8da",
+      "text": "(தேவனால் அளிக்கப்பட்டவன்)."
+    }
+  ]
+}

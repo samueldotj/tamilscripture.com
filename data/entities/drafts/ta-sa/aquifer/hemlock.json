@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hemlock",
+  "lang": "ta",
+  "source_hash": "f54ad4ef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எட்டி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hemlock#p1-0fbc1e5f",
+      "text": "எட்டி என்பது ஓசியாவின் 10:4-இல் “விஷச் செடிகள்” என்பதற்கும், ஆமோஸ் 6:12-இல் “கசப்பான செடி” என்பதற்கும் கிங் யாக்கோபு மொழிபெயர்ப்பில் தவறாக மொழிபெயர்க்கப்பட்ட சொல்லாகும்."
+    },
+    {
+      "id": "aquifer/hemlock#p2-ef578b13",
+      "text": "கசப்பான செடி எனும் கட்டுரையைக் காண்க."
+    }
+  ]
+}

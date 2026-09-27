@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sara",
+  "lang": "ta",
+  "source_hash": "1fb4bea1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரா",
+  "paragraphs": [
+    {
+      "id": "smiths/sara#p1-1fb4bea1",
+      "text": "சாராள் என்பதன் கிரேக்கு வடிவம்."
+    }
+  ]
+}

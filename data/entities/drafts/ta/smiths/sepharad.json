@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sepharad",
+  "lang": "ta",
+  "source_hash": "8b86eb19",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேப்பாராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/sepharad#p1-8b86eb19",
+      "text": "(பிரிக்கப்பட்டது), இது ஒபதியா 1:20-இல் மட்டும் காணப்படுகிற ஒரு பெயர். இதன் இருப்பிடம் எப்போதும் ஐயத்திற்குரிய விஷயமாகவே இருந்திருக்கிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lod",
+  "lang": "ta",
+  "source_hash": "099af9bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/lod#p1-099af9bd",
+      "text": "[லிட்டா]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/frying-pan",
+  "lang": "ta",
+  "source_hash": "30525ffa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொரிக்கும் பாத்திரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/frying-pan#p1-30525ffa",
+      "text": "(எபிரெயம் marhesheth, “கொதிக்கும் பாத்திரம்”), இறைச்சியைக் கொதிக்கவைக்கும் ஒரு பாத்திரம் (லேவியராகமம் 2:7; 7:9)."
+    }
+  ]
+}

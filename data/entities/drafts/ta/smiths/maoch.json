@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maoch",
+  "lang": "ta",
+  "source_hash": "d7641be6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாயோகு",
+  "paragraphs": [
+    {
+      "id": "smiths/maoch#p1-d7641be6",
+      "text": "(ஒடுக்குதல்) தாவீது அடைக்கலம் புகுந்த காத்தின் ராஜாவாகிய ஆகீஸின் தகப்பன். (1 சாமுவேல் 27:2)"
+    }
+  ]
+}

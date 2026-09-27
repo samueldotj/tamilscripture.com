@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pethuel",
+  "lang": "ta",
+  "source_hash": "08a618ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்துவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pethuel#p1-08a618ac",
+      "text": "தீர்க்கதரிசியாகிய யோவேலின் தகப்பன் (யோவேல் 1:1)."
+    }
+  ]
+}

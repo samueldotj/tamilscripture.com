@@ -1,0 +1,18 @@
+{
+  "id": "smiths/saraph",
+  "lang": "ta",
+  "source_hash": "a55b0e5c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராப்",
+  "paragraphs": [
+    {
+      "id": "smiths/saraph#p1-a55b0e5c",
+      "text": "(எரிதல்) யூதாவின் சந்ததியர்களுக்குள் (1 நாளாகமம் 4:22) குறிப்பிடப்பட்டவர்."
+    }
+  ]
+}

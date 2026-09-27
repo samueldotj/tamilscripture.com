@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehdeiah",
+  "lang": "ta",
+  "source_hash": "8ccfb6ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகேதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/jehdeiah#p1-8ccfb6ed",
+      "text": "(யெகோவா மகிழ்ச்சியாக்குகிறவர்)."
+    }
+  ]
+}

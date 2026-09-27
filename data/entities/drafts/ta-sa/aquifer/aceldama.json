@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aceldama",
+  "lang": "ta",
+  "source_hash": "d185bdf6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்கெல்தமா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aceldama#p1-4c3d4ffd",
+      "text": "யாக்கோபு அரசர் மொழிபெயர்ப்பில் அக்கெல்தமா என்பதற்கு எழுதப்பட்ட வேறு எழுத்துவடிவம், இதன் பொருள் “இரத்தநிலம்” (அப்போஸ்தலருடைய நடபடிகள் 1:19)."
+    },
+    {
+      "id": "aquifer/aceldama#p2-2d48a8d1",
+      "text": "“இரத்தநிலம்” என்ற தலைப்பைக் காண்க."
+    }
+  ]
+}

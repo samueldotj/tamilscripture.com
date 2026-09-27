@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amaziah",
+  "lang": "ta",
+  "source_hash": "e93dbc58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அமத்சியா",
+  "paragraphs": [
+    {
+      "id": "smiths/amaziah#p1-e93dbc58",
+      "text": "(கர்த்தரின் பலம்)."
+    }
+  ]
+}

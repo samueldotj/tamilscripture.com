@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jadah",
+  "lang": "ta",
+  "source_hash": "15fbeb7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jadah#p1-5333bbc0",
+      "text": "யாதா என்பது யோகதா (1 நாளாகமம் 8:36) மற்றும் யாராக் (1 நாளாகமம் 9:42) என்ற பெயர்களின் மற்றொரு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jadah#p2-2f912c3d",
+      "text": "யோகதா, யோகதாவைப் என்பதைக் காண்க."
+    }
+  ]
+}

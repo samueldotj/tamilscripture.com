@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/joktan",
+  "lang": "ta",
+  "source_hash": "88a684c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொக்தான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/joktan#p1-88a684c7",
+      "text": "யொக்தான் ஏபேரின் மகன், பேலேகின் இளைய சகோதரன். பல அரபிய கோத்திரங்கள் இவனிலிருந்து வந்தன (ஆதியாகமம் 10:25-29; 1 நாளாகமம் 1:19-23)."
+    }
+  ]
+}

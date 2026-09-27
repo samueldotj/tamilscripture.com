@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jezer",
+  "lang": "ta",
+  "source_hash": "199f3dc5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்செர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jezer#p1-199f3dc5",
+      "text": "நப்தலியின் மூன்றாம் மகனும் எத்செரியர்களின் குடும்பத்தை உண்டாக்கியவனும் ஆவான் (ஆதியாகமம் 46:24; எண்ணாகமம் 26:49; 1 நாளாகமம் 7:13)."
+    }
+  ]
+}

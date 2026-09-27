@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kedemah",
+  "lang": "ta",
+  "source_hash": "b67c38fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேத்மா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kedemah#p1-b67c38fc",
+      "text": "ஆதியாகமம் 25:15-ல் குறிப்பிடப்பட்ட இஸ்மவேலின் ஒரு மகன். பிற்காலத்தில், அவனுடைய சந்ததியார் அவனுடைய பெயரால் அறியப்பட்டனர் (1 நாளாகமம் 1:31)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hopping-locust",
+  "lang": "ta",
+  "source_hash": "2c9aa8df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பச்சைக்கிளி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hopping-locust#p1-b1301f38",
+      "text": "யோவேல் 1:4-ல் குறிப்பிடப்பட்ட ஒரு வகை வெட்டுக்கிளி. கிங் யாக்கோபு மொழிபெயர்ப்பில் இது “கேங்கர்வோம்” (cankerworm) என அழைக்கப்படுகிறது."
+    },
+    {
+      "id": "aquifer/hopping-locust#p2-4c71a758",
+      "text": "விலங்குகள் (வெட்டுக்கிளி) என்பதைக் காண்க."
+    }
+  ]
+}

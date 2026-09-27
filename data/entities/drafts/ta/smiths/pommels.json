@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pommels",
+  "lang": "ta",
+  "source_hash": "a76dbebd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கும்பங்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/pommels#p1-a76dbebd",
+      "text": "2 நாளாகமம் 4:12,13-ல் மட்டும் காணப்படுகிறது. 1 இராஜாக்கள் 7:41-ல் “உருண்டைக் கும்பங்கள்” என்று வருகிறது. இந்த வார்த்தை தூண்களின் முனைக் கும்பங்களுக்குச் சொந்தமான குவிந்த வெளிப்பகுதிகளைக் குறிக்கிறது."
+    }
+  ]
+}

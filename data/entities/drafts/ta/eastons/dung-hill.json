@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dung-hill",
+  "lang": "ta",
+  "source_hash": "78201780",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குப்பைமேடு",
+  "paragraphs": [
+    {
+      "id": "eastons/dung-hill#p1-78201780",
+      "text": "குப்பைமேட்டின்மேல் உட்காருதல் மிகவும் தாழ்ந்த துக்கநிலைக்கு அடையாளமாக இருந்தது (1 சாமுவேல் 2:8; சங்கீதங்கள் 113:7; புலம்பல்கள் 4:5)."
+    }
+  ]
+}

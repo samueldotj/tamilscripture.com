@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gog",
+  "lang": "ta",
+  "source_hash": "ec267fc3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோக்",
+  "paragraphs": [
+    {
+      "id": "smiths/gog#p1-ec267fc3",
+      "text": "(மலை)."
+    }
+  ]
+}

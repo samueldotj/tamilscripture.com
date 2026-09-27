@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/melki",
+  "lang": "ta",
+  "source_hash": "846cc4a0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெல்கி",
+  "paragraphs": [
+    {
+      "id": "aquifer/melki#p1-c7220042",
+      "text": "மெல்கி என்பது மெல்கி என்ற பெயரின் மற்றொரு எழுத்துப் பிரயோகமாகும்."
+    },
+    {
+      "id": "aquifer/melki#p2-ed9f20de",
+      "text": "மெல்கியைக் காண்க."
+    }
+  ]
+}

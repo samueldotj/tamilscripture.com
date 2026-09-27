@@ -1,0 +1,18 @@
+{
+  "id": "eastons/harum",
+  "lang": "ta",
+  "source_hash": "893bb771",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரும்",
+  "paragraphs": [
+    {
+      "id": "eastons/harum#p1-893bb771",
+      "text": "உயர்த்தப்பட்டவன், (1 நாளாகமம் 4:8), யூதாவின் சந்ததியில் ஒருவன்."
+    }
+  ]
+}

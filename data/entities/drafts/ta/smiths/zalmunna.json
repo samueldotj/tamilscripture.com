@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zalmunna",
+  "lang": "ta",
+  "source_hash": "45293824",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்முனா",
+  "paragraphs": [
+    {
+      "id": "smiths/zalmunna#p1-45293824",
+      "text": "[சேபா]"
+    }
+  ]
+}

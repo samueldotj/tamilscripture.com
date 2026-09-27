@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aran",
+  "lang": "ta",
+  "source_hash": "a2ad9bb8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aran#p1-a2ad9bb8",
+      "text": "திஷானுடைய மகன், ஓரியனாகிய சேயீரின் பேரன், மற்றும் ஏசாவின் சந்ததியார் (ஆதியாகமம் 36:28; 1 நாளாகமம் 1:42)."
+    }
+  ]
+}

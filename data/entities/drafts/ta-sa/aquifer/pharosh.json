@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pharosh",
+  "lang": "ta",
+  "source_hash": "fe0b911c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரோஷ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pharosh#p1-403e2ff0",
+      "text": "Pharosh என்பது எஸ்றா 8:3-இல் காணப்படும் பாரோஷ் என்ற பெயருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் உள்ள எழுத்துவடிவமாகும். இது பாபிலோனுக்குக் கொண்டுசெல்லப்பட்ட சிறையிருப்புக்குப் பிறகு இருந்த ஒரு குடும்பத்தின் மூலவனாகும்."
+    },
+    {
+      "id": "aquifer/pharosh#p2-39f0cec4",
+      "text": "பாரோஷ் என்பதைக் காண்க."
+    }
+  ]
+}

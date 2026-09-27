@@ -1,0 +1,18 @@
+{
+  "id": "smiths/molid",
+  "lang": "ta",
+  "source_hash": "cd5bd846",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோளித்",
+  "paragraphs": [
+    {
+      "id": "smiths/molid#p1-cd5bd846",
+      "text": "(பெறுவிப்பவன்), அபிசூருடைய மனைவி அபியாயேல் மூலம் பெற்ற மகன், மற்றும் யெராமியேலின் சந்ததியான். (1 நாளாகமம் 2:29)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/prayer",
+  "lang": "ta",
+  "source_hash": "e5dcbed4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஜெபம்",
+  "paragraphs": [
+    {
+      "id": "smiths/prayer#p1-e5dcbed4",
+      "text": "இந்தக் கட்டுரையின் நோக்கம் பின்வருவனவற்றை சுருக்கமாகக் குறிப்பிடுவதாகும்—"
+    }
+  ]
+}

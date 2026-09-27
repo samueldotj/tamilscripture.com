@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nicanor",
+  "lang": "ta",
+  "source_hash": "0cfc474c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிக்கானோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/nicanor#p1-0cfc474c",
+      "text": "(வெற்றியாளன்)."
+    }
+  ]
+}

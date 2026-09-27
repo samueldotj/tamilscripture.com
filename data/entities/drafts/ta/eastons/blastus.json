@@ -1,0 +1,18 @@
+{
+  "id": "eastons/blastus",
+  "lang": "ta",
+  "source_hash": "8e044cf8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலாஸ்து",
+  "paragraphs": [
+    {
+      "id": "eastons/blastus#p1-8e044cf8",
+      "text": "ஏரோது அகிரிப்பா ராஜாவின் வீட்டு விசாரணைக்காரன் (அப்போஸ்தலருடைய நடபடிகள் 12:20). இப்படிப்பட்டவர்கள் பொதுவாக தங்கள் எஜமான்களிடத்தில் பெரிய செல்வாக்கு உள்ளவர்களாக இருந்தார்கள்."
+    }
+  ]
+}

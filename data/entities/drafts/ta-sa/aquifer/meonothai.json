@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/meonothai",
+  "lang": "ta",
+  "source_hash": "bdde55f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெயோனத்தாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/meonothai#p1-bdde55f9",
+      "text": "மெயோனத்தாய் யூதா கோத்திரத்தைச் சேர்ந்த ஒத்னியேலின் மகனாக இருந்தான் (1 நாளாகமம் 4:13-14)."
+    }
+  ]
+}

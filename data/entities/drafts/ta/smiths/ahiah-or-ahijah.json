@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahiah-or-ahijah",
+  "lang": "ta",
+  "source_hash": "888b2527",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/ahiah-or-ahijah#p1-888b2527",
+      "text": "(யெகோவாவின் நண்பன்)."
+    }
+  ]
+}

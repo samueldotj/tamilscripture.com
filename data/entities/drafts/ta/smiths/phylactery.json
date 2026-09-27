@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phylactery",
+  "lang": "ta",
+  "source_hash": "b8b1103c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காப்புச்சீட்டு",
+  "paragraphs": [
+    {
+      "id": "smiths/phylactery#p1-b8b1103c",
+      "text": "[நெற்றிப்பட்டங்கள், அல்லது காப்புச்சீட்டுகள்]"
+    }
+  ]
+}

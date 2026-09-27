@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/abram",
+  "lang": "ta",
+  "source_hash": "37980939",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபிராம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abram#p1-a8183ded",
+      "text": "கோத்திரத்தலைவனாகிய ஆபிரகாமின் மூல பெயர் (ஆதியாகமம் 11:26)."
+    },
+    {
+      "id": "aquifer/abram#p2-51b3a119",
+      "text": "ஆபிரகாமைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/diphath",
+  "lang": "ta",
+  "source_hash": "27bcb4b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திபாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/diphath#p1-56184a32",
+      "text": "திபாத் என்பது 1 நாளாகமம் 1:6-ல் கோமருடைய மகனான ரீப்பாத்து என்பதற்கு மற்றொரு எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/diphath#p2-c9c5d807",
+      "text": "ரீப்பாத்து என்பதைக் காண்க."
+    }
+  ]
+}

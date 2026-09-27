@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ibnijah",
+  "lang": "ta",
+  "source_hash": "12d6bb59",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்னெயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ibnijah#p1-12d6bb59",
+      "text": "இப்னெயா என்பவர் பென்யமீன் கோத்திரத்தைச் சேர்ந்த மெசுல்லாமின் மூதாதையாக இருந்தார் (1 நாளாகமம் 9:8)."
+    }
+  ]
+}

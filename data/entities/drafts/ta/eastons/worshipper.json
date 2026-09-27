@@ -1,0 +1,18 @@
+{
+  "id": "eastons/worshipper",
+  "lang": "ta",
+  "source_hash": "62ee6c80",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வணங்குபவன்",
+  "paragraphs": [
+    {
+      "id": "eastons/worshipper#p1-62ee6c80",
+      "text": "(கிரேக்க மொழியில் neocoros = ஆலயப் பணிப்பாளன் (அப்போஸ்தலருடைய நடபடிகள் 19:35) மகா தேவியாகிய தியானாளின் ஆலயத்தில்). இந்த neocoros என்ற பெயர் இன்று எஞ்சியிருக்கும் எபேசு நகர நாணயங்களில் பெரும்பாலானவற்றில் காணப்படுகிறது."
+    }
+  ]
+}

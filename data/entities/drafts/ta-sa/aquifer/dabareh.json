@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dabareh",
+  "lang": "ta",
+  "source_hash": "b8f3bf62",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபாரே",
+  "paragraphs": [
+    {
+      "id": "aquifer/dabareh#p1-23a50981",
+      "text": "தாபாரே என்பது யோசுவா 21:28-ல் வரும் தாபராத் என்ற பட்டணத்தின் கிங் யாக்கோபு மொழிபெயர்ப்பு எழுத்துப்பெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/dabareh#p2-164670b9",
+      "text": "தாபராத்தும் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sea",
+  "lang": "ta",
+  "source_hash": "2b121544",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடல்",
+  "paragraphs": [
+    {
+      "id": "smiths/sea#p1-2b121544",
+      "text": "கடல், yam, என்பது வேதவாக்கியத்தில் பின்வருவனவற்றைக் குறிக்கப் பயன்படுத்தப்படுகிறது—"
+    }
+  ]
+}

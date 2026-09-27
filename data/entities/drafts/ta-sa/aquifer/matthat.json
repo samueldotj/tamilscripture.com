@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/matthat",
+  "lang": "ta",
+  "source_hash": "6227f60c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/matthat#p1-5cd23278",
+      "text": "இயேசுவின் முற்பிதாக்களில் ஒருவன் (லூக்கா 3:24), ஒருவேளை மாத்தானோடு (மத்தேயு 1:15) ஒருவனாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/matthat#p2-c19a055f",
+      "text": "இயேசுவின் முற்பிதாக்களில் ஒருவன் (லூக்கா 3:29)."
+    },
+    {
+      "id": "aquifer/matthat#p3-7b5caab4",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதையும் காண்க."
+    }
+  ]
+}

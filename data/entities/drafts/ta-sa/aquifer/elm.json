@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elm",
+  "lang": "ta",
+  "source_hash": "eda9bdb1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்ம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elm#p1-ffd8fb26",
+      "text": "எல்ம் என்பது ஓசியாவின் 4:13-ல் குறிப்பிடப்பட்டுள்ள பாலஸ்தீனத்தின் ஒரு பெரிய மரமான டெரிபிந்த் (terebinth) என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் செய்யப்பட்ட தவறான மொழிபெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/elm#p2-4b30534c",
+      "text": "டெரிபிந்த் (Terebinth) என்பதைக் காண்க."
+    }
+  ]
+}

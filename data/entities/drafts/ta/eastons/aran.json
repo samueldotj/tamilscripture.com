@@ -1,0 +1,18 @@
+{
+  "id": "eastons/aran",
+  "lang": "ta",
+  "source_hash": "89b50317",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரான்",
+  "paragraphs": [
+    {
+      "id": "eastons/aran#p1-89b50317",
+      "text": "காட்டு வெள்ளாடு, சேயீரின் ஓரியனுடைய சந்ததியான ஒருவன் (ஆதியாகமம் 36:28)."
+    }
+  ]
+}

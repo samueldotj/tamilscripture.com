@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joah",
+  "lang": "ta",
+  "source_hash": "8023d784",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/joah#p1-8023d784",
+      "text": "(யாருடைய சகோதரன் (அதாவது, உதவியாளன்) யெகோவா)."
+    }
+  ]
+}

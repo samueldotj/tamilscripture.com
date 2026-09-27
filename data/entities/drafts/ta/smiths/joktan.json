@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joktan",
+  "lang": "ta",
+  "source_hash": "a33f0f52",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொக்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/joktan#p1-a33f0f52",
+      "text": "(சிறியவன்), ஏபேரின் மகன், (ஆதியாகமம் 10:25; 1 நாளாகமம் 1:19) மற்றும் யொக்தானிய அரபியரின் தந்தை. (ஆதியாகமம் 10:30) (கி.மு. சுமார் 2200.)"
+    }
+  ]
+}

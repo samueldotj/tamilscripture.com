@@ -1,0 +1,18 @@
+{
+  "id": "smiths/suah",
+  "lang": "ta",
+  "source_hash": "57ee8bfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூவாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/suah#p1-57ee8bfe",
+      "text": "(அடித்துவாருதல்), ஆசேரியனான சோபாக்கின் மகன். (1 நாளாகமம் 7:36) (கி.மு. 1020-ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

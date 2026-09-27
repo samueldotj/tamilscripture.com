@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/manahath-person",
+  "lang": "ta",
+  "source_hash": "e1c6aca7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மானகாத் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/manahath-person#p1-a422642e",
+      "text": "மானகாத் என்பவன் சோபாலின் ஐந்து மகன்களில் ஒருவனாக இருந்தான் (ஆதியாகமம் 36:23; 1 நாளாகமம் 1:40)."
+    },
+    {
+      "id": "aquifer/manahath-person#p2-d5fe0afd",
+      "text": "சோபால் என்பதையும் காண்க."
+    }
+  ]
+}

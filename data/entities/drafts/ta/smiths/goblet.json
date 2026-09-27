@@ -1,0 +1,18 @@
+{
+  "id": "smiths/goblet",
+  "lang": "ta",
+  "source_hash": "17445e06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிண்ணம்",
+  "paragraphs": [
+    {
+      "id": "smiths/goblet#p1-17445e06",
+      "text": "திராட்சைரசத்திற்காகவோ அல்லது வேறு திரவத்திற்காகவோ பயன்படுத்தப்படும் ஒரு வட்டவடிவப் பாத்திரம்."
+    }
+  ]
+}

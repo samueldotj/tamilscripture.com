@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zabud",
+  "lang": "ta",
+  "source_hash": "75e851b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாபூத்",
+  "paragraphs": [
+    {
+      "id": "eastons/zabud#p1-75e851b2",
+      "text": "'கொடை' என்று பொருள்படும், சாலொமோனுடைய அரசவையில் 'ராஜாவின் நண்பன்' ஆக இருந்த நாத்தானின் மகன் (1 இராஜாக்கள் 4:5)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/glossolalia",
+  "lang": "ta",
+  "source_hash": "6caef2a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குளோசொலாலியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/glossolalia#p1-0a031583",
+      "text": "குளோசொலாலியா என்பது “அந்நிய பாஷைகளில் பேசுதல்” என்று பொருள்படும் ஒரு கிரேக்கு வெளிப்பாட்டின் ஒலிபெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/glossolalia#p2-09fe552b",
+      "text": "அந்நிய பாஷைகளில் பேசுதல் என்பதைக் காண்க."
+    }
+  ]
+}

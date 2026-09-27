@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/omar",
+  "lang": "ta",
+  "source_hash": "763d311d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/omar#p1-763d311d",
+      "text": "எலிப்பாசின் இரண்டாம் மகன், ஏசாவின் பேரன், ஆபிரகாமின் மூத்த கொள்ளுப் பேரன் (ஆதியாகமம் 36:11, 15; 1 நாளாகமம் 1:36); ஏதோமிய கோத்திரப் பிரபு."
+    }
+  ]
+}

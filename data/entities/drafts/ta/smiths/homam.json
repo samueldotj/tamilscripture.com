@@ -1,0 +1,18 @@
+{
+  "id": "smiths/homam",
+  "lang": "ta",
+  "source_hash": "49a88f06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/homam#p1-49a88f06",
+      "text": "(நாசம்), 1 நாளாகமம் 1:39-ல் இந்த வடிவத்தில் காணப்படும் ஏதோமிய பெயர், ஆதியாகமம் 36:22-ல் ஏமாம் என்று கொடுக்கப்பட்டிருக்கிறது."
+    }
+  ]
+}

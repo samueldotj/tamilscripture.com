@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shammah",
+  "lang": "ta",
+  "source_hash": "4a02cd60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/shammah#p1-4a02cd60",
+      "text": "(திகைப்பு)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eshban",
+  "lang": "ta",
+  "source_hash": "18618ab5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்பான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eshban#p1-18618ab5",
+      "text": "எஸ்பான் திஷோனுடைய இரண்டாம் மகனும், ஓரியனாகிய சேயீரின் மகனுடைய மகனுமாக இருந்தான் (ஆதியாகமம் 36:26; 1 நாளாகமம் 1:41)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hali",
+  "lang": "ta",
+  "source_hash": "ac4fe11d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலி",
+  "paragraphs": [
+    {
+      "id": "smiths/hali#p1-ac4fe11d",
+      "text": "(கழுத்தணி), ஆசேருடைய எல்லையிலுள்ள ஒரு பட்டணம், எல்காத்திற்கும் பேதேனுக்கும் நடுவே பெயர்பெறப்பட்டது. (யோசுவா 19:25)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gemalli",
+  "lang": "ta",
+  "source_hash": "67f699f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெமல்லி",
+  "paragraphs": [
+    {
+      "id": "smiths/gemalli#p1-67f699f8",
+      "text": "(ஒட்டகம் ஓட்டுபவன்), தாண் கோத்திரத்தின் ஒற்றன் அம்மியேலின் தகப்பன். (எண்ணாகமம் 13:12) (கி.மு. 1490.)"
+    }
+  ]
+}

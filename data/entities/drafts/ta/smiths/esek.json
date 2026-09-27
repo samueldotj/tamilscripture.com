@@ -1,0 +1,18 @@
+{
+  "id": "smiths/esek",
+  "lang": "ta",
+  "source_hash": "26d9910f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசேக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/esek#p1-26d9910f",
+      "text": "(வாக்குவாதம்), கேராரின் பள்ளத்தாக்கில் ஈசாக்கின் மேய்ப்பர்கள் தோண்டிய ஒரு கிணறு. (ஆதியாகமம் 26:20)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dibri",
+  "lang": "ta",
+  "source_hash": "1fdeae5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திப்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/dibri#p1-1fdeae5b",
+      "text": "தாண் கோத்திரத்தான், செலோமித்தின் தகப்பன். (லேவியராகமம் 24:11)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adah",
+  "lang": "ta",
+  "source_hash": "2878eb28",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/adah#p1-2878eb28",
+      "text": "(அலங்காரம், அழகு)."
+    }
+  ]
+}

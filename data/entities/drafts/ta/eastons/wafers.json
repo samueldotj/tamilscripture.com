@@ -1,0 +1,18 @@
+{
+  "id": "eastons/wafers",
+  "lang": "ta",
+  "source_hash": "39843d0b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதிரசங்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/wafers#p1-39843d0b",
+      "text": "பலவித காணிக்கைகளில் பயன்படுத்தப்பட்ட மெல்லிய அப்பங்கள் (யாத். 16:31; 29:2, 23; லேவி. 2:4; 7:12; 8:26; எண். 6:15, 19)."
+    }
+  ]
+}

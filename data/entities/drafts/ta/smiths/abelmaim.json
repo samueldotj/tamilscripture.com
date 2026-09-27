@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abelmaim",
+  "lang": "ta",
+  "source_hash": "9fb71e5a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபேல்மாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/abelmaim#p1-9fb71e5a",
+      "text": "(தண்ணீர்களின்மேல் இருக்கும் ஆபேல்), ஆபேல் என்று மட்டும் சொல்லப்படுவதும் உண்டு (2 சாமுவேல் 20:14,18), இது ஆபேல்பெத்மாக்காவுக்கு மற்றொரு பெயர். (2 நாளாகமம் 16:4)"
+    }
+  ]
+}

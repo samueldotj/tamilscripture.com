@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/benediction",
+  "lang": "ta",
+  "source_hash": "01b3b307",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசீர்வாத வாசகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/benediction#p1-1d26590b",
+      "text": "கூடிவந்திருக்கும் ஒரு கூட்டத்தார்மேல் தேவனுடைய தயவை அறிவிக்கும் அறிக்கை (ஆதியாகமம் 27:27-29; லூக்கா 24:50; 2 கொரிந்தியர் 13:11, 14)."
+    },
+    {
+      "id": "aquifer/benediction#p2-9e1deb1a",
+      "text": "காண்க: ஆசீர்வதி, ஆசீர்வாதம்."
+    }
+  ]
+}

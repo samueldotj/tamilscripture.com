@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nimrah",
+  "lang": "ta",
+  "source_hash": "765a5cb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிம்ரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/nimrah#p1-103a8475",
+      "text": "மோவாபிலுள்ள ஒரு பட்டணமாகிய பெத்நிம்ராவுக்கு இன்னொரு பெயர் (எண்ணாகமம் 32:3)."
+    },
+    {
+      "id": "aquifer/nimrah#p2-638e3e40",
+      "text": "பெத்நிம்ராவைக் காண்க."
+    }
+  ]
+}

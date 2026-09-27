@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jaziz",
+  "lang": "ta",
+  "source_hash": "900cf4df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசிச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaziz#p1-900cf4df",
+      "text": "யாசிச் தாவீது ராஜாவின் ஆடுகளுக்கு விசாரணைக்காரனாக இருந்த அரச விசாரணைக்காரர்களில் ஒருவனாக இருந்தான் (1 நாளாகமம் 27:30-31)."
+    }
+  ]
+}

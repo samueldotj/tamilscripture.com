@@ -1,0 +1,18 @@
+{
+  "id": "smiths/castle",
+  "lang": "ta",
+  "source_hash": "adb1789b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோட்டை",
+  "paragraphs": [
+    {
+      "id": "smiths/castle#p1-adb1789b",
+      "text": "[அரணான பட்டணங்கள் — பட்டணங்கள் காண்க]"
+    }
+  ]
+}

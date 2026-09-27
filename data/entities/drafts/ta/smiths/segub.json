@@ -1,0 +1,18 @@
+{
+  "id": "smiths/segub",
+  "lang": "ta",
+  "source_hash": "fd26dd88",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செகூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/segub#p1-fd26dd88",
+      "text": "(உயர்ந்தவன்)."
+    }
+  ]
+}

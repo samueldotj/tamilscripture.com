@@ -1,0 +1,18 @@
+{
+  "id": "smiths/giants",
+  "lang": "ta",
+  "source_hash": "81561751",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இராட்சதர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/giants#p1-81561751",
+      "text": "அசாதாரண உருவமும் உயரமும் உள்ள மனிதர்கள்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aman",
+  "lang": "ta",
+  "source_hash": "880dcdac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமான்",
+  "paragraphs": [
+    {
+      "id": "smiths/aman#p1-880dcdac",
+      "text": "[ஆமான்] (எஸ்தர் 10:7; 12:6; 13:3,12; 14:17; 16:10,17)"
+    }
+  ]
+}

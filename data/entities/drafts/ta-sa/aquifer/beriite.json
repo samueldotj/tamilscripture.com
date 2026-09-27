@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beriite",
+  "lang": "ta",
+  "source_hash": "51854a0d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரீயாவியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/beriite#p1-da8a5be0",
+      "text": "ஆசேரின் மகன்களில் ஒருவனாகிய பெரீயாவினின்று வந்த குடும்பத்தைச் சேர்ந்தவன் (எண்ணாகமம் 26:44)."
+    },
+    {
+      "id": "aquifer/beriite#p2-c0aa11c8",
+      "text": "பெரீயா #1 காண்க."
+    }
+  ]
+}

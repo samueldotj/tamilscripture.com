@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anim",
+  "lang": "ta",
+  "source_hash": "b820c5db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/anim#p1-b820c5db",
+      "text": "(நீரூற்றுகள்), எஸ்தெமொ மற்றும் கோசேனுடன் பெயர் குறிக்கப்பட்ட, யூதாவின் மலைநாட்டிலுள்ள ஒரு பட்டணம். (யோசுவா 15:50)"
+    }
+  ]
+}

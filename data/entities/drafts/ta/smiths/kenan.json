@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kenan",
+  "lang": "ta",
+  "source_hash": "9c647c7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனான்",
+  "paragraphs": [
+    {
+      "id": "smiths/kenan#p1-9c647c7c",
+      "text": "(கேனான் என்றால் \"உடைமை\") = காயினான், ஏனோஸின் மகன். (1 நாளாகமம் 1:2)"
+    }
+  ]
+}

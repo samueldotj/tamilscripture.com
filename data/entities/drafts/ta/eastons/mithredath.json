@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mithredath",
+  "lang": "ta",
+  "source_hash": "de7b4cad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மித்திரேதாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/mithredath#p1-25ea1246",
+      "text": "மித்ராவினால் கொடுக்கப்பட்டது, அல்லது மித்ராவுக்கு அர்ப்பணிக்கப்பட்டது, அதாவது, சூரியன்; கிரேக்க பெயரான மித்ரிடேட்ஸ் என்பதின் எபிரெய வடிவம்."
+    },
+    {
+      "id": "eastons/mithredath#p2-606b31e2",
+      "text": "(1.) கோரேஸ் ராஜாவின் “பொக்கிஷக்காரன்” (எஸ்றா 1:8)."
+    },
+    {
+      "id": "eastons/mithredath#p3-4142d609",
+      "text": "(2.) எஸ்றா 4:7, சமாரியாவிலிருந்த ஒரு பெர்சிய அதிகாரி."
+    }
+  ]
+}

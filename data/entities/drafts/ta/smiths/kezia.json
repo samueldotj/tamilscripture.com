@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kezia",
+  "lang": "ta",
+  "source_hash": "fdc48114",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசியாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/kezia#p1-fdc48114",
+      "text": "(கசியா), யோபு குணமடைந்தபின் அவனுக்குப் பிறந்த மகள்களில் இரண்டாமவள். (யோபு 42:14) (கி.மு. 1950.)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/azareel",
+  "lang": "ta",
+  "source_hash": "0dd0dcd5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசரெயேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/azareel#p1-86a2d03f",
+      "text": "கிங் யாக்கோபு வெர்ஷனில் அசாரியேல் என்பதற்குப் பயன்படுத்தப்படும் எழுத்துக்கூட்டு."
+    },
+    {
+      "id": "aquifer/azareel#p2-33bb99be",
+      "text": "அசாரியேல் #1–5-ஐக் காண்க."
+    }
+  ]
+}

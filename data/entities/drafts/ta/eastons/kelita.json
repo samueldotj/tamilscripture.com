@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kelita",
+  "lang": "ta",
+  "source_hash": "bac680bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலிதா",
+  "paragraphs": [
+    {
+      "id": "eastons/kelita#p1-bac680bf",
+      "text": "குள்ளன், நியாயப்பிரமாணத்தை மக்களுக்கு விளங்கச்செய்வதில் எஸ்றாவுக்கு உதவி செய்த லேவியன் (நெகேமியா 8:7; 10:10)."
+    }
+  ]
+}

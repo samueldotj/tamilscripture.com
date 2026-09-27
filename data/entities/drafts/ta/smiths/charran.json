@@ -1,0 +1,18 @@
+{
+  "id": "smiths/charran",
+  "lang": "ta",
+  "source_hash": "7d589f99",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/charran#p1-7d589f99",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 7:2,4) [ஆரான் காண்க]"
+    }
+  ]
+}

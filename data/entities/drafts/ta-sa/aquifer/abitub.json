@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/abitub",
+  "lang": "ta",
+  "source_hash": "bfc96a2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிதூப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abitub#p1-bfc96a2b",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த சகராயீமுக்கும் ஊசிமுக்கும் பிறந்த மகன் (1 நாளாகமம் 8:11)."
+    }
+  ]
+}

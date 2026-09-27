@@ -1,0 +1,18 @@
+{
+  "id": "smiths/canopy",
+  "lang": "ta",
+  "source_hash": "9faf90d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விதானம்",
+  "paragraphs": [
+    {
+      "id": "smiths/canopy#p1-9faf90d2",
+      "text": "யூதீத் 10:21; 13:9; 16:19. ஒலொப்பெர்னேசின் விதானம் மட்டுமே இங்கு குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

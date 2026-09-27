@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahali",
+  "lang": "ta",
+  "source_hash": "02ade041",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகாலி",
+  "paragraphs": [
+    {
+      "id": "smiths/mahali#p1-02ade041",
+      "text": "(நோய்வாய்ப்பட்டவன்), மகேலி, மெராரியின் மகன். (யாத்திராகமம் 6:19)"
+    }
+  ]
+}

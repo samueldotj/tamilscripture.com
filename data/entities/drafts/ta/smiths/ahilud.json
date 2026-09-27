@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahilud",
+  "lang": "ta",
+  "source_hash": "6e2a80e9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகிலூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahilud#p1-6e2a80e9",
+      "text": "(பிறந்த ஒருவனுடைய சகோதரன், அதாவது அவனுக்கு முன்பு பிறந்தவன்)."
+    }
+  ]
+}

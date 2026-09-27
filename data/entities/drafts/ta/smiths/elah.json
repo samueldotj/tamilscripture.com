@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elah",
+  "lang": "ta",
+  "source_hash": "f17f5985",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலா",
+  "paragraphs": [
+    {
+      "id": "smiths/elah#p1-f17f5985",
+      "text": "(கர்வாலி மரம், பெலன்)."
+    }
+  ]
+}

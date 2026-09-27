@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zabdiel",
+  "lang": "ta",
+  "source_hash": "36baa537",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்தியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/zabdiel#p1-1ccdab95",
+      "text": "தேவனுடைய வரம்."
+    },
+    {
+      "id": "eastons/zabdiel#p2-8c238935",
+      "text": "(1.) தாவீதின் அதிகாரிகளில் ஒருவனாயிருந்த யாஷோபியாமின் தகப்பன் (1 நாளாகமம் 27:2)."
+    },
+    {
+      "id": "eastons/zabdiel#p3-abae1d24",
+      "text": "(2.) சிறையிருப்புக்குப்பின் ஆசாரியர்களுக்குக் கண்காணியாயிருந்தவன் (நெகேமியா 11:14)."
+    }
+  ]
+}

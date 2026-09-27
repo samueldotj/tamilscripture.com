@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amadatha",
+  "lang": "ta",
+  "source_hash": "2323ef72",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/amadatha#p1-2323ef72",
+      "text": "(எஸ்தர் 16:10,17) மற்றும் ஆமதாதுஸ். (எஸ்தர் 12:6) [அம்மெதாத்தாவின்]"
+    }
+  ]
+}

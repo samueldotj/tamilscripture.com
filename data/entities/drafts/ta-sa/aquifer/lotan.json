@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/lotan",
+  "lang": "ta",
+  "source_hash": "1f97eccc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோத்தான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lotan#p1-1f97eccc",
+      "text": "சேயீரின் மூத்த மகன் (ஆதியாகமம் 36:20) மற்றும் ஏதோமின் மூலவாசிகளாகிய ஓரியரின் ஒரு பிரபு (வச. 22, 29). லோத்தானுக்கு ஓரி, ஓமாம் என்ற இரண்டு மகன்கள் இருந்தனர் (1 நாளாகமம் 1:38-39)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bizjothjah",
+  "lang": "ta",
+  "source_hash": "4253a02d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிஸ்யோத்யா",
+  "paragraphs": [
+    {
+      "id": "smiths/bizjothjah#p1-4253a02d",
+      "text": "(யெகோவாவை அசட்டைசெய்தல்), யூதாவின் தென்பகுதியில் இருந்த ஒரு பட்டணம். (யோசுவா 15:28)"
+    }
+  ]
+}

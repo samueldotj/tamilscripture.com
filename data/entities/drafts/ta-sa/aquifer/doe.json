@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/doe",
+  "lang": "ta",
+  "source_hash": "a9930d32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெண்மான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/doe#p1-533b1641",
+      "text": "பெண்மான் என்பது ஆண்மானின் பெண் இனமாகும் (நீதிமொழிகள் 5:19)."
+    },
+    {
+      "id": "aquifer/doe#p2-abd54883",
+      "text": "மான் என்பதைக் காண்க."
+    }
+  ]
+}

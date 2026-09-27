@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heshmon",
+  "lang": "ta",
+  "source_hash": "ab315002",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/heshmon#p1-ab315002",
+      "text": "(செழுமையான மண்), யூதாவின் தென்கோடியில் இருந்த ஒரு இடமாக மற்றவைகளுடன் பெயர் குறிக்கப்பட்டுள்ளது. (யோசுவா 15:27)"
+    }
+  ]
+}

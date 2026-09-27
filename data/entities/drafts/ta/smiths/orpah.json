@@ -1,0 +1,18 @@
+{
+  "id": "smiths/orpah",
+  "lang": "ta",
+  "source_hash": "b385ec76",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒர்பாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/orpah#p1-b385ec76",
+      "text": "(மான் என்று அர்த்தம்), நகோமியின் மகனான கிலியோனுக்கும் மனைவியாக இருந்த மோவாபியப் பெண்; இதனால் ரூத்திற்குச் சகோதரி மருமகள் ஆனாள். (ரூத் 2:4,14) (கி.மு. 1360.)"
+    }
+  ]
+}

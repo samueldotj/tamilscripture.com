@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abiezrite",
+  "lang": "ta",
+  "source_hash": "a7a9a00c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியேஸ்ரியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/abiezrite#p1-a7a9a00c",
+      "text": "உதவியின் தகப்பன், அபியேசரின் சந்ததியான் (நியாயாதிபதிகள் 6:11, 24; 8:32)."
+    }
+  ]
+}

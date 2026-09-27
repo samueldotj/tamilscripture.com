@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jediael",
+  "lang": "ta",
+  "source_hash": "f26ff731",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெதியாயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jediael#p1-f26ff731",
+      "text": "(தேவனால் அறியப்பட்டவன்)."
+    }
+  ]
+}

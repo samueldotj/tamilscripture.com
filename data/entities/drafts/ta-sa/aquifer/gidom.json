@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gidom",
+  "lang": "ta",
+  "source_hash": "4414d059",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீதோம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gidom#p1-4414d059",
+      "text": "பென்யமீனுக்கும் இஸ்ரவேலின் மற்ற கோத்திரங்களுக்கும் இடையே நடந்த உள்நாட்டுப் போரில், பென்யமீனுடைய இராணுவம் விரட்டப்பட்டுப் போன இடம் (நியாயாதிபதிகள் 20:45)."
+    }
+  ]
+}

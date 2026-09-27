@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chloe",
+  "lang": "ta",
+  "source_hash": "cbb4c5f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குலோவேயாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/chloe#p1-cbb4c5f4",
+      "text": "(பசுமையான தாவரம்), 1 கொரிந்தியர் 1:11 இல் குறிப்பிடப்பட்டுள்ள ஒரு பெண்."
+    }
+  ]
+}

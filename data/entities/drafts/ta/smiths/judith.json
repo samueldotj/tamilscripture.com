@@ -1,0 +1,18 @@
+{
+  "id": "smiths/judith",
+  "lang": "ta",
+  "source_hash": "2f29dc93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூதீத்",
+  "paragraphs": [
+    {
+      "id": "smiths/judith#p1-2f29dc93",
+      "text": "(யூதப் பெண், அல்லது துதிக்கப்பட்டவள்)."
+    }
+  ]
+}

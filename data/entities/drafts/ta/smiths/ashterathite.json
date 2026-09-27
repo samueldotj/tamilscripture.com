@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ashterathite",
+  "lang": "ta",
+  "source_hash": "efdf71e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்தரேத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ashterathite#p1-efdf71e4",
+      "text": "யோர்தானுக்கு அப்பாலுள்ள அஸ்தரோத்தில் பிறந்தவன் அல்லது அங்கு வாழ்பவன் (1 நாளாகமம் 11:44)."
+    }
+  ]
+}

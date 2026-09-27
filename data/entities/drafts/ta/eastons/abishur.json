@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abishur",
+  "lang": "ta",
+  "source_hash": "8169c85f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிசூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/abishur#p1-8169c85f",
+      "text": "“மதிலின் தகப்பன்”; அதாவது, “சிற்பி”; இவன் யூதா கோத்திரத்தைச் சேர்ந்த சம்மாயின் இரண்டு மகன்களில் ஒருவன் (1 நாளாகமம் 2:28, 29)."
+    }
+  ]
+}

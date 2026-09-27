@@ -1,0 +1,18 @@
+{
+  "id": "smiths/south-ramoth",
+  "lang": "ta",
+  "source_hash": "4ded1462",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தென்திசை ராமோத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/south-ramoth#p1-4ded1462",
+      "text": "[தென்திசையின் ராமாத்தைக் காண்க]"
+    }
+  ]
+}

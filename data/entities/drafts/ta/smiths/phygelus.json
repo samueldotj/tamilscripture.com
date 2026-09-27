@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phygelus",
+  "lang": "ta",
+  "source_hash": "506a3fe7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிகெல்லு",
+  "paragraphs": [
+    {
+      "id": "smiths/phygelus#p1-506a3fe7",
+      "text": "திருத்தப்பட்ட மொழிபெயர்ப்பில் (2 தீமோத்தேயு 1:15) Phygellus என்பதற்குப் பதிலாக இது பயன்படுத்தப்பட்டிருக்கிறது."
+    }
+  ]
+}

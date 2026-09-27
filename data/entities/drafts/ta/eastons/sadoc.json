@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sadoc",
+  "lang": "ta",
+  "source_hash": "c653f3e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாதோக்",
+  "paragraphs": [
+    {
+      "id": "eastons/sadoc#p1-c653f3e8",
+      "text": "நீதியுள்ள, நமது கர்த்தருடைய வம்சவரலாற்றில் குறிப்பிடப்பட்டவன் (மத்தேயு 1:14)."
+    }
+  ]
+}

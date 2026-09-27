@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mithcah-mithkah",
+  "lang": "ta",
+  "source_hash": "3e5cdf53",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மித்கா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mithcah-mithkah#p1-384d8a26",
+      "text": "இஸ்ரவேலர்கள் வனாந்தரத்தில் பயணம் செய்த காலத்தில் தங்கியிருந்த தற்காலிக முகாமிடங்களில் ஒன்று. எண்ணாகமம் 33:28-29 இதைத் தேராகுக்கும் அஸ்மோனாவுக்கும் இடையில் இருந்ததாகக் குறிப்பிடுகிறது."
+    },
+    {
+      "id": "aquifer/mithcah-mithkah#p2-5fd904a3",
+      "text": "வனாந்தர பயணங்கள் என்பதையும் காண்க."
+    }
+  ]
+}

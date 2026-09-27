@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/juda-place",
+  "lang": "ta",
+  "source_hash": "3532baf1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூதா (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/juda-place#p1-b72c1321",
+      "text": "லூக்கா 1:39-ல் யூதாவின் நிலப்பகுதிக்கு (அல்லது “யூதேயா”) கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் மாற்று எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/juda-place#p2-4f41700c",
+      "text": "காண்க: யூதா, கோத்திரம்; யூதேயா, யூதேயர்கள்."
+    }
+  ]
+}

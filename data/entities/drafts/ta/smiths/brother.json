@@ -1,0 +1,18 @@
+{
+  "id": "smiths/brother",
+  "lang": "ta",
+  "source_hash": "a98ca6cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சகோதரன்",
+  "paragraphs": [
+    {
+      "id": "smiths/brother#p1-a98ca6cd",
+      "text": "எபிரெய வார்த்தை பழைய ஏற்பாட்டில் பலவிதமான அர்த்தங்களில் பயன்படுத்தப்படுகிறது, அதாவது,"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maskil",
+  "lang": "ta",
+  "source_hash": "4aeb79ad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மஸ்கீல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/maskil#p1-8066ab6b",
+      "text": "13 சங்கீதங்களின் தலைப்புகளில் காணப்படும் ஒரு எபிரெய சொல். இது இந்த சங்கீதங்களை இசைக்கருவிக் கலைஞர்கள் எவ்வாறு இசைக்க வேண்டும் என்பதை விவரிக்கும் ஒரு இசைக் குறிப்பாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/maskil#p2-c265f6ba",
+      "text": "இசை என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aswan",
+  "lang": "ta",
+  "source_hash": "62df0840",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்வான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aswan#p1-f4f792b9",
+      "text": "தென் எகிப்தில் உள்ள ஒரு நகரம், பண்டைய கல் குவாரிகளுக்கும், நைல் நதியின் அருகில் உள்ள அஸ்வான் அணைக்கட்டுக்கும் பெயர்பெற்றது. பண்டைய காலங்களில் இந்த நகரம் செவெனே என்று அழைக்கப்பட்டது."
+    },
+    {
+      "id": "aquifer/aswan#p2-3d72367d",
+      "text": "செவெனே காண்க."
+    }
+  ]
+}

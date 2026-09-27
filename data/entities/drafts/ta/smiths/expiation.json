@@ -1,0 +1,18 @@
+{
+  "id": "smiths/expiation",
+  "lang": "ta",
+  "source_hash": "05697b2a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாவநிவாரணம்",
+  "paragraphs": [
+    {
+      "id": "smiths/expiation#p1-05697b2a",
+      "text": "[பலி]"
+    }
+  ]
+}

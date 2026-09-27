@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mezahab",
+  "lang": "ta",
+  "source_hash": "3d8136f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேசகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mezahab#p1-3d8136f7",
+      "text": "மேசகா மத்ரேத்தின் தகப்பனும், மெகேதபேலின் பாட்டனுமாக இருந்தான். மெகேதபேல் ஏதோமியனாகிய ஆதாத் என்னும் ராஜாவின் மனைவியாக இருந்தாள் (ஆதியாகமம் 36:39; 1 நாளாகமம் 1:50)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/balah",
+  "lang": "ta",
+  "source_hash": "5aaad43c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலா",
+  "paragraphs": [
+    {
+      "id": "smiths/balah#p1-5aaad43c",
+      "text": "(யோசுவா 19:3) [பாகால், புவியியல் எண். 2, b]"
+    }
+  ]
+}

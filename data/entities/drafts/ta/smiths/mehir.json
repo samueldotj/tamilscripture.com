@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mehir",
+  "lang": "ta",
+  "source_hash": "86c30ddb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேகீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/mehir#p1-86c30ddb",
+      "text": "(விலை), சூவாவின் சகோதரனாகிய கேலூப்பின் மகன். (1 நாளாகமம் 4:11)"
+    }
+  ]
+}

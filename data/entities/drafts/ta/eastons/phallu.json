@@ -1,0 +1,18 @@
+{
+  "id": "eastons/phallu",
+  "lang": "ta",
+  "source_hash": "b4aa2a58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்லூ",
+  "paragraphs": [
+    {
+      "id": "eastons/phallu#p1-b4aa2a58",
+      "text": "பிரிக்கப்பட்டவன், ரூபனுடைய இரண்டாம் மகன் (ஆதியாகமம் 46:9)."
+    }
+  ]
+}

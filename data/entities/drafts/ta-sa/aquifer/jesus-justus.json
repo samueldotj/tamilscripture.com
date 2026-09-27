@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jesus-justus",
+  "lang": "ta",
+  "source_hash": "394c992a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இயேசு யுஸ்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/jesus-justus#p1-89201091",
+      "text": "ஒரு யூதன் கிறிஸ்தவ மனிதன்."
+    },
+    {
+      "id": "aquifer/jesus-justus#p2-5d213248",
+      "text": "இயேசு #3 காண்க."
+    }
+  ]
+}

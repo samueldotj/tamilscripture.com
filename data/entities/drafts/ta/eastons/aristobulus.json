@@ -1,0 +1,18 @@
+{
+  "id": "eastons/aristobulus",
+  "lang": "ta",
+  "source_hash": "d22eeb05",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரிஸ்தொபூலு",
+  "paragraphs": [
+    {
+      "id": "eastons/aristobulus#p1-d22eeb05",
+      "text": "பவுல் ரோமருக்கு எழுதிய கடிதத்தில் (16:10) குறிப்பிடப்பட்ட ஒரு ரோமன், அவனுடைய “குடும்பத்தார்” வாழ்த்தப்படுகிறார்கள்."
+    }
+  ]
+}

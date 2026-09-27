@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/malchiram",
+  "lang": "ta",
+  "source_hash": "b39a34c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கீராம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/malchiram#p1-b39a34c6",
+      "text": "யெகோனியாவின் (யோயாக்கீன் என்றும் எழுதப்படுகிறார்) மகனும், தாவீதின் சந்ததியாருமாவார் (1 நாளாகமம் 3:18)."
+    }
+  ]
+}

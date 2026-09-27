@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pavement",
+  "lang": "ta",
+  "source_hash": "f57b2ec8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தளமிடப்பட்ட மேடை",
+  "paragraphs": [
+    {
+      "id": "smiths/pavement#p1-f57b2ec8",
+      "text": "[கபத்தா காண்க]"
+    }
+  ]
+}

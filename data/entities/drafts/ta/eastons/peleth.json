@@ -1,0 +1,26 @@
+{
+  "id": "eastons/peleth",
+  "lang": "ta",
+  "source_hash": "196c2e12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/peleth#p1-c3afa7c1",
+      "text": "வேகம்."
+    },
+    {
+      "id": "eastons/peleth#p2-164bd213",
+      "text": "(1.) மோசேக்கும் ஆரோனுக்கும் விரோதமான சதிகாரர்களில் ஒருவனுடைய தகப்பனாகிய ரூபன் வம்சத்தான் (எண்ணாகமம் 16:1)."
+    },
+    {
+      "id": "eastons/peleth#p3-32f83cb0",
+      "text": "(2.) யோனத்தானுடைய மகன்களில் ஒருவன் (1 நாளாகமம் 2:33)."
+    }
+  ]
+}

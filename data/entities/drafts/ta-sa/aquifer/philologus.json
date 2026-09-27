@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/philologus",
+  "lang": "ta",
+  "source_hash": "acc3a0ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலொலோகு",
+  "paragraphs": [
+    {
+      "id": "aquifer/philologus#p1-acc3a0ae",
+      "text": "அப்போஸ்தலன் பவுல் வாழ்த்துதல் அனுப்பிய ஆரம்பகால கிறிஸ்தவ அறிமுகமானவர் அல்லது நண்பர் (ரோமர் 16:15). அந்த வாழ்த்துதல்களின் வரிசையில், அவர் யூலியாள் என்னும் ஒரு பெண்ணுடன் இணைக்கப்பட்டவராகத் தோன்றுகிறார்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hamulites-the",
+  "lang": "ta",
+  "source_hash": "b1ab11de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமூலியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/hamulites-the#p1-b1ab11de",
+      "text": "முந்தினவரின் குடும்பம். (எண்ணாகமம் 26:21)"
+    }
+  ]
+}

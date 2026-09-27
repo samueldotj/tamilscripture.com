@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jaakobah",
+  "lang": "ta",
+  "source_hash": "e77a82f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கோபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaakobah#p1-e77a82f6",
+      "text": "யாக்கோபா சிமியோன் கோத்திரத்தில் ஒரு தலைவனாக இருந்தான் (1 நாளாகமம் 4:36)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hammedatha",
+  "lang": "ta",
+  "source_hash": "b2ba6ccc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மெதாத்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/hammedatha#p1-b2ba6ccc",
+      "text": "ஆமானின் தகப்பன், பொதுவாக “ஆகாகியன்” என்று குறிக்கப்படுகிறான் (எஸ்தர் 3:1, 10; 8:5)."
+    }
+  ]
+}

@@ -131,7 +131,9 @@
 	<footer class="foot">
 		<p class="source">{a.attribution}</p>
 		{#if src.sharealike}<p class="note" lang={ta ? 'ta' : 'en'}>{ta ? 'இக்கட்டுரையின் தமிழ் வடிவங்களும் திருத்தங்களும் CC BY-SA 4.0 உரிமத்திலேயே வெளியிடப்படும்.' : 'Tamil versions and corrections of this article are released under the same CC BY-SA 4.0 licence.'}</p>{/if}
-		<p class="note" lang={ta ? 'ta' : 'en'}>{ta ? 'தமிழ் வடிவம் இன்னும் இல்லை. வரைவுகள் சமூக மதிப்பாய்வுக்குப் பின் இங்கே வெளியிடப்படும்.' : hasTa ? 'Tamil text is an unreviewed draft; corrections are published after community review.' : 'No Tamil version yet. Drafts are published here after community review.'}</p>
+		<p class="note" lang={ta ? 'ta' : 'en'}>{hasTa
+			? (ta ? 'தமிழ் உரை ஒரு வரைவு. திருத்தங்களைப் பரிந்துரைக்கலாம்; மதிப்பாய்வுக்குப் பின் அவை வெளியிடப்படும்.' : 'The Tamil text is a draft. You can suggest corrections; they are published after review.')
+			: (ta ? 'தமிழ் வடிவம் இன்னும் இல்லை.' : 'No Tamil version yet.')}</p>
 	</footer>
 </article>
 

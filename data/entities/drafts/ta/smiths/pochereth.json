@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pochereth",
+  "lang": "ta",
+  "source_hash": "1e6aff3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போகெரேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/pochereth#p1-1e6aff3a",
+      "text": "செபாயீமிலுள்ள போகெரேத்தின் வம்சத்தார், செருபாபேலுடன் திரும்பிவந்த சாலொமோனுடைய வேலைக்காரரின் பிள்ளைகளில் அடங்கியிருந்தனர். (எஸ்றா 2:57; நெகேமியா 7:59)"
+    }
+  ]
+}

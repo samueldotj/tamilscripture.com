@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hotham",
+  "lang": "ta",
+  "source_hash": "3b6b5300",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hotham#p1-7e9a4302",
+      "text": "1 நாளாகமம் 7:32 இல் ஏலெமின் மறுவடிவம். ஏலெம் #1 காண்க."
+    },
+    {
+      "id": "aquifer/hotham#p2-d2358770",
+      "text": "சமாவும் ஏயேலும் இவனுடைய மகன்கள். சமாவும் ஏயேலும் தாவீதின் பராக்கிரமசாலிகளில் இருவர் (1 நாளாகமம் 11:44)."
+    }
+  ]
+}

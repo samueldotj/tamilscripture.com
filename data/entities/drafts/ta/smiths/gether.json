@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gether",
+  "lang": "ta",
+  "source_hash": "afea0b7a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேத்தெர்",
+  "paragraphs": [
+    {
+      "id": "smiths/gether#p1-afea0b7a",
+      "text": "(பயம்), ஆராமின் மகன்களில் மூன்றாம் வரிசையில் இருந்தவன். (ஆதியாகமம் 10:23) இவனிடமிருந்து உண்டான மக்களைப் பற்றி திருப்திகரமான எந்த ஆதாரமும் காணப்படவில்லை."
+    }
+  ]
+}

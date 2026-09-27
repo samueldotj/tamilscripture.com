@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gerah",
+  "lang": "ta",
+  "source_hash": "86c3bc68",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேரா",
+  "paragraphs": [
+    {
+      "id": "smiths/gerah#p1-86c3bc68",
+      "text": "[நிறைகளும் அளவைகளும் என்பதைக் காண்க]"
+    }
+  ]
+}

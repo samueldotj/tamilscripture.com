@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eder",
+  "lang": "ta",
+  "source_hash": "60309b62",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏதேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/eder#p1-60309b62",
+      "text": "(மந்தை)."
+    }
+  ]
+}

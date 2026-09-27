@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/arad-person",
+  "lang": "ta",
+  "source_hash": "0f18856d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராத் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/arad-person#p1-0f18856d",
+      "text": "பெரீயாவின் மகன்களில் ஒருவன். இவன் பென்யமீன் கோத்திரத்தைச் சேர்ந்தவன். இவனுடைய பெயர் 1 நாளாகமம் 8:15-இல் காணப்படுகிறது."
+    }
+  ]
+}

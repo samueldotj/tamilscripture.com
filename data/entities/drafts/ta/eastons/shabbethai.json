@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shabbethai",
+  "lang": "ta",
+  "source_hash": "9378829f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்பேதாயி",
+  "paragraphs": [
+    {
+      "id": "eastons/shabbethai#p1-9378829f",
+      "text": "ஓய்வுநாளில் பிறந்தவன், நியாயப்பிரமாணத்தை விளக்குவதிலும், யூதர்களின் முறையற்ற திருமணங்களை விசாரிப்பதிலும் உதவிய லேவியன் (எஸ்றா 10:15; நெகேமியா 8:7; 11:16)."
+    }
+  ]
+}

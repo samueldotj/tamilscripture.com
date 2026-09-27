@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ephraim-gate-of",
+  "lang": "ta",
+  "source_hash": "ef7d8c8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பிராயீம் வாசல்",
+  "paragraphs": [
+    {
+      "id": "smiths/ephraim-gate-of#p1-ef7d8c8a",
+      "text": "எருசலேம் நகரத்தின் வாசல்களில் ஒன்று (2 இராஜாக்கள் 14:13; 2 நாளாகமம் 25:23; நெகேமியா 8:16; 12:39), இது இப்பொழுதுள்ள “தமஸ்கு வாசலின்” இடத்திலோ அல்லது அதற்கு அருகிலோ இருந்திருக்கலாம்."
+    }
+  ]
+}

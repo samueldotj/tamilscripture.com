@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kishi",
+  "lang": "ta",
+  "source_hash": "074d5f32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிஷி",
+  "paragraphs": [
+    {
+      "id": "smiths/kishi#p1-074d5f32",
+      "text": "(யெகோவாவின் வில்), ஒரு மெராரியன்; வாத்தியக்காரனான ஏத்தானின் தகப்பன் அல்லது முற்பிதா. (1 நாளாகமம் 6:44)"
+    }
+  ]
+}

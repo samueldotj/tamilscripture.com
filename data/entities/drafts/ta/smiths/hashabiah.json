@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashabiah",
+  "lang": "ta",
+  "source_hash": "2b558952",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஷபியா",
+  "paragraphs": [
+    {
+      "id": "smiths/hashabiah#p1-2b558952",
+      "text": "(தேவன் கவனிக்கிறவர்)."
+    }
+  ]
+}

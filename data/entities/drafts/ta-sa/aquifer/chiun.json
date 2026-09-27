@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chiun",
+  "lang": "ta",
+  "source_hash": "c9884b6c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீயூன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chiun#p1-d84e4101",
+      "text": "கீயூன் என்பது கிங் யாக்கோபு வேர்ஷனில் காணப்படும் கைவான் என்ற பெயரின் வடிவமாகும், இது நட்சத்திரங்களுடன் தொடர்புடைய ஒரு அசீரிய தேவனாகும், ஆமோஸ் 5:26-ல் குறிப்பிடப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/chiun#p2-73b3437a",
+      "text": "கைவான் என்பதைக் காண்க."
+    }
+  ]
+}

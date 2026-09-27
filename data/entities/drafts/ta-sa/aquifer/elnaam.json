@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elnaam",
+  "lang": "ta",
+  "source_hash": "3e042241",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏல்நாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elnaam#p1-3e042241",
+      "text": "ஏல்நாம் தாவீதின் இராணுவத்தில் இருந்த பராக்கிரமசாலிகளான ஏரிபாயும், யொசவியாவும் ஆகிய இருவரின் தகப்பனாக இருந்தான் (1 நாளாகமம் 11:46)."
+    }
+  ]
+}

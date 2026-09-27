@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tikvah",
+  "lang": "ta",
+  "source_hash": "8a820824",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திக்வா",
+  "paragraphs": [
+    {
+      "id": "smiths/tikvah#p1-8a820824",
+      "text": "(நம்பிக்கை)."
+    }
+  ]
+}

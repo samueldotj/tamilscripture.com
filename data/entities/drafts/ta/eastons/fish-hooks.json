@@ -1,0 +1,18 @@
+{
+  "id": "eastons/fish-hooks",
+  "lang": "ta",
+  "source_hash": "bbc0b1e0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீன்பிடி தூண்டில்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/fish-hooks#p1-bbc0b1e0",
+      "text": "மீன்களைப் பிடிப்பதற்காக இவை பயன்படுத்தப்பட்டன (ஆமோஸ் 4:2; ஒப்பிடுக ஏசாயா 37:29; எரேமியா 16:16; எசேக்கியேல் 29:4; யோபு 41:1, 2; மத்தேயு 17:27)."
+    }
+  ]
+}

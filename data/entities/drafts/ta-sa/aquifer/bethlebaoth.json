@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethlebaoth",
+  "lang": "ta",
+  "source_hash": "55e4348e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்லெபாவோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethlebaoth#p1-118888ad",
+      "text": "பெத்லெபாவோத் என்பது யோசுவா 19:6-ல் குறிப்பிடப்பட்டுள்ளது போல, யூதாவின் கோத்திரத்திற்குரிய தென் எல்லைப்பகுதியில் இருந்த சிமியோனுடைய பட்டணமாகிய லெபாயோத்திற்கு வேறொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/bethlebaoth#p2-456d93c3",
+      "text": "லெபாயோத் என்பதைக் காண்க."
+    }
+  ]
+}

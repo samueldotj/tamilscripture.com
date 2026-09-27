@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chapel",
+  "lang": "ta",
+  "source_hash": "6ae0e2f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலயம்",
+  "paragraphs": [
+    {
+      "id": "eastons/chapel#p1-6ae0e2f3",
+      "text": "பரிசுத்த ஸ்தலம் அல்லது ஆராதனை இடம் என்ற பொருளில் இந்த வார்த்தை ஆமோஸ் 7:13-லே மட்டும் காணப்படுகிறது; அங்கே விக்கிரக ஆசாரியர்களில் ஒருவன் பெத்தேலை “ராஜாவின் பரிசுத்த இடம்” என்று அழைக்கிறான்."
+    }
+  ]
+}

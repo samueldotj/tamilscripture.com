@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zebulun",
+  "lang": "ta",
+  "source_hash": "a2fe1fb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபுலோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/zebulun#p1-a2fe1fb5",
+      "text": "வாசஸ்தலம், யாக்கோபுக்கும் லேயாளுக்கும் பிறந்த ஆறாவதும் இளையவனுமான மகன் (ஆதியாகமம் 30:20). அவனுடைய தனிப்பட்ட வாழ்க்கை வரலாறு பற்றி சிறிதே அறியப்படுகிறது. அவனுக்கு மூன்று மகன்கள் இருந்தார்கள் (46:14)."
+    }
+  ]
+}

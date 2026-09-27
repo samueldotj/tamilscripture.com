@@ -1,0 +1,18 @@
+{
+  "id": "smiths/winnowing",
+  "lang": "ta",
+  "source_hash": "e7589cfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூற்றுதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/winnowing#p1-e7589cfe",
+      "text": "[விவசாயம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/gahar",
+  "lang": "ta",
+  "source_hash": "e10fcc28",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காகார்",
+  "paragraphs": [
+    {
+      "id": "eastons/gahar#p1-e10fcc28",
+      "text": "பதுங்கும் இடம், நிதனீமியரின் தலைவர்களில் ஒருவன், இவனுடைய சந்ததியார் செருபாபேலின் கீழ் எருசலேமுக்குத் திரும்பினார்கள் (எஸ்றா 2:47)."
+    }
+  ]
+}

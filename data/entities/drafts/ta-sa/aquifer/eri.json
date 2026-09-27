@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eri",
+  "lang": "ta",
+  "source_hash": "c66383d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/eri#p1-c66383d7",
+      "text": "ஏரி காத்தின் ஐந்தாவது மகனாக இருந்தான் (ஆதியாகமம் 46:16). அவன் ஏரியரின் வம்சத்தை ஏற்படுத்தினான் (எண்ணாகமம் 26:16)."
+    }
+  ]
+}

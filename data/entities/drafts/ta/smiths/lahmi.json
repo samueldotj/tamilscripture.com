@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lahmi",
+  "lang": "ta",
+  "source_hash": "11901fab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாகேமி",
+  "paragraphs": [
+    {
+      "id": "smiths/lahmi#p1-11901fab",
+      "text": "(போர்வீரன்), காத்தியனாகிய கோலியாத்தின் சகோதரன், சாயீரின் அல்லது சாயோரின் மகனாகிய எல்க்கானானால் கொல்லப்பட்டவன். (1 நாளாகமம் 20:5) (கி.மு. 1020.)"
+    }
+  ]
+}

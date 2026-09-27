@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/magpiash",
+  "lang": "ta",
+  "source_hash": "503308df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்பியாஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/magpiash#p1-503308df",
+      "text": "யூதர்கள் சிறையிருப்பிலிருந்து திரும்பிய காலப்பகுதியில், எஸ்றாவின் உடன்படிக்கையில் கையெழுத்திட்ட ஒரு அரசியல் தலைவராக மக்பியாஸ் இருந்தார் (நெகேமியா 10:20)."
+    }
+  ]
+}

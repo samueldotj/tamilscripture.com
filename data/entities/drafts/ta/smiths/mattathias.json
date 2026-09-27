@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mattathias",
+  "lang": "ta",
+  "source_hash": "e2c327a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்தத்தியா",
+  "paragraphs": [
+    {
+      "id": "smiths/mattathias#p1-e2c327a1",
+      "text": "(யெகோவாவின் வரம்), மத்தத்தியா என்பதன் கிரேக்கு வடிவம்."
+    }
+  ]
+}

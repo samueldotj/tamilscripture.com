@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/lael",
+  "lang": "ta",
+  "source_hash": "c32ef6ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாயேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lael#p1-c32ef6ec",
+      "text": "கெர்சோனின் குடும்பத்தைச் சேர்ந்த ஒரு லேவியன். இவன் எலியாசாபின் தகப்பன் (எண்ணாகமம் 3:24)."
+    }
+  ]
+}

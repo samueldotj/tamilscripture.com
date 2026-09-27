@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/abronah",
+  "lang": "ta",
+  "source_hash": "c204d0d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்ரோனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/abronah#p1-52a93f03",
+      "text": "இஸ்ரவேலர்கள் எகிப்திலிருந்து கானானுக்குப் பயணம் செய்யும்போது ஏலாத்திற்கு அருகில் முகாமிட்ட ஒரு இடம் (எண்ணாகமம் 33:34-35)."
+    },
+    {
+      "id": "aquifer/abronah#p2-666ed66c",
+      "text": "வனாந்தர பயணங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

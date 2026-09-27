@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/fallow-deer",
+  "lang": "ta",
+  "source_hash": "eb1864a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வரையாடு",
+  "paragraphs": [
+    {
+      "id": "aquifer/fallow-deer#p1-73c8c847",
+      "text": "உபாகமம் 14:5-ல் “roe deer” என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்படும் சொல் Fallow deer ஆகும். Roe deer என்பது மான் குடும்பத்தைச் சேர்ந்த, தான் உண்ணும் உணவை ஒன்றுக்கு மேற்பட்ட முறை அசைபோடும் ஒரு மிருகமாகும்."
+    },
+    {
+      "id": "aquifer/fallow-deer#p2-55d1f409",
+      "text": "மான்; வெளிமான் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

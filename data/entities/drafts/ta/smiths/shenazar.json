@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shenazar",
+  "lang": "ta",
+  "source_hash": "ed173d4f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேனாசார்",
+  "paragraphs": [
+    {
+      "id": "smiths/shenazar#p1-ed173d4f",
+      "text": "(சிறந்த தலைவன்), சலாதியேல் அல்லது செயல்தியேலின் மகன். (1 நாளாகமம் 3:18) (கி.மு. 606க்குப் பின்)."
+    }
+  ]
+}

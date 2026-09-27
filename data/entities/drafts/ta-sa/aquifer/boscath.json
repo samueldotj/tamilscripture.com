@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/boscath",
+  "lang": "ta",
+  "source_hash": "a279596e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போஸ்காத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/boscath#p1-cab1c196",
+      "text": "2 இராஜாக்கள் 22:1 இல் Bozkath என்பதற்கான கிங் யாக்கோபு மொழிபெயர்ப்பு வடிவம். போஸ்காத் யூதாவிலுள்ள ஒரு பட்டணமாகும்."
+    },
+    {
+      "id": "aquifer/boscath#p2-a608f968",
+      "text": "போஸ்காத் காண்க."
+    }
+  ]
+}

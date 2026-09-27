@@ -1,0 +1,18 @@
+{
+  "id": "eastons/didymus",
+  "lang": "ta",
+  "source_hash": "4775fffe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திதிமு",
+  "paragraphs": [
+    {
+      "id": "eastons/didymus#p1-4775fffe",
+      "text": "(கிரேக்க. இரட்டைப்பிறவி = எபிரெய. தோமா, காண்க), யோவான் 11:16; 20:24; 21:2."
+    }
+  ]
+}

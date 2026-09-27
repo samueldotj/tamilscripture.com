@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bosor",
+  "lang": "ta",
+  "source_hash": "da32694b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போசோர்",
+  "paragraphs": [
+    {
+      "id": "eastons/bosor#p1-da32694b",
+      "text": "பிலேயாமின் தகப்பனாகிய பேயோர் என்ற பெயரின் கல்தேய அல்லது அராமிக் மொழி வடிவம் (2 பேதுரு 2:15)."
+    }
+  ]
+}

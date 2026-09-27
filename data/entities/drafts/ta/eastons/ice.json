@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ice",
+  "lang": "ta",
+  "source_hash": "4d23d40b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பனிக்கட்டி",
+  "paragraphs": [
+    {
+      "id": "eastons/ice#p1-4d23d40b",
+      "text": "இது அடிக்கடி குறிப்பிடப்பட்டுள்ளது (யோபு 6:16; 38:29; சங்கீதங்கள் 147:17, முதலியன). (பளிங்கு என்பதைக் காண்க.)"
+    }
+  ]
+}

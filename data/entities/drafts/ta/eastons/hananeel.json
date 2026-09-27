@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hananeel",
+  "lang": "ta",
+  "source_hash": "79ba2845",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனானெயேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/hananeel#p1-79ba2845",
+      "text": "தேவன் கிருபையாக அளித்திருக்கிறார், எருசலேமின் மதிலிலுள்ள ஒரு கோபுரம் (நெகேமியா 3:1; 12:39). இது எரேமியா 31:38; சகரியா 14:10-லும் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

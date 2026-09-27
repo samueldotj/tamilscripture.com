@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arabia",
+  "lang": "ta",
+  "source_hash": "99286b9e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரேபியா",
+  "paragraphs": [
+    {
+      "id": "smiths/arabia#p1-99286b9e",
+      "text": "(வனாந்திரம், வறண்ட நிலம்), பழைய ஏற்பாட்டில் இரண்டு பெயர்களால் அறியப்படும் ஒரு தேசம்:—"
+    }
+  ]
+}

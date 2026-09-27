@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dodai",
+  "lang": "ta",
+  "source_hash": "d8e2fbfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோதாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/dodai#p1-d8e2fbfe",
+      "text": "(அன்புசெலுத்தியதாலும், நேசத்தால்), இரண்டாம் மாதத்தின் வகுப்பைச் சேனைத்தலைவனாக நடத்திய அகோகியன். (1 நாளாகமம் 27:4) இவன் தோதோவின் என்பவனுடன் ஒருவனாகவே இருக்கலாம் என்று கருதப்படுகிறது."
+    }
+  ]
+}

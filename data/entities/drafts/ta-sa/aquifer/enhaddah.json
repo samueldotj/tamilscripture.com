@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/enhaddah",
+  "lang": "ta",
+  "source_hash": "4f7d7bd1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "என்காதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/enhaddah#p1-4f7d7bd1",
+      "text": "என்காதா என்பது இசக்காரின் கோத்திரத்திற்கு சுதந்தரமாகக் கொடுக்கப்பட்ட ஒரு பட்டணமாக இருந்தது. இது என்கன்னீமையும் பெத்பாத்செஸையும் இடையே அமைந்திருந்தது (யோசுவா 19:21)."
+    }
+  ]
+}

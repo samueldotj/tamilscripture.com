@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dungeon",
+  "lang": "ta",
+  "source_hash": "6d801f34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காவல்அறை",
+  "paragraphs": [
+    {
+      "id": "smiths/dungeon#p1-6d801f34",
+      "text": "[சிறைச்சாலை என்பதைக் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beri",
+  "lang": "ta",
+  "source_hash": "81163c6b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரி",
+  "paragraphs": [
+    {
+      "id": "smiths/beri#p1-81163c6b",
+      "text": "(ஒரு கிணறு), ஆசேர் கோத்திரத்திற்குரிய சோபாக்கின் மகன். (1 நாளாகமம் 7:36)"
+    }
+  ]
+}

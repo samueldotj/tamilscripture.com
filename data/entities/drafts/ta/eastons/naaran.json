@@ -1,0 +1,18 @@
+{
+  "id": "eastons/naaran",
+  "lang": "ta",
+  "source_hash": "6ec6e0e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாரான்",
+  "paragraphs": [
+    {
+      "id": "eastons/naaran#p1-6ec6e0e7",
+      "text": "பையனான, சிறுவனான, பெத்தேலுக்கும் எரிகோவிற்கும் இடையே எப்பிராயீமிலுள்ள ஒரு பட்டணம் (1 நாளாகமம் 7:28)."
+    }
+  ]
+}

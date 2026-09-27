@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/manassite",
+  "lang": "ta",
+  "source_hash": "88a5bb65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனாசேயர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/manassite#p1-ee333918",
+      "text": "மனாசேயன் என்பவன் யோசேப்பின் மூத்த மகனாகிய மனாசேயின் சந்ததியைச் சேர்ந்தவன் (உபாகமம் 4:43; 2 இராஜாக்கள் 10:33)."
+    },
+    {
+      "id": "aquifer/manassite#p2-c860df01",
+      "text": "காண்க: மனாசே (நபர்) #1; மனாசே கோத்திரம்."
+    }
+  ]
+}

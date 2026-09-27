@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anem",
+  "lang": "ta",
+  "source_hash": "163b5187",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/anem#p1-163b5187",
+      "text": "(இரண்டு நீரூற்றுகள்), இசக்காருக்குரிய ஒரு பட்டணம், அதின் “வெளிநிலங்களுடன்” கேர்சோனியருக்குரியதாக இருந்தது. (1 நாளாகமம் 6:70)"
+    }
+  ]
+}

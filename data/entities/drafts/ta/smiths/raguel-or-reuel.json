@@ -1,0 +1,18 @@
+{
+  "id": "smiths/raguel-or-reuel",
+  "lang": "ta",
+  "source_hash": "591b4836",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெகுவேல் அல்லது ரெகுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/raguel-or-reuel#p1-591b4836",
+      "text": "(தேவனுடைய நண்பன்)."
+    }
+  ]
+}

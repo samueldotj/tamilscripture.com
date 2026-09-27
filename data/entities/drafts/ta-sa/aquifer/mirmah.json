@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mirmah",
+  "lang": "ta",
+  "source_hash": "b82b6935",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிர்மா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mirmah#p1-b82b6935",
+      "text": "மிர்மா பென்யமீன் கோத்திரத்திற்குரிய சகராயீமுக்கும் ஓதேசுக்கும் பிறந்த மகன் (1 நாளாகமம் 8:10)."
+    }
+  ]
+}

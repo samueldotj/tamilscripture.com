@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jeshishai",
+  "lang": "ta",
+  "source_hash": "de4daac7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசிசாயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/jeshishai#p1-de4daac7",
+      "text": "எசிசாயி என்பவன் யூதாவின் ராஜாவாகிய யோதாமின் நாட்களில் காத்தின் சந்ததியாராக இருந்தான் (1 நாளாகமம் 5:14)."
+    }
+  ]
+}

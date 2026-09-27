@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/amraphel",
+  "lang": "ta",
+  "source_hash": "94630f1f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்ராப்பேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/amraphel#p1-94630f1f",
+      "text": "சிநெயாரின் அல்லது பாபிலோனின் ராஜா. பாலஸ்தீனத்திலிருந்த ஐந்து பட்டணங்களின் கலகத்தை அடக்குவதற்கு ஏலாமின் ராஜாவாகிய கெதர்லாகோமேருக்கு அவன் உதவினான் (ஆதியாகமம் 14:1-11)."
+    }
+  ]
+}

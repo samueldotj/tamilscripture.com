@@ -1,0 +1,30 @@
+{
+  "id": "eastons/baana",
+  "lang": "ta",
+  "source_hash": "7c07b380",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானா",
+  "paragraphs": [
+    {
+      "id": "eastons/baana#p1-7b5a829d",
+      "text": "சிறுமையின் மகன்."
+    },
+    {
+      "id": "eastons/baana#p2-1ef3b6ef",
+      "text": "(1.) சாலொமோனின் உணவு விசாரிப்புக்காரர்களில் ஒருவன் (1 இராஜாக்கள் 4:12)."
+    },
+    {
+      "id": "eastons/baana#p3-9491d2cf",
+      "text": "(2.) ஊசாயின் மகன், சாலொமோனுக்கு உணவு விசாரிப்புக்காரர்களில் மற்றொருவன் (1 இராஜாக்கள் 4:16)."
+    },
+    {
+      "id": "eastons/baana#p4-371cd355",
+      "text": "(3.) சாதோக்கின் தகப்பன் (நெகேமியா 3:4)."
+    }
+  ]
+}

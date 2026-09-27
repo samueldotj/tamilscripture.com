@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/binea",
+  "lang": "ta",
+  "source_hash": "66134016",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பினியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/binea#p1-66134016",
+      "text": "பினியா பென்யமீன் கோத்திரத்தைச் சேர்ந்த மோசாவின் மகன் (1 நாளாகமம் 8:37; 9:43). அவன் யோனத்தானுடைய குடும்ப வழியாக சவுல் ராஜாவின் சந்ததியாக இருந்தான்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ascalon",
+  "lang": "ta",
+  "source_hash": "5962371a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்காலோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ascalon#p1-e933244b",
+      "text": "யூதீத் 2:28-ல் காணப்படும் அஸ்கலோன் என்பதன் வேறொரு வடிவம்."
+    },
+    {
+      "id": "aquifer/ascalon#p2-6b4a224c",
+      "text": "அஸ்கலோன் காண்க."
+    }
+  ]
+}

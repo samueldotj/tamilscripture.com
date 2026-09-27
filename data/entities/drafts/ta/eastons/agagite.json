@@ -1,0 +1,18 @@
+{
+  "id": "eastons/agagite",
+  "lang": "ta",
+  "source_hash": "f212334b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகாகியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/agagite#p1-f212334b",
+      "text": "ஆமானுக்கும் அவனுடைய தகப்பனுக்கும் பயன்படுத்தப்பட்ட ஒரு பெயர் (எஸ்தர் 3:1, 10; 8:3, 5). இது அமலேக்கியன் என்பதற்குச் சமமான பொருளுடையதாக இருந்திருக்கலாம்."
+    }
+  ]
+}

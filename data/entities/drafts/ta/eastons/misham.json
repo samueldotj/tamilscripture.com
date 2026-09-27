@@ -1,0 +1,18 @@
+{
+  "id": "eastons/misham",
+  "lang": "ta",
+  "source_hash": "613e35ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீஷாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/misham#p1-613e35ca",
+      "text": "அவர்களுடைய சுத்திகரிப்பு அல்லது அவர்களுடைய பார்வை, ஒரு பென்யமீனன், எல்பாலின் மகன்களில் ஒருவன் (1 நாளாகமம் 8:12)."
+    }
+  ]
+}

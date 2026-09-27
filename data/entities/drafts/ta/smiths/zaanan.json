@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zaanan",
+  "lang": "ta",
+  "source_hash": "9bceebbf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாயனான்",
+  "paragraphs": [
+    {
+      "id": "smiths/zaanan#p1-9bceebbf",
+      "text": "[சேனான்]"
+    }
+  ]
+}

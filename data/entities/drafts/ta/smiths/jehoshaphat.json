@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehoshaphat",
+  "lang": "ta",
+  "source_hash": "8ccd02ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehoshaphat#p1-8ccd02ac",
+      "text": "(யெகோவா நியாயம் தீர்க்கிறவர்.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zur",
+  "lang": "ta",
+  "source_hash": "18d52fca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/zur#p1-18d52fca",
+      "text": "(ஒரு கன்மலை)."
+    }
+  ]
+}

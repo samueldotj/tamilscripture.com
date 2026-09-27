@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cainan",
+  "lang": "ta",
+  "source_hash": "ea829dbb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காயினான்",
+  "paragraphs": [
+    {
+      "id": "smiths/cainan#p1-ea829dbb",
+      "text": "(உடையவன்)"
+    }
+  ]
+}

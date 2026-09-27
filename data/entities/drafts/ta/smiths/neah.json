@@ -1,0 +1,18 @@
+{
+  "id": "smiths/neah",
+  "lang": "ta",
+  "source_hash": "cf9963bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேயா",
+  "paragraphs": [
+    {
+      "id": "smiths/neah#p1-cf9963bd",
+      "text": "(அசைதல்) செபுலோனின் எல்லையின் அடையாளக் குறிகளில் ஒன்றாக இருந்த ஓரிடம். (யோசுவா 19:13) மட்டும். இது இன்னும் உறுதியாக இனங்காணப்படவில்லை."
+    }
+  ]
+}

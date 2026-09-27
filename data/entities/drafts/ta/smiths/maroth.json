@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maroth",
+  "lang": "ta",
+  "source_hash": "4b04472b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/maroth#p1-4b04472b",
+      "text": "(கசப்பு), யூதாவின் மேற்குப் பள்ளத்தாக்கிலுள்ள பட்டணங்களில் ஒன்று. (மீகா 1:12)"
+    }
+  ]
+}

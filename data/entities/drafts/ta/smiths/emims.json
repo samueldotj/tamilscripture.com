@@ -1,0 +1,18 @@
+{
+  "id": "smiths/emims",
+  "lang": "ta",
+  "source_hash": "2fb896c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏமியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/emims#p1-2fb896c8",
+      "text": "(பயங்கரங்கள்), இறந்தகடலின் கிழக்குப் பகுதியிலே முதலில் குடியிருந்த மாபெரும் உயரமுடைய ஒரு கோத்திரம். இவர்கள் ஏனாக்கியர்களோடு தொடர்புடையவர்களாக இருந்தனர்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joash",
+  "lang": "ta",
+  "source_hash": "a6ff8a81",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/joash#p1-a6ff8a81",
+      "text": "(யெகோவா யாருக்கு விரைந்து வருகிறார், அதாவது உதவிசெய்ய), யோவாகாஸ் என்பதிலிருந்து சுருக்கப்பட்டது."
+    }
+  ]
+}

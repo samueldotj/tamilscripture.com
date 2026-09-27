@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asnapper",
+  "lang": "ta",
+  "source_hash": "ae22bd27",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்னாப்பார்",
+  "paragraphs": [
+    {
+      "id": "smiths/asnapper#p1-ae22bd27",
+      "text": "(விரைவானவன்), எஸ்றா 4:10-ல் கூத்தியரை சமாரியாவின் பட்டணங்களில் குடியேறச் செய்தவராகக் குறிப்பிடப்பட்டவர். இவர் எசரத்தோனின் ஒரு தளபதியாக இருந்திருக்கலாம். (கி.மு. 712.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ohad",
+  "lang": "ta",
+  "source_hash": "c67c654d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓகாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ohad#p1-c67c654d",
+      "text": "சிமியோனுடைய மகன் (ஆதியாகமம் 46:10; யாத்திராகமம் 6:15). இவருடைய பெயர் எண்ணாகமம் 26:12-14ல் உள்ள பட்டியலில் காணப்படவில்லை."
+    }
+  ]
+}

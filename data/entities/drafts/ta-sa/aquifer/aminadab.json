@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aminadab",
+  "lang": "ta",
+  "source_hash": "011a143d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அமினதாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aminadab#p1-631ddf96",
+      "text": "மத்தேயு 1:4 மற்றும் லூக்கா 3:33-ல் காணப்படும் அம்மினதாபின் கிங் யாக்கோபு மொழிபெயர்ப்பிலுள்ள வடிவம்."
+    },
+    {
+      "id": "aquifer/aminadab#p2-de4a4a08",
+      "text": "அம்மினதாப் #1-ஐ காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/palaestra",
+  "lang": "ta",
+  "source_hash": "0e876193",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பலஸ்திரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/palaestra#p1-0e876193",
+      "text": "பலஸ்திரா என்பது பண்டைய கிரேக்க உலகில் மக்கள் விளையாட்டு நடவடிக்கைகளுக்காக, விசேஷமாக மற்போரிற்காக பயிற்சி பெற்ற ஒரு இடமாகும் (2 மக்கபேயர் 4:14)."
+    }
+  ]
+}

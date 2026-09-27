@@ -1,0 +1,18 @@
+{
+  "id": "smiths/johanan",
+  "lang": "ta",
+  "source_hash": "781a5218",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகனான",
+  "paragraphs": [
+    {
+      "id": "smiths/johanan#p1-781a5218",
+      "text": "(தேவனுடைய அன்பளிப்பு அல்லது கிருபை)."
+    }
+  ]
+}

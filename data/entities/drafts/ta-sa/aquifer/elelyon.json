@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elelyon",
+  "lang": "ta",
+  "source_hash": "bae11d46",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்-எல்யோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elelyon#p1-2b7e2f40",
+      "text": "எல்-எல்யோன் என்பது “உன்னதமான தேவன்” என்பதற்கான ஒரு எபிரெய சொற்றொடர் (ஆதியாகமம் 14:18)."
+    },
+    {
+      "id": "aquifer/elelyon#p2-7bbc6dfe",
+      "text": "தேவனுடைய நாமங்கள் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/casiphia",
+  "lang": "ta",
+  "source_hash": "54dd4758",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கசிப்பியா",
+  "paragraphs": [
+    {
+      "id": "eastons/casiphia#p1-54dd4758",
+      "text": "வெள்ளி, பாபிலோனுக்கும் எருசலேமுக்கும் இடையே இருந்த ஒரு இடம், அங்கே இத்தோ குடியிருந்தார் (எஸ்றா 8:17); வேறு விவரங்கள் அறியப்படவில்லை."
+    }
+  ]
+}

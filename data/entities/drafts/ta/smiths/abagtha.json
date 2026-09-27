@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abagtha",
+  "lang": "ta",
+  "source_hash": "9f8389c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபக்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/abagtha#p1-9f8389c7",
+      "text": "(தேவனால் அளிக்கப்பட்டவன்), அகாஸ்வேருவின் பெர்சியப் அரசவையில் இருந்த ஏழு பிரதானிகளில் ஒருவன். (எஸ்தர் 1:10)"
+    }
+  ]
+}

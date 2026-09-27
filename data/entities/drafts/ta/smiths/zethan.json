@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zethan",
+  "lang": "ta",
+  "source_hash": "1cae4c6b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேத்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/zethan#p1-1cae4c6b",
+      "text": "(ஒலிவமரம்), பில்கானின் மகன்களில் ஒருவனான ஒரு பென்யமீனியன். (1 நாளாகமம் 7:10) (கி.மு. ஏறக்குறைய 1014.)"
+    }
+  ]
+}

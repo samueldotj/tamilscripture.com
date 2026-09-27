@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hashmonah",
+  "lang": "ta",
+  "source_hash": "08306eb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்மோனா",
+  "paragraphs": [
+    {
+      "id": "eastons/hashmonah#p1-08306eb2",
+      "text": "கொழுமை, இஸ்ரவேலர்கள் வனாந்தரத்தில் அலைந்து திரிந்தபோது தங்கிய முப்பதாம் தங்குமிடம், ஓர் மலைக்கு அருகில் இருந்தது (எண்ணாகமம் 33:29, 30)."
+    }
+  ]
+}

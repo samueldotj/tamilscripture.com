@@ -1,0 +1,18 @@
+{
+  "id": "eastons/italian-band",
+  "lang": "ta",
+  "source_hash": "d135299a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தாலியா படைப்பிரிவு",
+  "paragraphs": [
+    {
+      "id": "eastons/italian-band#p1-d135299a",
+      "text": "கொர்நேலியு சேர்ந்திருந்த ரோம படைப்பிரிவின் பெயர் (அப்போஸ்தலருடைய நடபடிகள் 10:1), இது இத்தாலியாவில் சேர்க்கப்பட்ட மனிதர்களைக் கொண்டிருந்ததால் இவ்வாறு அழைக்கப்பட்டிருக்கலாம்."
+    }
+  ]
+}

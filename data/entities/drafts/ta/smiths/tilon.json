@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tilon",
+  "lang": "ta",
+  "source_hash": "2870d086",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/tilon#p1-2870d086",
+      "text": "(வெகுமதி), யூதாவின் வம்சவரலாறுகளில் கணக்கிடப்பட்ட ஷீமோனின் நான்கு மகன்களில் ஒருவன். (1 நாளாகமம் 4:20) (கி.மு. 1451.)"
+    }
+  ]
+}

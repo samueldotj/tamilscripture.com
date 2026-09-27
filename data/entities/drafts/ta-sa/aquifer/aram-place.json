@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aram-place",
+  "lang": "ta",
+  "source_hash": "02c3b1ff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராம் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/aram-place#p1-02c3b1ff",
+      "text": "இப்பொழுது சீரியா என்று அழைக்கப்படும் பிரதேசத்திற்கு அளிக்கப்பட்ட பெயர். சீரியா, சீரியர்கள் என்பதைக் காண்க."
+    }
+  ]
+}

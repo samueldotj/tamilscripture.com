@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bilgai",
+  "lang": "ta",
+  "source_hash": "39666a91",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்காய்",
+  "paragraphs": [
+    {
+      "id": "smiths/bilgai#p1-39666a91",
+      "text": "(நெகேமியா 10:8) [பில்கா, 2]"
+    }
+  ]
+}

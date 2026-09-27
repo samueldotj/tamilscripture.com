@@ -1,0 +1,26 @@
+{
+  "id": "eastons/matthat",
+  "lang": "ta",
+  "source_hash": "5665897d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/matthat#p1-1ccdab95",
+      "text": "தேவனுடைய கொடை."
+    },
+    {
+      "id": "eastons/matthat#p2-d1ac6d92",
+      "text": "(1.) லேவியின் குமாரனும், ஏலியின் தகப்பனும் (லூக்கா 3:24)."
+    },
+    {
+      "id": "eastons/matthat#p3-d44a19b0",
+      "text": "(2.) மற்றொரு லேவியின் குமாரன் (லூக்கா 3:29)."
+    }
+  ]
+}

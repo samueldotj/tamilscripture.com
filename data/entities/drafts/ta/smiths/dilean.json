@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dilean",
+  "lang": "ta",
+  "source_hash": "b91861af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திலியான்",
+  "paragraphs": [
+    {
+      "id": "smiths/dilean#p1-b91861af",
+      "text": "(வெள்ளரிக்காய்), யூதாவின் பள்ளத்தாக்குகளில் இருந்த பட்டணங்களில் ஒன்று. (யோசுவா 15:38) இது எந்த இடமென்று உறுதியாகக் கண்டுபிடிக்கப்படவில்லை."
+    }
+  ]
+}

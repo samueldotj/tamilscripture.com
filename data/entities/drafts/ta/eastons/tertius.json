@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tertius",
+  "lang": "ta",
+  "source_hash": "bee3c1e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெர்தியு",
+  "paragraphs": [
+    {
+      "id": "eastons/tertius#p1-bee3c1e8",
+      "text": "மூன்றாம் என்று பொருள்படும்; பவுல் ரோமருக்கு எழுதிய கடிதத்தை எழுத உதவியாளராகப் பயன்படுத்திய ஒரு ரோமானிய கிறிஸ்தவர் (16:22)."
+    }
+  ]
+}

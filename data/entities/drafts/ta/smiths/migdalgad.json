@@ -1,0 +1,18 @@
+{
+  "id": "smiths/migdalgad",
+  "lang": "ta",
+  "source_hash": "504782ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்தால்காத்",
+  "paragraphs": [
+    {
+      "id": "smiths/migdalgad#p1-504782ca",
+      "text": "(காத்தின் கோபுரம்), யூதாவில் இருந்த ஒரு பட்டணம், (யோசுவா 15:37) செபேலா என்னும் கடற்கரைப் பள்ளத்தாக்கு பிரதேசத்திலிருந்தது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hadlai",
+  "lang": "ta",
+  "source_hash": "c3b5c513",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்லாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/hadlai#p1-c3b5c513",
+      "text": "இளைப்பாறுதல், ஒரு எப்பிராயீமியன்; 2 நாளாகமம் 28:12-ல் குறிப்பிடப்பட்டுள்ள அமாசாவின் தகப்பன்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/king-s-dale",
+  "lang": "ta",
+  "source_hash": "c55e8dab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராஜாவின் பள்ளத்தாக்கு",
+  "paragraphs": [
+    {
+      "id": "eastons/king-s-dale#p1-c55e8dab",
+      "text": "ஆதியாகமம் 14:17; 2 சாமுவேல் 18:18-ல் மட்டும் குறிப்பிடப்பட்டுள்ளது, சோதோமின் ராஜா ஆபிராமுக்கு எதிர்கொண்டுபோன “சாவே பள்ளத்தாக்கு” என்பதற்குக் கொடுக்கப்பட்ட பெயர்."
+    }
+  ]
+}

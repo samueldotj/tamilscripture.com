@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/arah",
+  "lang": "ta",
+  "source_hash": "a0efa2fa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/arah#p1-bed8a2e1",
+      "text": "ஆசேருடைய கோத்திரத்தைச் சேர்ந்த உல்லாவின் மகன் (1 நாளாகமம் 7:39)."
+    },
+    {
+      "id": "aquifer/arah#p2-d97e3f53",
+      "text": "பாபிலோனுக்குச் சிறையிருப்பிற்குப் பிறகு செருபாபேலுடன் எருசலேமுக்குத் திரும்பிவந்த ஒரு கூட்டத்தினரின் மூல தந்தை (எஸ்றா 2:5; நெகேமியா 7:10)."
+    }
+  ]
+}

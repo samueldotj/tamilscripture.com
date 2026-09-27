@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chenaiah",
+  "lang": "ta",
+  "source_hash": "d74e3692",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனானியா",
+  "paragraphs": [
+    {
+      "id": "eastons/chenaiah#p1-d74e3692",
+      "text": "யெகோவா உண்டாக்கினவன். “லேவியர்களின் தலைவன்,” ஒருவேளை கோகாத்தியனாக இருக்கலாம் (1 நாளாகமம் 15:22), ஆகவே 26:29-ல் குறிப்பிடப்பட்டவனைப் போன்றவன் அல்ல."
+    }
+  ]
+}

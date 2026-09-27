@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jaanai",
+  "lang": "ta",
+  "source_hash": "ab1b7d9d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/jaanai#p1-ab1b7d9d",
+      "text": "(யெகோவா பதில் கொடுக்கிறவர்), காத் கோத்திரத்தில் ஒரு முக்கிய மனிதன். (1 நாளாகமம் 5:12)"
+    }
+  ]
+}

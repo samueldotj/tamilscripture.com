@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/minnith",
+  "lang": "ta",
+  "source_hash": "89e888dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மின்னித்",
+  "paragraphs": [
+    {
+      "id": "aquifer/minnith#p1-89e888dd",
+      "text": "யெப்தா அம்மோனியரை முறியடித்தபோது கைப்பற்றிய பத்து பட்டணங்களில் ஒன்றாகும் (நியாயாதிபதிகள் 11:33). இந்தப் பட்டணம் கோதுமை வியாபாரத்திற்கு ஒரு மையமாக இருந்தது (எசேக்கியேல் 27:17)."
+    }
+  ]
+}

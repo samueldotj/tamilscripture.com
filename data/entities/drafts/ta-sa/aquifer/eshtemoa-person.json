@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eshtemoa-person",
+  "lang": "ta",
+  "source_hash": "0f9d79ef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்தெமொவா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/eshtemoa-person#p1-03c00452",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த இஸ்பாவின் மகன் (1 நாளாகமம் 4:17)."
+    },
+    {
+      "id": "aquifer/eshtemoa-person#p2-63290919",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த மாகாத்தியன் (1 நாளாகமம் 4:19)."
+    }
+  ]
+}

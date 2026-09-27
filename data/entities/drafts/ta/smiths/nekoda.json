@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nekoda",
+  "lang": "ta",
+  "source_hash": "08939239",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெகோதாவின்",
+  "paragraphs": [
+    {
+      "id": "smiths/nekoda#p1-08939239",
+      "text": "(விசேஷித்தவன்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/benejaakan",
+  "lang": "ta",
+  "source_hash": "309484a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனெயாக்கான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/benejaakan#p1-57b234f0",
+      "text": "இஸ்ரவேல் ஏதோமின் எல்லைக்கு அருகில் முகாமிட்ட ஒரு இடம் (எண்ணாகமம் 33:31-32)."
+    },
+    {
+      "id": "aquifer/benejaakan#p2-854d707f",
+      "text": "பெனெயாக்கானுக்கடுத்த பேரோத் என்பதைக் காண்க."
+    }
+  ]
+}

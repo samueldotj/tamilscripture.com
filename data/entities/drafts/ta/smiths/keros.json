@@ -1,0 +1,18 @@
+{
+  "id": "smiths/keros",
+  "lang": "ta",
+  "source_hash": "25fa38c4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேரோசு",
+  "paragraphs": [
+    {
+      "id": "smiths/keros#p1-25fa38c4",
+      "text": "(வளைந்தது), நெதினீமியரில் ஒருவன், இவனுடைய சந்ததியார் செருபாபேலுடன் திரும்பி வந்தனர். (எஸ்றா 2:44; நெகேமியா 7:47)"
+    }
+  ]
+}

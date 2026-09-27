@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahiam",
+  "lang": "ta",
+  "source_hash": "6df149bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahiam#p1-6df149bb",
+      "text": "சாராரின் மகன், மற்றும் “முப்பது பேர்” என்று அறியப்பட்ட தாவீதின் பராக்கிரமசாலிகளில் ஒரு போர்வீரன் (2 சாமுவேல் 23:33)."
+    }
+  ]
+}

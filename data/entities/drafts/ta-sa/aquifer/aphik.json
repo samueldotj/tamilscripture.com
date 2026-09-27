@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aphik",
+  "lang": "ta",
+  "source_hash": "610b2e87",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆப்பீக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aphik#p1-60c5396d",
+      "text": "நியாயாதிபதிகள் 1:31-ல் காணப்படும் ஆப்பெக்கின் மற்றொரு வடிவம்."
+    },
+    {
+      "id": "aquifer/aphik#p2-ec5e224a",
+      "text": "ஆப்பெக் #3-ஐ காண்க."
+    }
+  ]
+}

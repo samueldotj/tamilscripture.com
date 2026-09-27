@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hen-person",
+  "lang": "ta",
+  "source_hash": "20b7adc3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏன் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hen-person#p1-ccc25558",
+      "text": "ஏன் என்பது சகரியா 6:14-ல் காணப்படும் செப்பனியாவின் மகனாகிய யோசியாவுக்கு ராஜா யாக்கோபு மொழிபெயர்ப்பு கொடுக்கும் மாற்றுப் பெயராகும்."
+    },
+    {
+      "id": "aquifer/hen-person#p2-01cc2205",
+      "text": "யோசியா #2-ஐ காண்க."
+    }
+  ]
+}

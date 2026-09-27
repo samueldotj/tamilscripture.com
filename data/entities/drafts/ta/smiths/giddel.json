@@ -1,0 +1,18 @@
+{
+  "id": "smiths/giddel",
+  "lang": "ta",
+  "source_hash": "06acbd0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தேலின்",
+  "paragraphs": [
+    {
+      "id": "smiths/giddel#p1-06acbd0e",
+      "text": "(மிகவும் பெரியவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/camp",
+  "lang": "ta",
+  "source_hash": "ce02db3e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/camp#p1-ce02db3e",
+      "text": "[முகாமிடுதல்]"
+    }
+  ]
+}

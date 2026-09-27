@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shepho",
+  "lang": "ta",
+  "source_hash": "4e55f87b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செப்போ",
+  "paragraphs": [
+    {
+      "id": "smiths/shepho#p1-4e55f87b",
+      "text": "(ஆதியாகமம் 36:23) [செப்பி காண்க]"
+    }
+  ]
+}

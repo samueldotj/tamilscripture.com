@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/baalah",
+  "lang": "ta",
+  "source_hash": "af9146d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/baalah#p1-ac8bbbb6",
+      "text": "கானானின் தென்பகுதியில் இருந்த ஒரு நகரம் (யோசுவா 15:29), இது பாலாவுடன் ஒன்றாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/baalah#p2-f07ca48a",
+      "text": "பாலாவைக் காண்க."
+    }
+  ]
+}

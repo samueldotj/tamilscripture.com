@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elihu",
+  "lang": "ta",
+  "source_hash": "a9c927e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிகூ",
+  "paragraphs": [
+    {
+      "id": "smiths/elihu#p1-a9c927e4",
+      "text": "(யாருடைய தேவன் அவரே (யெகோவா))."
+    }
+  ]
+}

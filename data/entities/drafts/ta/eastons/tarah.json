@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tarah",
+  "lang": "ta",
+  "source_hash": "cc382f75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாராகு",
+  "paragraphs": [
+    {
+      "id": "eastons/tarah#p1-cc382f75",
+      "text": "நிற்றல்; தங்குமிடம், வனாந்திரத்தில் எபிரெயர்கள் முகாமிட்ட ஒரு இடம் (எண்ணாகமம் 33:27, 28)."
+    }
+  ]
+}

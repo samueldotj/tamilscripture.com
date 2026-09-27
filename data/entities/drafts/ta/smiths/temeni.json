@@ -1,0 +1,18 @@
+{
+  "id": "smiths/temeni",
+  "lang": "ta",
+  "source_hash": "6c7f71cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெமனி",
+  "paragraphs": [
+    {
+      "id": "smiths/temeni#p1-6c7f71cc",
+      "text": "தெக்கோவாவின் தகப்பனாகிய அகூருக்கு, அவனுடைய மனைவியாகிய நாராளினால் பிறந்த மகன். (1 நாளாகமம் 4:6) (கி.மு. 1450 வரையில்.)"
+    }
+  ]
+}

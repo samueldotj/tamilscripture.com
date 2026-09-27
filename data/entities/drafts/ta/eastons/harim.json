@@ -1,0 +1,38 @@
+{
+  "id": "eastons/harim",
+  "lang": "ta",
+  "source_hash": "2d072e34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/harim#p1-04675dc6",
+      "text": "பரந்த மூக்குடையவன்."
+    },
+    {
+      "id": "eastons/harim#p2-e3dbc1e0",
+      "text": "(1.) ஆசாரியர்களின் இரண்டாம் பிரிவின் தலைவன் (1 நாளாகமம் 24:8)."
+    },
+    {
+      "id": "eastons/harim#p3-db1f0efc",
+      "text": "(2.) எஸ்றா 2:32, 39; நெகேமியா 7:35, 42."
+    },
+    {
+      "id": "eastons/harim#p4-0d1946ec",
+      "text": "(3.) நெகேமியா 3:11."
+    },
+    {
+      "id": "eastons/harim#p5-0288b603",
+      "text": "(4.) நெகேமியா 12:3."
+    },
+    {
+      "id": "eastons/harim#p6-2d0cfba0",
+      "text": "(5.) நெகேமியா 10:5."
+    }
+  ]
+}

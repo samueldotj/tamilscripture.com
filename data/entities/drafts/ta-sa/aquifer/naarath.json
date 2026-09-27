@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/naarath",
+  "lang": "ta",
+  "source_hash": "2e425967",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாராள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naarath#p1-ebc926d7",
+      "text": "நாராள் என்பது யோசுவா 16:7-இல் எப்பிராயீமுடைய எல்லையிலுள்ள ஒரு பட்டணமான நாராளுக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்படும் எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/naarath#p2-ccbd9047",
+      "text": "நாராள் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

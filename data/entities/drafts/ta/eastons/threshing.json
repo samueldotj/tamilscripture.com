@@ -1,0 +1,18 @@
+{
+  "id": "eastons/threshing",
+  "lang": "ta",
+  "source_hash": "8ef82f44",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போரடித்தல்",
+  "paragraphs": [
+    {
+      "id": "eastons/threshing#p1-8ef82f44",
+      "text": "விவசாயம் என்பதைக் காண்க."
+    }
+  ]
+}

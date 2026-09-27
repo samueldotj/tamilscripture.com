@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cinneroth",
+  "lang": "ta",
+  "source_hash": "37763525",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சின்னேரோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cinneroth#p1-3c60c245",
+      "text": "1 இராஜாக்கள் 15:20-ல் உள்ள கின்னரேத் என்ற இடப்பெயரின் கிங் யாக்கோபு மொழிபெயர்ப்பு எழுத்துப்பெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/cinneroth#p2-06ead810",
+      "text": "கின்னரேத் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pestilence",
+  "lang": "ta",
+  "source_hash": "2faf3b6e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொள்ளைநோய்",
+  "paragraphs": [
+    {
+      "id": "smiths/pestilence#p1-2faf3b6e",
+      "text": "[வாதை, THE ஐப் பார்க்க]"
+    }
+  ]
+}

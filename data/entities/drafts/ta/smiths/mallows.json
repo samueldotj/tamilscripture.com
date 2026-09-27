@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mallows",
+  "lang": "ta",
+  "source_hash": "fdd995cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்லோஸ் செடிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/mallows#p1-fdd995cf",
+      "text": "(யோபு 30:4)"
+    }
+  ]
+}

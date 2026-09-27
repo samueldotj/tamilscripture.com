@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gaal",
+  "lang": "ta",
+  "source_hash": "d9ce40c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காகால்",
+  "paragraphs": [
+    {
+      "id": "smiths/gaal#p1-d9ce40c7",
+      "text": "(அவமதிப்பு), ஏபேதின் மகன், அபிமெலேக்குக்கு எதிராகச் சீகேமியர் செய்த கலகத்தில் அவர்களுக்கு உதவினான். (நியாயாதிபதிகள் 9:1) ... (கி.மு. 1206.)"
+    }
+  ]
+}

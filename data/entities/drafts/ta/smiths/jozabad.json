@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jozabad",
+  "lang": "ta",
+  "source_hash": "73b96626",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jozabad#p1-73b96626",
+      "text": "(யெகோவா நீதிமானாக்குகிறார்)."
+    }
+  ]
+}

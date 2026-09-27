@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anaharath",
+  "lang": "ta",
+  "source_hash": "fa095a9f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாகராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/anaharath#p1-fa095a9f",
+      "text": "(பள்ளத்தாக்கு அல்லது கணவாய்), இசக்காருடைய எல்லைக்குள் இருந்த ஒரு இடம், சீகோன் மற்றும் ராப்பித் ஆகியவற்றுடன் குறிப்பிடப்பட்டுள்ளது. (யோசுவா 19:19)"
+    }
+  ]
+}

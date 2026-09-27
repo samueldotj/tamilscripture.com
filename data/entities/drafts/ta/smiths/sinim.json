@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sinim",
+  "lang": "ta",
+  "source_hash": "2e0dd6dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீனீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/sinim#p1-2e0dd6dd",
+      "text": "ஏசாயா 49:12-ல் அறியப்பட்ட உலகத்தின் கடைசி எல்லையில் வாழ்ந்தவர்களாகக் குறிப்பிடப்பட்ட ஒரு மக்கள் இனம். இவர்கள் பண்டைய சீனாவின் தென் பகுதியில் வாழ்ந்த சீனோய் (Sinoe) என்பவர்களோடு அடையாளப்படுத்தப்படலாம்."
+    }
+  ]
+}

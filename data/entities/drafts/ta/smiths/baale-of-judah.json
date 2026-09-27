@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baale-of-judah",
+  "lang": "ta",
+  "source_hash": "4d6bb2a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலாலே யூதா",
+  "paragraphs": [
+    {
+      "id": "smiths/baale-of-judah#p1-4d6bb2a9",
+      "text": "[பாகால், எண்.2, அ]"
+    }
+  ]
+}

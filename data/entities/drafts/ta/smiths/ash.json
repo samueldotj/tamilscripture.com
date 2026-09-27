@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ash",
+  "lang": "ta",
+  "source_hash": "536bd84b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆஷ் மரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ash#p1-536bd84b",
+      "text": "(எபிரெயம் oren), ஏசாயா 44:14 -ல் மட்டும் வருகிறது. உண்மையான ஆஷ் மரம் பாலஸ்தீனத்தில் இயல்பாக வளராதபடியால், சிலர் இதை ஒரு வகை தேவதாரு மரமாகக் கருதுகிறார்கள். ஒருவேளை லார்ச் (Laryx europaea) மரம் குறிக்கப்பட்டிருக்கலாம்."
+    }
+  ]
+}

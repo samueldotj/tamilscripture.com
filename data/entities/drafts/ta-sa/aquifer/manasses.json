@@ -1,0 +1,30 @@
+{
+  "id": "aquifer/manasses",
+  "lang": "ta",
+  "source_hash": "d40bcf9f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனாசே (Manasses)",
+  "paragraphs": [
+    {
+      "id": "aquifer/manasses#p1-db135255",
+      "text": "மத்தேயு 1:10-ல் யூதாவின் அரசனான மனாசேயின் கிங் யாக்கோபு வர்ஷன் வடிவம்."
+    },
+    {
+      "id": "aquifer/manasses#p2-55802ce6",
+      "text": "மனாசே (நபர்) #3-ஐ காண்க."
+    },
+    {
+      "id": "aquifer/manasses#p3-f32f90ef",
+      "text": "வெளிப்படுத்தின விசேஷம் 7:6-ல் இஸ்ரவேலின் 12 கோத்திரங்களில் ஒன்றான மனாசேயின் கிங் யாக்கோபு வர்ஷன் வடிவம்."
+    },
+    {
+      "id": "aquifer/manasses#p4-ae811333",
+      "text": "மனாசே (நபர்) #1; மனாசே கோத்திரம் ஆகியவற்றை காண்க."
+    }
+  ]
+}

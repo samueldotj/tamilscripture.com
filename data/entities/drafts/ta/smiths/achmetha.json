@@ -1,0 +1,18 @@
+{
+  "id": "smiths/achmetha",
+  "lang": "ta",
+  "source_hash": "a26b568a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்மேதா",
+  "paragraphs": [
+    {
+      "id": "smiths/achmetha#p1-a26b568a",
+      "text": "[அக்மேதா]"
+    }
+  ]
+}

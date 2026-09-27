@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ir",
+  "lang": "ta",
+  "source_hash": "2ae17b69",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ir#p1-2ae17b69",
+      "text": "(நகரம்). (1 நாளாகமம் 7:12) [இரி]"
+    }
+  ]
+}

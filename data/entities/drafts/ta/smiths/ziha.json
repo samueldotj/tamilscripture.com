@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ziha",
+  "lang": "ta",
+  "source_hash": "77efbb6a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகா",
+  "paragraphs": [
+    {
+      "id": "smiths/ziha#p1-77efbb6a",
+      "text": "(வெட்டவெளியில் காயவிடப்பட்டவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/japhlet",
+  "lang": "ta",
+  "source_hash": "40ad8eb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யப்லேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/japhlet#p1-40ad8eb5",
+      "text": "(தேவன் விடுவிக்கிறவர்) பெரீயா வழியாக ஆசேரின் சந்ததியினன். (1 நாளாகமம் 7:32,33)"
+    }
+  ]
+}

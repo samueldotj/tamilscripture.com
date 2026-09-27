@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zaza",
+  "lang": "ta",
+  "source_hash": "cfe51f3d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாசா",
+  "paragraphs": [
+    {
+      "id": "eastons/zaza#p1-cfe51f3d",
+      "text": "ஏராளம் என்று பொருள்படும், யூதாவின் சந்ததியில் ஒருவன் (1 நாளாகமம் 2:33)."
+    }
+  ]
+}

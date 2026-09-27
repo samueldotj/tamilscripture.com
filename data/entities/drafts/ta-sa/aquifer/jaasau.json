@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jaasau",
+  "lang": "ta",
+  "source_hash": "4a9bb930",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசாவு",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaasau#p1-7fd1f9f1",
+      "text": "யாசாவு என்பது எஸ்றா 10:37இல் காணப்படும், பானியின் மகனாகிய யாசாய் என்னும் பெயருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் (King James Version) பயன்படுத்தப்பட்ட எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jaasau#p2-e5e957c9",
+      "text": "யாசாய் என்பதைக் காண்க."
+    }
+  ]
+}

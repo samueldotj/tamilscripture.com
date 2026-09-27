@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dodo",
+  "lang": "ta",
+  "source_hash": "6603a7b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோதோ",
+  "paragraphs": [
+    {
+      "id": "smiths/dodo#p1-6603a7b9",
+      "text": "(அன்பாக இருக்கிறவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hazargaddah",
+  "lang": "ta",
+  "source_hash": "d14b710a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சார்காதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hazargaddah#p1-d14b710a",
+      "text": "ஆத்சார்காதா என்பது யூதா கோத்திரத்தின் நிலத்திற்குத் தென்பகுதியில் இருந்த ஒரு பட்டணமாகும் (யோசுவா 15:27)."
+    }
+  ]
+}

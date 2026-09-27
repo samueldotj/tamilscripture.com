@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ashvath",
+  "lang": "ta",
+  "source_hash": "1ec736ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்வாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ashvath#p1-1ec736ea",
+      "text": "அஸ்வாத் என்பவன் யப்லேத்தின் மகன்; அவன் ஆசேருடைய கோத்திரத்தில் ஒரு வம்சத்தின் தலைவனும் பெரிய போர்வீரனுமாக இருந்தான் (1 நாளாகமம் 7:33)."
+    }
+  ]
+}

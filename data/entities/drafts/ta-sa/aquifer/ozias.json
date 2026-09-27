@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ozias",
+  "lang": "ta",
+  "source_hash": "57699f89",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒசியாஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ozias#p1-fee84852",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் மத்தேயு 1:8-9-ல் யூதாவின் அரசனாகிய உசியா என்பதற்கு பயன்படுத்தப்பட்ட ஆங்கில எழுத்துமுறை."
+    },
+    {
+      "id": "aquifer/ozias#p2-a870ddeb",
+      "text": "உசியா #1-ஐ காண்க."
+    }
+  ]
+}

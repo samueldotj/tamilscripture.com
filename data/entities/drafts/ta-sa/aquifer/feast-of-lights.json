@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/feast-of-lights",
+  "lang": "ta",
+  "source_hash": "276ee5c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பண்டிகைகளின் ஒளி",
+  "paragraphs": [
+    {
+      "id": "aquifer/feast-of-lights#p1-7f2f69a7",
+      "text": "ஒளியின் பண்டிகை (அல்லது ஒளிப் பண்டிகை) என்பது ஹனுக்கா என்ற பெயருக்கு மற்றொரு பெயராகும், இது கி.மு. 164ல் ஆலயம் மீண்டும் அர்ப்பணிக்கப்பட்டதைக் கொண்டாடும் இஸ்ரவேலின் பண்டிகைகளில் ஒன்றாகும்."
+    },
+    {
+      "id": "aquifer/feast-of-lights#p2-4b652da5",
+      "text": "இஸ்ரவேலின் பண்டிகைகளும் விழாக்களும் என்பதைக் காண்க."
+    }
+  ]
+}

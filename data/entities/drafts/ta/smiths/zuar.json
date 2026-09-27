@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zuar",
+  "lang": "ta",
+  "source_hash": "0800147b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூவார்",
+  "paragraphs": [
+    {
+      "id": "smiths/zuar#p1-0800147b",
+      "text": "(சிறுமை), யாத்திராகமத்தின் காலத்தில் இசக்கார் கோத்திரத்தின் தலைவனாகிய நெதனெயேலின் தகப்பன். (எண்ணாகமம் 1:8; 2:5; 7:18,23; 10:15) (கி.மு. 2491.)"
+    }
+  ]
+}

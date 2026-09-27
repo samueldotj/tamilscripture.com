@@ -1,0 +1,18 @@
+{
+  "id": "eastons/senate",
+  "lang": "ta",
+  "source_hash": "849f12d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலோசனைச் சபை",
+  "paragraphs": [
+    {
+      "id": "eastons/senate#p1-849f12d3",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 5:21), “இஸ்ரவேலின் மூப்பர்கள்” என்பவர்களே ஆலோசனைச் சங்கத்தில் ஒரு அங்கமாக இருந்தவர்கள்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/melkon",
+  "lang": "ta",
+  "source_hash": "8585be1e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெல்கோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/melkon#p1-00109d5c",
+      "text": "இயேசுவுக்குக் காணிக்கைகளைக் கொண்டுவந்த ஞானிகளில் (மத்தேயு 2:1-2) ஒருவருக்குப் பாரம்பரியமாகக் கொடுக்கப்பட்ட பெயர், அவரை மெல்கியோர் என்றும் அழைப்பர்."
+    },
+    {
+      "id": "aquifer/melkon#p2-8aab7ae8",
+      "text": "சாஸ்திரிகள் என்பதைக் காண்க."
+    }
+  ]
+}

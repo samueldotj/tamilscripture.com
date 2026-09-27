@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uthii",
+  "lang": "ta",
+  "source_hash": "f5948f20",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உத்தி",
+  "paragraphs": [
+    {
+      "id": "smiths/uthii#p1-f5948f20",
+      "text": "1 எஸ்றா 8:40. [ஊத்தாய், 2]"
+    }
+  ]
+}

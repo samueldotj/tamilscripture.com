@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jaanai",
+  "lang": "ta",
+  "source_hash": "d1a458e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/jaanai#p1-d1a458e7",
+      "text": "புலம்புகிறவன், காத்தியரின் தலைவர்களில் ஒருவன் (1 நாளாகமம் 5:12)."
+    }
+  ]
+}

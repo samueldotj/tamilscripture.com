@@ -1,0 +1,18 @@
+{
+  "id": "eastons/helkai",
+  "lang": "ta",
+  "source_hash": "6159b332",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்காய்",
+  "paragraphs": [
+    {
+      "id": "eastons/helkai#p1-6159b332",
+      "text": "மெதுவான நாக்குடையவன், யொயகீமின் காலத்தில் இருந்த முதன்மையான ஆசாரியர்களில் ஒருவன் (நெகேமியா 12:15)."
+    }
+  ]
+}

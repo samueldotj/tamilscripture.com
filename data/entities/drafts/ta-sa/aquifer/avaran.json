@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/avaran",
+  "lang": "ta",
+  "source_hash": "04eb0eee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/avaran#p1-04eb0eee",
+      "text": "யூதாஸ் மக்காபேயுவின் சகோதரனாகிய எலெயாசாரின் புனைப்பெயர் (1 மக்காபேயர் 2:5; 6:43). இப்பெயர் “விழித்தவன்,” “வெளிறிய முகம்,” அல்லது “துளைப்பவன்” என்று பொருள்படலாம்."
+    }
+  ]
+}

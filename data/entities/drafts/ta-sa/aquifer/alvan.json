@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/alvan",
+  "lang": "ta",
+  "source_hash": "08f78fb1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்வான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/alvan#p1-08f78fb1",
+      "text": "சோபாலின் மகனும், ஏசாவின் சந்ததியாருமான ஒருவன் (ஆதியாகமம் 36:23). அல்வான் என்ற பெயர் 1 நாளாகமம் 1:40-ல் ஆலியான் என்றும் எழுதப்பட்டுள்ளது."
+    }
+  ]
+}

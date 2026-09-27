@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jehieli-jehielite",
+  "lang": "ta",
+  "source_hash": "640e541d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெகியேலி, யெகியேலியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jehieli-jehielite#p1-dc6a573d",
+      "text": "யெகியேலி என்பது யெகியேல் என்ற பெயரின் மற்றொரு எழுத்துவடிவம், இவன் ஒரு லேவியனும், 1 நாளாகமம் 26:21-22-ல் காணப்படும் யெகியேலியர் குடும்பத்தின் ஸ்தாபகனுமாகும்."
+    },
+    {
+      "id": "aquifer/jehieli-jehielite#p2-173a08f8",
+      "text": "யெகியேல் #4-ஐ காண்க."
+    }
+  ]
+}

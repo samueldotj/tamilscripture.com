@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/peniel",
+  "lang": "ta",
+  "source_hash": "d0a2fa05",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/peniel#p1-706e598e",
+      "text": "பெனியேலின் மற்றொரு வடிவம். இது யாக்கோபு என்னும் கோத்திரத்தலைவன் தேவனுடைய “மனுஷனுடன்” மோதிப் போராடிய பாலஸ்தீனிய பட்டணமாகும் (ஆதியாகமம் 32:30)."
+    },
+    {
+      "id": "aquifer/peniel#p2-38b27ba0",
+      "text": "பெனியேல் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

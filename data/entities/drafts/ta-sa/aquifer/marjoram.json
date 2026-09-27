@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/marjoram",
+  "lang": "ta",
+  "source_hash": "f16603c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மார்ஜோரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/marjoram#p1-f16603c9",
+      "text": "மூன்று அடி (.9 மீட்டர்) உயரம் வரை வளரும் ஒரு சிறிய மிண்ட் வகைச் செடி. இது பழைய ஏற்பாட்டில் குறிப்பிடப்பட்ட “ஈசோப்பு” ஆக இருக்கலாம். செடிகள் (ஈசோப்பு) பார்க்க."
+    }
+  ]
+}

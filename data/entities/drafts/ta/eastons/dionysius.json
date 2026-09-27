@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dionysius",
+  "lang": "ta",
+  "source_hash": "61a80778",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தியொனீசியு",
+  "paragraphs": [
+    {
+      "id": "eastons/dionysius#p1-61a80778",
+      "text": "மார்ஸ் மேடையின் நியாயாதிபதிகளில் ஒருவன், அத்தேனேயில் பவுலின் மனமாற்றத்தால் விசுவாசியானவர்களில் ஒருவன் (அப்போஸ்தலருடைய நடபடிகள் 17:34)."
+    }
+  ]
+}

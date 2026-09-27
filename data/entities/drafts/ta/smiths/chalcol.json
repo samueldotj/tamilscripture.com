@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chalcol",
+  "lang": "ta",
+  "source_hash": "2380077c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்கோல்",
+  "paragraphs": [
+    {
+      "id": "smiths/chalcol#p1-2380077c",
+      "text": "(1 இராஜாக்கள் 4:31) [கல்கோல்]"
+    }
+  ]
+}

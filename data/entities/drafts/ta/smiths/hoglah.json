@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hoglah",
+  "lang": "ta",
+  "source_hash": "bb97f98f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒக்லாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/hoglah#p1-bb97f98f",
+      "text": "(கவுதாரி), செலொப்பியாத்தின் ஐந்து மகள்களில் மூன்றாமவள். (எண்ணாகமம் 26:33; 27:1; 36:11; யோசுவா 17:3) (கி.மு. 1450.)"
+    }
+  ]
+}

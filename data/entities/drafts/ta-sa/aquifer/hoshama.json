@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hoshama",
+  "lang": "ta",
+  "source_hash": "9b4263e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒசாமா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hoshama#p1-9b4263e4",
+      "text": "யெகமியாவின் வம்சத்தவன் (1 நாளாகமம் 3:18)."
+    }
+  ]
+}

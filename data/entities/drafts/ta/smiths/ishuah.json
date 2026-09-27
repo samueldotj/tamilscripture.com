@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ishuah",
+  "lang": "ta",
+  "source_hash": "f0a6105f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்வா",
+  "paragraphs": [
+    {
+      "id": "smiths/ishuah#p1-f0a6105f",
+      "text": "(அமைதி), ஆசேருடைய இரண்டாவது மகன். (ஆதியாகமம் 46:17) (கி.மு. 1706.)"
+    }
+  ]
+}

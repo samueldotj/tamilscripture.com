@@ -1,0 +1,18 @@
+{
+  "id": "smiths/telaim",
+  "lang": "ta",
+  "source_hash": "0eca1e01",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெலாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/telaim#p1-0eca1e01",
+      "text": "(ஆட்டுக்குட்டிகள்), சவுல் அமலேக்கியர்களை தாக்குவதற்கு முன்பாக தன் படைவீரர்களைச் சேர்த்து கணக்கெடுத்த இடம், (1 சாமுவேல் 16:4) இது தேலெம் என்பதுடன் ஒன்றாக இருக்கலாம், அதைக் காண்க."
+    }
+  ]
+}

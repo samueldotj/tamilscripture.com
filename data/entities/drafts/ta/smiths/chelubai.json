@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chelubai",
+  "lang": "ta",
+  "source_hash": "1405c8e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செலுபாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/chelubai#p1-1405c8e4",
+      "text": "(திறமையுள்ளவன்), எஸ்ரோனின் மகன். காலேபுக்கு ஒப்பானவன். (1 நாளாகமம் 2:9,18,42)"
+    }
+  ]
+}

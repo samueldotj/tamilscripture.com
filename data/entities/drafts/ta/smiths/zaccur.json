@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zaccur",
+  "lang": "ta",
+  "source_hash": "73d6fd7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சக்கூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/zaccur#p1-73d6fd7b",
+      "text": "(நினைவுள்ளவன்)."
+    }
+  ]
+}

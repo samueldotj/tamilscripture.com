@@ -1,0 +1,18 @@
+{
+  "id": "eastons/urim",
+  "lang": "ta",
+  "source_hash": "688e4cd1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊரீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/urim#p1-688e4cd1",
+      "text": "விளக்குகள் (வுல்கேட் “doctrina;” எல்.எக்ஸ்.எக்ஸ். “வெளிப்படுத்துதல்”). தும்மீம் காண்க."
+    }
+  ]
+}

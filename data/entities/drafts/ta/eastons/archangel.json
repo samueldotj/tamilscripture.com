@@ -1,0 +1,18 @@
+{
+  "id": "eastons/archangel",
+  "lang": "ta",
+  "source_hash": "4f805c85",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரதான தூதன்",
+  "paragraphs": [
+    {
+      "id": "eastons/archangel#p1-4f805c85",
+      "text": "(1 தெசலோனிக்கேயர் 4:16; யூதா 1:9), தூதன்களுடைய தலைவன்."
+    }
+  ]
+}

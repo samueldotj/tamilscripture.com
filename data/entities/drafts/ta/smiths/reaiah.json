@@ -1,0 +1,18 @@
+{
+  "id": "smiths/reaiah",
+  "lang": "ta",
+  "source_hash": "6fbd052f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராயா",
+  "paragraphs": [
+    {
+      "id": "smiths/reaiah#p1-6fbd052f",
+      "text": "(யெகோவாவினால் காணப்பட்டவன்)."
+    }
+  ]
+}

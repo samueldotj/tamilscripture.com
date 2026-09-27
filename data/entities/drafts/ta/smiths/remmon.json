@@ -1,0 +1,18 @@
+{
+  "id": "smiths/remmon",
+  "lang": "ta",
+  "source_hash": "10de1c03",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரிம்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/remmon#p1-10de1c03",
+      "text": "(மாதுளம்பழம்), சிமியோனுடைய பங்கில் இருந்த ஒரு பட்டணம், (யோசுவா 10:7) மற்ற இடங்களில் அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் ரிம்மோன் என்று சரியாகக் குறிக்கப்பட்டுள்ளது."
+    }
+  ]
+}

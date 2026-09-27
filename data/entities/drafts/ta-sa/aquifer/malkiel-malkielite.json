@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/malkiel-malkielite",
+  "lang": "ta",
+  "source_hash": "80f59ece",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கியேல், மல்கியேலிய",
+  "paragraphs": [
+    {
+      "id": "aquifer/malkiel-malkielite#p1-73c6af85",
+      "text": "மல்கியேல் என்பது மல்கியேல் என்ற பெயரின் மற்றொரு வடிவமாகும். மல்கியேலிய என்பது மல்கியேலியர்களின் மற்றொரு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/malkiel-malkielite#p2-5dd715d5",
+      "text": "மல்கியேல், மல்கியேலியர்களின் என்பதைக் காண்க."
+    }
+  ]
+}

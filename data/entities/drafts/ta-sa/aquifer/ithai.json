@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ithai",
+  "lang": "ta",
+  "source_hash": "9f80d4df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தாயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ithai#p1-fe67a5b3",
+      "text": "1 நாளாகமம் 11:31-ல் குறிப்பிடப்பட்டுள்ள ஒரு பென்யமீன் யுத்தவீரனாகிய இத்தாயிக்கு இது இன்னொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/ithai#p2-a4b14f92",
+      "text": "இத்தாயி #2-ஐக் காண்க."
+    }
+  ]
+}

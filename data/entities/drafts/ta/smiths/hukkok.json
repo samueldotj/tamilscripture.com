@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hukkok",
+  "lang": "ta",
+  "source_hash": "f94ac3ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உக்கோக்",
+  "paragraphs": [
+    {
+      "id": "smiths/hukkok#p1-f94ac3ab",
+      "text": "(வெட்டப்பட்டது), நப்தலியின் எல்லையிலுள்ள ஒரு இடம். (யோசுவா 19:34) இது கலிலேயாக்கடலின் மேல்முனைக்கு மேற்கே, நப்தலியின் மலைகளிலுள்ள ஒரு கிராமமான யாகூக் என்ற இடத்தில் கண்டுபிடிக்கப்பட்டுள்ளது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pulse",
+  "lang": "ta",
+  "source_hash": "491d08cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பருப்பு முதலானவை",
+  "paragraphs": [
+    {
+      "id": "eastons/pulse#p1-491d08cf",
+      "text": "(தாண் 1:12, 16), R.V. “பூண்டுகள்,” பொதுவாக சாக்கடிப் பொருள்களைக் குறிக்கும்."
+    }
+  ]
+}

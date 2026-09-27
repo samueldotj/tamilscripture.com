@@ -1,0 +1,18 @@
+{
+  "id": "smiths/melchishua",
+  "lang": "ta",
+  "source_hash": "596e6728",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கிசூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/melchishua#p1-596e6728",
+      "text": "சவுலின் மகன் (1 சாமுவேல் 14:49; 31:2). வேறு இடங்களில் மல்கிசூவா என்று சரியாகக் கொடுக்கப்பட்டுள்ளது."
+    }
+  ]
+}

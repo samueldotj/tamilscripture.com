@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rithmah",
+  "lang": "ta",
+  "source_hash": "3e682de1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரித்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/rithmah#p1-3e682de1",
+      "text": "(வறண்ட நிலம்), வனாந்தரத்தில் ஒரு பயண நிலையம், (எண்ணாகமம் 33:18,19). ஆஸ்ரோத்திற்கு வடகிழக்கே இருந்திருக்கலாம்."
+    }
+  ]
+}

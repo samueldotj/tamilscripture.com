@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aroer",
+  "lang": "ta",
+  "source_hash": "5174c86d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோவேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/aroer#p1-5174c86d",
+      "text": "(இடிபாடுகள்)."
+    }
+  ]
+}

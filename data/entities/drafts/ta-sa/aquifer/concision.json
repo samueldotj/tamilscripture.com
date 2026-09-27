@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/concision",
+  "lang": "ta",
+  "source_hash": "b9e275c4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விருத்தசேதனச் சிதைவு",
+  "paragraphs": [
+    {
+      "id": "aquifer/concision#p1-b9e275c4",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் பிலிப்பியர் 3:2ன் வேதவாக்கியத்தில் Concision என்ற வார்த்தை வருகிறது, இதன் பொருள் “சரீரத்தை சிதைத்தல்” என்பதாகும்."
+    }
+  ]
+}

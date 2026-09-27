@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chilmad",
+  "lang": "ta",
+  "source_hash": "a93ba749",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கில்மாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/chilmad#p1-a93ba749",
+      "text": "(வேலி) சேபாவோடும் அசூரோடும் இணைந்து குறிப்பிடப்படும் ஓரிடம் அல்லது நாடு. (எசேக்கியேல் 27:23)"
+    }
+  ]
+}

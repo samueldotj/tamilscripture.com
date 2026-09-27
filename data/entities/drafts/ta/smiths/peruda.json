@@ -1,0 +1,18 @@
+{
+  "id": "smiths/peruda",
+  "lang": "ta",
+  "source_hash": "df59e341",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெருதா",
+  "paragraphs": [
+    {
+      "id": "smiths/peruda#p1-df59e341",
+      "text": "பெரிதாவின் அதே பெயர். (எஸ்றா 2:55)"
+    }
+  ]
+}

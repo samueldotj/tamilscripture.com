@@ -1,0 +1,30 @@
+{
+  "id": "eastons/chapiter",
+  "lang": "ta",
+  "source_hash": "12b7b3b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கும்பம்",
+  "paragraphs": [
+    {
+      "id": "eastons/chapiter#p1-23709727",
+      "text": "தூணின் அலங்கார தலை அல்லது முடி. மூன்று எபிரெய வார்த்தைகள் இவ்வாறு மொழிபெயர்க்கப்பட்டுள்ளன."
+    },
+    {
+      "id": "eastons/chapiter#p2-7c531a84",
+      "text": "(1.) Cothereth (1 இராஜாக்கள் 7:16; 2 இராஜாக்கள் 25:17; 2 நாளாகமம் 4:12), இதன் பொருள் “முடிசூட்டு” அல்லது “கிரீடம்”."
+    },
+    {
+      "id": "eastons/chapiter#p3-25b9769d",
+      "text": "(2.) Tzepheth (2 நாளாகமம் 3:15)."
+    },
+    {
+      "id": "eastons/chapiter#p4-8d1172d3",
+      "text": "(3.) ரோஷ் (யாத்திராகமம் 36:38; 38:17, 19, 28), சரியாகச் சொன்னால் “தலை” அல்லது “உச்சி” என்பதாகும்."
+    }
+  ]
+}

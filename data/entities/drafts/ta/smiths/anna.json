@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anna",
+  "lang": "ta",
+  "source_hash": "dfdcc0d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/anna#p1-dfdcc0d0",
+      "text": "(கிருபை), நம்முடைய கர்த்தர் ஆலயத்தில் ஒப்புக்கொடுக்கப்பட்ட காலத்தில் எருசலேமில் இருந்த ஒரு “தீர்க்கதரிசி” (லூக்கா 2:36). அவள் ஆசேருடைய கோத்திரத்தைச் சேர்ந்தவளாக இருந்தாள்."
+    }
+  ]
+}

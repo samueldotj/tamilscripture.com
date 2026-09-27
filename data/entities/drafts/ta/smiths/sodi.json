@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sodi",
+  "lang": "ta",
+  "source_hash": "55978fa2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோதி",
+  "paragraphs": [
+    {
+      "id": "smiths/sodi#p1-55978fa2",
+      "text": "(உரிமையானவன்), செபுலோன் கோத்திரத்திலிருந்து தெரிந்துகொள்ளப்பட்ட ஒற்றனாகிய காதியேலின் தகப்பன். (எண்ணாகமம் 13:10) (கி.மு. 1490.)"
+    }
+  ]
+}

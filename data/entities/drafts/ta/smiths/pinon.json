@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pinon",
+  "lang": "ta",
+  "source_hash": "16e79acb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பினோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/pinon#p1-16e79acb",
+      "text": "(இருள்), ஏதோமின் “பிரபுக்களில்” ஒருவன்,—அதாவது, அந்த தேசத்தின் ஒரு கோத்திரத்திற்குரிய தலைவன் அல்லது ஸ்தாபகன். (ஆதியாகமம் 38:41; 1 நாளாகமம் 1:52)"
+    }
+  ]
+}

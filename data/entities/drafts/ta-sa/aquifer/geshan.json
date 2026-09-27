@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/geshan",
+  "lang": "ta",
+  "source_hash": "745a0d2e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/geshan#p1-745a0d2e",
+      "text": "கேசான் யாதாயின் மகனும், காலேபுடைய வம்சாவழியாக யூதாவின் சந்ததியாருமாக இருந்தான் (1 நாளாகமம் 2:47)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/goldsmith",
+  "lang": "ta",
+  "source_hash": "42062db4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொற்கொல்லன்",
+  "paragraphs": [
+    {
+      "id": "eastons/goldsmith#p1-42062db4",
+      "text": "(நெகேமியா 3:8, 32; ஏசாயா 40:19; 41:7; 46:6). இவ்வாறு மொழிபெயர்க்கப்பட்ட வார்த்தை உண்மையில் ஒரு உலோக வேலைசெய்பவனையோ அல்லது சுத்திகரிப்பவனையோ குறிக்கிறது."
+    }
+  ]
+}

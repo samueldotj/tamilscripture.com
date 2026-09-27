@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/irshemesh",
+  "lang": "ta",
+  "source_hash": "ecf0e321",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இர்சேமேஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/irshemesh#p1-ecf0e321",
+      "text": "இர்சேமேஸ் தாண் கோத்திரத்திற்கு பங்காக அளிக்கப்பட்ட ஒரு பட்டணமாகும் (யோசுவா 19:41). இது ஒருவேளை பெத்ஷிமேஸ் என்னும் பட்டணமே ஆகும்."
+    }
+  ]
+}

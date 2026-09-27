@@ -1,0 +1,54 @@
+{
+  "id": "eastons/hashabiah",
+  "lang": "ta",
+  "source_hash": "79b7261b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஷபியா",
+  "paragraphs": [
+    {
+      "id": "eastons/hashabiah#p1-e0108956",
+      "text": "யெகோவாவால் கவனிக்கப்பட்டவன்."
+    },
+    {
+      "id": "eastons/hashabiah#p2-3b91ea0f",
+      "text": "(1.) மெராரியனான லேவியன் (1 நாளாகமம் 6:45; 9:14)."
+    },
+    {
+      "id": "eastons/hashabiah#p3-71ca572d",
+      "text": "(2.) எதுத்தூனின் மகன் (25:3, 19)."
+    },
+    {
+      "id": "eastons/hashabiah#p4-76f26c06",
+      "text": "(3.) கேமுவேலின் மகன் (26:30)."
+    },
+    {
+      "id": "eastons/hashabiah#p5-ab15d850",
+      "text": "(4.) லேவியர்களின் தலைவர்களில் ஒருவன் (2 நாளாகமம் 35:9)."
+    },
+    {
+      "id": "eastons/hashabiah#p6-3c3714b6",
+      "text": "(5.) ஒரு லேவியன் (நெகேமியா 11:22)."
+    },
+    {
+      "id": "eastons/hashabiah#p7-c064ab98",
+      "text": "(6.) எஸ்றாவின் காலத்தில் இருந்த ஆசாரியர்களின் தலைவர்களில் ஒருவன் (எஸ்றா 8:24)."
+    },
+    {
+      "id": "eastons/hashabiah#p8-4faf57b5",
+      "text": "(7.) லேவியர்களின் தலைவன் (நெகேமியா 12:24)."
+    },
+    {
+      "id": "eastons/hashabiah#p9-0d08f272",
+      "text": "(8.) எஸ்றா 8:19."
+    },
+    {
+      "id": "eastons/hashabiah#p10-c6d61511",
+      "text": "(9.) நெகேமியா 3:17."
+    }
+  ]
+}

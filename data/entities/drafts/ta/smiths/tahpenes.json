@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tahpenes",
+  "lang": "ta",
+  "source_hash": "c025a83b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாப்பெனேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/tahpenes#p1-c025a83b",
+      "text": "ஏதோமியனாகிய ஆதாதை ஏற்றுக்கொண்டு, தன்னுடைய சகோதரியை அவனுக்குத் திருமணம் செய்துகொடுத்த பார்வோனின் மனைவியாகிய ஒரு எகிப்திய ராணி. (1 இராஜாக்கள் 11:18-20) (கிமு. 1000 என்று)."
+    }
+  ]
+}

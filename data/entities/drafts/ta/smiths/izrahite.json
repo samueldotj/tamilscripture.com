@@ -1,0 +1,18 @@
+{
+  "id": "smiths/izrahite",
+  "lang": "ta",
+  "source_hash": "e81b5e5e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்ராகியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/izrahite#p1-e81b5e5e",
+      "text": "(செராகுவின் சந்ததி), சம்கூத் என்பவனுக்குக் கொடுக்கப்பட்ட பெயர் (1 நாளாகமம் 27:8). இதன் உண்மையான பொருள் ஒருவேளை செராகியன், அதாவது செராகுவின் பெரிய யூதா குடும்பத்திலிருந்து வந்தவன் என்பதே."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/adamah",
+  "lang": "ta",
+  "source_hash": "46205374",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதமா",
+  "paragraphs": [
+    {
+      "id": "eastons/adamah#p1-46205374",
+      "text": "சிவப்பு மண், நப்தலியின் அரணான ஒரு பட்டணம், இது ஒருவேளை திபேரியா கடலின் மேற்குப் பக்கத்திலுள்ள இன்றைய தாமியே ஆகும் (யோசுவா 19:33, 36)."
+    }
+  ]
+}

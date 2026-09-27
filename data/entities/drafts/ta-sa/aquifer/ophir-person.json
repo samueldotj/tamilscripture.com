@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ophir-person",
+  "lang": "ta",
+  "source_hash": "b752a227",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓப்பீர் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ophir-person#p1-b752a227",
+      "text": "ஓப்பீர் யொக்தானின் மகனும், அற்பாக்சாத் என்பவனுடைய குடும்ப வழித்தோன்றலின் மூலம் சேமுடைய சந்ததியானவனுமாக இருந்தான் (ஆதியாகமம் 10:29; 1 நாளாகமம் 1:23)."
+    }
+  ]
+}

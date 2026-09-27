@@ -1,0 +1,18 @@
+{
+  "id": "smiths/havilah",
+  "lang": "ta",
+  "source_hash": "125152e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவிலா",
+  "paragraphs": [
+    {
+      "id": "smiths/havilah#p1-125152e6",
+      "text": "(ஆதியாகமம் 2:11) (வட்டப்பிரதேசம்)."
+    }
+  ]
+}

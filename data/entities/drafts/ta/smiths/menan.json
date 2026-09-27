@@ -1,0 +1,18 @@
+{
+  "id": "smiths/menan",
+  "lang": "ta",
+  "source_hash": "4b50792f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மயினான்",
+  "paragraphs": [
+    {
+      "id": "smiths/menan#p1-4b50792f",
+      "text": "(திருத்தப்பட்ட மொழிபெயர்ப்பில் மயினான் என்று அழைக்கப்படுகிறது), இயேசுகிறிஸ்துவின் வம்ச வரலாற்றில் யோசேப்பின் முன்னோர்களில் ஒருவன். (லூக்கா 3:31)"
+    }
+  ]
+}

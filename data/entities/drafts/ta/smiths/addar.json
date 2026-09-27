@@ -1,0 +1,18 @@
+{
+  "id": "smiths/addar",
+  "lang": "ta",
+  "source_hash": "ef2a93f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார்",
+  "paragraphs": [
+    {
+      "id": "smiths/addar#p1-ef2a93f0",
+      "text": "(வலியவன்), பேலாவின் மகன், (1 நாளாகமம் 8:3) (எண்ணாகமம் 26:40) இல் ஆரேத் என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

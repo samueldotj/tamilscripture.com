@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ishbosheth",
+  "lang": "ta",
+  "source_hash": "549b436e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்போசேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishbosheth#p1-2da8161f",
+      "text": "சவுல் ராஜாவின் மகன் எஸ்பாகாலுக்கு இருந்த மற்றொரு பெயர். தன் தகப்பன் மரணமடைந்த பின்பு இவன் ராஜாவானான் (2 சாமுவேல் 2–4). இஸ்போசேத் தான் மரணமடைவதற்கு முன் சிறிது காலம் ஆட்சி செய்தான்."
+    },
+    {
+      "id": "aquifer/ishbosheth#p2-859f1900",
+      "text": "எஸ்பாகால் என்பதைக் காண்க."
+    }
+  ]
+}

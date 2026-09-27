@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sadoc",
+  "lang": "ta",
+  "source_hash": "8bfd99b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாதோக்",
+  "paragraphs": [
+    {
+      "id": "smiths/sadoc#p1-8bfd99b9",
+      "text": "(சாதோக் என்பதன் கிரேக்கு வடிவம், நீதியுள்ளவன்)."
+    }
+  ]
+}

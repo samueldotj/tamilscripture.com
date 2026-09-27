@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zohar",
+  "lang": "ta",
+  "source_hash": "639f842f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோகார்",
+  "paragraphs": [
+    {
+      "id": "eastons/zohar#p1-479a142b",
+      "text": "பிரகாசம்."
+    },
+    {
+      "id": "eastons/zohar#p2-66b17e4d",
+      "text": "(1.) ஏத்தியனான எப்பெரோனுடைய தகப்பன் (ஆதியாகமம் 23:8)."
+    },
+    {
+      "id": "eastons/zohar#p3-e8ef2eff",
+      "text": "(2.) சிமியோனுடைய மகன்களில் ஒருவன் (ஆதியாகமம் 46:10; யாத்திராகமம் 6:15)."
+    }
+  ]
+}

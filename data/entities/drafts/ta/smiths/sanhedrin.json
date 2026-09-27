@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sanhedrin",
+  "lang": "ta",
+  "source_hash": "7289346d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலோசனைச் சங்கம் (சன்ஹெத்ரின்)",
+  "paragraphs": [
+    {
+      "id": "smiths/sanhedrin#p1-7289346d",
+      "text": "(கிரேக்க வார்த்தையான sunedrion, “ஆலோசனைக் கூடம்” என்பதிலிருந்து வந்தது; பொதுவாக ஆனால் தவறாக Sanhedrim என்று அழைக்கப்படும்) கிறிஸ்துவின் காலத்திலும் அதற்கு முன்பும் இருந்த யூதர்களின் உச்ச ஆலோசனைச் சங்கம்."
+    }
+  ]
+}

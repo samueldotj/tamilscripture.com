@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elkanah-or-elkonah",
+  "lang": "ta",
+  "source_hash": "e3ac2b67",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்க்கானா",
+  "paragraphs": [
+    {
+      "id": "smiths/elkanah-or-elkonah#p1-e3ac2b67",
+      "text": "(தேவனால் அளிக்கப்பட்டவன்)."
+    }
+  ]
+}

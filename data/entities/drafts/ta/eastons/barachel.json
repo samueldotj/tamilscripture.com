@@ -1,0 +1,18 @@
+{
+  "id": "eastons/barachel",
+  "lang": "ta",
+  "source_hash": "1336ebaa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரகெயேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/barachel#p1-1336ebaa",
+      "text": "தேவன் ஆசீர்வதித்தவன், ஒரு பூசியன், யோபுவின் நண்பர்களில் ஒருவனாகிய எலிகூவின் தகப்பன் (யோபு 32:2, 6)."
+    }
+  ]
+}

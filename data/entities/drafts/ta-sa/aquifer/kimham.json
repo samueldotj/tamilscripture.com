@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kimham",
+  "lang": "ta",
+  "source_hash": "c12ce753",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிம்காம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kimham#p1-f078f75d",
+      "text": "யூதன் வரலாற்றாசிரியனான யோசேபுவின் கூற்றுப்படி, பர்சிலாயியின் மகனாகிய கிம்காம் என்பதற்கு இது வேறொரு உச்சரிப்பாகும்."
+    },
+    {
+      "id": "aquifer/kimham#p2-d09ed874",
+      "text": "கிம்காம் என்பதைக் காண்க."
+    }
+  ]
+}

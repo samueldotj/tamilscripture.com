@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bellows",
+  "lang": "ta",
+  "source_hash": "6b3fea96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "துருத்தி",
+  "paragraphs": [
+    {
+      "id": "eastons/bellows#p1-6b3fea96",
+      "text": "எரேமியா 6:29-இல் மட்டும், உலோகத்தை உருக்குவதைக் குறித்து இது காணப்படுகிறது. எகிப்தில் பொதுவாக இருந்த தோல்பைகளுக்கு ஒப்பான தோல் பைகளாக அவை இருந்திருக்கலாம்."
+    }
+  ]
+}

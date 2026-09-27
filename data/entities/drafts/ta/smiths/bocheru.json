@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bocheru",
+  "lang": "ta",
+  "source_hash": "280facf9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொக்குரு",
+  "paragraphs": [
+    {
+      "id": "smiths/bocheru#p1-280facf9",
+      "text": "(இளைஞன்), தற்போதுள்ள எபிரெய பாடத்தின்படி ஆத்சேலின் மகன் (1 நாளாகமம் 8:38)"
+    }
+  ]
+}

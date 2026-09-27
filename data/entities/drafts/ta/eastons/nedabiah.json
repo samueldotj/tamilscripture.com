@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nedabiah",
+  "lang": "ta",
+  "source_hash": "ee158acc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெதபியா",
+  "paragraphs": [
+    {
+      "id": "eastons/nedabiah#p1-ee158acc",
+      "text": "யெகோவாவினால் ஏவப்பட்டவன், எக்கொனியாவின் மகன்களில் ஒருவன் (1 நாளாகமம் 3:18)."
+    }
+  ]
+}

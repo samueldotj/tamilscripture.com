@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jaakan",
+  "lang": "ta",
+  "source_hash": "5e769865",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கான்",
+  "paragraphs": [
+    {
+      "id": "smiths/jaakan#p1-5e769865",
+      "text": "(அவன் சூழ்ந்துகொள்வான்) என்பது, பெனே-யாக்கான் என்பவர்களின் மூல தந்தையாகிய யாக்கான் என்பவனையே குறிக்கிறது. (10:6; 1 நாளாகமம் 1:42)"
+    }
+  ]
+}

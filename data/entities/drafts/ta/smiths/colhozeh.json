@@ -1,0 +1,18 @@
+{
+  "id": "smiths/colhozeh",
+  "lang": "ta",
+  "source_hash": "caf74158",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொல்லோசே",
+  "paragraphs": [
+    {
+      "id": "smiths/colhozeh#p1-caf74158",
+      "text": "(எல்லாவற்றையும் காண்பவன்), நெகேமியாவின் காலத்தில் வாழ்ந்த யூதா கோத்திரத்தைச் சேர்ந்தவன். (நெகேமியா 3:15; 11:5) (கி.மு. 536.)"
+    }
+  ]
+}

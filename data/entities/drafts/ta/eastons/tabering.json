@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tabering",
+  "lang": "ta",
+  "source_hash": "120c1bd2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபரிங்",
+  "paragraphs": [
+    {
+      "id": "eastons/tabering#p1-120c1bd2",
+      "text": "ஒரு சிறிய மேளத்தை அல்லது தாளத்தை அடித்து வாசிப்பது. இது வேதத்தில் நாகூம் 2:7ல் மட்டுமே காணப்படுகிறது, அங்கே தாளம் வாசிக்கிறவர்கள் அதை அடிப்பதைப் போல மார்பில் அடித்துக்கொள்வதைக் குறிக்கிறது."
+    }
+  ]
+}

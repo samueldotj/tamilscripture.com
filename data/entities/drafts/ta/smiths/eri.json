@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eri",
+  "lang": "ta",
+  "source_hash": "ca4cd4d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரி",
+  "paragraphs": [
+    {
+      "id": "smiths/eri#p1-ca4cd4d2",
+      "text": "(விழிப்புள்ளவன்), காத்தின் மகன், (ஆதியாகமம் 46:16) மற்றும் ஏரியரின் மூலவன். (எண்ணாகமம் 26:16)"
+    }
+  ]
+}

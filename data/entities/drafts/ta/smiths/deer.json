@@ -1,0 +1,18 @@
+{
+  "id": "smiths/deer",
+  "lang": "ta",
+  "source_hash": "69be171c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மான்",
+  "paragraphs": [
+    {
+      "id": "smiths/deer#p1-69be171c",
+      "text": "[வெண்மான்]"
+    }
+  ]
+}

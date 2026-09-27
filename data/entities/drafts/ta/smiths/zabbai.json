@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zabbai",
+  "lang": "ta",
+  "source_hash": "4525a549",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாபாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/zabbai#p1-4525a549",
+      "text": "(தூய்மையான)."
+    }
+  ]
+}

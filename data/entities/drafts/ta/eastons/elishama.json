@@ -1,0 +1,34 @@
+{
+  "id": "eastons/elishama",
+  "lang": "ta",
+  "source_hash": "acb74eb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிஷாமா",
+  "paragraphs": [
+    {
+      "id": "eastons/elishama#p1-7d971669",
+      "text": "தேவன் கேட்கிறார்."
+    },
+    {
+      "id": "eastons/elishama#p2-159bdb3f",
+      "text": "(1.) பென்யமீன் கோத்திரத்தின் பிரபு, யோசுவாவின் பாட்டன் (எண்ணாகமம் 1:10; 1 நாளாகமம் 7:26)."
+    },
+    {
+      "id": "eastons/elishama#p3-8616bce7",
+      "text": "(2.) தாவீதின் மகன்களில் ஒருவன் (2 சாமுவேல் 5:16)."
+    },
+    {
+      "id": "eastons/elishama#p4-118601f2",
+      "text": "(3.) தாவீதின் மகன்களில் மற்றொருவன் (1 நாளாகமம் 3:6)."
+    },
+    {
+      "id": "eastons/elishama#p5-ebb71e1b",
+      "text": "(4.) மக்களுக்கு நியாயப்பிரமாணத்தைப் போதிக்க யோசபாத்தால் அனுப்பப்பட்ட ஆசாரியன் (2 நாளாகமம் 17:8)."
+    }
+  ]
+}

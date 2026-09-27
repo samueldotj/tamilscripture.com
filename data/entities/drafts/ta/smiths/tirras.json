@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tirras",
+  "lang": "ta",
+  "source_hash": "2fe78ce5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீராஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/tirras#p1-2fe78ce5",
+      "text": "(ஆசை), யாப்பேத்தின் இளையகுமாரன், (ஆதியாகமம் 10:2) பொதுவாக த்ராசியர்களுடன் அடையாளப்படுத்தப்படுகிறார், ஏனெனில் இந்த பெயருக்கு மிக நெருங்கிய சொல்லமைப்பு ஒப்புமையை அது காட்டுகிறது."
+    }
+  ]
+}

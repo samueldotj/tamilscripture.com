@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chenaanah",
+  "lang": "ta",
+  "source_hash": "5c3c946e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனானா",
+  "paragraphs": [
+    {
+      "id": "aquifer/chenaanah#p1-4f3f544d",
+      "text": "கேனானா என்ற பெயரின் மாற்று எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/chenaanah#p2-13c1555c",
+      "text": "கேனானாவைக் காண்க."
+    }
+  ]
+}

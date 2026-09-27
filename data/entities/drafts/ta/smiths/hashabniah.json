@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashabniah",
+  "lang": "ta",
+  "source_hash": "df164a3f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசாப்நெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/hashabniah#p1-df164a3f",
+      "text": "(யெகோவா கண்ணோக்குகிறவர்)."
+    }
+  ]
+}

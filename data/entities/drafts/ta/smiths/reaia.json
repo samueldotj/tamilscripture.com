@@ -1,0 +1,18 @@
+{
+  "id": "smiths/reaia",
+  "lang": "ta",
+  "source_hash": "b1d05b10",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/reaia#p1-b1d05b10",
+      "text": "ரூபனியன், மீகாவின் மகன், மற்றும் அவனுடைய கோத்திரத்தின் பிரபு போலும். (1 நாளாகமம் 5:5) இப்பெயர் ரெயாயா என்பதற்கு ஒப்பானது."
+    }
+  ]
+}

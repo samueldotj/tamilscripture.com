@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mashal",
+  "lang": "ta",
+  "source_hash": "986c7890",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாஷால்",
+  "paragraphs": [
+    {
+      "id": "smiths/mashal#p1-986c7890",
+      "text": "(வேண்டுதல்), மிஷயால் அல்லது மிஷயால் என்பதற்குச் சமமானது. (1 நாளாகமம் 6:74)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gershom",
+  "lang": "ta",
+  "source_hash": "371fe3d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெர்சோம்",
+  "paragraphs": [
+    {
+      "id": "smiths/gershom#p1-371fe3d4",
+      "text": "(அந்நியன் அல்லது பரதேசி)."
+    }
+  ]
+}

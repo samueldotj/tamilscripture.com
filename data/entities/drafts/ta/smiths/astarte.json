@@ -1,0 +1,18 @@
+{
+  "id": "smiths/astarte",
+  "lang": "ta",
+  "source_hash": "48cbd1c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்தார்தே",
+  "paragraphs": [
+    {
+      "id": "smiths/astarte#p1-48cbd1c9",
+      "text": "[அஸ்தரோத்]"
+    }
+  ]
+}

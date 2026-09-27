@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jochebed",
+  "lang": "ta",
+  "source_hash": "c1bdd232",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகெபேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jochebed#p1-c1bdd232",
+      "text": "(யாருடைய மகிமை யெகோவா), அம்ராமின் மனைவியும் அதேசமயம் அத்தையும் ஆகியவள்; மோசே மற்றும் ஆரோனின் தாய். (யாத்திராகமம் 2:1; 6:20; எண்ணாகமம் 26:59)"
+    }
+  ]
+}

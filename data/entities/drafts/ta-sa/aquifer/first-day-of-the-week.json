@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/first-day-of-the-week",
+  "lang": "ta",
+  "source_hash": "72f157b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வாரத்தின் முதலாம் நாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/first-day-of-the-week#p1-6ce30903",
+      "text": "வாரத்தின் முதலாம் நாள் ஞாயிற்றுக் கிழமையாகும், அது ஓய்வுநாளுக்கு அடுத்த நாள்."
+    },
+    {
+      "id": "aquifer/first-day-of-the-week#p2-fae13c38",
+      "text": "கர்த்தருடைய நாள் என்பதைக் காண்க."
+    }
+  ]
+}

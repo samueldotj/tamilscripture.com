@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beer",
+  "lang": "ta",
+  "source_hash": "507a26a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேயேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/beer#p1-507a26a1",
+      "text": "(ஒரு கிணறு)."
+    }
+  ]
+}

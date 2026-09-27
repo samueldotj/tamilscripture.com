@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/haggi",
+  "lang": "ta",
+  "source_hash": "8741562a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகி",
+  "paragraphs": [
+    {
+      "id": "aquifer/haggi#p1-8741562a",
+      "text": "அகி காத்தின் மகனும், ஆகியர்களின் குடும்பத்தை ஏற்படுத்தினவனுமாக இருந்தான் (ஆதியாகமம் 46:16; எண்ணாகமம் 26:15)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeconias",
+  "lang": "ta",
+  "source_hash": "7ce9d8e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெகொனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/jeconias#p1-7ce9d8e8",
+      "text": "யோயாக்கீனுடைய மாறுபட்ட வடிவமான யெகொனியாவின் கிரேக்கு வடிவம். [யோயாக்கீன்]"
+    }
+  ]
+}

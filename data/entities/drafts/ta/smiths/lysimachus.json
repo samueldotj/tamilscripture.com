@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lysimachus",
+  "lang": "ta",
+  "source_hash": "dcd4e870",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லுசிமாக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/lysimachus#p1-dcd4e870",
+      "text": "“எருசலேமிலுள்ள தொலமேயுவின் மகன்,” எஸ்தர் புத்தகத்தைக் கிரேக்கு மொழியில் மொழிபெயர்த்தவன். ஒப்பிடுக (எஸ்தர் 9:20)"
+    }
+  ]
+}

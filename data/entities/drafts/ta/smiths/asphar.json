@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asphar",
+  "lang": "ta",
+  "source_hash": "4bfa5510",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பார்",
+  "paragraphs": [
+    {
+      "id": "smiths/asphar#p1-4bfa5510",
+      "text": "\"தெக்கோவே வனாந்தரத்தில்\" இருந்த குளம். 1 மக்கபேயர் 9:33. இந்தப் பெயர் lacus Asphaltites என்பதன் சீர்கெட்ட வடிவமாக இருக்க முடியுமா?"
+    }
+  ]
+}

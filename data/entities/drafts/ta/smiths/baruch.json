@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baruch",
+  "lang": "ta",
+  "source_hash": "9299a297",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாருக்",
+  "paragraphs": [
+    {
+      "id": "smiths/baruch#p1-9299a297",
+      "text": "(ஆசீர்வதிக்கப்பட்டவன்)."
+    }
+  ]
+}

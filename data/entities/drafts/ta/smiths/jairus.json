@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jairus",
+  "lang": "ta",
+  "source_hash": "c41235ff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யவீரு",
+  "paragraphs": [
+    {
+      "id": "smiths/jairus#p1-c41235ff",
+      "text": "(எவனை தேவன் ஒளியூட்டுகிறார்)."
+    }
+  ]
+}

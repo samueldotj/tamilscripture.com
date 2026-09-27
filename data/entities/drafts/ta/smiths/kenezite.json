@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kenezite",
+  "lang": "ta",
+  "source_hash": "4348465c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனாசியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/kenezite#p1-4348465c",
+      "text": "அல்லது கேனிசியன் (கேனாசின் சந்ததியன்), (ஆதியாகமம் 15:19) ஏதோமிய கோத்திரம். (எண்ணாகமம் 32:12; யோசுவா 14:6,14)"
+    }
+  ]
+}

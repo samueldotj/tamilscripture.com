@@ -1,0 +1,18 @@
+{
+  "id": "smiths/huz",
+  "lang": "ta",
+  "source_hash": "2d1638a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊத்ஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/huz#p1-2d1638a4",
+      "text": "(வெளிச்சம், மணல் நிலம்), நாகோருக்கும் மில்க்காளுக்கும் மூத்த மகன். (ஆதியாகமம் 22:21) (கிமு 1900 ஆம் ஆண்டளவில்)."
+    }
+  ]
+}

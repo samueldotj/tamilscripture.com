@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asaph",
+  "lang": "ta",
+  "source_hash": "ece88aa6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/asaph#p1-ece88aa6",
+      "text": "(மக்களைச் சேர்க்கிறவன்)."
+    }
+  ]
+}

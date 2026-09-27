@@ -1,0 +1,18 @@
+{
+  "id": "smiths/irnahash",
+  "lang": "ta",
+  "source_hash": "1a2dcd8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈர்நாகாஷ்",
+  "paragraphs": [
+    {
+      "id": "smiths/irnahash#p1-1a2dcd8b",
+      "text": "(பாம்பு நகரம்) என்னும் இப்பெயர், வேறு பல இடங்களின் பெயர்களைப் போலவே, யூதாவின் வம்ச பட்டியல்களில் காணப்படுகிறது. (1 நாளாகமம் 4:12)"
+    }
+  ]
+}

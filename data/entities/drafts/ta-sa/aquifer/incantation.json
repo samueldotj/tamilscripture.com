@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/incantation",
+  "lang": "ta",
+  "source_hash": "0a0c0b18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மந்திரவசனம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/incantation#p1-16618c6f",
+      "text": "மந்திரவசனம் என்பது சூனியத்தில் பயன்படுத்தப்படும் ஒரு பாராயணம் ஆகும்."
+    },
+    {
+      "id": "aquifer/incantation#p2-eb9225a5",
+      "text": "சூனியம் என்பதைக் காண்க."
+    }
+  ]
+}

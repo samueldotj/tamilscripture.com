@@ -1,0 +1,18 @@
+{
+  "id": "smiths/crescens",
+  "lang": "ta",
+  "source_hash": "3b9cc4e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிரெஸ்கே",
+  "paragraphs": [
+    {
+      "id": "smiths/crescens#p1-3b9cc4e8",
+      "text": "(வளர்கிறவன்), (2 தீமோத்தேயு 4:10) பவுலின் உதவியாளர்; இவர் எழுபது சீடர்களில் ஒருவராக இருந்தார் என்று சொல்லப்படுகிறது."
+    }
+  ]
+}

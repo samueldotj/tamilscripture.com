@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jaalam",
+  "lang": "ta",
+  "source_hash": "f17f7ab9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/jaalam#p1-f17f7ab9",
+      "text": "மறைப்பவன், அகோலிபாமாள் வழியாக ஏசாவுக்குப் பிறந்த மூன்று மகன்களில் இரண்டாமவன் (ஆதியாகமம் 36:5, 14)."
+    }
+  ]
+}

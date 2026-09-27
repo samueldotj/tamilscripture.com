@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazar-addar",
+  "lang": "ta",
+  "source_hash": "2cc11690",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சார் ஆதார்",
+  "paragraphs": [
+    {
+      "id": "eastons/hazar-addar#p1-2cc11690",
+      "text": "ஆதாருடைய கிராமம், பாலஸ்தீனத்தின் தென் எல்லையில் இருக்கும் ஒரு இடம் (எண்ணாகமம் 34:4), காதேசுக்கும் மேற்கே வனாந்திரத்தில் அமைந்துள்ளது. இது யோசுவா 15:3இல் ஆதார் என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

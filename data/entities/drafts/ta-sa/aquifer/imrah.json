@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/imrah",
+  "lang": "ta",
+  "source_hash": "2d9d04a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்ரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/imrah#p1-2d9d04a6",
+      "text": "இம்ரா சோபாக்கின் மகனாக இருந்தான், ஆசேர் கோத்திரத்திற்குரிய ஒரு தலைவனாக இருந்தான் (1 நாளாகமம் 7:36, 40)."
+    }
+  ]
+}

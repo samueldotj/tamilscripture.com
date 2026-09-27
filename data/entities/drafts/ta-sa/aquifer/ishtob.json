@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ishtob",
+  "lang": "ta",
+  "source_hash": "7ee6d77e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்தோப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishtob#p1-59b893c1",
+      "text": "2 சாமுவேல் 10:6-8ல் “தோப் மனிதர்” என்பதற்கான கிங் யாக்கோபு வர்ஷன் மொழிபெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/ishtob#p2-6a0ca228",
+      "text": "தோப் காண்க."
+    }
+  ]
+}

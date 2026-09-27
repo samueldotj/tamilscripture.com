@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dumbness",
+  "lang": "ta",
+  "source_hash": "33d585c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊமைத்தன்மை",
+  "paragraphs": [
+    {
+      "id": "aquifer/dumbness#p1-7211650a",
+      "text": "பேச முடியாத நிலையைக் குறிக்கும் ஒரு பழைய சொல். இந்நிலை ஒரு மனிதனைத் தன் குரலைப் பயன்படுத்தி தொடர்பு கொள்ள முடியாமல் தடுக்கிறது."
+    },
+    {
+      "id": "aquifer/dumbness#p2-d3ac7b44",
+      "text": "ஊமைத்தன்மை (Muteness) என்பதைக் காண்க."
+    }
+  ]
+}

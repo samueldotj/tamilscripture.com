@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aram",
+  "lang": "ta",
+  "source_hash": "f1733100",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/aram#p1-f1733100",
+      "text": "(உயர்ந்த)."
+    }
+  ]
+}

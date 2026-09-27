@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kerub",
+  "lang": "ta",
+  "source_hash": "e3761971",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேருப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kerub#p1-06b4c0ba",
+      "text": "கேருப் என்பது பாபிலோனிலுள்ள ஒரு பட்டணத்தின் பெயராகிய கேருப் என்பதன் மறு எழுத்துப்பெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/kerub#p2-c7c25d1f",
+      "text": "கேருப் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

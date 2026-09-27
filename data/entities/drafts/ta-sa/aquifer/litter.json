@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/litter",
+  "lang": "ta",
+  "source_hash": "47087141",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்லக்கு",
+  "paragraphs": [
+    {
+      "id": "aquifer/litter#p1-0ac80592",
+      "text": "அதிகாரிகளைச் சுமந்துசெல்ல பயன்படுத்தப்பட்ட பெரிய கட்டில் (சாலொமோனின் உன்னதப்பாட்டு 3:7-10; ஏசாயா 66:20). இது “வண்டி” அல்லது “பல்லக்கு” என்றும் மொழிபெயர்க்கப்படுகிறது."
+    },
+    {
+      "id": "aquifer/litter#p2-02f25f95",
+      "text": "பயணம் என்பதைக் காண்க."
+    }
+  ]
+}

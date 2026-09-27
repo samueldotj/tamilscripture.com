@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahlon",
+  "lang": "ta",
+  "source_hash": "fcfb30fe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்லோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/mahlon#p1-fcfb30fe",
+      "text": "(வியாதியுள்ளவன்) ரூத்தினுடைய முதலாம் கணவன்; எலிமெலேக்குக்கும் நகோமிக்கும் மகன். (ரூத் 1:2,5; 4:9,10) ஒப்பிடுக 1 சாமுவேல் 17:12"
+    }
+  ]
+}

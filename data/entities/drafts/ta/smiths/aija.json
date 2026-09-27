@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aija",
+  "lang": "ta",
+  "source_hash": "61febf7d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயா",
+  "paragraphs": [
+    {
+      "id": "smiths/aija#p1-61febf7d",
+      "text": "ஆயாத்தைப்போல, இது ஆயீ என்னும் பெயரின் வேறுபாடாக இருக்கலாம், இது மிக்மாசுடனும் பெத்தேலுடனும் குறிப்பிடப்பட்டுள்ளது. (நெகேமியா 11:31)"
+    }
+  ]
+}

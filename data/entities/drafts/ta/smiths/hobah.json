@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hobah",
+  "lang": "ta",
+  "source_hash": "09fb9b0c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபா",
+  "paragraphs": [
+    {
+      "id": "smiths/hobah#p1-09fb9b0c",
+      "text": "(மறைவிடம்), சோதோமைக் கொள்ளையடித்த இராஜாக்களை ஆபிரகாம் துரத்திச் சென்ற இடம் (ஆதியாகமம் 14:15). இது “தமஸ்குவின் வடக்கே” அமைந்திருந்தது."
+    }
+  ]
+}

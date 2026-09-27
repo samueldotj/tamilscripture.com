@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elnathan-or-elnathan",
+  "lang": "ta",
+  "source_hash": "7576e65b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்நாத்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/elnathan-or-elnathan#p1-7576e65b",
+      "text": "(தேவன் கொடுத்தார்)."
+    }
+  ]
+}

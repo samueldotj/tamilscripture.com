@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ishod",
+  "lang": "ta",
+  "source_hash": "d2a0ee17",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈஷோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ishod#p1-d2a0ee17",
+      "text": "(மகிமையின் மனிதன்), யோர்தானுக்கு கிழக்கிலுள்ள மனாசேயின் கோத்திரத்தைச் சேர்ந்தவன், அம்மொளெகேத்தின் மகன். (1 நாளாகமம் 7:18) (கி.மு. 1491.)"
+    }
+  ]
+}

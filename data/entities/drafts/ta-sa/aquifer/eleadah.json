@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eleadah",
+  "lang": "ta",
+  "source_hash": "79f0b233",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/eleadah#p1-79f0b233",
+      "text": "எலாதா என்பவன் எப்பிராயீமின் சந்ததியாவான் (1 நாளாகமம் 7:20). கிங் யாக்கோபு மொழிபெயர்ப்பில் இவனுடைய பெயர் Eladah என்று உள்ளது."
+    }
+  ]
+}

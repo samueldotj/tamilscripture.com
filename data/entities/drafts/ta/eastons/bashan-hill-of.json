@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bashan-hill-of",
+  "lang": "ta",
+  "source_hash": "f40399ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசான் மலை",
+  "paragraphs": [
+    {
+      "id": "eastons/bashan-hill-of#p1-f40399ce",
+      "text": "(சங்கீதங்கள் 68:15), இது எர்மோனுக்கு வேறொரு பெயராக இருக்கலாம், அது பாசானுக்கு வடக்கே அமைந்திருக்கிறது."
+    }
+  ]
+}

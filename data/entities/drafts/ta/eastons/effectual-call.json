@@ -1,0 +1,18 @@
+{
+  "id": "eastons/effectual-call",
+  "lang": "ta",
+  "source_hash": "ba386f34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பயனுள்ள அழைப்பு",
+  "paragraphs": [
+    {
+      "id": "eastons/effectual-call#p1-ba386f34",
+      "text": "அழைப்பு என்பதைக் காண்க."
+    }
+  ]
+}

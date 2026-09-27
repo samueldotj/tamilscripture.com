@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/adithaim",
+  "lang": "ta",
+  "source_hash": "5b75a80f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதித்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/adithaim#p1-5b75a80f",
+      "text": "யூதாவின் தாழ்நிலப்பகுதியிலுள்ள ஒரு பட்டணம் (யோசுவா 15:36)."
+    }
+  ]
+}

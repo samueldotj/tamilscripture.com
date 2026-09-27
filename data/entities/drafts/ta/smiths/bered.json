@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bered",
+  "lang": "ta",
+  "source_hash": "759a7092",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bered#p1-759a7092",
+      "text": "(கல்மழை)."
+    }
+  ]
+}

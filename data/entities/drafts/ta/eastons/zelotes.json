@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zelotes",
+  "lang": "ta",
+  "source_hash": "71be086c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செலோத்தே",
+  "paragraphs": [
+    {
+      "id": "eastons/zelotes#p1-71be086c",
+      "text": "(லூக்கா 6:15). சீமோன்; சீலோத்துகள் காண்க."
+    }
+  ]
+}

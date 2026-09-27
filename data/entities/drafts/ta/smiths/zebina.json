@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zebina",
+  "lang": "ta",
+  "source_hash": "43039027",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபினா",
+  "paragraphs": [
+    {
+      "id": "smiths/zebina#p1-43039027",
+      "text": "(கொள்முதல்), பாபிலோனிலிருந்து திரும்பிய பின்பு அந்நிய மனைவிகளை விவாகம்செய்திருந்த நேபோவின் மகன்களில் ஒருவன், (எஸ்றா 10:43)"
+    }
+  ]
+}

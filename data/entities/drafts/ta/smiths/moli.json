@@ -1,0 +1,18 @@
+{
+  "id": "smiths/moli",
+  "lang": "ta",
+  "source_hash": "0411f360",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோலி",
+  "paragraphs": [
+    {
+      "id": "smiths/moli#p1-0411f360",
+      "text": "மகேலி, மெராரியின் மகன். 1 எஸ்றா 8:47; ஒப்பிடுக (எஸ்றா 8:18)"
+    }
+  ]
+}

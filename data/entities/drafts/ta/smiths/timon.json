@@ -1,0 +1,18 @@
+{
+  "id": "smiths/timon",
+  "lang": "ta",
+  "source_hash": "2848d03d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீமோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/timon#p1-2848d03d",
+      "text": "பொதுவாக “உதவிக்காரர்கள்” எனப்படும் ஏழுபேரில் ஒருவன். (அப்போஸ்தலருடைய நடபடிகள் 6:1-6) அவன் ஒருவேளை கிரேக்கம் பேசுகிற ஒரு யூதனாக இருந்திருக்கலாம். (கி.பி. 34.)"
+    }
+  ]
+}

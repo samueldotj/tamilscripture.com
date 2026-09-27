@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shoham",
+  "lang": "ta",
+  "source_hash": "81546e76",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shoham#p1-81546e76",
+      "text": "(கோமேதகம்), யாசியாவின் மகனாகிய மெராரியின் சந்ததியில் ஒரு லேவியன். (1 நாளாகமம் 24:27) (கி.மு.1043.)"
+    }
+  ]
+}

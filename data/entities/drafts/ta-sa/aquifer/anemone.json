@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/anemone",
+  "lang": "ta",
+  "source_hash": "186a72c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனிமோனி",
+  "paragraphs": [
+    {
+      "id": "aquifer/anemone#p1-17813c1e",
+      "text": "அனிமோனிகள் பட்டர்கப் குடும்பத்தைச் சேர்ந்த பூக்கும் செடிகளாகும். அவற்றின் கோப்பை வடிவ பூக்கள் வெள்ளை, இளஞ்சிவப்பு, சிவப்பு, ஊதா, அல்லது வேறு நிறங்களில் இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/anemone#p2-c5884127",
+      "text": "லில்லி என்பதைக் காண்க."
+    }
+  ]
+}

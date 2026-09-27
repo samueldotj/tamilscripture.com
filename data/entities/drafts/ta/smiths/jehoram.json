@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehoram",
+  "lang": "ta",
+  "source_hash": "7a4fac67",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehoram#p1-7a4fac67",
+      "text": "(யெகோவா உயர்த்தினார்)."
+    }
+  ]
+}

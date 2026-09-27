@@ -1,0 +1,18 @@
+{
+  "id": "smiths/enosh",
+  "lang": "ta",
+  "source_hash": "7b20e12a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏனோஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/enosh#p1-7b20e12a",
+      "text": "ஏனோஸ் என்பதே. (1 நாளாகமம் 1:1)"
+    }
+  ]
+}

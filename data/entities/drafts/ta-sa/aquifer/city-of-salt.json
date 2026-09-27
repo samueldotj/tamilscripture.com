@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/city-of-salt",
+  "lang": "ta",
+  "source_hash": "66083f76",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உப்புப்பட்டணம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/city-of-salt#p1-66083f76",
+      "text": "உப்புப்பட்டணம் என்பது சவக்கடலுக்கு அருகில் இருந்த ஒரு பட்டணமாகும், இது யூதாவின் கோத்திரத்திற்கு பங்கிடப்பட்டது (யோசுவா 15:62)."
+    }
+  ]
+}

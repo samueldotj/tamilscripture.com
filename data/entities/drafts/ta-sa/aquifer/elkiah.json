@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elkiah",
+  "lang": "ta",
+  "source_hash": "f28362b3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்கியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/elkiah#p1-f28362b3",
+      "text": "எல்கியா அனனியாவின் மகனும், ஓசியேலின் தகப்பனும், யூதீத்தின் முற்பிதாக்களில் ஒருவனுமாக இருந்தான் (யூதீத் 8:1)."
+    }
+  ]
+}

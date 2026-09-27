@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azaziah",
+  "lang": "ta",
+  "source_hash": "1a3aa918",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசசியா",
+  "paragraphs": [
+    {
+      "id": "smiths/azaziah#p1-1a3aa918",
+      "text": "(யாரை கர்த்தர் பலப்படுத்துகிறாரோ)"
+    }
+  ]
+}

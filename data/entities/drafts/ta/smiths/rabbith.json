@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rabbith",
+  "lang": "ta",
+  "source_hash": "3adb46e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராப்பித்",
+  "paragraphs": [
+    {
+      "id": "smiths/rabbith#p1-3adb46e3",
+      "text": "(கூட்டம்) இசக்காருடைய பங்கில், ஒருவேளை எல்லையில் இருந்த ஒரு பட்டணம். (யோசுவா 18:20) மட்டும்."
+    }
+  ]
+}

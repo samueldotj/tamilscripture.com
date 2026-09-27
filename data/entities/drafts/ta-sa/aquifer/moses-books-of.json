@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/moses-books-of",
+  "lang": "ta",
+  "source_hash": "a5ce56ef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசேயின் புத்தகங்கள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/moses-books-of#p1-a5ce56ef",
+      "text": "காண்க: உபாகமம், புத்தகம்; யாத்திராகமம், புத்தகம்; ஆதியாகமம், புத்தகம்; லேவியராகமம், புத்தகம்; மோசே; எண்ணாகமம், புத்தகம்; பஞ்சாகமம்."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zilthai",
+  "lang": "ta",
+  "source_hash": "9bbdfa5e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சில்தாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/zilthai#p1-ab6239df",
+      "text": "யெகோவாவின் நிழல் (அதாவது, பாதுகாப்பு)."
+    },
+    {
+      "id": "eastons/zilthai#p2-5df071e2",
+      "text": "(1.) பென்யமீனியனாகிய ஒருவன் (1 நாளாகமம் 8:20)."
+    },
+    {
+      "id": "eastons/zilthai#p3-0b8d4e2e",
+      "text": "(2.) சிக்லாகில் தாவீதுடன் இணைந்த மனாசே கோத்திரத்தின் தலைவர்களில் ஒருவன் (1 நாளாகமம் 12:20)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nepheg",
+  "lang": "ta",
+  "source_hash": "76c08f2c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெப்பேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/nepheg#p1-76c08f2c",
+      "text": "(முளை)."
+    }
+  ]
+}

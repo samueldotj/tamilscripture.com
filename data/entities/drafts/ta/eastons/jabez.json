@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jabez",
+  "lang": "ta",
+  "source_hash": "b2be2594",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாபேஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/jabez#p1-ca7ddb2d",
+      "text": "துக்கம்."
+    },
+    {
+      "id": "eastons/jabez#p2-5aa59a72",
+      "text": "(1.) யூதாவின் சந்ததியில் ஒருவன், அவனைக் குறித்து “அவன் வேண்டிக்கொண்டதை தேவன் அருளினார்” என்று பதிவு செய்யப்பட்டிருக்கிறது (1 நாளாகமம் 4:9, 10)."
+    },
+    {
+      "id": "eastons/jabez#p3-f2c0cd4f",
+      "text": "(2.) வேதபண்டிதர்களின் பல வம்சங்கள் குடியிருந்த ஒரு இடம் (1 நாளாகமம் 2:55)."
+    }
+  ]
+}

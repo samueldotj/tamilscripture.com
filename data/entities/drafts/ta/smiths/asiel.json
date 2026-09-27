@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asiel",
+  "lang": "ta",
+  "source_hash": "2696cf52",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/asiel#p1-2696cf52",
+      "text": "(தேவனால் உண்டாக்கப்பட்டவன்)."
+    }
+  ]
+}

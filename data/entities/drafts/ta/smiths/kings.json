@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kings",
+  "lang": "ta",
+  "source_hash": "90b158bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இராஜாக்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/kings#p1-90b158bb",
+      "text": "யூதாவின் மற்றும் இஸ்ரவேலின் இராஜாக்கள். பட்டியலுக்கு இந்தத் தொகுதியின் இறுதியில் உள்ள அட்டவணையைக் காண்க."
+    }
+  ]
+}

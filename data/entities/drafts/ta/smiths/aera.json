@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aera",
+  "lang": "ta",
+  "source_hash": "9bd0f133",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆண்டுக்கணக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/aera#p1-9bd0f133",
+      "text": "[காலக்கணக்கு]"
+    }
+  ]
+}

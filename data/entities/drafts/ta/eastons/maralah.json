@@ -1,0 +1,18 @@
+{
+  "id": "eastons/maralah",
+  "lang": "ta",
+  "source_hash": "4f80177f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாராலா",
+  "paragraphs": [
+    {
+      "id": "eastons/maralah#p1-4f80177f",
+      "text": "நடுக்கம், செபுலோனின் தென் எல்லையிலுள்ள ஒரு இடம் (யோசுவா 19:11). இது நாசரேத்திலிருந்து தென்மேற்கே சுமார் 4 மைல் தூரத்திலுள்ள இக்கால எம்'அலூல் என்ற இடத்துடன் அடையாளம் காணப்பட்டுள்ளது."
+    }
+  ]
+}

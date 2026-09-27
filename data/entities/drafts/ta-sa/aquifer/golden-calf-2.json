@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/golden-calf-2",
+  "lang": "ta",
+  "source_hash": "9096454e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொற்கன்று",
+  "paragraphs": [
+    {
+      "id": "aquifer/golden-calf-2#p1-9096454e",
+      "text": "பொற்கன்று என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jerusha",
+  "lang": "ta",
+  "source_hash": "f4e3174c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எருசாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/jerusha#p1-f4e3174c",
+      "text": "(கட்டுப்பட்டவள்), சாதோக்கின் மகளும், உசியாவின் ராணியும். (2 இராஜாக்கள் 15:33) (கி.மு. 806.)"
+    }
+  ]
+}

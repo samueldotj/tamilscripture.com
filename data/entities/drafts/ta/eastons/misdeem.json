@@ -1,0 +1,18 @@
+{
+  "id": "eastons/misdeem",
+  "lang": "ta",
+  "source_hash": "df3deb6e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தவறாக எண்ணுதல்",
+  "paragraphs": [
+    {
+      "id": "eastons/misdeem#p1-df3deb6e",
+      "text": "(உபாகமம் 32:27, R.V.). அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பு (Authorized Version) “should behave themselves strangely;” என வாசிக்கிறது; அதாவது, சத்தியத்தை அறியாமலிருந்து, இஸ்ரவேலின் அழிவின் காரணத்தைத் தவறாகப் புரிந்துகொள்வது அல்லது தவறாக எண்ணுவது; அந்த அழிவு, இஸ்ரவேலர்கள் தங்கள் துரோகத்தின் நிமித்தம் தேவனால் கைவிடப்பட்டதின் விளைவே ஆகும்."
+    }
+  ]
+}

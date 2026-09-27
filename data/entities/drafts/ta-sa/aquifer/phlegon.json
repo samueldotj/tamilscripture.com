@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/phlegon",
+  "lang": "ta",
+  "source_hash": "395c5ad4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலெகோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/phlegon#p1-395c5ad4",
+      "text": "பிலெகோன் ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவர், அவருக்கு பவுல் வாழ்த்துதலை அனுப்பினார் (ரோமர் 16:14)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/no",
+  "lang": "ta",
+  "source_hash": "4036e76a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோ",
+  "paragraphs": [
+    {
+      "id": "aquifer/no#p1-51a978b9",
+      "text": "நோ என்பது நாகூம் 3:8-ல் காணப்படும் நோ (Thebes) என்பதற்கான கிங் யாக்கோபு மொழிபெயர்ப்பின் வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/no#p2-3f8001d7",
+      "text": "நோ என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "eastons/shema",
+  "lang": "ta",
+  "source_hash": "2a7b9e6a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமா",
+  "paragraphs": [
+    {
+      "id": "eastons/shema#p1-78c02453",
+      "text": "கேள்வி."
+    },
+    {
+      "id": "eastons/shema#p2-a6a1bd48",
+      "text": "(1.) ரூபனியனான ஒருவன் (1 நாளாகமம் 5:8)."
+    },
+    {
+      "id": "eastons/shema#p3-6050e1ef",
+      "text": "(2.) பென்யமீனியனான ஒருவன் (1 நாளாகமம் 8:13)."
+    },
+    {
+      "id": "eastons/shema#p4-02eaad55",
+      "text": "(3.) எஸ்றா நியாயப்பிரமாணத்தை வாசித்தபோது அவனுக்கு அருகில் நின்றவர்களில் ஒருவன் (நெகேமியா 8:4)."
+    },
+    {
+      "id": "eastons/shema#p5-a4d33893",
+      "text": "(4.) யூதாவின் தெற்கிலிருந்த ஒரு பட்டணம் (யோசுவா 15:26); இது சேபா என்பதே (5-ஆம் வசனம்)."
+    }
+  ]
+}

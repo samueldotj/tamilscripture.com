@@ -1,0 +1,18 @@
+{
+  "id": "eastons/paran-mount",
+  "lang": "ta",
+  "source_hash": "70a38fd2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரான் மலை",
+  "paragraphs": [
+    {
+      "id": "eastons/paran-mount#p1-70a38fd2",
+      "text": "இது வாக்குத்தத்த தேசத்தின் தென் எல்லையை உண்டாக்கிய பாரான் வனாந்தரத்திற்கு வடக்கேயுள்ள மலைநிலப் பிரதேசம் அல்லது மேட்டு வனாந்தரமாக இருக்கலாம் (உபாகமம் 33:2; ஆபகூக் 3:3)."
+    }
+  ]
+}

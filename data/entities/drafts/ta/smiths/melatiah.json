@@ -1,0 +1,18 @@
+{
+  "id": "smiths/melatiah",
+  "lang": "ta",
+  "source_hash": "e77311bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெலதீயா",
+  "paragraphs": [
+    {
+      "id": "smiths/melatiah#p1-e77311bb",
+      "text": "(யெகோவா விடுவிக்கிறார்), எருசலேமின் மதிலைத் திரும்பக் கட்டுவதற்கு உதவிசெய்த ஒரு கிபியோனியன். (நெகேமியா 3:7)"
+    }
+  ]
+}

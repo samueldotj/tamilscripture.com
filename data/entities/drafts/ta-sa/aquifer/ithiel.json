@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ithiel",
+  "lang": "ta",
+  "source_hash": "6cea7044",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈத்தியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ithiel#p1-52b227ac",
+      "text": "1. பாபிலோனிய சிறையிருப்பிற்குப் பின்பு எருசலேமில் குடியிருந்த பென்யமீன் சந்ததியனாகிய சல்லாயின் மூதாதையர்களில் ஒருவன் (நெகேமியா 11:7)."
+    },
+    {
+      "id": "aquifer/ithiel#p2-5d24cd66",
+      "text": "2. ஆகூர் தன்னுடைய உபதேச வாக்கியங்களைச் சொன்ன இரண்டு பேரில் ஒருவன் (நீதிமொழிகள் 30:1, nlt mg)."
+    }
+  ]
+}

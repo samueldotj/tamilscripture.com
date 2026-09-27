@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/prayer-of-azariah-2",
+  "lang": "ta",
+  "source_hash": "a3fb7205",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசரியாவின் ஜெபம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/prayer-of-azariah-2#p1-c6ab610e",
+      "text": "பரிசுத்த வேதாகமத்தின் சில பதிப்புகளில் காணப்படும் ஒரு ஜெபம். இது தானியேலின் நண்பர்களில் ஒருவனாகிய அசரியா, எரிகிற நெருப்புக் குகையில் இருந்தபோது சொல்லிய ஜெபமாகும்."
+    },
+    {
+      "id": "aquifer/prayer-of-azariah-2#p2-3955d26a",
+      "text": "தானியேல், சேர்க்கைகள் என்பதைக் காண்க."
+    }
+  ]
+}

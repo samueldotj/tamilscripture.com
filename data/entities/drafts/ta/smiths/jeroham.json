@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeroham",
+  "lang": "ta",
+  "source_hash": "e295d6ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எரோகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jeroham#p1-e295d6ee",
+      "text": "(நேசிக்கப்பட்டவன்)."
+    }
+  ]
+}

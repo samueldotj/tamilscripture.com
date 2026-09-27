@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tel-haresha",
+  "lang": "ta",
+  "source_hash": "49e8798e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெல் அர்சா",
+  "paragraphs": [
+    {
+      "id": "eastons/tel-haresha#p1-49e8798e",
+      "text": "காடுகளின் மேடு, சிறையிருந்த யூதர்களில் சிலர் எருசலேமுக்குத் திரும்பி வந்த பாபிலோனிலுள்ள ஒரு இடம் (எஸ்றா 2:59; நெகேமியா 7:61)."
+    }
+  ]
+}

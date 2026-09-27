@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shoe",
+  "lang": "ta",
+  "source_hash": "08792854",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலணி",
+  "paragraphs": [
+    {
+      "id": "smiths/shoe#p1-08792854",
+      "text": "[காலணி (சாண்டல்) காண்க]"
+    }
+  ]
+}

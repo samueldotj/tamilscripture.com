@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mattenai",
+  "lang": "ta",
+  "source_hash": "b394eb6a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மதனாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/mattenai#p1-b394eb6a",
+      "text": "(யெகோவாவின் அன்பளிப்பு), மத்தனியா என்பதின் சுருக்கமான வடிவம்."
+    }
+  ]
+}

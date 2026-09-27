@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jechoniah",
+  "lang": "ta",
+  "source_hash": "f9033a4d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகொனியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jechoniah#p1-f348fbfd",
+      "text": "மத்தேயு 1:11-12-இல் காணப்படும் யூதேயா ராஜாவாகிய யோயாக்கீனுடைய மற்றொரு வடிவம்."
+    },
+    {
+      "id": "aquifer/jechoniah#p2-80f13d12",
+      "text": "யோயாக்கீன் என்பதைக் காண்க."
+    }
+  ]
+}

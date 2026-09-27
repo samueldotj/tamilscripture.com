@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aharah",
+  "lang": "ta",
+  "source_hash": "6cbf4fd0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஹராக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aharah#p1-79a7ff4c",
+      "text": "பென்யமீனுடைய மூன்றாம் மகனாகிய அகிராமுக்கு உள்ள மற்றொரு பெயர் (1 நாளாகமம் 8:1)."
+    },
+    {
+      "id": "aquifer/aharah#p2-1a0dfa43",
+      "text": "அகிராம், அகிராமியன் என்பதைக் காண்க."
+    }
+  ]
+}

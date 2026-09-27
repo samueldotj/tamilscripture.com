@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/japho",
+  "lang": "ta",
+  "source_hash": "5a90c557",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாப்போ",
+  "paragraphs": [
+    {
+      "id": "aquifer/japho#p1-e73852c2",
+      "text": "யோசுவா 19:46-ல் யோப்பா என்பதற்கு ராஜா யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் வடிவமே யாப்போ ஆகும்."
+    },
+    {
+      "id": "aquifer/japho#p2-36b84733",
+      "text": "யோப்பா என்பதைக் காண்க."
+    }
+  ]
+}

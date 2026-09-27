@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bewray",
+  "lang": "ta",
+  "source_hash": "f47ec7e0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பகைராய் (Bewray)",
+  "paragraphs": [
+    {
+      "id": "eastons/bewray#p1-f47ec7e0",
+      "text": "வெளிப்படுத்துதல் அல்லது காட்டிக்கொடுத்தல்; “காட்டிக்கொடு” என்பதற்குச் சமமான ஒரு பழைய ஆங்கிலச் சொல் (நீதிமொழிகள் 27:16; 29:24, R.V., “வெளிப்படுத்துகிறான்”; ஏசாயா 16:3; மத்தேயு 26:73)."
+    }
+  ]
+}

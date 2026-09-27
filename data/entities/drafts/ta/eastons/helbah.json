@@ -1,0 +1,18 @@
+{
+  "id": "eastons/helbah",
+  "lang": "ta",
+  "source_hash": "d537afbe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பா",
+  "paragraphs": [
+    {
+      "id": "eastons/helbah#p1-d537afbe",
+      "text": "கொழுமை, ஆசேர் கோத்திரத்திற்குரிய ஒரு பட்டணம் (நியாயாதிபதிகள் 1:31), பெனிக்கேவின் சமவெளியில் இருந்தது."
+    }
+  ]
+}

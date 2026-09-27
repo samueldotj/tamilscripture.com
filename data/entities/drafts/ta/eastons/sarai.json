@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sarai",
+  "lang": "ta",
+  "source_hash": "bb8cde5f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராய்",
+  "paragraphs": [
+    {
+      "id": "eastons/sarai#p1-bb8cde5f",
+      "text": "என் அதிபதி பெண், சாராளுக்கு முதலில் இருந்த பெயர் (ஆதியாகமம் 11:31; 17:15)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tohu",
+  "lang": "ta",
+  "source_hash": "789ba62c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோகு",
+  "paragraphs": [
+    {
+      "id": "smiths/tohu#p1-789ba62c",
+      "text": "(தாழ்மையுள்ளவன்), தீர்க்கதரிசியாகிய சாமுவேலின் முற்பிதாக்களில் ஒருவன்; தோவாவைப் போலவே இருக்கலாம் (1 சாமுவேல் 1:1). ஒப்பிடுக 1 நாளாகமம் 6:34."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeremias",
+  "lang": "ta",
+  "source_hash": "6f60e8b3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எரேமியாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/jeremias#p1-6f60e8b3",
+      "text": "தீர்க்கதரிசியாகிய எரேமியாவின் பெயருக்கான கிரேக்கு வடிவம். (மத்தேயு 16:14)"
+    }
+  ]
+}

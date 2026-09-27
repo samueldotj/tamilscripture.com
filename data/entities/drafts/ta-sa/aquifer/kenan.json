@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kenan",
+  "lang": "ta",
+  "source_hash": "6f2307ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kenan#p1-ec53586b",
+      "text": "ஆதாமின் சந்ததியில் ஒருவன். அவன் ஆதாமுக்குப் பின் நான்கு தலைமுறைகளுக்குப் பிறகு, ஏனோஸின் மகனாக வாழ்ந்தான் (ஆதியாகமம் 5:9-14; 1 நாளாகமம் 1:2). லூக்கா 3:37-ல் இவன் காயினான் என்றும் அழைக்கப்படுகிறான்."
+    },
+    {
+      "id": "aquifer/kenan#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு (Ancestry of Jesus Christ) என்பதைக் காண்க."
+    }
+  ]
+}

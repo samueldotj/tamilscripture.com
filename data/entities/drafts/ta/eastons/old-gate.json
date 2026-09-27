@@ -1,0 +1,18 @@
+{
+  "id": "eastons/old-gate",
+  "lang": "ta",
+  "source_hash": "4911221f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பழைய வாசல்",
+  "paragraphs": [
+    {
+      "id": "eastons/old-gate#p1-4911221f",
+      "text": "எருசலேமின் வடமதிலிலிருந்த வாசல்களில் ஒன்று; எபூசியர்களால் கட்டப்பட்டதால் இப்படி அழைக்கப்பட்டது (நெகேமியா 3:6; 12:39)."
+    }
+  ]
+}

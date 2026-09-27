@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nod",
+  "lang": "ta",
+  "source_hash": "01f24573",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/nod#p1-01f24573",
+      "text": "நாடுகடத்தல்; அலைதல்; அமைதியின்மை, காயீன் தப்பியோடிச் சென்ற தேசத்திற்கு இடப்பட்ட பெயர் (ஆதியாகமம் 4:16). அது ஏதேனுக்குக் கிழக்கே இருந்தது."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/heglam",
+  "lang": "ta",
+  "source_hash": "138f8b58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏக்லாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/heglam#p1-6873cb80",
+      "text": "1 நாளாகமம் 8:7-ல் பேலாவின் மகன் கேராவுக்கு ஏக்லாம் என்பது வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/heglam#p2-1a8ea79f",
+      "text": "கேரா #4-ஐ காண்க."
+    }
+  ]
+}

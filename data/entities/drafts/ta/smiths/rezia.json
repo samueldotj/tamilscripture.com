@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rezia",
+  "lang": "ta",
+  "source_hash": "214250f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெத்சியா",
+  "paragraphs": [
+    {
+      "id": "smiths/rezia#p1-214250f3",
+      "text": "(மகிழ்ச்சி), உல்லாவின் மகன்களில் ஒருவனான ஆசேரியன். (1 நாளாகமம் 7:39) (கி.மு. 1444.)"
+    }
+  ]
+}

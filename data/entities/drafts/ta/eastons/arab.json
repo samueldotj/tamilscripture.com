@@ -1,0 +1,18 @@
+{
+  "id": "eastons/arab",
+  "lang": "ta",
+  "source_hash": "9eb8b613",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அராப்",
+  "paragraphs": [
+    {
+      "id": "eastons/arab#p1-9eb8b613",
+      "text": "பதுங்கியிருக்கும் இடம், யூதாவின் மலைநாட்டில் இருந்த ஒரு பட்டணம் (யோசுவா 15:52), இப்பொழுது எர்-ரபியே என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

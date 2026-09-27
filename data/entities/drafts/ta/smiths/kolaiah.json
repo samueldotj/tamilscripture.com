@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kolaiah",
+  "lang": "ta",
+  "source_hash": "cf3311ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொலாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/kolaiah#p1-cf3311ec",
+      "text": "(யெகோவாவின் சத்தம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/paial",
+  "lang": "ta",
+  "source_hash": "7bb47b7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலால்",
+  "paragraphs": [
+    {
+      "id": "smiths/paial#p1-7bb47b7b",
+      "text": "(நியாயாதிபதி), நெகேமியாவின் காலத்தில் எருசலேமின் மதில்களைத் திருத்துவதற்கு உதவிசெய்த ஊசாயின் மகன். (நெகேமியா 3:25) (கி.மு. 446.)"
+    }
+  ]
+}

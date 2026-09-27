@@ -1,0 +1,18 @@
+{
+  "id": "eastons/helkath",
+  "lang": "ta",
+  "source_hash": "538755d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்காத்",
+  "paragraphs": [
+    {
+      "id": "eastons/helkath#p1-538755d4",
+      "text": "மென்மை, ஆசேருடைய கிழக்கு எல்லையிலிருந்த ஒரு பட்டணம் (யோசுவா 19:25; 21:31); இது உக்கோக் என்றும் அழைக்கப்பட்டது (1 நாளாகமம் 6:75)."
+    }
+  ]
+}

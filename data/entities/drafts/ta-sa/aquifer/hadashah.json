@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hadashah",
+  "lang": "ta",
+  "source_hash": "48757e29",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதாஷா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hadashah#p1-48757e29",
+      "text": "அதாஷா என்பது யூதாவின் பள்ளத்தாக்குப் பகுதிகளில், காத்தூருக்குச் சமீபமாக, சேனான், மிக்தால்காத் ஆகியவற்றின் அருகில் இருந்த ஒரு ஊராகும் (யோசுவா 15:37)."
+    }
+  ]
+}

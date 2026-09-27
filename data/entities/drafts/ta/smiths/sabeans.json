@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sabeans",
+  "lang": "ta",
+  "source_hash": "c7f1f543",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சபேயர்",
+  "paragraphs": [
+    {
+      "id": "smiths/sabeans#p1-c7f1f543",
+      "text": "[சேபா]"
+    }
+  ]
+}

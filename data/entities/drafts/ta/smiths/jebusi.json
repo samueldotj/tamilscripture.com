@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jebusi",
+  "lang": "ta",
+  "source_hash": "facd82d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எபூசி",
+  "paragraphs": [
+    {
+      "id": "smiths/jebusi#p1-facd82d6",
+      "text": "(எபூசு என்பதிலிருந்து வந்தது), எபூசு நகரத்தைக் குறிக்கப் பயன்படுத்தப்பட்ட பெயர். (யோசுவா 15:8; 18:16,28)"
+    }
+  ]
+}

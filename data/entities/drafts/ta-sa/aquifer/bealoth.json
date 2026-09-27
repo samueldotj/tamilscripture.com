@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bealoth",
+  "lang": "ta",
+  "source_hash": "f7c545ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெயாலோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bealoth#p1-64f39378",
+      "text": "நேகேவ் வனாந்திரப் பகுதியில் ஏதோமின் எல்லையிலிருந்த ஒரு பட்டணம் (யோசுவா 15:24)."
+    },
+    {
+      "id": "aquifer/bealoth#p2-a12c7175",
+      "text": "சாலொமோன் ராஜாவின் காலத்தில் ஊசாயின் மகன் பானா ஆளுகை செய்த ஒரு நிர்வாக மாகாணம் (1 இராஜாக்கள் 4:16)."
+    }
+  ]
+}

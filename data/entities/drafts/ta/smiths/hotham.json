@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hotham",
+  "lang": "ta",
+  "source_hash": "0e116747",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hotham#p1-0e116747",
+      "text": "(முத்திரை மோதிரம்), பெரீயாவின் வம்சத்தாரிலும், ஏபேரின் மகனான ஆசேரிலும் ஒருவன். (1 நாளாகமம் 7:32) (கி.மு. 1490.)"
+    }
+  ]
+}

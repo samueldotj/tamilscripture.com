@@ -1,0 +1,18 @@
+{
+  "id": "smiths/betrothing",
+  "lang": "ta",
+  "source_hash": "689ab7cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிச்சயதார்த்தம்",
+  "paragraphs": [
+    {
+      "id": "smiths/betrothing#p1-689ab7cf",
+      "text": "[விவாகம்.1]"
+    }
+  ]
+}

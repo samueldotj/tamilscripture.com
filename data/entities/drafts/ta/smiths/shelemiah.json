@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shelemiah",
+  "lang": "ta",
+  "source_hash": "172f21b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செலேமியா",
+  "paragraphs": [
+    {
+      "id": "smiths/shelemiah#p1-172f21b7",
+      "text": "(யெகோவாவினால் பிரதிபலன் அளிக்கப்பட்டவன்)."
+    }
+  ]
+}

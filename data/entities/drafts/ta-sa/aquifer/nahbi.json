@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nahbi",
+  "lang": "ta",
+  "source_hash": "c646282b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகபி",
+  "paragraphs": [
+    {
+      "id": "aquifer/nahbi#p1-c646282b",
+      "text": "ஒப்பேசியின் மகன். நாகபி நப்தலி கோத்திரத்தின் தலைவனாக இருந்தான். கானான் தேசத்தை உற்றுப்பார்க்க மோசே அனுப்பிய 12 ஒற்றர்களில் இவனும் ஒருவனாக இருந்தான் (எண்ணாகமம் 13:14)."
+    }
+  ]
+}

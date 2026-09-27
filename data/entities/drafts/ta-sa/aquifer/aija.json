@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aija",
+  "lang": "ta",
+  "source_hash": "be2e7dfb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aija#p1-5f0e5c72",
+      "text": "நெகேமியா 11:31-இல் காணானிய பட்டணமான ஆயீக்கு மாற்றுப்பெயராகும்."
+    },
+    {
+      "id": "aquifer/aija#p2-a2a88f01",
+      "text": "ஆயீயைக் காண்க."
+    }
+  ]
+}

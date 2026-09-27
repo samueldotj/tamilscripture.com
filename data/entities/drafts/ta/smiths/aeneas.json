@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aeneas",
+  "lang": "ta",
+  "source_hash": "a8f8ba8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஐனேயா",
+  "paragraphs": [
+    {
+      "id": "smiths/aeneas#p1-a8f8ba8a",
+      "text": "(புகழத்தக்கவன்), லித்தா ஊரில் இருந்த ஒரு பட்டவாதக்காரனாகிய இவன் பேதுருவினால் குணமாக்கப்பட்டான். (அப்போஸ்தலருடைய நடபடிகள் 9:33,34)"
+    }
+  ]
+}

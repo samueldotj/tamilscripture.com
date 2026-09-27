@@ -1,0 +1,18 @@
+{
+  "id": "smiths/idbash",
+  "lang": "ta",
+  "source_hash": "c625a5d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்பாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/idbash#p1-c625a5d2",
+      "text": "(திடமானவன்), யூதாவின் குடும்பங்களில், ஏதாம் என்னும் மூப்பனின் மூன்று மகன்களில் ஒருவன். (1 நாளாகமம் 4:3)"
+    }
+  ]
+}

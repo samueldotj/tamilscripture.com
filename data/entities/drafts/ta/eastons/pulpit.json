@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pulpit",
+  "lang": "ta",
+  "source_hash": "4e9ba1d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரசங்கபீடம்",
+  "paragraphs": [
+    {
+      "id": "eastons/pulpit#p1-4e9ba1d3",
+      "text": "(நெகேமியா 8:4). (எஸ்றா என்பதைக் காண்க.)"
+    }
+  ]
+}

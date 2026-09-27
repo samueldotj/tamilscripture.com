@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/laadan",
+  "lang": "ta",
+  "source_hash": "79f6868f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாதான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/laadan#p1-fd9a751c",
+      "text": "1. 1 நாளாகமம் 7:26-ல் யோசுவாவின் முற்பிதாவாகிய லாதானின் KJV உச்சரிப்பு. லாதான் #1-ஐ காண்க."
+    },
+    {
+      "id": "aquifer/laadan#p2-71c4fe90",
+      "text": "2. 1 நாளாகமம் 23:7-லும் 26:21-லும் கெர்சோனியனாகிய லிப்னீக்கு மறுபெயராகிய லாதானின் KJV உச்சரிப்பு. லிப்னீ #1-ஐ காண்க."
+    }
+  ]
+}

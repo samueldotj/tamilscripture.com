@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ambush",
+  "lang": "ta",
+  "source_hash": "77e4a5f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பதுங்கிக் காத்திருந்து தாக்குதல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ambush#p1-ab3231a5",
+      "text": "பதுங்கியிருந்து மற்றவர்களுக்காக காத்திருந்து செய்யப்படும் ஒரு எதிர்பாராத தாக்குதல், இது பெரும்பாலும் யுத்தங்களிலும் மோதல்களிலும் பயன்படுத்தப்படுகிறது."
+    },
+    {
+      "id": "aquifer/ambush#p2-b932fad8",
+      "text": "காண்க: யுத்தம்."
+    }
+  ]
+}

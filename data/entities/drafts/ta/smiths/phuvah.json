@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phuvah",
+  "lang": "ta",
+  "source_hash": "5e5ea1a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/phuvah#p1-5e5ea1a8",
+      "text": "(வாய்), இசக்காருடைய மகன்களில் ஒருவன் (ஆதியாகமம் 46:13), மற்றும் பூனீயர் குடும்பத்தை ஏற்படுத்தியவன்."
+    }
+  ]
+}

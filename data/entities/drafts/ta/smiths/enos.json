@@ -1,0 +1,18 @@
+{
+  "id": "smiths/enos",
+  "lang": "ta",
+  "source_hash": "4ac3c6c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏனோஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/enos#p1-4ac3c6c9",
+      "text": "(மரண மனுஷன்), சேத்தின் மகன், (ஆதியாகமம் 4:26; 5:6,7,9,10,11; லூக்கா 3:38) சரியாகச் சொன்னால் ஏனோஸ், (1 நாளாகமம் 1:1) இல் உள்ளதுபோல."
+    }
+  ]
+}

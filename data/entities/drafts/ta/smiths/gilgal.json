@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gilgal",
+  "lang": "ta",
+  "source_hash": "6b4be7a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கில்கால்",
+  "paragraphs": [
+    {
+      "id": "smiths/gilgal#p1-6b4be7a7",
+      "text": "(ஒரு உருளை; உருட்டுதல்)."
+    }
+  ]
+}

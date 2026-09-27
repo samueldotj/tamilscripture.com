@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ozem",
+  "lang": "ta",
+  "source_hash": "e3b44eaa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓத்சேம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ozem#p1-2a8225be",
+      "text": "1. ஈசாயின் ஆறாம் மகனும் எஸ்ரோனின் சந்ததியனுமாகிய ஒருவன் (1 நாளாகமம் 2:15)."
+    },
+    {
+      "id": "aquifer/ozem#p2-20e70217",
+      "text": "2. யெராமியேலுக்கு அவனுடைய முதல் மனைவியினால் பிறந்த நான்காம் மகன் (1 நாளாகமம் 2:25)."
+    }
+  ]
+}

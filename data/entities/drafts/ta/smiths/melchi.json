@@ -1,0 +1,18 @@
+{
+  "id": "smiths/melchi",
+  "lang": "ta",
+  "source_hash": "827e39b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெல்கி",
+  "paragraphs": [
+    {
+      "id": "smiths/melchi#p1-827e39b2",
+      "text": "(என் ராஜா, என் ஆலோசனை)."
+    }
+  ]
+}

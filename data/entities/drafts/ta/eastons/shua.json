@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shua",
+  "lang": "ta",
+  "source_hash": "5fd3a0d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூவா",
+  "paragraphs": [
+    {
+      "id": "eastons/shua#p1-6a1ebc22",
+      "text": "செல்வம்."
+    },
+    {
+      "id": "eastons/shua#p2-de596271",
+      "text": "(1.) யூதாவிற்குத் தன் மகளைத் திருமணம் செய்து கொடுத்த ஒரு கானானியன் (1 நாளாகமம் 2:3)."
+    },
+    {
+      "id": "eastons/shua#p3-8db81785",
+      "text": "(2.) ஆசேரியனான ஏபேரின் மகள் (1 நாளாகமம் 7:32)."
+    }
+  ]
+}

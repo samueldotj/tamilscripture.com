@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bilhah-place",
+  "lang": "ta",
+  "source_hash": "c86cc59e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்காள் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bilhah-place#p1-c86cc59e",
+      "text": "பில்காள் சிமியோன் கோத்திரத்திற்கு ஒதுக்கப்பட்ட எல்லைப்பகுதியில் இருந்த ஒரு பட்டணமாகும் (1 நாளாகமம் 4:29). இது பாலா (யோசுவா 15:29) மற்றும் பாலா (19:3) என்பவற்றுடன் ஒன்றாக இருக்கலாம்."
+    }
+  ]
+}

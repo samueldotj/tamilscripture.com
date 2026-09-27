@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/plumb-line-plummet",
+  "lang": "ta",
+  "source_hash": "c12a72da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூக்கு நூல், தூக்குக்கல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/plumb-line-plummet#p1-c12a72da",
+      "text": "தூக்கு நூல் அல்லது தூக்குக்கல் என்பது ஒரு நூலின் ஒரு முனையில் கட்டப்பட்ட ஒரு எடையாகும். ஒரு சுவர் நேராக இருக்கிறதா என்று உறுதிப்படுத்திக்கொள்ளும்படி இது பயன்படுத்தப்படுகிறது."
+    }
+  ]
+}

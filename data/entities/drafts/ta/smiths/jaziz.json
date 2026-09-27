@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jaziz",
+  "lang": "ta",
+  "source_hash": "e868f623",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசிச்",
+  "paragraphs": [
+    {
+      "id": "smiths/jaziz#p1-e868f623",
+      "text": "(தேவன் நடத்துகிறவர்) தாவீது ராஜாவின் ஆடுகளுக்கு விசாரிப்புக்காரனாக இருந்த ஆகாரியன். (1 நாளாகமம் 27:31) (கி.மு. 1046.)"
+    }
+  ]
+}

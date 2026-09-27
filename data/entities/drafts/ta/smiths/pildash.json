@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pildash",
+  "lang": "ta",
+  "source_hash": "0915bb65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்தாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/pildash#p1-0915bb65",
+      "text": "(நெருப்புச்சுவாலை), ஆபிரகாமின் சகோதரனாகிய நாகோருக்கு அவனுடைய மனைவியும் மருமகளுமாகிய மில்க்காளின் மூலம் பிறந்த எட்டு மகன்களில் ஒருவன். (ஆதியாகமம் 22:22) (கி.மு. 1900.)"
+    }
+  ]
+}

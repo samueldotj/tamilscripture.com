@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hazaiah",
+  "lang": "ta",
+  "source_hash": "d2a5391e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/hazaiah#p1-d2a5391e",
+      "text": "(யெகோவா பார்க்கிறவர்), சீலோனின் வம்சத்தாரான, அதாவது சாலாவின் சந்ததியாரான யூதாவின் மனிதன். (நெகேமியா 11:5)"
+    }
+  ]
+}

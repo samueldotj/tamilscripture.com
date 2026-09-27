@@ -1,0 +1,26 @@
+{
+  "id": "eastons/ziza",
+  "lang": "ta",
+  "source_hash": "e59fbab0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீசா",
+  "paragraphs": [
+    {
+      "id": "eastons/ziza#p1-9c9fb50a",
+      "text": "மகிமை; பரிபூரணம்."
+    },
+    {
+      "id": "eastons/ziza#p2-df51e5d9",
+      "text": "(1.) சிமியோனின் கோத்திரத்துப் பிரபு (1 நாளாகமம் 4:37-43)."
+    },
+    {
+      "id": "eastons/ziza#p3-d8228233",
+      "text": "(2.) ரெகொபெயாமின் மகன் (2 நாளாகமம் 11:20)."
+    }
+  ]
+}

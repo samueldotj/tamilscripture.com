@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gamul",
+  "lang": "ta",
+  "source_hash": "97a45960",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காமுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/gamul#p1-97a45960",
+      "text": "(பால்மறந்தவன்), பரிசுத்த ஸ்தலத்தின் ஊழியத்தில் இருபத்தி இரண்டாவது ஆசாரிய முறையின் தலைவனாகிய ஆசாரியனாகிய காமுவேல். (1 நாளாகமம் 24:17) (கி.மு. 535.)"
+    }
+  ]
+}

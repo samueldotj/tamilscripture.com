@@ -1,0 +1,18 @@
+{
+  "id": "eastons/emerod",
+  "lang": "ta",
+  "source_hash": "332d4bac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடிபுண்",
+  "paragraphs": [
+    {
+      "id": "eastons/emerod#p1-332d4bac",
+      "text": "காண்க: மூலவியாதி."
+    }
+  ]
+}

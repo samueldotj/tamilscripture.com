@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pencil",
+  "lang": "ta",
+  "source_hash": "5ea96a7d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்சில்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pencil#p1-5ea96a7d",
+      "text": "விக்கிரகங்களைச் செய்வதோடு தொடர்பாக rsv மொழிபெயர்ப்பில் குறிப்பிடப்பட்டுள்ள ஒரு தச்சனின் கோடு வரையும் கருவி (ஏசாயா 44:13). மற்ற மொழிபெயர்ப்புகளில் “line” (kjv), “red chalk” (nasb), “a scriber” (neb), “a marker” (niv) என்று வருகிறது."
+    }
+  ]
+}

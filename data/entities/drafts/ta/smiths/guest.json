@@ -1,0 +1,18 @@
+{
+  "id": "smiths/guest",
+  "lang": "ta",
+  "source_hash": "1cfb93ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விருந்தினன்",
+  "paragraphs": [
+    {
+      "id": "smiths/guest#p1-1cfb93ee",
+      "text": "[விருந்தோம்பல்]"
+    }
+  ]
+}

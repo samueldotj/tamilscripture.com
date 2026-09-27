@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jakan",
+  "lang": "ta",
+  "source_hash": "807feb29",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jakan#p1-e468a9c5",
+      "text": "யாக்கான் என்பது கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் 1 நாளாகமம் 1:42-ல் காணப்படும் ஏசாவின் சந்ததியாரான யாக்கானின் மறு எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jakan#p2-b9a5d390",
+      "text": "யாக்கான் என்பதைக் காண்க."
+    }
+  ]
+}

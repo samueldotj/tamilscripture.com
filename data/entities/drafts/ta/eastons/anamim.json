@@ -1,0 +1,18 @@
+{
+  "id": "eastons/anamim",
+  "lang": "ta",
+  "source_hash": "7993df06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாமீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/anamim#p1-7993df06",
+      "text": "மிஸ்ராயீமிலிருந்து பிறந்த ஒரு எகிப்திய கோத்திரத்தின் பெயர் (ஆதியாகமம் 10:13; 1 நாளாகமம் 1:11)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/naarai",
+  "lang": "ta",
+  "source_hash": "72a0ab26",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாராயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/naarai#p1-72a0ab26",
+      "text": "தாவீது ராஜாவின் பராக்கிரமசாலிகளில் ஒருவன் (1 நாளாகமம் 11:37). இவன் பாராயி (2 சாமுவேல் 23:35) என்பவனுடன் ஒரே நபராக இருக்கக்கூடும்."
+    }
+  ]
+}

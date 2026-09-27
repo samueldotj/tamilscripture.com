@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dress",
+  "lang": "ta",
+  "source_hash": "d8090c08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உடை",
+  "paragraphs": [
+    {
+      "id": "smiths/dress#p1-d8090c08",
+      "text": "இந்தத் தலைப்பு பின்வரும் விவரங்களை உள்ளடக்கியது:"
+    }
+  ]
+}

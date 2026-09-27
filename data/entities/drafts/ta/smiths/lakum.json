@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lakum",
+  "lang": "ta",
+  "source_hash": "d00377ef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லக்கூம்",
+  "paragraphs": [
+    {
+      "id": "smiths/lakum#p1-d00377ef",
+      "text": "(அரண்), நப்தலியினுடைய எல்லையின் அடையாளக் குறிகளை உரிய முறையில் அமைத்தது. (யோசுவா 19:33)"
+    }
+  ]
+}

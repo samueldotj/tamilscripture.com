@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/higgaion",
+  "lang": "ta",
+  "source_hash": "d46bea28",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இகாயோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/higgaion#p1-9a32ad83",
+      "text": "இகாயோன் என்பது சங்கீதம் 9:16-ல் பயன்படுத்தப்பட்டுள்ள ஒரு இசைக்குறிப்பு சொல். இது பாடகர்களை மெதுவாக இசைக்கருவிகளை வாசிக்கும்படி அறிவுறுத்துவதாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/higgaion#p2-c265f6ba",
+      "text": "இசை என்பதைக் காண்க."
+    }
+  ]
+}

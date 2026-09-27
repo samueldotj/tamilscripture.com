@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ligure",
+  "lang": "ta",
+  "source_hash": "02dfcf4d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிகுரே",
+  "paragraphs": [
+    {
+      "id": "aquifer/ligure#p1-c5b456d5",
+      "text": "யாத்திராகமம் 28:19 மற்றும் யாத்திராகமம் 39:12ல் வைடூரியம் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பு பயன்படுத்திய சொல்."
+    },
+    {
+      "id": "aquifer/ligure#p2-0ef03348",
+      "text": "விலையுள்ள கற்கள் என்பதைக் காண்க."
+    }
+  ]
+}

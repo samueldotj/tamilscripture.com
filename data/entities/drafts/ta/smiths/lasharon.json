@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lasharon",
+  "lang": "ta",
+  "source_hash": "872645e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லசரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/lasharon#p1-872645e8",
+      "text": "(சமவெளி), கானானியரின் பட்டணங்களில் ஒன்று, அதன் ராஜாக்கள் யோசுவாவால் கொல்லப்பட்டனர். (யோசுவா 12:18)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/naharai",
+  "lang": "ta",
+  "source_hash": "513dc0ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகராய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naharai#p1-513dc0ab",
+      "text": "தாவீது ராஜாவின் பராக்கிரமசாலிகளில் ஒருவன். அவன் யோவாபின் ஆயுதம் ஏந்தினவனாகவும் இருந்தான். நகராய் பேரோத் பட்டணத்தானாயிருந்தான் (2 சாமுவேல் 23:37; 1 நாளாகமம் 11:39)."
+    }
+  ]
+}

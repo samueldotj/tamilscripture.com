@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bezer",
+  "lang": "ta",
+  "source_hash": "3a4c5ced",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bezer#p1-3a4c5ced",
+      "text": "(தங்கக் கல்), சோபாக்கின் மகன், ஆசேருடைய வம்சங்களின் தலைவர்களில் ஒருவன். (1 நாளாகமம் 7:37)"
+    }
+  ]
+}

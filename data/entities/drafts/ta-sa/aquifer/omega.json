@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/omega",
+  "lang": "ta",
+  "source_hash": "acce2f60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒமேகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/omega#p1-92f5bb3b",
+      "text": "ஒமேகா என்பது கிரேக்கு அகரவரிசையின் கடைசி எழுத்தின் பெயரின் ஆங்கில எழுத்துப்பெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/omega#p2-8a3235c6",
+      "text": "அல்பா மற்றும் ஒமேகா என்பதைக் காண்க."
+    }
+  ]
+}

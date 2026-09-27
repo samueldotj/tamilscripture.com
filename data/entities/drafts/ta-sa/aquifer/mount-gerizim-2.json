@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mount-gerizim-2",
+  "lang": "ta",
+  "source_hash": "ceb0a4d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெரிசீம் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-gerizim-2#p1-ceb0a4d3",
+      "text": "கெரிசீம் மலை என்பதைக் காண்க."
+    }
+  ]
+}

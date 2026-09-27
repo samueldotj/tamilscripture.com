@@ -1,0 +1,18 @@
+{
+  "id": "smiths/wandering-in-the-wilderness",
+  "lang": "ta",
+  "source_hash": "9ca200ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வனாந்தரத்தில் அலைந்து திரிதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/wandering-in-the-wilderness#p1-9ca200ed",
+      "text": "[அலைந்து திரிதலின் வனாந்தரம் காண்க]"
+    }
+  ]
+}

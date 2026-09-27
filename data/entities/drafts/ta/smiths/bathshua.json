@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bathshua",
+  "lang": "ta",
+  "source_hash": "590b4a6a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாத்-சூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/bathshua#p1-590b4a6a",
+      "text": "[பாத்செபாள் காண்க]"
+    }
+  ]
+}

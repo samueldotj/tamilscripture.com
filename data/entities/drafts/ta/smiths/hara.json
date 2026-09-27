@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hara",
+  "lang": "ta",
+  "source_hash": "3ffd11bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரா",
+  "paragraphs": [
+    {
+      "id": "smiths/hara#p1-3ffd11bd",
+      "text": "(மலைநாடு), (1 நாளாகமம் 5:26) மட்டும், முற்றிலும் அறியப்படாத ஒரு இடமாக இருக்கலாம், அல்லது அது ஆரான் அல்லது கார்ரானுடன் ஒன்றேயெனக் கருதப்பட வேண்டும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mattaniah",
+  "lang": "ta",
+  "source_hash": "82c2e776",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்தனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/mattaniah#p1-82c2e776",
+      "text": "(யெகோவாவின் வரம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/collar",
+  "lang": "ta",
+  "source_hash": "3cfb31ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கழுத்தணி",
+  "paragraphs": [
+    {
+      "id": "smiths/collar#p1-3cfb31ce",
+      "text": "நியாயாதிபதிகள் 8:26-ல் காணப்படும் இந்தச் சொல்லின் உரிய பொருளை அறிய, காதணிகள் (Earrings) என்பதைக் காண்க."
+    }
+  ]
+}

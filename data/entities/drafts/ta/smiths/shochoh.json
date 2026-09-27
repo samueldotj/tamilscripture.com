@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shochoh",
+  "lang": "ta",
+  "source_hash": "7b4019bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோக்கோ",
+  "paragraphs": [
+    {
+      "id": "smiths/shochoh#p1-7b4019bf",
+      "text": "(1 சாமுவேல் 17:1) சோக்கோ என்பதற்குச் சமமானது."
+    }
+  ]
+}

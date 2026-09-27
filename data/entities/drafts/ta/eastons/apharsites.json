@@ -1,0 +1,18 @@
+{
+  "id": "eastons/apharsites",
+  "lang": "ta",
+  "source_hash": "2a19fab4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பார்சியர்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/apharsites#p1-2a19fab4",
+      "text": "சமாரியாவிற்குக் குடிபெயர்த்தப்பட்ட மற்றொரு கோத்திரம் (எஸ்றா 4:9), அல்லது முன்குறிப்பிட்டதைப் போன்றதே."
+    }
+  ]
+}

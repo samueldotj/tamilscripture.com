@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nemuel",
+  "lang": "ta",
+  "source_hash": "12a54074",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேமுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/nemuel#p1-12a54074",
+      "text": "(தேவனுடைய நாள்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kenezite",
+  "lang": "ta",
+  "source_hash": "be20b1f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனேசியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kenezite#p1-de28a164",
+      "text": "எண்ணாகமம் 32:12 மற்றும் யோசுவா 14:6, 14ல் கெனிசியர் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துமுறை."
+    },
+    {
+      "id": "aquifer/kenezite#p2-d8f12c9f",
+      "text": "கெனிசியர் என்பதைக் காண்க."
+    }
+  ]
+}

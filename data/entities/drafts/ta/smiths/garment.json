@@ -1,0 +1,18 @@
+{
+  "id": "smiths/garment",
+  "lang": "ta",
+  "source_hash": "01564624",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆடை",
+  "paragraphs": [
+    {
+      "id": "smiths/garment#p1-01564624",
+      "text": "[உடை]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joel",
+  "lang": "ta",
+  "source_hash": "f86d6137",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/joel#p1-f86d6137",
+      "text": "(எவனுக்கு யெகோவா தேவனாக இருக்கிறாரோ)."
+    }
+  ]
+}

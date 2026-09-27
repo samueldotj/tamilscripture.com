@@ -1,0 +1,18 @@
+{
+  "id": "eastons/seething-pot",
+  "lang": "ta",
+  "source_hash": "b394a588",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொங்குகிற பானை",
+  "paragraphs": [
+    {
+      "id": "eastons/seething-pot#p1-b394a588",
+      "text": "உணவு பொருள்களைக் காய்ச்சுவதற்குரிய ஒரு பாத்திரம் (யோபு 41:20; எரேமியா 1:13)."
+    }
+  ]
+}

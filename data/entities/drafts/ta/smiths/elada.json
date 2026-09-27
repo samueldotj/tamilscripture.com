@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elada",
+  "lang": "ta",
+  "source_hash": "e747d5a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/elada#p1-e747d5a3",
+      "text": "(தேவன் அணிவித்தவன்), சுத்தெலாக் மூலமாக எப்பிராயீமின் சந்ததியினன். (1 நாளாகமம் 7:20)"
+    }
+  ]
+}

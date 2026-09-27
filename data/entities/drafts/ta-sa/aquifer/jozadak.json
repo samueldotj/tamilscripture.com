@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jozadak",
+  "lang": "ta",
+  "source_hash": "3ed93cb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசதாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jozadak#p1-014feffd",
+      "text": "யோசதாக் என்பது செராயாவின் மகனாகிய யோசதாக்கின் மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/jozadak#p2-8f589b52",
+      "text": "யோசதாக்கைப் காண்க."
+    }
+  ]
+}

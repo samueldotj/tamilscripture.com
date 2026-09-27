@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/appaim",
+  "lang": "ta",
+  "source_hash": "c319ddde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பாயிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/appaim#p1-c319ddde",
+      "text": "நாதாபின் மகன், மற்றும் யூதாவின் கோத்திரத்தில் இஷியின் தகப்பன் (1 நாளாகமம் 2:30-31)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kine",
+  "lang": "ta",
+  "source_hash": "b2c83f87",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பசுக்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/kine#p1-b2c83f87",
+      "text": "'கோ' என்பதன் பன்மை (பசு). [காண்க: விடையேறு, கடா]"
+    }
+  ]
+}

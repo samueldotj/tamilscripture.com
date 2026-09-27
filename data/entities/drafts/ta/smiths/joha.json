@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joha",
+  "lang": "ta",
+  "source_hash": "cfae9780",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகா",
+  "paragraphs": [
+    {
+      "id": "smiths/joha#p1-cfae9780",
+      "text": "(யெகோவா ஜீவனைக் கொடுக்கிறார்)."
+    }
+  ]
+}

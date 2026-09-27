@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pelet",
+  "lang": "ta",
+  "source_hash": "8cea2d4f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/pelet#p1-8cea2d4f",
+      "text": "(விடுதலை),"
+    }
+  ]
+}

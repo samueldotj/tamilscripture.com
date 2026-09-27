@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gnat",
+  "lang": "ta",
+  "source_hash": "22eff497",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொசு",
+  "paragraphs": [
+    {
+      "id": "smiths/gnat#p1-22eff497",
+      "text": "நம்முடைய இரட்சகர் மத்தேயு 23:21 இல் பயன்படுத்திய பழமொழி வழக்கில் மட்டும் குறிப்பிடப்பட்டுள்ள ஒரு வகை கொசு."
+    }
+  ]
+}

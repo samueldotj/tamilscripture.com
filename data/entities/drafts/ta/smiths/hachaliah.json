@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hachaliah",
+  "lang": "ta",
+  "source_hash": "9e5a8f2c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகலியா",
+  "paragraphs": [
+    {
+      "id": "smiths/hachaliah#p1-9e5a8f2c",
+      "text": "(யெகோவா ஒளியூட்டுகிறவர்), நெகேமியாவின் தகப்பன். (நெகேமியா 1:1; 10:1)"
+    }
+  ]
+}

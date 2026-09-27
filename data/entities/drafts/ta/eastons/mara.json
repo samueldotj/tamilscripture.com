@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mara",
+  "lang": "ta",
+  "source_hash": "5cd883c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாரா",
+  "paragraphs": [
+    {
+      "id": "eastons/mara#p1-5cd883c7",
+      "text": "கசப்பு; துக்கம், நகோமி தன் துர்பாக்கியங்களின் காரணமாகத் தனக்குத் தானே கொடுத்துக்கொண்ட ஒரு அடையாள நாமம் (ரூத் 1:20)."
+    }
+  ]
+}

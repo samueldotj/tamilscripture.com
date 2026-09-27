@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tabeal",
+  "lang": "ta",
+  "source_hash": "83002527",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தபேயால்",
+  "paragraphs": [
+    {
+      "id": "eastons/tabeal#p1-83002527",
+      "text": "தேவனுடைய நன்மை, சீரியாவின் மற்றும் சமாரியாவின் ராஜாக்கள் ஆகாஸின் சிங்காசனத்தில் அமர்த்த வீணாக முயற்சி செய்த ஒருவனுடைய தகப்பன் (ஏசாயா 7:6)."
+    }
+  ]
+}

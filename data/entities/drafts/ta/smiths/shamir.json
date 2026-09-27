@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shamir",
+  "lang": "ta",
+  "source_hash": "f6e92353",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாமீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shamir#p1-f6e92353",
+      "text": "(முனை அல்லது முள் என்று அர்த்தம்.)"
+    }
+  ]
+}

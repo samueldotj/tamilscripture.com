@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mahalath",
+  "lang": "ta",
+  "source_hash": "10c4a57d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகலாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/mahalath#p1-a8fbdcf7",
+      "text": "ஒரு வீணை; சுரமண்டலம்."
+    },
+    {
+      "id": "eastons/mahalath#p2-0a41c0b2",
+      "text": "(1.) இஸ்மவேலின் மகள், ஏசாவின் மூன்றாவது மனைவி (ஆதியாகமம் 28:9); பஸ்மாத்து என்றும் அழைக்கப்பட்டாள் (ஆதியாகமம் 36:3)."
+    },
+    {
+      "id": "eastons/mahalath#p3-484a3fac",
+      "text": "(2.) தாவீதின் மகன்களில் ஒருவனாகிய எரிமோத்தின் மகள். அவள் ரெகொபெயாமின் மனைவிகளில் ஒருத்தியாக இருந்தாள் (2 நாளாகமம் 11:18)."
+    }
+  ]
+}

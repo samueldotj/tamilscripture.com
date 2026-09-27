@@ -1,0 +1,18 @@
+{
+  "id": "smiths/samgarnebo",
+  "lang": "ta",
+  "source_hash": "7cf27417",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்கார்நேபோ",
+  "paragraphs": [
+    {
+      "id": "smiths/samgarnebo#p1-7cf27417",
+      "text": "(நேபோவின் பட்டயம்), பாபிலோன் ராஜாவின் பிரபுக்களில் அல்லது தளபதிகளில் ஒருவன். (எரேமியா 39:3)"
+    }
+  ]
+}

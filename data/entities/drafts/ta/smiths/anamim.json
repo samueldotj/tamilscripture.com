@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anamim",
+  "lang": "ta",
+  "source_hash": "ccb9a60a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாமீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/anamim#p1-ccb9a60a",
+      "text": "மிஸ்ராயீமிலிருந்து வந்த ஒரு மக்களினத்தார் அல்லது கோத்திரம். (ஆதியாகமம் 10:13; 1 நாளாகமம் 1:11)"
+    }
+  ]
+}

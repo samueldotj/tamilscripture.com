@@ -1,0 +1,26 @@
+{
+  "id": "eastons/gath-rimmon",
+  "lang": "ta",
+  "source_hash": "e926e565",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்ரிம்மோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/gath-rimmon#p1-fd0d322f",
+      "text": "மாதுளம்பழத்தின் ஆலை."
+    },
+    {
+      "id": "eastons/gath-rimmon#p2-78cde8e6",
+      "text": "(1.) தாண் கோத்திரத்திலுள்ள ஒரு லேவிய பட்டணம் (யோசுவா 19:45; 21:24; 1 நாளாகமம் 6:69)."
+    },
+    {
+      "id": "eastons/gath-rimmon#p3-d3afb443",
+      "text": "(2.) யோர்தானுக்கு மேற்கே, மனாசேயில் இதே பெயருள்ள மற்றொரு பட்டணம் (யோசுவா 21:25), இது பீலியாம் என்றும் அழைக்கப்பட்டது (1 நாளாகமம் 6:70)."
+    }
+  ]
+}

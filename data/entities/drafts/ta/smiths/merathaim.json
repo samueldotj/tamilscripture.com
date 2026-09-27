@@ -1,0 +1,18 @@
+{
+  "id": "smiths/merathaim",
+  "lang": "ta",
+  "source_hash": "c105c6bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெரதாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/merathaim#p1-c105c6bb",
+      "text": "(இரட்டைக் கலகம்), காலதேயரின் தேசத்தைக் குறிக்கும் தேசம், இஸ்ரவேல் தேசத்தின்மேல் அது ஏற்படுத்திய இரட்டைச் சிறையிருப்பையும் குறிக்கிறது. (எரேமியா 50:21)"
+    }
+  ]
+}

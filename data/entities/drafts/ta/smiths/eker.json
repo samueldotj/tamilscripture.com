@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eker",
+  "lang": "ta",
+  "source_hash": "8d83d872",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எக்கேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/eker#p1-8d83d872",
+      "text": "(வேரோடு பிடுங்குதல்), யூதாவின் சந்ததியார். (1 நாளாகமம் 2:27)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sinite",
+  "lang": "ta",
+  "source_hash": "1da690e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீனியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/sinite#p1-1da690e4",
+      "text": "கானானியருடைய ஒரு கோத்திரம், (ஆதியாகமம் 10:17; 1 நாளாகமம் 1:15) இவர்களுடைய இருப்பிடம் லீபனோன் மாகாணத்தின் வடபகுதியில் தேடப்பட வேண்டும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mote",
+  "lang": "ta",
+  "source_hash": "f53736b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "துரும்பு",
+  "paragraphs": [
+    {
+      "id": "eastons/mote#p1-f53736b8",
+      "text": "(கிரேக்கு. karphos, உலர்ந்த ஒரு பொருள், ஆகவே மரத்தின் அல்லது தூர்க்கின் ஒரு துணுக்கு). ஒரு சிறிய ஒழுக்க குறை துரும்புக்கு ஒப்பிடப்படுகிறது (மத்தேயு 7:3-5; லூக்கா 6:41, 42)."
+    }
+  ]
+}

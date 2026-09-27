@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chedorlaomer",
+  "lang": "ta",
+  "source_hash": "2bd9fac1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதர்லாகோமேர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chedorlaomer#p1-b92f39e0",
+      "text": "ஆதியாகமத்தில் குறிப்பிடப்பட்டுள்ள ஏலாமின் ராஜாவாகிய கெதர்லாகோமேர் என்பதற்கு மாற்று எழுத்துமுறை, இவன் சோதோம் கொமோராவிற்கு எதிராக நடந்த யுத்தத்தில் ராஜாக்களின் கூட்டணியை வழிநடத்தினான் (ஆதியாகமம் 14)."
+    },
+    {
+      "id": "aquifer/chedorlaomer#p2-802f0bbb",
+      "text": "கெதர்லாகோமேர் என்பதைக் காண்க."
+    }
+  ]
+}

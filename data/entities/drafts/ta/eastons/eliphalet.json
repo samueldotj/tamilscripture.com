@@ -1,0 +1,18 @@
+{
+  "id": "eastons/eliphalet",
+  "lang": "ta",
+  "source_hash": "4ca53754",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிப்பாலேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/eliphalet#p1-4ca53754",
+      "text": "தேவன் அவனுடைய விடுதலை, தாவீதின் மகன்களில் ஒருவன் (2 சாமுவேல் 5:16); எலிப்பெலேத் என்றும் அழைக்கப்படுகிறான் (1 நாளாகமம் 3:8)."
+    }
+  ]
+}

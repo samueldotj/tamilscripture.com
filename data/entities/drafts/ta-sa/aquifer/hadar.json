@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hadar",
+  "lang": "ta",
+  "source_hash": "acefc3c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hadar#p1-c1a94c16",
+      "text": "1. ஆதியாகமம் 25:15-இல் வரும் இஸ்மவேலின் மகனாகிய ஆதாத் என்பதற்கு KJV பயன்படுத்தும் எழுத்துவடிவம். ஆதாத் #1-ஐ காண்க."
+    },
+    {
+      "id": "aquifer/hadar#p2-cb4b9c53",
+      "text": "2. ஆதியாகமம் 36:39-இல் வரும் ஏதோமின் ராஜாவாகிய ஆதாத் என்பதற்கு மாற்று எழுத்துவடிவம். ஆதாத் #3-ஐ காண்க."
+    }
+  ]
+}

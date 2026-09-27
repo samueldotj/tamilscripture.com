@@ -1,0 +1,18 @@
+{
+  "id": "eastons/geder",
+  "lang": "ta",
+  "source_hash": "6e031d47",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/geder#p1-6e031d47",
+      "text": "ஒரு சுற்றுச்சுவரால் சூழப்பட்ட இடம், (யோசுவா 12:13), கெதேரா அல்லது கேதோர் (15:58) என்பதே இதுவாக இருக்கலாம்."
+    }
+  ]
+}

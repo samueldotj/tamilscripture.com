@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nebat",
+  "lang": "ta",
+  "source_hash": "3ff5979c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேபாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nebat#p1-3ff5979c",
+      "text": "யோர்தான் சமபூமியிலுள்ள சேரேதா ஊரின் எப்பிராயீமியன், சாலொமோனுக்கு ஊழியம் செய்தவன், மற்றும் யெரொபெயாம் ராஜாவின் தகப்பன் (1 இராஜாக்கள் 11:26)."
+    }
+  ]
+}

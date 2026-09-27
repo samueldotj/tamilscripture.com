@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meremoth",
+  "lang": "ta",
+  "source_hash": "f2ab0aa8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெரெமோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/meremoth#p1-f2ab0aa8",
+      "text": "(உயர்வுகள்),"
+    }
+  ]
+}

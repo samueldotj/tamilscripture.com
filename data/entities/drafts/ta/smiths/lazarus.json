@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lazarus",
+  "lang": "ta",
+  "source_hash": "a07b6422",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாசரு",
+  "paragraphs": [
+    {
+      "id": "smiths/lazarus#p1-a07b6422",
+      "text": "(தேவன் உதவுகிறவன்), எலெயாசார் என்னும் எபிரெய நாமத்தின் மற்றொரு வடிவம்."
+    }
+  ]
+}

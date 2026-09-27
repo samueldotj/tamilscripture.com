@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/isis",
+  "lang": "ta",
+  "source_hash": "938e65ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈசிஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/isis#p1-aec69b77",
+      "text": "பண்டைய எகிப்திய மதத்தில் ஒரு முக்கிய தேவதை மற்றும் ஒசிரிஸின் (மரணத்தின் மற்றும் மரணத்திற்குப் பின்னுள்ள வாழ்வின் தேவன்) மனைவி."
+    },
+    {
+      "id": "aquifer/isis#p2-a6aca631",
+      "text": "காண்க எகிப்து, எகிப்திய (மதம்)."
+    }
+  ]
+}

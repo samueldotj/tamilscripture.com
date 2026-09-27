@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hadassah",
+  "lang": "ta",
+  "source_hash": "6ff18f48",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதாசா",
+  "paragraphs": [
+    {
+      "id": "smiths/hadassah#p1-6ff18f48",
+      "text": "(myrtle, ஒரு வகை புகைக்கார மரம்), எஸ்தருடைய முந்தின பெயராக இருந்திருக்கலாம். (எஸ்தர் 2:7)"
+    }
+  ]
+}

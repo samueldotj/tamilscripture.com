@@ -6,13 +6,12 @@
 	const text = $derived(
 		kind === 'community' ? (ta ? 'சமூகத் திருத்தம்' : 'community-corrected')
 		: kind === 'owner' ? (ta ? 'ஆசிரியர்' : 'owner-authored')
-		: kind === 'draft' ? (ta ? 'AI வரைவு' : 'AI draft')
 		: (ta ? 'வரைவு' : 'draft')
 	);
 	const title = $derived(
 		kind === 'community' ? (ta ? 'ஒரு மதிப்பாய்வாளர் ஏற்றுக்கொண்ட திருத்தம்' : 'A correction accepted by a reviewer')
 		: kind === 'owner' ? (ta ? 'தள ஆசிரியர் எழுதியது' : 'Written by the site owner')
-		: (ta ? 'தானியங்கி வரைவு, மதிப்பாய்வு நிலுவையில்' : 'Automatic draft, awaiting review')
+		: (ta ? 'வரைவு, மதிப்பாய்வு நிலுவையில்' : 'Draft, awaiting review')
 	);
 </script>
 

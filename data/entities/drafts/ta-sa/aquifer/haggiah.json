@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/haggiah",
+  "lang": "ta",
+  "source_hash": "329923f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/haggiah#p1-329923f6",
+      "text": "அகியா லேவியர்களின் கோத்திரத்தில் மெராரியின் வம்சத்தைச் சேர்ந்தவனாக இருந்தான். இவன் சிமேயாவின் மகனும் அசாயாவின் தகப்பனுமாக இருந்தான் (1 நாளாகமம் 6:30)."
+    }
+  ]
+}

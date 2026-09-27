@@ -1,0 +1,34 @@
+{
+  "id": "eastons/pethahiah",
+  "lang": "ta",
+  "source_hash": "87dcbb5e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தகியா",
+  "paragraphs": [
+    {
+      "id": "eastons/pethahiah#p1-6c151d20",
+      "text": "கர்த்தரால் விடுவிக்கப்பட்டவன்."
+    },
+    {
+      "id": "eastons/pethahiah#p2-1e7ed378",
+      "text": "(1.) தாவீதின் காலத்தில் ஆசாரிய பிரிவுகளில் ஒன்றின் (பத்தொன்பதாவது) தலைவன் (1 நாளாகமம் 24:16)."
+    },
+    {
+      "id": "eastons/pethahiah#p3-025c9ae7",
+      "text": "(2.) ஒரு லேவியன் (எஸ்றா 10:23)."
+    },
+    {
+      "id": "eastons/pethahiah#p4-57433e63",
+      "text": "(3.) நெகேமியா 9:5."
+    },
+    {
+      "id": "eastons/pethahiah#p5-0ff37d0a",
+      "text": "(4.) பெர்சியாவின் அரசவையில் ஒரு பதவி வகித்த யூதாவின் சந்ததியன் (நெகேமியா 11:24)."
+    }
+  ]
+}

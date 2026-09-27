@@ -1,0 +1,18 @@
+{
+  "id": "smiths/servant",
+  "lang": "ta",
+  "source_hash": "b7cccfe0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊழியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/servant#p1-b7cccfe0",
+      "text": "[அடிமை]"
+    }
+  ]
+}

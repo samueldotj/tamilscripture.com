@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gadites-the",
+  "lang": "ta",
+  "source_hash": "fb9dd0bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்தியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/gadites-the#p1-fb9dd0bd",
+      "text": "காத்தின் சந்ததியார், அவனுடைய கோத்திரத்தைச் சேர்ந்தவர்கள்."
+    }
+  ]
+}

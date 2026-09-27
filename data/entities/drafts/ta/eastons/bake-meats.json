@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bake-meats",
+  "lang": "ta",
+  "source_hash": "e5064b0d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேக்-மீட்ஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/bake-meats#p1-e5064b0d",
+      "text": "சுட்ட பதார்த்தங்கள் (ஆதியாகமம் 40:17), மூல அர்த்தத்தில் “அப்பம் சுடுபவனின் வேலைகள்,” அதாவது பிஸ்கட்டுகள் மற்றும் கேக்குகள் போன்றவை."
+    }
+  ]
+}

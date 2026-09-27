@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zeri",
+  "lang": "ta",
+  "source_hash": "eae93181",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரீ",
+  "paragraphs": [
+    {
+      "id": "smiths/zeri#p1-eae93181",
+      "text": "(கட்டப்பட்டவன்), தாவீதின் ஆட்சிக்காலத்தில் எதுத்தூனின் மகன்களில் ஒருவன். (1 நாளாகமம் 25:3) (கி.மு. 1043.)"
+    }
+  ]
+}

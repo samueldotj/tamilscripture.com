@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shaul",
+  "lang": "ta",
+  "source_hash": "dcade2bc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சவுல்",
+  "paragraphs": [
+    {
+      "id": "smiths/shaul#p1-dcade2bc",
+      "text": "(கேட்கப்பட்டவன்)."
+    }
+  ]
+}

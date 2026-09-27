@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nephish",
+  "lang": "ta",
+  "source_hash": "c080c6cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெபிஷ்",
+  "paragraphs": [
+    {
+      "id": "smiths/nephish#p1-c080c6cd",
+      "text": "(புதுப்பிக்கப்பட்டது), நெபிஷ் என்ற பெயரின் தவறான மாறுபாடு (1 நாளாகமம் 1:19 இல் மட்டும் காணப்படுகிறது)."
+    }
+  ]
+}

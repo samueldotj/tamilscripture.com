@@ -1,0 +1,18 @@
+{
+  "id": "smiths/methuselah",
+  "lang": "ta",
+  "source_hash": "f016f3cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெத்தூசலா",
+  "paragraphs": [
+    {
+      "id": "smiths/methuselah#p1-f016f3cd",
+      "text": "(வேல் வீசுகிறவன்), ஏனோக்கின் மகனும், சேத்திலிருந்து ஆறாம் தலைமுறையானவனும், லாமேக்கின் தகப்பனும் ஆனவன். (ஆதியாகமம் 5:25-27)"
+    }
+  ]
+}

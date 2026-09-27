@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tobijah",
+  "lang": "ta",
+  "source_hash": "3c9a2edd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தொபியா",
+  "paragraphs": [
+    {
+      "id": "eastons/tobijah#p1-3c9a2edd",
+      "text": "அதாவது (எகோவாவின் மகிமை), யோசபாத்தினால் மக்களுக்குப் போதிக்கும்படியாக யூதாவின் வழியாக அனுப்பப்பட்ட ஒரு லேவியன் (2 நாளாகமம் 17:8)."
+    }
+  ]
+}

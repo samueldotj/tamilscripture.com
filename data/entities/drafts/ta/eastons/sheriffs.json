@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sheriffs",
+  "lang": "ta",
+  "source_hash": "88b6cd88",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நீதிசாஸ்திரிகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/sheriffs#p1-88b6cd88",
+      "text": "(தாண் 3:2), பாபிலோனிய அதிகாரிகள்."
+    }
+  ]
+}

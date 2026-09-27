@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hacaliah",
+  "lang": "ta",
+  "source_hash": "fc0c0ecb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகலியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hacaliah#p1-fc0c0ecb",
+      "text": "நெகேமியாவின் தகப்பன் (நெகேமியா 1:1; 10:1)."
+    }
+  ]
+}

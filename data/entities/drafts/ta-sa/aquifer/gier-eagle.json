@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gier-eagle",
+  "lang": "ta",
+  "source_hash": "3db8ecde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூழக்கடா (Gier Eagle)",
+  "paragraphs": [
+    {
+      "id": "aquifer/gier-eagle#p1-9508b4b1",
+      "text": "எகிப்திய பருந்திற்கு (Neophron percnopterus) பழைய ஆங்கில பெயர். யாக்கோபு அரசர் மொழிபெயர்ப்பு (King James Version) லேவியராகமம் 11:18 மற்றும் உபாகமம் 14:17 ஆகிய வசனங்களில் “gier eagle” என்ற பெயரை, இப்போது பெரும்பாலும் carrion vulture என்று அழைக்கப்படும் பறவைக்குக் குறிக்கப் பயன்படுத்துகிறது."
+    },
+    {
+      "id": "aquifer/gier-eagle#p2-7978ed7a",
+      "text": "காண்க: பறவைகள்; பருந்து."
+    }
+  ]
+}

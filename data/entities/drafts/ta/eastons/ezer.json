@@ -1,0 +1,42 @@
+{
+  "id": "eastons/ezer",
+  "lang": "ta",
+  "source_hash": "fab5ee09",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏத்சேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/ezer#p1-7d34d6a4",
+      "text": "பொக்கிஷம்."
+    },
+    {
+      "id": "eastons/ezer#p2-88c3d295",
+      "text": "(1.) சேயீரின் மகன்களில் ஒருவன், ஓர் மலையின் சொந்த பிரபுக்களாகிய, “அதிபதிகளில்” ஒருவன் (ஆதியாகமம் 36:21, 27)."
+    },
+    {
+      "id": "eastons/ezer#p3-898aa1f4",
+      "text": "(2.) 1 நாளாகமம் 7:21;"
+    },
+    {
+      "id": "eastons/ezer#p4-a1168bc3",
+      "text": "(3.) 1 நாளாகமம் 4:4."
+    },
+    {
+      "id": "eastons/ezer#p5-7cff9657",
+      "text": "(4.) சிக்லாகில் தாவீதிடம் சேர்ந்த காத்தியரின் யுத்தவீரர்களில் ஒருவன் (12:9)."
+    },
+    {
+      "id": "eastons/ezer#p6-cb572885",
+      "text": "(5.) ஒரு லேவியன் (நெகேமியா 3:19)."
+    },
+    {
+      "id": "eastons/ezer#p7-99da284c",
+      "text": "(6.) ஒரு ஆசாரியன் (12:42)."
+    }
+  ]
+}

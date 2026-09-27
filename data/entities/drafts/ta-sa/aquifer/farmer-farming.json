@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/farmer-farming",
+  "lang": "ta",
+  "source_hash": "72d924c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விவசாயி, விவசாயம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/farmer-farming#p1-dc240a59",
+      "text": "விவசாயி என்பவர் பயிர்களை வளர்க்கும் அல்லது மிருகங்களை வளர்க்கும் ஒரு மனிதர். விவசாயம் என்பது உணவுக்காகவும் மற்ற தேவைகளுக்காகவும் பயிர்களை வளர்த்தலும் மிருகங்களை வளர்த்தலும் ஆகிய நடைமுறையாகும்."
+    },
+    {
+      "id": "aquifer/farmer-farming#p2-54832bd8",
+      "text": "விவசாயம் என்ற தலைப்பைக் காண்க."
+    }
+  ]
+}

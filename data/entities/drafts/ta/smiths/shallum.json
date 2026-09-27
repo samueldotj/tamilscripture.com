@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shallum",
+  "lang": "ta",
+  "source_hash": "55fe01a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்லூம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shallum#p1-55fe01a7",
+      "text": "(பதிலடி)."
+    }
+  ]
+}

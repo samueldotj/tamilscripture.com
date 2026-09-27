@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rechabites",
+  "lang": "ta",
+  "source_hash": "d7423c7e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேகாபியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/rechabites#p1-d7423c7e",
+      "text": "[ரேகாப் காண்க]"
+    }
+  ]
+}

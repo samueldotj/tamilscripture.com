@@ -1,0 +1,18 @@
+{
+  "id": "eastons/eglah",
+  "lang": "ta",
+  "source_hash": "d1c3f949",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எக்லாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/eglah#p1-d1c3f949",
+      "text": "கடாரி, தாவீதின் மனைவிகளில் ஒருத்தி, இத்ரேயாமின் தாய் (2 சாமுவேல் 3:5; 1 நாளாகமம் 3:3). ஒரு யூதன் பாரம்பரியத்தின்படி அவள் மீகாள் என்பவளாக இருந்தாள்."
+    }
+  ]
+}

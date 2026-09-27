@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bunah",
+  "lang": "ta",
+  "source_hash": "cf74e342",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bunah#p1-cf74e342",
+      "text": "பூனா யூதா கோத்திரத்தைச் சேர்ந்த யெராமியேலின் மகன் (1 நாளாகமம் 2:25)."
+    }
+  ]
+}

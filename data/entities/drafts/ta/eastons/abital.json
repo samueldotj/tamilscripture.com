@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abital",
+  "lang": "ta",
+  "source_hash": "c18a3903",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபித்தாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/abital#p1-c18a3903",
+      "text": "பனியின் தகப்பன்; அதாவது, “புதிதானவள்”, தாவீதின் ஐந்தாம் மனைவி (2 சாமுவேல் 3:4)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hazaradar",
+  "lang": "ta",
+  "source_hash": "b5e6eea0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசார்-தார்",
+  "paragraphs": [
+    {
+      "id": "smiths/hazaradar#p1-b5e6eea0",
+      "text": "முதலியன. [ஆசேர் காண்க]"
+    }
+  ]
+}

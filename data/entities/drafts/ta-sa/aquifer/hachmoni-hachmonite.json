@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hachmoni-hachmonite",
+  "lang": "ta",
+  "source_hash": "bbc95150",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்மோனி, அக்மோனியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hachmoni-hachmonite#p1-bbc95150",
+      "text": "அக்மோனி; அக்மோனியன் காண்க."
+    }
+  ]
+}

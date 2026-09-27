@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tortoise",
+  "lang": "ta",
+  "source_hash": "50f653b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமை",
+  "paragraphs": [
+    {
+      "id": "smiths/tortoise#p1-50f653b5",
+      "text": "(எபிரெயம் tsab). tsab என்ற சொல் லேவியராகமம் 11:29-ல் மட்டுமே ஒரு அசுத்தமான பிராணியின் பெயராக வருகிறது. இந்த எபிரெய சொல் அதனுடன் தொடர்புள்ள அரபு dhab, “ஒரு பெரிய வகை பல்லி” என்பதுடன் ஒப்பிடத்தக்கது; இது Cuvier-ன் Psommosaurus scincus எனப்படுவதாகத் தோன்றுகிறது."
+    }
+  ]
+}

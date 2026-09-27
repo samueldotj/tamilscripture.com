@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bera",
+  "lang": "ta",
+  "source_hash": "2a4347f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரா",
+  "paragraphs": [
+    {
+      "id": "eastons/bera#p1-2a4347f7",
+      "text": "பரிசு, அல்லது தீமையின் மகன், கெதர்லாகோமேரின் கீழிருந்த நான்கு ராஜாக்களின் படையெடுப்பின் காலத்தில் சோதோமின் ராஜாவாக இருந்தான் (ஆதியாகமம் 14:2, 8, 17, 21)."
+    }
+  ]
+}

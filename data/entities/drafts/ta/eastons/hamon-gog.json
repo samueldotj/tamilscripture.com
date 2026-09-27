@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hamon-gog",
+  "lang": "ta",
+  "source_hash": "0ea410c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோன்கோக்",
+  "paragraphs": [
+    {
+      "id": "eastons/hamon-gog#p1-0ea410c8",
+      "text": "கோக்கின் திரள் என்று பொருள்படும், கோக்கின் அழிக்கப்பட்ட படைகள் புதைக்கப்படும் பள்ளத்தாக்கின் பெயர் (எசேக்கியேல் 39:11, 15), “கடலுக்குக் கிழக்கே வழிபோக்கரர்களின் பள்ளத்தாக்கு.”"
+    }
+  ]
+}

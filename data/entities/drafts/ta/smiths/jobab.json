@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jobab",
+  "lang": "ta",
+  "source_hash": "c0ad525c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோபாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/jobab#p1-c0ad525c",
+      "text": "(வனாந்தரம்)."
+    }
+  ]
+}

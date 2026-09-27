@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/anniuth",
+  "lang": "ta",
+  "source_hash": "acf53433",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னியூத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/anniuth#p1-acf53433",
+      "text": "பானியின் மற்றொரு பெயர், இது 1 எஸ்திராஸ் 9:48-இல் காணப்படுகிறது. பானி #10-ஐ காண்க."
+    }
+  ]
+}

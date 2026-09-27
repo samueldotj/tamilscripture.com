@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chozeba",
+  "lang": "ta",
+  "source_hash": "64e195d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோசேபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/chozeba#p1-8d750e3d",
+      "text": "கோசேபா என்பது 1 நாளாகமம் 4:22-ல் உள்ள கோசேபாவின் கிங் யாக்கோபு வேர்ஷன் வடிவமாகும். கோசேபா என்பது யூதாவின் தேசத்திலுள்ள ஒரு பட்டணமான அக்சீபின் மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/chozeba#p2-6af447ab",
+      "text": "கோசேபாவைக் காண்க."
+    }
+  ]
+}

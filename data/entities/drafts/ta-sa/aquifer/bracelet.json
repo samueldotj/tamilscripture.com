@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bracelet",
+  "lang": "ta",
+  "source_hash": "b8cc4a5c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கை வளையல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bracelet#p1-86ce04fb",
+      "text": "கை வளையல் என்பது மணிக்கட்டில் அல்லது கையில் அணியப்படும் ஒரு ஆபரணமாகும்."
+    },
+    {
+      "id": "aquifer/bracelet#p2-0e4549c2",
+      "text": "பரிசுத்த வேதாகம காலத்தில் மக்கள் அலங்காரத்திற்காக கை வளையல்களை அணிந்தனர். சில கை வளையல்கள் தங்கம், வெள்ளி, அல்லது வேறு பொருட்களால் செய்யப்பட்டிருந்தன."
+    }
+  ]
+}

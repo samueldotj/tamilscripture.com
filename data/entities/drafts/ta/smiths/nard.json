@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nard",
+  "lang": "ta",
+  "source_hash": "862e8bb8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நளதம்",
+  "paragraphs": [
+    {
+      "id": "smiths/nard#p1-862e8bb8",
+      "text": "[நளதம் (Spikenard) காண்க]"
+    }
+  ]
+}

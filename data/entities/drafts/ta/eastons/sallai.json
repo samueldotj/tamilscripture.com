@@ -1,0 +1,26 @@
+{
+  "id": "eastons/sallai",
+  "lang": "ta",
+  "source_hash": "e224bd5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்லாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/sallai#p1-9994988b",
+      "text": "கூடை செய்கிறவன்."
+    },
+    {
+      "id": "eastons/sallai#p2-77a4fc99",
+      "text": "(1.) பென்யமீன் கோத்திரத்தானாகிய ஒருவன் (நெகேமியா 11:8)."
+    },
+    {
+      "id": "eastons/sallai#p3-5a2f3732",
+      "text": "(2.) யோசுவாவும் செருபாபேலும் இருந்த நாட்களில் இருந்த ஒரு ஆசாரியன் (நெகேமியா 12:20)."
+    }
+  ]
+}

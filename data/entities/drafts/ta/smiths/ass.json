@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ass",
+  "lang": "ta",
+  "source_hash": "3606f5aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கழுதை",
+  "paragraphs": [
+    {
+      "id": "smiths/ass#p1-3606f5aa",
+      "text": "பழைய ஏற்பாடத்தில் Asinus இனத்திற்குரிய ஐந்து எபிரெய பெயர்கள் காணப்படுகின்றன."
+    }
+  ]
+}

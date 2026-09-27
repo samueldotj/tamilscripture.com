@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cruse",
+  "lang": "ta",
+  "source_hash": "faebcc5c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கலசம்",
+  "paragraphs": [
+    {
+      "id": "smiths/cruse#p1-faebcc5c",
+      "text": "தண்ணீர் வைத்திருக்கும் ஒரு சிறிய பாத்திரம், சவுல் தாவீதைத் தேடி இரவு பயணம் செய்தபோது கொண்டுசென்றதைப் போன்றது (1 சாமுவேல் 26:11,12,16) மற்றும் எலியாவும் கொண்டிருந்தது. (1 இராஜாக்கள் 19:6)"
+    }
+  ]
+}

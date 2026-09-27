@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mikloth",
+  "lang": "ta",
+  "source_hash": "874fd0ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்லோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mikloth#p1-c064728e",
+      "text": "1. கிபியோனில் குடியிருந்தவன், பென்யமீனனான ஏயேலின் மகன், சிமியாவைப் பெற்ற தகப்பன் (1 நாளாகமம் 8:32; 9:37-38)."
+    },
+    {
+      "id": "aquifer/mikloth#p2-a7a0fc64",
+      "text": "2. சில பிரதிகளின்படி, தோதாயியின் கீழ் பணிசெய்த தாவீதின் இராணுவத்தின் அதிகாரி (1 நாளாகமம் 27:4)."
+    }
+  ]
+}

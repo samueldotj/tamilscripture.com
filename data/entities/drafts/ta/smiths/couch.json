@@ -1,0 +1,18 @@
+{
+  "id": "smiths/couch",
+  "lang": "ta",
+  "source_hash": "777beda5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "படுக்கை (Couch)",
+  "paragraphs": [
+    {
+      "id": "smiths/couch#p1-777beda5",
+      "text": "[படுக்கை காண்க]"
+    }
+  ]
+}

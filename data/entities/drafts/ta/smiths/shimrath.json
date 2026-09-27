@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimrath",
+  "lang": "ta",
+  "source_hash": "35f5b5be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/shimrath#p1-35f5b5be",
+      "text": "(காவலன்), சிமியின் மகன்களில் ஒருவனாகிய பென்யமீனன். (1 நாளாகமம் 8:21)"
+    }
+  ]
+}

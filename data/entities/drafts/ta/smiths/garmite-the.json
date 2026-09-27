@@ -1,0 +1,18 @@
+{
+  "id": "smiths/garmite-the",
+  "lang": "ta",
+  "source_hash": "4fef7960",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்மியன் (கார்மைட்)",
+  "paragraphs": [
+    {
+      "id": "smiths/garmite-the#p1-4fef7960",
+      "text": "கர்மியனாகிய கேகிலா, அதாவது கேரேமின் சந்ததியான், யூதாவின் குடும்பங்களின் தெளிவற்ற வம்சாவளிப் பட்டியல்களில் குறிப்பிடப்பட்டுள்ளான். (1 நாளாகமம் 4:19)"
+    }
+  ]
+}

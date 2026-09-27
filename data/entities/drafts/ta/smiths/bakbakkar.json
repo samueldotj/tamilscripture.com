@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bakbakkar",
+  "lang": "ta",
+  "source_hash": "fba97744",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பக்பக்கார்",
+  "paragraphs": [
+    {
+      "id": "smiths/bakbakkar#p1-fba97744",
+      "text": "(வியப்பானவன்) ஆசாப்பின் சந்ததியனாகக் காணப்படும் ஒரு லேவியன். (1 நாளாகமம் 9:15) (கி.மு. 588)"
+    }
+  ]
+}

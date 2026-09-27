@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gideoni",
+  "lang": "ta",
+  "source_hash": "909e3fe1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீதெயோனி",
+  "paragraphs": [
+    {
+      "id": "smiths/gideoni#p1-909e3fe1",
+      "text": "(வெட்டுதல்), பென்யமீன் கோத்திரத்தானாகிய, அபீதானின் தகப்பன். (எண்ணாகமம் 1:11; 7:60,65; 10:24)"
+    }
+  ]
+}

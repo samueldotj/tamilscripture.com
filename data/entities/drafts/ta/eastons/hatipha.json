@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hatipha",
+  "lang": "ta",
+  "source_hash": "31e2d9e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதிபா",
+  "paragraphs": [
+    {
+      "id": "eastons/hatipha#p1-31e2d9e7",
+      "text": "பிடிக்கப்பட்டவன், நெதினீம் என்பவர்களில் ஒருவன் (எஸ்றா 2:54)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ozias",
+  "lang": "ta",
+  "source_hash": "b7f848d9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒசியாஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/ozias#p1-b7f848d9",
+      "text": "யோராமின் மகன் (மத்தேயு 1:8); உசியா என்றும் அழைக்கப்பட்டான் (2 இராஜாக்கள் 15:32, 34)."
+    }
+  ]
+}

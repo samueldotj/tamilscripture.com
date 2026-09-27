@@ -1,0 +1,46 @@
+{
+  "id": "eastons/hanan",
+  "lang": "ta",
+  "source_hash": "8c0dfc58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனான்",
+  "paragraphs": [
+    {
+      "id": "eastons/hanan#p1-184aaf5a",
+      "text": "இரக்கமுள்ளவன்."
+    },
+    {
+      "id": "eastons/hanan#p2-443158e2",
+      "text": "(1.) ஒரு பென்யமீனியன் (1 நாளாகமம் 8:23)."
+    },
+    {
+      "id": "eastons/hanan#p3-a430f7ac",
+      "text": "(2.) தாவீதின் பராக்கிரமசாலிகளில் ஒருவன் (1 நாளாகமம் 11:43)."
+    },
+    {
+      "id": "eastons/hanan#p4-bcf2b10d",
+      "text": "(3.) எரேமியா 35:4."
+    },
+    {
+      "id": "eastons/hanan#p5-e833585b",
+      "text": "(4.) சவுலின் சந்ததியான் ஒருவன் (1 நாளாகமம் 8:38)."
+    },
+    {
+      "id": "eastons/hanan#p6-90aaea69",
+      "text": "(5.) நேதினீமியரில் ஒருவன் (எஸ்றா 2:46)."
+    },
+    {
+      "id": "eastons/hanan#p7-c2810e5e",
+      "text": "(6.) எஸ்றாவுக்கு உதவி செய்த லேவியர்களில் ஒருவன் (நெகேமியா 8:7)."
+    },
+    {
+      "id": "eastons/hanan#p8-a38319ae",
+      "text": "(7.) உடன்படிக்கையில் கையொப்பமிட்ட தலைவர்களில் ஒருவன் (நெகேமியா 10:22)."
+    }
+  ]
+}

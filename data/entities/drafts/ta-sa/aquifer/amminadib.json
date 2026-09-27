@@ -1,0 +1,38 @@
+{
+  "id": "aquifer/amminadib",
+  "lang": "ta",
+  "source_hash": "c95a06c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மினதாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/amminadib#p1-3cdf09bc",
+      "text": "உன்னதப்பாட்டு 6:12ன் சில ஆங்கில மொழிபெயர்ப்புகளில் காணப்படும் ஒரு சொல்: “நினைக்காததற்குமுன்னே என் ஆத்துமா என்னை அம்மினதாபின் இரதங்களுக்கு ஒப்பாக்கினது.”"
+    },
+    {
+      "id": "aquifer/amminadib#p2-d0b5468b",
+      "text": "American Standard Version [ஓர மேற்கோள்] மற்றும் New American Standard Bible [ஓர மேற்கோள்] ஆகியவற்றில் \"my people\" (என் ஜனங்கள்) என்பதற்குப் பதிலாக அம்மினதாப் என்று வருகிறது. மிகச் சமீபத்திய மொழிபெயர்ப்பாளர்கள் இந்தச் சொல்லை ஒரு பெயர்ச்சொல்லாகக் கருதவில்லை."
+    },
+    {
+      "id": "aquifer/amminadib#p3-7829e094",
+      "text": "American Standard Version அம்மினதாப் என்பதற்குப் பதிலாக “my willing people” (என் மனவிருப்பமுள்ள ஜனங்கள்) என்று வைக்கிறது."
+    },
+    {
+      "id": "aquifer/amminadib#p4-b895eb14",
+      "text": "Revised Standard Version அம்மினதாப் என்பதற்குப் பதிலாக \"beside my prince\" (என் இளவரசனின் அருகில்) என்று வைக்கிறது."
+    },
+    {
+      "id": "aquifer/amminadib#p5-4f54a7cd",
+      "text": "New American Standard Bible அம்மினதாப் என்பதற்குப் பதிலாக “my noble people” (என் மேன்மையான ஜனங்கள்) என்று வைக்கிறது."
+    },
+    {
+      "id": "aquifer/amminadib#p6-ab7d1599",
+      "text": "New Living Translation அம்மினதாப் என்பதற்குப் பதிலாக “என் இளவரச மஞ்சத்தில் என் காதலனுடன்” (in my princely bed with my beloved one) என்று வைக்கிறது."
+    }
+  ]
+}

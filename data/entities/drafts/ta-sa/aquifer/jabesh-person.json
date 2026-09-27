@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jabesh-person",
+  "lang": "ta",
+  "source_hash": "ac8cdd34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாபேச் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/jabesh-person#p1-ac8cdd34",
+      "text": "சல்லூமின் தகப்பன். சல்லூம் இஸ்ரவேலின் ராஜாவாகிய சகரியாவைக் கொலைசெய்தான் (2 இராஜாக்கள் 15:10–14)."
+    }
+  ]
+}

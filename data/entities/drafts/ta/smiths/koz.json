@@ -1,0 +1,18 @@
+{
+  "id": "smiths/koz",
+  "lang": "ta",
+  "source_hash": "a2a2babc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/koz#p1-a2a2babc",
+      "text": "(முள்), (எஸ்றா 2:61; நெகேமியா 3:4,21) = கோஸ் = கோசின்."
+    }
+  ]
+}

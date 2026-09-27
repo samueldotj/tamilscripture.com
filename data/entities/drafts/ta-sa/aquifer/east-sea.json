@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/east-sea",
+  "lang": "ta",
+  "source_hash": "4e216c9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிழக்கு கடல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/east-sea#p1-181ebaf2",
+      "text": "கிழக்கு கடல் என்பது எசேக்கியேல் 47:18-இல் வரும் “கிழக்கு கடல்” என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட பெயராகும். கிழக்கு கடல் என்பது சவக்கடலின் மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/east-sea#p2-27857345",
+      "text": "சவக்கடல் காண்க."
+    }
+  ]
+}

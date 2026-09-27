@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jahdo",
+  "lang": "ta",
+  "source_hash": "0e91fcae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாதோ",
+  "paragraphs": [
+    {
+      "id": "smiths/jahdo#p1-0e91fcae",
+      "text": "(ஒன்றுசேர்க்கப்பட்டவன்), ஒரு காத்தியன், (1 நாளாகமம் 5:14) பூஸின் மகனும் எசிசாயியின் தகப்பனும் ஆவான்."
+    }
+  ]
+}

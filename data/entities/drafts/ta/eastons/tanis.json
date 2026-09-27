@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tanis",
+  "lang": "ta",
+  "source_hash": "535e4c7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தானிஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/tanis#p1-535e4c7f",
+      "text": "(எசேக்கியேல் 30:14, விளிம்புக் குறிப்பு). சோவான் காண்க."
+    }
+  ]
+}

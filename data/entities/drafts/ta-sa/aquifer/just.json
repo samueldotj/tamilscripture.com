@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/just",
+  "lang": "ta",
+  "source_hash": "38e6a857",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நீதிமான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/just#p1-d20dab5f",
+      "text": "\"நீதிமான்\" என்ற வார்த்தை நீதியுள்ளவன் அல்லது ஒழுக்க ரீதியாக நல்லவன் என்பதைக் குறிக்கும்."
+    },
+    {
+      "id": "aquifer/just#p2-023b2a21",
+      "text": "நீதி என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jezoar",
+  "lang": "ta",
+  "source_hash": "c3809ef9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்சோகார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jezoar#p1-99f7dc9c",
+      "text": "எத்சோகார் என்பது 1 நாளாகமம் 4:7-ல் காணப்படும் ஏலாளின் மகனான இத்சேயார் என்பதற்கு யாக்கோபு அரசர் மொழிபெயர்ப்பில் உள்ள எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jezoar#p2-40b1ebea",
+      "text": "இத்சேயார் #2-ஐ காண்க."
+    }
+  ]
+}

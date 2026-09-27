@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/malkijah",
+  "lang": "ta",
+  "source_hash": "e58fb2b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கிஜா",
+  "paragraphs": [
+    {
+      "id": "aquifer/malkijah#p1-09e98a19",
+      "text": "மல்கிஜா என்பது மல்கியா என்ற பெயரின் மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/malkijah#p2-1ea1f464",
+      "text": "மல்கியா என்பதைக் காண்க."
+    }
+  ]
+}

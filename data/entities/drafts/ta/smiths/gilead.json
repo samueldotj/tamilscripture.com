@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gilead",
+  "lang": "ta",
+  "source_hash": "42fda8b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீலேயாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/gilead#p1-42fda8b8",
+      "text": "(கற்பாறை நிறைந்த பிரதேசம்)."
+    }
+  ]
+}

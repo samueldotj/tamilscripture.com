@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/abi",
+  "lang": "ta",
+  "source_hash": "7f8670d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபி",
+  "paragraphs": [
+    {
+      "id": "aquifer/abi#p1-0af0c7cb",
+      "text": "அபியா என்ற பெயரின் சுருக்கப்பட்ட வடிவம், யூதாவின் ராஜாவாகிய எசேக்கியாவின் தாயின் பெயர் (2 இராஜாக்கள் 18:2)."
+    },
+    {
+      "id": "aquifer/abi#p2-035647a3",
+      "text": "அபியா #4-ஐ காண்க."
+    }
+  ]
+}

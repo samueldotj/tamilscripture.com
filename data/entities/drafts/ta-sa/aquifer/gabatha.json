@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gabatha",
+  "lang": "ta",
+  "source_hash": "78736493",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கபாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/gabatha#p1-dee98177",
+      "text": "கபாதா என்பது அகாஸ்வேருவின் அரமன் பிரதானிகளில் ஒருவனான பிக்தானின் மற்றொரு பெயராகும் (எஸ்தருக்குச் சேர்க்கப்பட்டவை 12:1)."
+    },
+    {
+      "id": "aquifer/gabatha#p2-51ec480f",
+      "text": "பிக்தான், பிக்தானா என்பதைக் காண்க."
+    }
+  ]
+}

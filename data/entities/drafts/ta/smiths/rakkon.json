@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rakkon",
+  "lang": "ta",
+  "source_hash": "2ffb420c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராக்கோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/rakkon#p1-2ffb420c",
+      "text": "(ஆலயம்) (தலையினுடையது), தாணுடைய சுதந்தரத்தில், யோப்பாவிலிருந்து அதிக தூரமில்லாத, நல்ல நீர்வளமுள்ள ஒரு இடம். (யோசுவா 19:46)"
+    }
+  ]
+}

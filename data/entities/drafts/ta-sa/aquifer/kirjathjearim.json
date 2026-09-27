@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirjathjearim",
+  "lang": "ta",
+  "source_hash": "0af28bb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்யாரீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirjathjearim#p1-b2cd02b1",
+      "text": "கீரியாத்யாரீமின் கிங் யாக்கோபு மொழிபெயர்ப்பு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kirjathjearim#p2-17ae20b7",
+      "text": "கீரியாத்யாரீம் காண்க."
+    }
+  ]
+}

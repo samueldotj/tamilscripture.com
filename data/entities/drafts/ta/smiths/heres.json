@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heres",
+  "lang": "ta",
+  "source_hash": "e3da3d8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/heres#p1-e3da3d8e",
+      "text": "(சூரியன்), (நியாயாதிபதிகள் 1:35) ஆயலோனுக்கு அருகில், எப்பிராயீமின் மலைத்தொடரில் இருந்த தாணுடைய ஒரு பட்டணம்; இது யெயாரீம் மலைக்குப் (இர்சேமேஸ், சூரியனின் பட்டணம்) சமமாக இருக்கலாம்."
+    }
+  ]
+}

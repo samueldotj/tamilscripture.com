@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ithmah",
+  "lang": "ta",
+  "source_hash": "b1df125a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/ithmah#p1-b1df125a",
+      "text": "(பிள்ளையிழந்தவன்), ஒரு மோவாபியன், தாவீதின் காவலரிலுள்ள வீரர்களில் ஒருவன். (1 நாளாகமம் 11:46)"
+    }
+  ]
+}

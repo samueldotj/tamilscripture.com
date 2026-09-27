@@ -1,0 +1,18 @@
+{
+  "id": "smiths/josibiah",
+  "lang": "ta",
+  "source_hash": "b7874c20",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசிபியா",
+  "paragraphs": [
+    {
+      "id": "smiths/josibiah#p1-b7874c20",
+      "text": "(தேவன் குடியிருப்பைக் கொடுக்கிறவர்), சிமியோனியனான யெகூவின் தகப்பன். (1 நாளாகமம் 4:35)"
+    }
+  ]
+}

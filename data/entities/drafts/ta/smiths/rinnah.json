@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rinnah",
+  "lang": "ta",
+  "source_hash": "0fea264c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரின்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/rinnah#p1-0fea264c",
+      "text": "(கூக்குரல்), யூதாவின் சந்ததியாரில் ஒருவன். (1 நாளாகமம் 4:20) (கி.மு. 1300.)"
+    }
+  ]
+}

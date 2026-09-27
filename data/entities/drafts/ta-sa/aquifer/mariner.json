@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mariner",
+  "lang": "ta",
+  "source_hash": "f1f19867",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மரினர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mariner#p1-9d3ace57",
+      "text": "மரினர் என்பவன் கப்பலில் வேலை செய்கிற ஒரு மனிதன். இந்த வார்த்தை மலாக்கள் என்ற வார்த்தையின் அதே பொருளையே குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/mariner#p2-ea1c8140",
+      "text": "மலாக்கள் என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

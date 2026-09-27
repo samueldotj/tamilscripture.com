@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shinab",
+  "lang": "ta",
+  "source_hash": "68be691a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிநெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/shinab#p1-68be691a",
+      "text": "(தகப்பனுடைய மகிமை, அதாவது தேவன்), ஆபிரகாமின் காலத்தில் அத்மாவின் ராஜா. (ஆதியாகமம் 14:2) (கி.மு. 1912.)"
+    }
+  ]
+}

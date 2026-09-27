@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pithon",
+  "lang": "ta",
+  "source_hash": "073af30d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பித்தோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pithon#p1-073af30d",
+      "text": "பித்தோன் மீகாவின் மகனும், யோனத்தானுடைய சந்ததியாருமாக இருந்தான் (1 நாளாகமம் 8:35; 9:41). பித்தோன் பென்யமீன் கோத்திரத்தைச் சேர்ந்தவனாக இருந்தான்."
+    }
+  ]
+}

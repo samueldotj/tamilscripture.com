@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rohgah",
+  "lang": "ta",
+  "source_hash": "bb3af7b1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரோகா",
+  "paragraphs": [
+    {
+      "id": "smiths/rohgah#p1-bb3af7b1",
+      "text": "(ரோகா என்றால் 'கூக்குரல்' என்று பொருள்), ஆசேர் கோத்திரத்தானாகிய சோமேரின் மகன்களில் ஒருவன் (1 நாளாகமம் 7:34) (கி.மு. 1490 அளவில்)."
+    }
+  ]
+}

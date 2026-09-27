@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bera",
+  "lang": "ta",
+  "source_hash": "bef513b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரா",
+  "paragraphs": [
+    {
+      "id": "smiths/bera#p1-bef513b4",
+      "text": "(தீமையின் மகன்) சோதோமின் ராஜா. (ஆதியாகமம் 14:2) மேலும் காண்க (ஆதியாகமம் 14:17,21)"
+    }
+  ]
+}

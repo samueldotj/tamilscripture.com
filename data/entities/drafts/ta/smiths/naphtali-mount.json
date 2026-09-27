@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naphtali-mount",
+  "lang": "ta",
+  "source_hash": "f655826f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நப்தலி மலை",
+  "paragraphs": [
+    {
+      "id": "smiths/naphtali-mount#p1-f655826f",
+      "text": "நப்தலியின் சுதந்தரத்தில் பெரும்பகுதியை உருவாக்கிய மலைத்தேசம் (யோசுவா 20:7), இது பாலஸ்தீனத்தின் மத்தியிலுள்ள “எப்பிராயீமின் மலை”க்கும், தென்பகுதியிலுள்ள “யூதாவின் மலை”க்கும் ஒப்பானது."
+    }
+  ]
+}

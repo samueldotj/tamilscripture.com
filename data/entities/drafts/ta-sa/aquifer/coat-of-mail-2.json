@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/coat-of-mail-2",
+  "lang": "ta",
+  "source_hash": "ac2d94c4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கவசச் சட்டை",
+  "paragraphs": [
+    {
+      "id": "aquifer/coat-of-mail-2#p1-acd41281",
+      "text": "கவசச் சட்டை என்பது ஒரு தோல் அங்கியின்மேல் சிறிய பின்னலான உலோகத் தட்டுகளை தைத்து உண்டாக்கிய உடல் கவசமாகும்."
+    },
+    {
+      "id": "aquifer/coat-of-mail-2#p2-8d8ede60",
+      "text": "கவசமும் ஆயுதங்களும் என்பதைக் காண்க."
+    }
+  ]
+}

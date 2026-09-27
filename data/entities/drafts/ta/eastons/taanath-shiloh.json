@@ -1,0 +1,18 @@
+{
+  "id": "eastons/taanath-shiloh",
+  "lang": "ta",
+  "source_hash": "3be3e0f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தானாத்சீலோ",
+  "paragraphs": [
+    {
+      "id": "eastons/taanath-shiloh#p1-3be3e0f9",
+      "text": "சீலோவிற்கு அணுகுமிடம், எப்பிராயீமின் எல்லையிலுள்ள ஒரு இடம் (யோசுவா 16:6), இது ஒருவேளை இக்காலத்திய T’ana ஆக இருக்கலாம், இது சீகேமுக்கு தென்கிழக்கே 7 மைல் தூரத்தில், முக்னா சமவெளிக்குக் கிழக்கேயுள்ள மேட்டுநிலத்தில் அமைந்த ஒரு பாழிடமாகும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beraa",
+  "lang": "ta",
+  "source_hash": "c21af0a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரோயா",
+  "paragraphs": [
+    {
+      "id": "smiths/beraa#p1-c21af0a8",
+      "text": "(நன்றாக நீர்ப்பாய்ச்சப்பட்ட)."
+    }
+  ]
+}

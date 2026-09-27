@@ -1,0 +1,18 @@
+{
+  "id": "smiths/luke-gospel-of",
+  "lang": "ta",
+  "source_hash": "db6c88a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூக்கா எழுதிய நற்செய்தி",
+  "paragraphs": [
+    {
+      "id": "smiths/luke-gospel-of#p1-db6c88a8",
+      "text": "பண்டைய கிறிஸ்தவ சபையின் பொது ஏகோபித்த சாட்சியின்படி, மூன்றாம் நற்செய்தியானது, அப்போஸ்தலனாகிய பவுலின் நண்பரும் உடன்பணியாட்களுமான “பிரியமான வைத்தியர்” லூக்காவுக்குரியதாகக் கொள்ளப்படுகிறது."
+    }
+  ]
+}

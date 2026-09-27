@@ -1,0 +1,18 @@
+{
+  "id": "smiths/man",
+  "lang": "ta",
+  "source_hash": "ed32e890",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனிதன்",
+  "paragraphs": [
+    {
+      "id": "smiths/man#p1-ed32e890",
+      "text": "அங்கீகரிக்கப்பட்ட ஆங்கில மொழிபெயர்ப்பில் (Authorized Version) நான்கு எபிரெய சொற்கள் “மனிதன்” என்று மொழிபெயர்க்கப்பட்டுள்ளன:"
+    }
+  ]
+}

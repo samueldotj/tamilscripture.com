@@ -1,0 +1,18 @@
+{
+  "id": "smiths/horeb",
+  "lang": "ta",
+  "source_hash": "ac1c459b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/horeb#p1-ac1c459b",
+      "text": "(வனாந்திரம்). [சீனாய், அல்லது சீனாய்]"
+    }
+  ]
+}

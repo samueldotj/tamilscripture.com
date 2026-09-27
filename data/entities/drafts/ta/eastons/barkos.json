@@ -1,0 +1,18 @@
+{
+  "id": "eastons/barkos",
+  "lang": "ta",
+  "source_hash": "75ea9f99",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்கோச்",
+  "paragraphs": [
+    {
+      "id": "eastons/barkos#p1-75ea9f99",
+      "text": "சித்திரகாரன், (எஸ்றா 2:53; நெகேமியா 7:55). நிதனீமியரில் சிலருடைய தகப்பன்."
+    }
+  ]
+}

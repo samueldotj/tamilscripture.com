@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elpaal",
+  "lang": "ta",
+  "source_hash": "ea4602a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பாலின்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elpaal#p1-ea4602a3",
+      "text": "எல்பாலின் ஒரு பென்யமீனனாக இருந்தான், அவன் சகராயீமின் மகன்களில் ஒருவனாக இருந்தான் (1 நாளாகமம் 8:11–12, 18)."
+    }
+  ]
+}

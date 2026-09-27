@@ -1,0 +1,18 @@
+{
+  "id": "smiths/esaias",
+  "lang": "ta",
+  "source_hash": "bc0585e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசாயாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/esaias#p1-bc0585e1",
+      "text": "ஏசாயா என்ற பெயரின் கிரேக்கு வடிவம். [ஏசாயா]"
+    }
+  ]
+}

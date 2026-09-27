@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eshek",
+  "lang": "ta",
+  "source_hash": "3c2363c5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/eshek#p1-3c2363c5",
+      "text": "(ஒடுக்குதல்), சவுலின் பிற்கால சந்ததியாருள் ஒருவன். (1 நாளாகமம் 8:39)"
+    }
+  ]
+}

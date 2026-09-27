@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/meraiah",
+  "lang": "ta",
+  "source_hash": "bb189a32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெராயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/meraiah#p1-bb189a32",
+      "text": "யொயகீமின் காலத்தில் செராயாவின் ஆசாரிய குடும்பத்தலைவனாக மெராயா இருந்தான். பாபிலோனின் சிறையிருப்புக்குப் பின்பு அவன் எருசலேமில் வாழ்ந்தான் (நெகேமியா 12:12)."
+    }
+  ]
+}

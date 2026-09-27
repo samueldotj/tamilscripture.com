@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aspatha",
+  "lang": "ta",
+  "source_hash": "3739e4a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aspatha#p1-3739e4a1",
+      "text": "ஆமானின் பத்து மகன்களில் ஒருவன். யூதர்களை அழிக்கும்படியான ஆமானின் சூழ்ச்சி முடிவுக்கு வந்தபோது, அவனும் தன் தகப்பனுடன் கொல்லப்பட்டான் (எஸ்தர் 9:7)."
+    }
+  ]
+}

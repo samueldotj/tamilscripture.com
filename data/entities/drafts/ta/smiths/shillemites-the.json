@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shillemites-the",
+  "lang": "ta",
+  "source_hash": "bd7e59da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சில்லேமியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/shillemites-the#p1-bd7e59da",
+      "text": "[சில்லேம்]"
+    }
+  ]
+}

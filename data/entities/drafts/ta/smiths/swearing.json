@@ -1,0 +1,18 @@
+{
+  "id": "smiths/swearing",
+  "lang": "ta",
+  "source_hash": "6e06ff50",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆணையிடுதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/swearing#p1-6e06ff50",
+      "text": "[ஆணை காண்க]"
+    }
+  ]
+}

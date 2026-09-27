@@ -1,0 +1,18 @@
+{
+  "id": "smiths/solomon-wisdom-of",
+  "lang": "ta",
+  "source_hash": "06e6666b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலொமோனின் ஞானம்",
+  "paragraphs": [
+    {
+      "id": "smiths/solomon-wisdom-of#p1-06e6666b",
+      "text": "[சாலொமோனின் ஞானம், புத்தகம்]"
+    }
+  ]
+}

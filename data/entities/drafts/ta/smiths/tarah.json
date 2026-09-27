@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tarah",
+  "lang": "ta",
+  "source_hash": "5af03e8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாராக்",
+  "paragraphs": [
+    {
+      "id": "smiths/tarah#p1-5af03e8b",
+      "text": "(தாமதம்), தாகாத்திற்கும் மித்காவிற்கும் இடையில் இஸ்ரவேலரின் ஒரு வனாந்திர முகாம் இடம். (எண்ணாகமம் 33:27)"
+    }
+  ]
+}

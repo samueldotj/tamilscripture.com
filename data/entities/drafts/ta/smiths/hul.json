@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hul",
+  "lang": "ta",
+  "source_hash": "e476a7eb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூல்",
+  "paragraphs": [
+    {
+      "id": "smiths/hul#p1-e476a7eb",
+      "text": "(வட்டம்), ஆராமின் இரண்டாம் மகன், சேமின் பேரன். (ஆதியாகமம் 10:23) லீபனோனின் அடிவாரத்திலுள்ள பகுதியே இதன் அர்த்தம் என்பதற்கு பலமான ஆதாரம் உள்ளது."
+    }
+  ]
+}

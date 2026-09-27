@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zererath",
+  "lang": "ta",
+  "source_hash": "59fba2e2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செரெராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/zererath#p1-59fba2e2",
+      "text": "[சாரெதான், அல்லது சார்தான், சார்தான் காண்க]"
+    }
+  ]
+}

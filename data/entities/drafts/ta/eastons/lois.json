@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lois",
+  "lang": "ta",
+  "source_hash": "a28a13af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோவிசாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/lois#p1-a28a13af",
+      "text": "தீமோத்தேயுவின் தாய்வழி பாட்டியாகிய இவள் தன் விசுவாசத்தினிமித்தம் பவுலினால் புகழப்பட்டவள் (2 தீமோத்தேயு 1:5)."
+    }
+  ]
+}

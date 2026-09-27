@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/agora",
+  "lang": "ta",
+  "source_hash": "5d0683f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகோரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/agora#p1-e67a424f",
+      "text": "அகோரா என்பது பண்டைய கிரேக்க நகரங்களில் இருந்த ஒரு திறந்தவெளிப் பொது இடமாகும். இது ஒரு சந்தையாகவும், அரசியல், மத, மற்றும் சமூக நடவடிக்கைகளுக்கான மையமாகவும் செயல்பட்டது."
+    },
+    {
+      "id": "aquifer/agora#p2-ebfe26c6",
+      "text": "சந்தை, சந்தைவெளி என்பதைக் காண்க."
+    }
+  ]
+}

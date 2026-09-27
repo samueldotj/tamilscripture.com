@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aroerite",
+  "lang": "ta",
+  "source_hash": "e5745008",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோவேரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/aroerite#p1-e5745008",
+      "text": "ஆரோவேரியனாகிய ஓதாம் தாவீதின் இரண்டு படைத்தலைவர்களின் தகப்பனாக இருந்தான் (1 நாளாகமம் 11:44)."
+    }
+  ]
+}

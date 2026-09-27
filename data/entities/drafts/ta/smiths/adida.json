@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adida",
+  "lang": "ta",
+  "source_hash": "3e4bcdce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதிதா",
+  "paragraphs": [
+    {
+      "id": "smiths/adida#p1-3e4bcdce",
+      "text": "எருசலேமுக்கு அருகில் இருந்த ஒரு அரணான பட்டணம், இது எஸ்றா 2:33 இல் குறிப்பிடப்பட்டுள்ள ஆதீத் என்பதாக இருக்கலாம், மேலும் 1 மக்கபேயர் 12:38 இல் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

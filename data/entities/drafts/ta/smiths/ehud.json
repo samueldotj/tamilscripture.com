@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ehud",
+  "lang": "ta",
+  "source_hash": "26df76da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏகூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ehud#p1-26df76da",
+      "text": "(ஒன்றுபடுதல்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bajith",
+  "lang": "ta",
+  "source_hash": "a1266643",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாயித்",
+  "paragraphs": [
+    {
+      "id": "smiths/bajith#p1-a1266643",
+      "text": "(குதிரை), அந்த வசனத்திலேயே இருக்கும் \"மேடைகளுக்கு\" எதிராக, மோவாபின் பொய்த் தேவன்களின் \"ஆலயத்தை\" குறிக்கிறது. (ஏசாயா 15:2) மற்றும் ஒப்பிடுக (ஏசாயா 16:12)"
+    }
+  ]
+}

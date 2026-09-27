@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aphek",
+  "lang": "ta",
+  "source_hash": "badd8f3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆப்பெக்",
+  "paragraphs": [
+    {
+      "id": "smiths/aphek#p1-badd8f3b",
+      "text": "(பலம்), பாலஸ்தீனத்தில் உள்ள பல இடங்களின் பெயர்."
+    }
+  ]
+}

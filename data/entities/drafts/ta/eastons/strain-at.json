@@ -1,0 +1,18 @@
+{
+  "id": "eastons/strain-at",
+  "lang": "ta",
+  "source_hash": "54198df5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வடிகட்டு",
+  "paragraphs": [
+    {
+      "id": "eastons/strain-at#p1-54198df5",
+      "text": "இது வெறும் அச்சுப் பிழையாகும், “வடிகட்டி வெளியேவிடு” (strain out) என்பதற்குப் பதிலாக (மத்தேயு 23:24)."
+    }
+  ]
+}

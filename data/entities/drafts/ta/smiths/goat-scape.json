@@ -1,0 +1,18 @@
+{
+  "id": "smiths/goat-scape",
+  "lang": "ta",
+  "source_hash": "f1efe85d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோழி, பாலிகோழி",
+  "paragraphs": [
+    {
+      "id": "smiths/goat-scape#p1-f1efe85d",
+      "text": "[பாவநிவிர்த்தி, பாவநிவிர்த்தி நாள் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/taralah",
+  "lang": "ta",
+  "source_hash": "9d639bf4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாராலா",
+  "paragraphs": [
+    {
+      "id": "smiths/taralah#p1-9d639bf4",
+      "text": "(தள்ளாட்டம்), பென்யமீனுடைய பங்கிலிருந்த பட்டணங்களில் ஒன்று. (யோசுவா 18:27)"
+    }
+  ]
+}

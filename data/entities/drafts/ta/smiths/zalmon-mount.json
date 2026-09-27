@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zalmon-mount",
+  "lang": "ta",
+  "source_hash": "032f8ab1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்மோன் மலை",
+  "paragraphs": [
+    {
+      "id": "smiths/zalmon-mount#p1-032f8ab1",
+      "text": "சீகேமின் அருகிலுள்ள மரங்கள் அடர்ந்த ஒரு உயர்நிலம் (நியாயாதிபதிகள் 9:48). தல்மனூத்தா என்ற பெயர் சல்மோன் என்ற பெயரின் சீர்கெட்ட வடிவம் என்று கருதப்பட்டிருக்கிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahasuerus",
+  "lang": "ta",
+  "source_hash": "250e0bc2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகாஸ்வேரு",
+  "paragraphs": [
+    {
+      "id": "smiths/ahasuerus#p1-250e0bc2",
+      "text": "(சிங்க-அரசன்), பழைய ஏற்பாட்டில் குறிப்பிடப்பட்டுள்ள ஒரு மேதிய அரசனும், இரண்டு பெர்சிய அரசர்களும் கொண்டிருந்த பெயர்."
+    }
+  ]
+}

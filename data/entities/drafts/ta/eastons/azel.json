@@ -1,0 +1,18 @@
+{
+  "id": "eastons/azel",
+  "lang": "ta",
+  "source_hash": "dbb902e5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/azel#p1-dbb902e5",
+      "text": "பிரபு, சவுல் ராஜாவின் சந்ததியார் (1 நாளாகமம் 8:37; 9:43, 44)."
+    }
+  ]
+}

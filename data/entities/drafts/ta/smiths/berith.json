@@ -1,0 +1,18 @@
+{
+  "id": "smiths/berith",
+  "lang": "ta",
+  "source_hash": "f66d5ace",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரீத்",
+  "paragraphs": [
+    {
+      "id": "smiths/berith#p1-f66d5ace",
+      "text": "(நியாயாதிபதிகள் 9:46) [பாகால்பேரீத்]"
+    }
+  ]
+}

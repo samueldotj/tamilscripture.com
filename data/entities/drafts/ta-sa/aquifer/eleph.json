@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eleph",
+  "lang": "ta",
+  "source_hash": "e5722e61",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eleph#p1-c2cc7c1d",
+      "text": "ஏலேப் என்பது யோசுவா 18:28-ல் வரும் ஏலேப் ஊருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பு கொடுக்கும் பெயராகும்."
+    },
+    {
+      "id": "aquifer/eleph#p2-205d2834",
+      "text": "ஏலேப் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ittahkazin",
+  "lang": "ta",
+  "source_hash": "eb005695",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தாகாத்சீன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ittahkazin#p1-8f2c8bd1",
+      "text": "இத்தாகாத்சீன் என்பது யோசுவா 19:13-ல் காணப்படும் இத்தாகாத்சீன் ஊரின் கிங் யாக்கோபு மொழிபெயர்ப்பின் வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/ittahkazin#p2-d7fb25dc",
+      "text": "இத்தாகாத்சீன் காண்க."
+    }
+  ]
+}

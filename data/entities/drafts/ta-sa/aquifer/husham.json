@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/husham",
+  "lang": "ta",
+  "source_hash": "a3dc25ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊஷாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/husham#p1-a3dc25ee",
+      "text": "ஊஷாம் என்பவன் தேமானியனாக இருந்து, யோபாபுக்குப் பின்பு ஏதோமின் அரசனானான் (ஆதியாகமம் 36:34–35; 1 நாளாகமம் 1:45–46)."
+    }
+  ]
+}

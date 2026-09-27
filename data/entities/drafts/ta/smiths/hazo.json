@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hazo",
+  "lang": "ta",
+  "source_hash": "5b961ad2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசோ",
+  "paragraphs": [
+    {
+      "id": "smiths/hazo#p1-5b961ad2",
+      "text": "(தரிசனம்), நாகோருக்கு அவனுடைய மனைவியாகிய மில்க்காளால் பிறந்த ஒரு மகன். (ஆதியாகமம் 22:22) (கி.மு. 1900 ஏறக்குறைய.)"
+    }
+  ]
+}

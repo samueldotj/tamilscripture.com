@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rephaiah",
+  "lang": "ta",
+  "source_hash": "634d41a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெப்பாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/rephaiah#p1-634d41a4",
+      "text": "(யெகோவாவினால் சுகமளிக்கப்பட்டவன்)."
+    }
+  ]
+}

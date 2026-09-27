@@ -1,0 +1,18 @@
+{
+  "id": "smiths/olivet",
+  "lang": "ta",
+  "source_hash": "ed3230a5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒலிவேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/olivet#p1-ed3230a5",
+      "text": "(ஒலிவமரங்களின் இடம்). (2 சாமுவேல் 15:30; அப்போஸ்தலருடைய நடபடிகள் 1:12) [ஒலிவமலை காண்க]"
+    }
+  ]
+}

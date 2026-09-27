@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/graven-image",
+  "lang": "ta",
+  "source_hash": "7d31df84",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செதுக்கப்பட்ட விக்கிரகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/graven-image#p1-e61fcc42",
+      "text": "செதுக்கப்பட்ட விக்கிரகம் என்பது மரம், கல் அல்லது உலோகத்தால் வடிவமைக்கப்பட்ட ஒரு தேவனுடைய உருவம் அல்லது சாயல் ஆகும்."
+    },
+    {
+      "id": "aquifer/graven-image#p2-03e23eba",
+      "text": "விக்கிரகங்கள், விக்கிரக ஆராதனை என்பதைக் காண்க."
+    }
+  ]
+}

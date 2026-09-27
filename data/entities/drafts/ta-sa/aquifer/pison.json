@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pison",
+  "lang": "ta",
+  "source_hash": "7dedb074",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பைசோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pison#p1-a8206092",
+      "text": "Pison என்பது ஆதியாகமம் 2:11-லுள்ள பைசோன் ஆற்றுக்கான யாக்கோபு அரசன் மொழிபெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/pison#p2-dfefe595",
+      "text": "பைசோன் எனும் தலைப்பைக் காண்க."
+    }
+  ]
+}

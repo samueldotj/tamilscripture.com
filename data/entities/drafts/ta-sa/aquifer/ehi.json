@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ehi",
+  "lang": "ta",
+  "source_hash": "90e3ab23",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ehi#p1-8a78c62e",
+      "text": "எகி பென்யமீனுடைய ஒரு மகனாக இருந்தார் (ஆதியாகமம் 46:21). இந்தப் பெயர் அகிராம் என்பதற்கான ஒரு பிரதிபிடிப்பாளர் பிழையாக இருக்கக்கூடும்."
+    },
+    {
+      "id": "aquifer/ehi#p2-1a0dfa43",
+      "text": "அகிராம், அகிராமியர் என்பதைக் காண்க."
+    }
+  ]
+}

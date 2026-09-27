@@ -1,0 +1,18 @@
+{
+  "id": "smiths/omer",
+  "lang": "ta",
+  "source_hash": "5c42ace8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமர்",
+  "paragraphs": [
+    {
+      "id": "smiths/omer#p1-5c42ace8",
+      "text": "[நிறைகளும் அளவுகளும் என்பதைக் காண்க.]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uphaz",
+  "lang": "ta",
+  "source_hash": "ad9004fa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊப்பாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/uphaz#p1-ad9004fa",
+      "text": "(எரேமியா 10:9; தானியேல் 10:5) [ஓப்பீர்]"
+    }
+  ]
+}

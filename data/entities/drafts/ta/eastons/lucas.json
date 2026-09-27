@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lucas",
+  "lang": "ta",
+  "source_hash": "1c08e068",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூக்காஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/lucas#p1-1c08e068",
+      "text": "ரோமாபுரிக்குப் பவுல் சிறையிலிருந்தபோது அவனுடைய நண்பனும் தோழனும்; பிரியமான மருத்துவனாகிய லூக்கா (காண்க) (பிலேமோன் 1:24; கொலோசெயர் 4:14)."
+    }
+  ]
+}

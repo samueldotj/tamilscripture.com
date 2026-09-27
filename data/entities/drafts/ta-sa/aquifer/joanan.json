@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/joanan",
+  "lang": "ta",
+  "source_hash": "679be97e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவன்னான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/joanan#p1-a3568aac",
+      "text": "லூக்கா 3:27-ல் குறிப்பிடப்பட்டுள்ள இயேசுவின் முற்பிதாக்களில் ஒருவன்."
+    },
+    {
+      "id": "aquifer/joanan#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gashmu",
+  "lang": "ta",
+  "source_hash": "207643fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கஷ்மு",
+  "paragraphs": [
+    {
+      "id": "smiths/gashmu#p1-207643fc",
+      "text": "கேஷேம் என்ற பெயரின் ஒரு வேறுபாடு. (நெகேமியா 6:6) (கி.மு. 446.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abiud",
+  "lang": "ta",
+  "source_hash": "54e5431a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/abiud#p1-54e5431a",
+      "text": "(துதியின் தகப்பன்), இயேசுகிறிஸ்துவின் வம்சாவளியில் செருபாபேலின் சந்ததியார். (மத்தேயு 1:13)"
+    }
+  ]
+}

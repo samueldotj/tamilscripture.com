@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abi",
+  "lang": "ta",
+  "source_hash": "fa126673",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபி",
+  "paragraphs": [
+    {
+      "id": "smiths/abi#p1-fa126673",
+      "text": "எசேக்கியா ராஜாவின் தாய் (2 இராஜாக்கள் 18:2); 2 நாளாகமம் 29:1-லே அபியாள் என்று எழுதப்பட்டிருக்கிறது."
+    }
+  ]
+}

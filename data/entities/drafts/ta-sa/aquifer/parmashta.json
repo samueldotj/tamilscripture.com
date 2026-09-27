@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/parmashta",
+  "lang": "ta",
+  "source_hash": "878fd475",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்மஷ்டா",
+  "paragraphs": [
+    {
+      "id": "aquifer/parmashta#p1-878fd475",
+      "text": "யூதர்களால் கொல்லப்பட்ட ஆமானின் பத்து மகன்களில் ஒருவன் (எஸ்தர் 9:9)."
+    }
+  ]
+}

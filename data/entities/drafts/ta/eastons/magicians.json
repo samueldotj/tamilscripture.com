@@ -1,0 +1,18 @@
+{
+  "id": "eastons/magicians",
+  "lang": "ta",
+  "source_hash": "eb0f51c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மந்திரவாதிகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/magicians#p1-eb0f51c6",
+      "text": "எபிரெயம் hartumim (தானியேல் 1:20), அறிகுறிகளை விளக்குகிறவர்களாகவும், “மறைந்த காரியங்களை வெளிப்படுத்துகிறவர்களாகவும்” செயல்பட்ட புனித வேதபண்டிதர்களைக் குறிக்கிறது."
+    }
+  ]
+}

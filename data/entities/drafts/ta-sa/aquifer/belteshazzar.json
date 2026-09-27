@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/belteshazzar",
+  "lang": "ta",
+  "source_hash": "e953bb4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெல்தெஷாத்சார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/belteshazzar#p1-1a3eef2c",
+      "text": "தானியேலின் பாபிலோனிய பெயர் (தானியேல் 1:7). நேபுகாத்நேச்சார் அரசனுக்கு பணிவிடை செய்யப் பயிற்சி பெறுவதற்காக பாபிலோனுக்குச் சிறைப்பிடித்துச் செல்லப்பட்ட இளம் மனிதர்களில் தானியேலும் ஒருவனாக இருந்தான் (தானியேல் 1)."
+    },
+    {
+      "id": "aquifer/belteshazzar#p2-e69e9ddf",
+      "text": "தானியேல் (நபர்) #3-ஐக் காண்க."
+    }
+  ]
+}

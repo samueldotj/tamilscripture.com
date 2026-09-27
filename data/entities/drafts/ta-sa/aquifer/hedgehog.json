@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hedgehog",
+  "lang": "ta",
+  "source_hash": "f00d5d27",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முள்ளம்பன்றி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hedgehog#p1-f00d5d27",
+      "text": "பூச்சிகளை உணவாகக் கொள்ளும் சிறிய பாலூட்டி, குட்டையான முள்ளடர்த்திய தோலைக் கொண்டதும், முள்ளம்பன்றியை (porcupine) ஒத்ததும் ஆகும் (ஏசாயா 14:23; செப்பனியா 2:14). மிருகங்கள் (முள்ளம்பன்றி) என்பதைக் காண்க."
+    }
+  ]
+}

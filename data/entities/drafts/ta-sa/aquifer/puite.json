@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/puite",
+  "lang": "ta",
+  "source_hash": "bd801dcf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூயீத்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/puite#p1-7a7f1fe3",
+      "text": "பூனீத்து குடும்பத்தைச் சேர்ந்தவன்."
+    },
+    {
+      "id": "aquifer/puite#p2-eb4a58a9",
+      "text": "பூனீத்து காண்க."
+    }
+  ]
+}

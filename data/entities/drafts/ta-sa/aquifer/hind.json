@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hind",
+  "lang": "ta",
+  "source_hash": "ad07ef3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெண்மான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hind#p1-c83f1f3e",
+      "text": "பெண்மான் என்பது சிவப்பு மானின் வளர்ந்த பெண் இனத்தைக் குறிக்கும்."
+    },
+    {
+      "id": "aquifer/hind#p2-abd54883",
+      "text": "காண்க: மான்."
+    }
+  ]
+}

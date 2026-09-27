@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/fire-lake-of",
+  "lang": "ta",
+  "source_hash": "07fdbda5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெருப்பு, கடல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/fire-lake-of#p1-07fdbda5",
+      "text": "நெருப்புக்கடல் என்பதைக் காண்க."
+    }
+  ]
+}

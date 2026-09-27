@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mercurius-mercury",
+  "lang": "ta",
+  "source_hash": "bed1cd9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெர்குரியுஸ், மெர்குரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/mercurius-mercury#p1-33f81ba7",
+      "text": "மெர்குரியுஸ், அல்லது மெர்குரி, கிரேக்க தேவனாகிய எர்மேயுடன் அடையாளப்படுத்தப்பட்ட ரோம தேவனாவான். அவன் செய்திகள், பயணம், வர்த்தகம், மற்றும் சொல்வளமையான பேச்சுடன் தொடர்புகொள்ளப்பட்டவனாக இருந்தான்."
+    },
+    {
+      "id": "aquifer/mercurius-mercury#p2-95505679",
+      "text": "எர்மே #1-ஐ காண்க."
+    }
+  ]
+}

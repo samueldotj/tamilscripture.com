@@ -1,0 +1,18 @@
+{
+  "id": "smiths/messias",
+  "lang": "ta",
+  "source_hash": "e2b73dee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேசியாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/messias#p1-e2b73dee",
+      "text": "(அபிஷேகம் செய்யப்பட்டவர்), மேசியா என்பதன் கிரேக்க வடிவம். (யோவான் 1:41; 4:25)"
+    }
+  ]
+}

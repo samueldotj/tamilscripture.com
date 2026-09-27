@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/iron",
+  "lang": "ta",
+  "source_hash": "6eaa4961",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இரும்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/iron#p1-3e27e1e5",
+      "text": "பழங்காலத்தில் கருவிகளையும் ஆயுதங்களையும் செய்யப் பயன்படுத்தப்பட்ட ஒரு பலமான உலோகம்."
+    },
+    {
+      "id": "aquifer/iron#p2-064c142a",
+      "text": "கனிமங்கள் மற்றும் உலோகங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

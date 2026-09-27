@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elnaam",
+  "lang": "ta",
+  "source_hash": "6457b86c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏல்நாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/elnaam#p1-6457b86c",
+      "text": "(தேவன் அவருடைய மகிழ்ச்சி), 1 நாளாகமம் 11:46-ன்படி, தாவீதின் காவலரில் இருவரான ஏரிபாய், யொசவியா ஆகியோரின் தகப்பன்."
+    }
+  ]
+}

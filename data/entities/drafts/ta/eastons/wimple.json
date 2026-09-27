@@ -1,0 +1,18 @@
+{
+  "id": "eastons/wimple",
+  "lang": "ta",
+  "source_hash": "a167ea16",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விம்பிள்",
+  "paragraphs": [
+    {
+      "id": "eastons/wimple#p1-a167ea16",
+      "text": "ஏசாயா 3:22, (ஆர்.வி., “சால்வைகள்”), ஒரு போர்வை அல்லது திரைச்சீலை. அதே எபிரெய வார்த்தை ரூத் 3:15-இல் “போர்வை” (ஆர்.வி., “மேலாடை”) என்று மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

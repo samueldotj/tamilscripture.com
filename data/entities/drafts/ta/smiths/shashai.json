@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shashai",
+  "lang": "ta",
+  "source_hash": "bebbda5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாசாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/shashai#p1-bebbda5b",
+      "text": "(உயர்குடி), எஸ்றாவின் காலத்தில் பானியின் மகன்களில் ஒருவன். (எஸ்றா 10:40) (கி.மு. 457.)"
+    }
+  ]
+}

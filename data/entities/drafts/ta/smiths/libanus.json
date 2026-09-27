@@ -1,0 +1,18 @@
+{
+  "id": "smiths/libanus",
+  "lang": "ta",
+  "source_hash": "d93adc96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிபானஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/libanus#p1-d93adc96",
+      "text": "[லீபனோன்]"
+    }
+  ]
+}

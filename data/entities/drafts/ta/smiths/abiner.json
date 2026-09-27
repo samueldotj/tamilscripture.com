@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abiner",
+  "lang": "ta",
+  "source_hash": "a6dd9a28",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபினேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/abiner#p1-a6dd9a28",
+      "text": "(வெளிச்சத்தின் தகப்பன்). அப்னேரைப் போன்றது. (1 சாமுவேல் 14:50) குறிப்பு."
+    }
+  ]
+}

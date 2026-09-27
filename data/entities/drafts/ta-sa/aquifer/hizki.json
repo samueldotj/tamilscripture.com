@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hizki",
+  "lang": "ta",
+  "source_hash": "5dc81ad0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்கி",
+  "paragraphs": [
+    {
+      "id": "aquifer/hizki#p1-5dc81ad0",
+      "text": "இஸ்கி என்பவன் பென்யமீன் கோத்திரத்தில் எல்பாலின் மகனாக இருந்தான் (1 நாளாகமம் 8:17)."
+    }
+  ]
+}

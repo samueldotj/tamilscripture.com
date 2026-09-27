@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gazer",
+  "lang": "ta",
+  "source_hash": "56320602",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gazer#p1-b0874ec8",
+      "text": "2 சாமுவேல் 5:25 மற்றும் 1 நாளாகமம் 14:16-ல் உள்ள கேசேர் என்ற பட்டணத்திற்குக் ராஜா யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் மாற்று எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/gazer#p2-a118672b",
+      "text": "கேசேர் என்பதைக் காண்க."
+    }
+  ]
+}

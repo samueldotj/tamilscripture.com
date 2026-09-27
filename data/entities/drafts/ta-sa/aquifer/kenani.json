@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kenani",
+  "lang": "ta",
+  "source_hash": "520d1eb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனானி",
+  "paragraphs": [
+    {
+      "id": "aquifer/kenani#p1-520d1eb2",
+      "text": "கெனானி பாபிலோனில் இருந்த சிறையிருப்புக்குப் பின்பு மோசேயின் நியாயப்பிரமாணத்தை பொதுவில் வாசிப்பதில் பங்குகொண்ட ஒரு லேவியன் ஆவான் (நெகேமியா 9:4)."
+    }
+  ]
+}

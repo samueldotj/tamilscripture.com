@@ -1,0 +1,18 @@
+{
+  "id": "eastons/vagabond",
+  "lang": "ta",
+  "source_hash": "4f8100ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாடோடி",
+  "paragraphs": [
+    {
+      "id": "eastons/vagabond#p1-4f8100ae",
+      "text": "லத்தீன் vagabundus, “அலைந்து திரிபவன்,” “ஓடிப்போனவன்” என்பதிலிருந்து வந்தது; இகழ்ச்சிப் பொருளில் பயன்படுத்தப்படவில்லை (ஆதியாகமம் 4:12, R.V., “அலைகிறவன்”; சங்கீதங்கள் 109:10; அப்போஸ்தலருடைய நடபடிகள் 19:13, R.V., “திரிகிற”)."
+    }
+  ]
+}

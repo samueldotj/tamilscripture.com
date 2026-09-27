@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sychem",
+  "lang": "ta",
+  "source_hash": "85e9cd60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகேம் (சுகேம்)",
+  "paragraphs": [
+    {
+      "id": "smiths/sychem#p1-85e9cd60",
+      "text": "இது ஷெகேம் (சீகேம்) என்ற வார்த்தையின் கிரேக்கு வடிவம். இது அப்போஸ்தலருடைய நடபடிகள் 7:16 இல் மட்டுமே காணப்படுகிறது. [சீகேம் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bag",
+  "lang": "ta",
+  "source_hash": "7b173d94",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பை",
+  "paragraphs": [
+    {
+      "id": "smiths/bag#p1-7b173d94",
+      "text": "பழைய ஏற்பாட்டிலும் புதிய ஏற்பாட்டிலும் உள்ள பல வார்த்தைகளை மொழிபெயர்க்கும்போது இந்தச் சொல் பயன்படுத்தப்படுகிறது."
+    }
+  ]
+}

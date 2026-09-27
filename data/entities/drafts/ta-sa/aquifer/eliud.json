@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eliud",
+  "lang": "ta",
+  "source_hash": "e06c0fee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியூத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eliud#p1-77d644d8",
+      "text": "மத்தேயுவின் வம்ச பட்டியலின்படி (மத்தேயு 1:14-15), ஆகீமின் மகனும், எலெயாசாரின் தந்தையும், இயேசுகிறிஸ்துவின் முன்னோர்களில் ஒருவனுமாக இருந்தான்."
+    },
+    {
+      "id": "aquifer/eliud#p2-28052238",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

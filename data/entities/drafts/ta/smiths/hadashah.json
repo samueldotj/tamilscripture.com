@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hadashah",
+  "lang": "ta",
+  "source_hash": "34df64f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதாஷா",
+  "paragraphs": [
+    {
+      "id": "smiths/hadashah#p1-34df64f1",
+      "text": "(புதியது), யூதாவின் ஊர்களில் ஒன்று, கடற்கரையோர தாழ்நிலப் பகுதியில் இருந்தது, (யோசுவா 15:37, 16:37) மட்டும், மக்கபேயர் வரலாற்றின் அதாஸா என்பது இதுவே எனக் கருதப்படுகிறது."
+    }
+  ]
+}

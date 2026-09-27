@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jannes",
+  "lang": "ta",
+  "source_hash": "b9b95991",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யந்நே",
+  "paragraphs": [
+    {
+      "id": "eastons/jannes#p1-b9b95991",
+      "text": "“மோசேக்கு எதிர்த்துநின்ற” எகிப்தியர்களில் ஒருவன் (2 தீமோத்தேயு 3:8)."
+    }
+  ]
+}

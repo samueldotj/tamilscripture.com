@@ -1,0 +1,18 @@
+{
+  "id": "smiths/talitha-cumi",
+  "lang": "ta",
+  "source_hash": "b872e3bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தலீத்தாகூமி",
+  "paragraphs": [
+    {
+      "id": "smiths/talitha-cumi#p1-b872e3bb",
+      "text": "இவை இரண்டு சிரியா மொழிச் சொற்கள் (மாற்கு 5:41), இதற்கு சிறுபெண்ணே, எழுந்திரு என்று அர்த்தம்."
+    }
+  ]
+}

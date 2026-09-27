@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beroea",
+  "lang": "ta",
+  "source_hash": "f950d552",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரோயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/beroea#p1-7f8aa9b0",
+      "text": "பெரோயா என்பதற்கு மாற்று எழுத்துமுறை, மக்கெதோனியாவில் உள்ள ஒரு பழங்கால பட்டணம், அங்கே பவுல் தன்னுடைய இரண்டாம் மிஷனரிப் பயணத்தின்போது பிரசங்கம் செய்தான் (அப்போஸ்தலருடைய நடபடிகள் 17:10-15)."
+    },
+    {
+      "id": "aquifer/beroea#p2-27c06364",
+      "text": "பெரோயா #2 ஐக் காண்க."
+    }
+  ]
+}

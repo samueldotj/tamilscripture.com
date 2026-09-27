@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ai",
+  "lang": "ta",
+  "source_hash": "fe9c9be8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயீ",
+  "paragraphs": [
+    {
+      "id": "smiths/ai#p1-fe9c9be8",
+      "text": "(பாழான மண்மேடு)."
+    }
+  ]
+}

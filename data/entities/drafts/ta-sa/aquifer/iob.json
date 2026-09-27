@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/iob",
+  "lang": "ta",
+  "source_hash": "2ec53df8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோபு (இசக்காரின் மகன்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/iob#p1-ac700b98",
+      "text": "யோபு என்பது இசக்காருடைய மகனாகிய யாசூபுக்கு (ஆதியாகமம் 46:13) மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/iob#p2-25c96ed8",
+      "text": "யாசூப் #1-ஐக் காண்க."
+    }
+  ]
+}

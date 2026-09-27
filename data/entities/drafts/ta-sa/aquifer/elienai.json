@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elienai",
+  "lang": "ta",
+  "source_hash": "f550d0ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியேனாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elienai#p1-f550d0ce",
+      "text": "எலியேனாய் ஒரு பென்யமீனனாகவும், சீமேயின் மகனாகவும் இருந்தான் (1 நாளாகமம் 8:20). அவனுடைய பெயர் எலியோனாய் என்பதன் சுருக்கப்பட்ட வடிவமாக இருக்கலாம் (1 நாளாகமம் 26:3 காண்க)."
+    }
+  ]
+}

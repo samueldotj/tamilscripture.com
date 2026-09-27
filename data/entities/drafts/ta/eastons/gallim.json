@@ -1,0 +1,18 @@
+{
+  "id": "eastons/gallim",
+  "lang": "ta",
+  "source_hash": "2358936c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/gallim#p1-2358936c",
+      "text": "குவியல்கள் (1 சாமுவேல் 25:44; ஏசாயா 10:30). சவுல் மீகாளை கொடுத்த பல்த்தியின் பூர்வ ஊர். இது எருசலேமுக்கு வடக்கே, பென்யமீனில் இருந்திருக்கலாம்."
+    }
+  ]
+}

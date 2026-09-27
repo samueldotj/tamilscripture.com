@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nahor",
+  "lang": "ta",
+  "source_hash": "af6f4e47",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/nahor#p1-af6f4e47",
+      "text": "(மூச்சிரைப்பு), ஆபிரகாமின் குடும்பத்திலிருந்த இரண்டு நபர்களின் பெயர்."
+    }
+  ]
+}

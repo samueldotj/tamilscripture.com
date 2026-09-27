@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kushaiah",
+  "lang": "ta",
+  "source_hash": "418df540",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குஷாயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kushaiah#p1-c0100191",
+      "text": "குஷாயா என்பது 1 நாளாகமம் 15:17-இல் குறிப்பிடப்பட்டுள்ள மெராரியனுடைய சந்ததியான லேவியனாகிய கிஷியின் மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/kushaiah#p2-ffcd9f7a",
+      "text": "கிஷி என்பதைக் காண்க."
+    }
+  ]
+}

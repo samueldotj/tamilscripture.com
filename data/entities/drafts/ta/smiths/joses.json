@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joses",
+  "lang": "ta",
+  "source_hash": "19c1a28b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசே",
+  "paragraphs": [
+    {
+      "id": "smiths/joses#p1-19c1a28b",
+      "text": "(உயர்த்தப்படுவான்)."
+    }
+  ]
+}

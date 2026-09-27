@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bigamy",
+  "lang": "ta",
+  "source_hash": "3675fad2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இருமனையாட்சி",
+  "paragraphs": [
+    {
+      "id": "aquifer/bigamy#p1-8af9265f",
+      "text": "இருமனையாட்சி என்பது முதல் மனைவியுடன் சட்டப்படி இன்னும் திருமண உறவில் இருக்கும்போதே இரண்டாம் மனைவியை மணந்துகொள்வதைக் குறிக்கும்."
+    },
+    {
+      "id": "aquifer/bigamy#p2-e8b33856",
+      "text": "திருமணம், திருமண வழக்கங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

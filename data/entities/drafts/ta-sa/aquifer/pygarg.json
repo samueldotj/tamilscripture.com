@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pygarg",
+  "lang": "ta",
+  "source_hash": "74b9a3e5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிகார்க்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pygarg#p1-13d8d266",
+      "text": "உபாகமம் 14:5இல் “வரையாடு” என்பதற்கான கிங் யாக்கோபு மொழிபெயர்ப்புச் சொல்."
+    },
+    {
+      "id": "aquifer/pygarg#p2-ee1673b2",
+      "text": "விலங்குகள் (வரையாடு) என்பதைக் காண்க."
+    }
+  ]
+}

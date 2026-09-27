@@ -1,0 +1,18 @@
+{
+  "id": "eastons/piram",
+  "lang": "ta",
+  "source_hash": "4261d28a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பீராம்",
+  "paragraphs": [
+    {
+      "id": "eastons/piram#p1-4261d28a",
+      "text": "காட்டுக் கழுதையைப் போன்றவன், கானானியரின் அரச நகரமாகிய யர்மூத்தின் ராஜா, இவன் யோசுவாவினால் தோற்கடிக்கப்பட்டு மரணத்திற்கு உள்ளாக்கப்பட்டான் (10:3, 23, 26)."
+    }
+  ]
+}

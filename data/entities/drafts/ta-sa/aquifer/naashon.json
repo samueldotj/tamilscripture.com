@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/naashon",
+  "lang": "ta",
+  "source_hash": "a3f0c406",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாஷோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naashon#p1-2f696082",
+      "text": "யாத்திராகமம் 6:23-ல் அம்மினதாபின் மகனாகிய நகசோன் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/naashon#p2-14e86f93",
+      "text": "நகசோனைப் காண்க."
+    }
+  ]
+}

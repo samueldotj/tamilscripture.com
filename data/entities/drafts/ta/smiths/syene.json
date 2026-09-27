@@ -1,0 +1,18 @@
+{
+  "id": "smiths/syene",
+  "lang": "ta",
+  "source_hash": "486811a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செவெனே",
+  "paragraphs": [
+    {
+      "id": "smiths/syene#p1-486811a3",
+      "text": "சரியாகச் சொன்னால் Seventh, கூஷ் அல்லது எத்தியோப்பியாவின் எல்லையில் இருந்த எகிப்தின் ஒரு பட்டணம் (எசேக்கியேல் 29:10; 30:6), இது இன்றுள்ள Aruan அல்லது Es-Suan ஆகும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ethni",
+  "lang": "ta",
+  "source_hash": "6386cb8c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்னி",
+  "paragraphs": [
+    {
+      "id": "smiths/ethni#p1-6386cb8c",
+      "text": "(உதாரகுணமுள்ளவன்), கேர்சோன் வம்சத்தைச் சேர்ந்த ஒரு லேவியன். (1 நாளாகமம் 6:41)"
+    }
+  ]
+}

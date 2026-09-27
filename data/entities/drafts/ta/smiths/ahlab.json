@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahlab",
+  "lang": "ta",
+  "source_hash": "e65fe443",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்லாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahlab#p1-e65fe443",
+      "text": "(வளமான), ஆசேர் கோத்திரத்திற்குரிய ஒரு பட்டணம், அதிலிருந்து கானானியர்கள் துரத்தப்படவில்லை. (நியாயாதிபதிகள் 1:31)"
+    }
+  ]
+}

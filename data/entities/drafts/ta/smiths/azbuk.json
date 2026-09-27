@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azbuk",
+  "lang": "ta",
+  "source_hash": "3282bdce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பூக்",
+  "paragraphs": [
+    {
+      "id": "smiths/azbuk#p1-3282bdce",
+      "text": "(பலத்த அழிவு), பெத்சூரின் ஒரு பகுதியை ஆட்சி செய்த நெகேமியாவின் தகப்பன் அல்லது முற்பிதா. (நெகேமியா 3:16)"
+    }
+  ]
+}

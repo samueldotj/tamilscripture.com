@@ -1,0 +1,18 @@
+{
+  "id": "smiths/smith",
+  "lang": "ta",
+  "source_hash": "eab1ed72",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொல்லன்",
+  "paragraphs": [
+    {
+      "id": "smiths/smith#p1-eab1ed72",
+      "text": "[கைத்தொழில்]"
+    }
+  ]
+}

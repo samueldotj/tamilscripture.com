@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elbethel",
+  "lang": "ta",
+  "source_hash": "cb6b4d95",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பெத்தேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/elbethel#p1-cb6b4d95",
+      "text": "(பெத்தேலின் தேவன்), ஏசாவைவிட்டு ஓடிப்போன காலத்தில் தேவன் தனக்குக் காட்சியளித்த இடத்திற்கு யாக்கோபு கொடுத்ததாகச் சொல்லப்படும் பெயர். (ஆதியாகமம் 35:7)"
+    }
+  ]
+}

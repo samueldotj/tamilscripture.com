@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zavan",
+  "lang": "ta",
+  "source_hash": "8c911a4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாவான்",
+  "paragraphs": [
+    {
+      "id": "smiths/zavan#p1-8c911a4b",
+      "text": "(1 நாளாகமம் 1:42) [சகவான், அல்லது சாவான்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zizah",
+  "lang": "ta",
+  "source_hash": "c9b45f27",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீனா",
+  "paragraphs": [
+    {
+      "id": "smiths/zizah#p1-c9b45f27",
+      "text": "கேர்சோனியனான ஒரு லேவியன், சீமேயின் இரண்டாம் மகன், (1 நாளாகமம் 23:11) 10-ஆம் வசனத்தில் சீனா என்று அழைக்கப்பட்டான் (1 நாளாகமம் 23:10)"
+    }
+  ]
+}

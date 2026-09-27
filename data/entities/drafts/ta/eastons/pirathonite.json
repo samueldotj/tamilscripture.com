@@ -1,0 +1,22 @@
+{
+  "id": "eastons/pirathonite",
+  "lang": "ta",
+  "source_hash": "616e7255",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரத்தோனியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/pirathonite#p1-018efaf5",
+      "text": "(1.) இல்லேலின் மகனான அப்தோன், இவ்வாறு அழைக்கப்பட்டான், நியாயாதிபதிகள் 12:13, 15."
+    },
+    {
+      "id": "eastons/pirathonite#p2-2b2a26bd",
+      "text": "(2.) எப்பிராயீமியனான பெனாயா (2 சாமுவேல் 23:30), தாவீதின் முப்பது பராக்கிரமசாலிகளில் ஒருவன்."
+    }
+  ]
+}

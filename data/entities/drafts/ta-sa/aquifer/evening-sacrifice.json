@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/evening-sacrifice",
+  "lang": "ta",
+  "source_hash": "debaaf8f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாலை பலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/evening-sacrifice#p1-bf6a7d7d",
+      "text": "மாலை பலி என்பது ஒவ்வொரு நாளும் செலுத்தப்படும் நித்திய சர்வாங்க தகன காணிக்கையின் ஒரு பகுதியாக இருந்தது. ஒரு ஆட்டுக்குட்டி காலையில் பலியிடப்பட்டது, மற்றொன்று நாள் முடிவடையும் நேரத்தில் பலியிடப்பட்டது."
+    },
+    {
+      "id": "aquifer/evening-sacrifice#p2-1320f47c",
+      "text": "காணிக்கைகளும் பலிகளும் என்பதைக் காண்க."
+    }
+  ]
+}

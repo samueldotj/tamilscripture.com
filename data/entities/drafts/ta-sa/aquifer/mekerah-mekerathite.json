@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mekerah-mekerathite",
+  "lang": "ta",
+  "source_hash": "0099ae04",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகேரா, மெகேராத்தியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mekerah-mekerathite#p1-a113b0d7",
+      "text": "மெகேரா என்பது மெகேராத்தியன் என்ற பெயர் உருவான இடமாகவோ அல்லது மூதாதையாகவோ கருதப்படுகிறது. மெகேராத்தியன் என்பது மெகேராத்தியன் என்ற பெயரின் மாற்று உச்சரிப்பாகும்."
+    },
+    {
+      "id": "aquifer/mekerah-mekerathite#p2-9f8da4e6",
+      "text": "மெகேராத்தியன் என்பதைக் காண்க."
+    }
+  ]
+}

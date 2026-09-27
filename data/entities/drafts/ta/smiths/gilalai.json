@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gilalai",
+  "lang": "ta",
+  "source_hash": "f4263ab1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலாலாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/gilalai#p1-f4263ab1",
+      "text": "(எடையுள்ளவன்), எருசலேமின் மதிலைக் கட்டிமுடித்த அர்ப்பணிப்பின்போது இருந்த ஆசாரியர்களின் மகன்களில் ஒருவன். (நெகேமியா 12:36) (கி.மு. 446.)"
+    }
+  ]
+}

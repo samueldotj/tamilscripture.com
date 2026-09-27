@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/jered",
+  "lang": "ta",
+  "source_hash": "4cc302c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாரேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jered#p1-03d07a37",
+      "text": "1 நாளாகமம் 1:2-ல் யாரேத் என்பதற்கு யாக்கோபு அரசரின் மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/jered#p2-4900026a",
+      "text": "யாரேத்தைப் பார்க்கவும்."
+    },
+    {
+      "id": "aquifer/jered#p3-bbf74398",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த எஸ்றாவின் மகன் (1 நாளாகமம் 4:18)."
+    }
+  ]
+}

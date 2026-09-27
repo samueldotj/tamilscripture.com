@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/arbathite",
+  "lang": "ta",
+  "source_hash": "7f3a602d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்பாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/arbathite#p1-7f3a602d",
+      "text": "அரபா நகரத்தின் குடியேற்றவாசி. அரபா, தாவீதின் முப்பது \"பராக்கிரமசாலிகளில்\" ஒருவனான அபிஅல்பொனின் (அபீயேலின்) சொந்த ஊராக இருந்தது (2 சாமுவேல் 23:31; 1 நாளாகமம் 11:32)."
+    }
+  ]
+}

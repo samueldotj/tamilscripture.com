@@ -1,0 +1,18 @@
+{
+  "id": "smiths/wedding",
+  "lang": "ta",
+  "source_hash": "a8d57423",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திருமணம்",
+  "paragraphs": [
+    {
+      "id": "smiths/wedding#p1-a8d57423",
+      "text": "[விவாகம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cushan",
+  "lang": "ta",
+  "source_hash": "38c68224",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூஷான்",
+  "paragraphs": [
+    {
+      "id": "smiths/cushan#p1-38c68224",
+      "text": "(கருமை) (ஆபகூக் 3:7) இது ஒருவேளை மெசொப்பொத்தாமியாவின் ராஜாவாகிய கூசான்ரிஷதாயீமைக் (ஆங்கிலம் Authorized Version-இல் Chushan-) குறிக்கலாம். (நியாயாதிபதிகள் 3:8,10)"
+    }
+  ]
+}

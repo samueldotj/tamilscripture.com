@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nahbi",
+  "lang": "ta",
+  "source_hash": "729becde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகபி",
+  "paragraphs": [
+    {
+      "id": "eastons/nahbi#p1-729becde",
+      "text": "மறைவானவன், கானான் தேசத்தை உசாவிப்பார்க்க அனுப்பப்பட்ட பன்னிரண்டு ஒற்றர்களில் ஒருவன் (எண்ணாகமம் 13:14)."
+    }
+  ]
+}

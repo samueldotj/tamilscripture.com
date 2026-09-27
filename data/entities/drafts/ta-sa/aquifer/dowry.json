@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dowry",
+  "lang": "ta",
+  "source_hash": "82fea6dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கட்னம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dowry#p1-b3cf1d2b",
+      "text": "கட்னம் என்பது திருமணத்திற்கு முன்பு மணமகளின் குடும்பத்தினரால் மணமகளுக்கோ அல்லது மணமகனுக்கோ கொடுக்கப்படும் சொத்து அல்லது பொருட்களின் அன்பளிப்பாகும்."
+    },
+    {
+      "id": "aquifer/dowry#p2-e8b33856",
+      "text": "திருமணம், திருமண வழக்கங்கள் என்பவற்றைக் காண்க."
+    }
+  ]
+}

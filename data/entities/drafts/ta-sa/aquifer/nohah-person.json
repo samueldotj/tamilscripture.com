@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nohah-person",
+  "lang": "ta",
+  "source_hash": "1f90a890",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோகா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/nohah-person#p1-1f90a890",
+      "text": "நோகா என்பவன் பென்யமீனின் நான்காம் மகன் (1 நாளாகமம் 8:2)."
+    }
+  ]
+}

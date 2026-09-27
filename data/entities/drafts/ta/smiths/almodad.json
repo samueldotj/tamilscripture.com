@@ -1,0 +1,18 @@
+{
+  "id": "smiths/almodad",
+  "lang": "ta",
+  "source_hash": "0cf90ef7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோதாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/almodad#p1-0cf90ef7",
+      "text": "(அளவு) யொக்தானுடைய சந்ததியில் முதலாவதாக வரிசைப்படுத்தப்பட்டவன். (ஆதியாகமம் 10:26; 1 நாளாகமம் 1:20)"
+    }
+  ]
+}

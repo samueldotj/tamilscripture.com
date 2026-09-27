@@ -1,0 +1,18 @@
+{
+  "id": "eastons/riphath",
+  "lang": "ta",
+  "source_hash": "483820ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரீப்பாத்து",
+  "paragraphs": [
+    {
+      "id": "eastons/riphath#p1-483820ea",
+      "text": "நொறுக்குகிறவன், கோமரின் இரண்டாம் மகன் (ஆதியாகமம் 10:3), இவன் பாப்லகோனியரின் மூதாதையாக இருந்தான் என்று கருதப்படுகிறது."
+    }
+  ]
+}

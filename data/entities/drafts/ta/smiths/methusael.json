@@ -1,0 +1,18 @@
+{
+  "id": "smiths/methusael",
+  "lang": "ta",
+  "source_hash": "066d2baf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெத்தூசவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/methusael#p1-066d2baf",
+      "text": "(தேவனுடைய மனுஷன்), மெகுயவேலுடைய மகன், காயீனிலிருந்து நான்காம் தலைமுறையினன், லாமேக்குக்குத் தகப்பன். (ஆதியாகமம் 4:18)"
+    }
+  ]
+}

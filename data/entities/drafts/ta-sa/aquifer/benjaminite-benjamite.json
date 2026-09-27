@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/benjaminite-benjamite",
+  "lang": "ta",
+  "source_hash": "cd2c8912",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்யமீனியன், பென்யமீனித்தன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/benjaminite-benjamite#p1-238522e0",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்தவன்."
+    },
+    {
+      "id": "aquifer/benjaminite-benjamite#p2-efb230ac",
+      "text": "பென்யமீன் கோத்திரம் என்னும் தலைப்பைக் காண்க."
+    }
+  ]
+}

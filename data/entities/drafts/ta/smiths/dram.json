@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dram",
+  "lang": "ta",
+  "source_hash": "7cbaf6cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாலந்து (Dram)",
+  "paragraphs": [
+    {
+      "id": "smiths/dram#p1-7cbaf6cf",
+      "text": "[டாரிக் காண்க]"
+    }
+  ]
+}

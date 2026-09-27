@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sackbut",
+  "lang": "ta",
+  "source_hash": "223c8370",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சபேக்கா",
+  "paragraphs": [
+    {
+      "id": "eastons/sackbut#p1-223c8370",
+      "text": "(கல்தேயம் sabkha; கிரேக்கம் sambuke), சுரமண்டலத்தை ஒத்த ஒரு சீரிய நரம்புக் கருவி (தாண் 3:5, 7, 10, 15); இது இன்றைய சபேக்கா என்னும் காற்று வாத்தியம் அல்ல."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/necho",
+  "lang": "ta",
+  "source_hash": "a83eb1f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேகோ",
+  "paragraphs": [
+    {
+      "id": "smiths/necho#p1-a83eb1f1",
+      "text": "(முடவன்). (2 நாளாகமம் 35:20,22; 36:4) [பார்வோன்-நேகோ]"
+    }
+  ]
+}

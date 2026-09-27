@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bukkiah",
+  "lang": "ta",
+  "source_hash": "9951dc0a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புக்கியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bukkiah#p1-9951dc0a",
+      "text": "புக்கியா என்பவன் ஏமானின் மூத்த மகனாக இருந்தான். அவன் தன் தகப்பனோடும், தன் 13 சகோதரர்களோடும் ஆலயத்தில் இசைக்கலைஞனாக ஊழியம் செய்தான் (1 நாளாகமம் 25:4, 13)."
+    }
+  ]
+}

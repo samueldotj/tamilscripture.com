@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tahanites-the",
+  "lang": "ta",
+  "source_hash": "cdb9f550",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாகானியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/tahanites-the#p1-cdb9f550",
+      "text": "(எண்ணாகமம் 26:35) [தாகான்]"
+    }
+  ]
+}

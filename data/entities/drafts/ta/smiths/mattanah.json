@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mattanah",
+  "lang": "ta",
+  "source_hash": "934b31e0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தனா",
+  "paragraphs": [
+    {
+      "id": "smiths/mattanah#p1-934b31e0",
+      "text": "(யெகோவாவின் கொடை), இஸ்ரவேலர்களின் பயணத்தின் பிந்திய பகுதியில் இருந்த ஒரு தங்குமிடம். (எண்ணாகமம் 21:18,19) இது மரண கடலுக்கு தென்கிழக்கே இருந்திருக்கக்கூடும்."
+    }
+  ]
+}

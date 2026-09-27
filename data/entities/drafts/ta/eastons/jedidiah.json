@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jedidiah",
+  "lang": "ta",
+  "source_hash": "898cdac0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெதிதியா",
+  "paragraphs": [
+    {
+      "id": "eastons/jedidiah#p1-898cdac0",
+      "text": "யெகோவாவினால் நேசிக்கப்பட்டவன் என்பது, தீர்க்கதரிசியான நாத்தானின் வாய் மூலமாக, சாலொமோன் பிறந்தபோது தேவனுடைய தயவுக்கு அடையாளமாக கர்த்தர் அவனுக்குக் கொடுத்த பெயராகும் (2 சாமுவேல் 12:25)."
+    }
+  ]
+}

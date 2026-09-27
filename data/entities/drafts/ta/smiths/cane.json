@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cane",
+  "lang": "ta",
+  "source_hash": "da69f570",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோரை",
+  "paragraphs": [
+    {
+      "id": "smiths/cane#p1-da69f570",
+      "text": "[நாணல் பார்க்க]"
+    }
+  ]
+}

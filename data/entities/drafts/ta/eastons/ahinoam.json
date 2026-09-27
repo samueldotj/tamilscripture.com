@@ -1,0 +1,26 @@
+{
+  "id": "eastons/ahinoam",
+  "lang": "ta",
+  "source_hash": "9f6524cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகினோவாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/ahinoam#p1-4bea5de8",
+      "text": "பிரியத்தின் சகோதரி = இன்பமானவள்."
+    },
+    {
+      "id": "eastons/ahinoam#p2-17935fe3",
+      "text": "(1.) அகிமாசின் மகள், சவுலின் மனைவி (1 சாமுவேல் 14:50)."
+    },
+    {
+      "id": "eastons/ahinoam#p3-895b8037",
+      "text": "(2.) யெஸ்ரயேல் ஊராள், தாவீதின் முதல் மனைவி (1 சாமுவேல் 25:43; 27:3). அவள் அம்னோனின் தாய் (2 சாமுவேல் 3:2). (1 சாமுவேல் 30:5, 18; 2 சாமுவேல் 2:2 காண்க.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/deputy",
+  "lang": "ta",
+  "source_hash": "f928a96e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரதிநிதி (அதிபதி)",
+  "paragraphs": [
+    {
+      "id": "smiths/deputy#p1-f928a96e",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 13:7,8,12; 19:38) கிரேக்கு வார்த்தை ப்ரோகான்சல் (proconsul) என்பதைக் குறிக்கிறது, இது செனட்டினால் நியமிக்கப்பட்ட ரோம ஆளுநர்களின் பட்டம்."
+    }
+  ]
+}

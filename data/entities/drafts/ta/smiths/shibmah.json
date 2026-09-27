@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shibmah",
+  "lang": "ta",
+  "source_hash": "946d2102",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீப்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/shibmah#p1-946d2102",
+      "text": "(சரியாக சீப்மா). [ஷேபாம் காண்க]"
+    }
+  ]
+}

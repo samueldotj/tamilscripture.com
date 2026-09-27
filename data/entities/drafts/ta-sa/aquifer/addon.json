@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/addon",
+  "lang": "ta",
+  "source_hash": "aeff3d68",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/addon#p1-b4303dda",
+      "text": "பாபிலோனில் உள்ள ஒரு இடமான ஆதான் என்பதன் மற்றொரு வடிவம் (நெகேமியா 7:61)."
+    },
+    {
+      "id": "aquifer/addon#p2-e178a66b",
+      "text": "ஆதான் காண்க."
+    }
+  ]
+}

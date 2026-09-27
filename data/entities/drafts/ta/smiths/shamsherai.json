@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shamsherai",
+  "lang": "ta",
+  "source_hash": "8205d231",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்சேராய்",
+  "paragraphs": [
+    {
+      "id": "smiths/shamsherai#p1-8205d231",
+      "text": "(சூரியனைப்போன்றவன்), ஒரு பென்யமீனியன். (1 நாளாகமம் 8:26)"
+    }
+  ]
+}

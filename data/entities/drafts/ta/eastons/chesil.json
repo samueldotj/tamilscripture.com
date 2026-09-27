@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chesil",
+  "lang": "ta",
+  "source_hash": "698c6c0d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெசீல்",
+  "paragraphs": [
+    {
+      "id": "eastons/chesil#p1-698c6c0d",
+      "text": "அவபக்தி, யூதாவின் தென்பகுதியில் இருந்த ஒரு பட்டணம் (யோசுவா 15:30); இது பெத்தூல் (19:4) மற்றும் பெத்துவேலின் (1 நாளாகமம் 4:30) அதே ஊராக இருக்கலாம்; இப்பொழுது கெலாசா."
+    }
+  ]
+}

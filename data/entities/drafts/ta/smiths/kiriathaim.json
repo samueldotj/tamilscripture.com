@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kiriathaim",
+  "lang": "ta",
+  "source_hash": "a9020bf8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/kiriathaim#p1-a9020bf8",
+      "text": "[கீரியாத்தாயீம் காண்க]"
+    }
+  ]
+}

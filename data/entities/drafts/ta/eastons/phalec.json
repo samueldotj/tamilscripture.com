@@ -1,0 +1,18 @@
+{
+  "id": "eastons/phalec",
+  "lang": "ta",
+  "source_hash": "5f244f37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலெக்",
+  "paragraphs": [
+    {
+      "id": "eastons/phalec#p1-5f244f37",
+      "text": "(லூக்கா 3:35)=பேலேகு (காண்க), ஆதியாகமம் 11:16."
+    }
+  ]
+}

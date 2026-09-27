@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harodite-the",
+  "lang": "ta",
+  "source_hash": "b95a9e13",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோதியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/harodite-the#p1-b95a9e13",
+      "text": "தாவீதின் முப்பத்தேழு பராக்கிரமசாலிகளில் இருவராகிய சம்மா மற்றும் எலிக்கா ஆகியோருக்குரிய பட்டப்பெயர் (2 சாமுவேல் 23:25), இது சந்தேகமின்றி ஆரோத் என்னும் ஒரு இடத்தின் பெயரிலிருந்து வந்திருக்கவேண்டும்."
+    }
+  ]
+}

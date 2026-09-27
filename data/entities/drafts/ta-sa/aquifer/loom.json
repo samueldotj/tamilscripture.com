@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/loom",
+  "lang": "ta",
+  "source_hash": "ad094b24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெசவுத்தறி",
+  "paragraphs": [
+    {
+      "id": "aquifer/loom#p1-e161a09c",
+      "text": "நெசவுத்தறி என்பது நூலைத் துணியாக நெய்வதற்குப் பயன்படுத்தப்படும் ஒரு சட்டகம் அல்லது இயந்திரமாகும்."
+    },
+    {
+      "id": "aquifer/loom#p2-a4710f08",
+      "text": "துணி மற்றும் துணி உற்பத்தி என்பதைக் காண்க."
+    }
+  ]
+}

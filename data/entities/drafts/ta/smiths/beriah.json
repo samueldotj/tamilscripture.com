@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beriah",
+  "lang": "ta",
+  "source_hash": "fb1fe72a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரீயா",
+  "paragraphs": [
+    {
+      "id": "smiths/beriah#p1-fb1fe72a",
+      "text": "(தீமையில், அல்லது ஒரு வெகுமதி)."
+    }
+  ]
+}

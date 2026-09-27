@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zina",
+  "lang": "ta",
+  "source_hash": "7627be0f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீனா",
+  "paragraphs": [
+    {
+      "id": "smiths/zina#p1-7627be0f",
+      "text": "(ஏராளம்); கேர்சோனியனாகிய சீமேயின் இரண்டாம் மகனான சீனா. (1 நாளாகமம் 23:10) ஒப்பிடுக 1 நாளாகமம் 23:11"
+    }
+  ]
+}

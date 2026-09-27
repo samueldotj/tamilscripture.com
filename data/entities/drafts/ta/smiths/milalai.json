@@ -1,0 +1,18 @@
+{
+  "id": "smiths/milalai",
+  "lang": "ta",
+  "source_hash": "ae96a10d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிலாலாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/milalai#p1-ae96a10d",
+      "text": "(சொற்பொழிவாற்றுபவன்), எருசலேமின் மதில்களை அர்ப்பணிக்கும்போது உதவிசெய்த ஆசாப்பின் மகன்களில் ஒருவனாகிய, கர்சோனியக் குடும்பத்தைச் சேர்ந்த லேவியனாக இருக்கக்கூடும். (நெகேமியா 12:36)"
+    }
+  ]
+}

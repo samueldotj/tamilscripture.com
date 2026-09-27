@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ithai",
+  "lang": "ta",
+  "source_hash": "a7488132",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/ithai#p1-a7488132",
+      "text": "(கர்த்தருடன்), பென்யமீனியன், கிபியாவைச் சேர்ந்த ரிபாயின் மகன், தாவீதின் மெய்க்காவலரில் ஒரு பராக்கிரமசாலி. (1 நாளாகமம் 11:31) (கி.மு. 1046.)"
+    }
+  ]
+}

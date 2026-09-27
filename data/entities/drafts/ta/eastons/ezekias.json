@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ezekias",
+  "lang": "ta",
+  "source_hash": "0f2ab6f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசேக்கியாஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/ezekias#p1-0f2ab6f5",
+      "text": "எசேக்கியா என்ற பெயரின் கிரேக்க வழக்கப்படுத்தப்பட்ட வடிவம் (மத்தேயு 1:9, 10)."
+    }
+  ]
+}

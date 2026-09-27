@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/breakfast",
+  "lang": "ta",
+  "source_hash": "f0bd05cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலை உணவு",
+  "paragraphs": [
+    {
+      "id": "aquifer/breakfast#p1-cfe718a2",
+      "text": "காலை உணவு என்பது ஒரு நாளின் முதல் உணவாகும்."
+    },
+    {
+      "id": "aquifer/breakfast#p2-b089bdaf",
+      "text": "இந்த வார்த்தை “நோன்பை முடிக்கிறது” என்று பொருள்படும், ஏனெனில் இது இரவில் சாப்பிடாமல் இருந்த நேரத்தை முடிவுக்குக் கொண்டுவருகிறது."
+    },
+    {
+      "id": "aquifer/breakfast#p3-38a1ba67",
+      "text": "குடும்ப வாழ்க்கையும் உறவுகளும்; உணவும் உணவு தயாரிப்பும் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

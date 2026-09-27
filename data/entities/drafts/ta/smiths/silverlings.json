@@ -1,0 +1,18 @@
+{
+  "id": "smiths/silverlings",
+  "lang": "ta",
+  "source_hash": "d68b7a79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெள்ளிக்காசுகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/silverlings#p1-d68b7a79",
+      "text": "அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) ஒரே ஒரு முறை மட்டும் பயன்படுத்தப்பட்ட ஒரு சொல் (ஏசாயா 7:23), இது வேறிடங்களில் “வெள்ளி” அல்லது “பணம்” என்று மொழிபெயர்க்கப்பட்ட எபிரெய சொல்லின் மொழிபெயர்ப்பாகும்."
+    }
+  ]
+}

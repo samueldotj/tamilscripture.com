@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/palsy",
+  "lang": "ta",
+  "source_hash": "64c34737",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பக்கவாதம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/palsy#p1-0ce1ef3c",
+      "text": "பக்கவாதம் (Palsy) என்பது மயக்குவாதத்திற்கு (உடலின் ஒரு பகுதியில் இயக்கம் அல்லது உணர்வு இழப்பு) பயன்படுத்தப்படும் மறு சொல்."
+    },
+    {
+      "id": "aquifer/palsy#p2-6860a23e",
+      "text": "மயக்குவாதம், மயக்குவாதக்காரன் என்பதைக் காண்க."
+    }
+  ]
+}

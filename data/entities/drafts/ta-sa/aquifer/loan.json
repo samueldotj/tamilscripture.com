@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/loan",
+  "lang": "ta",
+  "source_hash": "510a5fd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/loan#p1-b261c63f",
+      "text": "கடன் என்பது வட்டிக்கு கொடுக்கப்படும் பணமாகும்."
+    },
+    {
+      "id": "aquifer/loan#p2-802116ee",
+      "text": "பணம்; வங்கியாளர், வங்கித்தொழில் என்பவற்றைக் காண்க."
+    }
+  ]
+}

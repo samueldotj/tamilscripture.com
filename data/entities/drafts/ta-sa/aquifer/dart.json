@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dart",
+  "lang": "ta",
+  "source_hash": "e1f8f5ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/dart#p1-b178dd80",
+      "text": "அம்பு என்பது கூர்மையான, முனையுள்ள ஒரு ஆயுதமாகும், இது அம்பாகவோ அல்லது குத்துவதற்கு பயன்படும் இலேசான வேலாகவோ பயன்படுத்தப்பட்டது."
+    },
+    {
+      "id": "aquifer/dart#p2-8d8ede60",
+      "text": "கவசம் மற்றும் ஆயுதங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

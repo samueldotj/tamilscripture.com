@@ -1,0 +1,18 @@
+{
+  "id": "eastons/haruphite",
+  "lang": "ta",
+  "source_hash": "666f22cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அருப்பியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/haruphite#p1-666f22cd",
+      "text": "ஆரீப் ஊரைச் சேர்ந்தவன்; சிக்லாகில் தாவீதுடன் சேர்ந்தவர்களில் ஒருவனான செபத்தியாவுக்குக் கொடுக்கப்பட்ட பெயர்ச்சொல் (1 நாளாகமம் 12:5)."
+    }
+  ]
+}

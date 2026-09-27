@@ -1,0 +1,18 @@
+{
+  "id": "eastons/diblathaim",
+  "lang": "ta",
+  "source_hash": "a6089eed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திப்லத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/diblathaim#p1-a6089eed",
+      "text": "இரண்டு அடைகள் என்று பொருள்படும், சவக்கடலின் கிழக்கிலுள்ள மோவாபின் ஒரு பட்டணம் (எண்ணாகமம் 33:46; எரேமியா 48:22)."
+    }
+  ]
+}

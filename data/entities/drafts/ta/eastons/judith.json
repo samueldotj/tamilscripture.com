@@ -1,0 +1,18 @@
+{
+  "id": "eastons/judith",
+  "lang": "ta",
+  "source_hash": "71dd7fe7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூதீத்",
+  "paragraphs": [
+    {
+      "id": "eastons/judith#p1-71dd7fe7",
+      "text": "யூதேயப் பெண், ஏத்தியனான பெயேரியின் மகள், ஏசாவின் மனைவிகளில் ஒருத்தி (ஆதியாகமம் 26:34), வேறு இடத்தில் அகோலிபாமா என்று அழைக்கப்படுகிறாள் (36:2-14)."
+    }
+  ]
+}

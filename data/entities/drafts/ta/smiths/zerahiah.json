@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zerahiah",
+  "lang": "ta",
+  "source_hash": "8a0a2a78",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செராகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/zerahiah#p1-8a0a2a78",
+      "text": "(யெகோவா எழுந்தார்)."
+    }
+  ]
+}

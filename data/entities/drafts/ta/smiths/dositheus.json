@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dositheus",
+  "lang": "ta",
+  "source_hash": "e89657f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தொசிதேயு",
+  "paragraphs": [
+    {
+      "id": "smiths/dositheus#p1-e89657f4",
+      "text": "எஸ்தரின் மொழிபெயர்ப்பை எகிப்திற்குக் கொண்டுசென்ற ஒரு “ஆசாரியனும் லேவியனுமான” ஒருவன். (எஸ்தர் 11:1,2)"
+    }
+  ]
+}

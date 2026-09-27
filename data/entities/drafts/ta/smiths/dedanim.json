@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dedanim",
+  "lang": "ta",
+  "source_hash": "4d465093",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேதானியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/dedanim#p1-4d465093",
+      "text": "தேதான் I இன் சந்ததியார் (ஏசாயா 21:13) [தேதான் காண்க]"
+    }
+  ]
+}

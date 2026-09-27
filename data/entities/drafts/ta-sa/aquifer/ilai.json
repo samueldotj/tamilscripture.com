@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ilai",
+  "lang": "ta",
+  "source_hash": "e40c2020",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈலாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ilai#p1-d199865b",
+      "text": "1 நாளாகமம் 11:29-ல் குறிப்பிடப்பட்டுள்ள புகழ்பெற்ற போராளியான சல்மோனுக்கு ஈலாய் என்பது வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/ilai#p2-d5d4eee2",
+      "text": "சல்மோன் (நபர்) என்பதைக் காண்க."
+    }
+  ]
+}

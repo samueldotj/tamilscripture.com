@@ -1,0 +1,18 @@
+{
+  "id": "smiths/prince-princess",
+  "lang": "ta",
+  "source_hash": "c655a356",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரபு, பிராட்டி",
+  "paragraphs": [
+    {
+      "id": "smiths/prince-princess#p1-c655a356",
+      "text": "\"பிரபு\" என்ற வார்த்தையின் விசேஷமான பயன்பாடுகள் மட்டும்—"
+    }
+  ]
+}

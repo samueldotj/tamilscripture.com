@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asa",
+  "lang": "ta",
+  "source_hash": "58ef7193",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசா",
+  "paragraphs": [
+    {
+      "id": "smiths/asa#p1-58ef7193",
+      "text": "(வைத்தியன், அல்லது சுகவாழ்வு)."
+    }
+  ]
+}

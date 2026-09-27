@@ -1,0 +1,18 @@
+{
+  "id": "smiths/syntyche",
+  "lang": "ta",
+  "source_hash": "8ada36b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிந்திகேயாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/syntyche#p1-8ada36b6",
+      "text": "(“அதிர்ஷ்டத்துடன்” என்று பொருள்படும்), பிலிப்பி சபையைச் சேர்ந்த ஒரு பெண் உறுப்பினர். (பிலேமோன் 4:2,3) (கி.பி. 57)."
+    }
+  ]
+}

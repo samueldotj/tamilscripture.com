@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jucal",
+  "lang": "ta",
+  "source_hash": "cece1d42",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூகல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jucal#p1-cece1d42",
+      "text": "(வல்லமையுள்ளவன்), செலேமியாவின் மகன். (எரேமியா 38:1)"
+    }
+  ]
+}

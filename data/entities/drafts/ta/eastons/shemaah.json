@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shemaah",
+  "lang": "ta",
+  "source_hash": "3962c951",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேமா",
+  "paragraphs": [
+    {
+      "id": "eastons/shemaah#p1-3962c951",
+      "text": "பேச்சு, சிக்லாகில் இருந்த தாவீதிடம் வந்த மகன்களைக் கொண்ட ஒரு பென்யமீனியன் (1 நாளாகமம் 12:3)."
+    }
+  ]
+}

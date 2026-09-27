@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jaddua",
+  "lang": "ta",
+  "source_hash": "f7df3853",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யதுவா",
+  "paragraphs": [
+    {
+      "id": "eastons/jaddua#p1-729bc83a",
+      "text": "அறியப்பட்டவன்."
+    },
+    {
+      "id": "eastons/jaddua#p2-57d8f3f2",
+      "text": "(1.) உடன்படிக்கையில் கையெழுத்திட்ட தலைவர்களில் ஒருவன் (நெகேமியா 10:21)."
+    },
+    {
+      "id": "eastons/jaddua#p3-1fbf5fe4",
+      "text": "(2.) பழைய ஏற்பாட்டில் குறிப்பிடப்பட்ட கடைசி பிரதான ஆசாரியன் (நெகேமியா 12:11, 22), யோனத்தானின் மகன்கள்."
+    }
+  ]
+}

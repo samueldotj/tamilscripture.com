@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baalis",
+  "lang": "ta",
+  "source_hash": "1e609f14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலிஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/baalis#p1-1e609f14",
+      "text": "நேபுகாத்நேச்சாரினால் எருசலேம் அழிக்கப்பட்ட காலத்தில் அம்மோன் மக்களின் ராஜாவாக இருந்தவன். (எரேமியா 40:14) (கி.மு. 588.)"
+    }
+  ]
+}

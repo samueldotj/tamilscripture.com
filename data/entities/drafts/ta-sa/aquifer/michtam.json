@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/michtam",
+  "lang": "ta",
+  "source_hash": "1e836abb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்தாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/michtam#p1-1e836abb",
+      "text": "சங்கீதம் 16, 56, 57, 58, 59, மற்றும் 60 ஆகியவற்றின் தலைப்புகளில் காணப்படும் ஒரு இசைக் குறிப்பான miktam என்பதற்கு KJV வழங்கும் மொழிபெயர்ப்பு. மிக்தாம் என்பதைக் காண்க."
+    }
+  ]
+}

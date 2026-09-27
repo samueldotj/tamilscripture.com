@@ -1,0 +1,38 @@
+{
+  "id": "aquifer/behistun-inscription",
+  "lang": "ta",
+  "source_hash": "72609f17",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெஹிஸ்தூன் கல்வெட்டு",
+  "paragraphs": [
+    {
+      "id": "aquifer/behistun-inscription#p1-72b1364e",
+      "text": "பண்டைய பெர்சியாவிலிருந்து பெஹிஸ்தூன் மலையின் சரிவில் செதுக்கப்பட்ட ஒரு பெரிய பாறைச் சிலைவேலைப்பாடு. இது மூன்று மொழிகளில் எழுதப்பட்டுள்ளது:"
+    },
+    {
+      "id": "aquifer/behistun-inscription#p2-d409a869",
+      "text": "பழைய பெர்சிய மொழி"
+    },
+    {
+      "id": "aquifer/behistun-inscription#p3-97c236ce",
+      "text": "எலாமித் மொழி"
+    },
+    {
+      "id": "aquifer/behistun-inscription#p4-0aba6aa6",
+      "text": "அக்காடியன் மொழி"
+    },
+    {
+      "id": "aquifer/behistun-inscription#p5-0b3861b9",
+      "text": "இது பெர்சியப் பேரரசின் அரசனாகிய தரியு I-ன் சாதனைகளின் பதிவாகும். இந்த பண்டைய மொழிகளில் பல எழுதப்பட்டிருந்த குனிஎழுத்து (ஆப்புவடிவ முறையில் எழுதப்படும் ஒரு பழங்கால எழுத்து முறை) என்னும் எழுத்து வடிவத்தைப் புரிந்துகொள்வதற்கான திறவுகோலை இது வழங்குகிறது."
+    },
+    {
+      "id": "aquifer/behistun-inscription#p6-0410d1be",
+      "text": "கல்வெட்டுகள் என்பதைக் காண்க."
+    }
+  ]
+}

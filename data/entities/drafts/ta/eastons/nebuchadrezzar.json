@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nebuchadrezzar",
+  "lang": "ta",
+  "source_hash": "f93c0f56",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேபுகாத்ரேச்சார்",
+  "paragraphs": [
+    {
+      "id": "eastons/nebuchadrezzar#p1-f93c0f56",
+      "text": "=நேபுகாத்நேச்சார் (எரேமியா 21:2, 7; 22:25; 24:1, முதலியன), இந்தச் சொல்லின் சரியான உச்சரிப்பிற்கு நெருக்கமான ஒரு வழிமுறை."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/potsherd",
+  "lang": "ta",
+  "source_hash": "40b76cc0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓட்டுத்துண்டு",
+  "paragraphs": [
+    {
+      "id": "smiths/potsherd#p1-40b76cc0",
+      "text": "கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் “sherd” என்றும் அழைக்கப்படுகிறது, இது ஒடிந்த மண்பாண்டத்தின் ஒரு துண்டு. (நீதிமொழிகள் 26:23)"
+    }
+  ]
+}

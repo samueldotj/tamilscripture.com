@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azubah",
+  "lang": "ta",
+  "source_hash": "837b1f16",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசுபாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/azubah#p1-837b1f16",
+      "text": "(கைவிடப்பட்டவள்)."
+    }
+  ]
+}

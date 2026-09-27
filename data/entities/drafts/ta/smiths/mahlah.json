@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahlah",
+  "lang": "ta",
+  "source_hash": "3b45cf90",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்லாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/mahlah#p1-3b45cf90",
+      "text": "(நோய்), மனாசேயின் பேரனாகிய செலொப்பியாத்தின் ஐந்து மகள்களில் மூத்தவள். (எண்ணாகமம் 27:1-11)"
+    }
+  ]
+}

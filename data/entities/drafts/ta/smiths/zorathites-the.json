@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zorathites-the",
+  "lang": "ta",
+  "source_hash": "48f54b64",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோராத்தியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/zorathites-the#p1-48f54b64",
+      "text": "அதாவது, சோராவின் மக்கள், சோபாலின் சந்ததியாரென (1 நாளாகமம் 4:2) குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

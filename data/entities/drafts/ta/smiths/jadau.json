@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jadau",
+  "lang": "ta",
+  "source_hash": "112d79aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யதாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/jadau#p1-112d79aa",
+      "text": "(அன்புவைத்து), வேற்று ஜாதி பெண்ணை மனைவியாக எடுத்துக்கொண்ட நேபோவின் மகன்களில் ஒருவன். (எஸ்றா 10:43) (கி.மு. 459)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/funerals",
+  "lang": "ta",
+  "source_hash": "21c568ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இறுதிக்கிரியைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/funerals#p1-21c568ea",
+      "text": "[அடக்கம், கல்லறைகள் காண்க]"
+    }
+  ]
+}

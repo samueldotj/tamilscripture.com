@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aridai",
+  "lang": "ta",
+  "source_hash": "d4095683",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரிதாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/aridai#p1-d4095683",
+      "text": "(பலவான்), ஆமானின் ஒன்பதாம் மகன். (எஸ்தர் 9:9)"
+    }
+  ]
+}

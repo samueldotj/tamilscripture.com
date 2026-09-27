@@ -1,0 +1,26 @@
+{
+  "id": "eastons/iim",
+  "lang": "ta",
+  "source_hash": "ec428e69",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈயிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/iim#p1-8d71f55e",
+      "text": "பாழிடங்கள்."
+    },
+    {
+      "id": "eastons/iim#p2-8661425e",
+      "text": "(1.) யூதாவின் தென்பகுதியிலுள்ள ஒரு பட்டணம் (யோசுவா 15:29)."
+    },
+    {
+      "id": "eastons/iim#p3-b0b1be1a",
+      "text": "(2.) வனாந்தரத்தில் இஸ்ரவேலர்கள் தங்கிய தங்குமிடங்களில் ஒன்று (எண்ணாகமம் 33:45)."
+    }
+  ]
+}

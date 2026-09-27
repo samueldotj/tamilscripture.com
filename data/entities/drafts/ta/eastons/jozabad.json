@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jozabad",
+  "lang": "ta",
+  "source_hash": "ef36fd02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசபாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/jozabad#p1-5b1b547a",
+      "text": "யெகோவா அளிக்கிறார்."
+    },
+    {
+      "id": "eastons/jozabad#p2-7f7755e7",
+      "text": "(1.) சிக்லாகிலும் தாவீதுடன் இணைந்த பென்யமீன் கோத்திரத்தின் வில்வீரர்களில் ஒருவன் (1 நாளாகமம் 12:4)."
+    },
+    {
+      "id": "eastons/jozabad#p3-840488e9",
+      "text": "(2.) மனாசே கோத்திரத்தின் தலைவன் ஒருவன் (1 நாளாகமம் 12:20)."
+    }
+  ]
+}

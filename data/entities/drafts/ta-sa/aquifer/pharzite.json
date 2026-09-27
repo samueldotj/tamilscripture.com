@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pharzite",
+  "lang": "ta",
+  "source_hash": "dbedef9c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரேசியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pharzite#p1-1c0f1b02",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் பாரேசியர் என்பதின் வேறு வடிவம். பாரேசியர் என்பவர் பாரேசின் குடும்பத்தில் உள்ள எவரும் ஆவார் (எண்ணாகமம் 26:20)."
+    },
+    {
+      "id": "aquifer/pharzite#p2-c12797dc",
+      "text": "பாரேஸ், பாரேசியர் என்பதைக் காண்க."
+    }
+  ]
+}

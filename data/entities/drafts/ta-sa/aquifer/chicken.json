@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chicken",
+  "lang": "ta",
+  "source_hash": "17de7008",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோழி",
+  "paragraphs": [
+    {
+      "id": "aquifer/chicken#p1-9989fe82",
+      "text": "உண்ணக்கூடிய முட்டைகளுக்காகவும் இறைச்சிக்காகவும் வளர்க்கப்படும் பொதுவான வளர்ப்பு பறவை."
+    },
+    {
+      "id": "aquifer/chicken#p2-65f321da",
+      "text": "பார்க்க: கோழி (வளர்ப்பு)."
+    }
+  ]
+}

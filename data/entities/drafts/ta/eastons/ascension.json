@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ascension",
+  "lang": "ta",
+  "source_hash": "365b3f9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரமஏறுதல்",
+  "paragraphs": [
+    {
+      "id": "eastons/ascension#p1-365b3f9b",
+      "text": "கிறிஸ்து என்பதைக் காண்க."
+    }
+  ]
+}

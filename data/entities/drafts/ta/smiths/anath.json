@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anath",
+  "lang": "ta",
+  "source_hash": "7209edac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/anath#p1-7209edac",
+      "text": "(பொருள்: பதில்), சம்காரின் தகப்பன். (நியாயாதிபதிகள் 3:31; 5:6)"
+    }
+  ]
+}

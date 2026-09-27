@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/peoples",
+  "lang": "ta",
+  "source_hash": "3d5a0f64",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேசத்தார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/peoples#p1-62f2590c",
+      "text": "பரிசுத்த வேதாகமத்தில் \"தேசங்கள்\" என்பதற்கு மற்றொரு சொல்."
+    },
+    {
+      "id": "aquifer/peoples#p2-70cbecf3",
+      "text": "தேசங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

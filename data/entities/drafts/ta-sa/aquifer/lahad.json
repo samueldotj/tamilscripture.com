@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/lahad",
+  "lang": "ta",
+  "source_hash": "809d728c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாகாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lahad#p1-809d728c",
+      "text": "லாகாத் யூதா கோத்திரத்தைச் சேர்ந்த யாகாத்தின் மகன் (1 நாளாகமம் 4:2)."
+    }
+  ]
+}

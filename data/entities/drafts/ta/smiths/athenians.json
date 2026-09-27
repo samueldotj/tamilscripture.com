@@ -1,0 +1,18 @@
+{
+  "id": "smiths/athenians",
+  "lang": "ta",
+  "source_hash": "2e3c67f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தேனேயர்",
+  "paragraphs": [
+    {
+      "id": "smiths/athenians#p1-2e3c67f7",
+      "text": "அத்தேனே பட்டணத்தைச் சேர்ந்தவர்கள் (அப்போஸ்தலருடைய நடபடிகள் 17:21)"
+    }
+  ]
+}

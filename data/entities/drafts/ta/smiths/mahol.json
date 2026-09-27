@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahol",
+  "lang": "ta",
+  "source_hash": "521823cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகோல்",
+  "paragraphs": [
+    {
+      "id": "smiths/mahol#p1-521823cf",
+      "text": "(நடனம்), சாலொமோனுக்கு அடுத்தபடியாக ஞானத்தினால் மிகவும் பிரசித்தி பெற்ற நான்கு மனிதர்களின் தகப்பன். (1 இராஜாக்கள் 4:31; 1 நாளாகமம் 2:6)"
+    }
+  ]
+}

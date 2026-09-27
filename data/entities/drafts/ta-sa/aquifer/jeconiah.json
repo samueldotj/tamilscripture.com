@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jeconiah",
+  "lang": "ta",
+  "source_hash": "a94f5687",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகொனியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jeconiah#p1-a417e787",
+      "text": "எகொனியா என்பது யூதாவின் ராஜாவாகிய யோயாக்கீனுக்கு உள்ள வேறொரு பெயராகும், அவன் பாபிலோனுக்குச் சிறையிருப்பிற்குக் கொண்டுபோகப்பட்டான் (1 நாளாகமம் 3:16-17; எரேமியா 24:1)."
+    },
+    {
+      "id": "aquifer/jeconiah#p2-80f13d12",
+      "text": "யோயாக்கீன் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mehunim",
+  "lang": "ta",
+  "source_hash": "a8f54d02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெயூனீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/mehunim#p1-a8f54d02",
+      "text": "(குடியிருப்புகள்). (எஸ்றா 2:50) வேறு இடங்களில் மெயூனீம்கள் என்றும் மெயுநீமின் என்றும் அழைக்கப்படுகிறது."
+    }
+  ]
+}

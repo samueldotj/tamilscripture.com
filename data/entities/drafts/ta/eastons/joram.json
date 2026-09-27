@@ -1,0 +1,26 @@
+{
+  "id": "eastons/joram",
+  "lang": "ta",
+  "source_hash": "40f0bd0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோராம்",
+  "paragraphs": [
+    {
+      "id": "eastons/joram#p1-98e919b2",
+      "text": "=யோராம்."
+    },
+    {
+      "id": "eastons/joram#p2-2917b332",
+      "text": "(1.) இஸ்ரவேலின் ராஜாக்களில் ஒருவன் (2 இராஜாக்கள் 8:16, 25, 28). அவன் ஆகாபின் மகன்."
+    },
+    {
+      "id": "eastons/joram#p3-86f4a98a",
+      "text": "(2.) யோராம், யோசபாத்தின் மகனும் யூதாவின் சிங்காசனத்தில் அவனுக்குப் பின்வந்தவனும் ஆனான் (2 இராஜாக்கள் 8:24)."
+    }
+  ]
+}

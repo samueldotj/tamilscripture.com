@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meres",
+  "lang": "ta",
+  "source_hash": "008c41ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேரேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/meres#p1-008c41ab",
+      "text": "(உயர்ந்தவன்), அகாஸ்வேருவின் ஏழு மந்திரிகளில் ஒருவன். (எஸ்தர் 1:14)"
+    }
+  ]
+}

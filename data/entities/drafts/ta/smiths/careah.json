@@ -1,0 +1,18 @@
+{
+  "id": "smiths/careah",
+  "lang": "ta",
+  "source_hash": "ba39a829",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கரேயா",
+  "paragraphs": [
+    {
+      "id": "smiths/careah#p1-ba39a829",
+      "text": "(மொட்டைத் தலை), யோகனானின் தகப்பன், (2 இராஜாக்கள் 25:23) வேறு இடங்களில் கரேயா என்று எழுதப்பட்டுள்ளது."
+    }
+  ]
+}

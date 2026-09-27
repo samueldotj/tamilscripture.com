@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethezel",
+  "lang": "ta",
+  "source_hash": "533201bc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத் ஏசேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethezel#p1-533201bc",
+      "text": "தென்மேற்கு யூதாவில் இருந்திருக்கக்கூடிய பல சிறிய பட்டணங்களில் ஒன்று, அதன் அழிவைக் குறித்து தீர்க்கதரிசியாகிய மீகா புலம்பினான் (மீகா 1:11)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/darling",
+  "lang": "ta",
+  "source_hash": "d98b3b0d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அருமையானது",
+  "paragraphs": [
+    {
+      "id": "eastons/darling#p1-d98b3b0d",
+      "text": "(சங்கீதங்கள் 22:20; 35:17) “ஒரே ஒன்று” என்று அர்த்தங்கொள்ளும்."
+    }
+  ]
+}

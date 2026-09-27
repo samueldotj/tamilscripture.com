@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sarepta",
+  "lang": "ta",
+  "source_hash": "313cf63b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சரெப்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/sarepta#p1-313cf63b",
+      "text": "(லூக்கா 4:26). சரெப்தாத் என்பதைக் காண்க."
+    }
+  ]
+}

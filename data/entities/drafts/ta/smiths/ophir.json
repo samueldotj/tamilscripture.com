@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ophir",
+  "lang": "ta",
+  "source_hash": "e82f7202",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓப்பீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ophir#p1-e82f7202",
+      "text": "(மிகுதி)."
+    }
+  ]
+}

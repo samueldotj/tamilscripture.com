@@ -1,0 +1,18 @@
+{
+  "id": "smiths/leaf-leaves",
+  "lang": "ta",
+  "source_hash": "5ab2041e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இலை, இலைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/leaf-leaves#p1-5ab2041e",
+      "text": "இந்த வார்த்தை அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) ஒருமையிலோ பன்மையிலோ மூன்று வேறுபட்ட அர்த்தங்களில் காணப்படுகிறது."
+    }
+  ]
+}

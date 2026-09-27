@@ -1,0 +1,18 @@
+{
+  "id": "smiths/taberah",
+  "lang": "ta",
+  "source_hash": "b6e0ecae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தபேரா",
+  "paragraphs": [
+    {
+      "id": "smiths/taberah#p1-b6e0ecae",
+      "text": "பாரான் வனாந்தரத்தில் இருந்த ஒரு இடத்தின் பெயர். (எண்ணாகமம் 11:3; 9:22) இது இன்னும் அடையாளம் காணப்படவில்லை."
+    }
+  ]
+}

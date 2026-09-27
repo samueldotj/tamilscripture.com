@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nephish",
+  "lang": "ta",
+  "source_hash": "9aa5904a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெப்பீஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nephish#p1-141a7396",
+      "text": "நெப்பீஸ் என்பது இஸ்மவேலின் மகனாகிய நாபீஸ் (1 நாளாகமம் 5:19) என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவம் ஆகும்."
+    },
+    {
+      "id": "aquifer/nephish#p2-7e172444",
+      "text": "நாபீஸ் என்பதைக் காண்க."
+    }
+  ]
+}

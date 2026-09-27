@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/achzib",
+  "lang": "ta",
+  "source_hash": "44475693",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்சீப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/achzib#p1-7fdfe75f",
+      "text": "அக்சீப் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் வடிவம்."
+    },
+    {
+      "id": "aquifer/achzib#p2-ea057c1a",
+      "text": "அக்சீப் காண்க."
+    }
+  ]
+}

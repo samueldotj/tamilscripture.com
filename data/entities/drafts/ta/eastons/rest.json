@@ -1,0 +1,30 @@
+{
+  "id": "eastons/rest",
+  "lang": "ta",
+  "source_hash": "39e62c99",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓய்வு",
+  "paragraphs": [
+    {
+      "id": "eastons/rest#p1-7ab450f1",
+      "text": "(1.) Gr. katapausis, எபிரெய வார்த்தையாகிய noah க்கு சமமானது (எபிரெயர் 4:1)."
+    },
+    {
+      "id": "eastons/rest#p2-3703e046",
+      "text": "(2.) Gr. anapausis, “வருத்தத்தினின்று இளைப்பாறுதல்” (மத்தேயு 11:28)."
+    },
+    {
+      "id": "eastons/rest#p3-ad63013d",
+      "text": "(3.) Gr. anesis, “தளர்ச்சி” (2 தெசலோனிக்கேயர் 1:7)."
+    },
+    {
+      "id": "eastons/rest#p4-028fd994",
+      "text": "(4.) Gr. sabbatismos, ஓய்வுநாளாகிய ஓய்வு, எல்லா வேலையிலிருந்தும் ஓய்வு (எபிரெயர் 4:9; R.V., “sabbath”), சிருஷ்டிப்பின் செயலை முடித்தபோது தேவனுக்கு இருந்த ஓய்வைப் போன்ற ஒரு ஓய்வு."
+    }
+  ]
+}

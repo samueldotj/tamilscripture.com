@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/dannah",
+  "lang": "ta",
+  "source_hash": "c1a62cc3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தன்னா",
+  "paragraphs": [
+    {
+      "id": "aquifer/dannah#p1-c1a62cc3",
+      "text": "தன்னா என்பது யூதாவின் மலைநாட்டில் சோக்கோவுக்கும் கீரியாத்சன்னா (தெபீர் என்றும் அழைக்கப்பட்டது; யோசுவா 15:49) என்பதற்கும் இடையில் இருந்த ஒரு பட்டணமாகும்."
+    }
+  ]
+}

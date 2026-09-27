@@ -1,0 +1,18 @@
+{
+  "id": "smiths/accad",
+  "lang": "ta",
+  "source_hash": "3af23931",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்காத்",
+  "paragraphs": [
+    {
+      "id": "smiths/accad#p1-3af23931",
+      "text": "சிநெயார் தேசத்திலுள்ள பட்டணங்களில் ஒன்று. (ஆதியாகமம் 10:10) அதன் இடம் மிகவும் நிச்சயமற்றதாக இருக்கிறது."
+    }
+  ]
+}

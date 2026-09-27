@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/joktheel",
+  "lang": "ta",
+  "source_hash": "bb7d034b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோக்தெயேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/joktheel#p1-a6ece0b1",
+      "text": "லாகீசுக்கு அருகில் யூதாவின் பள்ளத்தாக்கு நிலப்பகுதியில் இருந்த ஒரு பட்டணம் (யோசுவா 15:38)."
+    },
+    {
+      "id": "aquifer/joktheel#p2-c40f744e",
+      "text": "முதலில் சேலா என்று பெயரிடப்பட்ட ஒரு பழங்கால ஏதோமிய அரண். ஏதோமியரை வென்ற பின்பு அமத்சியா அதற்கு யோக்தெயேல் என்று பெயர் மாற்றினான் (2 இராஜாக்கள் 14:7)."
+    }
+  ]
+}

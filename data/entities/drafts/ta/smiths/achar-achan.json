@@ -1,0 +1,18 @@
+{
+  "id": "smiths/achar-achan",
+  "lang": "ta",
+  "source_hash": "2d28db8d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகார் = ஆகான்",
+  "paragraphs": [
+    {
+      "id": "smiths/achar-achan#p1-2d28db8d",
+      "text": "(1 நாளாகமம் 2:7)"
+    }
+  ]
+}

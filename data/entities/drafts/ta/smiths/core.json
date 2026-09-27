@@ -1,0 +1,18 @@
+{
+  "id": "smiths/core",
+  "lang": "ta",
+  "source_hash": "89adb32b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோரா",
+  "paragraphs": [
+    {
+      "id": "smiths/core#p1-89adb32b",
+      "text": "(யூதா 1:11) [கோராகு, 1]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benhail",
+  "lang": "ta",
+  "source_hash": "e2e78ed1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்னாயில்",
+  "paragraphs": [
+    {
+      "id": "smiths/benhail#p1-e2e78ed1",
+      "text": "(படைவீட்டின் மகன், பலமுள்ளவன்), யூதாவின் பட்டணங்களில் உபதேசம் செய்ய அரசன் யோசபாத் அனுப்பிய பிரபுக்களில் ஒருவன். (2 நாளாகமம் 17:7)"
+    }
+  ]
+}

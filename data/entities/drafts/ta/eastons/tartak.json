@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tartak",
+  "lang": "ta",
+  "source_hash": "22db756b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தர்தாக்",
+  "paragraphs": [
+    {
+      "id": "eastons/tartak#p1-22db756b",
+      "text": "இருளின் அதிபதி, சல்மனாசாரால் இஸ்ரவேலர் நாடுகடத்தப்பட்ட பின்பு சமாரியாவின் ஒரு பகுதியில் குடியேறிய ஆவியர்களின் தேவன்களில் ஒருவன் (2 இராஜாக்கள் 17:31)."
+    }
+  ]
+}

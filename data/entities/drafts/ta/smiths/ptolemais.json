@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ptolemais",
+  "lang": "ta",
+  "source_hash": "e4d5a696",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பித்தொலோமாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/ptolemais#p1-e4d5a696",
+      "text": "[அக்கோ]"
+    }
+  ]
+}

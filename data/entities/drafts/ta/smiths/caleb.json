@@ -1,0 +1,18 @@
+{
+  "id": "smiths/caleb",
+  "lang": "ta",
+  "source_hash": "5b71f0d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/caleb#p1-5b71f0d5",
+      "text": "(திறமையுள்ளவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rabsaris",
+  "lang": "ta",
+  "source_hash": "5db5bb9f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்சாரீஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/rabsaris#p1-5db5bb9f",
+      "text": "(நபும்சகர்களின் தலைவன்)."
+    }
+  ]
+}

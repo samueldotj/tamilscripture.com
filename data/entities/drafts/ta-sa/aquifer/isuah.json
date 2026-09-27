@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/isuah",
+  "lang": "ta",
+  "source_hash": "757a59da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இசுவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/isuah#p1-3dcdf84d",
+      "text": "இசுவா என்பது 1 நாளாகமம் 7:30ல் காணப்படும் ஆசேரின் மகனான இஸ்வா என்ற பெயருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/isuah#p2-835d459b",
+      "text": "இஸ்வா என்பதைக் காண்க."
+    }
+  ]
+}

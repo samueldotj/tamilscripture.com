@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zabdi",
+  "lang": "ta",
+  "source_hash": "22b51008",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்தி",
+  "paragraphs": [
+    {
+      "id": "smiths/zabdi#p1-22b51008",
+      "text": "(என் அன்பளிப்பு)."
+    }
+  ]
+}

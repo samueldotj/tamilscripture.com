@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shiphi",
+  "lang": "ta",
+  "source_hash": "a08b1de0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீப்பி",
+  "paragraphs": [
+    {
+      "id": "smiths/shiphi#p1-a08b1de0",
+      "text": "(மிகுதியான), எசேக்கியாவின் காலத்தில் கோத்திரத்தின் பிரபுவாக இருந்த சீசாவின் தகப்பன் ஆகிய ஒரு சிமியோனியன். (1 நாளாகமம் 4:37) (கி.மு. 726.)"
+    }
+  ]
+}

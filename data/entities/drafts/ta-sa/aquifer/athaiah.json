@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/athaiah",
+  "lang": "ta",
+  "source_hash": "dd23e5d8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தாயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/athaiah#p1-dd23e5d8",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த உசியாவின் மகன். பாபிலோனில் நடந்த சிறையிருப்புக்குப் பின்பு அவன் எருசலேமில் குடியிருந்தான் (நெகேமியா 11:4)."
+    }
+  ]
+}

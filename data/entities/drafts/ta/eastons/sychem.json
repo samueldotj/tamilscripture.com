@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sychem",
+  "lang": "ta",
+  "source_hash": "2dfba9a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகேம்",
+  "paragraphs": [
+    {
+      "id": "eastons/sychem#p1-2dfba9a6",
+      "text": "சீகேம் காண்க."
+    }
+  ]
+}

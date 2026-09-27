@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jesus",
+  "lang": "ta",
+  "source_hash": "a5e43e41",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இயேசு",
+  "paragraphs": [
+    {
+      "id": "smiths/jesus#p1-a5e43e41",
+      "text": "யுஸ்து என்றும் அழைக்கப்பட்டவன், ரோமாபுரிக்குப் பவுலுடன் இருந்த ஒரு கிறிஸ்தவன். (கொலோசெயர் 4:11) (கி.பி. 57.) (இரட்சகர்)."
+    }
+  ]
+}

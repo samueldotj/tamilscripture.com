@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/asnapper",
+  "lang": "ta",
+  "source_hash": "74be610f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்னாப்பார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/asnapper#p1-74f3a660",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் அஸ்னாப்பார் என்பதற்குப் பயன்படுத்தப்பட்ட எழுத்துருவம், எஸ்றா 4:10-ல் குறிப்பிடப்படும் அசீரிய ராஜாவான அஷூர்பானிபாலுக்கு வழங்கப்பட்ட வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/asnapper#p2-c83c3ab8",
+      "text": "அஷூர்பானிபால் என்பதைக் காண்க."
+    }
+  ]
+}

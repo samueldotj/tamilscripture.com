@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gederite-the",
+  "lang": "ta",
+  "source_hash": "984c89c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதேரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/gederite-the#p1-984c89c7",
+      "text": "கெதேர் அல்லது கெதேரா என்னும் இடத்தில் பிறந்தவன். (1 நாளாகமம் 27:28)"
+    }
+  ]
+}

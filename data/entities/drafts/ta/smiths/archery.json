@@ -1,0 +1,18 @@
+{
+  "id": "smiths/archery",
+  "lang": "ta",
+  "source_hash": "92dad403",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வில் வித்தை",
+  "paragraphs": [
+    {
+      "id": "smiths/archery#p1-92dad403",
+      "text": "[ஆயுதங்கள், போர்க்கவசம்]"
+    }
+  ]
+}

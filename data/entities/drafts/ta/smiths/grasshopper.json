@@ -1,0 +1,18 @@
+{
+  "id": "smiths/grasshopper",
+  "lang": "ta",
+  "source_hash": "a70aaad8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெட்டுக்கிளி",
+  "paragraphs": [
+    {
+      "id": "smiths/grasshopper#p1-a70aaad8",
+      "text": "[வெட்டுக்கிளி காண்க]"
+    }
+  ]
+}

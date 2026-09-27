@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amminadab",
+  "lang": "ta",
+  "source_hash": "bf32806d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மினதாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/amminadab#p1-bf32806d",
+      "text": "(பிரபுவின் மக்களில் ஒருவன்)."
+    }
+  ]
+}

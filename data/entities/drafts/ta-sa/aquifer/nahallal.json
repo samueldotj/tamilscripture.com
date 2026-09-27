@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nahallal",
+  "lang": "ta",
+  "source_hash": "9271d30a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகலால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nahallal#p1-24bb11ad",
+      "text": "நகலால் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவமே நகலால், இது யோசுவா 19:15-ல் குறிப்பிடப்பட்டுள்ள செபுலோனின் ஒரு பட்டணம்."
+    },
+    {
+      "id": "aquifer/nahallal#p2-292094b1",
+      "text": "நகலால் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ami",
+  "lang": "ta",
+  "source_hash": "b575aee3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமி",
+  "paragraphs": [
+    {
+      "id": "smiths/ami#p1-b575aee3",
+      "text": "(கட்டுபவன்), சாலொமோனுடைய வேலையாட்களில் ஒருவன், (எஸ்றா 2:57) நெகேமியா 7:59 இல் ஆமோன் என அழைக்கப்பட்டிருக்கிறான்."
+    }
+  ]
+}

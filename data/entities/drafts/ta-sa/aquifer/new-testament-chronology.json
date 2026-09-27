@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/new-testament-chronology",
+  "lang": "ta",
+  "source_hash": "b0a5245f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புதிய ஏற்பாட்டுக் காலவரிசை",
+  "paragraphs": [
+    {
+      "id": "aquifer/new-testament-chronology#p1-b0a5245f",
+      "text": "பார்க்க: பைபிள் காலவரிசை (புதிய ஏற்பாடு)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/horonaim",
+  "lang": "ta",
+  "source_hash": "67ff1777",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒரொனாயிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/horonaim#p1-67ff1777",
+      "text": "(இரண்டு குகைகள்), மோவாபின் ஒரு பட்டணம், ஒருவேளை ஒரு பரிசுத்த ஸ்தலமாக இருக்கலாம், சோவாருடனும் லூகித்துடனும் சேர்த்துக் குறிப்பிடப்பட்டுள்ளது. (ஏசாயா 15:5; எரேமியா 48:3,5,34)"
+    }
+  ]
+}

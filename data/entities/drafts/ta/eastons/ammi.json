@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ammi",
+  "lang": "ta",
+  "source_hash": "16f84ca4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மீ",
+  "paragraphs": [
+    {
+      "id": "eastons/ammi#p1-16f84ca4",
+      "text": "என் மக்கள், இஸ்ரவேலின் மக்களுக்கு யெகோவாவினால் கொடுக்கப்பட்ட ஒரு பெயர் (ஓசியா 2:1, 23. ஒப்பிடுக: 1:9; எசேக்கியேல் 16:8; ரோமர் 9:25, 26; 1 பேதுரு 2:10)."
+    }
+  ]
+}

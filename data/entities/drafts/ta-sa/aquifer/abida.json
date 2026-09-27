@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/abida",
+  "lang": "ta",
+  "source_hash": "d1449ca2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபீதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/abida#p1-d1449ca2",
+      "text": "மீதியானின் மகன்களில் ஒருவன். மீதியான் ஆபிரகாமுக்கு அவனுடைய மறுமனையாட்டியாகிய கேத்தூராளால் பிறந்த மகன் (ஆதியாகமம் 25:2, 4; 1 நாளாகமம் 1:33)."
+    }
+  ]
+}

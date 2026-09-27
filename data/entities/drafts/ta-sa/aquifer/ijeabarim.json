@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ijeabarim",
+  "lang": "ta",
+  "source_hash": "fb0ffb89",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈயே-அபாரிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ijeabarim#p1-1043a700",
+      "text": "இது கிங் யாக்கோபு மொழிபெயர்ப்பில் அபாரிமீன் என்ற பெயருக்கு வழங்கப்படும் எழுத்துவடிவம். இது இஸ்ரவேலர்கள் வனாந்திரத்தின் வழியாகச் சென்ற பயணத்தின்போது தங்கிய இடங்களில் ஒன்றாகும் (எண்ணாகமம் 21:11, 33:44)."
+    },
+    {
+      "id": "aquifer/ijeabarim#p2-50ef7731",
+      "text": "காண்க: அபாரிமீன், Iyim."
+    }
+  ]
+}

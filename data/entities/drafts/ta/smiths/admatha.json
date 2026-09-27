@@ -1,0 +1,18 @@
+{
+  "id": "smiths/admatha",
+  "lang": "ta",
+  "source_hash": "d210f4e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்மாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/admatha#p1-d210f4e4",
+      "text": "(மிகவும் உயர்ந்தவரால் கொடுக்கப்பட்டவன்), பெர்சியாவின் ஏழு பிரபுக்களில் ஒருவன். (எஸ்தர் 1:14)"
+    }
+  ]
+}

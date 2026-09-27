@@ -1,0 +1,18 @@
+{
+  "id": "eastons/harhaiah",
+  "lang": "ta",
+  "source_hash": "36a5045e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அராயா",
+  "paragraphs": [
+    {
+      "id": "eastons/harhaiah#p1-36a5045e",
+      "text": "யெகோவாவின் வைராக்கியம், (நெகேமியா 3:8) “பொற்கொல்லர்களில் ஒருவன்,” இவனுடைய மகன் எருசலேமின் மதிலைப் பழுதுபார்த்துக் கட்ட உதவினான்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aphiah",
+  "lang": "ta",
+  "source_hash": "e83a1b65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aphiah#p1-e83a1b65",
+      "text": "சவுல் ராஜாவின் முற்பிதாக்களில் ஒருவன். இவன் பென்யமீன் கோத்திரத்தைச் சேர்ந்தவன். இவன் பெயர் 1 சாமுவேல் 9:1 இல் காணப்படுகிறது."
+    }
+  ]
+}

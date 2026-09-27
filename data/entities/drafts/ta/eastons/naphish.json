@@ -1,0 +1,18 @@
+{
+  "id": "eastons/naphish",
+  "lang": "ta",
+  "source_hash": "aa604d3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாபீஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/naphish#p1-aa604d3a",
+      "text": "புத்துணர்ச்சி அளிப்பவன், இஸ்மவேலின் மகன்களில் ஒருவன் (ஆதியாகமம் 25:15; 1 நாளாகமம் 1:31). அவன் ஒரு அராப் கோத்திரத்தின் தந்தையாக இருந்தான்."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/hepher-person",
+  "lang": "ta",
+  "source_hash": "398b1a38",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பேர் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hepher-person#p1-e10b9df2",
+      "text": "மனாசே கோத்திரத்தைச் சேர்ந்தவனும், எப்பேரியர்களின் குடும்பத்தை உற்பத்தி செய்தவனுமான ஒருவன் (எண்ணாகமம் 26:32)."
+    },
+    {
+      "id": "aquifer/hepher-person#p2-a7f622ab",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த அசூரின் மகன் (1 நாளாகமம் 4:6)."
+    },
+    {
+      "id": "aquifer/hepher-person#p3-3916966b",
+      "text": "தாவீது ராஜாவின் \"பராக்கிரமசாலிகளில்\" ஒருவன் (1 நாளாகமம் 11:36)."
+    }
+  ]
+}

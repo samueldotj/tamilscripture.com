@@ -1,0 +1,18 @@
+{
+  "id": "smiths/governor",
+  "lang": "ta",
+  "source_hash": "842c5bc5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதிபதி",
+  "paragraphs": [
+    {
+      "id": "smiths/governor#p1-842c5bc5",
+      "text": "அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) இந்த ஒரே ஆங்கில வார்த்தை பத்துக்கும் குறையாத எபிரெய வார்த்தைகளுக்கும் நான்கு கிரேக்கு வார்த்தைகளுக்கும் பிரதிநிதியாக இருக்கிறது."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bilhan",
+  "lang": "ta",
+  "source_hash": "909a4c8c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்கான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bilhan#p1-fba022fe",
+      "text": "ஏத்சேருடைய முதற்பேறான மகனும் சேயீரின் வழித்தோன்றலும் (ஆதியாகமம் 36:27; 1 நாளாகமம் 1:42)."
+    },
+    {
+      "id": "aquifer/bilhan#p2-6513d8bc",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த யெதியாயேலின் மகன் (1 நாளாகமம் 7:10)."
+    }
+  ]
+}

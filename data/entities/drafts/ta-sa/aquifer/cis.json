@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cis",
+  "lang": "ta",
+  "source_hash": "888c5995",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cis#p1-812ad7b5",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் கீச் என்ற பெயருக்கான எழுத்துவடிவம், சவுல் ராஜாவின் தகப்பன் (அப்போஸ்தலருடைய நடபடிகள் 13:21)."
+    },
+    {
+      "id": "aquifer/cis#p2-87718dfb",
+      "text": "கீச் #1-ஐக் காண்க."
+    }
+  ]
+}

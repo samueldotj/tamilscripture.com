@@ -1,0 +1,18 @@
+{
+  "id": "eastons/heli",
+  "lang": "ta",
+  "source_hash": "fbf12901",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலி",
+  "paragraphs": [
+    {
+      "id": "eastons/heli#p1-fbf12901",
+      "text": "உயர்வு, நம்முடைய கர்த்தருடைய வம்சாவளியில் யோசேப்பின் தகப்பன் (லூக்கா 3:23)."
+    }
+  ]
+}

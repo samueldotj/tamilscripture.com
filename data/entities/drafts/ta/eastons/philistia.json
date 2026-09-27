@@ -1,0 +1,18 @@
+{
+  "id": "eastons/philistia",
+  "lang": "ta",
+  "source_hash": "e5315d4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலிஸ்தியா",
+  "paragraphs": [
+    {
+      "id": "eastons/philistia#p1-e5315d4b",
+      "text": "=பாலஸ்தீனம் (காண்க), “பெலிஸ்தியரின் தேசம்” (சங்கீதங்கள் 60:8; 87:4; 108:9). இந்த வார்த்தை “அலைந்து திரிபவர்களின் தேசம்” அல்லது “அந்நியரின் தேசம்” என்று பொருள்படுவதாக கருதப்படுகிறது."
+    }
+  ]
+}

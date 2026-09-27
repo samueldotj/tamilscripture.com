@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jogli",
+  "lang": "ta",
+  "source_hash": "17cdfb8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொக்லி",
+  "paragraphs": [
+    {
+      "id": "smiths/jogli#p1-17cdfb8b",
+      "text": "(நாடுகடத்தப்பட்டவன்), தாண் கோத்திரத்தின் பிரபுவாகிய புக்கியின் தகப்பன். (எண்ணாகமம் 34:22)"
+    }
+  ]
+}

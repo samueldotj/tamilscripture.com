@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pence",
+  "lang": "ta",
+  "source_hash": "bffef3d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்ஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pence#p1-bffef3d6",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் மத்தேயு 18:28, மாற்கு 14:5, லூக்கா 7:41, 10:35, மற்றும் யோவான் 12:5-ல் காணப்படும் denarius என்ற வார்த்தையின் வடிவம். நாணயங்கள்; பணம் என்பவற்றைக் காண்க."
+    }
+  ]
+}

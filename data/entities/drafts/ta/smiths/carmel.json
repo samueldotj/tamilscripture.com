@@ -1,0 +1,18 @@
+{
+  "id": "smiths/carmel",
+  "lang": "ta",
+  "source_hash": "bce0694e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்மேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/carmel#p1-bce0694e",
+      "text": "(கனிதரும் இடம் அல்லது தோட்டம்)."
+    }
+  ]
+}

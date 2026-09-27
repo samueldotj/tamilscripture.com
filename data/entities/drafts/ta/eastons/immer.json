@@ -1,0 +1,38 @@
+{
+  "id": "eastons/immer",
+  "lang": "ta",
+  "source_hash": "34cee519",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்மேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/immer#p1-598b16fe",
+      "text": "பேசுகிறவன்."
+    },
+    {
+      "id": "eastons/immer#p2-996f589e",
+      "text": "(1.) பதினாறாவது ஆசாரிய வகுப்பின் தலைவன் (1 நாளாகமம் 24:14)."
+    },
+    {
+      "id": "eastons/immer#p3-7ee3ee0e",
+      "text": "(2.) எரேமியா 20:1."
+    },
+    {
+      "id": "eastons/immer#p4-0e8bf473",
+      "text": "(3.) எஸ்றா 2:37; நெகேமியா 7:40."
+    },
+    {
+      "id": "eastons/immer#p5-a005f425",
+      "text": "(4.) எஸ்றா 2:59; நெகேமியா 7:61."
+    },
+    {
+      "id": "eastons/immer#p6-bb8a5da5",
+      "text": "(5.) சாதோக்கின் தகப்பன் (நெகேமியா 3:29)."
+    }
+  ]
+}

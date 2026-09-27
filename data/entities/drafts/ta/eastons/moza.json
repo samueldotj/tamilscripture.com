@@ -1,0 +1,26 @@
+{
+  "id": "eastons/moza",
+  "lang": "ta",
+  "source_hash": "10f45426",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசா",
+  "paragraphs": [
+    {
+      "id": "eastons/moza#p1-0e3946be",
+      "text": "ஒரு வெளிச்செல்லுதல்."
+    },
+    {
+      "id": "eastons/moza#p2-aff75968",
+      "text": "(1.) காலேபின் மகன்களில் ஒருவன் (1 நாளாகமம் 2:46)."
+    },
+    {
+      "id": "eastons/moza#p3-f4f59190",
+      "text": "(2.) சிம்ரியின் மகன், சவுலின் சந்ததியைச் சேர்ந்தவன் (1 நாளாகமம் 8:36, 37; 9:42, 43)."
+    }
+  ]
+}

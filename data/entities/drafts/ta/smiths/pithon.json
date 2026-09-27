@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pithon",
+  "lang": "ta",
+  "source_hash": "d53ace0f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பித்தோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/pithon#p1-d53ace0f",
+      "text": "(தீங்கற்றவன்) மேவிபோசேத்தின் மகனாகிய மீகாவின் நான்கு மகன்களில் ஒருவன். (1 நாளாகமம் 8:36; 9:41) (கி.மு. 1050.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ishi",
+  "lang": "ta",
+  "source_hash": "ef1ed6e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஷி",
+  "paragraphs": [
+    {
+      "id": "eastons/ishi#p1-ef1ed6e8",
+      "text": "என் புருஷன் என்பது ஓசியா 2:16-இல் பயன்படுத்தப்பட்ட ஒரு அடையாளச் சொல் (பாகாலி-ஐக் காண்க)."
+    }
+  ]
+}

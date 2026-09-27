@@ -1,0 +1,18 @@
+{
+  "id": "smiths/emmanuel",
+  "lang": "ta",
+  "source_hash": "728a0300",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்மானுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/emmanuel#p1-728a0300",
+      "text": "(மத்தேயு 1:23) [இம்மானுவேல் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harorite",
+  "lang": "ta",
+  "source_hash": "b9dacd92",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோதியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/harorite#p1-b9dacd92",
+      "text": "(ஆரோதியன் என்பதற்குச் சமமானது) இது தாவீதின் காவற்படை வீரர்களில் ஒருவனான சம்மோத்திற்குக் கொடுக்கப்பட்ட பெயர். (1 நாளாகமம் 11:27)"
+    }
+  ]
+}

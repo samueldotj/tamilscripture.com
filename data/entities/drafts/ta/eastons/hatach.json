@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hatach",
+  "lang": "ta",
+  "source_hash": "c817f26e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்தாகு",
+  "paragraphs": [
+    {
+      "id": "eastons/hatach#p1-c817f26e",
+      "text": "நேர்மை; அகாஸ்வேருவின் அரண்மனையிலிருந்த மந்திரிமார்களில் அல்லது காரியக்காரர்களில் ஒருவன் (எஸ்தர் 4:5, 6, 9, 10)."
+    }
+  ]
+}

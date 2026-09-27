@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/azubah",
+  "lang": "ta",
+  "source_hash": "b7d473b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசுபாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/azubah#p1-8992b0e5",
+      "text": "சில்கியின் மகளும் யூதாவின் ராஜாவாகிய யோசபாத்தின் தாயும் ஆவாள் (1 இராஜாக்கள் 22:42; 2 நாளாகமம் 20:31)."
+    },
+    {
+      "id": "aquifer/azubah#p2-80fc0a9d",
+      "text": "காலேபின் முதலாம் மனைவியும் அவனுடைய மூன்று மகன்களின் தாயும் ஆவாள் (1 நாளாகமம் 2:18-19)."
+    }
+  ]
+}

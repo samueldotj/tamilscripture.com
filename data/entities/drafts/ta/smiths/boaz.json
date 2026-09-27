@@ -1,0 +1,18 @@
+{
+  "id": "smiths/boaz",
+  "lang": "ta",
+  "source_hash": "4a69742d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போவாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/boaz#p1-4a69742d",
+      "text": "(வேகம்)."
+    }
+  ]
+}

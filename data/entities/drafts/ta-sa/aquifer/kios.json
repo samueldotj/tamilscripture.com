@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kios",
+  "lang": "ta",
+  "source_hash": "5322fc64",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீயு",
+  "paragraphs": [
+    {
+      "id": "aquifer/kios#p1-261c54f3",
+      "text": "ஏகியன் கடலில் உள்ள தீவான கீயு என்பதற்கு இது வேறொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kios#p2-525e61a0",
+      "text": "கீயு என்பதைக் காண்க."
+    }
+  ]
+}

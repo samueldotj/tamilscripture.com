@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/huri",
+  "lang": "ta",
+  "source_hash": "920ed19e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/huri#p1-920ed19e",
+      "text": "ஊரி பாசானிலுள்ள கீலேயாத்தில் வாழ்ந்த காத் கோத்திரத்தைச் சேர்ந்த அபியாயேலின் தகப்பனாக இருந்தார் (1 நாளாகமம் 5:14)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bedan",
+  "lang": "ta",
+  "source_hash": "964b5ddc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/bedan#p1-964b5ddc",
+      "text": "(நியாயத்தீர்ப்பின் மகன்)."
+    }
+  ]
+}

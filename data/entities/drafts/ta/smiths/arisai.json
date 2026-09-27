@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arisai",
+  "lang": "ta",
+  "source_hash": "69504997",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரிசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/arisai#p1-69504997",
+      "text": "(சிங்கம் போன்றவன்), ஆமானின் எட்டாவது மகன். (எஸ்தர் 9:9)"
+    }
+  ]
+}

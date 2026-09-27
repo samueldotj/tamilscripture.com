@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kehelathah",
+  "lang": "ta",
+  "source_hash": "2995e730",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேலத்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kehelathah#p1-2995e730",
+      "text": "இஸ்ரவேலர்கள் எகிப்திலிருந்து சீனாய்மலைக்கும் பயணம் செய்யும்போது முகாமிட்ட இடங்களில் ஒன்று. இது ரீசாவுக்கும் சாப்பேர் மலைக்கும் இடையில் எங்கோ இருந்தது (எண்ணாகமம் 33:22-23)."
+    }
+  ]
+}

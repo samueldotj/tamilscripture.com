@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jalon",
+  "lang": "ta",
+  "source_hash": "5e272de1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/jalon#p1-5e272de1",
+      "text": "(தங்குதல்), எஸ்றாவின் மகன்களில் ஒருவன். (1 நாளாகமம் 4:17)"
+    }
+  ]
+}

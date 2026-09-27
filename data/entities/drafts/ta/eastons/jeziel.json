@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jeziel",
+  "lang": "ta",
+  "source_hash": "df7160d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/jeziel#p1-df7160d7",
+      "text": "தேவனால் சேர்க்கப்பட்டவன், அஸ்மாவேத்தின் மகன். இவன் சிக்லாகில் தாவீதுடன் சேர்ந்த பென்யமீனிய வில்வீரர்களில் ஒருவனாக இருந்தான் (1 நாளாகமம் 12:3)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/palace-of-the-forest-of-lebanon",
+  "lang": "ta",
+  "source_hash": "bb83b169",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லெபனோன் வனமாளிகை அரண்மனை",
+  "paragraphs": [
+    {
+      "id": "aquifer/palace-of-the-forest-of-lebanon#p1-00edc3d9",
+      "text": "லெபனோன் வனமாளிகை அரண்மனை என்பது லெபனோனுக்கு இருக்கும் மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/palace-of-the-forest-of-lebanon#p2-4f529826",
+      "text": "லெபனோன் என்பதைக் காண்க."
+    }
+  ]
+}

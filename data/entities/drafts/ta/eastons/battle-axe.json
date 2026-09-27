@@ -1,0 +1,18 @@
+{
+  "id": "eastons/battle-axe",
+  "lang": "ta",
+  "source_hash": "15befb9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போர்க்கோடரி",
+  "paragraphs": [
+    {
+      "id": "eastons/battle-axe#p1-15befb9b",
+      "text": "ஒரு அடிக்கும் கருவி அல்லது கடினமான போர்த் தடி. இது பாபிலோனை அழிப்பதற்குத் தேவனுடைய கருவியாகிய கோரேசுக்கு உருவகமாகப் பயன்படுத்தப்பட்டுள்ளது (எரேமியா 51:20)."
+    }
+  ]
+}

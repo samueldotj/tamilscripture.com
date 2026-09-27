@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mattathias",
+  "lang": "ta",
+  "source_hash": "d327000d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்தத்தியா",
+  "paragraphs": [
+    {
+      "id": "eastons/mattathias#p1-df9a08d2",
+      "text": "மேற்படி."
+    },
+    {
+      "id": "eastons/mattathias#p2-09ab51cf",
+      "text": "(1.) நம்முடைய கர்த்தருடைய வம்சவரலாற்றில், ஆமோஸின் குமாரன் (லூக்கா 3:25)."
+    },
+    {
+      "id": "eastons/mattathias#p3-2fee30fd",
+      "text": "(2.) அதே வம்சவரலாற்றில், சேமேயின் குமாரன் (லூக்கா 3:26)."
+    }
+  ]
+}

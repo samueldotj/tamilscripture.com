@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jerusha",
+  "lang": "ta",
+  "source_hash": "59363141",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எருசாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/jerusha#p1-59363141",
+      "text": "சொத்து, அல்லது சொந்தமானவள்; அதாவது, \"கணவனால் சொந்தமாக்கப்பட்டவள்\", உசியாவின் மனைவியும், யோதாம் ராஜாவின் தாயும் ஆவாள் (2 இராஜாக்கள் 15:33)."
+    }
+  ]
+}

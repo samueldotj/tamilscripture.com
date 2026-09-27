@@ -1,0 +1,18 @@
+{
+  "id": "eastons/balah",
+  "lang": "ta",
+  "source_hash": "2876dd25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலா",
+  "paragraphs": [
+    {
+      "id": "eastons/balah#p1-2876dd25",
+      "text": "சிமியோன் கோத்திரத்திற்குரிய ஒரு பட்டணம் (யோசுவா 19:3), வேறு இடங்களில் பில்காள் (1 நாளாகமம் 4:29) மற்றும் பாலா (யோசுவா 15:29) என்றும் அழைக்கப்படுகிறது."
+    }
+  ]
+}

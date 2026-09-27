@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kilmad",
+  "lang": "ta",
+  "source_hash": "ea1009da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கில்மாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kilmad#p1-6fc6234a",
+      "text": "கில்மாத் என்பது, மெசொப்பொத்தாமியாவிலுள்ள ஒரு பட்டணமான கில்மாத்திற்கு (எசேக்கியேல் 27:23) இருக்கும் மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kilmad#p2-e650ef8a",
+      "text": "கில்மாத் என்பதைக் காண்க."
+    }
+  ]
+}

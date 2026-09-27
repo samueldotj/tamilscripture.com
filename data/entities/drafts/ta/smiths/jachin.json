@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jachin",
+  "lang": "ta",
+  "source_hash": "fe38bf1c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாகீன்",
+  "paragraphs": [
+    {
+      "id": "smiths/jachin#p1-fe38bf1c",
+      "text": "(அவர் ஸ்திரப்படுத்துவார்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dulcimer",
+  "lang": "ta",
+  "source_hash": "07d54966",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தம்புரு",
+  "paragraphs": [
+    {
+      "id": "aquifer/dulcimer#p1-e7e2f4af",
+      "text": "தானியேல் 3:5, 10, 15-ல் \"தம்புரு\" எனக் குறிப்பிடப்பட்டுள்ளது கிங் யாக்கோபு மொழிபெயர்ப்பில் \"pipe\" (குழல்) என்பதற்கு ஈடான மொழிபெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/dulcimer#p2-2f2aebfd",
+      "text": "காண்க: இசைக்கருவிகள் (Psantrin); இசை."
+    }
+  ]
+}

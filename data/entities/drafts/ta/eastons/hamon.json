@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hamon",
+  "lang": "ta",
+  "source_hash": "ef8e3b48",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/hamon#p1-ef8e3b48",
+      "text": "பாகால்-ஆமோன் பார்க்க."
+    }
+  ]
+}

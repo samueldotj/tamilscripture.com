@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hoglah",
+  "lang": "ta",
+  "source_hash": "822d20db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒக்லாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/hoglah#p1-822d20db",
+      "text": "கவுதாரி, கிலெயாத்தியனான செலொப்பியாத்தின் மகள்களில் ஒருத்தி, இவளுக்கு மோசேயினால் பங்குகள் நியமிக்கப்பட்டன (எண்ணாகமம் 26:33; 27:1; 36:11)."
+    }
+  ]
+}

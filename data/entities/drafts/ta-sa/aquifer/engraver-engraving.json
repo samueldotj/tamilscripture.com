@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/engraver-engraving",
+  "lang": "ta",
+  "source_hash": "e083816b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொறிப்பவன், பொறித்தல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/engraver-engraving#p1-89c02939",
+      "text": "பொறிப்பவன் என்பவன் கல் அல்லது உலோகம் போன்ற கடினமான பரப்புகளில் வேலைப்பாடுகளை வெட்டி அல்லது செதுக்கும் ஒரு நபர். பொறித்தல் என்பது கடினமான பொருட்களில் வேலைப்பாடுகளையும், அமைப்புகளையும், எழுத்துகளையும் வெட்டும் கலை அல்லது முறையாகும்."
+    },
+    {
+      "id": "aquifer/engraver-engraving#p2-07aed4a3",
+      "text": "கல்வேலைக்காரன் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/machpelah",
+  "lang": "ta",
+  "source_hash": "0a3c87b1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்பேலா",
+  "paragraphs": [
+    {
+      "id": "smiths/machpelah#p1-0a3c87b1",
+      "text": "(இரட்டை, அல்லது ஒரு பங்கு). [எப்ரோனைக் காண்க]"
+    }
+  ]
+}

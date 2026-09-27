@@ -1,0 +1,18 @@
+{
+  "id": "eastons/passion",
+  "lang": "ta",
+  "source_hash": "ba4382ad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாடு (Passion)",
+  "paragraphs": [
+    {
+      "id": "eastons/passion#p1-ba4382ad",
+      "text": "இது ஒரு முறை மட்டும், அப்போஸ்தலருடைய நடபடிகள் 1:3-ல் காணப்படுகிறது, துன்பப்படுதல் என்று அர்த்தமுடையது, நம்முடைய கர்த்தருடைய பாடுகளைக் குறிக்கிறது."
+    }
+  ]
+}

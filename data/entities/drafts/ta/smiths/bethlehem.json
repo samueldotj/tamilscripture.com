@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethlehem",
+  "lang": "ta",
+  "source_hash": "23dc6993",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்லகேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethlehem#p1-23dc6993",
+      "text": "(அப்பத்தின் வீடு)."
+    }
+  ]
+}

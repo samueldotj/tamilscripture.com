@@ -1,0 +1,26 @@
+{
+  "id": "eastons/bunch",
+  "lang": "ta",
+  "source_hash": "8f40e0de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொத்து",
+  "paragraphs": [
+    {
+      "id": "eastons/bunch#p1-7d9d884a",
+      "text": "(1.) சிறு கிளைகளின் கொத்து (யாத். 12:22)."
+    },
+    {
+      "id": "eastons/bunch#p2-728f2a08",
+      "text": "(2.) திராட்சைப்பழத்தின் கொத்து அல்லது குலை (2 சாமுவேல் 16:1)."
+    },
+    {
+      "id": "eastons/bunch#p3-cc6a23d1",
+      "text": "(3.) “ஒட்டகத்தின் திமில்” (ஏசாயா 30:6)."
+    }
+  ]
+}

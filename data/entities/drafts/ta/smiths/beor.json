@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beor",
+  "lang": "ta",
+  "source_hash": "60c409fe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேயோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/beor#p1-60c409fe",
+      "text": "(எரிதல் அல்லது தீவட்டி)."
+    }
+  ]
+}

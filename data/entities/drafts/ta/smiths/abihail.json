@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abihail",
+  "lang": "ta",
+  "source_hash": "0c1cbcb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியாயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/abihail#p1-0c1cbcb6",
+      "text": "(பலத்தின் தகப்பன், அதாவது பலத்தை உடையவன்)."
+    }
+  ]
+}

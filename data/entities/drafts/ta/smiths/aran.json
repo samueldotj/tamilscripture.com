@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aran",
+  "lang": "ta",
+  "source_hash": "29617083",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/aran#p1-29617083",
+      "text": "(காட்டு வெள்ளாடு), திஷானுடைய மகனும் ஊத்ஸின் சகோதரனுமாகிய ஒரு ஓரியன். ஆதியாகமம் 36:28; 1 நாளாகமம் 1:42"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/omar",
+  "lang": "ta",
+  "source_hash": "22a32fc1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமார்",
+  "paragraphs": [
+    {
+      "id": "smiths/omar#p1-22a32fc1",
+      "text": "(சொற்பொழிவாற்றுபவன், பேச்சாளன்), ஏசாவுக்கு மூத்த மகனாகிய எலிப்பாசின் மகன். (ஆதியாகமம் 36:11,15; 1 நாளாகமம் 1:38) (கி.மு. 1750.)"
+    }
+  ]
+}

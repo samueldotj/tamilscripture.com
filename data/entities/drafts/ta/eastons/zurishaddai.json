@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zurishaddai",
+  "lang": "ta",
+  "source_hash": "7d659929",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூரிஷதாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/zurishaddai#p1-7d659929",
+      "text": "சர்வவல்லவரின் கன்மலை என்று பொருள்படும், இஸ்ரவேல் சீனாய் மலையில் முகாமிட்டிருந்தபோது சிமியோன் கோத்திரத்தின் தலைவனாக இருந்த செலூமியேலின் தகப்பன் (எண்ணாகமம் 1:6; 2:12)."
+    }
+  ]
+}

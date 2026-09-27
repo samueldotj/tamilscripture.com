@@ -1,0 +1,18 @@
+{
+  "id": "smiths/apocrypha",
+  "lang": "ta",
+  "source_hash": "b96a8313",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபோக்ரிபா",
+  "paragraphs": [
+    {
+      "id": "smiths/apocrypha#p1-b96a8313",
+      "text": "(மறைக்கப்பட்டது, மறைவானது)."
+    }
+  ]
+}

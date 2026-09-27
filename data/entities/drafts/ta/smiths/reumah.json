@@ -1,0 +1,18 @@
+{
+  "id": "smiths/reumah",
+  "lang": "ta",
+  "source_hash": "caf8acb8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேயுமாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/reumah#p1-caf8acb8",
+      "text": "(உயர்ந்தவள்), ஆபிரகாமின் சகோதரனாகிய நாகோரின் மறுமனையாட்டி. (ஆதியாகமம் 22:4) (கி.மு. 1870 ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

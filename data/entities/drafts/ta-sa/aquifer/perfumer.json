@@ -1,0 +1,42 @@
+{
+  "id": "aquifer/perfumer",
+  "lang": "ta",
+  "source_hash": "9f91db15",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரிமளதைலம் செய்பவர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/perfumer#p1-b04e8191",
+      "text": "பரிமளதைலம் செய்பவன் என்பவன் மூன்று பயன்பாடுகளுக்காக எண்ணெய்களையும், பொடிகளையும், கலவைகளையும் தயாரிக்கிற ஒரு நபராவான்:"
+    },
+    {
+      "id": "aquifer/perfumer#p2-30cc5ca4",
+      "text": "மருந்து"
+    },
+    {
+      "id": "aquifer/perfumer#p3-192181d2",
+      "text": "பரிமளதைலங்கள்"
+    },
+    {
+      "id": "aquifer/perfumer#p4-d00f533d",
+      "text": "மத ஆசாரங்களில் பயன்படுத்தப்படும் தூபம்"
+    },
+    {
+      "id": "aquifer/perfumer#p5-0efac137",
+      "text": "நசுக்கப்படும்போது தனிச்சிறப்பான வாசனையை உண்டாக்கும் எண்ணெய்களையோ பொடிகளையோ தரும் பல செடிவகைகள் இருந்தன."
+    },
+    {
+      "id": "aquifer/perfumer#p6-64b58c2d",
+      "text": "பரிமளதைலம் செய்பவன் கிங் யாக்கோபு மொழிபெயர்ப்பில் “apothecary” (யாத்திராகமம் 30:25) அல்லது “confectionary” (1 சாமுவேல் 8:13) என்றும் அழைக்கப்படுகிறான்."
+    },
+    {
+      "id": "aquifer/perfumer#p7-b0797653",
+      "text": "பரிமளதைலம் (Perfume) என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/moadiah",
+  "lang": "ta",
+  "source_hash": "8f7f6686",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மொவதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/moadiah#p1-8f7f6686",
+      "text": "(நெகேமியா 12:17) வேறு இடத்தில் நெகேமியா 12:5 இல் மாதியா என்று அழைக்கப்பட்டிருக்கிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/arisai",
+  "lang": "ta",
+  "source_hash": "190c237b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரிசாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/arisai#p1-190c237b",
+      "text": "யூதர்களை அழிக்கும் ஆமானின் சூழ்ச்சியை எஸ்தர் வெளிப்படுத்தியபோது, தன் தகப்பனுடன் கொல்லப்பட்ட ஆமானின் பத்து மகன்களில் ஒருவன் (எஸ்தர் 9:7-10)."
+    }
+  ]
+}

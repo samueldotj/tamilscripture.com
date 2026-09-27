@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hadarezer",
+  "lang": "ta",
+  "source_hash": "2a4bfafd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதாதேசர்",
+  "paragraphs": [
+    {
+      "id": "eastons/hadarezer#p1-2a4bfafd",
+      "text": "அதாத் என்னுடைய உதவி என்று பொருள்படும் ஆதாதேசர் (2 சாமுவேல் 8:3-12) என்பவனுக்கு 2 சாமுவேல் 10-ல் கொடுக்கப்பட்ட பெயர்."
+    }
+  ]
+}

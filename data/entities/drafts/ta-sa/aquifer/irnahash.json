@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/irnahash",
+  "lang": "ta",
+  "source_hash": "2cc15431",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இர்நாகாஷ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/irnahash#p1-2cc15431",
+      "text": "யூதாவின் கோத்திரத்திற்குரிய எஸ்தோனின் மகனாகிய தெகினாகின் மகன் (1 நாளாகமம் 4:12). சில மொழிபெயர்ப்புகள் மாற்று வாசகமாக, “நாகாசின் நகரம்” (mg niv, kjv) என்பதைக் குறிப்பிடுகின்றன."
+    }
+  ]
+}

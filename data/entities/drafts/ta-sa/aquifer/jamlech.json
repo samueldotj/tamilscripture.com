@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jamlech",
+  "lang": "ta",
+  "source_hash": "b08020f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யம்லேக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jamlech#p1-b08020f7",
+      "text": "யம்லேக் சிமியோன் கோத்திரத்தில் ஒரு தலைவனாக இருந்தான் (1 நாளாகமம் 4:34)."
+    }
+  ]
+}

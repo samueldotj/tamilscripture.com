@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bozkath",
+  "lang": "ta",
+  "source_hash": "9cf91f2c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போஸ்காத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bozkath#p1-9cf91f2c",
+      "text": "(கற்பாறை மேடு), தாழ்நிலப் பகுதியில் இருந்த யூதாவின் ஒரு பட்டணம் (யோசுவா 15:39; 2 இராஜாக்கள் 22:1)"
+    }
+  ]
+}

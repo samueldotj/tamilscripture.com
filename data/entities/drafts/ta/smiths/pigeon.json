@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pigeon",
+  "lang": "ta",
+  "source_hash": "937976ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புறா",
+  "paragraphs": [
+    {
+      "id": "smiths/pigeon#p1-937976ba",
+      "text": "[காட்டுப்புறா காண்க]"
+    }
+  ]
+}

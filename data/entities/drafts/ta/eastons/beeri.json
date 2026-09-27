@@ -1,0 +1,26 @@
+{
+  "id": "eastons/beeri",
+  "lang": "ta",
+  "source_hash": "c75bb380",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெயேரி",
+  "paragraphs": [
+    {
+      "id": "eastons/beeri#p1-e600265d",
+      "text": "பிரசித்திபெற்றவன், அல்லது கிணற்றுக்காரன்."
+    },
+    {
+      "id": "eastons/beeri#p2-5ab0ea73",
+      "text": "(1.) ஏசாவின் மனைவிகளில் ஒருத்தியான யூதீத்தின் தகப்பன் (ஆதியாகமம் 26:34), இவளே ஆதாள் என்றும் அழைக்கப்படுகிறாள் (ஆதியாகமம் 36:2)."
+    },
+    {
+      "id": "eastons/beeri#p3-bb3d5e4e",
+      "text": "(2.) தீர்க்கதரிசியாகிய ஓசியாவின் தகப்பன் (ஓசியா 1:1)."
+    }
+  ]
+}

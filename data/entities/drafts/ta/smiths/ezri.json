@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezri",
+  "lang": "ta",
+  "source_hash": "d9504e9c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/ezri#p1-d9504e9c",
+      "text": "(யெகோவாவின் உதவி), கேலூப்பின் மகன், தாவீது ராஜாவின் வயல்வெளி வேலையாட்களின்மேல் விசாரிப்புக்காரன். (1 நாளாகமம் 27:26) (கி.மு. 1014)."
+    }
+  ]
+}

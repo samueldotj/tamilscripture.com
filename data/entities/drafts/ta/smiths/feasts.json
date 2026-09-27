@@ -1,0 +1,18 @@
+{
+  "id": "smiths/feasts",
+  "lang": "ta",
+  "source_hash": "bd94b565",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பண்டிகைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/feasts#p1-bd94b565",
+      "text": "[பண்டிகைகள்; உணவுகள்]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/betah",
+  "lang": "ta",
+  "source_hash": "903ba6ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/betah#p1-4c2d610f",
+      "text": "திப்காத்திற்கு (1 நாளாகமம் 18:8) இருந்த மற்றொரு பெயர். இது தாவீது ராஜா தன் ஆளுகைக்குள் கொண்டுவந்த ஆராம்-சோபா நகர-அரசின் ஒரு பட்டணமாக இருந்தது (2 சாமுவேல் 8:8)."
+    },
+    {
+      "id": "aquifer/betah#p2-01714440",
+      "text": "தேபா (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

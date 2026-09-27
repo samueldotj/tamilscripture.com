@@ -1,0 +1,18 @@
+{
+  "id": "eastons/supper",
+  "lang": "ta",
+  "source_hash": "c5d5d631",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விருந்து",
+  "paragraphs": [
+    {
+      "id": "eastons/supper#p1-c5d5d631",
+      "text": "யூதர்களிடையே நாளின் முக்கிய உணவு இதுவே. இது மாலையின் ஆரம்ப நேரத்தில் உண்ணப்பட்டது (மாற்கு 6:21; யோவான் 12:2; 1 கொரிந்தியர் 11:21). (யெகோவாவுடைய இராப்போஜனம் என்பதைக் காண்க.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gamul",
+  "lang": "ta",
+  "source_hash": "339fa42e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காமுவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gamul#p1-339fa42e",
+      "text": "காமுவேல் தாவீதின் காலத்தில் ஆலயத்தில் பணிக்காக நியமிக்கப்பட்ட ஆசாரியனாயிருந்தான் (1 நாளாகமம் 24:17)."
+    }
+  ]
+}

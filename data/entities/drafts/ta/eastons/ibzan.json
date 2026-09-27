@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ibzan",
+  "lang": "ta",
+  "source_hash": "43bea380",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்சான்",
+  "paragraphs": [
+    {
+      "id": "eastons/ibzan#p1-43bea380",
+      "text": "புகழ்பெற்றவன், இஸ்ரவேலின் பத்தாம் நியாயாதிபதி (நியாயாதிபதிகள் 12:8-10). அவன் ஏழு வருடங்கள் ஆண்டான்."
+    }
+  ]
+}

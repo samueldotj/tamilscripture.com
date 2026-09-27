@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anani",
+  "lang": "ta",
+  "source_hash": "d6ae2eaf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனானி",
+  "paragraphs": [
+    {
+      "id": "smiths/anani#p1-d6ae2eaf",
+      "text": "(யெகோவாவினால் காக்கப்பட்டவன்), யூதாவின் அரச வம்சாவளியில் வந்த எலியோனாயின் ஏழாவது மகன். (1 நாளாகமம் 3:24)"
+    }
+  ]
+}

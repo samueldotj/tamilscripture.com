@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hasenuah",
+  "lang": "ta",
+  "source_hash": "cb9355a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசெனூவா",
+  "paragraphs": [
+    {
+      "id": "eastons/hasenuah#p1-cb9355a9",
+      "text": "முறுக்கப்பட்டவன் அல்லது வெறுக்கப்பட்டவன், ஒரு பென்யமீனியன் (1 நாளாகமம் 9:7)."
+    }
+  ]
+}

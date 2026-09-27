@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zacher",
+  "lang": "ta",
+  "source_hash": "dc674e99",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாகர்",
+  "paragraphs": [
+    {
+      "id": "eastons/zacher#p1-dc674e99",
+      "text": "நினைவுச்சின்னம், யெகியேலின் மகன் (1 நாளாகமம் 8:31; 9:35); சகரியா என்று அழைக்கப்பட்டான் (9:37)."
+    }
+  ]
+}

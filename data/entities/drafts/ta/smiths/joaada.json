@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joaada",
+  "lang": "ta",
+  "source_hash": "be5e975a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோயதா",
+  "paragraphs": [
+    {
+      "id": "smiths/joaada#p1-be5e975a",
+      "text": "(யெகோவா தயை செய்பவர்), தன் தகப்பனாகிய எலியாசிபுக்குப் பின் பிரதான ஆசாரியனானவன். (நெகேமியா 13:28) (கி.மு. 446-க்குப் பின்.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pools-of-solomon",
+  "lang": "ta",
+  "source_hash": "d28e5adb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலொமோனின் குளங்கள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pools-of-solomon#p1-d28e5adb",
+      "text": "சாலொமோனின் குளங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

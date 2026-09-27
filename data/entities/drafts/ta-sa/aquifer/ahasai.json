@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ahasai",
+  "lang": "ta",
+  "source_hash": "b7d6e546",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகசாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahasai#p1-3317322f",
+      "text": "ஆசாரியனாகிய அகசாயின் கிங் யாக்கோபு வேர்ஷன் வடிவமே அஹ்சாய் (நெகேமியா 11:13)."
+    },
+    {
+      "id": "aquifer/ahasai#p2-588edbca",
+      "text": "அஹ்சாய் என்பதைக் காண்க."
+    }
+  ]
+}

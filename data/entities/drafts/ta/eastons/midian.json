@@ -1,0 +1,18 @@
+{
+  "id": "eastons/midian",
+  "lang": "ta",
+  "source_hash": "92c72e7e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீதியான்",
+  "paragraphs": [
+    {
+      "id": "eastons/midian#p1-92c72e7e",
+      "text": "வாக்குவாதம், கேத்தூராளினால் ஆபிரகாமுக்குப் பிறந்த நான்காம் மகன், மீதியானியர்களின் தகப்பன் (ஆதியாகமம் 25:2; 1 நாளாகமம் 1:32)."
+    }
+  ]
+}

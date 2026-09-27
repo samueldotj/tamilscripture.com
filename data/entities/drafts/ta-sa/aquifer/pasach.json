@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pasach",
+  "lang": "ta",
+  "source_hash": "d48111db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pasach#p1-d48111db",
+      "text": "பாசாக் ஆசேர் கோத்திரத்தைச் சேர்ந்த யப்லேத்தின் மகன் ஆவான் (1 நாளாகமம் 7:33)."
+    }
+  ]
+}

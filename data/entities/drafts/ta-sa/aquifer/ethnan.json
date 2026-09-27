@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ethnan",
+  "lang": "ta",
+  "source_hash": "425383d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்னான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ethnan#p1-425383d1",
+      "text": "எத்னான் யூதா கோத்திரத்தில் ஏலாளின் குடும்பத்தைச் சேர்ந்தவனாக இருந்தான் (1 நாளாகமம் 4:7)."
+    }
+  ]
+}

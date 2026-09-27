@@ -1,0 +1,18 @@
+{
+  "id": "eastons/breeches",
+  "lang": "ta",
+  "source_hash": "205e47d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கால்சட்டைகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/breeches#p1-205e47d0",
+      "text": "(யாத்திராகமம் 28:42), இது இடுப்புத் தொடங்கி முழங்காலுக்கு சற்று மேல்வரை அணியப்படும் சணல்நூல் உள்ளாடையைக் குறிக்கிறது; இதை ஆசாரியர்கள் அணிந்துகொண்டனர் (எசேக்கியேல் 44:17, 18)."
+    }
+  ]
+}

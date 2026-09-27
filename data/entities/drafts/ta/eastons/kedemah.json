@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kedemah",
+  "lang": "ta",
+  "source_hash": "0e06bb54",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேத்மா",
+  "paragraphs": [
+    {
+      "id": "eastons/kedemah#p1-0e06bb54",
+      "text": "கிழக்கு நோக்கி இருப்பவன், இஸ்மவேலின் மகன்களில் கடைசியாகக் குறிப்பிடப்பட்டவன் (ஆதியாகமம் 25:15)."
+    }
+  ]
+}

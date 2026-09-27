@@ -1,0 +1,18 @@
+{
+  "id": "smiths/astaroth",
+  "lang": "ta",
+  "source_hash": "55b935ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்தரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/astaroth#p1-55b935ae",
+      "text": "(1:4) [அஸ்தரோத்]"
+    }
+  ]
+}

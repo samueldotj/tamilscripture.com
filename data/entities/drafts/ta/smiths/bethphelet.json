@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethphelet",
+  "lang": "ta",
+  "source_hash": "2d00596e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்பெலேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethphelet#p1-2d00596e",
+      "text": "(நெகேமியா 11:26) [பேத்பாலெத்]"
+    }
+  ]
+}

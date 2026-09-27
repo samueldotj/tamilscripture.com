@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pethuel",
+  "lang": "ta",
+  "source_hash": "24b39eb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்துவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/pethuel#p1-24b39eb6",
+      "text": "(தேவனுடைய தரிசனம்), தீர்க்கதரிசியாகிய யோவேலின் தகப்பன். (யோவேல் 1:1) (கிமு 800க்கு முன்)."
+    }
+  ]
+}

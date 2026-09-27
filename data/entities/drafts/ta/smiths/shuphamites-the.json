@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shuphamites-the",
+  "lang": "ta",
+  "source_hash": "464bf36e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூப்பாமியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shuphamites-the#p1-464bf36e",
+      "text": "பென்யமீனனாகிய சூப்பாம் அல்லது செப்புப்பாமின் சந்ததியார். (எண்ணாகமம் 26:3)"
+    }
+  ]
+}

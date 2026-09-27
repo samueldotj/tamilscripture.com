@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aethiopia",
+  "lang": "ta",
+  "source_hash": "8b7c52d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்தியோப்பியா",
+  "paragraphs": [
+    {
+      "id": "smiths/aethiopia#p1-8b7c52d7",
+      "text": "[எத்தியோப்பியா காண்க]"
+    }
+  ]
+}

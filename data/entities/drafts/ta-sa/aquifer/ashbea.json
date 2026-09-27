@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ashbea",
+  "lang": "ta",
+  "source_hash": "384a4ba4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பெயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ashbea#p1-05029f74",
+      "text": "1 நாளாகமம் 4:21-ல் காணப்படும் ஒரு வம்சத்தின் பெயர். இந்தப் பெயர் அந்த வம்சம் குடியிருந்த இடத்தின் பெயராக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/ashbea#p2-56c04e63",
+      "text": "அஸ்பெயா வீடு என்பதைக் காண்க."
+    }
+  ]
+}

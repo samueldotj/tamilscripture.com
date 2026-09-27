@@ -1,0 +1,18 @@
+{
+  "id": "smiths/symeon",
+  "lang": "ta",
+  "source_hash": "fef51c75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிமியோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/symeon#p1-fef51c75",
+      "text": "(சீமோன் என்ற பெயரின் யூதன் வடிவம், இது திருத்தப்பட்ட மொழிபெயர்ப்பில் (அப்போஸ்தலருடைய நடபடிகள் 15:14) பயன்படுத்தப்பட்டு, சீமோன் பேதுருவைக் குறிக்கிறது.-பதிப்பாசிரியர்.)"
+    }
+  ]
+}

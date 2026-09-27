@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hoham",
+  "lang": "ta",
+  "source_hash": "dd381a70",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓகாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/hoham#p1-dd381a70",
+      "text": "யெகோவா தள்ளுகிறார், கிபியோனுக்கு எதிராக கூட்டணி சேர்ந்த எப்ரோனின் ராஜா. அவனும் அவனுடைய கூட்டாளிகளும் தோற்கடிக்கப்பட்டனர் (யோசுவா 10:3, 5, 16-27)."
+    }
+  ]
+}

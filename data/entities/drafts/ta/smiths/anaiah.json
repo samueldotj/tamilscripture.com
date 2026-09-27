@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anaiah",
+  "lang": "ta",
+  "source_hash": "67e92c26",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/anaiah#p1-67e92c26",
+      "text": "(யெகோவா பதிலளிக்கிறவர்)."
+    }
+  ]
+}

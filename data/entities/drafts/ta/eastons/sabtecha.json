@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sabtecha",
+  "lang": "ta",
+  "source_hash": "29d05ccb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்தேகா",
+  "paragraphs": [
+    {
+      "id": "eastons/sabtecha#p1-29d05ccb",
+      "text": "கூஷின் ஐந்தாம் மகன் (மேற்குறித்தவை)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shammoth",
+  "lang": "ta",
+  "source_hash": "f7ed3f46",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்மோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/shammoth#p1-f7ed3f46",
+      "text": "[சம்மா]"
+    }
+  ]
+}

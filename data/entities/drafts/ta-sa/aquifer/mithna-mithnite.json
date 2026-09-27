@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mithna-mithnite",
+  "lang": "ta",
+  "source_hash": "aca3b8f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மித்னா, மித்னியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mithna-mithnite#p1-aca3b8f6",
+      "text": "மித்னா என்பது தாவீதின் பராக்கிரமசாலிகளில் ஒருவனாகிய யோசபாத்துடன் தொடர்புடைய இடப்பெயராகும். பெரியன் ஸ்டாண்டர்ட் பைபிள் அவனை “மித்னியனாகிய யோசபாத்” என்று அழைக்கிறது (1 நாளாகமம் 11:43)."
+    }
+  ]
+}

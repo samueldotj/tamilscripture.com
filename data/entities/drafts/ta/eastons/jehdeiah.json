@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jehdeiah",
+  "lang": "ta",
+  "source_hash": "c530701e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகேதியா",
+  "paragraphs": [
+    {
+      "id": "eastons/jehdeiah#p1-1f44e4aa",
+      "text": "யெகோவாவில் மகிழுகிறவன்."
+    },
+    {
+      "id": "eastons/jehdeiah#p2-37608253",
+      "text": "(1.) ஆலயத்தில் இருந்த லேவியப் பணிவிடையாட்களில் ஒருவன், சூபவேலின் சந்ததியில் ஒருவன் (1 நாளாகமம் 24:20)."
+    },
+    {
+      "id": "eastons/jehdeiah#p3-e2511e73",
+      "text": "(2.) மெரோனோத்தியன், தாவீதுக்கும் சாலொமோனுக்கும் கீழ் கழுதைகளின்மேல் இருந்த மேய்ப்பன் (1 நாளாகமம் 27:30)."
+    }
+  ]
+}

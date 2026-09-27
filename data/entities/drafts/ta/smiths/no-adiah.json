@@ -1,0 +1,18 @@
+{
+  "id": "smiths/no-adiah",
+  "lang": "ta",
+  "source_hash": "7dc05497",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நொவதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/no-adiah#p1-7dc05497",
+      "text": "(யெகோவா சந்திக்கிறவர்)."
+    }
+  ]
+}

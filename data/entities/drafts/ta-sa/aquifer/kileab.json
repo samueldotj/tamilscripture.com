@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kileab",
+  "lang": "ta",
+  "source_hash": "ca68b698",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீலேயாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kileab#p1-e43ce830",
+      "text": "கீலேயாப் என்பதன் மற்றொரு எழுத்துவடிவம், தாவீது ராஜாவின் இரண்டாம் மகன்."
+    },
+    {
+      "id": "aquifer/kileab#p2-0e46ff49",
+      "text": "கீலேயாப் காண்க."
+    }
+  ]
+}

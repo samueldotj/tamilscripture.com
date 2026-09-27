@@ -1,0 +1,18 @@
+{
+  "id": "eastons/obal",
+  "lang": "ta",
+  "source_hash": "584a17eb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபால்",
+  "paragraphs": [
+    {
+      "id": "eastons/obal#p1-584a17eb",
+      "text": "உரிக்கப்பட்டவன், யொக்தானின் எட்டாவது மகன் (ஆதியாகமம் 10:28); ஏபால் என்றும் அழைக்கப்படுகிறான் (1 நாளாகமம் 1:22)."
+    }
+  ]
+}

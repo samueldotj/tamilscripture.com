@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shuham",
+  "lang": "ta",
+  "source_hash": "956a9ae4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shuham#p1-956a9ae4",
+      "text": "(குழி தோண்டுபவன்) தாணுடைய மகன், சூகாமியரின் மூலவன். (எண்ணாகமம் 26:42)"
+    }
+  ]
+}

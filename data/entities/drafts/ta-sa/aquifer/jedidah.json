@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jedidah",
+  "lang": "ta",
+  "source_hash": "89a0a215",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எதிதாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jedidah#p1-89a0a215",
+      "text": "அதாயாவின் மகள். இவள் யூதாவின் ராஜாவாகிய ஆமோனின் மனைவியும், ராஜாவாகிய யோசியாவின் தாயும் ஆவாள் (2 இராஜாக்கள் 22:1)."
+    }
+  ]
+}

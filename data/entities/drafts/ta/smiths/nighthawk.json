@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nighthawk",
+  "lang": "ta",
+  "source_hash": "45306e30",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இராக்கோழி",
+  "paragraphs": [
+    {
+      "id": "smiths/nighthawk#p1-45306e30",
+      "text": "இப்படி மொழிபெயர்க்கப்பட்ட எபிரெய வார்த்தை, (லேவியராகமம் 11:10; 14:15) ஒருவேளை ஒரு வகை ஆந்தையைக் குறிக்கலாம்."
+    }
+  ]
+}

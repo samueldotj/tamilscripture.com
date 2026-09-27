@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/colhozeh",
+  "lang": "ta",
+  "source_hash": "eabc9b2c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொல்லோசே",
+  "paragraphs": [
+    {
+      "id": "aquifer/colhozeh#p1-eabc9b2c",
+      "text": "கொல்லோசே மிஸ்பாவின் மாகாணத்தை ஆட்சி செய்த சல்லூமின் தகப்பனாக இருந்தான் (நெகேமியா 3:15). அசாயாவின் மகனாகக் குறிப்பிடப்பட்டுள்ள கொல்லோசே வேறொரு நபராக இருக்கக்கூடும் (நெகேமியா 11:5)."
+    }
+  ]
+}

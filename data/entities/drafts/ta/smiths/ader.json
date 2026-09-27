@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ader",
+  "lang": "ta",
+  "source_hash": "97fbf806",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ader#p1-97fbf806",
+      "text": "(மந்தை), ஆயலோன் குடிகளின் தலைவனாகிய பெரீயாவின் மகன், ஒரு பென்யமீனியன். (1 நாளாகமம் 8:15) இந்தப் பெயர் சரியாக ஏதேர் என்பதே."
+    }
+  ]
+}

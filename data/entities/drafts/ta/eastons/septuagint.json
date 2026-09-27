@@ -1,0 +1,18 @@
+{
+  "id": "eastons/septuagint",
+  "lang": "ta",
+  "source_hash": "bdef9e70",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செப்துவசிந்த் மொழிபெயர்ப்பு",
+  "paragraphs": [
+    {
+      "id": "eastons/septuagint#p1-bdef9e70",
+      "text": "மொழிபெயர்ப்புகள் என்பதைக் காண்க."
+    }
+  ]
+}

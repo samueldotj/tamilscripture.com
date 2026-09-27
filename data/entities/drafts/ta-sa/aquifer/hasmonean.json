@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hasmonean",
+  "lang": "ta",
+  "source_hash": "809bb067",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹஸ்மோனியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hasmonean#p1-ad0141e3",
+      "text": "ஹஸ்மோனியன் என்பது கிமு 167 ஆம் ஆண்டில் கிரேக்கர்களின் ஆட்சிக்கு எதிராகக் கலகத்தைத் தொடங்கிய யூதர்களின் தலைவர்களுடைய குடும்பப் பெயராகும்."
+    },
+    {
+      "id": "aquifer/hasmonean#p2-ebcdd26a",
+      "text": "யூத மதம் என்பதைக் காண்க."
+    }
+  ]
+}

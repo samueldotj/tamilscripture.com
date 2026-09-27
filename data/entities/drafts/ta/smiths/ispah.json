@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ispah",
+  "lang": "ta",
+  "source_hash": "d732e0d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/ispah#p1-d732e0d0",
+      "text": "(மொட்டையான), பெரீயாவின் வம்சத்தைச் சேர்ந்த பென்யமீன் கோத்திரத்தான்; தன் கோத்திரத்தார்களுக்குரிய தலைவர்களில் ஒருவன். (1 நாளாகமம் 8:16) (கி.மு. 588 க்கு முன்)."
+    }
+  ]
+}

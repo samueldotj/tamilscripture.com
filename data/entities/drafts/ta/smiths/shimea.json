@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimea",
+  "lang": "ta",
+  "source_hash": "5c9d0412",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிமெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/shimea#p1-5c9d0412",
+      "text": "(புகழ்)."
+    }
+  ]
+}

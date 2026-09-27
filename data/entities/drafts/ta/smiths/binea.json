@@ -1,0 +1,18 @@
+{
+  "id": "smiths/binea",
+  "lang": "ta",
+  "source_hash": "8aec24e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பினியா",
+  "paragraphs": [
+    {
+      "id": "smiths/binea#p1-8aec24e7",
+      "text": "(நீரூற்று), சவுலின் சந்ததியாரில் ஒருவன். (1 நாளாகமம் 8:37; 7:43) (கி.மு. 850.)"
+    }
+  ]
+}

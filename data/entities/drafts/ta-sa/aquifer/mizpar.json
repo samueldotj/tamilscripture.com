@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mizpar",
+  "lang": "ta",
+  "source_hash": "79c7155d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸ்பார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mizpar#p1-b652130e",
+      "text": "மிஸ்பார் என்பது எஸ்றா 2:2-ல் உள்ள மிஸ்பார் என்ற பெயருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/mizpar#p2-9e4a1a78",
+      "text": "மிஸ்பார், மிஸ்பரெத் என்பவற்றைக் காண்க."
+    }
+  ]
+}

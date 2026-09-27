@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nanea",
+  "lang": "ta",
+  "source_hash": "2bb0c08c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நானேயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/nanea#p1-2bb0c08c",
+      "text": "நானேயா என்பவள் 2 மக்கபேயர் 1:13-இல் குறிப்பிடப்பட்டுள்ள ஒரு பெர்சிய தேவதை. அந்தியோகு என்னும் ஒரு மனிதன் எலிமாயிஸில் அவளுக்கென்று அர்ப்பணிக்கப்பட்ட ஒரு ஆலயத்தில் கொல்லப்பட்டான்."
+    }
+  ]
+}

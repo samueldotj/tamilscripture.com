@@ -1,0 +1,18 @@
+{
+  "id": "smiths/old-testament",
+  "lang": "ta",
+  "source_hash": "474d55cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பழைய ஏற்பாடு",
+  "paragraphs": [
+    {
+      "id": "smiths/old-testament#p1-474d55cf",
+      "text": "I. பழைய ஏற்பாட்டின் மூலப்பிரதி.—"
+    }
+  ]
+}

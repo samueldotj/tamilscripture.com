@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rivers-of-babylon",
+  "lang": "ta",
+  "source_hash": "719b63e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாபிலோனின் ஆறுகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/rivers-of-babylon#p1-719b63e3",
+      "text": "(சங்கீதங்கள் 137:1), அதாவது, பாபிலோன் தேசம் முழுவதிலுமுள்ள ஆறுகள், உதாரணமாக இதெக்கேல், ஐப்பிராத்து, கலோனாஸ், ஊலாய், மற்றும் ஏராளமான கால்வாய்கள்."
+    }
+  ]
+}

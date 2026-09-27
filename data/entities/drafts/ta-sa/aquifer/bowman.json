@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bowman",
+  "lang": "ta",
+  "source_hash": "971a12d5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வில்வீரன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bowman#p1-4306e1b7",
+      "text": "வில்லும் அம்பும் பயன்படுத்துவதில் திறமையுள்ள ஒருவன்."
+    },
+    {
+      "id": "aquifer/bowman#p2-5f9b5b52",
+      "text": "வில்வீரன், வில்வித்தை என்பதைக் காண்க."
+    }
+  ]
+}

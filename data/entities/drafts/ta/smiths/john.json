@@ -1,0 +1,18 @@
+{
+  "id": "smiths/john",
+  "lang": "ta",
+  "source_hash": "cb8b5193",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவான்",
+  "paragraphs": [
+    {
+      "id": "smiths/john#p1-cb8b5193",
+      "text": "இது யோகனான் என்ற பெயருக்கு ஒப்பானது, யோகனான் என்பது யெகோவாவின் ஈவு என்று பொருள்படும் யேகோவானான் என்பதன் சுருக்கமான வடிவம்."
+    }
+  ]
+}

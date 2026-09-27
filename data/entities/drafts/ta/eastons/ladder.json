@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ladder",
+  "lang": "ta",
+  "source_hash": "2e9c740c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏணி",
+  "paragraphs": [
+    {
+      "id": "eastons/ladder#p1-2e9c740c",
+      "text": "யாக்கோபுக்குத் தரிசனமான வர்ணனையிலே (ஆதியாகமம் 28:12) இது ஒருமுறை மட்டுமே காணப்படுகிறது."
+    }
+  ]
+}

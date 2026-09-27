@@ -1,0 +1,26 @@
+{
+  "id": "eastons/heres",
+  "lang": "ta",
+  "source_hash": "b9e81322",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரேஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/heres#p1-e16c2e25",
+      "text": "சூரியன்."
+    },
+    {
+      "id": "eastons/heres#p2-1f05e272",
+      "text": "(1.) “ஏரேஸ் மலை” (நியாயாதிபதிகள் 1:35), எபிரெயு Har-heres, அதாவது, “சூரிய மலை;” யோசுவா 19:41-ல் குறிப்பிடப்படும் இர்சேமேஸுடன் ஒத்திருக்கக்கூடும்."
+    },
+    {
+      "id": "eastons/heres#p3-def0054a",
+      "text": "(2.) ஏசாயா 19:18, ஓரக்குறிப்பு. (ON என்பதைக் காண்க.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/petra",
+  "lang": "ta",
+  "source_hash": "85ad4fe4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்ரா",
+  "paragraphs": [
+    {
+      "id": "eastons/petra#p1-85ad4fe4",
+      "text": "கன்மலை, ஏசாயா 16:1, குறிப்பு. (சேலா-வைக் காண்க.)"
+    }
+  ]
+}

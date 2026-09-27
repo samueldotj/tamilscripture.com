@@ -1,0 +1,18 @@
+{
+  "id": "smiths/garrison",
+  "lang": "ta",
+  "source_hash": "61095e0a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காவல்படை",
+  "paragraphs": [
+    {
+      "id": "smiths/garrison#p1-61095e0a",
+      "text": "அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) இவ்வாறு மொழிபெயர்க்கப்பட்ட எபிரெய வார்த்தைகள் natsab எனும் மூலத்திலிருந்து பெறப்பட்டவை; அதற்கு “நிலைநிறுத்துதல், எழுப்புதல்” என்பது பொருள், இது பலவகையான பொருள்களுக்குப் பொருந்தலாம்."
+    }
+  ]
+}

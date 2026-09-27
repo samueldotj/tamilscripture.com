@@ -1,0 +1,18 @@
+{
+  "id": "smiths/delilah-or-delilah",
+  "lang": "ta",
+  "source_hash": "2efc0ca8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெலீலாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/delilah-or-delilah#p1-2efc0ca8",
+      "text": "(மெலிதலுடையவள்) சோரேக் பள்ளத்தாக்கில் வாழ்ந்த ஒரு பெண், சிம்சோனால் நேசிக்கப்பட்டவள் (நியாயாதிபதிகள் 16:4-18). அவள் ஒரு பெலிஸ்தரின் வேசியாக இருந்தாள் என்பதில் சிறிதும் ஐயமில்லை என்று தோன்றுகிறது. [சிம்சோன் காண்க] (கி.மு. 1141.)"
+    }
+  ]
+}

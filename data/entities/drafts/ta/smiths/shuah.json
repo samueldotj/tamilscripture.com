@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shuah",
+  "lang": "ta",
+  "source_hash": "60b3de88",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/shuah#p1-60b3de88",
+      "text": "(செல்வம்)."
+    }
+  ]
+}

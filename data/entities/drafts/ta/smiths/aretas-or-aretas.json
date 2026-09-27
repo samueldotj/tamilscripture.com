@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aretas-or-aretas",
+  "lang": "ta",
+  "source_hash": "59f8b4bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரேத்தா, அல்லது அரேத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/aretas-or-aretas#p1-59f8b4bb",
+      "text": "(வெட்டுபவன்)."
+    }
+  ]
+}

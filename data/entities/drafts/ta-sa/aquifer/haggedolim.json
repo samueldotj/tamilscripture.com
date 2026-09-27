@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/haggedolim",
+  "lang": "ta",
+  "source_hash": "0755ff09",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகெதோலிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/haggedolim#p1-0755ff09",
+      "text": "அகெதோலிம் சப்தியேலின் தகப்பன். நெகேமியாவின் காலத்தில் எருசலேமில் வாழ்ந்த 128 “பலசாலிகளுக்கு” சப்தியேல் கண்காணியாக இருந்தான் (நெகேமியா 11:14)."
+    }
+  ]
+}

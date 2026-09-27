@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amplias",
+  "lang": "ta",
+  "source_hash": "bf3633b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்பிலியாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/amplias#p1-bf3633b8",
+      "text": "(பெரியவன்), ரோமாபுரிக்குப் ஒரு கிறிஸ்தவன். (ரோமர் 16:8) (கி.பி. 55.)"
+    }
+  ]
+}

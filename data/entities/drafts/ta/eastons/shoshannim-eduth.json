@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shoshannim-eduth",
+  "lang": "ta",
+  "source_hash": "dea2b403",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஷொஷன்னீம் ஏதுத்",
+  "paragraphs": [
+    {
+      "id": "eastons/shoshannim-eduth#p1-dea2b403",
+      "text": "சங்கீதம் 80ன் தலைப்பில் (R.V. குறிப்பு, “லீலிகள், ஒரு சாட்சி”), இது அந்த சங்கீதம் பாடப்பட வேண்டிய இராகத்தின் பெயராக இருக்கலாம்."
+    }
+  ]
+}

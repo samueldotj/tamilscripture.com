@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehoahaz",
+  "lang": "ta",
+  "source_hash": "0af53d85",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவாகாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehoahaz#p1-0af53d85",
+      "text": "(கர்த்தர் காக்கிறவன்)."
+    }
+  ]
+}

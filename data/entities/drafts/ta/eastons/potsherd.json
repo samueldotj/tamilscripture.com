@@ -1,0 +1,18 @@
+{
+  "id": "eastons/potsherd",
+  "lang": "ta",
+  "source_hash": "7d0d8de5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓட்டுத்துண்டு",
+  "paragraphs": [
+    {
+      "id": "eastons/potsherd#p1-7d0d8de5",
+      "text": "“துண்டு”, அதாவது பிரிக்கப்பட்ட எதுவும், மண்பாண்டத்தின் ஒரு துண்டைப் போன்றது (யோபு 2:8; நீதிமொழிகள் 26:23; ஏசாயா 45:9)."
+    }
+  ]
+}

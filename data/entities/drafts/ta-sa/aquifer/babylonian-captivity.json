@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/babylonian-captivity",
+  "lang": "ta",
+  "source_hash": "6192f8c4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாபிலோனிய சிறையிருப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/babylonian-captivity#p1-ac328464",
+      "text": "கிறிஸ்துவுக்கு முன் ஆறாம் நூற்றாண்டில் நேபுகாத்நேச்சார் எருசலேமை வென்றபின், இஸ்ரவேலின் தென்பகுதி இராஜ்யமாகிய யூதாவில் வாழ்ந்த பலர் பாபிலோனுக்குக் கொண்டு செல்லப்பட்ட காலம்."
+    },
+    {
+      "id": "aquifer/babylonian-captivity#p2-863ac0be",
+      "text": "காண்க: பாபிலோன், பாபிலோனியா; யூதர்களின் சிதறடிக்கப்படுதல்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barsabas",
+  "lang": "ta",
+  "source_hash": "e3d12851",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சபா",
+  "paragraphs": [
+    {
+      "id": "smiths/barsabas#p1-e3d12851",
+      "text": "(சாபாஸின் மகன், அல்லது இளைப்பாறுதல்). [யோசேப்பு பர்சபா; யூதாஸ் பர்சபா]"
+    }
+  ]
+}

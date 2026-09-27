@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/passover",
+  "lang": "ta",
+  "source_hash": "b47c3420",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பஸ்கா",
+  "paragraphs": [
+    {
+      "id": "aquifer/passover#p1-2d0e4c25",
+      "text": "பஸ்கா என்பது எகிப்தில் அடிமைத்தனத்திலிருந்து தேவன் இஸ்ரவேலரை விடுவித்ததை நினைவுகூரும் ஒரு முக்கியமான யூதர்களின் பண்டிகையாகும்."
+    },
+    {
+      "id": "aquifer/passover#p2-76bac762",
+      "text": "இஸ்ரவேலின் பண்டிகைகளும் விழாக்களும்; வேதத்தில் பண்டிகைகளின் அர்த்தம் ஆகிய கட்டுரைகளைக் காண்க."
+    }
+  ]
+}

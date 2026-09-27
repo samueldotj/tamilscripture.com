@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/briar",
+  "lang": "ta",
+  "source_hash": "f55bb989",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முட்செடி",
+  "paragraphs": [
+    {
+      "id": "aquifer/briar#p1-2fc16b86",
+      "text": "முட்செடி என்பது கூரிய முட்கள் கொண்ட ஒரு செடியாகும்."
+    },
+    {
+      "id": "aquifer/briar#p2-afcdabf2",
+      "text": "பரிசுத்த வேதாகமத்தில் முட்செடிகள் பற்பல முறை குறிப்பிடப்படுகின்றன. அவை பெரும்பாலும் கவனிக்கப்படாத இடங்களில் வளரும்."
+    },
+    {
+      "id": "aquifer/briar#p3-d00e6634",
+      "text": "நெருஞ்சி; முட்செடி, முள் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

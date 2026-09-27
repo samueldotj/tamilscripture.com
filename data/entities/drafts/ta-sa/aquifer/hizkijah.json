@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hizkijah",
+  "lang": "ta",
+  "source_hash": "40898c44",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹிஸ்கியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hizkijah#p1-e062100b",
+      "text": "ஹிஸ்கியா என்பது நெகேமியா 10:17-ல் காணப்படும் அதேரின் சந்ததியாரான எசேக்கியாவின் பெயருக்கான கிங் யாக்கோபு மொழிபெயர்ப்பின் வடிவம்."
+    },
+    {
+      "id": "aquifer/hizkijah#p2-e9e86958",
+      "text": "எசேக்கியா #3-ஐக் காண்க."
+    }
+  ]
+}

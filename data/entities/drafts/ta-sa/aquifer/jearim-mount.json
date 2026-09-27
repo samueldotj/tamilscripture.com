@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jearim-mount",
+  "lang": "ta",
+  "source_hash": "14abe8e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெயாரீம் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/jearim-mount#p1-2d2af016",
+      "text": "பெத்ஷிமேசுக்கும் கீரியாத்யாரீமுக்கும் இடையில் யூதாவின் எல்லையின் வடமேற்கு பகுதியில் இருந்த மலை. கெசலோன் அதன் வடக்குப் பக்கத்தில் இருந்தது (யோசுவா 15:10). இது சேயீரின் மலையோடும் எப்பெரோனின் மலையோடும் தொடர்புடையது."
+    },
+    {
+      "id": "aquifer/jearim-mount#p2-e0b26af7",
+      "text": "கெசலோன் என்பதையும் காண்க."
+    }
+  ]
+}

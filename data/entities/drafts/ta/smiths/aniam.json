@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aniam",
+  "lang": "ta",
+  "source_hash": "b2ee8734",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனியாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/aniam#p1-b2ee8734",
+      "text": "(மக்களின் பெருமூச்சு), செமீதாவின் மகனாகிய மனாசே கோத்திரத்தான் (1 நாளாகமம் 7:19)."
+    }
+  ]
+}

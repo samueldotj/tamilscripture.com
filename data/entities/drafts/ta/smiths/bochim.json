@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bochim",
+  "lang": "ta",
+  "source_hash": "7d41c44c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போகீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/bochim#p1-7d41c44c",
+      "text": "(அழுகிறவர்கள்) யோர்தானின் மேற்குப் புறத்தில், கில்காலுக்கு மேலான ஓரிடம்; இஸ்ரவேலின் அழுகையினால் இப்படிப் பெயரிடப்பட்டது. (நியாயாதிபதிகள் 2:1,6)"
+    }
+  ]
+}

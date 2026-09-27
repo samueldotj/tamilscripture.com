@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aphses",
+  "lang": "ta",
+  "source_hash": "f07097da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்சேசு",
+  "paragraphs": [
+    {
+      "id": "aquifer/aphses#p1-ce7de2a0",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் அப்சேசு என்பது, தாவீதின் காலத்தில் இருந்த ஆசாரியனாகிய அப்சேசிற்கும் என்பதற்கான வடிவமாகும், 1 நாளாகமம் 24:15-இல்."
+    },
+    {
+      "id": "aquifer/aphses#p2-aa753b61",
+      "text": "அப்சேசு என்பதைக் காண்க."
+    }
+  ]
+}

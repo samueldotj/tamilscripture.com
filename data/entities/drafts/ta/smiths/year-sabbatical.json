@@ -1,0 +1,18 @@
+{
+  "id": "smiths/year-sabbatical",
+  "lang": "ta",
+  "source_hash": "f6652bae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆண்டு, ஓய்வு ஆண்டு",
+  "paragraphs": [
+    {
+      "id": "smiths/year-sabbatical#p1-f6652bae",
+      "text": "[ஓய்வு ஆண்டு காண்க]"
+    }
+  ]
+}

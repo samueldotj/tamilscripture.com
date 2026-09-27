@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dibongan",
+  "lang": "ta",
+  "source_hash": "7f1f1509",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீபோன்கான்",
+  "paragraphs": [
+    {
+      "id": "smiths/dibongan#p1-7f1f1509",
+      "text": "[தீபோன்]"
+    }
+  ]
+}

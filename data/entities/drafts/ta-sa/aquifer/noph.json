@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/noph",
+  "lang": "ta",
+  "source_hash": "59ec6793",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/noph#p1-3e7e53f0",
+      "text": "நோப் என்பது எகிப்திலிருந்த ஒரு பழங்கால நகரமாகிய நோப்பிற்கான எபிரெய வார்த்தையின் கிங் யாக்கோபு வேர்ஷன் மொழிபெயர்ப்பாகும். எபிரெய பாடம் நோப் என்ற பெயரையே பயன்படுத்துகிறது."
+    },
+    {
+      "id": "aquifer/noph#p2-3ee30f84",
+      "text": "நோப்பைக் காண்க."
+    }
+  ]
+}

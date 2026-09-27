@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kiriathsannah",
+  "lang": "ta",
+  "source_hash": "c44baef4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்சன்னா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kiriathsannah#p1-cae52051",
+      "text": "கீரியாத்சன்னா என்பது யோசுவா 15:49-ல் குறிப்பிடப்பட்ட யூதேயாவின் நகரமாகிய தெபீரின் மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/kiriathsannah#p2-389e22d8",
+      "text": "தெபீர் (இடம்) #1-ஐ காண்க."
+    }
+  ]
+}

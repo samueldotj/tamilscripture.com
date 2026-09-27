@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arodi",
+  "lang": "ta",
+  "source_hash": "24bd7e1b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோதி",
+  "paragraphs": [
+    {
+      "id": "smiths/arodi#p1-24bd7e1b",
+      "text": "[ஆரோதி]"
+    }
+  ]
+}

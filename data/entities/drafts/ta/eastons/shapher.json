@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shapher",
+  "lang": "ta",
+  "source_hash": "4fa0357c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்பேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/shapher#p1-4fa0357c",
+      "text": "ஒளி, வனாந்திரத்தில் இஸ்ரவேலர்கள் முகாமிட்ட ஸ்தலங்களில் ஒன்று (எண்ணாகமம் 33:23, 24)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nimshi",
+  "lang": "ta",
+  "source_hash": "ec587362",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிம்சி",
+  "paragraphs": [
+    {
+      "id": "smiths/nimshi#p1-ec587362",
+      "text": "(விடுவிக்கப்பட்டவன்), யெகூவின் பாட்டன், அவன் பொதுவாக “நிம்சியின் மகன்” என்று அழைக்கப்படுகிறான். (1 இராஜாக்கள் 19:16; 2 இராஜாக்கள் 9:2; 14:20; 2 நாளாகமம் 22:7)"
+    }
+  ]
+}

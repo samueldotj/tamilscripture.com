@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehubbah",
+  "lang": "ta",
+  "source_hash": "0a1b3c0f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகூபா",
+  "paragraphs": [
+    {
+      "id": "smiths/jehubbah#p1-0a1b3c0f",
+      "text": "(பாதுகாக்கப்பட்டவன்), பெரீயாவின் வம்சத்தில் சோமேரின் அல்லது ஷாமேரின் மகனான ஆசேரிலும் ஒரு மனிதன். (1 நாளாகமம் 7:34) (கி.மு. ஏறக்குறைய 1450.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gathrimmon",
+  "lang": "ta",
+  "source_hash": "ee512dd0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்ரிம்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/gathrimmon#p1-ee512dd0",
+      "text": "(மாதுளம்பழத்தின் ஆலை)"
+    }
+  ]
+}

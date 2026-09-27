@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/atrothbethjoab",
+  "lang": "ta",
+  "source_hash": "dc1bf0e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதரோத்-பெத்யோவாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/atrothbethjoab#p1-09265bf4",
+      "text": "பெத்லெகேமுக்கு அருகில் யூதாவிலிருந்த ஒரு பட்டணம் (1 நாளாகமம் 2:54)."
+    },
+    {
+      "id": "aquifer/atrothbethjoab#p2-3f6f8985",
+      "text": "எபிரெய வார்த்தையாகிய ‘ataroth’ என்பது “கிரீடங்கள்” என்று பொருள்படும். எனவே, சில அறிஞர்கள் இந்த சொற்றொடர் சல்மாவின் சந்ததியினரை யோவாபின் கோத்திரத்தின் தலைவர்களாகக் குறிப்பிடலாம் என்று கருதுகின்றனர்."
+    }
+  ]
+}

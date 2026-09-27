@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jairite",
+  "lang": "ta",
+  "source_hash": "cf4cc178",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாவீரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/jairite#p1-cf4cc178",
+      "text": "(யாவீரின் சந்ததியான்). யாவீரியனான ஈரா தாவீதுக்கு ஆசாரியனாயிருந்தான் (அங்கீகரிக்கப்பட்ட ஆங்கில பதிப்பில் “முதலமைச்சர்” என்று உள்ளது) (2 சாமுவேல் 20:26)"
+    }
+  ]
+}

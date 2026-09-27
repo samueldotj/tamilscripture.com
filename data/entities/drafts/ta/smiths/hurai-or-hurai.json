@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hurai-or-hurai",
+  "lang": "ta",
+  "source_hash": "f76641c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊராயி, அல்லது ஊராயி",
+  "paragraphs": [
+    {
+      "id": "smiths/hurai-or-hurai#p1-f76641c2",
+      "text": "(சணல்நூல் நெசவாளன்), தாவீதின் மெய்க்காவலரில் ஒருவன்—காயாஸின் ஆறுகளைச் சேர்ந்த ஊராயி, 1 நாளாகமம் 11:32-ன் பட்டியலின்படி [ஈத்தாயி]"
+    }
+  ]
+}

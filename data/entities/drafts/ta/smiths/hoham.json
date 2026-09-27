@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hoham",
+  "lang": "ta",
+  "source_hash": "e2aa54a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hoham#p1-e2aa54a3",
+      "text": "(யெகோவா தூண்டுகிறவர்) கானான் தேசம் கைப்பற்றப்பட்ட காலத்தில் எப்ரோனின் ராஜா. (யோசுவா 10:3) (கி.மு. 1450.)"
+    }
+  ]
+}

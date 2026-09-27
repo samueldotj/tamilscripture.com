@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/affliction",
+  "lang": "ta",
+  "source_hash": "a863370b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உபத்திரவம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/affliction#p1-4f388966",
+      "text": "உபத்திரவம் என்பது கடுமையான வேதனையையும் தொல்லையையும் குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/affliction#p2-fee1a5eb",
+      "text": "பாடு காண்க."
+    }
+  ]
+}

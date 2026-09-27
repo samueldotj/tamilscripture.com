@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nachon",
+  "lang": "ta",
+  "source_hash": "47dd1776",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/nachon#p1-47dd1776",
+      "text": "ஆயத்தமாக்கப்பட்டவன், ஊசா கொல்லப்பட்ட ஒரு போரடிக்கும் களத்தின் சொந்தக்காரன் (2 சாமுவேல் 6:6); இவனுக்கு கீதோன் என்றும் பெயர் (1 நாளாகமம் 13:9)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/alemeth-person",
+  "lang": "ta",
+  "source_hash": "34b54229",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலமேத் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/alemeth-person#p1-a1dfaa96",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த பெகேரின் மகன் (1 நாளாகமம் 7:8)."
+    },
+    {
+      "id": "aquifer/alemeth-person#p2-4013b61d",
+      "text": "யோகதாவின் (1 நாளாகமம் 8:36) அல்லது யாராகின் (1 நாளாகமம் 9:42) மகன், சவுல் ராஜாவின் சந்ததியார்."
+    }
+  ]
+}

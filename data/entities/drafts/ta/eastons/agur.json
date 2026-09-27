@@ -1,0 +1,18 @@
+{
+  "id": "eastons/agur",
+  "lang": "ta",
+  "source_hash": "ead4afe9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/agur#p1-ead4afe9",
+      "text": "சேகரிப்பவன்; திரட்டுபவன், நீதிமொழிகள் 30-ல் உள்ள வாக்கியங்களின் ஆசிரியராகக் குறிப்பிடப்படுகிறார். அங்கே பதிவு செய்யப்பட்டதைத் தவிர அவரைப் பற்றி வேறொன்றும் அறியப்படவில்லை."
+    }
+  ]
+}

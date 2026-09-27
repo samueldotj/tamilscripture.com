@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeshanah",
+  "lang": "ta",
+  "source_hash": "310b1e3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஷானா",
+  "paragraphs": [
+    {
+      "id": "smiths/jeshanah#p1-310b1e3b",
+      "text": "(பழையது), யெரொபெயாமிடமிருந்து அபியா பிடித்துக்கொண்ட மூன்று பட்டணங்களில் ஒன்றாகிய, அதின் கீழிருந்த கிராமங்களையும் கொண்ட ஒரு பட்டணம். (2 நாளாகமம் 13:19)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kneadingtroughs",
+  "lang": "ta",
+  "source_hash": "7ac5174a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிசையும் தொட்டிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/kneadingtroughs#p1-7ac5174a",
+      "text": "[அப்பம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ozni",
+  "lang": "ta",
+  "source_hash": "7afaa8de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓஸ்னி",
+  "paragraphs": [
+    {
+      "id": "smiths/ozni#p1-7afaa8de",
+      "text": "(கேட்டல்), காத்தின் மகன்களில் ஒருவன் (எண்ணாகமம் 26:16), ஒஸ்னியர்கள் என்னும் குடும்பத்தை உண்டாக்கினவன். (எண்ணாகமம் 26:16)"
+    }
+  ]
+}

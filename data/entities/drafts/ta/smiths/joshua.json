@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joshua",
+  "lang": "ta",
+  "source_hash": "c33eb575",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசுவா",
+  "paragraphs": [
+    {
+      "id": "smiths/joshua#p1-c33eb575",
+      "text": "(இரட்சகர், அல்லது யாருடைய உதவி யெகோவாவே). அவனுடைய பெயர் ஓசெயா, ஓஷேயா, யெகோசுவா, யெசுவா, இயேசு என்ற பல்வேறு வடிவங்களில் காணப்படுகிறது."
+    }
+  ]
+}

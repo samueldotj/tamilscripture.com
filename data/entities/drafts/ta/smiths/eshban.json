@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eshban",
+  "lang": "ta",
+  "source_hash": "080d5fd4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்பான்",
+  "paragraphs": [
+    {
+      "id": "smiths/eshban#p1-080d5fd4",
+      "text": "(ஞானமுள்ள மனிதன்), ஒரு ஓரியன்; திஷோனுடைய நான்கு மகன்களில் ஒருவன். (ஆதியாகமம் 36:26; 1 நாளாகமம் 1:41)"
+    }
+  ]
+}

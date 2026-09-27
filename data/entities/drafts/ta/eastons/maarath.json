@@ -1,0 +1,18 @@
+{
+  "id": "eastons/maarath",
+  "lang": "ta",
+  "source_hash": "261538b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாராத்",
+  "paragraphs": [
+    {
+      "id": "eastons/maarath#p1-261538b0",
+      "text": "பாழ்வெளி, யூதாவின் மலைநாட்டில் உள்ள ஒரு இடம் (யோசுவா 15:59), இது எப்ரோனுக்கு வடக்கே 6 மைல் தூரத்தில் உள்ள இக்கால பெய்த் உம்மார் என்ற கிராமமாக இருக்கலாம்."
+    }
+  ]
+}

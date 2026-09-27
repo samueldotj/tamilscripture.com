@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rachal",
+  "lang": "ta",
+  "source_hash": "ad1383fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராகால்",
+  "paragraphs": [
+    {
+      "id": "smiths/rachal#p1-ad1383fc",
+      "text": "(வியாபாரம்), (1 சாமுவேல் 30:29) யூதா கோத்திரத்தின் தென்பகுதியில் இருந்த ஒரு பட்டணம், அமலேக்கியரின் கொள்ளைப்பொருளிலிருந்து தாவீது அன்பளிப்புகளை அனுப்பிய பட்டணங்களில் ஒன்று."
+    }
+  ]
+}

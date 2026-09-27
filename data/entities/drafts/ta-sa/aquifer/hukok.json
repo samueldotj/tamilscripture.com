@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hukok",
+  "lang": "ta",
+  "source_hash": "a8d07cb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உக்கோக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hukok#p1-9d8bc6a8",
+      "text": "உக்கோக் என்பது 1 நாளாகமம் 6:75-ல் ஆசேரின் நிலத்திலிருந்த எல்காத் என்பதன் வேறொரு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/hukok#p2-2248c3c9",
+      "text": "எல்காத்தையும் காண்க."
+    }
+  ]
+}

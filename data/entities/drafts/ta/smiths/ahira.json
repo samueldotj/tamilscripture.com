@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahira",
+  "lang": "ta",
+  "source_hash": "37a20b7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகீரா",
+  "paragraphs": [
+    {
+      "id": "smiths/ahira#p1-37a20b7c",
+      "text": "(சகோதரனாகிய தீமை, அதாவது துர்பாக்கியமுள்ளவன்), நப்தலி கோத்திரத்தின் தலைவன். (எண்ணாகமம் 1:15; 2:29; 7:78,83; 10:27)"
+    }
+  ]
+}

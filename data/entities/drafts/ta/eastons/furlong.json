@@ -1,0 +1,18 @@
+{
+  "id": "eastons/furlong",
+  "lang": "ta",
+  "source_hash": "76142b8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்லாங்",
+  "paragraphs": [
+    {
+      "id": "eastons/furlong#p1-76142b8a",
+      "text": "ஸ்டேடியம், 606 அடி 9 அங்குலத்திற்கு சமமான ஒரு கிரேக்கன் தூர அளவீடு (லூக்கா 24:13; யோவான் 6:19; 11:18; வெளிப்படுத்தின விசேஷம் 14:20; 21:16)."
+    }
+  ]
+}

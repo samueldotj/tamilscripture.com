@@ -1,0 +1,18 @@
+{
+  "id": "smiths/palti",
+  "lang": "ta",
+  "source_hash": "8f10345e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்த்தி",
+  "paragraphs": [
+    {
+      "id": "smiths/palti#p1-8f10345e",
+      "text": "(யெகோவா விடுவிக்கிறவர்), பென்யமீன் கோத்திரத்தைச் சேர்ந்த வேவுக்காரன், ரப்பூவின் மகன். (எண்ணாகமம் 13:9) (கி.மு. 1490.)"
+    }
+  ]
+}

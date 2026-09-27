@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hashub",
+  "lang": "ta",
+  "source_hash": "21d0e68f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hashub#p1-a1d22da7",
+      "text": "அசூப் என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் அசூபின் பெயருக்கான எழுத்துக்கூட்டல் ஆகும்."
+    },
+    {
+      "id": "aquifer/hashub#p2-9b6cb7e5",
+      "text": "அசூபின் பெயரைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aliah",
+  "lang": "ta",
+  "source_hash": "b7843ec8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aliah#p1-ba2e36a2",
+      "text": "ஏசாவின் சந்ததியாகிய அல்வாவுக்கு (1 நாளாகமம் 1:51) இருந்த மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/aliah#p2-5be77a3e",
+      "text": "அல்வா என்பதைக் காண்க."
+    }
+  ]
+}

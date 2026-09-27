@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jakinite",
+  "lang": "ta",
+  "source_hash": "3a4fe804",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாகினியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jakinite#p1-d16a807a",
+      "text": "யாகினியர் என்பதற்கு மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/jakinite#p2-c24f4724",
+      "text": "யாகினியர் என்பதைக் காண்க."
+    }
+  ]
+}

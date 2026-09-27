@@ -1,0 +1,18 @@
+{
+  "id": "eastons/midwife",
+  "lang": "ta",
+  "source_hash": "3316ba0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மருத்துவச்சி",
+  "paragraphs": [
+    {
+      "id": "eastons/midwife#p1-3316ba0e",
+      "text": "யாத்திராகமம் 1:15-ல் குறிப்பிடப்பட்டுள்ள இரண்டு மருத்துவச்சிகளும் ஒருவேளை அந்த முழு தொழிலாளர் வகுப்பினருக்கும் மேற்பார்வையாளர்களாக இருந்திருக்கலாம்."
+    }
+  ]
+}

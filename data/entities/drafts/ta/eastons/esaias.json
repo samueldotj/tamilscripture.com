@@ -1,0 +1,18 @@
+{
+  "id": "eastons/esaias",
+  "lang": "ta",
+  "source_hash": "5b06025b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசாயாஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/esaias#p1-5b06025b",
+      "text": "ஏசாயா என்ற பெயருக்கான கிரேக்கு வடிவம், இது புதிய ஏற்பாட்டின் அங்கீகரிக்கப்பட்ட பதிப்பில் (Authorized Version) தொடர்ந்து பயன்படுத்தப்படுகிறது (மத்தேயு 3:3; 4:14), ஆனால் திருத்தப்பட்ட பதிப்பில் (Revised Version) எப்போதும் “ஏசாயா” என்றே காணப்படுகிறது."
+    }
+  ]
+}

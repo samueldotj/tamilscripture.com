@@ -1,0 +1,18 @@
+{
+  "id": "eastons/open-place",
+  "lang": "ta",
+  "source_hash": "5a9ec6ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திறந்த இடம்",
+  "paragraphs": [
+    {
+      "id": "eastons/open-place#p1-5a9ec6ec",
+      "text": "ஆதியாகமம் 38:14, 21, குறிப்பு: ஏனாயீம்; இது தாழ்நிலமான அல்லது செபேலாவிலிருந்த ஒரு பட்டணமாகிய ஏனாமுடன் (யோசுவா 15:34) ஒன்றாக இருக்கலாம்."
+    }
+  ]
+}

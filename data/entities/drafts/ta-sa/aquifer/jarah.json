@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jarah",
+  "lang": "ta",
+  "source_hash": "0035b5b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாராக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jarah#p1-0035b5b4",
+      "text": "யாராக் சவுல் ராஜாவின் வழித்தோன்றல் ஆவான் (1 நாளாகமம் 9:42)."
+    }
+  ]
+}

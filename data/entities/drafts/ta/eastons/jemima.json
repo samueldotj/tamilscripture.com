@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jemima",
+  "lang": "ta",
+  "source_hash": "63f96297",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எமீமாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/jemima#p1-63f96297",
+      "text": "புறா, யோபுவின் சிறுமையின் காலத்திற்குப் பின்பு பிறந்த அவனுடைய மூன்று மகள்களில் மூத்தவள் (யோபு 42:14)."
+    }
+  ]
+}

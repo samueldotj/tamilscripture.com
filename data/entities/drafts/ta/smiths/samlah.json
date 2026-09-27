@@ -1,0 +1,18 @@
+{
+  "id": "smiths/samlah",
+  "lang": "ta",
+  "source_hash": "bbbdbacc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்லா",
+  "paragraphs": [
+    {
+      "id": "smiths/samlah#p1-bbbdbacc",
+      "text": "(ஆடை), (ஆதியாகமம் 36:36,37; 1 நாளாகமம் 1:47,48) ஆதாத் அல்லது ஆதாத் என்பவனுக்குப் பின் வந்த ஏதோமின் இராஜாக்களில் ஒருவன்."
+    }
+  ]
+}

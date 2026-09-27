@@ -1,0 +1,18 @@
+{
+  "id": "smiths/conaniah",
+  "lang": "ta",
+  "source_hash": "256f6d49",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொனனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/conaniah#p1-256f6d49",
+      "text": "(யெகோவாவினால் உண்டாக்கப்பட்டவன்), யோசியாவின் காலத்தில் இருந்த லேவியர்களின் பிரபுக்களில் ஒருவன். (2 நாளாகமம் 35:9) (கி.மு. 628)."
+    }
+  ]
+}

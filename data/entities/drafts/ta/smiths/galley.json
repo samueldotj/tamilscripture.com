@@ -1,0 +1,18 @@
+{
+  "id": "smiths/galley",
+  "lang": "ta",
+  "source_hash": "a0327459",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கப்பல்",
+  "paragraphs": [
+    {
+      "id": "smiths/galley#p1-a0327459",
+      "text": "[கப்பல் காண்க]"
+    }
+  ]
+}

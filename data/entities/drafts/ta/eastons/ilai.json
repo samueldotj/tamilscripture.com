@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ilai",
+  "lang": "ta",
+  "source_hash": "eceb9d18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈலாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/ilai#p1-eceb9d18",
+      "text": "ஒரு அகோகியன், தாவீதின் முதன்மையான வலிமையுள்ள யோதர்களில் ஒருவன் (1 நாளாகமம் 11:29); இவன் சல்மோன் என்றும் அழைக்கப்பட்டான் (2 சாமுவேல் 23:28)."
+    }
+  ]
+}

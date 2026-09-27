@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/festival-of-shelters",
+  "lang": "ta",
+  "source_hash": "bb936f91",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூடாரப் பண்டிகை",
+  "paragraphs": [
+    {
+      "id": "aquifer/festival-of-shelters#p1-759e2d7c",
+      "text": "கூடாரப் பண்டிகை என்பது ஆசரிப்புக்கூடாரப் பண்டிகைக்கு இன்னொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/festival-of-shelters#p2-4b652da5",
+      "text": "இஸ்ரவேலின் பண்டிகைகள் மற்றும் பண்டிகைமுறைமையின்படி என்பதைக் காண்க."
+    }
+  ]
+}

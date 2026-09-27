@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bezer-person",
+  "lang": "ta",
+  "source_hash": "b100e273",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேசேர் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bezer-person#p1-b100e273",
+      "text": "ஆசேர் கோத்திரத்தில் சோபாக்கின் மகன் (1 நாளாகமம் 7:37)."
+    }
+  ]
+}

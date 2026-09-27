@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bariah",
+  "lang": "ta",
+  "source_hash": "3dce8bca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரியா",
+  "paragraphs": [
+    {
+      "id": "smiths/bariah#p1-3dce8bca",
+      "text": "(தப்பியோடியவன்), யூதாவின் அரச வம்சத்தைச் சேர்ந்தவன். (1 நாளாகமம் 3:22) (கி.மு. 410-க்கு முன்.)"
+    }
+  ]
+}

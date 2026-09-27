@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bel",
+  "lang": "ta",
+  "source_hash": "eedd9820",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/bel#p1-eedd9820",
+      "text": "[பாகால்]"
+    }
+  ]
+}

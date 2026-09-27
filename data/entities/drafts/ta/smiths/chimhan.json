@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chimhan",
+  "lang": "ta",
+  "source_hash": "b00448f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிம்காம்",
+  "paragraphs": [
+    {
+      "id": "smiths/chimhan#p1-b00448f4",
+      "text": "[கிம்காம்]"
+    }
+  ]
+}

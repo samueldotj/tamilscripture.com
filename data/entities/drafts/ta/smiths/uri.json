@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uri",
+  "lang": "ta",
+  "source_hash": "b6b61d9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊரி",
+  "paragraphs": [
+    {
+      "id": "smiths/uri#p1-b6b61d9b",
+      "text": "(நெருப்புள்ள)."
+    }
+  ]
+}

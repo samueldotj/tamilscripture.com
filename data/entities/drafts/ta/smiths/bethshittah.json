@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethshittah",
+  "lang": "ta",
+  "source_hash": "bb2ef19a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்சித்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/bethshittah#p1-bb2ef19a",
+      "text": "(சீத்திம் மரத்தின் வீடு), கிதியோனால் தோற்கடிக்கப்பட்ட மீதியானியரின் ராணுவம் ஓடிப்போன இடங்களில் ஒன்று. (நியாயாதிபதிகள் 7:22)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethgader",
+  "lang": "ta",
+  "source_hash": "d0fcefb4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்காதேர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethgader#p1-d0fcefb4",
+      "text": "காலேபியனான ஆரேப்பு என்பவனுடன் சேர்த்து குறிப்பிடப்பட்ட ஒரு பட்டணம், அவன் இதை நிறுவியவனாக இருந்தான் (1 நாளாகமம் 2:51)."
+    }
+  ]
+}

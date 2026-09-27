@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dumah",
+  "lang": "ta",
+  "source_hash": "bf167577",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூமா",
+  "paragraphs": [
+    {
+      "id": "smiths/dumah#p1-bf167577",
+      "text": "(மவுனம்)."
+    }
+  ]
+}

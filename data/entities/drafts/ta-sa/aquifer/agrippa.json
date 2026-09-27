@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/agrippa",
+  "lang": "ta",
+  "source_hash": "051f3ba7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகிரிப்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/agrippa#p1-018eb32c",
+      "text": "ஏரோது குடும்ப வம்சாவளியிலிருந்து வந்த யூதேயாவின் இரண்டு ரோம ஆளுநர்களின் பெயர்."
+    },
+    {
+      "id": "aquifer/agrippa#p2-293bf709",
+      "text": "காண்க: ஏரோது, ஏரோதிய குடும்பம்."
+    }
+  ]
+}

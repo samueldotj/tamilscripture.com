@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eastern-sea",
+  "lang": "ta",
+  "source_hash": "bffb533c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிழக்கு சமுத்திரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eastern-sea#p1-f6a23ecb",
+      "text": "சவக்கடலின் மற்றொரு பெயர். இஸ்ரவேல் தேசத்தின் கிழக்கு எல்லையில் அந்தக் கடல் அமைந்திருந்ததால் இந்தப் பெயர் வந்தது (எசேக்கியேல் 47:18; யோவேல் 2:20; சகரியா 14:8)."
+    },
+    {
+      "id": "aquifer/eastern-sea#p2-27857345",
+      "text": "சவக்கடல் என்பதைக் காண்க."
+    }
+  ]
+}

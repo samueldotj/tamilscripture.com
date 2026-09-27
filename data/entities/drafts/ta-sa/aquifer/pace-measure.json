@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pace-measure",
+  "lang": "ta",
+  "source_hash": "8b6cea9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேஸ் (அளவு)",
+  "paragraphs": [
+    {
+      "id": "aquifer/pace-measure#p1-8b6cea9b",
+      "text": "ஒரு மனிதனுடைய நடையின் சராசரி தூரத்திற்குச் சமமான நேர்க்கோட்டு அளவு, அதாவது ஏறக்குறைய ஒரு யார்டு (.9 மீட்டர்). நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

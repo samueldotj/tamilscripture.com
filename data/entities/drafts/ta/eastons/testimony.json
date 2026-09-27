@@ -1,0 +1,26 @@
+{
+  "id": "eastons/testimony",
+  "lang": "ta",
+  "source_hash": "b9e9b3ff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாட்சி",
+  "paragraphs": [
+    {
+      "id": "eastons/testimony#p1-3751e82d",
+      "text": "(1.) சாட்சி அல்லது ஆதாரம் (2 தெசலோனிக்கேயர் 1:10)."
+    },
+    {
+      "id": "eastons/testimony#p2-f372edda",
+      "text": "(2.) தேவனுடைய சித்தத்தின் வெளிப்படுத்துதலாகிய வேதவாக்கியம் (2 இராஜாக்கள் 11:12; சங்கீதங்கள் 19:7; 119:88; ஏசாயா 8:16, 20)."
+    },
+    {
+      "id": "eastons/testimony#p3-86fdabc4",
+      "text": "(3.) காத்தியரும் ரூபனியரும் கட்டின பலிபீடம் (யோசுவா 22:10)."
+    }
+  ]
+}

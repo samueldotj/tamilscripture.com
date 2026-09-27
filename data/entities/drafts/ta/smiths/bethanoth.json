@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethanoth",
+  "lang": "ta",
+  "source_hash": "444ed3d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தானோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethanoth#p1-444ed3d1",
+      "text": "(எதிரொலியின் வீடு), யூதாவின் மலைநாட்டிலுள்ள ஒரு பட்டணம், அல்கூல், பெத்சூர் மற்றும் மற்றவைகளுடன் யோசுவா 15:58-ல் மட்டும் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

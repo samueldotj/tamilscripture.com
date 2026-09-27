@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeziah",
+  "lang": "ta",
+  "source_hash": "564cae27",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெசியா",
+  "paragraphs": [
+    {
+      "id": "smiths/jeziah#p1-564cae27",
+      "text": "(யெகோவா நிவிர்த்தி செய்கிறார்), பாரோஷின் சந்ததியான ஒருவன், இவன் அந்நிய பெண்ணை மனைவியாகக் கொண்டிருந்தான். (எஸ்றா 10:25)"
+    }
+  ]
+}

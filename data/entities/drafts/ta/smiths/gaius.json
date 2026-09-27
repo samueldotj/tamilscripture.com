@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gaius",
+  "lang": "ta",
+  "source_hash": "3793f2a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காயு",
+  "paragraphs": [
+    {
+      "id": "smiths/gaius#p1-3793f2a4",
+      "text": "அல்லது காயுஸ் (கர்த்தர்)—"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tolaites-the",
+  "lang": "ta",
+  "source_hash": "e7449aec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோலாவியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/tolaites-the#p1-e7449aec",
+      "text": "இசக்காரின் மகனாகிய தோலாவின் சந்ததியார். (எண்ணாகமம் 26:23)"
+    }
+  ]
+}

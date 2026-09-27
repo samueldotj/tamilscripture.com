@@ -1,0 +1,18 @@
+{
+  "id": "smiths/epah",
+  "lang": "ta",
+  "source_hash": "67e21ad1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/epah#p1-67e21ad1",
+      "text": "(இருள் நிறைந்தவன்), மீதியானின் மகன்களில் முதன்மையானவன், (ஆதியாகமம் 25:4; 1 நாளாகமம் 1:33) பின்பு ஏசாயாவினால் (ஏசாயா 60:6) குறிப்பிடப்படுகிறான்."
+    }
+  ]
+}

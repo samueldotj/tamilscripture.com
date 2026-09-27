@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hamul",
+  "lang": "ta",
+  "source_hash": "e3867ab6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமூல்",
+  "paragraphs": [
+    {
+      "id": "smiths/hamul#p1-e3867ab6",
+      "text": "(கிருபை பெற்றவன்), யூதாவுக்குத் தாமாரினிடத்தில் பிறந்த பாரேசின் இளைய மகன். (ஆதியாகமம் 46:12; 1 நாளாகமம் 2:5) (கி.மு. 1706-1688 காலப்பகுதிக்கிடையில்.)"
+    }
+  ]
+}

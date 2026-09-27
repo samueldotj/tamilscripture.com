@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeremy",
+  "lang": "ta",
+  "source_hash": "2bc7506d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எரேமியா",
+  "paragraphs": [
+    {
+      "id": "smiths/jeremy#p1-2bc7506d",
+      "text": "தீர்க்கதரிசியாகிய எரேமியா. (மத்தேயு 2:17; 27:9)"
+    }
+  ]
+}

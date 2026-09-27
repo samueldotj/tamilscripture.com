@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shadow",
+  "lang": "ta",
+  "source_hash": "ed9a3b8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிழல்",
+  "paragraphs": [
+    {
+      "id": "eastons/shadow#p1-ed9a3b8a",
+      "text": "யூதர்களின் ஏற்பாட்டுக்கும் கிறிஸ்தவ ஏற்பாட்டுக்கும் இடையேயுள்ள முன்னுரு தொடர்பைக் குறிக்க கொலோசெயர் 2:17; எபிரெயர் 8:5; 10:1-ல் இச்சொல் பயன்படுத்தப்பட்டுள்ளது."
+    }
+  ]
+}

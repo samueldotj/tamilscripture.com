@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shebuel-or-shebuel",
+  "lang": "ta",
+  "source_hash": "263a5bbb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபுவேல் அல்லது சூபவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/shebuel-or-shebuel#p1-263a5bbb",
+      "text": "(தேவனுடைய சிறைப்பட்டவன்)."
+    }
+  ]
+}

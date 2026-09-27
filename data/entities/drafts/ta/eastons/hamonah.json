@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hamonah",
+  "lang": "ta",
+  "source_hash": "14dc9b79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோனா",
+  "paragraphs": [
+    {
+      "id": "eastons/hamonah#p1-14dc9b79",
+      "text": "கூட்டம், கோக்கின் படைகள் கொல்லப்பட்டு அடக்கம் செய்யப்படும் இடத்திற்கு உருவகமாகக் கொடுக்கப்பட்ட பெயர் (எசேக்கியேல் 39:16)."
+    }
+  ]
+}

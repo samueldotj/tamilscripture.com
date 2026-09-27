@@ -1,0 +1,18 @@
+{
+  "id": "eastons/timon",
+  "lang": "ta",
+  "source_hash": "bc398e1b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீமோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/timon#p1-bc398e1b",
+      "text": "கனம்பெறுதல், எருசலேமிலிருந்த ஏழு உதவிக்காரர்களில் ஒருவன் (அப்போஸ்தலருடைய நடபடிகள் 6:5). இவனைப் பற்றி மற்றொன்றும் தெரியவில்லை."
+    }
+  ]
+}

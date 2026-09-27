@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pot",
+  "lang": "ta",
+  "source_hash": "81f5c1a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானை",
+  "paragraphs": [
+    {
+      "id": "smiths/pot#p1-81f5c1a4",
+      "text": "\"பானை\" என்ற சொல் பலவகையான பாத்திரங்களுக்குப் பொருந்துவதால், அதை எந்தவொரு குறிப்பிட்ட பாத்திரத்திற்கும் மட்டுப்படுத்துவது கடினம்."
+    }
+  ]
+}

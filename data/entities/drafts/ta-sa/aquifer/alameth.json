@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/alameth",
+  "lang": "ta",
+  "source_hash": "66c9259e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலமேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/alameth#p1-2fbaca62",
+      "text": "பெகேரின் மகனாகிய அலமேத்திற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் இப்படி எழுதப்பட்டுள்ளது (1 நாளாகமம் 7:8)."
+    },
+    {
+      "id": "aquifer/alameth#p2-1c12c7ac",
+      "text": "அலமேத் (நபர்) #1-ஐக் காண்க."
+    }
+  ]
+}

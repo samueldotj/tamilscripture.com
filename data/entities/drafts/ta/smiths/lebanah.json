@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lebanah",
+  "lang": "ta",
+  "source_hash": "1b3373e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லெபானா",
+  "paragraphs": [
+    {
+      "id": "smiths/lebanah#p1-1b3373e8",
+      "text": "(வெண்மையான) எஸ்றா 2:45-ல்."
+    }
+  ]
+}

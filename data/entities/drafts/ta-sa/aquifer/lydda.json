@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lydda",
+  "lang": "ta",
+  "source_hash": "ce9afca9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லித்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/lydda#p1-d4709737",
+      "text": "எருசலேமுக்கு தென்மேற்கே செபேலா பகுதியில் அமைந்திருந்த லோத் என்ற ஊருக்கு புதிய ஏற்பாட்டில் வழங்கப்பட்ட பெயர் (அப்போஸ்தலருடைய நடபடிகள் 9:32-38)."
+    },
+    {
+      "id": "aquifer/lydda#p2-f248e1e6",
+      "text": "லோத் என்பதைக் காண்க."
+    }
+  ]
+}

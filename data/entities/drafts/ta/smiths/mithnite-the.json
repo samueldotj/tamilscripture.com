@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mithnite-the",
+  "lang": "ta",
+  "source_hash": "d529cc2d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிதினியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/mithnite-the#p1-d529cc2d",
+      "text": "தாவீதின் மறவர்களின் பட்டியலில் (1 நாளாகமம் 11:43) குறிப்பிடப்பட்டிருக்கிற யோசபாத்திற்கு அளிக்கப்பட்ட பெயர்."
+    }
+  ]
+}

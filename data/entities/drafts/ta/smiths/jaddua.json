@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jaddua",
+  "lang": "ta",
+  "source_hash": "7bcc5df2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யதுவா",
+  "paragraphs": [
+    {
+      "id": "smiths/jaddua#p1-7bcc5df2",
+      "text": "(அறியப்பட்டவன்)."
+    }
+  ]
+}

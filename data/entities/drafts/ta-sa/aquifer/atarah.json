@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/atarah",
+  "lang": "ta",
+  "source_hash": "3fe260e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தாராள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/atarah#p1-3fe260e4",
+      "text": "ஓனாமின் தாய், யெராமியேலின் இரண்டாம் மனைவி (1 நாளாகமம் 2:26)."
+    }
+  ]
+}

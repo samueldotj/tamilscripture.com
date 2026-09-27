@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elparan",
+  "lang": "ta",
+  "source_hash": "e823d649",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பாரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/elparan#p1-e823d649",
+      "text": "(தேவன் அவனுடைய விடுதலை), சொல்லர்த்தமாக “பாரானின் ஏலமரம்” (ஆதியாகமம் 14:6) [பாரான், எல்பாரான்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shimron-meron",
+  "lang": "ta",
+  "source_hash": "57555378",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரோன் மேரோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/shimron-meron#p1-57555378",
+      "text": "இது, ஒருவேளை, சிம்ரோன் என்பதே ஆகும் (யோசுவா 12:20)."
+    }
+  ]
+}

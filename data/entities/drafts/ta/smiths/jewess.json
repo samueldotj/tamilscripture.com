@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jewess",
+  "lang": "ta",
+  "source_hash": "ad29a12b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூதப்பெண்",
+  "paragraphs": [
+    {
+      "id": "smiths/jewess#p1-ad29a12b",
+      "text": "கோத்திரம் என்ற வித்தியாசமில்லாமல் எபிரெய பிறப்புள்ள ஒரு பெண். (அப்போஸ்தலருடைய நடபடிகள் 16:1; 24:24)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ishpan",
+  "lang": "ta",
+  "source_hash": "f374041e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்பான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishpan#p1-f374041e",
+      "text": "இஸ்பான் சாஷாக்கின் மகனும், பென்யமீன் கோத்திரத்திற்குரிய ஒரு தலைவனுமாக இருந்தான் (1 நாளாகமம் 8:22)."
+    }
+  ]
+}

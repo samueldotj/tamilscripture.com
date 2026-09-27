@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/baara",
+  "lang": "ta",
+  "source_hash": "5b25b655",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாராள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/baara#p1-5b25b655",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த சகராயீம் என்னும் மனிதனிடமிருந்து விவாகரத்து செய்யப்பட்ட ஒரு பெண் (1 நாளாகமம் 8:8)."
+    }
+  ]
+}

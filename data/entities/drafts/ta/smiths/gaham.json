@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gaham",
+  "lang": "ta",
+  "source_hash": "6d0c00da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/gaham#p1-6d0c00da",
+      "text": "(வெயிலில் கருகியவன்), ஆபிரகாமின் சகோதரனாகிய நாகோருக்கு அவனுடைய மறுமனையாட்டியாகிய ரேயுமாளால் பிறந்த மகன். (ஆதியாகமம் 22:24) (கி.மு. 1900 அளவில்.)"
+    }
+  ]
+}

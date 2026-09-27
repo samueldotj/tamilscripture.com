@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/childless",
+  "lang": "ta",
+  "source_hash": "87f4a73e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிள்ளையில்லாத",
+  "paragraphs": [
+    {
+      "id": "aquifer/childless#p1-87f4a73e",
+      "text": "ஒரு பிள்ளையோ அல்லது பிள்ளைகளோ இல்லாத ஒருவரை விவரிக்கப் பயன்படுத்தப்படும் சொல். மலடு என்பதைக் காண்க."
+    }
+  ]
+}

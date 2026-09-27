@@ -1,0 +1,18 @@
+{
+  "id": "eastons/keren-happuch",
+  "lang": "ta",
+  "source_hash": "45d35fce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேரேனாப்புக்",
+  "paragraphs": [
+    {
+      "id": "eastons/keren-happuch#p1-45d35fce",
+      "text": "முகச் சாயத்தின் கொம்பு = அலங்காரப் பெட்டி, யோபுவின் மூன்றாம் மகளுடைய பெயர் (யோபு 42:14), யோபுவுக்கு மீண்டும் செல்வம் திரும்பிய பின்பு பிறந்தவள்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jochebed",
+  "lang": "ta",
+  "source_hash": "fdceb8bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகெபேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jochebed#p1-fdceb8bf",
+      "text": "அம்ராமின் மனைவியும், மோசே, ஆரோன், மிரியாம் ஆகியோரின் தாயும் ஆவாள் (யாத்திராகமம் 6:20; எண்ணாகமம் 26:59)."
+    }
+  ]
+}

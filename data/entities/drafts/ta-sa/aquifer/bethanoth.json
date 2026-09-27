@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethanoth",
+  "lang": "ta",
+  "source_hash": "5a764a14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தானோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethanoth#p1-5a764a14",
+      "text": "கானானை இஸ்ரவேலர் கட்டுப்படுத்தியபின், யூதா கோத்திரத்திற்கு கொடுக்கப்பட்ட மலைநாட்டிலுள்ள ஒரு கிராமம் (யோசுவா 15:59)."
+    }
+  ]
+}

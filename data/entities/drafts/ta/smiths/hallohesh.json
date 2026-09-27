@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hallohesh",
+  "lang": "ta",
+  "source_hash": "1066a73f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்லோகேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/hallohesh#p1-1066a73f",
+      "text": "(மந்திரவாதி), நெகேமியாவுடன் உடன்படிக்கையை முத்திரையிட்ட மக்களின் தலைவர்களில் ஒருவன். (நெகேமியா 10:24) (கி.மு. 410.)"
+    }
+  ]
+}

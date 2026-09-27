@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ohel",
+  "lang": "ta",
+  "source_hash": "c96cb066",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒகேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ohel#p1-c96cb066",
+      "text": "ஒகேல் யோயாக்கீமுடைய மற்றும் தாவீது ராஜாவின் சந்ததியாக இருந்தான் (1 நாளாகமம் 3:20)."
+    }
+  ]
+}

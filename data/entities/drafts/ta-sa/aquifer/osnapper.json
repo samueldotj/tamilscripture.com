@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/osnapper",
+  "lang": "ta",
+  "source_hash": "73509e68",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒஸ்னாப்பார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/osnapper#p1-e7f89c29",
+      "text": "ஒஸ்னாப்பார் என்பது அசீரியன் அரசனாகிய அஷூர்பானிபாலுக்கு அராமிக் மொழியில் கொடுக்கப்பட்ட பெயராகும் (எஸ்றா 4:10)."
+    },
+    {
+      "id": "aquifer/osnapper#p2-ae6ce042",
+      "text": "காண்க: அஷூர்பானிபால்; அசீரியா, அசீரியர்."
+    }
+  ]
+}

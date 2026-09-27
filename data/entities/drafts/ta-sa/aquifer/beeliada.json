@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beeliada",
+  "lang": "ta",
+  "source_hash": "8b2f05e5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலியாதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/beeliada#p1-625a589d",
+      "text": "தாவீது ராஜாவின் மகன்களில் ஒருவனான எலியாதாவின் முந்தின பெயர், 1 நாளாகமம் 14:7ல் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/beeliada#p2-77c5207f",
+      "text": "எலியாதா #1ஐக் காண்க."
+    }
+  ]
+}

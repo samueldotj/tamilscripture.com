@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gudgodah",
+  "lang": "ta",
+  "source_hash": "8b0ffe75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குத்கோதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/gudgodah#p1-55ca890a",
+      "text": "குத்கோதா என்பது கித்காத் மலைக்குரிய மற்றொரு பெயராகும். இது இஸ்ரவேலர்கள் வனாந்தரத்தில் பயணம் செய்த காலத்தில் தங்கியிருந்த இடங்களில் ஒன்றாகும் (உபாகமம் 10:7)."
+    },
+    {
+      "id": "aquifer/gudgodah#p2-2153c9a9",
+      "text": "கித்காத் மலை என்பதைக் காண்க."
+    }
+  ]
+}

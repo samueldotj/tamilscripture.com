@@ -1,0 +1,18 @@
+{
+  "id": "smiths/market-of-appius",
+  "lang": "ta",
+  "source_hash": "456f23cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பியுபரம் சந்தை",
+  "paragraphs": [
+    {
+      "id": "smiths/market-of-appius#p1-456f23cc",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 28:15) அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) 'அப்பியுபரம்' என்று குறிப்பிடப்பட்டதற்கு, திருத்தப்பட்ட மொழிபெயர்ப்பில் (Revised Version) இப்படிக் குறிப்பிடப்பட்டுள்ளது; 'அப்பியுபரம்' என்பதைக் காண்க."
+    }
+  ]
+}

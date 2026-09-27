@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nehemiah",
+  "lang": "ta",
+  "source_hash": "d99a6f07",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெகேமியா",
+  "paragraphs": [
+    {
+      "id": "smiths/nehemiah#p1-d99a6f07",
+      "text": "(கர்த்தருடைய தேற்றரவு)."
+    }
+  ]
+}

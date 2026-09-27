@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/heresh",
+  "lang": "ta",
+  "source_hash": "02294b25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரேஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/heresh#p1-02294b25",
+      "text": "ஏரேஸ் என்பவன் பாபிலோனின் சிறையிருப்புக்குப் பின்பு எருசலேமுக்குத் திரும்பி வந்த ஒரு லேவியன் ஆவான் (1 நாளாகமம் 9:15)."
+    }
+  ]
+}

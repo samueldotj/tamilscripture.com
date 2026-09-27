@@ -1,0 +1,18 @@
+{
+  "id": "eastons/idumaea",
+  "lang": "ta",
+  "source_hash": "a13c411e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இதுமேயா",
+  "paragraphs": [
+    {
+      "id": "eastons/idumaea#p1-a13c411e",
+      "text": "ஏதோம் என்பதன் கிரேக்கு வடிவம் (ஏசாயா 34:5, 6; எசேக்கியேல் 35:15; 36:5, ஆனால் R.V. இல் “ஏதோம்” எனக் காணப்படுகிறது). (ஏதோம் காண்க)."
+    }
+  ]
+}

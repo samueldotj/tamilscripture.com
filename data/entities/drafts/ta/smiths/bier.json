@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bier",
+  "lang": "ta",
+  "source_hash": "d6d3e86d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாடை",
+  "paragraphs": [
+    {
+      "id": "smiths/bier#p1-d6d3e86d",
+      "text": "[அடக்கம், கல்லறைகள்.1]"
+    }
+  ]
+}

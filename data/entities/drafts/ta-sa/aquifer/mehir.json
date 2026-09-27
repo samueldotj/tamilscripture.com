@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mehir",
+  "lang": "ta",
+  "source_hash": "8c743791",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேகீர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mehir#p1-8c743791",
+      "text": "மேகீர் யூதா கோத்திரத்தைச் சேர்ந்த கேலூப்பின் மகன் (1 நாளாகமம் 4:11)."
+    }
+  ]
+}

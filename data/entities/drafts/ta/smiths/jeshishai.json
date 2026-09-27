@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeshishai",
+  "lang": "ta",
+  "source_hash": "0cdd4299",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசிசாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/jeshishai#p1-0cdd4299",
+      "text": "(வயோதிபனிலிருந்து வந்தவன்), கீலேயாத்தில் குடியிருந்த காத்தியரின் முற்பிதாக்களில் ஒருவன். (1 நாளாகமம் 5:14)"
+    }
+  ]
+}

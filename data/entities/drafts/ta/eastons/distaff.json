@@ -1,0 +1,18 @@
+{
+  "id": "eastons/distaff",
+  "lang": "ta",
+  "source_hash": "2fa12e57",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கதிர்",
+  "paragraphs": [
+    {
+      "id": "eastons/distaff#p1-2fa12e57",
+      "text": "(எபிரெயம் pelek, “வட்டம்”), சுழற்சி மூலம் நூல்களைத் திரிக்கப் பயன்படுத்தும் கருவி (நீதிமொழிகள் 31:19)."
+    }
+  ]
+}

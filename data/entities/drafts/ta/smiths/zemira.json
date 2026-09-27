@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zemira",
+  "lang": "ta",
+  "source_hash": "5ff6be93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமிரா",
+  "paragraphs": [
+    {
+      "id": "smiths/zemira#p1-5ff6be93",
+      "text": "(ஒரு பாட்டு), பென்யமீனுடைய மகனாகிய பெகேரின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:8) (கி.மு. 1706-க்குப் பின்.)"
+    }
+  ]
+}

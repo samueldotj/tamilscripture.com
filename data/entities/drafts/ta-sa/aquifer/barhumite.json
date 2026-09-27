@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/barhumite",
+  "lang": "ta",
+  "source_hash": "c9c29b42",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பருமியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/barhumite#p1-ec2e9686",
+      "text": "பகூரிம் என்னும் கிராமத்தைச் சேர்ந்தவரைக் குறிக்கும் கிங் யாக்கோபு மொழிபெயர்ப்பின் வடிவம் (2 சாமுவேல் 23:31)."
+    },
+    {
+      "id": "aquifer/barhumite#p2-8000b997",
+      "text": "பாகரூம், பாகரூமியன், பகூரிம் என்பவற்றைக் காண்க."
+    }
+  ]
+}

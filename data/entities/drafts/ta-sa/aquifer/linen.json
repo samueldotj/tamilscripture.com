@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/linen",
+  "lang": "ta",
+  "source_hash": "e05aa475",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெல்லிய நூல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/linen#p1-8a348f52",
+      "text": "மெல்லிய நூல் என்பது சணல் பஞ்சு (flax) என்னும் பொருளால் செய்யப்படும் ஒரு துணி."
+    },
+    {
+      "id": "aquifer/linen#p2-a4710f08",
+      "text": "துணி மற்றும் துணி உற்பத்தி என்னும் கட்டுரையைக் காண்க."
+    }
+  ]
+}

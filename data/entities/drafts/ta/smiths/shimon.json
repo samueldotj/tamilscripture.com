@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimon",
+  "lang": "ta",
+  "source_hash": "a399d9c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஷீமோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shimon#p1-a399d9c8",
+      "text": "(வனாந்தரம்). யூதாவின் கோத்திரத்தைச் சேர்ந்த ஒரு தெளிவற்ற வம்சாவளியில் ஷீமோனின் நான்கு மகன்கள் பட்டியலிடப்பட்டிருக்கிறார்கள். (1 நாளாகமம் 4:20)"
+    }
+  ]
+}

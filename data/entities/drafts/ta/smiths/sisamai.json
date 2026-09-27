@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sisamai",
+  "lang": "ta",
+  "source_hash": "d3d2339e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிஸ்மாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/sisamai#p1-d3d2339e",
+      "text": "யெராமியேலின் வம்சத்தில் சேசானின் சந்ததியார். (1 நாளாகமம் 2:40) (கி.மு. 1450 அளவில்.)"
+    }
+  ]
+}

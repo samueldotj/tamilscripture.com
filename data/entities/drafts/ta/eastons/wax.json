@@ -1,0 +1,18 @@
+{
+  "id": "eastons/wax",
+  "lang": "ta",
+  "source_hash": "cbbac835",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெழுகு",
+  "paragraphs": [
+    {
+      "id": "eastons/wax#p1-cbbac835",
+      "text": "தேனீக்களின் அடுக்குகளை உருக்குவதனால் உண்டாக்கப்படுகிறது. இது உவமையாகக் குறிப்பிடப்பட்டுள்ளது (சங்கீதங்கள் 22:14; 68:2; 97:5; மீகா 1:4)."
+    }
+  ]
+}

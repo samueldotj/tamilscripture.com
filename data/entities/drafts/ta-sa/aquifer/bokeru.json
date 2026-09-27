@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bokeru",
+  "lang": "ta",
+  "source_hash": "e1893a4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொக்குரு",
+  "paragraphs": [
+    {
+      "id": "aquifer/bokeru#p1-bb8ab7be",
+      "text": "பொக்குரு என்பதை எழுதும் இன்னொரு வழி. அவன் ஆத்சேலின் மகன்."
+    },
+    {
+      "id": "aquifer/bokeru#p2-790a6bcd",
+      "text": "பொக்குரு காண்க."
+    }
+  ]
+}

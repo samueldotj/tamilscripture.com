@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cockle",
+  "lang": "ta",
+  "source_hash": "baa7df78",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "களை",
+  "paragraphs": [
+    {
+      "id": "smiths/cockle#p1-baa7df78",
+      "text": "இது ஒருவேளை கெட்ட களைகளையோ அல்லது கெட்ட கனியையோ குறிக்கும் (யோபு 31:40)."
+    }
+  ]
+}

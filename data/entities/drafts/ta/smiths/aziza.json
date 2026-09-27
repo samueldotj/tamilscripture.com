@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aziza",
+  "lang": "ta",
+  "source_hash": "8cec0f3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசிசா",
+  "paragraphs": [
+    {
+      "id": "smiths/aziza#p1-8cec0f3b",
+      "text": "(வலியன்) பாபிலோனிலிருந்து திரும்பி வந்தபின் அந்நிய மனைவியை விவாகம் செய்துகொண்ட சத்தூவின் குடும்பத்தைச் சேர்ந்த ஒரு சாதாரண மனிதன்."
+    }
+  ]
+}

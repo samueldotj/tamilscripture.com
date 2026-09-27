@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/malkishua",
+  "lang": "ta",
+  "source_hash": "5776cdf4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்கிசூவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/malkishua#p1-094747eb",
+      "text": "மல்கிசூவா என்பது மல்கிசூவா (அல்லது மல்கிசூவாவையும்) என்ற பெயரின் மறுவிதமான எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/malkishua#p2-12034e49",
+      "text": "மல்கிசூவா, மல்கிசூவாவையும் காண்க."
+    }
+  ]
+}

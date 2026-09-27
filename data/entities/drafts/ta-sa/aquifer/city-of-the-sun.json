@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/city-of-the-sun",
+  "lang": "ta",
+  "source_hash": "ce5dcfb8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூரிய நகரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/city-of-the-sun#p1-68c71198",
+      "text": "சூரிய நகரம் என்பது ஏசாயா 19:18-ல் குறிப்பிடப்படும் ஒரு நகரத்தின் பெயர். இது எகிப்திய நகரமான ஹீலியோபோலிஸை குறிக்கிறது என்று அறிஞர்கள் பொதுவாக புரிந்துகொள்கிறார்கள்."
+    },
+    {
+      "id": "aquifer/city-of-the-sun#p2-b8b2e6eb",
+      "text": "ஹீலியோபோலிஸ் காண்க."
+    }
+  ]
+}

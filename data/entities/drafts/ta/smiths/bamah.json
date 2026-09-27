@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bamah",
+  "lang": "ta",
+  "source_hash": "df4b92e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாமா",
+  "paragraphs": [
+    {
+      "id": "smiths/bamah#p1-df4b92e3",
+      "text": "(மேடு). எசேக்கியேலுக்குக் மட்டும் (எசேக்கியேல் 20:29) விக்கிரகங்களைத் தொழுதுகொள்ளும் இடங்களைக் குறிக்கப் பயன்படுத்தப்பட்டுள்ளது."
+    }
+  ]
+}

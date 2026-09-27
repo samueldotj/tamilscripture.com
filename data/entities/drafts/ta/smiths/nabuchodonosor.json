@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nabuchodonosor",
+  "lang": "ta",
+  "source_hash": "aa0a7234",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நபுகோதொனொசோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/nabuchodonosor#p1-aa0a7234",
+      "text": "[நேபுகாத்நேச்சார், அல்லது நெபுகாத்ரேச்சார்]"
+    }
+  ]
+}

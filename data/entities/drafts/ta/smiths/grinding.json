@@ -1,0 +1,18 @@
+{
+  "id": "smiths/grinding",
+  "lang": "ta",
+  "source_hash": "d0fcdffc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரைத்தல்",
+  "paragraphs": [
+    {
+      "id": "smiths/grinding#p1-d0fcdffc",
+      "text": "[ஆலை காண்க]"
+    }
+  ]
+}

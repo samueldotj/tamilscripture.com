@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bashanhavothjair",
+  "lang": "ta",
+  "source_hash": "a60d0ad6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசான்-அவோத்யாயீர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bashanhavothjair#p1-60efa4f3",
+      "text": "உபாகமம் 3:14ல் யாவீரின் ஊர்களைக் குறிக்கும் கிங் யாக்கோபு மொழிபெயர்ப்பில் (உபாகமம் 3:14) காணப்படும் பெயர். இவை பாசானின் பகுதியில் இருந்த 60 கிராமங்கள்."
+    },
+    {
+      "id": "aquifer/bashanhavothjair#p2-75f7fee8",
+      "text": "யாவீரின் ஊர்கள் என்பதைக் காண்க."
+    }
+  ]
+}

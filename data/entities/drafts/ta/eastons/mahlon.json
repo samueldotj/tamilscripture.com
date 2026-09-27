@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mahlon",
+  "lang": "ta",
+  "source_hash": "a3cf6e58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்லோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/mahlon#p1-a3cf6e58",
+      "text": "வியாதியுள்ளவன், பெத்லெகேமியனான எலிமெலேக்குக்கு நகோமியினால் பிறந்த இரண்டு மகன்களில் மூப்பன். இவன் ரூத்தை மனைவியாகக் கொண்டு, மோவாப் தேசத்தில் பிள்ளையில்லாமல் இறந்தான் (ரூத் 1:2, 5; 4:9, 10)."
+    }
+  ]
+}

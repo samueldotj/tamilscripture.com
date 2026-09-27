@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shebah",
+  "lang": "ta",
+  "source_hash": "79127a5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஷேபா",
+  "paragraphs": [
+    {
+      "id": "smiths/shebah#p1-79127a5b",
+      "text": "(ஒரு ஆணை), பெயெர்செபா நகரத்திற்குப் பெயர் கொடுத்த புகழ்பெற்ற கிணறு. (ஆதியாகமம் 26:53) [பெயெர்செபா காண்க]"
+    }
+  ]
+}

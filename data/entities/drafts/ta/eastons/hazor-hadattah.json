@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazor-hadattah",
+  "lang": "ta",
+  "source_hash": "c6abcc3f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சோர் அதாத்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/hazor-hadattah#p1-c6abcc3f",
+      "text": "புதிய ஆத்சோர், யூதாவின் தென்பகுதியில் உள்ள ஒரு பட்டணம் (யோசுவா 15:25). இது பெய்த் ஜெப்ரின் அருகிலுள்ள எல்-ஹஸ்ஸாரா என்னும் இடிபாடுகளுடன் ஒப்பிடப்படுகிறது என்று கருதப்படுகிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/trespass-offering",
+  "lang": "ta",
+  "source_hash": "8d2a5367",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குற்றநிவாரணபலி",
+  "paragraphs": [
+    {
+      "id": "smiths/trespass-offering#p1-8d2a5367",
+      "text": "[பாவம் காணிக்கை காணிக்கை]"
+    }
+  ]
+}

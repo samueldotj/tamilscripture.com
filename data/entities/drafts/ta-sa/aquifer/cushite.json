@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cushite",
+  "lang": "ta",
+  "source_hash": "c20fd4ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூஷியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cushite#p1-df754fc6",
+      "text": "நூபியா என்னும் ஆபிரிக்க பிரதேசத்தைச் சேர்ந்த ஒரு மனிதன் (2 சாமுவேல் 18:32)."
+    },
+    {
+      "id": "aquifer/cushite#p2-c5d1379e",
+      "text": "கூஷ் (இடம்) என்பதையும் காண்க."
+    }
+  ]
+}

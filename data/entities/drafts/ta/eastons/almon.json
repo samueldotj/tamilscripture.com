@@ -1,0 +1,18 @@
+{
+  "id": "eastons/almon",
+  "lang": "ta",
+  "source_hash": "b55eb58c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/almon#p1-b55eb58c",
+      "text": "மறைவானது, பென்யமீனுடைய ஆசாரிய பட்டணங்களில் ஒன்று (யோசுவா 21:18), இது அலமேத் என்றும் அழைக்கப்படுகிறது (1 நாளாகமம் 6:60)."
+    }
+  ]
+}

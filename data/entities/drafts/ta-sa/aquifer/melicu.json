@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/melicu",
+  "lang": "ta",
+  "source_hash": "60eeced6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெலிகு",
+  "paragraphs": [
+    {
+      "id": "aquifer/melicu#p1-47be4b45",
+      "text": "மெலிகு என்பது நெகேமியா 12:14-ல் உள்ள ஆசாரியனாகிய மல்லூகியின் கிங் யாக்கோபு மொழிபெயர்ப்பு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/melicu#p2-c57ff73e",
+      "text": "மல்லூகி என்பதைக் காண்க."
+    }
+  ]
+}

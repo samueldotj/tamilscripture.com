@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/carbon-dating",
+  "lang": "ta",
+  "source_hash": "85f4a259",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கார்பன் தேதி நிர்ணயம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/carbon-dating#p1-4b8b7aad",
+      "text": "தொல்லியலில், கதிரியக்க ஐசோடோப் ஆகிய கார்பன்-14ஐ அளவிடுவதன் மூலம் உயிரியல் பொருட்களின் வயதை நிர்ணயிக்கப் பயன்படுத்தப்படும் ஒரு முறை."
+    },
+    {
+      "id": "aquifer/carbon-dating#p2-aad331d5",
+      "text": "தொல்லியலும் பரிசுத்த வேதாகமமும் என்பதைக் காண்க."
+    }
+  ]
+}

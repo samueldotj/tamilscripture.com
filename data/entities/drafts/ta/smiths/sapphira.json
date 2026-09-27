@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sapphira",
+  "lang": "ta",
+  "source_hash": "b8f304ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்பீராள்",
+  "paragraphs": [
+    {
+      "id": "smiths/sapphira#p1-b8f304ab",
+      "text": "[அனனியா]"
+    }
+  ]
+}

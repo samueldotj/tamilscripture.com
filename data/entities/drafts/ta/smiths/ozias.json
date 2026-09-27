@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ozias",
+  "lang": "ta",
+  "source_hash": "20bc7a6d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசியா",
+  "paragraphs": [
+    {
+      "id": "smiths/ozias#p1-20bc7a6d",
+      "text": "(கர்த்தரிடமிருந்து வரும் பலம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/taphath",
+  "lang": "ta",
+  "source_hash": "2e7144ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/taphath#p1-2e7144ca",
+      "text": "(அலங்காரம்), சாலொமோனின் மகள், இவள் பென்-அபினதாபுக்கு மனைவியாகக் கொடுக்கப்பட்டாள். (1 இராஜாக்கள் 4:11) (கிமு. 1000 அளவில்.)"
+    }
+  ]
+}

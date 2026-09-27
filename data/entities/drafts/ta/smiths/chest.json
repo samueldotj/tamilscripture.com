@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chest",
+  "lang": "ta",
+  "source_hash": "34f04064",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெட்டி",
+  "paragraphs": [
+    {
+      "id": "smiths/chest#p1-34f04064",
+      "text": "இந்த வார்த்தையானது அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) இரண்டு வேறுபட்ட எபிரெய சொற்களை மொழிபெயர்க்கப் பயன்படுத்தப்பட்டுள்ளது:"
+    }
+  ]
+}

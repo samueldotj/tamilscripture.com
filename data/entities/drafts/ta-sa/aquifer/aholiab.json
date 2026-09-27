@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aholiab",
+  "lang": "ta",
+  "source_hash": "7cdcb27d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகோலியாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aholiab#p1-d3fddd21",
+      "text": "தாண் கோத்திரத்தைச் சேர்ந்த ஒரு கைவினைஞனான அகோலியாப் (யாத்திராகமம் 31:6) என்பவனுக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் அளிக்கப்பட்ட வேறுவகை வடிவம்."
+    },
+    {
+      "id": "aquifer/aholiab#p2-ebbe090e",
+      "text": "அகோலியாப் என்பதைக் காண்க."
+    }
+  ]
+}

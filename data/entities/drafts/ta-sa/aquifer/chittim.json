@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chittim",
+  "lang": "ta",
+  "source_hash": "388cfb5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chittim#p1-c3aa43d5",
+      "text": "கித்தீம் என்பதற்கான வேறு எழுத்துவடிவம், இது சீப்புருதீவிற்குக் கொடுக்கப்பட்ட பழைய எபிரெய பெயர்."
+    },
+    {
+      "id": "aquifer/chittim#p2-090c2af2",
+      "text": "கித்தீமைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jesher",
+  "lang": "ta",
+  "source_hash": "8e93ef53",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/jesher#p1-8e93ef53",
+      "text": "(நீதி), எஸ்ரோனின் மகனாகிய காலேப் தன்னுடைய மனைவியாகிய அசுபாளின்மூலம் பெற்ற மகன்களில் ஒருவன். (1 நாளாகமம் 2:18) (கி.மு. 1491க்கு முன்)."
+    }
+  ]
+}

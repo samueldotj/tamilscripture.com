@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/prison",
+  "lang": "ta",
+  "source_hash": "bf3d385b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிறைச்சாலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/prison#p1-15a4fdb8",
+      "text": "மக்கள் தங்கள் விருப்பத்திற்கு மாறாக அடைத்து வைக்கப்படும் ஒரு இடம்."
+    },
+    {
+      "id": "aquifer/prison#p2-9edaeead",
+      "text": "குற்றவியல் நியாயப்பிரமாணமும் தண்டனையும்; தண்டனை என்பவற்றைக் காண்க."
+    }
+  ]
+}

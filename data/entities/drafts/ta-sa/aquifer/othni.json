@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/othni",
+  "lang": "ta",
+  "source_hash": "ddd41693",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒத்னி",
+  "paragraphs": [
+    {
+      "id": "aquifer/othni#p1-ddd41693",
+      "text": "ஒத்னி செமாயாவின் மகனும், சாலொமோனுடைய ஆலயத்தில் ஒரு வாசல்காவலனுமாக இருந்தான் (1 நாளாகமம் 26:7). அவன் லேவியர்களின் கோத்திரத்தைச் சேர்ந்தவனாக இருந்தான்."
+    }
+  ]
+}

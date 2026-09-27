@@ -1,0 +1,26 @@
+{
+  "id": "eastons/ziha",
+  "lang": "ta",
+  "source_hash": "8e5d161d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகா",
+  "paragraphs": [
+    {
+      "id": "eastons/ziha#p1-9b99363e",
+      "text": "வறட்சி."
+    },
+    {
+      "id": "eastons/ziha#p2-e9657327",
+      "text": "(1.) நிதனீமியரின் ஒரு வம்சத்தின் பெயர் (எஸ்றா 2:43; நெகேமியா 7:46)."
+    },
+    {
+      "id": "eastons/ziha#p3-178d7afd",
+      "text": "(2.) நிதனீமியரிடையே இருந்த ஒரு பொறுப்பாளன் (நெகேமியா 11:21)."
+    }
+  ]
+}

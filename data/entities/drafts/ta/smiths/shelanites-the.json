@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shelanites-the",
+  "lang": "ta",
+  "source_hash": "db080a95",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலானியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shelanites-the#p1-db080a95",
+      "text": "சாலாவின் சந்ததியார். 1. (எண்ணாகமம் 26:20)"
+    }
+  ]
+}

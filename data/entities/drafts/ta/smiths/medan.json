@@ -1,0 +1,18 @@
+{
+  "id": "smiths/medan",
+  "lang": "ta",
+  "source_hash": "ca679502",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/medan#p1-ca679502",
+      "text": "(வாக்குவாதம்), ஆபிரகாமுக்கும் கேத்தூராளுக்கும் பிறந்த மகன். (ஆதியாகமம் 23:5; 1 நாளாகமம் 1:42)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shihon",
+  "lang": "ta",
+  "source_hash": "c4bf7cc8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shihon#p1-c4bf7cc8",
+      "text": "(அழிவு), இசக்காருடைய ஒரு பட்டணம், (யோசுவா 19:19) இல் மட்டும் பெயர் குறிக்கப்பட்டுள்ளது. யூசீபியஸ் அது தன் காலத்தில் “தாபோரின்மேல் அருகில்” இருந்ததாகக் குறிப்பிடுகிறார்."
+    }
+  ]
+}

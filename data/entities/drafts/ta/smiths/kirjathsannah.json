@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kirjathsannah",
+  "lang": "ta",
+  "source_hash": "d3639cb8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிரியாத்சன்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/kirjathsannah#p1-d3639cb8",
+      "text": "(புத்தகங்களின் நகரம்). [தெபீரின்]"
+    }
+  ]
+}

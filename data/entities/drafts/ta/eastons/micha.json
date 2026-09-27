@@ -1,0 +1,22 @@
+{
+  "id": "eastons/micha",
+  "lang": "ta",
+  "source_hash": "77aaece2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீகா",
+  "paragraphs": [
+    {
+      "id": "eastons/micha#p1-63a16cf3",
+      "text": "(1.) 2 சாமுவேல் 9:12 = மீகா (2)."
+    },
+    {
+      "id": "eastons/micha#p2-dae247ef",
+      "text": "(2.) ஆசாப்பின் குடும்பத்தைச் சேர்ந்த லேவியனாகிய சப்தியின் மகன் (நெகேமியா 11:17, 22)."
+    }
+  ]
+}

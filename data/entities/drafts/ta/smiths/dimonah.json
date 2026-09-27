@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dimonah",
+  "lang": "ta",
+  "source_hash": "a0e7f233",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திமோனா",
+  "paragraphs": [
+    {
+      "id": "smiths/dimonah#p1-a0e7f233",
+      "text": "யூதாவின் தென்பகுதியில் இருந்த ஒரு பட்டணம், (யோசுவா 15:22) இது நெகேமியாவின் (நெகேமியா 11:25) குறிப்பிடப்பட்ட தீபோனுக்கும் ஒரே இடமாக இருக்கலாம்"
+    }
+  ]
+}

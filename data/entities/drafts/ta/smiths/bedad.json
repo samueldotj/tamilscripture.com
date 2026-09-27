@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bedad",
+  "lang": "ta",
+  "source_hash": "8ecbe3db",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேதாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bedad#p1-8ecbe3db",
+      "text": "(தனிமையானவன்), ஏதோமின் ராஜாவாகிய ஆதாத்தின் தகப்பன். (ஆதியாகமம் 36:35; 1 நாளாகமம் 1:46) (கிமு 1093க்கு முன்)."
+    }
+  ]
+}

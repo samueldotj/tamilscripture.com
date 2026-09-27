@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jabez-person",
+  "lang": "ta",
+  "source_hash": "babb8e08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாபேஸ் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/jabez-person#p1-babb8e08",
+      "text": "தேவபக்தியினால் குறிக்கப்பட்ட யூதாவின் கோத்திரத்தைச் சேர்ந்தவன். அவன் தேவனுடைய பாதுகாப்புக்காக ஜெபம்பண்ணினான், அவனுடைய ஜெபத்திற்கு பதில் கிடைத்தது (1 நாளாகமம் 4:9-10)."
+    }
+  ]
+}

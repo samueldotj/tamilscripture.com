@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hamonah",
+  "lang": "ta",
+  "source_hash": "a950508e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோனா",
+  "paragraphs": [
+    {
+      "id": "smiths/hamonah#p1-a950508e",
+      "text": "(திரள் கூட்டம்), எசேக்கியேலில் குறிப்பிடப்பட்டுள்ள ஒரு நகரத்தின் பெயர். (எசேக்கியேல் 39:16)"
+    }
+  ]
+}

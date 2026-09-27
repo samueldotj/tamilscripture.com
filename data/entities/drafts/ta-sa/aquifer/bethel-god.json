@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethel-god",
+  "lang": "ta",
+  "source_hash": "8113a961",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தேல் (தேவன்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethel-god#p1-1bbae898",
+      "text": "பண்டைய நூல்களில் குறிப்பிடப்பட்டுள்ள ஒரு அந்நிய தேவன். இது எரேமியா 48:13, ஆமோஸ் 5:5, சகரியா 7:2 ஆகியவற்றில் குறிப்பிடப்பட்டிருக்கலாம் என்று சிலர் கருதுகின்றனர்."
+    },
+    {
+      "id": "aquifer/bethel-god#p2-8b31edc8",
+      "text": "கானானிய தெய்வங்களும் மதமும் என்பதைக் காண்க."
+    }
+  ]
+}

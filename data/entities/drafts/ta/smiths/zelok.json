@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zelok",
+  "lang": "ta",
+  "source_hash": "43d558b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேலேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/zelok#p1-43d558b6",
+      "text": "(பிளவு), ஒரு அம்மோனியன், தாவீதின் மறவர்களில் ஒருவன். (2 சாமுவேல் 23:37; 1 நாளாகமம் 11:39)"
+    }
+  ]
+}

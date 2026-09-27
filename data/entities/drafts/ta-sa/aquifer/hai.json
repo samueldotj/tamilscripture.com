@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hai",
+  "lang": "ta",
+  "source_hash": "69d0bf37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hai#p1-10e683cc",
+      "text": "ஹாய் என்பது ஆதியாகமம் 12:8 மற்றும் 13:3ல் காணப்படும் கானானியக் பட்டணமான ஆயீக்கு யாக்கோபு அரசரின் மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/hai#p2-a2a88f01",
+      "text": "ஆயீ என்பதைக் காண்க."
+    }
+  ]
+}

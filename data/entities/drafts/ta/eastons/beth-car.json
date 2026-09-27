@@ -1,0 +1,18 @@
+{
+  "id": "eastons/beth-car",
+  "lang": "ta",
+  "source_hash": "964f9ed1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்காரீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/beth-car#p1-964f9ed1",
+      "text": "ஆடு-வீடு, இஸ்ரவேலர்கள் மிஸ்பேக்குப் மேற்கே பெலிஸ்தர்களைப் பின்தொடர்ந்த ஒரு இடம் (1 சாமுவேல் 7:11)."
+    }
+  ]
+}

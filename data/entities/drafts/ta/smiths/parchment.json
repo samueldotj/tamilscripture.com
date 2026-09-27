@@ -1,0 +1,18 @@
+{
+  "id": "smiths/parchment",
+  "lang": "ta",
+  "source_hash": "34631ba8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோல் சுருள் (Parchment)",
+  "paragraphs": [
+    {
+      "id": "smiths/parchment#p1-34631ba8",
+      "text": "[எழுத்து காண்க]"
+    }
+  ]
+}

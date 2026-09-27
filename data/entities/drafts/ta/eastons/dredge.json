@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dredge",
+  "lang": "ta",
+  "source_hash": "b3e6122f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திரவிய தானியம்",
+  "paragraphs": [
+    {
+      "id": "eastons/dredge#p1-b3e6122f",
+      "text": "(யோபு 24:6). CORN என்பதைக் காண்க."
+    }
+  ]
+}

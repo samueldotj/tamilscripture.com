@@ -1,0 +1,18 @@
+{
+  "id": "eastons/neballat",
+  "lang": "ta",
+  "source_hash": "dd66a1dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெபலாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/neballat#p1-dd66a1dd",
+      "text": "மறைவான துன்மார்க்கம் (நெகேமியா 11:34), லித்தாவிற்கு வடக்கே சுமார் 4 மைல் தொலைவில் உள்ள பெய்த் நெபாலா என்னும் கிராமமாக இருக்கலாம்."
+    }
+  ]
+}

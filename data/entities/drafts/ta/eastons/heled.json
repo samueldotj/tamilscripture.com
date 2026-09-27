@@ -1,0 +1,18 @@
+{
+  "id": "eastons/heled",
+  "lang": "ta",
+  "source_hash": "c6541dfb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/heled#p1-c6541dfb",
+      "text": "இந்த உலகம், (1 நாளாகமம் 11:30); ஏலேப் என்றும் அழைக்கப்படுகிறது (2 சாமுவேல் 23:29)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/arnan",
+  "lang": "ta",
+  "source_hash": "82d53355",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்னான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/arnan#p1-82d53355",
+      "text": "அர்னான் ரெப்பாயாவின் மகனும், ஒபதியாவின் தகப்பனும், செருபாபேலின் மூலமாக தாவீதின் சந்ததியில் வந்தவனுமாக இருந்தான் (1 நாளாகமம் 3:21)."
+    }
+  ]
+}

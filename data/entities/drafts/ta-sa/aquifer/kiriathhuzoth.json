@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kiriathhuzoth",
+  "lang": "ta",
+  "source_hash": "414ab6cb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத் ஊசோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kiriathhuzoth#p1-414ab6cb",
+      "text": "மோவாபில் இருந்த ஒரு பட்டணம். பிலேயாமும் பாலாகும் பாமோத்பாகாலுக்குப் போவதற்கு முன்பு அங்கே போனார்கள் (எண்ணாகமம் 22:39)."
+    }
+  ]
+}

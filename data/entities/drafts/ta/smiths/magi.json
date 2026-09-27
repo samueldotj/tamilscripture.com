@@ -1,0 +1,18 @@
+{
+  "id": "smiths/magi",
+  "lang": "ta",
+  "source_hash": "39e85ff4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகி (சாஸ்திரிகள்)",
+  "paragraphs": [
+    {
+      "id": "smiths/magi#p1-39e85ff4",
+      "text": "(கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் ஞானமுள்ளவர்கள்)."
+    }
+  ]
+}

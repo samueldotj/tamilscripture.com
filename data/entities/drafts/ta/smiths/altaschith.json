@@ -1,0 +1,18 @@
+{
+  "id": "smiths/altaschith",
+  "lang": "ta",
+  "source_hash": "383920dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்தஸ்கீத்",
+  "paragraphs": [
+    {
+      "id": "smiths/altaschith#p1-383920dc",
+      "text": "(அழிக்காதே), சங்கீதங்கள் 57, 58, 59, 75ஆகியவற்றின் அறிமுக வசனத்தில் காணப்படுகிறது. அந்த சங்கீதங்கள் இயற்றப்பட்டு பாடப்பட வேண்டிய ஒரு பாட்டு அல்லது கவிதையின் ஆரம்பமாக இது இருந்திருக்கலாம்."
+    }
+  ]
+}

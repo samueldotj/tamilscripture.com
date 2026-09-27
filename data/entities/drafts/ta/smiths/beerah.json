@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beerah",
+  "lang": "ta",
+  "source_hash": "78ca729d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரா",
+  "paragraphs": [
+    {
+      "id": "smiths/beerah#p1-78ca729d",
+      "text": "ரூபனியரின் பிரபுவான இவனை அசீரியா ராஜாவாகிய தில்காத்பில்நேசர் சிறைபிடித்துப்போனான் (1 நாளாகமம் 5:6) (கி.மு. 738)."
+    }
+  ]
+}

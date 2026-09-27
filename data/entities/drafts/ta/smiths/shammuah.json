@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shammuah",
+  "lang": "ta",
+  "source_hash": "03358bad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்முவா",
+  "paragraphs": [
+    {
+      "id": "smiths/shammuah#p1-03358bad",
+      "text": "தாவீதின் மகன், (2 சாமுவேல் 5:14) வேறு இடங்களில் சம்முவா மற்றும் சிமேயாவின் என்றும் அழைக்கப்படுகிறான்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/brook",
+  "lang": "ta",
+  "source_hash": "9891d587",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆறு",
+  "paragraphs": [
+    {
+      "id": "aquifer/brook#p1-405437ae",
+      "text": "தண்ணீர் ஓடும் ஒரு சிறிய நீரோடை."
+    },
+    {
+      "id": "aquifer/brook#p2-cdbe0991",
+      "text": "வாடி என்பதைக் காண்க."
+    }
+  ]
+}

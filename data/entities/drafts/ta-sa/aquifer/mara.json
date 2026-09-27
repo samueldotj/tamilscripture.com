@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mara",
+  "lang": "ta",
+  "source_hash": "7cc0eaf8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mara#p1-2e019201",
+      "text": "“கசப்பு” என்று அர்த்தமுள்ள ஒரு பெயர். நகோமி மோவாபிலிருந்து யூதாவிற்கு விதவையாகத் திரும்பி வந்தபோது தனக்குத்தானே இந்தப் பெயரைச் சூட்டினாள் (ரூத் 1:20)."
+    },
+    {
+      "id": "aquifer/mara#p2-abfd2bbf",
+      "text": "நகோமி என்பதைக் காண்க."
+    }
+  ]
+}

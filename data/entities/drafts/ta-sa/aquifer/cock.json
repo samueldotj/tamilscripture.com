@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cock",
+  "lang": "ta",
+  "source_hash": "655f4e8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோழி (சேவல்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/cock#p1-581ac9da",
+      "text": "சேவல் என்பது வளர்ப்புக் கோழியின் வளர்ந்த ஆண் பறவை."
+    },
+    {
+      "id": "aquifer/cock#p2-b8a990c8",
+      "text": "காண்க: வளர்ப்புக் கோழி, கோழிக் கூட்டம்."
+    }
+  ]
+}

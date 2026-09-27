@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hurhai",
+  "lang": "ta",
+  "source_hash": "850e519d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹூர்காய்",
+  "paragraphs": [
+    {
+      "id": "smiths/hurhai#p1-850e519d",
+      "text": "(மகா தரித்திரமானவன்), உல்தாளின் கணவனாகிய சல்லூமின் முற்பிதா. (2 இராஜாக்கள் 22:14) (கி.மு. 623க்கு முன்.)"
+    }
+  ]
+}

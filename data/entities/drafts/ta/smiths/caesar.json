@@ -1,0 +1,18 @@
+{
+  "id": "smiths/caesar",
+  "lang": "ta",
+  "source_hash": "774800d9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இராயன்",
+  "paragraphs": [
+    {
+      "id": "smiths/caesar#p1-774800d9",
+      "text": "புதிய ஏற்பாட்டில் எப்பொழுதும் ரோம பேரரசனையே, யூதேயாவின் ராஜரிகத்தை உடையவனையே குறிக்கிறது. (யோவான் 19:12,15; அப்போஸ்தலருடைய நடபடிகள் 17:7)"
+    }
+  ]
+}

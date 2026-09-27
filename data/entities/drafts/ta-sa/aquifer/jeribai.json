@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jeribai",
+  "lang": "ta",
+  "source_hash": "2e07de07",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரிபாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jeribai#p1-2e07de07",
+      "text": "ஏரிபாய் ஏல்நாமின் மகனாக இருந்தான், தாவீதின் பராக்கிரமசாலிகளில் ஒருவனாக இருந்தான் (1 நாளாகமம் 11:46)."
+    }
+  ]
+}

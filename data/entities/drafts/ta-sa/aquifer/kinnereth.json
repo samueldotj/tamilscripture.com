@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kinnereth",
+  "lang": "ta",
+  "source_hash": "e63146e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கின்னரேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kinnereth#p1-9f545cf4",
+      "text": "கின்னரேத் என்பது கின்னரேத் என்பதன் மறு எழுத்துவடிவம், இது கலிலேயாக்கடலுக்கு மற்றொரு பெயராகும். இந்தப் பெயர் அந்தத் தடாகத்தைச் சுற்றியுள்ள நிலப்பகுதியையும் குறிக்கலாம்."
+    },
+    {
+      "id": "aquifer/kinnereth#p2-06ead810",
+      "text": "கின்னரேத், கின்னரோத் என்பவற்றைக் காண்க."
+    }
+  ]
+}

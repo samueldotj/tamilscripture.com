@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kiriatharim",
+  "lang": "ta",
+  "source_hash": "d7c74233",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்யாரீம் (Kiriath-arim)",
+  "paragraphs": [
+    {
+      "id": "aquifer/kiriatharim#p1-37d2af33",
+      "text": "கீரியாத்யாரீம் என்னும் ஊர் பெயரின் வேறுபட்ட வடிவமே Kiriath-arim ஆகும், இது எஸ்றா 2:25-ன் எபிரெய பிரதியில் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/kiriatharim#p2-17ae20b7",
+      "text": "கீரியாத்யாரீம் என்பதைக் காண்க."
+    }
+  ]
+}

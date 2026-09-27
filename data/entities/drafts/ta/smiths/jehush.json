@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehush",
+  "lang": "ta",
+  "source_hash": "531734ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யேகூஷ்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehush#p1-531734ed",
+      "text": "(தேவன் விரைந்து செல்பவர்), எசேக்கின் மகன், சவுலின் தூரமான சந்ததியான். (1 நாளாகமம் 8:39)"
+    }
+  ]
+}

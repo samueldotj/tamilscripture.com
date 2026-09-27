@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/manual-of-discipline",
+  "lang": "ta",
+  "source_hash": "c1c7bd5f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போதகதண்டனை நெறிமுறை நூல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/manual-of-discipline#p1-c1c7bd5f",
+      "text": "கும்ரானில் வாழ்ந்த எசேனியருக்குச் சொந்தமான சமூக நடத்தை விதிகளைக் கொண்ட ஒரு நூல். எசேனியர் மற்றவரிடமிருந்து பிரிந்து வாழ்ந்து, கடும் விதிகளைப் பின்பற்றிய யூதர்களில் ஒரு விசேஷ கூட்டமாக இருந்தனர். சாவுக்கடல் சுருள்கள்; எசேனியர் என்பதைக் காண்க."
+    }
+  ]
+}

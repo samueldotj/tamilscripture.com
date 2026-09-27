@@ -1,0 +1,18 @@
+{
+  "id": "eastons/luhith",
+  "lang": "ta",
+  "source_hash": "e721833b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூகித்",
+  "paragraphs": [
+    {
+      "id": "eastons/luhith#p1-e721833b",
+      "text": "பலகைகளால் செய்யப்பட்டது; இது சோவாருக்கும் ஒரொனாயிமுக்கும் இடையிலுள்ள மோவாபியரின் ஒரு இடம் (ஏசாயா 15:5; எரேமியா 48:5)."
+    }
+  ]
+}

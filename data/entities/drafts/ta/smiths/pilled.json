@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pilled",
+  "lang": "ta",
+  "source_hash": "563c23b3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்ட்",
+  "paragraphs": [
+    {
+      "id": "smiths/pilled#p1-563c23b3",
+      "text": "(ஆதியாகமம் 30:37,38) “உரித்தல்,” ஏசாயா 18:2; எசேக்கியேல் 29:28. “to pill” என்ற வினைச்சொல் பழைய ஆங்கிலத்தில் “to peel, to strip” (உரித்தல், தோலுரித்தல்) என்பதற்கு ஒத்த பொருளில் காணப்படுகிறது."
+    }
+  ]
+}

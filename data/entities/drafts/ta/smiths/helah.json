@@ -1,0 +1,18 @@
+{
+  "id": "smiths/helah",
+  "lang": "ta",
+  "source_hash": "1487f661",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/helah#p1-1487f661",
+      "text": "(துரு), தெக்கோவாவுக்கு தகப்பனான அசூருக்கு இருந்த இரண்டு மனைவிகளில் ஒருத்தி. (1 நாளாகமம் 4:5)"
+    }
+  ]
+}

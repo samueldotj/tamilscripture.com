@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jorim",
+  "lang": "ta",
+  "source_hash": "28471745",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோரீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jorim#p1-9fbd8074",
+      "text": "லூக்கா 3:29-ல் பட்டியலிடப்பட்டுள்ள இயேசுவின் மூதாதையர்களில் ஒருவர்."
+    },
+    {
+      "id": "aquifer/jorim#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் பரம்பரை என்பதைக் காண்க."
+    }
+  ]
+}

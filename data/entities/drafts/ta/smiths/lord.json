@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lord",
+  "lang": "ta",
+  "source_hash": "74d5f7cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்த்தர்",
+  "paragraphs": [
+    {
+      "id": "smiths/lord#p1-74d5f7cf",
+      "text": "[தேவன்]"
+    }
+  ]
+}

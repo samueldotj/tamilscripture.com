@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahisamach",
+  "lang": "ta",
+  "source_hash": "e48b5ed0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகிசாமாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahisamach#p1-e48b5ed0",
+      "text": "தாண் கோத்திரத்தைச் சேர்ந்த தொழிலாளியாகிய அகோலியாபின் தகப்பன். அகோலியாப் ஆசரிப்புக்கூடாரத்தையும் அதற்குள் இருந்த எல்லாவற்றையும் கட்டுவதற்கு உதவினான் (யாத்திராகமம் 31:6; 35:34; 38:23)."
+    }
+  ]
+}

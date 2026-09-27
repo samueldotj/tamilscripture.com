@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gaddiel",
+  "lang": "ta",
+  "source_hash": "dde8d969",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காதியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gaddiel#p1-dde8d969",
+      "text": "செபுலோன் கோத்திரத்தில் சோதியின் மகன். மோசே கானான் தேசத்தை சோதித்துப் பார்க்கும்படி காதியேலை அனுப்பினார் (எண்ணாகமம் 13:10)."
+    }
+  ]
+}

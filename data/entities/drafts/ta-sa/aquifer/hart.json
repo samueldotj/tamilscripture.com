@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hart",
+  "lang": "ta",
+  "source_hash": "9e6bf4f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கலைமான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hart#p1-dcea9211",
+      "text": "கலைமான் என்பது சிவப்பு நிற வெளிமானின் முதிர்ந்த ஆண் வகையாகும்."
+    },
+    {
+      "id": "aquifer/hart#p2-abd54883",
+      "text": "மான் என்பதைக் காண்க."
+    }
+  ]
+}

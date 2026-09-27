@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/betharam",
+  "lang": "ta",
+  "source_hash": "9e24c5b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தாராம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/betharam#p1-4225fb78",
+      "text": "யோசுவா 13:27ல் காணப்படும் காத் கோத்திரத்தாருடைய பட்டணமான பெத்தாராம் என்பதற்கு ராஜா யாக்கோபு மொழிபெயர்ப்பு (King James Version) கொடுக்கும் எழுத்துப்பெயர்."
+    },
+    {
+      "id": "aquifer/betharam#p2-033377f2",
+      "text": "பெத்தாராம், பெத்தாரான் என்பவற்றைக் காண்க."
+    }
+  ]
+}

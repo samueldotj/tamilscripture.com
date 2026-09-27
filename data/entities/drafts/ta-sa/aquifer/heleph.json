@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/heleph",
+  "lang": "ta",
+  "source_hash": "7ce0b451",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/heleph#p1-7ce0b451",
+      "text": "ஏலேப் என்பது நப்தலியினுடைய தென் எல்லையில் (யோசுவா 19:33), தாபோரின்மேல் இருந்து வடகிழக்கே இருந்த ஒரு கிராமமாக இருந்தது. இது இன்றைய கிர்பெத் அர்பாதா (Khirbet ‘Arbathah) என்று இருக்கலாம்."
+    }
+  ]
+}

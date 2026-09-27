@@ -1,0 +1,18 @@
+{
+  "id": "eastons/naamathite",
+  "lang": "ta",
+  "source_hash": "b748c3ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகமாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/naamathite#p1-b748c3ae",
+      "text": "யோபுவின் மூன்று சிநேகிதரில் ஒருவனான சோப்பாருக்குரிய பட்டம் (யோபு 2:11; 11:1), அரேபியாவிலுள்ள நாமா என்று அழைக்கப்பட்ட ஏதோ ஒரு இடத்திலிருந்து பெறப்பட்டது என்று கருதப்படுகிறது."
+    }
+  ]
+}

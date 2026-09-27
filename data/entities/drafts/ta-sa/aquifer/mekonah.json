@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mekonah",
+  "lang": "ta",
+  "source_hash": "a808c260",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேகோனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mekonah#p1-a808c260",
+      "text": "மேகோனாக் என்பது நெகேமியா 11:28ல் உள்ள யூதேயாவின் ஒரு பட்டணமான மேகோனாகிற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் கொடுக்கப்பட்ட எழுத்துப்பெயர்ப்பாகும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/elisheba",
+  "lang": "ta",
+  "source_hash": "291ce8a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிசபாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/elisheba#p1-291ce8a6",
+      "text": "தேவன் என் ஆணை என்பது பொருள்; இவள் அம்மினதாபின் மகளும் ஆரோனின் மனைவியுமாவாள் (யாத்திராகமம் 6:23)."
+    }
+  ]
+}

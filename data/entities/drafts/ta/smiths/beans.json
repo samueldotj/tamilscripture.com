@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beans",
+  "lang": "ta",
+  "source_hash": "38feea73",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பயிறு",
+  "paragraphs": [
+    {
+      "id": "smiths/beans#p1-38feea73",
+      "text": "(2 சாமுவேல் 17:28; எசேக்கியேல் 4:9) பாலஸ்தீனத்தில் பயிறு பயிரிடப்பட்டது; அந்த நாடு பருப்பு வகைச் செடிகளில் மசூர் பருப்பு, சிறு பயிறு, துவரை போன்ற பலவற்றை விளைவிக்கிறது."
+    }
+  ]
+}

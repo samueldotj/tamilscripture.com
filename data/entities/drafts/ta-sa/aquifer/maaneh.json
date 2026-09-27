@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maaneh",
+  "lang": "ta",
+  "source_hash": "718c4db3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மானே",
+  "paragraphs": [
+    {
+      "id": "aquifer/maaneh#p1-5ffe4249",
+      "text": "மானே என்பது ஒரு உழவுசால் அளவுக்குச் சமமான நீளத்தின் அளவீடாகும் (சுமார் 18.3–27.4 மீட்டர், அதாவது 20–30 யார்டுகள்)."
+    },
+    {
+      "id": "aquifer/maaneh#p2-db3bfff6",
+      "text": "நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

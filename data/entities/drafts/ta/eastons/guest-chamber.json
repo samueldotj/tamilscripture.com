@@ -1,0 +1,18 @@
+{
+  "id": "eastons/guest-chamber",
+  "lang": "ta",
+  "source_hash": "22b34c08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விருந்தினர் அறை",
+  "paragraphs": [
+    {
+      "id": "eastons/guest-chamber#p1-22b34c08",
+      "text": "கிழக்கத்திய வீட்டின் மேல் மாடியிலுள்ள மிகுதி அறை (மாற்கு 14:14; லூக்கா 22:11). லூக்கா 2:7 இல் இந்த வார்த்தை “சத்திரம்” என்று மொழிபெயர்க்கப்பட்டுள்ளது (காண்க)."
+    }
+  ]
+}

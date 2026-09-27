@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jezoar",
+  "lang": "ta",
+  "source_hash": "f78f1ce1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்சோகார்",
+  "paragraphs": [
+    {
+      "id": "smiths/jezoar#p1-f78f1ce1",
+      "text": "(வெண்மை), ஆசேருடைய மனைவிகளில் ஒருத்தியான ஏலாளின் மகன். (1 நாளாகமம் 4:7)"
+    }
+  ]
+}

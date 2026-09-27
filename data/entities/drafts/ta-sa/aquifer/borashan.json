@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/borashan",
+  "lang": "ta",
+  "source_hash": "bbfaa668",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொராசான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/borashan#p1-85f1ff53",
+      "text": "கொராசான் என்பது ஆஷான் என்னும் பெயருக்கு மற்றொரு பெயராகும், அது முதலில் யூதாவின் கோத்திரத்திற்குக் கொடுக்கப்பட்ட ஒரு பட்டணமாகும், இது 1 சாமுவேல் 30:30-ல் குறிப்பிடப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/borashan#p2-2381c7fc",
+      "text": "ஆஷான் என்பதைக் காண்க."
+    }
+  ]
+}

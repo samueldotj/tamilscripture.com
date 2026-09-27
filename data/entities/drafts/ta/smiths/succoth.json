@@ -1,0 +1,18 @@
+{
+  "id": "smiths/succoth",
+  "lang": "ta",
+  "source_hash": "edfcaab3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சுக்கோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/succoth#p1-edfcaab3",
+      "text": "(கூடாரங்கள்)."
+    }
+  ]
+}

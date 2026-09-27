@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chilmad",
+  "lang": "ta",
+  "source_hash": "377315fa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கில்மாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/chilmad#p1-377315fa",
+      "text": "சேபாவையும் அசூரையும் சேர்ந்து தீருவுடன் வியாபாரம் செய்த அறியப்படாத ஒரு இடம் அல்லது தேசம் (எசேக்கியேல் 27:23)."
+    }
+  ]
+}

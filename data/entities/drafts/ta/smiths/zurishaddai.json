@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zurishaddai",
+  "lang": "ta",
+  "source_hash": "1e85bc4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூரிஷதாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/zurishaddai#p1-1e85bc4b",
+      "text": "(என் கன்மலை சர்வவல்லமையுள்ள தேவன்), இஸ்ரவேலர் எகிப்திலிருந்து வெளியேறின காலத்தில் சிமியோன் கோத்திரத்தின் தலைவனாயிருந்த செலூமியேலின் தகப்பன். (எண்ணாகமம் 1:6; 2:12; 7:36,41; 10:19)"
+    }
+  ]
+}

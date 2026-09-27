@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lots-feats-of",
+  "lang": "ta",
+  "source_hash": "45ef024c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீட்டுக்குலுக்கல் பண்டிகை",
+  "paragraphs": [
+    {
+      "id": "smiths/lots-feats-of#p1-45ef024c",
+      "text": "[பூரீம்]"
+    }
+  ]
+}

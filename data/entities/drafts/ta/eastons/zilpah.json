@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zilpah",
+  "lang": "ta",
+  "source_hash": "ef1c88e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சில்பாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/zilpah#p1-ef1c88e1",
+      "text": "தொங்குகிறவள் என்று பொருள்படும், லேயாளின் வேலைக்காரி, காத் மற்றும் ஆசேரின் தாய் (ஆதியாகமம் 30:9-13)."
+    }
+  ]
+}

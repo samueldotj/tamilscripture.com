@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ethiopian",
+  "lang": "ta",
+  "source_hash": "1059060c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்தியோப்பியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ethiopian#p1-1059060c",
+      "text": "சரியாகச் சொன்னால் “கூஷியன்” (எரேமியா 13:23), இது செராகு (2 நாளாகமம் 14:9) (8) மற்றும் எபெத்மெலேக் (எரேமியா 38:7,10,12; 39:16) என்பவர்களைக் குறிக்கப் பயன்படுத்தப்பட்டது."
+    }
+  ]
+}

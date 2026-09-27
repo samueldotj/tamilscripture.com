@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ezri",
+  "lang": "ta",
+  "source_hash": "001d7cf5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ezri#p1-001d7cf5",
+      "text": "கேலூப்பின் மகனும், தாவீதின் நிலங்களைப் பயிரிடும் வேலையை மேற்பார்வை செய்த மனிதர்களில் ஒருவனும் ஆவான் (1 நாளாகமம் 27:26)."
+    }
+  ]
+}

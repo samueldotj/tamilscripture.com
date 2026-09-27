@@ -1,0 +1,18 @@
+{
+  "id": "smiths/obadiah",
+  "lang": "ta",
+  "source_hash": "ca66f018",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒபதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/obadiah#p1-ca66f018",
+      "text": "(கர்த்தருடைய ஊழியன்),"
+    }
+  ]
+}

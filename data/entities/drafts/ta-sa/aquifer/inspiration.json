@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/inspiration",
+  "lang": "ta",
+  "source_hash": "c6119218",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அருளப்படுதல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/inspiration#p1-c6119218",
+      "text": "பார்க்க: வேதத்தின் அருளப்படுதல்."
+    }
+  ]
+}

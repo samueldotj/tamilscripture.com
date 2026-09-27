@@ -1,0 +1,18 @@
+{
+  "id": "eastons/secundus",
+  "lang": "ta",
+  "source_hash": "1e3af849",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செக்குந்து",
+  "paragraphs": [
+    {
+      "id": "eastons/secundus#p1-1e3af849",
+      "text": "செக்குந்து என்றால் இரண்டாம் என்று பொருள்; இவன் தெசலோனிக்கேயில் இருந்த ஒரு கிறிஸ்தவன், பவுலுடன் ஆசியாவிற்குச் சென்றான் (அப்போஸ்தலருடைய நடபடிகள் 20:4)."
+    }
+  ]
+}

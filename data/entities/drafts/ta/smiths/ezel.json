@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezel",
+  "lang": "ta",
+  "source_hash": "62b6b74e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/ezel#p1-62b6b74e",
+      "text": "(புறப்பாடு), சவுலின் இருப்பிடத்திற்கு அருகில் இருந்த நன்கு அறியப்பட்ட ஒரு கல், தாவீதும் யோனத்தானும் பிரிந்து சென்ற இடம். (1 சாமுவேல் 20:19)"
+    }
+  ]
+}

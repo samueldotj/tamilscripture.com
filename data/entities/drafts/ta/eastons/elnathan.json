@@ -1,0 +1,26 @@
+{
+  "id": "eastons/elnathan",
+  "lang": "ta",
+  "source_hash": "e2e9e902",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்நாத்தான்",
+  "paragraphs": [
+    {
+      "id": "eastons/elnathan#p1-6906ee76",
+      "text": "தேவன் கொடுத்தவன்."
+    },
+    {
+      "id": "eastons/elnathan#p2-15b2667f",
+      "text": "(1.) எருசலேமின் குடியிருந்தவன், யோயாக்கீன் ராஜாவின் தாயான நெகுஸ்தாளின் தகப்பன் (2 இராஜாக்கள் 24:8). யோயாக்கீம் எரேமியாவின் தீர்க்கதரிசன சுருளை எரிப்பதைத் தடுக்க முயற்சித்தவன் இவனேயாக இருக்கலாம் (எரேமியா 26:22; 36:12)."
+    },
+    {
+      "id": "eastons/elnathan#p3-b2b07cf4",
+      "text": "(2.) எஸ்றா 8:16."
+    }
+  ]
+}

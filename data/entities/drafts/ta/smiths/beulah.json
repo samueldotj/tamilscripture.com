@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beulah",
+  "lang": "ta",
+  "source_hash": "cd151b4e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பியூலா",
+  "paragraphs": [
+    {
+      "id": "smiths/beulah#p1-cd151b4e",
+      "text": "(திருமணமானவள்), “தேசம் திருமணம் செய்யப்படும்” போது இஸ்ரவேலின் தேசம் அழைக்கப்படும் பெயர். (ஏசாயா 62:4)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jokim",
+  "lang": "ta",
+  "source_hash": "c12c9f77",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோக்கீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/jokim#p1-c12c9f77",
+      "text": "யெகோவா நிலைநிறுத்தியவர், சாலாவின் சந்ததியில் ஒருவர் (1 நாளாகமம் 4:22)."
+    }
+  ]
+}

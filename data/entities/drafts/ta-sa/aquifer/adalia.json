@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/adalia",
+  "lang": "ta",
+  "source_hash": "c2e2a1f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதலியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/adalia#p1-c2e2a1f9",
+      "text": "ஆமானின் பத்து மகன்களில் ஐந்தாமவன். யூதர்களை அழிக்கும் ஆமானின் சூழ்ச்சி தடுக்கப்பட்டபோது, அவனுடைய மகன்கள் அனைவரும் அவனோடு கொல்லப்பட்டனர் (எஸ்தர் 9:8)."
+    }
+  ]
+}

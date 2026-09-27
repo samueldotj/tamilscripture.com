@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kitron",
+  "lang": "ta",
+  "source_hash": "86a09805",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்ரோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/kitron#p1-86a09805",
+      "text": "முடிச்சுள்ளது, செபுலோனின் ஒரு பட்டணம் (நியாயாதிபதிகள் 1:30), காத்தாத் என்றும் அழைக்கப்பட்டது (யோசுவா 19:15); இது “கலிலேயாவிலுள்ள கானா” என்று கருதப்படுகிறது."
+    }
+  ]
+}

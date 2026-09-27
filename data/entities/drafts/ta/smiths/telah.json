@@ -1,0 +1,18 @@
+{
+  "id": "smiths/telah",
+  "lang": "ta",
+  "source_hash": "2454f34d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேலாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/telah#p1-2454f34d",
+      "text": "(பலம்), எப்பிராயீமின் சந்ததியான், யோசுவாவின் மூதாதையர். (1 நாளாகமம் 7:25) (கி.மு. 1491க்கு முன்).​"
+    }
+  ]
+}

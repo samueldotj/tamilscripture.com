@@ -1,0 +1,18 @@
+{
+  "id": "smiths/migdol",
+  "lang": "ta",
+  "source_hash": "9f0f2a93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்தோல்",
+  "paragraphs": [
+    {
+      "id": "smiths/migdol#p1-9f0f2a93",
+      "text": "(கோபுரம்), எகிப்தின் கிழக்கு எல்லையில் இருந்த இரண்டு இடங்களில் ஒன்றின் பெயர்."
+    }
+  ]
+}

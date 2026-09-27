@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/abishur",
+  "lang": "ta",
+  "source_hash": "77b84a12",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிசூர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abishur#p1-77b84a12",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த சம்மாயின் மகன்; அக்பானையும் மோளிதையும் பெற்றவன். அவனுடைய மனைவி அபியாயேல் (1 நாளாகமம் 2:28–29)."
+    }
+  ]
+}

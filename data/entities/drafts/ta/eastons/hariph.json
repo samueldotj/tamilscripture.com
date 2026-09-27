@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hariph",
+  "lang": "ta",
+  "source_hash": "4bed7aef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரீப்",
+  "paragraphs": [
+    {
+      "id": "eastons/hariph#p1-54bfbb56",
+      "text": "கூதிர்காலமான மழை."
+    },
+    {
+      "id": "eastons/hariph#p2-43b21ebc",
+      "text": "(1.) நெகேமியா 7:24."
+    },
+    {
+      "id": "eastons/hariph#p3-ed10a3ca",
+      "text": "(2.) நெகேமியா 10:19."
+    }
+  ]
+}

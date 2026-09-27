@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nahamaai",
+  "lang": "ta",
+  "source_hash": "7de5b1e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகமாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/nahamaai#p1-7de5b1e1",
+      "text": "(இரக்கமும் உடையவன்), செருபாபேலுடனும் யெசுவாவுடனும் பாபிலோனிலிருந்து திரும்பி வந்தவர்களில் ஒரு முதன்மையான மனிதன். (நெகேமியா 7:7) (கி.மு. 536.)"
+    }
+  ]
+}

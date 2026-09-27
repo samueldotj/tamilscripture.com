@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazel",
+  "lang": "ta",
+  "source_hash": "f13b37d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமன் மரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/hazel#p1-f13b37d7",
+      "text": "Heb. luz, (ஆதியாகமம் 30:37), கொட்டையுடைய ஒரு மரம். இந்த எபிரெய வார்த்தை வுல்கேட் மொழிபெயர்ப்பில் amygdalinus, \"வாதுமை மரம்\" என்று மொழிபெயர்க்கப்பட்டுள்ளது, இது சரியாக இருக்கலாம். அந்த மரம் சீரியாவில் செழிக்கிறது."
+    }
+  ]
+}

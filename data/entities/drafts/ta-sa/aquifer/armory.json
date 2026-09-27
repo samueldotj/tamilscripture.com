@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/armory",
+  "lang": "ta",
+  "source_hash": "520ca43f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயுதசாலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/armory#p1-8508d7cf",
+      "text": "ஆயுதங்கள் சேமித்து வைக்கப்படும் ஒரு இடம் (எரேமியா 50:25)."
+    },
+    {
+      "id": "aquifer/armory#p2-8d8ede60",
+      "text": "“ஆயுதங்களும் போர்க்கருவிகளும்” என்னும் கட்டுரையைக் காண்க."
+    }
+  ]
+}

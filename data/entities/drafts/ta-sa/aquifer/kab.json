@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kab",
+  "lang": "ta",
+  "source_hash": "d86b49dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kab#p1-1a0248c4",
+      "text": "கழுதைத் தலை என்னும் அளவு அளவீட்டைக் குறிக்கும் வேறொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/kab#p2-e47a7199",
+      "text": "காண்க."
+    }
+  ]
+}

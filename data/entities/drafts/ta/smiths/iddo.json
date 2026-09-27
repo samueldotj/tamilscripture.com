@@ -1,0 +1,18 @@
+{
+  "id": "smiths/iddo",
+  "lang": "ta",
+  "source_hash": "e92f7d74",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தோ",
+  "paragraphs": [
+    {
+      "id": "smiths/iddo#p1-e92f7d74",
+      "text": "(ஏற்றது அல்லது அழகுள்ளது)."
+    }
+  ]
+}

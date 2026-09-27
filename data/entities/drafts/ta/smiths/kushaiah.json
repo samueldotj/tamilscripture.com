@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kushaiah",
+  "lang": "ta",
+  "source_hash": "bbccf063",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குஷாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/kushaiah#p1-bbccf063",
+      "text": "(யெகோவாவின் வில்), மெராரி கோத்திரத்தானாகிய ஏத்தானின் தகப்பனான கீச் என்பவனே இவன். (1 நாளாகமம் 15:17)"
+    }
+  ]
+}

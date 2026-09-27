@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rahel",
+  "lang": "ta",
+  "source_hash": "c23c1007",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராகேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/rahel#p1-c23c1007",
+      "text": "நமது ஆங்கில அங்கீகரிக்கப்பட்ட வேதாகமத்தில் இப்போது நன்கு அறியப்பட்ட ராகேல் என்ற பெயரின் மூல வடிவம். (எரேமியா 31:15)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/battering-ram",
+  "lang": "ta",
+  "source_hash": "ee2da31a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முட்டு இயந்திரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/battering-ram#p1-ee2da31a",
+      "text": "(எசேக்கியேல் 4:2; 21:22), இது சுவர்களை உடைப்பதற்காக ஒரு சட்டத்தில் தூக்கிவைக்கப்பட்ட நீண்ட மரக்கட்டையினால் ஆன ஒரு போர்க்கருவி ஆகும். சுவரின்மேல் மோதும் அதன் முனை ஒரு ஆட்டுக்கடா தலையின் வடிவமாக அமைக்கப்பட்டிருந்தது."
+    }
+  ]
+}

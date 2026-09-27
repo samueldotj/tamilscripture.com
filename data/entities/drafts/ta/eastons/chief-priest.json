@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chief-priest",
+  "lang": "ta",
+  "source_hash": "dfa85c3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரதான ஆசாரியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/chief-priest#p1-dfa85c3a",
+      "text": "ஆசாரியன் என்பதைக் காண்க."
+    }
+  ]
+}

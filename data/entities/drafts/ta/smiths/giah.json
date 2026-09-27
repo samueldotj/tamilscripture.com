@@ -1,0 +1,18 @@
+{
+  "id": "smiths/giah",
+  "lang": "ta",
+  "source_hash": "1d0b6ee0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீயா",
+  "paragraphs": [
+    {
+      "id": "smiths/giah#p1-1d0b6ee0",
+      "text": "(நீர் வீழ்ச்சி) 2 சாமுவேல் 2:24-இல் மட்டும் குறிப்பிடப்பட்டிருக்கிற ஒரு இடம், இது அம்மா மேட்டின் இருப்பிடத்தைக் குறிக்கும்படி பயன்படுத்தப்பட்டிருக்கிறது."
+    }
+  ]
+}

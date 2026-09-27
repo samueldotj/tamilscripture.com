@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zerah",
+  "lang": "ta",
+  "source_hash": "ee1f3cb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செராகு",
+  "paragraphs": [
+    {
+      "id": "smiths/zerah#p1-ee1f3cb2",
+      "text": "(உதயம் (சூரியனுடைய))."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shebarim",
+  "lang": "ta",
+  "source_hash": "4fd1ae26",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபாரீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/shebarim#p1-4fd1ae26",
+      "text": "முறிவுகள்; பாழிடங்கள், ஆயீக்கு அருகில் உள்ள ஒரு இடம் (யோசுவா 7:5; ஆர்.வி. குறிப்பு, “கற்குவாரிகள்”)."
+    }
+  ]
+}

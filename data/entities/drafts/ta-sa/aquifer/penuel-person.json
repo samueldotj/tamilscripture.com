@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/penuel-person",
+  "lang": "ta",
+  "source_hash": "3c3db322",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனுவெல் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/penuel-person#p1-7262562e",
+      "text": "1. ஊரின் சந்ததியான் (ஒருவேளை மகன்), மற்றும் யூதாவின் கோத்திரத்திற்குரிய கேதோரின் தந்தை (முன்னோன் என்ற பொருளில்) (1 நாளாகமம் 4:4)."
+    },
+    {
+      "id": "aquifer/penuel-person#p2-4c9a3c27",
+      "text": "2. பென்யமீன் கோத்திரத்திற்குரிய சாஷாக்கின் மகன் (1 நாளாகமம் 8:25)."
+    }
+  ]
+}

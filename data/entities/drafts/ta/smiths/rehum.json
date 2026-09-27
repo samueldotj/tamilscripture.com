@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rehum",
+  "lang": "ta",
+  "source_hash": "97ec4fd7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெகூம்",
+  "paragraphs": [
+    {
+      "id": "smiths/rehum#p1-97ec4fd7",
+      "text": "(இரங்கும்)."
+    }
+  ]
+}

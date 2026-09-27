@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/phebe",
+  "lang": "ta",
+  "source_hash": "3775db96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெபேயாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/phebe#p1-6effa798",
+      "text": "பெபேயாள் என்பது King James Version-இல் Phoebe என்ற பெயருக்குப் பயன்படுத்தப்பட்ட எழுத்துருவாகும், இவள் கெங்கிரேயாவிலுள்ள சபைக்கு ஊழியம் செய்த ஒரு கிறிஸ்தவப் பெண் (ரோமர் 16:1)."
+    },
+    {
+      "id": "aquifer/phebe#p2-5889cfeb",
+      "text": "பெபேயாள் என்பதைக் காண்க."
+    }
+  ]
+}

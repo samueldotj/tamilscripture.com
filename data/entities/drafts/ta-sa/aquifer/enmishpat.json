@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/enmishpat",
+  "lang": "ta",
+  "source_hash": "24ef9f04",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "என்மிஸ்பாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/enmishpat#p1-673ad51c",
+      "text": "என்மிஸ்பாத் என்பது காதேசுக்கு ஏற்கனவே இருந்த ஒரு பெயராகும். இது ராஜாவாகிய கெதர்லாகோமேரின் யுத்தங்களின் கதையில் குறிப்பிடப்பட்டுள்ளது (ஆதியாகமம் 14:7)."
+    },
+    {
+      "id": "aquifer/enmishpat#p2-fc126190",
+      "text": "காதேஸ், காதேஸ்-பர்னேயா என்பவற்றைக் காண்க."
+    }
+  ]
+}

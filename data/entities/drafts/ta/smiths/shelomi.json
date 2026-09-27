@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shelomi",
+  "lang": "ta",
+  "source_hash": "858b9a02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேலோமி",
+  "paragraphs": [
+    {
+      "id": "smiths/shelomi#p1-858b9a02",
+      "text": "(சமாதானமுள்ளவன்), ஆசேரியனாகிய இவன், அகியூதின் தகப்பன். (எண்ணாகமம் 34:27) (கி.மு. 1450க்கு முன்பு.)"
+    }
+  ]
+}

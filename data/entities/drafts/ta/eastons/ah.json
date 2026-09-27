@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ah",
+  "lang": "ta",
+  "source_hash": "248cf9b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆ!",
+  "paragraphs": [
+    {
+      "id": "eastons/ah#p1-248cf9b8",
+      "text": "துக்கத்தையோ வருத்தத்தையோ குறிக்கும் ஒரு ஆச்சரியக் குறிப்புச் சொல் (சங்கீதங்கள் 35:25; ஏசாயா 1:4, 24; எரேமியா 1:6; 22:18; மாற்கு 15:29)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jabesh",
+  "lang": "ta",
+  "source_hash": "8245dded",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாபேசு",
+  "paragraphs": [
+    {
+      "id": "smiths/jabesh#p1-8245dded",
+      "text": "(வறண்ட)."
+    }
+  ]
+}

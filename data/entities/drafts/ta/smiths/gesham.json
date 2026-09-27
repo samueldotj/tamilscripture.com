@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gesham",
+  "lang": "ta",
+  "source_hash": "650fe7ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசான்",
+  "paragraphs": [
+    {
+      "id": "smiths/gesham#p1-650fe7ea",
+      "text": "(அசுத்தமானவன்) (சில வேளைகளில் \"கேஷான்\" என்றும் எழுதப்படுகிறது), யூதாவின் வம்சவரலாற்றிலும் காலேபின் குடும்பத்திலும் காணப்படும் யூதாவின் மகன்களில் ஒருவன். (1 நாளாகமம் 2:47)"
+    }
+  ]
+}

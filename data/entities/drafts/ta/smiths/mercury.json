@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mercury",
+  "lang": "ta",
+  "source_hash": "987af16c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெர்க்குரி",
+  "paragraphs": [
+    {
+      "id": "smiths/mercury#p1-987af16c",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 14:12) மேற்கூறிய பெயருக்கு திருத்தப்பட்ட மொழிபெயர்ப்பில் (Revised Version) கொடுக்கப்பட்டுள்ள மொழிபெயர்ப்பு."
+    }
+  ]
+}

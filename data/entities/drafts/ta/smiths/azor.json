@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azor",
+  "lang": "ta",
+  "source_hash": "d0876821",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/azor#p1-d0876821",
+      "text": "(உதவிசெய்பவன்), எலியாக்கீமின் மகன், நம்முடைய கர்த்தருடைய வம்சவரிசையில் உள்ளவன். (மத்தேயு 1:13,14)"
+    }
+  ]
+}

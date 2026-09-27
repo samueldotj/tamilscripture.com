@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shobab",
+  "lang": "ta",
+  "source_hash": "04a02b73",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/shobab#p1-f67e13a2",
+      "text": "விசுவாசதுரோகி."
+    },
+    {
+      "id": "eastons/shobab#p2-21cb3711",
+      "text": "(1.) பத்சேபாளிடம் தாவீதுக்குப் பிறந்த மகன்களில் ஒருவன் (2 சாமுவேல் 5:14)."
+    },
+    {
+      "id": "eastons/shobab#p3-7d0dc1a1",
+      "text": "(2.) எஸ்ரோனின் மகனாகிய காலேபின் மகன்களில் ஒருவன் (1 நாளாகமம் 2:18)."
+    }
+  ]
+}

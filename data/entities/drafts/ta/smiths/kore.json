@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kore",
+  "lang": "ta",
+  "source_hash": "eeb23958",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோரே",
+  "paragraphs": [
+    {
+      "id": "smiths/kore#p1-eeb23958",
+      "text": "(கவுதாரி)."
+    }
+  ]
+}

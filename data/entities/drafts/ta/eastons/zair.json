@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zair",
+  "lang": "ta",
+  "source_hash": "0df4fd19",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாயீர்",
+  "paragraphs": [
+    {
+      "id": "eastons/zair#p1-0df4fd19",
+      "text": "சிறியது என்பது பொருள், சவக்கடலுக்குக் கிழக்கே இருந்திருக்கக்கூடிய ஒரு இடம், அங்கே தன்னிடமிருந்து கலகம்செய்த ஏதோமின் படையை யோராம் தோற்கடித்தான் (2 இராஜாக்கள் 8:21)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/salmone",
+  "lang": "ta",
+  "source_hash": "4a22c0ff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்மோனே",
+  "paragraphs": [
+    {
+      "id": "eastons/salmone#p1-4a22c0ff",
+      "text": "கிரேத்தாதீவின் கிழக்குப் புறத்திலுள்ள ஒரு முனை; பவுல் ரோமாபுரிக்குப் பயணம் செய்தபோது இதன் ஓரமாகச் சென்றார் (அப்போஸ்தலருடைய நடபடிகள் 27:7); இது இன்று கேப் சிடேரோ என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

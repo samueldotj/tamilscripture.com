@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/galilee-sea-of",
+  "lang": "ta",
+  "source_hash": "fc3b8fbb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கலிலேயா கடல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/galilee-sea-of#p1-fc3b8fbb",
+      "text": "கலிலேயாக்கடலைக் காண்க."
+    }
+  ]
+}

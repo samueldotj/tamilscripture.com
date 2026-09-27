@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phanuel",
+  "lang": "ta",
+  "source_hash": "8d7fcfa6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானுவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/phanuel#p1-8d7fcfa6",
+      "text": "(தேவனுடைய முகம்) ஆசேருடைய கோத்திரத்தைச் சேர்ந்த தீர்க்கதரிசியாகிய அன்னாளின் தகப்பன். (லூக்கா 2:36) (கி.மு. 80 ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

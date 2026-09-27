@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shemeber",
+  "lang": "ta",
+  "source_hash": "9eb25dac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமேபர்",
+  "paragraphs": [
+    {
+      "id": "smiths/shemeber#p1-9eb25dac",
+      "text": "(உயர்ந்த பறவை), செபோயீமின் ராஜா, சோதோமின் ராஜா கெதர்லாகோமேரால் தாக்கப்பட்டபோது அவனுடைய கூட்டாளி. (கி.மு. 1912.)"
+    }
+  ]
+}

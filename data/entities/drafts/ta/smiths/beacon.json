@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beacon",
+  "lang": "ta",
+  "source_hash": "c7e48520",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொடிமரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/beacon#p1-c7e48520",
+      "text": "திசைகாட்டுவதற்காக ஒரு மேட்டின்மேல் நிற்கவைக்கப்பட்ட ஒரு அடையாளம் அல்லது தெரியும் குறி. (ஏசாயா 30:17)"
+    }
+  ]
+}

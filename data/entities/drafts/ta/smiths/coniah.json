@@ -1,0 +1,18 @@
+{
+  "id": "smiths/coniah",
+  "lang": "ta",
+  "source_hash": "9e06051e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/coniah#p1-9e06051e",
+      "text": "[எக்கோனியா]"
+    }
+  ]
+}

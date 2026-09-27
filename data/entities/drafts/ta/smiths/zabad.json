@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zabad",
+  "lang": "ta",
+  "source_hash": "42710507",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/zabad#p1-42710507",
+      "text": "(அன்பளிப்பு)."
+    }
+  ]
+}

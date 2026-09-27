@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lintel",
+  "lang": "ta",
+  "source_hash": "d3dd04b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிலைக்கால் மேற்சட்டம்",
+  "paragraphs": [
+    {
+      "id": "smiths/lintel#p1-d3dd04b7",
+      "text": "கதவின் கட்டமைப்பின் மேற்பகுதியை உருவாக்கும் மேற்சட்டம்."
+    }
+  ]
+}

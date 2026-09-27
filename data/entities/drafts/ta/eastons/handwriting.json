@@ -1,0 +1,18 @@
+{
+  "id": "eastons/handwriting",
+  "lang": "ta",
+  "source_hash": "9337686b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கையெழுத்து",
+  "paragraphs": [
+    {
+      "id": "eastons/handwriting#p1-9337686b",
+      "text": "(கொலோசெயர் 2:14). “கையெழுத்தை அழித்தல்” என்பது, நாம் மீறிய நியாயப்பிரமாணத்தின் ஆக்கினைத்தீர்ப்பை நற்செய்தியின் கிருபையினால் நீக்குதலைக் குறிக்கிறது."
+    }
+  ]
+}

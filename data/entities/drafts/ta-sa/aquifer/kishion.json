@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kishion",
+  "lang": "ta",
+  "source_hash": "f81c02a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிஷியோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kishion#p1-98c88279",
+      "text": "கிஷியோன் இசக்கார் கோத்திரத்திற்கு ஒதுக்கப்பட்ட ஒரு பட்டணமாக இருந்தது (யோசுவா 19:20), மற்றும் இது கேர்சோனிய லேவியர்களுக்குக் கொடுக்கப்பட்டது (யோசுவா 21:28)."
+    },
+    {
+      "id": "aquifer/kishion#p2-2dcd2df7",
+      "text": "லேவியர் பட்டணங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

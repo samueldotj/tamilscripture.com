@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pethahiah",
+  "lang": "ta",
+  "source_hash": "48f7eb8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/pethahiah#p1-48f7eb8e",
+      "text": "(யெகோவாவினால் விடுதலையாக்கப்பட்டவன்)."
+    }
+  ]
+}

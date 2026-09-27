@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tolad",
+  "lang": "ta",
+  "source_hash": "35fae38e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோலாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/tolad#p1-35fae38e",
+      "text": "உற்பத்தி செய்கிறது, யூதாவின் தென்பகுதியில் இருந்த சிமியோனுடைய ஒரு பட்டணம் (1 நாளாகமம் 4:29)."
+    }
+  ]
+}

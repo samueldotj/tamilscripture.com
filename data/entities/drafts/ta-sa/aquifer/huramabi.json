@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/huramabi",
+  "lang": "ta",
+  "source_hash": "d87b1f45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈராம் அபி",
+  "paragraphs": [
+    {
+      "id": "aquifer/huramabi#p1-f256174c",
+      "text": "ஈராம் அபி என்பது 2 நாளாகமம் 2:13 மற்றும் 4:16-இல் சாலொமோனுடைய ஆலயத் தொழிலாளியாகிய ஈராம் என்பவனுக்கு இடப்பட்ட மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/huramabi#p2-1b43778f",
+      "text": "ஈராம் #2-ஐக் காண்க."
+    }
+  ]
+}

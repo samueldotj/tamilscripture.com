@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ithlah",
+  "lang": "ta",
+  "source_hash": "0b6b3a53",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெத்லா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ithlah#p1-0b6b3a53",
+      "text": "யோசுவா கானானை கட்டப்படுத்தின பின்பு தாண் கோத்திரத்திற்கு கொடுக்கப்பட்ட ஒரு பட்டணமாக யெத்லா இருந்தது (யோசுவா 19:42)."
+    }
+  ]
+}

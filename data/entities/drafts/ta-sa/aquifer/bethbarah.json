@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethbarah",
+  "lang": "ta",
+  "source_hash": "b6b213fd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தாபரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethbarah#p1-b6b213fd",
+      "text": "கிதியோனின் தலைமையின்கீழ் எப்பிராயீம் கோத்திரத்தைச் சேர்ந்த போராளிகள் மீதியானியர்கள் யோர்தான் நதியைக் கடந்து பின்வாங்குவதைத் தடுக்க முயற்சித்த ஒரு இடம் (நியாயாதிபதிகள் 7:24)."
+    }
+  ]
+}

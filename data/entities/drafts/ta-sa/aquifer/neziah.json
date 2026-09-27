@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/neziah",
+  "lang": "ta",
+  "source_hash": "c02c6898",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெத்சியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/neziah#p1-c02c6898",
+      "text": "பாபிலோனிய சிறையிருப்புக்குப் பின்பு செருபாபேலுடன் எருசலேமுக்குத் திரும்பி வந்த ஆலயத்தின் பணியாட்களின் ஒரு வம்சத்தின் மூலத்தந்தை (எஸ்றா 2:54; நெகேமியா 7:56)."
+    }
+  ]
+}

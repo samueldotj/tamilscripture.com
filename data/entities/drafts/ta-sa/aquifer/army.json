@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/army",
+  "lang": "ta",
+  "source_hash": "fd3520d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இராணுவம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/army#p1-fd184616",
+      "text": "இராணுவம் என்பது யுத்தங்களில், விசேஷமாக தரையில் போரிடும்படி பயிற்சி பெற்ற வீரர்களின் ஒரு பெரிய ஒழுங்கமைக்கப்பட்ட கூட்டமாகும்."
+    },
+    {
+      "id": "aquifer/army#p2-b932fad8",
+      "text": "போர் என்பதைக் காண்க."
+    }
+  ]
+}

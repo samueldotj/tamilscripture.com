@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hearth",
+  "lang": "ta",
+  "source_hash": "6328e319",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடுப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/hearth#p1-1d3c54e5",
+      "text": "அடுப்பு என்பது ஒரு வீட்டில் மக்கள் நெருப்பு மூட்டிய இடமாகும். அவர்கள் அந்த நெருப்பை சமைப்பதற்கும், குளிர் நீக்குவதற்கும், வெளிச்சத்திற்கும் பயன்படுத்தினர்."
+    },
+    {
+      "id": "aquifer/hearth#p2-6ac11ec2",
+      "text": "காண்க: வீடுகளும் குடியிருப்புகளும்."
+    }
+  ]
+}

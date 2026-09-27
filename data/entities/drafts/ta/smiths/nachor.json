@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nachor",
+  "lang": "ta",
+  "source_hash": "8c219c93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/nachor#p1-8c219c93",
+      "text": "[நாகோர்]"
+    }
+  ]
+}

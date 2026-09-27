@@ -1,0 +1,30 @@
+{
+  "id": "eastons/hezron",
+  "lang": "ta",
+  "source_hash": "f2bdfdcc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/hezron#p1-743ffa13",
+      "text": "அடைக்கப்பட்டது."
+    },
+    {
+      "id": "eastons/hezron#p2-e7a67b6b",
+      "text": "(1.) ரூபனுடைய மகன்களில் ஒருவன் (ஆதியாகமம் 46:9; யாத்திராகமம் 6:14)."
+    },
+    {
+      "id": "eastons/hezron#p3-209f9cf0",
+      "text": "(2.) பாரேசுடைய இரண்டு மகன்களில் மூத்தவன் (ஆதியாகமம் 46:12)."
+    },
+    {
+      "id": "eastons/hezron#p4-9a654f00",
+      "text": "(3.) காதேஸுக்கு மேற்கே, யூதாவின் தென்பகுதியில் இருந்த ஒரு சமவெளி (யோசுவா 15:3)."
+    }
+  ]
+}

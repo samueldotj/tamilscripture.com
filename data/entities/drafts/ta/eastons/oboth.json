@@ -1,0 +1,18 @@
+{
+  "id": "eastons/oboth",
+  "lang": "ta",
+  "source_hash": "da093848",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/oboth#p1-da093848",
+      "text": "தோல்பைகள் (Bottles) என்று பொருள்படும், வனாந்தரப் பயணத்தின்போது இஸ்ரவேலர்கள் முகாமிட்ட ஒரு இடம் (எண்ணாகமம் 33:43); வெண்கலப் பாம்பை நிறுத்தப்பட்ட பின்பு அவர்கள் முகாமிட்ட முதலாவது இடம் இதுவே."
+    }
+  ]
+}

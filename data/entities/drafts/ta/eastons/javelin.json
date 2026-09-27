@@ -1,0 +1,22 @@
+{
+  "id": "eastons/javelin",
+  "lang": "ta",
+  "source_hash": "4cdce0f2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈட்டி",
+  "paragraphs": [
+    {
+      "id": "eastons/javelin#p1-401535dd",
+      "text": "(1.) எபிரெய hanith, ஈட்டி, அதன் நெகிழ்வுத்தன்மையிலிருந்து பெயர் பெற்றது (1 சாமுவேல் 18:10, 11; 19:9, 10; 20:33)."
+    },
+    {
+      "id": "eastons/javelin#p2-7ad02fab",
+      "text": "(2.) எபிரெய romah, கனமான ஆயுதம் தரித்த போர்வீரர்களுக்குரிய ஈட்டி, அது துளைத்துச் செல்வதால் அப்படி அழைக்கப்பட்டது (எண்ணாகமம் 25:7). (ஆயுதங்கள் என்பதைக் காண்க.)"
+    }
+  ]
+}

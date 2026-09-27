@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tharra",
+  "lang": "ta",
+  "source_hash": "0bb7c598",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தார்றா",
+  "paragraphs": [
+    {
+      "id": "smiths/tharra#p1-0bb7c598",
+      "text": "(எஸ்தர் 12:1) தேரேசு என்பதன் சீர்கெட்ட வடிவம்."
+    }
+  ]
+}

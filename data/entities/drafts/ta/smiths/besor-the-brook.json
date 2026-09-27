@@ -1,0 +1,18 @@
+{
+  "id": "smiths/besor-the-brook",
+  "lang": "ta",
+  "source_hash": "a4f673d4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேசோர் ஆறு",
+  "paragraphs": [
+    {
+      "id": "smiths/besor-the-brook#p1-a4f673d4",
+      "text": "(குளிர்ந்தது), யூதாவின் தென் எல்லையின் கடையாந்தரத்தில் இருந்த ஒரு வற்றின ஆற்றுப் பள்ளம் அல்லது பள்ளத்தாக்கு (1 சாமுவேல் 30:9,10,21)."
+    }
+  ]
+}

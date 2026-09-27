@@ -1,0 +1,30 @@
+{
+  "id": "eastons/burden",
+  "lang": "ta",
+  "source_hash": "b6039124",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/burden#p1-e3527ab2",
+      "text": "(1.) எந்த வகையான சுமையும் (யாத். 23:5)."
+    },
+    {
+      "id": "eastons/burden#p2-8df31752",
+      "text": "(2.) கடினமான வேலை (யாத். 2:11)."
+    },
+    {
+      "id": "eastons/burden#p3-c4fb27e0",
+      "text": "(3.) முயற்சி தேவைப்படும் கடினமான கடமை (யாத். 18:22)."
+    },
+    {
+      "id": "eastons/burden#p4-edb046b1",
+      "text": "(4.) பேரழிவு அல்லது ஆபத்தான தன்மையுள்ள தீர்க்கதரிசனம் (ஏசாயா 13:1; 17:1; ஆபகூக் 1:1, முதலியன)."
+    }
+  ]
+}

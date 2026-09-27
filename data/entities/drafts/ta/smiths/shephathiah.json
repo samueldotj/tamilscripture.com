@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shephathiah",
+  "lang": "ta",
+  "source_hash": "dc5983de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/shephathiah#p1-dc5983de",
+      "text": "பென்யமீனியன், மெசுல்லாம் 6-ன் தகப்பன். (1 நாளாகமம் 9:8)"
+    }
+  ]
+}

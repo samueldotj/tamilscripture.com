@@ -1,0 +1,18 @@
+{
+  "id": "smiths/akkub",
+  "lang": "ta",
+  "source_hash": "da4ad1ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்கூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/akkub#p1-da4ad1ab",
+      "text": "(வஞ்சகமான)."
+    }
+  ]
+}

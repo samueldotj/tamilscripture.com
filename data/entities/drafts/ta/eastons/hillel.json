@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hillel",
+  "lang": "ta",
+  "source_hash": "2cfcc4a5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இல்லேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/hillel#p1-2cfcc4a5",
+      "text": "துதிக்கிறவன், பிரத்தோனியன், நியாயாதிபதியான அப்தோனின் தகப்பன் (நியாயாதிபதிகள் 12:13, 15)."
+    }
+  ]
+}

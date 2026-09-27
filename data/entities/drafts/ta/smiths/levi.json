@@ -1,0 +1,18 @@
+{
+  "id": "smiths/levi",
+  "lang": "ta",
+  "source_hash": "ca5b60e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லேவி",
+  "paragraphs": [
+    {
+      "id": "smiths/levi#p1-ca5b60e7",
+      "text": "(இணைக்கப்பட்டவன்)."
+    }
+  ]
+}

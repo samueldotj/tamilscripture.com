@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/on-place",
+  "lang": "ta",
+  "source_hash": "ec8417e8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓன் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/on-place#p1-d6697348",
+      "text": "ஓன் என்பது எகிப்திய பட்டணமாகிய ஏலியோபோலிசுக்கு எபிரெயர்களின் பெயராகும் (ஆதியாகமம் 41:45, 50; 46:20)."
+    },
+    {
+      "id": "aquifer/on-place#p2-b8b2e6eb",
+      "text": "ஏலியோபோலிஸ் காண்க."
+    }
+  ]
+}

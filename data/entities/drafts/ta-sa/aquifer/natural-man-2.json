@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/natural-man-2",
+  "lang": "ta",
+  "source_hash": "8a632935",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இயற்கை மனுஷன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/natural-man-2#p1-8a632935",
+      "text": "காண்க: மனுஷன், இயற்கை."
+    }
+  ]
+}

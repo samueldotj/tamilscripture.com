@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/helek-helekite",
+  "lang": "ta",
+  "source_hash": "a9656fb3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேக், ஏலேக்கியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/helek-helekite#p1-a9656fb3",
+      "text": "மனாசே கோத்திரத்திற்குரிய கீலேயாத்தின் ஒரு மகன் (யோசுவா 17:2). இவனே ஏலேக்கியர்களின் வம்சத்தை உண்டாக்கினான் (எண்ணாகமம் 26:30)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/omar",
+  "lang": "ta",
+  "source_hash": "6eabe5a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமார்",
+  "paragraphs": [
+    {
+      "id": "eastons/omar#p1-6eabe5a7",
+      "text": "பேச்சுவன்மையுள்ளவன், ஏசாவின் மூத்த மகனாகிய எலிப்பாசினுடைய மகன் (ஆதியாகமம் 36:11-15)."
+    }
+  ]
+}

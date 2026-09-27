@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mehuman",
+  "lang": "ta",
+  "source_hash": "0cc1dcfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகுமான்",
+  "paragraphs": [
+    {
+      "id": "smiths/mehuman#p1-0cc1dcfe",
+      "text": "(உண்மையுள்ளவர்), அகாஸ்வேருவின் ஏழு பிரதானிகளில் ஒருவன் (எஸ்தர் 1:10)."
+    }
+  ]
+}

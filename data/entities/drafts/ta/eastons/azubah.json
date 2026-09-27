@@ -1,0 +1,26 @@
+{
+  "id": "eastons/azubah",
+  "lang": "ta",
+  "source_hash": "c955041e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசுபாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/azubah#p1-30e5afd2",
+      "text": "விடுவிக்கப்பட்டவள் அல்லது கைவிடப்பட்டவள்."
+    },
+    {
+      "id": "eastons/azubah#p2-9ef7fd09",
+      "text": "(1.) காலேபின் மனைவி (1 நாளாகமம் 2:18, 19)."
+    },
+    {
+      "id": "eastons/azubah#p3-cec4d2f2",
+      "text": "(2.) சில்கியின் மகளும், யோசபாத் ராஜாவின் தாயும் (1 இராஜாக்கள் 22:42)."
+    }
+  ]
+}

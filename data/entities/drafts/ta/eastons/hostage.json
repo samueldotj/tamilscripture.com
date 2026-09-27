@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hostage",
+  "lang": "ta",
+  "source_hash": "487a02f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிணைக்கைதி",
+  "paragraphs": [
+    {
+      "id": "eastons/hostage#p1-487a02f0",
+      "text": "ஏதோ ஒரு வாக்குத்தத்தத்தை நிறைவேற்றுவதற்கு உத்தரவாதமாக மற்றொருவனுடைய கைகளில் ஒப்புக்கொடுக்கப்படும் ஒரு நபர் (2 இராஜாக்கள் 14:14; 2 நாளாகமம் 25:24)."
+    }
+  ]
+}

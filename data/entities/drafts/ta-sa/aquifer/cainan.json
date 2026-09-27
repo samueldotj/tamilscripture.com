@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/cainan",
+  "lang": "ta",
+  "source_hash": "10254a18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காயினான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cainan#p1-47cb6d10",
+      "text": "அர்பக்சாத்தின் மகன் (லூக்கா 3:36; ஆதியாகமம் 10:24, செப்துவசிந்த் மொழிபெயர்ப்பில்; 11:12-13)."
+    },
+    {
+      "id": "aquifer/cainan#p2-1b296209",
+      "text": "ஆதாமின் பேரப்பிள்ளையின் மகன், கேனான் என்றும் அழைக்கப்படுகிறவன் (ஆதியாகமம் 5:9-14; 1 நாளாகமம் 1:2; லூக்கா 3:37)."
+    },
+    {
+      "id": "aquifer/cainan#p3-c74fbccb",
+      "text": "கேனான் என்பதைக் காண்க."
+    }
+  ]
+}

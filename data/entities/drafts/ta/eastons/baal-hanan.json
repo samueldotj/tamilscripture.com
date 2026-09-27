@@ -1,0 +1,26 @@
+{
+  "id": "eastons/baal-hanan",
+  "lang": "ta",
+  "source_hash": "8f35205b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகாலானான்",
+  "paragraphs": [
+    {
+      "id": "eastons/baal-hanan#p1-d52ef817",
+      "text": "கிருபையின் கர்த்தர்."
+    },
+    {
+      "id": "eastons/baal-hanan#p2-4f90c8eb",
+      "text": "(1.) அக்போருடைய மகனாகிய ஏதோமின் ஒரு அரசன் (ஆதியாகமம் 36:38, 39; 1 நாளாகமம் 1:49, 50)."
+    },
+    {
+      "id": "eastons/baal-hanan#p3-9ea705a5",
+      "text": "(2.) தாவீதின் காலத்தில், “பள்ளத்தாக்குகளிலுள்ள ஒலிவமரங்களும் முசுக்கட்டை மரங்களும்” (செபேலா) மேலிருந்த ஒரு கண்காணி (1 நாளாகமம் 27:28)."
+    }
+  ]
+}

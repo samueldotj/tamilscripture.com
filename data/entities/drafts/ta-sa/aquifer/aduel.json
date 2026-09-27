@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aduel",
+  "lang": "ta",
+  "source_hash": "094b35c7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதுவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aduel#p1-094b35c7",
+      "text": "தொபியாவின் மூத்த பாட்டன். அவன் தொபியா 1:1 இல் மட்டுமே குறிப்பிடப்பட்டுள்ளான்."
+    }
+  ]
+}

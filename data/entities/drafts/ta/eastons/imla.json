@@ -1,0 +1,18 @@
+{
+  "id": "eastons/imla",
+  "lang": "ta",
+  "source_hash": "4fd8cbab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்லா",
+  "paragraphs": [
+    {
+      "id": "eastons/imla#p1-4fd8cbab",
+      "text": "நிரப்புகிறவன், தீர்க்கதரிசியாகிய மிகாயாவின் தகப்பன் (2 நாளாகமம் 18:7, 8)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/maasai",
+  "lang": "ta",
+  "source_hash": "765fc2f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாசாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/maasai#p1-765fc2f7",
+      "text": "மாசாய் என்பவர் பாபிலோனில் நடந்த சிறையிருப்புக்குப் பின்பு செருபாபேலுடன் எருசலேமுக்குத் திரும்பிவந்த ஒரு ஆசாரியனாயிருந்தார் (1 நாளாகமம் 9:12)."
+    }
+  ]
+}

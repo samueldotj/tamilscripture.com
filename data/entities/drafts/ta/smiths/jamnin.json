@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jamnin",
+  "lang": "ta",
+  "source_hash": "1c70fdc8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாம்னின்",
+  "paragraphs": [
+    {
+      "id": "smiths/jamnin#p1-1c70fdc8",
+      "text": "[யப்னேயின்]"
+    }
+  ]
+}

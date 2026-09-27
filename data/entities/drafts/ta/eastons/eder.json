@@ -1,0 +1,26 @@
+{
+  "id": "eastons/eder",
+  "lang": "ta",
+  "source_hash": "6b800c03",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏதேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/eder#p1-a3a12b5a",
+      "text": "மந்தை."
+    },
+    {
+      "id": "eastons/eder#p2-828dbfad",
+      "text": "(1.) இதுமேயாவின் எல்லையில், யூதாவின் தென்புறத்தில் இருந்த ஒரு பட்டணம் (யோசுவா 15:21)."
+    },
+    {
+      "id": "eastons/eder#p3-82b4e76f",
+      "text": "(2.) மெராரியின் குடும்பத்தைச் சேர்ந்த, ஆசாரிய ஊழியத்திற்கு நியமிக்கப்பட்ட மகேலியின் மூன்று மகன்களில் இரண்டாமவன் (1 நாளாகமம் 23:23; 24:30)."
+    }
+  ]
+}

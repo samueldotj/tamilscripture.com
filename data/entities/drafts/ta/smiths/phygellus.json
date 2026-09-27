@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phygellus",
+  "lang": "ta",
+  "source_hash": "0bc42eca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிகெல்லு",
+  "paragraphs": [
+    {
+      "id": "smiths/phygellus#p1-0bc42eca",
+      "text": "(தப்பியோடுகிறவன்). [எர்மொகெனே காண்க]"
+    }
+  ]
+}

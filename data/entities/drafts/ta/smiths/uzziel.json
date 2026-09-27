@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uzziel",
+  "lang": "ta",
+  "source_hash": "a889a878",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊசியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/uzziel#p1-a889a878",
+      "text": "(என்னுடைய பலம் தேவன்)."
+    }
+  ]
+}

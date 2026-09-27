@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aeon",
+  "lang": "ta",
+  "source_hash": "389d3ec8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏயோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aeon#p1-74db9b5d",
+      "text": "நீண்ட காலம் அல்லது யுகம் என்று பொருள்படும் ஒரு கிரேக்கு வார்த்தை. \"eon\" என்ற ஆங்கில வார்த்தை இந்த கிரேக்கு வார்த்தையிலிருந்து வருகிறது."
+    },
+    {
+      "id": "aquifer/aeon#p2-89b55987",
+      "text": "காண்க: Age."
+    }
+  ]
+}

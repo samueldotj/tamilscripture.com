@@ -1,0 +1,18 @@
+{
+  "id": "smiths/booths",
+  "lang": "ta",
+  "source_hash": "7da0518e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூடாரங்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/booths#p1-7da0518e",
+      "text": "[சுக்கோத்; ஆசரிப்புக்கூடாரப் பண்டிகை, பண்டிகை]"
+    }
+  ]
+}

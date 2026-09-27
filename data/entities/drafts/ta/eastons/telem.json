@@ -1,0 +1,26 @@
+{
+  "id": "eastons/telem",
+  "lang": "ta",
+  "source_hash": "5588389a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேலெம்",
+  "paragraphs": [
+    {
+      "id": "eastons/telem#p1-83605b0b",
+      "text": "ஒடுக்குதல்."
+    },
+    {
+      "id": "eastons/telem#p2-800f587b",
+      "text": "(1.) எஸ்றாவின் காலத்தில் ஆலயத்தின் ஒரு வாசல் காவலாளன் (10:24)."
+    },
+    {
+      "id": "eastons/telem#p3-5541daeb",
+      "text": "(2.) யூதாவின் தென் எல்லையில் இருந்த ஒரு பட்டணம் (யோசுவா 15:24); தெலாயீம் என்பதே இதுவாக இருக்கலாம்."
+    }
+  ]
+}

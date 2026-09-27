@@ -1,0 +1,18 @@
+{
+  "id": "smiths/antothijah",
+  "lang": "ta",
+  "source_hash": "c134e3ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்தோதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/antothijah#p1-c134e3ae",
+      "text": "(யெகோவாவின் மறுமொழிகள்), எரோகாமின் மகன்களில் ஒருவனாகிய பென்யமீனியன். (1 நாளாகமம் 8:24)"
+    }
+  ]
+}

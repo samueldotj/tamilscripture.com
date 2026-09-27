@@ -1,0 +1,18 @@
+{
+  "id": "smiths/omri",
+  "lang": "ta",
+  "source_hash": "12f263bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உம்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/omri#p1-12f263bf",
+      "text": "(யெகோவாவின் மாணாக்கன்)."
+    }
+  ]
+}

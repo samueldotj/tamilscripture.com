@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/naamite",
+  "lang": "ta",
+  "source_hash": "57514398",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகமானியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/naamite#p1-dd7fdb8a",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த பேலாவின் மகன் நாகமானின் சந்ததியில் உள்ள எவரும் (எண்ணாகமம் 26:40)."
+    },
+    {
+      "id": "aquifer/naamite#p2-f724eace",
+      "text": "நாகமான் #1 காண்க."
+    }
+  ]
+}

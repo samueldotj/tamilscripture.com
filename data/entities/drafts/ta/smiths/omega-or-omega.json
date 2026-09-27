@@ -1,0 +1,18 @@
+{
+  "id": "smiths/omega-or-omega",
+  "lang": "ta",
+  "source_hash": "274c5551",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமெகா",
+  "paragraphs": [
+    {
+      "id": "smiths/omega-or-omega#p1-274c5551",
+      "text": "கிரேக்கு எழுத்தமாலையின் கடைசி எழுத்து. இது எதையாவது முடிவைக் குறிக்க அடையாள அர்த்தத்தில் பயன்படுத்தப்படுகிறது (வெளிப்படுத்தின விசேஷம் 1:8,11)"
+    }
+  ]
+}

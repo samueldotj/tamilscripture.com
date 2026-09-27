@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baharumite-the",
+  "lang": "ta",
+  "source_hash": "b5708b2a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பகூரிமியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/baharumite-the#p1-b5708b2a",
+      "text": "[பகூரிம்]"
+    }
+  ]
+}

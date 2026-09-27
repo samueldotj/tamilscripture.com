@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bilshan",
+  "lang": "ta",
+  "source_hash": "43ce8c99",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்சான்",
+  "paragraphs": [
+    {
+      "id": "smiths/bilshan#p1-43ce8c99",
+      "text": "(சொல்வளர்ச்சியுள்ளவன்), செருபாபேல் பாபிலோனிலிருந்து மேற்கொண்ட பயணத்தில் அவனுடன் இருந்த தோழர்களில் ஒருவன். (எஸ்றா 2:2; நெகேமியா 7:7) (கி.மு. 536)."
+    }
+  ]
+}

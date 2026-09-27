@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cis",
+  "lang": "ta",
+  "source_hash": "5ffe0af5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீச்",
+  "paragraphs": [
+    {
+      "id": "smiths/cis#p1-5ffe0af5",
+      "text": "சவுலின் தகப்பன், (அப்போஸ்தலருடைய நடபடிகள் 13:21) பொதுவாக கீச் என்று அழைக்கப்படுகிறார்."
+    }
+  ]
+}

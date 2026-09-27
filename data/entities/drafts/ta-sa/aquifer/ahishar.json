@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahishar",
+  "lang": "ta",
+  "source_hash": "9757b4e9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகீஷார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahishar#p1-9757b4e9",
+      "text": "சாலொமோனின் அரண்மனையின் மேற்பார்வையாளராக இருந்த கண்காணியானவன் (1 இராஜாக்கள் 4:6)."
+    }
+  ]
+}

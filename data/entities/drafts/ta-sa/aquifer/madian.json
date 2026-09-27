@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/madian",
+  "lang": "ta",
+  "source_hash": "3e169bec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மதியான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/madian#p1-89dc3476",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் மீதியான் என்பதற்கு இவ்வாறு எழுதப்பட்டுள்ளது. இது அரேபியாவின் வடமேற்கிலுள்ள ஒரு புவியியல் பிரதேசமாக இருந்தது (அப்போஸ்தலருடைய நடபடிகள் 7:29)."
+    },
+    {
+      "id": "aquifer/madian#p2-32d421e9",
+      "text": "மீதியான், மீதியானியர்களை காண்க."
+    }
+  ]
+}

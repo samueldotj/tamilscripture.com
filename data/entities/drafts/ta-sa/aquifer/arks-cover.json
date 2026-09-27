@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/arks-cover",
+  "lang": "ta",
+  "source_hash": "81ca0f18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெட்டியின் மூடி",
+  "paragraphs": [
+    {
+      "id": "aquifer/arks-cover#p1-4f0077ee",
+      "text": "ஆசரிப்புக்கூடாரத்திலும் ஆலயத்திலும் உடன்படிக்கைப் பெட்டியை மூடிய இரக்க ஆசனம் என்றும் அழைக்கப்படும் ஒரு தங்கத் தட்டு."
+    },
+    {
+      "id": "aquifer/arks-cover#p2-30389221",
+      "text": "இரக்க ஆசனத்தைக் காண்க."
+    }
+  ]
+}

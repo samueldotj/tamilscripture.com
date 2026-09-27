@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/heled",
+  "lang": "ta",
+  "source_hash": "a48f7b54",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/heled#p1-a7d530b2",
+      "text": "ஏலேத் என்பது 1 நாளாகமம் 11:30-ல் காணப்படும் பானாவின் மகனாகிய எல்தாயின் மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/heled#p2-a9eb9b68",
+      "text": "எல்தாய் #1-ஐக் காண்க."
+    }
+  ]
+}

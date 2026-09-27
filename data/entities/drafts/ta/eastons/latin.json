@@ -1,0 +1,18 @@
+{
+  "id": "eastons/latin",
+  "lang": "ta",
+  "source_hash": "036967c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லத்தீன்",
+  "paragraphs": [
+    {
+      "id": "eastons/latin#p1-036967c8",
+      "text": "பண்டைய ரோமர்களின் தாய்மொழி (யோவான் 19:20)."
+    }
+  ]
+}

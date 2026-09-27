@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arvadite",
+  "lang": "ta",
+  "source_hash": "2cc7d23d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்வாத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/arvadite#p1-2cc7d23d",
+      "text": "[அர்வாத்]"
+    }
+  ]
+}

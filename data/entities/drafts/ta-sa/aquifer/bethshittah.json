@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethshittah",
+  "lang": "ta",
+  "source_hash": "6a126f1c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்சித்தா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethshittah#p1-6a126f1c",
+      "text": "யோர்தானுக்கும் யெஸ்ரயேலின் பள்ளத்தாக்குக்கும் இடையே இருந்த ஒரு பட்டணம். கிதியோனால் தோற்கடிக்கப்பட்ட பின்பு மீதியானியர் இங்கு ஓடிப்போனார்கள் (நியாயாதிபதிகள் 7:22)."
+    }
+  ]
+}

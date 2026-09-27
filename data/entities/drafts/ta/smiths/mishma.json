@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mishma",
+  "lang": "ta",
+  "source_hash": "8118707c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஷ்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/mishma#p1-8118707c",
+      "text": "(கேட்டல்)."
+    }
+  ]
+}

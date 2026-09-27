@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shobek",
+  "lang": "ta",
+  "source_hash": "e576b88f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/shobek#p1-e576b88f",
+      "text": "(சுதந்திரமானவன்) நெகேமியாவுடன் உடன்படிக்கையை முத்திரையிட்ட மக்களின் தலைவர்களில் ஒருவன். (நெகேமியா 10:24) (கி.மு. 446)"
+    }
+  ]
+}

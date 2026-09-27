@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/denarius",
+  "lang": "ta",
+  "source_hash": "f671ff86",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெனாரியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/denarius#p1-7dabd68c",
+      "text": "தெனாரியன் என்பது ரோம சாம்ராஜ்யத்தில் பயன்படுத்தப்பட்ட ஒரு வெள்ளிக் காசு. பெரும்பாலான வேலையாட்கள் ஒரு நாள் முழுவதும் வேலைசெய்ததற்கு ஒரு தெனாரியனைச் சம்பாதித்தனர்."
+    },
+    {
+      "id": "aquifer/denarius#p2-882704f3",
+      "text": "காசுகள்; பணம் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

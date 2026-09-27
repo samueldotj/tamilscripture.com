@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jehubbah",
+  "lang": "ta",
+  "source_hash": "4742cebf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகூபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jehubbah#p1-4742cebf",
+      "text": "எகூபா ஆசேர் கோத்திரத்தைச் சேர்ந்த சேமேரின் மகனாக இருந்தார் (1 நாளாகமம் 7:34)."
+    }
+  ]
+}

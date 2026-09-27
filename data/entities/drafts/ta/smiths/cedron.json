@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cedron",
+  "lang": "ta",
+  "source_hash": "cb75b759",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/cedron#p1-cb75b759",
+      "text": "(யோவான் 18:1) [காண்க கீதரோன்]"
+    }
+  ]
+}

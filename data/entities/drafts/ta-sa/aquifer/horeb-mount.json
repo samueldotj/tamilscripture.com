@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/horeb-mount",
+  "lang": "ta",
+  "source_hash": "4b263e8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரேப் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/horeb-mount#p1-aa880632",
+      "text": "“சீனாய் மலை”க்கு மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/horeb-mount#p2-68c19b15",
+      "text": "சீனா, சீனாய் காண்க."
+    }
+  ]
+}

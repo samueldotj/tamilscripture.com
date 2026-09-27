@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/closed-womb",
+  "lang": "ta",
+  "source_hash": "bdbba88c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடைக்கப்பட்ட கர்ப்பம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/closed-womb#p1-cf136c11",
+      "text": "“அடைக்கப்பட்ட கர்ப்பம்” என்பது ஒரு பெண் கர்ப்பமடைய இயலாதிருக்கிறாள் என்பதைக் குறிக்கும் ஒரு வெளிப்பாடு."
+    },
+    {
+      "id": "aquifer/closed-womb#p2-b29f6909",
+      "text": "மலட்டுத்தன்மை என்பதைக் காண்க."
+    }
+  ]
+}

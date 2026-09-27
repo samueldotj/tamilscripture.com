@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bavai",
+  "lang": "ta",
+  "source_hash": "f95593e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாபாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/bavai#p1-f95593e1",
+      "text": "நெகேமியாவின் காலத்தில் கேகிலா மாகாணத்தை ஆட்சி செய்த எனாதாதின் மகன். (நெகேமியா 3:18) (கி.மு. 446.)"
+    }
+  ]
+}

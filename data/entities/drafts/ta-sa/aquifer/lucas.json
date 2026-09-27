@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lucas",
+  "lang": "ta",
+  "source_hash": "00843be4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லூகாஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lucas#p1-5657ae19",
+      "text": "பிலேமோன் 1:24-ல் கிங் யாக்கோபு மொழிபெயர்ப்பில் லூக்கா என்ற பெயருக்கு லூகாஸ் என்ற எழுத்துவடிவம் பயன்படுத்தப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/lucas#p2-a809a8eb",
+      "text": "லூக்கா (நபர்) என்பதைக் காண்க."
+    }
+  ]
+}

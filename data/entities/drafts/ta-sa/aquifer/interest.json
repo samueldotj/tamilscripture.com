@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/interest",
+  "lang": "ta",
+  "source_hash": "24f0c456",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வட்டி",
+  "paragraphs": [
+    {
+      "id": "aquifer/interest#p1-732aa1ea",
+      "text": "பணம் கடன் வாங்குவதற்காக விதிக்கப்படும் கட்டணம்."
+    },
+    {
+      "id": "aquifer/interest#p2-9c76aafe",
+      "text": "கடன்; வங்கியாளர், வங்கி நடவடிக்கை; பணம் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

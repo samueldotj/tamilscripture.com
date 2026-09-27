@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/clauda",
+  "lang": "ta",
+  "source_hash": "92cfe462",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலவுதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/clauda#p1-8fd33d00",
+      "text": "கிரேத்தாவின் தென்பகுதியில் இருந்த ஒரு சிறிய தீவின் பழைய பெயர் (மற்றும் மாறுபட்ட உச்சரிப்பு) (அப்போஸ்தலருடைய நடபடிகள் 27:16)."
+    },
+    {
+      "id": "aquifer/clauda#p2-0ce3b156",
+      "text": "கிலவுதா என்பதைக் காண்க."
+    }
+  ]
+}

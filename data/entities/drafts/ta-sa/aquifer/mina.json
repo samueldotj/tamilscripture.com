@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mina",
+  "lang": "ta",
+  "source_hash": "cf8e2547",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மினா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mina#p1-521d4a36",
+      "text": "மினா என்பது தோராயமாக 567 கிராம் (20 அவுன்ஸ்) நிறையுள்ள ஒரு நிறை அளவு. விலையுள்ள உலோகங்களையும் மற்ற பொருட்களையும் அளக்க மக்கள் இதைப் பயன்படுத்தினர்."
+    },
+    {
+      "id": "aquifer/mina#p2-db3bfff6",
+      "text": "நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

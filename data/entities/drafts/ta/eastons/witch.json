@@ -1,0 +1,18 @@
+{
+  "id": "eastons/witch",
+  "lang": "ta",
+  "source_hash": "88bddafa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூனியக்காரி",
+  "paragraphs": [
+    {
+      "id": "eastons/witch#p1-88bddafa",
+      "text": "இது யாத்திராகமம் 22:18-ல் மட்டுமே காணப்படுகிறது, அங்கே mekhashshepheh என்ற பெண்பால் வடிவம் \"சூனியக்காரி\" (R.V., \"மந்திரவாதி\") என மொழிபெயர்க்கப்பட்டுள்ளது; மற்றும் உபாகமம் 18:10-ல் mekhashshepheth என்ற ஆண்பால் வடிவம் \"சூனியக்காரன்\" எனும் பொருளில் மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

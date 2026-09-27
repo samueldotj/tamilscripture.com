@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/harum",
+  "lang": "ta",
+  "source_hash": "95961546",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரும்",
+  "paragraphs": [
+    {
+      "id": "aquifer/harum#p1-95961546",
+      "text": "ஆரும் யூதா கோத்திரத்தைச் சேர்ந்த அகர்கேலின் தகப்பனாக இருந்தான் (1 நாளாகமம் 4:8)."
+    }
+  ]
+}

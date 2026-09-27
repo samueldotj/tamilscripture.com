@@ -1,0 +1,18 @@
+{
+  "id": "eastons/fathom",
+  "lang": "ta",
+  "source_hash": "8779a02c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடி (Fathom)",
+  "paragraphs": [
+    {
+      "id": "eastons/fathom#p1-8779a02c",
+      "text": "(பழைய ஆங்கிலோ-சாக்சன் faethm, “மார்பு”, அல்லது நீட்டிய கைகள்), ஆறு அடிகளின் அளவு (அப்போஸ்தலருடைய நடபடிகள் 27:28). கிரேக்க orguia (orego என்பதிலிருந்து, “நான் நீட்டுகிறேன்”), இரு கைகளையும் முழுவதும் நீட்டியபோது அவற்றின் நுனிகளுக்கிடையேயுள்ள தூரம்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/josiah",
+  "lang": "ta",
+  "source_hash": "f8ce2487",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசியா",
+  "paragraphs": [
+    {
+      "id": "smiths/josiah#p1-f8ce2487",
+      "text": "(யெகோவா குணமாக்குகிறவர்)."
+    }
+  ]
+}

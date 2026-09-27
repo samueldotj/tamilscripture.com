@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hachilah",
+  "lang": "ta",
+  "source_hash": "9d670bff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகிலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hachilah#p1-9d670bff",
+      "text": "எப்ரோன் நகருக்கு அருகில், கொரேஷிலிருந்த அடையாளம் காணப்படாத ஒரு இடம். சவுல் தன்னைக் கொலைசெய்ய முயன்றபோது தாவீது இங்கே ஓடிப்போனான் (1 சாமுவேல் 23:19; 26:1, 3)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hadattah",
+  "lang": "ta",
+  "source_hash": "7083d5fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹதாத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/hadattah#p1-7083d5fc",
+      "text": "(புதிய). அங்கீகரிக்கப்பட்ட வசனத்தின்படி (Authorized Version), தென்திசையின் கடையெல்லையில் இருந்த யூதாவின் பட்டணங்களில் ஒன்று. (யோசுவா 15:25)"
+    }
+  ]
+}

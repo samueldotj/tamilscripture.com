@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ela",
+  "lang": "ta",
+  "source_hash": "de092b1c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ela#p1-de092b1c",
+      "text": "ராஜாவாகிய சாலொமோனுடைய அரண்மனைக்கு ஆகாரம் சேர்ப்பதற்காக தெரிந்துகொள்ளப்பட்ட 12 அதிகாரிகளில் ஒருவனாகிய சீமேயியின் தகப்பன் (1 இராஜாக்கள் 4:18)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/paulus-sergius",
+  "lang": "ta",
+  "source_hash": "81dcb9be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பவுலு, செர்கியு",
+  "paragraphs": [
+    {
+      "id": "aquifer/paulus-sergius#p1-81dcb9be",
+      "text": "செர்கியுபவுலைக் காண்க."
+    }
+  ]
+}

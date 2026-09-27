@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cockatrice",
+  "lang": "ta",
+  "source_hash": "59024bd6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கட்டுவிரியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cockatrice#p1-3a69a332",
+      "text": "கட்டுவிரியன் என்பது யாக்கோபு அரசர் மொழிபெயர்ப்பில் ஏசாயா 11:8; 14:29; மற்றும் 59:5 ஆகிய இடங்களில் \"விரியன்\" என்ற சொல்லுக்குக் கொடுக்கப்பட்ட மொழிபெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/cockatrice#p2-0c805105",
+      "text": "விரியன் என்பதைக் காண்க."
+    }
+  ]
+}

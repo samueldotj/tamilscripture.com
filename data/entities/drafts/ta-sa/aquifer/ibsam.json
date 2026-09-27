@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ibsam",
+  "lang": "ta",
+  "source_hash": "30d319c3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்சாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ibsam#p1-30d319c3",
+      "text": "இப்சாம் இசக்காருடைய கோத்திரத்தில் தோலாவின் மகனாக இருந்தான் (1 நாளாகமம் 7:2)."
+    }
+  ]
+}

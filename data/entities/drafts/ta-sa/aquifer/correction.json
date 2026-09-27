@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/correction",
+  "lang": "ta",
+  "source_hash": "fa65b4f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தண்டனை (Correction)",
+  "paragraphs": [
+    {
+      "id": "aquifer/correction#p1-84e396d3",
+      "text": "தவறான நடத்தையை மாற்றுவதற்கு ஒருவருக்குக் கற்பிக்கும் செயல்."
+    },
+    {
+      "id": "aquifer/correction#p2-38dd6485",
+      "text": "தண்டனை என்பதைக் காண்க."
+    }
+  ]
+}

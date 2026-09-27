@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jokshan",
+  "lang": "ta",
+  "source_hash": "97298878",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யக்க்ஷான்",
+  "paragraphs": [
+    {
+      "id": "smiths/jokshan#p1-97298878",
+      "text": "(வேடன்), ஆபிரகாமும் கேத்தூராளும் பெற்ற ஒரு மகன் (ஆதியாகமம் 25:2,3; 1 நாளாகமம் 1:32), இவனுடைய மகன்கள் சேபாவும் தேதானும் ஆவர்."
+    }
+  ]
+}

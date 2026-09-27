@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/brazen-serpent",
+  "lang": "ta",
+  "source_hash": "799a771e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெண்கல சர்ப்பம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/brazen-serpent#p1-5324c29f",
+      "text": "வனாந்தரத்தில் பாம்புகளால் கடிக்கப்பட்ட இஸ்ரவேலரைச் சுகமாக்கும்படி தேவனுடைய கட்டளையின்படி மோசே செய்த வெண்கலப் பாம்பு."
+    },
+    {
+      "id": "aquifer/brazen-serpent#p2-880ed5c3",
+      "text": "வெண்கல சர்ப்பம், வெண்கலப் பாம்பு என்பதைக் காண்க."
+    }
+  ]
+}

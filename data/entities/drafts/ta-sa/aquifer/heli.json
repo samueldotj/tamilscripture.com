@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/heli",
+  "lang": "ta",
+  "source_hash": "63125b44",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/heli#p1-79c5b459",
+      "text": "லூக்கா 3:23-ன்படி யோசேப்பின் முற்பிதாக்களில் ஒருவர்."
+    },
+    {
+      "id": "aquifer/heli#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்ச வரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

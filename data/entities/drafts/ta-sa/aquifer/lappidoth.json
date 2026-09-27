@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/lappidoth",
+  "lang": "ta",
+  "source_hash": "a65a2a37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லபிதோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lappidoth#p1-a65a2a37",
+      "text": "லபிதோத் என்பவன் தீர்க்கதரிசியாகிய தெபொராளின் கணவனாக இருந்தான் (நியாயாதிபதிகள் 4:4)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/wizard",
+  "lang": "ta",
+  "source_hash": "96dd84d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மந்திரவாதி",
+  "paragraphs": [
+    {
+      "id": "smiths/wizard#p1-96dd84d6",
+      "text": "[குறிசொல்லுதல்; சூனியம், சூனியக்காரர் காண்க]"
+    }
+  ]
+}

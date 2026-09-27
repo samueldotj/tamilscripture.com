@@ -1,0 +1,18 @@
+{
+  "id": "eastons/cesarea",
+  "lang": "ta",
+  "source_hash": "b1b873ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செசரெயா",
+  "paragraphs": [
+    {
+      "id": "eastons/cesarea#p1-b1b873ba",
+      "text": "கைசரியா என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/achzib",
+  "lang": "ta",
+  "source_hash": "324af5f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்சீப்",
+  "paragraphs": [
+    {
+      "id": "smiths/achzib#p1-324af5f6",
+      "text": "(பொருள்: பொய்யான, வஞ்சகமான)."
+    }
+  ]
+}

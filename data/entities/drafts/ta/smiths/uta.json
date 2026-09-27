@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uta",
+  "lang": "ta",
+  "source_hash": "d5d9cc9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உதா",
+  "paragraphs": [
+    {
+      "id": "smiths/uta#p1-d5d9cc9b",
+      "text": "1 எஸ்றா 5:30. இது அக்கூபின் ஒரு சீர்கேடு போலத் தோன்றுகிறது. (எஸ்றா 2:45)"
+    }
+  ]
+}

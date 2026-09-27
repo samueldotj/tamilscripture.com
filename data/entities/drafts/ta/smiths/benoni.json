@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benoni",
+  "lang": "ta",
+  "source_hash": "57078b03",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனொனி",
+  "paragraphs": [
+    {
+      "id": "smiths/benoni#p1-57078b03",
+      "text": "(என்னுடைய துக்கத்தின் மகன்). (ஆதியாகமம் 35:18) [பென்யமீன், பென்யமீன் கோத்திரம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pleiades",
+  "lang": "ta",
+  "source_hash": "29325e7d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கார்த்திகைமீன் கூட்டம் (Pleiades)",
+  "paragraphs": [
+    {
+      "id": "eastons/pleiades#p1-29325e7d",
+      "text": "எபிரெய Heb. kimah, “ஒரு கூட்டம்” (யோபு 9:9; 38:31; ஆமோஸ் 5:8, A.V., “ஏழு நட்சத்திரங்கள்;” R.V., “Pleiades”), இது ரிஷப ராசி (Taurus) நட்சத்திரக் கூட்டத்தின் தோள்பகுதியில் காணப்படும் நட்சத்திரக் கூட்டத்திற்குக் கொடுக்கப்பட்ட பெயராகும்."
+    }
+  ]
+}

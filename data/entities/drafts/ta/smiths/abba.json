@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abba",
+  "lang": "ta",
+  "source_hash": "a28a1101",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/abba#p1-a28a1101",
+      "text": "ஆப் என்பதைக் காண்க."
+    }
+  ]
+}

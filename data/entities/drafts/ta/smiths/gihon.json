@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gihon",
+  "lang": "ta",
+  "source_hash": "8ba7be7e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீகோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/gihon#p1-8ba7be7e",
+      "text": "(ஒரு நீரோடை)."
+    }
+  ]
+}

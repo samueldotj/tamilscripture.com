@@ -1,0 +1,18 @@
+{
+  "id": "eastons/almodad",
+  "lang": "ta",
+  "source_hash": "c43d54fb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோதாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/almodad#p1-c43d54fb",
+      "text": "அளவிடமுடியாதவன், யொக்தானின் மகன்களில் முதலில் குறிப்பிடப்பட்டவன் (ஆதியாகமம் 10:26), ஒரு அரபிய கோத்திரத்தை நிறுவியவன்."
+    }
+  ]
+}

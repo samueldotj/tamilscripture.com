@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lakes",
+  "lang": "ta",
+  "source_hash": "d403b02b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/lakes#p1-d403b02b",
+      "text": "[பாலஸ்தீனா காண்க]"
+    }
+  ]
+}

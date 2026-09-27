@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hodesh",
+  "lang": "ta",
+  "source_hash": "ccc4075c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதேச்",
+  "paragraphs": [
+    {
+      "id": "smiths/hodesh#p1-ccc4075c",
+      "text": "(அமாவாசை), பென்யமீனுடைய வம்சவரலாறுகளில் (1 நாளாகமம் 8:9) சகராயீமின் மனைவியாகக் குறிப்பிடப்பட்டுள்ள ஒரு பெண்."
+    }
+  ]
+}

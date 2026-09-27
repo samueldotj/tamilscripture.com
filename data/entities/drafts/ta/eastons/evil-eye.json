@@ -1,0 +1,18 @@
+{
+  "id": "eastons/evil-eye",
+  "lang": "ta",
+  "source_hash": "643ef479",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொறாமையான கண்",
+  "paragraphs": [
+    {
+      "id": "eastons/evil-eye#p1-643ef479",
+      "text": "(நீதிமொழிகள் 23:6), அடையாள அர்த்தத்தில், பொறாமைக்காரனையோ ஆசைக்காரனையோ குறிக்கும். (ஒப்பிடுக உபாகமம் 15:9; மத்தேயு 20:15.)"
+    }
+  ]
+}

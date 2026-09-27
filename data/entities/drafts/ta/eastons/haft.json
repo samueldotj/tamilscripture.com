@@ -1,0 +1,18 @@
+{
+  "id": "eastons/haft",
+  "lang": "ta",
+  "source_hash": "85be7de8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிடி",
+  "paragraphs": [
+    {
+      "id": "eastons/haft#p1-85be7de8",
+      "text": "ஒரு கத்தியின் கைப்பிடி (நியாயாதிபதிகள் 3:22)."
+    }
+  ]
+}

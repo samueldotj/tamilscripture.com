@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chillon",
+  "lang": "ta",
+  "source_hash": "976f6aef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலியோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/chillon#p1-976f6aef",
+      "text": "(வாடுதல், நோய்வாய்ப்பட்டவன்), நகோமியின் மகனும் ரூத்தின் கணவனும் ஆவான். (ரூத் 1:2-5; 4:9) (கி.மு. 1250.)"
+    }
+  ]
+}

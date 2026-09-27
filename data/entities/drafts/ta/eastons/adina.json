@@ -1,0 +1,18 @@
+{
+  "id": "eastons/adina",
+  "lang": "ta",
+  "source_hash": "53785fef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதினா",
+  "paragraphs": [
+    {
+      "id": "eastons/adina#p1-53785fef",
+      "text": "மெலிந்தவன், தாவீதின் போர்வீரர்களில் ஒருவன் (1 நாளாகமம் 11:42), ரூபனியன்."
+    }
+  ]
+}

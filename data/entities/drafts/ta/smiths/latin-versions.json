@@ -1,0 +1,18 @@
+{
+  "id": "smiths/latin-versions",
+  "lang": "ta",
+  "source_hash": "73b87429",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லத்தீன் மொழிபெயர்ப்புகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/latin-versions#p1-73b87429",
+      "text": "[வல்கேட் (THE VULGATE) என்பதைக் காண்க]"
+    }
+  ]
+}

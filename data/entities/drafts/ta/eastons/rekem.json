@@ -1,0 +1,30 @@
+{
+  "id": "eastons/rekem",
+  "lang": "ta",
+  "source_hash": "86b21391",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேக்கேம்",
+  "paragraphs": [
+    {
+      "id": "eastons/rekem#p1-c920c5df",
+      "text": "수 வேலைப்பாடு செய்யப்பட்டது; பலவர்ணமுள்ளது."
+    },
+    {
+      "id": "eastons/rekem#p2-4c5ddc3e",
+      "text": "(1.) இஸ்ரவேலர்கள் அழித்த ஐந்து மீதியானியர் ராஜாக்களில் ஒருவன் (எண்ணாகமம் 31:8)."
+    },
+    {
+      "id": "eastons/rekem#p3-e170ae97",
+      "text": "(2.) எப்ரோனின் மகன்களில் ஒருவன் (1 நாளாகமம் 2:43, 44)."
+    },
+    {
+      "id": "eastons/rekem#p4-11ba0ed5",
+      "text": "(3.) பென்யமீனுடைய ஒரு பட்டணம் (யோசுவா 18:27)."
+    }
+  ]
+}

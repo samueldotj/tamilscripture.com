@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sherezer",
+  "lang": "ta",
+  "source_hash": "79fd6748",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செரேசர்",
+  "paragraphs": [
+    {
+      "id": "smiths/sherezer#p1-79fd6748",
+      "text": "(அக்கினியின் இளவரசன்), சகரியா 7:2-ல் குறிப்பிடப்பட்டுள்ள மக்களின் தூதுவர்களில் ஒருவன்."
+    }
+  ]
+}

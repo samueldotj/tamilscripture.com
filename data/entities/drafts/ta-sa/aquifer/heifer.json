@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/heifer",
+  "lang": "ta",
+  "source_hash": "e7cafc3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிடாரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/heifer#p1-6dcace10",
+      "text": "கிடாரி என்பது கன்று போடாத இளம் பெண் மாடு ஆகும்."
+    },
+    {
+      "id": "aquifer/heifer#p2-e4a90374",
+      "text": "மாடு என்பதைக் காண்க."
+    }
+  ]
+}

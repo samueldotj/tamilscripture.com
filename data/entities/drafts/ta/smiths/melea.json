@@ -1,0 +1,18 @@
+{
+  "id": "smiths/melea",
+  "lang": "ta",
+  "source_hash": "50ea8129",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெலெயா",
+  "paragraphs": [
+    {
+      "id": "smiths/melea#p1-50ea8129",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாற்றில் மேனானின் குமாரனும், யோசேப்புக்கு முற்பிதாவுமாக இருந்தவன். (லூக்கா 3:31)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kings-dale",
+  "lang": "ta",
+  "source_hash": "c22d25be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராஜாவின் பள்ளத்தாக்கு (King’s Dale)",
+  "paragraphs": [
+    {
+      "id": "aquifer/kings-dale#p1-59f8ef1e",
+      "text": "சாலேமுக்கு அருகிலுள்ள ராஜாவின் பள்ளத்தாக்கிற்கு கிங் யாக்கோபு மொழிபெயர்ப்பு (King James Version) கொடுத்த பெயர். சாலேம் மெல்கிசேதேக்குடைய நகரமாக இருந்தது, இது ஆதியாகமம் 14:17இல் குறிப்பிடப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/kings-dale#p2-16e510e0",
+      "text": "ராஜாவின் பள்ளத்தாக்கு (King’s Valley) என்பதைக் காண்க."
+    }
+  ]
+}

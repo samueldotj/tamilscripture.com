@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hosham",
+  "lang": "ta",
+  "source_hash": "ed3d45b1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊஷாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hosham#p1-ed3d45b1",
+      "text": "(விரைவு), ஏதோமின் ஆரம்பகால அரசர்களில் ஒருவன். ஆதியாகமம் 36:34,36; 1 நாளாகமம் 1:45,46"
+    }
+  ]
+}

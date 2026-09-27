@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/beri",
+  "lang": "ta",
+  "source_hash": "34ed53f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/beri#p1-34ed53f7",
+      "text": "சோபாக்கின் மகன், ஒரு துணைக்குடும்பத்தின் தலைவன். பேரி ஆசேருடைய சந்ததிகளில் ஒருவனாகப் பட்டியலிடப்பட்ட திறமையான வீரனாக இருந்தான் (1 நாளாகமம் 7:36, 40)."
+    }
+  ]
+}

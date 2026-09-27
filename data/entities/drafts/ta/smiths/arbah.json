@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arbah",
+  "lang": "ta",
+  "source_hash": "e8e13866",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/arbah#p1-e8e13866",
+      "text": "எப்ரோன், அல்லது கீரியாத்அர்பா, “அர்பாவின் ஊர்” என்பது வேறு இடங்களில் எப்போதும் இவ்வாறே மொழிபெயர்க்கப்படுகிறது. (ஆதியாகமம் 35:27)"
+    }
+  ]
+}

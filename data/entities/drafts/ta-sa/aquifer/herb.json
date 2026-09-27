@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/herb",
+  "lang": "ta",
+  "source_hash": "ead0be84",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாவரவகை",
+  "paragraphs": [
+    {
+      "id": "aquifer/herb#p1-d489bc8e",
+      "text": "தாவரவகை என்பது உணவு, மருந்து அல்லது நறுமணமாகப் பயன்படுத்தப்படும் ஒரு செடியாகும்."
+    },
+    {
+      "id": "aquifer/herb#p2-808b0637",
+      "text": "காண்க: சீரகம்; சதகுப்பை; மென்தா; நளதம்; கசப்பான தாவரவகைகள்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hilen",
+  "lang": "ta",
+  "source_hash": "45559eed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈலேன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hilen#p1-a6248ce5",
+      "text": "ஈலேன் என்பது 1 நாளாகமம் 6:58ல் லேவியர்களின் கோத்திரத்திற்கு ஒப்புக்கொடுக்கப்பட்ட நகரமான ஓலோனுக்கு வேறொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/hilen#p2-a1ea6fc0",
+      "text": "ஓலோன் #1 காண்க."
+    }
+  ]
+}

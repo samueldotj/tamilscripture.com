@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sippai",
+  "lang": "ta",
+  "source_hash": "3a4047bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிப்பாயி",
+  "paragraphs": [
+    {
+      "id": "smiths/sippai#p1-3a4047bf",
+      "text": "(வாசற்படி), சாப், கேசேரிலே சிப்பெக்காயினால் கொல்லப்பட்ட ரெப்பாயீமியரின், அதாவது \"இராட்சதர்களின்\" மகன்களில் ஒருவன். (1 நாளாகமம் 20:4) (கி.மு. 1050 ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

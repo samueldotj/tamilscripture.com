@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/monster",
+  "lang": "ta",
+  "source_hash": "9bdc5cde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பயங்கர ஜலஜந்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/monster#p1-e2fe15bb",
+      "text": "சில பைபிள் மொழிபெயர்ப்புகளில், “பயங்கர ஜலஜந்து” என்ற சொல் தண்ணீரில் வாழும் பல்வேறு பெரிய அல்லது ஆபத்தான உயிரினங்களைக் குறிக்கப் பயன்படுத்தப்படுகிறது."
+    },
+    {
+      "id": "aquifer/monster#p2-bbf6e384",
+      "text": "முதலை; வலுசர்ப்பம் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

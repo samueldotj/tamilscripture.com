@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dromedary",
+  "lang": "ta",
+  "source_hash": "5fa7865e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேவகதி ஒட்டகம்",
+  "paragraphs": [
+    {
+      "id": "smiths/dromedary#p1-5fa7865e",
+      "text": "[ஒட்டகம் காண்க]"
+    }
+  ]
+}

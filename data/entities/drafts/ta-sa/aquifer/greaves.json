@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/greaves",
+  "lang": "ta",
+  "source_hash": "2495dcfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கால் கவசம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/greaves#p1-422b9e49",
+      "text": "கால் கவசம் என்பது கால்களின் கீழ்ப்பகுதியைக் காக்கும் கவச உறுப்புகளாகும் (1 சாமுவேல் 17:6)."
+    },
+    {
+      "id": "aquifer/greaves#p2-ab54e435",
+      "text": "கவசமும் ஆயுதங்களும் என்பதையும் காண்க."
+    }
+  ]
+}

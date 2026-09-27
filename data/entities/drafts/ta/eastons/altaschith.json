@@ -1,0 +1,18 @@
+{
+  "id": "eastons/altaschith",
+  "lang": "ta",
+  "source_hash": "8c4ce196",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்தஸ்கீத்",
+  "paragraphs": [
+    {
+      "id": "eastons/altaschith#p1-8c4ce196",
+      "text": "நாசம் செய்யாதே, சங்கீதம் 57, 58, 59, மற்றும் 75-இன் தலைப்பு. இது இந்த சங்கீதங்களைப் பாடும்போது இணைக்கப்பட்ட ஒரு இராகத்தின் பெயராக இருக்கலாம்."
+    }
+  ]
+}

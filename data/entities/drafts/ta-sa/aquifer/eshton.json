@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eshton",
+  "lang": "ta",
+  "source_hash": "e78ad48b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்தோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eshton#p1-e78ad48b",
+      "text": "எஸ்தோன் மேகீரின் மகனும், யூதா கோத்திரத்திற்குரிய கேலூப்பின் மகனாகிய பேரனும் ஆவான் (1 நாளாகமம் 4:11-12)."
+    }
+  ]
+}

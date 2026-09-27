@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adithaim",
+  "lang": "ta",
+  "source_hash": "a3768736",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதித்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/adithaim#p1-a3768736",
+      "text": "(இரட்டை ஆபரணம்), தாழ்வான நாட்டில் இருந்த யூதாவின் பட்டணங்களில் ஒன்று, இது சாராயீமுக்கும் கேதெரொத்தாயீமுக்கும் இடையில் (யோசுவா 15:36) இல் மட்டுமே குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

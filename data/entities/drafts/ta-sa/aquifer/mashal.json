@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mashal",
+  "lang": "ta",
+  "source_hash": "7c0f0c7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாஷால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mashal#p1-52db694b",
+      "text": "மாஷால் என்பது மிஷயால் என்பதற்கான வேறொரு உச்சரிப்பு, இது 1 நாளாகமம் 6:74 இல் குறிப்பிடப்பட்ட ஆசேரிலும் உள்ள ஒரு லேவிய பட்டணமாகும்."
+    },
+    {
+      "id": "aquifer/mashal#p2-b773b22a",
+      "text": "மிஷயால் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/timotheus",
+  "lang": "ta",
+  "source_hash": "377a5e71",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீமோத்தேயு (திமோதேயு)",
+  "paragraphs": [
+    {
+      "id": "eastons/timotheus#p1-377a5e71",
+      "text": "தீமோத்தேயு என்ற பெயரின் கிரேக்கு வடிவம் (அப்போஸ்தலருடைய நடபடிகள் 16:1, முதலியன; R.V. எப்போதும் “தீமோத்தேயு” என்று குறிப்பிடுகிறது)."
+    }
+  ]
+}

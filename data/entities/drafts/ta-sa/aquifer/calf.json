@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/calf",
+  "lang": "ta",
+  "source_hash": "edec1aea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கன்று",
+  "paragraphs": [
+    {
+      "id": "aquifer/calf#p1-8fdfd983",
+      "text": "இளம் மாடு அல்லது காளை."
+    },
+    {
+      "id": "aquifer/calf#p2-d794bc53",
+      "text": "விலங்குகள் (மாடுகள்) பார்க்க."
+    }
+  ]
+}

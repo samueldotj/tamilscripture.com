@@ -1,0 +1,18 @@
+{
+  "id": "smiths/keturah",
+  "lang": "ta",
+  "source_hash": "9e5508a0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேத்தூராள்",
+  "paragraphs": [
+    {
+      "id": "smiths/keturah#p1-9e5508a0",
+      "text": "(தூபம்), சாராளுடைய மரணத்திற்குப் பின்பு ஆபிரகாமின் மனைவியானவள். (ஆதியாகமம் 25:1; 1 நாளாகமம் 1:32) (கி.மு. 1860.)"
+    }
+  ]
+}

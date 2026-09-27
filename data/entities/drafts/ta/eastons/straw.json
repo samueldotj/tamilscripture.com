@@ -1,0 +1,18 @@
+{
+  "id": "eastons/straw",
+  "lang": "ta",
+  "source_hash": "061cfd43",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வைக்கோல்",
+  "paragraphs": [
+    {
+      "id": "eastons/straw#p1-061cfd43",
+      "text": "செங்கல் செய்யும் வேலையில் பயன்படுத்தப்பட்டது (யாத்திராகமம் 5:7-18). யோபு 41:27; ஏசாயா 11:7; 25:10; 65:25 ஆகியவற்றில் அஷ்டமமாக பயன்படுத்தப்பட்டுள்ளது."
+    }
+  ]
+}

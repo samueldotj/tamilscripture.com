@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahban",
+  "lang": "ta",
+  "source_hash": "34233fd3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்பான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahban#p1-34233fd3",
+      "text": "(ஞானமுள்ளவனின் சகோதரன்) அபிசூருக்கு அவனுடைய மனைவி அபியாயேலினால் பிறந்த மகன். (1 நாளாகமம் 2:29) அவன் யூதாவின் கோத்திரத்தைச் சேர்ந்தவனாக இருந்தான்."
+    }
+  ]
+}

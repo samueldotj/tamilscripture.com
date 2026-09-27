@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/buz-person",
+  "lang": "ta",
+  "source_hash": "a1dd7ded",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூஸ் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/buz-person#p1-7a2cf8e7",
+      "text": "ஆபிரகாமின் சகோதரன் மகன், நாகோருக்குப் பிறந்த எட்டு மகன்களில் ஒருவன் (ஆதியாகமம் 22:21)."
+    },
+    {
+      "id": "aquifer/buz-person#p2-4b947b86",
+      "text": "காத்தின் கோத்திரத்தைச் சேர்ந்தவன் (1 நாளாகமம் 5:14)."
+    }
+  ]
+}

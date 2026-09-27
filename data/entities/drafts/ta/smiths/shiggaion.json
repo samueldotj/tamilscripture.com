@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shiggaion",
+  "lang": "ta",
+  "source_hash": "0f5ced37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிக்காயோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shiggaion#p1-0f5ced37",
+      "text": "(சங்கீதம் 7:1) ஒரு விசேஷித்த வகையான சங்கீதம், அதன் திட்டமான தன்மை இப்போது அறியப்படவில்லை; அது ஒரு “வெறித்த, சோகமான கீதம்” ஆயிருக்கலாம்."
+    }
+  ]
+}

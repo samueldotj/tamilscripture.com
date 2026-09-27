@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tobiah",
+  "lang": "ta",
+  "source_hash": "78a6f6ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தொபியா",
+  "paragraphs": [
+    {
+      "id": "smiths/tobiah#p1-78a6f6ee",
+      "text": "(யெகோவாவின் நன்மை)."
+    }
+  ]
+}

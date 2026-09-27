@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirioth",
+  "lang": "ta",
+  "source_hash": "57cb711e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirioth#p1-b0cedb4c",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவம், மோவாபிய நகரமான கீரியோத்தை குறிக்கும் (ஆமோஸ் 2:2)."
+    },
+    {
+      "id": "aquifer/kirioth#p2-f9467730",
+      "text": "கீரியோத் #2-ஐ காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gittite",
+  "lang": "ta",
+  "source_hash": "07d905bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gittite#p1-28bc853d",
+      "text": "காத் என்னும் பெலிஸ்தர் நகரத்தில் வாழ்ந்த ஒரு நபர் (2 சாமுவேல் 6:10-11; 1 நாளாகமம் 13:13)."
+    },
+    {
+      "id": "aquifer/gittite#p2-df19e702",
+      "text": "காத் என்பதைக் காண்க."
+    }
+  ]
+}

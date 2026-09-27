@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nagge",
+  "lang": "ta",
+  "source_hash": "d40c08cb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகே",
+  "paragraphs": [
+    {
+      "id": "eastons/nagge#p1-d40c08cb",
+      "text": "பிரகாசிக்கிறவன், தாய்வழியில் கிறிஸ்துவின் முற்பிதாக்களில் ஒருவன் (லூக்கா 3:25)."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/timnath",
+  "lang": "ta",
+  "source_hash": "ed58c140",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திம்னாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/timnath#p1-f52afee5",
+      "text": "ஆதியாகமம் 38:12, 14."
+    },
+    {
+      "id": "eastons/timnath#p2-647b643a",
+      "text": "(1.) எபிரெயு Timnathah, இது திருத்தப்பட்ட மொழிபெயர்ப்பில் Timnah என்று சரியாக மொழிபெயர்க்கப்பட்டுள்ளது, யூதாவில் உள்ள ஒரு ஊரான திம்னாத்."
+    },
+    {
+      "id": "eastons/timnath#p3-61f6c297",
+      "text": "(2.) சிம்சோன் தங்கியிருந்த ஊர், மேலே கூறிய “திம்னாத்” (1) ஊரோடு ஒத்ததாக இருக்கலாம் (நியாயாதிபதிகள் 14:1-18)."
+    }
+  ]
+}

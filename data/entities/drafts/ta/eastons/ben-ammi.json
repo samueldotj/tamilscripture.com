@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ben-ammi",
+  "lang": "ta",
+  "source_hash": "e55114c3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்னம்மி",
+  "paragraphs": [
+    {
+      "id": "eastons/ben-ammi#p1-e55114c3",
+      "text": "என் இனத்தானின் மகன்; அதாவது, “மானபங்கத்தால் பிறந்தவன்”, லோத்துக்கு அவனுடைய இளையவளால் பிறந்த மகன் (ஆதியாகமம் 19:38)."
+    }
+  ]
+}

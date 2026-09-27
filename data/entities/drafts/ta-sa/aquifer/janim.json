@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/janim",
+  "lang": "ta",
+  "source_hash": "aa6e5cee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானூம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/janim#p1-aa6e5cee",
+      "text": "யூதாவின் கோத்திரத்திற்கு சுதந்தரமாக நியமிக்கப்பட்ட எல்லைக்குள் மலைநாட்டில் இருந்த நகரம் (யோசுவா 15:53). அதன் இருப்பிடம் எப்ரோனுக்கு தென்மேற்கே இருந்திருக்கலாம்."
+    }
+  ]
+}

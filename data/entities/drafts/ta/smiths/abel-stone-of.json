@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abel-stone-of",
+  "lang": "ta",
+  "source_hash": "d1534edd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆபேலின் கல்",
+  "paragraphs": [
+    {
+      "id": "smiths/abel-stone-of#p1-d1534edd",
+      "text": "(பெரிய ஆபேல்), பெத்ஷிமேசிலே இருக்கும் யோசுவாவின் வயலில் பெட்டி வைக்கப்பட்ட இடம். (1 சாமுவேல் 6:18)"
+    }
+  ]
+}

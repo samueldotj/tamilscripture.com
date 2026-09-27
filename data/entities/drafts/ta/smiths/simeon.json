@@ -1,0 +1,18 @@
+{
+  "id": "smiths/simeon",
+  "lang": "ta",
+  "source_hash": "2448e7b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிமியோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/simeon#p1-2448e7b2",
+      "text": "(கேட்கப்பட்டவன்)."
+    }
+  ]
+}

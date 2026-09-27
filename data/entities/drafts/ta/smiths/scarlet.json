@@ -1,0 +1,18 @@
+{
+  "id": "smiths/scarlet",
+  "lang": "ta",
+  "source_hash": "9759e409",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிவப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/scarlet#p1-9759e409",
+      "text": "[நிறங்கள்]"
+    }
+  ]
+}

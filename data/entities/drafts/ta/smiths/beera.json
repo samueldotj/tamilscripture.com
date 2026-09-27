@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beera",
+  "lang": "ta",
+  "source_hash": "817622fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரா",
+  "paragraphs": [
+    {
+      "id": "smiths/beera#p1-817622fc",
+      "text": "(கிணறு), ஆசேர் கோத்திரத்தைச் சேர்ந்த சோபாக்கின் மகன். (1 நாளாகமம் 7:37) (கி.மு. 1450க்குப் பின்)"
+    }
+  ]
+}

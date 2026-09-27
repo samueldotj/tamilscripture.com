@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/helam",
+  "lang": "ta",
+  "source_hash": "8e738789",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/helam#p1-8e738789",
+      "text": "தாவீது ராஜா சீரியாவின் ராஜாவாகிய ஆதாதேசரின் இராணுவங்களை முறியடித்த யோர்தான் நதிக்கு கிழக்கேயுள்ள ஒரு இடம் (2 சாமுவேல் 10:16-17)."
+    }
+  ]
+}

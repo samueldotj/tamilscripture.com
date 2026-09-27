@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phinehas",
+  "lang": "ta",
+  "source_hash": "0694e160",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பினெகாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/phinehas#p1-0694e160",
+      "text": "(வெண்கல வாய்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/oziel",
+  "lang": "ta",
+  "source_hash": "cd2a05cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒசியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/oziel#p1-f073d2f2",
+      "text": "ஒசியேல் என்பவர் யூதீத் புத்தகத்தின் முக்கிய பாத்திரமான யூதீத்தின் மூதாதையர் ஆவார். யூதீத்தின் மூதாதையர் பட்டியலில் ஒசியேல் குறிப்பிடப்பட்டுள்ளார் (யூதீத் 8:1)."
+    },
+    {
+      "id": "aquifer/oziel#p2-3d1675d6",
+      "text": "யூதீத் புத்தகம் என்பதையும் காண்க."
+    }
+  ]
+}

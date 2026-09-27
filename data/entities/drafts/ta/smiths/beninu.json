@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beninu",
+  "lang": "ta",
+  "source_hash": "e2e02bf6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனினு",
+  "paragraphs": [
+    {
+      "id": "smiths/beninu#p1-e2e02bf6",
+      "text": "(எங்கள் மகன்), ஒரு லேவியன்; நெகேமியாவுடன் உடன்படிக்கையை முத்திரையிட்டவர்களில் ஒருவன். (நெகேமியா 10:13,14)"
+    }
+  ]
+}

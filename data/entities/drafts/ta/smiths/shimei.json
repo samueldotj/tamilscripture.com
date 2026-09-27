@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimei",
+  "lang": "ta",
+  "source_hash": "5215849a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீமேயி",
+  "paragraphs": [
+    {
+      "id": "smiths/shimei#p1-5215849a",
+      "text": "(பிரபலமானவன்)."
+    }
+  ]
+}

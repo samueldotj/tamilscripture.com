@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tahan",
+  "lang": "ta",
+  "source_hash": "1889e374",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாகான்",
+  "paragraphs": [
+    {
+      "id": "smiths/tahan#p1-1889e374",
+      "text": "(முகாம்), எப்பிராயீமின் சந்ததியான ஒருவன். (எண்ணாகமம் 26:35) 1 நாளாகமம் 7:25-ல் இவன் தேலாகின் மகனாகக் காணப்படுகிறான்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nahbi",
+  "lang": "ta",
+  "source_hash": "15930a51",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகபி",
+  "paragraphs": [
+    {
+      "id": "smiths/nahbi#p1-15930a51",
+      "text": "(மறைவானவன்), ஒப்பேசியின் மகன், நப்தலியன், மற்றும் பன்னிரண்டு உளவுகாரர்களில் ஒருவன். (எண்ணாகமம் 13:14)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zatthu",
+  "lang": "ta",
+  "source_hash": "bcfa4ff9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சத்தூ",
+  "paragraphs": [
+    {
+      "id": "eastons/zatthu#p1-bcfa4ff9",
+      "text": "ஒரு துளிர், நெகேமியா 10:14."
+    }
+  ]
+}

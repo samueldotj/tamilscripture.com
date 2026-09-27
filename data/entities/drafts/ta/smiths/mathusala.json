@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mathusala",
+  "lang": "ta",
+  "source_hash": "242e83be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்தூசலா",
+  "paragraphs": [
+    {
+      "id": "smiths/mathusala#p1-242e83be",
+      "text": "= மெத்தூசலா, ஏனோக்குடைய குமாரன் (லூக்கா 3:37)."
+    }
+  ]
+}

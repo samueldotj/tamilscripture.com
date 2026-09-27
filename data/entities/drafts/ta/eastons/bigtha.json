@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bigtha",
+  "lang": "ta",
+  "source_hash": "3cd1a61c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிக்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/bigtha#p1-3cd1a61c",
+      "text": "தோட்டம், அல்லது பாக்கியத்தின் வரம், அகாஸ்வேருவின் அந்தப்புரத்தின் மேற்பார்வையில் இருந்த ஏழு பிரதானிகளாகிய அரமனை அதிகாரிகளில் ஒருவன் (எஸ்தர் 1:10)."
+    }
+  ]
+}

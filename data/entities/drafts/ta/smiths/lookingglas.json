@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lookingglas",
+  "lang": "ta",
+  "source_hash": "5a1054da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கண்ணாடி",
+  "paragraphs": [
+    {
+      "id": "smiths/lookingglas#p1-5a1054da",
+      "text": "[கண்ணாடிகள்]"
+    }
+  ]
+}

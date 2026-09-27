@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chephirah",
+  "lang": "ta",
+  "source_hash": "c2edae2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெபிரா",
+  "paragraphs": [
+    {
+      "id": "smiths/chephirah#p1-c2edae2b",
+      "text": "(குடிசை), கிபியோனியரின் நான்கு பட்டணங்களில் ஒன்று (யோசுவா 9:17), பின்பு பென்யமீனுடைய பட்டணங்களில் ஒன்றாகக் குறிப்பிடப்பட்டது. (எஸ்றா 2:25; நெகேமியா 7:29)"
+    }
+  ]
+}

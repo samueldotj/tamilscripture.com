@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aliah",
+  "lang": "ta",
+  "source_hash": "ba0301a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலியா",
+  "paragraphs": [
+    {
+      "id": "smiths/aliah#p1-ba0301a6",
+      "text": "[அல்வா]"
+    }
+  ]
+}

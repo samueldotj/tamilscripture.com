@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/havilah-person",
+  "lang": "ta",
+  "source_hash": "410fd48f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவிலா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/havilah-person#p1-62109e2c",
+      "text": "கூஷின் வம்சத்தில் ஒருவன் (ஆதியாகமம் 10:7; 1 நாளாகமம் 1:9)."
+    },
+    {
+      "id": "aquifer/havilah-person#p2-7e0b4e14",
+      "text": "யொக்தான் மூலமாக சேமின் வம்சத்தில் ஒருவன் (ஆதியாகமம் 10:29; 1 நாளாகமம் 1:23)."
+    }
+  ]
+}

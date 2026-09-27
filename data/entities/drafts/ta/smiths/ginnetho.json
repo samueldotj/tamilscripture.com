@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ginnetho",
+  "lang": "ta",
+  "source_hash": "1fcecad9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிநேதோ",
+  "paragraphs": [
+    {
+      "id": "smiths/ginnetho#p1-1fcecad9",
+      "text": "(தோட்டக்காரன்), செருபாபேலுடன் யூதேயாவுக்குத் திரும்பி வந்த ஆசாரியர்களிலும் லேவியர்களிலும் தலைவர்களில் ஒருவன். (நெகேமியா 12:4) இவன் நிச்சயமாகவே"
+    }
+  ]
+}

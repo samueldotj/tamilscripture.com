@@ -1,0 +1,18 @@
+{
+  "id": "eastons/potipherah",
+  "lang": "ta",
+  "source_hash": "b9cfa88f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போத்திபிரா",
+  "paragraphs": [
+    {
+      "id": "eastons/potipherah#p1-b9cfa88f",
+      "text": "ஓன் பட்டணத்து ஆசாரியனாகிய இவனுடைய மகளாகிய ஆஸ்நாத்து, யோசேப்பின் மனைவியானாள் (ஆதியாகமம் 41:45)."
+    }
+  ]
+}

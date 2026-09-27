@@ -1,0 +1,30 @@
+{
+  "id": "eastons/nahath",
+  "lang": "ta",
+  "source_hash": "2e7d98f1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/nahath#p1-25253354",
+      "text": "ஓய்வு."
+    },
+    {
+      "id": "eastons/nahath#p2-3af7a8dc",
+      "text": "(1.) ஏசாவின் மகனாகிய ரெகுவேலின் நான்கு மகன்களில் ஒருவன் (ஆதியாகமம் 36:13, 17)."
+    },
+    {
+      "id": "eastons/nahath#p3-2dcd5335",
+      "text": "(2.) கோகாத்தியனாகிய லேவியன் (1 நாளாகமம் 6:26)."
+    },
+    {
+      "id": "eastons/nahath#p4-22dbc64e",
+      "text": "(3.) ஆலயத்தின் பரிசுத்த காணிக்கைகளுக்குக் கண்காணியானவர்களில் ஒருவனாகிய லேவியன் (2 நாளாகமம் 31:13)."
+    }
+  ]
+}

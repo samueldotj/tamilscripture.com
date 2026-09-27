@@ -1,0 +1,18 @@
+{
+  "id": "smiths/persis",
+  "lang": "ta",
+  "source_hash": "91a29c40",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெர்சியாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/persis#p1-91a29c40",
+      "text": "(ஒரு பெர்சிய பெண்), ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவப் பெண், (ரோமர் 16:12) இவளை பவுல் வாழ்த்துகிறார். (கி.பி. 55.)"
+    }
+  ]
+}

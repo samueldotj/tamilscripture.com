@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jekamiah",
+  "lang": "ta",
+  "source_hash": "de6f8bd5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெகமியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jekamiah#p1-e378da0f",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த சல்லூமின் மகன் (1 நாளாகமம் 2:41)."
+    },
+    {
+      "id": "aquifer/jekamiah#p2-ca31a8cc",
+      "text": "ராஜா யோயாக்கீனுடைய மகன்களில் ஒருவன் (1 நாளாகமம் 3:18)."
+    }
+  ]
+}

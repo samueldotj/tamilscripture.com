@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ishbah",
+  "lang": "ta",
+  "source_hash": "4ad73272",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ishbah#p1-4ad73272",
+      "text": "இஸ்பா என்பவன் மேரேத்திற்கு பார்வோனின் மகளாகிய பித்தியாளின் மூலமாகப் பிறந்த மகன் (1 நாளாகமம் 4:17)."
+    }
+  ]
+}

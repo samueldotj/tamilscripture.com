@@ -1,0 +1,18 @@
+{
+  "id": "smiths/igeal",
+  "lang": "ta",
+  "source_hash": "379c3f7e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இகேயால்",
+  "paragraphs": [
+    {
+      "id": "smiths/igeal#p1-379c3f7e",
+      "text": "(தேவன் நீதிசெய்வார் என்று அர்த்தம்) நெகேமியாவின் மகன்; யூதாவின் ராஜரீக வம்சத்தின் சந்ததியார். (1 நாளாகமம் 3:22) (கி.மு. 406.)"
+    }
+  ]
+}

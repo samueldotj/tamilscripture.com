@@ -1,0 +1,18 @@
+{
+  "id": "smiths/thamar",
+  "lang": "ta",
+  "source_hash": "06d8a1dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாமார்",
+  "paragraphs": [
+    {
+      "id": "smiths/thamar#p1-06d8a1dd",
+      "text": "தாமார், 1. (மத்தேயு 1:3)"
+    }
+  ]
+}

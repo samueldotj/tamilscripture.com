@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ziza",
+  "lang": "ta",
+  "source_hash": "a8988214",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீசா",
+  "paragraphs": [
+    {
+      "id": "smiths/ziza#p1-a8988214",
+      "text": "(பிரகாசம்)."
+    }
+  ]
+}

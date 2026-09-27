@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shocho",
+  "lang": "ta",
+  "source_hash": "c1c07d68",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஷோகோ",
+  "paragraphs": [
+    {
+      "id": "smiths/shocho#p1-c1c07d68",
+      "text": "(2 நாளாகமம் 28:18) சோக்கோ என்ற பெயருக்குரிய நான்கு வேறுபாடுகளில் ஒன்று."
+    }
+  ]
+}

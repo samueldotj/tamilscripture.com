@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ulla",
+  "lang": "ta",
+  "source_hash": "a096e684",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உல்லா",
+  "paragraphs": [
+    {
+      "id": "smiths/ulla#p1-a096e684",
+      "text": "(நுகம்), ஆசேர் கோத்திரத்தானாகிய இவன், தன் கோத்திரத்தில் ஒரு வம்சத்திற்குத் தலைவனாக இருந்தான். (1 நாளாகமம் 7:30) (கிமு. 1014 ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

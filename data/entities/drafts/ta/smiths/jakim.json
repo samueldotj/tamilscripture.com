@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jakim",
+  "lang": "ta",
+  "source_hash": "8ea536ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jakim#p1-8ea536ee",
+      "text": "(யாரை தேவன் ஏற்படுத்துகிறார்)."
+    }
+  ]
+}

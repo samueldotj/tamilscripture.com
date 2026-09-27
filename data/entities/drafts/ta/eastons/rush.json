@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rush",
+  "lang": "ta",
+  "source_hash": "9835ed42",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாணல்",
+  "paragraphs": [
+    {
+      "id": "eastons/rush#p1-9835ed42",
+      "text": "பாப்பிரஸ் தாவரம் (யோபு 8:11) (பார்க்க: கோரைப்புல்). ஏசாயா 9:14; 19:15-ல் வரும் “கிளையும் நாணலும்” என்ற வெளிப்பாடு “முழுவதுமாக” என்பதைக் குறிக்கிறது."
+    }
+  ]
+}

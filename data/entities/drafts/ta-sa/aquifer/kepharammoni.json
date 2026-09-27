@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kepharammoni",
+  "lang": "ta",
+  "source_hash": "8626d85f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேப்பார் அமோனாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kepharammoni#p1-8626d85f",
+      "text": "கேப்பார் அமோனாய் என்பது யோசுவா கானானை கட்டியபின்பு பென்யமீன் கோத்திரத்திற்கு சுதந்தரமாக ஒப்படைக்கப்பட்ட ஒரு பட்டணமாக இருந்தது (யோசுவா 18:24)."
+    }
+  ]
+}

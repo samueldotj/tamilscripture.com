@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethcar",
+  "lang": "ta",
+  "source_hash": "ed380cfa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்காரீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethcar#p1-ed380cfa",
+      "text": "(ஆட்டுக்குட்டியின் வீடு), இஸ்ரவேலர்கள் பெலிஸ்தர்களைப் பின்தொடர்ந்து சென்ற இடமாகக் குறிப்பிடப்பட்ட ஒரு ஸ்தலம், (1 சாமுவேல் 7:11) ஆகவே இது மிஸ்பேக்கு மேற்கே இருக்கிறது."
+    }
+  ]
+}

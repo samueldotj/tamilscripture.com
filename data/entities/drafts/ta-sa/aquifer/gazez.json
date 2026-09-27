@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gazez",
+  "lang": "ta",
+  "source_hash": "3f9f6836",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசேச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gazez#p1-3b9a1676",
+      "text": "1. காலேபுடைய மறுமனையாட்டியாகிய எப்பாளின் மகனும், ஆரானின் சகோதரனும் ஆவான் (1 நாளாகமம் 2:46)."
+    },
+    {
+      "id": "aquifer/gazez#p2-0b5433c5",
+      "text": "2. ஆரானின் மகனும், மேலே கூறப்பட்ட முதலாமவனுக்கு (1) சகோதரன் மகனும் ஆவான் (1 நாளாகமம் 2:46)."
+    }
+  ]
+}

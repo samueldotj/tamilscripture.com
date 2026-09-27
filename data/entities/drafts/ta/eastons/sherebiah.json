@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sherebiah",
+  "lang": "ta",
+  "source_hash": "e6c7aebd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செரெபியா",
+  "paragraphs": [
+    {
+      "id": "eastons/sherebiah#p1-e6c7aebd",
+      "text": "கர்த்தருடைய ஜூவாலை, எருசலேமில் எஸ்றாவும் நெகேமியாவும் நடத்திய பணியில் முக்கியமான ஒரு ஆசாரியனாக இவனுடைய பெயர் குறிக்கப்படுகிறது (எஸ்றா 8:17, 18, 24-30; நெகேமியா 8:7; 9:4, 5; 10:12)."
+    }
+  ]
+}

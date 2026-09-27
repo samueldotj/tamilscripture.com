@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sheal",
+  "lang": "ta",
+  "source_hash": "1a764a61",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செயால்",
+  "paragraphs": [
+    {
+      "id": "smiths/sheal#p1-1a764a61",
+      "text": "(கேட்டல்), அந்நிய பெண்ணை மனம் செய்துகொண்ட பானியின் மகன்களில் ஒருவன். (எஸ்றா 10:29) (கி.மு. 452.)"
+    }
+  ]
+}

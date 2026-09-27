@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adiel",
+  "lang": "ta",
+  "source_hash": "78960200",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/adiel#p1-78960200",
+      "text": "(தேவனுடைய அலங்காரம்)."
+    }
+  ]
+}

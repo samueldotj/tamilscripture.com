@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heldai",
+  "lang": "ta",
+  "source_hash": "b2fba1ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்தாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/heldai#p1-b2fba1ac",
+      "text": "(உலகப்பிரகாரமான)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bar",
+  "lang": "ta",
+  "source_hash": "8dc37e82",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bar#p1-23c1cdfe",
+      "text": "நெருங்கிய குடும்ப உறவைக் குறிக்க அராமிக் மொழியில் பயன்படுத்தப்படும் ஒரு சொல். உதாரணமாக, சீமோன் பார்-யோனா என்பது “யோவானுடைய குமாரனாகிய சீமோன்” என்று அர்த்தப்படும்."
+    },
+    {
+      "id": "aquifer/bar#p2-f460e6e7",
+      "text": "பேன் (பெயர்ச்சொல்) என்பதையும் காண்க."
+    }
+  ]
+}

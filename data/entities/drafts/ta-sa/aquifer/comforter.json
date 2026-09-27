@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/comforter",
+  "lang": "ta",
+  "source_hash": "80be5409",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேற்றரவாளன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/comforter#p1-f09e1343",
+      "text": "தேற்றரவாளன் என்பது யோவான் 14:16, 26; 15:26; 16:7 ஆகிய வசனங்களில் உள்ள கிரேக்கு வார்த்தையாகிய parakletos-ஐ கிங் யாக்கோபு மொழிபெயர்ப்பில் மொழிபெயர்த்த விதமாகும்."
+    },
+    {
+      "id": "aquifer/comforter#p2-7969ceba",
+      "text": "பராக்லேத்தோஸ் (Paraclete) என்பதைக் காண்க."
+    }
+  ]
+}

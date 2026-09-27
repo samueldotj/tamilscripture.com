@@ -1,0 +1,18 @@
+{
+  "id": "smiths/taverns-the-three",
+  "lang": "ta",
+  "source_hash": "a8662f71",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மூன்று தங்கும் விடுதிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/taverns-the-three#p1-a8662f71",
+      "text": "[மூன்று தங்கும் விடுதி என்பதைக் காண்க]"
+    }
+  ]
+}

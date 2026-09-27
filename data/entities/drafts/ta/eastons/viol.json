@@ -1,0 +1,18 @@
+{
+  "id": "eastons/viol",
+  "lang": "ta",
+  "source_hash": "e53610ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகசுரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/viol#p1-e53610ba",
+      "text": "எபிரெய nebel (ஏசாயா 5:12, R.V., “lute;” 14:11), ஒரு இசைக்கருவி, பொதுவாக “சுரமண்டலம்” (காண்க) என்று மொழிபெயர்க்கப்படுகிறது."
+    }
+  ]
+}

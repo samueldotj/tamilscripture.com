@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mahali",
+  "lang": "ta",
+  "source_hash": "9280d070",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மஹாலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/mahali#p1-f0699003",
+      "text": "யாத்திராகமம் 6:19-ல் மெராரியின் மகனாகிய மகேலிக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் கொடுக்கப்பட்டுள்ள எழுத்துப்பெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/mahali#p2-a4937320",
+      "text": "மகேலி #1-ஐ காண்க."
+    }
+  ]
+}

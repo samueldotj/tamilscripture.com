@@ -1,0 +1,18 @@
+{
+  "id": "smiths/debtor",
+  "lang": "ta",
+  "source_hash": "42222c0a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடன்காரன்",
+  "paragraphs": [
+    {
+      "id": "smiths/debtor#p1-42222c0a",
+      "text": "[கடன்]"
+    }
+  ]
+}

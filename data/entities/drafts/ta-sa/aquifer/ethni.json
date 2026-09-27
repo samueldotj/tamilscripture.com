@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ethni",
+  "lang": "ta",
+  "source_hash": "d52898ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்னி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ethni#p1-49812882",
+      "text": "எத்னி என்பது 1 நாளாகமம் 6:41-ல் காணப்படும் செராகுவின் மகனான யாத்திராயிக்கு உள்ள வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/ethni#p2-f0d33237",
+      "text": "யெத்தராயி, யாத்திராயி என்பதைக் காண்க."
+    }
+  ]
+}

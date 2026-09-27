@@ -1,0 +1,18 @@
+{
+  "id": "eastons/archevite",
+  "lang": "ta",
+  "source_hash": "555e494a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அற்கேவியர்",
+  "paragraphs": [
+    {
+      "id": "eastons/archevite#p1-555e494a",
+      "text": "அசீரியர்களால் சமாரியாவில் குடியேற்றப்பட்ட தேசங்களில் ஒன்று (எஸ்றா 4:9); ஏரேக்கின் மனிதர்கள்."
+    }
+  ]
+}

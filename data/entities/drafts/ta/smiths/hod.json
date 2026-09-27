@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hod",
+  "lang": "ta",
+  "source_hash": "4d93c22a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓத்",
+  "paragraphs": [
+    {
+      "id": "smiths/hod#p1-4d93c22a",
+      "text": "(மகிமை), ஆசேரின் சந்ததியாருக்குள் சோபாக்கின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:37)"
+    }
+  ]
+}

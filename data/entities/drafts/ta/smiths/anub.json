@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anub",
+  "lang": "ta",
+  "source_hash": "4e692a8f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/anub#p1-4e692a8f",
+      "text": "(கூட்டாளி), கோஸின் மகனும், தெக்கோவாவின் தகப்பனாகிய அசூரின் மூலமாக யூதாவின் சந்ததியனும் ஆவான் (1 நாளாகமம் 4:8)"
+    }
+  ]
+}

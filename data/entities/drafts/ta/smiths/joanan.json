@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joanan",
+  "lang": "ta",
+  "source_hash": "bbb48242",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவன்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/joanan#p1-bbb48242",
+      "text": "திருத்தப்பட்ட பதிப்பில் யோவன்னாள் என்பதற்குப் பதிலாக (லூக்கா 3:27)."
+    }
+  ]
+}

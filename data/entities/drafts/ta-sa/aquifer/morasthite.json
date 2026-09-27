@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/morasthite",
+  "lang": "ta",
+  "source_hash": "7302bfa7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மொரேசா ஊரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/morasthite#p1-7302bfa7",
+      "text": "மொரேசா என்னும் ஊரின் பெயரிலிருந்து எடுக்கப்பட்ட, தீர்க்கதரிசியாகிய மீகாவுக்கு KJV வழங்கும் பெயர் (எரேமியா 26:18; மீகா 1:1). மீகா (நபர்) #7 காண்க."
+    }
+  ]
+}

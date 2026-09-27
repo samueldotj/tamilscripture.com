@@ -1,0 +1,18 @@
+{
+  "id": "smiths/er",
+  "lang": "ta",
+  "source_hash": "b314f051",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏர்",
+  "paragraphs": [
+    {
+      "id": "smiths/er#p1-b314f051",
+      "text": "(விழிப்புள்ளவன்)."
+    }
+  ]
+}

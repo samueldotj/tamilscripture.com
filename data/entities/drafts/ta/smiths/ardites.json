@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ardites",
+  "lang": "ta",
+  "source_hash": "a58427e2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேதியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/ardites#p1-a58427e2",
+      "text": "பென்யமீனுடைய பேரனான ஆரேத் அல்லது ஆதாரின் சந்ததியார். (எண்ணாகமம் 26:40)"
+    }
+  ]
+}

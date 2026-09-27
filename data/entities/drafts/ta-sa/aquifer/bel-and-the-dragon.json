@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bel-and-the-dragon",
+  "lang": "ta",
+  "source_hash": "85fb7cc3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலும் வலுசர்ப்பமும்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bel-and-the-dragon#p1-bbfc0eca",
+      "text": "பரிசுத்த வேதாகமத்தின் சில பதிப்புகளில் காணப்படும் ஒரு மத சம்பந்தமான கதை, இதில் பாபிலோனிய தேவர்கள் உண்மையானவர்கள் அல்ல என்று தானியேல் நிரூபிக்கிறார்."
+    },
+    {
+      "id": "aquifer/bel-and-the-dragon#p2-3955d26a",
+      "text": "தானியேல், சேர்க்கைகள் என்பதைக் காண்க."
+    }
+  ]
+}

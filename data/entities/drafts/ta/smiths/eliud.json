@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliud",
+  "lang": "ta",
+  "source_hash": "20a2b9e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliud#p1-20a2b9e1",
+      "text": "(தேவன் அவருடைய புகழ்ச்சி), கிறிஸ்துவின் வம்சவரலாற்றில் ஆகீமின் மகன். (மத்தேயு 1:15)"
+    }
+  ]
+}

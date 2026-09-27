@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hill-of-evil-counsel",
+  "lang": "ta",
+  "source_hash": "b5eb2a57",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீய ஆலோசனையின் மேடு",
+  "paragraphs": [
+    {
+      "id": "eastons/hill-of-evil-counsel#p1-b5eb2a57",
+      "text": "இது இன்னோம் பள்ளத்தாக்கின் தென்புறத்தில் இருக்கிறது. கிறிஸ்துவைக் கொலைசெய்ய யூதர்களின் அதிகாரிகள் தீர்மானித்தபோது, பிரதான ஆசாரியனாகிய காய்பாவின் வீடு இங்கே இருந்தது என்ற பாரம்பரியத்தினால் இது இப்படி அழைக்கப்படுகிறது."
+    }
+  ]
+}

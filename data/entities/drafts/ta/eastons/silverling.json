@@ -1,0 +1,18 @@
+{
+  "id": "eastons/silverling",
+  "lang": "ta",
+  "source_hash": "956b7c71",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெள்ளிக்காசு",
+  "paragraphs": [
+    {
+      "id": "eastons/silverling#p1-956b7c71",
+      "text": "(ஏசாயா 7:23). சொற்பிரகாரமாக இது “ஆயிரம் வெள்ளிக்கு” என்பதாகும், அதாவது “வெள்ளிக்காசுகள்” அல்லது சேக்கல்கள்."
+    }
+  ]
+}

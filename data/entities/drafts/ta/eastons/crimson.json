@@ -1,0 +1,18 @@
+{
+  "id": "eastons/crimson",
+  "lang": "ta",
+  "source_hash": "1d550a0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிவப்பு நிறம்",
+  "paragraphs": [
+    {
+      "id": "eastons/crimson#p1-1d550a0e",
+      "text": "COLOUR (நிறம்) காண்க."
+    }
+  ]
+}

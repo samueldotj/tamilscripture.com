@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naggai",
+  "lang": "ta",
+  "source_hash": "9f111cfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நங்காய்",
+  "paragraphs": [
+    {
+      "id": "smiths/naggai#p1-9f111cfe",
+      "text": "(ஒளிவிடச்செய்கிறவன்), நாகே என்பதன் உண்மையான வடிவம், (லூக்கா 3:25) மற்றும் திருத்தப்பட்ட மொழிபெயர்ப்பில் அவ்வாறே கொடுக்கப்பட்டுள்ளது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zattu",
+  "lang": "ta",
+  "source_hash": "fdacd57c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சத்தூ",
+  "paragraphs": [
+    {
+      "id": "smiths/zattu#p1-fdacd57c",
+      "text": "செருபாபேலுடன் திரும்பி வந்த இஸ்ரவேலின் சாதாரண மக்களைச் சேர்ந்த ஒரு வம்சத்தாரே சத்தூவின் வம்சத்தார். (எஸ்றா 2:8; நெகேமியா 7:13)"
+    }
+  ]
+}

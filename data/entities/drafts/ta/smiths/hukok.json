@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hukok",
+  "lang": "ta",
+  "source_hash": "e86f0483",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உக்கோக்",
+  "paragraphs": [
+    {
+      "id": "smiths/hukok#p1-e86f0483",
+      "text": "1 நாளாகமம் 6:75-இல் தவறாக ஏல்காத் என்பதற்குப் பதிலாகப் பயன்படுத்தப்பட்ட ஒரு பெயர்; அதைக் காண்க."
+    }
+  ]
+}

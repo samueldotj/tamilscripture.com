@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kine",
+  "lang": "ta",
+  "source_hash": "31c87150",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கவுகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kine#p1-d18a73f5",
+      "text": "\"கவுகள்\" (Kine) என்பது பசுக்களைக் குறிக்கும் ஒரு பழைய வார்த்தை."
+    },
+    {
+      "id": "aquifer/kine#p2-d794bc53",
+      "text": "விலங்குகள் (மாடு) என்பதைக் காண்க."
+    }
+  ]
+}

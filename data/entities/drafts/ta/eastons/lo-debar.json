@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lo-debar",
+  "lang": "ta",
+  "source_hash": "f81ecf7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லோதேபார்",
+  "paragraphs": [
+    {
+      "id": "eastons/lo-debar#p1-f81ecf7f",
+      "text": "மேய்ச்சல் இல்லாத இடம், (2 சாமுவேல் 17:27), யாப்போக்குக்கு வடக்கே, மகனாயீமிலிருந்து வெகு தூரமில்லாத கீலேயாத்திலுள்ள ஒரு பட்டணம் (9:4, 5). இது தெபீருக்கு (யோசுவா 13:26) ஒத்திருக்கலாம்."
+    }
+  ]
+}

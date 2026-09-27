@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chapiter",
+  "lang": "ta",
+  "source_hash": "296bba6b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கும்பம்",
+  "paragraphs": [
+    {
+      "id": "smiths/chapiter#p1-296bba6b",
+      "text": "ஒரு தூணின் தலைப்பு பகுதி; அதாவது, நவீன கட்டிடக்கலையில் இந்தச் சொல் பயன்படுத்தப்படுவது போல, மேல் பகுதி."
+    }
+  ]
+}

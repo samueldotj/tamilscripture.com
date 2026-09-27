@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eber",
+  "lang": "ta",
+  "source_hash": "3cb996c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏபேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/eber#p1-3cb996c8",
+      "text": "(அந்தப் பகுதிக்கு அப்பால் உள்ள பிரதேசம்)."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mibsam",
+  "lang": "ta",
+  "source_hash": "13b8ae3c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிப்சாம்",
+  "paragraphs": [
+    {
+      "id": "eastons/mibsam#p1-98b166f6",
+      "text": "நறுமணம்."
+    },
+    {
+      "id": "eastons/mibsam#p2-4ca4a1fd",
+      "text": "(1.) இஸ்மவேலின் பன்னிரண்டு மகன்களில் ஒருவனும், ஒரு அராப் கோத்திரத்தின் தலைவனுமாக இருந்தான் (ஆதியாகமம் 25:13)."
+    },
+    {
+      "id": "eastons/mibsam#p3-0dbde6b7",
+      "text": "(2.) சிமியோனுடைய ஒரு மகன் (1 நாளாகமம் 4:25)."
+    }
+  ]
+}

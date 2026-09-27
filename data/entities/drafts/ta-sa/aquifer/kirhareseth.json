@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirhareseth",
+  "lang": "ta",
+  "source_hash": "3a9433a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீர்-அரேசேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirhareseth#p1-2283395c",
+      "text": "மோவாபின் பழைய தலைநகரமாகக் கருதப்படும் ஒரு அரணிக்கப்பட்ட நகரம்."
+    },
+    {
+      "id": "aquifer/kirhareseth#p2-c3314d6c",
+      "text": "கீர் #2ஐக் காண்க."
+    }
+  ]
+}

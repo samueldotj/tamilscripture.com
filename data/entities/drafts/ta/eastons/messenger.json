@@ -1,0 +1,18 @@
+{
+  "id": "eastons/messenger",
+  "lang": "ta",
+  "source_hash": "420d131e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூதன்",
+  "paragraphs": [
+    {
+      "id": "eastons/messenger#p1-420d131e",
+      "text": "(எபிரெயம் mal’ak, கிரேக்கம் angelos), தூதன், கால்நடையாக ஓடிச்செல்லும் தூதுவன், செய்திகளைக் கொண்டுசெல்லுபவன் (யோபு 1:14; 1 சாமுவேல் 11:7; 2 நாளாகமம் 36:22); வேகமாக ஓடுகிறவன் (2 இராஜாக்கள் 9:18)."
+    }
+  ]
+}

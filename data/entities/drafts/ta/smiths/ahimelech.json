@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahimelech",
+  "lang": "ta",
+  "source_hash": "831ff0ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகிமெலேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahimelech#p1-831ff0ce",
+      "text": "(ராஜாவின் சகோதரன்)."
+    }
+  ]
+}

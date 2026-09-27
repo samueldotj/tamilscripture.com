@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hebrews",
+  "lang": "ta",
+  "source_hash": "d7883fe4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எபிரெயர்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/hebrews#p1-d7883fe4",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 6:1) கிரேக்கு மொழி பேசினவர்களிடமிருந்து வேறுபடுத்தப்பட்ட, எபிரெய மொழி பேசின யூதர்களைக் குறிக்கும். (கிரேக்கர்கள் என்பதைக் காண்க.)"
+    }
+  ]
+}

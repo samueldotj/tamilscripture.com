@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/irrigation",
+  "lang": "ta",
+  "source_hash": "d8a64206",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நீர்ப்பாய்ச்சல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/irrigation#p1-10065cb1",
+      "text": "கால்வாய்கள், வாய்க்கால்கள் போன்ற மனித கரங்களால் அமைக்கப்பட்ட அமைப்புகள் மூலம் விவசாய நிலங்களுக்கு தண்ணீரைக் கொண்டு வரும் நடைமுறை."
+    },
+    {
+      "id": "aquifer/irrigation#p2-54832bd8",
+      "text": "வேளாண்மை (Agriculture) என்பதைக் காண்க."
+    }
+  ]
+}

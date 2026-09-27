@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shamed",
+  "lang": "ta",
+  "source_hash": "72bf026e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாமேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/shamed#p1-72bf026e",
+      "text": "(காவற்காரன்), சரியாக சேமேர் அல்லது சேமேர்; பென்யமீனனான எல்பாலின் மகன்களில் ஒருவன். (1 நாளாகமம் 8:12)"
+    }
+  ]
+}

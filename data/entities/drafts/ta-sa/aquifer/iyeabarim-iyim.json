@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/iyeabarim-iyim",
+  "lang": "ta",
+  "source_hash": "0143faf0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபாரிமீன், ஈயீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/iyeabarim-iyim#p1-0143faf0",
+      "text": "வனாந்தர பயணத்தின்போது இஸ்ரவேலர் மோவாபின் தென்கிழக்கு எல்லையில் முகாமிட்ட ஒரு இடம் (எண்ணாகமம் 33:44). 45 வது வசனத்தில் இந்த ஊர் ஈயீம் என்று அழைக்கப்படுகிறது, இது அபாரிமீன் என்ற பெயரின் சுருக்கப்பட்ட வடிவம்."
+    }
+  ]
+}

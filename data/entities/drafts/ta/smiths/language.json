@@ -1,0 +1,18 @@
+{
+  "id": "smiths/language",
+  "lang": "ta",
+  "source_hash": "8853e447",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மொழி",
+  "paragraphs": [
+    {
+      "id": "smiths/language#p1-8853e447",
+      "text": "[பாஷைகள், குழப்பம், குழப்பம் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/isuah",
+  "lang": "ta",
+  "source_hash": "aca60d6d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்வா",
+  "paragraphs": [
+    {
+      "id": "smiths/isuah#p1-aca60d6d",
+      "text": "(அமைதியானவன்), ஆசேரின் இரண்டாம் மகன். (1 நாளாகமம் 7:30) (கி.மு. 1706.)"
+    }
+  ]
+}

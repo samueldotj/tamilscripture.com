@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abiasaph",
+  "lang": "ta",
+  "source_hash": "36bd62b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியாசாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/abiasaph#p1-36bd62b8",
+      "text": "கூட்டுகிறவனின் தகப்பன்; சேர்க்கிறவன்; லேவியனாகிய கோராகின் மூன்று மகன்களில் இளையவன், கோராகியர்களின் குடும்பத் தலைவன் (யாத். 6:24); எபியாசாப்பு என்றும் அழைக்கப்பட்டான் (1 நாளாகமம் 6:37)."
+    }
+  ]
+}

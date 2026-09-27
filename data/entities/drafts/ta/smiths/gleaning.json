@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gleaning",
+  "lang": "ta",
+  "source_hash": "6b9ac2be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தானியம் பறித்தல்",
+  "paragraphs": [
+    {
+      "id": "smiths/gleaning#p1-6b9ac2be",
+      "text": "தானியப் பயிர்களைப் போலவே பழ மரங்களின் விளைச்சலிலும் மீதியாக விடப்பட்டதைப் பறித்துக்கொள்ளும் உரிமை ஏழைகளுக்காக ஒதுக்கப்பட்டிருந்தது. [Corner என்பதைக் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ishbah",
+  "lang": "ta",
+  "source_hash": "5e08b565",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/ishbah#p1-5e08b565",
+      "text": "(துதிக்கிறவன்), யூதாவின் வம்சாவளியில் இருந்த ஒரு மனிதன், “எஸ்தெமோவாவின் தகப்பன்” என நினைவுகூரப்படுகிறான். (1 நாளாகமம் 4:17)"
+    }
+  ]
+}

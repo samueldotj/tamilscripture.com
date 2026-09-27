@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mathusala",
+  "lang": "ta",
+  "source_hash": "50dce584",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்தூசலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/mathusala#p1-9afbd28d",
+      "text": "லூக்கா 3:37-ல் ஏனோக்கின் குமாரனாகிய மெத்தூசலாவைக் குறிக்கும் கிங் யாக்கோபு மொழிபெயர்ப்பின் எழுத்துப்பிழை."
+    },
+    {
+      "id": "aquifer/mathusala#p2-3f098e1c",
+      "text": "மெத்தூசலாவைக் காண்க."
+    }
+  ]
+}

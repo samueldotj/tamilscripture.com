@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazar-hatticon",
+  "lang": "ta",
+  "source_hash": "a9786a90",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சார் அத்தீகோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/hazar-hatticon#p1-a9786a90",
+      "text": "நடு கிராமம், ஆப்ரானுக்கும் ஆமாத்திலும் அருகிலுள்ள ஒரு இடம் (எசேக்கியேல் 47:16), ஒருவேளை எர்மோன் மலையின் வடக்குப் புறத்தில் அமைந்திருந்தது."
+    }
+  ]
+}

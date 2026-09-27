@@ -1,0 +1,18 @@
+{
+  "id": "smiths/odollam",
+  "lang": "ta",
+  "source_hash": "0548bf1c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதொல்லாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/odollam#p1-0548bf1c",
+      "text": "[அதுல்லாம்]"
+    }
+  ]
+}

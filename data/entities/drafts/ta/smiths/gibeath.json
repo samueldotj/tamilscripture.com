@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gibeath",
+  "lang": "ta",
+  "source_hash": "eab55c8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிபியாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/gibeath#p1-eab55c8a",
+      "text": "ஒருவேளை பென்யமீனுடைய கிபியா ஊரையே குறிக்கும் (யோசுவா 18:28)."
+    }
+  ]
+}

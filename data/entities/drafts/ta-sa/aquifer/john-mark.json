@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/john-mark",
+  "lang": "ta",
+  "source_hash": "31e4c422",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோவான் மாற்கு",
+  "paragraphs": [
+    {
+      "id": "aquifer/john-mark#p1-31e4c422",
+      "text": "மாற்கு, யோவான் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sered",
+  "lang": "ta",
+  "source_hash": "a447dc8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/sered#p1-a447dc8b",
+      "text": "பயம், செபுலோனின் மகன்களில் ஒருவன் (ஆதியாகமம் 46:14)."
+    }
+  ]
+}

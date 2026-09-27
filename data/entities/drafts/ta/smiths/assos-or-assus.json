@@ -1,0 +1,18 @@
+{
+  "id": "smiths/assos-or-assus",
+  "lang": "ta",
+  "source_hash": "aaaf62cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசோ (Assos, or Assus)",
+  "paragraphs": [
+    {
+      "id": "smiths/assos-or-assus#p1-aaaf62cf",
+      "text": "(நெருங்குதல்), பூர்வகாலத்தில் மீசியா எனப்பட்ட மாகாணத்திலுள்ள, ஆசியா என்ற ரோம மாகாணத்தின் ஒரு கடல்துறைமுகப் பட்டணம். இது அத்ராமித்தியன் வளைகுடாவின் வடகரையிலும், லெஸ்போ தீவிலிருந்து ஏழு மைல் தூரத்திலும் இருந்தது. (அப்போஸ்தலருடைய நடபடிகள் 20:13,14)"
+    }
+  ]
+}

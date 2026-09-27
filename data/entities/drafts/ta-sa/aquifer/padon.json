@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/padon",
+  "lang": "ta",
+  "source_hash": "343b7f40",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாதோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/padon#p1-343b7f40",
+      "text": "பாபிலோன் சிறையிருப்புக்குப்பின் செருபாபேலுடன் பாலஸ்தீனத்திற்குத் திரும்பிவந்த ஆலய ஊழியக்காரர்களின் ஒரு குடும்பத்தின் மூல தந்தை (எஸ்றா 2:44; நெகேமியா 7:47)."
+    }
+  ]
+}

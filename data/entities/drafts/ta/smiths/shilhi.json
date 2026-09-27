@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shilhi",
+  "lang": "ta",
+  "source_hash": "d984be9b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சில்கி",
+  "paragraphs": [
+    {
+      "id": "smiths/shilhi#p1-d984be9b",
+      "text": "(ஆயுதம் தரித்தவன்), யோசபாத்தின் தாயாகிய அசுபாளின் தகப்பன் (1 இராஜாக்கள் 22:42; 2 நாளாகமம் 20:31) (கி.மு. 946க்கு முன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahban",
+  "lang": "ta",
+  "source_hash": "960dee14",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்பான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahban#p1-960dee14",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த அபிசூருக்கும் அபியாயேலுக்கும் பிறந்த மகன் (1 நாளாகமம் 2:29)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/purah",
+  "lang": "ta",
+  "source_hash": "edafbc8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/purah#p1-edafbc8a",
+      "text": "கிதியோனுடைய வேலைக்காரன், அவன் தன் எஜமானுடன் மீதியானியர் படையினிடத்திற்கு இரவில் ரகசியமாகப் போன பொழுது உடன் சென்றவன்; அங்கே அவர்கள் கர்த்தரால் தைரியப்படுத்தப்பட்டார்கள் (நியாயாதிபதிகள் 7:10-11)."
+    }
+  ]
+}

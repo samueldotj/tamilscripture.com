@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ramoth",
+  "lang": "ta",
+  "source_hash": "2b850c91",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராமோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/ramoth#p1-2b850c91",
+      "text": "உயரங்கள். இசக்காரின் கோத்திரத்திற்குரிய ஒரு லேவியர் பட்டணம் (1 சாமுவேல் 30:27; 1 நாளாகமம் 6:73), இது யர்மூத் (யோசுவா 21:29) மற்றும் ரெமேத் (காண்க), 19:21 என்பவற்றுக்கு ஒத்ததே."
+    }
+  ]
+}

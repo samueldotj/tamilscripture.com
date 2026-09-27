@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cherethim",
+  "lang": "ta",
+  "source_hash": "1796a546",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிரேத்தீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/cherethim#p1-1796a546",
+      "text": "(கோடரிக்காரர்), (எசேக்கியேல் 25:16) கிரேத்தியருக்கு ஒப்பானவர்."
+    }
+  ]
+}

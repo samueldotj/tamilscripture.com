@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shicron",
+  "lang": "ta",
+  "source_hash": "d2bd1fe2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிக்ரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shicron#p1-d2bd1fe2",
+      "text": "(வெறி), யூதாவின் வடக்கு எல்லையின் மேற்குப் புறத்திலுள்ள எல்லைக்குறிகளில் ஒன்று. (யோசுவா 15:11) மட்டும். இது எக்ரோனுக்கும் (ஆகிர்) யாப்னியேலுக்கும் (யெப்னா) இடையே இருந்தது."
+    }
+  ]
+}

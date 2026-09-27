@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahuzzath",
+  "lang": "ta",
+  "source_hash": "0192c673",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகுசாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahuzzath#p1-0192c673",
+      "text": "கேராரின் அபிமெலேக்குக்கு அரசவை ஆலோசகனாக இருந்தவன். ஈசாக்குடன் ஒரு உடன்படிக்கை செய்வதற்காக அபிமெலேக்குடன் அகுசாத் பெயெர்செபாவுக்குப் போனான் (ஆதியாகமம் 26:26)."
+    }
+  ]
+}

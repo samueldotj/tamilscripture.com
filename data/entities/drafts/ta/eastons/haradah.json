@@ -1,0 +1,18 @@
+{
+  "id": "eastons/haradah",
+  "lang": "ta",
+  "source_hash": "ac16e179",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரதா",
+  "paragraphs": [
+    {
+      "id": "eastons/haradah#p1-ac16e179",
+      "text": "திடுக்கம்; பயம், இஸ்ரவேலர்கள் தங்கள் பயணத்தில் தங்கிய இருபத்தைந்தாவது முகாமிடம் (எண்ணாகமம் 33:24)."
+    }
+  ]
+}

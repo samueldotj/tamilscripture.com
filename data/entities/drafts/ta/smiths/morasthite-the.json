@@ -1,0 +1,18 @@
+{
+  "id": "smiths/morasthite-the",
+  "lang": "ta",
+  "source_hash": "a49a6a40",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மொரஸ்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/morasthite-the#p1-a49a6a40",
+      "text": "அதாவது, மொரெசேத் என்னும் இடத்தைச் சேர்ந்தவன். இது இரண்டு முறை காணப்படுகிறது—(எரேமியா 26:18; மீகா 1:1)—ஒவ்வொரு முறையும் மீகா தீர்க்கதரிசியின் வர்ணனையாக."
+    }
+  ]
+}

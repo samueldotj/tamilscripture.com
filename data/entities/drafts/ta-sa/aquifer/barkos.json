@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/barkos",
+  "lang": "ta",
+  "source_hash": "04b7135a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்கோச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/barkos#p1-04b7135a",
+      "text": "பாபிலோனில் இருந்த சிறையிருப்பிற்குப் பின்பு செருபாபேலுடன் எருசலேமுக்குத் திரும்பி வந்த ஆலயப் பணியாட்கள் கூட்டத்தினருடைய முன்னோன் (எஸ்றா 2:53; நெகேமியா 7:55)."
+    }
+  ]
+}

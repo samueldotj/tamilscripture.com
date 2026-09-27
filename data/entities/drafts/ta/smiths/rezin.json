@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rezin",
+  "lang": "ta",
+  "source_hash": "c7bea2a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேத்சீன்",
+  "paragraphs": [
+    {
+      "id": "smiths/rezin#p1-c7bea2a9",
+      "text": "(உறுதியானவன்)."
+    }
+  ]
+}

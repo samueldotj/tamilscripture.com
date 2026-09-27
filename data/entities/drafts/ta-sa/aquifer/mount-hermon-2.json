@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mount-hermon-2",
+  "lang": "ta",
+  "source_hash": "04fbee83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எர்மோன் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-hermon-2#p1-04fbee83",
+      "text": "எர்மோன் மலையைக் காண்க."
+    }
+  ]
+}

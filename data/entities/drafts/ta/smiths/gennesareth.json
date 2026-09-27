@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gennesareth",
+  "lang": "ta",
+  "source_hash": "3f068087",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனேசரேத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/gennesareth#p1-3f068087",
+      "text": "[கெனேசரேத்து] என்பதற்குப் பதிலாகத் தவறாக எழுதப்பட்டது"
+    }
+  ]
+}

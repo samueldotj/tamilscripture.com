@@ -1,0 +1,18 @@
+{
+  "id": "smiths/menna",
+  "lang": "ta",
+  "source_hash": "b7f86fa6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மயினான்",
+  "paragraphs": [
+    {
+      "id": "smiths/menna#p1-b7f86fa6",
+      "text": "லூக்கா 3:31-ல் திருத்தப்பட்ட மொழிபெயர்ப்பில் மேனான் என்பதற்குப் பதிலாக மயினான்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/madai",
+  "lang": "ta",
+  "source_hash": "96dcc17c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாதாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/madai#p1-96dcc17c",
+      "text": "மாதாய் யாப்பேத்தின் ஏழு மகன்களில் மூன்றாவது மகனாக இருந்தான் (ஆதியாகமம் 10:2; 1 நாளாகமம் 1:5)."
+    }
+  ]
+}

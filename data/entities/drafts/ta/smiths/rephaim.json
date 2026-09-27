@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rephaim",
+  "lang": "ta",
+  "source_hash": "04116bc1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெப்பாயீமியர்",
+  "paragraphs": [
+    {
+      "id": "smiths/rephaim#p1-04116bc1",
+      "text": "[இராட்சதர்கள் காண்க]"
+    }
+  ]
+}

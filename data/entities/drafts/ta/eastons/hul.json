@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hul",
+  "lang": "ta",
+  "source_hash": "e4792e5b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூல்",
+  "paragraphs": [
+    {
+      "id": "eastons/hul#p1-e4792e5b",
+      "text": "வட்டம், ஆராமின் இரண்டாம் மகன் (ஆதியாகமம் 10:23), மற்றும் சேமின் பேரன்."
+    }
+  ]
+}

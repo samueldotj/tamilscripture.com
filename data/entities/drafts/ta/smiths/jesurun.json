@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jesurun",
+  "lang": "ta",
+  "source_hash": "6f758471",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெசூரூன்",
+  "paragraphs": [
+    {
+      "id": "smiths/jesurun#p1-6f758471",
+      "text": "[யெஷூரூன் காண்க]"
+    }
+  ]
+}

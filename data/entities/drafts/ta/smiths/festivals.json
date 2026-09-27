@@ -1,0 +1,18 @@
+{
+  "id": "smiths/festivals",
+  "lang": "ta",
+  "source_hash": "e574a567",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பண்டிகைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/festivals#p1-e574a567",
+      "text": "I. நியாயப்பிரமாணத்தில் நியமிக்கப்பட்ட மத நேரங்கள் மூன்று தலைப்புகளின் கீழ் வருகின்றன:"
+    }
+  ]
+}

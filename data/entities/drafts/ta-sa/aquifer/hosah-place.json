@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hosah-place",
+  "lang": "ta",
+  "source_hash": "4116868c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசா (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hosah-place#p1-4116868c",
+      "text": "ஓசா என்பது தீருவுக்குத் தெற்கே ஆசேரின் எல்லையில் இருந்த ஒரு பட்டணம் (யோசுவா 19:29)."
+    }
+  ]
+}

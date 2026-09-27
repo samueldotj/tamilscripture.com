@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cherub-place",
+  "lang": "ta",
+  "source_hash": "53d1d70c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேருப் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/cherub-place#p1-26762846",
+      "text": "பாபிலோனிலுள்ள ஐந்து பட்டணங்களில் ஒன்று. அங்கிருந்து வந்த இஸ்ரவேலர்கள் தங்கள் பிதாக்களின் வம்சத்தை நிரூபிக்க முடியாமல் இருந்தனர்; அவர்கள் சிறையிருப்புக்குப் பின்பு அங்கே திரும்பினர் (எஸ்றா 2:59; நெகேமியா 7:61)."
+    },
+    {
+      "id": "aquifer/cherub-place#p2-aa78ac48",
+      "text": "கேருப் என்பதைப் பார்க்க."
+    }
+  ]
+}

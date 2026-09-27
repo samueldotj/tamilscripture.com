@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hassenaah",
+  "lang": "ta",
+  "source_hash": "6f8a53d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசெனா",
+  "paragraphs": [
+    {
+      "id": "smiths/hassenaah#p1-6f8a53d6",
+      "text": "பெனே-அசெனா என்பவர்கள் எருசலேமின் அலங்கத்தைப் பழுதுபார்க்கும்போது மீன்வாசலைக் கட்டினார்கள் (நெகேமியா 3:3) (கி.மு. 446)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/finer",
+  "lang": "ta",
+  "source_hash": "0fef2248",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொல்லன்",
+  "paragraphs": [
+    {
+      "id": "eastons/finer#p1-0fef2248",
+      "text": "வெள்ளியிலும் பொன்னிலும் வேலை செய்கிறவன் (நீதிமொழிகள் 25:4). நியாயாதிபதிகள் 17:4-ல் இந்த வார்த்தை (tsoreph) “கொல்லன்” என்றும், ஏசாயா 41:7-ல் “சித்திரவேலைக்காரன்” என்றும் மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

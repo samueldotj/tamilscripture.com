@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/publican",
+  "lang": "ta",
+  "source_hash": "25adb2a9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வரி வசூலிப்பவன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/publican#p1-27555c4f",
+      "text": "வரி வசூலிப்பவன் (Publican) என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் “வரி வசூலிப்பவன்” (tax collector) என்பதற்குப் பயன்படுத்தப்பட்ட சொல்லாகும்."
+    },
+    {
+      "id": "aquifer/publican#p2-3c3a4144",
+      "text": "காண்க: வரி வசூலிப்பவன்."
+    }
+  ]
+}

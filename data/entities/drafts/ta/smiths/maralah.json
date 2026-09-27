@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maralah",
+  "lang": "ta",
+  "source_hash": "540d3abd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாராலா",
+  "paragraphs": [
+    {
+      "id": "smiths/maralah#p1-540d3abd",
+      "text": "(நடுக்கம்) செபுலோன் கோத்திரத்தின் எல்லையிலுள்ள எல்லைக்குறிகளில் ஒன்று. (யோசுவா 19:11)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/migron",
+  "lang": "ta",
+  "source_hash": "2fa84c86",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்ரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/migron#p1-2fa84c86",
+      "text": "(பாறை), கிபியாவின் அருகிலுள்ள ஒரு பட்டணம் அல்லது இடம். (1 சாமுவேல் 14:23) சனகெரிபின் எருசலேமுக்குள் அணுகுதலில் மிக்ரோனும் குறிப்பிடப்பட்டுள்ளது. (ஏசாயா 10:28)"
+    }
+  ]
+}

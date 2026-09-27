@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jubal",
+  "lang": "ta",
+  "source_hash": "ffe82109",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூபால்",
+  "paragraphs": [
+    {
+      "id": "smiths/jubal#p1-ffe82109",
+      "text": "(இசை) ஆதாள் மூலமாக லாமேக்குக்குப் பிறந்த மகன், \"கின்னரம் மற்றும் நாதசுரம்\" ஆகியவற்றைக் கண்டுபிடித்தவன். (ஆதியாகமம் 4:21)"
+    }
+  ]
+}

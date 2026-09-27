@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/medan",
+  "lang": "ta",
+  "source_hash": "516ea2ef",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேதான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/medan#p1-516ea2ef",
+      "text": "மேதான் ஆபிரகாமுக்கு அவனுடைய இரண்டாம் மனைவியாகிய கேத்தூராளால் பிறந்த மூன்றாவது மகன் (ஆதியாகமம் 25:2; 1 நாளாகமம் 1:32)."
+    }
+  ]
+}

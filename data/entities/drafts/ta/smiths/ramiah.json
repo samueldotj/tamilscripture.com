@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ramiah",
+  "lang": "ta",
+  "source_hash": "e51ad19e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரமீயா",
+  "paragraphs": [
+    {
+      "id": "smiths/ramiah#p1-e51ad19e",
+      "text": "“அந்நிய மனைவியை” விவாகம் செய்திருந்தவன். (எஸ்றா 10:25)"
+    }
+  ]
+}

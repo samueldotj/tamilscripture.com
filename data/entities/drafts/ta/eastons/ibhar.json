@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ibhar",
+  "lang": "ta",
+  "source_hash": "6552be7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்பார்",
+  "paragraphs": [
+    {
+      "id": "eastons/ibhar#p1-6552be7b",
+      "text": "தெரிந்துகொள்ளப்பட்டவன், தாவீதின் மகன்களில் ஒருவன் (1 நாளாகமம் 3:6; 2 சாமுவேல் 5:15)."
+    }
+  ]
+}

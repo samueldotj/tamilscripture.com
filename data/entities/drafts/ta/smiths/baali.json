@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baali",
+  "lang": "ta",
+  "source_hash": "59d109b1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகாலி",
+  "paragraphs": [
+    {
+      "id": "smiths/baali#p1-59d109b1",
+      "text": "(ஓசியா 2:16) [பாகால்]"
+    }
+  ]
+}

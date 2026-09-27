@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chun",
+  "lang": "ta",
+  "source_hash": "b3b4d1a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chun#p1-5208dd8a",
+      "text": "1 நாளாகமம் 18:8-ல் தாவீது வெகு திரளான வெண்கலத்தை எடுத்துக்கொண்ட ஒரு பட்டணமான கூனுக்கு கிங் யாக்கோபு வேர்ஷனில் \"Chun\" என்று உள்ளது."
+    },
+    {
+      "id": "aquifer/chun#p2-7bbd0599",
+      "text": "கூன் என்பதைக் காண்க."
+    }
+  ]
+}

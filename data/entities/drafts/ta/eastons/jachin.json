@@ -1,0 +1,30 @@
+{
+  "id": "eastons/jachin",
+  "lang": "ta",
+  "source_hash": "953da0f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாகீன்",
+  "paragraphs": [
+    {
+      "id": "eastons/jachin#p1-9c949ae1",
+      "text": "உறுதியானவன்."
+    },
+    {
+      "id": "eastons/jachin#p2-a17f70ab",
+      "text": "(1.) சிமியோனின் நான்காம் மகன் (ஆதியாகமம் 46:10), இவனுக்கு யாரீப் என்றும் பெயர் (1 நாளாகமம் 4:24)."
+    },
+    {
+      "id": "eastons/jachin#p3-64da382a",
+      "text": "(2.) ஆசாரியர்களின் ஒரு பிரிவின் (இருபத்தோராவது) தலைவன் (1 நாளாகமம் 24:17)."
+    },
+    {
+      "id": "eastons/jachin#p4-b2bb9a64",
+      "text": "(3.) சிறையிருப்பிலிருந்து திரும்பிவந்த ஆசாரியர்களில் ஒருவன் (1 நாளாகமம் 9:10)."
+    }
+  ]
+}

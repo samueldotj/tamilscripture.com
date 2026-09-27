@@ -1,0 +1,26 @@
+{
+  "id": "eastons/rapha",
+  "lang": "ta",
+  "source_hash": "3dc8a4c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்பா",
+  "paragraphs": [
+    {
+      "id": "eastons/rapha#p1-69fefd90",
+      "text": "உயரமான."
+    },
+    {
+      "id": "eastons/rapha#p2-adff39c3",
+      "text": "(1.) பினியாவின் மகனான ஒரு பென்யமீனியன் (1 நாளாகமம் 8:2, 37), சவுலின் சந்ததியன்."
+    },
+    {
+      "id": "eastons/rapha#p3-bea728df",
+      "text": "(2.) 1 நாளாகமம் 20:4, 6-ன் ஓரக்குறிப்பு, அங்கே வேதவாக்கியத்தில் “இராட்சதன்” எனக் கொடுக்கப்பட்டுள்ளது."
+    }
+  ]
+}

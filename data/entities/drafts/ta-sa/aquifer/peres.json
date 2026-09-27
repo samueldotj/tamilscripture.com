@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/peres",
+  "lang": "ta",
+  "source_hash": "4c27ac0b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரேஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/peres#p1-4c27ac0b",
+      "text": "\"பிரிக்கப்பட்டது\" என்று அர்த்தமுள்ள பர்சின் என்பதன் ஒருமை வடிவம் (தானியேல் 5:28). மெனே, மெனே, தேக்கேல், பர்சின் என்பதைக் காண்க."
+    }
+  ]
+}

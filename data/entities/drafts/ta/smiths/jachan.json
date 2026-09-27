@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jachan",
+  "lang": "ta",
+  "source_hash": "bf40efb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கான்",
+  "paragraphs": [
+    {
+      "id": "smiths/jachan#p1-bf40efb6",
+      "text": "(உபத்திரவம்), காத் கோத்திரத்தின் ஏழு பிரதான மனிதர்களில் ஒருவன். (1 நாளாகமம் 5:13)"
+    }
+  ]
+}

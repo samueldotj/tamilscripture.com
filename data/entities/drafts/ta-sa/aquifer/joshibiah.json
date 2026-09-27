@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/joshibiah",
+  "lang": "ta",
+  "source_hash": "0e07928c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசிபியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/joshibiah#p1-0e07928c",
+      "text": "யோசிபியா சிமியோன் கோத்திரத்தைச் சேர்ந்த ஒரு தலைவராக இருந்தார். அவர் செராயாவின் மகனும், யெகூவின் தகப்பனும் ஆவார் (1 நாளாகமம் 4:35)."
+    }
+  ]
+}

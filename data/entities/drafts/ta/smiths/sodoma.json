@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sodoma",
+  "lang": "ta",
+  "source_hash": "75adcde5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோதோமா",
+  "paragraphs": [
+    {
+      "id": "smiths/sodoma#p1-75adcde5",
+      "text": "(ரோமர் 2:29) இந்த இடத்தில் மட்டும் அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பு (Authorized Version) நன்கு அறியப்பட்ட சோதோம் என்னும் பெயரின் கிரேக்கு மற்றும் வல்கேட் வடிவத்தைப் பின்பற்றியுள்ளது."
+    }
+  ]
+}

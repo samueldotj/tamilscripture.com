@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/assarion",
+  "lang": "ta",
+  "source_hash": "5cf95b33",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசாரியோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/assarion#p1-cf18b1b3",
+      "text": "சிறிய மதிப்புள்ள ஒரு நாணயம் (மத்தேயு 10:29)."
+    },
+    {
+      "id": "aquifer/assarion#p2-10692688",
+      "text": "நாணயங்கள் காண்க."
+    }
+  ]
+}

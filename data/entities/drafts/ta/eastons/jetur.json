@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jetur",
+  "lang": "ta",
+  "source_hash": "876fa59b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெத்தூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/jetur#p1-876fa59b",
+      "text": "ஒரு வேலி, இஸ்மவேலின் பன்னிரண்டு மகன்களில் ஒருவன் (ஆதியாகமம் 25:15)."
+    }
+  ]
+}

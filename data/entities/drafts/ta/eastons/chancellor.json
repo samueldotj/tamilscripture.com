@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chancellor",
+  "lang": "ta",
+  "source_hash": "18c2fac4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதிகாரி",
+  "paragraphs": [
+    {
+      "id": "eastons/chancellor#p1-18c2fac4",
+      "text": "நியாயத்தீர்ப்புச் செய்யும் அதிகாரம் உள்ளவன், மொழிப்படி “நியாயத்தீர்ப்பின் கர்த்தர்;” இது சமாரியாவின் பெர்சிய தேசாதிபதிக்குக் கொடுக்கப்பட்ட ஒரு பட்டம் (எஸ்றா 4:8, 9, 17)."
+    }
+  ]
+}

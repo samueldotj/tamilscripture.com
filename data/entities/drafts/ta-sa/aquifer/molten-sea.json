@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/molten-sea",
+  "lang": "ta",
+  "source_hash": "4d0d594d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உருக்கின கடல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/molten-sea#p1-c67bdc74",
+      "text": "ராஜாவாகிய சாலொமோனுடைய ஆலயத்தில் இருந்த சடங்கு முழுக்குத் தொட்டிக்கு இடப்பட்ட மறு பெயர் (\"வெண்கலக் கடல்\" என்னும் தொட்டி, 1 இராஜாக்கள் 7:23)."
+    },
+    {
+      "id": "aquifer/molten-sea#p2-3d4c9eac",
+      "text": "காண்க: வெண்கலக் கடல்; தொட்டி; ஆசரிப்புக்கூடாரம்; ஆலயம்."
+    }
+  ]
+}

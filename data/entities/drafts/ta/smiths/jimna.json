@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jimna",
+  "lang": "ta",
+  "source_hash": "52511d6d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/jimna#p1-52511d6d",
+      "text": "(செழிப்பு), ஆசேருடைய முதற்பேறான மகன் (எண்ணாகமம் 26:44). இவன் வேறு இடங்களில் ஆதியாகமம் 46:17-லும், 1 நாளாகமம் 7:30-லும் இம்னா என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

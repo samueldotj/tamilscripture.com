@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/esrom",
+  "lang": "ta",
+  "source_hash": "fdffd040",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரோம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/esrom#p1-2b812b58",
+      "text": "பாரேஸின் குமாரனாகிய எஸ்ரோன் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் மத்தேயு 1:3 மற்றும் லூக்கா 3:33 ஆகிய வசனங்களில் காணப்படும் எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/esrom#p2-37919ef4",
+      "text": "எஸ்ரோன் (நபர்) #2 ஐக் காண்க."
+    }
+  ]
+}

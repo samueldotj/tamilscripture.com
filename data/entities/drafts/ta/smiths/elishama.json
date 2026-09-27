@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elishama",
+  "lang": "ta",
+  "source_hash": "6eb60294",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிஷாமா",
+  "paragraphs": [
+    {
+      "id": "smiths/elishama#p1-6eb60294",
+      "text": "(தேவன் கேட்கிறவர்)."
+    }
+  ]
+}

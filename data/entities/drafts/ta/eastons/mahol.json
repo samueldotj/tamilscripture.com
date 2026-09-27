@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mahol",
+  "lang": "ta",
+  "source_hash": "d49f34de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகோல்",
+  "paragraphs": [
+    {
+      "id": "eastons/mahol#p1-d49f34de",
+      "text": "நடனம்; சாலொமோனுக்கு அடுத்தபடியாகவே ஞானத்தில் குறைந்தவர்களாக இருந்த நான்கு மகன்களுடைய தகப்பன் (1 இராஜாக்கள் 4:31)."
+    }
+  ]
+}

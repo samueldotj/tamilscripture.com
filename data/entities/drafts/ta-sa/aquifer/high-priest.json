@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/high-priest",
+  "lang": "ta",
+  "source_hash": "55a553a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரதான ஆசாரியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/high-priest#p1-30e06e54",
+      "text": "பிரதான ஆசாரியன் என்பவன் தலைமை ஆசாரியன் என்பவனே. அவன் இஸ்ரவேலில் மிக முக்கியமான ஆசாரியனாக இருந்தான்."
+    },
+    {
+      "id": "aquifer/high-priest#p2-68995354",
+      "text": "தலைமை ஆசாரியன், ஆசாரியர்களும் லேவியர்களும் என்பதைக் காண்க."
+    }
+  ]
+}

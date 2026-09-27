@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/anaharath",
+  "lang": "ta",
+  "source_hash": "8f4bedd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாகராத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/anaharath#p1-8f4bedd9",
+      "text": "இது யெஸ்ரயேல் பள்ளத்தாக்கில் இருந்த ஒரு பட்டணமாகும். யோசுவா தேசத்தைப் பங்கிட்டபோது இது இசக்காருடைய கோத்திரத்திற்குக் கொடுக்கப்பட்டது (யோசுவா 19:19)."
+    }
+  ]
+}

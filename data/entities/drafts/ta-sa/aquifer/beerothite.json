@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beerothite",
+  "lang": "ta",
+  "source_hash": "d130c20f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரோத்தியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/beerothite#p1-58aad8da",
+      "text": "பேரோத்தில் வசிக்கிற ஒருவன் (கிங் யாக்கோபு மொழிபெயர்ப்பிலும் திருத்தப்பட்ட நியமன மொழிபெயர்ப்பிலும் 2 சாமுவேல் 4:2-9)."
+    },
+    {
+      "id": "aquifer/beerothite#p2-e959aa6a",
+      "text": "பேரோத் என்பதைக் காண்க."
+    }
+  ]
+}

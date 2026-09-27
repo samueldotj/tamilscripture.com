@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jecoliah",
+  "lang": "ta",
+  "source_hash": "ecffb61c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எக்கோலியாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jecoliah#p1-ecffb61c",
+      "text": "உசியா என்றும் அழைக்கப்பட்ட அசரியா ராஜாவின் தாய் (2 இராஜாக்கள் 15:2; 2 நாளாகமம் 26:3)."
+    }
+  ]
+}

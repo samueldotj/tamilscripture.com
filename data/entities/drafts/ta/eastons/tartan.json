@@ -1,0 +1,26 @@
+{
+  "id": "eastons/tartan",
+  "lang": "ta",
+  "source_hash": "504d731f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தர்த்தான்",
+  "paragraphs": [
+    {
+      "id": "eastons/tartan#p1-993bdcc4",
+      "text": "“சேனாதிபதி” என்று பொருள்படும் ஒரு அசீரிய வார்த்தை."
+    },
+    {
+      "id": "eastons/tartan#p2-fa99fa2b",
+      "text": "(1.) சனகெரிப் எசேக்கியாவினிடத்தில் அனுப்பிய தூதுவர்களில் ஒருவன் (2 இராஜாக்கள் 18:17)."
+    },
+    {
+      "id": "eastons/tartan#p3-36d61380",
+      "text": "(2.) சர்கோனின் சேனாதிபதிகளில் ஒருவன் (ஏசாயா 20:1)."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "eastons/malluch",
+  "lang": "ta",
+  "source_hash": "67bcd9b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்லூக்",
+  "paragraphs": [
+    {
+      "id": "eastons/malluch#p1-270db6f2",
+      "text": "அரசாண்டவன், அல்லது அரசாளுகிறவன்."
+    },
+    {
+      "id": "eastons/malluch#p2-eae2ce53",
+      "text": "(1.) மெராரியின் குடும்பத்தைச் சேர்ந்த ஒரு லேவியன் (1 நாளாகமம் 6:44)."
+    },
+    {
+      "id": "eastons/malluch#p3-1cf0ca23",
+      "text": "(2.) பாபிலோனிலிருந்து திரும்பிவந்த ஒரு ஆசாரியன் (நெகேமியா 12:2)."
+    },
+    {
+      "id": "eastons/malluch#p4-b8398356",
+      "text": "(3.) எஸ்றா 10:29."
+    },
+    {
+      "id": "eastons/malluch#p5-44252714",
+      "text": "(4.) எஸ்றா 10:32"
+    }
+  ]
+}

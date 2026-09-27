@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rekem",
+  "lang": "ta",
+  "source_hash": "c9b5dc02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெக்கேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/rekem#p1-c9b5dc02",
+      "text": "பென்யமீனுடைய பங்கில் இருந்த பட்டணங்களில் ஒன்று. (யோசுவா 18:27) இதன் இருப்பிடம் இன்று அறியப்படவில்லை. (பலவண்ணம்)."
+    }
+  ]
+}

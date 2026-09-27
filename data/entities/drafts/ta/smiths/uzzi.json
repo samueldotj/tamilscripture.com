@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uzzi",
+  "lang": "ta",
+  "source_hash": "cc716c10",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊசி",
+  "paragraphs": [
+    {
+      "id": "smiths/uzzi#p1-cc716c10",
+      "text": "(பலமுள்ளவன்)."
+    }
+  ]
+}

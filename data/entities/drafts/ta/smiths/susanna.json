@@ -1,0 +1,18 @@
+{
+  "id": "smiths/susanna",
+  "lang": "ta",
+  "source_hash": "97d4f40d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூசன்னாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/susanna#p1-97d4f40d",
+      "text": "(லீலி மலர்)."
+    }
+  ]
+}

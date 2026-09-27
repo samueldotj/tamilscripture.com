@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethbiri",
+  "lang": "ta",
+  "source_hash": "11f98f3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்பிரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethbiri#p1-005abdf1",
+      "text": "பெத்பிரி என்பது 1 நாளாகமம் 4:31-ல் யூதாவின் தென் பகுதியிலுள்ள ஒரு பட்டணமான லெபாயோத்திற்கு வேறொரு பெயர்."
+    },
+    {
+      "id": "aquifer/bethbiri#p2-456d93c3",
+      "text": "லெபாயோத் காண்க."
+    }
+  ]
+}

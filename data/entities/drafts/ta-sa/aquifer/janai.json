@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/janai",
+  "lang": "ta",
+  "source_hash": "71aa43df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/janai#p1-71aa43df",
+      "text": "யானாய் என்பது காத் கோத்திரத்தைச் சேர்ந்த யானாய் என்பவனுடைய பெயரின் மற்றொரு எழுத்துவடிவமாகும் (1 நாளாகமம் 5:12)."
+    }
+  ]
+}

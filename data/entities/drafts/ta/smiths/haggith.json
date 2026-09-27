@@ -1,0 +1,18 @@
+{
+  "id": "smiths/haggith",
+  "lang": "ta",
+  "source_hash": "cdc9fb2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகீத்",
+  "paragraphs": [
+    {
+      "id": "smiths/haggith#p1-cdc9fb2b",
+      "text": "(உற்சாகமானவள்; நடனமாடுபவள்), தாவீதின் மனைவிகளில் ஒருத்தி, அதோனியாவின் தாய். (2 சாமுவேல் 3:4; 1 இராஜாக்கள் 1:6) (கி.மு. 1053.)"
+    }
+  ]
+}

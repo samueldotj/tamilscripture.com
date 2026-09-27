@@ -1,0 +1,18 @@
+{
+  "id": "smiths/farthing",
+  "lang": "ta",
+  "source_hash": "038a8ff2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசு",
+  "paragraphs": [
+    {
+      "id": "smiths/farthing#p1-038a8ff2",
+      "text": "புதிய ஏற்பாட்டில் இரண்டு வெவ்வேறு நாணயங்களின் பெயர்கள் அங்கீகரிக்கப்பட்ட வெளிப்பாட்டில் (Authorized Version) இந்த வார்த்தையால் மொழிபெயர்க்கப்பட்டுள்ளன:"
+    }
+  ]
+}

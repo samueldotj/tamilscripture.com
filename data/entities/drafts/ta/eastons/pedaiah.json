@@ -1,0 +1,46 @@
+{
+  "id": "eastons/pedaiah",
+  "lang": "ta",
+  "source_hash": "777f01f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெதாயா",
+  "paragraphs": [
+    {
+      "id": "eastons/pedaiah#p1-675833cd",
+      "text": "கர்த்தருடைய மீட்பு."
+    },
+    {
+      "id": "eastons/pedaiah#p2-402aae53",
+      "text": "(1.) யோசியாவின் மனைவியும், ராஜாவாகிய யோயாக்கீமின் தாயுமான செபுதாளின் தகப்பன் (2 இராஜாக்கள் 23:36)."
+    },
+    {
+      "id": "eastons/pedaiah#p3-8d0ae634",
+      "text": "(2.) செருபாபேலின் தகப்பன் (1 நாளாகமம் 3:17-19)."
+    },
+    {
+      "id": "eastons/pedaiah#p4-64d5b07c",
+      "text": "(3.) மனாசேயின் பாதிக்கோத்திரத்திற்கு அதிகாரியாகிய யோவேலின் தகப்பன் (1 நாளாகமம் 27:20)."
+    },
+    {
+      "id": "eastons/pedaiah#p5-c1ef2d77",
+      "text": "(4.) நெகேமியா 3:25."
+    },
+    {
+      "id": "eastons/pedaiah#p6-3cee31d9",
+      "text": "(5.) ஒரு லேவியன் (8:4)."
+    },
+    {
+      "id": "eastons/pedaiah#p7-a60b06e6",
+      "text": "(6.) ஒரு பென்யமீனியன் (11:7)."
+    },
+    {
+      "id": "eastons/pedaiah#p8-ea97cd20",
+      "text": "(7.) ஒரு லேவியன் (13:13)."
+    }
+  ]
+}

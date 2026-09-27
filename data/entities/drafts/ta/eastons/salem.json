@@ -1,0 +1,18 @@
+{
+  "id": "eastons/salem",
+  "lang": "ta",
+  "source_hash": "18817a5a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலேம்",
+  "paragraphs": [
+    {
+      "id": "eastons/salem#p1-18817a5a",
+      "text": "சமாதானம் என்று பொருள்படும், இது எருசலேமின் வேறொரு பெயராகக் கருதப்படுகிறது (ஆதியாகமம் 14:18; சங்கீதங்கள் 76:2; எபிரெயர் 7:1, 2)."
+    }
+  ]
+}

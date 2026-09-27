@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nachon",
+  "lang": "ta",
+  "source_hash": "e071ca98",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nachon#p1-3774aca9",
+      "text": "2 சாமுவேல் 6:6-ல் வரும் நாகோன் என்பதற்கு யாக்கோபு அரசரின் மொழிபெயர்ப்பில் (கிங் ஜேம்ஸ் மொழிபெயர்ப்பு) காணப்படும் எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/nachon#p2-35aabb5a",
+      "text": "நாகோன் என்பதைக் காண்க."
+    }
+  ]
+}

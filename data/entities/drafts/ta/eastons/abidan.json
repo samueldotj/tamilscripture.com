@@ -1,0 +1,18 @@
+{
+  "id": "eastons/abidan",
+  "lang": "ta",
+  "source_hash": "cdb893e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபீதான்",
+  "paragraphs": [
+    {
+      "id": "eastons/abidan#p1-cdb893e7",
+      "text": "நியாயத்தீர்ப்பின் தகப்பன்; நியாயாதிபதி, எகிப்திலிருந்து வெளியேறும்போது பென்யமீன் கோத்திரத்தின் தலைவனாக இருந்தவன் (எண்ணாகமம் 1:11; 2:22)."
+    }
+  ]
+}

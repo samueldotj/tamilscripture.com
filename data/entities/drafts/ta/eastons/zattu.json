@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zattu",
+  "lang": "ta",
+  "source_hash": "49c1027c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சத்தூ",
+  "paragraphs": [
+    {
+      "id": "eastons/zattu#p1-49c1027c",
+      "text": "அதே பொருள் கொண்ட பெயர்; செருபாபேலுடன் சிறையிருப்பிலிருந்து திரும்பிய ஒருவனின் சந்ததியார் (எஸ்றா 2:8; நெகேமியா 7:13); இது சத்தூ என்பவனோடு ஒத்திருக்கலாம்."
+    }
+  ]
+}

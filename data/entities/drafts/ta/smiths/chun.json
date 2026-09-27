@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chun",
+  "lang": "ta",
+  "source_hash": "58a2864f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூன்",
+  "paragraphs": [
+    {
+      "id": "smiths/chun#p1-58a2864f",
+      "text": "(1 நாளாகமம் 18:8) இது 2 சாமுவேலில் (8:8) பேரொத்தாய் என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/crescens",
+  "lang": "ta",
+  "source_hash": "0fa6ba32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிரெஸ்கே",
+  "paragraphs": [
+    {
+      "id": "eastons/crescens#p1-0fa6ba32",
+      "text": "பெருகுகிறவன், ஒருவேளை கிறிஸ்துவின் எழுபது சீடர்களில் ஒருவனாக இருக்கலாம். இவன் பவுலின் உதவியாட்களில் ஒருவனாக இருந்தான் (2 தீமோத்தேயு 4:10), ஒருவேளை ரோமாபுரிக்குப் சேர்ந்த ஒரு கிறிஸ்தவனாக இருக்கலாம்."
+    }
+  ]
+}

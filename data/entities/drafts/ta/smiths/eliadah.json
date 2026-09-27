@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliadah",
+  "lang": "ta",
+  "source_hash": "0cbaa703",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/eliadah#p1-0cbaa703",
+      "text": "சாலொமோனுக்குத் தொல்லை கொடுத்த ஒரு கொள்ளைக் கூட்டத்தின் தலைவனாகிய ரேசோனின் தகப்பன். (1 இராஜாக்கள் 11:23)"
+    }
+  ]
+}

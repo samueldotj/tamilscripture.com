@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chant",
+  "lang": "ta",
+  "source_hash": "50e37975",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீதனம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/chant#p1-6a929783",
+      "text": "கீதனம் என்பது ஒரு தொடர்ச்சியான, தாள ஒழுங்குடைய பாடும் அல்லது பேசும் முறையாகும், இது பெரும்பாலும் ஒரே தொடர்ச்சியான ஒலியைப் போல் ஒலிக்கும் (சங்கீதம் 8:1; எசேக்கியேல் 32:16)."
+    },
+    {
+      "id": "aquifer/chant#p2-c265f6ba",
+      "text": "இசை என்பதைக் காண்க."
+    }
+  ]
+}

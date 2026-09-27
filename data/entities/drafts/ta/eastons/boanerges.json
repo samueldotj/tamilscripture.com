@@ -1,0 +1,18 @@
+{
+  "id": "eastons/boanerges",
+  "lang": "ta",
+  "source_hash": "80a06dfb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போவனெர்கேஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/boanerges#p1-80a06dfb",
+      "text": "இடிமுழக்க மக்கள் என்னும் பொருள்கொண்ட ஒரு மறுபெயர், நமது கர்த்தர் யாக்கோபுக்கும் யோவானுக்கும் கொடுத்தார் (மாற்கு 3:17), அவர்களுடைய வேகமும் தீவிரமுமான குணத்தினிமித்தம் (லூக்கா 9:54)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tehinnah",
+  "lang": "ta",
+  "source_hash": "bf8922b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெகினாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/tehinnah#p1-bf8922b5",
+      "text": "(விண்ணப்பம்), நாகாசின் பட்டணமாகிய இர்நாகாஷின் தகப்பன் அல்லது ஸ்தாபகன், எஸ்தோனின் மகன். (1 நாளாகமம் 4:12) (கி.மு. 1083 இற்குரியது.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mattathah",
+  "lang": "ta",
+  "source_hash": "878abe11",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தாத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/mattathah#p1-878abe11",
+      "text": "(யெகோவாவின் அன்பளிப்பு), ஒருவேளை மாத்தாதியாவின் சுருக்கப்பட்ட வடிவமாக இருக்கலாம்."
+    }
+  ]
+}

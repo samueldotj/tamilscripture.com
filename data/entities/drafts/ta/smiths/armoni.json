@@ -1,0 +1,18 @@
+{
+  "id": "smiths/armoni",
+  "lang": "ta",
+  "source_hash": "8e433dc3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்மோனி",
+  "paragraphs": [
+    {
+      "id": "smiths/armoni#p1-8e433dc3",
+      "text": "ரிஸ்பாளால் சவுலுக்குப் பிறந்த மகன். (2 சாமுவேல் 21:8)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jinah",
+  "lang": "ta",
+  "source_hash": "8203d37a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஜீனா",
+  "paragraphs": [
+    {
+      "id": "smiths/jinah#p1-8203d37a",
+      "text": "(புலம்பல்), யூதாவிற்குரிய ஒரு பட்டணம், அது கோத்திரத்தின் தென் எல்லையின் கடைசி பகுதியில், ஏதோமுக்கு அடுத்ததாக இருந்தது. (யோசுவா 15:22)"
+    }
+  ]
+}

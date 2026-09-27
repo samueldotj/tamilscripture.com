@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bileam",
+  "lang": "ta",
+  "source_hash": "b8e13f73",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பீலியாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bileam#p1-4581a258",
+      "text": "1 நாளாகமம் 6:70-ல் பீலியாம் என்பது மனாசேயின் நாட்டிலுள்ள லேவியரின் ஊராகிய இப்லேயாமுக்கு வேறொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/bileam#p2-ed3f0a27",
+      "text": "இப்லேயாம் காண்க."
+    }
+  ]
+}

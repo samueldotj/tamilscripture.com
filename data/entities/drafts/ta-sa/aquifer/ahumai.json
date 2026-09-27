@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ahumai",
+  "lang": "ta",
+  "source_hash": "032abcfb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகுமாயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahumai#p1-032abcfb",
+      "text": "யூதா கோத்திரத்தில் யாகாத்தின் சந்ததியார் (1 நாளாகமம் 4:2)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ward",
+  "lang": "ta",
+  "source_hash": "5fac9f03",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காவல்",
+  "paragraphs": [
+    {
+      "id": "eastons/ward#p1-5fac9f03",
+      "text": "ஒரு சிறைச்சாலை (ஆதியாகமம் 40:3, 4); ஒரு காவலிடம் (ஏசாயா 21:8); ஒரு பாதுகாப்பு (நெகேமியா 13:30)."
+    }
+  ]
+}

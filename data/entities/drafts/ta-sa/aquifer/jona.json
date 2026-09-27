@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jona",
+  "lang": "ta",
+  "source_hash": "c771adaa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jona#p1-2a937f0a",
+      "text": "யோவான் 1:42-ல் சீமோன் பேதுருவும் அந்திரேயாவும் தங்கள் தகப்பனாகிய யோவானைக் குறிக்கும்படி யோனா என்பது கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/jona#p2-6d53e7bf",
+      "text": "யோவான் (நபர்) #1-ஐக் காண்க."
+    }
+  ]
+}

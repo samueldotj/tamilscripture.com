@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alemeth",
+  "lang": "ta",
+  "source_hash": "0a0072dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலமேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/alemeth#p1-0a0072dd",
+      "text": "(மூடுதல்), ஒரு பென்யமீனியன், யோகதா அல்லது யாராகின் மகன், (1 நாளாகமம் 8:36; 9:42) சவுலின் மகனாகிய யோனத்தானிலிருந்து வம்சாவளியாயிருந்தான். (கி.மு. 1077-க்குப்பின்.)"
+    }
+  ]
+}

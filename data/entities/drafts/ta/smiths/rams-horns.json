@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rams-horns",
+  "lang": "ta",
+  "source_hash": "bdc70799",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடா கொம்புகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/rams-horns#p1-bdc70799",
+      "text": "[எக்காளம்; யூபிலி வருடம் காண்க]"
+    }
+  ]
+}

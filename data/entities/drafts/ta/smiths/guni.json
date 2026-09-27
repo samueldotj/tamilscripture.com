@@ -1,0 +1,18 @@
+{
+  "id": "smiths/guni",
+  "lang": "ta",
+  "source_hash": "a5cf00e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூனி",
+  "paragraphs": [
+    {
+      "id": "smiths/guni#p1-a5cf00e1",
+      "text": "(சித்திரம் தீட்டப்பட்டவன்)."
+    }
+  ]
+}

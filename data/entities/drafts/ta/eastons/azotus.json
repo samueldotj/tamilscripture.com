@@ -1,0 +1,18 @@
+{
+  "id": "eastons/azotus",
+  "lang": "ta",
+  "source_hash": "189f5aab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/azotus#p1-189f5aab",
+      "text": "அஸ்தோத் (காண்க) என்பதற்குரிய கிரேக்க வழக்கமான வடிவம் (அப்போஸ்தலருடைய நடபடிகள் 8:40 முதலியன)."
+    }
+  ]
+}

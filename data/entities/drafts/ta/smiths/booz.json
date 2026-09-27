@@ -1,0 +1,18 @@
+{
+  "id": "smiths/booz",
+  "lang": "ta",
+  "source_hash": "5ead652b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போவாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/booz#p1-5ead652b",
+      "text": "(மத்தேயு 1:5; லூக்கா 3:32) [போவாஸ்]"
+    }
+  ]
+}

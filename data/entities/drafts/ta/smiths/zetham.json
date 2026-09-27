@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zetham",
+  "lang": "ta",
+  "source_hash": "935bb7cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேத்தாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/zetham#p1-935bb7cd",
+      "text": "(ஒலிவமரம்), கேர்சோனியனான லேவியன் லாதானின் மகன். (1 நாளாகமம் 23:8) (கி.மு. 1043.)"
+    }
+  ]
+}

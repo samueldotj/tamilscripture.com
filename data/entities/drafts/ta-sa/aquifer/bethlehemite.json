@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethlehemite",
+  "lang": "ta",
+  "source_hash": "16ab7f37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்லெகேமியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethlehemite#p1-d40f2036",
+      "text": "யூதாவிலுள்ள பெத்லெகேமின் குடியிருப்பாளன் (1 சாமுவேல் 16:1, 18; 17:58; 2 சாமுவேல் 21:19)."
+    },
+    {
+      "id": "aquifer/bethlehemite#p2-6f893018",
+      "text": "பெத்லெகேம் #1-ஐக் காண்க."
+    }
+  ]
+}

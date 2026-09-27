@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gederothaim",
+  "lang": "ta",
+  "source_hash": "899603be",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேதெரொத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/gederothaim#p1-899603be",
+      "text": "(இரண்டு ஆட்டுத்தொழுவங்கள்), யூதாவின் தாழ்வான நாட்டிலுள்ள ஒரு பட்டணம், (யோசுவா 15:36) கெதேராவுக்கு அடுத்ததாகக் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

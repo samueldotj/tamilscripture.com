@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abishur",
+  "lang": "ta",
+  "source_hash": "bea631a0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிசூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/abishur#p1-bea631a0",
+      "text": "(மதிலின் தகப்பன்), சம்மாயின் மகன். (1 நாளாகமம் 2:28)"
+    }
+  ]
+}

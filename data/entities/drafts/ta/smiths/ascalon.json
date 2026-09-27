@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ascalon",
+  "lang": "ta",
+  "source_hash": "e614a512",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்கலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ascalon#p1-e614a512",
+      "text": "[அஸ்கலோன்]"
+    }
+  ]
+}

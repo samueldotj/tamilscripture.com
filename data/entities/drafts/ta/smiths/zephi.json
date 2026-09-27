@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zephi",
+  "lang": "ta",
+  "source_hash": "81d482de",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செப்பி",
+  "paragraphs": [
+    {
+      "id": "smiths/zephi#p1-81d482de",
+      "text": "(1 நாளாகமம் 1:36) [செப்போ]"
+    }
+  ]
+}

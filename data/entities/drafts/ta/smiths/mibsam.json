@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mibsam",
+  "lang": "ta",
+  "source_hash": "96c4096c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிப்சாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/mibsam#p1-96c4096c",
+      "text": "(இனிய வாசனை)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/korhites",
+  "lang": "ta",
+  "source_hash": "87fdcbfd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோராகியர்",
+  "paragraphs": [
+    {
+      "id": "eastons/korhites#p1-87fdcbfd",
+      "text": "கோராகிலிருந்து வந்த ஒரு லேவிய குடும்பம் (யாத்திராகமம் 6:24; 1 நாளாகமம் 12:6; 26:1; 2 நாளாகமம் 20:19)."
+    }
+  ]
+}

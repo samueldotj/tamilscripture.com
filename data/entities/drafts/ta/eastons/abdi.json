@@ -1,0 +1,30 @@
+{
+  "id": "eastons/abdi",
+  "lang": "ta",
+  "source_hash": "60f2eed6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்தி",
+  "paragraphs": [
+    {
+      "id": "eastons/abdi#p1-eabff447",
+      "text": "என் ஊழியக்காரன்."
+    },
+    {
+      "id": "eastons/abdi#p2-f8bc20fd",
+      "text": "(1.) 1 நாளாகமம் 6:44."
+    },
+    {
+      "id": "eastons/abdi#p3-ad2611c8",
+      "text": "(2.) 2 நாளாகமம் 29:12."
+    },
+    {
+      "id": "eastons/abdi#p4-b8066156",
+      "text": "(3.) எஸ்றா 10:26."
+    }
+  ]
+}

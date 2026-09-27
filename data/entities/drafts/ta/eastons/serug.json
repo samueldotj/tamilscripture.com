@@ -1,0 +1,18 @@
+{
+  "id": "eastons/serug",
+  "lang": "ta",
+  "source_hash": "dd2137c5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செரூகு",
+  "paragraphs": [
+    {
+      "id": "eastons/serug#p1-dd2137c5",
+      "text": "கிளை, நாகோரின் தகப்பன் (ஆதியாகமம் 11:20-23); லூக்கா 3:35-ல் சேரூக் என்று அழைக்கப்பட்டவன்."
+    }
+  ]
+}

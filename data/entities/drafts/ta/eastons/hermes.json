@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hermes",
+  "lang": "ta",
+  "source_hash": "20cb9888",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எர்மே",
+  "paragraphs": [
+    {
+      "id": "eastons/hermes#p1-20cb9888",
+      "text": "மெர்குரி, ஒரு ரோம கிறிஸ்தவன் (ரோமர் 16:14)."
+    }
+  ]
+}

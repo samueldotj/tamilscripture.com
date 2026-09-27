@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eliphalet",
+  "lang": "ta",
+  "source_hash": "efd82f58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிபலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eliphalet#p1-101c0b51",
+      "text": "தாவீது ராஜாவின் மகன் எலிப்பேலேத்திற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் கொடுக்கப்பட்ட வேறு எழுத்துருவே எலிபலேத் ஆகும் (2 சாமுவேல் 5:16; 1 நாளாகமம் 14:7)."
+    },
+    {
+      "id": "aquifer/eliphalet#p2-a1707867",
+      "text": "எலிப்பேலேத் #1-ஐ காண்க."
+    }
+  ]
+}

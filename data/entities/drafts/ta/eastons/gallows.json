@@ -1,0 +1,18 @@
+{
+  "id": "eastons/gallows",
+  "lang": "ta",
+  "source_hash": "491fc76e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூக்குமரம்",
+  "paragraphs": [
+    {
+      "id": "eastons/gallows#p1-491fc76e",
+      "text": "எபிரெயு ‘ets, அதாவது “மரம்” (எஸ்தர் 6:4), ஒரு கம்பம் அல்லது தூக்குமரம். ஆதியாகமம் 40:19 மற்றும் உபாகமம் 21:22 -ல் இந்த வார்த்தை “மரம்” என்று மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

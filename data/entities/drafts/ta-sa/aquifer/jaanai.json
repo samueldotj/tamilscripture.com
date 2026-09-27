@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jaanai",
+  "lang": "ta",
+  "source_hash": "da03f6b1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaanai#p1-7cc916ef",
+      "text": "யானாய் காத் கோத்திரத்தைச் சேர்ந்த ஒரு தலைவனாக இருந்தான். அவன் தன் குடும்பத்தினருடன் பாசான் தேசத்தில் வாழ்ந்தான் (1 நாளாகமம் 5:12)."
+    },
+    {
+      "id": "aquifer/jaanai#p2-159aff82",
+      "text": "யானாய் காண்க."
+    }
+  ]
+}

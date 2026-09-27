@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ohel",
+  "lang": "ta",
+  "source_hash": "e1349e79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒகேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/ohel#p1-e1349e79",
+      "text": "வீடு; கூடாரம், செருபாபேலின் நான்காம் மகன் (1 நாளாகமம் 3:20)."
+    }
+  ]
+}

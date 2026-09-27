@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bunni",
+  "lang": "ta",
+  "source_hash": "6ad29ce1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புன்னி",
+  "paragraphs": [
+    {
+      "id": "smiths/bunni#p1-6ad29ce1",
+      "text": "(எனது புரிதல்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cockatrice",
+  "lang": "ta",
+  "source_hash": "8c19aafd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கட்டுவிரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/cockatrice#p1-8c19aafd",
+      "text": "[விரியன் காண்க]"
+    }
+  ]
+}

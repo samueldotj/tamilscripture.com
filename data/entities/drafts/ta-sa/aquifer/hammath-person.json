@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hammath-person",
+  "lang": "ta",
+  "source_hash": "c2b77901",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மாத் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hammath-person#p1-c2b77901",
+      "text": "அம்மாத் ரேகாபியருடைய வம்சத்தின் தகப்பனாக இருந்தான் (1 நாளாகமம் 2:55). அவனைப் பற்றி வேறு எதையும் நாம் அறியோம்."
+    }
+  ]
+}

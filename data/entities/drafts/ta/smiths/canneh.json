@@ -1,0 +1,18 @@
+{
+  "id": "smiths/canneh",
+  "lang": "ta",
+  "source_hash": "40588540",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கன்னே",
+  "paragraphs": [
+    {
+      "id": "smiths/canneh#p1-40588540",
+      "text": "(எசேக்கியேல் 27:23) [காண்க: கல்னே]"
+    }
+  ]
+}

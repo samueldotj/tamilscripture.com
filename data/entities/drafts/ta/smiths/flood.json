@@ -1,0 +1,18 @@
+{
+  "id": "smiths/flood",
+  "lang": "ta",
+  "source_hash": "fe88b110",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரவாகம்",
+  "paragraphs": [
+    {
+      "id": "smiths/flood#p1-fe88b110",
+      "text": "[நோவா]"
+    }
+  ]
+}

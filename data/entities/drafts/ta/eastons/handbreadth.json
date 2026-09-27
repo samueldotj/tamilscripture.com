@@ -1,0 +1,18 @@
+{
+  "id": "eastons/handbreadth",
+  "lang": "ta",
+  "source_hash": "04a04017",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நான்கு விரலளவு",
+  "paragraphs": [
+    {
+      "id": "eastons/handbreadth#p1-04a04017",
+      "text": "நான்கு விரல்களின் அளவாகும், இது கிட்டத்தட்ட நான்கு அங்குலங்களுக்குச் சமமானது (யாத்திராகமம் 25:25; 37:12; சங்கீதங்கள் 39:5, முதலியன)."
+    }
+  ]
+}

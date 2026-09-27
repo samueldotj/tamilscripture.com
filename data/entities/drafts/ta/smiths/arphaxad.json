@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arphaxad",
+  "lang": "ta",
+  "source_hash": "deb468fe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்பக்சாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/arphaxad#p1-deb468fe",
+      "text": "(கல்தேயருடைய கோட்டை)."
+    }
+  ]
+}

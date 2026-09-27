@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hai",
+  "lang": "ta",
+  "source_hash": "2e585f0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/hai#p1-2e585f0e",
+      "text": "ஆயீயைப் போலவே."
+    }
+  ]
+}

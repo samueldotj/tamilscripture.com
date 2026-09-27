@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dragon-well",
+  "lang": "ta",
+  "source_hash": "75c56cd2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வலுசர்ப்பக் கிணறு",
+  "paragraphs": [
+    {
+      "id": "eastons/dragon-well#p1-75c56cd2",
+      "text": "(நெகேமியா 2:13), இது கீகோன் குளத்தோடு ஒன்றே என்று சிலரால் கருதப்படுகிறது."
+    }
+  ]
+}

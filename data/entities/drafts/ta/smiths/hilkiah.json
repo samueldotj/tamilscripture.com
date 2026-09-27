@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hilkiah",
+  "lang": "ta",
+  "source_hash": "5a701a6b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இல்க்கியா",
+  "paragraphs": [
+    {
+      "id": "smiths/hilkiah#p1-5a701a6b",
+      "text": "(தேவன் என் பங்கு)"
+    }
+  ]
+}

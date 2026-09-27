@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joelah",
+  "lang": "ta",
+  "source_hash": "78932adf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொவேலா",
+  "paragraphs": [
+    {
+      "id": "smiths/joelah#p1-78932adf",
+      "text": "(யெகோவா உதவுகிறார்), கேதோரின் எரோகாமின் மகன். (1 நாளாகமம் 12:7)"
+    }
+  ]
+}

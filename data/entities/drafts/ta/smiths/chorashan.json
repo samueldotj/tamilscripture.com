@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chorashan",
+  "lang": "ta",
+  "source_hash": "113a5643",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோராஷான்",
+  "paragraphs": [
+    {
+      "id": "smiths/chorashan#p1-113a5643",
+      "text": "(1 சாமுவேல் 30:30) இது சிமியோனுடைய ஆஷானுடன் ஒத்ததாக இருக்கலாம்."
+    }
+  ]
+}

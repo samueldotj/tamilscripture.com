@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/peraea",
+  "lang": "ta",
+  "source_hash": "7e7b3204",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரேயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/peraea#p1-8bbaeb03",
+      "text": "பெரேயா என்பதற்கு மற்றொரு எழுத்துவடிவம், இது யோர்தான் நதிக்குக் கிழக்கே அமைந்த ஒரு பகுதி."
+    },
+    {
+      "id": "aquifer/peraea#p2-f9437512",
+      "text": "பெரேயா என்பதைக் காண்க."
+    }
+  ]
+}

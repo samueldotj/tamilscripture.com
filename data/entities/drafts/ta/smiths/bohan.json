@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bohan",
+  "lang": "ta",
+  "source_hash": "4e4dd479",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போகன்",
+  "paragraphs": [
+    {
+      "id": "smiths/bohan#p1-4e4dd479",
+      "text": "(கட்டைவிரல்), ரூபனின் மகன். (யோசுவா 15:6; 18:17)"
+    }
+  ]
+}

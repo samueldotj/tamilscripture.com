@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gad",
+  "lang": "ta",
+  "source_hash": "6e5e4bce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்",
+  "paragraphs": [
+    {
+      "id": "smiths/gad#p1-6e5e4bce",
+      "text": "(ஒரு கூட்டம்)."
+    }
+  ]
+}

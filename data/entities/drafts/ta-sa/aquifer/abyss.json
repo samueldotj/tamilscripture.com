@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/abyss",
+  "lang": "ta",
+  "source_hash": "01f2e017",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாதாளம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abyss#p1-bbbc425b",
+      "text": "அளவிட முடியாத அடித்தளமில்லாத ஆழமான குழி, அல்லது பாதாள உலகம்."
+    },
+    {
+      "id": "aquifer/abyss#p2-21e499c8",
+      "text": "அடிமட்டமில்லாத குழி காண்க."
+    }
+  ]
+}

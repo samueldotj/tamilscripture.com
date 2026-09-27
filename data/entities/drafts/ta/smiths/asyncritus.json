@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asyncritus",
+  "lang": "ta",
+  "source_hash": "762b686b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசிங்கிரீத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/asyncritus#p1-762b686b",
+      "text": "(ஒப்பற்றவன்), ரோமாபுரிக்குப் பவுலால் வாழ்த்தப்பட்ட ஒரு கிறிஸ்தவன். (ரோமர் 16:14)"
+    }
+  ]
+}

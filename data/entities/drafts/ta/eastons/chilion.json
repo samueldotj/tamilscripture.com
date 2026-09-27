@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chilion",
+  "lang": "ta",
+  "source_hash": "5c821072",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிலியோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/chilion#p1-5c821072",
+      "text": "இளைத்துப்போகிறவன், எலிமெலேக்குக்கும் நகோமிக்கும் பிறந்த இளைய மகன், ரூத்தின் சகோதரி ஒர்பாளின் கணவன் (ரூத் 1:2; 4:9)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gareb",
+  "lang": "ta",
+  "source_hash": "c7b0aef0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காரேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/gareb#p1-c7b0aef0",
+      "text": "(சொறியுள்ளவன்), தாவீதின் சேனையின் பராக்கிரமசாலிகளில் ஒருவன். (2 சாமுவேல் 23:38)"
+    }
+  ]
+}

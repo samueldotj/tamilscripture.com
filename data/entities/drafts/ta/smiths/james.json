@@ -1,0 +1,18 @@
+{
+  "id": "smiths/james",
+  "lang": "ta",
+  "source_hash": "146f3fc1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கோபு",
+  "paragraphs": [
+    {
+      "id": "smiths/james#p1-146f3fc1",
+      "text": "(யாக்கோபு என்ற பெயரின் கிரேக்கு வடிவம், அதாவது இடம்பிடிப்பவன்)."
+    }
+  ]
+}

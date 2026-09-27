@@ -1,0 +1,18 @@
+{
+  "id": "smiths/idalah",
+  "lang": "ta",
+  "source_hash": "ac41e2e3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இதாலா",
+  "paragraphs": [
+    {
+      "id": "smiths/idalah#p1-ac41e2e3",
+      "text": "(தேவனுடைய நினைவுச்சின்னம்), செபுலோன் கோத்திரத்தின் பட்டணங்களில் ஒன்று, சிம்ரோனுக்கும் பெத்லகேமிற்கும் இடையில் குறிப்பிடப்பட்டுள்ளது. (யோசுவா 19:15)"
+    }
+  ]
+}

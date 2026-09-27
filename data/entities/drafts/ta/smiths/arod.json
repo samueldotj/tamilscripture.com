@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arod",
+  "lang": "ta",
+  "source_hash": "a919d157",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரோதி",
+  "paragraphs": [
+    {
+      "id": "smiths/arod#p1-a919d157",
+      "text": "(காட்டுக்கழுதை), காத்தின் மகன், (எண்ணாகமம் 26:17); ஆதியாகமம் 46:16-ல் ஆரோதி என்று அழைக்கப்பட்டவன்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hunchback",
+  "lang": "ta",
+  "source_hash": "f733d3c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hunchback#p1-4c3d9daa",
+      "text": "கூன் என்பது ஒரு உடல் நிலைமையாகும், இதில் ஒரு மனிதனுக்கு முதுகெலும்பு அசாதாரணமாக வளைந்து, முதுகில் ஒரு வட்டமான அல்லது குவிந்த வடிவத்தை உண்டாக்குகிறது."
+    },
+    {
+      "id": "aquifer/hunchback#p2-6e67e57d",
+      "text": "உருக்குலைவு என்பதைக் காண்க."
+    }
+  ]
+}

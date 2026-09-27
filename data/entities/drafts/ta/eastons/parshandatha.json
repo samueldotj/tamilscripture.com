@@ -1,0 +1,18 @@
+{
+  "id": "eastons/parshandatha",
+  "lang": "ta",
+  "source_hash": "3351ed38",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்சான்தாத்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/parshandatha#p1-3351ed38",
+      "text": "நியாயப்பிரமாணத்தை விளக்குகிறவன், ஆமானின் மகன்களில் மூத்தவன், சூசானில் கொலைசெய்யப்பட்டான் (எஸ்தர் 9:7)."
+    }
+  ]
+}

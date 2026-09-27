@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ashpenaz",
+  "lang": "ta",
+  "source_hash": "d30ebd66",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பேனாச்",
+  "paragraphs": [
+    {
+      "id": "smiths/ashpenaz#p1-d30ebd66",
+      "text": "(குதிரை மூக்கு), நேபுகாத்நேச்சாருடைய பிரதானிகளின் தலைவன். (தானியேல் 1:3)"
+    }
+  ]
+}

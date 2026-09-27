@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mibsam",
+  "lang": "ta",
+  "source_hash": "cd3ba181",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிப்சாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mibsam#p1-24eddf1f",
+      "text": "1. இஸ்மவேலின் மகன்களில் ஒருவனும், தன் பெயரையுடைய கோத்திரத்தை ஏற்படுத்தினவனும் (ஆதியாகமம் 25:13; 1 நாளாகமம் 1:29)."
+    },
+    {
+      "id": "aquifer/mibsam#p2-4cd7fb46",
+      "text": "2. சல்லூமின் மகனும், மிஸ்மாவின் தகப்பனும் (1 நாளாகமம் 4:25)."
+    }
+  ]
+}

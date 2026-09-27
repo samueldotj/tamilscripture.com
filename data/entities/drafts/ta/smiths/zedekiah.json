@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zedekiah",
+  "lang": "ta",
+  "source_hash": "904a34d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிதேக்கியா",
+  "paragraphs": [
+    {
+      "id": "smiths/zedekiah#p1-904a34d0",
+      "text": "(யெகோவாவின் நியாயம்)."
+    }
+  ]
+}

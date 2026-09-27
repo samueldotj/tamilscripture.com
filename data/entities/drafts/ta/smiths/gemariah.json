@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gemariah",
+  "lang": "ta",
+  "source_hash": "50a0896f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெமரியா",
+  "paragraphs": [
+    {
+      "id": "smiths/gemariah#p1-50a0896f",
+      "text": "(யெகோவாவினால் நிறைவாக்கப்பட்டவன்)."
+    }
+  ]
+}

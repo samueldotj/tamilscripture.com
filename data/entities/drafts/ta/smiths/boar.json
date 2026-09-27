@@ -1,0 +1,18 @@
+{
+  "id": "smiths/boar",
+  "lang": "ta",
+  "source_hash": "18d11a9d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காட்டுப்பன்றி",
+  "paragraphs": [
+    {
+      "id": "smiths/boar#p1-18d11a9d",
+      "text": "[பன்றி]"
+    }
+  ]
+}

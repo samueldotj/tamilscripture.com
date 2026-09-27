@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aloth",
+  "lang": "ta",
+  "source_hash": "66c640a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆலோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/aloth#p1-66c640a2",
+      "text": "ஒரு இடம் அல்லது பிரதேசம், இது ஆசேருடன் சேர்ந்து சாலொமோனுடைய ஒன்பதாம் தானியக் கண்காணிப்பாளனின் அதிகார எல்லையாக இருந்தது. (1 இராஜாக்கள் 4:16)"
+    }
+  ]
+}

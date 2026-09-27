@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/armor-bearer",
+  "lang": "ta",
+  "source_hash": "9a8985c2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கவசம் சுமப்பவன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/armor-bearer#p1-fdbebfca",
+      "text": "ஒரு போர்வீரனின் காப்புச் சாதனங்களையும் (கவசம்) ஆயுதங்களையும் சுமந்து செல்லுகிறவன்."
+    },
+    {
+      "id": "aquifer/armor-bearer#p2-8d8ede60",
+      "text": "கவசம் மற்றும் ஆயுதங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

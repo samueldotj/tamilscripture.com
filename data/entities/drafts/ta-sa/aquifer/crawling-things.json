@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/crawling-things",
+  "lang": "ta",
+  "source_hash": "f08e7850",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊரும் பிராணிகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/crawling-things#p1-f77d1787",
+      "text": "ஊரும் பிராணிகள் என்பது, முதன்மையாக ஊர்வன மற்றும் தரைக்கு அருகில் நகரும் ஏனைய சிறு உயிரினங்களைக் குறிக்கும் பல எபிரெய வார்த்தைகளை மொழிபெயர்க்கப் பயன்படுத்தப்படும் ஒரு சொல்."
+    },
+    {
+      "id": "aquifer/crawling-things#p2-51b53226",
+      "text": "விரியன் பாம்பு; நாகப்பாம்பு; பச்சோந்தி; பல்லி; ஓணான்; பாம்பு ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

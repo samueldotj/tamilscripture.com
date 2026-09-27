@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tohu",
+  "lang": "ta",
+  "source_hash": "0b878eba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோகு",
+  "paragraphs": [
+    {
+      "id": "eastons/tohu#p1-0b878eba",
+      "text": "சாமுவேலின் முன்னோர்களில் ஒருவன் (1 சாமுவேல் 1:1)."
+    }
+  ]
+}

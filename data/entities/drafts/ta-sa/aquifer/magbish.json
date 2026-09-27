@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/magbish",
+  "lang": "ta",
+  "source_hash": "ff16e485",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்பீஷ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/magbish#p1-ff16e485",
+      "text": "மக்பீஷ் என்பது ஒரு பட்டணமாகும், அதன் முன்னாள் குடியிருப்பாளர்களின் சந்ததியாரில் 156 பேர் பாபிலோனுக்குச் சிறைப்பட்டுப் போன பின்பு வாழ்ந்து வந்தனர் (எஸ்றா 2:30)."
+    }
+  ]
+}

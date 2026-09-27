@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jerahmeel",
+  "lang": "ta",
+  "source_hash": "209914e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெராமியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jerahmeel#p1-209914e6",
+      "text": "(தேவனுடைய இரக்கம்)."
+    }
+  ]
+}

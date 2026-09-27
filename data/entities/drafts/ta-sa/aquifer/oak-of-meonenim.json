@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/oak-of-meonenim",
+  "lang": "ta",
+  "source_hash": "f5fd663f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெயொனெனீமின் கர்வாலிமரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/oak-of-meonenim#p1-cbd6fb36",
+      "text": "மெயொனெனீமின் கர்வாலிமரம் என்பது சீகேமிற்கு அருகிலுள்ள மெயொனெனீமின் கர்வாலிமரத்திற்கு அமெரிக்கன் ஸ்டாண்டர்ட் மொழிபெயர்ப்பில் பயன்படுத்தப்படும் பெயராகும் (நியாயாதிபதிகள் 9:37)."
+    },
+    {
+      "id": "aquifer/oak-of-meonenim#p2-6f44b152",
+      "text": "மெயொனெனீமின் கர்வாலிமரம் என்பதைக் காண்க."
+    }
+  ]
+}

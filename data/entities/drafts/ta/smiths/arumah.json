@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arumah",
+  "lang": "ta",
+  "source_hash": "207f345f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அருமா",
+  "paragraphs": [
+    {
+      "id": "smiths/arumah#p1-207f345f",
+      "text": "(உயரம்), சீகேமின் அருகில் இருந்ததாகத் தோன்றும் ஒரு இடம், அங்கே அபிமெலேக்கு குடியிருந்தான். (நியாயாதிபதிகள் 9:41)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/micmethath",
+  "lang": "ta",
+  "source_hash": "e9d3f667",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்மேத்தாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/micmethath#p1-31ccc960",
+      "text": "மிக்மேத்தாத் என்பதே மிக்மேத்தாத் என்பதைக் குறிக்கும் மறு எழுத்துமுறை."
+    },
+    {
+      "id": "aquifer/micmethath#p2-ed5cef74",
+      "text": "மிக்மேத்தாத் என்பதைக் காண்க."
+    }
+  ]
+}

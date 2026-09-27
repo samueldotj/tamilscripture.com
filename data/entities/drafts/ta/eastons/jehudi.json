@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jehudi",
+  "lang": "ta",
+  "source_hash": "ae66dd1e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெகுதி",
+  "paragraphs": [
+    {
+      "id": "eastons/jehudi#p1-ae66dd1e",
+      "text": "நெத்தானியாவின் மகனாகிய ஒரு யூதன். எரேமியாவின் சுருளை பாருக் தங்களுக்கு வாசிக்கும்படி அழைத்து வரும்படி இவன் பிரபுக்களால் அனுப்பப்பட்டான் (எரேமியா 36:14, 21)."
+    }
+  ]
+}

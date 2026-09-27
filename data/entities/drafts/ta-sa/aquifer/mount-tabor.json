@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mount-tabor",
+  "lang": "ta",
+  "source_hash": "23bd4333",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபோர் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-tabor#p1-23bd4333",
+      "text": "தாபோர் மலை என்பதைக் காண்க."
+    }
+  ]
+}

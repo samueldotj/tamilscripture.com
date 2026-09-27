@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azotus",
+  "lang": "ta",
+  "source_hash": "d385018c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசோத்து",
+  "paragraphs": [
+    {
+      "id": "smiths/azotus#p1-d385018c",
+      "text": "[அஸ்தோத், அல்லது அசோத்து]"
+    }
+  ]
+}

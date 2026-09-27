@@ -1,0 +1,18 @@
+{
+  "id": "smiths/new-year",
+  "lang": "ta",
+  "source_hash": "bc6cfbcc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புத்தாண்டு",
+  "paragraphs": [
+    {
+      "id": "smiths/new-year#p1-bc6cfbcc",
+      "text": "[எக்காளங்களின் பண்டிகை காண்க]"
+    }
+  ]
+}

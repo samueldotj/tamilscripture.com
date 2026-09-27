@@ -1,0 +1,18 @@
+{
+  "id": "eastons/paltite",
+  "lang": "ta",
+  "source_hash": "63d3459a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்தியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/paltite#p1-63d3459a",
+      "text": "தாவீதின் பராக்கிரமசாலிகளில் ஒருவனுக்குக் கொடுக்கப்பட்ட பெயர் (2 சாமுவேல் 23:26); இவன் பெலோனியன் என்றும் அழைக்கப்படுகிறான் (1 நாளாகமம் 11:27)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chase",
+  "lang": "ta",
+  "source_hash": "1715a87e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வேட்டையாடுதல்",
+  "paragraphs": [
+    {
+      "id": "smiths/chase#p1-1715a87e",
+      "text": "[வேட்டையாடுதல்]"
+    }
+  ]
+}

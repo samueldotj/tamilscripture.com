@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezem",
+  "lang": "ta",
+  "source_hash": "13bbb44d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏத்சேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ezem#p1-13bbb44d",
+      "text": "(எலும்பு), சிமியோனுடைய பட்டணங்களில் ஒன்று. (1 நாளாகமம் 4:29)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/javelin",
+  "lang": "ta",
+  "source_hash": "92dad403",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈட்டி",
+  "paragraphs": [
+    {
+      "id": "smiths/javelin#p1-92dad403",
+      "text": "[ஆயுதங்கள், படைக்கவசம்]"
+    }
+  ]
+}

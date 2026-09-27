@@ -1,0 +1,18 @@
+{
+  "id": "eastons/palti",
+  "lang": "ta",
+  "source_hash": "f27be22b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்த்தி",
+  "paragraphs": [
+    {
+      "id": "eastons/palti#p1-f27be22b",
+      "text": "கர்த்தரிடத்திலிருந்து விடுதலை, பென்யமீன் கோத்திரத்தைச் சேர்ந்து ஒற்றர்களில் ஒருவனாக இருந்தவன் (எண்ணாகமம் 13:9)."
+    }
+  ]
+}

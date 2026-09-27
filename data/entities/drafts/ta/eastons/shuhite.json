@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shuhite",
+  "lang": "ta",
+  "source_hash": "bd4abe31",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூகியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/shuhite#p1-bd4abe31",
+      "text": "பில்தாதுக்கு (யோபு 2:11) கொடுக்கப்பட்ட ஒரு பெயர், ஒருவேளை அவன் சூவாவின் சந்ததியாக இருந்ததால் இருக்கலாம்."
+    }
+  ]
+}

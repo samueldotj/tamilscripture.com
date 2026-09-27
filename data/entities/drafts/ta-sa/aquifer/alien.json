@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/alien",
+  "lang": "ta",
+  "source_hash": "1ea4e90f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்நியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/alien#p1-56f90b78",
+      "text": "ஒரு நாட்டில் வாழும் அயல் நாட்டுக்காரன், பரதேசி, அல்லது அந்நாட்டு பிறப்பு இல்லாத குடியிருப்பவன்."
+    },
+    {
+      "id": "aquifer/alien#p2-46ff41cc",
+      "text": "அயல்நாட்டுக்காரன் என்பதைக் காண்க."
+    }
+  ]
+}

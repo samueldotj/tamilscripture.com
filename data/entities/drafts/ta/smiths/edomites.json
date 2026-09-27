@@ -1,0 +1,18 @@
+{
+  "id": "smiths/edomites",
+  "lang": "ta",
+  "source_hash": "7e99d131",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏதோமியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/edomites#p1-7e99d131",
+      "text": "[ஏதோம், இதுமேயா]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/berekiah",
+  "lang": "ta",
+  "source_hash": "21640837",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரகியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/berekiah#p1-ceda2685",
+      "text": "பெரகியா என்பதை எழுதும் மற்றொரு விதம்."
+    },
+    {
+      "id": "aquifer/berekiah#p2-5625cbec",
+      "text": "பெரகியா காண்க."
+    }
+  ]
+}

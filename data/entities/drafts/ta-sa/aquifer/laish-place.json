@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/laish-place",
+  "lang": "ta",
+  "source_hash": "9205dc37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாயிசு (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/laish-place#p1-d0272d29",
+      "text": "1. தாண் நகரத்தின் ஆரம்பகால பெயர் (நியாயாதிபதிகள் 18:7, 14, 27–29). தாண் (இடம்) #1-ஐ காண்க."
+    },
+    {
+      "id": "aquifer/laish-place#p2-0a18b66c",
+      "text": "2. ஏசாயா 10:30-இல் காணப்படும், பென்யமீன் கோத்திரத்தைச் சேர்ந்த லாயீஷ் என்ற ஊருக்கு KJV வழங்கும் எழுத்துவடிவம். லாயீஷ்-ஐ காண்க."
+    }
+  ]
+}

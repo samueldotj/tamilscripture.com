@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zelotes",
+  "lang": "ta",
+  "source_hash": "061d38ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செலோத்தே",
+  "paragraphs": [
+    {
+      "id": "smiths/zelotes#p1-061d38ab",
+      "text": "சீமோன் பேதுருவிலிருந்து வேறுபடுத்துவதற்காக அப்போஸ்தலனான சீமோனுக்குக் கொடுக்கப்பட்ட பட்டப்பெயர். (லூக்கா 6:15) [காண்க: கானானியன்; சீமோன், 5]"
+    }
+  ]
+}

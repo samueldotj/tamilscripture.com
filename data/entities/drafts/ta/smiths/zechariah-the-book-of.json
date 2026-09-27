@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zechariah-the-book-of",
+  "lang": "ta",
+  "source_hash": "0f1d5812",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சகரியாவின் புத்தகம்",
+  "paragraphs": [
+    {
+      "id": "smiths/zechariah-the-book-of#p1-0f1d5812",
+      "text": "சகரியாவின் புத்தகம், அதன் இருக்கும் வடிவத்தில், மூன்று முக்கிய பகுதிகளைக் கொண்டுள்ளது, அதாவது அதிகாரங்கள் 1-8; அதிகாரங்கள் 9-11; அதிகாரங்கள் 12-14."
+    }
+  ]
+}

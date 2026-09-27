@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ananiah-person",
+  "lang": "ta",
+  "source_hash": "c4612f0f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனனியா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ananiah-person#p1-c4612f0f",
+      "text": "அசரியாவின் பாட்டன். பாபிலோனுக்குச் சிறையிருப்பிற்குப் பின்பு எருசலேமின் மதிலைத் தங்களுடைய வீடுகளின் அருகே பழுதுபார்த்துக் கட்டிய மூன்று மனிதர்களில் அசரியாவும் ஒருவன் (நெகேமியா 3:23)."
+    }
+  ]
+}

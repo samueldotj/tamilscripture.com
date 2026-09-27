@@ -1,0 +1,18 @@
+{
+  "id": "smiths/carshena",
+  "lang": "ta",
+  "source_hash": "337a467c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்ஷேனா",
+  "paragraphs": [
+    {
+      "id": "smiths/carshena#p1-337a467c",
+      "text": "(பிரகாசமானவன்), பெர்சியா மற்றும் மேதியாவின் ஏழு பிரபுக்களில் ஒருவன். (எஸ்தர் 1:14)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dwarf",
+  "lang": "ta",
+  "source_hash": "be21bbe8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குள்ளன்",
+  "paragraphs": [
+    {
+      "id": "eastons/dwarf#p1-be21bbe8",
+      "text": "இளைத்து மெலிந்த ஒரு நபர் (லேவியராகமம் 21:20)."
+    }
+  ]
+}

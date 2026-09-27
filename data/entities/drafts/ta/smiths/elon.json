@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elon",
+  "lang": "ta",
+  "source_hash": "48a49831",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/elon#p1-48a49831",
+      "text": "(ஒரு கர்வாலி மரம்)."
+    }
+  ]
+}

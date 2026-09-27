@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/certificate-of-divorce",
+  "lang": "ta",
+  "source_hash": "484644f2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விவாகரத்து சான்றிதழ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/certificate-of-divorce#p1-9ebf9fc6",
+      "text": "கணவனுக்கும் மனைவிக்கும் இடையேயான திருமணம் முடிவடைந்ததைக் குறிக்கும் ஒரு அதிகாரப்பூர்வ ஆவணம்."
+    },
+    {
+      "id": "aquifer/certificate-of-divorce#p2-5bede9d4",
+      "text": "விவாகரத்து சான்றிதழ் காண்க."
+    }
+  ]
+}

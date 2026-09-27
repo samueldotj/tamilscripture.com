@@ -1,0 +1,18 @@
+{
+  "id": "smiths/stripes",
+  "lang": "ta",
+  "source_hash": "d224270b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/stripes#p1-d224270b",
+      "text": "[தண்டனைகள்]"
+    }
+  ]
+}

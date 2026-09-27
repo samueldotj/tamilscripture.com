@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/goyim",
+  "lang": "ta",
+  "source_hash": "735c31bc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோயிம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/goyim#p1-07ca3c20",
+      "text": "கோயிம் என்பது கோயிமின் என்பதற்கான வேறொரு எழுத்துருவாகும், இது யோர்தானின் மேற்குப் புறத்தில் யோசுவா தோற்கடித்த ஒரு மக்கள் கூட்டமாகும் (யோசுவா 12:23)."
+    },
+    {
+      "id": "aquifer/goyim#p2-91af95fe",
+      "text": "கோயிமின் #2ஐக் காண்க."
+    }
+  ]
+}

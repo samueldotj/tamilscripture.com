@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hubbah",
+  "lang": "ta",
+  "source_hash": "b0a9ee54",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹுப்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hubbah#p1-b0a9ee54",
+      "text": "ஹுப்பா என்பது ஆசேர் கோத்திரத்தைச் சேர்ந்த சோமேரின் மகனுக்குரிய மற்றொரு எழுத்துவடிவமாகும் (1 நாளாகமம் 7:34)."
+    }
+  ]
+}

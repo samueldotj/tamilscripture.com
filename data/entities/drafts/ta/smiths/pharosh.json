@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pharosh",
+  "lang": "ta",
+  "source_hash": "c187e4dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரோஷ்",
+  "paragraphs": [
+    {
+      "id": "smiths/pharosh#p1-c187e4dc",
+      "text": "(எஸ்றா 8:3) [பாரோஷ் என்பதைக் காண்க]"
+    }
+  ]
+}

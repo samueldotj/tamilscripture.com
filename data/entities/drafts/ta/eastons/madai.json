@@ -1,0 +1,18 @@
+{
+  "id": "eastons/madai",
+  "lang": "ta",
+  "source_hash": "c97e0bb9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாதாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/madai#p1-c97e0bb9",
+      "text": "நடு நாடு, யாப்பேத்தின் மூன்றாம் “மகன்” (ஆதியாகமம் 10:2), அசீரிய கல்வெட்டுகளில் மேதியர் அறியப்படும் பெயர்."
+    }
+  ]
+}

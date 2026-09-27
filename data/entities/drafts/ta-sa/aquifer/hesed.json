@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hesed",
+  "lang": "ta",
+  "source_hash": "f71c8d42",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏசேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hesed#p1-d06f618c",
+      "text": "ஏசேத் என்பது ஏசேதின் (1 இராஜாக்கள் 4:10) என்ற பெயரின் ஒரு பகுதி."
+    },
+    {
+      "id": "aquifer/hesed#p2-3d8f828a",
+      "text": "ஏசேதின் என்பதைக் காண்க."
+    }
+  ]
+}

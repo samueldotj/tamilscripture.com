@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dalphon",
+  "lang": "ta",
+  "source_hash": "b42833d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தல்போன்",
+  "paragraphs": [
+    {
+      "id": "smiths/dalphon#p1-b42833d0",
+      "text": "(விரைவானவன்), ஆமானின் பத்து மகன்களில் இரண்டாமவன் (எஸ்தர் 9:7) (கி.மு. 610.)"
+    }
+  ]
+}

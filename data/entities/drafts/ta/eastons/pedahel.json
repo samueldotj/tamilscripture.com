@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pedahel",
+  "lang": "ta",
+  "source_hash": "8035ff3c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெதாக்கேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/pedahel#p1-8035ff3c",
+      "text": "தேவனால் மீட்கப்பட்டவன், அம்மியூதின் மகன், நப்தலியின் பிரபு (எண்ணாகமம் 34:28)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/asher-place",
+  "lang": "ta",
+  "source_hash": "ae493225",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசேர் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/asher-place#p1-eb8361a5",
+      "text": "தொபியா 1:2-இல் குறிப்பிடப்பட்ட ஒரு இடம். இது ஆத்சோர் என்றும் அடையாளம் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/asher-place#p2-757d8e11",
+      "text": "ஆத்சோர் #1-ஐ காண்க."
+    }
+  ]
+}

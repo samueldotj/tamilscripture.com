@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ethnan",
+  "lang": "ta",
+  "source_hash": "60985128",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எத்னான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ethnan#p1-60985128",
+      "text": "(கூலி), அஷூருடைய மனைவியாகிய ஏலாளின் மகன்களில் ஒருவன். (1 நாளாகமம் 4:7)"
+    }
+  ]
+}

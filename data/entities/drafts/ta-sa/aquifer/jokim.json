@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jokim",
+  "lang": "ta",
+  "source_hash": "938d43fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோக்கீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jokim#p1-938d43fc",
+      "text": "யோக்கீம் யூதாவின் சந்ததியாரில் சாலாவின் வம்சத்தைச் சேர்ந்தவனாக இருந்தான் (1 நாளாகமம் 4:22)."
+    }
+  ]
+}

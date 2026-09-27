@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meraioth",
+  "lang": "ta",
+  "source_hash": "80b271b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெராயோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/meraioth#p1-80b271b8",
+      "text": "(கலகக்காரன்)."
+    }
+  ]
+}

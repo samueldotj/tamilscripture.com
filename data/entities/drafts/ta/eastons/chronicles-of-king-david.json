@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chronicles-of-king-david",
+  "lang": "ta",
+  "source_hash": "1adc4d04",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாவீது ராஜாவின் நாளாகமங்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/chronicles-of-king-david#p1-1adc4d04",
+      "text": "(1 நாளாகமம் 27:24) இவை புள்ளிவிவர அரசு பதிவுகளாக இருந்தன; பல்வேறு பொது விஷயங்களைப் பற்றிய தகவல்களை நாளாகமங்கள் புத்தகங்களைத் தொகுத்தவர் பெற்றுக்கொண்ட பொது ஆதாரங்களில் ஒன்றாக இது இருந்தது."
+    }
+  ]
+}

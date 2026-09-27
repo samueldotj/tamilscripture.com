@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shaaraim",
+  "lang": "ta",
+  "source_hash": "ca5e35d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shaaraim#p1-ca5e35d0",
+      "text": "(இரண்டு வாசல்கள்), யூதாவின் பங்காக ஒதுக்கப்பட்ட எல்லைக்குள் இருந்த ஒரு பட்டணம், (யோசுவா 15:36) Authorized Version-ல் தவறாக Sharaim என்று குறிக்கப்பட்டுள்ளது. (1 சாமுவேல் 17:52) சிமியோனுடைய பட்டணங்களில் ஒன்றான சாராயீம், (1 நாளாகமம் 4:31) வேறொரு இடமாக இருக்க வேண்டும்."
+    }
+  ]
+}

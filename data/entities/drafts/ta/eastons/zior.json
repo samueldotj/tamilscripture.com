@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zior",
+  "lang": "ta",
+  "source_hash": "5ab07cee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீயோர்",
+  "paragraphs": [
+    {
+      "id": "eastons/zior#p1-5ab07cee",
+      "text": "சிறுமை, யூதாவின் மலைநாட்டில் இருந்த ஒரு பட்டணம் (யோசுவா 15:54); இது எப்ரோனுக்கு வடகிழக்கே 4 1/2 மைல் தூரத்தில் இருக்கும் இன்றைய Si'air ஆகும்."
+    }
+  ]
+}

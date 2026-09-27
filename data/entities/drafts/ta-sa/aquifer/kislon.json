@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kislon",
+  "lang": "ta",
+  "source_hash": "ebe4af5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிஸ்லோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kislon#p1-71973a1e",
+      "text": "கிஸ்லோன் என்பதன் மற்றொரு எழுத்துமுறை, எலிதாதின் தகப்பன்."
+    },
+    {
+      "id": "aquifer/kislon#p2-7e5b91ae",
+      "text": "கிஸ்லோன் காண்க."
+    }
+  ]
+}

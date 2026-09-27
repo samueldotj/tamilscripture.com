@@ -1,0 +1,18 @@
+{
+  "id": "smiths/footman",
+  "lang": "ta",
+  "source_hash": "adbfbf25",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/footman#p1-adbfbf25",
+      "text": "ஆங்கில பைபிளில் இரண்டு அர்த்தங்களில் பயன்படுத்தப்பட்ட ஒரு வார்த்தை:"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jaroah",
+  "lang": "ta",
+  "source_hash": "778a60b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெரொவா",
+  "paragraphs": [
+    {
+      "id": "smiths/jaroah#p1-778a60b2",
+      "text": "(நிலா), காத் கோத்திரத்தைச் சேர்ந்த ஒரு பிரதான மனிதன் (1 நாளாகமம் 5:14)"
+    }
+  ]
+}

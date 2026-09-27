@@ -1,0 +1,18 @@
+{
+  "id": "eastons/iscah",
+  "lang": "ta",
+  "source_hash": "db3ee4f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்காள்",
+  "paragraphs": [
+    {
+      "id": "eastons/iscah#p1-db3ee4f6",
+      "text": "ஒற்றன் என்று பொருள்; ஆரானுடைய மகளும், மில்க்காளுடைய மற்றும் லோத்தினுடைய சகோதரியும் ஆவாள் (ஆதியாகமம் 11:29, 31)."
+    }
+  ]
+}

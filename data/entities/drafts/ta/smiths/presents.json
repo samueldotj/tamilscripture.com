@@ -1,0 +1,18 @@
+{
+  "id": "smiths/presents",
+  "lang": "ta",
+  "source_hash": "08761926",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காணிக்கைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/presents#p1-08761926",
+      "text": "[வெளிப்படுத்துதல்]"
+    }
+  ]
+}

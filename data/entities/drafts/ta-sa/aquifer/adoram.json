@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/adoram",
+  "lang": "ta",
+  "source_hash": "64045e0a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதோராம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/adoram#p1-815dfc0c",
+      "text": "அதோனிராம் என்பதற்கு மாற்று எழுத்துவடிவம் (2 சாமுவேல் 20:24 மற்றும் 1 இராஜாக்கள் 12:18)."
+    },
+    {
+      "id": "aquifer/adoram#p2-df75d03f",
+      "text": "அதோனிராம் காண்க."
+    }
+  ]
+}

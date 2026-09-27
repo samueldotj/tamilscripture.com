@@ -1,0 +1,18 @@
+{
+  "id": "eastons/izhar",
+  "lang": "ta",
+  "source_hash": "04fc1817",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்சேயார்",
+  "paragraphs": [
+    {
+      "id": "eastons/izhar#p1-04fc1817",
+      "text": "எண்ணெய், கோகாத்தின் மகன்களில் ஒருவனும், லேவியரின் பேரனும் (யாத்திராகமம் 6:18, 21; எண்ணாகமம் 16:1)."
+    }
+  ]
+}

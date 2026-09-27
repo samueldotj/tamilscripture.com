@@ -1,0 +1,18 @@
+{
+  "id": "eastons/saph",
+  "lang": "ta",
+  "source_hash": "edcafc28",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/saph#p1-edcafc28",
+      "text": "விரிவு, சிப்பெக்காய் வெட்டிப்போட்ட இராட்சத சந்ததியானவனுடைய மகன் (2 சாமுவேல் 21:18); இவன் சிப்பாயி என்றும் அழைக்கப்படுகிறான் (1 நாளாகமம் 20:4)."
+    }
+  ]
+}

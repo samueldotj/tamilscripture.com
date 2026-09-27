@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abida-or-abidah",
+  "lang": "ta",
+  "source_hash": "33a59513",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபீதா",
+  "paragraphs": [
+    {
+      "id": "smiths/abida-or-abidah#p1-33a59513",
+      "text": "(அறிவின் தகப்பன்), மீதியானின் ஒரு மகன். (ஆதியாகமம் 25:4; 1 நாளாகமம் 1:33)"
+    }
+  ]
+}

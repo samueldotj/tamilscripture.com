@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/molid",
+  "lang": "ta",
+  "source_hash": "f3ff70ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோளித்",
+  "paragraphs": [
+    {
+      "id": "aquifer/molid#p1-f3ff70ba",
+      "text": "மோளித் யூதா கோத்திரத்திலிருந்த அபிசூருடைய மற்றும் அபியாயேலின் மகன் (1 நாளாகமம் 2:29)."
+    }
+  ]
+}

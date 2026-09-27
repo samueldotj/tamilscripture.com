@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zebulonite",
+  "lang": "ta",
+  "source_hash": "ae794bde",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபுலோனியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/zebulonite#p1-ae794bde",
+      "text": "செபுலோன் கோத்திரத்தைச் சேர்ந்தவன் (நியாயாதிபதிகள் 12:11,12). இந்தக் கோத்திரம் உண்டாக்கிய ஒரே நியாயாதிபதியான ஏலோனுக்கு மட்டும் இது பயன்படுத்தப்படுகிறது (நியாயாதிபதிகள் 12:11,12)."
+    }
+  ]
+}

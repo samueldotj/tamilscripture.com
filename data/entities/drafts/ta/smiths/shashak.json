@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shashak",
+  "lang": "ta",
+  "source_hash": "2043ec77",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாஷாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/shashak#p1-2043ec77",
+      "text": "(ஏக்கம்), பெரீயாவின் மகன்களில் ஒருவனாகிய பென்யமீனியன். (1 நாளாகமம் 8:14,25) (கி.மு. 1450க்குப் பின்.)"
+    }
+  ]
+}

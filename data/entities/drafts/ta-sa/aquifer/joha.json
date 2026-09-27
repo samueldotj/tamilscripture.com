@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/joha",
+  "lang": "ta",
+  "source_hash": "3808588a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/joha#p1-9ebc9529",
+      "text": "1. பென்யமீனியனும், பெரீயாவுக்கும் இருந்த ஒன்பது மகன்களில் ஒருவனும் (1 நாளாகமம் 8:16)."
+    },
+    {
+      "id": "aquifer/joha#p2-0b552ccf",
+      "text": "2. தித்சியனும், யெதியாயேலின் சகோதரனும், தாவீதின் பராக்கிரமசாலிகளில் ஒருவனும் (1 நாளாகமம் 11:45)."
+    }
+  ]
+}

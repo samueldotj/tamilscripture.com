@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heman",
+  "lang": "ta",
+  "source_hash": "b990a5a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏமான்",
+  "paragraphs": [
+    {
+      "id": "smiths/heman#p1-b990a5a2",
+      "text": "(உண்மையுள்ளவர்)"
+    }
+  ]
+}

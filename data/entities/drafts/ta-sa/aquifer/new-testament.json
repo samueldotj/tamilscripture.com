@@ -1,0 +1,146 @@
+{
+  "id": "aquifer/new-testament",
+  "lang": "ta",
+  "source_hash": "47573e3e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புதிய ஏற்பாடு",
+  "paragraphs": [
+    {
+      "id": "aquifer/new-testament#p1-5d51e16b",
+      "text": "புதிய ஏற்பாடு பரிசுத்த வேதாகமத்தின் இரண்டாம் பிரதான பகுதியாகும். இது இயேசுவின் வாழ்க்கையையும் போதனையையும், ஆரம்பகால சபையையும் (விசுவாசிகளின் முதல் கூட்டமாகிய) விவரிக்கிறது."
+    },
+    {
+      "id": "aquifer/new-testament#p2-3c7311f3",
+      "text": "புதிய ஏற்பாட்டில் 27 புத்தகங்கள் உள்ளன. இந்தப் புத்தகங்களில் அடங்கியவை:"
+    },
+    {
+      "id": "aquifer/new-testament#p3-f4a6a877",
+      "text": "இயேசுவின் வாழ்க்கையைப் பற்றி விவரிக்கும் நான்கு நற்செய்தி நூல்கள்:"
+    },
+    {
+      "id": "aquifer/new-testament#p4-34aec03b",
+      "text": "மத்தேயு,"
+    },
+    {
+      "id": "aquifer/new-testament#p5-5037750b",
+      "text": "மாற்கு,"
+    },
+    {
+      "id": "aquifer/new-testament#p6-761201c2",
+      "text": "லூக்கா, மற்றும்"
+    },
+    {
+      "id": "aquifer/new-testament#p7-085877e6",
+      "text": "யோவான்;"
+    },
+    {
+      "id": "aquifer/new-testament#p8-5fe7be72",
+      "text": "அப்போஸ்தலருடைய நடபடிகள் புத்தகம்;"
+    },
+    {
+      "id": "aquifer/new-testament#p9-e72c3af0",
+      "text": "சபைகளுக்கும் தனிநபர்களுக்கும் எழுதப்பட்ட 21 நிருபங்கள்:"
+    },
+    {
+      "id": "aquifer/new-testament#p10-4df1dc13",
+      "text": "ரோமர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p11-458363c8",
+      "text": "1 கொரிந்தியர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p12-5148dc58",
+      "text": "2 கொரிந்தியர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p13-b2d05824",
+      "text": "கலாத்தியர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p14-56a54b07",
+      "text": "எபேசியர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p15-f9b3b4ad",
+      "text": "பிலிப்பியர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p16-4813ccf6",
+      "text": "கொலோசெயர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p17-24265e16",
+      "text": "1 தெசலோனிக்கேயர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p18-cc134732",
+      "text": "2 தெசலோனிக்கேயர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p19-c3dac67d",
+      "text": "1 தீமோத்தேயு,"
+    },
+    {
+      "id": "aquifer/new-testament#p20-1612ca4c",
+      "text": "2 தீமோத்தேயு,"
+    },
+    {
+      "id": "aquifer/new-testament#p21-87ad9dac",
+      "text": "தீத்து,"
+    },
+    {
+      "id": "aquifer/new-testament#p22-92e953ed",
+      "text": "பிலேமோன்,"
+    },
+    {
+      "id": "aquifer/new-testament#p23-2ba61422",
+      "text": "எபிரெயர்,"
+    },
+    {
+      "id": "aquifer/new-testament#p24-9ede04ac",
+      "text": "யாக்கோபு,"
+    },
+    {
+      "id": "aquifer/new-testament#p25-0c09d6c8",
+      "text": "1 பேதுரு,"
+    },
+    {
+      "id": "aquifer/new-testament#p26-2dcea870",
+      "text": "2 பேதுரு,"
+    },
+    {
+      "id": "aquifer/new-testament#p27-0ff6e820",
+      "text": "1 யோவான்,"
+    },
+    {
+      "id": "aquifer/new-testament#p28-3d14b96f",
+      "text": "2 யோவான்,"
+    },
+    {
+      "id": "aquifer/new-testament#p29-4bcfab98",
+      "text": "3 யோவான்,"
+    },
+    {
+      "id": "aquifer/new-testament#p30-91d08d95",
+      "text": "யூதா; மற்றும் இறுதியாக"
+    },
+    {
+      "id": "aquifer/new-testament#p31-8833a241",
+      "text": "வெளிப்படுத்தின விசேஷம் புத்தகம்."
+    },
+    {
+      "id": "aquifer/new-testament#p32-89c2425e",
+      "text": "புதிய ஏற்பாடு கிரேக்கு மொழியில் எழுதப்பட்டது, மேலும் இது இயேசுவின் மூலமாக இரட்சிப்பைக் கொண்டுவருகிற தேவனுடைய செயலின்மேல் கவனம் செலுத்துகிறது."
+    },
+    {
+      "id": "aquifer/new-testament#p33-183c35ed",
+      "text": "காண்க பரிசுத்த வேதாகமம்; மேலும் காண்க புதிய ஏற்பாட்டின் பரிசுத்த வேதாகமம், கையெழுத்துப் பிரதிகள் மற்றும் பாடம்; பரிசுத்த வேதாகமம்: பழைய ஏற்பாட்டு மேற்கோள்கள் புதிய ஏற்பாட்டில்."
+    }
+  ]
+}

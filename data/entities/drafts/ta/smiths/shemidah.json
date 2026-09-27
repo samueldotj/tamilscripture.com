@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shemidah",
+  "lang": "ta",
+  "source_hash": "1d6500f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமீதா",
+  "paragraphs": [
+    {
+      "id": "smiths/shemidah#p1-1d6500f4",
+      "text": "செமீதா, கீலேயாத்தின் மகன். (1 நாளாகமம் 7:19)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/baalgad",
+  "lang": "ta",
+  "source_hash": "63128abb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகால்காத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/baalgad#p1-ec01dc66",
+      "text": "யோசுவாவின் கானான் வெற்றியின் வடக்கு எல்லையில், எர்மோன் மலையடிவாரத்தில், லீபனோனின் பள்ளத்தாக்கில் இருந்த ஒரு இடம் (யோசுவா 11:17; 12:7; 13:5)."
+    },
+    {
+      "id": "aquifer/baalgad#p2-04fbee83",
+      "text": "எர்மோன், மலை என்பதைக் காண்க."
+    }
+  ]
+}

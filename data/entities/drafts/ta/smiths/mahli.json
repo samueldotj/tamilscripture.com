@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahli",
+  "lang": "ta",
+  "source_hash": "f7e2241e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகேலி",
+  "paragraphs": [
+    {
+      "id": "smiths/mahli#p1-f7e2241e",
+      "text": "(வியாதியுள்ளவன்)."
+    }
+  ]
+}

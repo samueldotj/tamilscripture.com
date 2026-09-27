@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/joatham",
+  "lang": "ta",
+  "source_hash": "2bed17eb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோதாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/joatham#p1-41e50f52",
+      "text": "கிங் யாக்கோபு வேர்ஷனில் மத்தேயு 1:9-ல் காணப்படும், கிமு 750 முதல் 735 வரை யூதாவை ஆண்ட யோதாம் என்ற அரசனுக்குக் கொடுக்கப்பட்ட எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/joatham#p2-565afb03",
+      "text": "யோதாம் #2-ஐக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/avim",
+  "lang": "ta",
+  "source_hash": "ce76b59f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/avim#p1-fad68d51",
+      "text": "யோசுவா 18:23-ல் உள்ள பென்யமீன் கோத்திரத்தின் ஊரான ஆவீம் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் உள்ள எழுத்துருபு."
+    },
+    {
+      "id": "aquifer/avim#p2-77f3d14e",
+      "text": "ஆவீம் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

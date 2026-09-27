@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gennaeus-genneus",
+  "lang": "ta",
+  "source_hash": "a3cff25b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனேயஸ், கென்னேயஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gennaeus-genneus#p1-a3cff25b",
+      "text": "கெனேயஸ் அப்பொல்லோனியுவின் தகப்பன் ஆவான் (2 மக்கபேயர் 12:2). கெனேயஸ் என்பதற்கு “உயர்குடியில் பிறந்தவன்” அல்லது “உயர்ந்தவன்” என்று பொருள் இருப்பதால், இது ஒரு பெயருக்குப் பதிலாக ஒரு பட்டமாக இருக்கக்கூடும்."
+    }
+  ]
+}

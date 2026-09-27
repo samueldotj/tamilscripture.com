@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mashal",
+  "lang": "ta",
+  "source_hash": "ad5877af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாஷால்",
+  "paragraphs": [
+    {
+      "id": "eastons/mashal#p1-ad5877af",
+      "text": "வேண்டுகோள் என்று பொருள்படும், ஆசேர் கோத்திரத்திலுள்ள ஒரு லேவியர் பட்டணம் (1 நாளாகமம் 6:74); மிஷயால் என்றும் அழைக்கப்பட்டது (யோசுவா 21:30)."
+    }
+  ]
+}

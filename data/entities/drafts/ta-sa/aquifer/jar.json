@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jar",
+  "lang": "ta",
+  "source_hash": "6b4e628d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானை",
+  "paragraphs": [
+    {
+      "id": "aquifer/jar#p1-527834e2",
+      "text": "திரவங்கள் அல்லது உலர் பொருட்களை சேமிக்கப் பயன்படுத்தப்பட்ட மண்ணினால் செய்யப்பட்ட ஒரு பாத்திரம்."
+    },
+    {
+      "id": "aquifer/jar#p2-5eb2c90e",
+      "text": "மண்பாண்டங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

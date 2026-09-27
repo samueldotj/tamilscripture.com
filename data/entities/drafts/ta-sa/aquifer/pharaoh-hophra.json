@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pharaoh-hophra",
+  "lang": "ta",
+  "source_hash": "cfac5d6f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பார்வோன் ஒப்பிரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/pharaoh-hophra#p1-c73a7834",
+      "text": "பார்வோன் ஒப்பிரா எகிப்தின் 26வது வம்சத்தின் நான்காம் ராஜாவாக இருந்தான் (எரேமியா 44:30). அவன் கிமு 589 முதல் 570 வரை ஆண்டான்."
+    },
+    {
+      "id": "aquifer/pharaoh-hophra#p2-c0c9ee41",
+      "text": "பார்வோன் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azel",
+  "lang": "ta",
+  "source_hash": "503d72dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/azel#p1-503d72dd",
+      "text": "(உயர்குடியினன்), சவுலின் சந்ததியார். (1 நாளாகமம் 8:37,38; 9:43,44)"
+    }
+  ]
+}

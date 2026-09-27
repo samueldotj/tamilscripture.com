@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/danite",
+  "lang": "ta",
+  "source_hash": "1fe66daa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாணியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/danite#p1-1ee64b4f",
+      "text": "தாணியன் என்பவன் இஸ்ரவேலின் கோத்திரங்களில் ஒன்றாகிய தாண் கோத்திரத்தைச் சேர்ந்தவன் (யோசுவா 19:47; 1 நாளாகமம் 12:35)."
+    },
+    {
+      "id": "aquifer/danite#p2-6b34c61a",
+      "text": "தாண் கோத்திரம் என்பதைக் காண்க."
+    }
+  ]
+}

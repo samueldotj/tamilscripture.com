@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aramzobah",
+  "lang": "ta",
+  "source_hash": "4959d1f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராம்-சோபா",
+  "paragraphs": [
+    {
+      "id": "smiths/aramzobah#p1-4959d1f5",
+      "text": "சங்கீதம் 60:1, தலைப்பு. [ஆராம், 1]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chambering",
+  "lang": "ta",
+  "source_hash": "e04c3bbf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "களியாட்டம்",
+  "paragraphs": [
+    {
+      "id": "eastons/chambering#p1-e04c3bbf",
+      "text": "(ரோமர் 13:13), காமவிகாரம், அசுத்தம்."
+    }
+  ]
+}

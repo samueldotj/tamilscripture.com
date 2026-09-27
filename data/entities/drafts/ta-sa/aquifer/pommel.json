@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pommel",
+  "lang": "ta",
+  "source_hash": "a84febbb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கும்பம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pommel#p1-8679ed8b",
+      "text": "கும்பம் என்பது கிங் யாக்கோபு வேர்ஷனில் “bowl” என்பதற்கான மொழிபெயர்ப்பாகும், இது ஆலயத் தூண்களின் முனையின்மேலிருக்கிற கும்பங்களின் ஒரு பகுதியாகும் (2 நாளாகமம் 4:12)."
+    },
+    {
+      "id": "aquifer/pommel#p2-6d0cde31",
+      "text": "காண்க: கட்டிடக்கலை (பாலஸ்தீனம்); ஆசரிப்புக்கூடாரம்; ஆலயம்."
+    }
+  ]
+}

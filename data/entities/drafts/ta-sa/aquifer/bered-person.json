@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bered-person",
+  "lang": "ta",
+  "source_hash": "a50a7fa7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரேத் (ஆள்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bered-person#p1-d8a94d9d",
+      "text": "1 நாளாகமம் 7:20-ல் எப்பிராயீமின் மகன்களில் ஒருவனாகிய பேகேருக்கு இருந்த மற்றொரு பெயர் பேரேத் ஆகும்."
+    },
+    {
+      "id": "aquifer/bered-person#p2-1406ae38",
+      "text": "பேகேர், பேகேரியன் #2-ஐக் காண்க."
+    }
+  ]
+}

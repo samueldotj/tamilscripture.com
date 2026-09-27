@@ -1,0 +1,22 @@
+{
+  "id": "eastons/farthing",
+  "lang": "ta",
+  "source_hash": "2ebfcdee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசு",
+  "paragraphs": [
+    {
+      "id": "eastons/farthing#p1-282c4167",
+      "text": "(1.) மத்தேயு 10:29; லூக்கா 12:6. கிரேக்கு வார்த்தையான assarion, அதாவது ஒரு சிறிய as, இது ரோமானிய நாணயமாக, ஒரு denarius அல்லது drachma வின் பத்தில் ஒரு பங்குக்குச் சமமானதாகவும், நம்முடைய நாணயத்தில் ஒரு அரை பென்னிக்கு அருகிலுள்ளதாகவும் இருந்தது."
+    },
+    {
+      "id": "eastons/farthing#p2-8dd82777",
+      "text": "(2.) மத்தேயு 5:26; மாற்கு 12:42 (கிரேக்கு: kodrantes), இது quadrant எனப்படும், as இன் நான்கில் ஒரு பங்காக, இரண்டு lepta அதாவது காசுகளுக்குச் சமமானது. lepton (காசு) என்பது மிகச் சிறிய செம்பு நாணயமாக இருந்தது."
+    }
+  ]
+}

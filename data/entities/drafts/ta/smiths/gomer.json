@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gomer",
+  "lang": "ta",
+  "source_hash": "6f888d01",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோமர்",
+  "paragraphs": [
+    {
+      "id": "smiths/gomer#p1-6f888d01",
+      "text": "(பூரணமானது)."
+    }
+  ]
+}

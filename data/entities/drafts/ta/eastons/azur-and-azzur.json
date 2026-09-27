@@ -1,0 +1,30 @@
+{
+  "id": "eastons/azur-and-azzur",
+  "lang": "ta",
+  "source_hash": "a463b710",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூர் மற்றும் அசூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/azur-and-azzur#p1-3fd2de5c",
+      "text": "உதவியாளன்."
+    },
+    {
+      "id": "eastons/azur-and-azzur#p2-c4f01670",
+      "text": "(1.) பொய்த் தீர்க்கதரிசியாகிய அனனியாவின் தகப்பன் (எரேமியா 28:1)."
+    },
+    {
+      "id": "eastons/azur-and-azzur#p3-d15a0965",
+      "text": "(2.) யசனியாவின் தகப்பன் (எசேக்கியேல் 11:1)."
+    },
+    {
+      "id": "eastons/azur-and-azzur#p4-6a3a006a",
+      "text": "(3.) பாபிலோனிலிருந்து திரும்பி வந்தபோது யெகோவாவுடன் உடன்படிக்கையை முத்திரையிட்டவர்களில் ஒருவன் (நெகேமியா 10:17)."
+    }
+  ]
+}

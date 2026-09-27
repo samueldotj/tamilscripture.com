@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/benhanan",
+  "lang": "ta",
+  "source_hash": "30e7d125",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்கானான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/benhanan#p1-30e7d125",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த ஷீமோனின் மகன் (1 நாளாகமம் 4:20)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/catholic-epistles",
+  "lang": "ta",
+  "source_hash": "6981824f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கத்தோலிக்க கடிதங்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/catholic-epistles#p1-6981824f",
+      "text": "யாக்கோபு, பேதுரு, யோவான், யூதா ஆகியோரின் கடிதங்கள்; இவை எந்த ஒரு சபைக்கோ அல்லது ஒரு நபருக்கோ குறிப்பாக அல்லாமல், பொதுவாக கிறிஸ்தவர்களுக்கு எழுதப்பட்டவை என்பதால் இவ்வாறு அழைக்கப்படுகின்றன."
+    }
+  ]
+}

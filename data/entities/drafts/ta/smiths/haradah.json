@@ -1,0 +1,18 @@
+{
+  "id": "smiths/haradah",
+  "lang": "ta",
+  "source_hash": "1115e101",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரதா",
+  "paragraphs": [
+    {
+      "id": "smiths/haradah#p1-1115e101",
+      "text": "(பயம்), இஸ்ரவேலரின் வனாந்திர முகாம்களில் ஒன்று (எண்ணாகமம் 33:24,25); இதன் இருப்பிடம் நிச்சயமற்றது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/buzi",
+  "lang": "ta",
+  "source_hash": "efe0c359",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூசி",
+  "paragraphs": [
+    {
+      "id": "smiths/buzi#p1-efe0c359",
+      "text": "(அவமதிப்பு), தீர்க்கதரிசியாகிய எசேக்கியேலின் தகப்பன். (எசேக்கியேல் 1:3)"
+    }
+  ]
+}

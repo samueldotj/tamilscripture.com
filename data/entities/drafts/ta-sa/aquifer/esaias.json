@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/esaias",
+  "lang": "ta",
+  "source_hash": "db31f23e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசாயாஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/esaias#p1-58f4b50e",
+      "text": "எசாயாஸ் என்பது புதிய ஏற்பாட்டில் காணப்படும் ஏசாயா தீர்க்கதரிசியின் கிங் யாக்கோபு மொழிபெயர்ப்பு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/esaias#p2-4d8b20d6",
+      "text": "ஏசாயா (நபர்) என்பதைக் காண்க."
+    }
+  ]
+}

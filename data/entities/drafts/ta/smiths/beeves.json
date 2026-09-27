@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beeves",
+  "lang": "ta",
+  "source_hash": "1985e9ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பசுமாடுகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/beeves#p1-1985e9ee",
+      "text": "மாடுகள் என்பதற்குச் சமமானது. (லேவியராகமம் 22:19) [காண்க: எருது, கடா]"
+    }
+  ]
+}

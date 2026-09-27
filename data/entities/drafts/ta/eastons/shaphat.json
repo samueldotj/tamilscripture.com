@@ -1,0 +1,30 @@
+{
+  "id": "eastons/shaphat",
+  "lang": "ta",
+  "source_hash": "f40b2610",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்பாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/shaphat#p1-b478af51",
+      "text": "நியாயாதிபதி."
+    },
+    {
+      "id": "eastons/shaphat#p2-1c1c2ba5",
+      "text": "(1.) ஒற்றர்களில் ஒருவன். இவன் சிமியோன் கோத்திரத்தை பிரதிநிதித்துவப்படுத்தினான் (எண்ணாகமம் 13:5)."
+    },
+    {
+      "id": "eastons/shaphat#p3-b1c36de0",
+      "text": "(2.) எலிசாவின் தகப்பன் (1 இராஜாக்கள் 19:16-19)."
+    },
+    {
+      "id": "eastons/shaphat#p4-d9b92c36",
+      "text": "(3.) தாவீதின் தலைமை மேய்ப்பர்களில் ஒருவன் (1 நாளாகமம் 27:29)."
+    }
+  ]
+}

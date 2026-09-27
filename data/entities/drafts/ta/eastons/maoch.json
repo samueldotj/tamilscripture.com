@@ -1,0 +1,18 @@
+{
+  "id": "eastons/maoch",
+  "lang": "ta",
+  "source_hash": "70fc3d5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாயோகு",
+  "paragraphs": [
+    {
+      "id": "eastons/maoch#p1-70fc3d5d",
+      "text": "நெருக்கப்பட்டவன், காத்தின் ராஜாவாகிய ஆகீஸின் தகப்பன் (1 சாமுவேல் 27:2). மாக்காவினன்று அழைக்கப்பட்டிருக்கிறான் (1 இராஜாக்கள் 2:39)."
+    }
+  ]
+}

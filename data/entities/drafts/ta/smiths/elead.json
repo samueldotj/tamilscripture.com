@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elead",
+  "lang": "ta",
+  "source_hash": "83e38ab3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/elead#p1-83e38ab3",
+      "text": "(தேவனால் துதிக்கப்பட்டவன்), எப்பிராயீமின் சந்ததியான் (1 நாளாகமம் 7:21)."
+    }
+  ]
+}

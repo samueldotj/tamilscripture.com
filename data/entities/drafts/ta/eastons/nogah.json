@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nogah",
+  "lang": "ta",
+  "source_hash": "72c63c0b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோகா",
+  "paragraphs": [
+    {
+      "id": "eastons/nogah#p1-72c63c0b",
+      "text": "பிரகாசம் என்று பொருள்படும், எருசலேமில் பிறந்த தாவீதின் மகன்களில் ஒருவன் (1 நாளாகமம் 3:7)."
+    }
+  ]
+}

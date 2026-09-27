@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ephron-mount",
+  "lang": "ta",
+  "source_hash": "e8a65088",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பெரோன் மலை",
+  "paragraphs": [
+    {
+      "id": "smiths/ephron-mount#p1-e8a65088",
+      "text": "“எப்பெரோன் மலையின் பட்டணங்கள்” யூதா கோத்திரத்தின் வடக்கு எல்லையிலுள்ள அடையாளக் குறிகளில் ஒன்றாக இருந்தன. (யோசுவா 15:9)"
+    }
+  ]
+}

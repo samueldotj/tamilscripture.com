@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jair",
+  "lang": "ta",
+  "source_hash": "025c4600",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாவீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/jair#p1-025c4600",
+      "text": "(ஒளியூட்டுபவன்)."
+    }
+  ]
+}

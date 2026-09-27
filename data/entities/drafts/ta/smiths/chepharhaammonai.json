@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chepharhaammonai",
+  "lang": "ta",
+  "source_hash": "68cdc08e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேப்பார் அமோனாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/chepharhaammonai#p1-68cdc08e",
+      "text": "(அம்மோனியரின் குடியிருப்பு), பென்யமீனுடைய பட்டணங்களில் குறிப்பிடப்பட்ட ஒரு இடம். (யோசுவா 18:24)"
+    }
+  ]
+}

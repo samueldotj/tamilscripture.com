@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/dinhabah",
+  "lang": "ta",
+  "source_hash": "c94bcb9f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தின்காபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/dinhabah#p1-c94bcb9f",
+      "text": "இஸ்ரவேலின் அரசாட்சிக்கு முன்பே ஏதோமின் தலைநகராக இருந்த ஊர், அதன் அரசனாகிய பேலா பரிசுத்த வேதாகமத்தில் குறிப்பிடப்பட்டுள்ளான் (ஆதி 36:32; 1 நாளாகமம் 1:43). அதன் இருப்பிடம் தெரியவில்லை."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hareth",
+  "lang": "ta",
+  "source_hash": "227da084",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hareth#p1-79ed278b",
+      "text": "ஹரேத் என்பது 1 சாமுவேல் 22:5-ல் உள்ள ஆரேத் என்பதற்கான கிங் யாக்கோபு மொழிபெயர்ப்பின் எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/hareth#p2-ea7727c1",
+      "text": "ஆரேத் என்பதைக் காண்க."
+    }
+  ]
+}

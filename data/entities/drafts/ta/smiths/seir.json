@@ -1,0 +1,18 @@
+{
+  "id": "smiths/seir",
+  "lang": "ta",
+  "source_hash": "d3fd04ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேயீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/seir#p1-d3fd04ab",
+      "text": "(மயிர் நிறைந்தவன், முடி அடர்ந்தவன்),"
+    }
+  ]
+}

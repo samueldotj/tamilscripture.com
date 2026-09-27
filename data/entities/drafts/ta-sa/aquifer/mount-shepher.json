@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mount-shepher",
+  "lang": "ta",
+  "source_hash": "ec3078a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்பேர் மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-shepher#p1-5b35a5a6",
+      "text": "இஸ்ரவேலர்கள் வனாந்தரத்தில் பயணம் செய்தபோது தங்கிய ஒரு தற்காலிக முகாமிடும் இடம். சாப்பேர் மலை கேலத்தாவுக்கும் ஆரதாவுக்கும் இடையில் இருந்தது (எண்ணாகமம் 33:23-24)."
+    },
+    {
+      "id": "aquifer/mount-shepher#p2-5fd904a3",
+      "text": "வனாந்தர பயணங்கள் என்பதையும் காண்க."
+    }
+  ]
+}

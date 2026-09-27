@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/asiel",
+  "lang": "ta",
+  "source_hash": "ed278656",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/asiel#p1-ed278656",
+      "text": "யெகூவின் பாட்டனாருடைய தகப்பன். யெகூ சிமியோனுடைய கோத்திரத்தில் ஒரு பிரபுவாக இருந்தார் (1 நாளாகமம் 4:35, 38)."
+    }
+  ]
+}

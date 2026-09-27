@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hegai",
+  "lang": "ta",
+  "source_hash": "1d047ee7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யேகாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/hegai#p1-1d047ee7",
+      "text": "(மந்தமான வேலைக்காரன்), அகாஸ்வேருவின் அரண்மனையிலிருந்த அரண்மனை வேலைக்காரர்களில் ஒருவன். (எஸ்தர் 2:8,15) (கி.மு. 474.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bier",
+  "lang": "ta",
+  "source_hash": "dd55c148",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாடை",
+  "paragraphs": [
+    {
+      "id": "eastons/bier#p1-dd55c148",
+      "text": "மரித்த சரீரங்களைக் கல்லறைக்குக் கொண்டுபோகும்போது வைக்கப்படும் சட்டம் (லூக்கா 7:14)."
+    }
+  ]
+}

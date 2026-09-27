@@ -1,0 +1,18 @@
+{
+  "id": "eastons/meah",
+  "lang": "ta",
+  "source_hash": "997a5481",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேயா",
+  "paragraphs": [
+    {
+      "id": "eastons/meah#p1-997a5481",
+      "text": "நூறு, நெகேமியாவின் காலத்தில் எருசலேமின் கிழக்குச் சுவரிலிருந்த ஒரு கோபுரம் (நெகேமியா 3:1)."
+    }
+  ]
+}

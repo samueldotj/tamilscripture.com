@@ -1,0 +1,18 @@
+{
+  "id": "smiths/canaan",
+  "lang": "ta",
+  "source_hash": "36aeba07",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கானான்",
+  "paragraphs": [
+    {
+      "id": "smiths/canaan#p1-36aeba07",
+      "text": "(கானான்) (தாழ்வான, சமமான)."
+    }
+  ]
+}

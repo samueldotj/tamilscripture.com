@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kezia",
+  "lang": "ta",
+  "source_hash": "d60702dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசியாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/kezia#p1-d60702dc",
+      "text": "கேசியாள், யோபுவின் இரண்டாம் மகளின் பெயர் (42:14), யோபுவின் செல்வம் திரும்ப அளிக்கப்பட்ட பின்பு பிறந்தவள்."
+    }
+  ]
+}

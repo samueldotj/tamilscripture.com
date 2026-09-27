@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gaspar",
+  "lang": "ta",
+  "source_hash": "2ba861b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காஸ்பார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gaspar#p1-2ba861b5",
+      "text": "மத்தேயு 2:1-2இல் இயேசுவிற்கு காணிக்கை கொண்டுவந்த ஞானிகளில் ஒருவருக்கு பாரம்பரியமாக வழங்கப்பட்ட பெயர். ஞானிகள் என்பதைக் காண்க."
+    }
+  ]
+}

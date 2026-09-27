@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/almon",
+  "lang": "ta",
+  "source_hash": "dde1cbc0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/almon#p1-dde1cbc0",
+      "text": "யோசுவா 21:18ல் அலமேத்திற்குரிய வேறொரு பெயர். அலமேத் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

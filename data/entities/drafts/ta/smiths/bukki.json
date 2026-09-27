@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bukki",
+  "lang": "ta",
+  "source_hash": "64648a8a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புக்கி",
+  "paragraphs": [
+    {
+      "id": "smiths/bukki#p1-64648a8a",
+      "text": "(வீணாக்குதல்)."
+    }
+  ]
+}

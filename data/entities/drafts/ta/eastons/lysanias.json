@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lysanias",
+  "lang": "ta",
+  "source_hash": "71578691",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிசானியா",
+  "paragraphs": [
+    {
+      "id": "eastons/lysanias#p1-71578691",
+      "text": "தமஸ்கு நகரத்திற்கு அருகில், அந்தி-லீபனோன் மலையின் கிழக்குச் சரிவில் இருந்த அபிலேனேயின் நாற்பதிலரசன் (லூக்கா 3:1)."
+    }
+  ]
+}

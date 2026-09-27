@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ethan",
+  "lang": "ta",
+  "source_hash": "f470c559",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏத்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ethan#p1-f470c559",
+      "text": "(நிலைத்திருக்கிறவன்)."
+    }
+  ]
+}

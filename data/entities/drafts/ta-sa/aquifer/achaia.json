@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/achaia",
+  "lang": "ta",
+  "source_hash": "a1ac3404",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகாயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/achaia#p1-ddcf4bb7",
+      "text": "தெசலோனிக்கேயின் தென்பகுதியில் உள்ள கிரேக்க தீபகற்பப் பகுதியைக் குறிக்க புதிய ஏற்பாட காலத்தில் பயன்படுத்தப்பட்ட ஒரு பெயர்."
+    },
+    {
+      "id": "aquifer/achaia#p2-2abbdaf0",
+      "text": "கிரேக்கு, கிரேக்கன் என்பதைக் காண்க."
+    }
+  ]
+}

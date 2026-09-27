@@ -1,0 +1,18 @@
+{
+  "id": "eastons/susi",
+  "lang": "ta",
+  "source_hash": "557805e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூசி",
+  "paragraphs": [
+    {
+      "id": "eastons/susi#p1-557805e1",
+      "text": "பன்னிரண்டு உளவாளிகளில் ஒருவனாகிய காதியின் தகப்பன் (எண்ணாகமம் 13:11)."
+    }
+  ]
+}

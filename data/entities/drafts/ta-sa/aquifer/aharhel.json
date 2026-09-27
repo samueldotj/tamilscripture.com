@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aharhel",
+  "lang": "ta",
+  "source_hash": "31dbfd0f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகர்கேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aharhel#p1-31dbfd0f",
+      "text": "யூதா கோத்திரத்தில் ஆருமின் மகன் (1 நாளாகமம் 4:8)."
+    }
+  ]
+}

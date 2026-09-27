@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/charran",
+  "lang": "ta",
+  "source_hash": "d8f15fe9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கார்ரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/charran#p1-a2ba7e2f",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் ஆரான் என்பதற்குப் பயன்படுத்தப்பட்ட எழுத்துவடிவம், இது மெசொப்பொத்தாமியாவிலுள்ள ஒரு நகரம் (அப்போஸ்தலருடைய நடபடிகள் 7:2-4)."
+    },
+    {
+      "id": "aquifer/charran#p2-18cc5179",
+      "text": "ஆரான் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

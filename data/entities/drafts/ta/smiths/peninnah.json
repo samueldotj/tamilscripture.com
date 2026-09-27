@@ -1,0 +1,18 @@
+{
+  "id": "smiths/peninnah",
+  "lang": "ta",
+  "source_hash": "d2f15a74",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனின்னாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/peninnah#p1-d2f15a74",
+      "text": "(பவளம் அல்லது முத்து), எல்க்கானாவின் இரண்டு மனைவிகளில் ஒருத்தி. (1 சாமுவேல் 1:2) (கி.மு. 1125.)"
+    }
+  ]
+}

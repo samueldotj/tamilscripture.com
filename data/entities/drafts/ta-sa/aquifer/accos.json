@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/accos",
+  "lang": "ta",
+  "source_hash": "361fd366",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்கோஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/accos#p1-3c22585e",
+      "text": "1 மக்கபேயர் 8:17-ல் கோசின் என்பவரின் பெயர்."
+    },
+    {
+      "id": "aquifer/accos#p2-a82116fb",
+      "text": "கோசின் காண்க."
+    }
+  ]
+}

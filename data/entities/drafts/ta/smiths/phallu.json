@@ -1,0 +1,18 @@
+{
+  "id": "smiths/phallu",
+  "lang": "ta",
+  "source_hash": "bb9a753e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்லூ",
+  "paragraphs": [
+    {
+      "id": "smiths/phallu#p1-bb9a753e",
+      "text": "(வேறுபடுத்தப்பட்டவன்), ரூபனுடைய மகனாகிய பல்லூ ஆதியாகமம் 46:9-ல் (கி.மு. 1706 அளவில்) இவ்வாறு அழைக்கப்படுகிறான்."
+    }
+  ]
+}

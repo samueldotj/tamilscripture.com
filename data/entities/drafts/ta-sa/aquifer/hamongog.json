@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hamongog",
+  "lang": "ta",
+  "source_hash": "c1198755",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோன்கோகு",
+  "paragraphs": [
+    {
+      "id": "aquifer/hamongog#p1-c1198755",
+      "text": "ஆமோன்கோகு என்பது யோர்தானுக்கு கிழக்கே இருக்கும் ஒரு பள்ளத்தாக்கு, அங்கே கோகின் படைகளிலிருந்து மரித்தவர்கள் புதைக்கப்படுவார்கள் (எசேக்கியேல் 39:11, 15)."
+    }
+  ]
+}

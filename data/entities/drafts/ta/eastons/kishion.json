@@ -1,0 +1,18 @@
+{
+  "id": "eastons/kishion",
+  "lang": "ta",
+  "source_hash": "16362a69",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிஷியோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/kishion#p1-16362a69",
+      "text": "கடினத்தன்மை, இசக்காரின் ஒரு பட்டணம், அது கேர்சோனிய லேவியர்களுக்கு நியமிக்கப்பட்டது (யோசுவா 19:20), இது கீசோன் (21:28) என்பதைப் போலவே ஆகும்."
+    }
+  ]
+}

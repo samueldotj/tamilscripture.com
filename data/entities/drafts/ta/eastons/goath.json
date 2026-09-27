@@ -1,0 +1,18 @@
+{
+  "id": "eastons/goath",
+  "lang": "ta",
+  "source_hash": "b0fe3e78",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோவாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/goath#p1-b0fe3e78",
+      "text": "கதறுதல் என்று பொருள்படும், எருசலேமுக்கு அருகிலுள்ள ஒரு இடம், எரேமியா 31:39-ல் மட்டும் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

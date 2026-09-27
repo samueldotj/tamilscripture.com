@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dromedary",
+  "lang": "ta",
+  "source_hash": "43bdba83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "துரகதம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dromedary#p1-f62f98d1",
+      "text": "துரகதம் என்பது ஒரு திமில் உள்ள வேகமான ஒட்டகமாகும். இது அரேபியாவின் சொந்த இடமாகும், மேலும் வெப்பமான, வறண்ட பிரதேசங்களில் பயணம் செய்வதற்கு மிகவும் ஏற்றதாக இருக்கிறது."
+    },
+    {
+      "id": "aquifer/dromedary#p2-d882b78d",
+      "text": "ஒட்டகம் காண்க."
+    }
+  ]
+}

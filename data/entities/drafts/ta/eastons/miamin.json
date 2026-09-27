@@ -1,0 +1,26 @@
+{
+  "id": "eastons/miamin",
+  "lang": "ta",
+  "source_hash": "6e424638",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மியாமின்",
+  "paragraphs": [
+    {
+      "id": "eastons/miamin#p1-c2883dfa",
+      "text": "=மியாம், வலது கரத்திலிருந்து."
+    },
+    {
+      "id": "eastons/miamin#p2-03d3bcb2",
+      "text": "(1.) ஆசாரியர்களின் பிரிவுகளில் ஒன்றின் தலைவன் (1 நாளாகமம் 24:9)."
+    },
+    {
+      "id": "eastons/miamin#p3-1db2baef",
+      "text": "(2.) செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பி வந்த ஒரு பிரதான ஆசாரியன் (நெகேமியா 12:5), மியாம் (10:7) என்றும் மினியாமீன் (12:17) என்றும் அழைக்கப்பட்டவன்."
+    }
+  ]
+}

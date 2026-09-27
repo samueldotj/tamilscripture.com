@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/horhaggidgad",
+  "lang": "ta",
+  "source_hash": "1efa63cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓர்-அக்கித்காத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/horhaggidgad#p1-99ef915c",
+      "text": "வனாந்தர பயணத்தின்போது இஸ்ரவேலர்கள் முகாமிட்ட ஒரு இடம் (எண்ணாகமம் 33:32-33). இது உபாகமம் 10:7-ல் குறிப்பிடப்பட்டுள்ள குத்கோதாவாக இருக்கலாம், மேலும் இது வாடி காதகெத் என்ற இடத்துடன் அடையாளம் காணப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/horhaggidgad#p2-5fd904a3",
+      "text": "வனாந்தர பயணம் என்பதையும் காண்க."
+    }
+  ]
+}

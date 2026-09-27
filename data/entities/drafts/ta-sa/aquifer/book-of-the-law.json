@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/book-of-the-law",
+  "lang": "ta",
+  "source_hash": "ffecf342",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நியாயப்பிரமாணப் புத்தகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/book-of-the-law#p1-eeae79c0",
+      "text": "“உடன்படிக்கை புத்தகம்” என்பதற்குரிய மற்றொரு பெயர், இது யோசியா ராஜாவின் ஆலயப் பழுதுபார்க்கும் பணிகளின்போது ஆசாரியனாகிய இல்க்கியாவினால் ஆலயத்தில் கண்டுபிடிக்கப்பட்ட ஒரு ஆவணமாகும்."
+    },
+    {
+      "id": "aquifer/book-of-the-law#p2-d22dd1e5",
+      "text": "உடன்படிக்கை புத்தகம் என்பதைக் காண்க."
+    }
+  ]
+}

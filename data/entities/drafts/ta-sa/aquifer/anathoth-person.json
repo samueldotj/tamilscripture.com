@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/anathoth-person",
+  "lang": "ta",
+  "source_hash": "248f9616",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனதோத் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/anathoth-person#p1-018a2922",
+      "text": "பென்யமீன் கோத்திரத்திலுள்ள பெகேரின் மகன் (1 நாளாகமம் 7:8)."
+    },
+    {
+      "id": "aquifer/anathoth-person#p2-b89486c2",
+      "text": "பாபிலோனுக்கு நாடுகடத்தப்பட்டதற்குப் பின்பு, நெகேமியாவும் மற்றவர்களும் தேவனுக்கு உண்மையாயிருக்கும் எஸ்றாவின் உடன்படிக்கையில் கையெழுத்திட்ட ஒரு அரசியல் தலைவன் (நெகேமியா 10:19)."
+    }
+  ]
+}

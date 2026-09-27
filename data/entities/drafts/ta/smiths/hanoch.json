@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hanoch",
+  "lang": "ta",
+  "source_hash": "34658092",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனோக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/hanoch#p1-34658092",
+      "text": "(அர்ப்பணிக்கப்பட்டவன்)."
+    }
+  ]
+}

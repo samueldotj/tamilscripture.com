@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kirjatharim",
+  "lang": "ta",
+  "source_hash": "19f9b7a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்யாரீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/kirjatharim#p1-19f9b7a6",
+      "text": "(காடுகளின் நகரம்), கீரியாத்யாரீம் என்ற பெயரின் சுருக்கப்பட்ட வடிவம், இது எஸ்றா 2:25-ல் மட்டுமே காணப்படுகிறது."
+    }
+  ]
+}

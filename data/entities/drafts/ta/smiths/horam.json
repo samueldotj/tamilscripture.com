@@ -1,0 +1,18 @@
+{
+  "id": "smiths/horam",
+  "lang": "ta",
+  "source_hash": "e5fe8895",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/horam#p1-e5fe8895",
+      "text": "(மலைப்பிரதேசம்), பாலஸ்தீனத்தின் தென்மேற்கு பகுதி கட்டப்படும் காலத்தில் கேசேரின் ராஜாவாக இருந்தான். (யோசுவா 10:33)"
+    }
+  ]
+}

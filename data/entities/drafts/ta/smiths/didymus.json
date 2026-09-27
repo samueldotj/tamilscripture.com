@@ -1,0 +1,18 @@
+{
+  "id": "smiths/didymus",
+  "lang": "ta",
+  "source_hash": "547429d8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திதிமு",
+  "paragraphs": [
+    {
+      "id": "smiths/didymus#p1-547429d8",
+      "text": "(Didymus, அதாவது இரட்டைப் பிள்ளை), அப்போஸ்தலனாகிய தோமாவின் மறுபெயர். (யோவான் 11:16; 20:24; 21:2) [தோமா]"
+    }
+  ]
+}

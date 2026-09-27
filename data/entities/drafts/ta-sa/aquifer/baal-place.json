@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/baal-place",
+  "lang": "ta",
+  "source_hash": "e599fe4c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகால் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/baal-place#p1-1caa03b8",
+      "text": "பாகால் என்பது 1 நாளாகமம் 4:33-இல் சிமியோனுடைய எல்லையில் இருந்த பாலாத்பெயேர் என்னும் பட்டணத்திற்கு வேறொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/baal-place#p2-0d26384f",
+      "text": "பாலாத்பெயேர் என்பதைக் காண்க."
+    }
+  ]
+}

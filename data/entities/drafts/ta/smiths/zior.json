@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zior",
+  "lang": "ta",
+  "source_hash": "3e055056",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீயோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/zior#p1-3e055056",
+      "text": "(சிறுமை), யூதாவின் மலைநாட்டிலுள்ள ஒரு பட்டணம் (யோசுவா 15:54). இது எப்ரோனுடன் ஒரே தொகுப்பைச் சேர்ந்தது."
+    }
+  ]
+}

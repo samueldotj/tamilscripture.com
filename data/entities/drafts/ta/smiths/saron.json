@@ -1,0 +1,18 @@
+{
+  "id": "smiths/saron",
+  "lang": "ta",
+  "source_hash": "3663a9d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/saron#p1-3663a9d7",
+      "text": "லித்தா நகரம் இருந்த மாவட்டம், (அப்போஸ்தலருடைய நடபடிகள் 9:35) மட்டும்; இது பழைய ஏற்பாட்டின் சாரோன் ஆகும். [சாரோன்]"
+    }
+  ]
+}

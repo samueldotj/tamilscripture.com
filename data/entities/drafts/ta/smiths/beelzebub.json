@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beelzebub",
+  "lang": "ta",
+  "source_hash": "dc17a28e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெயெல்செபூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/beelzebub#p1-dc17a28e",
+      "text": "[பெயெல்செபூலைக் காண்க]"
+    }
+  ]
+}

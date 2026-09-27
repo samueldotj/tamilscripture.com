@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/potter",
+  "lang": "ta",
+  "source_hash": "c4bcaa8c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குயவன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/potter#p1-f62fec77",
+      "text": "குயவன் என்பவன் களிமண்ணினால் பானைகளையும் மற்ற பொருட்களையும் செய்கிறவன்."
+    },
+    {
+      "id": "aquifer/potter#p2-5eb2c90e",
+      "text": "மண்பாண்டங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

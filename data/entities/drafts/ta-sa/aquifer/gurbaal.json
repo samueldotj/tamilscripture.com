@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gurbaal",
+  "lang": "ta",
+  "source_hash": "88dca168",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூர்பாகால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gurbaal#p1-88dca168",
+      "text": "நெகேவிலுள்ள ஒரு பட்டணம், அரபியர்களால் குடியேற்றப்பட்டது, ஏதோமின் அருகாமையில் இருக்கக்கூடும், யூதாவின் உசியா அதை வென்றார் (2 நாளாகமம் 26:7, nlt mg)."
+    }
+  ]
+}

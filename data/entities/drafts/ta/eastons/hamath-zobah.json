@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hamath-zobah",
+  "lang": "ta",
+  "source_hash": "ccf6b263",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாத்சோபா",
+  "paragraphs": [
+    {
+      "id": "eastons/hamath-zobah#p1-ccf6b263",
+      "text": "சோபாவின் அரண் (2 நாளாகமம் 8:3) என்பதை சிலர் மேலே குறிப்பிட்ட இடத்திலிருந்து வேறுபட்ட ஒரு இடமாகக் கருதுகின்றனர்; ஆனால் இது முற்றிலும் நிச்சயமற்றது."
+    }
+  ]
+}

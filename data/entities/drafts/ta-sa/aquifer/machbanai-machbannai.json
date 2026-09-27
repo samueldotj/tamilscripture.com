@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/machbanai-machbannai",
+  "lang": "ta",
+  "source_hash": "1ffef7e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மக்பன்னாயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/machbanai-machbannai#p1-1ffef7e1",
+      "text": "மக்பன்னாயி என்பவன் காத் கோத்திரத்தைச் சேர்ந்த ஒரு போர்வீரனாக இருந்தான், அவன் சவுல் அரசனுக்கு எதிரான போராட்டத்தில் தாவீதிடம் சிக்லாகில் வந்து சேர்ந்தான் (1 நாளாகமம் 12:13). மக்பன்னாயி என்ற பெயர் மக்பன்னாயி என்றும் எழுதப்படுகிறது."
+    }
+  ]
+}

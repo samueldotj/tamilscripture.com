@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jakeh",
+  "lang": "ta",
+  "source_hash": "a3eacba1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கே",
+  "paragraphs": [
+    {
+      "id": "smiths/jakeh#p1-a3eacba1",
+      "text": "(பக்தியுள்ளவன்). [நீதிமொழிகள், புத்தகம், காண்க]"
+    }
+  ]
+}

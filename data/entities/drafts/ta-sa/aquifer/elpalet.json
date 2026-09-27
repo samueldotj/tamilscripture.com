@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elpalet",
+  "lang": "ta",
+  "source_hash": "cd52bba4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பாலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elpalet#p1-7530c18d",
+      "text": "எல்பாலேத் என்பது 1 நாளாகமம் 14:5-ல் இராஜாவாகிய தாவீதின் மகனாகிய எலிப்பேலேத்திற்குரிய மறு பெயராகிய எல்பெலேத் என்ற பெயருக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/elpalet#p2-a176f867",
+      "text": "எலிப்பேலேத் #3-ஐ காண்க."
+    }
+  ]
+}

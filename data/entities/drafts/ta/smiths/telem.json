@@ -1,0 +1,18 @@
+{
+  "id": "smiths/telem",
+  "lang": "ta",
+  "source_hash": "8ddf7673",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேலெம்",
+  "paragraphs": [
+    {
+      "id": "smiths/telem#p1-8ddf7673",
+      "text": "(ஒடுக்குதல்)."
+    }
+  ]
+}

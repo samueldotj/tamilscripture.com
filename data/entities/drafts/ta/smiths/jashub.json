@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jashub",
+  "lang": "ta",
+  "source_hash": "f3435815",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/jashub#p1-f3435815",
+      "text": "(அவன் திரும்புகிறான்)."
+    }
+  ]
+}

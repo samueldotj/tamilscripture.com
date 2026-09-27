@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rogelim",
+  "lang": "ta",
+  "source_hash": "174a62cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரோகிலிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/rogelim#p1-174a62cd",
+      "text": "வண்ணார், கீலேயாத்தின் ஒரு பட்டணம், கீலேயாத்தியனான பர்சிலாயியின் குடியிருப்பு (2 சாமுவேல் 17:27; 19:31), மகனாயீமுக்கு அருகில் இருந்திருக்கலாம்."
+    }
+  ]
+}

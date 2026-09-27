@@ -1,0 +1,18 @@
+{
+  "id": "eastons/refiner",
+  "lang": "ta",
+  "source_hash": "9d461748",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புடமிடுகிறவன்",
+  "paragraphs": [
+    {
+      "id": "eastons/refiner#p1-9d461748",
+      "text": "உலோகங்களைப் புடமிடும் செயல்முறை உவமையாக ஏசாயா 1:25; எரேமியா 6:29; சகரியா 13:9; மல்கியா 3:2, 3 ஆகிய வசனங்களில் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

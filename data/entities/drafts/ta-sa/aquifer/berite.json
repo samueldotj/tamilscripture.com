@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/berite",
+  "lang": "ta",
+  "source_hash": "66f06010",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரீ",
+  "paragraphs": [
+    {
+      "id": "aquifer/berite#p1-5f2ec10e",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில், பிக்கிரியனிடமிருந்து வம்சாவளியாகிய ஒரு நபரைக் குறிக்கும் பிக்ரைட் என்ற வார்த்தையின் மொழிபெயர்ப்பு (2 சாமுவேல் 20:14)."
+    },
+    {
+      "id": "aquifer/berite#p2-a6ef5ac4",
+      "text": "பிக்கிரியின், பிக்ரைட், பிக்ரி என்பவற்றைக் காண்க."
+    }
+  ]
+}

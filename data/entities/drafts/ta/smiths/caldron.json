@@ -1,0 +1,18 @@
+{
+  "id": "smiths/caldron",
+  "lang": "ta",
+  "source_hash": "1faf1de4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொப்பரை",
+  "paragraphs": [
+    {
+      "id": "smiths/caldron#p1-1faf1de4",
+      "text": "சரீரத்தை வேகவைப்பதற்காக, சடங்கு நோக்கத்திற்காகவோ வீட்டு உபயோகத்திற்காகவோ பயன்படுத்தப்பட்ட ஒரு பாத்திரம். (1 சாமுவேல் 2:14; 2 நாளாகமம் 35:13; யோபு 41:20; மீகா 3:3)"
+    }
+  ]
+}

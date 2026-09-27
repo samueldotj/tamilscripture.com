@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/flogging",
+  "lang": "ta",
+  "source_hash": "e6cf2cb8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சவுக்கடி",
+  "paragraphs": [
+    {
+      "id": "aquifer/flogging#p1-9da8dd1b",
+      "text": "சவுக்கடி என்பது ஒரு நபரை சவுக்கினாலோ மற்றொரு கருவியினாலோ அடிக்கும் செயலாகும், சில வேளைகளில் இது தண்டனையின் ஒரு வடிவமாக இருக்கும்."
+    },
+    {
+      "id": "aquifer/flogging#p2-ff2469ea",
+      "text": "குற்றவியல் நியாயப்பிரமாணம் மற்றும் தண்டனை என்பதைக் காண்க."
+    }
+  ]
+}

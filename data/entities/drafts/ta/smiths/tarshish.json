@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tarshish",
+  "lang": "ta",
+  "source_hash": "b78e1bd2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தர்ஷீஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/tarshish#p1-b78e1bd2",
+      "text": "(நிலைநிறுத்தப்பட்டது)."
+    }
+  ]
+}

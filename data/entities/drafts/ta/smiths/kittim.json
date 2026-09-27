@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kittim",
+  "lang": "ta",
+  "source_hash": "9823ffc2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/kittim#p1-9823ffc2",
+      "text": "அங்கீகரிக்கப்பட்ட ஆங்கில மொழிபெயர்ப்பில் (Authorized Version) 'கித்தீம்' என்பது இரண்டு இடங்களில் 'சித்தீம்' (Chittim) என்பதற்குப் பதிலாக எழுதப்பட்டுள்ளது. (ஆதியாகமம் 10:4; 1 நாளாகமம் 1:7)"
+    }
+  ]
+}

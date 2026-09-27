@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lawyer",
+  "lang": "ta",
+  "source_hash": "803482a1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நியாயசாஸ்திரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/lawyer#p1-2f7ce6fe",
+      "text": "நியாயசாஸ்திரி என்பது முதன்மையாக லூக்கா நற்செய்தியில், மோசேயின் நியாயப்பிரமாணத்தில் தேர்ச்சி பெற்றிருந்த ஒரு நபரைக் குறிக்கப் பயன்படுத்தப்படும் ஒரு சொல்."
+    },
+    {
+      "id": "aquifer/lawyer#p2-80201366",
+      "text": "வேதபண்டிதன் என்பதைக் காண்க."
+    }
+  ]
+}

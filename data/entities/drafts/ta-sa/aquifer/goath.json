@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/goath",
+  "lang": "ta",
+  "source_hash": "9b3f2826",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோவாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/goath#p1-cb33f90f",
+      "text": "கோவாத் என்பது எரேமியா 31:39-இல் கோவாத் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் எழுத்துப்பெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/goath#p2-15528a32",
+      "text": "கோவாத் என்பதைக் காண்க."
+    }
+  ]
+}

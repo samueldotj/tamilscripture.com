@@ -1,0 +1,42 @@
+{
+  "id": "aquifer/hazaraddar",
+  "lang": "ta",
+  "source_hash": "670a9af1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆத்சார் ஆதார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hazaraddar#p1-ec4ae0da",
+      "text": "அஸ்மோனாவுடன் சேர்ந்து, யூதாவின் தென் எல்லையைக் குறித்த ஒரு பட்டணம் (எண்ணாகமம் 34:4). இது பொதுவாக காதேஸ்பர்னேயாவுக்கு அருகில் உள்ள Khirbet el-Qudeirat என அடையாளம் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/hazaraddar#p2-b99d85e8",
+      "text": "யோசுவா 15:3-4-லுள்ள இணையான பகுதி இரண்டு இடங்களுக்குப் பதிலாக நான்கு இடங்களைப் பட்டியலிடுகிறது:"
+    },
+    {
+      "id": "aquifer/hazaraddar#p3-7ff67169",
+      "text": "எஸ்ரோன்"
+    },
+    {
+      "id": "aquifer/hazaraddar#p4-e87ee40e",
+      "text": "ஆதார்"
+    },
+    {
+      "id": "aquifer/hazaraddar#p5-bffafcdf",
+      "text": "கர்க்கா"
+    },
+    {
+      "id": "aquifer/hazaraddar#p6-75324b7f",
+      "text": "அஸ்மோன்"
+    },
+    {
+      "id": "aquifer/hazaraddar#p7-21c37d35",
+      "text": "ஆத்சார் ஆதாரும் ஆதாரும் ஒரே இடமே என்று சிலர் கருதுகின்றனர். மற்றவர்கள், ஆதாரிலிருந்து வேறுபடுத்திக் காட்ட அதற்கு எஸ்ரோன் என்று பெயர் மாற்றியிருக்கலாம் என்று நினைக்கிறார்கள்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aiah",
+  "lang": "ta",
+  "source_hash": "ace2175a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயா",
+  "paragraphs": [
+    {
+      "id": "smiths/aiah#p1-ace2175a",
+      "text": "(கூக்குரல்)."
+    }
+  ]
+}

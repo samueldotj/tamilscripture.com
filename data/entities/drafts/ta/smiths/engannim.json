@@ -1,0 +1,18 @@
+{
+  "id": "smiths/engannim",
+  "lang": "ta",
+  "source_hash": "5a482f93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "என்கன்னீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/engannim#p1-5a482f93",
+      "text": "(தோட்டத்தின் நீரூற்று)."
+    }
+  ]
+}

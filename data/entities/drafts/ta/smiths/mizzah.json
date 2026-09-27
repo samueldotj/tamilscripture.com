@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mizzah",
+  "lang": "ta",
+  "source_hash": "6e244707",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீசா",
+  "paragraphs": [
+    {
+      "id": "smiths/mizzah#p1-6e244707",
+      "text": "(பயம்), ரெகுவேலின் மகனும், ஏசாவின் பேரனும். (ஆதியாகமம் 36:13,17; 1 நாளாகமம் 1:37)"
+    }
+  ]
+}

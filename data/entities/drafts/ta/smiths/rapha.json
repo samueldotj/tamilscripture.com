@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rapha",
+  "lang": "ta",
+  "source_hash": "d4c3e55d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/rapha#p1-d4c3e55d",
+      "text": "(உயரமானவன்)."
+    }
+  ]
+}

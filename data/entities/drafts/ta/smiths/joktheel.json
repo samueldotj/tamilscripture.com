@@ -1,0 +1,18 @@
+{
+  "id": "smiths/joktheel",
+  "lang": "ta",
+  "source_hash": "6229b454",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோக்தெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/joktheel#p1-6229b454",
+      "text": "(தேவனாலே அடக்கப்பட்டது)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/geneva-bible",
+  "lang": "ta",
+  "source_hash": "b2b77a4f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஜெனீவா பைபிள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/geneva-bible#p1-b2b77a4f",
+      "text": "1560ஆம் ஆண்டில் சுவிட்சர்லாந்தின் ஜெனீவா நகரில் பரிசுத்த வேதாகமம் ஆங்கிலத்தில் மொழிபெயர்க்கப்பட்டது. பைபிள், வேதாகமத்தின் பதிப்புகள் (ஆங்கிலம்) என்பதைக் காண்க."
+    }
+  ]
+}

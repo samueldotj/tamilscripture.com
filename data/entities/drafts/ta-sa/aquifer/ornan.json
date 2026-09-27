@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ornan",
+  "lang": "ta",
+  "source_hash": "3c939214",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒர்னான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ornan#p1-bfc9b0b2",
+      "text": "1 நாளாகமம் 21:15-ல் யெபூசியனாகிய அரவ்னா என்பவனுக்கு ஒர்னான் என்பது வேறொரு எழுத்துருவம்."
+    },
+    {
+      "id": "aquifer/ornan#p2-a5ba6441",
+      "text": "அரவ்னா என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eleazar",
+  "lang": "ta",
+  "source_hash": "ebf0e1ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலெயாசார்",
+  "paragraphs": [
+    {
+      "id": "smiths/eleazar#p1-ebf0e1ab",
+      "text": "(தேவனுடைய உதவி)."
+    }
+  ]
+}

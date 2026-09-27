@@ -1,0 +1,18 @@
+{
+  "id": "smiths/haran",
+  "lang": "ta",
+  "source_hash": "d4700579",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/haran#p1-d4700579",
+      "text": "(மலைவாசி)."
+    }
+  ]
+}

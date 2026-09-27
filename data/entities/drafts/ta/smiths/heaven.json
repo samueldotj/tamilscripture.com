@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heaven",
+  "lang": "ta",
+  "source_hash": "456ea721",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரலோகம்",
+  "paragraphs": [
+    {
+      "id": "smiths/heaven#p1-456ea721",
+      "text": "பழைய ஏற்பாடில் இவ்வாறு மொழிபெயர்க்கப்பட்ட நான்கு எபிரெய வார்த்தைகள் உள்ளன, அவற்றை நாம் சுருக்கமாகக் கருதலாம்."
+    }
+  ]
+}

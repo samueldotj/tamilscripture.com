@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethrapha",
+  "lang": "ta",
+  "source_hash": "899f26d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்ராபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethrapha#p1-899f26d3",
+      "text": "யூதா கோத்திரத்தில் எஸ்தோனின் சந்ததியாருடன் பட்டியலிடப்பட்ட ஒரு இடப்பெயர் அல்லது வம்சப்பெயர் (1 நாளாகமம் 4:1, 12)."
+    }
+  ]
+}

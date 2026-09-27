@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tanach",
+  "lang": "ta",
+  "source_hash": "5aee493a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தானாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/tanach#p1-5aee493a",
+      "text": "தானாக் என்ற பெயரின் ஒரு சிறு வேறுபாடு. (யோசுவா 21:26)"
+    }
+  ]
+}

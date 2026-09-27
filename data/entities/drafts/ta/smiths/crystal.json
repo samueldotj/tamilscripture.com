@@ -1,0 +1,18 @@
+{
+  "id": "smiths/crystal",
+  "lang": "ta",
+  "source_hash": "8f8a5a37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பளிங்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/crystal#p1-8f8a5a37",
+      "text": "இது Authorized Version-இல் இரண்டு எபிரெய வார்த்தைகளுக்கு பிரதிநிதியாக இருக்கும் சொல்."
+    }
+  ]
+}

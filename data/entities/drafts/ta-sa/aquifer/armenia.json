@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/armenia",
+  "lang": "ta",
+  "source_hash": "266af899",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆர்மேனியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/armenia#p1-d44fe32c",
+      "text": "2 இராஜாக்கள் 19:37 மற்றும் ஏசாயா 37:38-ல் அரராத் என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பு. சனகெரிபின் இரண்டு மகன்கள் தங்கள் தகப்பனைக் கொலைசெய்த பின்பு தப்பி ஓடிய இடமாக ஆர்மேனியா குறிப்பிடப்படுகிறது."
+    },
+    {
+      "id": "aquifer/armenia#p2-ba1ff2d9",
+      "text": "அரராத் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/eshkalonite",
+  "lang": "ta",
+  "source_hash": "5000e58b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஷ்கலோனியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eshkalonite#p1-9d06a206",
+      "text": "எஷ்கலோனியன் என்பது பெலிஸ்தரின் அஸ்கலோன் என்ற பட்டணத்தில் வாழ்ந்தவனைக் குறிக்கும் கிங் யாக்கோபு மொழிபெயர்ப்பின் சொல்லாகும் (யோசுவா 13:3)."
+    },
+    {
+      "id": "aquifer/eshkalonite#p2-6b4a224c",
+      "text": "அஸ்கலோன் என்பதைக் காண்க."
+    }
+  ]
+}

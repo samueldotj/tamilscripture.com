@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tiria",
+  "lang": "ta",
+  "source_hash": "44ef483f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திரியா",
+  "paragraphs": [
+    {
+      "id": "smiths/tiria#p1-44ef483f",
+      "text": "(பயம்), யூதா கோத்திரத்திற்குரிய எகலெலேலின் மகன். (1 நாளாகமம் 4:16) (கி.மு. 1451 ஆம் ஆண்டளவில்.)"
+    }
+  ]
+}

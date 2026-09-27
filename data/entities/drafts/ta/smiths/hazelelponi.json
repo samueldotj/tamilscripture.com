@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hazelelponi",
+  "lang": "ta",
+  "source_hash": "a53fd85d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்செலெல்போனி",
+  "paragraphs": [
+    {
+      "id": "smiths/hazelelponi#p1-a53fd85d",
+      "text": "(என் மேல் வரும் நிழல்), யூதாவின் வம்சவரலாற்றில் ஏத்தாமின் மகன்களுடைய சகோதரி. (1 நாளாகமம் 4:3)"
+    }
+  ]
+}

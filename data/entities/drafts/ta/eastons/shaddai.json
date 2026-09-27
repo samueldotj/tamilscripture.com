@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shaddai",
+  "lang": "ta",
+  "source_hash": "7901e642",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஷடாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/shaddai#p1-7901e642",
+      "text": "சர்வவல்லமையுள்ளவர், எபிரெய வேதவாக்கியங்களில் அடிக்கடி பயன்படுத்தப்படும் தேவனுடைய நாமம், பொதுவாக “சர்வவல்லவர்” என்று மொழிபெயர்க்கப்படுகிறது."
+    }
+  ]
+}

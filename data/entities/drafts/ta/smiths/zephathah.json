@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zephathah",
+  "lang": "ta",
+  "source_hash": "bceb010b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செப்பத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/zephathah#p1-bceb010b",
+      "text": "(காவற்கோபுரம்), எத்தியோப்பியனாகிய செராகுவுடன் ஆசா போருக்கு அணிவகுத்த இடமாகிய பள்ளத்தாக்கு. (2 நாளாகமம் 14:10) மாத்திரம்."
+    }
+  ]
+}

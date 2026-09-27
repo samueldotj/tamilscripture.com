@@ -1,0 +1,18 @@
+{
+  "id": "smiths/atarah",
+  "lang": "ta",
+  "source_hash": "cc75d779",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தாராள்",
+  "paragraphs": [
+    {
+      "id": "smiths/atarah#p1-cc75d779",
+      "text": "(கிரீடம்) யெராமியேலின் மனைவியும், ஓனாமின் தாயும். (1 நாளாகமம் 2:26)"
+    }
+  ]
+}

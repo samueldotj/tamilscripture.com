@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/henoch",
+  "lang": "ta",
+  "source_hash": "c580408e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏனோக்கு (ஹெனோக்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/henoch#p1-de72e021",
+      "text": "1. 1 நாளாகமம் 1:3-இல் காணப்படுகிற யாரேத்தின் மகனாகிய ஏனோக்குக்கான KJV வடிவம். ஏனோக்கு (நபர்) #2-ஐக் காண்க."
+    },
+    {
+      "id": "aquifer/henoch#p2-1932ec13",
+      "text": "2. 1 நாளாகமம் 1:33-இல் காணப்படுகிற மீதியானின் மகனாகிய ஆனோக்குக்கான KJV வடிவம். ஆனோக்கு #1-ஐக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pledge",
+  "lang": "ta",
+  "source_hash": "e1c8ef8e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வாக்குத்தத்தம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pledge#p1-9ea19dfb",
+      "text": "பிணை என்பது ஒரு வாக்குத்தத்தம் அல்லது ஒரு உறுதிமொழி (ஒரு காரியத்தைச் செய்வதற்கோ அல்லது ஒரு கடனைத் திருப்பிச் செலுத்துவதற்கோ கொடுக்கப்படும் உறுதியான உறுதிப்பாடு)."
+    },
+    {
+      "id": "aquifer/pledge#p2-cb2cc818",
+      "text": "வங்கியாளர், வங்கி வியாபாரம் என்பதைக் காண்க."
+    }
+  ]
+}

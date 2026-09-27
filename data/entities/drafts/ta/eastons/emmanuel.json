@@ -1,0 +1,18 @@
+{
+  "id": "eastons/emmanuel",
+  "lang": "ta",
+  "source_hash": "ded13573",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்மானுவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/emmanuel#p1-ded13573",
+      "text": "தேவன் நம்மோடு இருக்கிறார், மத்தேயு 1:23. (இம்மானுவேல் காண்க.)"
+    }
+  ]
+}

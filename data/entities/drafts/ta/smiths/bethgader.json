@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethgader",
+  "lang": "ta",
+  "source_hash": "031d569b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்காதேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethgader#p1-031d569b",
+      "text": "(மதிலின் வீடு), இது யூதாவின் வம்சவரலாறுகளில் ஒரு நபரைப் போலக் காணப்பட்டாலும், நிச்சயமாக ஒரு இடமாகும். (1 நாளாகமம் 2:51)"
+    }
+  ]
+}

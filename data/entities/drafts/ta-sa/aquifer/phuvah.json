@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/phuvah",
+  "lang": "ta",
+  "source_hash": "ffa85986",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/phuvah#p1-bc46e7c6",
+      "text": "கோத்திரப்பிதாவாகிய இசக்காரின் மகனான புவாவுக்கு கிங் யாக்கோபு வெர்சனில் கொடுக்கப்பட்ட எழுத்துப்பெயர்ப்பு (ஆதியாகமம் 46:13)."
+    },
+    {
+      "id": "aquifer/phuvah#p2-7dd5e710",
+      "text": "புவா என்பதைக் காண்க."
+    }
+  ]
+}

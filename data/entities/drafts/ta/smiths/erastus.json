@@ -1,0 +1,18 @@
+{
+  "id": "smiths/erastus",
+  "lang": "ta",
+  "source_hash": "125f4bf4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எரஸ்து",
+  "paragraphs": [
+    {
+      "id": "smiths/erastus#p1-125f4bf4",
+      "text": "(நேசிக்கப்பட்டவன்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/palmerworm",
+  "lang": "ta",
+  "source_hash": "28b75dbb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முசுக்கட்டைப்பூச்சி",
+  "paragraphs": [
+    {
+      "id": "aquifer/palmerworm#p1-ee661e6e",
+      "text": "யோவேல் 1:4, 2:25, மற்றும் ஆமோஸ் 4:9-ல் வரும் வெட்டுக்கிளி இனத்தைக் குறிக்க கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்படும் சொல்."
+    },
+    {
+      "id": "aquifer/palmerworm#p2-4c71a758",
+      "text": "விலங்குகள் (வெட்டுக்கிளி) என்பதைக் காண்க."
+    }
+  ]
+}

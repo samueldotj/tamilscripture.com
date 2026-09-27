@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mozah",
+  "lang": "ta",
+  "source_hash": "ffb3bb94",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசா",
+  "paragraphs": [
+    {
+      "id": "eastons/mozah#p1-ffb3bb94",
+      "text": "தண்ணீர் பீறிடும் இடம், பென்யமீனுடைய ஒரு பட்டணம் (யோசுவா 18:26)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dan",
+  "lang": "ta",
+  "source_hash": "d27eebb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாண்",
+  "paragraphs": [
+    {
+      "id": "smiths/dan#p1-d27eebb5",
+      "text": "(நியாயம் தீர்ப்பவர்)."
+    }
+  ]
+}

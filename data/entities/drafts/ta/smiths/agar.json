@@ -1,0 +1,18 @@
+{
+  "id": "smiths/agar",
+  "lang": "ta",
+  "source_hash": "337508f2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகார்",
+  "paragraphs": [
+    {
+      "id": "smiths/agar#p1-337508f2",
+      "text": "[ஆகார்]"
+    }
+  ]
+}

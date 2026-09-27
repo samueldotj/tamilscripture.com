@@ -1,0 +1,42 @@
+{
+  "id": "eastons/zaccur",
+  "lang": "ta",
+  "source_hash": "568ef4b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சக்கூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/zaccur#p1-8f902eb0",
+      "text": "நினைக்கப்பட்டவன்."
+    },
+    {
+      "id": "eastons/zaccur#p2-eb07bfaf",
+      "text": "(1.) மோசே அனுப்பிய ஒற்றர்களில் ஒருவனான சம்முவாவின் தகப்பன் (எண்ணாகமம் 13:4)."
+    },
+    {
+      "id": "eastons/zaccur#p3-6202c1e9",
+      "text": "(2.) மெராரியனாகிய ஒரு லேவியன் (1 நாளாகமம் 24:27)."
+    },
+    {
+      "id": "eastons/zaccur#p4-16ec4101",
+      "text": "(3.) ஆசாபின் மகன், தாவீது ஏற்படுத்தின பாடகர் வகுப்புகளில் ஒன்றின் தலைவன் (1 நாளாகமம் 25:2, 10)."
+    },
+    {
+      "id": "eastons/zaccur#p5-022aa38d",
+      "text": "(4.) இம்ரியின் மகன் (நெகேமியா 3:2)."
+    },
+    {
+      "id": "eastons/zaccur#p6-e15fd05a",
+      "text": "(5.) ஒரு லேவியன் (நெகேமியா 10:12)."
+    },
+    {
+      "id": "eastons/zaccur#p7-b9d56266",
+      "text": "(6.) மத்தனியாவின் மகன் (நெகேமியா 13:13)."
+    }
+  ]
+}

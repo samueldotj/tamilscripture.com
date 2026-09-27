@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benammi",
+  "lang": "ta",
+  "source_hash": "221bcfd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்னம்மி",
+  "paragraphs": [
+    {
+      "id": "smiths/benammi#p1-221bcfd9",
+      "text": "(என் மக்களின் மகன்), லோத்தின் இளையவளான மகளின் மகன், அம்மோனியருடைய மூல தகப்பன். (ஆதியாகமம் 19:38) (கி.மு. 1897.)"
+    }
+  ]
+}

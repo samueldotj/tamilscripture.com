@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hazel",
+  "lang": "ta",
+  "source_hash": "d04b70a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புன்னை",
+  "paragraphs": [
+    {
+      "id": "aquifer/hazel#p1-557050c5",
+      "text": "ஆதியாகமம் 30:37-ல், கிங் யாக்கோபு மொழிபெயர்ப்பு “hazel” (புன்னை) என்ற வார்த்தையை ஒரு மரத்திற்குப் பயன்படுத்துகிறது, அது இப்பொழுது வாதுமை மரமாக இருக்கும் என்று அறியப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/hazel#p2-126182e5",
+      "text": "வாதுமை என்பதைக் காண்க."
+    }
+  ]
+}

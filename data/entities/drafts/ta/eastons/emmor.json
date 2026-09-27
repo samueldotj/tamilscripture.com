@@ -1,0 +1,18 @@
+{
+  "id": "eastons/emmor",
+  "lang": "ta",
+  "source_hash": "f40371d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எம்மோர்",
+  "paragraphs": [
+    {
+      "id": "eastons/emmor#p1-f40371d2",
+      "text": "கழுதை, அப்போஸ்தலருடைய நடபடிகள் 7:16. (ஏமோர் காண்க.)"
+    }
+  ]
+}

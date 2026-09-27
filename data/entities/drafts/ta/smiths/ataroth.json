@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ataroth",
+  "lang": "ta",
+  "source_hash": "1cfd5d45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ataroth#p1-1cfd5d45",
+      "text": "(கிரீடங்கள்)."
+    }
+  ]
+}

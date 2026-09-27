@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chezib",
+  "lang": "ta",
+  "source_hash": "484a17a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெசீப்",
+  "paragraphs": [
+    {
+      "id": "eastons/chezib#p1-484a17a4",
+      "text": "கபடமுள்ளது, யூதாவின் மகனாகிய சாலா பிறந்த ஒரு பட்டணம் (ஆதியாகமம் 38:5). அக்சீப் (காண்க) என்பதே இதுவாக இருக்கலாம்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/laadah",
+  "lang": "ta",
+  "source_hash": "0d965e0e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாதாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/laadah#p1-0d965e0e",
+      "text": "லாதாக் சாலாவின் மகனும், யூதா கோத்திரத்தில் மரேஷாவின் தகப்பனுமாக இருந்தான் (1 நாளாகமம் 4:21)."
+    }
+  ]
+}

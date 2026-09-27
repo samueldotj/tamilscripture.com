@@ -1,0 +1,18 @@
+{
+  "id": "eastons/toll",
+  "lang": "ta",
+  "source_hash": "2b5bac3f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தீர்வை",
+  "paragraphs": [
+    {
+      "id": "eastons/toll#p1-2b5bac3f",
+      "text": "பெர்சியா ராஜாவின் வருமான வழிகளில் ஒன்று (எஸ்றா 4:13; 7:24), இது பாலங்களையும் துறைமுகங்களையும் நெடுஞ்சாலைகளையும் பயன்படுத்தினவர்களிடம் இருந்து வசூலிக்கப்பட்ட ஒரு வரியாக இருந்திருக்கலாம்."
+    }
+  ]
+}

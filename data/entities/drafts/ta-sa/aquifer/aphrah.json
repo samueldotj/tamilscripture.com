@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aphrah",
+  "lang": "ta",
+  "source_hash": "2450c793",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்ராகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aphrah#p1-281ff473",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் பெத் அப்ராவுக்கு பயன்படுத்தப்பட்ட பெயர். இது மீகா 1:10-ல் குறிப்பிடப்பட்ட ஒரு பெலிஸ்தர் பட்டணத்தின் பெயராக இருக்கக்கூடும்."
+    },
+    {
+      "id": "aquifer/aphrah#p2-30ab7a32",
+      "text": "பெத் அப்ரா என்பதைக் காண்க."
+    }
+  ]
+}

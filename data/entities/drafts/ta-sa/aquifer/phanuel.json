@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/phanuel",
+  "lang": "ta",
+  "source_hash": "5cef8d08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானுவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/phanuel#p1-5cef8d08",
+      "text": "அன்னாள் என்ற தீர்க்கதரிசினியின் தகப்பன். இயேசு குழந்தையாக ஆலயத்திற்குக் கொண்டுவரப்பட்டபோது, தேவனுக்கு நன்றி செலுத்தி, இயேசுவைக் குறித்துப் பேசிய தீர்க்கதரிசினி அன்னாள் ஆவாள் (லூக்கா 2:36)."
+    }
+  ]
+}

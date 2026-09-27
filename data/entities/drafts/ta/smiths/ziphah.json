@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ziphah",
+  "lang": "ta",
+  "source_hash": "7e76e572",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/ziphah#p1-7e76e572",
+      "text": "(சீப் என்பதன் பெண்பால் வடிவம்), எகலெலேலின் இன்னொரு மகன். (1 நாளாகமம் 4:16)"
+    }
+  ]
+}

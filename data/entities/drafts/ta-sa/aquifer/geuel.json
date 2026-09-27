@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/geuel",
+  "lang": "ta",
+  "source_hash": "adbf5cad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/geuel#p1-adbf5cad",
+      "text": "காத் கோத்திரத்தைச் சேர்ந்த மாகியின் மகன். கானான் தேசத்தை சோதித்தறிய மோசே தெரிந்துகொண்ட 12 வேவுக்காரர்களில் ஒருவனாக கூவேல் இருந்தான் (எண்ணாகமம் 13:15)."
+    }
+  ]
+}

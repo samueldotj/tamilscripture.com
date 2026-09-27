@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shekel",
+  "lang": "ta",
+  "source_hash": "c97d607e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேக்கல்",
+  "paragraphs": [
+    {
+      "id": "smiths/shekel#p1-c97d607e",
+      "text": "[பணம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ephlal",
+  "lang": "ta",
+  "source_hash": "6191d71e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்லால்",
+  "paragraphs": [
+    {
+      "id": "smiths/ephlal#p1-6191d71e",
+      "text": "(நியாயத்தீர்ப்பு), யூதாவின் வம்சத்தாரிலும், எஸ்ரோனின் மற்றும் யெராமியேலின் குடும்பத்தைச் சேர்ந்தவன். (1 நாளாகமம் 2:37)"
+    }
+  ]
+}

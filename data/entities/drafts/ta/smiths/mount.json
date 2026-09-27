@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mount",
+  "lang": "ta",
+  "source_hash": "182c8d41",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மலை",
+  "paragraphs": [
+    {
+      "id": "smiths/mount#p1-182c8d41",
+      "text": "(ஏசாயா 29:3; எரேமியா 6:6) முதலியன. [முற்றுகை காண்க]"
+    }
+  ]
+}

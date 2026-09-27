@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hirah",
+  "lang": "ta",
+  "source_hash": "dee1721f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈரா",
+  "paragraphs": [
+    {
+      "id": "smiths/hirah#p1-dee1721f",
+      "text": "(உயர்குடி இனத்தான்), யூதாவின் சிநேகிதனான ஒரு அதுல்லாம் ஊரான். (ஆதியாகமம் 38:1,12) மற்றும் ஆதியாகமம் 38:20-ஐயும் காண்க"
+    }
+  ]
+}

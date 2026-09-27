@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shimri",
+  "lang": "ta",
+  "source_hash": "4cf02099",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/shimri#p1-4cf02099",
+      "text": "(விழிப்புள்ளவன்)."
+    }
+  ]
+}

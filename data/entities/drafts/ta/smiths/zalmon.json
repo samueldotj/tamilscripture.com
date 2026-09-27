@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zalmon",
+  "lang": "ta",
+  "source_hash": "49aaa669",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சல்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/zalmon#p1-49aaa669",
+      "text": "(நிழலுள்ள), தாவீதின் காவலரில் ஒருவனான அகோகியன். (2 சாமுவேல் 23:28)"
+    }
+  ]
+}

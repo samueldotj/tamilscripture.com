@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ananias",
+  "lang": "ta",
+  "source_hash": "c9984bbf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/ananias#p1-c9984bbf",
+      "text": "(யெகோவா அருளாய்க் கொடுத்தவர்)"
+    }
+  ]
+}

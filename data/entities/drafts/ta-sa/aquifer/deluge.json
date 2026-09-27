@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/deluge",
+  "lang": "ta",
+  "source_hash": "a3880ccd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரவாகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/deluge#p1-749f1f7a",
+      "text": "“பிரவாகம்” என்ற வார்த்தை மிகப் பெரிய வெள்ளத்தைக் குறிக்கிறது. வேதத்தில் இது பொதுவாக நோவாவின் காலத்தில் ஏற்பட்ட உலகளாவிய வெள்ளத்தைக் குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/deluge#p2-d983ca20",
+      "text": "வெள்ளப்பிரவாகம் என்பதைக் காண்க."
+    }
+  ]
+}

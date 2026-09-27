@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ebed",
+  "lang": "ta",
+  "source_hash": "0dcb523f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏபேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ebed#p1-0dcb523f",
+      "text": "(ஒரு பணியாள்). (பல கையெழுத்துப் பிரதிகளில் ஏபேர் என்று இருக்கிறது.)"
+    }
+  ]
+}

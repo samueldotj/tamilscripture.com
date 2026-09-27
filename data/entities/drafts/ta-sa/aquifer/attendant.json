@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/attendant",
+  "lang": "ta",
+  "source_hash": "567f8667",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பணிவிடையாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/attendant#p1-1836fd84",
+      "text": "ராஜாவுக்காக வேலைசெய்த ஒரு உயர் அதிகாரி."
+    },
+    {
+      "id": "aquifer/attendant#p2-2eb31914",
+      "text": "அரமனை மேற்பார்வையாளன் காண்க."
+    }
+  ]
+}

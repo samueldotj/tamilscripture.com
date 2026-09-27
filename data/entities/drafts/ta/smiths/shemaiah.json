@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shemaiah",
+  "lang": "ta",
+  "source_hash": "63e096b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/shemaiah#p1-63e096b8",
+      "text": "(யெகோவாவினால் கேட்கப்பட்டவன்)."
+    }
+  ]
+}

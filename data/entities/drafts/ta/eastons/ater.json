@@ -1,0 +1,30 @@
+{
+  "id": "eastons/ater",
+  "lang": "ta",
+  "source_hash": "a765dacf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/ater#p1-aa574aaf",
+      "text": "அடைக்கப்பட்டது; கால் ஊனமானது."
+    },
+    {
+      "id": "eastons/ater#p2-ca76036f",
+      "text": "(1.) எஸ்றா 2:16."
+    },
+    {
+      "id": "eastons/ater#p3-e8d465f1",
+      "text": "(2.) நெகேமியா 10:17."
+    },
+    {
+      "id": "eastons/ater#p4-3ea0c256",
+      "text": "(3.) எஸ்றா 2:42."
+    }
+  ]
+}

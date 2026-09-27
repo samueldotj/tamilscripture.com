@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cozbi",
+  "lang": "ta",
+  "source_hash": "60eebc93",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கஸ்பி",
+  "paragraphs": [
+    {
+      "id": "smiths/cozbi#p1-60eebc93",
+      "text": "(வஞ்சகமுள்ளவள்) மீதியானியரின் தலைவனாகிய சூரின் மகள். (எண்ணாகமம் 25:15,18)"
+    }
+  ]
+}

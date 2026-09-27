@@ -1,0 +1,18 @@
+{
+  "id": "smiths/oren",
+  "lang": "ta",
+  "source_hash": "18f7b71d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரென்",
+  "paragraphs": [
+    {
+      "id": "smiths/oren#p1-18f7b71d",
+      "text": "(பைன் மரம்), எஸ்ரோனுக்கு முதலில் பிறந்த யெராமியேலின் மகன்களில் ஒருவன் (1 நாளாகமம் 2:25)."
+    }
+  ]
+}

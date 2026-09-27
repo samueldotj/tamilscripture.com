@@ -1,0 +1,18 @@
+{
+  "id": "smiths/unni",
+  "lang": "ta",
+  "source_hash": "9f1c0a96",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உன்னி",
+  "paragraphs": [
+    {
+      "id": "smiths/unni#p1-9f1c0a96",
+      "text": "(தாழ்த்தப்பட்டவன்)."
+    }
+  ]
+}

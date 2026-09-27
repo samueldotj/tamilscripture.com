@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pau",
+  "lang": "ta",
+  "source_hash": "c3b37938",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகு",
+  "paragraphs": [
+    {
+      "id": "smiths/pau#p1-c3b37938",
+      "text": "(கத்துதல்) (ஆனால் 1 நாளாகமம் 1:50-ல் பாகி), ஏதோமின் ராஜாவாகிய ஆதாருடைய தலைநகரம். (ஆதியாகமம் 36:39) அதன் இடம் அறியப்படவில்லை."
+    }
+  ]
+}

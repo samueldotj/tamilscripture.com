@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zina",
+  "lang": "ta",
+  "source_hash": "bbf82f51",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீனா",
+  "paragraphs": [
+    {
+      "id": "eastons/zina#p1-bbf82f51",
+      "text": "அலங்காரம், சீமேயின் மகன்களில் ஒருவன் (1 நாளாகமம் 23:10)."
+    }
+  ]
+}

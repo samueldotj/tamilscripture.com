@@ -1,0 +1,18 @@
+{
+  "id": "smiths/korah",
+  "lang": "ta",
+  "source_hash": "6947edfc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோராகு",
+  "paragraphs": [
+    {
+      "id": "smiths/korah#p1-6947edfc",
+      "text": "(மொட்டைத்தலை)."
+    }
+  ]
+}

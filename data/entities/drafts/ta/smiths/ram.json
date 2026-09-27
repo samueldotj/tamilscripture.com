@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ram",
+  "lang": "ta",
+  "source_hash": "db4da210",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ram#p1-db4da210",
+      "text": "(உயர்ந்தவன், உயர்த்தப்பட்டவன்). [பேட்டரிங்-ராம் என்பதைக் காண்க]"
+    }
+  ]
+}

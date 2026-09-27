@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/garden-house",
+  "lang": "ta",
+  "source_hash": "992a2f2a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோட்டத்தின் வீடு",
+  "paragraphs": [
+    {
+      "id": "aquifer/garden-house#p1-722d9bb8",
+      "text": "2 இராஜாக்கள் 9:27-ல் தோட்டத்தின் வீடு என்பதற்கு யாக்கோபு அரசன் மொழிபெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/garden-house#p2-78b932b3",
+      "text": "தோட்டத்தின் வீடு என்பதைக் காண்க."
+    }
+  ]
+}

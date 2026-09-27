@@ -1,0 +1,26 @@
+{
+  "id": "eastons/ahiezer",
+  "lang": "ta",
+  "source_hash": "20800fe5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகியேசேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/ahiezer#p1-bfb1c737",
+      "text": "உதவியின் சகோதரன்; அதாவது, “உதவிசெய்பவன்.”"
+    },
+    {
+      "id": "eastons/ahiezer#p2-473c6371",
+      "text": "(1.) யாத்திராகமத்தின் காலத்தில் தாண் கோத்திரத்தின் தலைவன் (எண்ணாகமம் 1:12; 2:25; 10:25)."
+    },
+    {
+      "id": "eastons/ahiezer#p3-ab95b3e8",
+      "text": "(2.) சிக்லாகிலே தாவீதிடம் வந்த பென்யமீன் கவண்காரர்களின் தலைவன் (1 நாளாகமம் 12:3)."
+    }
+  ]
+}

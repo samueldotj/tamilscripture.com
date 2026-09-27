@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aven",
+  "lang": "ta",
+  "source_hash": "cfd8ab45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவேன்",
+  "paragraphs": [
+    {
+      "id": "smiths/aven#p1-cfd8ab45",
+      "text": "(வீணானது)."
+    }
+  ]
+}

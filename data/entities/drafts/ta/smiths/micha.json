@@ -1,0 +1,18 @@
+{
+  "id": "smiths/micha",
+  "lang": "ta",
+  "source_hash": "dfde61c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீகா",
+  "paragraphs": [
+    {
+      "id": "smiths/micha#p1-dfde61c8",
+      "text": "(தேவனைப்போல் யார் இருக்கிறார்?)."
+    }
+  ]
+}

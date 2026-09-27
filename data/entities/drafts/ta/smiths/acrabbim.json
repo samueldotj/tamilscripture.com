@@ -1,0 +1,18 @@
+{
+  "id": "smiths/acrabbim",
+  "lang": "ta",
+  "source_hash": "f769042c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்ராபீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/acrabbim#p1-f769042c",
+      "text": "காண்க மாலே-அக்ராபீம், (யோசுவா 15:3) ஓரமாக."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/porcius-festus",
+  "lang": "ta",
+  "source_hash": "5fedec66",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போர்சியஸ் பெஸ்து",
+  "paragraphs": [
+    {
+      "id": "smiths/porcius-festus#p1-5fedec66",
+      "text": "[பெஸ்து, போர்சியஸ்]"
+    }
+  ]
+}

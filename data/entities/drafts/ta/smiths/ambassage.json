@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ambassage",
+  "lang": "ta",
+  "source_hash": "f0cbabb3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தூதுவரவு",
+  "paragraphs": [
+    {
+      "id": "smiths/ambassage#p1-f0cbabb3",
+      "text": "தூதுவர்களால் கொண்டுவரப்படும் பொது இயல்புள்ள செய்தி. இச்சொல் சில வேளைகளில் தூதுவர்களையும் உட்படுத்தும். (லூக்கா 14:32)"
+    }
+  ]
+}

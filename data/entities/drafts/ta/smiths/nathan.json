@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nathan",
+  "lang": "ta",
+  "source_hash": "4124995f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாத்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/nathan#p1-4124995f",
+      "text": "(கொடுப்பவர்)."
+    }
+  ]
+}

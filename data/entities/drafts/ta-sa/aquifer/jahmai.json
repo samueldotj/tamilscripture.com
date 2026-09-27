@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jahmai",
+  "lang": "ta",
+  "source_hash": "eebc85d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யக்மாயி",
+  "paragraphs": [
+    {
+      "id": "aquifer/jahmai#p1-eebc85d1",
+      "text": "யக்மாயி இசக்கார் கோத்திரத்தைச் சேர்ந்த தோலாவின் மகன் ஆவான் (1 நாளாகமம் 7:2)."
+    }
+  ]
+}

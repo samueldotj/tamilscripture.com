@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mount-nebo",
+  "lang": "ta",
+  "source_hash": "da330d34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேபோ மலை",
+  "paragraphs": [
+    {
+      "id": "aquifer/mount-nebo#p1-da330d34",
+      "text": "நேபோ, மலை என்பதைக் காண்க."
+    }
+  ]
+}

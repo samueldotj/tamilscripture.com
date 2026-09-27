@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/malcham",
+  "lang": "ta",
+  "source_hash": "fcfa0b95",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்காம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/malcham#p1-2406f819",
+      "text": "1. 1 நாளாகமம் 8:9-இல் மல்காமுக்கான KJV வடிவம். மல்காம் காண்க."
+    },
+    {
+      "id": "aquifer/malcham#p2-d03b7ca3",
+      "text": "2. செப்பனியா 1:5-இல் ஒரு அம்மோனிய தேவனாகிய மில்கோமுக்கான KJV வடிவம். மில்கோம் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hippopotamus",
+  "lang": "ta",
+  "source_hash": "5e4b1cab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹிப்போபொட்டேமஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/hippopotamus#p1-5e4b1cab",
+      "text": "[பெகிமோத்]"
+    }
+  ]
+}

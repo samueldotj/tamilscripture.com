@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pekod",
+  "lang": "ta",
+  "source_hash": "db120ab0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேகோடு",
+  "paragraphs": [
+    {
+      "id": "smiths/pekod#p1-db120ab0",
+      "text": "(விசாரணை), கல்தேயருக்குப் பயன்படுத்தப்பட்ட ஒரு பட்டப்பெயர். (எரேமியா 50:21; எசேக்கியேல் 23:23) இந்தச் சொல்லின் பொருள் என்ன என்பதைப் பற்றி அறிஞர்கள் தீர்மானிக்காமல் இருக்கிறார்கள்."
+    }
+  ]
+}

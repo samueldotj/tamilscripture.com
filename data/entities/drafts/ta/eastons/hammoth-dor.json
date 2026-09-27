@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hammoth-dor",
+  "lang": "ta",
+  "source_hash": "cf158ce4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மோத்தோர்",
+  "paragraphs": [
+    {
+      "id": "eastons/hammoth-dor#p1-cf158ce4",
+      "text": "வெதுவெதுப்பான நீரூற்றுகள், நப்தலியின் லேவியப் பட்டணம் (யோசுவா 21:32); ஒருவேளை இது 19:35-ல் குறிக்கப்பட்ட அம்மாத் ஆயிருக்கலாம்."
+    }
+  ]
+}

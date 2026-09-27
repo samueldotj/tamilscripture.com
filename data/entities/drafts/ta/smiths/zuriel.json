@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zuriel",
+  "lang": "ta",
+  "source_hash": "17b48b16",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூரியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/zuriel#p1-17b48b16",
+      "text": "(என் கன்மலை தேவனே) அபியாயேலின் மகன், மேலும் யாத்திரையின் காலத்தில் மெராரியப் லேவியருடைய தலைவன். (எண்ணாகமம் 3:35)"
+    }
+  ]
+}

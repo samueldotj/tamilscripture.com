@@ -1,0 +1,18 @@
+{
+  "id": "smiths/didrachmon",
+  "lang": "ta",
+  "source_hash": "f2d951cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "டிட்ராக்மோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/didrachmon#p1-f2d951cc",
+      "text": "[நாணயம்; சேக்கல்]"
+    }
+  ]
+}

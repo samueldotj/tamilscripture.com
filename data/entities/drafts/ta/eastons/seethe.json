@@ -1,0 +1,18 @@
+{
+  "id": "eastons/seethe",
+  "lang": "ta",
+  "source_hash": "c1274005",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வேகவைத்தல்",
+  "paragraphs": [
+    {
+      "id": "eastons/seethe#p1-c1274005",
+      "text": "கொதிக்கவைத்தல் (யாத்திராகமம் 16:23)."
+    }
+  ]
+}

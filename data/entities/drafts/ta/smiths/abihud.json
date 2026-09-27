@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abihud",
+  "lang": "ta",
+  "source_hash": "3bc2d14b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/abihud#p1-3bc2d14b",
+      "text": "(புகழுள்ள தகப்பன், பிரசித்தமானவன்), பேலாவின் மகன், பென்யமீனின் பேரன். (1 நாளாகமம் 8:3)"
+    }
+  ]
+}

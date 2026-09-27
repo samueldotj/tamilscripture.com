@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/david-tower-of",
+  "lang": "ta",
+  "source_hash": "20348950",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாவீதின் கோபுரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/david-tower-of#p1-edc2d98c",
+      "text": "தாவீதினால் கட்டப்பட்ட ஒரு கோட்டை, அதில் ஆயிரம் கேடகங்கள் தூக்கிவைக்கப்பட்டிருந்தன. இது உன்னதப்பாட்டு 4:4-இல் குறிப்பிடப்பட்டுள்ளது, வேறெங்கும் இல்லை."
+    },
+    {
+      "id": "aquifer/david-tower-of#p2-35606a8b",
+      "text": "எருசலேமில், ஜாஃபா வாசலுக்கு அருகில் உள்ள தாவீதின் கோபுரம். இது நடுக்கால காலத்தில் கட்டப்பட்டது."
+    },
+    {
+      "id": "aquifer/david-tower-of#p3-100fc703",
+      "text": "எருசலேம் என்பதைக் காண்க."
+    }
+  ]
+}

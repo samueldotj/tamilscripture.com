@@ -1,0 +1,18 @@
+{
+  "id": "smiths/urbanus",
+  "lang": "ta",
+  "source_hash": "22928bc0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உர்பான்",
+  "paragraphs": [
+    {
+      "id": "smiths/urbanus#p1-22928bc0",
+      "text": "உர்பானை என்பதற்குப் பரிசோதிக்கப்பட்ட வெளியீட்டில் கொடுக்கப்பட்டுள்ள வடிவம்."
+    }
+  ]
+}

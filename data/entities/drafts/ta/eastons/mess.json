@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mess",
+  "lang": "ta",
+  "source_hash": "3de9d395",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பங்கு உணவு",
+  "paragraphs": [
+    {
+      "id": "eastons/mess#p1-3de9d395",
+      "text": "விருந்தினருக்குக் கொடுக்கப்படும் உணவின் ஒரு பங்கு (ஆதியாகமம் 43:34; 2 சாமுவேல் 11:8)."
+    }
+  ]
+}

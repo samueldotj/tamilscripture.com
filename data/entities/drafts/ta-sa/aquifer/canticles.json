@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/canticles",
+  "lang": "ta",
+  "source_hash": "f4916e43",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காண்டிகிள்ஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/canticles#p1-e54ed441",
+      "text": "பரிசுத்த வேதாகமப் புத்தகமாகிய உன்னதப்பாட்டு (அல்லது சாலொமோனின் பாட்டு) என்பதற்கான மற்றொரு தலைப்பு. இந்தப் பெயர் அந்தப் புத்தகத்தின் இலத்தீன் பெயரான Canticum Canticorum என்பதிலிருந்து வருகிறது (இதன் பொருள் \"பாட்டுகளின் பாட்டு\")."
+    },
+    {
+      "id": "aquifer/canticles#p2-04645129",
+      "text": "உன்னதப்பாட்டு என்பதைக் காண்க."
+    }
+  ]
+}

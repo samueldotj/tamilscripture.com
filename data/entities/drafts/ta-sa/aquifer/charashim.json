@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/charashim",
+  "lang": "ta",
+  "source_hash": "42d2ecb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கராஷீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/charashim#p1-3398dad9",
+      "text": "1 நாளாகமம் 4:14-ல் காணப்படும் கராஷீமன் பள்ளத்தாக்கிற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்படும் வடிவமே இது; இது சாரோனின் தென்எல்லையிலுள்ள சமவெளியில் அமைந்த ஒரு பள்ளத்தாக்கு."
+    },
+    {
+      "id": "aquifer/charashim#p2-c8d42e2e",
+      "text": "கராஷீமன் என்பதைக் காண்க."
+    }
+  ]
+}

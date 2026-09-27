@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/canneh",
+  "lang": "ta",
+  "source_hash": "25880a63",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கன்னே",
+  "paragraphs": [
+    {
+      "id": "aquifer/canneh#p1-61d6441b",
+      "text": "கன்னே என்பது வட சீரியாவிலுள்ள ஒரு பட்டணமாகிய கல்னேவின் வேறு பெயராகும் (எசேக்கியேல் 27:23)."
+    },
+    {
+      "id": "aquifer/canneh#p2-76b68096",
+      "text": "கல்னே #2-ஐ காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cyrenius",
+  "lang": "ta",
+  "source_hash": "9cdbb4c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிரேனியு",
+  "paragraphs": [
+    {
+      "id": "aquifer/cyrenius#p1-800e06db",
+      "text": "கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் லூக்கா 2:2 இல் காணப்படும் சிரேனியு என்ற பெயரின் எழுத்துவடிவம். கிறிஸ்து பிறந்தபோது சிரேனியு சீரியா தேசத்தின் அதிபதியாக இருந்தான்."
+    },
+    {
+      "id": "aquifer/cyrenius#p2-a8db28a7",
+      "text": "சிரேனியு என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abdeel",
+  "lang": "ta",
+  "source_hash": "45407549",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்தெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/abdeel#p1-45407549",
+      "text": "செலேமியாவின் தகப்பன். (எரேமியா 36:26)"
+    }
+  ]
+}

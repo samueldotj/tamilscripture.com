@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/putiel",
+  "lang": "ta",
+  "source_hash": "8113728f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூத்தியேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/putiel#p1-8113728f",
+      "text": "எலெயாசாரின் மனைவியின் தகப்பனும், பினெகாசின் தாத்தாவும் ஆவான் (யாத்திராகமம் 6:25)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heresh",
+  "lang": "ta",
+  "source_hash": "cdedbed7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/heresh#p1-cdedbed7",
+      "text": "(கைவினைஞன்), ஆசரிப்புக்கூடாரத்தை சேர்ந்த ஒரு லேவியன் (1 நாளாகமம் 9:15) (கி.மு. 536.)"
+    }
+  ]
+}

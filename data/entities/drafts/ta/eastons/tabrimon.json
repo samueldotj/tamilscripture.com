@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tabrimon",
+  "lang": "ta",
+  "source_hash": "ac8414a5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தப்ரிமோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/tabrimon#p1-ac8414a5",
+      "text": "ரிம்மோன் நல்லவர், சீரியாவின் ராஜாவாகிய பெனாதாத்தின் தகப்பன் (1 இராஜாக்கள் 15:18)."
+    }
+  ]
+}

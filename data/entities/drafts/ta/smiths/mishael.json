@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mishael",
+  "lang": "ta",
+  "source_hash": "cf2e2e83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மீஷாவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/mishael#p1-cf2e2e83",
+      "text": "(தேவனைப் போன்றவர் யார்?)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/agee",
+  "lang": "ta",
+  "source_hash": "a3be6117",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகே",
+  "paragraphs": [
+    {
+      "id": "aquifer/agee#p1-a3be6117",
+      "text": "தாவீதின் பராக்கிரமசாலிகளில் \"முப்பது\" பேர் என்று அறியப்பட்டவர்களில் ஒருவனான சம்மாவின் தகப்பன் (2 சாமுவேல் 23:11)."
+    }
+  ]
+}

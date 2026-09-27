@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/carmite",
+  "lang": "ta",
+  "source_hash": "3d29052c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்மீயன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/carmite#p1-73501fc1",
+      "text": "கர்மீயின் சந்ததியாருக்குரிய பெயர். கர்மீ ரூபனுடைய மகன்களில் ஒருவனாக இருந்தான் (எண்ணாகமம் 26:6)."
+    },
+    {
+      "id": "aquifer/carmite#p2-745025e2",
+      "text": "கர்மீ #1-ஐக் காண்க."
+    }
+  ]
+}

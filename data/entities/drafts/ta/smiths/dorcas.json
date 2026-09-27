@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dorcas",
+  "lang": "ta",
+  "source_hash": "71bde5bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தொற்காள்",
+  "paragraphs": [
+    {
+      "id": "smiths/dorcas#p1-71bde5bb",
+      "text": "(வெளிமான்). [தபீத்தாள் காண்க]"
+    }
+  ]
+}

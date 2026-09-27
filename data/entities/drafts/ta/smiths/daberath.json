@@ -1,0 +1,18 @@
+{
+  "id": "smiths/daberath",
+  "lang": "ta",
+  "source_hash": "23385d95",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாபராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/daberath#p1-23385d95",
+      "text": "[தாபரேக் காண்க]"
+    }
+  ]
+}

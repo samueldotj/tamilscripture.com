@@ -1,0 +1,18 @@
+{
+  "id": "eastons/manoah",
+  "lang": "ta",
+  "source_hash": "600b3c82",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனோவா",
+  "paragraphs": [
+    {
+      "id": "eastons/manoah#p1-600b3c82",
+      "text": "ஓய்வு, தாண் வம்சத்தானாகிய ஒருவன், சிம்சோனின் தகப்பன் (நியாயாதிபதிகள் 13:1-22, மற்றும் 14:2-4)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/avvim-place",
+  "lang": "ta",
+  "source_hash": "0047ceda",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவீம் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/avvim-place#p1-0047ceda",
+      "text": "ஆவீம் பென்யமீனுடைய கோத்திரத்தின் எல்லைக்குள் இருந்த ஒரு பட்டணமாக இருந்தது (யோசுவா 18:23). அது பெத்தேலுக்குத் தெற்கே அமைந்திருந்தது."
+    }
+  ]
+}

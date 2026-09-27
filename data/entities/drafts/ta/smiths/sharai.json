@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sharai",
+  "lang": "ta",
+  "source_hash": "38fc8bad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராயி",
+  "paragraphs": [
+    {
+      "id": "smiths/sharai#p1-38fc8bad",
+      "text": "(விடுவிப்பவன்), பானியின் மகன்களில் ஒருவன். (எஸ்றா 10:40) (கி.மு. 457.)"
+    }
+  ]
+}

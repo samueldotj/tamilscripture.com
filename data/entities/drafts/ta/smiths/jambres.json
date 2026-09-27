@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jambres",
+  "lang": "ta",
+  "source_hash": "6a3d7eb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யம்பிரே",
+  "paragraphs": [
+    {
+      "id": "smiths/jambres#p1-6a3d7eb6",
+      "text": "[யந்நே மற்றும் யம்பிரே காண்க]"
+    }
+  ]
+}

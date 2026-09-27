@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kefr-kenna",
+  "lang": "ta",
+  "source_hash": "1a307b72",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெஃப்ர் கென்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/kefr-kenna#p1-1a307b72",
+      "text": "[கானா என்பதைக் காண்க]"
+    }
+  ]
+}

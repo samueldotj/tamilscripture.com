@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hasupha",
+  "lang": "ta",
+  "source_hash": "012f3735",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசுபா",
+  "paragraphs": [
+    {
+      "id": "smiths/hasupha#p1-012f3735",
+      "text": "[அசுபா பார்க்க]"
+    }
+  ]
+}

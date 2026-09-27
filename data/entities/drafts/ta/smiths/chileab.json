@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chileab",
+  "lang": "ta",
+  "source_hash": "6f9fdf60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீலேயாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/chileab#p1-6f9fdf60",
+      "text": "(தன் தகப்பனைப் போன்றவன்), தாவீதுக்கு அபிகாயிலிடம் பிறந்த மகன். [அபிகாயில் காண்க]"
+    }
+  ]
+}

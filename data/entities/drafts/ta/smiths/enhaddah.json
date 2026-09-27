@@ -1,0 +1,18 @@
+{
+  "id": "smiths/enhaddah",
+  "lang": "ta",
+  "source_hash": "9073ba9f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "என்காதா",
+  "paragraphs": [
+    {
+      "id": "smiths/enhaddah#p1-9073ba9f",
+      "text": "(விரைவான நீரூற்று), இசக்காரின் எல்லையிலுள்ள பட்டணங்களில் ஒன்று, என்கன்னீமுக்கு அடுத்ததாகக் குறிக்கப்பட்டுள்ளது. (யோசுவா 19:21)"
+    }
+  ]
+}

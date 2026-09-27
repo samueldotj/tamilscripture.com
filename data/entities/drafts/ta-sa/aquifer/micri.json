@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/micri",
+  "lang": "ta",
+  "source_hash": "fc0e9bcb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்ரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/micri#p1-e8de9593",
+      "text": "மிக்ரி என்பது மிக்கிரி என்பதை எழுதும் இன்னொரு விதம்."
+    },
+    {
+      "id": "aquifer/micri#p2-52cf2dbe",
+      "text": "மிக்கிரி என்பதைக் காண்க."
+    }
+  ]
+}

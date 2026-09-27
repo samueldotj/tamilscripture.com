@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirjatharba",
+  "lang": "ta",
+  "source_hash": "096edcf0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத் அர்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirjatharba#p1-1f35d4e9",
+      "text": "யாக்கோபு அரசர் மொழிபெயர்ப்பில் காணப்படும் கீரியாத் அர்பா என்பதின் வடிவம், எப்ரோனின் பழைய பெயராகும்."
+    },
+    {
+      "id": "aquifer/kirjatharba#p2-d281f509",
+      "text": "எப்ரோன் (இடம்) #1-ஐ காண்க."
+    }
+  ]
+}

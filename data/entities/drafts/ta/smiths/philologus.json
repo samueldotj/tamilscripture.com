@@ -1,0 +1,18 @@
+{
+  "id": "smiths/philologus",
+  "lang": "ta",
+  "source_hash": "c5ad17c5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிலொலோகு",
+  "paragraphs": [
+    {
+      "id": "smiths/philologus#p1-c5ad17c5",
+      "text": "பவுல் தன் வாழ்த்துதலை அனுப்பிய ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவன். (ரோமர் 18:15)"
+    }
+  ]
+}

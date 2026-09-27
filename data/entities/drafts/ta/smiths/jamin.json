@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jamin",
+  "lang": "ta",
+  "source_hash": "c680c3f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாமின்",
+  "paragraphs": [
+    {
+      "id": "smiths/jamin#p1-c680c3f7",
+      "text": "(வலது கை)."
+    }
+  ]
+}

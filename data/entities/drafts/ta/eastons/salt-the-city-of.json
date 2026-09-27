@@ -1,0 +1,18 @@
+{
+  "id": "eastons/salt-the-city-of",
+  "lang": "ta",
+  "source_hash": "d5ee12b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உப்புப்பட்டணம்",
+  "paragraphs": [
+    {
+      "id": "eastons/salt-the-city-of#p1-d5ee12b4",
+      "text": "யூதாவின் பட்டணங்களில் ஒன்று (யோசுவா 15:62), இது மரணக்கடலின் தென் கோடியிலுள்ள உப்புப்பள்ளத்தாக்கிலே இருந்திருக்கலாம்."
+    }
+  ]
+}

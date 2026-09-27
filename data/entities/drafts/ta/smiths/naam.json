@@ -1,0 +1,18 @@
+{
+  "id": "smiths/naam",
+  "lang": "ta",
+  "source_hash": "a9c4852a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/naam#p1-a9c4852a",
+      "text": "(இன்பம்), எப்புன்னேயின் மகனாகிய காலேபுடைய மகன்களில் ஒருவன். (1 நாளாகமம் 4:15) (கி.மு. 1451-1420 அளவில்.)"
+    }
+  ]
+}

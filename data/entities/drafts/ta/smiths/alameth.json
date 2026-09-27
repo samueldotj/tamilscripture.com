@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alameth",
+  "lang": "ta",
+  "source_hash": "0c7022ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அலாமேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/alameth#p1-0c7022ce",
+      "text": "சரியாகச் சொன்னால் அல்எமேத் (மூடுதல்), பென்யமீனுடைய மகனாகிய பெகேரின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:8)"
+    }
+  ]
+}

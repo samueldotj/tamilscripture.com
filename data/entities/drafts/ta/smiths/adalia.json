@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adalia",
+  "lang": "ta",
+  "source_hash": "c45550b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதலியா",
+  "paragraphs": [
+    {
+      "id": "smiths/adalia#p1-c45550b6",
+      "text": "(நெருப்பு தேவன்), ஆமானின் ஐந்தாம் மகன். (எஸ்தர் 9:8)"
+    }
+  ]
+}

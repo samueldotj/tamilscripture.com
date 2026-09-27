@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shelah",
+  "lang": "ta",
+  "source_hash": "532abe98",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேலா",
+  "paragraphs": [
+    {
+      "id": "smiths/shelah#p1-532abe98",
+      "text": "(வேண்டுதல்)."
+    }
+  ]
+}

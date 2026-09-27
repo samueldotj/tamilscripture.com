@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sheresh",
+  "lang": "ta",
+  "source_hash": "e31195f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரேஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/sheresh#p1-e31195f5",
+      "text": "வேர், மனாசேயின் வம்சத்தானாகிய ஒருவன் (1 நாளாகமம் 7:16)."
+    }
+  ]
+}

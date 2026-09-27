@@ -1,0 +1,18 @@
+{
+  "id": "smiths/haga-bah",
+  "lang": "ta",
+  "source_hash": "3956425a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகாபா",
+  "paragraphs": [
+    {
+      "id": "smiths/haga-bah#p1-3956425a",
+      "text": "இது (எஸ்றா 2:45) இல் காணப்படும் இணையான பட்டியலில் இந்தப் பெயரின் கீழ் காணப்படுகிறது"
+    }
+  ]
+}

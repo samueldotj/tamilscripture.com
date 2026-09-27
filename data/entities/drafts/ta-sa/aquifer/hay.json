@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hay",
+  "lang": "ta",
+  "source_hash": "c44cfc31",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புல் (உலர்ந்த வைக்கோல்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hay#p1-c44cfc31",
+      "text": "வைக்கோல் என்பது வெட்டப்பட்டு, மிருகங்களுக்கு தீவனமாகப் பயன்படுத்தும் பொருட்டு உலர்த்தப்பட்ட புல்லாகும்."
+    }
+  ]
+}

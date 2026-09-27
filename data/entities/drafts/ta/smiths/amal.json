@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amal",
+  "lang": "ta",
+  "source_hash": "4575b6a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமால்",
+  "paragraphs": [
+    {
+      "id": "smiths/amal#p1-4575b6a8",
+      "text": "(பிரயாசம்), ஆசேர் கோத்திரத்தான், ஏலேமின் மகன். (1 நாளாகமம் 7:35)"
+    }
+  ]
+}

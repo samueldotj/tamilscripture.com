@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/likhi",
+  "lang": "ta",
+  "source_hash": "110656f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிக்கே",
+  "paragraphs": [
+    {
+      "id": "aquifer/likhi#p1-110656f8",
+      "text": "லிக்கே மனாசே கோத்திரத்தைச் சேர்ந்த செமீதாவின் மகன் (1 நாளாகமம் 7:19)."
+    }
+  ]
+}

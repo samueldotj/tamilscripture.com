@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zabbai",
+  "lang": "ta",
+  "source_hash": "f9162205",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாபாயி",
+  "paragraphs": [
+    {
+      "id": "eastons/zabbai#p1-15e7e9dc",
+      "text": "அலைந்து திரிபவன்; சுத்தமானவன்."
+    },
+    {
+      "id": "eastons/zabbai#p2-b60a762c",
+      "text": "(1.) எஸ்றா 10:28."
+    },
+    {
+      "id": "eastons/zabbai#p3-63c399f0",
+      "text": "(2.) எருசலேமின் சுவரின் ஒரு பகுதியை “மிக கவனமாகப் பழுதுபார்த்துக் கட்டின” பாருக்கின் தகப்பன் (நெகேமியா 3:20; ஓரக்குறிப்பு, “சக்காய்”)."
+    }
+  ]
+}

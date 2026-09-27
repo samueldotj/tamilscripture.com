@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chenani",
+  "lang": "ta",
+  "source_hash": "b81e434c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனானி",
+  "paragraphs": [
+    {
+      "id": "aquifer/chenani#p1-1878e502",
+      "text": "இஸ்ரவேலர்கள் பாபிலோனின் சிறையிருப்பிலிருந்து திரும்பிய பின்பு, எஸ்றா நியாயப்பிரமாணத்தை பொது வாசிப்பில் வாசித்தபோது அதில் பங்கு பெற்ற லேவியனாகிய கெனானிக்கு மாற்று வடிவில் எழுதப்படும் பெயர்."
+    },
+    {
+      "id": "aquifer/chenani#p2-c78d1e7a",
+      "text": "கெனானியைக் காண்க."
+    }
+  ]
+}

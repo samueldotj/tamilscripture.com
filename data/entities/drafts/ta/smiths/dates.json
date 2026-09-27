@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dates",
+  "lang": "ta",
+  "source_hash": "b5469472",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேரீச்சம்பழங்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/dates#p1-b5469472",
+      "text": "(2 நாளாகமம் 31:5) விளிம்புக்குறிப்பு. [பேரீச்ச மரம் TREE காண்க]"
+    }
+  ]
+}

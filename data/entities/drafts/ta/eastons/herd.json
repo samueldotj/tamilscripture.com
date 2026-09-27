@@ -1,0 +1,18 @@
+{
+  "id": "eastons/herd",
+  "lang": "ta",
+  "source_hash": "02b275ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மந்தை",
+  "paragraphs": [
+    {
+      "id": "eastons/herd#p1-02b275ce",
+      "text": "ஆதியாகமம் 13:5; உபாகமம் 7:14. (மாடுமாடு என்பதைக் காண்க.)"
+    }
+  ]
+}

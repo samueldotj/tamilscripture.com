@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nibshan",
+  "lang": "ta",
+  "source_hash": "fdf01931",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிப்சான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nibshan#p1-fdf01931",
+      "text": "நிப்சான் என்பது வனாந்திரத்தில் யூதா கோத்திரத்திற்கு சொத்துரிமையாக ஒப்புவிக்கப்பட்ட ஆறு பட்டணங்களில் ஒன்றாகும் (யோசுவா 15:62)."
+    }
+  ]
+}

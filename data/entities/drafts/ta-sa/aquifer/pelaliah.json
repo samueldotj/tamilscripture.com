@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/pelaliah",
+  "lang": "ta",
+  "source_hash": "e8ae7545",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெல்லியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/pelaliah#p1-e8ae7545",
+      "text": "பெல்லியா, எஸ்றாவின் காலத்தில் எருசலேமில் வாழ்ந்த ஆசாரியனாகிய அதாயாவின் முற்பிதாவாக இருந்தார் (நெகேமியா 11:12)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/samgar-nebo",
+  "lang": "ta",
+  "source_hash": "d872b7fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்கார்நேபோ",
+  "paragraphs": [
+    {
+      "id": "eastons/samgar-nebo#p1-d872b7fc",
+      "text": "நேபோவே, கிருபையாயிரும்! அல்லது நேபோவின் பான பாத்திரக்காரன், இது பாபிலோனின் பிரபுக்களில் ஒருவனான நெர்கல் சரேத்சேர் என்பவனுடைய பட்டப்பெயராக இருக்கலாம் (எரேமியா 39:3)."
+    }
+  ]
+}

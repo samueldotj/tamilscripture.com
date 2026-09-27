@@ -1,0 +1,18 @@
+{
+  "id": "smiths/apelles",
+  "lang": "ta",
+  "source_hash": "34e8e96d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பெல்லே",
+  "paragraphs": [
+    {
+      "id": "smiths/apelles#p1-34e8e96d",
+      "text": "(அழைக்கப்பட்டவன்) பவுலினால் ரோமர் 16:10-ல் வாழ்த்தப்பட்ட ஒரு கிறிஸ்தவன். பரம்பரை மரபுப்படி இவன் சிமிர்னாவின் அல்லது ஏரக்லியாவின் கண்காணியானவன் என்று கருதப்படுகிறான். (கி.பி. 55.)"
+    }
+  ]
+}

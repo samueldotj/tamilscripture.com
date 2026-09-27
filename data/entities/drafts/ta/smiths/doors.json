@@ -1,0 +1,18 @@
+{
+  "id": "smiths/doors",
+  "lang": "ta",
+  "source_hash": "bc2f6ae4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கதவுகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/doors#p1-bc2f6ae4",
+      "text": "[வாசல்]"
+    }
+  ]
+}

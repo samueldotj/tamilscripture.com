@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jaala",
+  "lang": "ta",
+  "source_hash": "fe93b1e0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலா",
+  "paragraphs": [
+    {
+      "id": "eastons/jaala#p1-fe93b1e0",
+      "text": "காட்டு வெள்ளாட்டுப் பெண், நெதினீமியரில் ஒருவன், இவனுடைய சந்ததியார் சிறையிருப்பிலிருந்து திரும்பிவந்தார்கள் (நெகேமியா 7:58)."
+    }
+  ]
+}

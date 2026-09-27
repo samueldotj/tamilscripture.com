@@ -1,0 +1,18 @@
+{
+  "id": "eastons/horse-gate",
+  "lang": "ta",
+  "source_hash": "b37f42ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குதிரைவாசல்",
+  "paragraphs": [
+    {
+      "id": "eastons/horse-gate#p1-b37f42ab",
+      "text": "சீயோனிலிருந்து ஆலயத்திற்குச் செல்லும் பாலத்தின் மேற்குமுனையில், எருசலேமின் மதிலில் இருந்த ஒரு வாசல் (நெகேமியா 3:28; எரேமியா 31:40)."
+    }
+  ]
+}

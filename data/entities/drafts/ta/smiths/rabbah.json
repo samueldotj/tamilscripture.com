@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rabbah",
+  "lang": "ta",
+  "source_hash": "f5c83750",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/rabbah#p1-f5c83750",
+      "text": "(பெரியது)."
+    }
+  ]
+}

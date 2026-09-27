@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ebal",
+  "lang": "ta",
+  "source_hash": "357d14dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏபால்",
+  "paragraphs": [
+    {
+      "id": "smiths/ebal#p1-357d14dc",
+      "text": "(கல், வெறுமையான மலை)."
+    }
+  ]
+}

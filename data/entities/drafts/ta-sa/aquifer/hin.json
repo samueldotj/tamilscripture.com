@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hin",
+  "lang": "ta",
+  "source_hash": "dffa61aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹின்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hin#p1-13e5fb42",
+      "text": "ஹின் என்பது ஒரு திரவ அளவாகும், இது ஒரு பாத்தில் ஆறில் ஒரு பங்கிற்குச் சமமானது, அதாவது சுமார் 3.8 லீட்டர் (ஒரு கேலன்)."
+    },
+    {
+      "id": "aquifer/hin#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

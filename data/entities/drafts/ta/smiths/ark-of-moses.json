@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ark-of-moses",
+  "lang": "ta",
+  "source_hash": "c28857c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசேயின் பேழை",
+  "paragraphs": [
+    {
+      "id": "smiths/ark-of-moses#p1-c28857c8",
+      "text": "எகிப்தின் சேற்று நிலங்களில் வளரும் பாப்பிரஸ் என்னும் தாளடியினால் செய்யப்பட்ட ஒரு சிறிய படகு அல்லது கூடை. அது தண்ணீர் புகாதபடி பிச்சுமண் பூசப்பட்டிருந்தது."
+    }
+  ]
+}

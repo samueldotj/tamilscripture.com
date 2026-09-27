@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/guni",
+  "lang": "ta",
+  "source_hash": "03822c20",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூனி",
+  "paragraphs": [
+    {
+      "id": "aquifer/guni#p1-d3aac8a6",
+      "text": "நப்தலியின் மகனும் கோத்திரத்தலைவனாகிய யாக்கோபுக்குப் பேரனுமான ஒருவன் (ஆதியாகமம் 46:24; 1 நாளாகமம் 7:13)."
+    },
+    {
+      "id": "aquifer/guni#p2-7a57fa26",
+      "text": "காத் கோத்திரத்தைச் சேர்ந்த அப்தியேலின் தகப்பன் (1 நாளாகமம் 5:15)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/husbandman-husbandry",
+  "lang": "ta",
+  "source_hash": "6e8b0ce5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விவசாயி, விவசாயம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/husbandman-husbandry#p1-6e8b0ce5",
+      "text": "பயிர்த்தொழில் மற்றும் மிருக வளர்ப்பின் தொழிலும் நடைமுறையும்; கி.ப.வ (KJV) மொழிபெயர்ப்பில் விவசாயி, குடியானவன், உழவன், பயிரிடுவோன், திராட்சைத் தோட்டக்காரன் ஆகியவற்றைக் குறிக்கிறது. வேளாண்மை என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/solomons-porch",
+  "lang": "ta",
+  "source_hash": "8c0d3961",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலொமோனின் மண்டபம்",
+  "paragraphs": [
+    {
+      "id": "smiths/solomons-porch#p1-8c0d3961",
+      "text": "[அரண்மனை; ஆலயம் காண்க]."
+    }
+  ]
+}

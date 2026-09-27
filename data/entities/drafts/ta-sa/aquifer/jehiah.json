@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jehiah",
+  "lang": "ta",
+  "source_hash": "f64c72a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jehiah#p1-f64c72a6",
+      "text": "தாவீது பெட்டியை எருசலேமுக்குக் கொண்டுவந்தபோது, அதைக் காவல்காக்க ஓபேத்ஏதோமுடன் நியமிக்கப்பட்ட லேவியனாகிய எகியா ஆவான் (1 நாளாகமம் 15:24)."
+    }
+  ]
+}

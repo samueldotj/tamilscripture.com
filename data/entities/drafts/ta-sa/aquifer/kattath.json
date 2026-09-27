@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kattath",
+  "lang": "ta",
+  "source_hash": "cdb6b5b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்தாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kattath#p1-58a1718d",
+      "text": "காத்தாத் என்பது செபுலோனுக்கு ஒதுக்கப்பட்ட ஒரு பட்டணமாக இருந்தது (யோசுவா 19:15). இது நியாயாதிபதிகள் 1:30-இல் குறிப்பிடப்பட்டுள்ள கித்ரோன் என்ற பட்டணமே ஆக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/kattath#p2-b284a322",
+      "text": "கித்ரோனைக் காண்க."
+    }
+  ]
+}

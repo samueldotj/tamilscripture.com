@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lmri",
+  "lang": "ta",
+  "source_hash": "12713af8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்ரி",
+  "paragraphs": [
+    {
+      "id": "smiths/lmri#p1-12713af8",
+      "text": "(பேச்சுத்திறமையுள்ளவன்)."
+    }
+  ]
+}

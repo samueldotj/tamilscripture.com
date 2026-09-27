@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bela-place",
+  "lang": "ta",
+  "source_hash": "a52aeae4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலா (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bela-place#p1-567fc846",
+      "text": "பேலா என்பது சமபூமியின் நகரமாகிய சோவாருக்கு வேறு ஒரு பெயர் (ஆதியாகமம் 14:2)."
+    },
+    {
+      "id": "aquifer/bela-place#p2-da149860",
+      "text": "காண்க: சமபூமியின் நகரங்கள்; சோவார்."
+    }
+  ]
+}

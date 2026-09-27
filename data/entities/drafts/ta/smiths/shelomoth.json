@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shelomoth",
+  "lang": "ta",
+  "source_hash": "385a1509",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செலோமித்",
+  "paragraphs": [
+    {
+      "id": "smiths/shelomoth#p1-385a1509",
+      "text": "செலோமித், 3-ல் குறிப்பிடப்பட்டவரே இவர். (1 நாளாகமம் 24:22)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dinhabah",
+  "lang": "ta",
+  "source_hash": "1f5fe99d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தின்காபா",
+  "paragraphs": [
+    {
+      "id": "eastons/dinhabah#p1-1f5fe99d",
+      "text": "கள்வர்களின் குகை, ஏதோமியருடைய ஒரு பட்டணம், அது பேலா என்னும் ராஜாவின் தலைநகரமாக இருந்தது (ஆதியாகமம் 36:32). இது பெற்றாவுக்குச் சிறிது வடகிழக்கே இருக்கும் இன்றைய திப்திபா என்று கருதப்படுகிறது."
+    }
+  ]
+}

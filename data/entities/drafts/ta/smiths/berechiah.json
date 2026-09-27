@@ -1,0 +1,18 @@
+{
+  "id": "smiths/berechiah",
+  "lang": "ta",
+  "source_hash": "7c491f95",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/berechiah#p1-7c491f95",
+      "text": "(யெகோவாவினால் ஆசீர்வதிக்கப்பட்டவன்)."
+    }
+  ]
+}

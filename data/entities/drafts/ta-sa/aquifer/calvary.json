@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/calvary",
+  "lang": "ta",
+  "source_hash": "4f7d30b6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்வாரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/calvary#p1-d85420c9",
+      "text": "லூக்கா 23:33-இல், கிங் யாக்கோபு வேர்ஷன் மொழிபெயர்ப்பில் கபாலஸ்தலம் (“மண்டை ஓடு”) என்பதற்குப் பயன்படுத்தப்பட்ட பெயர்; இயேசு சிலுவையில் அறையப்பட்ட இடம்."
+    },
+    {
+      "id": "aquifer/calvary#p2-ce955497",
+      "text": "கபாலஸ்தலம் என்பதைக் காண்க."
+    }
+  ]
+}

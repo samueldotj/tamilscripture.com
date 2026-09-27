@@ -1,0 +1,18 @@
+{
+  "id": "smiths/evi",
+  "lang": "ta",
+  "source_hash": "9ab52b45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏவி",
+  "paragraphs": [
+    {
+      "id": "smiths/evi#p1-9ab52b45",
+      "text": "(ஆசை) இஸ்ரவேலரால் கொல்லப்பட்ட மீதியானின் ஐந்து ராஜாக்கள் அல்லது பிரபுக்களில் ஒருவன். (எண்ணாகமம் 31:8; யோசுவா 13:21)"
+    }
+  ]
+}

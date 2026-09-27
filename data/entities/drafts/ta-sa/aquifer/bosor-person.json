@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bosor-person",
+  "lang": "ta",
+  "source_hash": "1f8097b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போசோர் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bosor-person#p1-d4739a00",
+      "text": "பிலேயாமின் தகப்பனாகிய பேயோர் என்பதற்கு கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் காணப்படும் வேறு வடிவம் (2 பேதுரு 2:15)."
+    },
+    {
+      "id": "aquifer/bosor-person#p2-f5c55d21",
+      "text": "பேயோர் #2 காண்க."
+    }
+  ]
+}

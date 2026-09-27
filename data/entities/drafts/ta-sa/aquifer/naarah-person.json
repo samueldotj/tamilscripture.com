@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/naarah-person",
+  "lang": "ta",
+  "source_hash": "177ad8f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாராள் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/naarah-person#p1-729d5067",
+      "text": "நாராள் அசூருக்கு இருந்த இரண்டு மனைவிகளில் ஒருத்தி, அவள் அவனுக்கு நான்கு மகன்களைப் பெற்றாள் (1 நாளாகமம் 4:5-6)."
+    },
+    {
+      "id": "aquifer/naarah-person#p2-6ad23a0b",
+      "text": "பணிவிடைக்காரி, இளங்கன்னி என்பதையும் காண்க."
+    }
+  ]
+}

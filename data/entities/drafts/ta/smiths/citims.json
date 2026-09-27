@@ -1,0 +1,18 @@
+{
+  "id": "smiths/citims",
+  "lang": "ta",
+  "source_hash": "c5442d75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/citims#p1-c5442d75",
+      "text": "1 மக்கபேயர் 8:5. [கித்தீம், கித்தீமின்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/izehar",
+  "lang": "ta",
+  "source_hash": "b5ba2749",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்சேயார்",
+  "paragraphs": [
+    {
+      "id": "smiths/izehar#p1-b5ba2749",
+      "text": "(எண்ணெய்), எண்ணாகமம் 3:19 ஒரு இடத்தில் மட்டும் அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) இத்சேயார் என்ற பெயர் தரப்பட்டுள்ள வடிவம்."
+    }
+  ]
+}

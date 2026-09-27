@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bariah",
+  "lang": "ta",
+  "source_hash": "97c9402f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாரியா",
+  "paragraphs": [
+    {
+      "id": "eastons/bariah#p1-97c9402f",
+      "text": "தப்பியோடினவன், செமாயாவின் ஐந்து மகன்களில் ஒருவன். 1 நாளாகமம் 3:22-ல் அவர்களுடைய தகப்பனும் அவர்களுடன் சேர்த்து எண்ணப்பட்டிருக்கிறார்."
+    }
+  ]
+}

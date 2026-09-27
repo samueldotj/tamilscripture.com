@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beeliada",
+  "lang": "ta",
+  "source_hash": "9a45c285",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலியாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/beeliada#p1-9a45c285",
+      "text": "(கர்த்தர் அறிவார்); எருசலேமில் பிறந்த தாவீதின் 9 குமாரரில் ஒருவன். (1 நாளாகமம் 14:7) சாமுவேலின் பட்டியல்களில் இந்தப் பெயர் எலியாதா என்று காணப்படுகிறது. (கி.மு. 1045க்குப் பிறகு.)"
+    }
+  ]
+}

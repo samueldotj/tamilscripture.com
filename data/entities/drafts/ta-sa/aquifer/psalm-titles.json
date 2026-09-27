@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/psalm-titles",
+  "lang": "ta",
+  "source_hash": "13c8da32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சங்கீத தலைப்புகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/psalm-titles#p1-6f5440d2",
+      "text": "சங்கீத தலைப்புகள் என்பவை பல சங்கீதங்களின் ஆரம்பத்தில் காணப்படும் குறுகிய குறிப்புகள். அவை சங்கீதத்தின் ஆசிரியர், நோக்கம், பயன்பாடு, அல்லது இசை பற்றிய தகவல்களைத் தரலாம்."
+    },
+    {
+      "id": "aquifer/psalm-titles#p2-d97c3673",
+      "text": "இசை; சங்கீத புத்தகம் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

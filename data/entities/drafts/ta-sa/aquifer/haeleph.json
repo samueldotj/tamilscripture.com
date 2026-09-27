@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/haeleph",
+  "lang": "ta",
+  "source_hash": "a214bcbc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/haeleph#p1-a214bcbc",
+      "text": "கானான் தேசத்தின் ஆரம்ப வெற்றியின் பின்பு, ஏலேப் என்பது பென்யமீன் கோத்திரத்திற்கு சொத்துரிமையாகக் கொடுக்கப்பட்ட ஒரு பட்டணமாக இருந்தது (யோசுவா 18:28)."
+    }
+  ]
+}

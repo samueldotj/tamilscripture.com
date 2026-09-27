@@ -1,0 +1,18 @@
+{
+  "id": "smiths/meshillemoth",
+  "lang": "ta",
+  "source_hash": "18e803ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெஷிலெமோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/meshillemoth#p1-18e803ce",
+      "text": "(பலன்)."
+    }
+  ]
+}

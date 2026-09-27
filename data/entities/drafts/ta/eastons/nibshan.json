@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nibshan",
+  "lang": "ta",
+  "source_hash": "128c5af4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிப்சான்",
+  "paragraphs": [
+    {
+      "id": "eastons/nibshan#p1-128c5af4",
+      "text": "செழிப்பு; இலேசான மண், யூதாவின் “வனாந்தரத்தில்” எங்கோ இருந்த ஒரு பட்டணம் (யோசுவா 15:62), என்கேதிக்கு அருகில் இருந்திருக்கலாம்."
+    }
+  ]
+}

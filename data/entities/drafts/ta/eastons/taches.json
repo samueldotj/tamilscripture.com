@@ -1,0 +1,18 @@
+{
+  "id": "eastons/taches",
+  "lang": "ta",
+  "source_hash": "b735de3f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொக்கிகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/taches#p1-b735de3f",
+      "text": "ஆசரிப்புக்கூடாரத்தின் மூடுதிரைகள் ஒன்றோடொன்று இணைக்கப்பட்ட கொக்கிகள் அல்லது இணைப்புகள் (யாத்திராகமம் 26:6, 11, 33; 35:11)."
+    }
+  ]
+}

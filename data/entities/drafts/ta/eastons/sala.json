@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sala",
+  "lang": "ta",
+  "source_hash": "236c455e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலா",
+  "paragraphs": [
+    {
+      "id": "eastons/sala#p1-236c455e",
+      "text": "ஒரு தளிர், அர்ப்பகசாத்தின் சந்ததியான் (லூக்கா 3:35, 36); சாலா என்றும் அழைக்கப்படுகிறார் (1 நாளாகமம் 1:18, 24)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bay-tree",
+  "lang": "ta",
+  "source_hash": "264a68bc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பே மரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/bay-tree#p1-264a68bc",
+      "text": "லாரல் இன வகையைச் சேர்ந்தது. Laurus nobilis. இது நமது மலைச் செண்பகத்தைப் போன்ற இலைகளையுடைய பசுமையான மரம். (சங்கீதம் 37:35)"
+    }
+  ]
+}

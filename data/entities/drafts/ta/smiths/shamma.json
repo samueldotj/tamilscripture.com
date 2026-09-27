@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shamma",
+  "lang": "ta",
+  "source_hash": "c006121e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/shamma#p1-c006121e",
+      "text": "(பிரமிப்பு), ஆசேர் கோத்திரத்தானாகிய சோப்பாரின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:37)"
+    }
+  ]
+}

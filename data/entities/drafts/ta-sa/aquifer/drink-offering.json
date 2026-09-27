@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/drink-offering",
+  "lang": "ta",
+  "source_hash": "815013ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானபலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/drink-offering#p1-9b7dd77f",
+      "text": "பானபலி என்பது கர்த்தருடைய முன்பாக ஊற்றப்படும் திராட்சைரசக் காணிக்கையாக இருந்தது, இது பொதுவாக மற்ற பலிகளுடன் சேர்ந்து செலுத்தப்பட்டது (எண்ணாகமம் 15:5-10; 28:7)."
+    },
+    {
+      "id": "aquifer/drink-offering#p2-1320f47c",
+      "text": "காணிக்கைகளும் பலிகளும் என்ற தலைப்பைக் காண்க."
+    }
+  ]
+}

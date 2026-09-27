@@ -1,0 +1,18 @@
+{
+  "id": "smiths/moserah",
+  "lang": "ta",
+  "source_hash": "568b4129",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசெரா",
+  "paragraphs": [
+    {
+      "id": "smiths/moserah#p1-568b4129",
+      "text": "(கட்டுகள்), (உபாகமம் 10:6) தோற்றத்தில் மோசெரோத் என்பதற்கு ஒத்ததாகும், (எண்ணாகமம் 33:30) அது அதன் பன்மை வடிவமாகும், ஓர் என்னும் மலைக்கு அருகிலுள்ள ஒரு இடத்தின் பெயராகும்."
+    }
+  ]
+}

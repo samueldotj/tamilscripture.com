@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hobah",
+  "lang": "ta",
+  "source_hash": "39087b7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபா",
+  "paragraphs": [
+    {
+      "id": "eastons/hobah#p1-39087b7c",
+      "text": "மறைவிடம், தமஸ்குவின் வடக்கே இருந்த ஓரிடம், அங்கு ஆபிரகாம் கெதர்லாகோமேரையும் அவனுடைய கூட்டாளிகளையும் துரத்திச் சென்றான் (ஆதியாகமம் 14:15)."
+    }
+  ]
+}

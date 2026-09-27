@@ -1,0 +1,18 @@
+{
+  "id": "smiths/telmelah",
+  "lang": "ta",
+  "source_hash": "452ab0bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேல்மேலா",
+  "paragraphs": [
+    {
+      "id": "smiths/telmelah#p1-452ab0bb",
+      "text": "[தேல்-கர்சா]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kola",
+  "lang": "ta",
+  "source_hash": "0f75497c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kola#p1-0f75497c",
+      "text": "கோலா என்பது யூதீத் புத்தகத்தில் (யூதீத் 15:4) ஒரு இடப்பெயராகக் குறிப்பிடப்பட்டுள்ளது. இது ஓலோனுடன் (யோசுவா 15:51) அடையாளம் காணப்படலாம்."
+    }
+  ]
+}

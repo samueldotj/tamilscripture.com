@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ivah",
+  "lang": "ta",
+  "source_hash": "0d7de684",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ivah#p1-845414db",
+      "text": "ஈவா என்பது ஈவா என்பதற்கான கிங் யாக்கோபு வேர்ஷன் எழுத்துப்பிழை ஆகும்."
+    },
+    {
+      "id": "aquifer/ivah#p2-3d06d663",
+      "text": "ஈவா என்பதைக் காண்க."
+    }
+  ]
+}

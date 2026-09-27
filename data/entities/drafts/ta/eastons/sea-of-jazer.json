@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sea-of-jazer",
+  "lang": "ta",
+  "source_hash": "024ec6eb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசேர் கடல்",
+  "paragraphs": [
+    {
+      "id": "eastons/sea-of-jazer#p1-024ec6eb",
+      "text": "(எரேமியா 48:32), அம்மோனியரின் யாசேர் நகரம் அமைந்திருக்கும் உயர்ந்த பள்ளத்தாக்கில் இப்பொழுது சில குட்டைகளால் குறிக்கப்படும் ஒரு ஏரி; இதன் இடிபாடுகள் சார் என அழைக்கப்படுகின்றன."
+    }
+  ]
+}

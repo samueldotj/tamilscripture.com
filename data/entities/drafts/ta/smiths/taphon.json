@@ -1,0 +1,18 @@
+{
+  "id": "smiths/taphon",
+  "lang": "ta",
+  "source_hash": "e29d80e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாப்போன்",
+  "paragraphs": [
+    {
+      "id": "smiths/taphon#p1-e29d80e7",
+      "text": "பாக்கிதேஸால் அரணாக்கப்பட்ட யூதேயாவிலுள்ள நகரங்களில் ஒன்று. 1 மக்கபேயர் 9:50. இது பழைய ஏற்பாட்டிலுள்ள பெத்தப்புவா என்பதாகவே இருக்கலாம்."
+    }
+  ]
+}

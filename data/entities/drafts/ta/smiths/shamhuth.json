@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shamhuth",
+  "lang": "ta",
+  "source_hash": "d8d2e1c0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சம்கூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/shamhuth#p1-d8d2e1c0",
+      "text": "(பாழாக்குதல்), தாவீதின் இராணுவ ஒழுங்கமைப்பில் ஐந்தாவது மாதத்திற்கான ஐந்தாம் தளபதி. (1 நாளாகமம் 27:8) (கி.மு. 1020.)"
+    }
+  ]
+}

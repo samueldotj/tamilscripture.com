@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahinoam",
+  "lang": "ta",
+  "source_hash": "87ed80e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகினோவாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahinoam#p1-87ed80e6",
+      "text": "(கிருபையின் சகோதரன், அதாவது கிருபையுள்ளவன்)."
+    }
+  ]
+}

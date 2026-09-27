@@ -1,0 +1,18 @@
+{
+  "id": "eastons/moseroth",
+  "lang": "ta",
+  "source_hash": "9acdd09e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோசெரோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/moseroth#p1-9acdd09e",
+      "text": "கட்டுகள், வனாந்தரத்தில் இருந்த முகாமிடங்களில் ஒன்று (எண்ணாகமம் 33:30, 31), இது மோசேராவைப் போலவே இருக்கலாம்."
+    }
+  ]
+}

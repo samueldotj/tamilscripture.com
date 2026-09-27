@@ -1,0 +1,18 @@
+{
+  "id": "smiths/anethothite",
+  "lang": "ta",
+  "source_hash": "0c6e02e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனதோத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/anethothite#p1-0c6e02e1",
+      "text": "(2 சாமுவேல் 23:27) ஆனேத்தோத்தியன், (1 நாளாகமம் 27:12) மற்றும் ஆன்தோத்தியன், (1 நாளாகமம் 11:28; 12:3) பென்யமீன் கோத்திரத்திற்குரிய ஆனதோத்தில் வாழ்ந்த ஒருவன்."
+    }
+  ]
+}

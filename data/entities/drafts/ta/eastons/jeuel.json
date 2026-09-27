@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jeuel",
+  "lang": "ta",
+  "source_hash": "ceecb2e5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏயெல்",
+  "paragraphs": [
+    {
+      "id": "eastons/jeuel#p1-ceecb2e5",
+      "text": "தேவனால் பறிக்கப்பட்டவன், செராகுவின் சந்ததியில் ஒருவன் (1 நாளாகமம் 9:6)."
+    }
+  ]
+}

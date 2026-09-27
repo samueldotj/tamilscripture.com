@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tel-abib",
+  "lang": "ta",
+  "source_hash": "e9db65df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெலாபீப்",
+  "paragraphs": [
+    {
+      "id": "eastons/tel-abib#p1-e9db65df",
+      "text": "தானியக் குன்று என்பது கேபார் நதியின் அருகிலுள்ள ஒரு இடமாகும், அது எசேக்கியேலின் வாழ்விடமாக இருந்தது (எசேக்கியேல் 3:15). அதன் இருப்பிடம் தெரியவில்லை."
+    }
+  ]
+}

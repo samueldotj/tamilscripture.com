@@ -1,0 +1,18 @@
+{
+  "id": "smiths/matthan",
+  "lang": "ta",
+  "source_hash": "323416bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தான்",
+  "paragraphs": [
+    {
+      "id": "smiths/matthan#p1-323416bf",
+      "text": "(வரம்), கன்னிமரியாளுடைய கணவனாகிய யோசேப்பின் பாட்டன். (மத்தேயு 1:15)"
+    }
+  ]
+}

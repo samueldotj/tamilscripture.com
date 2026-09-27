@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bow",
+  "lang": "ta",
+  "source_hash": "f258a537",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வில்",
+  "paragraphs": [
+    {
+      "id": "smiths/bow#p1-f258a537",
+      "text": "(ஆதியாகமம் 37:10) கிழக்கத்திய வாழ்த்துச் செய்முறை, ஒரு முழங்காலின்மேல் மண்டியிட்டு, தலை தரையைத் தொடும்வரை முன்னோக்கி வணங்குதலாகும்."
+    }
+  ]
+}

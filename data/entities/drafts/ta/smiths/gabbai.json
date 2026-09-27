@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gabbai",
+  "lang": "ta",
+  "source_hash": "c4f2a43a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கப்பாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/gabbai#p1-c4f2a43a",
+      "text": "(வரி வசூலிப்பவன்), எருசலேமில் குடியிருந்த பென்யமீனுடைய முக்கியமான குடும்பத்தின் தலைவனாகத் தோன்றுகிறான். (நெகேமியா 11:8) (கிமு 536-க்கு முன்)."
+    }
+  ]
+}

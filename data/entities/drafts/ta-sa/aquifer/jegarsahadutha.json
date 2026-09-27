@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jegarsahadutha",
+  "lang": "ta",
+  "source_hash": "98e3a75b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஜேகார்-சகதூதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jegarsahadutha#p1-f6a423a0",
+      "text": "லாபானும் யாக்கோபும் தங்கள் உடன்படிக்கைக்கு நினைவுச்சின்னமாகக் குவித்த கல்மேட்டிற்கு லாபான் அராமிக் மொழியில் கொடுத்த பெயர்; யாக்கோபு அதற்கு “கலயெத்” என்று பெயரிட்டான் (ஆதியாகமம் 31:47). இந்தப் பெயரின் பொருள் “சாட்சியின் மேடு” என்பதாகும்."
+    },
+    {
+      "id": "aquifer/jegarsahadutha#p2-a348fbe1",
+      "text": "கலயெத் என்பதையும் காண்க."
+    }
+  ]
+}

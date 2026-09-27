@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jesiah",
+  "lang": "ta",
+  "source_hash": "29665218",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஷியா",
+  "paragraphs": [
+    {
+      "id": "smiths/jesiah#p1-29665218",
+      "text": "(யெகோவா கடன் கொடுக்கிறவர்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/infirmity",
+  "lang": "ta",
+  "source_hash": "ed7a5576",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பலவீனம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/infirmity#p1-349bd9cf",
+      "text": "பலவீனம் என்பது உடல் சம்பந்தமான பலவீனத்தையோ, வியாதியையோ, ஊனத்தையோ குறிக்கப் பயன்படுத்தப்பட்ட ஒரு பழைய வார்த்தையாகும். சில வேத பகுதிகளில், இது மனித பலவீனத்தை பொதுவாகவும் குறிக்கலாம்."
+    },
+    {
+      "id": "aquifer/infirmity#p2-e294061a",
+      "text": "காண்க: வியாதி; வைத்தியமும் வைத்திய நடைமுறையும்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "eastons/shimeah",
+  "lang": "ta",
+  "source_hash": "30f9c6c4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிமியா",
+  "paragraphs": [
+    {
+      "id": "eastons/shimeah#p1-b04d6284",
+      "text": "(1.) தாவீதின் சகோதரர்களில் ஒருவன் (2 சாமுவேல் 13:3); சிமெயா (4) என்பவனும் இவனே."
+    },
+    {
+      "id": "eastons/shimeah#p2-5de0e4a3",
+      "text": "(2.) பென்யமீன் கோத்திரத்தானாகிய, கிபியோனின் சந்ததியான ஒருவன் (1 நாளாகமம் 8:32); இவன் சிமெயாம் (9:38) என்றும் அழைக்கப்படுகிறான்."
+    }
+  ]
+}

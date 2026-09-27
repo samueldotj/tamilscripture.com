@@ -1,0 +1,18 @@
+{
+  "id": "eastons/naphtali-mount",
+  "lang": "ta",
+  "source_hash": "f8cc7842",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நப்தலி மலை",
+  "paragraphs": [
+    {
+      "id": "eastons/naphtali-mount#p1-f8cc7842",
+      "text": "நப்தலியின் மலைத்தேசம் (யோசுவா 20:7)."
+    }
+  ]
+}

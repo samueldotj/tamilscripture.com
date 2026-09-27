@@ -1,0 +1,18 @@
+{
+  "id": "smiths/senuah",
+  "lang": "ta",
+  "source_hash": "f17dd5fa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செனூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/senuah#p1-f17dd5fa",
+      "text": "(உரோமம் நிமிர்ந்தவன், சரியாகச் சொன்னால் அசெனூவா, திட்டமான வண்ணம் முன்னொட்டுடன்), பென்யமீன் கோத்திரத்தான். (நெகேமியா 11:9)"
+    }
+  ]
+}

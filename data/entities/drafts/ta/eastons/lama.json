@@ -1,0 +1,18 @@
+{
+  "id": "eastons/lama",
+  "lang": "ta",
+  "source_hash": "f0037358",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாமா",
+  "paragraphs": [
+    {
+      "id": "eastons/lama#p1-f0037358",
+      "text": "(மத்தேயு 27:46), 'ஏன்' என்று பொருள்படும் ஒரு எபிரெய வார்த்தை, சங்கீதம் 22:1-லிருந்து மேற்கோள் காட்டப்பட்டது."
+    }
+  ]
+}

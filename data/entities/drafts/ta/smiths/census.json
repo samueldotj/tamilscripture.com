@@ -1,0 +1,18 @@
+{
+  "id": "smiths/census",
+  "lang": "ta",
+  "source_hash": "a213d2d8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கணக்கெடுப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/census#p1-a213d2d8",
+      "text": "[மக்கள்தொகை கணக்கெடுப்பு காண்க]"
+    }
+  ]
+}

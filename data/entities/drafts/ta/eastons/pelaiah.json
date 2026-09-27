@@ -1,0 +1,26 @@
+{
+  "id": "eastons/pelaiah",
+  "lang": "ta",
+  "source_hash": "62928428",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெலாயா",
+  "paragraphs": [
+    {
+      "id": "eastons/pelaiah#p1-65c77705",
+      "text": "கர்த்தரால் விசேஷித்தவன்."
+    },
+    {
+      "id": "eastons/pelaiah#p2-bdc18730",
+      "text": "(1.) தாவீதின் சந்ததியில் ஒருவன் (1 நாளாகமம் 3:24)."
+    },
+    {
+      "id": "eastons/pelaiah#p3-dafb7202",
+      "text": "(2.) நியாயப்பிரமாணத்தை விளங்கச்செய்த லேவியன் (நெகேமியா 8:7)."
+    }
+  ]
+}

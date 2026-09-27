@@ -1,0 +1,18 @@
+{
+  "id": "smiths/berothite-the",
+  "lang": "ta",
+  "source_hash": "1b1b91cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரோத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/berothite-the#p1-1b1b91cf",
+      "text": "(1 நாளாகமம் 11:39) [பேரோத் ஆஃப் தி சில்ட்ரன் ஆஃப் யாகான் காண்க]"
+    }
+  ]
+}

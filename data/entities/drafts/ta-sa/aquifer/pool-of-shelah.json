@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pool-of-shelah",
+  "lang": "ta",
+  "source_hash": "f06257fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலா குளம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/pool-of-shelah#p1-b630a361",
+      "text": "சாலா குளம் என்பது எருசலேமிலுள்ள ராஜாவின் தோட்டத்தில் இருந்த ஒரு தண்ணீர்த் தேக்கமாகும் (நெகேமியா 3:15)."
+    },
+    {
+      "id": "aquifer/pool-of-shelah#p2-a4b85714",
+      "text": "சீலோவாம் குளம் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bezai",
+  "lang": "ta",
+  "source_hash": "021f15c6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/bezai#p1-021f15c6",
+      "text": "(வெற்றியாளன்). “பேசாயின் வம்சத்தார்”, 328 பேர் வரையான எண்ணிக்கையில், செருபாபேலுடன் சிறையிருப்பிலிருந்து திரும்பி வந்தார்கள் (எஸ்றா 2:17; நெகேமியா 7:23; 10:18)"
+    }
+  ]
+}

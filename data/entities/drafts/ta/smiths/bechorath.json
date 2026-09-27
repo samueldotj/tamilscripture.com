@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bechorath",
+  "lang": "ta",
+  "source_hash": "5179b4ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெகோராத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bechorath#p1-5179b4ac",
+      "text": "(மூத்த மகன்), 1 சாமுவேல் 9:1; 1 நாளாகமம் 7:8 இன்படி, அபியாவின் அல்லது அபியாளின் மகனும், பெகேரின் பேரனும் ஆவான். (கிமு 1093க்கு முன்)"
+    }
+  ]
+}

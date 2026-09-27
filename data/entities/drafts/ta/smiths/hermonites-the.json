@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hermonites-the",
+  "lang": "ta",
+  "source_hash": "be747923",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எர்மோன் மலைகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/hermonites-the#p1-be747923",
+      "text": "சரியாகச் சொன்னால் “எர்மோன்கள்” என்பதே, எர்மோன் மலையின் மூன்று சிகரங்களைக் குறிக்கும் விதமாக. (சங்கீதங்கள் 42:6) (சங்கீதம் 42:7)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pledge",
+  "lang": "ta",
+  "source_hash": "45918920",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடைமானம்",
+  "paragraphs": [
+    {
+      "id": "eastons/pledge#p1-45918920",
+      "text": "கடன் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elmadam-elmodam",
+  "lang": "ta",
+  "source_hash": "bdc47b60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்மோதாம், எல்மாதாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elmadam-elmodam#p1-727d4109",
+      "text": "லூக்கா 3:28-ன் படி, இயேசுகிறிஸ்துவின் மூதாதையருள் ஒருவர். கிங் ஜேம்ஸ் மொழிபெயர்ப்பில் இது “Elmodam” என எழுதப்பட்டுள்ளது."
+    },
+    {
+      "id": "aquifer/elmadam-elmodam#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

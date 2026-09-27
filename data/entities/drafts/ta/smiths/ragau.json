@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ragau",
+  "lang": "ta",
+  "source_hash": "0e1687fd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரகாவு",
+  "paragraphs": [
+    {
+      "id": "smiths/ragau#p1-0e1687fd",
+      "text": "நம்முடைய கர்த்தருடைய முற்பிதாக்களில் ஒருவன், பேலேகின் குமாரன். (லூக்கா 3:35) இவனே பேலேக்கின் குமாரனாகிய ரெகூவும் ஆவான்."
+    }
+  ]
+}

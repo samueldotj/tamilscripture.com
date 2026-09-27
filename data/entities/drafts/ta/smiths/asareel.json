@@ -1,0 +1,18 @@
+{
+  "id": "smiths/asareel",
+  "lang": "ta",
+  "source_hash": "7673f332",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசரெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/asareel#p1-7673f332",
+      "text": "(தேவன் கட்டினவர் (ஒரு ஆணையினால்)), யூதாவின் வம்சவரலாறுகளில் எகலெலேலின் மகன். (1 நாளாகமம் 4:16)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shiramoth",
+  "lang": "ta",
+  "source_hash": "62ddaa79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமிரமோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/shiramoth#p1-62ddaa79",
+      "text": "(உன்னதங்களின் பெயர், அதாவது யெகோவா)."
+    }
+  ]
+}

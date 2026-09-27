@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ozni",
+  "lang": "ta",
+  "source_hash": "130c5b69",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓஸ்னி",
+  "paragraphs": [
+    {
+      "id": "eastons/ozni#p1-130c5b69",
+      "text": "கேட்டல் என்பது பொருள், காத்தின் மகன்களில் ஒருவன்; இவன் எஸ்போன் என்றும் அழைக்கப்படுகிறான் (ஆதியாகமம் 46:16; எண்ணாகமம் 26:16)."
+    }
+  ]
+}

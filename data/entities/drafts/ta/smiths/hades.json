@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hades",
+  "lang": "ta",
+  "source_hash": "672fd0cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாதாளம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hades#p1-672fd0cd",
+      "text": "திருத்தப்பட்ட மொழிபெயர்ப்பில். [நரகம் என்பதைக் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/omniscience",
+  "lang": "ta",
+  "source_hash": "f233c8f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சர்வஞானம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/omniscience#p1-9a6fb88d",
+      "text": "கடந்த, நிகழ் மற்றும் வரப்போகும் காரியங்களைப் பற்றிய தேவனுடைய எல்லையில்லாத அறிவும் விளங்குதலும். அது முடிவோ, எல்லையோ, வரம்போ இல்லாதது."
+    },
+    {
+      "id": "aquifer/omniscience#p2-d3019495",
+      "text": "தேவன், அவருடைய இருப்பும் பண்புகளும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chronicles",
+  "lang": "ta",
+  "source_hash": "260a866f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாளாகமம்",
+  "paragraphs": [
+    {
+      "id": "eastons/chronicles#p1-260a866f",
+      "text": "நாட்களின் வார்த்தைகள், (1 இராஜாக்கள் 14:19; 1 நாளாகமம் 27:24), ராஜ்யத்தின் நடவடிக்கைகளின் தினசரி அல்லது வருடாந்திர பதிவுகள்; காலவரிசைப்படி பதிவு செய்யப்பட்ட நிகழ்வுகள்."
+    }
+  ]
+}

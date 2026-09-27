@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kirjathbaal",
+  "lang": "ta",
+  "source_hash": "1f00a0c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிரியாத்பாகால்",
+  "paragraphs": [
+    {
+      "id": "smiths/kirjathbaal#p1-1f00a0c8",
+      "text": "[கிரியாத்யாரீம்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kenaz",
+  "lang": "ta",
+  "source_hash": "44ec14c5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/kenaz#p1-44ec14c5",
+      "text": "(வேட்டையாடுதல்)."
+    }
+  ]
+}

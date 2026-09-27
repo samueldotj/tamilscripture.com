@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethgamul",
+  "lang": "ta",
+  "source_hash": "28941930",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்கமூல்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethgamul#p1-28941930",
+      "text": "(ஒட்டகவீடு), யோர்தானுக்குக் கிழக்கேயுள்ள சமனான வெளிகளில் இருந்த மோவாபின் ஒரு பட்டணம். (எரேமியா 48:23) ஒப்பிடுக எரேமியா 48:21"
+    }
+  ]
+}

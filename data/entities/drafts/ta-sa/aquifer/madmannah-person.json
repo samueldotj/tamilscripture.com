@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/madmannah-person",
+  "lang": "ta",
+  "source_hash": "8ad24405",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்மன்னா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/madmannah-person#p1-8ad24405",
+      "text": "மத்மன்னா என்பவன் சாகாபின் மகனும், காலேபுடைய பேரனுமாக இருந்தான் (1 நாளாகமம் 2:49)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirjathbaal",
+  "lang": "ta",
+  "source_hash": "cc373c8b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்பாகால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirjathbaal#p1-de512365",
+      "text": "கீரியாத்பாகால் என்பது கீரியாத்யாரீமின் மற்றொரு பெயராகிய கீரியாத்பாகால் என்பதற்குரிய கிங் யாக்கோபு வேர்ஷன் எழுத்துவடிவமாகும், இது யோசுவா 15:60 மற்றும் 18:14 ஆகிய வசனங்களில் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/kirjathbaal#p2-17ae20b7",
+      "text": "கீரியாத்யாரீம் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/artificer",
+  "lang": "ta",
+  "source_hash": "be3629d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தொழிலாளன்",
+  "paragraphs": [
+    {
+      "id": "eastons/artificer#p1-be3629d2",
+      "text": "எந்த ஒரு கைவினைத் தொழிலிலும் ஈடுபடும் ஒரு நபர் (ஆதியாகமம் 4:22; ஏசாயா 3:3)."
+    }
+  ]
+}

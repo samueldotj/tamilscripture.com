@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/meronoth",
+  "lang": "ta",
+  "source_hash": "660255f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெரோனோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/meronoth#p1-660255f8",
+      "text": "மெரோனோத் என்பது எகெதியாவின் (1 நாளாகமம் 27:30) மற்றும் யாதோனின் (நெகேமியா 3:7) சொந்த ஊராக இருந்தது. மெரோனோத்தியன் என்பவன் மெரோனோத் ஊரைச் சேர்ந்தவன் ஆவான்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/likhi",
+  "lang": "ta",
+  "source_hash": "4b407d45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிக்கே",
+  "paragraphs": [
+    {
+      "id": "smiths/likhi#p1-4b407d45",
+      "text": "(கற்றறிந்தவன்), மனாசேயின் மகனாகிய செமீதாவின் மகனான ஒரு மனாசேயன். (1 நாளாகமம் 7:19)"
+    }
+  ]
+}

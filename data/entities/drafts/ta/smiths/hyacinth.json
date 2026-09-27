@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hyacinth",
+  "lang": "ta",
+  "source_hash": "d6693c47",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உசுவந்தி",
+  "paragraphs": [
+    {
+      "id": "smiths/hyacinth#p1-d6693c47",
+      "text": "வெளிப்படுத்தின விசேஷம் 9:17-ல் வரும் \"கீதம் கல்\" (jacinth) என்பதற்குப் பதிலாக திருத்தப்பட்ட ஆங்கில பதிப்பில் (Revised Version) பயன்படுத்தப்பட்ட வார்த்தை இது. இது அதே கிரேக்கு வார்த்தையின் வேறொரு ஆங்கில எழுத்துப்பெயர்ப்பு மட்டுமே."
+    }
+  ]
+}

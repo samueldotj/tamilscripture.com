@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirjath",
+  "lang": "ta",
+  "source_hash": "fbdef060",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirjath#p1-7342c416",
+      "text": "கீரியாத் என்பது கீரியாத்யாரீம் என்பதன் சுருக்கமான யோசுவா 18:28-ல் காணப்படும் கிங் யாக்கோபு வேர்ஷன் எழுத்துமுறையாகும்."
+    },
+    {
+      "id": "aquifer/kirjath#p2-17ae20b7",
+      "text": "கீரியாத்யாரீம் என்பதைக் காண்க."
+    }
+  ]
+}

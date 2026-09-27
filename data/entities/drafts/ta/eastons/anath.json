@@ -1,0 +1,18 @@
+{
+  "id": "eastons/anath",
+  "lang": "ta",
+  "source_hash": "4640e9dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/anath#p1-4640e9dc",
+      "text": "பதில்; அதாவது, “ஜெபத்திற்குப்” பதில், இஸ்ரவேலின் நியாயாதிபதிகளில் ஒருவனாகிய சம்காரின் தகப்பன் (நியாயாதிபதிகள் 3:31)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/judges-book-of",
+  "lang": "ta",
+  "source_hash": "395be253",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நியாயாதிபதிகள் புத்தகம்",
+  "paragraphs": [
+    {
+      "id": "smiths/judges-book-of#p1-395be253",
+      "text": "ரூத் புத்தகம் முதலில் இதன் ஒரு பகுதியாக இருந்தது; இது யோசுவா முதல் சிம்சோன் வரையுள்ள வரலாற்றைக் கொண்டுள்ளது. இந்தப் புத்தகத்தை இரண்டு பகுதிகளாகப் பிரிக்கலாம்:—"
+    }
+  ]
+}

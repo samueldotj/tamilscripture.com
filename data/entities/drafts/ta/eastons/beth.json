@@ -1,0 +1,18 @@
+{
+  "id": "eastons/beth",
+  "lang": "ta",
+  "source_hash": "cef26657",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்",
+  "paragraphs": [
+    {
+      "id": "eastons/beth#p1-cef26657",
+      "text": "வீடு அல்லது குடியிருப்பு என்பதைக் குறிக்கும் ஒரு பெயராக, உடனடியாகத் தொடர்ந்து வரும் சொற்களைப் போன்ற கூட்டுச் சொற்களில் அடிக்கடி வருகிறது:"
+    }
+  ]
+}

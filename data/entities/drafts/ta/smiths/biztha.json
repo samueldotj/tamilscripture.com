@@ -1,0 +1,18 @@
+{
+  "id": "smiths/biztha",
+  "lang": "ta",
+  "source_hash": "24f6ce62",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிஸ்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/biztha#p1-24f6ce62",
+      "text": "(யூனுக்கன்), ராஜாவாகிய அகாஸ்வேருவின் அரமனையிலிருந்த ஏழு யூனுக்கர்களில் இரண்டாமவன். (எஸ்தர் 1:10) (கி.மு. 483.)"
+    }
+  ]
+}

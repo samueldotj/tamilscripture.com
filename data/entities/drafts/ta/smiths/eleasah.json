@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eleasah",
+  "lang": "ta",
+  "source_hash": "e9b1e096",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலெயாசா",
+  "paragraphs": [
+    {
+      "id": "smiths/eleasah#p1-e9b1e096",
+      "text": "(தேவன் உண்டாக்கினவன்)."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zibeon",
+  "lang": "ta",
+  "source_hash": "33f09465",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிபியோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/zibeon#p1-6d6285dd",
+      "text": "கள்வன்; அல்லது சாயமிடப்பட்டவன்."
+    },
+    {
+      "id": "eastons/zibeon#p2-791285c3",
+      "text": "(1.) ஏவியன் (ஆதியாகமம் 36:2)."
+    },
+    {
+      "id": "eastons/zibeon#p3-e329d0b2",
+      "text": "(2.) ஓரியன், சேயீரின் மகன் (ஆதியாகமம் 36:20)."
+    }
+  ]
+}

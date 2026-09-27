@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amath",
+  "lang": "ta",
+  "source_hash": "a7f3e1fd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/amath#p1-a7f3e1fd",
+      "text": "[ஆமாத்]"
+    }
+  ]
+}

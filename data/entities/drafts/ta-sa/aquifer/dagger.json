@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dagger",
+  "lang": "ta",
+  "source_hash": "c80efa75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குறுவாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dagger#p1-4d54e178",
+      "text": "குறுவாள் என்பது கூர்மையான வாய்த்தலையுடைய குறுகிய வாள் ஆகும்."
+    },
+    {
+      "id": "aquifer/dagger#p2-53c1e300",
+      "text": "கவசமும் ஆயுதங்களும்; வாள் என்பதைக் காண்க."
+    }
+  ]
+}

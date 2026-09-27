@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hepherite",
+  "lang": "ta",
+  "source_hash": "e452c90c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பேரியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hepherite#p1-fc20f70b",
+      "text": "மனாசே கோத்திரத்திற்குரிய எப்பேரின் சந்ததியில் ஒருவன் (எண்ணாகமம் 26:32)."
+    },
+    {
+      "id": "aquifer/hepherite#p2-808885ef",
+      "text": "எப்பேர் (நபர்) #1 காண்க."
+    }
+  ]
+}

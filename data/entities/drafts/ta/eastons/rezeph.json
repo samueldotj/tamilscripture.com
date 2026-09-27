@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rezeph",
+  "lang": "ta",
+  "source_hash": "b9c43f52",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேத்சேப்",
+  "paragraphs": [
+    {
+      "id": "eastons/rezeph#p1-b9c43f52",
+      "text": "திடமானது; ஒரு கல், (2 இராஜாக்கள் 19:12; ஏசாயா 37:12), ஆரானுக்கு அருகில் இருந்த ஒரு அரண், அநேகமாக ஐப்பிராத்து நதிக்கு மேற்கே இருந்தது, சனகெரிபினால் கொள்ளையடிக்கப்பட்டது."
+    }
+  ]
+}

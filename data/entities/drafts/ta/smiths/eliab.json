@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliab",
+  "lang": "ta",
+  "source_hash": "4c9858ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliab#p1-4c9858ac",
+      "text": "(தேவன் என் பிதா)."
+    }
+  ]
+}

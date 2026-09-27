@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ara",
+  "lang": "ta",
+  "source_hash": "2a6491d9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/ara#p1-2a6491d9",
+      "text": "ஆசேர் கோத்திரத்தில் தலைவனாக இருந்த யெத்தெரின் மகன் (1 நாளாகமம் 7:38)."
+    }
+  ]
+}

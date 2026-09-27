@@ -1,0 +1,18 @@
+{
+  "id": "smiths/becher",
+  "lang": "ta",
+  "source_hash": "d7b2a96b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெகேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/becher#p1-d7b2a96b",
+      "text": "(இளையவன் அல்லது முதற்பேறானவன்)"
+    }
+  ]
+}

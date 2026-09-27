@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hammuel",
+  "lang": "ta",
+  "source_hash": "2f8876bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்முவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hammuel#p1-2f8876bf",
+      "text": "அம்முவேல் சிமியோன் கோத்திரத்திற்குரிய மிஸ்மாவின் வம்சத்தைச் சேர்ந்தவனாக இருந்தான் (1 நாளாகமம் 4:26)."
+    }
+  ]
+}

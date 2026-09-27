@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pot",
+  "lang": "ta",
+  "source_hash": "04216cd0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பானை",
+  "paragraphs": [
+    {
+      "id": "aquifer/pot#p1-e67d83f3",
+      "text": "பானை என்பது திரவங்களையோ அல்லது திண்மங்களையோ வைத்திருப்பதற்குப் பயன்படுத்தப்படும் ஒரு பாத்திரம்."
+    },
+    {
+      "id": "aquifer/pot#p2-5eb2c90e",
+      "text": "மண்பாண்டங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elymas",
+  "lang": "ta",
+  "source_hash": "d26bfdfb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிமா",
+  "paragraphs": [
+    {
+      "id": "smiths/elymas#p1-d26bfdfb",
+      "text": "(ஞானமுள்ள மனிதன்), மாயவித்தைக்காரனும் யூதனுமான பர்யேசு என்பவனுக்கு அரபு மொழியில் கொடுக்கப்பட்ட பெயர். (அப்போஸ்தலருடைய நடபடிகள் 13:6) தொடர்ந்து. (கி.பி. 44.)"
+    }
+  ]
+}

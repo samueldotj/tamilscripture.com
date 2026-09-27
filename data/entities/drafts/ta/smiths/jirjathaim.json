@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jirjathaim",
+  "lang": "ta",
+  "source_hash": "9f5745d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்தாயீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jirjathaim#p1-9f5745d3",
+      "text": "(இரண்டு பட்டணங்கள்)."
+    }
+  ]
+}

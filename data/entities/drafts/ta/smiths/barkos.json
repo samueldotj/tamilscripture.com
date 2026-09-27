@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barkos",
+  "lang": "ta",
+  "source_hash": "f4521fa9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்கோச்",
+  "paragraphs": [
+    {
+      "id": "smiths/barkos#p1-f4521fa9",
+      "text": "(வண்ணம் தீட்டப்பட்டவன்). “பர்கோசின் வம்சத்தார்” செருபாபேலுடன் சிறையிருப்பிலிருந்து திரும்பிவந்த நேதினீமியரில் அடங்கியிருந்தார்கள். (எஸ்றா 2:53; நெகேமியா 7:55) (கி.மு. 536.)"
+    }
+  ]
+}

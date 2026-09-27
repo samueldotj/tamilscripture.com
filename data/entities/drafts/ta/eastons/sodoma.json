@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sodoma",
+  "lang": "ta",
+  "source_hash": "3ec3bad0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சொதோமா",
+  "paragraphs": [
+    {
+      "id": "eastons/sodoma#p1-3ec3bad0",
+      "text": "(ரோமர் 9:29; ஆர்.வி., “சோதோம்”), சோதோம் என்பதன் கிரேக்க வடிவம்."
+    }
+  ]
+}

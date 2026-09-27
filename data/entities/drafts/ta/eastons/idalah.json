@@ -1,0 +1,18 @@
+{
+  "id": "eastons/idalah",
+  "lang": "ta",
+  "source_hash": "6b963c4b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இதாலா",
+  "paragraphs": [
+    {
+      "id": "eastons/idalah#p1-6b963c4b",
+      "text": "கண்ணிகள்(?), செபுலோனின் மேற்குப் புறத்திற்கு அருகில் இருந்த ஒரு பட்டணம் (யோசுவா 19:15). இது கீசோன் பள்ளத்தாக்கில் உள்ள தற்கால ஜெய்தா என்ற இடத்துடன் அடையாளம் காணப்பட்டுள்ளது."
+    }
+  ]
+}

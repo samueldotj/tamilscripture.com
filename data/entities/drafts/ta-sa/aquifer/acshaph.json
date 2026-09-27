@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/acshaph",
+  "lang": "ta",
+  "source_hash": "5b895e66",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்சாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/acshaph#p1-45573f54",
+      "text": "அக்ஸாப் என்பது அக்சாப் என்ற பெயருக்கு மற்றொரு எழுத்துவடிவமாகும், இது ஒரு கானானிய அரச நகரத்தின் பெயராகும்."
+    },
+    {
+      "id": "aquifer/acshaph#p2-26b2da32",
+      "text": "அக்சாபை காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nahari",
+  "lang": "ta",
+  "source_hash": "8f3b40c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நகராய்",
+  "paragraphs": [
+    {
+      "id": "smiths/nahari#p1-8f3b40c8",
+      "text": "இது நகராய் என்பதற்கு அதே பெயராகும். (2 சாமுவேல் 23:37) 1611 ஆம் ஆண்டின் அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் இந்தப் பெயர் “பெரோத்தியனான நகராய்” என அச்சிடப்பட்டுள்ளது."
+    }
+  ]
+}

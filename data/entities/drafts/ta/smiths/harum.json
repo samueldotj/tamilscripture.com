@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harum",
+  "lang": "ta",
+  "source_hash": "961bc846",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரும்",
+  "paragraphs": [
+    {
+      "id": "smiths/harum#p1-961bc846",
+      "text": "(உயர்ந்த), யூதாவின் மிகவும் தெளிவற்ற வம்சவரலாறுகளில் ஒன்றில் காணப்படும் அகர்கேலின் தகப்பன். (1 நாளாகமம் 4:8)"
+    }
+  ]
+}

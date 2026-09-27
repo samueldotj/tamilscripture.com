@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jarmuth",
+  "lang": "ta",
+  "source_hash": "f1733100",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யர்மூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/jarmuth#p1-f1733100",
+      "text": "(உயரம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mibzar",
+  "lang": "ta",
+  "source_hash": "21ad882b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிப்சார்",
+  "paragraphs": [
+    {
+      "id": "eastons/mibzar#p1-21ad882b",
+      "text": "கோட்டை, ஏசாவின் வம்சாவளியில் வந்த ஏதோமிய “பிரபுகளில்” ஒருவன் (ஆதியாகமம் 36:42; 1 நாளாகமம் 1:53)."
+    }
+  ]
+}

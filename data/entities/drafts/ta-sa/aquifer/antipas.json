@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/antipas",
+  "lang": "ta",
+  "source_hash": "f6dc4964",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்திப்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/antipas#p1-46c33bc0",
+      "text": "பெர்கமு சபையிலிருந்த ஒரு ஆரம்பகால இரத்தசாட்சி (வெளிப்படுத்தின விசேஷம் 2:13)."
+    },
+    {
+      "id": "aquifer/antipas#p2-b686eeff",
+      "text": "பெரிய ஏரோதின் மகன். ஏரோது, ஏரோதிய குடும்பம் என்பதைக் காண்க."
+    }
+  ]
+}

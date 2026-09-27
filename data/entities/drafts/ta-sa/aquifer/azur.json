@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/azur",
+  "lang": "ta",
+  "source_hash": "129888dc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/azur#p1-77ccaf58",
+      "text": "எரேமியா 28:1 மற்றும் எசேக்கியேல் 11:1ல் வரும் அசூரின் கிங் யாக்கோபு வர்ஷன் வடிவம்."
+    },
+    {
+      "id": "aquifer/azur#p2-de4b63c5",
+      "text": "அசூரின் #2 மற்றும் #3 காண்க."
+    }
+  ]
+}

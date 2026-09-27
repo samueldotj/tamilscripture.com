@@ -1,0 +1,18 @@
+{
+  "id": "eastons/torment",
+  "lang": "ta",
+  "source_hash": "3454b017",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வேதனை",
+  "paragraphs": [
+    {
+      "id": "eastons/torment#p1-3454b017",
+      "text": "கிரேக்க basanos (மத்தேயு 4:24), நியாயத்தின் “உரைகல்”; ஆகவே சித்திரவதையால் விசாரணை செய்தல், பின்பு உடலின் அங்கங்களை வலித்துச் சிதைக்கும் எந்த நோயையும் குறிக்கும்."
+    }
+  ]
+}

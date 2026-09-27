@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/achim",
+  "lang": "ta",
+  "source_hash": "b1adc3b1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/achim#p1-1b780184",
+      "text": "செருபாபேலின் ஒரு சந்ததியார். இவர் புதிய ஏற்பாட்டில் இயேசுவின் முற்பிதாக்களில் ஒருவராக பட்டியலிடப்பட்டுள்ளார் (மத்தேயு 1:14)."
+    },
+    {
+      "id": "aquifer/achim#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

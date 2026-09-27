@@ -1,0 +1,18 @@
+{
+  "id": "eastons/stachys",
+  "lang": "ta",
+  "source_hash": "07c7e0d2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஸ்தாக்கி",
+  "paragraphs": [
+    {
+      "id": "eastons/stachys#p1-07c7e0d2",
+      "text": "கம்பு; தானியத்தின் கதிர், ரோமாபுரிக்குப் பவுல் மனமாற்றம் பெற்றவனாக வாழ்த்துகிற ஒருவன் (ரோமர் 16:9)."
+    }
+  ]
+}

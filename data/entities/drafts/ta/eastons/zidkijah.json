@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zidkijah",
+  "lang": "ta",
+  "source_hash": "0b00277b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிதேகியா",
+  "paragraphs": [
+    {
+      "id": "eastons/zidkijah#p1-0b00277b",
+      "text": "கர்த்தர் நீதியுள்ளவர், நெகேமியாவுடன் உடன்படிக்கையை முத்திரையிட்டவர்களில் ஒருவன் (நெகேமியா 10:1)."
+    }
+  ]
+}

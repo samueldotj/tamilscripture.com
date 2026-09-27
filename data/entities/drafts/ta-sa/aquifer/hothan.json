@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hothan",
+  "lang": "ta",
+  "source_hash": "f0e843f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hothan#p1-cb86e121",
+      "text": "1 நாளாகமம் 11:44-இல் ஓதாம் என்பதற்கு யாக்கோபு அரசர் மொழிபெயர்ப்பு கொடுக்கும் எழுத்துவடிவம் இது."
+    },
+    {
+      "id": "aquifer/hothan#p2-8241d93e",
+      "text": "ஓதாம் #2-ஐ காண்க."
+    }
+  ]
+}

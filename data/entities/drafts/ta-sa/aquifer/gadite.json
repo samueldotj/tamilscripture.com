@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gadite",
+  "lang": "ta",
+  "source_hash": "cc7d818e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்தியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gadite#p1-a7537347",
+      "text": "காத் கோத்திரத்தைச் சேர்ந்தவர் (உபாகமம் 3:12, 16)."
+    },
+    {
+      "id": "aquifer/gadite#p2-167e240c",
+      "text": "காண்க: காத் (நபர்) #1; காத், கோத்திரம்."
+    }
+  ]
+}

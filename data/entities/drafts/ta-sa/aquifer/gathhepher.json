@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gathhepher",
+  "lang": "ta",
+  "source_hash": "09abc6b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காத்தேப்பேர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gathhepher#p1-09abc6b8",
+      "text": "செபுலோனின் பங்கிலுள்ள கலிலேயாவிலுள்ள ஒரு பட்டணம். யோனா இங்கே பிறந்தான் (யோசுவா 19:13; 2 இராஜாக்கள் 14:25). இக்கால எல்-மெஷாத் என்னும் இடம் காத்தேப்பேரின் இருப்பிடத்தில் அமைந்துள்ளது."
+    }
+  ]
+}

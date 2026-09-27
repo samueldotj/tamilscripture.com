@@ -1,0 +1,18 @@
+{
+  "id": "smiths/fathom",
+  "lang": "ta",
+  "source_hash": "86c3bc68",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அடி (நங்கூரம்)",
+  "paragraphs": [
+    {
+      "id": "smiths/fathom#p1-86c3bc68",
+      "text": "[நிறைகள் மற்றும் அளவைகள் காண்க]"
+    }
+  ]
+}

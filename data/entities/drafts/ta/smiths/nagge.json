@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nagge",
+  "lang": "ta",
+  "source_hash": "95be4269",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நங்காய்",
+  "paragraphs": [
+    {
+      "id": "smiths/nagge#p1-95be4269",
+      "text": "கிறிஸ்துவின் மூதாதையர்களில் ஒருவன். (லூக்கா 3:25) நங்காய் என்பதைக் காண்க."
+    }
+  ]
+}

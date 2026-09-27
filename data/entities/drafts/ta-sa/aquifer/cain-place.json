@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cain-place",
+  "lang": "ta",
+  "source_hash": "0902dd5a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காயின் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/cain-place#p1-23ca0190",
+      "text": "காயின் என்பதற்கான கிங் யாக்கோபு மொழிபெயர்ப்பின் எழுத்துவடிவம், யோசுவா 15:57-ல் காணப்படும், யூதாவின் பங்கிலுள்ள தென்பகுதி மலைநாட்டில் இருந்த ஒரு பட்டணத்தின் பெயர்."
+    },
+    {
+      "id": "aquifer/cain-place#p2-f88a7bea",
+      "text": "காயின் (இடம்) என்பதைக் காண்க."
+    }
+  ]
+}

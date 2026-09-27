@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nemuelite",
+  "lang": "ta",
+  "source_hash": "993a91d0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேமுவேலியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nemuelite#p1-9526e86a",
+      "text": "நேமுவேலியன் என்பவன் சிமியோனுடைய கோத்திரத்தில் நேமுவேலின் குடும்பத்தைச் சேர்ந்தவனாக இருந்தான் (எண்ணாகமம் 26:12). நேமுவேல் ஆதியாகமம் 46:10-ல் எமுவேல் என்றும் அழைக்கப்படுகிறான்."
+    },
+    {
+      "id": "aquifer/nemuelite#p2-e926f23f",
+      "text": "எமுவேல் என்பதைக் காண்க."
+    }
+  ]
+}

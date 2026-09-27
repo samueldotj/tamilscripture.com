@@ -1,0 +1,18 @@
+{
+  "id": "eastons/harbona",
+  "lang": "ta",
+  "source_hash": "b43772ac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அற்போனா",
+  "paragraphs": [
+    {
+      "id": "eastons/harbona#p1-b43772ac",
+      "text": "(“கழுதை ஓட்டுபவன்” என்று பொருள்படும் ஒரு பெர்சிய வார்த்தை), அகாஸ்வேரு ராஜாவின் ஏழு பிரதானிகள் அல்லது பிரதம ஊழியர்களில் ஒருவன் (எஸ்தர் 1:10; 7:9)."
+    }
+  ]
+}

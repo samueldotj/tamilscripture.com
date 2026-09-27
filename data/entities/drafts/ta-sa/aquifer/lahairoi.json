@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lahairoi",
+  "lang": "ta",
+  "source_hash": "648230cb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லகாய்ரோயீ",
+  "paragraphs": [
+    {
+      "id": "aquifer/lahairoi#p1-5b44333b",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் பேயேர்-லகாய்ரோயீ என்பதன் வேறுவடிவமே இது. இது ஆதியாகமம் 24:62 மற்றும் 25:11 ஆகிய வசனங்களில் குறிப்பிடப்பட்ட ஒரு கிணற்றின் பெயர்."
+    },
+    {
+      "id": "aquifer/lahairoi#p2-e013c00e",
+      "text": "பேயேர்-லகாய்ரோயீ என்பதைக் காண்க."
+    }
+  ]
+}

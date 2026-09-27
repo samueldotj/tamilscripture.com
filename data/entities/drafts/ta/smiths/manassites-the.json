@@ -1,0 +1,18 @@
+{
+  "id": "smiths/manassites-the",
+  "lang": "ta",
+  "source_hash": "f9a5accf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மனாசேயர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/manassites-the#p1-f9a5accf",
+      "text": "அதாவது, மனாசே கோத்திரத்தைச் சேர்ந்தவர்கள். (4:43; நியாயாதிபதிகள் 12:4; 2 இராஜாக்கள் 10:33)"
+    }
+  ]
+}

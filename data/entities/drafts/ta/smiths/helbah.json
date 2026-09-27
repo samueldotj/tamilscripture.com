@@ -1,0 +1,18 @@
+{
+  "id": "smiths/helbah",
+  "lang": "ta",
+  "source_hash": "8746e6cd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/helbah#p1-8746e6cd",
+      "text": "(செழுமையான), சீதோனுக்கு அதிக தூரமில்லாத பெனிக்கேயின் சமனான வெளியில் இருந்திருக்கக்கூடிய ஆசேருடைய ஒரு பட்டணம். (நியாயாதிபதிகள் 1:31)"
+    }
+  ]
+}

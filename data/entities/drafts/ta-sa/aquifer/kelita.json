@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kelita",
+  "lang": "ta",
+  "source_hash": "5e02a726",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலிதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kelita#p1-38f3e71f",
+      "text": "கெலிதா என்பவன் ஒரு லேவியனாகும், அவன் கெலாயா என்பவனாகவே இருந்திருக்கக்கூடும்."
+    },
+    {
+      "id": "aquifer/kelita#p2-f091f1b3",
+      "text": "கெலாயாவைக் காண்க."
+    }
+  ]
+}

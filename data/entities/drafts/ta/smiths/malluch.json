@@ -1,0 +1,18 @@
+{
+  "id": "smiths/malluch",
+  "lang": "ta",
+  "source_hash": "ec007d7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மல்லூக்",
+  "paragraphs": [
+    {
+      "id": "smiths/malluch#p1-ec007d7c",
+      "text": "(ஆலோசகன்)."
+    }
+  ]
+}

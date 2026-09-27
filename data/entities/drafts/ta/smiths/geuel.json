@@ -1,0 +1,18 @@
+{
+  "id": "smiths/geuel",
+  "lang": "ta",
+  "source_hash": "c4b9852d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/geuel#p1-c4b9852d",
+      "text": "(தேவனுடைய மகத்துவம்), காத் கோத்திரத்தின் ஒற்றனாகிய மாகியின் மகன். (எண்ணாகமம் 13:15) (கி.மு. 1490.)"
+    }
+  ]
+}

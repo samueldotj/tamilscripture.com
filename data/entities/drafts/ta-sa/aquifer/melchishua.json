@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/melchishua",
+  "lang": "ta",
+  "source_hash": "c632b44e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெல்கீ-சூவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/melchishua#p1-f42c92d6",
+      "text": "மெல்கீ-சூவா என்பது கிங் யாக்கோபு வேர்ஷனில் 1 சாமுவேல் 14:49-ல் காணப்படும் சவுல் இராஜாவின் மூன்றாம் மகனாகிய மல்கிசூவா என்ற பெயரின் வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/melchishua#p2-d5e0d87d",
+      "text": "மல்கிசூவா என்பதைக் காண்க."
+    }
+  ]
+}

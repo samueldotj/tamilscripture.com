@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uknaz",
+  "lang": "ta",
+  "source_hash": "be8129dd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உக்னாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/uknaz#p1-be8129dd",
+      "text": "(1 நாளாகமம் 4:16) இன் விளிம்புக் குறிப்பில், மூலப் பாடத்திலுள்ள “கேனாஸ்” என்ற வார்த்தைகளுக்குப் பதிலாக “உக்னாஸ்” என்பது ஒரு சொந்தப் பெயராகக் கொடுக்கப்பட்டுள்ளது."
+    }
+  ]
+}

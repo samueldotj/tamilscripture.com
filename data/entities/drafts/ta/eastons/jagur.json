@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jagur",
+  "lang": "ta",
+  "source_hash": "9c1e7ea5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாகூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/jagur#p1-9c1e7ea5",
+      "text": "தங்குமிடம், யூதாவின் தென் எல்லையில் இருந்த ஒரு பட்டணம் (யோசுவா 15:21)."
+    }
+  ]
+}

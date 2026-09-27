@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/porter",
+  "lang": "ta",
+  "source_hash": "7fed2bac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வாசல் காவலாளன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/porter#p1-7fed2bac",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில், “porter” என்ற வார்த்தை ஒரு வாசலையோ நுழைவாயிலையோ காவல்காக்கும் நபரைக் குறிக்கிறது. பெரும்பாலான நவீன பைபிள் மொழிபெயர்ப்புகள் “வாசல் காவலாளன்” என்ற வார்த்தையைப் பயன்படுத்துகின்றன."
+    }
+  ]
+}

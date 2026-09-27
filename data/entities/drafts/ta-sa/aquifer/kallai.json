@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kallai",
+  "lang": "ta",
+  "source_hash": "7cc8b59a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்லாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kallai#p1-7cc8b59a",
+      "text": "கல்லாய் ஒரு ஆசாரியனாகவும், பிரதான ஆசாரியனான யொயகீமின் நாட்களில் சல்லாயின் ஆசாரிய குடும்பத்தின் தலைவனாகவும் இருந்தான் (நெகேமியா 12:20)."
+    }
+  ]
+}

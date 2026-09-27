@@ -1,0 +1,18 @@
+{
+  "id": "smiths/euodia",
+  "lang": "ta",
+  "source_hash": "a02a4319",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எயோதியாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/euodia#p1-a02a4319",
+      "text": "[யூவோதியா என்பதைக் காண்க]"
+    }
+  ]
+}

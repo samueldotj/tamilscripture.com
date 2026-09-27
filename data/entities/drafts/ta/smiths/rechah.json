@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rechah",
+  "lang": "ta",
+  "source_hash": "aa5160b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேகா",
+  "paragraphs": [
+    {
+      "id": "smiths/rechah#p1-aa5160b4",
+      "text": "(கடைசி பகுதி), யூதாவில் ஒரு இடமாக இருக்கக்கூடும்—எருசலேமுக்கு மூன்று மைல் தூரத்தில் தென்புறமாக இருக்கும் ரஷியா என்னும் கிராமம்."
+    }
+  ]
+}

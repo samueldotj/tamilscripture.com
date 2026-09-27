@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethemek",
+  "lang": "ta",
+  "source_hash": "5fa30d53",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தேமேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethemek#p1-5fa30d53",
+      "text": "(பள்ளத்தாக்கின் வீடு), ஆசேரின் எல்லையில் அல்லது அதற்கு அருகில் இருந்த ஓர் இடம், அதன் வடபுறத்தில் இப்தாவேலின் பள்ளத்தாக்கு இருந்தது (யோசுவா 19:27)"
+    }
+  ]
+}

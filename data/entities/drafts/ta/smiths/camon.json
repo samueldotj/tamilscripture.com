@@ -1,0 +1,18 @@
+{
+  "id": "smiths/camon",
+  "lang": "ta",
+  "source_hash": "d11371f7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காமோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/camon#p1-d11371f7",
+      "text": "(தானியம் நிறைந்தது) நியாயாதிபதியாகிய யாவீரின் அடக்கம் செய்யப்பட்ட இடம். (நியாயாதிபதிகள் 10:5)"
+    }
+  ]
+}

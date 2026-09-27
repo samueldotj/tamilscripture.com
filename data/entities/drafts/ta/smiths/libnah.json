@@ -1,0 +1,18 @@
+{
+  "id": "smiths/libnah",
+  "lang": "ta",
+  "source_hash": "99af1f95",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிப்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/libnah#p1-99af1f95",
+      "text": "(வெண்மை)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/husband",
+  "lang": "ta",
+  "source_hash": "3764e56e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கணவன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/husband#p1-4cdc2924",
+      "text": "கணவன் என்பவன் திருமணமான ஆண்."
+    },
+    {
+      "id": "aquifer/husband#p2-ba5a7b37",
+      "text": "குடும்ப வாழ்க்கை மற்றும் உறவுகள் என்பதைக் காண்க."
+    }
+  ]
+}

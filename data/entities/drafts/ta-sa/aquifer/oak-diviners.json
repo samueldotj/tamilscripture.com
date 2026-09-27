@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/oak-diviners",
+  "lang": "ta",
+  "source_hash": "7faa28a5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெயொனெனீமின் கர்வாலிமரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/oak-diviners#p1-7c76db7e",
+      "text": "சீகேமிற்கு அருகில் இருந்த ஒரு மரம் (நியாயாதிபதிகள் 9:37)."
+    },
+    {
+      "id": "aquifer/oak-diviners#p2-6f44b152",
+      "text": "மெயொனெனீமின் கர்வாலிமரத்தைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/elkosh",
+  "lang": "ta",
+  "source_hash": "036b59ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்கோஸ்",
+  "paragraphs": [
+    {
+      "id": "eastons/elkosh#p1-036b59ea",
+      "text": "தேவனே என் வில், தீர்க்கதரிசியாகிய நாகூமின் பிறப்பிடம் (நாகூம் 1:1). இது கலிலேயாவில் இருந்திருக்கலாம் என்று எண்ணப்படுகிறது, ஆனால் அதைக் குறித்து உறுதியாக எதுவும் அறியப்படவில்லை."
+    }
+  ]
+}

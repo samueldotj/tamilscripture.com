@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ramath-of-the-south",
+  "lang": "ta",
+  "source_hash": "e640af26",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெற்கு ராமாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ramath-of-the-south#p1-e640af26",
+      "text": "சிமியோனுடைய தேசத்தின் தெற்கு எல்லையின் கடைசி எல்லையில் இருந்த ஊர்களில் ஒன்று. (யோசுவா 19:8) இது தெற்கான ராமோத்தையும் (1 சாமுவேல் 30:27) ஒரே இடமாக இருக்கும் என்பது மிகவும் நிச்சயமாகும்."
+    }
+  ]
+}

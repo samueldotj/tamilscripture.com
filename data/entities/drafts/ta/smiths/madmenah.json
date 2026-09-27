@@ -1,0 +1,18 @@
+{
+  "id": "smiths/madmenah",
+  "lang": "ta",
+  "source_hash": "7ead4b46",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்மேனா",
+  "paragraphs": [
+    {
+      "id": "smiths/madmenah#p1-7ead4b46",
+      "text": "(குப்பைமேடு), எருசலேமுக்கு வடக்கே இருந்த பென்யமீன் கோத்திரத்தின் கிராமங்களில் ஒன்று; வடக்குச் சாலை வழியாக சனகெரிப் அணுகி வந்தபோது அதன் குடிமக்கள் அஞ்சி ஓடிப்போனார்கள். (ஏசாயா 10:31)"
+    }
+  ]
+}

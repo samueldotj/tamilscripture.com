@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bowels",
+  "lang": "ta",
+  "source_hash": "bb305935",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குடல் (Bowels)",
+  "paragraphs": [
+    {
+      "id": "eastons/bowels#p1-bb305935",
+      "text": "(பிலிப்பியர் 1:8; 2:1; கொலோசெயர் 3:12), உருக்கமான உணர்வுகள்; ஆர்.வி., “உருக்கமான இரக்கங்கள்.”"
+    }
+  ]
+}

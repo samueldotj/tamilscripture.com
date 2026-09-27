@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sheshai",
+  "lang": "ta",
+  "source_hash": "9e96ec83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/sheshai#p1-9e96ec83",
+      "text": "(உயர்குடி பிறந்தவன்), எப்ரோனில் குடியிருந்த ஏனாக்கின் மூன்று மகன்களில் ஒருவன். (எண்ணாகமம் 13:22) (கி.மு. 1445.)"
+    }
+  ]
+}

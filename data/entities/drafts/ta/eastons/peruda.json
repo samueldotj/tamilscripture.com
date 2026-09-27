@@ -1,0 +1,18 @@
+{
+  "id": "eastons/peruda",
+  "lang": "ta",
+  "source_hash": "3bd2a870",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெருதா",
+  "paragraphs": [
+    {
+      "id": "eastons/peruda#p1-3bd2a870",
+      "text": "செருபாபேலுடன் திரும்பிவந்தவர்களின் வம்சத்தாருள் ஒருவன் (எஸ்றா 2:55); பெரிதா என்றும் அழைக்கப்பட்டான் (நெகேமியா 7:57)."
+    }
+  ]
+}

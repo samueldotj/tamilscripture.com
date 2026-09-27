@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/palestina",
+  "lang": "ta",
+  "source_hash": "19bc3c5f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலஸ்தீனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/palestina#p1-15e92dd7",
+      "text": "கானானின் தென்மேற்குக் கடற்கரையோரமாக இருந்த ஒரு நாடான பெலிஸ்தியாவை, யாத்திராகமம் 15:14 மற்றும் ஏசாயா 14:29–31 ஆகிய வசனங்களில் கிங் யாக்கோபு மொழிபெயர்ப்பு எழுதும் விதம்."
+    },
+    {
+      "id": "aquifer/palestina#p2-786d66dd",
+      "text": "பெலிஸ்தியா, பெலிஸ்தியர் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezbon",
+  "lang": "ta",
+  "source_hash": "02971ca6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்போன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ezbon#p1-02971ca6",
+      "text": "(வேலைசெய்கிறவன்)."
+    }
+  ]
+}

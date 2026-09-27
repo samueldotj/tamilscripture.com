@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bramble",
+  "lang": "ta",
+  "source_hash": "8cd313b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முட்செடி",
+  "paragraphs": [
+    {
+      "id": "smiths/bramble#p1-8cd313b2",
+      "text": "[முட்கள்]"
+    }
+  ]
+}

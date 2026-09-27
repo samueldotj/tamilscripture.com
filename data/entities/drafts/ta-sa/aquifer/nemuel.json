@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/nemuel",
+  "lang": "ta",
+  "source_hash": "23fe5573",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேமுவேல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nemuel#p1-42613b0b",
+      "text": "1. ரூபனியனும், எலியாபின் மகனும் (எண்ணாகமம் 26:9)."
+    },
+    {
+      "id": "aquifer/nemuel#p2-5cede0cd",
+      "text": "2. சிமியோனுடைய மகன்களில் ஒருவன் (எண்ணாகமம் 26:12; 1 நாளாகமம் 4:24), இவனே எமுவேல் என்றும் அழைக்கப்படுகிறான் (ஆதியாகமம் 46:10). எமுவேல் காண்க."
+    }
+  ]
+}

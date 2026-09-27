@@ -1,0 +1,18 @@
+{
+  "id": "eastons/migdal-gad",
+  "lang": "ta",
+  "source_hash": "0d798bff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்தால்காத்",
+  "paragraphs": [
+    {
+      "id": "eastons/migdal-gad#p1-0d798bff",
+      "text": "பாக்கியத்தின் கோபுரம், யூதாவின் சமபூமிகளில் இருந்த ஒரு பட்டணம், இது அஸ்கலோனுக்கு வடகிழக்கே சிறிது தூரத்தில் உள்ள இன்றைய எல்-மெஜ்டெல் என்று கருதப்படுகிறது (யோசுவா 15:37)."
+    }
+  ]
+}

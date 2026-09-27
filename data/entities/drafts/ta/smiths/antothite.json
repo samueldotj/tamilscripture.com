@@ -1,0 +1,18 @@
+{
+  "id": "smiths/antothite",
+  "lang": "ta",
+  "source_hash": "11d23baf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆனதோத்தியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/antothite#p1-11d23baf",
+      "text": "ஆனதோத்தில் வசிக்கிறவன். (1 நாளாகமம் 11:28; 12:3) [ஆனதோத்]"
+    }
+  ]
+}

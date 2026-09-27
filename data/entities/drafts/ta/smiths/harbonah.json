@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harbonah",
+  "lang": "ta",
+  "source_hash": "1c4ebd5f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அற்போனா",
+  "paragraphs": [
+    {
+      "id": "smiths/harbonah#p1-1c4ebd5f",
+      "text": "(எஸ்தர் 7:9) முந்தினவனுக்கு ஒத்தவன்."
+    }
+  ]
+}

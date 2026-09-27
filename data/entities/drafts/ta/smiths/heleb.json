@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heleb",
+  "lang": "ta",
+  "source_hash": "d5f87860",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/heleb#p1-d5f87860",
+      "text": "(பால்) அல்லது ஏலெத் (நிலையற்றவன்) - நெத்தோபாத்தியனாகிய பானாவின் மகன், தாவீது ராஜாவின் மெய்க்காப்பு வீரர்களில் ஒருவன். (2 சாமுவேல் 23:29; 1 நாளாகமம் 11:30)"
+    }
+  ]
+}

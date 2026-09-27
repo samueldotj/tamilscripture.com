@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chinneroth",
+  "lang": "ta",
+  "source_hash": "d4bc7af5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கின்னரோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/chinneroth#p1-d4bc7af5",
+      "text": "[கின்னரேத், கின்னரேத் கடல்]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dishan",
+  "lang": "ta",
+  "source_hash": "c7adbd47",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திஷான்",
+  "paragraphs": [
+    {
+      "id": "eastons/dishan#p1-c7adbd47",
+      "text": "அந்திலோப் (மான்), ஓரியனாகிய சேயீரின் இளைய மகன், ஏதோமியாவின் கோத்திரங்களில் ஒன்றின் தலைவன் (ஆதியாகமம் 36:21, 28, 30)."
+    }
+  ]
+}

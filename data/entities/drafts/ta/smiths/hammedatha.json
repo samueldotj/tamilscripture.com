@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hammedatha",
+  "lang": "ta",
+  "source_hash": "04003185",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மெதாத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/hammedatha#p1-04003185",
+      "text": "(இரட்டை), பேர்பெற்ற ஆமானின் தகப்பன். (எஸ்தர் 3:1,10; 8:5; 9:24)"
+    }
+  ]
+}

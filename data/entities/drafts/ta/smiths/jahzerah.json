@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jahzerah",
+  "lang": "ta",
+  "source_hash": "75f981b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசெரா",
+  "paragraphs": [
+    {
+      "id": "smiths/jahzerah#p1-75f981b4",
+      "text": "(தேவன் திரும்ப நடத்துகிறவர்), இம்மேரின் வம்சத்தைச் சேர்ந்த ஆசாரியன். (1 நாளாகமம் 9:12)"
+    }
+  ]
+}

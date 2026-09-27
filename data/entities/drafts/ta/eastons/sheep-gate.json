@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sheep-gate",
+  "lang": "ta",
+  "source_hash": "fdade22f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆட்டு வாசல்",
+  "paragraphs": [
+    {
+      "id": "eastons/sheep-gate#p1-fdade22f",
+      "text": "நெகேமியாவின் குறிப்பில் (3:1, 32; 12:39) குறிப்பிடப்பட்டுள்ள எருசலேமின் வாசல்களில் ஒன்று. இது நகரத்தின் கிழக்குச் சுவரில் இருந்தது."
+    }
+  ]
+}

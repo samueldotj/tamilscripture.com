@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bath",
+  "lang": "ta",
+  "source_hash": "4dde5dcf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bath#p1-b5d51daf",
+      "text": "பழைய ஏற்பாட்டில் காணப்படும் ஒரு திரவ அளவு (எசேக்கியேல் 45:10-11). இது சுமார் ஆறு காலன் அல்லது 23 லிட்டருக்குச் சமமானது."
+    },
+    {
+      "id": "aquifer/bath#p2-db3bfff6",
+      "text": "நிறுவைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/laadan",
+  "lang": "ta",
+  "source_hash": "ad675a6a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/laadan#p1-ad675a6a",
+      "text": "(ஒழுங்குபடுத்தப்பட்டது)."
+    }
+  ]
+}

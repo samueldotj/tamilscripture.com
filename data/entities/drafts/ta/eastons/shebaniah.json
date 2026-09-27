@@ -1,0 +1,34 @@
+{
+  "id": "eastons/shebaniah",
+  "lang": "ta",
+  "source_hash": "1ae6aa41",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபனியா",
+  "paragraphs": [
+    {
+      "id": "eastons/shebaniah#p1-c5c2ab52",
+      "text": "யெகோவா மறைத்திருக்கிறவர், அல்லது வளர்ந்தோங்கச் செய்திருக்கிறவர்."
+    },
+    {
+      "id": "eastons/shebaniah#p2-e3ad3cd4",
+      "text": "(1.) தேவனுடைய பெட்டிக்கு முன்பாகப் பூரிகை ஊதும்படி நியமிக்கப்பட்ட லேவியனாகிய செபனியா (1 நாளாகமம் 15:24)."
+    },
+    {
+      "id": "eastons/shebaniah#p3-a8df9a91",
+      "text": "(2.) மற்றொரு லேவியனாகிய செபனியா (நெகேமியா 9:4, 5)."
+    },
+    {
+      "id": "eastons/shebaniah#p4-d17e66a5",
+      "text": "(3.) ஆசாரியனாகிய செபனியா (நெகேமியா 10:12)."
+    },
+    {
+      "id": "eastons/shebaniah#p5-2921f4af",
+      "text": "(4.) லேவியனாகிய செபனியா (நெகேமியா 10:4)."
+    }
+  ]
+}

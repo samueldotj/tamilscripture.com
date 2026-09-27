@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/dragons-well",
+  "lang": "ta",
+  "source_hash": "0fb424ec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "டிராகனின் கிணறு",
+  "paragraphs": [
+    {
+      "id": "aquifer/dragons-well#p1-f7db247b",
+      "text": "டிராகனின் கிணறு என்பது வலுசர்ப்பக் கிணறு என்ற ஒரு நீர் ஊற்றின் மற்றொரு பெயராகும், இது நெகேமியா 2:13ல் குறிப்பிடப்பட்டுள்ளது (நெகேமியா 2:13)."
+    },
+    {
+      "id": "aquifer/dragons-well#p2-5100e4b6",
+      "text": "வலுசர்ப்பக் கிணறு என்பதைக் காண்க."
+    }
+  ]
+}

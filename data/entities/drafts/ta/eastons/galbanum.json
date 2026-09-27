@@ -1,0 +1,18 @@
+{
+  "id": "eastons/galbanum",
+  "lang": "ta",
+  "source_hash": "32ad7403",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்பானம்",
+  "paragraphs": [
+    {
+      "id": "eastons/galbanum#p1-32ad7403",
+      "text": "எபிரெயு helbenah, (யாத்திராகமம் 30:34), பரிசுத்த தூபவர்க்கத்தில் சேர்க்கப்பட்ட பொருட்களில் ஒன்று (இதற்கு IRV-இல் \"அல்பான் பிசின்\" என்று மொழிபெயர்க்கப்பட்டுள்ளது). இது ஒரு பிசின், ஒருவேளை Galbanum officinale என்ற செடியிலிருந்து பெறப்பட்டிருக்கலாம்."
+    }
+  ]
+}

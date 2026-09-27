@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeroboam",
+  "lang": "ta",
+  "source_hash": "2086fec1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெரொபெயாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jeroboam#p1-2086fec1",
+      "text": "(எவனுடைய மக்கள் அநேகராயிருக்கிறார்கள்)."
+    }
+  ]
+}

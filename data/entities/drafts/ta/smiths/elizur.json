@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elizur",
+  "lang": "ta",
+  "source_hash": "4d8e2afa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிசூர்",
+  "paragraphs": [
+    {
+      "id": "smiths/elizur#p1-4d8e2afa",
+      "text": "ரூபன் கோத்திரத்தின் பிரபுவும், அதின் இராணுவத்திற்குத் தலைவனும் (எண்ணாகமம் 1:5; 2:10; 7:30,35; 10:18)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kidon",
+  "lang": "ta",
+  "source_hash": "566d934e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீதோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kidon#p1-8df42484",
+      "text": "கீதோன் என்பது சிதோன் என்பதன் மற்றொரு எழுத்துவடிவம், அது ஊசா உடன்படிக்கைப் பெட்டியை நிலைப்படுத்த முயற்சித்தபோது தேவன் அவனை வெட்டியெறிந்த போரடிக்கும் களம் (1 நாளாகமம் 13:9)."
+    },
+    {
+      "id": "aquifer/kidon#p2-b33195d1",
+      "text": "சிதோன் காண்க."
+    }
+  ]
+}

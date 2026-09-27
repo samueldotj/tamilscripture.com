@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aramitess",
+  "lang": "ta",
+  "source_hash": "93463524",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அராமிய பெண்",
+  "paragraphs": [
+    {
+      "id": "smiths/aramitess#p1-93463524",
+      "text": "ஆராமில் வசிக்கிற ஒரு பெண். (1 நாளாகமம் 7:14)"
+    }
+  ]
+}

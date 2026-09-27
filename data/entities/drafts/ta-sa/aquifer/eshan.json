@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/eshan",
+  "lang": "ta",
+  "source_hash": "8a553627",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஷியான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/eshan#p1-8a553627",
+      "text": "எஷியான் என்பது யூதா கோத்திரத்திற்கு சொத்தாக ஒதுக்கப்பட்ட நாட்டின் மலைநாட்டில் இருந்த ஒரு பட்டணமாகும் (யோசுவா 15:52)."
+    }
+  ]
+}

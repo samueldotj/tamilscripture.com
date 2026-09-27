@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uzai",
+  "lang": "ta",
+  "source_hash": "ac0bea58",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊசாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/uzai#p1-ac0bea58",
+      "text": "(வலியவன்), நகர சுவரைத் திரும்பக் கட்டுவதில் நெகேமியாவுக்கு உதவிசெய்த பாலாலின் தகப்பன். (நெகேமியா 3:25) (கி.மு. 446க்கு முன்.)"
+    }
+  ]
+}

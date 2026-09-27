@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beheading",
+  "lang": "ta",
+  "source_hash": "bba466a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தலைவெட்டுதல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/beheading#p1-b05d396b",
+      "text": "தலைவெட்டுதல் என்பது ஒருவரின் தலையை வெட்டுவதன் மூலம் அவரைக் கொலை செய்யும் ஒரு வழியாகும். இந்த மரண தண்டனை முறை (தண்டனையாக ஒருவரைக் கொலை செய்தல்) பைபிள் காலங்களில் பயன்படுத்தப்பட்டது."
+    },
+    {
+      "id": "aquifer/beheading#p2-ff2469ea",
+      "text": "குற்றவியல் நியாயப்பிரமாணமும் தண்டனையும் என்பதைக் காண்க."
+    }
+  ]
+}

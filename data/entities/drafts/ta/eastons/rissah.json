@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rissah",
+  "lang": "ta",
+  "source_hash": "816a7a8c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரீசா",
+  "paragraphs": [
+    {
+      "id": "eastons/rissah#p1-816a7a8c",
+      "text": "பாழான குவியல்; பனி, வனாந்தரத்தில் இஸ்ரவேலர்கள் தங்கிய ஒரு முகாம் (எண்ணாகமம் 33:21, 22)."
+    }
+  ]
+}

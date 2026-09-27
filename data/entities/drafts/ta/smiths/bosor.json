@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bosor",
+  "lang": "ta",
+  "source_hash": "df47f852",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போசோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bosor#p1-df47f852",
+      "text": "பேயோர் என்பதற்குச் சமமானது. (2 பேதுரு 2:15)"
+    }
+  ]
+}

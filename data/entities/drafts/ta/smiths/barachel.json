@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barachel",
+  "lang": "ta",
+  "source_hash": "72bcd06f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பரகெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/barachel#p1-72bcd06f",
+      "text": "(தேவன் ஆசீர்வதித்தார்), எலிகூவின் தகப்பன். (யோபு 32:2,6) [பூஸ்]"
+    }
+  ]
+}

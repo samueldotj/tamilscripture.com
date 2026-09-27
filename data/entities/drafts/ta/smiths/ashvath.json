@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ashvath",
+  "lang": "ta",
+  "source_hash": "9444988d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்வாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ashvath#p1-9444988d",
+      "text": "ஆசேர் கோத்திரத்தைச் சேர்ந்த யப்லேத்தின் மகன்களில் ஒருவன். (1 நாளாகமம் 7:33)"
+    }
+  ]
+}

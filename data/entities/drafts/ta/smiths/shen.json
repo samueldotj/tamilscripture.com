@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shen",
+  "lang": "ta",
+  "source_hash": "b300b2ad",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேண்",
+  "paragraphs": [
+    {
+      "id": "smiths/shen#p1-b300b2ad",
+      "text": "(பல்) 1 சாமுவேல் 7:12 -இல் மட்டுமே குறிப்பிடப்பட்டுள்ள ஒரு இடம். இதைப்பற்றி எதுவும் அறியப்படவில்லை."
+    }
+  ]
+}

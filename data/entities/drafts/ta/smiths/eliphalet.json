@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliphalet",
+  "lang": "ta",
+  "source_hash": "d4f1402c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிப்பெலேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliphalet#p1-d4f1402c",
+      "text": "(விடுதலையின் தேவன்), தாவீது எருசலேமில் நிலைபெற்ற பின்பு அவனுக்குப் பிறந்த பதின்மூன்று மகன்களில் கடைசியானவன். (2 சாமுவேல் 5:16; 1 நாளாகமம் 14:7) [எலிப்பேலேத், 2]"
+    }
+  ]
+}

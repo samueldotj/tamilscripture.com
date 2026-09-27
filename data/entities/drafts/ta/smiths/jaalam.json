@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jaalam",
+  "lang": "ta",
+  "source_hash": "2c98bf60",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jaalam#p1-2c98bf60",
+      "text": "(யாலாம் என்றால் தேவன் மறைக்கிறவர்), ஏசாவின் ஒரு மகன், ஆதியாகமம் 36:5,14,18 ஒப்பிடுக 1 நாளாகமம் 1:35. மேலும் ஏதோமின் ஒரு கோத்திரத்திற்குத் தலைவனாக இருந்தான். (கி.மு. 1790.)."
+    }
+  ]
+}

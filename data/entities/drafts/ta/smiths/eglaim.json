@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eglaim",
+  "lang": "ta",
+  "source_hash": "5cafd7a8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எக்லாயிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/eglaim#p1-5cafd7a8",
+      "text": "(இரண்டு குளங்கள்), ஏசாயா 15:8-ல் மட்டும் குறிப்பிடப்பட்டிருக்கும் ஒரு இடம், ஏனெக்லாயிமைப் (எசேக்கியேல் 47:10) போலவே இருக்கலாம்."
+    }
+  ]
+}

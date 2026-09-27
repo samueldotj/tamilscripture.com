@@ -1,0 +1,18 @@
+{
+  "id": "smiths/boil",
+  "lang": "ta",
+  "source_hash": "1aee1e2e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொப்புளம்",
+  "paragraphs": [
+    {
+      "id": "smiths/boil#p1-1aee1e2e",
+      "text": "[வைத்தியம்]"
+    }
+  ]
+}

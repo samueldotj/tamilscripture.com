@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hanameel",
+  "lang": "ta",
+  "source_hash": "fd7d3a0b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனாமெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/hanameel#p1-fd7d3a0b",
+      "text": "(தேவன் கிருபையாக அளித்தவன்), சல்லூமின் மகனும் எரேமியாவின் ஒன்றுவிட்ட சகோதரனும் ஆவான். (எரேமியா 32:7,8,9,12) மற்றும் ஒப்பிடுக எரேமியா 32:44 (கி.மு. 589.)"
+    }
+  ]
+}

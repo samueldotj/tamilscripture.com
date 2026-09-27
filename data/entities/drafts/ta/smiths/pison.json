@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pison",
+  "lang": "ta",
+  "source_hash": "7a8b8be0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பீசோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/pison#p1-7a8b8be0",
+      "text": "[ஏதேன்]"
+    }
+  ]
+}

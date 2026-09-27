@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eleph",
+  "lang": "ta",
+  "source_hash": "ec41df6b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/eleph#p1-ec41df6b",
+      "text": "(எருது), பென்யமீனுக்கு பங்கிடப்பட்ட பட்டணங்களில் ஒன்று, எருசலேமுக்கு அடுத்ததாகப் பெயரிடப்பட்டுள்ளது. (யோசுவா 18:28)"
+    }
+  ]
+}

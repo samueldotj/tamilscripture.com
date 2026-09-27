@@ -1,0 +1,18 @@
+{
+  "id": "smiths/binnui",
+  "lang": "ta",
+  "source_hash": "209a679b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பின்னூயி",
+  "paragraphs": [
+    {
+      "id": "smiths/binnui#p1-209a679b",
+      "text": "(உறவினர்)."
+    }
+  ]
+}

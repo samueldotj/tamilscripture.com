@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/panther",
+  "lang": "ta",
+  "source_hash": "c72caffe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிறுத்தைப்புலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/panther#p1-e5e8c3e5",
+      "text": "சிறுத்தைப்புலி என்பது ஒரு பெரிய காட்டு பூனை இனம். வேதத்தில், இந்த வார்த்தை சில வேளைகளில் சிரிங்கி (சிறுத்தை) என்பதைக் குறிக்கலாம்."
+    },
+    {
+      "id": "aquifer/panther#p2-94ae4104",
+      "text": "காண்க: சிறுத்தை; இதைவும் காண்க: மிருகங்கள்."
+    }
+  ]
+}

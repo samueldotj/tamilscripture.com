@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/amam",
+  "lang": "ta",
+  "source_hash": "0a295f85",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/amam#p1-0a295f85",
+      "text": "யூதா ராஜ்யத்தின் தென்பகுதியில் இருந்த ஒரு பட்டணம். இது ஏதோமின் எல்லையில் அமைந்திருந்தது (யோசுவா 15:26)."
+    }
+  ]
+}

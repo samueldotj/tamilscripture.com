@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hanniel",
+  "lang": "ta",
+  "source_hash": "92ec1b74",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்னியேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/hanniel#p1-8abf15d8",
+      "text": "தேவனுடைய கிருபை."
+    },
+    {
+      "id": "eastons/hanniel#p2-363c3985",
+      "text": "(1.) மனாசே கோத்திரத்தின் ஒரு பிரபு (எண்ணாகமம் 34:23)."
+    },
+    {
+      "id": "eastons/hanniel#p3-d6cc08cd",
+      "text": "(2.) ஆசேர் கோத்திரத்தின் ஒரு பிரபு (1 நாளாகமம் 7:39)."
+    }
+  ]
+}

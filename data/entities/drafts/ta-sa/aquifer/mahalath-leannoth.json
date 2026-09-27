@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mahalath-leannoth",
+  "lang": "ta",
+  "source_hash": "5f681b2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மஹலாத் லெயன்னோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mahalath-leannoth#p1-5f681b2b",
+      "text": "சங்கீதம் 88ன் தலைப்பில் காணப்படும் எபிரெய சொற்றொடர், “வியாதியின் வேதனை” என்று மொழிபெயர்க்கப்படுகிறது; இது ஒருவேளை அந்தச் சங்கீதம் பாடப்பட்ட பரிச்சயமான ஒரு பழங்கால இராகமாக இருக்கலாம். இசை என்பதைக் காண்க."
+    }
+  ]
+}

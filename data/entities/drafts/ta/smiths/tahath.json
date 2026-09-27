@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tahath",
+  "lang": "ta",
+  "source_hash": "87414b2e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாகாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/tahath#p1-87414b2e",
+      "text": "மக்கெலோத்திற்கும் தாராகிற்கும் இடையே இஸ்ரவேலரின் பாலைவனப் பாளையம் இருந்த இடத்தின் பெயர். (எண்ணாகமம் 33:26) இந்த இடம் இன்னும் அறியப்படவில்லை. (பாளையம்)."
+    }
+  ]
+}

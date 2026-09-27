@@ -1,0 +1,18 @@
+{
+  "id": "eastons/semei",
+  "lang": "ta",
+  "source_hash": "99eb13b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செமேய்",
+  "paragraphs": [
+    {
+      "id": "eastons/semei#p1-99eb13b5",
+      "text": "நம்முடைய கர்த்தருடைய வம்சவரலாற்றில் குறிப்பிடப்பட்டவர் (லூக்கா 3:26)."
+    }
+  ]
+}

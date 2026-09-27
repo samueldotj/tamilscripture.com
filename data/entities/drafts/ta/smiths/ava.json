@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ava",
+  "lang": "ta",
+  "source_hash": "8db1fd43",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவா",
+  "paragraphs": [
+    {
+      "id": "smiths/ava#p1-8db1fd43",
+      "text": "(பாழிடம்), அசீரியா ராஜ்யத்திலுள்ள ஒரு இடம், இது ஈவா என்பதற்குச் சமமானதாகத் தோன்றுகிறது. (2 இராஜாக்கள் 17:24)"
+    }
+  ]
+}

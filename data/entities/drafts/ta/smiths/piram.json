@@ -1,0 +1,18 @@
+{
+  "id": "smiths/piram",
+  "lang": "ta",
+  "source_hash": "9569142a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பீராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/piram#p1-9569142a",
+      "text": "(காட்டுக் கழுதையைப் போன்றவன்; வேகமாக ஓடுபவன்) யோசுவா கானானை கட்டியாண்ட காலத்தில் யர்மூத்தின் அமோரிய ராஜாவாக இருந்தவன். (யோசுவா 10:3) (கி.மு. 1450)"
+    }
+  ]
+}

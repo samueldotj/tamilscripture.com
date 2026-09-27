@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pallu",
+  "lang": "ta",
+  "source_hash": "c9f16796",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பல்லூ",
+  "paragraphs": [
+    {
+      "id": "smiths/pallu#p1-c9f16796",
+      "text": "(விசேஷித்தவன்), ரூபனுடைய இரண்டாம் மகன், எலியாபின் தகப்பன், (ஏசாயா 6:14; எண்ணாகமம் 26:5,8; 1 நாளாகமம் 5:3) மற்றும் பல்லூவியர்கள் குடும்பத்தை நிறுவினவன்."
+    }
+  ]
+}

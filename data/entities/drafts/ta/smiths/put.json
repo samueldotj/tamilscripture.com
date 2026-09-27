@@ -1,0 +1,18 @@
+{
+  "id": "smiths/put",
+  "lang": "ta",
+  "source_hash": "5a6aa334",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/put#p1-5a6aa334",
+      "text": "(1 நாளாகமம் 1:8; நாகூம் 3:9) [பூத்]"
+    }
+  ]
+}

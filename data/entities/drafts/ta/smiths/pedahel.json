@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pedahel",
+  "lang": "ta",
+  "source_hash": "e507d7bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெதாக்கேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/pedahel#p1-e507d7bb",
+      "text": "(தேவன் மீட்கிறவர்), அம்மியூதின் மகனும், நப்தலி கோத்திரத்தின் பிரபுவும். (எண்ணாகமம் 34:28)"
+    }
+  ]
+}

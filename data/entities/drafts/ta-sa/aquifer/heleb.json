@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/heleb",
+  "lang": "ta",
+  "source_hash": "79ea7729",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/heleb#p1-174e0b7f",
+      "text": "பானாவின் மகனான எல்தாய்க்கு மற்றொரு பெயர் (2 சாமுவேல் 23:29)."
+    },
+    {
+      "id": "aquifer/heleb#p2-a9eb9b68",
+      "text": "எல்தாய் #1-ஐ காண்க."
+    }
+  ]
+}

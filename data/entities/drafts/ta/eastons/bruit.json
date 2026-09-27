@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bruit",
+  "lang": "ta",
+  "source_hash": "b7bf9d57",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரூட்",
+  "paragraphs": [
+    {
+      "id": "eastons/bruit#p1-b7bf9d57",
+      "text": "ஒரு செய்தி அல்லது வர்த்தமானம் (எரேமியா 10:22, ஆர்.வி. “செய்தி”; நாகூம் 3:19)."
+    }
+  ]
+}

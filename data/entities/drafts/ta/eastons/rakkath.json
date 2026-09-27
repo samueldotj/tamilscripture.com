@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rakkath",
+  "lang": "ta",
+  "source_hash": "55826d5a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரக்காத்",
+  "paragraphs": [
+    {
+      "id": "eastons/rakkath#p1-55826d5a",
+      "text": "கடற்கரை நகரம், நப்தலி கோத்திரத்திற்குரிய “பாதுகாப்பான பட்டணங்களில்” ஒன்று (யோசுவா 19:35). ரபீக்களின் கூற்றுப்படி, இது திபேரியாவின் பழைய பெயராகும்."
+    }
+  ]
+}

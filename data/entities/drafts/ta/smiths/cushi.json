@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cushi",
+  "lang": "ta",
+  "source_hash": "8b93940f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூஷி",
+  "paragraphs": [
+    {
+      "id": "smiths/cushi#p1-8b93940f",
+      "text": "சரியாகச் சொன்னால் “கூஷியன்,” “எத்தியோப்பியன்,” யோவாபின் பணியில் இருந்த ஒரு மனிதனாகத் தோன்றுகிறான். (2 சாமுவேல் 18:21-25,31,32)"
+    }
+  ]
+}

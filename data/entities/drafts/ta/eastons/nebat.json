@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nebat",
+  "lang": "ta",
+  "source_hash": "213cb4ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேபாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/nebat#p1-213cb4ed",
+      "text": "பார்வை; தோற்றம், இஸ்ரவேலின் ராஜாவாகிய யெரொபெயாமின் தகப்பன் (1 இராஜாக்கள் 11:26, முதலியன)."
+    }
+  ]
+}

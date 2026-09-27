@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bedeiah",
+  "lang": "ta",
+  "source_hash": "e5fde5a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெதியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bedeiah#p1-e5fde5a6",
+      "text": "பாபிலோனுக்குச் சிறையிருப்பானபின்பு, தன் யூதப்பெண் அல்லாத மனைவியை விவாகரத்து செய்யுமாறு எஸ்றாவின் கட்டளைக்குக் கீழ்ப்படிந்த பானியின் மகன் (எஸ்றா 10:35)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nun",
+  "lang": "ta",
+  "source_hash": "453f4877",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நூன்",
+  "paragraphs": [
+    {
+      "id": "eastons/nun#p1-453f4877",
+      "text": "அவன் யோசுவாவின் தகப்பன் என்பதைத் தவிர அவனைப்பற்றி வேறொன்றும் அறியப்படவில்லை (யாத்திராகமம் 33:11)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/harumaph",
+  "lang": "ta",
+  "source_hash": "16ace84f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அருமாப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/harumaph#p1-16ace84f",
+      "text": "அருமாப் யெதாயாவின் தகப்பன். நெகேமியாவின் காலத்தில் எருசலேமின் மதிலைப் பழுதுபார்த்துக் கட்டுவதற்கு யெதாயா உதவினான் (நெகேமியா 3:10)."
+    }
+  ]
+}

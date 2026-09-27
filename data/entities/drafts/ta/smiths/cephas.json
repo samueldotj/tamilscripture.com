@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cephas",
+  "lang": "ta",
+  "source_hash": "efc46637",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேபா",
+  "paragraphs": [
+    {
+      "id": "smiths/cephas#p1-efc46637",
+      "text": "[பேதுரு]"
+    }
+  ]
+}

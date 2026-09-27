@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pyrrhus",
+  "lang": "ta",
+  "source_hash": "c082cf3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிர்ரு",
+  "paragraphs": [
+    {
+      "id": "smiths/pyrrhus#p1-c082cf3b",
+      "text": "பெரோயா ஊரானாகிய சோபத்தரின் தகப்பன். (அப்போஸ்தலருடைய நடபடிகள் 20:4) திருத்தப்பட்ட மொழிபெயர்ப்பில். (கி.பி. 55.)"
+    }
+  ]
+}

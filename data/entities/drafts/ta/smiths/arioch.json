@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arioch",
+  "lang": "ta",
+  "source_hash": "5086ecaa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரியோகு",
+  "paragraphs": [
+    {
+      "id": "smiths/arioch#p1-5086ecaa",
+      "text": "(வணக்கத்திற்குரியவன்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/temanite",
+  "lang": "ta",
+  "source_hash": "b28b8bed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேமானியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/temanite#p1-b28b8bed",
+      "text": "தேமான் ஊரானாகிய ஒருவன், யோபுவின் மூன்று சிநேகிதரில் ஒருவனாகிய எலிப்பாசுக்குக் கொடுக்கப்பட்ட பெயர் (யோபு 2:11; 22:1)."
+    }
+  ]
+}

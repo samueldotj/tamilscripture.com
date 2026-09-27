@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gunites-the",
+  "lang": "ta",
+  "source_hash": "51f952b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூனியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/gunites-the#p1-51f952b2",
+      "text": "நப்தலியின் மகனாகிய கூனியின் சந்ததியார். (எண்ணாகமம் 26:48)"
+    }
+  ]
+}

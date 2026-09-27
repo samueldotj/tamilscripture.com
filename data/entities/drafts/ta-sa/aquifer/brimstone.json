@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/brimstone",
+  "lang": "ta",
+  "source_hash": "3f1b1c9d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கந்தகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/brimstone#p1-129b09fc",
+      "text": "கந்தகம் என்பது கந்தகம் (sulfur) என்ற உலோகமல்லாத தனிமத்திற்கான பழைய பெயராகும், அதன் நேரடிப் பொருள் “எரியும் கல்” என்பதாகும்."
+    },
+    {
+      "id": "aquifer/brimstone#p2-5f283624",
+      "text": "காண்க: கந்தகம்; கனிமங்களும் உலோகங்களும்."
+    }
+  ]
+}

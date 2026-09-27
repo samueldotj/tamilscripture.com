@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/maul",
+  "lang": "ta",
+  "source_hash": "9943edd9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தண்டாயுதம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/maul#p1-207da02a",
+      "text": "நீதிமொழிகள் 25:18-இல் “தண்டாயுதம்” என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பு “கிராதி” (Maul) என்று மொழிபெயர்த்துள்ளது."
+    },
+    {
+      "id": "aquifer/maul#p2-b1b80a1d",
+      "text": "கவசமும் ஆயுதங்களும்; யுத்தம் ஆகியவற்றைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/serug",
+  "lang": "ta",
+  "source_hash": "ee82fa6e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செரூகு",
+  "paragraphs": [
+    {
+      "id": "smiths/serug#p1-ee82fa6e",
+      "text": "(கிளை), ரெகூவின் மகனும் ஆபிரகாமின் பாட்டனாருடைய தாத்தாவும். எபிரெய பைபிளில் இவனுடைய வயது 230 வருடங்களாகக் குறிக்கப்பட்டுள்ளது. (ஆதியாகமம் 11:20-23) (கி.மு. 2180.)"
+    }
+  ]
+}

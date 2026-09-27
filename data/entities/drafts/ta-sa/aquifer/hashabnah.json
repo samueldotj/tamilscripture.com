@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hashabnah",
+  "lang": "ta",
+  "source_hash": "cfb132d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஷபனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hashabnah#p1-cfb132d7",
+      "text": "நாடுகடத்தலுக்குப் பின்பு நெகேமியாவும் மற்றவர்களுடனும் சேர்ந்து, தேவனுக்கு உண்மையுள்ளவர்களாய் இருப்பதற்கான எஸ்றாவின் உடன்படிக்கையில் கையெழுத்திட்ட தலைவர்களில் ஒருவர் (நெகேமியா 10:25)."
+    }
+  ]
+}

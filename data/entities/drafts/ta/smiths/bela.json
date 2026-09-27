@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bela",
+  "lang": "ta",
+  "source_hash": "ddd2db7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேலா",
+  "paragraphs": [
+    {
+      "id": "smiths/bela#p1-ddd2db7b",
+      "text": "(அழிவு)."
+    }
+  ]
+}

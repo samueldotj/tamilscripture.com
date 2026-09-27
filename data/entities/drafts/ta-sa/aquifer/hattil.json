@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hattil",
+  "lang": "ta",
+  "source_hash": "2e5cf60b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தீல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hattil#p1-2e5cf60b",
+      "text": "நாடுகடத்தப்பட்ட பின்பு செருபாபேலுடன் எருசலேமுக்குத் திரும்பி வந்த ராஜாவாகிய சாலொமோனின் வேலைக்காரர் குடும்பத்தினருக்கு முற்பிதாவானவன் (எஸ்றா 2:57; நெகேமியா 7:59)."
+    }
+  ]
+}

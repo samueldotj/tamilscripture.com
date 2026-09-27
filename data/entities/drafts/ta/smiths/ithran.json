@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ithran",
+  "lang": "ta",
+  "source_hash": "c90176d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/ithran#p1-c90176d7",
+      "text": "(மேன்மை)."
+    }
+  ]
+}

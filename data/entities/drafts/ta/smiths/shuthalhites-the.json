@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shuthalhites-the",
+  "lang": "ta",
+  "source_hash": "33910d63",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சுத்தெலாகியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/shuthalhites-the#p1-33910d63",
+      "text": "[சுத்தெலாக்]"
+    }
+  ]
+}

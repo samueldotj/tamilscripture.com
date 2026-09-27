@@ -1,0 +1,18 @@
+{
+  "id": "eastons/stealing",
+  "lang": "ta",
+  "source_hash": "3931e2c0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திருடுதல்",
+  "paragraphs": [
+    {
+      "id": "eastons/stealing#p1-3931e2c0",
+      "text": "திருட்டு என்பதைக் காண்க."
+    }
+  ]
+}

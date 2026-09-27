@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/maai",
+  "lang": "ta",
+  "source_hash": "69adbe7c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/maai#p1-69adbe7c",
+      "text": "மகாய் என்பவன் ஒரு ஆசாரியனும் இசைவாணனுமாக இருந்து, திரும்பக் கட்டப்பட்ட எருசலேமின் மதிலின் அர்ப்பணிப்பில் பங்குபெற்றான் (நெகேமியா 12:36)."
+    }
+  ]
+}

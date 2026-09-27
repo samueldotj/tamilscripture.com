@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/psaltery",
+  "lang": "ta",
+  "source_hash": "44ec3ecd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தம்புரு",
+  "paragraphs": [
+    {
+      "id": "aquifer/psaltery#p1-d96c9ecf",
+      "text": "தம்புரு என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் ஒரு நரம்பு இசைக்கருவிக்குப் பயன்படுத்தப்பட்ட பெயர். பெரும்பாலான நவீன பைபிள் மொழிபெயர்ப்புகள் இந்தக் கருவியை ஒரு சுரமண்டலமாக அடையாளப்படுத்துகின்றன."
+    },
+    {
+      "id": "aquifer/psaltery#p2-48aff65d",
+      "text": "காண்க: இசைக்கருவிகள்; சுரமண்டலம்."
+    }
+  ]
+}

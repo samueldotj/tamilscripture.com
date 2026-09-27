@@ -1,0 +1,18 @@
+{
+  "id": "smiths/habergeon",
+  "lang": "ta",
+  "source_hash": "e3b2f0b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கவசம்",
+  "paragraphs": [
+    {
+      "id": "smiths/habergeon#p1-e3b2f0b2",
+      "text": "கழுத்தையும் மார்பையும் மூடும் ஒரு மார்க்கவசம். [ஆயுதங்கள், கவசம்]"
+    }
+  ]
+}

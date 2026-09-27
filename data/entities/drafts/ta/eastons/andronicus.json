@@ -1,0 +1,18 @@
+{
+  "id": "eastons/andronicus",
+  "lang": "ta",
+  "source_hash": "b7cce2ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அன்றோனீக்கு",
+  "paragraphs": [
+    {
+      "id": "eastons/andronicus#p1-b7cce2ba",
+      "text": "மனிதனை வெற்றிகொள்ளுகிறவன், ஒரு யூதனாகிய கிறிஸ்தவன், பவுலின் இனத்தானும் அவனுடன் காவலில் கட்டப்பட்டவனும் (ரோமர் 16:7); “அப்போஸ்தலர்களுக்குள் பெயர்பெற்றவன்.”"
+    }
+  ]
+}

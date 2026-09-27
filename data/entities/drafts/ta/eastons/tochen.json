@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tochen",
+  "lang": "ta",
+  "source_hash": "098d015d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோகேன்",
+  "paragraphs": [
+    {
+      "id": "eastons/tochen#p1-098d015d",
+      "text": "அளக்கப்பட்டது, சிமியோனுடைய ஒரு பட்டணம் (1 நாளாகமம் 4:32)."
+    }
+  ]
+}

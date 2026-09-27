@@ -1,0 +1,18 @@
+{
+  "id": "smiths/machir",
+  "lang": "ta",
+  "source_hash": "64156aff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகீர்",
+  "paragraphs": [
+    {
+      "id": "smiths/machir#p1-64156aff",
+      "text": "(விற்கப்பட்டது)."
+    }
+  ]
+}

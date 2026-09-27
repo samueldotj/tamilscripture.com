@@ -1,0 +1,18 @@
+{
+  "id": "eastons/merathaim",
+  "lang": "ta",
+  "source_hash": "3a57cfbf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெரதாயீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/merathaim#p1-3a57cfbf",
+      "text": "இரட்டைக் கலகம், இது பாபிலோனுக்குக் கொடுக்கப்பட்ட ஒரு அடையாள நாமமாக இருக்கலாம் (எரேமியா 50:21), இது மற்ற தேசங்களின் கலகத்தையும் மிஞ்சிய கலகத்தைக் குறிக்கிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hodijah",
+  "lang": "ta",
+  "source_hash": "29f54b86",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒதியா",
+  "paragraphs": [
+    {
+      "id": "smiths/hodijah#p1-29f54b86",
+      "text": "(யெகோவாவின் மகிமை)."
+    }
+  ]
+}

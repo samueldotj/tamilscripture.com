@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/phasiron",
+  "lang": "ta",
+  "source_hash": "9f483d04",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசிரோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/phasiron#p1-9f483d04",
+      "text": "பாசிரோன் என்பது பெத்பாசிக்கு அருகில் வாழ்ந்த ஒரு கோத்திரமாகும். யோனத்தான் அவர்களில் சிலரைத் தாக்கிக் கொன்றார் (1 மக்கபேயர் 9:66). இந்தக் கோத்திரத்தைப் பற்றி வேறு எதுவும் அறியப்படவில்லை."
+    }
+  ]
+}

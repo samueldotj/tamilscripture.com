@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/earthenware",
+  "lang": "ta",
+  "source_hash": "5a97c356",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மண்பாண்டம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/earthenware#p1-e0e5878a",
+      "text": "சுட்ட மண்ணினால் செய்யப்பட்ட பொருட்கள், அதாவது பானைகள், குடங்கள், தட்டுகள் போன்றவை. இவை பரிசுத்த வேத காலங்களில் வீடுகளில் பொதுவாகப் பயன்படுத்தப்பட்ட பாத்திரங்களாக இருந்தன."
+    },
+    {
+      "id": "aquifer/earthenware#p2-5eb2c90e",
+      "text": "மண்பாண்டங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bocheru",
+  "lang": "ta",
+  "source_hash": "55843011",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொக்குரு",
+  "paragraphs": [
+    {
+      "id": "aquifer/bocheru#p1-55843011",
+      "text": "பொக்குரு ஆத்சேலின் மகனும், சவுல் ராஜாவின் சந்ததியாருமாக இருந்தான் (1 நாளாகமம் 8:38; 9:44)."
+    }
+  ]
+}

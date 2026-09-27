@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/abialbon",
+  "lang": "ta",
+  "source_hash": "30bb0ef2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிஅல்பொன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/abialbon#p1-30bb0ef2",
+      "text": "2 சாமுவேல் 23:31 இல் அபீயேலுக்கு மாற்றுப் பெயர். அபீயேல் #2 ஐக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gopher-wood",
+  "lang": "ta",
+  "source_hash": "600a9344",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொப்பேர் மரம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gopher-wood#p1-fec376d9",
+      "text": "கொப்பேர் மரம் என்பது நோவா கப்பலைக் கட்டப் பயன்படுத்திய பொருளாகும் (ஆதியாகமம் 6:14). இது எந்த வகையான மரம் என்பது உறுதியாகத் தெரியவில்லை."
+    },
+    {
+      "id": "aquifer/gopher-wood#p2-2682909d",
+      "text": "காண்க: கிப்ரஸ் மரம்."
+    }
+  ]
+}

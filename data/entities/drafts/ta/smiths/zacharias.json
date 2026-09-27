@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zacharias",
+  "lang": "ta",
+  "source_hash": "e5f04710",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சகரியாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/zacharias#p1-e5f04710",
+      "text": "(சகரியா என்பதற்கான கிரேக்கு வடிவம்)."
+    }
+  ]
+}

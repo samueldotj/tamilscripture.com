@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zared-the-valley-of",
+  "lang": "ta",
+  "source_hash": "d07eb39c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேரேத் பள்ளத்தாக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/zared-the-valley-of#p1-d07eb39c",
+      "text": "[சேரேத்]"
+    }
+  ]
+}

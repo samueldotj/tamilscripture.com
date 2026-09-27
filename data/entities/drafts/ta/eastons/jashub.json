@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jashub",
+  "lang": "ta",
+  "source_hash": "17ff6b06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசூப்",
+  "paragraphs": [
+    {
+      "id": "eastons/jashub#p1-72a7d792",
+      "text": "திரும்புகிறவன்."
+    },
+    {
+      "id": "eastons/jashub#p2-9037f348",
+      "text": "(1.) இசக்காருடைய நான்கு மகன்களில் மூன்றாமவன் (1 நாளாகமம் 7:1); இவன் யோபு என்றும் அழைக்கப்பட்டான் (ஆதியாகமம் 46:13)."
+    },
+    {
+      "id": "eastons/jashub#p3-b7b23e1c",
+      "text": "(2.) எஸ்றா 10:29."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethdagon",
+  "lang": "ta",
+  "source_hash": "28cfa23a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தாகோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethdagon#p1-28cfa23a",
+      "text": "(தாகோனுடைய வீடு)."
+    }
+  ]
+}

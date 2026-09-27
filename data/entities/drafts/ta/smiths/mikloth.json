@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mikloth",
+  "lang": "ta",
+  "source_hash": "0a41e1e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்லோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/mikloth#p1-0a41e1e4",
+      "text": "(கழிகள்)."
+    }
+  ]
+}

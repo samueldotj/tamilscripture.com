@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hazerim",
+  "lang": "ta",
+  "source_hash": "5a104c2a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆஸரீம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hazerim#p1-5a104c2a",
+      "text": "உபாகமம் 2:23-ல் இருக்கும் ஒத்த எபிரெய சொல்லின் KJV ஒலிபெயர்ப்பு இதுவாகும். ஒரு நகரத்தின் பெயராக இருப்பதற்கு பதிலாக, இது “கிராமங்கள்” என்பதற்கான ஒரு பொதுவான சொல்லாக இருக்கலாம், இது nlt விரும்பும் மொழிபெயர்ப்பாகும்."
+    }
+  ]
+}

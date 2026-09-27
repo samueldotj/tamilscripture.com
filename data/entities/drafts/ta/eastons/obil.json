@@ -1,0 +1,18 @@
+{
+  "id": "eastons/obil",
+  "lang": "ta",
+  "source_hash": "ff6ff447",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓபில்",
+  "paragraphs": [
+    {
+      "id": "eastons/obil#p1-ff6ff447",
+      "text": "தாவீதின் காலத்தில் “ஒட்டகங்களின்மேல்” விசாரிப்பாளனாக இருந்த ஓபில் என்னும் இஸ்மவேலியனாகிய ஒட்டகக்காரன் (1 நாளாகமம் 27:30)."
+    }
+  ]
+}

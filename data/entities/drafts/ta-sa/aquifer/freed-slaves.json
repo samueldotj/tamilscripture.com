@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/freed-slaves",
+  "lang": "ta",
+  "source_hash": "03ab1bab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விடுதலையான அடிமைகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/freed-slaves#p1-a1e493d0",
+      "text": "அப்போஸ்தலருடைய நடபடிகள் 6:9-ல் வரும் \"லிபர்த்தீனர்\" என்னும் சொல்லுக்கு New Living Translation மொழிபெயர்ப்பில் கொடுக்கப்பட்ட \"விடுதலையான அடிமைகள்\" என்னும் பொழிப்பாகும். இவர்கள் முன்பு அடிமைகளாக இருந்து, விடுதலை பெற்றவர்கள்."
+    },
+    {
+      "id": "aquifer/freed-slaves#p2-57395a35",
+      "text": "லிபர்த்தீனர் என்னும் கட்டுரையைக் காண்க."
+    }
+  ]
+}

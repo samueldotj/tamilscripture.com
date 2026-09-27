@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hadlai",
+  "lang": "ta",
+  "source_hash": "4c16333c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்லாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/hadlai#p1-4c16333c",
+      "text": "(தேவனுடைய இளைப்பாறுதல்), எப்பிராயீம் வம்சத்தானாகிய ஒரு மனிதன். (2 நாளாகமம் 28:12)"
+    }
+  ]
+}

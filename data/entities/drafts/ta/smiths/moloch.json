@@ -1,0 +1,18 @@
+{
+  "id": "smiths/moloch",
+  "lang": "ta",
+  "source_hash": "733175d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோளோகு",
+  "paragraphs": [
+    {
+      "id": "smiths/moloch#p1-733175d1",
+      "text": "மோளேகு என்பதே. மோளேகு காண்க."
+    }
+  ]
+}

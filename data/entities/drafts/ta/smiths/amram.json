@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amram",
+  "lang": "ta",
+  "source_hash": "49e6d2f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்ராம்",
+  "paragraphs": [
+    {
+      "id": "smiths/amram#p1-49e6d2f4",
+      "text": "(உயர்ந்த மக்கள்)."
+    }
+  ]
+}

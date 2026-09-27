@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ira",
+  "lang": "ta",
+  "source_hash": "6aeffae3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈரா",
+  "paragraphs": [
+    {
+      "id": "smiths/ira#p1-6aeffae3",
+      "text": "(நகரத்தை விழிப்புடன் காப்பவன்)."
+    }
+  ]
+}

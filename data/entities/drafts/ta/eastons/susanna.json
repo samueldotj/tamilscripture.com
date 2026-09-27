@@ -1,0 +1,18 @@
+{
+  "id": "eastons/susanna",
+  "lang": "ta",
+  "source_hash": "1fa82e18",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூசன்னாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/susanna#p1-1fa82e18",
+      "text": "லீலி, மற்ற பக்தியுள்ள பெண்களோடு இயேசுவுக்கு ஊழியம் செய்தாள் (லூக்கா 8:3)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirjathsannah",
+  "lang": "ta",
+  "source_hash": "b1427982",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்சன்னா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirjathsannah#p1-c7d818cc",
+      "text": "கீரியாத்சன்னா என்பது யோசுவா 15:49-ல் காணப்படும் கிரியாத்-சன்னாவின் கிங் யாக்கோபு மொழிபெயர்ப்பு எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/kirjathsannah#p2-389e22d8",
+      "text": "தெபீரின் (இடம்) #1-ஐ காண்க."
+    }
+  ]
+}

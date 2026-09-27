@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/patrobas",
+  "lang": "ta",
+  "source_hash": "c37b03e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பத்திரொபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/patrobas#p1-c37b03e1",
+      "text": "பத்திரொபா என்பவர் பவுல் வாழ்த்துதல் அனுப்பிய ரோமாபுரிக்குப் இருந்த கிறிஸ்தவர்களில் ஒருவராக இருந்தார் (ரோமர் 16:14)."
+    }
+  ]
+}

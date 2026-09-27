@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abidan",
+  "lang": "ta",
+  "source_hash": "bc87e87d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபீதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/abidan#p1-bc87e87d",
+      "text": "(நியாயாதிபதியின் தகப்பன்), எகிப்திலிருந்து வெளியேறின காலத்தில் பென்யமீன் கோத்திரத்தின் பிரபு. (கி.மு. 1491) (எண்ணாகமம் 1:11; 2:22; 7:60,65; 10:24)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gazathites",
+  "lang": "ta",
+  "source_hash": "56c9891a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசாவர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gazathites#p1-daa0a490",
+      "text": "காசாவர் என்பது காசாவில் வாழும் மக்களைக் குறிக்கும் கிங் யாக்கோபு வெர்ஷன் எழுத்துவடிவமாகும் (யோசுவா 13:3)."
+    },
+    {
+      "id": "aquifer/gazathites#p2-1847e2bf",
+      "text": "காசா; காசியர் என்பதைக் காண்க."
+    }
+  ]
+}

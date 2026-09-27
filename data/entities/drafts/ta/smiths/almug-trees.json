@@ -1,0 +1,18 @@
+{
+  "id": "smiths/almug-trees",
+  "lang": "ta",
+  "source_hash": "0ae4fa6e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்முகு மரங்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/almug-trees#p1-0ae4fa6e",
+      "text": "[அல்கூம் அல்லது அல்முகு மரங்கள் என்பதைக் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/addar-person",
+  "lang": "ta",
+  "source_hash": "5126a414",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/addar-person#p1-9c2e92e6",
+      "text": "ஆதார் என்பது பென்யமீனுடைய சந்ததியாரில் ஒருவனாகிய ஆரேதின் வேறொரு பெயராகும் (1 நாளாகமம் 8:3)."
+    },
+    {
+      "id": "aquifer/addar-person#p2-ddb1d8eb",
+      "text": "ஆரேத், ஆரேதிய என்பவற்றைக் காண்க."
+    }
+  ]
+}

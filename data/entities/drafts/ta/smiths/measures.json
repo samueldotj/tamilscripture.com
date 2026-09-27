@@ -1,0 +1,18 @@
+{
+  "id": "smiths/measures",
+  "lang": "ta",
+  "source_hash": "75c3008b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அளவுகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/measures#p1-75c3008b",
+      "text": "[நிறைகளும் அளவுகளும் காண்க]"
+    }
+  ]
+}

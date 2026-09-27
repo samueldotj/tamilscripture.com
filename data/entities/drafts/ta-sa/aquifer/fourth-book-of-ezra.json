@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/fourth-book-of-ezra",
+  "lang": "ta",
+  "source_hash": "ec7daffd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நான்காம் எஸ்றா புத்தகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/fourth-book-of-ezra#p1-88847730",
+      "text": "இது அபோக்ரிபாவைச் சேர்ந்த 2 எஸ்றா புத்தகத்திற்கு உள்ள மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/fourth-book-of-ezra#p2-1d0922f2",
+      "text": "இரண்டாம் எஸ்றா புத்தகம் காண்க; அபோக்ரிபா நூல்களையும் காண்க."
+    }
+  ]
+}

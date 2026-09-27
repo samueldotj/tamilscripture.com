@@ -1,0 +1,18 @@
+{
+  "id": "smiths/baruch-book-of",
+  "lang": "ta",
+  "source_hash": "ce085679",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாருக் ஆகமம்",
+  "paragraphs": [
+    {
+      "id": "smiths/baruch-book-of#p1-ce085679",
+      "text": "பழைய ஏற்பாட்டின் அபோக்ரிபா நூல்களில் ஒன்று. இந்நூல் யூதர்களால் மிகக் குறைவான மதிப்புள்ளதாகக் கருதப்பட்டது, மேலும் இதன் காலமும் எழுத்தாசிரியரும் மிகவும் நிச்சயமற்றவையாக இருக்கின்றன."
+    }
+  ]
+}

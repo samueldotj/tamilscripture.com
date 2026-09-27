@@ -1,0 +1,18 @@
+{
+  "id": "smiths/moon-new",
+  "lang": "ta",
+  "source_hash": "56050d51",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாதப்பிறப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/moon-new#p1-56050d51",
+      "text": "[மாதப்பிறப்பு] மாதப்பிறப்பு - 3185"
+    }
+  ]
+}

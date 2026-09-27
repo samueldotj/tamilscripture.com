@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zebulonite",
+  "lang": "ta",
+  "source_hash": "67958e0c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபுலோனியன்",
+  "paragraphs": [
+    {
+      "id": "eastons/zebulonite#p1-67958e0c",
+      "text": "செபுலோன் கோத்திரத்தைச் சேர்ந்த நியாயாதிபதியாகிய ஏலோனுக்கு இடப்பட்ட பெயர் (நியாயாதிபதிகள் 12:11, 12)."
+    }
+  ]
+}

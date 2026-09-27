@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/creeping-things",
+  "lang": "ta",
+  "source_hash": "7032cd83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊரும் பிராணிகள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/creeping-things#p1-7032cd83",
+      "text": "வயிற்றால் ஊர்ந்து செல்லும் அல்லது நான்கு அல்லது அதற்கு மேற்பட்ட கால்களால் ஊர்ந்து செல்லும் பூச்சிகள், ஊர்வன, மற்றும் சில பிற மிருகங்களைக் குறிக்கும். மிருகங்கள் (Animals) என்பதைக் காண்க."
+    }
+  ]
+}

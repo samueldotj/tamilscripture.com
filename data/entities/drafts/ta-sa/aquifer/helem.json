@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/helem",
+  "lang": "ta",
+  "source_hash": "373ede0c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலேம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/helem#p1-59b0d4d7",
+      "text": "1. ஆசேருடைய கோத்திரத்தாரில் ஒருவன் (1 நாளாகமம் 7:35), 32ஆம் வசனத்தில் ஓதாம் என்று அழைக்கப்பட்டவன்."
+    },
+    {
+      "id": "aquifer/helem#p2-ac529db9",
+      "text": "2. சகரியா 6:14ல் எல்தாய் என்பவனுக்குக் KJV ஆங்கில மொழிபெயர்ப்பு கொடுக்கும் பெயர். எல்தாய் #2 காண்க."
+    }
+  ]
+}

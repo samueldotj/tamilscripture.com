@@ -1,0 +1,18 @@
+{
+  "id": "smiths/imrah",
+  "lang": "ta",
+  "source_hash": "b8fb22bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்ரா",
+  "paragraphs": [
+    {
+      "id": "smiths/imrah#p1-b8fb22bd",
+      "text": "(பிடிவாதமுள்ளவன்), ஆசேருடைய வம்சத்தில், சோபாக் குடும்பத்தைச் சேர்ந்தவன் (1 நாளாகமம் 7:36) (கி.மு. 1445க்குப் பின்)."
+    }
+  ]
+}

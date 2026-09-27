@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gazites-the",
+  "lang": "ta",
+  "source_hash": "a8ff1c15",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காசாவின் மக்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/gazites-the#p1-a8ff1c15",
+      "text": "காசாவின் குடிமக்கள். (நியாயாதிபதிகள் 16:2)"
+    }
+  ]
+}

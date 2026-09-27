@@ -1,0 +1,18 @@
+{
+  "id": "smiths/achbor",
+  "lang": "ta",
+  "source_hash": "218a4712",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்போர்",
+  "paragraphs": [
+    {
+      "id": "smiths/achbor#p1-218a4712",
+      "text": "(எலி)."
+    }
+  ]
+}

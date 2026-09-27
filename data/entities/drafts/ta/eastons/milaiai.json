@@ -1,0 +1,18 @@
+{
+  "id": "eastons/milaiai",
+  "lang": "ta",
+  "source_hash": "d12bb828",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிலாலாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/milaiai#p1-d12bb828",
+      "text": "சொற்சுவைஞன், எருசலேமின் மதிலின் அர்ப்பணிப்பில் பங்குகொண்ட ஒரு லேவிய சங்கீதக்காரன் (நெகேமியா 12:36)."
+    }
+  ]
+}

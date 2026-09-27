@@ -1,0 +1,18 @@
+{
+  "id": "eastons/linen-yarn",
+  "lang": "ta",
+  "source_hash": "d8306653",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நூல் (Linen-yarn)",
+  "paragraphs": [
+    {
+      "id": "eastons/linen-yarn#p1-d8306653",
+      "text": "(நூல் என்பதைக் காண்க.)"
+    }
+  ]
+}

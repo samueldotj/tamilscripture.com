@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dowry",
+  "lang": "ta",
+  "source_hash": "a8d57423",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீதனம்",
+  "paragraphs": [
+    {
+      "id": "smiths/dowry#p1-a8d57423",
+      "text": "[விவாகம்]"
+    }
+  ]
+}

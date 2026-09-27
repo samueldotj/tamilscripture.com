@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ulam",
+  "lang": "ta",
+  "source_hash": "b2200cd8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊலாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/ulam#p1-b2200cd8",
+      "text": "(மண்டபம்)."
+    }
+  ]
+}

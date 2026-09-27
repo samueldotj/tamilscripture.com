@@ -1,0 +1,18 @@
+{
+  "id": "eastons/padan",
+  "lang": "ta",
+  "source_hash": "00f3e289",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பதான்",
+  "paragraphs": [
+    {
+      "id": "eastons/padan#p1-00f3e289",
+      "text": "ஒரு சமவெளி, இது ஆதியாகமம் 48:7-ல் மட்டும் காணப்படுகிறது, அங்கே அது பதான் அராமைக் குறிக்கிறது."
+    }
+  ]
+}

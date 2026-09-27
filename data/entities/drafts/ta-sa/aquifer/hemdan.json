@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hemdan",
+  "lang": "ta",
+  "source_hash": "8bd6b005",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எம்தான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hemdan#p1-8bd6b005",
+      "text": "திஷோனுடைய மகனும் சேயீரின் ஏவியனான ஒருவனின் வழித்தோன்றலும் ஆவான் (ஆதியாகமம் 36:26). இவன் 1 நாளாகமம் 1:41-ல் அம்ராம் என்றும் அழைக்கப்படுகிறான் (கேஜேவி “Amram”)."
+    }
+  ]
+}

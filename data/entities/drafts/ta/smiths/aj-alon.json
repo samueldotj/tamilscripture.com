@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aj-alon",
+  "lang": "ta",
+  "source_hash": "34c72cc4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயலோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/aj-alon#p1-34c72cc4",
+      "text": "[ஆயலோன்]"
+    }
+  ]
+}

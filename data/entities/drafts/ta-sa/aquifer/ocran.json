@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ocran",
+  "lang": "ta",
+  "source_hash": "f7ba4e15",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓகிரான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ocran#p1-f7ba4e15",
+      "text": "பாகியேலின் தகப்பன். இஸ்ரவேலர்கள் வனாந்திரத்தின் வழியாகப் பயணம் செய்த காலத்தில், பாகியேல் ஆசேர் கோத்திரத்தின் தலைவனாக இருந்தான் (எண்ணாகமம் 1:13; 2:27; 7:72, 77; 10:26)."
+    }
+  ]
+}

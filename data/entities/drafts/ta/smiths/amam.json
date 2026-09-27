@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amam",
+  "lang": "ta",
+  "source_hash": "f4e22bd0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/amam#p1-f4e22bd0",
+      "text": "(கூடும் இடம்), யூதாவின் தென்புறத்திலுள்ள ஒரு பட்டணம், செமா மற்றும் மொலாதாவுடன் யோசுவா 15:26-ல் மாத்திரம் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

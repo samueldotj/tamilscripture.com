@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jehiel",
+  "lang": "ta",
+  "source_hash": "ff9a839f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெகியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jehiel#p1-ff9a839f",
+      "text": "(தேவனால் காக்கப்பட்டவன்), முந்தினதிலிருந்து முற்றிலும் வேறுபட்ட பெயர். (தேவன் வாழ்கிறார்)."
+    }
+  ]
+}

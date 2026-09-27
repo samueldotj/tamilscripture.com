@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zia",
+  "lang": "ta",
+  "source_hash": "1168a466",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகா",
+  "paragraphs": [
+    {
+      "id": "eastons/zia#p1-1168a466",
+      "text": "பயம், ஒரு காத்தியன் (1 நாளாகமம் 5:13)."
+    }
+  ]
+}

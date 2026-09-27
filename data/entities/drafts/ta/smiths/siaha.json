@@ -1,0 +1,18 @@
+{
+  "id": "smiths/siaha",
+  "lang": "ta",
+  "source_hash": "77e2754e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீயா",
+  "paragraphs": [
+    {
+      "id": "smiths/siaha#p1-77e2754e",
+      "text": "- சீயாகா (எஸ்றா 2:44)"
+    }
+  ]
+}

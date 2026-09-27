@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kish",
+  "lang": "ta",
+  "source_hash": "c8fce225",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/kish#p1-c8fce225",
+      "text": "(ஒரு வில்)."
+    }
+  ]
+}

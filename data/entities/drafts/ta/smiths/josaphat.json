@@ -1,0 +1,18 @@
+{
+  "id": "smiths/josaphat",
+  "lang": "ta",
+  "source_hash": "1a7fc8a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசபாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/josaphat#p1-1a7fc8a4",
+      "text": "= யூதாவின் ராஜாவாகிய யோசபாத். (மத்தேயு 1:8)"
+    }
+  ]
+}

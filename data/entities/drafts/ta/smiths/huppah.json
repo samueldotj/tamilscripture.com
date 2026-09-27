@@ -1,0 +1,18 @@
+{
+  "id": "smiths/huppah",
+  "lang": "ta",
+  "source_hash": "325db040",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உப்பா",
+  "paragraphs": [
+    {
+      "id": "smiths/huppah#p1-325db040",
+      "text": "(பாதுகாக்கப்பட்டவன்), தாவீதின் காலத்தில் இருந்த ஒரு ஆசாரியன். (1 நாளாகமம் 24:13)"
+    }
+  ]
+}

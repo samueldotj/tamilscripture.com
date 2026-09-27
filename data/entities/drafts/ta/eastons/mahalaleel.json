@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mahalaleel",
+  "lang": "ta",
+  "source_hash": "e13df9bf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகலாலெயேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/mahalaleel#p1-553b1f83",
+      "text": "தேவனுடைய துதி."
+    },
+    {
+      "id": "eastons/mahalaleel#p2-da6067db",
+      "text": "(1.) சேத்தின் வம்சத்தைச் சேர்ந்த காயினானின் மகன் (ஆதியாகமம் 5:12-17); லூக்காவில் மலெலேயேல் என்று அழைக்கப்படுகிறான் (லூக்கா 3:37)."
+    },
+    {
+      "id": "eastons/mahalaleel#p3-bf9af3a7",
+      "text": "(2.) நெகேமியா 11:4, பாரேஸின் சந்ததியில் ஒருவன்."
+    }
+  ]
+}

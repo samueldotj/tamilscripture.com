@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sicyon",
+  "lang": "ta",
+  "source_hash": "8af678fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிசியோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/sicyon#p1-8af678fc",
+      "text": "(சிஷ்’எயன்), 1 மக்கபேயர் 15:23, பெலொப்பொன்னேசுவில், கொரிந்தியன் வாகனாற்றின் மேல் இருந்த ஒரு புகழ்பெற்ற கிரேக்கன் நகரம்."
+    }
+  ]
+}

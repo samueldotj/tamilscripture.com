@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azaz",
+  "lang": "ta",
+  "source_hash": "5bfa15a4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசாச்",
+  "paragraphs": [
+    {
+      "id": "smiths/azaz#p1-5bfa15a4",
+      "text": "(பலமுள்ளவன்), ரூபன் கோத்திரத்தவனாகிய பேலாவின் தகப்பன். (1 நாளாகமம் 5:8)"
+    }
+  ]
+}

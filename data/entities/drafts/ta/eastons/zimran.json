@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zimran",
+  "lang": "ta",
+  "source_hash": "93e541bb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரான்",
+  "paragraphs": [
+    {
+      "id": "eastons/zimran#p1-93e541bb",
+      "text": "திராட்சைத் தோட்டக்காரர்; கொண்டாடப்பட்டவன், ஆபிரகாமுக்கு கேத்தூராளினால் பிறந்த மகன்களில் ஒருவன் (ஆதியாகமம் 25:2)."
+    }
+  ]
+}

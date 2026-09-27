@@ -1,0 +1,18 @@
+{
+  "id": "smiths/brazen-serpent",
+  "lang": "ta",
+  "source_hash": "cc9ac425",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெண்கல சர்ப்பம்",
+  "paragraphs": [
+    {
+      "id": "smiths/brazen-serpent#p1-cc9ac425",
+      "text": "[சர்ப்பம் காண்க]"
+    }
+  ]
+}

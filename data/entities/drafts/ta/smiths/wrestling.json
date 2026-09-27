@@ -1,0 +1,18 @@
+{
+  "id": "smiths/wrestling",
+  "lang": "ta",
+  "source_hash": "b65ed4a7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோதுகுத்தல்",
+  "paragraphs": [
+    {
+      "id": "smiths/wrestling#p1-b65ed4a7",
+      "text": "[விளையாட்டுகள்]"
+    }
+  ]
+}

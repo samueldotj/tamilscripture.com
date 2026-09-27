@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/kezib",
+  "lang": "ta",
+  "source_hash": "7f7ff137",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசீப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kezib#p1-7f7ff137",
+      "text": "யூதாவின் எல்லைக்குள் இருந்த ஒரு நகரமான கெசீப் என்பதற்கு இது வேறொரு எழுத்துவடிவம் (ஆதியாகமம் 38:5)."
+    }
+  ]
+}

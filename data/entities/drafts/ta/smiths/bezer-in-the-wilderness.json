@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bezer-in-the-wilderness",
+  "lang": "ta",
+  "source_hash": "80c6d386",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வனாந்தரத்திலுள்ள பேசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bezer-in-the-wilderness#p1-80c6d386",
+      "text": "யோர்தானுக்குக் கிழக்கே இருக்கும் சமபூமியில் உள்ள ஒரு அடைக்கல நகரம். (உபாகமம் 4:43; யோசுவா 20:8; 21:36; 1 நாளாகமம் 6:78)"
+    }
+  ]
+}

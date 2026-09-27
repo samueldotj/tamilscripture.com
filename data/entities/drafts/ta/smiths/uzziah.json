@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uzziah",
+  "lang": "ta",
+  "source_hash": "ea6fdbd4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உசியா",
+  "paragraphs": [
+    {
+      "id": "smiths/uzziah#p1-ea6fdbd4",
+      "text": "(யெகோவாவின் பலம்)."
+    }
+  ]
+}

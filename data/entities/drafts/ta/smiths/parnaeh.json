@@ -1,0 +1,18 @@
+{
+  "id": "smiths/parnaeh",
+  "lang": "ta",
+  "source_hash": "c7483cb2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்னாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/parnaeh#p1-c7483cb2",
+      "text": "(மென்மையானவன்), செபுலோன் கோத்திரத்தின் பிரபுவாகிய எலிசாபானுடைய தகப்பன் அல்லது முற்பிதா. (எண்ணாகமம் 34:25) (கி.மு. 1452க்கு முன்.)"
+    }
+  ]
+}

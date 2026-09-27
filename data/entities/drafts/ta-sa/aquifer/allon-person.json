@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/allon-person",
+  "lang": "ta",
+  "source_hash": "ff1954af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்லோன் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/allon-person#p1-ff1954af",
+      "text": "சிமியோனின் கோத்திரத்தில் சீசாவின் முற்பிதா (1 நாளாகமம் 4:37)."
+    }
+  ]
+}

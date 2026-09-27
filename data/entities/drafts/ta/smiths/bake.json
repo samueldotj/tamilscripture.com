@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bake",
+  "lang": "ta",
+  "source_hash": "a72a4dab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சுடு",
+  "paragraphs": [
+    {
+      "id": "smiths/bake#p1-a72a4dab",
+      "text": "அப்பம் சுடுதலைப் பற்றிய குறிப்பு (லேவியராகமம் 26:26; 1 சாமுவேல் 8:13; 2 சாமுவேல் 13:8; எரேமியா 7:18; 37:21; ஓசியா 7:4-7) ஆகிய வசனங்களில் காணப்படுகிறது."
+    }
+  ]
+}

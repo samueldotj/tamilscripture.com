@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benzoheth",
+  "lang": "ta",
+  "source_hash": "6c7ea453",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பென்சோகேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/benzoheth#p1-6c7ea453",
+      "text": "(சோகேதின் மகன்), யூதாவின் சந்ததியார். (1 நாளாகமம் 4:20)"
+    }
+  ]
+}

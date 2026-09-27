@@ -1,0 +1,18 @@
+{
+  "id": "eastons/merib-baal",
+  "lang": "ta",
+  "source_hash": "84a7d54f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெரிபால்",
+  "paragraphs": [
+    {
+      "id": "eastons/merib-baal#p1-84a7d54f",
+      "text": "பாகாலோடு போராடுகிறவன், (1 நாளாகமம் 8:34; 9:40), வேறு இடங்களில் மேவிபோசேத் என்று அழைக்கப்பட்டவன் (2 சாமுவேல் 4:4), யோனத்தானின் மகன்."
+    }
+  ]
+}

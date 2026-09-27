@@ -1,0 +1,18 @@
+{
+  "id": "smiths/antioch",
+  "lang": "ta",
+  "source_hash": "cdfe8e3b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்தியோகியா",
+  "paragraphs": [
+    {
+      "id": "smiths/antioch#p1-cdfe8e3b",
+      "text": "(அந்தியோகுஸ் என்பதிலிருந்து)-"
+    }
+  ]
+}

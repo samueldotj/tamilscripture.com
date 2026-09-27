@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hashubah",
+  "lang": "ta",
+  "source_hash": "c07abf05",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூபா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hashubah#p1-c07abf05",
+      "text": "அசூபா செருபாபேலின் மகன்களில் ஒருவனாக இருந்தான் (1 நாளாகமம் 3:20)."
+    }
+  ]
+}

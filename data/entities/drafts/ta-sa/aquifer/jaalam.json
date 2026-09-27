@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jaalam",
+  "lang": "ta",
+  "source_hash": "c3d4bc86",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaalam#p1-e8023e85",
+      "text": "ஆதியாகமம் 36:5, 14, 18 மற்றும் 1 நாளாகமம் 1:35-ல் காணப்படும் ஏசாவின் மகனான யாலாம் என்பதற்கு கிங் யாக்கோபு வெர்ஷனில் காணப்படும் வேறுவடிவமே Jaalam."
+    },
+    {
+      "id": "aquifer/jaalam#p2-ac497370",
+      "text": "யாலாம் என்பதைக் காண்க."
+    }
+  ]
+}

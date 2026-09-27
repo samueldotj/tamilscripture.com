@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elberith",
+  "lang": "ta",
+  "source_hash": "ed0c7ab7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்பேரீத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elberith#p1-ed0c7ab7",
+      "text": "எல்பேரீத் என்பது சீகேமிலே தொழுதுகொள்ளப்பட்ட ஒரு உள்ளூர் தேவனாக இருந்தான் (நியாயாதிபதிகள் 9:46). இவன் பொதுவாக பாகால்பேரீத் என்னும் தேவனுடன் அடையாளம் காணப்படுகிறான் (நியாயாதிபதிகள் 8:33; 9:4)."
+    }
+  ]
+}

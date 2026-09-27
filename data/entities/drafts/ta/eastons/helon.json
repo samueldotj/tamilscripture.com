@@ -1,0 +1,18 @@
+{
+  "id": "eastons/helon",
+  "lang": "ta",
+  "source_hash": "7d66eca2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/helon#p1-7d66eca2",
+      "text": "பலமுள்ளவன், “செபுலோன் சந்ததிக்குப் படைத்தலைவனாக” இருந்த எலியாபின் தகப்பன் (எண்ணாகமம் 1:9; 2:7)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kiriatharba",
+  "lang": "ta",
+  "source_hash": "52dad30c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத் அர்பா",
+  "paragraphs": [
+    {
+      "id": "aquifer/kiriatharba#p1-668eda3e",
+      "text": "இது எப்ரோனுக்கு இருந்த ஒரு பழைய பெயர். இது கோத்திரப்பிதாக்களை அடக்கம் செய்த மக்பேலாவிலுள்ள கல்லறைக்கு அருகில் இருந்தது (ஆதியாகமம் 23:2; யோசுவா 14:15; நியாயாதிபதிகள் 1:10)."
+    },
+    {
+      "id": "aquifer/kiriatharba#p2-d281f509",
+      "text": "எப்ரோன் (இடம்) #1-ஐ காண்க."
+    }
+  ]
+}

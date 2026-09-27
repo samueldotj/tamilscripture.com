@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hushah",
+  "lang": "ta",
+  "source_hash": "647c3de4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உஷா",
+  "paragraphs": [
+    {
+      "id": "smiths/hushah#p1-647c3de4",
+      "text": "(விரைவு), யூதா கோத்திரத்தின் வம்ச வரலாறுகளில் காணப்படும் ஒரு பெயர் (1 நாளாகமம் 4:4)"
+    }
+  ]
+}

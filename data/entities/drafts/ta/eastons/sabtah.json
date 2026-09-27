@@ -1,0 +1,18 @@
+{
+  "id": "eastons/sabtah",
+  "lang": "ta",
+  "source_hash": "9bc53884",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/sabtah#p1-9bc53884",
+      "text": "ஓய்வு, கூஷின் மூன்றாம் மகன் (ஆதியாகமம் 10:7; 1 நாளாகமம் 1:9)."
+    }
+  ]
+}

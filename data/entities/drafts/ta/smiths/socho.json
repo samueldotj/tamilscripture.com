@@ -1,0 +1,18 @@
+{
+  "id": "smiths/socho",
+  "lang": "ta",
+  "source_hash": "a45f906a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோக்கோ",
+  "paragraphs": [
+    {
+      "id": "smiths/socho#p1-a45f906a",
+      "text": "(செழிப்பான, தழைத்த) (1 நாளாகமம் 4:18) இது யூதாவில் சோக்கோ என்று அழைக்கப்பட்ட ஊர்களில் ஒன்றாக இருக்கக்கூடும், ஆனாலும் இரண்டில் எது என்பது உறுதிசெய்யப்படவில்லை."
+    }
+  ]
+}

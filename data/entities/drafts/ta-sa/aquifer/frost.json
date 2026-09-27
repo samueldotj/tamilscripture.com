@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/frost",
+  "lang": "ta",
+  "source_hash": "92f01e65",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உறைபனி",
+  "paragraphs": [
+    {
+      "id": "aquifer/frost#p1-92f01e65",
+      "text": "உறைபனி என்பது உறைந்த நீராவி அல்லது பனி ஆகும் (சங்கீதம் 147:16; எரேமியா 36:30; சகரியா 14:6)."
+    }
+  ]
+}

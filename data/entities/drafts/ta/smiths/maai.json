@@ -1,0 +1,18 @@
+{
+  "id": "smiths/maai",
+  "lang": "ta",
+  "source_hash": "29ebd567",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/maai#p1-29ebd567",
+      "text": "(இரக்கமுள்ளவன்), எருசலேமின் மதிலைப் பிரதிஷ்டை செய்யும்போது நடந்த பரிசுத்த இசைச் சேவையில் பங்குகொண்ட ஆசாபின் புத்திரரில் ஒருவன். (நெகேமியா 12:36)"
+    }
+  ]
+}

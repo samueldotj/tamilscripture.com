@@ -1,0 +1,18 @@
+{
+  "id": "eastons/algum",
+  "lang": "ta",
+  "source_hash": "d1d913d6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்கூம்",
+  "paragraphs": [
+    {
+      "id": "eastons/algum#p1-d1d913d6",
+      "text": "(2 நாளாகமம் 2:8; 9:10, 11), அல்மூக் (1 இராஜாக்கள் 10:11) என்பதே."
+    }
+  ]
+}

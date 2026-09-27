@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hakkoz",
+  "lang": "ta",
+  "source_hash": "432d34d9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோசின்",
+  "paragraphs": [
+    {
+      "id": "eastons/hakkoz#p1-432d34d9",
+      "text": "முள் செடி; ஆசாரியர்களின் ஆசாரிய ஊழிய முறைகளில் ஒன்றின் தலைவனாக இருந்தவன் (1 நாளாகமம் 24:10)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hadar",
+  "lang": "ta",
+  "source_hash": "0179a4e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார்",
+  "paragraphs": [
+    {
+      "id": "smiths/hadar#p1-0179a4e6",
+      "text": "[ஆதாத்]"
+    }
+  ]
+}

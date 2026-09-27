@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gennesaret-lake-of",
+  "lang": "ta",
+  "source_hash": "77a37919",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனேசரேத்து கடல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/gennesaret-lake-of#p1-79e43ab9",
+      "text": "லூக்கா 5:1-ல் கலிலேயா கடலுக்கு உள்ள மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/gennesaret-lake-of#p2-fc3b8fbb",
+      "text": "கலிலேயா கடல் என்பதைக் காண்க."
+    }
+  ]
+}

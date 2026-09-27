@@ -1,0 +1,18 @@
+{
+  "id": "smiths/perida",
+  "lang": "ta",
+  "source_hash": "9e7c82bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெரிதா",
+  "paragraphs": [
+    {
+      "id": "smiths/perida#p1-9e7c82bd",
+      "text": "(தானியம், விதை), பெரிதாவின் வம்சத்தினர் செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பினார்கள். (நெகேமியா 7:57) (கி.மு. 536க்கு முன்)."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jamnia",
+  "lang": "ta",
+  "source_hash": "818f8702",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாம்னியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jamnia#p1-63d9661d",
+      "text": "யாம்னியா என்பது யூதீத் 2:28-இல் காணப்படும் யாப்னே என்பதற்கு மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/jamnia#p2-0b7aec61",
+      "text": "யாப்னே-ஐ காண்க."
+    }
+  ]
+}

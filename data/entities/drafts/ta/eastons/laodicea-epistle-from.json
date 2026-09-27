@@ -1,0 +1,18 @@
+{
+  "id": "eastons/laodicea-epistle-from",
+  "lang": "ta",
+  "source_hash": "006448d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லவோதிக்கேயாவிலிருந்து வந்த கடிதம்",
+  "paragraphs": [
+    {
+      "id": "eastons/laodicea-epistle-from#p1-006448d7",
+      "text": "(கொலோசெயர் 4:16), இது பொதுவான பரம்பலுக்காக எழுதப்பட்டதாக இருந்ததால், எபேசியருக்கு எழுதப்பட்ட கடிதமாக இருந்திருக்கக்கூடும். இது லவோதிக்கேயா வழியாக கொலோசெயருக்கு வந்திருக்கும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zenas",
+  "lang": "ta",
+  "source_hash": "3c7891c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேனா",
+  "paragraphs": [
+    {
+      "id": "eastons/zenas#p1-3c7891c8",
+      "text": "“நியாயப்பண்டிதன்” என்று அழைக்கப்பட்ட ஒரு சீடன், அவனை பவுல் தீத்துவுடனே கொண்டுவரவேண்டுமென்று விரும்பினார் (தீத்து 3:13). இவனைப் பற்றி இதற்கு மேல் ஒன்றும் அறியப்படவில்லை."
+    }
+  ]
+}

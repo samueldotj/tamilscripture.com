@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hashbaddanah",
+  "lang": "ta",
+  "source_hash": "09928445",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பதானா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hashbaddanah#p1-09928445",
+      "text": "அஸ்பதானா ஒரு லேவியனாக இருந்திருக்கக்கூடிய மனிதன். எஸ்றா நியாயப்பிரமாணத்தை மக்களுக்கு வாசித்தபோது, அவன் எஸ்றாவின் இடதுபக்கத்தில் நின்றான் (நெகேமியா 8:4)."
+    }
+  ]
+}

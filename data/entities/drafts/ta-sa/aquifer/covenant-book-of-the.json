@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/covenant-book-of-the",
+  "lang": "ta",
+  "source_hash": "8308a60a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உடன்படிக்கையின் புத்தகம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/covenant-book-of-the#p1-32222c23",
+      "text": "இது மோசேயால் பயன்படுத்தப்பட்ட ஒரு சொற்றொடராகும். இது பத்துக் கற்பனைகளையும், யாத்திராகமம் 20:22–23:33-ல் உள்ள நியாயப்பிரமாணங்களையும் குறிக்கிறது."
+    },
+    {
+      "id": "aquifer/covenant-book-of-the#p2-d22dd1e5",
+      "text": "உடன்படிக்கையின் புத்தகம் என்பதைக் காண்க."
+    }
+  ]
+}

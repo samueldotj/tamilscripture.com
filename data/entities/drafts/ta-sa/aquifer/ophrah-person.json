@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ophrah-person",
+  "lang": "ta",
+  "source_hash": "13037602",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒப்ரா (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ophrah-person#p1-13037602",
+      "text": "ஒப்ரா யூதா கோத்திரத்திலிருந்த மெயோனத்தாயின் மகன் (1 நாளாகமம் 4:14)."
+    }
+  ]
+}

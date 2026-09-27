@@ -1,0 +1,18 @@
+{
+  "id": "smiths/salt-sea-or-dead-sea",
+  "lang": "ta",
+  "source_hash": "a65a4a88",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சவக்கடல்",
+  "paragraphs": [
+    {
+      "id": "smiths/salt-sea-or-dead-sea#p1-a65a4a88",
+      "text": "[சவக்கடல் பார்க்க]"
+    }
+  ]
+}

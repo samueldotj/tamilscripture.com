@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pardon",
+  "lang": "ta",
+  "source_hash": "5f816bcc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மன்னிப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/pardon#p1-6ac0aa19",
+      "text": "ஒருவரை மன்னித்தல் என்பது அவரை மன்னித்தருளுதலைக் குறிக்கும்."
+    },
+    {
+      "id": "aquifer/pardon#p2-39e6e4f2",
+      "text": "மன்னிப்பு என்பதைக் காண்க."
+    }
+  ]
+}

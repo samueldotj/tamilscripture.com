@@ -1,0 +1,18 @@
+{
+  "id": "smiths/alamoth",
+  "lang": "ta",
+  "source_hash": "9230b483",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/alamoth#p1-9230b483",
+      "text": "(கன்னிகைகள்), (சங்கீதம் 46:1) தலைப்பு; (1 நாளாகமம் 15:20) இதை சிலர் ஒரு இசைக்கருவியைக் குறிக்கும் என்றும், மற்றவர்கள் ஒரு இசையை குறிக்கும் என்றும் விளக்குகிறார்கள்."
+    }
+  ]
+}

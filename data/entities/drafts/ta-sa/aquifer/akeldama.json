@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/akeldama",
+  "lang": "ta",
+  "source_hash": "cfbb392d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அக்கெல்தமா",
+  "paragraphs": [
+    {
+      "id": "aquifer/akeldama#p1-d3bc8469",
+      "text": "இயேசுவைக் காட்டிக்கொடுத்த பின்பு யூதாஸ் தன்னைத்தானே கொலைசெய்துகொண்ட நிலத்திற்குக் கொடுக்கப்பட்ட பெயர். இது “இரத்தநிலம்” என்று மொழிபெயர்க்கப்பட்டுள்ளது (அப்போஸ்தலருடைய நடபடிகள் 1:19)."
+    },
+    {
+      "id": "aquifer/akeldama#p2-2d48a8d1",
+      "text": "இரத்த நிலம் என்பதைக் காண்க."
+    }
+  ]
+}

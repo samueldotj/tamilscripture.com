@@ -1,0 +1,18 @@
+{
+  "id": "smiths/parmashta",
+  "lang": "ta",
+  "source_hash": "153e9ce2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்மஷ்டா",
+  "paragraphs": [
+    {
+      "id": "smiths/parmashta#p1-153e9ce2",
+      "text": "(மேலானவன்), யூதர்களால் சூசானில் கொலைசெய்யப்பட்ட ஆமானின் பத்து மகன்களில் ஒருவன். (எஸ்தர் 9:9) (கி.மு. 473.)"
+    }
+  ]
+}

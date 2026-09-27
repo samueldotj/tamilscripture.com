@@ -1,0 +1,18 @@
+{
+  "id": "smiths/socoh",
+  "lang": "ta",
+  "source_hash": "be1f9e3c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோக்கோ",
+  "paragraphs": [
+    {
+      "id": "smiths/socoh#p1-be1f9e3c",
+      "text": "யூதா கோத்திரத்தில் இருந்த இரண்டு பட்டணங்களின் பெயர்."
+    }
+  ]
+}

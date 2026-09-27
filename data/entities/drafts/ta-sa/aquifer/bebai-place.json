@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bebai-place",
+  "lang": "ta",
+  "source_hash": "8b11aeb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெபாயி (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/bebai-place#p1-8b11aeb7",
+      "text": "யூதீத் 15:4-இல் குறிப்பிடப்பட்டுள்ள, இன்னும் அடையாளம் காணப்படாத ஒரு இஸ்ரவேலிய நகரம்."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/horus",
+  "lang": "ta",
+  "source_hash": "8dc58573",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/horus#p1-6cf1d6af",
+      "text": "ஓரஸ் என்பவன் பூர்வ எகிப்திய மதத்தில் (பூர்வகாலத்தில் எகிப்தின் விசுவாச முறைமை) ஒரு தேவனாக இருந்தான். அவன் அரசாட்சியோடும் வானத்தோடும் அடிக்கடி தொடர்புபடுத்தப்பட்டான்."
+    },
+    {
+      "id": "aquifer/horus#p2-a6aca631",
+      "text": "எகிப்து, எகிப்திய (மதம்) என்பதைக் காண்க."
+    }
+  ]
+}

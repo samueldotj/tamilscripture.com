@@ -1,0 +1,18 @@
+{
+  "id": "smiths/daniel",
+  "lang": "ta",
+  "source_hash": "2c7a1a30",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தானியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/daniel#p1-2c7a1a30",
+      "text": "(தேவனுடைய நியாயத்தீர்ப்பு)."
+    }
+  ]
+}

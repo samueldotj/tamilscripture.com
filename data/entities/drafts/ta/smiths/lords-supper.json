@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lords-supper",
+  "lang": "ta",
+  "source_hash": "de189e75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்த்தருடைய இராப்போஜனம்",
+  "paragraphs": [
+    {
+      "id": "smiths/lords-supper#p1-de189e75",
+      "text": "கிறிஸ்தவ சபை தொழுதுகொள்ளும் மையமான செயலை இவ்வாறு விவரிக்கும் சொற்கள் புதிய ஏற்பாட்டில் ஒரே ஒரு பகுதியில் மட்டுமே காணப்படுகின்றன— (1 கொரிந்தியர் 11:20)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zophai",
+  "lang": "ta",
+  "source_hash": "019e50af",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/zophai#p1-019e50af",
+      "text": "(சூப்பிலிருந்து வந்தவன்), கோகாத்தியனான ஒரு லேவியன், எல்க்கானாவின் குமாரன், சாமுவேலின் முற்பிதா. (2 நாளாகமம் 6:26) (11). 35ஆம் வசனத்தில் அவன் சூப் என்று அழைக்கப்படுகிறான்."
+    }
+  ]
+}

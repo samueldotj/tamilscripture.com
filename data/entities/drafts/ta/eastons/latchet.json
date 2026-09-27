@@ -1,0 +1,18 @@
+{
+  "id": "eastons/latchet",
+  "lang": "ta",
+  "source_hash": "fef5f372",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலணி வார்",
+  "paragraphs": [
+    {
+      "id": "eastons/latchet#p1-fef5f372",
+      "text": "ஒரு வார் (அப்போஸ்தலருடைய நடபடிகள் 22:25), கயிறு, அல்லது காலில் காலணியை இணைத்துக் கட்டும் வார் (ஏசாயா 5:27; மாற்கு 1:7; லூக்கா 3:16)."
+    }
+  ]
+}

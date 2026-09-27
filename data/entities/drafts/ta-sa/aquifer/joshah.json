@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/joshah",
+  "lang": "ta",
+  "source_hash": "49f0e7c8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோஷா",
+  "paragraphs": [
+    {
+      "id": "aquifer/joshah#p1-49f0e7c8",
+      "text": "யோஷா சிமியோன் கோத்திரத்தில் ஒரு பிரபுவாக இருந்தான் (1 நாளாகமம் 4:34)."
+    }
+  ]
+}

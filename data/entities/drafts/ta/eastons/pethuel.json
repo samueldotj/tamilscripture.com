@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pethuel",
+  "lang": "ta",
+  "source_hash": "4fca4f59",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்துவேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/pethuel#p1-4fca4f59",
+      "text": "தேவனுடைய தரிசனம், தீர்க்கதரிசியாகிய யோவேலின் தகப்பன் (யோவேல் 1:1)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/belteshazzar",
+  "lang": "ta",
+  "source_hash": "ab652ebd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெல்தெஷாத்சார்",
+  "paragraphs": [
+    {
+      "id": "smiths/belteshazzar#p1-ab652ebd",
+      "text": "(பேலால் தயவு பெற்றவன்.) [தானியேல், தானியேலின் புத்தகம் காண்க]"
+    }
+  ]
+}

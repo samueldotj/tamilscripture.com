@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ozni-oznite",
+  "lang": "ta",
+  "source_hash": "f8bff806",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒஸ்னி, ஒஸ்னியர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ozni-oznite#p1-23ea752e",
+      "text": "ஒஸ்னி என்பது எஸ்போன் என்று அழைக்கப்பட்ட ஒருவனுக்கு இருந்த மற்றொரு பெயர். ஒஸ்னியர்கள் என்பது ஒஸ்னியிலிருந்து வந்த குடும்பக் குழுவாகும் (எண்ணாகமம் 26:16)."
+    },
+    {
+      "id": "aquifer/ozni-oznite#p2-91b24e39",
+      "text": "எஸ்போன் #1-ஐ காண்க."
+    }
+  ]
+}

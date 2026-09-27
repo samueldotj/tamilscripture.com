@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chiun",
+  "lang": "ta",
+  "source_hash": "09d98ac9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீயூன்",
+  "paragraphs": [
+    {
+      "id": "smiths/chiun#p1-09d98ac9",
+      "text": "(ஒரு சிலை, ஒருவேளை சனி கிரகத்தினுடையது), வனாந்திரத்தில் இஸ்ரவேலர்கள் உண்டாக்கின ஒரு விக்கிரகம். [ரெம்பான் காண்க]"
+    }
+  ]
+}

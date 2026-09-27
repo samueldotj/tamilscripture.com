@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bearbel",
+  "lang": "ta",
+  "source_hash": "29a36d08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேயார்பேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/bearbel#p1-29a36d08",
+      "text": "(தேவனுடைய நீதிமன்றத்தின் வீடு), ஓசியாவின் புத்தகத்தில் (ஓசியா 10:14) மாத்திரம் குறிப்பிடப்பட்டிருக்கிறது, அங்கே சல்மானால் அது கொள்ளையாடப்பட்டு படுகொலை செய்யப்பட்டது."
+    }
+  ]
+}

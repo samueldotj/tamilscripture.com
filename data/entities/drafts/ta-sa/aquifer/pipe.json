@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/pipe",
+  "lang": "ta",
+  "source_hash": "eaac5f06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பீப்பி",
+  "paragraphs": [
+    {
+      "id": "aquifer/pipe#p1-3e3db141",
+      "text": "பீப்பி என்பது வெவ்வேறு வகையான குழல் வடிவமான காற்று வாத்தியங்களைக் குறிக்கும் பல்வேறு எபிரெய மற்றும் கிரேக்கு வார்த்தைகளை மொழிபெயர்க்கப் பயன்படுத்தப்படும் ஒரு ஆங்கில வார்த்தை."
+    },
+    {
+      "id": "aquifer/pipe#p2-5e8a04b8",
+      "text": "இசைக்கருவிகள் என்பதைக் காண்க."
+    }
+  ]
+}

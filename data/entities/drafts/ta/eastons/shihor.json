@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shihor",
+  "lang": "ta",
+  "source_hash": "610ffe83",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீகோர்",
+  "paragraphs": [
+    {
+      "id": "eastons/shihor#p1-610ffe83",
+      "text": "கருமை, (1 நாளாகமம் 13:5), கானானின் தென்மேற்கு எல்லை, வாதி எல்-அரீஷ். (சீகோர்; நீல் நதி என்பதைக் காண்க.)"
+    }
+  ]
+}

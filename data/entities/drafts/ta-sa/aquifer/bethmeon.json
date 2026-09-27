@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethmeon",
+  "lang": "ta",
+  "source_hash": "28e2bfc1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்மெயோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethmeon#p1-dc7e58d2",
+      "text": "மெயோனுக்கு உள்ள வேறொரு பெயர், இது முதலில் ரூபனுடைய கோத்திரத்திற்குரிய ஒரு பட்டணமாக இருந்தது (எரேமியா 48:23)."
+    },
+    {
+      "id": "aquifer/bethmeon#p2-1a2daecd",
+      "text": "மெயோனைக் காண்க."
+    }
+  ]
+}

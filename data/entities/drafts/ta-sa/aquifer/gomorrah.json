@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gomorrah",
+  "lang": "ta",
+  "source_hash": "616aa7f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கொமோரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/gomorrah#p1-616aa7f3",
+      "text": "அதன் துன்மார்க்கத்தினால் தேவனால் அழிக்கப்பட்ட “பள்ளத்தாக்கின் பட்டணங்களில்” ஒன்று (ஆதி. 19). பள்ளத்தாக்கின் பட்டணங்கள்; சோதோமும் கொமோராவும் என்பதைக் காண்க."
+    }
+  ]
+}

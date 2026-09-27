@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aniam",
+  "lang": "ta",
+  "source_hash": "fa505ab3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனியாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aniam#p1-fa505ab3",
+      "text": "இஸ்ரவேலின் பன்னிரண்டு கோத்திரங்களில் ஒன்றான நப்தலி கோத்திரத்தைச் சேர்ந்த செமீதாவின் மகன். அவனுடைய பெயர் 1 நாளாகமம் 7:19-இல் பட்டியலிடப்பட்டுள்ளது."
+    }
+  ]
+}

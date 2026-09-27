@@ -1,0 +1,18 @@
+{
+  "id": "smiths/battleaxe",
+  "lang": "ta",
+  "source_hash": "27125195",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "போர்க்கோடரி",
+  "paragraphs": [
+    {
+      "id": "smiths/battleaxe#p1-27125195",
+      "text": "(எரேமியா 51:20) [குறுவடி காண்க]"
+    }
+  ]
+}

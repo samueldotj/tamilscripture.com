@@ -1,0 +1,30 @@
+{
+  "id": "aquifer/ahoah-ahohi-ahohite",
+  "lang": "ta",
+  "source_hash": "4e3a01e4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகோவா, அகோகி, அகோகியன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ahoah-ahohi-ahohite#p1-cff43439",
+      "text": "பென்யமீன் கோத்திரத்தைச் சேர்ந்த பேலாவின் ஒன்பது மகன்களில் ஒருவன் (1 நாளாகமம் 8:4)."
+    },
+    {
+      "id": "aquifer/ahoah-ahohi-ahohite#p2-4ecb01ca",
+      "text": "அகோவாவின் சந்ததியார் அகோகியர் என்று அழைக்கப்பட்டனர், அவர்களில் இருவர் தாவீது ராஜாவின் மிகச் சிறந்த வலிமையான வீரர்களில் இருந்தனர்:"
+    },
+    {
+      "id": "aquifer/ahoah-ahohi-ahohite#p3-2c72df57",
+      "text": "தோதோ (“அகோகியனான... மகன்,” 2 சாமுவேல் 23:9; 1 நாளாகமம் 27:4-இல் “தோதாயி” என்று எழுதப்பட்டுள்ளது)"
+    },
+    {
+      "id": "aquifer/ahoah-ahohi-ahohite#p4-ad42cdcd",
+      "text": "அகோகியனான சல்மோன் (2 சாமுவேல் 23:28; இவன் 1 நாளாகமம் 11:29-இல் “ஈலாய்” என்று அழைக்கப்படுகிறான்)"
+    }
+  ]
+}

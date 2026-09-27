@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jehdeiah",
+  "lang": "ta",
+  "source_hash": "e86a3f21",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எகேதியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jehdeiah#p1-3b502daf",
+      "text": "1. சூபவேலின் மகன், தாவீதின் காலத்தில் இருந்த லேவியன் (1 நாளாகமம் 24:20)."
+    },
+    {
+      "id": "aquifer/jehdeiah#p2-6f58ee4d",
+      "text": "2. மெரோனோத்தியனாகிய அரச விசாரணைக்காரன், தாவீதின் கழுதைகளின் மேல் விசாரணை செய்தவன் (1 நாளாகமம் 27:30)."
+    }
+  ]
+}

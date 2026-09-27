@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/potters-field",
+  "lang": "ta",
+  "source_hash": "8cfeb3cf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குயவனுடைய நிலம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/potters-field#p1-cd329e87",
+      "text": "எருசலேமுக்கு வெளியே இருந்த ஒரு புதைகுழிநிலத்தின் பெயர் (மத்தேயு 27:7, 10)."
+    },
+    {
+      "id": "aquifer/potters-field#p2-2d48a8d1",
+      "text": "இரத்தத்தின் நிலம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kesalon",
+  "lang": "ta",
+  "source_hash": "5b9f274a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெசலோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/kesalon#p1-ac5ccbaa",
+      "text": "தாணுடைய எல்லைக்கு அருகில் யூதாவின் வடபகுதியில் இருந்த கெசலோனாகிய பட்டணத்திற்கு இன்னொரு எழுத்துவடிவம் (யோசுவா 15:10)."
+    },
+    {
+      "id": "aquifer/kesalon#p2-9f3c0e61",
+      "text": "கெசலோனையும் காண்க."
+    }
+  ]
+}

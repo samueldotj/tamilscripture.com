@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jewish",
+  "lang": "ta",
+  "source_hash": "eb67bc21",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூத",
+  "paragraphs": [
+    {
+      "id": "smiths/jewish#p1-eb67bc21",
+      "text": "யூதர்களுடையது அல்லது யூதர்களுக்குச் சொந்தமானது; அவர்களுடைய ரபீக்களின் புராணக் கட்டுக்கதைகளுக்குப் பயன்படுத்தப்படும் ஒரு பெயர். (தீத்து 1:14)"
+    }
+  ]
+}

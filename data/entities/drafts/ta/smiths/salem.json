@@ -1,0 +1,18 @@
+{
+  "id": "smiths/salem",
+  "lang": "ta",
+  "source_hash": "d90fa4ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாலேம்",
+  "paragraphs": [
+    {
+      "id": "smiths/salem#p1-d90fa4ee",
+      "text": "(சமாதானம்)."
+    }
+  ]
+}

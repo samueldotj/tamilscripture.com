@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zaphon",
+  "lang": "ta",
+  "source_hash": "c480e99a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாபோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/zaphon#p1-c480e99a",
+      "text": "(வடக்கு), காத் கோத்திரத்தின் சுதந்தரப் பங்கின் விவரிப்பில் குறிப்பிடப்பட்டிருக்கிற ஒரு இடம். (யோசுவா 13:27)"
+    }
+  ]
+}

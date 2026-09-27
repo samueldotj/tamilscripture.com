@@ -1,0 +1,18 @@
+{
+  "id": "smiths/amok",
+  "lang": "ta",
+  "source_hash": "31a18a2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோக்",
+  "paragraphs": [
+    {
+      "id": "smiths/amok#p1-31a18a2b",
+      "text": "செருபாபேலுடன் திரும்பி வந்த ஒரு ஆசாரியன். (நெகேமியா 12:7,20) (கி.மு. 536.)"
+    }
+  ]
+}

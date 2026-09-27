@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pottage",
+  "lang": "ta",
+  "source_hash": "dc92b414",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூழ்",
+  "paragraphs": [
+    {
+      "id": "smiths/pottage#p1-dc92b414",
+      "text": "[பருப்பு வகைகள் காண்க]"
+    }
+  ]
+}

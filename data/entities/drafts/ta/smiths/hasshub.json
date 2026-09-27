@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hasshub",
+  "lang": "ta",
+  "source_hash": "d1084eed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூப்",
+  "paragraphs": [
+    {
+      "id": "smiths/hasshub#p1-d1084eed",
+      "text": "[அசூப் காண்க]"
+    }
+  ]
+}

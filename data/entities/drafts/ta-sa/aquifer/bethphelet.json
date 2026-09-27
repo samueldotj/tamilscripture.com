@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bethphelet",
+  "lang": "ta",
+  "source_hash": "2971f9ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்பெலேத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethphelet#p1-57eb846d",
+      "text": "யாக்கோபு அரசரின் மொழிபெயர்ப்பில் காணப்படும் பெத்பெலேத் என்பதன் எழுத்துப் பிரதிபேதம், இது யூதாவின் நாட்டில் இருந்த ஒரு பட்டணமாகும் (நெகேமியா 11:26)."
+    },
+    {
+      "id": "aquifer/bethphelet#p2-82f51805",
+      "text": "பெத்பெலேத் என்பதைக் காண்க."
+    }
+  ]
+}

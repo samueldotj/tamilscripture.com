@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dannah",
+  "lang": "ta",
+  "source_hash": "64b1cb70",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தன்னா",
+  "paragraphs": [
+    {
+      "id": "eastons/dannah#p1-64b1cb70",
+      "text": "முறுமுறுத்தல், யூதாவின் மலைநாட்டிலே எப்ரோனுக்கு தென்மேற்கே சுமார் 8 மைல் தூரத்தில் இருந்த ஒரு பட்டணம் (யோசுவா 15:49)."
+    }
+  ]
+}

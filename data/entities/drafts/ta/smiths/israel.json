@@ -1,0 +1,18 @@
+{
+  "id": "smiths/israel",
+  "lang": "ta",
+  "source_hash": "57a75c89",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்ரவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/israel#p1-57a75c89",
+      "text": "(தேவனோடு மேற்கொள்ளும் அதிபதி)."
+    }
+  ]
+}

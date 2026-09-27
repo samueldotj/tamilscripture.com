@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliada",
+  "lang": "ta",
+  "source_hash": "6d9b0cb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாதா",
+  "paragraphs": [
+    {
+      "id": "smiths/eliada#p1-6d9b0cb6",
+      "text": "(தேவனால் அறியப்பட்டவன்)."
+    }
+  ]
+}

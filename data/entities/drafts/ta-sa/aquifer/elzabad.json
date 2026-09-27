@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/elzabad",
+  "lang": "ta",
+  "source_hash": "d6b39724",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்சபாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/elzabad#p1-847b1a57",
+      "text": "1. சிக்லாகில் தாவீதிடம் சேர்ந்த காத் கோத்திரத்தைச் சேர்ந்த ஒரு படைத் தலைவன் (1 நாளாகமம் 12:12)."
+    },
+    {
+      "id": "aquifer/elzabad#p2-adae944e",
+      "text": "2. ஓபேத்ஏதோமின் வம்சத்தைச் சேர்ந்த கோராகியனாகிய லேவியன், பரிசுத்த ஸ்தலத்தின் வாசல் காவற்காரனாக இருந்தான் (1 நாளாகமம் 26:7)."
+    }
+  ]
+}

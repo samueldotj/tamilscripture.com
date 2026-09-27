@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/arni",
+  "lang": "ta",
+  "source_hash": "bdb03251",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்னி",
+  "paragraphs": [
+    {
+      "id": "aquifer/arni#p1-bdb03251",
+      "text": "லூக்கா இயேசுவின் மூதாதையர் பட்டியலின்படி இயேசுவின் ஒரு மூதாதை (லூக்கா 3:33). அர்னி என்பவர் ரூத் 4:19 மற்றும் 1 நாளாகமம் 2:9-10 ஆகிய வசனங்களில் ராம் என்றும் அழைக்கப்படுகிறார்."
+    }
+  ]
+}

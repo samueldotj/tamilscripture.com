@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jecoliah",
+  "lang": "ta",
+  "source_hash": "3a94225b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எக்கோலியாள்",
+  "paragraphs": [
+    {
+      "id": "smiths/jecoliah#p1-3a94225b",
+      "text": "எக்கோலியாள் என்பதே இது. (2 நாளாகமம் 26:3)"
+    }
+  ]
+}

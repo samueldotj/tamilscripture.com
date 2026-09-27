@@ -1,0 +1,18 @@
+{
+  "id": "eastons/elishaphat",
+  "lang": "ta",
+  "source_hash": "42f8a62b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிஷாபாத்",
+  "paragraphs": [
+    {
+      "id": "eastons/elishaphat#p1-42f8a62b",
+      "text": "தேவன் நியாயம் தீர்த்தவன், அத்தாலியாளுடைய அரசுபறிப்பைக் கவிழ்க்கும் உடன்படிக்கையில் யோய்தாவுடன் இணைந்திருந்த “நூறுபேருக்கு அதிபதிகளில்” ஒருவன் (2 நாளாகமம் 23:1)."
+    }
+  ]
+}

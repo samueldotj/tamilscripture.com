@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliel",
+  "lang": "ta",
+  "source_hash": "4a06217b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliel#p1-4a06217b",
+      "text": "(எவனுக்கு தேவனே பலம் ஆகிறார்)."
+    }
+  ]
+}

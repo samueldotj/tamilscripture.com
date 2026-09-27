@@ -1,0 +1,18 @@
+{
+  "id": "smiths/josias",
+  "lang": "ta",
+  "source_hash": "44f8ca81",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசியாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/josias#p1-44f8ca81",
+      "text": "யூதாவின் ராஜாவாகிய யோசியா. (மத்தேயு 1:10,11)"
+    }
+  ]
+}

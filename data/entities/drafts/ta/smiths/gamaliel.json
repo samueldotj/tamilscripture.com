@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gamaliel",
+  "lang": "ta",
+  "source_hash": "d7d0bff7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கமாலியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/gamaliel#p1-d7d0bff7",
+      "text": "(தேவனுடைய பலன்)."
+    }
+  ]
+}

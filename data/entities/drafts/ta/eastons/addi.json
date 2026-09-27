@@ -1,0 +1,18 @@
+{
+  "id": "eastons/addi",
+  "lang": "ta",
+  "source_hash": "b880c3d1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தி",
+  "paragraphs": [
+    {
+      "id": "eastons/addi#p1-b880c3d1",
+      "text": "அலங்காரம், (லூக்கா 3:28), கோசாமின் குமாரன், மெல்கியின் தகப்பன், கிறிஸ்துவின் மூதாதையருள் ஒருவன்."
+    }
+  ]
+}

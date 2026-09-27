@@ -1,0 +1,18 @@
+{
+  "id": "smiths/emmor",
+  "lang": "ta",
+  "source_hash": "dcef8380",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எம்மோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/emmor#p1-dcef8380",
+      "text": "(கழுதை), சீகேமின் தகப்பன். (அப்போஸ்தலருடைய நடபடிகள் 7:16) [ஏமோர்]"
+    }
+  ]
+}

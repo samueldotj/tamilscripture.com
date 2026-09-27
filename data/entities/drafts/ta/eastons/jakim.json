@@ -1,0 +1,30 @@
+{
+  "id": "eastons/jakim",
+  "lang": "ta",
+  "source_hash": "2b9e924e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/jakim#p1-c5d89dc4",
+      "text": "ஸ்தாபிக்கிறவர்."
+    },
+    {
+      "id": "eastons/jakim#p2-07a2726a",
+      "text": "(1.) பன்னிரெண்டாவது ஆசாரிய வகுப்பின் தலைவன் (1 நாளாகமம் 24:12)."
+    },
+    {
+      "id": "eastons/jakim#p3-2c584bef",
+      "text": "(2.) ஒரு பென்யமீனியன் (1 நாளாகமம் 8:19)."
+    },
+    {
+      "id": "eastons/jakim#p4-c8d10c20",
+      "text": "(3.) மத்தேயு 1:11-ல் உள்ள ஓரமான குறிப்பு யோயாக்கீமைக் குறிக்கிறது."
+    }
+  ]
+}

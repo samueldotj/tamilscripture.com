@@ -1,0 +1,18 @@
+{
+  "id": "smiths/barjesus",
+  "lang": "ta",
+  "source_hash": "5473b7da",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்யேசு",
+  "paragraphs": [
+    {
+      "id": "smiths/barjesus#p1-5473b7da",
+      "text": "(இயேசுவின் மகன்). [எலிமா காண்க]"
+    }
+  ]
+}

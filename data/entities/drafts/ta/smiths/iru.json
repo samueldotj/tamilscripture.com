@@ -1,0 +1,18 @@
+{
+  "id": "smiths/iru",
+  "lang": "ta",
+  "source_hash": "fc4a1931",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈரு",
+  "paragraphs": [
+    {
+      "id": "smiths/iru#p1-fc4a1931",
+      "text": "(காவல்), எப்புன்னேயின் மகனாகிய பெரிய காலேபின் மூத்த மகன். (1 நாளாகமம் 4:15) (கி.மு. 1451.)"
+    }
+  ]
+}

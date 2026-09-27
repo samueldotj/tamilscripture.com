@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nahash",
+  "lang": "ta",
+  "source_hash": "47d43f13",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாகாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/nahash#p1-47d43f13",
+      "text": "(பாம்பு)."
+    }
+  ]
+}

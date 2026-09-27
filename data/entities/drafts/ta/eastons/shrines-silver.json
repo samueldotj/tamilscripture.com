@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shrines-silver",
+  "lang": "ta",
+  "source_hash": "ffd55c4e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வெள்ளிக் கோவில்கள்",
+  "paragraphs": [
+    {
+      "id": "eastons/shrines-silver#p1-ffd55c4e",
+      "text": "எபேசுவின் தியானாளின் ஆலயத்தையும் சிலையையும் ஒத்த சிறிய மாதிரிகளும் நினைவுச்சின்னங்களும் (அப்போஸ்தலருடைய நடபடிகள் 19:24). இவற்றைச் செய்யும் தொழில் மிகவும் பெரிய, ஆதாயமுள்ள வியாபாரமாக இருந்தது."
+    }
+  ]
+}

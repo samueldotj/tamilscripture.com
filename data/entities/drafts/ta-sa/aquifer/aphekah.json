@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/aphekah",
+  "lang": "ta",
+  "source_hash": "81662b20",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆப்பெக்கா",
+  "paragraphs": [
+    {
+      "id": "aquifer/aphekah#p1-81662b20",
+      "text": "கானானின் மலைநாட்டில் இருந்த ஒரு பட்டணம். வாக்குத்தத்த தேசத்தை கட்டிக்கொண்ட பின்பு யோசுவா இதை யூதாவின் கோத்திரத்திற்குக் கொடுத்தார் (யோசுவா 15:53)."
+    }
+  ]
+}

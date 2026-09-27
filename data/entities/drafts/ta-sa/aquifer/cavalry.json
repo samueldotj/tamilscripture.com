@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cavalry",
+  "lang": "ta",
+  "source_hash": "adefe974",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "குதிரைப்படை",
+  "paragraphs": [
+    {
+      "id": "aquifer/cavalry#p1-92098e28",
+      "text": "குதிரைகளின்மேல் ஏறிக்கொண்டு யுத்தம் செய்கிற போர்வீரர்கள்."
+    },
+    {
+      "id": "aquifer/cavalry#p2-b932fad8",
+      "text": "போர் என்பதைக் காண்க."
+    }
+  ]
+}

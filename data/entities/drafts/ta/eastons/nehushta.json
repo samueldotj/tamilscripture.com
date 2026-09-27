@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nehushta",
+  "lang": "ta",
+  "source_hash": "353706c1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெகுஸ்தாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/nehushta#p1-353706c1",
+      "text": "செம்பு (அர்த்தம்), எருசலேமைச் சேர்ந்த எல்நாத்தானின் மகளும், யூதாவின் ராஜாவாகிய யோயாக்கீனின் மனைவியும் ஆவாள் (2 இராஜாக்கள் 24:8)."
+    }
+  ]
+}

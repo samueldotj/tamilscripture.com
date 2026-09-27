@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mizpeh",
+  "lang": "ta",
+  "source_hash": "e5962bb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸ்பே",
+  "paragraphs": [
+    {
+      "id": "aquifer/mizpeh#p1-f98fba69",
+      "text": "மிஸ்பே என்பது மிஸ்பாவுக்கு (யோசுவா 11:3, 8; 15:38; 18:26) இன்னொரு எழுத்துவடிவமாகும்."
+    },
+    {
+      "id": "aquifer/mizpeh#p2-8352284a",
+      "text": "மிஸ்பாவைக் காண்க."
+    }
+  ]
+}

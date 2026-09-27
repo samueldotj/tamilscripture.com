@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aphik",
+  "lang": "ta",
+  "source_hash": "d9fbeff8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆப்பீக்",
+  "paragraphs": [
+    {
+      "id": "smiths/aphik#p1-d9fbeff8",
+      "text": "(பலமான), கானானியர்கள் துரத்திவிடப்படாத ஆசேருடைய ஒரு பட்டணம். (நியாயாதிபதிகள் 1:31) இது ஆப்பெக், 2 என்பதே இதே இடமாக இருக்கக்கூடும்."
+    }
+  ]
+}

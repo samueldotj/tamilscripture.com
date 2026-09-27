@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ahimaaz",
+  "lang": "ta",
+  "source_hash": "c3a0f0f8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகிமாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/ahimaaz#p1-c3a0f0f8",
+      "text": "(கோபத்தின் சகோதரன்)."
+    }
+  ]
+}

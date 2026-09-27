@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pas-dammim",
+  "lang": "ta",
+  "source_hash": "2748df3e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாஸ்தம்மீம்",
+  "paragraphs": [
+    {
+      "id": "eastons/pas-dammim#p1-2748df3e",
+      "text": "இரத்தத்தின் எல்லை = பெலிஸ்தர்கள் (காண்க), சோக்கோவுக்கும் அசெக்காவுக்கும் நடுவே (1 சாமுவேல் 17:1; 1 நாளாகமம் 11:13)."
+    }
+  ]
+}

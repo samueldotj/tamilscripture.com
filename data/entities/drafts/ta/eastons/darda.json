@@ -1,0 +1,18 @@
+{
+  "id": "eastons/darda",
+  "lang": "ta",
+  "source_hash": "e9778b5a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தர்தா",
+  "paragraphs": [
+    {
+      "id": "eastons/darda#p1-e9778b5a",
+      "text": "ஞானத்தின் முத்து, ஞானத்தினால் புகழ்பெற்ற நான்கு பேரில் ஒருவன், ஆனாலும் சாலொமோன் அவனை மிஞ்சினான் (1 இராஜாக்கள் 4:31)."
+    }
+  ]
+}

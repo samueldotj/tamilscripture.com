@@ -1,0 +1,18 @@
+{
+  "id": "smiths/chain",
+  "lang": "ta",
+  "source_hash": "26170a44",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சங்கிலி",
+  "paragraphs": [
+    {
+      "id": "smiths/chain#p1-26170a44",
+      "text": "சங்கிலிகள் பயன்படுத்தப்பட்டன,"
+    }
+  ]
+}

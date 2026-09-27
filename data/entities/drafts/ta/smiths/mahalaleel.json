@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mahalaleel",
+  "lang": "ta",
+  "source_hash": "c4c8f908",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மகலாலெயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/mahalaleel#p1-c4c8f908",
+      "text": "(தேவனுடைய துதி)."
+    }
+  ]
+}

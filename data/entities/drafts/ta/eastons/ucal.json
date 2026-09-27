@@ -1,0 +1,18 @@
+{
+  "id": "eastons/ucal",
+  "lang": "ta",
+  "source_hash": "7201f936",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊகால்",
+  "paragraphs": [
+    {
+      "id": "eastons/ucal#p1-7201f936",
+      "text": "ஆகூரினுடைய வசனங்கள் யாருக்குச் சொல்லப்பட்டதோ அந்த மனிதனின் பெயர் (நீதிமொழிகள் 30:1)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abila",
+  "lang": "ta",
+  "source_hash": "c9048d24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபீலா",
+  "paragraphs": [
+    {
+      "id": "smiths/abila#p1-c9048d24",
+      "text": "[அபிலேனே]"
+    }
+  ]
+}

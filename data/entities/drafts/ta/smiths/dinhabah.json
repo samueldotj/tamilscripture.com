@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dinhabah",
+  "lang": "ta",
+  "source_hash": "75344a2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தின்காபா",
+  "paragraphs": [
+    {
+      "id": "smiths/dinhabah#p1-75344a2b",
+      "text": "(ஆதியாகமம் 36:32; 1 நாளாகமம் 1:43) ஏதோமின் இராஜாவாகிய பேயோருடைய மகன் பேலாவின் தலைநகரமும், அவன் பிறந்த இடமாகவும் இருந்திருக்கக்கூடிய பட்டணம்."
+    }
+  ]
+}

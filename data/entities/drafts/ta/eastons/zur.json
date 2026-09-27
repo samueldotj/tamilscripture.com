@@ -1,0 +1,26 @@
+{
+  "id": "eastons/zur",
+  "lang": "ta",
+  "source_hash": "e79d12f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூர்",
+  "paragraphs": [
+    {
+      "id": "eastons/zur#p1-cd1b79a7",
+      "text": "கன்மலை."
+    },
+    {
+      "id": "eastons/zur#p2-4c321328",
+      "text": "(1.) இஸ்ரவேலர்கள் தோற்கடித்துக் கொன்றுபோட்ட ஐந்து மீதியானிய ராஜாக்களில் ஒருவன் (எண்ணாகமம் 31:8)."
+    },
+    {
+      "id": "eastons/zur#p3-cf352700",
+      "text": "(2.) ஒரு பென்யமீனியன் (1 நாளாகமம் 8:30)."
+    }
+  ]
+}

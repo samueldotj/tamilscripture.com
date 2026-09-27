@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lamech",
+  "lang": "ta",
+  "source_hash": "4fe45844",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாமேக்கு",
+  "paragraphs": [
+    {
+      "id": "smiths/lamech#p1-4fe45844",
+      "text": "(வலிமையுள்ளவன்), சரியாகச் சொன்னால் Lemech."
+    }
+  ]
+}

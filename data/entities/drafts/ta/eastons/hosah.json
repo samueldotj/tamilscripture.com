@@ -1,0 +1,26 @@
+{
+  "id": "eastons/hosah",
+  "lang": "ta",
+  "source_hash": "ac4e73b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசா",
+  "paragraphs": [
+    {
+      "id": "eastons/hosah#p1-c1db5562",
+      "text": "அடைக்கலம்."
+    },
+    {
+      "id": "eastons/hosah#p2-1ea8fc9f",
+      "text": "(1.) ஆசேர் கோத்திரத்தின் எல்லையில் இருந்த ஒரு இடம் (யோசுவா 19:29), சீதோனுக்குச் சற்று தெற்கே."
+    },
+    {
+      "id": "eastons/hosah#p3-02a8d119",
+      "text": "(2.) மெராரியின் வம்சத்தைச் சேர்ந்த ஒரு லேவியன் (1 நாளாகமம் 16:38)."
+    }
+  ]
+}

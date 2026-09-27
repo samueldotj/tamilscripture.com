@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kedron",
+  "lang": "ta",
+  "source_hash": "54d0e8c0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதரோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/kedron#p1-54d0e8c0",
+      "text": "சரியாகச் சொன்னால் கீதரோன். [கீதரோன், அல்லது கெதரோன் காண்க]"
+    }
+  ]
+}

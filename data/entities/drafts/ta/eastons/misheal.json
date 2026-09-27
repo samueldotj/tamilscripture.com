@@ -1,0 +1,18 @@
+{
+  "id": "eastons/misheal",
+  "lang": "ta",
+  "source_hash": "1077ddcf",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஷயால்",
+  "paragraphs": [
+    {
+      "id": "eastons/misheal#p1-1077ddcf",
+      "text": "(யோசுவா 19:26), ஆசேருடைய ஒரு பட்டணம், ஒருவேளை மாஷாலைப் போன்றது."
+    }
+  ]
+}

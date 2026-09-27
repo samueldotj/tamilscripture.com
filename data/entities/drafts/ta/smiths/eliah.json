@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliah",
+  "lang": "ta",
+  "source_hash": "d4340813",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியா",
+  "paragraphs": [
+    {
+      "id": "smiths/eliah#p1-d4340813",
+      "text": "(என் தேவன் யெகோவா)."
+    }
+  ]
+}

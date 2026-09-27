@@ -1,0 +1,18 @@
+{
+  "id": "smiths/teil-tree",
+  "lang": "ta",
+  "source_hash": "e38c3988",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேவதாரு மரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/teil-tree#p1-e38c3988",
+      "text": "[கர்வாலிமரம் காண்க]"
+    }
+  ]
+}

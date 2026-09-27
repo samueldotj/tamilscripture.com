@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/matthan",
+  "lang": "ta",
+  "source_hash": "1f054db9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/matthan#p1-05fbfef9",
+      "text": "இயேசுவின் முற்பிதாக்களில் ஒருவன் (மத்தேயு 1:15). இவனே லூக்கா 3:24-இல் குறிப்பிடப்பட்டுள்ள மாத்தாத்தாக இருக்கலாம்."
+    },
+    {
+      "id": "aquifer/matthan#p2-28052238",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு காண்க."
+    }
+  ]
+}

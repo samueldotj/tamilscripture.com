@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hammelech",
+  "lang": "ta",
+  "source_hash": "62f9b128",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மெலேக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hammelech#p1-62f9b128",
+      "text": "“அரசன்” என்று பொருள்படும் எபிரெய வார்த்தை, இதை கேஜேவி (KJV) மொழிபெயர்ப்பு ஒரு நபரின் பெயராகக் கருதியது, ஆனால் மற்ற மொழிபெயர்ப்புகள் இதை “அரசன்” என்று மிகச் சரியாக மொழிபெயர்த்துள்ளன (எரேமியா 36:26; 38:6)."
+    }
+  ]
+}

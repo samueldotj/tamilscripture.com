@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/chusi",
+  "lang": "ta",
+  "source_hash": "bfdb832a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூஷி",
+  "paragraphs": [
+    {
+      "id": "aquifer/chusi#p1-bfdb832a",
+      "text": "கூஷி என்பது அக்ராபாவுக்கு அருகில் மொக்மூர் நதிக்கு அருகில் இருந்த ஒரு இடமாகும் (யூதீத் 7:18). இது இன்றைய இஸ்ரவேலில் உள்ள நாப்லுஸின் தெற்கே அமைந்திருந்தது எனக் கருதப்படுகிறது."
+    }
+  ]
+}

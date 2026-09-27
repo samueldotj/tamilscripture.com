@@ -1,0 +1,18 @@
+{
+  "id": "eastons/spicery",
+  "lang": "ta",
+  "source_hash": "c61b714a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நறுமணப்பொருள்",
+  "paragraphs": [
+    {
+      "id": "eastons/spicery#p1-c61b714a",
+      "text": "எபிரெயு. nechoth (நேகோத்), அரபு naka’at உடன் அடையாளம் காணப்படுகிறது, இது astralagus எனும் செடியிலிருந்து பெறப்படும் tragacanth எனும் பசை ஆகும், இதன் இருபது வகைகள் பாலஸ்தீனத்தில் காணப்படுகின்றன. வர்த்தக tragacanth, A. tragacantha என்பதிலிருந்து பெறப்படுகிறது. “வெயிலின் வெப்பத்தினால் இலைகள், முள்கள், மற்றும் கிளைகளின் நுனிகளில் இந்தப் பசை மிகுதியாகக் கசிகிறது.”"
+    }
+  ]
+}

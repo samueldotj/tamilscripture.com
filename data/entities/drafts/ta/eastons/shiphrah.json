@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shiphrah",
+  "lang": "ta",
+  "source_hash": "eaa152b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிப்பிராள்",
+  "paragraphs": [
+    {
+      "id": "eastons/shiphrah#p1-eaa152b4",
+      "text": "அழகு, எகிப்திய மருத்துவச்சிகளில் ஒருத்தி (யாத். 1:15)."
+    }
+  ]
+}

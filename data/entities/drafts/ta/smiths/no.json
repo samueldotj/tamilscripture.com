@@ -1,0 +1,18 @@
+{
+  "id": "smiths/no",
+  "lang": "ta",
+  "source_hash": "9125d587",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோ",
+  "paragraphs": [
+    {
+      "id": "smiths/no#p1-9125d587",
+      "text": "[நோ-அம்மோன்]"
+    }
+  ]
+}

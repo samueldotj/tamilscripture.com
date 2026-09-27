@@ -1,0 +1,18 @@
+{
+  "id": "smiths/possession",
+  "lang": "ta",
+  "source_hash": "47e4e18b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆவியால் பிடிக்கப்பட்டவர்",
+  "paragraphs": [
+    {
+      "id": "smiths/possession#p1-47e4e18b",
+      "text": "[பிசாசு பிடித்தவர்கள் காண்க]"
+    }
+  ]
+}

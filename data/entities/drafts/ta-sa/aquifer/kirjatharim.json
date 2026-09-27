@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kirjatharim",
+  "lang": "ta",
+  "source_hash": "956f33fb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கீரியாத்யாரீம் (Kirjath-arim)",
+  "paragraphs": [
+    {
+      "id": "aquifer/kirjatharim#p1-dbd03147",
+      "text": "Kirjath-arim என்பது எஸ்றா 2:25-ல் காணப்படும் கீரியாத்யாரீமிற்கு மற்றொரு பெயரான Kiriatharim என்பதன் கிங் யாக்கோபு மொழிபெயர்ப்பு வடிவமாகும்."
+    },
+    {
+      "id": "aquifer/kirjatharim#p2-17ae20b7",
+      "text": "கீரியாத்யாரீம் என்பதைக் காண்க."
+    }
+  ]
+}

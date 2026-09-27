@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elmodam",
+  "lang": "ta",
+  "source_hash": "9bd7cbb7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்மோதாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/elmodam#p1-9bd7cbb7",
+      "text": "(அளவு), யோசேப்புக்கு உரிய வம்ச அட்டவணையில் ஏர் என்பவனுடைய குமாரன். (லூக்கா 3:28)"
+    }
+  ]
+}

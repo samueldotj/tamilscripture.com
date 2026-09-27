@@ -1,0 +1,18 @@
+{
+  "id": "smiths/areopagite",
+  "lang": "ta",
+  "source_hash": "b8acf3df",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மார்ஸ் மேடையானவன்",
+  "paragraphs": [
+    {
+      "id": "smiths/areopagite#p1-b8acf3df",
+      "text": "மார்ஸ் மேடையின் நியாயஸ்தலத்தில் ஒரு உறுப்பினர். (அப்போஸ்தலருடைய நடபடிகள் 17:31) [மார்ஸ் மேடை காண்க]"
+    }
+  ]
+}

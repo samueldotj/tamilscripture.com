@@ -1,0 +1,18 @@
+{
+  "id": "smiths/neri",
+  "lang": "ta",
+  "source_hash": "154c6578",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேரி",
+  "paragraphs": [
+    {
+      "id": "smiths/neri#p1-154c6578",
+      "text": "நேரியா (யெகோவா என் விளக்கு) என்பதன் சுருக்க வடிவம், மெல்கியின் மகனும் சலாத்தியேலின் தகப்பனும், கிறிஸ்துவின் வம்சவரலாற்றில்."
+    }
+  ]
+}

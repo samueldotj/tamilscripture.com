@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/calno",
+  "lang": "ta",
+  "source_hash": "ee90dc32",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்னோ",
+  "paragraphs": [
+    {
+      "id": "aquifer/calno#p1-5aba4ccd",
+      "text": "வட சீரியாவிலுள்ள ஒரு பட்டணமான கல்னேவிற்கு வேறொரு பெயர் (ஏசாயா 10:9)."
+    },
+    {
+      "id": "aquifer/calno#p2-76b68096",
+      "text": "கல்னே #2-ஐக் காண்க."
+    }
+  ]
+}

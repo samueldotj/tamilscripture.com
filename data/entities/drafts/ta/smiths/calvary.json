@@ -1,0 +1,18 @@
+{
+  "id": "smiths/calvary",
+  "lang": "ta",
+  "source_hash": "af69a4fc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கல்வாரி",
+  "paragraphs": [
+    {
+      "id": "smiths/calvary#p1-af69a4fc",
+      "text": "[கொல்கொதா காண்க]"
+    }
+  ]
+}

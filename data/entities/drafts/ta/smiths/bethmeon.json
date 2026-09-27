@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethmeon",
+  "lang": "ta",
+  "source_hash": "82639e6a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்மெயோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethmeon#p1-82639e6a",
+      "text": "(எரேமியா 48:23) பெத்பாகால்மெயோன் என்பதன் சுருக்கமான வடிவம்."
+    }
+  ]
+}

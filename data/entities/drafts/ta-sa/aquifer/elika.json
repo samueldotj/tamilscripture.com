@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/elika",
+  "lang": "ta",
+  "source_hash": "b6ac6a07",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிக்கா",
+  "paragraphs": [
+    {
+      "id": "aquifer/elika#p1-b6ac6a07",
+      "text": "ஆரோதியனாகிய இவன், தாவீது ராஜாவின் பராக்கிரமசாலிகளில் ஒருவனாக இருந்தான் (2 சாமுவேல் 23:25). எலிக்காவின் பெயர் 1 நாளாகமம் 11:27 இல் காணப்படும் இதற்கொப்பான பட்டியலில் இடம்பெறவில்லை."
+    }
+  ]
+}

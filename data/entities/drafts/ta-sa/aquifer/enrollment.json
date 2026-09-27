@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/enrollment",
+  "lang": "ta",
+  "source_hash": "d4343942",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பதிவேடு",
+  "paragraphs": [
+    {
+      "id": "aquifer/enrollment#p1-2fbf4a0c",
+      "text": "கோத்திரம், வம்சம், மற்றும் பதவி அடிப்படையில் மக்களைப் பதிவு செய்தல்."
+    },
+    {
+      "id": "aquifer/enrollment#p2-a3e732ec",
+      "text": "கணக்கெடுப்பு காண்க."
+    }
+  ]
+}

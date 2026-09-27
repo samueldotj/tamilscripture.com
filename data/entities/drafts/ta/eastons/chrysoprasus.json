@@ -1,0 +1,18 @@
+{
+  "id": "eastons/chrysoprasus",
+  "lang": "ta",
+  "source_hash": "262d8c3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "படிகப்பச்சை",
+  "paragraphs": [
+    {
+      "id": "eastons/chrysoprasus#p1-262d8c3a",
+      "text": "தங்க வெள்ளரி, வெள்ளரிச் சாற்றின் நிறமான, பசுமை-தங்க நிறமுள்ள ஒரு விலையுள்ள கல் (வெளிப்படுத்தின விசேஷம் 21:20)."
+    }
+  ]
+}

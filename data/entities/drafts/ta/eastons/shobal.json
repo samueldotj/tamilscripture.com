@@ -1,0 +1,26 @@
+{
+  "id": "eastons/shobal",
+  "lang": "ta",
+  "source_hash": "0fea1329",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோபால்",
+  "paragraphs": [
+    {
+      "id": "eastons/shobal#p1-3bd9371e",
+      "text": "யாத்திரிகன்."
+    },
+    {
+      "id": "eastons/shobal#p2-df87a7d5",
+      "text": "(1.) ஓரியனான சேயீரின் இரண்டாம் மகன்; ஓரியரின் “பிரபுக்களில்” ஒருவன் (ஆதியாகமம் 36:20)."
+    },
+    {
+      "id": "eastons/shobal#p3-cf22de38",
+      "text": "(2.) காலேபின் மகன்களில் ஒருவன், ஊருடைய சந்ததியில் ஒருவன் (1 நாளாகமம் 2:50, 52; 4:1, 2)."
+    }
+  ]
+}

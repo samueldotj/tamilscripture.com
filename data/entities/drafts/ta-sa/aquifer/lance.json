@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lance",
+  "lang": "ta",
+  "source_hash": "45d8e07c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈட்டி",
+  "paragraphs": [
+    {
+      "id": "aquifer/lance#p1-4c5177a4",
+      "text": "ஈட்டி என்பது வேலைப் போன்ற ஒரு நீண்ட ஆயுதம்."
+    },
+    {
+      "id": "aquifer/lance#p2-10fb0386",
+      "text": "போர்க்கவசமும் ஆயுதங்களும் (தாக்குதல் ஆயுதங்கள்) என்பதைக் காண்க."
+    }
+  ]
+}

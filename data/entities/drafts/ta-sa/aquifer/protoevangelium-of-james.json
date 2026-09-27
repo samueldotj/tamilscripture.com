@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/protoevangelium-of-james",
+  "lang": "ta",
+  "source_hash": "240e1fda",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கோபுவின் ஆதிநற்செய்தி (Protoevangelium of James)",
+  "paragraphs": [
+    {
+      "id": "aquifer/protoevangelium-of-james#p1-bdaa62f6",
+      "text": "இது அபோக்ரிபாவைச் சேர்ந்த ஒரு நற்செய்தி நூலாகும், இது மரியாளின் திருமணம், அவளுடைய கருவுற்ற நிலை, மற்றும் இயேசுவின் பிறப்பையும் குழந்தைப் பருவத்தையும் பற்றி விவரிக்கிறது. மேலும் இது இயேசு வளர்ந்து வந்த ஆரம்ப ஆண்டுகளையும் விவரிக்கிறது."
+    },
+    {
+      "id": "aquifer/protoevangelium-of-james#p2-3a95bb92",
+      "text": "Protoevangelium என்ற சொல் கிரேக்கு மொழியில் “முதல் நற்செய்தி” என்று பொருள்படும். இந்நூல் 16-ஆம் நூற்றாண்டில் பிரெஞ்சு அறிஞரான கிலோம் போஸ்டெல் (Guillaume Postel) என்பவரால் மீண்டும் கண்டுபிடிக்கப்பட்டது."
+    },
+    {
+      "id": "aquifer/protoevangelium-of-james#p3-82cf1001",
+      "text": "மரியாளின் பிறப்பின் நற்செய்தி என்பதைக் காண்க; அபோக்ரிபாவையும் காண்க."
+    }
+  ]
+}

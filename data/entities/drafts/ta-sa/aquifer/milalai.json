@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/milalai",
+  "lang": "ta",
+  "source_hash": "951b27e1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிலாலாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/milalai#p1-951b27e1",
+      "text": "மிலாலாய் எருசலேமின் புதுப்பிக்கப்பட்ட மதிலின் பிரதிஷ்டையில் பங்கேற்ற இசைக்கலைஞர்களில் ஒருவனாக இருந்தான் (நெகேமியா 12:36)."
+    }
+  ]
+}

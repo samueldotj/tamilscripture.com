@@ -1,0 +1,18 @@
+{
+  "id": "eastons/rhesa",
+  "lang": "ta",
+  "source_hash": "a94265ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரேசா",
+  "paragraphs": [
+    {
+      "id": "eastons/rhesa#p1-a94265ee",
+      "text": "பாசம், செருபாபேலின் குமாரன், நம்முடைய கர்த்தருடைய வம்ச வரலாற்றில் குறிப்பிடப்பட்டவன் (லூக்கா 3:27)."
+    }
+  ]
+}

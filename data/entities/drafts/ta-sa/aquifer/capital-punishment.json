@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/capital-punishment",
+  "lang": "ta",
+  "source_hash": "3fe93b7a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மரண தண்டனை",
+  "paragraphs": [
+    {
+      "id": "aquifer/capital-punishment#p1-f97c27ca",
+      "text": "சில குற்றங்களுக்கு நியாயப்பிரமாணப்படியான தண்டனையாக ஒருவரைக் கொலை செய்யும் நடைமுறை."
+    },
+    {
+      "id": "aquifer/capital-punishment#p2-ff2469ea",
+      "text": "குற்ற நியாயப்பிரமாணமும் தண்டனையும் என்பதைக் காண்க."
+    }
+  ]
+}

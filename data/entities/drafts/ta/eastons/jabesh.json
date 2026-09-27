@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jabesh",
+  "lang": "ta",
+  "source_hash": "a68f29b7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாபேச்",
+  "paragraphs": [
+    {
+      "id": "eastons/jabesh#p1-1bf37e72",
+      "text": "உலர்ந்த."
+    },
+    {
+      "id": "eastons/jabesh#p2-8d581195",
+      "text": "(1.) கீலேயாத் யாபேசுக்காக (1 சாமுவேல் 11:3, 9, 10)."
+    },
+    {
+      "id": "eastons/jabesh#p3-8d0d44ac",
+      "text": "(2.) சகரியாவின் மரணத்திற்குப் பின்பு இஸ்ரவேலின் அரியணையைப் பறித்துக்கொண்ட சல்லூமின் தகப்பன் (2 இராஜாக்கள் 15:10, 13, 14)."
+    }
+  ]
+}

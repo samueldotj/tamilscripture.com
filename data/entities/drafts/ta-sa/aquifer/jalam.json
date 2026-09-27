@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jalam",
+  "lang": "ta",
+  "source_hash": "cff3b16f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/jalam#p1-cff3b16f",
+      "text": "யாலாம் ஏசாவின் மகனும், ஏதோமிய கோத்திரத்தின் பிரபுவுமாக இருந்தான் (ஆதியாகமம் 36:5, 14, 18; 1 நாளாகமம் 1:35)."
+    }
+  ]
+}

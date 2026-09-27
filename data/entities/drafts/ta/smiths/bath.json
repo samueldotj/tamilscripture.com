@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bath",
+  "lang": "ta",
+  "source_hash": "8775e255",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bath#p1-8775e255",
+      "text": "[அளவுகள்]"
+    }
+  ]
+}

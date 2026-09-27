@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ephrain",
+  "lang": "ta",
+  "source_hash": "a88f5e1c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்பிராயீன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ephrain#p1-ff105d2f",
+      "text": "எப்பிராயீன் என்பது 2 நாளாகமம் 13:19-இல் பெத்தேலுக்கு அருகிலுள்ள ஒரு பட்டணமான எப்பெரோன் என்பதற்கான கிங் யாக்கோபு வேர்ஷன் வடிவம் ஆகும்."
+    },
+    {
+      "id": "aquifer/ephrain#p2-14b7cd48",
+      "text": "எப்பெரோன் (இடம்) #2-ஐக் காண்க."
+    }
+  ]
+}

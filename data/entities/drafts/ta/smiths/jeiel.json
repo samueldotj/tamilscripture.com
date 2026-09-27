@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jeiel",
+  "lang": "ta",
+  "source_hash": "95a28af3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jeiel#p1-95a28af3",
+      "text": "(தேவனுடைய பொக்கிஷம்)."
+    }
+  ]
+}

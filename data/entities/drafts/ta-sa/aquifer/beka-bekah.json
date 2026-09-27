@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beka-bekah",
+  "lang": "ta",
+  "source_hash": "d777dde4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேக்கா, பேக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/beka-bekah#p1-907ec173",
+      "text": "“பரிசுத்த ஸ்தலத்தின் சேக்கலின்படி அரைச்சேக்கல்” என்று அழைக்கப்பட்ட ஆறு கிராம் எடையுள்ள ஒரு நிறுவை (யாத்திராகமம் 38:26)."
+    },
+    {
+      "id": "aquifer/beka-bekah#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

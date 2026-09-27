@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethbaalmaveth",
+  "lang": "ta",
+  "source_hash": "62b806cb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத் பாகால்மாவேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethbaalmaveth#p1-62b806cb",
+      "text": "(அஸ்மாவேத்தின் வீடு). இந்தப் பெயரில், நெகேமியா 7:28-ல் மாத்திரம் குறிப்பிடப்பட்டுள்ளது, வேறு இடங்களில் அஸ்மாவேத் என்றும் பெத்-சாமோஸ் என்றும் அழைக்கப்படும் பென்யமீனுடைய ஊரையே இது குறிக்கிறது."
+    }
+  ]
+}

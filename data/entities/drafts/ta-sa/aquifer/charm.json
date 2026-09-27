@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/charm",
+  "lang": "ta",
+  "source_hash": "8c4a46fe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தாலி (மந்திரப் பொருள்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/charm#p1-c8ea2c83",
+      "text": "தாலி என்பது தீமையை விரட்டுவதற்காக கழுத்தில் அணியப்படும் ஒரு சிறிய பொருளாகும்."
+    },
+    {
+      "id": "aquifer/charm#p2-7a7f7be3",
+      "text": "காண்க: மந்திரப் பொருள்; மாயவித்தை; சூனியம்."
+    }
+  ]
+}

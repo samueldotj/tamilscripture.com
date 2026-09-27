@@ -1,0 +1,18 @@
+{
+  "id": "eastons/dodai",
+  "lang": "ta",
+  "source_hash": "4819c0bc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோதாயி",
+  "paragraphs": [
+    {
+      "id": "eastons/dodai#p1-4819c0bc",
+      "text": "அன்புள்ளவன், தாவீதின் சேனாபதிகளில் ஒருவன் (1 நாளாகமம் 27:4). (தோதோ [2] காண்க.)"
+    }
+  ]
+}

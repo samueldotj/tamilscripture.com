@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cub",
+  "lang": "ta",
+  "source_hash": "4d840367",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கூப்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cub#p1-51540921",
+      "text": "கூப் என்பது எசேக்கியேலுக்குக் 30:5-ல் (Revised Standard Version குறிப்பு) லிபியாவுடன் அடையாளப்படுத்தப்பட்ட ஒரு இடத்தின் பெயராகும்."
+    },
+    {
+      "id": "aquifer/cub#p2-df0c6f79",
+      "text": "லிபியாவும், லிபியர்களும் என்பதைக் காண்க."
+    }
+  ]
+}

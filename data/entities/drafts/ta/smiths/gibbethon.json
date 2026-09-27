@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gibbethon",
+  "lang": "ta",
+  "source_hash": "87a63d4e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிபெத்தோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/gibbethon#p1-87a63d4e",
+      "text": "(மேடு), தாண் கோத்திரத்திற்கு பங்கிடப்பட்ட ஒரு பட்டணம் (யோசுவா 19:44), பின்பு அதனுடைய “வெளிநிலங்களுடன்” கோகாத்தியரான லேவியர்களுக்குக் கொடுக்கப்பட்டது (யோசுவா 21:23)."
+    }
+  ]
+}

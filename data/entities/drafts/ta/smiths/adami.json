@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adami",
+  "lang": "ta",
+  "source_hash": "977c8b56",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதமி",
+  "paragraphs": [
+    {
+      "id": "smiths/adami#p1-977c8b56",
+      "text": "(எனது மனிதன், மண்) நப்தலியின் எல்லையிலுள்ள ஒரு இடம். (யோசுவா 19:33)"
+    }
+  ]
+}

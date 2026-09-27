@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sharar",
+  "lang": "ta",
+  "source_hash": "c735e25a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாரார்",
+  "paragraphs": [
+    {
+      "id": "smiths/sharar#p1-c735e25a",
+      "text": "(வலிமையுள்ளவன்), ஆராரியனான அகியாமின் தகப்பன். (2 சாமுவேல் 23:33) 1 நாளாகமம் 11:35-ல் இவன் சாக்கார் என்று அழைக்கப்படுகிறான். (கி.மு. 1040.)"
+    }
+  ]
+}

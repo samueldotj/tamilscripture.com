@@ -1,0 +1,18 @@
+{
+  "id": "smiths/heleph",
+  "lang": "ta",
+  "source_hash": "74784403",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலேப்",
+  "paragraphs": [
+    {
+      "id": "smiths/heleph#p1-74784403",
+      "text": "(மாற்றம்), நப்தலி கோத்திரத்தினுடைய எல்லை தொடங்கின இடம். (யோசுவா 19:33)"
+    }
+  ]
+}

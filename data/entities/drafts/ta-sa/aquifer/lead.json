@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lead",
+  "lang": "ta",
+  "source_hash": "d8b6acca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈயம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lead#p1-8f2b6fdb",
+      "text": "ஈயம் என்பது ஒரு கடினமான, மென்மையான, நீலம்-சாம்பல் நிற உலோகம்."
+    },
+    {
+      "id": "aquifer/lead#p2-064c142a",
+      "text": "கனிமங்களும் உலோகங்களும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sarah",
+  "lang": "ta",
+  "source_hash": "17faa67a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாராள்",
+  "paragraphs": [
+    {
+      "id": "smiths/sarah#p1-17faa67a",
+      "text": "(இராஜகுமாரி)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/areli",
+  "lang": "ta",
+  "source_hash": "33e8557e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரேலி",
+  "paragraphs": [
+    {
+      "id": "smiths/areli#p1-33e8557e",
+      "text": "(வீரமுள்ளவன்), காத்தின் மகன். (ஆதியாகமம் 46:16; எண்ணாகமம் 26:17) இவனுடைய சந்ததியார் அரேலியர்கள் என்று அழைக்கப்படுகிறார்கள். எண்ணாகமம் 26:17."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/oshea",
+  "lang": "ta",
+  "source_hash": "81171253",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசெயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/oshea#p1-8eb9673d",
+      "text": "இது கிங் யாக்கோபு மொழிபெயர்ப்பில் ஓசெயா என்பதற்குரிய வடிவம். இது எண்ணாகமம் 13:8, 16 -இல் யோசுவாவுக்கு பதிலாகக் கொடுக்கப்பட்ட மறுபெயர்."
+    },
+    {
+      "id": "aquifer/oshea#p2-c00cc515",
+      "text": "யோசுவா (நபர்) #1 -ஐ காண்க."
+    }
+  ]
+}

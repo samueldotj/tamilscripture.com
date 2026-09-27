@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kithlish",
+  "lang": "ta",
+  "source_hash": "343d95cc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்லீஷ்",
+  "paragraphs": [
+    {
+      "id": "smiths/kithlish#p1-343d95cc",
+      "text": "(மனுஷனுடைய சுவர்), யூதாவின் பட்டணங்களில் ஒன்று, செபேலா அல்லது பள்ளத்தாக்கு நிலப்பகுதியில் இருந்தது. (யோசுவா 15:40)"
+    }
+  ]
+}

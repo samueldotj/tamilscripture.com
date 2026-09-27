@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hadassah",
+  "lang": "ta",
+  "source_hash": "efe44851",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹதாசா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hadassah#p1-ecf4781c",
+      "text": "எஸ்தரின் முதல் பெயர் (எஸ்தர் 2:7)."
+    },
+    {
+      "id": "aquifer/hadassah#p2-84027bfe",
+      "text": "எஸ்தர் (நபர்) என்பதைக் காண்க."
+    }
+  ]
+}

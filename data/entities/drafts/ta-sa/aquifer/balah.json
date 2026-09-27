@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/balah",
+  "lang": "ta",
+  "source_hash": "8d2b057f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/balah#p1-8d2b057f",
+      "text": "கானானின் தென்பகுதியிலுள்ள ஒரு பட்டணம் (யோசுவா 19:3), இது பாலாவுடன் (யோசுவா 15:29) மற்றும் பில்காளுடன் (1 நாளாகமம் 4:29) ஒன்றாக இருக்கலாம்."
+    }
+  ]
+}

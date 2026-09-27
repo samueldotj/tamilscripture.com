@@ -1,0 +1,18 @@
+{
+  "id": "smiths/testament-new",
+  "lang": "ta",
+  "source_hash": "e17de420",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புதிய ஏற்பாடு",
+  "paragraphs": [
+    {
+      "id": "smiths/testament-new#p1-e17de420",
+      "text": "[புதிய ஏற்பாடு; பரிசுத்த வேதாகமம்] புதிய ஏற்பாடு - 3186"
+    }
+  ]
+}

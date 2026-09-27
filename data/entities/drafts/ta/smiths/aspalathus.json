@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aspalathus",
+  "lang": "ta",
+  "source_hash": "e46aea2b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்பலாதுஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/aspalathus#p1-e46aea2b",
+      "text": "எக்லேசியஸ்திகஸ் 24:15-ல் குறிப்பிடப்பட்டுள்ள ஒரு இனிய நறுமணப்பொருளின் பெயர். Lignum rhodianum என்பது சிலரால் அஸ்பலாதுஸ் என்பதால் குறிக்கப்படும் பொருள் என்று கருதப்படுகிறது; அதை உண்டாக்கும் செடி லின்னேயஸ் கூறும் Convolvulus scoparius என்பதாகும்."
+    }
+  ]
+}

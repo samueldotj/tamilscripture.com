@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/aiath",
+  "lang": "ta",
+  "source_hash": "f6358c97",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆயாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/aiath#p1-18f45557",
+      "text": "கானானிய பட்டணமான ஆயீக்கு மற்றொரு பெயர் (ஏசாயா 10:28)."
+    },
+    {
+      "id": "aquifer/aiath#p2-a2a88f01",
+      "text": "ஆயீ காண்க."
+    }
+  ]
+}

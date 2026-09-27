@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mehuman",
+  "lang": "ta",
+  "source_hash": "6ae32247",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மெகுமான்",
+  "paragraphs": [
+    {
+      "id": "eastons/mehuman#p1-6ae32247",
+      "text": "உண்மையுள்ளவன், வஸ்தியை அழைத்துவரும்படி அகாஸ்வேரு (செர்செஸ்) கட்டளையிட்ட அண்ணகர்களில் ஒருவன் (எஸ்தர் 1:10)."
+    }
+  ]
+}

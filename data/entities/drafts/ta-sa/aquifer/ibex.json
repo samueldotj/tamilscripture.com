@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ibex",
+  "lang": "ta",
+  "source_hash": "cf91fa9d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மலையாடு",
+  "paragraphs": [
+    {
+      "id": "aquifer/ibex#p1-d3bc6749",
+      "text": "மலையாடு என்பது ஒரு வகையான காட்டு வெள்ளாடு ஆகும். மோசேயின் நியாயப்பிரமாணம் அதைச் சுத்தமானதாக அறிவித்து, இஸ்ரவேலர்கள் அதைச் சாப்பிடுவதை அனுமதித்தது (உபாகமம் 14:5)."
+    },
+    {
+      "id": "aquifer/ibex#p2-15968a32",
+      "text": "வெள்ளாடு என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/helon",
+  "lang": "ta",
+  "source_hash": "4355b3ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலியாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/helon#p1-4355b3ce",
+      "text": "(பலமுள்ளவன்), செபுலோன் கோத்திரத்தில் எலியாபின் பிதா. (எண்ணாகமம் 1:9; 2:7; 7:24,29; 10:16) (கி.மு. 1491.)"
+    }
+  ]
+}

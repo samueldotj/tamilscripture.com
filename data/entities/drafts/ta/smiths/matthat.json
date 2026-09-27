@@ -1,0 +1,18 @@
+{
+  "id": "smiths/matthat",
+  "lang": "ta",
+  "source_hash": "4a14cf04",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/matthat#p1-4a14cf04",
+      "text": "(தேவனுடைய கொடை), மாத்தான் என்ற பெயரின் ஒரு வேறுவடிவம்."
+    }
+  ]
+}

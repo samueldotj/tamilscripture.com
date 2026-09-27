@@ -1,0 +1,18 @@
+{
+  "id": "smiths/vineyards-plain-of-the",
+  "lang": "ta",
+  "source_hash": "c9d2687e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திராட்சைத் தோட்டங்களின் சமபூமி",
+  "paragraphs": [
+    {
+      "id": "smiths/vineyards-plain-of-the#p1-c9d2687e",
+      "text": "இந்த இடம் நியாயாதிபதிகள் 11:33-ல் மட்டுமே குறிப்பிடப்பட்டுள்ளது; இது யோர்தானுக்கு கிழக்கே, ஆரோவேருக்கு அப்பால் இருந்தது."
+    }
+  ]
+}

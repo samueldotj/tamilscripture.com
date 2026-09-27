@@ -1,0 +1,18 @@
+{
+  "id": "eastons/pasach",
+  "lang": "ta",
+  "source_hash": "5c90d1c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாசாக்",
+  "paragraphs": [
+    {
+      "id": "eastons/pasach#p1-5c90d1c9",
+      "text": "பிரித்தல் என்று பொருள்படும், ஆசேர் கோத்திரத்தைச் சேர்ந்த யப்லேத்தின் மகன்களில் ஒருவன் (1 நாளாகமம் 7:33)."
+    }
+  ]
+}

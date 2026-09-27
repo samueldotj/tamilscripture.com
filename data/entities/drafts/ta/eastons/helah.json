@@ -1,0 +1,18 @@
+{
+  "id": "eastons/helah",
+  "lang": "ta",
+  "source_hash": "2af48cc5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏலாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/helah#p1-2af48cc5",
+      "text": "துரு, (1 நாளாகமம் 4:5, 7), அசூருடைய மனைவிகளில் ஒருத்தி."
+    }
+  ]
+}

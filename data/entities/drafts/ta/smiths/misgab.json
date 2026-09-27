@@ -1,0 +1,18 @@
+{
+  "id": "smiths/misgab",
+  "lang": "ta",
+  "source_hash": "67f8407e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸ்காப்",
+  "paragraphs": [
+    {
+      "id": "smiths/misgab#p1-67f8407e",
+      "text": "(உயரம்), மோவாபிலுள்ள ஒரு இடம் (எரேமியா 48:1). ஏசாயா 25:12-லும் இது குறிப்பிடப்பட்டிருப்பதாகத் தோன்றுகிறது, அங்கு அங்கீகரிக்கப்பட்ட மொழிபெயர்ப்பில் (Authorized Version) “high fort” (உயர்ந்த கோட்டை) என்று மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

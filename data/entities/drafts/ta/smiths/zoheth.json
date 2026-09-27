@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zoheth",
+  "lang": "ta",
+  "source_hash": "b6bfd323",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோகேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/zoheth#p1-b6bfd323",
+      "text": "யூதா கோத்திரத்தைச் சேர்ந்த இஷியின் மகன். (1 நாளாகமம் 4:20)"
+    }
+  ]
+}

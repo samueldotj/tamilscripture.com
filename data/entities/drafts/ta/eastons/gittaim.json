@@ -1,0 +1,18 @@
+{
+  "id": "eastons/gittaim",
+  "lang": "ta",
+  "source_hash": "d87cc35c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கித்தாயிம்",
+  "paragraphs": [
+    {
+      "id": "eastons/gittaim#p1-d87cc35c",
+      "text": "இரண்டு ஆலைகள் (2 சாமுவேல் 4:3; நெகேமியா 11:33), பேரோத்தியர்கள் ஓடிப்போன பென்யமீனுடைய பகுதியில் இருந்திருக்கக்கூடிய ஒரு பட்டணம்."
+    }
+  ]
+}

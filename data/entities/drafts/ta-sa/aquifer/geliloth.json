@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/geliloth",
+  "lang": "ta",
+  "source_hash": "da9f64f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெலிலோத்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/geliloth#p1-41e7e963",
+      "text": "கெலிலோத்து என்பது யோசுவா 18:17-ல் பென்யமீனின் எல்லையில் குறிப்பிடப்பட்ட ஒரு இடம். இது வழக்கமாக கில்கால் என அடையாளம் காணப்படுகிறது."
+    },
+    {
+      "id": "aquifer/geliloth#p2-4658ad48",
+      "text": "கில்கால் #4-ஐ காண்க."
+    }
+  ]
+}

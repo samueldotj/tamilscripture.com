@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/meconah",
+  "lang": "ta",
+  "source_hash": "685dca5e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேகோனாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/meconah#p1-685dca5e",
+      "text": "மேகோனாக் சிக்லாகுக்கு அருகில் குறிப்பிடப்பட்ட ஒரு குடியிருப்பு ஆகும் (நெகேமியா 11:28). இது நேகேவ் பிரதேசத்தின் மேற்குப் பகுதியில் இருந்திருக்கலாம்."
+    }
+  ]
+}

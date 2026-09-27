@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elm",
+  "lang": "ta",
+  "source_hash": "1af3f13c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்ம் மரம் (Elm)",
+  "paragraphs": [
+    {
+      "id": "smiths/elm#p1-1af3f13c",
+      "text": "(ஓசியாவின் 4:13) [கர்வாலி மரம் என்பதைக் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hassenaah",
+  "lang": "ta",
+  "source_hash": "f869cf3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசெனா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hassenaah#p1-d78d22fc",
+      "text": "அசெனா என்பது நெகேமியா 3:3இல் செனாகாவிற்குரிய மற்றொரு பெயராகும்."
+    },
+    {
+      "id": "aquifer/hassenaah#p2-492d8484",
+      "text": "செனாகா என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/vajezatha",
+  "lang": "ta",
+  "source_hash": "b56aa27a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "வாய்சாதா",
+  "paragraphs": [
+    {
+      "id": "eastons/vajezatha#p1-b56aa27a",
+      "text": "தூய்மை; மதிப்புக்கு தகுதியானவன், ஆமானின் மகன்களில் ஒருவன், இவனை யூதர்கள் சூசான் அரண்மனையில் கொன்றுபோட்டார்கள் (எஸ்தர் 9:9)."
+    }
+  ]
+}

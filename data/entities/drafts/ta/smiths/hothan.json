@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hothan",
+  "lang": "ta",
+  "source_hash": "fcd63759",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓதாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hothan#p1-fcd63759",
+      "text": "(முத்திரை மோதிரம்), ஆரோவேரியனான ஒருவன், சமாவும் யெகியேலும் என்பவர்களின் தகப்பன். (1 நாளாகமம் 11:44) (கி.மு. 1046)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/neriah",
+  "lang": "ta",
+  "source_hash": "bc92cf7b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேரியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/neriah#p1-bc92cf7b",
+      "text": "வேதபண்டிதனாகிய பாருக்கின் (எரேமியா 32:12, 16; 36:4, 8) மற்றும் தலமையாளனாகிய செராயாவின் (51:59) தகப்பன், இவர்கள் இருவரும் எரேமியா தீர்க்கதரிசிக்கு பணிவிடை செய்தார்கள்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/nicolas",
+  "lang": "ta",
+  "source_hash": "c1949df1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிக்கொலா",
+  "paragraphs": [
+    {
+      "id": "eastons/nicolas#p1-c1949df1",
+      "text": "மக்களின் வெற்றி, யூத மதத்தைச் சேர்ந்தவனான அந்தியோகியா பட்டணத்தான், ஏழு உதவிக்காரர்களில் ஒருவன் (அப்போஸ்தலருடைய நடபடிகள் 6:5)."
+    }
+  ]
+}

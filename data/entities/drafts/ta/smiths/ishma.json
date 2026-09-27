@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ishma",
+  "lang": "ta",
+  "source_hash": "11e0983e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஷ்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/ishma#p1-11e0983e",
+      "text": "(பாழ்நிலம்), யூதாவின் வம்சவரலாற்றில் காணப்படும் ஒரு பெயர். (1 நாளாகமம் 4:3)"
+    }
+  ]
+}

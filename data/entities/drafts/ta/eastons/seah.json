@@ -1,0 +1,18 @@
+{
+  "id": "eastons/seah",
+  "lang": "ta",
+  "source_hash": "739a763b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேயா",
+  "paragraphs": [
+    {
+      "id": "eastons/seah#p1-739a763b",
+      "text": "நில அளவில், இது 50 முழம் நீளமும் 50 முழம் அகலமும் உள்ள இடம். கொள்ளளவு அளவில், ஒரு சேயா ஒரு பேக்கிற்கு சற்று மேலானது. (அளவு என்பதைக் காண்க.)"
+    }
+  ]
+}

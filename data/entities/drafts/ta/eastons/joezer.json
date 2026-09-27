@@ -1,0 +1,18 @@
+{
+  "id": "eastons/joezer",
+  "lang": "ta",
+  "source_hash": "3029db98",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொவேசேர்",
+  "paragraphs": [
+    {
+      "id": "eastons/joezer#p1-3029db98",
+      "text": "யெகோவா அவனுடைய உதவி, தாவீதின் மெய்க்காவலரில் ஒருவனாக மாறிய கோராகியரில் ஒருவன் (1 நாளாகமம் 12:6)."
+    }
+  ]
+}

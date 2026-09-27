@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/amoz",
+  "lang": "ta",
+  "source_hash": "64e3de06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆமோத்ஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/amoz#p1-64e3de06",
+      "text": "ஏசாயாவின் தகப்பன் (2 இராஜாக்கள் 19:2; ஏசாயா 1:1). இவர் தீர்க்கதரிசியாகிய ஆமோஸ் அல்ல."
+    }
+  ]
+}

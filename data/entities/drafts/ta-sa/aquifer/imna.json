@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/imna",
+  "lang": "ta",
+  "source_hash": "36aaad22",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்னா",
+  "paragraphs": [
+    {
+      "id": "aquifer/imna#p1-36aaad22",
+      "text": "இம்னா ஆசேர் கோத்திரத்தைச் சேர்ந்த ஏலேமின் மகன் ஆவான் (1 நாளாகமம் 7:35)."
+    }
+  ]
+}

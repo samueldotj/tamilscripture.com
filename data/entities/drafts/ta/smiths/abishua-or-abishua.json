@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abishua-or-abishua",
+  "lang": "ta",
+  "source_hash": "465ca72d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபிசுவா, அல்லது அபிசுவா",
+  "paragraphs": [
+    {
+      "id": "smiths/abishua-or-abishua#p1-465ca72d",
+      "text": "(விடுதலையின் தகப்பன்)."
+    }
+  ]
+}

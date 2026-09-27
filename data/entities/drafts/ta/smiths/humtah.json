@@ -1,0 +1,18 @@
+{
+  "id": "smiths/humtah",
+  "lang": "ta",
+  "source_hash": "faacd56d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உம்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/humtah#p1-faacd56d",
+      "text": "(பச்சோந்திகளின் இடம்), யூதாவின் ஒரு பட்டணம், மலைநாடுகளில் இருந்த பட்டணங்களில் ஒன்று, எப்ரோனுக்கு அடுத்ததாக இருந்தது. (யோசுவா 15:54)"
+    }
+  ]
+}

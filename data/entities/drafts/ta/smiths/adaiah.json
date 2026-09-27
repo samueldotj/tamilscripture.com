@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adaiah",
+  "lang": "ta",
+  "source_hash": "e4ffa5ed",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அதாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/adaiah#p1-e4ffa5ed",
+      "text": "(யெகோவாவினால் அலங்கரிக்கப்பட்டவன்)."
+    }
+  ]
+}

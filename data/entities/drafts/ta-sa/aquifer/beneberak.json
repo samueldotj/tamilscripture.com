@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/beneberak",
+  "lang": "ta",
+  "source_hash": "ba2d026f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனபெராக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/beneberak#p1-ba2d026f",
+      "text": "தாணுடைய பட்டணங்களில் ஒன்று (யோசுவா 19:45). இதன் இன்றைய பெயர் இப்ன் இப்ராக், டெல் அவீவுக்கு வடமேற்கில் உள்ள ஒரு குடியிருப்பு பகுதியாகும்."
+    }
+  ]
+}

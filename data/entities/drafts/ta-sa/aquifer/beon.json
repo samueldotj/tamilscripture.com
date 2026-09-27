@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/beon",
+  "lang": "ta",
+  "source_hash": "2a8cb6ce",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெயோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/beon#p1-39e81017",
+      "text": "யோர்தானுக்குக் கிழக்கே இருந்த ஒரு பட்டணமான மெயோனுக்கு மற்றொரு பெயர் (எண்ணாகமம் 32:3)."
+    },
+    {
+      "id": "aquifer/beon#p2-1a2daecd",
+      "text": "மெயோனைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nod",
+  "lang": "ta",
+  "source_hash": "43ebd241",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/nod#p1-43ebd241",
+      "text": "நோத் என்பது காயீன் தன் சகோதரனான ஆபேலைக் கொலைசெய்த பின்பு சென்ற ஏதேனுக்குக் கிழக்கேயுள்ள ஒரு தேசம் (ஆதியாகமம் 4:16)."
+    }
+  ]
+}

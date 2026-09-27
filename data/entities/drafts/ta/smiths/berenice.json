@@ -1,0 +1,18 @@
+{
+  "id": "smiths/berenice",
+  "lang": "ta",
+  "source_hash": "456bb6c0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெர்னீக்கேயாளும்",
+  "paragraphs": [
+    {
+      "id": "smiths/berenice#p1-456bb6c0",
+      "text": "[பெர்னீக்கேயாளும், அல்லது பெரெனீக்கே]"
+    }
+  ]
+}

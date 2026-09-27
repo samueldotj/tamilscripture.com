@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shebaniah",
+  "lang": "ta",
+  "source_hash": "ccf967b8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செபனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/shebaniah#p1-ccf967b8",
+      "text": "(யெகோவாவினால் வர்த்திக்கப்பட்டவன்)."
+    }
+  ]
+}

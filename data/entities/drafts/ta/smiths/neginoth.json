@@ -1,0 +1,18 @@
+{
+  "id": "smiths/neginoth",
+  "lang": "ta",
+  "source_hash": "482cb357",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெகினோத்",
+  "paragraphs": [
+    {
+      "id": "smiths/neginoth#p1-482cb357",
+      "text": "[நெகினா]"
+    }
+  ]
+}

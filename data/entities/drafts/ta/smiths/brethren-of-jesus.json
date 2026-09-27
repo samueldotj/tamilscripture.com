@@ -1,0 +1,18 @@
+{
+  "id": "smiths/brethren-of-jesus",
+  "lang": "ta",
+  "source_hash": "ce9af3b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இயேசுவின் சகோதரர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/brethren-of-jesus#p1-ce9af3b0",
+      "text": "[யாக்கோபு தி லெஸ்ஸர்]"
+    }
+  ]
+}

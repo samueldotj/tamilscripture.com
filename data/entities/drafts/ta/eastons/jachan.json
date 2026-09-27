@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jachan",
+  "lang": "ta",
+  "source_hash": "6dfd067e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கான்",
+  "paragraphs": [
+    {
+      "id": "eastons/jachan#p1-6dfd067e",
+      "text": "புலம்புகிறவன், பாசானிலுள்ள கிலாத் மனிதரின் தலைமையான “சகோதரர்களில்” ஒருவன் (1 நாளாகமம் 5:13)."
+    }
+  ]
+}

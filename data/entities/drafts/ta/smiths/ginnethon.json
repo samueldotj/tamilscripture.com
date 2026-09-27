@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ginnethon",
+  "lang": "ta",
+  "source_hash": "78960430",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிநேதோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ginnethon#p1-78960430",
+      "text": "(தோட்டக்காரன்) நெகேமியாவுடன் உடன்படிக்கையை முத்திரையிட்ட ஆசாரியன் (நெகேமியா 10:6) (கி.மு. 410)."
+    }
+  ]
+}

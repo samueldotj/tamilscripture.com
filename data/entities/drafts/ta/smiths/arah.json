@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arah",
+  "lang": "ta",
+  "source_hash": "0d56c249",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராக்",
+  "paragraphs": [
+    {
+      "id": "smiths/arah#p1-0d56c249",
+      "text": "(பயணம்செய்தல்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hashubah",
+  "lang": "ta",
+  "source_hash": "74643e48",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசூபா",
+  "paragraphs": [
+    {
+      "id": "smiths/hashubah#p1-74643e48",
+      "text": "(அறிவுள்ள), செருபாபேலின் வம்சத்தாரில் பின்பாதியாகத் தோன்றுவதாகக் காணப்படும் ஐந்துபேர் கூட்டத்தில் முதலாமவன். (1 நாளாகமம் 3:20)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/achaz-ahaz",
+  "lang": "ta",
+  "source_hash": "f55c06d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆகாஸ் = ஆகாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/achaz-ahaz#p1-f55c06d3",
+      "text": "யூதாவின் ராஜா, (மத்தேயு 1:9)"
+    }
+  ]
+}

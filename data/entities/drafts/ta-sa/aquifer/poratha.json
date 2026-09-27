@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/poratha",
+  "lang": "ta",
+  "source_hash": "90327b75",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொராதா",
+  "paragraphs": [
+    {
+      "id": "aquifer/poratha#p1-90327b75",
+      "text": "யூதர்களால் கொல்லப்பட்ட ஆமானின் பத்து மகன்களில் ஒருவன் (எஸ்தர் 9:8)."
+    }
+  ]
+}

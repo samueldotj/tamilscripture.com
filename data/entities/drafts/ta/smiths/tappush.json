@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tappush",
+  "lang": "ta",
+  "source_hash": "cf91a0ea",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தப்புவா",
+  "paragraphs": [
+    {
+      "id": "smiths/tappush#p1-cf91a0ea",
+      "text": "(ஆப்பிள்-நகரம்)."
+    }
+  ]
+}

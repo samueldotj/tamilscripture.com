@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/azaz",
+  "lang": "ta",
+  "source_hash": "e769527b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசாச்",
+  "paragraphs": [
+    {
+      "id": "aquifer/azaz#p1-e769527b",
+      "text": "ரூபன் கோத்திரத்தைச் சேர்ந்த செமாவின் மகனும், பேலாவின் தகப்பனுமாகிய ஆசாச் (1 நாளாகமம் 5:8)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/dedan",
+  "lang": "ta",
+  "source_hash": "f415b852",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தேதான்",
+  "paragraphs": [
+    {
+      "id": "smiths/dedan#p1-f415b852",
+      "text": "(தாழ்வான நிலம்)."
+    }
+  ]
+}

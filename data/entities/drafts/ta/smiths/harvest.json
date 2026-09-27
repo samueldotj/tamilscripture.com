@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harvest",
+  "lang": "ta",
+  "source_hash": "e7589cfe",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அறுப்புக்காலம்",
+  "paragraphs": [
+    {
+      "id": "smiths/harvest#p1-e7589cfe",
+      "text": "[வேளாண்மை]"
+    }
+  ]
+}

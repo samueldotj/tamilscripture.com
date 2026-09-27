@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/coniah",
+  "lang": "ta",
+  "source_hash": "051c656d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோனியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/coniah#p1-11688d26",
+      "text": "கோனியா என்பது யூதாவின் ராஜாவாகிய யோயாக்கீனுக்கு எரேமியா 22:24, 28; 37:1-ல் கொடுக்கப்பட்ட மற்றொரு பெயர்."
+    },
+    {
+      "id": "aquifer/coniah#p2-80f13d12",
+      "text": "யோயாக்கீன் என்பதைக் காண்க."
+    }
+  ]
+}

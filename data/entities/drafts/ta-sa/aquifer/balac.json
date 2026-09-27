@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/balac",
+  "lang": "ta",
+  "source_hash": "f79f2b24",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/balac#p1-9f9f1ebf",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் பிலேயாம் என்பவனுக்கு எழுதப்பட்ட எழுத்துப் பெயர். பிலேயாம் மோசேயின் காலத்தில் மோவாபின் அரசனாக இருந்தான் (வெளிப்படுத்தின விசேஷம் 2:14)."
+    },
+    {
+      "id": "aquifer/balac#p2-f079268a",
+      "text": "பிலேயாம் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/narcissus-person",
+  "lang": "ta",
+  "source_hash": "40d0499d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நர்கீசு (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/narcissus-person#p1-40d0499d",
+      "text": "நர்கீசு ஒரு கிறிஸ்தவராக இருந்தார், அவருடைய குடும்பத்தார் கர்த்தரை அறிந்திருந்தனர், மேலும் பவுல் ரோமாபுரிக்குப் எழுதிய தன் கடிதத்தில் அவர்களுக்கு வாழ்த்துதல்களை அனுப்பினார் (ரோமர் 16:11)."
+    }
+  ]
+}

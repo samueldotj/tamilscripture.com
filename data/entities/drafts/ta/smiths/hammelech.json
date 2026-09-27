@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hammelech",
+  "lang": "ta",
+  "source_hash": "6756a627",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மெலேக்",
+  "paragraphs": [
+    {
+      "id": "smiths/hammelech#p1-6756a627",
+      "text": "பொருள்: “ராஜா,” Authorized Version-ல் இது தேவையின்றி ஒரு பெயர்ச்சொல்லாக மொழிபெயர்க்கப்பட்டுள்ளது. (எரேமியா 36:26; 38:6)"
+    }
+  ]
+}

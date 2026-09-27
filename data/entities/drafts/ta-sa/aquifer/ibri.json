@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ibri",
+  "lang": "ta",
+  "source_hash": "885ad4f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்ரி",
+  "paragraphs": [
+    {
+      "id": "aquifer/ibri#p1-885ad4f5",
+      "text": "இப்ரி மெராரியனாகிய லேவியனும், யாசியாவின் மகனுமாக இருந்தான், அவன் தாவீது ராஜாவின் காலத்தில் வாழ்ந்தான் (1 நாளாகமம் 24:27)."
+    }
+  ]
+}

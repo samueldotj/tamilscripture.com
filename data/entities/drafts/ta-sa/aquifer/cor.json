@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cor",
+  "lang": "ta",
+  "source_hash": "1196bc89",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கோர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cor#p1-d9938541",
+      "text": "கோர் என்பது ஒரு பெரிய உலர் அளவை ஆகும்."
+    },
+    {
+      "id": "aquifer/cor#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

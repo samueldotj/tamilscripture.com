@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/marcus",
+  "lang": "ta",
+  "source_hash": "10e5184c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மார்க்குஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/marcus#p1-79f290b5",
+      "text": "மார்க்குஸ் என்பது கிங் யாக்கோபு மொழிபெயர்ப்பில் மாற்கு என்ற பெயருக்கு அளிக்கப்பட்டுள்ள எழுத்துவடிவமாகும் (கொலோசெயர் 4:10; பிலேமோன் 1:24; 1 பேதுரு 5:13)."
+    },
+    {
+      "id": "aquifer/marcus#p2-3f0ed68d",
+      "text": "யோவான் மாற்கு என்ற கட்டுரையைக் காண்க."
+    }
+  ]
+}

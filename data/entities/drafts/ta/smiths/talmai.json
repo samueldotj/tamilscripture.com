@@ -1,0 +1,18 @@
+{
+  "id": "smiths/talmai",
+  "lang": "ta",
+  "source_hash": "c3034c45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தல்மாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/talmai#p1-c3034c45",
+      "text": "(கடினமான)."
+    }
+  ]
+}

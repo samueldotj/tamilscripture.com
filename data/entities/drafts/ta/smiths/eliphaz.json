@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliphaz",
+  "lang": "ta",
+  "source_hash": "37a6966d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிப்பாஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliphaz#p1-37a6966d",
+      "text": "(தேவனே அவனுடைய பெலன்)."
+    }
+  ]
+}

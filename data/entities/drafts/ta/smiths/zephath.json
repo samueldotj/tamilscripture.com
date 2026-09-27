@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zephath",
+  "lang": "ta",
+  "source_hash": "30851edc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேப்பாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/zephath#p1-30851edc",
+      "text": "(காவல்கோபுரம்), ஒரு கானானிய பட்டணத்தின் முந்தின பெயர், (நியாயாதிபதிகள் 1:17) அது இஸ்ரவேலரால் பிடிக்கப்பட்டு அழிக்கப்பட்ட பின்பு ஓர்மா என்று அழைக்கப்பட்டது. [ஓர்மா]"
+    }
+  ]
+}

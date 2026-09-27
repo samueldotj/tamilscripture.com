@@ -1,0 +1,18 @@
+{
+  "id": "eastons/apelles",
+  "lang": "ta",
+  "source_hash": "10ea6dec",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பெல்லே",
+  "paragraphs": [
+    {
+      "id": "eastons/apelles#p1-10ea6dec",
+      "text": "பவுல் வாழ்த்துகின்ற (ரோமர் 16:10) ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவன், அவனை “கிறிஸ்துவிற்குள் உத்தமனாகிய” என்று குறிப்பிடுகிறார்."
+    }
+  ]
+}

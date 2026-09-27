@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/lign-aloes",
+  "lang": "ta",
+  "source_hash": "9a7b4cc4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லிக்ன் அலோஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/lign-aloes#p1-130dbfd7",
+      "text": "எண்ணாகமம் 24:6இல் \"அகில்\" என்பதற்கான கிங் யாக்கோபு பதிப்பு மொழிபெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/lign-aloes#p2-9959e51b",
+      "text": "தாவரங்கள் (அகில்) என்பதைக் காண்க."
+    }
+  ]
+}

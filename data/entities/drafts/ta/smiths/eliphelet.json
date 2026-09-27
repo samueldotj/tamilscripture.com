@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eliphelet",
+  "lang": "ta",
+  "source_hash": "295bf08d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எலிப்பெலேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/eliphelet#p1-295bf08d",
+      "text": "(விடுதலையின் தேவன்)."
+    }
+  ]
+}

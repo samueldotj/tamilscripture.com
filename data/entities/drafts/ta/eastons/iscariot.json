@@ -1,0 +1,18 @@
+{
+  "id": "eastons/iscariot",
+  "lang": "ta",
+  "source_hash": "b3fc3ae7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இஸ்காரியோத்து",
+  "paragraphs": [
+    {
+      "id": "eastons/iscariot#p1-b3fc3ae7",
+      "text": "(யூதா என்பதைக் காண்க.)"
+    }
+  ]
+}

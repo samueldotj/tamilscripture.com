@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/bachrite",
+  "lang": "ta",
+  "source_hash": "d6c60633",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாக்ரைட்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bachrite#p1-42c059b6",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் பெகேரியர் (Becherite) என்பதன் வடிவமாகும். இது பெகேரின் சந்ததியில் உள்ள எவரையும் குறிக்கும் (எண்ணாகமம் 26:35)."
+    },
+    {
+      "id": "aquifer/bachrite#p2-b14637d8",
+      "text": "பெகேர், பெகேரிய #2 என்பதைக் காண்க."
+    }
+  ]
+}

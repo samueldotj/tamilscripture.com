@@ -1,0 +1,18 @@
+{
+  "id": "eastons/addar",
+  "lang": "ta",
+  "source_hash": "29672ce7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதார்",
+  "paragraphs": [
+    {
+      "id": "eastons/addar#p1-29672ce7",
+      "text": "விரிவானவன், சிறப்பானவன், பேலாவின் மகன் (1 நாளாகமம் 8:3); “ஆரேத்” என்றும் அழைக்கப்படுகிறான் (ஆதியாகமம் 46:21)."
+    }
+  ]
+}

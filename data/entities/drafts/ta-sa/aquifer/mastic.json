@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mastic",
+  "lang": "ta",
+  "source_hash": "9dda49a6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாஸ்திகி",
+  "paragraphs": [
+    {
+      "id": "aquifer/mastic#p1-d2a23bfd",
+      "text": "மாஸ்திகி மத்திய தரைக்கடல் பிராந்தியத்தில் வளரும் ஒரு சிறிய மரம். இது கம் என்று அழைக்கப்படும் ஒரு பசை பொருளை உற்பத்தி செய்கிறது, இது பல பொருட்களை உருவாக்கப் பயன்படுகிறது."
+    },
+    {
+      "id": "aquifer/mastic#p2-9c80363d",
+      "text": "பாம், பல்சாம் என்பவற்றைக் காண்க."
+    }
+  ]
+}

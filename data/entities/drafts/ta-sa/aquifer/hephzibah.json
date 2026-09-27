@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hephzibah",
+  "lang": "ta",
+  "source_hash": "7efa5920",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்சிபாள்",
+  "paragraphs": [
+    {
+      "id": "aquifer/hephzibah#p1-159fc032",
+      "text": "1. யூதாவின் ராஜாவாகிய மனாசேயின் தாய் (2 இராஜாக்கள் 21:1)."
+    },
+    {
+      "id": "aquifer/hephzibah#p2-3c45bccb",
+      "text": "2. மீட்கப்பட்ட எருசலேம் நகரத்திற்கு (கிங் ஜேம்ஸ் வேர்ஷனில்) கொடுக்கப்பட்ட அடையாளப் பெயர், அதன் பொருள் “என் பிரியம் அவளிடத்தில் இருக்கிறது” (ஏசாயா 62:4)."
+    }
+  ]
+}

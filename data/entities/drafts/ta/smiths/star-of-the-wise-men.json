@@ -1,0 +1,18 @@
+{
+  "id": "smiths/star-of-the-wise-men",
+  "lang": "ta",
+  "source_hash": "d05ba2ba",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஞானிகளுடைய நட்சத்திரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/star-of-the-wise-men#p1-d05ba2ba",
+      "text": "[சாஸ்திரிகள்]"
+    }
+  ]
+}

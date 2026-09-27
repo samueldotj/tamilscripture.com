@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shaveh",
+  "lang": "ta",
+  "source_hash": "0e08abb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாவே",
+  "paragraphs": [
+    {
+      "id": "smiths/shaveh#p1-0e08abb6",
+      "text": "(சமபூமி), பள்ளத்தாக்கு, (ஆதியாகமம் 14:17) இல் “ராஜாவின் பள்ளத்தாக்கு” என்று விவரிக்கப்பட்டுள்ளது, (2 சாமுவேல் 18:18) இல் அப்சலோம் ஒரு தூணை நிறுத்திய இடமாக மீண்டும் குறிப்பிடப்படுகிறது."
+    }
+  ]
+}

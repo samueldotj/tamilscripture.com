@@ -1,0 +1,18 @@
+{
+  "id": "smiths/lieutenants",
+  "lang": "ta",
+  "source_hash": "02593cb9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பிரதிநிதிகள்",
+  "paragraphs": [
+    {
+      "id": "smiths/lieutenants#p1-02593cb9",
+      "text": "எபிரெய வார்த்தையாகிய achash darpan என்பது பெர்சியப் பேரரசின் மாகாணங்களை ஆண்ட சத்திரப்பர்கள் அல்லது பிரதிநிதி ஆளுநர்களின் அதிகாரப்பூர்வ பட்டமாக இருந்தது; இது தானியேல் 3:2; 6:1 ஆகிய வசனங்களில் “தேசாதிபதி” என்று மொழிபெயர்க்கப்பட்டுள்ளது."
+    }
+  ]
+}

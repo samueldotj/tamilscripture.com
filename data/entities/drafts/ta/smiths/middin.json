@@ -1,0 +1,18 @@
+{
+  "id": "smiths/middin",
+  "lang": "ta",
+  "source_hash": "5ae81dbb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மித்தீன்",
+  "paragraphs": [
+    {
+      "id": "smiths/middin#p1-5ae81dbb",
+      "text": "(அளவுகள்), யூதாவில் ஒரு பட்டணம், (யோசுவா 15:61) “மிட்பார்” (Authorized Version “வனாந்திரம்”) என்ற பகுதியில் அமைந்திருந்ததாகக் குறிப்பிடப்பட்ட ஆறு பட்டணங்களில் ஒன்று."
+    }
+  ]
+}

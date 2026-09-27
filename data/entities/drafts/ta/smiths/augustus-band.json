@@ -1,0 +1,18 @@
+{
+  "id": "smiths/augustus-band",
+  "lang": "ta",
+  "source_hash": "50439f79",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகுஸ்து படை",
+  "paragraphs": [
+    {
+      "id": "smiths/augustus-band#p1-50439f79",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 27:1) [படை]"
+    }
+  ]
+}

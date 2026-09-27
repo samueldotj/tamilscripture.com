@@ -1,0 +1,18 @@
+{
+  "id": "smiths/cheran",
+  "lang": "ta",
+  "source_hash": "2ed4fa35",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/cheran#p1-2ed4fa35",
+      "text": "(வீணை), ஓரியனாகிய திஷோன் என்னும் “அதிபதி”யின் மகன்களில் ஒருவன். (ஆதியாகமம் 36:26; 1 நாளாகமம் 1:41)"
+    }
+  ]
+}

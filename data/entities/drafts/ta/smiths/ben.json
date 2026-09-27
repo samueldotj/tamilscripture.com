@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ben",
+  "lang": "ta",
+  "source_hash": "d3b2ad45",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேன்",
+  "paragraphs": [
+    {
+      "id": "smiths/ben#p1-d3b2ad45",
+      "text": "(மகன்), லேவியனாகிய இவன், பெட்டிக்காக தாவீது நியமித்த வாசல் காவலாளர்களில் ஒருவன். (1 நாளாகமம் 15:18)"
+    }
+  ]
+}

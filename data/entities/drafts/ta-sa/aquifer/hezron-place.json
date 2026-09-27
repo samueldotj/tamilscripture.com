@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/hezron-place",
+  "lang": "ta",
+  "source_hash": "c1f66ee6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்ரோன் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/hezron-place#p1-c1f66ee6",
+      "text": "யூதாவின் எல்லையில் இருந்த ஒரு பட்டணம் (யோசுவா 15:3). எண்ணாகமம் 34:4-ல், இது ஆத்சார் ஆதார் என்ற பெயரின் ஒரு பகுதியாக இருக்கக்கூடும் என்று கருதப்படுகிறது."
+    }
+  ]
+}

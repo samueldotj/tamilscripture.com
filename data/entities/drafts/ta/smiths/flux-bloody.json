@@ -1,0 +1,18 @@
+{
+  "id": "smiths/flux-bloody",
+  "lang": "ta",
+  "source_hash": "d1add7f0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இரத்த பேதி",
+  "paragraphs": [
+    {
+      "id": "smiths/flux-bloody#p1-d1add7f0",
+      "text": "(அப்போஸ்தலருடைய நடபடிகள் 28:8) நமது பேதி நோய்க்குச் சமமானது; இது கிழக்கு தேசங்களில் சில நேரங்களில் தனிப்பட்ட வியாதியாகவும், பொதுவாக தொற்று நோயாகவும் பரவி, அப்பொழுது அதன் மிகக் கொடிய வடிவை அடைகிறது."
+    }
+  ]
+}

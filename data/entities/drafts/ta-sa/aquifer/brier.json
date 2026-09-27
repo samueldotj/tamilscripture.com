@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/brier",
+  "lang": "ta",
+  "source_hash": "8cfab60d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "முட்செடி",
+  "paragraphs": [
+    {
+      "id": "aquifer/brier#p1-1cac56c8",
+      "text": "முட்செடி என்பது முட்கள் நிறைந்த ஒரு செடியாகும். இதை சில நேரங்களில் “முள்செடி” என்றும் எழுதுவார்கள்."
+    },
+    {
+      "id": "aquifer/brier#p2-270b6b73",
+      "text": "பரிசுத்த வேதாகமம் முட்செடிகளை பலமுறை குறிப்பிடுகிறது. அவை பெரும்பாலும் கவனிக்கப்படாத இடங்களில் வளரும்."
+    },
+    {
+      "id": "aquifer/brier#p3-d00e6634",
+      "text": "காண்க: முட்புதர்; முட்செடி."
+    }
+  ]
+}

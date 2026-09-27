@@ -1,0 +1,18 @@
+{
+  "id": "smiths/arab",
+  "lang": "ta",
+  "source_hash": "b50b55b0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அராப்",
+  "paragraphs": [
+    {
+      "id": "smiths/arab#p1-b50b55b0",
+      "text": "(பதுங்கியிருப்பு) மலைநாட்டில் இருந்த யூதாவின் ஒரு பட்டணம், அநேகமாக எப்ரோனுக்கு அருகில் இருந்திருக்கலாம்; (யோசுவா 15:62) இல் மட்டும் குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mizpar",
+  "lang": "ta",
+  "source_hash": "fb456563",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸ்பார்",
+  "paragraphs": [
+    {
+      "id": "smiths/mizpar#p1-fb456563",
+      "text": "(எண்); சரியாக மிஸ்பார், மிஸ்பரேத் என்பவனுக்கு ஒத்தவன். (எஸ்றா 2:2)"
+    }
+  ]
+}

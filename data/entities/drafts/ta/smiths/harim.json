@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harim",
+  "lang": "ta",
+  "source_hash": "390deae0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆரிம்",
+  "paragraphs": [
+    {
+      "id": "smiths/harim#p1-390deae0",
+      "text": "(தட்டையான மூக்கு உடையவன்)."
+    }
+  ]
+}

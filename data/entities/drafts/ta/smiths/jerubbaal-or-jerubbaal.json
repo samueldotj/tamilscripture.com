@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jerubbaal-or-jerubbaal",
+  "lang": "ta",
+  "source_hash": "a0eb7cc0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெருபாகால்",
+  "paragraphs": [
+    {
+      "id": "smiths/jerubbaal-or-jerubbaal#p1-a0eb7cc0",
+      "text": "(பாகாலோடு வாதாடுகிறவன்), கிதியோனுடைய மறுபெயர், அவன் பாகாலின் பலிபீடத்தைத் தகர்த்ததின் விளைவாக இப்பெயரைப் பெற்றான்; அப்போது அபியேஸ்ரியரின் பழிவாங்குதலிலிருந்து அவனை அவனுடைய தகப்பன் காப்பாற்றினான். (நியாயாதிபதிகள் 6:32)"
+    }
+  ]
+}

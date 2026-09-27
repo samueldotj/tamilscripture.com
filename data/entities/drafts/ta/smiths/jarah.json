@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jarah",
+  "lang": "ta",
+  "source_hash": "b05baa02",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாராக்",
+  "paragraphs": [
+    {
+      "id": "smiths/jarah#p1-b05baa02",
+      "text": "(தேன்), சவுலின் சந்ததியன்; மீகாவின் மகன், மேவிபோசேத்தின் பேரப்பேரன். (1 நாளாகமம் 9:42) ஒப்பிடுக 1 நாளாகமம் 9:40"
+    }
+  ]
+}

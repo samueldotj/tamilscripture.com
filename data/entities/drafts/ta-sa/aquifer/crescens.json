@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/crescens",
+  "lang": "ta",
+  "source_hash": "c7e2c24e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிரெஸ்கே",
+  "paragraphs": [
+    {
+      "id": "aquifer/crescens#p1-c7e2c24e",
+      "text": "கிரெஸ்கே அப்போஸ்தலன் பவுலின் உடன்பணியாளராக இருந்தார். பவுல் ரோமாபுரிக்குப் சிறைப்பட்டிருந்தபோது அவர் கலாத்தியாவுக்குப் பயணம் செய்தார் (2 தீமோத்தேயு 4:10)."
+    }
+  ]
+}

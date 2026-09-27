@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/glede",
+  "lang": "ta",
+  "source_hash": "7b5a267f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிளேட்",
+  "paragraphs": [
+    {
+      "id": "aquifer/glede#p1-786789f5",
+      "text": "உபாகமம் 14:13-ல் “buzzard” (பைரி) என்பதற்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட சொல்."
+    },
+    {
+      "id": "aquifer/glede#p2-11025064",
+      "text": "பறவைகள் (பருந்து அல்லது கிளேட்) என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aphses",
+  "lang": "ta",
+  "source_hash": "db7ca96d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்சேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/aphses#p1-db7ca96d",
+      "text": "(சிதறுதல்), ஆலயத்தின் பணிவிடையில் இருந்த 24 முறைகளில் 18-ஆவதின் தலைவன். (1 நாளாகமம் 24:15)"
+    }
+  ]
+}

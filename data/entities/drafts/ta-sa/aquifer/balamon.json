@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/balamon",
+  "lang": "ta",
+  "source_hash": "193420ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாலமோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/balamon#p1-193420ee",
+      "text": "யூதீத்தின் கணவனாகிய மனாசே அடக்கம் செய்யப்பட்ட இடத்திற்கு அருகிலிருந்த ஒரு நகரம் (யூதீத் 8:3)."
+    }
+  ]
+}

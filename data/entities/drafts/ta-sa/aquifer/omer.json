@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/omer",
+  "lang": "ta",
+  "source_hash": "27fd3c7a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓமர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/omer#p1-4722d63d",
+      "text": "மன்னாவைச் சேர்த்துக்கொள்வதில் பயன்படுத்தப்பட்ட ஒரு அளவை (யாத்திராகமம் 16:16, 18, 22, 36)."
+    },
+    {
+      "id": "aquifer/omer#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

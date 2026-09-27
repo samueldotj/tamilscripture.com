@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/bethemek",
+  "lang": "ta",
+  "source_hash": "26120960",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தேமேக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/bethemek#p1-26120960",
+      "text": "பெத்தேமேக் என்பது ஆசேர் மற்றும் செபுலோன் கோத்திரங்களுக்குரிய பகுதிகளுக்கு இடையேயுள்ள எல்லையில் இருந்த ஒரு பட்டணமாகும் (யோசுவா 19:27)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethpeor",
+  "lang": "ta",
+  "source_hash": "4103acd8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பேத்பேயோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethpeor#p1-4103acd8",
+      "text": "(பேயோரின் வீடு), யோர்தானுக்கு கிழக்கே, எரிகோவிற்கு எதிரே, லிபியாஸ் அல்லது பெத்-ஆரானுக்கு ஆறு மைல் மேலே இருந்த ஒரு இடம். (யோசுவா 13:20; 3:29; 4:46)"
+    }
+  ]
+}

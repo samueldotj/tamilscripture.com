@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ebez",
+  "lang": "ta",
+  "source_hash": "f1f0bffb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபெத்ஸ்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ebez#p1-f1f0bffb",
+      "text": "அபெத்ஸ் என்பது எஸ்திரயேலோன் சமபூமியில் இருந்த ஒரு பட்டணமாகும், இது இசக்கார் கோத்திரத்திற்குச் சொத்தாக ஒப்புக்கொடுக்கப்பட்டது (யோசுவா 19:20)."
+    }
+  ]
+}

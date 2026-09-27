@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nehum",
+  "lang": "ta",
+  "source_hash": "47a8b8ff",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நெகூம்",
+  "paragraphs": [
+    {
+      "id": "smiths/nehum#p1-47a8b8ff",
+      "text": "(ஆறுதல்), செருபாபேலுடன் பாபிலோனிலிருந்து திரும்பி வந்தவர்களில் ஒருவன். (நெகேமியா 7:7)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/oren",
+  "lang": "ta",
+  "source_hash": "2101398e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓரென்",
+  "paragraphs": [
+    {
+      "id": "eastons/oren#p1-2101398e",
+      "text": "சாம்பல் அல்லது பைன், யெராமியேலின் மகன் (1 நாளாகமம் 2:25)."
+    }
+  ]
+}

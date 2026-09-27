@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zimmah",
+  "lang": "ta",
+  "source_hash": "c8802838",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/zimmah#p1-c8802838",
+      "text": "(நோக்கம்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gerah",
+  "lang": "ta",
+  "source_hash": "ca53e578",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேரா",
+  "paragraphs": [
+    {
+      "id": "aquifer/gerah#p1-ca53e578",
+      "text": "ஒரு சேக்கலின் இருபதில் ஒரு பங்காக வரையறுக்கப்பட்ட நிறையளவு; சேமித்திய மக்களிடையே சேக்கல் என்பது அடிப்படை நிறையளவாக இருந்தது. நிறைகளும் அளவுகளும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/debir-person",
+  "lang": "ta",
+  "source_hash": "b8890827",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தெபீர் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/debir-person#p1-b8890827",
+      "text": "எருசலேமின் ராஜாவாகிய அதோனிசேதேக்கின் கூட்டாளியான எக்லோனின் ராஜாக்களில் ஒருவன். தெபீர் யோசுவாவினால் கொல்லப்பட்டான் (யோசுவா 10:22-27)."
+    }
+  ]
+}

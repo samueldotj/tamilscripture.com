@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/neah",
+  "lang": "ta",
+  "source_hash": "2171e5d3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேயா",
+  "paragraphs": [
+    {
+      "id": "aquifer/neah#p1-2171e5d3",
+      "text": "நேயா செபுலோனின் எல்லைப்பட்ட ஒரு பட்டணமாக இருந்தது (யோசுவா 19:13)."
+    }
+  ]
+}

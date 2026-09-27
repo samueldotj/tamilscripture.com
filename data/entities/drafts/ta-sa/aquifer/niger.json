@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/niger",
+  "lang": "ta",
+  "source_hash": "16f1cf8c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நீகர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/niger#p1-38f747e4",
+      "text": "அந்தியோகியாவிலுள்ள சபையின் தலைவர்களில் ஒருவனாகிய சிமியோனுடைய குடும்பப் பெயர் (அப்போஸ்தலருடைய நடபடிகள் 13:1)."
+    },
+    {
+      "id": "aquifer/niger#p2-7a282a5f",
+      "text": "சிமியோன் (நபர்) #4 காண்க."
+    }
+  ]
+}

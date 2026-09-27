@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/azotus",
+  "lang": "ta",
+  "source_hash": "9cca31b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அசோத்து",
+  "paragraphs": [
+    {
+      "id": "aquifer/azotus#p1-c7bb0868",
+      "text": "அப்போஸ்தலருடைய நடபடிகள் 8:40-இல் உள்ள அஸ்தோத்தின் புதிய ஏற்பாட்டு வடிவம்."
+    },
+    {
+      "id": "aquifer/azotus#p2-e8658f3f",
+      "text": "அஸ்தோத், அஸ்தோத்தியன், அஸ்தோத்தியர் காண்க."
+    }
+  ]
+}

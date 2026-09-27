@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/alamoth",
+  "lang": "ta",
+  "source_hash": "2aa47122",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அல்மோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/alamoth#p1-709ad5ee",
+      "text": "சங்கீதம் 46-ன் தலைப்பிலும், 1 நாளாகமம் 15:20-லும் வரும் ஒரு எபிரெய சொல்."
+    },
+    {
+      "id": "aquifer/alamoth#p2-c265f6ba",
+      "text": "இசை என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/othni",
+  "lang": "ta",
+  "source_hash": "7a88e031",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒத்னி",
+  "paragraphs": [
+    {
+      "id": "smiths/othni#p1-7a88e031",
+      "text": "(யெகோவாவின் சிங்கம்), செமாயாவின் மகனும், ஓபேத்ஏதோமின் மூத்த மகனுமாகிய இவன் (1 நாளாகமம் 26:7). (கி.மு. 1013)"
+    }
+  ]
+}

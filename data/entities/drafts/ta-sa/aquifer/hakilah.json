@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/hakilah",
+  "lang": "ta",
+  "source_hash": "1300121b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஹாகிலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/hakilah#p1-ce6fcd2a",
+      "text": "கொரேஷில் இருந்த அடையாளம் காணப்படாத ஒரு இடமான ஆகிலா என்பதற்கு மற்றொரு எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/hakilah#p2-db99f588",
+      "text": "ஆகிலா என்பதைக் காண்க."
+    }
+  ]
+}

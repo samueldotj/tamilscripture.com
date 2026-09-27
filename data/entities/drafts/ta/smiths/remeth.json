@@ -1,0 +1,18 @@
+{
+  "id": "smiths/remeth",
+  "lang": "ta",
+  "source_hash": "3e153b9e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரெமேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/remeth#p1-3e153b9e",
+      "text": "(உயரம்), இசக்காருடைய பட்டணங்களில் ஒன்று. (யோசுவா 19:21) இது (1 நாளாகமம் 6:73)-இல் குறிப்பிடப்பட்ட ராமோத் என்பதிலிருந்து வேறுபட்ட இடமாக இருக்கக்கூடும், ஆனாலும் இது உறுதியானதல்ல."
+    }
+  ]
+}

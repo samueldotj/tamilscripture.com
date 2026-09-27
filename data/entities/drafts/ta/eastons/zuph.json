@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zuph",
+  "lang": "ta",
+  "source_hash": "989b2aa1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூப்",
+  "paragraphs": [
+    {
+      "id": "eastons/zuph#p1-989b2aa1",
+      "text": "தேன் கூடு என்று அர்த்தமுள்ள, கோகாத்தியனாகிய லேவியன், எல்க்கானாவினும் சாமுவேலினும் மூதாதையன் (1 சாமுவேல் 1:1); சோபாய் என்றும் அழைக்கப்பட்டவன் (1 நாளாகமம் 6:26)."
+    }
+  ]
+}

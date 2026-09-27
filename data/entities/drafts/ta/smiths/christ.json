@@ -1,0 +1,18 @@
+{
+  "id": "smiths/christ",
+  "lang": "ta",
+  "source_hash": "7d193744",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிறிஸ்து",
+  "paragraphs": [
+    {
+      "id": "smiths/christ#p1-7d193744",
+      "text": "[இயேசு]"
+    }
+  ]
+}

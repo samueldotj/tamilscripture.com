@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bar-jona",
+  "lang": "ta",
+  "source_hash": "fb319e06",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பார்-யோனா",
+  "paragraphs": [
+    {
+      "id": "eastons/bar-jona#p1-fb319e06",
+      "text": "யோனாவின் மகன், இது பேதுருவின் தந்தை-வாரிசுப் பெயர் (மத்தேயு 16:17; யோவான் 1:42), ஏனெனில் அவனுடைய தகப்பனுடைய பெயர் யோனா ஆகும். (பேதுரு காண்க.)"
+    }
+  ]
+}

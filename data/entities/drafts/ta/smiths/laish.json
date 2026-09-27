@@ -1,0 +1,18 @@
+{
+  "id": "smiths/laish",
+  "lang": "ta",
+  "source_hash": "3be81672",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "லாயிசு",
+  "paragraphs": [
+    {
+      "id": "smiths/laish#p1-3be81672",
+      "text": "(சிங்கம்) பல்த்தியேலின் தகப்பன், சவுல் தாவீதின் மனைவியாகிய மீகாளை இவனுடைய மகனுக்குக் கொடுத்திருந்தான். (1 சாமுவேல் 25:44; 2 சாமுவேல் 3:15)"
+    }
+  ]
+}

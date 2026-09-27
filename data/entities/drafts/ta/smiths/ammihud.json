@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ammihud",
+  "lang": "ta",
+  "source_hash": "af14e3b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மியூத்",
+  "paragraphs": [
+    {
+      "id": "smiths/ammihud#p1-af14e3b2",
+      "text": "(துதியின் மக்கள்)."
+    }
+  ]
+}

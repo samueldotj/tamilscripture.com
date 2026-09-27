@@ -1,0 +1,18 @@
+{
+  "id": "smiths/oil",
+  "lang": "ta",
+  "source_hash": "385febee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எண்ணெய்",
+  "paragraphs": [
+    {
+      "id": "smiths/oil#p1-385febee",
+      "text": "பழங்காலத்தில் எண்ணெய் தரும் பொருள்களாக அறியப்பட்ட விலங்கு மற்றும் தாவரப் பொருள்கள் பலவற்றில், ஒலிவப் பழமே வேதவாக்கியங்களில் அதிக முறை குறிப்பிடப்பட்டுள்ளது."
+    }
+  ]
+}

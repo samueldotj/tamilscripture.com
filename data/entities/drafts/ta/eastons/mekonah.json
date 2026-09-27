@@ -1,0 +1,18 @@
+{
+  "id": "eastons/mekonah",
+  "lang": "ta",
+  "source_hash": "c800f4b2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேகோனா",
+  "paragraphs": [
+    {
+      "id": "eastons/mekonah#p1-c800f4b2",
+      "text": "அஸ்திபாரம் அல்லது ஆதாரம் என்பது இதன் பொருள்; சிக்லாகுக்கு அருகில், யூதாவின் தென்பகுதியில் இருந்த ஒரு பட்டணம் (நெகேமியா 11:28)."
+    }
+  ]
+}

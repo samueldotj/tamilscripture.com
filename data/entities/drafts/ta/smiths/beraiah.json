@@ -1,0 +1,18 @@
+{
+  "id": "smiths/beraiah",
+  "lang": "ta",
+  "source_hash": "f06047f4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெராயா",
+  "paragraphs": [
+    {
+      "id": "smiths/beraiah#p1-f06047f4",
+      "text": "(யெகோவாவினால் உண்டாக்கப்பட்டவன்), சிம்ரியின் மகன், பென்யமீனுடைய தலைவனாக இருந்தவன். (1 நாளாகமம் 8:21)"
+    }
+  ]
+}

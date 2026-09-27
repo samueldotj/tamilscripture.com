@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pathrusim",
+  "lang": "ta",
+  "source_hash": "fdf09edb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பத்ருசீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/pathrusim#p1-fdf09edb",
+      "text": "பத்ரோஸ் மக்கள். [பத்ரோஸ்]"
+    }
+  ]
+}

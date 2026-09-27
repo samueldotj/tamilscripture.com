@@ -1,0 +1,18 @@
+{
+  "id": "smiths/clouted",
+  "lang": "ta",
+  "source_hash": "97e99567",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பழுதுபார்க்கப்பட்ட",
+  "paragraphs": [
+    {
+      "id": "smiths/clouted#p1-97e99567",
+      "text": "பழுது பார்க்கப்பட்டது. (யோசுவா 9:5)"
+    }
+  ]
+}

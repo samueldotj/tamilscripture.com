@@ -1,0 +1,18 @@
+{
+  "id": "smiths/imnah",
+  "lang": "ta",
+  "source_hash": "ec40f4ee",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இம்னா",
+  "paragraphs": [
+    {
+      "id": "smiths/imnah#p1-ec40f4ee",
+      "text": "(தடுத்து நிறுத்துதல்)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sheber",
+  "lang": "ta",
+  "source_hash": "739f57a2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேபேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/sheber#p1-739f57a2",
+      "text": "(உடைவு), எஸ்ரோனின் மகனாகிய காலேபுடைய மறுமனையாட்டியான மாகாளால் பெறப்பட்ட மகன். (1 நாளாகமம் 2:48) (கி.மு. 1690க்குப் பின்)."
+    }
+  ]
+}

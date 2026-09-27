@@ -1,0 +1,18 @@
+{
+  "id": "eastons/heshmon",
+  "lang": "ta",
+  "source_hash": "10342ea8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எஸ்மோன்",
+  "paragraphs": [
+    {
+      "id": "eastons/heshmon#p1-10342ea8",
+      "text": "கொழுமை, யூதாவின் தென்பகுதியில் இருந்த ஒரு பட்டணம் (யோசுவா 15:27)."
+    }
+  ]
+}

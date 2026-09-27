@@ -1,0 +1,18 @@
+{
+  "id": "smiths/caria",
+  "lang": "ta",
+  "source_hash": "89e63447",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காரியா",
+  "paragraphs": [
+    {
+      "id": "smiths/caria#p1-89e63447",
+      "text": "புதிய ஏற்பாடு ஆசியா என்று அழைக்கும் பகுதியின் தென்பகுதி, ஆசியா மைனர் தீபகற்பத்தின் தென்மேற்குப் பகுதி (அப்போஸ்தலருடைய நடபடிகள் 20:15; 27:7)."
+    }
+  ]
+}

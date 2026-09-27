@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aridatha",
+  "lang": "ta",
+  "source_hash": "1ad19c20",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அரிதாத்தா",
+  "paragraphs": [
+    {
+      "id": "smiths/aridatha#p1-1ad19c20",
+      "text": "ஆமானின் ஆறாம் மகன் (எஸ்தர் 9:8)."
+    }
+  ]
+}

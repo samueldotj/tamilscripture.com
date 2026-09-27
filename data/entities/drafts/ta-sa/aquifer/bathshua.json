@@ -1,0 +1,26 @@
+{
+  "id": "aquifer/bathshua",
+  "lang": "ta",
+  "source_hash": "e7e706c9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பத்சூவா",
+  "paragraphs": [
+    {
+      "id": "aquifer/bathshua#p1-f558f5ab",
+      "text": "யூதாவின் கானானிய மனைவி. இவள் அவனுக்கு ஏர், ஓனான், சாலா என்னும் மூன்று மகன்களைப் பெற்றெடுத்தாள் (ஆதியாகமம் 38:2-5; 1 நாளாகமம் 2:3)."
+    },
+    {
+      "id": "aquifer/bathshua#p2-2d583bc0",
+      "text": "1 நாளாகமம் 3:5-ல் பத்சேபாள் என்பதற்கு மாற்றுப் பெயர்."
+    },
+    {
+      "id": "aquifer/bathshua#p3-84d14165",
+      "text": "பத்சேபாளைக் காண்க."
+    }
+  ]
+}

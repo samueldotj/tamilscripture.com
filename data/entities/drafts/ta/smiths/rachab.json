@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rachab",
+  "lang": "ta",
+  "source_hash": "25f59512",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ராகாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/rachab#p1-25f59512",
+      "text": "ராகாப் என்னும் வேசி. (மத்தேயு 1:15)"
+    }
+  ]
+}

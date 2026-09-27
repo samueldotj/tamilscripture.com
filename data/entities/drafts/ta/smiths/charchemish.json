@@ -1,0 +1,18 @@
+{
+  "id": "smiths/charchemish",
+  "lang": "ta",
+  "source_hash": "986429f9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்கேமிஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/charchemish#p1-986429f9",
+      "text": "(2 நாளாகமம் 35:20) [கர்கேமிஸ்]"
+    }
+  ]
+}

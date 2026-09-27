@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/gedeon",
+  "lang": "ta",
+  "source_hash": "08071b56",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கிதியோன் (கெதியோன்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/gedeon#p1-bb115c36",
+      "text": "கெதியோன் என்பது எபிரெயர் 11:32-ல் காணப்படும் யோவாஸின் மகனும், இஸ்ரவேலின் நியாயாதிபதியுமான கிதியோனுக்கு கிங் யாக்கோபு மொழிபெயர்ப்பில் பயன்படுத்தப்பட்ட எழுத்துப்பெயர்ப்பாகும்."
+    },
+    {
+      "id": "aquifer/gedeon#p2-b699ddc6",
+      "text": "கிதியோனைக் காண்க."
+    }
+  ]
+}

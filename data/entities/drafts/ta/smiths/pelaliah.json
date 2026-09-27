@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pelaliah",
+  "lang": "ta",
+  "source_hash": "c540f46e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெல்லியா",
+  "paragraphs": [
+    {
+      "id": "smiths/pelaliah#p1-c540f46e",
+      "text": "(யெகோவாவால் நியாயந்தீர்க்கப்பட்டவன்), அம்சியின் மகனும் அதாயாவின் மூதாதையுமாயிருந்தான். (நெகேமியா 11:12)"
+    }
+  ]
+}

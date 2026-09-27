@@ -1,0 +1,18 @@
+{
+  "id": "smiths/edar-tower-of",
+  "lang": "ta",
+  "source_hash": "6a99ff90",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏதேர் கோபுரம்",
+  "paragraphs": [
+    {
+      "id": "smiths/edar-tower-of#p1-6a99ff90",
+      "text": "(சரியாகச் சொன்னால் ஏதேர், ஆட்டுமந்தை என்பது பொருள்), (ஆதியாகமம் 35:21) இல் மட்டுமே குறிக்கப்பட்ட ஒரு இடம். எரோமின் கூற்றுப்படி அது பெத்லெகேமிலிருந்து ஆயிரம் அடி தூரத்தில் இருந்தது."
+    }
+  ]
+}

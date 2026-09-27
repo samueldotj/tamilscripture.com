@@ -1,0 +1,18 @@
+{
+  "id": "smiths/tolad",
+  "lang": "ta",
+  "source_hash": "ba77dae7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோலாத்",
+  "paragraphs": [
+    {
+      "id": "smiths/tolad#p1-ba77dae7",
+      "text": "சிமியோனுடைய பட்டணங்களில் ஒன்று (1 நாளாகமம் 4:29), வேறு இடங்களில் எல்தோலாத் என்று அழைக்கப்படுகிறது."
+    }
+  ]
+}

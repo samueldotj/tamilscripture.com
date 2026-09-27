@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mizar",
+  "lang": "ta",
+  "source_hash": "38049b94",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஸார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mizar#p1-38049b94",
+      "text": "மிஸார் என்பது யோர்தான் நதிக்குக் கிழக்கே, எர்மோன் மலைக்கு அருகில் இருந்திருக்கக்கூடிய ஒரு சிறுமலையாக இருந்தது (சங்கீதம் 42:6)."
+    }
+  ]
+}

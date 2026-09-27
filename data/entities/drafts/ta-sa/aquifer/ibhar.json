@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ibhar",
+  "lang": "ta",
+  "source_hash": "a72e07ab",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இப்பார்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ibhar#p1-a72e07ab",
+      "text": "தாவீது எருசலேமில் ஆளுகை செய்த காலத்தில் அவனுக்குப் பிறந்த ஒரு மகன் (2 சாமுவேல் 5:15; 1 நாளாகமம் 3:6; 14:5)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hoshaiah",
+  "lang": "ta",
+  "source_hash": "a70a6a5c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓசாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/hoshaiah#p1-a70a6a5c",
+      "text": "(யெகோவா உதவி செய்கிறவர்)."
+    }
+  ]
+}

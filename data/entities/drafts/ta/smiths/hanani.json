@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hanani",
+  "lang": "ta",
+  "source_hash": "4fb83bb3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனானி",
+  "paragraphs": [
+    {
+      "id": "smiths/hanani#p1-4fb83bb3",
+      "text": "(கிருபையுள்ளவன்)."
+    }
+  ]
+}

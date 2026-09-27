@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/dilan",
+  "lang": "ta",
+  "source_hash": "63cff239",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "திலியான்",
+  "paragraphs": [
+    {
+      "id": "aquifer/dilan#p1-63cff239",
+      "text": "திலியான் லாகீசுக்கு அருகில் யூதாவில் இருந்த ஒரு அறியப்படாத சிற்றூராகும். இது பழைய ஏற்பாட்டில் ஒரு முறை மட்டுமே குறிப்பிடப்பட்டுள்ளது (யோசுவா 15:38)."
+    }
+  ]
+}

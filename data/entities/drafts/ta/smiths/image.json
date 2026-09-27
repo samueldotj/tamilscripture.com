@@ -1,0 +1,18 @@
+{
+  "id": "smiths/image",
+  "lang": "ta",
+  "source_hash": "f81ae267",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "விக்கிரகம்",
+  "paragraphs": [
+    {
+      "id": "smiths/image#p1-f81ae267",
+      "text": "[விக்கிரகம்]"
+    }
+  ]
+}

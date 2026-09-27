@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jakan",
+  "lang": "ta",
+  "source_hash": "4d71b8bd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாக்கான்",
+  "paragraphs": [
+    {
+      "id": "smiths/jakan#p1-4d71b8bd",
+      "text": "(விவேகமுள்ளவன்), ஏத்சேரின் மகனான ஓரியன். (1 நாளாகமம் 1:42) யாக்கான் என்பவனே. [அக்கானையும் காண்க]"
+    }
+  ]
+}

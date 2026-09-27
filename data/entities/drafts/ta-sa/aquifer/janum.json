@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/janum",
+  "lang": "ta",
+  "source_hash": "ea962af7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானூம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/janum#p1-4eccf9c3",
+      "text": "யானூம் என்பது யானூம் என்பதன் கிங் யாக்கோபு வேர்ஷன் எழுத்துவடிவமாகும், இது யோசுவா 15:53இல் குறிப்பிடப்படும் யூதாவின் தேசத்திலுள்ள ஒரு பட்டணமாகும்."
+    },
+    {
+      "id": "aquifer/janum#p2-d16c9781",
+      "text": "யானூம் என்பதைக் காண்க."
+    }
+  ]
+}

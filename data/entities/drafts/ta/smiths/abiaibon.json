@@ -1,0 +1,18 @@
+{
+  "id": "smiths/abiaibon",
+  "lang": "ta",
+  "source_hash": "cfff1819",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அபியாபோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/abiaibon#p1-cfff1819",
+      "text": "(பலத்தின் தகப்பன்). அபீயேல் அல்லது ஆபியேலைக் காண்க."
+    }
+  ]
+}

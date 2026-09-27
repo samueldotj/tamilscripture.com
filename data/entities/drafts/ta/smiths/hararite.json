@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hararite",
+  "lang": "ta",
+  "source_hash": "7d3e87e6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆராரியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/hararite#p1-7d3e87e6",
+      "text": "(மலைவாசி), ஆராரியன். தாவீதின் மறவர்களில் மூன்று பேருடைய இருப்பிடப் பெயர்."
+    }
+  ]
+}

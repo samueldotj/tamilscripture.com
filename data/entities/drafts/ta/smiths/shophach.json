@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shophach",
+  "lang": "ta",
+  "source_hash": "c84c2e08",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சோப்பாக்",
+  "paragraphs": [
+    {
+      "id": "smiths/shophach#p1-c84c2e08",
+      "text": "(விரிவாக்கம்), சோபாக், ஆதாரேசரின் படைத்தலைவன். (1 நாளாகமம் 19:16,18) (கி.மு. 1034)."
+    }
+  ]
+}

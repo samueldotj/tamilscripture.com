@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gull",
+  "lang": "ta",
+  "source_hash": "ffd25095",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடற்காக்கை",
+  "paragraphs": [
+    {
+      "id": "aquifer/gull#p1-ffd25095",
+      "text": "லாரிடே (Laridae) குடும்பத்தைச் சேர்ந்த பல பறவைகளில் ஒன்று. லேவியராகமம் 11:16 மற்றும் உபாகமம் 14:15 இல் வரும் nlt-யின் “seagull” (kjv-யின் “cuckow”) என்பது நிச்சயமற்றது. பறவைகள் (கடற்காக்கை) என்பதைக் காண்க."
+    }
+  ]
+}

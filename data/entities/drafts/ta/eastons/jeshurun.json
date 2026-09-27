@@ -1,0 +1,18 @@
+{
+  "id": "eastons/jeshurun",
+  "lang": "ta",
+  "source_hash": "ac641d5d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யெஷூரன்",
+  "paragraphs": [
+    {
+      "id": "eastons/jeshurun#p1-ac641d5d",
+      "text": "இஸ்ரவேல் மக்களைக் குறிக்கும் ஒரு கவிதைச் சொல்; அன்பின் அடையாளமாகப் பயன்படுத்தப்படுகிறது, அதன் பொருள், “அன்பான செம்மையான மக்கள்” என்பதாகும் (உபாகமம் 32:15; 33:5, 26; ஏசாயா 44:2)."
+    }
+  ]
+}

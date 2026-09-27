@@ -1,0 +1,18 @@
+{
+  "id": "eastons/janum",
+  "lang": "ta",
+  "source_hash": "a37d041a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யானூம்",
+  "paragraphs": [
+    {
+      "id": "eastons/janum#p1-a37d041a",
+      "text": "தூக்கம் என்று பொருள்படும், இது யூதாவின் மலைநாட்டில் இருந்த ஒரு பட்டணம் (யோசுவா 15:53)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/aegypt",
+  "lang": "ta",
+  "source_hash": "8c38b095",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏகிப்து",
+  "paragraphs": [
+    {
+      "id": "smiths/aegypt#p1-8c38b095",
+      "text": "[எகிப்து]"
+    }
+  ]
+}

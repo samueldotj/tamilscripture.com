@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/morning-sacrifice",
+  "lang": "ta",
+  "source_hash": "f287f1f6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "காலைப் பலி",
+  "paragraphs": [
+    {
+      "id": "aquifer/morning-sacrifice#p1-bd0099fb",
+      "text": "காலைப் பலியானது ஒவ்வொரு நாளும் செலுத்தப்பட்ட நித்திய சர்வாங்க தகனபலிக் காணிக்கையின் ஒரு பகுதியாக இருந்தது. ஒரு ஆட்டுக்குட்டி காலையில் பலியிடப்பட்டது, மற்றொன்று நாளின் முடிவில் பலியிடப்பட்டது."
+    },
+    {
+      "id": "aquifer/morning-sacrifice#p2-1320f47c",
+      "text": "காணிக்கைகளும் பலிகளும் என்பதைக் காண்க."
+    }
+  ]
+}

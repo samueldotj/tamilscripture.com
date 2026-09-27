@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jotham",
+  "lang": "ta",
+  "source_hash": "d11d593f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோதாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jotham#p1-d11d593f",
+      "text": "(யெகோவா நீதியுள்ளவர்)."
+    }
+  ]
+}

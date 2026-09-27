@@ -1,0 +1,18 @@
+{
+  "id": "smiths/ezekias",
+  "lang": "ta",
+  "source_hash": "a8fcc42d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசேக்கியா",
+  "paragraphs": [
+    {
+      "id": "smiths/ezekias#p1-a8fcc42d",
+      "text": "(மத்தேயு 1:9,10) [எசேக்கியா காண்க]"
+    }
+  ]
+}

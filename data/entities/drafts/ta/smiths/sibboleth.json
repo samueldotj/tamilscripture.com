@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sibboleth",
+  "lang": "ta",
+  "source_hash": "6ef9c83a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிபோலேத்",
+  "paragraphs": [
+    {
+      "id": "smiths/sibboleth#p1-6ef9c83a",
+      "text": "ஷிபோலேத் என்ற வார்த்தையை எப்பிராயீமியர் உச்சரித்த விதம். (நியாயாதிபதிகள் 12:6) [ஷிபோலேத் காண்க]"
+    }
+  ]
+}

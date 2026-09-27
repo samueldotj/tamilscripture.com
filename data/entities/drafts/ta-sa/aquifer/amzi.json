@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/amzi",
+  "lang": "ta",
+  "source_hash": "f8b747b5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்சி",
+  "paragraphs": [
+    {
+      "id": "aquifer/amzi#p1-fcf5147b",
+      "text": "லேவியரின் மெராரி குடும்பத்தைச் சேர்ந்த ஒருவனும், சங்கீதக்காரனாகிய ஏத்தானின் முற்பிதாவும் ஆவான் (1 நாளாகமம் 6:46)."
+    },
+    {
+      "id": "aquifer/amzi#p2-69c85ef8",
+      "text": "அதாயாவின் முற்பிதாவும், மல்கியாவின் பிரிவிலுள்ள ஆசாரியனுமான ஒருவன் (நெகேமியா 11:12)."
+    }
+  ]
+}

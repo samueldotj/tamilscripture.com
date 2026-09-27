@@ -1,0 +1,30 @@
+{
+  "id": "eastons/gera",
+  "lang": "ta",
+  "source_hash": "7ef12a2f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேரா",
+  "paragraphs": [
+    {
+      "id": "eastons/gera#p1-756e9785",
+      "text": "தானியம்."
+    },
+    {
+      "id": "eastons/gera#p2-bccb7809",
+      "text": "(1.) பேலாவின் மகனும் பென்யமீனின் பேரனும் (1 நாளாகமம் 8:3, 5, 7)."
+    },
+    {
+      "id": "eastons/gera#p3-c3e0bccf",
+      "text": "(2.) நியாயாதிபதியாகிய ஏகூத்தின் தகப்பன் (நியாயாதிபதிகள் 3:15)."
+    },
+    {
+      "id": "eastons/gera#p4-b0cff367",
+      "text": "(3.) தாவீதை அவ்வளவு கடுமையாக நிந்தித்த சீமேயியின் தகப்பன் (2 சாமுவேல் 16:5; 19:16, 18)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/tophel",
+  "lang": "ta",
+  "source_hash": "90ca44ca",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "தோப்பேல்",
+  "paragraphs": [
+    {
+      "id": "eastons/tophel#p1-90ca44ca",
+      "text": "சுண்ணாம்பு, சீனாய் வனாந்தரத்திலுள்ள ஒரு இடம் (உபாகமம் 1:1), இப்பொழுது ஏதோமிய மலைகளின் மேற்குப் பக்கத்திலுள்ள தாஃப்யிலே அல்லது தூஃபிலே என்று அடையாளம் காணப்படுகிறது."
+    }
+  ]
+}

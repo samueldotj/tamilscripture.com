@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/asenath",
+  "lang": "ta",
+  "source_hash": "ab93eda2",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆஸ்நாத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/asenath#p1-ab93eda2",
+      "text": "யோசேப்பினுடைய எகிப்திய மனைவியாகிய இவள் மனாசேயும் எப்பிராயீமும் பிறந்த தாயானாள். ஆஸ்நாத் ஆசாரியனாகிய போத்திபிராவின் மகளாக இருந்தாள் (ஆதியாகமம் 41:45, 50–52; 46:20)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shilonite-the",
+  "lang": "ta",
+  "source_hash": "54e698f3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீலோனியன்",
+  "paragraphs": [
+    {
+      "id": "smiths/shilonite-the#p1-54e698f3",
+      "text": "அதாவது, சீலோவின் சொந்த குடியிருப்பாளன்; இந்தப் பட்டப்பெயர் அகியாவிற்கு மட்டுமே கொடுக்கப்பட்டுள்ளது. (1 இராஜாக்கள் 11:29; 12:15; 15:29; 2 நாளாகமம் 9:29; 10:15)"
+    }
+  ]
+}

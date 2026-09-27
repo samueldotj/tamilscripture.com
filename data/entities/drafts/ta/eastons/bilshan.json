@@ -1,0 +1,18 @@
+{
+  "id": "eastons/bilshan",
+  "lang": "ta",
+  "source_hash": "d06434d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பில்சான்",
+  "paragraphs": [
+    {
+      "id": "eastons/bilshan#p1-d06434d7",
+      "text": "நாவின் மகன்; அதாவது, “சொற்பொழிவாற்றுபவன்”, செருபாபேலுடன் சிறையிருப்பிலிருந்து திரும்பி வந்த குறிப்பிடத்தக்க ஒரு மனிதன் (எஸ்றா 2:2; நெகேமியா 7:7)."
+    }
+  ]
+}

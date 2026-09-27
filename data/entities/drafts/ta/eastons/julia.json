@@ -1,0 +1,18 @@
+{
+  "id": "eastons/julia",
+  "lang": "ta",
+  "source_hash": "22e14fdd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யூலியாள்",
+  "paragraphs": [
+    {
+      "id": "eastons/julia#p1-22e14fdd",
+      "text": "பவுல் தன் வாழ்த்துதலை அனுப்பிய ரோமாபுரிக்குப் இருந்த ஒரு கிறிஸ்தவப் பெண் (ரோமர் 16:15), இவள் பிலொலோகுக்கும் மனைவியாக இருந்திருக்கலாம் என்று கருதப்படுகிறது."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hupham",
+  "lang": "ta",
+  "source_hash": "4295ec34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "உப்பாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/hupham#p1-4295ec34",
+      "text": "(கடலோர மனிதன்), பென்யமீனுடைய ஒரு மகன், உப்பாமியர்களின் குடும்பத்தை நிறுவியவன். (எண்ணாகமம் 26:39) (கி.மு. 1688.)"
+    }
+  ]
+}

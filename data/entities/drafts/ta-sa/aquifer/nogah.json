@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/nogah",
+  "lang": "ta",
+  "source_hash": "98f2f789",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோகா",
+  "paragraphs": [
+    {
+      "id": "aquifer/nogah#p1-98f2f789",
+      "text": "தாவீது ராஜாவானபின் எருசலேமில் அவனுக்குப் பிறந்த 13 மகன்களில் நோகா ஒருவன் (1 நாளாகமம் 3:7; 14:6)."
+    }
+  ]
+}

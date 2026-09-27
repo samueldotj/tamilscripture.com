@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/anthothijah",
+  "lang": "ta",
+  "source_hash": "30db8f3a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்தோதியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/anthothijah#p1-30db8f3a",
+      "text": "பென்யமீன் கோத்திரத்தானாகிய இவன் சாஷாக்கின் மகன். இவனுடைய பெயர் 1 நாளாகமம் 8:24-ல் பட்டியலிடப்பட்டுள்ளது."
+    }
+  ]
+}

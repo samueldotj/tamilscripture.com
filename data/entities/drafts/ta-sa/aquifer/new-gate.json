@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/new-gate",
+  "lang": "ta",
+  "source_hash": "f48d5a59",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "புதிய வாசல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/new-gate#p1-f48d5a59",
+      "text": "புதிய வாசல் என்பது தீர்க்கதரிசியாகிய எரேமியாவின் ஊழியக் காலத்தில் இருந்த ஆலய வாசல்களில் ஒன்றாக இருந்தது (எரேமியா 26:10; 36:10)."
+    }
+  ]
+}

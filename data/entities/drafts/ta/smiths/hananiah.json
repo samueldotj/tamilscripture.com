@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hananiah",
+  "lang": "ta",
+  "source_hash": "ed491e94",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அனனியா",
+  "paragraphs": [
+    {
+      "id": "smiths/hananiah#p1-ed491e94",
+      "text": "(தேவனுடைய கொடை)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nadab",
+  "lang": "ta",
+  "source_hash": "456d4d40",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாதாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/nadab#p1-456d4d40",
+      "text": "(தாராளமான)."
+    }
+  ]
+}

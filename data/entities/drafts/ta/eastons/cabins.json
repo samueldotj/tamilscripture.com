@@ -1,0 +1,18 @@
+{
+  "id": "eastons/cabins",
+  "lang": "ta",
+  "source_hash": "c2ea1420",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிலவறைகள்",
+  "paragraphs": [
+    {
+      "id": "eastons/cabins#p1-c2ea1420",
+      "text": "எரேமியா 37:16-ல் மட்டும் (R.V., “அறைகள்”), இது ஒரு வழிப்பாதை அல்லது அறையின் ஓரமாக இருக்கும் வளைவான குழிகளையோ உட்குழிகளையோ குறிக்கும்; கைதிகளை மிகக் கடுமையாகச் சிறையிலடைக்கும் அறைகள்."
+    }
+  ]
+}

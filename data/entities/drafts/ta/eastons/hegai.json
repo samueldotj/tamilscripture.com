@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hegai",
+  "lang": "ta",
+  "source_hash": "5be90562",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யேகாய்",
+  "paragraphs": [
+    {
+      "id": "eastons/hegai#p1-5be90562",
+      "text": "அகாஸ்வேருவின் அந்தப்புரத்தின் பொறுப்பில் இருந்த குண்டகன் (எஸ்தர் 2:8)."
+    }
+  ]
+}

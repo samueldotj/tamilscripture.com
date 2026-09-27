@@ -1,0 +1,18 @@
+{
+  "id": "smiths/puah",
+  "lang": "ta",
+  "source_hash": "3ed4d288",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பூவா",
+  "paragraphs": [
+    {
+      "id": "smiths/puah#p1-3ed4d288",
+      "text": "(சிறந்த)."
+    }
+  ]
+}

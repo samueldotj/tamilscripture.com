@@ -1,0 +1,18 @@
+{
+  "id": "smiths/eranites-the",
+  "lang": "ta",
+  "source_hash": "5cf5b61e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏரானியர்கள்",
+  "paragraphs": [
+    {
+      "id": "smiths/eranites-the#p1-5cf5b61e",
+      "text": "(எண்ணாகமம் 26:36)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ephah-measurement",
+  "lang": "ta",
+  "source_hash": "bce7094a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏப்பா (அளவு)",
+  "paragraphs": [
+    {
+      "id": "aquifer/ephah-measurement#p1-07b30f57",
+      "text": "ஏப்பா என்பது தானியத்தை அளவிட பயன்படுத்தப்பட்ட ஒரு அளவு. இது சுமார் அரை புஷல் (18 லிட்டர்) அளவுக்கு சமமாக இருந்தது."
+    },
+    {
+      "id": "aquifer/ephah-measurement#p2-db3bfff6",
+      "text": "நிறைகளும் அளவைகளும் என்பதைக் காண்க."
+    }
+  ]
+}

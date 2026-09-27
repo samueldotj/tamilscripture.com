@@ -1,0 +1,26 @@
+{
+  "id": "eastons/mikloth",
+  "lang": "ta",
+  "source_hash": "33353669",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிக்லோத்",
+  "paragraphs": [
+    {
+      "id": "eastons/mikloth#p1-53ff6cbd",
+      "text": "கோல்கள்."
+    },
+    {
+      "id": "eastons/mikloth#p2-2dee99e4",
+      "text": "(1.) தாவீதின் மற்றும் சாலொமோனின் காலத்தில் தோதாயின் கீழிருந்த ஒரு அதிகாரி (1 நாளாகமம் 27:4)."
+    },
+    {
+      "id": "eastons/mikloth#p3-4e4377c6",
+      "text": "(2.) ஒரு பென்யமீனியன் (1 நாளாகமம் 8:32; 9:37, 38)."
+    }
+  ]
+}

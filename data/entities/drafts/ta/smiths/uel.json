@@ -1,0 +1,18 @@
+{
+  "id": "smiths/uel",
+  "lang": "ta",
+  "source_hash": "60c7160f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஊவேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/uel#p1-60c7160f",
+      "text": "(தேவனுடைய விருப்பம்), சிறையிருப்பின்போது அந்நிய பெண்ணை மணந்துகொண்ட பானியின் குடும்பத்தாரில் ஒருவன். (எஸ்றா 10:34) (கி.மு. 458.)"
+    }
+  ]
+}

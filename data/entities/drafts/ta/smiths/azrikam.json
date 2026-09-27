@@ -1,0 +1,18 @@
+{
+  "id": "smiths/azrikam",
+  "lang": "ta",
+  "source_hash": "11a75f7f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்ரீகாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/azrikam#p1-11a75f7f",
+      "text": "(எதிரிக்கு எதிரான உதவி)."
+    }
+  ]
+}

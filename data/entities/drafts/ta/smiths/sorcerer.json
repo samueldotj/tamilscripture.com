@@ -1,0 +1,18 @@
+{
+  "id": "smiths/sorcerer",
+  "lang": "ta",
+  "source_hash": "85f38490",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூனியக்காரன்",
+  "paragraphs": [
+    {
+      "id": "smiths/sorcerer#p1-85f38490",
+      "text": "[குறிசொல்லுதல் காண்க]"
+    }
+  ]
+}

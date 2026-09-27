@@ -1,0 +1,18 @@
+{
+  "id": "smiths/benaiah",
+  "lang": "ta",
+  "source_hash": "35fb6db1",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெனாயா",
+  "paragraphs": [
+    {
+      "id": "smiths/benaiah#p1-35fb6db1",
+      "text": "(கர்த்தரால் உண்டாக்கப்பட்டவன்)."
+    }
+  ]
+}

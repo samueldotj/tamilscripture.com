@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/noe",
+  "lang": "ta",
+  "source_hash": "3a5ad34e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நோயே",
+  "paragraphs": [
+    {
+      "id": "aquifer/noe#p1-e0f65b5c",
+      "text": "கிங் யாக்கோபு மொழிபெயர்ப்பில் மத்தேயு 24:37-38 மற்றும் லூக்கா 3:36; 17:26-27 ஆகிய இடங்களில் நோவா என்ற பெயருக்கு பயன்படுத்தப்பட்ட எழுத்துவடிவம்."
+    },
+    {
+      "id": "aquifer/noe#p2-2c22e26b",
+      "text": "நோவா #1 ஐக் காண்க."
+    }
+  ]
+}

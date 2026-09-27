@@ -1,0 +1,18 @@
+{
+  "id": "smiths/mirma",
+  "lang": "ta",
+  "source_hash": "39326e81",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிர்மா",
+  "paragraphs": [
+    {
+      "id": "smiths/mirma#p1-39326e81",
+      "text": "(வஞ்சகம்), மோவாப் தேசத்தில் பிறந்த ஒரு பென்யமீனியன். (1 நாளாகமம் 8:10)"
+    }
+  ]
+}

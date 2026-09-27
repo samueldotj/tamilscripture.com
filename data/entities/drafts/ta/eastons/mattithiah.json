@@ -1,0 +1,34 @@
+{
+  "id": "eastons/mattithiah",
+  "lang": "ta",
+  "source_hash": "977304aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மத்தித்தியா",
+  "paragraphs": [
+    {
+      "id": "eastons/mattithiah#p1-2b35ab38",
+      "text": "யெகோவாவின் ஈவு."
+    },
+    {
+      "id": "eastons/mattithiah#p2-34886d9e",
+      "text": "(1.) எதுத்தூனின் மகன்களில் ஒருவன் (1 நாளாகமம் 25:3, 21)."
+    },
+    {
+      "id": "eastons/mattithiah#p3-0b53cf2f",
+      "text": "(2.) கோராகின் குடும்பத்தைச் சேர்ந்த சல்லூமின் மூத்த மகன் (1 நாளாகமம் 9:31)."
+    },
+    {
+      "id": "eastons/mattithiah#p4-605dfe48",
+      "text": "(3.) எஸ்றா நியாயப்பிரமாணத்தை வாசிக்கும்போது அவனருகில் நின்றவன் (நெகேமியா 8:4)."
+    },
+    {
+      "id": "eastons/mattithiah#p5-bf4aa25b",
+      "text": "(4.) நம்முடைய கர்த்தருடைய வம்சவரலாற்றில் ஆமோஸின் மகனும், யோசேப்பின் தகப்பனும் ஆனவன் (லூக்கா 3:25)."
+    }
+  ]
+}

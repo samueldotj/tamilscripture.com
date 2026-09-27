@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hizkiah",
+  "lang": "ta",
+  "source_hash": "2a0c8a7d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசேக்கியா",
+  "paragraphs": [
+    {
+      "id": "eastons/hizkiah#p1-2a0c8a7d",
+      "text": "தீர்க்கதரிசியாகிய செப்பனியாவின் முற்பிதா (1:1)."
+    }
+  ]
+}

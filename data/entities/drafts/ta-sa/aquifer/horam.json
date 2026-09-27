@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/horam",
+  "lang": "ta",
+  "source_hash": "53dd1a44",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஓராம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/horam#p1-53dd1a44",
+      "text": "ஓராம் கேசேரின் ராஜாவாக இருந்தான். ஓராம் லாகீசுக்கு உதவிசெய்யும்படி வந்தபோது, யோசுவா அவனை முறியடித்துக் கொலைசெய்தான் (யோசுவா 10:33)."
+    }
+  ]
+}

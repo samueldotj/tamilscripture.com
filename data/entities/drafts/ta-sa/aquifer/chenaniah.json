@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/chenaniah",
+  "lang": "ta",
+  "source_hash": "d4e752b9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெனானியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/chenaniah#p1-d62c2568",
+      "text": "கெனானியா என்ற பெயரின் இன்னொரு எழுத்துப்பெயர்."
+    },
+    {
+      "id": "aquifer/chenaniah#p2-0cd1d413",
+      "text": "கெனானியா என்பதைக் காண்க."
+    }
+  ]
+}

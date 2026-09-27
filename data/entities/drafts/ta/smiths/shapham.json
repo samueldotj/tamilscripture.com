@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shapham",
+  "lang": "ta",
+  "source_hash": "f42e2303",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாப்பாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/shapham#p1-f42e2303",
+      "text": "பாசானிலுள்ள ஒரு காத்தியன். (1 நாளாகமம் 5:12) (கி.மு. 750)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hammothdor",
+  "lang": "ta",
+  "source_hash": "5bcac2a3",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அம்மாத்தோர்",
+  "paragraphs": [
+    {
+      "id": "smiths/hammothdor#p1-5bcac2a3",
+      "text": "(வெந்நீர் ஊற்றுகளின் குடியிருப்பு). [அம்மாத்தின்]"
+    }
+  ]
+}

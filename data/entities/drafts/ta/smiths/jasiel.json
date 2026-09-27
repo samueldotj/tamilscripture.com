@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jasiel",
+  "lang": "ta",
+  "source_hash": "af7465a5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாசீயேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/jasiel#p1-af7465a5",
+      "text": "(தேவன் உண்டாக்கினவன்), 1 நாளாகமம் 11:47 இல் தாவீதின் பராக்கிரமசாலிகளின் பட்டியலில் இறுதியாகக் குறிப்பிடப்பட்டவன்."
+    }
+  ]
+}

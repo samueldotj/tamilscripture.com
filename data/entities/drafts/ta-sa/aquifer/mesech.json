@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mesech",
+  "lang": "ta",
+  "source_hash": "c8744d00",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேசெக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mesech#p1-e1e59953",
+      "text": "மேசெக் என்பது நோவாவின் பேரனான மேசேக்கின் கிங் யாக்கோபு பதிப்பு எழுத்துவடிவமாகும் (சங்கீதம் 120:5)."
+    },
+    {
+      "id": "aquifer/mesech#p2-e2d9c71b",
+      "text": "மேசேக் #1 காண்க."
+    }
+  ]
+}

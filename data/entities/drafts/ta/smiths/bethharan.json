@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bethharan",
+  "lang": "ta",
+  "source_hash": "41963ee6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பெத்தாரான்",
+  "paragraphs": [
+    {
+      "id": "smiths/bethharan#p1-41963ee6",
+      "text": "(எண்ணாகமம் 32:36) இது சந்தேகமில்லாமல் பெத்தாராம் என்னும் இடத்தையே குறிக்கிறது. (யோசுவா 13:27)"
+    }
+  ]
+}

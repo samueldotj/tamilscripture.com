@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/jaalah",
+  "lang": "ta",
+  "source_hash": "69aa4da0",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யாலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jaalah#p1-69aa4da0",
+      "text": "பாபிலோனிய சிறையிருப்புக்குப் பின்பு செருபாபேலுடன் எருசலேமுக்குத் திரும்பி வந்த ஒரு வம்சத்தின் தலைவனும், சாலொமோன் ராஜாவின் ஊழியக்காரனுமாக இருந்தவன் (எஸ்றா 2:56; நெகேமியா 7:58)."
+    }
+  ]
+}

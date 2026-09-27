@@ -1,0 +1,18 @@
+{
+  "id": "smiths/kedesh",
+  "lang": "ta",
+  "source_hash": "63f32374",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேதேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/kedesh#p1-63f32374",
+      "text": "(ஒரு பரிசுத்த ஸ்தலம்)."
+    }
+  ]
+}

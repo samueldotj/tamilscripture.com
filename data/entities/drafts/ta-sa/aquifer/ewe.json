@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ewe",
+  "lang": "ta",
+  "source_hash": "44acd771",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "செம்மறியாட்டுத் தாய்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ewe#p1-8b449e82",
+      "text": "ஈவ் என்பது ஒரு பெண் செம்மறியாடு."
+    },
+    {
+      "id": "aquifer/ewe#p2-8f4045ec",
+      "text": "செம்மறியாடு என்பதைக் காண்க."
+    }
+  ]
+}

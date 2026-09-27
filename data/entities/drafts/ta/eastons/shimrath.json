@@ -1,0 +1,18 @@
+{
+  "id": "eastons/shimrath",
+  "lang": "ta",
+  "source_hash": "b858f7aa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ராத்",
+  "paragraphs": [
+    {
+      "id": "eastons/shimrath#p1-b858f7aa",
+      "text": "பாதுகாவலன், ஒரு பென்யமீனியன், சிமியின் மகன்களில் ஒருவன் (மேற்கூறியது)."
+    }
+  ]
+}

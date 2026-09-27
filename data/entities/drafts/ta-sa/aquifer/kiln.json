@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/kiln",
+  "lang": "ta",
+  "source_hash": "43b52540",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சூளை",
+  "paragraphs": [
+    {
+      "id": "aquifer/kiln#p1-62d907c1",
+      "text": "சூளை என்பது மண்பாண்டங்களை சுடுவதற்குப் பயன்படுத்தப்படும் ஒரு பெரிய அடுப்பாகும்."
+    },
+    {
+      "id": "aquifer/kiln#p2-5eb2c90e",
+      "text": "மண்பாண்டங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

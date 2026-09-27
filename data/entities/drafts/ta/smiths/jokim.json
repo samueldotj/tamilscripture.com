@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jokim",
+  "lang": "ta",
+  "source_hash": "2cffeef4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோக்கீம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jokim#p1-2cffeef4",
+      "text": "(யெகோவா நிலைநிறுத்தினவர்), யூதாவின் மகனாகிய சாலாவின் மகன்களில் ஒருவன். (1 நாளாகமம் 4:22)"
+    }
+  ]
+}

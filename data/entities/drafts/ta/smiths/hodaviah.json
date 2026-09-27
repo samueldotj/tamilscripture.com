@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hodaviah",
+  "lang": "ta",
+  "source_hash": "436fdb49",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஒதாவியா",
+  "paragraphs": [
+    {
+      "id": "smiths/hodaviah#p1-436fdb49",
+      "text": "(யெகோவாவைத் துதியுங்கள்)."
+    }
+  ]
+}

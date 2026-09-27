@@ -1,0 +1,18 @@
+{
+  "id": "smiths/zaza",
+  "lang": "ta",
+  "source_hash": "f5a57444",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சாசா",
+  "paragraphs": [
+    {
+      "id": "smiths/zaza#p1-f5a57444",
+      "text": "யெராமியேலின் சந்ததியாகிய யோனத்தானுடைய மகன்களில் ஒருவன். (1 நாளாகமம் 2:33)"
+    }
+  ]
+}

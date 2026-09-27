@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/cedron",
+  "lang": "ta",
+  "source_hash": "bf7412ae",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கெதரோன்",
+  "paragraphs": [
+    {
+      "id": "aquifer/cedron#p1-440d242b",
+      "text": "யோவான் 18:1இல் எருசலேமுக்கும் ஒலிவமலைக்கும் இடையே உள்ள நதி பள்ளத்தாக்கான கீதரோன் என்பதற்குக் கிங் யாக்கோபு மொழிபெயர்ப்பில் காணும் எழுத்துப்பெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/cedron#p2-b8abb39a",
+      "text": "கீதரோன் காண்க."
+    }
+  ]
+}

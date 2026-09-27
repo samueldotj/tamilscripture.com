@@ -1,0 +1,30 @@
+{
+  "id": "eastons/igal",
+  "lang": "ta",
+  "source_hash": "3ae73630",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈகால்",
+  "paragraphs": [
+    {
+      "id": "eastons/igal#p1-34d7007a",
+      "text": "பழிவாங்குபவர்கள்."
+    },
+    {
+      "id": "eastons/igal#p2-1763d9f2",
+      "text": "(1.) எண்ணாகமம் 13:7, இசக்கார் கோத்திரத்தின் ஒற்றர்களில் ஒருவன்."
+    },
+    {
+      "id": "eastons/igal#p3-195ac119",
+      "text": "(2.) சோபாவின் நாத்தானின் மகன், தாவீதின் போர்வீரர்களில் ஒருவன் (2 சாமுவேல் 23:36)."
+    },
+    {
+      "id": "eastons/igal#p4-f4abca27",
+      "text": "(3.) 1 நாளாகமம் 3:22."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/moloch",
+  "lang": "ta",
+  "source_hash": "2a39aa51",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மோளோகு",
+  "paragraphs": [
+    {
+      "id": "aquifer/moloch#p1-fb087ee0",
+      "text": "மோளேக் என்னும் பெயருக்கு மற்றொரு எழுத்துவரிவு, இது அம்மோனியரின் தேவனாகும் (அப்போஸ்தலருடைய நடபடிகள் 7:43)."
+    },
+    {
+      "id": "aquifer/moloch#p2-68ff957a",
+      "text": "மில்கோம் என்பதைக் காண்க."
+    }
+  ]
+}

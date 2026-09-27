@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jokdean",
+  "lang": "ta",
+  "source_hash": "ede3815b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யொக்தெயாம்",
+  "paragraphs": [
+    {
+      "id": "smiths/jokdean#p1-ede3815b",
+      "text": "(மக்களால் உடைமையாக்கப்பட்டது), யூதாவின் மலைநாட்டிலுள்ள ஒரு பட்டணம், (யோசுவா 15:56) எப்ரோனுக்கு தென்புறமாக இருந்ததாகத் தோன்றுகிறது."
+    }
+  ]
+}

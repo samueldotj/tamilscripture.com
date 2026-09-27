@@ -1,0 +1,18 @@
+{
+  "id": "smiths/carcas",
+  "lang": "ta",
+  "source_hash": "bea98716",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கர்காஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/carcas#p1-bea98716",
+      "text": "(கடுமையான), ராஜாவாகிய அகாஸ்வேருவின் ஏழு \"பிரதானிகளில்\" அதாவது வேட்டிராஜாக்களில் ஏழாமவன். (எஸ்தர் 1:10) (கி.மு. 483)."
+    }
+  ]
+}

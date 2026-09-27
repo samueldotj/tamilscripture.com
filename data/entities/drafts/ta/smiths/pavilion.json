@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pavilion",
+  "lang": "ta",
+  "source_hash": "bea74f37",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பந்தல்",
+  "paragraphs": [
+    {
+      "id": "smiths/pavilion#p1-bea74f37",
+      "text": "தற்காலிகமாக நகர்த்தக்கூடிய ஒரு கூடாரம் அல்லது இருப்பிடம்."
+    }
+  ]
+}

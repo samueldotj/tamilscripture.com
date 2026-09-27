@@ -1,0 +1,26 @@
+{
+  "id": "eastons/chenaanah",
+  "lang": "ta",
+  "source_hash": "4e4de7bc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேனானா",
+  "paragraphs": [
+    {
+      "id": "eastons/chenaanah#p1-779be380",
+      "text": "வர்த்தகன்."
+    },
+    {
+      "id": "eastons/chenaanah#p2-df6a304e",
+      "text": "(1.) ஒரு பென்யமீனியன் (1 நாளாகமம் 7:10)."
+    },
+    {
+      "id": "eastons/chenaanah#p3-44c959f8",
+      "text": "(2.) சிதேக்கியாவின் தகப்பன் (1 இராஜாக்கள் 22:11, 24)."
+    }
+  ]
+}

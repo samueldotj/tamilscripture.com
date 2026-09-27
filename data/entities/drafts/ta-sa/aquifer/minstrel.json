@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/minstrel",
+  "lang": "ta",
+  "source_hash": "1560ee98",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இரவல் பாட்டன் (இசைக்கலைஞன்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/minstrel#p1-1560ee98",
+      "text": "இசைக்கலைஞனைக் குறிக்கும் ஒரு பழைய சொல் (2 இராஜாக்கள் 3:15; சங்கீதம் 68:25; மத்தேயு 9:23; வெளிப்படுத்தின விசேஷம் 18:22)."
+    }
+  ]
+}

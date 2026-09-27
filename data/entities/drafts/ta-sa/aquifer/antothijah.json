@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/antothijah",
+  "lang": "ta",
+  "source_hash": "b87e70f5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்தோதியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/antothijah#p1-3eb2be8d",
+      "text": "கிங் யாக்கோபு வேர்ஷனில் காணப்படும் அந்தோதியா என்பதன் எழுத்துப் பெயர்ப்பு, சாஷாக்கின் சந்ததியார் (1 நாளாகமம் 8:24)."
+    },
+    {
+      "id": "aquifer/antothijah#p2-9b915cf0",
+      "text": "அந்தோதியா என்பதைக் காண்க."
+    }
+  ]
+}

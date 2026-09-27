@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pagiel",
+  "lang": "ta",
+  "source_hash": "35a2bb2f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பாகியேல்",
+  "paragraphs": [
+    {
+      "id": "smiths/pagiel#p1-35a2bb2f",
+      "text": "(தேவன் பங்கிடுகிறார்) யாத்திராகமத்தின் காலத்தில் ஓகிரானின் மகனும் ஆசேர் கோத்திரத்தின் தலைவனுமாக இருந்தவன். (எண்ணாகமம் 1:13; 2:27; 7:72,77; 10:26) (கி.மு. 1491.)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nereus",
+  "lang": "ta",
+  "source_hash": "e5d9831c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேரே",
+  "paragraphs": [
+    {
+      "id": "smiths/nereus#p1-e5d9831c",
+      "text": "(விளக்கு), ரோமாபுரிக்குப் பவுலால் வாழ்த்தப்பட்ட ஒரு கிறிஸ்தவன். (ரோமர் 16:15) பாரம்பரியத்தின்படி, அவன் டெராசினாவில், நேர்வாவின் ஆட்சிக்காலத்தில் தலை வெட்டப்பட்டு கொல்லப்பட்டான்."
+    }
+  ]
+}

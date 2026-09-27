@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/jesarelah",
+  "lang": "ta",
+  "source_hash": "1e1a626e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எசரேலா",
+  "paragraphs": [
+    {
+      "id": "aquifer/jesarelah#p1-ffed759a",
+      "text": "எசரேலா என்பது அஷாரேலா அல்லது அசரேலா என்பதற்கான வேறொரு எழுத்துவடிவமாகும், இது 1 நாளாகமம் 25:14-ல் குறிப்பிடப்பட்ட ஒரு லேவியனாகிய இசைக்காரனின் பெயர்."
+    },
+    {
+      "id": "aquifer/jesarelah#p2-8c895926",
+      "text": "அஷாரேலா என்பதைக் காண்க."
+    }
+  ]
+}

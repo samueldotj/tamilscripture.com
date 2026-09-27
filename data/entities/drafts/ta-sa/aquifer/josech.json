@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/josech",
+  "lang": "ta",
+  "source_hash": "ab658338",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோசேப்பு",
+  "paragraphs": [
+    {
+      "id": "aquifer/josech#p1-d9c318c3",
+      "text": "லூக்கா 3:26-ல் மட்டுமே குறிப்பிடப்பட்டுள்ள இயேசுவின் மூதாதையர்களில் ஒருவர்."
+    },
+    {
+      "id": "aquifer/josech#p2-e1a04aff",
+      "text": "இயேசுகிறிஸ்துவின் வம்சவரலாறு என்பதைக் காண்க."
+    }
+  ]
+}

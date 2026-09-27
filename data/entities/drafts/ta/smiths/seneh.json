@@ -1,0 +1,18 @@
+{
+  "id": "smiths/seneh",
+  "lang": "ta",
+  "source_hash": "4f83f36e",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேனே",
+  "paragraphs": [
+    {
+      "id": "smiths/seneh#p1-4f83f36e",
+      "text": "(முள்) எருசலேமுக்கு வடக்கே 6 1/2 மைல் தூரத்திலுள்ள \"மிக்மாசின் வழியில்\" (1 சாமுவேல் 14:4) இருந்த இரண்டு தனித்த பாறைகளில் ஒன்றின் பெயர்."
+    }
+  ]
+}

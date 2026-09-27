@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/igdaliah",
+  "lang": "ta",
+  "source_hash": "3d9dabb6",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்தலியா",
+  "paragraphs": [
+    {
+      "id": "aquifer/igdaliah#p1-3d9dabb6",
+      "text": "இத்தலியா ஆனானின் தகப்பனாக இருந்தான். யோயாக்கீம் அரசாண்ட காலத்தில் ஆனானுடைய மகன்களுக்கு ஆலயத்தின் அருகில் ஒரு அறை இருந்தது (எரேமியா 35:4)."
+    }
+  ]
+}

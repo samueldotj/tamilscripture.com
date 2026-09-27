@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/ashtoreth",
+  "lang": "ta",
+  "source_hash": "5fa19e22",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அஸ்தரோத்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ashtoreth#p1-0c4a4731",
+      "text": "பூர்வ கிழக்கு நாடுகளெங்கும் பரவலாகத் தொழுதுகொள்ளப்பட்ட ஒரு அந்நிய மாதா தேவி (1 இராஜாக்கள் 11:5, 33; 2 இராஜாக்கள் 23:13). அவளுக்கு அஸ்தார்த்தே என்றும் பெயர் இருந்தது."
+    },
+    {
+      "id": "aquifer/ashtoreth#p2-8b31edc8",
+      "text": "கானானிய தேவர்களும் மதமும் என்பதைக் காண்க."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/hege",
+  "lang": "ta",
+  "source_hash": "f36f1f2f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஏகே",
+  "paragraphs": [
+    {
+      "id": "smiths/hege#p1-f36f1f2f",
+      "text": "முந்தினதின் (யேகாயி) மற்றொரு வடிவம் (எஸ்தர் 2:3)"
+    }
+  ]
+}

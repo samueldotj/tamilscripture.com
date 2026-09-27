@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/gedor-person",
+  "lang": "ta",
+  "source_hash": "bd242759",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேதோர் (நபர்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/gedor-person#p1-bd242759",
+      "text": "கேதோர் ஏயேலின் மகன், சவுல் ராஜாவின் முற்பிதாவாக இருந்தார். கேதோரின் குடும்பம் கிபியோனிலே வாழ்ந்தது (1 நாளாகமம் 8:31; 9:37)."
+    }
+  ]
+}

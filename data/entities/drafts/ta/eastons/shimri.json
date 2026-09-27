@@ -1,0 +1,30 @@
+{
+  "id": "eastons/shimri",
+  "lang": "ta",
+  "source_hash": "56c31997",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சிம்ரி",
+  "paragraphs": [
+    {
+      "id": "eastons/shimri#p1-45136de8",
+      "text": "காவற்காரன்."
+    },
+    {
+      "id": "eastons/shimri#p2-a495698a",
+      "text": "(1.) ஒரு சிமியோனியன் (1 நாளாகமம் 4:37)."
+    },
+    {
+      "id": "eastons/shimri#p3-f8f1249b",
+      "text": "(2.) தாவீதின் இராணுவங்களில் இருந்த “பராக்கிரமசாலிகளில்” ஒருவனின் தகப்பன் (1 நாளாகமம் 11:45)."
+    },
+    {
+      "id": "eastons/shimri#p4-1a0e95c1",
+      "text": "(3.) எசேக்கியாவின் காலத்தில் ஆலயத்தின் சுத்திகரிப்பில் உதவினான் (2 நாளாகமம் 29:13)."
+    }
+  ]
+}

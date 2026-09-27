@@ -1,0 +1,18 @@
+{
+  "id": "smiths/appius-market-of",
+  "lang": "ta",
+  "source_hash": "d68de4d7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அப்பியுவின் சந்தை",
+  "paragraphs": [
+    {
+      "id": "smiths/appius-market-of#p1-d68de4d7",
+      "text": "அப்பியு பொருந்தை (Appii Forum) என்பதற்கான திருத்தப்பட்ட மொழிபெயர்ப்பு. (அப்போஸ்தலருடைய நடபடிகள் 28:16)"
+    }
+  ]
+}

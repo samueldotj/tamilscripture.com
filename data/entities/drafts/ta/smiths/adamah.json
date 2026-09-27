@@ -1,0 +1,18 @@
+{
+  "id": "smiths/adamah",
+  "lang": "ta",
+  "source_hash": "f5e5ae55",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆதமா",
+  "paragraphs": [
+    {
+      "id": "smiths/adamah#p1-f5e5ae55",
+      "text": "(சிவப்பு மண்), நப்தலியினுடைய \"அரணான பட்டணங்களில்\" ஒன்று, கின்னரேத்திற்கும் ராமாவிற்கும் இடையில் பெயரிடப்பட்டுள்ளது. (யோசுவா 19:36)"
+    }
+  ]
+}

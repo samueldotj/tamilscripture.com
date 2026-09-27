@@ -1,0 +1,18 @@
+{
+  "id": "smiths/bishopric",
+  "lang": "ta",
+  "source_hash": "8bbf654d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கண்காணிப் பொறுப்பு",
+  "paragraphs": [
+    {
+      "id": "smiths/bishopric#p1-8bbf654d",
+      "text": "ஒரு கண்காணியானவனுடைய அதிகாரம் செல்லுத்தும் எல்லைப்பகுதி. (அப்போஸ்தலருடைய நடபடிகள் 1:20; 1 தீமோத்தேயு 3:1)"
+    }
+  ]
+}

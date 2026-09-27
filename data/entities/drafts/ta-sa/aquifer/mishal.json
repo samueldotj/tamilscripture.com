@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/mishal",
+  "lang": "ta",
+  "source_hash": "3cb6fbfd",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மிஷயால்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mishal#p1-2e098257",
+      "text": "மிஷயால் ஆசேரின் எல்லைக்குள் இருந்த ஒரு லேவியரின் பட்டணமாக இருந்தது (யோசுவா 19:26; 21:30; 1 நாளாகமம் 6:74)."
+    },
+    {
+      "id": "aquifer/mishal#p2-2dcd2df7",
+      "text": "லேவியரின் பட்டணங்கள் என்பதைக் காண்க."
+    }
+  ]
+}

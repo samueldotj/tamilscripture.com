@@ -1,0 +1,18 @@
+{
+  "id": "smiths/attai",
+  "lang": "ta",
+  "source_hash": "6148dbb5",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அத்தாய்",
+  "paragraphs": [
+    {
+      "id": "smiths/attai#p1-6148dbb5",
+      "text": "(ஏற்ற தருணம்)."
+    }
+  ]
+}

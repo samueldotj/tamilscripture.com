@@ -1,0 +1,18 @@
+{
+  "id": "smiths/pollux",
+  "lang": "ta",
+  "source_hash": "c11eafeb",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பொல்லக்ஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/pollux#p1-c11eafeb",
+      "text": "[காஸ்டர் மற்றும் பொல்லக்ஸ் காண்க]"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "eastons/jonadab",
+  "lang": "ta",
+  "source_hash": "c0786fc7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "யோனதாப்",
+  "paragraphs": [
+    {
+      "id": "eastons/jonadab#p1-6ea2dc20",
+      "text": "= யெகோனதாப்."
+    },
+    {
+      "id": "eastons/jonadab#p2-df59e269",
+      "text": "(1.) ரேகாபின் மகன், மற்றும் ரேகாபியருடைய நிறுவனர், 2 இராஜாக்கள் 10:15; எரேமியா 35:6, 10."
+    },
+    {
+      "id": "eastons/jonadab#p3-70b7ebf1",
+      "text": "(2.) சிமியாவைப் தந்தையாகக் கொண்ட மகன், தாவீதின் சகோதரன் (2 சாமுவேல் 13:3). அவன் \"மகா தந்திரமுள்ளவன்\" ஆயிருந்தான்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/closet",
+  "lang": "ta",
+  "source_hash": "d9ab3d1b",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அறை",
+  "paragraphs": [
+    {
+      "id": "eastons/closet#p1-d9ab3d1b",
+      "text": "புதிய ஏற்பாட்டில் பயன்படுத்தப்பட்டுள்ளபடி, இது சரியாகக் கிடங்கு அல்லது களஞ்சியத்தைக் குறிக்கிறது (லூக்கா 12:24), அதனால் தனிமையான, ஒதுங்கிய இடத்தையும் குறிக்கிறது (மத்தேயு 6:6; லூக்கா 12:3)."
+    }
+  ]
+}

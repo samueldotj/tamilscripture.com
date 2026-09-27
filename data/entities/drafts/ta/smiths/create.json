@@ -1,0 +1,18 @@
+{
+  "id": "smiths/create",
+  "lang": "ta",
+  "source_hash": "f95c523d",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "படைத்தல்",
+  "paragraphs": [
+    {
+      "id": "smiths/create#p1-f95c523d",
+      "text": "படைத்தல் என்பது முன்பு இல்லாத ஒன்றை உண்டாக்குதலைக் குறிக்கும், அது ஏற்கெனவே இருக்கும் ஒன்றை மறுவடிவமைத்தலைக் குறிக்கும் ‘உருவாக்குதல்’ என்பதிலிருந்து வேறுபட்டது."
+    }
+  ]
+}

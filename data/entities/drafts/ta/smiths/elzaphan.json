@@ -1,0 +1,18 @@
+{
+  "id": "smiths/elzaphan",
+  "lang": "ta",
+  "source_hash": "7e273606",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எல்சாபான்",
+  "paragraphs": [
+    {
+      "id": "smiths/elzaphan#p1-7e273606",
+      "text": "(தேவன் காக்கிறவர்), லேவியின் மகனாகிய கோகாத்தின் மகன் ஊசியேலின் இரண்டாம் மகன். (யாத்திராகமம் 6:22)"
+    }
+  ]
+}

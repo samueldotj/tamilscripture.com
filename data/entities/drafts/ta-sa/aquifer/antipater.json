@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/antipater",
+  "lang": "ta",
+  "source_hash": "8a4459e7",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அந்திபாத்தர்",
+  "paragraphs": [
+    {
+      "id": "aquifer/antipater#p1-614eda97",
+      "text": "பிரதான ஆசாரியனாகிய யோனத்தானால் நுமெனியுவுடன் ஸ்பார்த்தர்களுக்கும் ரோமர்களுக்கும் அனுப்பப்பட்ட நல்லெண்ண தூதுவன் (1 மக்கபேயர் 12:16; 14:22)."
+    },
+    {
+      "id": "aquifer/antipater#p2-8bd7ca06",
+      "text": "ஏரோது மகாராஜாவின் தந்தை. ஏரோது, ஏரோதிய குடும்பம் என்பதைக் காண்க."
+    }
+  ]
+}

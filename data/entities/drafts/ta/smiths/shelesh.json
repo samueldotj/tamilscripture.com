@@ -1,0 +1,18 @@
+{
+  "id": "smiths/shelesh",
+  "lang": "ta",
+  "source_hash": "458e6cac",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சேலேஸ்",
+  "paragraphs": [
+    {
+      "id": "smiths/shelesh#p1-458e6cac",
+      "text": "(பலம்), ஏலேமின் மகன். (1 நாளாகமம் 7:35)"
+    }
+  ]
+}

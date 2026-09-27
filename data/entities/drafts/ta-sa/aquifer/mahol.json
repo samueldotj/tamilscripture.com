@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/mahol",
+  "lang": "ta",
+  "source_hash": "03851f69",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாகோல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/mahol#p1-03851f69",
+      "text": "சாலொமோன் அரசனுடைய ஆட்சிக்காலத்தில் வாழ்ந்த மூன்று புகழ்பெற்ற ஞானவான்களான ஏமான், கல்கோல், தர்தா ஆகியோரின் தகப்பன் (1 இராஜாக்கள் 4:31)."
+    }
+  ]
+}

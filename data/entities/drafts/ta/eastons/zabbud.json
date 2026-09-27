@@ -1,0 +1,18 @@
+{
+  "id": "eastons/zabbud",
+  "lang": "ta",
+  "source_hash": "2204094a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சப்பூத்",
+  "paragraphs": [
+    {
+      "id": "eastons/zabbud#p1-2204094a",
+      "text": "கொடை, எஸ்றா 8:14."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eastons/hazo",
+  "lang": "ta",
+  "source_hash": "1650f63f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஆசோ",
+  "paragraphs": [
+    {
+      "id": "eastons/hazo#p1-1650f63f",
+      "text": "தரிசனம், நாகோரின் மகன்களில் ஒருவன் (ஆதியாகமம் 22:22)."
+    }
+  ]
+}

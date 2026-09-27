@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/iron-place",
+  "lang": "ta",
+  "source_hash": "6644537a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ஈரோன் (இடம்)",
+  "paragraphs": [
+    {
+      "id": "aquifer/iron-place#p1-23a5ef84",
+      "text": "Iron என்பது ஈரோன் என்ற பெயருக்கு யாக்கோபு மொழிபெயர்ப்பில் காணப்படும் வடிவமாகும். இது நப்தலியின் நிலப்பகுதியில் உள்ள ஒரு பட்டணமாகும் (யோசுவா 19:38)."
+    },
+    {
+      "id": "aquifer/iron-place#p2-13ab82a6",
+      "text": "ஈரோனைக் காண்க."
+    }
+  ]
+}

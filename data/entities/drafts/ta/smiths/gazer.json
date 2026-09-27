@@ -1,0 +1,18 @@
+{
+  "id": "smiths/gazer",
+  "lang": "ta",
+  "source_hash": "b4f8c060",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கேசேர்",
+  "paragraphs": [
+    {
+      "id": "smiths/gazer#p1-b4f8c060",
+      "text": "(2 சாமுவேல் 5:25; 1 நாளாகமம் 14:16) [கேசேர்]"
+    }
+  ]
+}

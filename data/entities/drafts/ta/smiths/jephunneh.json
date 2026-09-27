@@ -1,0 +1,18 @@
+{
+  "id": "smiths/jephunneh",
+  "lang": "ta",
+  "source_hash": "af258b35",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "எப்புன்னேயின்",
+  "paragraphs": [
+    {
+      "id": "smiths/jephunneh#p1-af258b35",
+      "text": "(யாருக்கு ஒரு வழி ஆயத்தப்படுத்தப்பட்டதோ)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/parnach",
+  "lang": "ta",
+  "source_hash": "fd020ff9",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "பர்னாக்",
+  "paragraphs": [
+    {
+      "id": "aquifer/parnach#p1-fd020ff9",
+      "text": "செபுலோன் கோத்திரத்திற்குரிய எலிசாபானின் தகப்பன் (எண்ணாகமம் 34:25)."
+    }
+  ]
+}

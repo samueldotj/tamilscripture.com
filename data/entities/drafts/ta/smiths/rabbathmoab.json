@@ -1,0 +1,18 @@
+{
+  "id": "smiths/rabbathmoab",
+  "lang": "ta",
+  "source_hash": "1efdb766",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "ரப்பாத்மோவாப்",
+  "paragraphs": [
+    {
+      "id": "smiths/rabbathmoab#p1-1efdb766",
+      "text": "[ஆர்]"
+    }
+  ]
+}

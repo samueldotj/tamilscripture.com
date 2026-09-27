@@ -1,0 +1,18 @@
+{
+  "id": "eastons/medan",
+  "lang": "ta",
+  "source_hash": "04ea0530",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மேதான்",
+  "paragraphs": [
+    {
+      "id": "eastons/medan#p1-04ea0530",
+      "text": "விவாதம், கேத்தூராளின் மூலமாக ஆபிரகாமுக்குப் பிறந்த மூன்றாம் மகன் (ஆதியாகமம் 25:2)."
+    }
+  ]
+}

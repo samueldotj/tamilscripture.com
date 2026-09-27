@@ -1,0 +1,18 @@
+{
+  "id": "eastons/naarah",
+  "lang": "ta",
+  "source_hash": "61f92c85",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நாராள்",
+  "paragraphs": [
+    {
+      "id": "eastons/naarah#p1-61f92c85",
+      "text": "ஒரு பெண், யூதா கோத்திரத்தைச் சேர்ந்த அசூரின் இரண்டு மனைவிகளில் இரண்டாமவள் (1 நாளாகமம் 4:5, 6)."
+    }
+  ]
+}

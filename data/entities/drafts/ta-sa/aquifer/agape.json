@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/agape",
+  "lang": "ta",
+  "source_hash": "2e22aed8",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அகாப்பே",
+  "paragraphs": [
+    {
+      "id": "aquifer/agape#p1-b239bdab",
+      "text": "“அன்பு” அல்லது “அன்புப் பண்டிகை” என்பதற்குரிய புதிய ஏற்பாட்டு கிரேக்கு வார்த்தையின் ஆங்கில ஒலிபெயர்ப்பு."
+    },
+    {
+      "id": "aquifer/agape#p2-e0b71715",
+      "text": "அன்பு (Love) என்பதைக் காண்க."
+    }
+  ]
+}

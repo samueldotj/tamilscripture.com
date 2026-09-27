@@ -1,0 +1,18 @@
+{
+  "id": "smiths/nibshan",
+  "lang": "ta",
+  "source_hash": "ee7cfabc",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நிப்சான்",
+  "paragraphs": [
+    {
+      "id": "smiths/nibshan#p1-ee7cfabc",
+      "text": "(மென்மையான மண்) யூதாவின் ஆறு பட்டணங்களில் ஒன்று (யோசுவா 15:62), இவை மிட்பார் (Authorized Version இல் “வனாந்தரம்”) என்னும் மாவட்டத்தில் இருந்தன."
+    }
+  ]
+}

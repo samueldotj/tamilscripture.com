@@ -1,0 +1,18 @@
+{
+  "id": "smiths/disciple",
+  "lang": "ta",
+  "source_hash": "8fc1982c",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "சீடன்",
+  "paragraphs": [
+    {
+      "id": "smiths/disciple#p1-8fc1982c",
+      "text": "[அப்போஸ்தலர்கள்]"
+    }
+  ]
+}

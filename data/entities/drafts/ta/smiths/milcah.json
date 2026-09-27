@@ -1,0 +1,18 @@
+{
+  "id": "smiths/milcah",
+  "lang": "ta",
+  "source_hash": "668a9f34",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மில்க்காள்",
+  "paragraphs": [
+    {
+      "id": "smiths/milcah#p1-668a9f34",
+      "text": "(ராணி அல்லது ஆலோசனை)."
+    }
+  ]
+}

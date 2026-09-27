@@ -1,0 +1,18 @@
+{
+  "id": "eastons/matthan",
+  "lang": "ta",
+  "source_hash": "854c29b4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "மாத்தான்",
+  "paragraphs": [
+    {
+      "id": "eastons/matthan#p1-854c29b4",
+      "text": "கொடை, நம்முடைய கர்த்தருடைய முற்பிதாக்களில் ஒருவன் (மத்தேயு 1:15)."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/harmagedon",
+  "lang": "ta",
+  "source_hash": "4356094a",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "அர்மகெதோன்",
+  "paragraphs": [
+    {
+      "id": "smiths/harmagedon#p1-4356094a",
+      "text": "(மெகிதோவின் மேடு), (வெளிப்படுத்தின விசேஷம் 16:16) திருத்தப்பட்ட மொழிபெயர்ப்பில் அர்மகெதோனுக்கு பதிலாக. இந்த மாற்றம் முதன்மையாக Har, மேடு, என்பது ஆர், நகரம், என்பதற்கு பதிலாக வருவதாகும்."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "smiths/en",
+  "lang": "ta",
+  "source_hash": "5f21d976",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "என்",
+  "paragraphs": [
+    {
+      "id": "smiths/en#p1-5f21d976",
+      "text": "பல எபிரெய வார்த்தைகளின் ஆரம்பத்தில் இருக்கும், ஒரு ஊற்று அல்லது நீரூற்றைக் குறிக்கிறது."
+    }
+  ]
+}

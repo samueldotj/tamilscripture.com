@@ -1,0 +1,22 @@
+{
+  "id": "aquifer/borrow-borrowing",
+  "lang": "ta",
+  "source_hash": "5d86467f",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "கடன் வாங்குதல்",
+  "paragraphs": [
+    {
+      "id": "aquifer/borrow-borrowing#p1-8e01383f",
+      "text": "ஒரு நபர் திரும்பக் கொடுப்பதாக வாக்குத்தத்தம் செய்து பணத்தையோ பொருட்களையோ பெற்றுக்கொள்ளுதல். மோசேயின் நியாயப்பிரமாணம் கடன் வாங்குதலையும் கடன் கொடுத்தலையும் ஒழுங்குபடுத்தியது (உபாகமம் 23:19–20)."
+    },
+    {
+      "id": "aquifer/borrow-borrowing#p2-cb2cc818",
+      "text": "வங்கியாளர், வங்கித்தொழில் என்பதைக் காண்க."
+    }
+  ]
+}

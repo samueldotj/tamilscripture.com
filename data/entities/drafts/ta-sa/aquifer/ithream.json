@@ -1,0 +1,18 @@
+{
+  "id": "aquifer/ithream",
+  "lang": "ta",
+  "source_hash": "b117a1fa",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "இத்ரேயாம்",
+  "paragraphs": [
+    {
+      "id": "aquifer/ithream#p1-b117a1fa",
+      "text": "தாவீது ராஜாவின் ஆறாம் மகன். இவனுடைய மனைவி எக்லாள் இவனை எப்ரோனிலே பெற்றாள் (2 சாமுவேல் 3:5; 1 நாளாகமம் 3:3)."
+    }
+  ]
+}

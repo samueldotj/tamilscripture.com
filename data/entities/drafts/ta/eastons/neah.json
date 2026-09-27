@@ -1,0 +1,18 @@
+{
+  "id": "eastons/neah",
+  "lang": "ta",
+  "source_hash": "e9981ff4",
+  "generator": {
+    "name": "claude",
+    "model": "claude-sonnet-5",
+    "prompt_version": "1",
+    "generated_at": "2026-09-27"
+  },
+  "title": "நேயா",
+  "paragraphs": [
+    {
+      "id": "eastons/neah#p1-e9981ff4",
+      "text": "அசைவு, அல்லது குடியேற்றம், அல்லது இறங்குதல் என்று பொருள்படும், செபுலோனின் கிழக்குப் பக்கத்தில், ரிம்மோனுக்கு அதிக தூரமில்லாத ஒரு பட்டணம் (யோசுவா 19:13)."
+    }
+  ]
+}
