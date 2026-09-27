@@ -7,26 +7,33 @@
 	import { REASONS, formatReason, suggest } from './repo';
 	import type { ReasonId } from './repo';
 
+	type Choice = { target: string; current: string; source: string; label: string };
 	let {
-		target,
+		target = '',
 		current = '',
 		source = '',
+		choices,
 		lang,
 		compact = false
 	}: {
 		/** `name:Damascus` or `article:eastons/damascus#p1-…` */
-		target: string;
+		target?: string;
 		/** the Tamil text the reader sees now ('' when none yet) */
 		current?: string;
 		/** English source shown beside the field, for article paragraphs */
 		source?: string;
+		/** Several things to correct (an article's paragraphs): the reader picks
+		 *  one in the form, so the page needs one control rather than one each. */
+		choices?: Choice[];
 		lang: 'ta' | 'en';
 		compact?: boolean;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
+	let pick = $state(0);
+	const chosen = $derived<Choice>(choices?.length ? choices[Math.min(pick, choices.length - 1)] : { target, current, source, label: '' });
 	// Aquifer articles are CC BY-SA; a correction to them stays ShareAlike.
-	const sharealike = $derived(target.startsWith('article:aquifer/'));
+	const sharealike = $derived(chosen.target.startsWith('article:aquifer/'));
 	let open = $state(false);
 	let text = $state('');
 	let reasonTag = $state<ReasonId | ''>('');
@@ -36,12 +43,16 @@
 	let error = $state('');
 
 	function start() {
-		text = current;
+		text = chosen.current;
 		reasonTag = '';
 		reason = '';
 		error = '';
 		done = false;
 		open = true;
+	}
+	function choose(e: Event) {
+		pick = Number((e.currentTarget as HTMLSelectElement).value);
+		text = chosen.current;
 	}
 	async function submit(e: Event) {
 		e.preventDefault();
@@ -49,7 +60,7 @@
 		busy = true;
 		error = '';
 		try {
-			await suggest(target, current, text, formatReason(reasonTag, reason));
+			await suggest(chosen.target, chosen.current, text, formatReason(reasonTag, reason));
 			done = true;
 			open = false;
 		} catch (err) {
@@ -70,25 +81,33 @@
 			<button type="button" class="link" onclick={start} lang={ta ? 'ta' : 'en'}>{ta ? 'திருத்தம் பரிந்துரை' : 'Suggest a correction'}</button>
 		{:else}
 			<form class="form" onsubmit={submit}>
-				{#if source}
+				{#if choices?.length}
+					<label>
+						<span lang={ta ? 'ta' : 'en'}>{ta ? 'எந்தப் பத்தி?' : 'Which paragraph?'}</span>
+						<select value={String(pick)} onchange={choose}>
+							{#each choices as c, i (c.target)}<option value={String(i)}>{c.label}</option>{/each}
+						</select>
+					</label>
+				{/if}
+				{#if chosen.source}
 					<div class="block">
 						<div class="blabel" lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கில மூலம்' : 'English source'}</div>
-						<p class="src" lang="en">{source}</p>
+						<p class="src" lang="en">{chosen.source}</p>
 					</div>
 				{/if}
-				{#if current}
+				{#if chosen.current}
 					<div class="block">
 						<div class="blabel" lang={ta ? 'ta' : 'en'}>{ta ? 'தற்போதைய தமிழ்' : 'Current Tamil'}</div>
-						<p class="cur" lang="ta">{current}</p>
+						<p class="cur" lang="ta">{chosen.current}</p>
 					</div>
 				{/if}
 				<label>
-					<span lang={ta ? 'ta' : 'en'}>{ta ? (current ? 'உங்கள் திருத்தம்' : 'உங்கள் தமிழாக்கம்') : current ? 'Your correction' : 'Your Tamil translation'}</span>
+					<span lang={ta ? 'ta' : 'en'}>{ta ? (chosen.current ? 'உங்கள் திருத்தம்' : 'உங்கள் தமிழாக்கம்') : chosen.current ? 'Your correction' : 'Your Tamil translation'}</span>
 					<textarea bind:value={text} lang="ta" rows={compact ? 1 : 4} required maxlength="4000"></textarea>
 				</label>
 				<div class="reasons">
-					<span class="blabel" id="{target}-why" lang={ta ? 'ta' : 'en'}>{ta ? 'காரணம்' : 'Reason'}</span>
-					<div class="chips" role="group" aria-labelledby="{target}-why">
+					<span class="blabel" id="{chosen.target}-why" lang={ta ? 'ta' : 'en'}>{ta ? 'காரணம்' : 'Reason'}</span>
+					<div class="chips" role="group" aria-labelledby="{chosen.target}-why">
 						{#each REASONS as r (r.id)}
 							<button
 								type="button"
@@ -146,7 +165,7 @@
 	label { display: grid; gap: 0.25rem; }
 	label span { color: var(--muted); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; }
 	label span[lang='ta'] { font-family: var(--tamil); }
-	textarea, input { font: inherit; font-size: 1rem; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); color: inherit; width: 100%; box-sizing: border-box; }
+	textarea, input, select { font: inherit; font-size: 1rem; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); color: inherit; width: 100%; box-sizing: border-box; }
 	textarea[lang='ta'], input[lang='ta'] { font-family: var(--tamil); line-height: 1.7; }
 	.consent { margin: 0; color: var(--muted); font-size: 0.75rem; line-height: 1.5; }
 	.consent[lang='ta'] { font-family: var(--tamil); }

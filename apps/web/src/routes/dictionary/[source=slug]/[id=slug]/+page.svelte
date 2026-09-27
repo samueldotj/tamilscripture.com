@@ -13,6 +13,21 @@
 	const src = $derived(sourceOf(a.source));
 	const sourceName = $derived(`${src.name} (${src.year})`);
 	const hasTa = $derived(a.paragraphs.some((p) => p.ta));
+	/** The site language decides: Tamil (with English only where a paragraph
+	 *  has none yet), or the English original. */
+	const showTa = $derived(ta && hasTa);
+	/** The paragraphs a reader can correct, for the one control at the foot. */
+	const choices = $derived(
+		a.paragraphs.map((p, i) => {
+			const text = (p.ta ?? p.text).replace(/\s+/g, ' ');
+			return {
+				target: articleTarget(p.id),
+				current: p.ta ?? '',
+				source: p.text,
+				label: `${i + 1}. ${text.length > 70 ? text.slice(0, 70) + '…' : text}`
+			};
+		})
+	);
 	/** This entry and its siblings, in entry order: the source switcher. */
 	const sources = $derived(
 		byEntryOrder(
@@ -42,7 +57,11 @@
 
 	<header class="head">
 		<div class="kicker">{sourceName} · {ta ? src.licence_ta : src.licence_en} <span class="badge" title={hasTa ? (ta ? 'தமிழ் வரைவு உள்ளது' : 'Tamil draft available') : (ta ? 'ஆங்கிலம் மட்டும்' : 'English only')}>{hasTa ? 'TA' : 'EN'}</span></div>
-		<h1>{a.title}{#if a.title_ta} <span class="title-ta" lang="ta">{a.title_ta}</span>{/if}</h1>
+		{#if showTa && a.title_ta}
+			<h1 lang="ta" class="h-ta">{a.title_ta} <span class="title-en" lang="en">{a.title}</span></h1>
+		{:else}
+			<h1>{a.title}</h1>
+		{/if}
 		{#if data.linked.length}
 			<ul class="chips" aria-label={ta ? 'இணைக்கப்பட்ட பெயர்கள்' : 'Linked names'}>
 				{#each data.linked as l (l.ref)}
@@ -79,17 +98,16 @@
 
 	<div class="body">
 		{#each a.paragraphs as p (p.id)}
+			{@const tamil = showTa && p.ta}
 			<div class="para" class:heading={p.heading} id={p.id.split('#')[1]}>
 				{#if p.heading}
-					<h2 lang={p.ta ? 'ta' : 'en'}>{p.ta ?? p.text}</h2>
-				{:else if p.ta}
-					<p lang="ta" class="ta"><RefText text={p.ta} /></p>
-					<details class="src"><summary lang={ta ? 'ta' : 'en'}>{ta ? 'ஆங்கில மூலம்' : 'English source'}</summary><p lang="en"><RefText text={p.text} /></p></details>
-					<Provenance kind={p.ta_source ?? 'draft'} lang={ta ? 'ta' : 'en'} />
+					<h2 lang={tamil ? 'ta' : 'en'}>{tamil ? p.ta : p.text}</h2>
+				{:else if tamil}
+					<p lang="ta" class="ta"><RefText text={p.ta ?? ''} /></p>
+					{#if p.ta_source === 'community' || p.ta_source === 'owner'}<Provenance kind={p.ta_source} lang="ta" />{/if}
 				{:else}
 					<p lang="en"><RefText text={p.text} /></p>
 				{/if}
-				<SuggestControl target={articleTarget(p.id)} current={p.ta ?? ''} source={p.text} lang={ta ? 'ta' : 'en'} />
 			</div>
 		{/each}
 	</div>
@@ -99,13 +117,15 @@
 			<div class="pname">{src.name}, {src.year}</div>
 			<div class="pta" lang={ta ? 'ta' : 'en'}>
 				{#if hasTa}
-					{ta ? 'தமிழாக்கம்' : 'Tamil translation'}{#if corrections} · <span class="ok">✓ {corrections} {ta ? 'சமூக திருத்தங்கள்' : corrections === 1 ? 'community correction' : 'community corrections'}</span>{/if}
+					{ta ? 'தமிழாக்கம்' : 'Tamil translation'}
+					{#if corrections}· <span class="ok">✓ {corrections} {ta ? 'சமூக திருத்தங்கள்' : corrections === 1 ? 'community correction' : 'community corrections'}</span>
+					{:else}<Provenance kind="draft" lang={ta ? 'ta' : 'en'} />{/if}
 				{:else}
 					{ta ? 'தமிழாக்கம் இன்னும் இல்லை' : 'no Tamil translation yet'}
 				{/if}
 			</div>
 		</div>
-		<a class="pedit" href="#{a.paragraphs[0]?.id.split('#')[1] ?? ''}" lang={ta ? 'ta' : 'en'}>✎ {ta ? (hasTa ? 'திருத்து' : 'தமிழாக்கம் பரிந்துரை') : hasTa ? 'Suggest a correction' : 'Suggest a translation'}</a>
+		<div class="pedit"><SuggestControl {choices} lang={ta ? 'ta' : 'en'} /></div>
 	</div>
 
 	{#if a.also_in?.length}
@@ -154,10 +174,8 @@
 	.para h2 { margin: 0.6rem 0 0; font-size: 1.15rem; font-weight: 700; }
 	.para h2[lang='ta'] { font-family: var(--tamil); }
 	.para p.ta { font-family: var(--tamil); font-size: 1.15rem; line-height: 1.9; }
-	.src { margin-top: 0.4rem; font-size: 0.92rem; color: var(--ink-2); }
-	.src summary { cursor: pointer; color: var(--muted); font-size: 0.8rem; }
-	.src summary[lang='ta'] { font-family: var(--tamil); }
-	.src p { margin-top: 0.3rem; font-size: 0.95rem; }
+	h1.h-ta { font-family: var(--tamil); }
+	.title-en { font-family: var(--sans, inherit); color: var(--muted); font-weight: 500; font-size: 0.55em; margin-left: 0.4em; }
 	/* Source switcher: the same headword in the other dictionaries (design 8A). */
 	.sources { margin-top: 1rem; display: grid; gap: 0.45rem; }
 	.srow { display: flex; align-items: baseline; gap: 0.6rem; }
@@ -178,8 +196,9 @@
 	.pta { font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
 	.pta[lang='ta'] { font-family: var(--tamil); }
 	.ok { color: var(--good); font-weight: 600; }
-	.pedit { font-size: 0.85rem; font-weight: 600; text-decoration: none; color: var(--accent); white-space: nowrap; }
-	.pedit[lang='ta'] { font-family: var(--tamil); }
+	/* The one correction control: a link, then the form across the box. */
+	.pedit { flex: 1 1 auto; display: flex; justify-content: flex-end; min-width: 0; }
+	.pedit:has(:global(form)) { flex-basis: 100%; justify-content: flex-start; }
 
 	/* One line from each of the other dictionaries. */
 	.also { margin-top: 1.2rem; }
@@ -195,7 +214,6 @@
 	.aprev[lang='ta'] { font-family: var(--tamil); }
 	.achev { color: var(--muted); flex: none; }
 
-	.title-ta { font-family: var(--tamil); color: var(--muted); font-weight: 500; font-size: 0.7em; margin-left: 0.4em; }
 	.foot { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 0.9rem; display: grid; gap: 0.4rem; }
 	.source, .note { margin: 0; font-size: 0.78rem; color: var(--muted); }
 	.note[lang='ta'] { font-family: var(--tamil); }
