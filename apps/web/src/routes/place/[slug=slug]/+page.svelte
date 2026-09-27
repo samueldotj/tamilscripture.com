@@ -5,6 +5,8 @@
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { nameTarget } from '$lib/community/repo';
+	import { sourceOf } from '$lib/entities/sources';
+	import DictionaryText from '$lib/entities/DictionaryText.svelte';
 
 	let { data } = $props();
 	const ui = $derived(settings.value.uiLang);
@@ -18,10 +20,19 @@
 	const kind = $derived(data.glossary?.types[p.place_type] ?? { ta: p.place_type, en: p.place_type });
 	const precision = $derived(data.glossary?.precision[p.geo?.precision ?? 'unlocated'] ?? { ta: '', en: '' });
 	const groups = $derived(groupByBook(p.verses));
+	/** The dictionary entry of this name, the page's main text; the other
+	 *  linked articles stay a list beside it. */
+	const dict = $derived(data.dictionary);
+	const moreArticles = $derived((p.articles ?? []).filter((x) => !dict?.entries.some((e) => e.id === x.id)));
+	// Search engines get the Tamil page: the dictionary's first Tamil paragraph
+	// when there is one, else the one-line summary.
+	const lead = $derived(dict?.article.paragraphs.find((x) => !x.heading && x.ta));
 	const description = $derived(
-		ta
-			? `${title}${qualifier}: வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படும் ${kind.ta}.`
-			: `${p.name_en}${qualifier}, a biblical ${kind.en} named in ${p.verses.length} verses.`
+		lead?.ta
+			? lead.ta.replace(/\s+/g, ' ').slice(0, 160)
+			: ta
+				? `${title}${qualifier}: வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படும் ${kind.ta}.`
+				: `${p.name_en}${qualifier}, a biblical ${kind.en} named in ${p.verses.length} verses.`
 	);
 	function verseHref(v: string) {
 		const [code, ch, n] = v.split('.');
@@ -86,6 +97,10 @@
 				<p class="unlocated card" lang={ta ? 'ta' : 'en'}>{ta ? 'இந்த இடத்தின் அமைவிடம் அறியப்படவில்லை.' : 'The location of this place is not known.'}</p>
 			{/if}
 
+			{#if dict}
+				<DictionaryText article={dict.article} entries={dict.entries} lang={ta ? 'ta' : 'en'} />
+			{/if}
+
 			<section class="verses">
 				<h2 class="kicker"><span lang="ta">வசனங்கள்</span> · Verses <span class="n">{p.verses.length}</span></h2>
 				{#each groups as [code, verses] (code)}
@@ -138,6 +153,17 @@
 					<ul class="chips">
 						{#each p.nearby as n (n.id)}
 							<li><a class="chip round" href="/place/{n.id}" lang={ta && n.name_ta ? 'ta' : 'en'}>{ta && n.name_ta ? n.name_ta : n.name_en}{n.qualifier ? ` (${n.qualifier})` : ''}</a></li>
+						{/each}
+					</ul>
+				</section>
+			{/if}
+
+			{#if moreArticles.length}
+				<section class="card">
+					<h2 class="kicker"><span lang="ta">{dict ? 'மேலும் அகராதியில்' : 'அகராதி'}</span> · {dict ? 'More in the dictionary' : 'Dictionary'}</h2>
+					<ul class="plain">
+						{#each moreArticles as a (a.id)}
+							<li><a href="/dictionary/{a.id}">{a.title}</a> <span class="muted small">{sourceOf(a.source).short}</span></li>
 						{/each}
 					</ul>
 				</section>
@@ -200,6 +226,7 @@
 	.chips .chip[lang='ta'] { font-family: var(--tamil); }
 	.muted { color: var(--muted); margin: 0; }
 	.muted[lang='ta'] { font-family: var(--tamil); }
+	.small { font-size: 0.78rem; }
 	.source { font-size: 0.75rem; color: var(--muted); margin: 0; }
 	.source a { color: inherit; }
 	@media (min-width: 900px) {

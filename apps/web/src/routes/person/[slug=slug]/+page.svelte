@@ -7,6 +7,7 @@
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { nameTarget } from '$lib/community/repo';
 	import { sourceOf } from '$lib/entities/sources';
+	import DictionaryText from '$lib/entities/DictionaryText.svelte';
 
 	let { data } = $props();
 	const ui = $derived(settings.value.uiLang);
@@ -23,10 +24,19 @@
 	const relationOrder = ['parents', 'partners', 'siblings', 'children'] as const;
 	const relations = $derived(relationOrder.filter((k) => p.relations[k]?.length).map((k) => ({ key: k, label: ta ? relationLabels[k][0] : relationLabels[k][1], people: p.relations[k]! })));
 	const paragraphs = $derived((p.article ?? '').split(/\n+/).map((s) => s.trim()).filter(Boolean));
+	/** The dictionary entry of this name, the page's main text; the other
+	 *  linked articles stay a list beside it. */
+	const dict = $derived(data.dictionary);
+	const moreArticles = $derived((p.articles ?? []).filter((x) => !dict?.entries.some((e) => e.id === x.id)));
+	// Search engines get the Tamil page: the dictionary's first Tamil paragraph
+	// when there is one (as on dictionary pages), else the summary line.
+	const lead = $derived(dict?.article.paragraphs.find((x) => !x.heading && x.ta));
 	const description = $derived(
-		ta
-			? `${title}${qualifier}: ${p.brief ?? p.description ?? ''} வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படுகிறார்.`
-			: `${p.name_en}${qualifier}: ${p.brief ?? p.description ?? 'a person in the Bible'}, named in ${p.verses.length} verses.`
+		lead?.ta
+			? lead.ta.replace(/\s+/g, ' ').slice(0, 160)
+			: ta
+				? `${title}${qualifier}: ${p.brief ?? p.description ?? ''} வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படுகிறார்.`
+				: `${p.name_en}${qualifier}: ${p.brief ?? p.description ?? 'a person in the Bible'}, named in ${p.verses.length} verses.`
 	);
 	function verseHref(v: string) {
 		const [code, ch, n] = v.split('.');
@@ -68,14 +78,16 @@
 			<h1 lang={ta ? 'ta' : 'en'}>{title}<span class="q">{qualifier}</span></h1>
 			{#if alt}<span class="alt" lang={ta ? 'en' : 'ta'}>{alt}</span>{/if}
 		</div>
-		{#if p.brief || p.description}
+		{#if (p.brief || p.description) && !(ta && dict)}
 			<p class="brief">{p.brief ?? p.description}</p>
 		{/if}
 	</header>
 
 	<div class="grid">
 		<div class="main">
-			{#if p.short || paragraphs.length}
+			{#if dict}
+				<DictionaryText article={dict.article} entries={dict.entries} lang={ta ? 'ta' : 'en'} />
+			{:else if p.short || paragraphs.length}
 				<section class="about card">
 					<h2 class="kicker"><span lang="ta">பற்றி</span> · About</h2>
 					{#if p.short && !paragraphs.length}<p><RefText text={p.short} /></p>{/if}
@@ -125,7 +137,7 @@
 				<section class="card">
 					<h2 class="kicker"><span lang="ta">மூல மொழியில்</span> · Original</h2>
 					<ul class="plain orig">
-						{#each p.forms.slice(0, 6) as f (f.strongs + f.original + f.significance)}
+						{#each p.forms.slice(0, 6) as f, i (i)}
 							<li><span lang={f.script} class="orig-word">{f.original}</span> <a class="strongs" href="/strongs/{f.strongs}" title="Every verse this word is used in">{f.strongs}</a>{#if f.translated && f.translated !== p.name_en} <span class="muted">{f.translated}</span>{/if}</li>
 						{/each}
 					</ul>
@@ -143,11 +155,11 @@
 				</section>
 			{/each}
 
-			{#if p.articles?.length}
+			{#if moreArticles.length}
 				<section class="card">
-					<h2 class="kicker"><span lang="ta">அகராதி</span> · Dictionary</h2>
+					<h2 class="kicker"><span lang="ta">{dict ? 'மேலும் அகராதியில்' : 'அகராதி'}</span> · {dict ? 'More in the dictionary' : 'Dictionary'}</h2>
 					<ul class="plain">
-						{#each p.articles as a (a.id)}
+						{#each moreArticles as a (a.id)}
 							<li><a href="/dictionary/{a.id}">{a.title}</a> <span class="muted small">{sourceOf(a.source).short}</span></li>
 						{/each}
 					</ul>

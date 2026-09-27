@@ -1,7 +1,8 @@
 // Loaders for the entity content written by entity-ingest (M6, M7). All static
 // files under /content/{build}/entities/, so they cache like chapter JSON.
 import { contentUrl, findBook } from '$lib/content/manifest';
-import type { Article, ArticleIndexEntry, ChapterMentions, Glossary, Journey, Person, PersonIndexEntry, Place, PlaceIndex } from './types';
+import type { Article, ArticleIndexEntry, ArticleRef, ChapterMentions, Glossary, Journey, Person, PersonIndexEntry, Place, PlaceIndex } from './types';
+import { byEntryOrder } from './sources';
 
 type Fetch = typeof fetch;
 
@@ -107,6 +108,35 @@ export function loadArticleIndex(fetch: Fetch): Promise<ArticleIndexEntry[]> {
 /** `id` is `{source}/{slug}`. */
 export function loadArticle(fetch: Fetch, id: string): Promise<Article> {
 	return getJson<Article>(fetch, `entities/articles/${id}.json`);
+}
+
+/** The dictionary entries of this very name (Easton's "Jesus", not "Christ"),
+ *  in entry order: the first is the main text of a person or place page, the
+ *  rest are its source switcher. Other linked articles stay a list. */
+export function nameEntries(refs: ArticleRef[] | undefined, name: string): ArticleRef[] {
+	const want = name.toLowerCase();
+	return byEntryOrder((refs ?? []).filter((r) => r.title.toLowerCase() === want), (r) => r.source);
+}
+
+/** Entries chosen by hand where the headword of the name is about someone
+ *  else: Easton's and Smith's "Jesus" list other men of the name (Joshua,
+ *  Jesus Justus), and the dictionaries treat Christ under "Christ" or "Jesus
+ *  Christ". Aquifer's 102-paragraph article leads: Easton has two paragraphs. */
+const CHOSEN_ENTRIES: Record<string, string[]> = {
+	'person/jesus': ['aquifer/jesus-christ', 'eastons/christ', 'smiths/jesus-christ']
+};
+
+/** The main dictionary article of a person or place (`entity` is
+ *  `person/jesus`), and its entries; null when no dictionary has an entry of
+ *  that name. */
+export async function loadNameArticle(fetch: Fetch, refs: ArticleRef[] | undefined, name: string, entity = '') {
+	const chosen = CHOSEN_ENTRIES[entity];
+	const entries: ArticleRef[] = chosen
+		? chosen.map((id) => ({ source: id.split('/')[0], id, title: name, paragraphs: 0 }))
+		: nameEntries(refs, name);
+	if (!entries.length) return null;
+	const article = await loadArticle(fetch, entries[0].id).catch(() => null);
+	return article ? { article, entries } : null;
 }
 
 /** Mentions for a chapter; null when the chapter names no places or people. */
