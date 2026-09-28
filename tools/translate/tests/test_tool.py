@@ -620,6 +620,12 @@ class CommentaryTests(unittest.TestCase):
         self.assertEqual(commentary.ref_token("MAL.2.7", u), "2:7")
         self.assertEqual(commentary.ref_token("JHN.3.22-36", u), "22")  # the unit's own chapter
         self.assertEqual(commentary.ref_token("2KI.15", u), "15")
+        # Its own chapter, written in full; a chapter the English names without a verse.
+        self.assertTrue(commentary.ref_found("JHN.3.31", u, "Joh 3:31", "யோவான் 3:31"))
+        self.assertTrue(commentary.ref_found("JHN.3.31", u, "ver. 31", "31-ஆம் வசனம்"))
+        self.assertFalse(commentary.ref_found("JHN.3.31", u, "ver. 31", "யோவான் 2:31"))
+        self.assertTrue(commentary.ref_found("ROM.16.1", u, "ch. xvi.", "16-ஆம் அதிகாரம்"))
+        self.assertFalse(commentary.ref_found("MAL.2.7", u, "Mal. ii. 7", "மல்கியா 2"))
 
     def test_latin_is_not_english(self):
         from translate_tool import commentary

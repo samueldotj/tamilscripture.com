@@ -341,21 +341,42 @@ def english_left(tamil: str) -> str | None:
     return None
 
 
-def ref_token(ref: str, u: dict) -> str | None:
-    """What a Tamil paragraph must contain for this reference: chapter:verse,
-    or the verse alone for a verse of the unit's own chapter, or the chapter
-    alone for a whole chapter."""
+def ref_token(ref: str, u: dict, english: str = "") -> str | None:
+    """The least a Tamil paragraph must contain for this reference: the verse
+    alone for a verse of the unit's own chapter, the chapter alone for a whole
+    chapter (also when the English names only the chapter, "ch. xvi.", though
+    the import gave it verse 1), else chapter:verse. `ref_found` accepts the
+    fuller chapter:verse form too."""
     try:
         book, ch, v1, _ = parse_range(ref)
     except ValueError:
         return None
     if not ch:
         return None
-    if not v1:
+    if not v1 or (english and not re.search(r"\d", english)):
         return str(ch)
     if book == u["book"] and ch == u["chapter"]:
         return str(v1)
     return f"{ch}:{v1}"
+
+
+def ref_found(ref: str, u: dict, english: str, tamil: str) -> bool:
+    tok = ref_token(ref, u, english)
+    if tok is None:
+        return True
+    forms = [tok]
+    try:
+        _, ch, v1, _ = parse_range(ref)
+    except ValueError:
+        return True
+    if v1:
+        forms.append(f"{ch}:{v1}")
+        # Written in the English as a continuation ("Romans 5:8, 10"): the verse alone.
+        if f"{ch}:{v1}" not in english:
+            forms.append(str(v1))
+    if re.search(r"-\d+\.\d+$", ref):  # a range across chapters ("ch. xiv. and ch. xv. 1-14")
+        forms.append(str(ch))
+    return any(re.search(rf"(?<![\d:]){re.escape(f)}(?!\d)", tamil) for f in forms)
 
 
 def check_unit(u: dict, title: str, paragraphs: list[dict], terms: dict[str, Term],
@@ -392,8 +413,7 @@ def check_unit(u: dict, title: str, paragraphs: list[dict], terms: dict[str, Ter
         missing = sorted(set(checks.VERSE_NUM.findall(e["text"])) - set(checks.VERSE_NUM.findall(ta)))
         if missing:
             out.append(Problem(where, f"verse references missing: {', '.join(missing)}"))
-        lost = [r["text"] for r in e.get("refs", [])
-                if (tok := ref_token(r["ref"], u)) and not re.search(rf"(?<![\d:]){re.escape(tok)}(?![\d])", ta)]
+        lost = [r["text"] for r in e.get("refs", []) if not ref_found(r["ref"], u, r["text"], ta)]
         if lost:
             out.append(Problem(where, f"references missing: {', '.join(dict.fromkeys(lost))}"))
         marks = sorted(set(FOOTNOTE_MARK.findall(e["text"])) - set(FOOTNOTE_MARK.findall(ta)))

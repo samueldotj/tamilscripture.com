@@ -172,6 +172,57 @@ def status() -> str:
     return "\n".join(lines)
 
 
+def report_html(model: str) -> Path:
+    """One page to read a model's pilot drafts: English beside Tamil for each
+    unit, with the problems the checks still find. Written to the model's folder."""
+    import html
+
+    from . import repo
+
+    terms, names = repo.reviewed_terms(), repo.reviewed_names()
+    esc = html.escape
+    parts = []
+    for i in ids():
+        u = commentary.load_unit(i)
+        commentary.DRAFTS_ROOT = folder(model) / "drafts"
+        d = commentary.load_draft(u)
+        commentary.DRAFTS_ROOT = None
+        if d is None:
+            continue
+        ta = {x["id"]: x for x in d["paragraphs"]}
+        probs = [q for q in commentary.check_unit(u, d.get("title", ""), d["paragraphs"], terms, names)
+                 if not q.what.startswith("ids differ")]
+        rows = []
+        for p in u["paragraphs"]:
+            x = ta.get(p["id"], {})
+            lead_en = _shown(p, "", p.get("anchor")).strip()
+            lead_ta = _shown(p, "", x.get("anchor")).strip()
+            rows.append(f'<tr><td class="en">{"<b>" + esc(lead_en) + "</b> " if lead_en else ""}{esc(p["text"])}</td>'
+                        f'<td class="ta" lang="ta">{"<b>" + esc(lead_ta) + "</b> " if lead_ta else ""}{esc(x.get("text", "—"))}</td></tr>')
+        flag = "".join(f"<li>{esc(str(q))}</li>" for q in probs)
+        title = esc(commentary.label(u)) + (f" · {esc(u['title'])}" if u.get("title") else "")
+        title_ta = f' · <span lang="ta">{esc(d["title"])}</span>' if d.get("title") else ""
+        parts.append(f'<section id="{esc(i)}"><h2><span class="src">{esc(u["source"])}</span> {title}{title_ta}</h2>'
+                     + (f'<ul class="probs">{flag}</ul>' if flag else "")
+                     + f'<table>{"".join(rows)}</table></section>')
+    page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Commentary pilot · {esc(model)}</title>
+<style>
+body {{ font-family: 'Noto Sans', system-ui, sans-serif; margin: 0 auto; max-width: 1200px; padding: 1.5rem 1rem 4rem; color: #1f1b16; background: #fbf7f0; }}
+h1 {{ font-size: 1.4rem; }} h2 {{ font-size: 1.05rem; margin: 2.2rem 0 0.6rem; }}
+.src {{ font-size: 0.75rem; background: #b9862c; color: #fff; border-radius: 6px; padding: 0.1rem 0.45rem; margin-right: 0.3rem; }}
+table {{ width: 100%; border-collapse: collapse; table-layout: fixed; }}
+td {{ vertical-align: top; padding: 0.6rem 0.8rem; border-top: 1px solid #e3dccf; line-height: 1.6; }}
+td.en {{ font-family: Georgia, serif; font-size: 0.95rem; color: #3d352c; }}
+td.ta, [lang=ta] {{ font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', sans-serif; font-size: 1.02rem; }}
+.probs {{ background: #fff4e0; border-left: 3px solid #d98b1a; margin: 0 0 0.5rem; padding: 0.5rem 1.6rem; font-size: 0.85rem; }}
+@media (max-width: 720px) {{ td {{ display: block; }} td.ta {{ border-top: 0; background: #f3ede2; }} }}
+</style></head><body><h1>Commentary pilot · {esc(model)}</h1><pre>{esc(status())}</pre>{"".join(parts)}</body></html>"""
+    out = folder(model) / "review.html"
+    out.write_text(page, encoding="utf-8", newline="\n")
+    return out
+
+
 def adopt(model: str, keep_problems: bool = True) -> tuple[int, int]:
     """Copy this model's pilot drafts into the bible-commentaries repository (ta/, ta-ecf/)."""
     copied = skipped = 0

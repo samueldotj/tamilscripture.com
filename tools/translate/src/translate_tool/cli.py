@@ -509,6 +509,14 @@ def cmd_commentary_pilot(a) -> int:
         print(cp.status())
         return 0
     if a.action == "review":
+        if len(cp.models()) == 1:  # one model: a page to read, not a blind comparison
+            path = cp.report_html(cp.models()[0])
+            print(f"wrote {path}")
+            if not a.no_open:
+                import webbrowser
+
+                webbrowser.open(path.as_uri())
+            return 0
         from . import pilotweb
 
         pilotweb.serve(port=a.port, open_browser=not a.no_open, pm=cp)
