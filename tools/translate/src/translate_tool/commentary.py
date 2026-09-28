@@ -29,6 +29,8 @@ from .repo import Name, Term
 
 ROOT = Path(os.environ.get("TRANSLATE_COMMENTARIES") or repo.ROOT.parent / "bible-commentaries")
 WORK = repo.WORK / "commentary"
+# Where drafts are written: the repository (ta/, ta-ecf/), or a pilot folder.
+DRAFTS_ROOT: Path | None = None
 REPORT = WORK / "report.jsonl"
 FLAGGED = WORK / "flagged"
 _WRITE_LOCK = threading.Lock()  # units of one chapter share a draft file
@@ -162,7 +164,8 @@ def draft_folder(source: str) -> str:
 
 def draft_path(u: dict) -> Path:
     ch = u["chapter"]
-    return ROOT / draft_folder(u["source"]) / u["source"] / u["book"] / ("intro.json" if ch == 0 else f"{ch}.json")
+    base = DRAFTS_ROOT or ROOT
+    return base / draft_folder(u["source"]) / u["source"] / u["book"] / ("intro.json" if ch == 0 else f"{ch}.json")
 
 
 def load_draft(u: dict) -> dict | None:

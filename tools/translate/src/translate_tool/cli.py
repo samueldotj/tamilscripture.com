@@ -15,6 +15,7 @@
     check      re-check committed drafts against the current glossary and names
     batch      submit | status | collect: bulk runs through the Message Batches API
     commentary status | show | run: the Bible commentaries in ../bible-commentaries
+    commentary-pilot  run | status | review | adopt: the commentary pilot, two models compared blind
 
 See docs/feature_dictionary_translation.md.
 """
@@ -497,6 +498,31 @@ def cmd_commentary(a) -> int:
     return report(outcomes, commentary.REPORT)
 
 
+def cmd_commentary_pilot(a) -> int:
+    from . import commentary_pilot as cp
+
+    if a.action == "run":
+        if not a.model_given:
+            raise SystemExit("run needs --model (the pilot compares two: e.g. claude-sonnet-5 and claude-opus-5-5)")
+        outcomes = cp.run(a.model, a.effort, a.workers, a.force)
+        print(f"\n{sum(o.written for o in outcomes)}/{len(outcomes)} drafts written for {a.model}.")
+        print(cp.status())
+        return 0
+    if a.action == "review":
+        from . import pilotweb
+
+        pilotweb.serve(port=a.port, open_browser=not a.no_open, pm=cp)
+        return 0
+    if a.action == "adopt":
+        if not a.model_given:
+            raise SystemExit("adopt needs --model: the model whose drafts go into bible-commentaries/ta/")
+        copied, skipped = cp.adopt(a.model, keep_problems=not a.clean_only)
+        print(f"{copied} drafts copied into {cp.commentary.ROOT}, {skipped} left out.")
+        return 0
+    print(cp.status())
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="translate", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -653,6 +679,17 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--system", action="store_true", help="show: print the system prompt too")
     model_opts(p)
     p.set_defaults(fn=cmd_commentary)
+
+    p = sub.add_parser("commentary-pilot", help="the commentary pilot: two models on seed/commentary-pilot.txt, compared blind")
+    p.add_argument("action", nargs="?", default="status", choices=["status", "run", "review", "adopt"],
+                   help="status (default): drafts, problems, cost per model; run: translate the pilot with --model; "
+                        "review: compare the two models blind in the browser; adopt: copy --model's drafts into bible-commentaries")
+    p.add_argument("--force", action="store_true", help="run: redo units that already have a pilot draft")
+    p.add_argument("--clean-only", action="store_true", help="adopt: leave out drafts the checks still flag")
+    p.add_argument("--port", type=int, default=8768, help="review: the page's port")
+    p.add_argument("--no-open", action="store_true", help="review: do not open the browser")
+    model_opts(p)
+    p.set_defaults(fn=cmd_commentary_pilot)
 
     a = ap.parse_args(argv)
     args = argv if argv is not None else sys.argv[1:]

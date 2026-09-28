@@ -24,6 +24,11 @@ PRICES = {"claude-opus-5": (5.0, 25.0), "claude-sonnet-5": (2.0, 10.0), "claude-
           "claude-haiku-4-5": (1.0, 5.0)}
 
 
+def load(article_id: str) -> dict:
+    """What the review page shows for one pilot item."""
+    return repo.load_article(article_id)
+
+
 def ids() -> list[str]:
     return [l.strip() for l in LIST.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
 
