@@ -149,6 +149,19 @@ Each run sends 6 articles at a time (`--workers`), writes its drafts, report and
 
 The glossary goes with each article: only the approved terms its text uses (a typical article: a few thousand characters), not all 278. Renderings to avoid are checked in their inflected forms too, leaving out those that are part of the term's own Tamil or another approved term's.
 
+## Bible commentaries
+
+The Geneva notes, Matthew Henry, Calvin, Poole and Trapp, from the [bible-commentaries](https://github.com/samueldotj/bible-commentaries) repository cloned next to this one (or at `TRANSLATE_COMMENTARIES`). Units are translated like articles, with the same glossary, names and IRV verses, and their own prompt and checks. See [docs/feature_commentary_translation.md](../../docs/feature_commentary_translation.md).
+
+```bash
+translate commentary status                                # units and current drafts per commentary
+translate commentary show henry/JHN.3.1-21 --system        # the requests; no API call
+translate commentary run trapp/JHN.3.2 geneva/GEN.1.1       # translate now
+translate commentary run --source poole --every 1000 --limit 5
+```
+
+Drafts go to `bible-commentaries/ta/{source}/{BOOK}/{chapter}.json`, or `ta-ecf/` for the Early Church Fathers; the report and flagged replies to `.translate-work/commentary/`.
+
 ## What it writes
 
 - **Drafts:** `data/entities/drafts/ta/{source}/{slug}.json`, or `drafts/ta-sa/aquifer/{slug}.json` for Aquifer. A draft is written unless the build would reject it (missing paragraphs, no Tamil, markup).

@@ -593,5 +593,85 @@ class GlossaryTermsTests(unittest.TestCase):
                 repo.GLOSSARY = saved
 
 
+def unit(paragraphs, rid="JHN.3.2", kind="passage", title=None):
+    from translate_tool import commentary
+
+    book, ch, _, _ = commentary.parse_range(rid)
+    return {"id": f"trapp/{rid}", "range": rid, "kind": kind, "hash": "0c1d2e3f", "source": "trapp",
+            "book": book, "chapter": ch, **({"title": title} if title else {}),
+            "paragraphs": [{"id": f"trapp/{rid}#p{i}-x", **p} for i, p in enumerate(paragraphs, 1)]}
+
+
+class CommentaryTests(unittest.TestCase):
+    def test_ranges(self):
+        from translate_tool import commentary
+
+        self.assertEqual(commentary.parse_range("JHN.3.1-21"), ("JHN", 3, 1, 21))
+        self.assertEqual(commentary.parse_range("1CO.13"), ("1CO", 13, 0, 0))
+        self.assertEqual(commentary.parse_range("JHN"), ("JHN", 0, 0, 0))
+        self.assertEqual(commentary.parse_range("JHN.3.36-4.2"), ("JHN", 3, 36, 36))
+        self.assertEqual(commentary.verse_ids("PSA.23.1-3"), ["PSA.23.1", "PSA.23.2", "PSA.23.3"])
+        self.assertEqual(commentary.verse_ids("PSA.23"), [])
+
+    def test_ref_token(self):
+        from translate_tool import commentary
+
+        u = unit([{"text": "x"}])
+        self.assertEqual(commentary.ref_token("MAL.2.7", u), "2:7")
+        self.assertEqual(commentary.ref_token("JHN.3.22-36", u), "22")  # the unit's own chapter
+        self.assertEqual(commentary.ref_token("2KI.15", u), "15")
+
+    def test_latin_is_not_english(self):
+        from translate_tool import commentary
+
+        self.assertIsNone(commentary.english_left("Miracula a diabolo edita sunt praestigiae, imposturae (அற்புதங்கள்)"))
+        self.assertIsNotNone(commentary.english_left("அவன் the devil that commits this sin every day"))
+
+    def test_checks(self):
+        from translate_tool import commentary
+
+        u = unit([
+            {"text": "But will not know. Hence they became sinners, Mat 12:23, &c. {a}", "anchor": "We know",
+             "refs": [{"text": "Mat 12:23", "ref": "MAT.12.23"}]},
+            {"text": "Ne si solos simplices vocasset.", "footnote": True, "label": "a"},
+        ])
+        good = [
+            {"id": u["paragraphs"][0]["id"], "anchor": "அறிந்திருக்கிறோம்",
+             "text": "ஆனால் அறிய மனதில்லை. ஆகவே அவர்கள் பாவிகளானார்கள், மத்தேயு 12:23. {a}"},
+            {"id": u["paragraphs"][1]["id"], "text": "Ne si solos simplices vocasset. (எளியவர்களை மட்டும் அழைத்திருந்தால்)"},
+        ]
+        self.assertEqual(commentary.check_unit(u, "", good, {}, {}), [])
+        bad = [{**good[0], "anchor": "", "text": "ஆனால் அறிய மனதில்லை. ஆகவே அவர்கள் பாவிகளானார்கள்."}, good[1]]
+        whats = [p.what for p in commentary.check_unit(u, "", bad, {}, {})]
+        self.assertIn("anchor missing", whats)
+        self.assertTrue(any(w.startswith("verse references missing") for w in whats))
+        self.assertTrue(any(w.startswith("footnote markers missing") for w in whats))
+
+    def test_footnote_stays_with_its_paragraph(self):
+        from translate_tool import commentary
+
+        long = " ".join(["word"] * (prompts.CHUNK_WORDS - 10))
+        u = unit([{"text": long}, {"text": "more words here " * 10}, {"text": "note", "footnote": True, "label": "a"}])
+        parts = commentary.chunks(u)
+        self.assertEqual([len(p) for p in parts], [1, 2])
+
+    def test_draft_file(self):
+        from translate_tool import commentary
+
+        with tempfile.TemporaryDirectory() as d:
+            saved = commentary.ROOT
+            commentary.ROOT = Path(d)
+            try:
+                u = unit([{"text": "x"}], rid="JHN.3.2")
+                self.assertEqual(commentary.draft_path(u), Path(d) / "ta" / "trapp" / "JHN" / "3.json")
+                commentary.write_draft(u, {"id": u["id"], "source_hash": "0c1d2e3f",
+                                           "generator": {"prompt_version": commentary.PROMPT_VERSION}, "paragraphs": []})
+                self.assertTrue(commentary.is_current(u))
+                self.assertFalse(commentary.is_current({**u, "hash": "changed"}))
+                self.assertEqual(commentary.draft_folder("ecf"), "ta-ecf")
+            finally:
+                commentary.ROOT = saved
+
+
 if __name__ == "__main__":
     unittest.main()
