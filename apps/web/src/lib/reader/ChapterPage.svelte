@@ -28,6 +28,7 @@
 	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, setRangeHighlight, removeRangeHighlight, isPartial, rangesOverlap, type Highlight, type HighlightColor, type Note, type TextRange } from '$lib/personal/repo';
 	import { marksByVerse, selectionRange, sideNotesByVerse } from './marks';
 	import { player, trackKey } from '$lib/audio/player.svelte';
+	import { loadCommentaryChapter, loadCommentaryIndex, unitVerses, type CommentaryChapter, type CommentaryIndex, type CommentaryUnit } from '$lib/commentary/load';
 
 	let { data }: { data: ChapterPageData } = $props();
 
@@ -388,6 +389,96 @@
 	);
 	const panelTargets = $derived(panelVerse && xrefs ? xrefs[panelVerse] ?? [] : null);
 
+	// Commentary (design 15, docs/feature_commentary.md): with the setting on,
+	// the chosen commentary's chapter is fetched from the CDN after paint. Wide
+	// screens show it in the context panel (15B); narrower ones fold each
+	// comment open beneath the paragraph that ends its verses (15C).
+	const cmOn = $derived(settings.value.commentary && !dual);
+	const cmSource = $derived(settings.value.commentarySource);
+	let cmIndex = $state<CommentaryIndex | null>(null);
+	let cmChapter = $state<CommentaryChapter | null>(null);
+	let cmIntro = $state<CommentaryChapter | null>(null);
+	let cmLoading = $state(false);
+	let cmClosed = $state<Set<string>>(new Set());
+	// The views are their own chunk, fetched when a reader first turns commentary on.
+	let CmViews = $state<typeof import('$lib/commentary/views') | null>(null);
+	$effect(() => {
+		if (cmOn && !CmViews) import('$lib/commentary/views').then((m) => (CmViews = m)).catch(() => {});
+	});
+	$effect(() => {
+		if (!cmOn) return;
+		const key = `${cmSource}/${data.book.code}/${data.chapter}`;
+		cmChapter = null;
+		cmIntro = null;
+		cmLoading = true;
+		let cancelled = false;
+		loadCommentaryIndex(fetch)
+			.then((idx) => {
+				if (cancelled) return;
+				cmIndex = idx;
+				return Promise.all([
+					loadCommentaryChapter(fetch, cmSource, data.book.code, data.chapter),
+					data.chapter === 1 ? loadCommentaryChapter(fetch, cmSource, data.book.code, 0) : Promise.resolve(null)
+				]).then(([c, intro]) => {
+					if (cancelled || key !== `${cmSource}/${data.book.code}/${data.chapter}`) return;
+					cmChapter = c;
+					cmIntro = intro;
+				});
+			})
+			.catch(() => {})
+			.finally(() => { if (!cancelled) cmLoading = false; });
+		return () => { cancelled = true; };
+	});
+	const cmSourceInfo = $derived(cmIndex?.sources.find((s) => s.id === cmSource) ?? null);
+	/** Block index → the comments whose verses end in that paragraph. */
+	const cmAfter = $derived.by(() => {
+		const out = new Map<number, CommentaryUnit[]>();
+		if (!cmChapter) return out;
+		const blockOf = new Map<number, number>();
+		let lastVerse = 0;
+		data.chapters[0].blocks.forEach((b, i) => {
+			if (b.type !== 'para') return;
+			for (const seg of b.segments) {
+				const v = seg.id ? verseNum(seg.id) : NaN;
+				if (!isNaN(v)) { blockOf.set(v, i); lastVerse = Math.max(lastVerse, v); }
+			}
+		});
+		for (const u of cmChapter.units) {
+			const [, end] = unitVerses(u);
+			if (!end) continue;
+			let v = Math.min(end, lastVerse);
+			while (v > 0 && !blockOf.has(v)) v--;
+			const i = blockOf.get(v);
+			if (i === undefined) continue;
+			out.set(i, [...(out.get(i) ?? []), u]);
+		}
+		return out;
+	});
+	const cmLead = $derived([...(cmIntro?.units ?? []), ...(cmChapter?.units.filter((u) => u.kind !== 'passage') ?? [])]);
+	const cmAllIds = $derived([...cmLead, ...(cmChapter?.units.filter((u) => u.kind === 'passage') ?? [])].map((u) => u.id));
+	const cmAllClosed = $derived(cmAllIds.length > 0 && cmAllIds.every((id) => cmClosed.has(id)));
+	function cmToggle(id: string) {
+		const s = new Set(cmClosed);
+		if (s.has(id)) s.delete(id); else s.add(id);
+		cmClosed = s;
+	}
+	function cmToggleAll() {
+		cmClosed = cmAllClosed ? new Set() : new Set(cmAllIds);
+	}
+	// Switching the setting on opens its tab in the panel; off takes it away.
+	let cmWas = false;
+	$effect(() => {
+		if (cmOn && !cmWas) panelTab = 'commentary';
+		cmWas = cmOn;
+	});
+	function cmPick(v: number) {
+		const id = segOf(v);
+		selected = new Set([id]);
+		textSel = null;
+		xrefOpen = null;
+		measure?.querySelector<HTMLElement>(`[data-verse="${id}"]`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+	}
+
 	// Community heat (R-2.1, R-2.3): counts for tooltips and the action bar always;
 	// the background tint only when the setting is on. Loaded after paint from
 	// the hour-cached API; classes change background only, so no layout shift.
@@ -596,6 +687,9 @@
 		<div class="toolbar">
 			<Picker versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
 			<div class="right">
+				<button type="button" class="chip cm-chip" class:on={settings.value.commentary} aria-pressed={settings.value.commentary} onclick={() => settings.toggle('commentary')} title={isTamil ? 'விளக்கவுரை: ஆன் / ஆஃப்' : 'Commentary on or off'}>
+					<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'விளக்கவுரை' : 'Commentary'}</span><span class="cm-state">· {settings.value.commentary ? (cmSourceInfo?.short ?? '…') : isTamil ? 'ஆஃப்' : 'off'}</span>
+				</button>
 				{#if aids.length}
 					<button type="button" class="chip study-chip" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/></svg>
@@ -644,9 +738,17 @@
 				</blockquote>
 			{/if}
 
+			{#if cmOn && cmSourceInfo && cmChapter && CmViews}
+				<div class="cm-inline-wrap cm-top">
+					<button type="button" class="cm-all" onclick={cmToggleAll} lang={isTamil ? 'ta' : 'en'}>{cmAllClosed ? (isTamil ? 'அனைத்தும் விரி · Expand all' : 'Expand all') : isTamil ? 'அனைத்தும் சுருக்கு · Collapse all' : 'Collapse all'}</button>
+					{#each cmLead as u (u.id)}
+						<CmViews.CommentaryInline unit={u} source={cmSourceInfo} chapter={data.chapter} lang={ui} versionPath={primary.code.toLowerCase()} open={!cmClosed.has(u.id)} ontoggle={() => cmToggle(u.id)} />
+					{/each}
+				</div>
+			{/if}
 			{#if !dual}
 				<!-- While words are selected the browser's own selection shows them, not the whole-verse tint. -->
-				<Chapter chapter={data.chapters[0]} lang={primary.lang} selected={textSel ? new Set() : selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} {marks} {sidenotes} onopennote={openNoteFor} speaking={speakingId} onplay={timed ? playFromId : undefined} />
+				<Chapter chapter={data.chapters[0]} lang={primary.lang} selected={textSel ? new Set() : selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} {marks} {sidenotes} onopennote={openNoteFor} speaking={speakingId} onplay={timed ? playFromId : undefined} after={cmOn && cmSourceInfo && cmChapter && CmViews ? cmAfterBlock : undefined} />
 			{:else}
 				<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
 			{/if}
@@ -669,7 +771,7 @@
 
 	{#if !dual}
 		<aside class="panel">
-			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab} entry={picked && pickedSummary ? nameEntry : undefined} original={selected.size ? originalWords : undefined}>
+			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab} entry={picked && pickedSummary ? nameEntry : undefined} original={selected.size ? originalWords : undefined} commentary={cmOn ? commentaryPane : undefined}>
 				{#snippet study(only)}
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
@@ -680,6 +782,20 @@
 		</aside>
 	{/if}
 </div>
+
+{#snippet cmAfterBlock(i: number)}
+	{#if cmSourceInfo && CmViews && cmAfter.get(i)}
+		<div class="cm-inline-wrap">
+			{#each cmAfter.get(i) ?? [] as u (u.id)}
+				<CmViews.CommentaryInline unit={u} source={cmSourceInfo} chapter={data.chapter} lang={ui} versionPath={primary.code.toLowerCase()} open={!cmClosed.has(u.id)} ontoggle={() => cmToggle(u.id)} />
+			{/each}
+		</div>
+	{/if}
+{/snippet}
+
+{#snippet commentaryPane()}
+	{#if CmViews}<CmViews.CommentaryPane index={cmIndex} current={cmChapter} book={data.book.code} chapter={data.chapter} bookName={uiBookName} verse={selectedNumbers[0] ?? null} versionPath={primary.code.toLowerCase()} lang={ui} loading={cmLoading} onpick={cmPick} />{:else}<p class="hint">…</p>{/if}
+{/snippet}
 
 <!-- கேள் (12B): in the toolbar on wide screens, beside the title on phones. -->
 {#snippet listenChip()}
@@ -803,6 +919,15 @@
 	@keyframes eq { from { transform: scaleY(0.45); } to { transform: scaleY(1); } }
 	.bars span { transform-origin: bottom; }
 	.study-chip [lang='ta'] { font-family: var(--tamil); }
+	/* Commentary (design 15): the toolbar chip, and the inline comments of 15C. */
+	.cm-chip [lang='ta'] { font-family: var(--tamil); }
+	.cm-chip .cm-state { color: var(--muted); font-weight: 600; }
+	.cm-chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+	.cm-chip.on .cm-state { color: var(--accent); }
+	.cm-top { display: grid; justify-items: end; margin: 0 0 0.4rem; }
+	.cm-top > :global(.cm-inline) { justify-self: stretch; }
+	.cm-all { font: inherit; font-size: 0.82rem; font-weight: 700; color: var(--accent); background: none; border: 0; cursor: pointer; padding: 0.4rem 0; min-height: 40px; }
+	.cm-all[lang='ta'] { font-family: var(--tamil); }
 	.aa span { font-size: 0.72em; }
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
 	.crumbs a { color: var(--accent); font-weight: 600; text-decoration: none; }
@@ -878,6 +1003,8 @@
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); scrollbar-width: thin; }
 		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
 		.reader:not(.dual) .study-chip { display: none; }
+		/* The focus pane in the context panel takes over from the inline comments. */
+		.reader:not(.dual) .cm-inline-wrap { display: none; }
 		.overlays:not(.dual) { display: none; }
 	}
 </style>

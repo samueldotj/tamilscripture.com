@@ -13,6 +13,28 @@
         "--strictPort"
       ],
       "port": 5180
+    },
+    {
+      "name": "web-5182",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "--filter",
+        "web",
+        "dev",
+        "--port",
+        "5182",
+        "--strictPort"
+      ],
+      "port": 5182
+    },
+    {
+      "name": "commentary-cdn",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "../bible-commentaries/tools/serve.py",
+        "8790"
+      ],
+      "port": 8790
     }
   ]
 }

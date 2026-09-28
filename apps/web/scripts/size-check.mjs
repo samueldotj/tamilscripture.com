@@ -25,8 +25,10 @@ const READER_LIMIT = 120 * 1024;
 // and to 270 kB on 25 Sep 2026 for the audio player (the store rides with the
 // reader, 97 of its 120 kB; the bar is a 2.4 kB chunk loaded on first play),
 // and to 285 kB on 26 Sep 2026 for the reading plans (Today, Plans, Stats and
-// their store, 14.5 kB).
-const SITE_LIMIT = 285 * 1024;
+// their store, 14.5 kB), and to 295 kB on 27 Sep 2026 for the commentaries
+// (the focus pane and inline views are a chunk loaded when a reader turns
+// commentary on; about 7 kB in all).
+const SITE_LIMIT = 295 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 

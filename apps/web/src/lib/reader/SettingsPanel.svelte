@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { settings, type Format, type TamilFont, type Theme, type ToggleKey } from '$lib/settings/store.svelte';
 	import { manifest } from '$lib/content/manifest';
+	import { loadCommentaryIndex, type CommentarySource } from '$lib/commentary/load';
 
 	let { open = $bindable(false) }: { open?: boolean } = $props();
 	const s = $derived(settings.value);
@@ -40,6 +41,14 @@
 		{ id: 'dark', ta: 'இரவு', en: 'Night' }
 	];
 
+	// Commentary (design 15): its switch, and the commentaries to choose from
+	// once it is on, read from the CDN's index when the panel opens.
+	let cmSources = $state<CommentarySource[]>([]);
+	$effect(() => {
+		if (!open || !s.commentary || cmSources.length) return;
+		loadCommentaryIndex(fetch).then((i) => (cmSources = i.sources)).catch(() => {});
+	});
+
 	function onKey(e: KeyboardEvent) {
 		if (e.key === 'Escape') open = false;
 	}
@@ -78,6 +87,35 @@
 			{#if s.format === 'xref'}
 				<p class="note" lang={ta ? 'ta' : 'en'}>{ta ? 'ஒரு வரிக்கு ஒரு வசனம்; அதிகாரத்தின் இடங்கள், நபர்கள், வரைபடம் பக்கவாட்டில் (அல்லது “ஆய்வு” பொத்தானில்).' : 'One verse per line, with the chapter’s places, persons and map in the side panel (or behind the Study button on small screens).'}</p>
 			{/if}
+		</section>
+
+		<section>
+			<h3 class="kicker"><span lang="ta">விளக்கவுரை</span> · Commentary</h3>
+			<div class="card list">
+				<div class="row">
+					<span class="labels">
+						<span class="t" lang="ta">விளக்கவுரை</span>
+						<span class="d">Commentary beside each verse</span>
+					</span>
+					<button type="button" role="switch" class="switch" aria-checked={s.commentary} aria-label={ta ? 'விளக்கவுரை' : 'Commentary'} onclick={() => settings.toggle('commentary')}><span class="knob"></span></button>
+				</div>
+				{#if s.commentary}
+					<div class="sources" role="radiogroup" aria-label={ta ? 'விளக்கவுரை மூலம்' : 'Commentary source'}>
+						<span class="src-k"><span lang="ta">மூலம்</span> · Source</span>
+						{#each cmSources as c (c.id)}
+							<button type="button" role="radio" class="src" class:on={s.commentarySource === c.id} aria-checked={s.commentarySource === c.id} onclick={() => settings.update({ commentarySource: c.id })}>
+								<span class="dot" aria-hidden="true"></span>
+								<span class="labels">
+									<span class="sname">{c.name} <span class="year">· {c.year}</span></span>
+									<span class="d" lang={ta ? 'ta' : 'en'}>{ta ? c.desc_ta : c.desc_en}</span>
+								</span>
+							</button>
+						{:else}
+							<p class="note src-wait" lang={ta ? 'ta' : 'en'}>{ta ? 'விளக்கவுரைகள் ஏற்றப்படுகின்றன…' : 'Loading the commentaries…'}</p>
+						{/each}
+					</div>
+				{/if}
+			</div>
 		</section>
 
 		<section>
@@ -166,6 +204,19 @@
 	.switch[aria-checked='true'] { background: var(--accent); }
 	.knob { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 999px; background: var(--surface); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); transition: transform 0.15s; }
 	.switch[aria-checked='true'] .knob { transform: translateX(22px); }
+	.sources { display: grid; gap: 0.3rem; padding: 0.3rem 0.75rem 0.8rem; border-top: var(--bw) solid var(--line); }
+	.src-k { padding: 0.6rem 0.35rem 0.2rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+	.src-k [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
+	.src { display: flex; align-items: center; gap: 0.75rem; padding: 0.7rem 0.75rem; border: var(--bw) solid transparent; border-radius: 12px; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+	.src:hover { background: var(--surface-2); }
+	.src.on { background: var(--accent-soft); border-color: var(--accent); }
+	.dot { width: 18px; height: 18px; flex: none; border-radius: 999px; border: 2px solid var(--line-2); display: grid; place-items: center; }
+	.src.on .dot { border-color: var(--accent); }
+	.src.on .dot::after { content: ''; width: 8px; height: 8px; border-radius: 999px; background: var(--accent); }
+	.sname { font-size: 0.9rem; font-weight: 700; }
+	.year { font-weight: 500; color: var(--muted); }
+	.labels .d[lang='ta'] { font-family: var(--tamil); }
+	.src-wait { padding: 0.4rem 0.35rem; }
 	.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; }
 	.tiles.three { grid-template-columns: repeat(3, 1fr); }
 	.tile { display: grid; gap: 0.5rem; justify-items: center; padding: 0.8rem 0.4rem; border: var(--bw) solid var(--line-2); border-radius: var(--r-l); background: var(--surface); color: var(--ink-2); cursor: pointer; }
