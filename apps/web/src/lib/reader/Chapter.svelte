@@ -5,6 +5,7 @@
 	import type { NameHit, VerseNames } from './names';
 	import type { Mark, SideNote } from './marks';
 	import type { Note } from '$lib/personal/repo';
+	import type { Snippet } from 'svelte';
 
 	let {
 		chapter,
@@ -24,7 +25,8 @@
 		sidenotes = null,
 		onopennote,
 		speaking = null,
-		onplay
+		onplay,
+		after
 	}: {
 		chapter: ChapterJson;
 		lang: string;
@@ -51,6 +53,8 @@
 		/** While a timed recording of this chapter plays: the verse being read, and play-from-verse. */
 		speaking?: string | null;
 		onplay?: (id: string) => void;
+		/** Rendered after block i: the commentary that ends its verses there (design 15C). */
+		after?: Snippet<[number]>;
 	} = $props();
 	const withNotes = $derived(!!sidenotes?.size);
 	function heatFor(seg: Segment) {
@@ -135,6 +139,7 @@
 				{/each}
 			</p>
 		{/if}
+		{#if after}{@render after(i)}{/if}
 	{/each}
 
 	{#if notes.length}

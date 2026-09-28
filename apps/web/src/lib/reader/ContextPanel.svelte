@@ -8,7 +8,7 @@
 	import XrefList from './XrefList.svelte';
 
 	export type AidId = 'map' | 'places' | 'persons';
-	export type TabId = 'related' | AidId | 'entry' | 'original';
+	export type TabId = 'related' | AidId | 'entry' | 'original' | 'commentary';
 	export interface Aid {
 		id: AidId;
 		ta: string;
@@ -28,7 +28,8 @@
 		study,
 		actions,
 		entry,
-		original
+		original,
+		commentary
 	}: {
 		/** verse or range label for the header; empty when nothing is selected */
 		label?: string;
@@ -47,6 +48,8 @@
 		entry?: Snippet;
 		/** The selected verses' Hebrew or Greek words (concordance C3), under the மூலம் tab. */
 		original?: Snippet;
+		/** The commentary on the selection (design 15B), under the விளக்கவுரை tab, while the setting is on. */
+		commentary?: Snippet;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
@@ -56,6 +59,11 @@
 	const hasRelated = $derived(!!label);
 	let leftRelated = false;
 	$effect(() => {
+		// The விளக்கவுரை tab stays put while the setting is on, selection or not.
+		if (tab === 'commentary') {
+			if (commentary) return;
+			tab = 'related';
+		}
 		// The அகராதி tab lives as long as a name is picked.
 		if (tab === 'entry') {
 			if (entry) return;
@@ -90,8 +98,11 @@
 		{/if}
 	</header>
 
-	{#if aids.length || entry || (hasRelated && original)}
+	{#if aids.length || entry || commentary || (hasRelated && original)}
 		<div class="tabs" role="tablist" aria-label={ta ? 'சூழல்' : 'Context'}>
+			{#if commentary}
+				<button type="button" role="tab" class="tab" class:on={tab === 'commentary'} aria-selected={tab === 'commentary'} onclick={() => { tab = 'commentary'; leftRelated = false; }} lang={ta ? 'ta' : 'en'}>{ta ? 'விளக்கவுரை' : 'Commentary'}</button>
+			{/if}
 			{#if entry}
 				<button type="button" role="tab" class="tab" class:on={tab === 'entry'} aria-selected={tab === 'entry'} onclick={() => (tab = 'entry')} lang="ta">அகராதி</button>
 			{/if}
@@ -114,11 +125,13 @@
 	{/if}
 
 	<div class="body" class:fill={tab === 'map'}>
-		{#if tab === 'entry' && entry}
+		{#if tab === 'commentary' && commentary}
+			{@render commentary()}
+		{:else if tab === 'entry' && entry}
 			{@render entry()}
 		{:else if tab === 'original' && original}
 			{@render original()}
-		{:else if tab !== 'related' && tab !== 'entry' && tab !== 'original' && study}
+		{:else if tab !== 'related' && tab !== 'entry' && tab !== 'original' && tab !== 'commentary' && study}
 			{@render study(tab)}
 		{:else if !label}
 			<p class="hint" lang={ta ? 'ta' : 'en'}>{ta ? 'ஒரு வசன எண்ணைத் தொட்டால் அதன் தொடர்புள்ள வசனங்கள் இங்கே காட்டப்படும். அடிக்கோடிட, குறிப்பு எழுத, நகலெடுக்க, பகிர இங்கேயே செய்யலாம்.' : 'Tap a verse number to see its related verses here, and to highlight, note, copy or share it.'}</p>

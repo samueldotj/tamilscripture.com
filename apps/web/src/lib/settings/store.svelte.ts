@@ -6,7 +6,7 @@ import { DEFAULT_VERSION } from '$lib/content/manifest';
 
 /** 'xref' is the Study Bible format: one verse per line with study aids (kept as the class name fmt-xref). */
 export type Format = 'reader' | 'standard' | 'xref';
-export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language' | 'names' | 'marginNotes';
+export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language' | 'names' | 'marginNotes' | 'commentary';
 export type Theme = 'system' | 'light' | 'dark';
 export type TamilFont = 'mukta' | 'sans' | 'serif' | 'system';
 
@@ -29,6 +29,9 @@ export interface Settings {
 	names: boolean;
 	/** The signed-in reader's own notes beside the verses they belong to (in the margin when there is room). */
 	marginNotes: boolean;
+	/** Commentary beside the verses (design 15B/15C, docs/feature_commentary.md), and which one. */
+	commentary: boolean;
+	commentarySource: string;
 	/** 1..5, 3 is the default 17px */
 	fontSize: number;
 	theme: Theme;
@@ -50,6 +53,8 @@ export const DEFAULTS: Settings = {
 	language: true,
 	names: false,
 	marginNotes: true,
+	commentary: false,
+	commentarySource: 'henry',
 	fontSize: 3,
 	theme: 'system',
 	uiLang: 'ta',
