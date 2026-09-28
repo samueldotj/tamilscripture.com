@@ -14,6 +14,9 @@
     repair     retry flagged articles from their saved replies, with the problems listed
     check      re-check committed drafts against the current glossary and names
     batch      submit | status | collect: bulk runs through the Message Batches API
+    commentary status | show | run: the Bible commentaries in ../bible-commentaries
+    commentary-pilot  run | status | review | adopt: the commentary pilot, two models compared blind
+    commentary-full-run  whole commentaries as batches, with a repair batch; resumable (--plan to count)
 
 See docs/feature_dictionary_translation.md.
 """
@@ -304,11 +307,11 @@ def cmd_review_names(a) -> int:
     return 0
 
 
-def report(outcomes: list[translate.Outcome]) -> int:
+def report(outcomes: list[translate.Outcome], where: Path | None = None) -> int:
     written = sum(o.written for o in outcomes)
     flagged = [o for o in outcomes if o.problems]
     print(f"\n{written}/{len(outcomes)} drafts written; {len(flagged)} with problems "
-          f"(listed in {translate.REPORT.relative_to(repo.ROOT)})")
+          f"(listed in {(where or translate.REPORT).relative_to(repo.ROOT)})")
     for o in flagged[:20]:
         print(f"  {o.article_id}{'' if o.written else ' (not written)'}")
         for p in o.problems[:4]:
@@ -434,6 +437,109 @@ def cmd_batch(a) -> int:
         parts = [replies.get(f"{prefix}-{k}", client.Reply(None, "missing from batch", "")) for k in range(1, n + 1)]
         outcomes.append(translate.finish(art, parts, ctx, allow_repair=False))
     return report(outcomes)
+
+
+def select_units(a) -> list[dict]:
+    """Commentary units named by id, or --source with --limit (every --every'th
+    unit, for a spread), skipping those with a current draft unless --force."""
+    from . import commentary
+
+    if a.ids:
+        found = [commentary.load_unit(i) for i in a.ids]
+    elif a.source:
+        found = [u for k, u in enumerate(commentary.units(a.source)) if k % max(1, a.every) == 0]
+    else:
+        raise SystemExit("name units (henry/JHN.3.1-21 …) or --source")
+    out = [u for u in found if not commentary.is_current(u, a.force)]
+    return out[: a.limit] if a.limit else out
+
+
+def cmd_commentary(a) -> int:
+    from . import commentary
+
+    if a.action == "status":
+        for source in commentary.SOURCES:
+            total = done = words = 0
+            for u in commentary.units(source):
+                total += 1
+                words += commentary.english_words(u)
+                done += commentary.is_current(u)
+            if total:
+                print(f"{source:7} {done:,}/{total:,} units have a current draft; {words:,} English words")
+        print(f"\nEnglish from {commentary.ROOT / 'en'}")
+        return 0
+
+    ctx = commentary.Context(model=a.model, effort=a.effort)
+    units = select_units(a)
+    if a.action == "show":
+        if a.system:
+            print(ctx.system[0]["text"])
+            print("\n" + "=" * 72 + "\n")
+        for u in units:
+            reqs = commentary.requests_for(u, ctx)
+            print(f"=== {u['id']}: {commentary.english_words(u):,} English words, {len(reqs)} request(s)")
+            for cid, req in reqs:
+                print(f"--- {cid}")
+                print(req["messages"][0]["content"])
+        print(f"\nsystem prompt: {len(ctx.system[0]['text'])} characters")
+        return 0
+
+    print(f"{len(units)} unit(s) with {ctx.model} at effort {ctx.effort}, {a.workers} at a time")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    client.client()
+    outcomes = []
+    with ThreadPoolExecutor(max_workers=max(1, a.workers)) as pool:
+        futures = {pool.submit(commentary.translate_direct, u, ctx): u for u in units}
+        for n, f in enumerate(as_completed(futures), 1):
+            o = f.result()
+            print(f"[{n}/{len(units)}] {o.article_id}: {'written' if o.written else 'not written'}"
+                  + (f", {len(o.problems)} problem(s)" if o.problems else ""), flush=True)
+            outcomes.append(o)
+    return report(outcomes, commentary.REPORT)
+
+
+def cmd_commentary_pilot(a) -> int:
+    from . import commentary_pilot as cp
+
+    if a.action == "run":
+        if not a.model_given:
+            raise SystemExit("run needs --model (the pilot compares two: e.g. claude-sonnet-5 and claude-opus-5-5)")
+        outcomes = cp.run(a.model, a.effort, a.workers, a.force)
+        print(f"\n{sum(o.written for o in outcomes)}/{len(outcomes)} drafts written for {a.model}.")
+        print(cp.status())
+        return 0
+    if a.action == "review":
+        if len(cp.models()) == 1:  # one model: a page to read, not a blind comparison
+            path = cp.report_html(cp.models()[0])
+            print(f"wrote {path}")
+            if not a.no_open:
+                import webbrowser
+
+                webbrowser.open(path.as_uri())
+            return 0
+        from . import pilotweb
+
+        pilotweb.serve(port=a.port, open_browser=not a.no_open, pm=cp)
+        return 0
+    if a.action == "adopt":
+        if not a.model_given:
+            raise SystemExit("adopt needs --model: the model whose drafts go into bible-commentaries/ta/")
+        copied, skipped = cp.adopt(a.model, keep_problems=not a.clean_only)
+        print(f"{copied} drafts copied into {cp.commentary.ROOT}, {skipped} left out.")
+        return 0
+    print(cp.status())
+    return 0
+
+
+def cmd_commentary_full_run(a) -> int:
+    from . import commentary, commentary_fullrun as cf
+
+    sources = a.source or list(commentary.SOURCES)
+    if a.plan:
+        print(cf.plan(sources))
+        return 0
+    return cf.run(a.model, a.effort, sources, a.poll)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -580,6 +686,37 @@ def main(argv: list[str] | None = None) -> int:
     model_opts(p)
     p.add_argument("--dry-run", action="store_true")
     p.set_defaults(fn=cmd_batch)
+
+    p = sub.add_parser("commentary", help="Bible commentaries: status | show | run (docs/feature_commentary_translation.md)")
+    p.add_argument("action", choices=["status", "show", "run"],
+                   help="status: units and drafts per commentary; show: print the requests, no API call; run: translate now")
+    p.add_argument("ids", nargs="*", help="unit ids, e.g. henry/JHN.3.1-21")
+    p.add_argument("--source", choices=["geneva", "henry", "calvin", "poole", "trapp", "ecf"])
+    p.add_argument("--limit", type=int)
+    p.add_argument("--every", type=int, default=1, help="with --source: take every Nth unit, for a spread")
+    p.add_argument("--force", action="store_true", help="redo units that already have a current draft")
+    p.add_argument("--system", action="store_true", help="show: print the system prompt too")
+    model_opts(p)
+    p.set_defaults(fn=cmd_commentary)
+
+    p = sub.add_parser("commentary-pilot", help="the commentary pilot: two models on seed/commentary-pilot.txt, compared blind")
+    p.add_argument("action", nargs="?", default="status", choices=["status", "run", "review", "adopt"],
+                   help="status (default): drafts, problems, cost per model; run: translate the pilot with --model; "
+                        "review: compare the two models blind in the browser; adopt: copy --model's drafts into bible-commentaries")
+    p.add_argument("--force", action="store_true", help="run: redo units that already have a pilot draft")
+    p.add_argument("--clean-only", action="store_true", help="adopt: leave out drafts the checks still flag")
+    p.add_argument("--port", type=int, default=8768, help="review: the page's port")
+    p.add_argument("--no-open", action="store_true", help="review: do not open the browser")
+    model_opts(p)
+    p.set_defaults(fn=cmd_commentary_pilot)
+
+    p = sub.add_parser("commentary-full-run", help="translate whole commentaries: batches, repairs, drafts; resumable")
+    p.add_argument("--source", action="append", choices=["geneva", "henry", "calvin", "poole", "trapp", "ecf"],
+                   help="a commentary to translate (repeat for several; default all)")
+    p.add_argument("--plan", action="store_true", help="count what is left and its cost; no API call")
+    p.add_argument("--poll", type=int, default=300, help="seconds between batch checks")
+    model_opts(p)
+    p.set_defaults(fn=cmd_commentary_full_run)
 
     a = ap.parse_args(argv)
     args = argv if argv is not None else sys.argv[1:]

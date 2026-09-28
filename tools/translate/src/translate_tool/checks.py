@@ -85,6 +85,21 @@ def _stem(form: str) -> str:
     return form[: max(3, min(len(form), 4))]
 
 
+TA_CONSONANT = re.compile(r"[க-ஹ]்$")  # a final consonant: ம் of ஜெபம், ன் of தூதன்
+TA_VOWEL_SIGN = re.compile(r"[ா-ௌ]$")  # a final vowel sign: ு of இரட்சிப்பு
+
+
+def _root(form: str) -> str:
+    """The form without its last letter when that is a consonant or a vowel
+    sign, which the case endings replace: ஜெபம் → ஜெப (ஜெபத்தில், ஜெபித்து),
+    தேசம் → தேச (தேசங்கள்), தூதன் → தூத (தூதர்கள்). At least three code points."""
+    for pat in (TA_CONSONANT, TA_VOWEL_SIGN):
+        if m := pat.search(form):
+            root = form[: m.start()]
+            return root if len(root) >= 3 else form
+    return form
+
+
 def usable_avoid(t: Term, terms: dict[str, Term]) -> list[str]:
     """The avoid entries of a term that can be checked: without explanations
     in brackets ("ஸ்நானம் (bathing)"), and leaving out any that are part of the
@@ -105,7 +120,7 @@ def usable_avoid(t: Term, terms: dict[str, Term]) -> list[str]:
 
 
 def uses_any(tamil: str, forms: list[str]) -> bool:
-    return any(f and (f in tamil or _stem(f) in tamil) for f in forms)
+    return any(f and (f in tamil or _stem(f) in tamil or _root(f) in tamil) for f in forms)
 
 
 def check_draft(

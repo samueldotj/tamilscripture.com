@@ -16,25 +16,26 @@ import webbrowser
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from . import pilot, repo
+from . import pilot
 
 WINNERS = {"a": "A better", "b": "B better", "g": "both good", "w": "both need work"}
 
 
 class PilotSession:
-    def __init__(self, models: list[str]):
+    def __init__(self, models: list[str], pm=pilot):
+        self.pm = pm
         if len(models) != 2:
             raise SystemExit(f"the comparison needs drafts from two models; found {models or 'none'} "
                              "(translate pilot run --model …)")
         self.models = models
-        self.ids = [i for i in pilot.ids()
-                    if all(pilot.draft(m, repo.load_article(i)) for m in models)]
-        self.problems = {m: pilot.problems(m) for m in models}
+        self.ids = [i for i in pm.ids()
+                    if all(pm.draft(m, pm.load(i)) for m in models)]
+        self.problems = {m: pm.problems(m) for m in models}
         self.i = self.first_unrated()
         self.lock = threading.Lock()
 
     def first_unrated(self) -> int:
-        done = pilot.ratings()
+        done = self.pm.ratings()
         return next((k for k, i in enumerate(self.ids) if i not in done), len(self.ids))
 
     def order(self, article_id: str) -> tuple[str, str]:
@@ -44,14 +45,14 @@ class PilotSession:
         return (b, a) if flip else (a, b)
 
     def view(self) -> dict:
-        done = pilot.ratings()
+        done = self.pm.ratings()
         base = {"total": len(self.ids), "rated": sum(i in done for i in self.ids)}
         if self.i >= len(self.ids):
-            return {**base, "done": True, "summary": pilot.status(), "results": self.results()}
+            return {**base, "done": True, "summary": self.pm.status(), "results": self.results()}
         aid = self.ids[self.i]
-        art = repo.load_article(aid)
+        art = self.pm.load(aid)
         ma, mb = self.order(aid)
-        da, db = pilot.draft(ma, art), pilot.draft(mb, art)
+        da, db = self.pm.draft(ma, art), self.pm.draft(mb, art)
         ta = {p["id"]: p["text"] for p in da["paragraphs"]}
         tb = {p["id"]: p["text"] for p in db["paragraphs"]}
         rows = [{"en": p["text"], "a": ta.get(p["id"], ""), "b": tb.get(p["id"], ""), "heading": p.get("heading", False)}
@@ -65,7 +66,7 @@ class PilotSession:
     def results(self) -> dict:
         """Model → how often it won, once everything is rated."""
         out = {m: {"better": 0, "worse": 0, "both good": 0, "both need work": 0} for m in self.models}
-        for i, r in pilot.ratings().items():
+        for i, r in self.pm.ratings().items():
             if i not in self.ids:
                 continue
             for m in self.models:
@@ -82,8 +83,8 @@ class PilotSession:
         ma, mb = self.order(aid)
         label = WINNERS[key]
         winner = ma if key == "a" else mb if key == "b" else label
-        pilot.ROOT.mkdir(parents=True, exist_ok=True)
-        with open(pilot.RATINGS, "a", encoding="utf-8", newline="\n") as f:
+        self.pm.ROOT.mkdir(parents=True, exist_ok=True)
+        with open(self.pm.RATINGS, "a", encoding="utf-8", newline="\n") as f:
             f.write(json.dumps({"id": aid, "label": label, "winner": winner, "a": ma, "b": mb, "note": note.strip(),
                                 "at": datetime.now().isoformat(timespec="seconds")}, ensure_ascii=False) + "\n")
         self.i += 1
@@ -144,8 +145,8 @@ def make_handler(s: PilotSession):
     return Handler
 
 
-def serve(port: int = 8767, open_browser: bool = True) -> None:
-    s = PilotSession(pilot.models())
+def serve(port: int = 8767, open_browser: bool = True, pm=pilot) -> None:
+    s = PilotSession(pm.models(), pm)
     server = ThreadingHTTPServer(("127.0.0.1", port), make_handler(s))
     server.daemon_threads = True
     url = f"http://127.0.0.1:{port}/"
@@ -158,7 +159,7 @@ def serve(port: int = 8767, open_browser: bool = True) -> None:
         pass
     finally:
         server.server_close()
-        print("\n" + pilot.status())
+        print("\n" + pm.status())
 
 
 PAGE = """<!doctype html>

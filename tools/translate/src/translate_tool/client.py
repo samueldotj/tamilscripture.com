@@ -39,7 +39,7 @@ def client():
     return _CLIENT
 
 
-def params(system: list[dict], messages: list[dict], model: str, effort: str) -> dict:
+def params(system: list[dict], messages: list[dict], model: str, effort: str, schema: dict | None = None) -> dict:
     return {
         "model": model,
         "max_tokens": MAX_TOKENS,
@@ -47,7 +47,7 @@ def params(system: list[dict], messages: list[dict], model: str, effort: str) ->
         "messages": messages,
         "output_config": {
             "effort": effort,
-            "format": {"type": "json_schema", "schema": prompts.OUTPUT_SCHEMA},
+            "format": {"type": "json_schema", "schema": schema or prompts.OUTPUT_SCHEMA},
         },
     }
 
