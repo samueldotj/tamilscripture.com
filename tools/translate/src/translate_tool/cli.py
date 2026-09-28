@@ -16,6 +16,7 @@
     batch      submit | status | collect: bulk runs through the Message Batches API
     commentary status | show | run: the Bible commentaries in ../bible-commentaries
     commentary-pilot  run | status | review | adopt: the commentary pilot, two models compared blind
+    commentary-full-run  whole commentaries as batches, with a repair batch; resumable (--plan to count)
 
 See docs/feature_dictionary_translation.md.
 """
@@ -531,6 +532,16 @@ def cmd_commentary_pilot(a) -> int:
     return 0
 
 
+def cmd_commentary_full_run(a) -> int:
+    from . import commentary, commentary_fullrun as cf
+
+    sources = a.source or list(commentary.SOURCES)
+    if a.plan:
+        print(cf.plan(sources))
+        return 0
+    return cf.run(a.model, a.effort, sources, a.poll)
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="translate", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -698,6 +709,14 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--no-open", action="store_true", help="review: do not open the browser")
     model_opts(p)
     p.set_defaults(fn=cmd_commentary_pilot)
+
+    p = sub.add_parser("commentary-full-run", help="translate whole commentaries: batches, repairs, drafts; resumable")
+    p.add_argument("--source", action="append", choices=["geneva", "henry", "calvin", "poole", "trapp", "ecf"],
+                   help="a commentary to translate (repeat for several; default all)")
+    p.add_argument("--plan", action="store_true", help="count what is left and its cost; no API call")
+    p.add_argument("--poll", type=int, default=300, help="seconds between batch checks")
+    model_opts(p)
+    p.set_defaults(fn=cmd_commentary_full_run)
 
     a = ap.parse_args(argv)
     args = argv if argv is not None else sys.argv[1:]
