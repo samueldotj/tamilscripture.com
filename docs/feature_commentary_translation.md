@@ -68,7 +68,14 @@ A failing part gets one repair turn:
   (chapter:verse, or the verse alone for a verse of the unit's own chapter);
 - footnote markers and `[Hebrew]` markers kept;
 - Tamil length 0.6–3.5 times the English (not checked for footnotes, where Latin is kept and rendered);
-- glossary terms and reviewed names, as for the dictionary.
+- glossary terms and reviewed names, as for the dictionary; a form also counts without its last letter
+  when that is a consonant or a vowel sign, which the case endings replace (ஜெபம் matches ஜெபத்தில்,
+  ஜெபித்து; தேசம் matches தேசங்கள்).
+
+The repair turn sends back only the flagged paragraphs: their English with the glossary, names and verses
+they need, the earlier Tamil of those paragraphs, and the problems. The answer holds those paragraphs,
+which replace theirs in the first answer. When the problem is not in a paragraph (no answer, paragraph
+ids wrong), the whole part goes back with the first answer, as the dictionary does.
 
 ## 5. Commands
 

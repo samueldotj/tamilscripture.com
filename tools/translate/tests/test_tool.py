@@ -653,6 +653,41 @@ class CommentaryTests(unittest.TestCase):
         self.assertTrue(any(w.startswith("verse references missing") for w in whats))
         self.assertTrue(any(w.startswith("footnote markers missing") for w in whats))
 
+    def test_glossary_forms_take_case_endings(self):
+        from translate_tool import checks
+
+        self.assertTrue(checks.uses_any("அவர் ஜெபத்தில் தரித்திருந்தார்", ["ஜெபம்"]))
+        self.assertTrue(checks.uses_any("அவன் ஜெபித்து", ["ஜெபம்"]))
+        self.assertTrue(checks.uses_any("எல்லாத் தேசங்களும்", ["தேசம்"]))
+        self.assertTrue(checks.uses_any("தேவதூதர்கள்", ["தூதன்"]))
+        self.assertTrue(checks.uses_any("இரட்சிப்பைப் பெற்றான்", ["இரட்சிப்பு"]))
+        self.assertFalse(checks.uses_any("அவன் விண்ணப்பம் செய்தான்", ["ஜெபம்"]))
+
+    def test_repair_sends_only_the_flagged_paragraphs(self):
+        import json
+        from translate_tool import commentary
+        from translate_tool.checks import Problem
+        from translate_tool.client import Reply
+
+        u = unit([{"text": "The first note, quite correct."}, {"text": "The second note, left in English."}])
+        ctx = commentary.Context(model="m", effort="low", terms={}, names={})
+        (cid, original), = commentary.requests_for(u, ctx)
+        p1, p2 = (p["id"] for p in u["paragraphs"])
+        first = {"title": "", "paragraphs": [{"id": p1, "text": "முதல் குறிப்பு"}, {"id": p2, "text": "left in English"}]}
+        reply = Reply(first, None, json.dumps(first, ensure_ascii=False))
+        req = commentary.repair_request(u, u["paragraphs"], reply, [Problem(p2, "untranslated English")], original, ctx)
+        msg = req["messages"][0]["content"]
+        self.assertEqual(len(req["messages"]), 1)
+        self.assertIn("The second note", msg)
+        self.assertNotIn("The first note", msg)
+        self.assertNotIn("முதல் குறிப்பு", msg)
+        fixed = {"title": "", "paragraphs": [{"id": p2, "text": "இரண்டாம் குறிப்பு"}]}
+        merged = commentary.merge_repair(reply, Reply(fixed, None, json.dumps(fixed)))
+        self.assertEqual([p["text"] for p in merged.data["paragraphs"]], ["முதல் குறிப்பு", "இரண்டாம் குறிப்பு"])
+        # paragraph ids wrong: the whole part goes back with the first answer
+        req = commentary.repair_request(u, u["paragraphs"], reply, [Problem("paragraphs", "ids differ")], original, ctx)
+        self.assertEqual(len(req["messages"]), 3)
+
     def test_footnote_stays_with_its_paragraph(self):
         from translate_tool import commentary
 

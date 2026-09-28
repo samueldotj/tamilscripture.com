@@ -20,7 +20,7 @@ import json
 import time
 from datetime import datetime
 
-from . import client, commentary, prompts, translate
+from . import client, commentary, translate
 from .client import Reply
 from .fullrun import keep_awake, say
 
@@ -120,12 +120,7 @@ def repair_requests(unit_ids: list[str], ctx: commentary.Context) -> tuple[list,
             if not ps:
                 continue
             cid, req = originals[k]
-            if reply.text:
-                req = {**req, "messages": req["messages"] + [
-                    {"role": "assistant", "content": reply.text},
-                    {"role": "user", "content": prompts.repair_message(ps)},
-                ]}
-            reqs.append((cid + "-r", req))
+            reqs.append((cid + "-r", commentary.repair_request(u, paras, reply, ps, req, ctx)))
             plan_.setdefault(uid, []).append(k + 1)
     return reqs, plan_
 
@@ -151,8 +146,8 @@ def collect_repairs(b: dict, ctx: commentary.Context) -> None:
             continue
         for k in part_numbers:
             r = replies.get(f"{translate.custom_id(uid, k)}-r")
-            if r is not None and r.data is not None:
-                parts[k - 1] = r
+            if r is not None:
+                parts[k - 1] = commentary.merge_repair(parts[k - 1], r)
         o = commentary.finish(u, parts, ctx, allow_repair=False)
         if o.problems:
             still += 1

@@ -446,6 +446,55 @@ def part_problems(u: dict, paras: list[dict], reply: Reply, ctx: Context) -> lis
     return check_unit(u, reply.data.get("title", ""), reply.data.get("paragraphs", []), ctx.terms, ctx.names, paras)
 
 
+def repair_request(u: dict, paras: list[dict], reply: Reply, problems: list[Problem],
+                   original: dict, ctx: Context) -> dict:
+    """The repair turn for one part. When every problem is in a paragraph or
+    the title, only the flagged paragraphs go back: their English with the
+    glossary, names and verses they need, the earlier Tamil of them, and the
+    problems; the answer holds those paragraphs alone (merge_repair puts them
+    back). Otherwise (no answer, paragraph ids wrong) the whole part is asked
+    again, or repaired with the first answer."""
+    ids = {p["id"] for p in paras}
+    where = {p.where for p in problems}
+    if reply.data is None or not where <= ids | {"title"}:
+        if not reply.text:
+            return original
+        return {**original, "messages": original["messages"] + [
+            {"role": "assistant", "content": reply.text},
+            {"role": "user", "content": prompts.repair_message(problems)},
+        ]}
+    bad = [p for p in paras if p["id"] in where]
+    earlier = {"title": reply.data.get("title", ""),
+               "paragraphs": [p for p in reply.data.get("paragraphs", []) if p.get("id") in where]}
+    msg = "\n\n".join([
+        user_message(u, bad, (1, 1), ctx.names, ctx.terms),
+        "Your earlier Tamil of these paragraphs:\n" + json.dumps(earlier, ensure_ascii=False, indent=1),
+        "It has these problems:\n" + "\n".join(f"- {p}" for p in problems),
+        "Return the corrected JSON: the title and these paragraphs only, with the same ids.",
+    ])
+    return client.params(ctx.system, [{"role": "user", "content": msg}], ctx.model, ctx.effort, OUTPUT_SCHEMA)
+
+
+def merge_repair(reply: Reply, fixed: Reply) -> Reply:
+    """The first answer with the repaired paragraphs (and title) in place."""
+    if fixed.data is None:
+        return reply
+    if reply.data is None:
+        return fixed
+    new = {p.get("id"): p for p in fixed.data.get("paragraphs", [])}
+    data = {**reply.data,
+            "title": (fixed.data.get("title") or "").strip() or reply.data.get("title", ""),
+            "paragraphs": [new.get(p.get("id"), p) for p in reply.data.get("paragraphs", [])]}
+    return Reply(data, None, json.dumps(data, ensure_ascii=False))
+
+
+def repair_direct(u: dict, paras: list[dict], reply: Reply, problems: list[Problem],
+                  original: tuple[str, dict], ctx: Context) -> Reply:
+    cid, req = original
+    fixed = client.run_direct(repair_request(u, paras, reply, problems, req, ctx), cid + "-r")
+    return merge_repair(reply, fixed)
+
+
 def finish(u: dict, replies: list[Reply], ctx: Context, allow_repair: bool) -> translate.Outcome:
     """Check each part, repair once if allowed, and write the draft unless a
     problem the site would reject remains."""
@@ -456,7 +505,7 @@ def finish(u: dict, replies: list[Reply], ctx: Context, allow_repair: bool) -> t
     todo = [k for k, ps in enumerate(first) if ps and allow_repair]
     if todo:
         with ThreadPoolExecutor(max_workers=len(todo)) as pool:
-            for k, r in zip(todo, pool.map(lambda k: translate.repair(reqs[k][1], replies[k], first[k], reqs[k][0]), todo)):
+            for k, r in zip(todo, pool.map(lambda k: repair_direct(u, parts[k], replies[k], first[k], reqs[k], ctx), todo)):
                 final[k] = r
     problems: list[Problem] = []
     for k, paras in enumerate(parts):
