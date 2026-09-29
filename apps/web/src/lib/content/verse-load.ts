@@ -15,6 +15,15 @@ export interface VersePageData {
 	chapter: number;
 	range: { start: number; end: number };
 	canonical: string;
+	/** The verse before and after the passage, across chapters and books: the page links to them. */
+	prevVerse: VerseLink | null;
+	nextVerse: VerseLink | null;
+}
+
+export interface VerseLink {
+	book: Book;
+	chapter: number;
+	verse: number;
 }
 
 export async function loadVersePage(
@@ -55,5 +64,20 @@ export async function loadVersePage(
 	const shown = shownVersions.map((version, i) => ({ version, verses: verseList(chapters[i], range.start, range.end) }));
 	// A verse the translation omits (e.g. Matthew 17:21 in some versions) has no page.
 	if (!shown[0].verses.length) error(404, 'No such verse');
-	return { versions, shown, book, chapter, range, canonical };
+	// The neighbours: the next verse, or the first of the next chapter; the verse
+	// before, or the last of the previous chapter (its JSON gives that number).
+	const here = chapters[0];
+	const nextVerse: VerseLink | null =
+		range.end < last
+			? { book, chapter, verse: range.end + 1 }
+			: here.next && findBook(here.next.book)
+				? { book: findBook(here.next.book)!, chapter: here.next.chapter, verse: 1 }
+				: null;
+	let prevVerse: VerseLink | null = range.start > 1 ? { book, chapter, verse: range.start - 1 } : null;
+	if (!prevVerse && here.prev && findBook(here.prev.book)) {
+		const pb = findBook(here.prev.book)!;
+		const pc = await loadChapter(fetch, versions[0].code, pb.code, here.prev.chapter).catch(() => null);
+		if (pc) prevVerse = { book: pb, chapter: here.prev.chapter, verse: lastVerse(pc) };
+	}
+	return { versions, shown, book, chapter, range, canonical, prevVerse, nextVerse };
 }

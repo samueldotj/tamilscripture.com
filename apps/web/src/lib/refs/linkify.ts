@@ -4,7 +4,7 @@
 // Each becomes a link to the verse, which the site's hover preview shows as a
 // drop-down (VersePreview). Found as the text renders, so the links are in the
 // server's HTML too and Svelte owns them like any other markup.
-import { chapterUrl, findBook } from '$lib/content/manifest';
+import { findBook, verseUrl } from '$lib/content/manifest';
 import type { Book } from '$lib/content/types';
 
 export type Piece = { t: string; href?: string };
@@ -46,7 +46,7 @@ export function linkRefs(text: string, versionPath: string): Piece[] {
 		if (!book || !ok(book, ch, v)) continue;
 		const to = m[5] && Number(m[5]) > v ? `${v}-${m[5]}` : `${v}`;
 		if (m.index > last) out.push({ t: text.slice(last, m.index) });
-		out.push({ t: m[0], href: chapterUrl(versionPath, book, ch, to) });
+		out.push({ t: m[0], href: verseUrl(versionPath, book, ch, to) });
 		let end = m.index + m[0].length;
 		// Carry on through references that reuse this book.
 		let chapter = ch;
@@ -68,7 +68,7 @@ export function linkRefs(text: string, versionPath: string): Piece[] {
 			if (!ok(book, nextCh, nextV)) break;
 			const target = upto && Number(upto) > nextV ? `${nextV}-${upto}` : `${nextV}`;
 			out.push({ t: sep });
-			out.push({ t: all.slice(sep.length), href: chapterUrl(versionPath, book, nextCh, target) });
+			out.push({ t: all.slice(sep.length), href: verseUrl(versionPath, book, nextCh, target) });
 			chapter = nextCh;
 			end += all.length;
 		}

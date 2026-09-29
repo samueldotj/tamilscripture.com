@@ -14,10 +14,10 @@
 	let link: HTMLAnchorElement | null = null;
 	let timer = 0;
 
-	/** `/irvtam/john/3/16` or `/irvtam+bsb/john/3/16-18` → what to show; null for any other link. */
+	/** `/irvtam/john/3/16`, `/irvtam/john/3.16` or `/irvtam+bsb/john/3/16-18` → what to show; null for any other link. */
 	function parse(a: HTMLAnchorElement) {
 		if (a.origin !== location.origin) return null;
-		const m = a.pathname.match(/^\/([a-z0-9+]+)\/([^/]+)\/(\d+)\/(\d+)(?:-(\d+))?\/?$/i);
+		const m = a.pathname.match(/^\/([a-z0-9+]+)\/([^/]+)\/(\d+)[/.](\d+)(?:-(\d+))?\/?$/i);
 		if (!m) return null;
 		const version = findVersion(m[1].split('+')[0]);
 		const book = findBook(decodeURIComponent(m[2]));

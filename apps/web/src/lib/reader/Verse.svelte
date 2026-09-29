@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Segment, XrefTarget } from '$lib/content/types';
-	import { chapterUrl, DEFAULT_VERSION, findBook } from '$lib/content/manifest';
+	import { chapterUrl, DEFAULT_VERSION, findBook, verseUrl } from '$lib/content/manifest';
 	import { splitNames, type NameHit, type VerseNames } from './names';
 	import type { Mark, SideNote } from './marks';
 	import type { Note } from '$lib/personal/repo';
@@ -55,6 +55,19 @@
 		audio?: 'play' | 'current' | null;
 		onplay?: (id: string) => void;
 	} = $props();
+
+	/** /irvtam/john/3.16 for JHN.3.16, in the version being read. */
+	function verseHref(id: string): string | undefined {
+		const [code, ch, v] = id.split('.');
+		const book = findBook(code);
+		return book ? verseUrl(versionPath, book, Number(ch), v) : undefined;
+	}
+
+	function selectVerse(e: MouseEvent, id: string) {
+		if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return; // a new tab or window: follow the link
+		e.preventDefault();
+		onselect?.(id);
+	}
 
 	function openName(e: MouseEvent, hit: NameHit) {
 		// A plain link without script or with a modifier key; the card otherwise.
@@ -137,7 +150,9 @@
 		{#if audio && seg.id}
 			<button type="button" class="vchip" class:on={audio === 'current'} aria-label={audio === 'current' ? (lang === 'ta' ? `வசனம் ${seg.n}: இடைநிறுத்து` : `Verse ${seg.n}: pause`) : (lang === 'ta' ? `வசனம் ${seg.n} முதல் கேள்` : `Play from verse ${seg.n}`)} onclick={() => onplay?.(seg.id!)}><span aria-hidden="true">{audio === 'current' ? '❚❚' : '▶'}</span> {seg.n}</button>
 		{:else if onselect && seg.id}
-			<button type="button" class="vn" aria-label="verse {seg.n}{users ? `, highlighted by ${users} readers` : ''}" title={users ? `${users} readers highlighted this verse` : undefined} aria-pressed={selected} onclick={() => onselect(seg.id!)}>{seg.n}</button>
+			<!-- A link to the verse's own page (its explanation), for search engines and a
+			     new tab; a plain click selects the verse, as the button it replaced did. -->
+			<a class="vn" href={verseHref(seg.id)} data-no-preview role="button" aria-label="verse {seg.n}{users ? `, highlighted by ${users} readers` : ''}" title={users ? `${users} readers highlighted this verse` : undefined} aria-pressed={selected} onclick={(e) => selectVerse(e, seg.id!)} onkeydown={(e) => { if (e.key === ' ') { e.preventDefault(); onselect(seg.id!); } }}>{seg.n}</a>
 		{:else}
 			<sup class="vn" aria-label="verse {seg.n}">{seg.n}</sup>
 		{/if}
@@ -170,8 +185,8 @@
 	.vchip:hover { background: var(--accent-soft); }
 	.vchip.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 800; }
 	.vn { font-family: var(--sans); font-size: 0.58em; color: var(--accent); margin-right: 0.25em; font-weight: 700; vertical-align: super; line-height: 1; }
-	button.vn { border: 0; background: none; padding: 0.15em 0.25em; margin-left: -0.25em; cursor: pointer; border-radius: 4px; }
-	button.vn:hover { background: var(--accent-soft); }
+	a.vn { padding: 0.15em 0.25em; margin-left: -0.25em; cursor: pointer; border-radius: 4px; text-decoration: none; }
+	a.vn:hover { background: var(--accent-soft); }
 	.fn { font-family: var(--sans); font-size: 0.6em; }
 	.fn a { color: var(--muted); text-decoration: none; }
 	.wj { color: var(--wj); }

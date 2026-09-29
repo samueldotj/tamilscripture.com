@@ -15,7 +15,7 @@
 	const chapterHref = $derived(chapterUrl(versionPath, b, data.chapter));
 	// With commentary the page is an explanation of the verse: its title and heading say so.
 	const explained = $derived(data.commentary.length > 0);
-	const headTitle = $derived(explained ? `Explanation of ${refEn} – ${refTa} விளக்கம்` : `${refTa} – ${refEn}`);
+	const headTitle = $derived(explained ? `${refTa} விளக்கம் – Explanation of ${refEn}` : `${refTa} – ${refEn}`);
 	/** Where a section a comment is part of can be read whole: the chapter at its verses. */
 	function sectionHref([a, z]: [number, number]): string {
 		return chapterUrl(versionPath, b, data.chapter, z >= 999 ? `${a}` : `${a}-${z}`);
@@ -25,7 +25,20 @@
 	const seoVersion = $derived(findVersion(DEFAULT_VERSION)?.books.includes(b.code) ? findVersion(DEFAULT_VERSION)! : data.versions[0]);
 	const seoUrl = $derived(`https://www.tamilscripture.com${verseUrl(seoVersion.code.toLowerCase(), b, data.chapter, verses)}`);
 	const primaryText = $derived(data.shown[0].verses.map((v) => v.text).join(' '));
-	const description = $derived(primaryText.length <= 160 ? primaryText : primaryText.slice(0, 160).replace(/\s\S*$/, '') + '…');
+	/** The first comment in Tamil (else English), for the description: the snippet promises an explanation. */
+	const commentLead = $derived.by(() => {
+		const paras = data.commentary.flatMap((c) => c.unit.paragraphs.filter((p) => !p.heading && !p.footnote));
+		const p = paras.find((x) => x.ta) ?? paras[0];
+		return p ? (p.ta ?? p.text) : '';
+	});
+	function cut(text: string, n: number): string {
+		return text.length <= n ? text : text.slice(0, n).replace(/\s\S*$/, '') + '…';
+	}
+	const description = $derived(commentLead ? `${cut(primaryText, 90)} — ${cut(commentLead, 150)}` : cut(primaryText, 160));
+	const navLang = $derived(ta ? 'ta' : 'en');
+	function verseLabel(v: { book: typeof b; chapter: number; verse: number }): string {
+		return `${ta ? v.book.name_ta : v.book.name_en} ${v.chapter}:${v.verse}`;
+	}
 
 	/** Long passages step the type down so a range still fits a screen or two. Sized from
 	 *  the longest version (Tamil runs longer), so the versions step down together. */
@@ -101,6 +114,15 @@
 		</section>
 	{/if}
 
+	<nav class="step" aria-label={ta ? 'வசனங்கள்' : 'Verses'} lang={navLang}>
+		{#if data.prevVerse}
+			<a rel="prev" href={verseUrl(versionPath, data.prevVerse.book, data.prevVerse.chapter, `${data.prevVerse.verse}`)}><span aria-hidden="true">←</span> {verseLabel(data.prevVerse)}</a>
+		{/if}
+		{#if data.nextVerse}
+			<a rel="next" class="next" href={verseUrl(versionPath, data.nextVerse.book, data.nextVerse.chapter, `${data.nextVerse.verse}`)}>{verseLabel(data.nextVerse)} <span aria-hidden="true">→</span></a>
+		{/if}
+	</nav>
+
 	<a class="expand" href={chapterHref} lang={ta ? 'ta' : 'en'}>
 		{ta ? `${b.name_ta} ${data.chapter} முழுவதும் வாசிக்க` : `Read all of ${b.name_en} ${data.chapter}`} <span aria-hidden="true">→</span>
 	</a>
@@ -145,6 +167,12 @@
 	.whole { justify-self: start; font-family: var(--sans); font-size: 0.88rem; font-weight: 600; color: var(--accent); text-decoration: none; }
 	.whole[lang='ta'] { font-family: var(--tamil); }
 	.whole:hover { text-decoration: underline; }
+
+	.step { display: flex; gap: 0.75rem; margin: 0 0 1.5rem; font-family: var(--sans); font-size: 0.9rem; }
+	.step[lang='ta'] { font-family: var(--tamil); }
+	.step a { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; color: var(--ink-2); text-decoration: none; }
+	.step a:hover { color: var(--accent); }
+	.step .next { margin-left: auto; }
 
 	.expand { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.6rem 1.1rem; border: var(--bw) solid var(--accent); border-radius: var(--r); color: var(--accent); font-weight: 600; text-decoration: none; }
 	.expand[lang='ta'] { font-family: var(--tamil); }

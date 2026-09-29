@@ -4,7 +4,7 @@
 	// note explains lead it in bold; references are links, those the import
 	// resolved ("Mal. ii. 7") first, the rest by the site's own linkifier.
 	import RefText from '$lib/refs/RefText.svelte';
-	import { chapterUrl, findBook } from '$lib/content/manifest';
+	import { chapterUrl, findBook, verseUrl } from '$lib/content/manifest';
 	import type { CommentaryParagraph, CommentaryUnit } from './load';
 
 	let { unit, lang, versionPath, compact = false }: { unit: CommentaryUnit; lang: 'ta' | 'en'; versionPath: string; compact?: boolean } = $props();
@@ -16,7 +16,8 @@
 		const book = m && findBook(m[1]);
 		if (!m || !book) return null;
 		const verses = m[3] ? (m[4] && !ref.includes('-' + m[4] + '.') ? `${m[3]}-${m[4]}` : m[3]) : undefined;
-		return chapterUrl(versionPath, book, Number(m[2]), verses);
+		// A verse goes to its own page (the verse and its explanation), a chapter to the reader.
+		return verses ? verseUrl(versionPath, book, Number(m[2]), verses) : chapterUrl(versionPath, book, Number(m[2]));
 	}
 
 	/** The text cut at the references the import resolved: [text, href | null][] */
