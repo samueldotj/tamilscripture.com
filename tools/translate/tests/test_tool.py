@@ -688,6 +688,15 @@ class CommentaryTests(unittest.TestCase):
         req = commentary.repair_request(u, u["paragraphs"], reply, [Problem("paragraphs", "ids differ")], original, ctx)
         self.assertEqual(len(req["messages"]), 3)
 
+    def test_placeholder_loop_in_anchor(self):
+        from translate_tool import commentary
+
+        u = unit([{"text": "The note on the words.", "anchor": "God so loved"}])
+        pid = u["paragraphs"][0]["id"]
+        loop = "தேவன் அன்புகூர்ந்தார்.001-9846.avoid-empty-placeholder-should-not-appear.remove-me.temp.temp2"
+        whats = [p.what for p in commentary.check_unit(u, "", [{"id": pid, "anchor": loop, "text": "வார்த்தைகளின் குறிப்பு."}], {}, {})]
+        self.assertIn("anchor holds more than the words the note explains", whats)
+
     def test_footnote_stays_with_its_paragraph(self):
         from translate_tool import commentary
 

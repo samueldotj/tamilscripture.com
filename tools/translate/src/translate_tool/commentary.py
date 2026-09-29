@@ -332,6 +332,9 @@ ENGLISH_WORDS = {"the", "and", "of", "to", "that", "is", "which", "was", "his", 
                  "they", "it", "as", "by", "are", "this", "from", "have", "their", "will", "shall", "unto", "him",
                  "them", "but", "who", "we", "our", "you", "your", "hath", "doth", "thou", "thee"}
 FOOTNOTE_MARK = re.compile(r"\{\w{1,3}\}")
+# A run of letters, digits and dots with no space: the model looping in a field
+# ("…placeholder-should-not-appear.remove-me.temp.temp2…", ".aspx.aspx.aspx").
+JUNK_RUN = re.compile(r"(?<!/)[A-Za-z0-9._\-]{30,}")
 
 
 def english_left(tamil: str) -> str | None:
@@ -408,6 +411,10 @@ def check_unit(u: dict, title: str, paragraphs: list[dict], terms: dict[str, Ter
                 out.append(Problem(where, "anchor missing"))
             elif (why := checks.check_text(anchor)) and not checks.untranslatable(e["anchor"]):
                 out.append(Problem(where, f"anchor {why}"))
+            elif JUNK_RUN.search(anchor) or len(anchor) > max(120, 5 * len(e["anchor"])):
+                out.append(Problem(where, "anchor holds more than the words the note explains"))
+        if m := JUNK_RUN.search(ta):
+            out.append(Problem(where, f"text that is not part of the translation: {m[0][:40]!r}"))
         if left := english_left(ta):
             out.append(Problem(where, f"untranslated English: {left!r}"))
         missing = sorted(set(checks.VERSE_NUM.findall(e["text"])) - set(checks.VERSE_NUM.findall(ta)))
@@ -515,12 +522,15 @@ def finish(u: dict, replies: list[Reply], ctx: Context, allow_repair: bool) -> t
     if written:
         title = next((r.data["title"].strip() for r in final if r.data and r.data.get("title")), "")
         paras = []
+        en = {p["id"]: p for p in u["paragraphs"]}
         for r in final:
             for p in r.data["paragraphs"]:
                 if checks.check_text(p["text"]) is not None:
                     continue  # nothing to translate ("538"): the site shows the English
                 d = {"id": p["id"], "text": p["text"].strip()}
-                if (p.get("anchor") or "").strip():
+                # An anchor only where the English has one: the model sometimes
+                # fills the optional field with a loop of placeholder text.
+                if (p.get("anchor") or "").strip() and en.get(p["id"], {}).get("anchor"):
                     d["anchor"] = p["anchor"].strip()
                 paras.append(d)
         draft = {"id": u["id"], "source_hash": u["hash"],

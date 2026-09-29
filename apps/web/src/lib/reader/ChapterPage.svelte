@@ -15,7 +15,7 @@
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
 	import type { ChapterMentions } from '$lib/entities/types';
-	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findBook, findVersion, verseUrl } from '$lib/content/manifest';
 	import { versesText } from '$lib/content/verses';
 	import { loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
@@ -56,7 +56,11 @@
 	const seoVersion = $derived(
 		[findVersion(DEFAULT_VERSION), ...data.versions].find((v) => v && v.books.includes(data.book.code)) ?? primary
 	);
-	const seoUrl = $derived(`https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter, rangeLabel || undefined)}`);
+	// A verse in the reader (/irv/john/3/16) names the verse page (/irv/john/3.16) as
+	// canonical: that page carries the verse's commentary and is the one in the sitemap.
+	const seoUrl = $derived(
+		`https://www.tamilscripture.com${rangeLabel ? verseUrl(seoVersion.code.toLowerCase(), data.book, data.chapter, rangeLabel) : chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter)}`
+	);
 	/** The selected verses' words, shown first on a verse page and used as its description. */
 	const leadText = $derived(data.range ? versesText(data.chapters[0], data.range.start, data.range.end) : '');
 	const description = $derived.by(() => {

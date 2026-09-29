@@ -26,7 +26,19 @@ built 27 Sep 2026, waiting for the CDN.
 - `lib/commentary/CommentaryPane.svelte` (15B), `CommentaryInline.svelte` (15C), `CommentaryFoot.svelte` (provenance strip), `views.ts` (the lazy chunk).
 - `lib/reader/ChapterPage.svelte`: loading, placing inline comments after the paragraph that ends their verses, the toolbar chip, and the panel tab. `Chapter.svelte` takes an `after` snippet; `ContextPanel.svelte` has a `commentary` tab; `SettingsPanel.svelte` has the commentary card.
 
-## 3. Local development
+## 3. The verse page: commentary for search engines
+
+The single-verse page (`/irvtam/john/3.16`) is the explanation of the verse. Its title is "Explanation of John 3:16 – யோவான் 3:16 விளக்கம்", and its h1 says the same. Every commentary's comment is rendered with the page, so search engines index it:
+
+- A commentary with a unit per verse (Geneva, Calvin, Poole, Trapp, the Fathers) shows those units whole, with a verse label on range pages (`3.16-18`).
+- Henry writes on sections (John 3:1–21 in one unit). The page shows only the paragraphs on the verse: those citing it ("v. 16") and the ones after them, up to the next paragraph citing another verse, at most 14. A link opens the whole section in the reader. Twenty-one pages carrying the same 10,000 words would be duplicate content.
+- Tamil is shown where a draft exists, otherwise English. A verse without commentary keeps the old title.
+
+The commentary is fetched in `+page.server.ts` (`lib/commentary/verse.ts`). A fetch in the universal load would inline each fetched chapter (all of the Fathers on John 3) into the HTML. On the server, `load.ts` reads `latest.json` again after five minutes and keeps no chapters in memory.
+
+The reader's verse URLs (`/irvtam/john/3/16`) name the verse page as their canonical, and only the verse pages are in `sitemap-verses.xml`. ISR pages never expire, so a verse page already rendered keeps the commentary it was rendered with until the next deploy.
+
+## 4. Local development
 
 ```bash
 python ../bible-commentaries/tools/publish.py build   # dist/commentary/{version}/
@@ -36,7 +48,7 @@ python ../bible-commentaries/tools/serve.py           # http://localhost:8790, w
 
 `.claude/launch.json` has `commentary-cdn` (the server above) and `web-5182`.
 
-## 4. Before it goes live
+## 5. Before it goes live
 
 - Upload (`publish.py upload`) to the R2 bucket, and set `PUBLIC_COMMENTARY_BASE` (or the default in `load.ts`) to its public URL.
 - A CORS rule on the bucket allowing GET from https://www.tamilscripture.com. Audio does not need one (`<audio>` does not use CORS); `fetch` does.

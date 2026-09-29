@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findVersion, verseUrl } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
+	import CommentaryText from '$lib/commentary/CommentaryText.svelte';
+	import { unitLabel } from '$lib/commentary/load';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -11,6 +13,13 @@
 	const many = $derived(data.range.end > data.range.start);
 	const versionPath = $derived(data.versions.map((v) => v.code.toLowerCase()).join('+'));
 	const chapterHref = $derived(chapterUrl(versionPath, b, data.chapter));
+	// With commentary the page is an explanation of the verse: its title and heading say so.
+	const explained = $derived(data.commentary.length > 0);
+	const headTitle = $derived(explained ? `Explanation of ${refEn} – ${refTa} விளக்கம்` : `${refTa} – ${refEn}`);
+	/** Where a section a comment is part of can be read whole: the chapter at its verses. */
+	function sectionHref([a, z]: [number, number]): string {
+		return chapterUrl(versionPath, b, data.chapter, z >= 999 ? `${a}` : `${a}-${z}`);
+	}
 
 	// Search engines (ADR-15): one canonical page per passage, the default Tamil version's.
 	const seoVersion = $derived(findVersion(DEFAULT_VERSION)?.books.includes(b.code) ? findVersion(DEFAULT_VERSION)! : data.versions[0]);
@@ -27,10 +36,10 @@
 </script>
 
 <svelte:head>
-	<title>{refTa} – {refEn} · Tamil Scripture</title>
+	<title>{headTitle} · Tamil Scripture</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={seoUrl} />
-	<meta property="og:title" content={`${refTa} – ${refEn}`} />
+	<meta property="og:title" content={headTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content={seoUrl} />
@@ -50,8 +59,13 @@
 
 <article class="verse">
 	<h1>
-		<span lang="ta">{refTa}</span>
-		<span class="en" lang="en">{refEn}</span>
+		{#if explained}
+			<span lang="ta">{refTa} விளக்கம்</span>
+			<span class="en" lang="en">Explanation of {refEn}</span>
+		{:else}
+			<span lang="ta">{refTa}</span>
+			<span class="en" lang="en">{refEn}</span>
+		{/if}
 	</h1>
 
 	{#each data.shown as s (s.version.code)}
@@ -64,6 +78,28 @@
 			<figcaption>{bookNameIn(b, s.version)} {data.chapter}:{verses} · <abbr title={s.version.name}>{s.version.short}</abbr></figcaption>
 		</figure>
 	{/each}
+
+	{#if explained}
+		<section class="explain" aria-labelledby="explain-h">
+			<h2 id="explain-h" lang={ta ? 'ta' : 'en'}>{ta ? 'விளக்கவுரைகள்' : 'Commentaries'}</h2>
+			{#each data.commentary as c (c.unit.id)}
+				<article class="comment">
+					<header>
+						<span class="badge">{c.source.short}</span>
+						<h3 lang="en">{c.source.name} <span class="year">({c.source.year})</span></h3>
+						{#if many && !c.partOf}<span class="at">{unitLabel(c.unit, data.chapter)}</span>{/if}
+					</header>
+					{#if c.unit.title && !c.partOf}<div class="title" lang={ta && c.unit.title_ta ? 'ta' : 'en'}>{ta && c.unit.title_ta ? c.unit.title_ta : c.unit.title}</div>{/if}
+					<CommentaryText unit={c.unit} lang={ta ? 'ta' : 'en'} {versionPath} />
+					{#if c.partOf}
+						<a class="whole" href={sectionHref(c.partOf)} lang={ta ? 'ta' : 'en'}>
+							{ta ? `${b.name_ta} ${data.chapter}:${c.partOf[0]}${c.partOf[1] < 999 ? `–${c.partOf[1]}` : ''} பகுதியின் முழு விளக்கம்` : `The whole section on ${b.name_en} ${data.chapter}:${c.partOf[0]}${c.partOf[1] < 999 ? `–${c.partOf[1]}` : ''}`} <span aria-hidden="true">→</span>
+						</a>
+					{/if}
+				</article>
+			{/each}
+		</section>
+	{/if}
 
 	<a class="expand" href={chapterHref} lang={ta ? 'ta' : 'en'}>
 		{ta ? `${b.name_ta} ${data.chapter} முழுவதும் வாசிக்க` : `Read all of ${b.name_en} ${data.chapter}`} <span aria-hidden="true">→</span>
@@ -94,6 +130,21 @@
 	figcaption { margin: 0.7rem 0 0 1.45rem; font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
 	.passage[lang='ta'] figcaption { font-family: var(--tamil); }
 	figcaption abbr { text-decoration: none; font-family: var(--sans); font-weight: 600; letter-spacing: 0.03em; }
+
+	.explain { margin: 0 0 2.5rem; display: grid; gap: 1.25rem; }
+	.explain h2 { margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+	.explain h2[lang='ta'] { font-family: var(--tamil); }
+	.comment { display: grid; gap: 0.7rem; padding: 1.1rem 1.2rem 1.2rem; border: var(--bw) solid var(--line); border-radius: 14px; background: var(--surface); }
+	.comment header { display: flex; align-items: center; gap: 0.6rem; }
+	.comment h3 { margin: 0; font-family: var(--sans); font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+	.comment .year { font-weight: 400; color: var(--muted); }
+	.comment .at { margin-left: auto; font-family: var(--sans); font-size: 0.82rem; font-weight: 700; color: var(--accent); }
+	.badge { font-family: var(--sans); font-size: 0.72rem; font-weight: 800; color: var(--on-accent); background: var(--accent); border-radius: 6px; padding: 0.1rem 0.45rem; }
+	.comment .title { font-family: var(--sans); font-weight: 700; color: var(--amber); font-size: 0.92rem; }
+	.comment .title[lang='ta'] { font-family: var(--tamil); }
+	.whole { justify-self: start; font-family: var(--sans); font-size: 0.88rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+	.whole[lang='ta'] { font-family: var(--tamil); }
+	.whole:hover { text-decoration: underline; }
 
 	.expand { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.6rem 1.1rem; border: var(--bw) solid var(--accent); border-radius: var(--r); color: var(--accent); font-weight: 600; text-decoration: none; }
 	.expand[lang='ta'] { font-family: var(--tamil); }

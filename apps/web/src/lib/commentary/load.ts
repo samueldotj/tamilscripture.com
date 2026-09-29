@@ -6,6 +6,7 @@
 //   {BASE}/{version}/{source}/{BOOK}/{ch}.json  one chapter of one commentary
 //
 // Fetched in the browser after paint, like the chapter's other study aids.
+import { browser } from '$app/environment';
 import { env } from '$env/dynamic/public';
 
 export const COMMENTARY_BASE = (env.PUBLIC_COMMENTARY_BASE || 'https://stream.tamilaudiobible.com/commentary').replace(/\/$/, '');
@@ -75,8 +76,12 @@ export interface CommentaryChapter {
 
 type Fetch = typeof fetch;
 
+// latest.json is read again after this long, as its cache allows: the server
+// renders verse pages for weeks from one process, and a publish must reach them.
+const VERSION_TTL = 5 * 60 * 1000;
 let version: Promise<string> | null = null;
-let index: Promise<CommentaryIndex> | null = null;
+let versionAt = 0;
+const indexes = new Map<string, Promise<CommentaryIndex>>();
 const chapters = new Map<string, Promise<CommentaryChapter | null>>();
 
 async function json<T>(f: Fetch, url: string): Promise<T> {
@@ -86,6 +91,8 @@ async function json<T>(f: Fetch, url: string): Promise<T> {
 }
 
 function currentVersion(f: Fetch): Promise<string> {
+	if (version && Date.now() - versionAt > VERSION_TTL) version = null;
+	if (!version) versionAt = Date.now();
 	version ??= json<{ version: string }>(f, `${COMMENTARY_BASE}/latest.json`)
 		.then((l) => l.version)
 		.catch((e) => {
@@ -95,29 +102,32 @@ function currentVersion(f: Fetch): Promise<string> {
 	return version;
 }
 
-export function loadCommentaryIndex(f: Fetch): Promise<CommentaryIndex> {
-	index ??= currentVersion(f)
-		.then((v) => json<CommentaryIndex>(f, `${COMMENTARY_BASE}/${v}/index.json`))
-		.catch((e) => {
-			index = null;
-			throw e;
-		});
-	return index;
+export async function loadCommentaryIndex(f: Fetch): Promise<CommentaryIndex> {
+	const v = await currentVersion(f);
+	let p = indexes.get(v);
+	if (!p) {
+		p = json<CommentaryIndex>(f, `${COMMENTARY_BASE}/${v}/index.json`);
+		p.catch(() => indexes.delete(v));
+		indexes.set(v, p);
+	}
+	return p;
 }
 
 /** One chapter of one commentary; null when that commentary has nothing on the chapter. */
 export async function loadCommentaryChapter(f: Fetch, source: string, book: string, chapter: number): Promise<CommentaryChapter | null> {
-	const key = `${source}/${book}/${chapter}`;
+	const v = await currentVersion(f);
+	const key = `${v}/${source}/${book}/${chapter}`;
 	let p = chapters.get(key);
 	if (!p) {
 		p = (async () => {
 			const idx = await loadCommentaryIndex(f);
 			if (!idx.chapters[source]?.[book]?.includes(chapter)) return null;
-			const v = await currentVersion(f);
 			return json<CommentaryChapter>(f, `${COMMENTARY_BASE}/${v}/${source}/${book}/${chapter === 0 ? 'intro' : chapter}.json`);
 		})();
 		p.catch(() => chapters.delete(key));
-		chapters.set(key, p);
+		// Kept for the visit in the browser; the server renders a page and forgets
+		// the chapter, or one process would come to hold every commentary.
+		if (browser) chapters.set(key, p);
 	}
 	return p;
 }
