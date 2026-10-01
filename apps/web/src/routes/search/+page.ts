@@ -43,14 +43,21 @@ export const load: PageLoad = async ({ url, fetch }) => {
 					.catch(() => [])
 			: Promise.resolve([]);
 	try {
-		let [result, entities] = await Promise.all([search(fetch, q, versions, offset, range), entitiesPromise]);
-		const words = await wordsPromise;
 		// An English word against a Tamil version (or the other way round) finds
-		// nothing in that version alone; look in every version rather than stop.
-		let widened = false;
-		if (result.total === 0 && scope === 'version') {
-			const all = manifest.versions.map((v) => v.code);
-			const wider = await search(fetch, q, all, offset, range).catch(() => null);
+		// nothing in that version alone, so such a query searches every version
+		// from the start; any other query widens to every version if it finds nothing.
+		const all = manifest.versions.map((v) => v.code);
+		const crossScript = scope === 'version' && /[஀-௿]/.test(q) !== (primary.lang === 'ta');
+		const canWiden = scope === 'version' && !crossScript;
+		const canRoman = !!roman && tamilVersions.length > 0;
+		let [result, entities] = await Promise.all([
+			search(fetch, q, crossScript ? all : versions, offset, range, canWiden || canRoman),
+			entitiesPromise
+		]);
+		const words = await wordsPromise;
+		let widened = crossScript && result.total > 0;
+		if (result.total === 0 && canWiden) {
+			const wider = await search(fetch, q, all, offset, range, canRoman).catch(() => null);
 			if (wider && wider.total > 0) {
 				result = wider;
 				widened = true;
@@ -62,7 +69,7 @@ export const load: PageLoad = async ({ url, fetch }) => {
 		let shown = q;
 		let fromRoman = false;
 		let romanOffer = '';
-		if (roman && tamilVersions.length) {
+		if (canRoman) {
 			if (result.total === 0) {
 				const tamil = await search(fetch, roman, tamilVersions, offset, range).catch(() => null);
 				if (tamil && tamil.total > 0) {

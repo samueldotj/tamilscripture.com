@@ -52,8 +52,9 @@ export const GET: RequestHandler = async ({ url, fetch, setHeaders }) => {
 	const hits = (await res.json()) as { verse_id: string; version: string; text: string; rank: number; book_ord: number; total: number }[];
 	const total = hits[0]?.total ?? 0;
 
-	// Anonymous log for common searches; fire and forget.
-	if (offset === 0) {
+	// Anonymous log for common searches; fire and forget. retry=1 means the search
+	// page tries wider when this finds nothing, so only the outcome shown is counted.
+	if (offset === 0 && !(total === 0 && url.searchParams.get('retry') === '1')) {
 		fetch(`${SUPABASE_URL}/rest/v1/rpc/log_search`, {
 			method: 'POST',
 			headers: { apikey: SUPABASE_ANON_KEY, authorization: `Bearer ${SUPABASE_ANON_KEY}`, 'content-type': 'application/json' },

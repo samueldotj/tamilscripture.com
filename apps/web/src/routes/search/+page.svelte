@@ -241,7 +241,7 @@
 					{#each hits as hit (hit.version + hit.verse_id)}
 						{@const r = refOf(hit)}
 						<li lang={r.lang}>
-							<a class="ref" href={r.href}>{r.label}{#if data.versions.length > 1} <span class="v">{r.short}</span>{/if}</a>
+							<a class="ref" href={r.href}>{r.label}{#if data.versions.length > 1 || data.widened} <span class="v">{r.short}</span>{/if}</a>
 							<p>{#each mark(hit.text) as run, i (i)}{#if run.hit}<mark>{run.t}</mark>{:else}{run.t}{/if}{/each}</p>
 						</li>
 					{/each}

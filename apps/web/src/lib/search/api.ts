@@ -21,9 +21,12 @@ export async function search(
 	q: string,
 	versions: string[],
 	offset = 0,
-	range: { bookMin: number; bookMax: number; chMin?: number; chMax?: number } | null = null
+	range: { bookMin: number; bookMax: number; chMin?: number; chMax?: number } | null = null,
+	/** true when an empty result will be followed by a wider try, so the search log skips it */
+	retry = false
 ): Promise<SearchResponse> {
 	const params = new URLSearchParams({ q, v: versions.join(','), offset: String(offset) });
+	if (retry) params.set('retry', '1');
 	if (range) {
 		params.set('bmin', String(range.bookMin));
 		params.set('bmax', String(range.bookMax));
