@@ -11,6 +11,7 @@
 	import ContextPanel from './ContextPanel.svelte';
 	import type { TabId } from './ContextPanel.svelte';
 	import StudyPanel from './StudyPanel.svelte';
+	import ColumnGrip from './ColumnGrip.svelte';
 	import NameCard from './NameCard.svelte';
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
@@ -619,6 +620,8 @@
 	function onKey(e: KeyboardEvent) {
 		const t = e.target as HTMLElement | null;
 		if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+		// An arrow a control has used (a column grip) does not also turn the chapter.
+		if (e.defaultPrevented && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) return;
 		if (e.key === 'ArrowRight' && navUrl(next)) goto(navUrl(next)!);
 		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
 		else if (e.key === 'Escape') {
@@ -684,6 +687,7 @@
 	{#if !dual}
 		<aside class="rail">
 			<BookRail versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
+			<ColumnGrip side="rail" lang={ui} />
 		</aside>
 	{/if}
 
@@ -775,6 +779,9 @@
 
 	{#if !dual}
 		<aside class="panel">
+			<ColumnGrip side="panel" lang={ui} />
+			<!-- The panel scrolls inside this, so the grip on its edge stays put. -->
+			<div class="panel-scroll">
 			<ContextPanel label={panelLabel} targets={panelTargets} xrefsEnabled={settings.value.xrefs} version={primary.code} lang={ui} {aids} bind:tab={panelTab} entry={picked && pickedSummary ? nameEntry : undefined} original={selected.size ? originalWords : undefined} commentary={cmOn ? commentaryPane : undefined}>
 				{#snippet study(only)}
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
@@ -783,6 +790,7 @@
 					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
 				{/snippet}
 			</ContextPanel>
+			</div>
 		</aside>
 	{/if}
 </div>
@@ -1001,19 +1009,24 @@
 
 	/* Rail joins. The side columns grow with the window up to 312px (rail) and
 	   420px (panel); the clamps keep a 1180-1440px screen from squeezing the
-	   reading column, which stays centred on its 40rem measure. */
+	   reading column, which stays centred on its 40rem measure. A column dragged
+	   to a width (ColumnGrip) sets --rail-w / --panel-w on <html>, never more
+	   than 40% of the window. */
+	.reader {
+		--rail-col: min(var(--rail-w, clamp(16.75rem, 21vw, 19.5rem)), 40vw);
+		--panel-col: min(var(--panel-w, clamp(21.5rem, 27vw, 26.25rem)), 40vw);
+	}
+	.panel-scroll { height: 100%; overflow-y: auto; scrollbar-width: thin; }
 	@media (min-width: 960px) {
-		.reader:not(.dual) { grid-template-columns: clamp(16.75rem, 21vw, 19.5rem) minmax(0, 1fr); }
-		.reader:not(.dual) .rail { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); }
+		.reader:not(.dual) { grid-template-columns: var(--rail-col) minmax(0, 1fr); }		.reader:not(.dual) .rail { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); }
 		.reader:not(.dual) .main { max-width: none; padding: 1.5rem 2.5rem 4rem; }
 		/* The rail covers book and chapter navigation */
 		.reader:not(.dual) :global(.picker select.nav) { display: none; }
 	}
 	/* Context panel joins; the floating action bar, the overlay sheet and the Study chip step aside */
 	@media (min-width: 1180px) {
-		.reader:not(.dual) { grid-template-columns: clamp(16.75rem, 21vw, 19.5rem) minmax(0, 1fr) clamp(21.5rem, 27vw, 26.25rem); }
-		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); scrollbar-width: thin; }
-		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
+		.reader:not(.dual) { grid-template-columns: var(--rail-col) minmax(0, 1fr) var(--panel-col); }
+		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); background: var(--surface); border-left: var(--bw) solid var(--line); }		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
 		.reader:not(.dual) .study-chip { display: none; }
 		/* The focus pane in the context panel takes over from the inline comments. */
 		.reader:not(.dual) .cm-inline-wrap { display: none; }

@@ -24,6 +24,8 @@
 				if (s.names === true) c.push('nm-on');
 				document.documentElement.className = c.join(' ');
 				if (s.theme === 'light' || s.theme === 'dark') document.documentElement.setAttribute('data-theme', s.theme);
+				if (s.railWidth > 0) document.documentElement.style.setProperty('--rail-w', s.railWidth + 'px');
+				if (s.panelWidth > 0) document.documentElement.style.setProperty('--panel-w', s.panelWidth + 'px');
 			} catch (e) {}
 		</script>
 		%sveltekit.head%

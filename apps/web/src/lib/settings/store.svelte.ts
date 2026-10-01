@@ -37,6 +37,9 @@ export interface Settings {
 	theme: Theme;
 	uiLang: 'ta' | 'en';
 	version: string;
+	/** Wide-screen side columns dragged to a width, in px; 0 keeps the automatic width. */
+	railWidth: number;
+	panelWidth: number;
 }
 
 export const DEFAULTS: Settings = {
@@ -58,7 +61,9 @@ export const DEFAULTS: Settings = {
 	fontSize: 3,
 	theme: 'system',
 	uiLang: 'ta',
-	version: DEFAULT_VERSION.toLowerCase()
+	version: DEFAULT_VERSION.toLowerCase(),
+	railWidth: 0,
+	panelWidth: 0
 };
 
 const KEY = 'reader';
@@ -117,7 +122,16 @@ class SettingsStore {
 		html.className = [...keep, ...htmlClasses(this.value)].join(' ');
 		if (this.value.theme === 'system') html.removeAttribute('data-theme');
 		else html.setAttribute('data-theme', this.value.theme);
+		columnWidth('--rail-w', this.value.railWidth);
+		columnWidth('--panel-w', this.value.panelWidth);
 	}
+}
+
+/** Set (or with 0, clear) a reader column width on <html>; the reader's grid falls back to its automatic width. */
+export function columnWidth(name: '--rail-w' | '--panel-w', px: number) {
+	if (!browser) return;
+	if (px > 0) document.documentElement.style.setProperty(name, `${Math.round(px)}px`);
+	else document.documentElement.style.removeProperty(name);
 }
 
 export const settings = new SettingsStore();
