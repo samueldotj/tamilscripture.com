@@ -854,6 +854,12 @@
 <!-- While audio is on, its bar takes the thumb bar's place (12A). -->
 <div class="thumb" class:hidden={chrome.hidden || selected.size > 0 || !!player.track}>
 	{#if navUrl(prev)}<a class="tb" href={navUrl(prev)} rel="prev">‹ {isTamil ? 'முன்' : 'Prev'}</a>{:else}<span class="tb spacer" aria-hidden="true"></span>{/if}
+	{#if chapterAudio}
+		<!-- Shown only while nothing plays: once a track is on, the player bar takes this bar's place. -->
+		<button type="button" class="tb-play" aria-label={isTamil ? 'கேள்' : 'Listen'} title={isTamil ? `${primary.short} ஒலி` : `${primary.short} audio`} onclick={listen}>
+			<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15L19.5 12z"/></svg>
+		</button>
+	{/if}
 	<button type="button" class="tb-aa" aria-label={isTamil ? 'எழுத்து அளவு' : 'Text size'} aria-expanded={sizeOpen} onclick={() => (sizeOpen = !sizeOpen)}>A<span>A</span></button>
 	{#if navUrl(next)}<a class="tb" href={navUrl(next)} rel="next">{isTamil ? 'அடுத்து' : 'Next'} ›</a>{:else}<span class="tb spacer" aria-hidden="true"></span>{/if}
 </div>
@@ -981,6 +987,8 @@
 		.tb.spacer { visibility: hidden; }
 		.tb-aa { width: 56px; height: 56px; flex: none; border-radius: 999px; border: 0; background: var(--accent); color: var(--on-accent); font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer; }
 		.tb-aa span, .float-aa span { font-size: 11px; }
+		.tb-play { width: 56px; height: 56px; flex: none; border-radius: 999px; border: var(--bw) solid var(--line-2); background: var(--surface); color: var(--accent); display: flex; align-items: center; justify-content: center; padding: 0 0 0 3px; cursor: pointer; }
+		.tb-play:focus-visible, .tb-aa:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 		.float-aa { display: flex; align-items: center; justify-content: center; position: fixed; z-index: 14; right: 22px; bottom: calc(max(30px, env(safe-area-inset-bottom)) + var(--player-h, 0px)); width: 52px; height: 52px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 92%, transparent); border: var(--bw) solid var(--line-2); color: var(--accent); font-family: var(--sans); font-size: 15px; font-weight: 700; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: var(--shadow); cursor: pointer; }
 		.progress { display: block; position: fixed; z-index: 14; top: max(4px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); width: 120px; height: 3px; border-radius: 999px; background: var(--line-2); overflow: hidden; pointer-events: none; }
 		.progress span { display: block; height: 100%; background: var(--accent); }
