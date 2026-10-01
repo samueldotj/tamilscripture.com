@@ -193,8 +193,11 @@
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
 		</button>
 		<a class="brand" href="/">
-			<span class="ta" lang="ta">தமிழ் வேதாகமம்</span>
-			<span class="en">Tamil Bible</span>
+			<svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="2" width="6" height="28" fill="currentColor"/><rect x="4" y="9" width="24" height="6" fill="#EC3013"/></svg>
+			<span class="words">
+				<span class="ta" lang="ta">தமிழ் வேதாகமம்</span>
+				<span class="en">Tamil Bible</span>
+			</span>
 		</a>
 		<div class="ref"><ReferenceBox {versionPath} lang={ui} /></div>
 		<div class="tools">
@@ -261,7 +264,9 @@
 	.site { border-bottom: var(--bw) solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 5; transition: transform 0.22s ease; }
 	.m-only { display: none; }
 	.bar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem 1.5rem; max-width: 74rem; margin: 0 auto; padding: 0.8rem 1.5rem; }
-	.brand { display: flex; flex-direction: column; text-decoration: none; color: inherit; line-height: 1.15; flex: none; }
+	.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); line-height: 1.15; flex: none; }
+	.brand .mark { flex: none; }
+	.brand .words { display: flex; flex-direction: column; }
 	.brand .ta { font-family: var(--tamil); font-weight: 600; font-size: 1.3rem; color: var(--ink); }
 	.brand .en { font-size: 0.66rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
 	.ref { flex: 1 1 16rem; max-width: 32rem; margin: 0 auto; }
