@@ -727,11 +727,11 @@
 			<div class="titles">
 				<h1 lang={primary.lang}>{bookName} {data.chapter}{rangeLabel ? `:${rangeLabel}` : ''}</h1>
 				<span class="alt" lang={primary.lang === 'ta' ? 'en' : 'ta'}>{altName} {data.chapter}{rangeLabel ? `:${rangeLabel}` : ''}{primary.lang === 'ta' ? ' in Tamil' : ''}</span>
-				<!-- On phones the toolbar gives way to the header pill and the thumb bar; Listen and Study stay here. -->
-				{#if chapterAudio || aids.length}<span class="m-chips">{#if chapterAudio}{@render listenChip()}{/if}{#if aids.length}<button type="button" class="chip study-chip m-study" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
+				<!-- On phones the toolbar gives way to the header pill and the thumb bar (Listen is the ▶ in both); Study stays here. -->
+				{#if aids.length}<span class="m-chips"><button type="button" class="chip study-chip m-study" onclick={() => (sheet = 'study')} aria-label={isTamil ? 'ஆய்வு: இடங்கள், நபர்கள், வரைபடம்' : 'Study: places, persons, map'}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19a2.5 2.5 0 0 1 2.5-2.5H20"/></svg>
 						<span lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'ஆய்வு' : 'Study'}</span>
-					</button>{/if}</span>{/if}
+					</button></span>{/if}
 			</div>
 			{#if leadText}
 				<!-- The shared verse first, in words, before the chapter it sits in: what a reader
@@ -801,7 +801,7 @@
 	{#if CmViews}<CmViews.CommentaryPane index={cmIndex} current={cmChapter} book={data.book.code} chapter={data.chapter} bookName={uiBookName} verse={selectedNumbers[0] ?? null} versionPath={primary.code.toLowerCase()} lang={ui} loading={cmLoading} onpick={cmPick} />{:else}<p class="hint">…</p>{/if}
 {/snippet}
 
-<!-- கேள் (12B): in the toolbar on wide screens, beside the title on phones. -->
+<!-- கேள் (12B): in the toolbar on wide screens. -->
 {#snippet listenChip()}
 	<button type="button" class="chip listen" class:on={listening} class:paused={listening && !player.playing} aria-pressed={listening && player.playing} onclick={listen} title={isTamil ? `${primary.short} ஒலி` : `${primary.short} audio`}>
 		{#if listening}
