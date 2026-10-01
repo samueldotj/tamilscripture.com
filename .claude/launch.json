@@ -28,6 +28,19 @@
       "port": 5182
     },
     {
+      "name": "web-5184",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "--filter",
+        "web",
+        "dev",
+        "--port",
+        "5184",
+        "--strictPort"
+      ],
+      "port": 5184
+    },
+    {
       "name": "commentary-cdn",
       "runtimeExecutable": "python",
       "runtimeArgs": [

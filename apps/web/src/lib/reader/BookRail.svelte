@@ -2,6 +2,7 @@
 	// Permanent book rail for wide screens (design 3A): OT/NT switch, every
 	// book as a row, and the current book expanded into an inline chapter grid
 	// so moving anywhere in the Bible costs no page change first.
+	import { tick } from 'svelte';
 	import { chapterUrl, manifest } from '$lib/content/manifest';
 	import type { Book, VersionMeta } from '$lib/content/types';
 
@@ -30,12 +31,25 @@
 		expanded = book.code;
 	});
 	$effect(() => {
-		// Keep the current book in view inside the rail without scrolling the page.
-		void expanded;
-		const el = list?.querySelector<HTMLElement>(`[data-book="${book.code}"]`);
-		if (list && el) list.scrollTop = Math.max(0, el.offsetTop - list.clientHeight / 3);
+		// Bring the current book into view inside the rail, without scrolling the
+		// page, when the page moves to another book. Expanding a different book in
+		// the rail must not jump back to the current one.
+		const code = book.code;
+		void tick().then(() => {
+			const el = list?.querySelector<HTMLElement>(`[data-book="${code}"]`);
+			if (list && el) list.scrollTop = Math.max(0, el.offsetTop - list.clientHeight / 3);
+		});
 	});
 	const books = $derived(testament === 'OT' ? ot : nt);
+
+	// Expanding a book collapses the one above it, which would shift the tapped
+	// row; keep it where it was tapped.
+	async function toggle(code: string, row: HTMLElement) {
+		const before = row.getBoundingClientRect().top;
+		expanded = expanded === code ? '' : code;
+		await tick();
+		if (list) list.scrollTop += row.getBoundingClientRect().top - before;
+	}
 </script>
 
 <nav class="rail" aria-label={ta ? 'புத்தகங்கள்' : 'Books'}>
@@ -48,7 +62,7 @@
 			{@const current = b.code === book.code}
 			{@const open = expanded === b.code}
 			<div class="book" data-book={b.code}>
-				<button type="button" class="row" class:current aria-expanded={open} aria-current={current ? 'page' : undefined} disabled={!available.has(b.code)} onclick={() => (expanded = open ? '' : b.code)}>
+				<button type="button" class="row" class:current aria-expanded={open} aria-current={current ? 'page' : undefined} disabled={!available.has(b.code)} onclick={(e) => toggle(b.code, e.currentTarget)}>
 					<span class="name" lang={ta ? 'ta' : 'en'}>{ta ? b.name_ta : b.name_en}</span>
 					<span class="alt" lang={ta ? 'en' : 'ta'}>{ta ? b.name_en : b.name_ta}</span>
 				</button>
