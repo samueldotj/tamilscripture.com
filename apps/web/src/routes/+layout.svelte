@@ -178,6 +178,10 @@
 				{/if}
 			</button>
 		{/if}
+		<!-- One tap flips the interface language; it shows the language it switches to. -->
+		<button type="button" class="m-only m-icon m-lang" lang={ui === 'ta' ? 'en' : 'ta'} aria-label={ui === 'ta' ? 'Switch to English' : 'தமிழுக்கு மாற்று'} onclick={() => settings.update({ uiLang: ui === 'ta' ? 'en' : 'ta' })}>
+			<span>{ui === 'ta' ? 'EN' : 'த'}</span>
+		</button>
 		<button type="button" class="m-only m-icon" aria-label={ui === 'ta' ? 'தேடு' : 'Search'} aria-expanded={searchOpen} onclick={toggleSearch}>
 			{#if searchOpen}
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -286,17 +290,20 @@
 	.site-foot a:hover { color: var(--accent); }
 	/* Room at the foot of every page for the player bar, while it is open. */
 	:global(html:has(section.player)) .site-foot { padding-bottom: calc(2.5rem + var(--player-h)); }
-	/* Phones (design 10A): back, chapter pill, search in one 56px bar. Language,
-	   sign-in and settings live in the chapter menu's footer. */
+	/* Phones (design 10A): back, chapter pill, language, search in one 56px bar.
+	   Sign-in lives in the chapter menu's footer. */
 	@media (max-width: 720px) {
-		.bar { padding: 6px 10px 8px; gap: 8px 4px; flex-wrap: wrap; }
+		.bar { padding: 6px 8px 8px; gap: 8px 4px; flex-wrap: wrap; }
 		.brand, .tools { display: none; }
 		.m-only { display: flex; }
-		.m-icon { width: 40px; height: 44px; flex: none; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; padding: 0; }
+		.m-icon { width: 36px; height: 44px; flex: none; align-items: center; justify-content: center; border: 0; border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; padding: 0; }
 		.m-icon:hover { background: var(--surface-2); }
 		.m-icon.listen { color: var(--accent); }
 		.m-icon.listen.on { background: var(--hl); }
-		.pill { flex: 1; min-width: 0; height: 44px; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: var(--surface); border: var(--bw) solid var(--line-2); color: var(--ink); cursor: pointer; }
+		.m-icon.m-lang { width: 32px; }
+		.m-lang span { min-width: 28px; height: 26px; padding: 0 4px; display: flex; align-items: center; justify-content: center; border: var(--bw) solid var(--line-2); border-radius: 8px; font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em; color: var(--ink-2); }
+		.m-lang[lang='ta'] span { font-family: var(--tamil); font-size: 0.95rem; letter-spacing: 0; }
+		.pill { flex: 1; min-width: 0; height: 44px; align-items: center; justify-content: center; gap: 6px; padding: 0 10px; border-radius: 999px; background: var(--surface); border: var(--bw) solid var(--line-2); color: var(--ink); cursor: pointer; }
 		.pill.open { background: var(--accent-soft); border-color: var(--accent); }
 		.pill .t { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 		.pill .t[lang='ta'] { font-family: var(--tamil); font-size: 1.12rem; }
