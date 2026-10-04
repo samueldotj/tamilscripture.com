@@ -7,6 +7,7 @@
 //! packs/bible.IRVTAM/{n}/bible.IRVTAM.sqlite.zst   one per version
 //! packs/xref/{n}/xref.sqlite.zst                   cross-references
 //! packs/commentary.henry/{n}/….sqlite.zst          one per commentary (with --commentary)
+//! packs/study.words/{n}/….sqlite.zst               study data from `entities/`, four packs
 //! packs/catalogue.json (+ .sig)                    what exists, sizes, SHA-256
 //! app/bootstrap.json  (+ .sig)                     where each origin lives
 //! ```
@@ -346,6 +347,57 @@ fn main() -> Result<()> {
         });
     }
 
+    // Study data (app roadmap M8-1): the website's entities/ files, grouped into packs.
+    let entities = build_dir.join("entities");
+    if entities.is_dir()
+        && args
+            .only
+            .as_ref()
+            .is_none_or(|o| o.iter().any(|c| c == "STUDY"))
+    {
+        for spec in STUDY_PACKS {
+            let (rows, raw) = build_files(&entities, spec.prefixes)?;
+            let pl = place(
+                &args.out,
+                spec.id,
+                &format!("{}.sqlite.zst", spec.id),
+                &raw,
+                &prev,
+                n,
+            )?;
+            println!(
+                "{}: {rows} files → v{} {} KB{}",
+                spec.id,
+                pl.version,
+                pl.size / 1024,
+                if pl.reused { " (unchanged)" } else { "" }
+            );
+            let raw_size = raw.len() as u64;
+            let raw_sha256 = hex(&Sha256::digest(&raw));
+            entries.push(CatalogueEntry {
+                id: spec.id.into(),
+                kind: "study".into(),
+                lang: "".into(),
+                version: pl.version,
+                schema: SCHEMA,
+                min_app: 1,
+                title: Title {
+                    ta: spec.title_ta.into(),
+                    en: spec.title_en.into(),
+                },
+                licence: spec.licence.into(),
+                attribution: spec.attribution.into(),
+                path: pl.path,
+                size: pl.size,
+                raw_size,
+                sha256: pl.sha256,
+                raw_sha256,
+                starter: false,
+                build: manifest.build.clone(),
+            });
+        }
+    }
+
     let mut entries: Vec<Value> = entries
         .into_iter()
         .map(serde_json::to_value)
@@ -581,7 +633,10 @@ fn write_signed(path: &Path, body: &[u8], key: Option<&SigningKey>) -> Result<()
 
 /// Fresh database in memory, written out with VACUUM INTO for stable bytes.
 fn finish(conn: Connection) -> Result<Vec<u8>> {
-    let tmp = std::env::temp_dir().join(format!("pack-build-{}.sqlite", std::process::id()));
+    // Unique per call, so packs built at the same time (tests run in parallel) never share it.
+    static NEXT: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
+    let n = NEXT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+    let tmp = std::env::temp_dir().join(format!("pack-build-{}-{n}.sqlite", std::process::id()));
     let _ = fs::remove_file(&tmp);
     conn.execute("VACUUM INTO ?1", params![tmp.to_string_lossy()])?;
     let bytes = fs::read(&tmp)?;
@@ -722,6 +777,100 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version) -> Result<(usize, Ve
     Ok((rows, finish(conn)?))
 }
 
+struct StudyPack {
+    id: &'static str,
+    /// Paths under entities/ that go in the pack: a directory ("strongs/") or a file.
+    prefixes: &'static [&'static str],
+    title_ta: &'static str,
+    title_en: &'static str,
+    licence: &'static str,
+    attribution: &'static str,
+}
+
+const STUDY_PACKS: &[StudyPack] = &[
+    StudyPack {
+        id: "study.words",
+        prefixes: &["strongs/", "original/"],
+        title_ta: "மூல மொழிச் சொற்கள் · ஸ்ட்ராங்ஸ்",
+        title_en: "Original words · Strong's",
+        licence: "CC BY 4.0",
+        attribution: "STEPBible.org (Tyndale House, Cambridge): TAHOT, TAGNT, TBESH, TBESG, CC BY 4.0",
+    },
+    StudyPack {
+        id: "study.people",
+        prefixes: &["person/", "place/", "mentions/", "people.json", "places.json", "glossary.json", "journeys.json", "church.json"],
+        title_ta: "நபர்களும் இடங்களும்",
+        title_en: "People and places",
+        licence: "CC BY 4.0",
+        attribution: "STEPBible TIPNR (CC BY 4.0), OpenBible.info geocoding (CC BY 4.0), BibleAquifer (CC BY-SA 4.0)",
+    },
+    StudyPack {
+        id: "study.dictionary",
+        prefixes: &["articles/"],
+        title_ta: "வேத அகராதி",
+        title_en: "Bible dictionary",
+        licence: "Public domain and CC BY-SA 4.0",
+        attribution: "Easton's and Smith's Bible Dictionaries (public domain); BibleAquifer articles (CC BY-SA 4.0)",
+    },
+    StudyPack {
+        id: "study.maps",
+        prefixes: &["maps/", "geo/"],
+        title_ta: "வரைபடங்கள்",
+        title_en: "Maps",
+        licence: "CC BY 4.0 and public domain",
+        attribution: "Natural Earth (public domain), OpenBible.info (CC BY 4.0), Cliopatria (CC BY 4.0)",
+    },
+];
+
+/// A study pack keeps each entities/ file unchanged under its path, so the app reads a
+/// downloaded file exactly as it reads one from the website (`content/{build}/entities/{path}`).
+fn build_files(entities: &Path, prefixes: &[&str]) -> Result<(usize, Vec<u8>)> {
+    let conn = open()?;
+    conn.execute_batch(
+        "CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+         CREATE TABLE file (path TEXT PRIMARY KEY, body TEXT NOT NULL) WITHOUT ROWID;",
+    )?;
+    conn.execute(
+        "INSERT INTO meta VALUES ('schema', ?1)",
+        params![SCHEMA.to_string()],
+    )?;
+    let mut paths = Vec::new();
+    for prefix in prefixes {
+        let p = entities.join(prefix.trim_end_matches('/'));
+        if p.is_file() {
+            paths.push(p);
+        } else if p.is_dir() {
+            collect_files(&p, &mut paths)?;
+        }
+    }
+    paths.sort();
+    let tx = conn.unchecked_transaction()?;
+    for path in &paths {
+        let rel = path
+            .strip_prefix(entities)?
+            .to_string_lossy()
+            .replace('\\', "/");
+        tx.execute(
+            "INSERT INTO file VALUES (?1, ?2)",
+            params![rel, fs::read_to_string(path)?],
+        )?;
+    }
+    tx.commit()?;
+    Ok((paths.len(), finish(conn)?))
+}
+
+fn collect_files(dir: &Path, out: &mut Vec<PathBuf>) -> Result<()> {
+    for e in fs::read_dir(dir)? {
+        let p = e?.path();
+        if p.is_dir() {
+            collect_files(&p, out)?;
+        } else {
+            out.push(p);
+        }
+    }
+    Ok(())
+}
+
 fn build_xref(build_dir: &Path, m: &Manifest) -> Result<(usize, Vec<u8>)> {
     let conn = open()?;
     conn.execute_batch(
@@ -768,7 +917,36 @@ fn build_xref(build_dir: &Path, m: &Manifest) -> Result<(usize, Vec<u8>)> {
 
 #[cfg(test)]
 mod tests {
-    use super::{build_commentary, CommentarySource, FTS_TABLE};
+    use super::{build_commentary, build_files, CommentarySource, FTS_TABLE};
+
+    #[test]
+    fn study_pack_keeps_files_under_their_paths() {
+        let dir = std::env::temp_dir().join(format!("pb-study-{}", std::process::id()));
+        std::fs::create_dir_all(dir.join("person")).unwrap();
+        std::fs::create_dir_all(dir.join("other")).unwrap();
+        std::fs::write(dir.join("person").join("aaron.json"), r#"{"id":"aaron"}"#).unwrap();
+        std::fs::write(dir.join("people.json"), "[]").unwrap();
+        std::fs::write(dir.join("other").join("x.json"), "{}").unwrap();
+        let (rows, raw) = build_files(&dir, &["person/", "people.json"]).unwrap();
+        assert_eq!(rows, 2);
+        let db = dir.join("pack.sqlite");
+        std::fs::write(&db, &raw).unwrap();
+        let conn = rusqlite::Connection::open(&db).unwrap();
+        let body: String = conn
+            .query_row(
+                "SELECT body FROM file WHERE path = 'person/aaron.json'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(body, r#"{"id":"aaron"}"#);
+        let n: i64 = conn
+            .query_row("SELECT count(*) FROM file", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(n, 2);
+        drop(conn);
+        let _ = std::fs::remove_dir_all(&dir);
+    }
     use std::collections::BTreeMap;
 
     #[test]
