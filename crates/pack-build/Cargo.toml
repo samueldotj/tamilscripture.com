@@ -1,0 +1,18 @@
+[package]
+name = "pack-build"
+description = "Builds the Android app's downloadable content packs (SQLite + FTS5) and their signed catalogue"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+unicode-normalization.workspace = true
+tamil-norm = { path = "../tamil-norm" }
+rusqlite = { version = "0.40", features = ["bundled"] }
+zstd = "0.14"
+sha2 = "0.11"
+ed25519-dalek = "3"

@@ -1,0 +1,24 @@
+[package]
+name = "ts-mobile"
+description = "UniFFI façade over bible-ref and tamil-norm for the Android app (tamilscripture.app)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+name = "ts_mobile"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+
+[dependencies]
+bible-ref = { path = "../bible-ref" }
+tamil-norm = { path = "../tamil-norm" }
+unicode-normalization.workspace = true
+uniffi = { version = "0.32", features = ["cli"] }
+zstd = { version = "0.14", default-features = false }
+ed25519-dalek = { version = "3", default-features = false }
+sha2 = "0.11"
