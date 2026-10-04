@@ -9,8 +9,20 @@
 	const ta = $derived(settings.value.uiLang === 'ta');
 	let message = $state('');
 	let failed = $state(false);
+	/** Set when the Android app started this sign-in: the code belongs to it, not to this browser. */
+	let appLink = $state('');
 
 	onMount(async () => {
+		// The app holds the PKCE verifier, so the code goes back to it unexchanged
+		// (tamilscripture.app design §13.1). Nothing else in the URL is passed on.
+		if (page.url.searchParams.get('app') === '1') {
+			const code = page.url.searchParams.get('code') ?? '';
+			const err = page.url.searchParams.get('error_description') ?? '';
+			const q = code ? `code=${encodeURIComponent(code)}` : `error=${encodeURIComponent(err || 'no code')}`;
+			appLink = `tamilscripture://auth?${q}`;
+			location.replace(appLink);
+			return;
+		}
 		const next = page.url.searchParams.get('next') || '/';
 		const target = next.startsWith('/') && !next.startsWith('//') ? next : '/';
 		const code = page.url.searchParams.get('code');
@@ -50,7 +62,10 @@
 
 <svelte:head><title>Sign in · Tamil Scripture</title><meta name="robots" content="noindex" /></svelte:head>
 <div class="wrap" role="status">
-	{#if failed}
+	{#if appLink}
+		<p class="msg" lang={ta ? 'ta' : 'en'}>{ta ? 'பயன்பாட்டுக்குத் திரும்புகிறது…' : 'Returning to the app…'}</p>
+		<p><a class="chip" href={appLink} lang={ta ? 'ta' : 'en'}>{ta ? 'தமிழ் வேதாகமம் பயன்பாட்டைத் திற' : 'Open the Tamil Scripture app'}</a></p>
+	{:else if failed}
 		<p class="msg" lang={ta ? 'ta' : 'en'}>{message}</p>
 		<p><a class="chip" href="/signin" lang={ta ? 'ta' : 'en'}>{ta ? 'மீண்டும் உள்நுழை' : 'Sign in again'}</a></p>
 	{:else}
