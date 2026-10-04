@@ -402,13 +402,20 @@ fn norm(text: &str) -> String {
     tamil_norm::normalize(&nfc)
 }
 
+/// The search index over `tamil_norm` text. Tamil vowel signs and the virama are
+/// combining marks (Mn, Mc), which `unicode61` treats as separators by default, so
+/// அன்பு would be indexed as அன + ப and match அனுப்பு. Counting marks as token
+/// characters keeps whole words, like the website's `tamil_tsvector`.
+const FTS_TABLE: &str = "CREATE VIRTUAL TABLE verse_fts USING fts5(norm, content='', contentless_delete=1,
+                                                   tokenize=\"unicode61 remove_diacritics 0 categories 'L* N* Co Mn Mc'\");";
+
 fn verse_key(order: u32, chapter: u32, verse: u32) -> i64 {
     order as i64 * 1_000_000 + chapter as i64 * 1_000 + verse as i64
 }
 
 fn build_bible(build_dir: &Path, m: &Manifest, v: &Version) -> Result<(usize, Vec<u8>)> {
     let conn = open()?;
-    conn.execute_batch(
+    conn.execute_batch(&format!(
         "CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
          CREATE TABLE book (code TEXT PRIMARY KEY, ord INTEGER NOT NULL, testament TEXT NOT NULL,
                             name TEXT NOT NULL, chapters INTEGER NOT NULL);
@@ -416,9 +423,8 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version) -> Result<(usize, Ve
                                PRIMARY KEY (book, chapter)) WITHOUT ROWID;
          CREATE TABLE verse (id INTEGER PRIMARY KEY, book TEXT NOT NULL, chapter INTEGER NOT NULL,
                              verse INTEGER NOT NULL, text TEXT NOT NULL);
-         CREATE VIRTUAL TABLE verse_fts USING fts5(norm, content='', contentless_delete=1,
-                                                   tokenize='unicode61 remove_diacritics 0');",
-    )?;
+         {FTS_TABLE}",
+    ))?;
     let meta = [
         ("pack_id", format!("bible.{}", v.code)),
         ("schema", SCHEMA.to_string()),
@@ -558,4 +564,44 @@ fn build_xref(build_dir: &Path, m: &Manifest) -> Result<(usize, Vec<u8>)> {
     }
     tx.commit()?;
     Ok((rows, finish(conn)?))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::FTS_TABLE;
+
+    fn hits(texts: &[&str], query: &str) -> Vec<i64> {
+        let conn = rusqlite::Connection::open_in_memory().unwrap();
+        conn.execute_batch(FTS_TABLE).unwrap();
+        for (i, t) in texts.iter().enumerate() {
+            conn.execute(
+                "INSERT INTO verse_fts(rowid, norm) VALUES (?1, ?2)",
+                rusqlite::params![i as i64, tamil_norm::normalize(t)],
+            )
+            .unwrap();
+        }
+        let q = format!("\"{}\"*", tamil_norm::normalize(query));
+        let mut st = conn
+            .prepare("SELECT rowid FROM verse_fts WHERE verse_fts MATCH ?1 ORDER BY rowid")
+            .unwrap();
+        st.query_map([q], |r| r.get(0))
+            .unwrap()
+            .map(Result::unwrap)
+            .collect()
+    }
+
+    #[test]
+    fn tamil_words_are_indexed_whole() {
+        let texts = [
+            "அன்பு நீடிய சாந்தமும்",
+            "அன்புக்குப் பொறாமை இல்லை",
+            "என்னை அனுப்பு",
+            "அன்பைக் காட்டு",
+        ];
+        // A prefix of the whole normalised word: அன்பு and அன்புக்குப், not அன்பை (stem அன்ப).
+        assert_eq!(hits(&texts, "அன்பு"), vec![0, 1]);
+        // Not a fragment match on அன + ப.
+        assert!(!hits(&texts, "அன்பு").contains(&2));
+        assert_eq!(hits(&texts, "அனுப்பு"), vec![2]);
+    }
 }
