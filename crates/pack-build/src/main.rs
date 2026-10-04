@@ -633,7 +633,10 @@ fn write_signed(path: &Path, body: &[u8], key: Option<&SigningKey>) -> Result<()
 
 /// Fresh database in memory, written out with VACUUM INTO for stable bytes.
 fn finish(conn: Connection) -> Result<Vec<u8>> {
-    let tmp = std::env::temp_dir().join(format!("pack-build-{}.sqlite", std::process::id()));
+    // Unique per call, so packs built at the same time (tests run in parallel) never share it.
+    static NEXT: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
+    let n = NEXT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+    let tmp = std::env::temp_dir().join(format!("pack-build-{}-{n}.sqlite", std::process::id()));
     let _ = fs::remove_file(&tmp);
     conn.execute("VACUUM INTO ?1", params![tmp.to_string_lossy()])?;
     let bytes = fs::read(&tmp)?;
