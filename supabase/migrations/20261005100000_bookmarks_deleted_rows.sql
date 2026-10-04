@@ -50,7 +50,7 @@ create trigger highlights_deleted after delete on public.highlights for each row
 create trigger notes_deleted after delete on public.notes for each row execute function public.record_deleted_row();
 create trigger bookmarks_deleted after delete on public.bookmarks for each row execute function public.record_deleted_row();
 
--- Export now includes bookmarks (R-10.4).
+-- Export now includes bookmarks (R-10.4); everything else as in 20260926120000.
 create or replace function public.export_my_data()
 returns jsonb
 language sql
@@ -63,6 +63,8 @@ as $$
     'highlights', coalesce((select jsonb_agg(to_jsonb(h) - 'user_id' order by h.created_at) from public.highlights h where h.user_id = auth.uid()), '[]'::jsonb),
     'notes', coalesce((select jsonb_agg(to_jsonb(n) - 'user_id' order by n.created_at) from public.notes n where n.user_id = auth.uid()), '[]'::jsonb),
     'bookmarks', coalesce((select jsonb_agg(to_jsonb(b) - 'user_id' order by b.created_at) from public.bookmarks b where b.user_id = auth.uid()), '[]'::jsonb),
-    'history', coalesce((select jsonb_agg(to_jsonb(x) - 'user_id' order by x.visited_at) from public.history x where x.user_id = auth.uid()), '[]'::jsonb)
+    'history', coalesce((select jsonb_agg(to_jsonb(x) - 'user_id' order by x.visited_at) from public.history x where x.user_id = auth.uid()), '[]'::jsonb),
+    'presentations', coalesce((select jsonb_agg(to_jsonb(r) - 'user_id' order by r.created_at) from public.presentations r where r.user_id = auth.uid()), '[]'::jsonb),
+    'reading_plans', coalesce((select jsonb_agg(to_jsonb(g) - 'user_id' order by g.created_at) from public.plan_progress g where g.user_id = auth.uid()), '[]'::jsonb)
   );
 $$;
