@@ -543,6 +543,18 @@
 		loadPersonal();
 		recordVisit(data.book.code, data.chapter, primary.code, data.range).catch(() => {});
 	});
+	// Edits made elsewhere (the Android app, another tab) appear without a reload: on
+	// returning to the tab, and every 60 s while it is visible (app design §13.5).
+	$effect(() => {
+		if (!session.ready || !session.signedIn) return;
+		const refresh = () => { if (document.visibilityState === 'visible' && !noteOpen) loadPersonal(); };
+		document.addEventListener('visibilitychange', refresh);
+		const timer = setInterval(refresh, 60_000);
+		return () => {
+			document.removeEventListener('visibilitychange', refresh);
+			clearInterval(timer);
+		};
+	});
 	const currentColor = $derived.by(() => {
 		if (!selected.size) return null;
 		if (textSel) {
