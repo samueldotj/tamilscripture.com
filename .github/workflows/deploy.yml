@@ -98,8 +98,17 @@ jobs:
           key="$RUNNER_TEMP/packs.key"
           printf '%s' "$PACKS_SIGNING_KEY" > "$key"
           curl -sf https://packs.tamilaudiobible.com/packs/catalogue.json -o "$RUNNER_TEMP/previous.json" || true
+          # Commentary packs are rebuilt only when a new commentary version is published;
+          # otherwise pack-build carries the published ones over.
+          commentary=()
+          latest=$(curl -sf https://stream.tamilaudiobible.com/commentary/latest.json | jq -r '.version // empty' || true)
+          built=$(jq -r '[.packs[]? | select(.type == "commentary") | .build][0] // empty' "$RUNNER_TEMP/previous.json" 2>/dev/null || true)
+          if [ -n "$latest" ] && [ "$latest" != "$built" ]; then
+            python3 scripts/fetch-commentary.py "$latest" "$RUNNER_TEMP/commentary/$latest"
+            commentary=(--commentary "$RUNNER_TEMP/commentary/$latest")
+          fi
           cargo run --release -p pack-build -- --content apps/web/static/content --out dist/app \
-            --previous "$RUNNER_TEMP/previous.json" --key "$key"
+            --previous "$RUNNER_TEMP/previous.json" --key "$key" "${commentary[@]}"
           rm -f "$key"
           s3() { aws s3 cp --endpoint-url "$R2_ENDPOINT" --only-show-errors "$@"; }
           s3 dist/app/packs "s3://$BUCKET/packs" --recursive --exclude 'catalogue.json*' \
