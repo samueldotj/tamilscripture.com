@@ -6,6 +6,7 @@
 //! ```text
 //! packs/bible.IRVTAM/{n}/bible.IRVTAM.sqlite.zst   one per version
 //! packs/xref/{n}/xref.sqlite.zst                   cross-references
+//! packs/commentary.henry/{n}/….sqlite.zst          one per commentary (with --commentary)
 //! packs/catalogue.json (+ .sig)                    what exists, sizes, SHA-256
 //! app/bootstrap.json  (+ .sig)                     where each origin lives
 //! ```
@@ -20,6 +21,12 @@
 //! Usage:
 //!   pack-build --content apps/web/static/content --out dist/app \
 //!              [--previous published-catalogue.json] [--pack-version 1] [--key signing.key]
+//!              [--commentary dist/commentary/{version}] [--commentary-skip ecf]
+//!
+//! Commentary packs come from a published commentary version (the bible-commentaries
+//! repository's output: `index.json` and `{source}/{BOOK}/{chapter}.json`). Without
+//! `--commentary`, the commentary packs of the previous catalogue are carried over
+//! unchanged, so a website deploy only rebuilds them when a new version is published.
 //!
 //! Pack bytes depend only on their content (no build ids or version numbers inside),
 //! so with `--previous` an unchanged pack keeps its published version and file, and
@@ -114,7 +121,7 @@ struct Catalogue {
     config: BTreeMap<String, Value>,
     content: BTreeMap<String, String>,
     commentary: BTreeMap<String, String>,
-    packs: Vec<CatalogueEntry>,
+    packs: Vec<Value>,
 }
 
 /// The catalogue currently published, used to keep version numbers stable.
@@ -122,6 +129,10 @@ struct Catalogue {
 #[serde(rename_all = "camelCase")]
 struct PreviousEntry {
     id: String,
+    #[serde(rename = "type", default)]
+    kind: String,
+    #[serde(default)]
+    build: String,
     version: u32,
     path: String,
     size: u64,
@@ -131,7 +142,7 @@ struct PreviousEntry {
 
 #[derive(Deserialize)]
 struct PreviousCatalogue {
-    packs: Vec<PreviousEntry>,
+    packs: Vec<Value>,
 }
 
 /// Where a pack's bytes go: an unchanged pack keeps its published version and file,
@@ -186,12 +197,17 @@ struct Args {
     key: Option<PathBuf>,
     only: Option<Vec<String>>,
     previous: Option<PathBuf>,
+    commentary: Option<PathBuf>,
+    commentary_skip: Vec<String>,
 }
 
 fn args() -> Result<Args> {
     let mut a = std::env::args().skip(1);
     let (mut content, mut out, mut pack_version, mut key, mut only, mut previous) =
         (None, None, None, None, None, None);
+    let mut commentary = None;
+    // The Early Church Fathers stay out of the app for now (app requirements §7.1).
+    let mut commentary_skip = vec!["ecf".to_string()];
     while let Some(k) = a.next() {
         let v = a.next().with_context(|| format!("{k} needs a value"))?;
         match k.as_str() {
@@ -201,6 +217,14 @@ fn args() -> Result<Args> {
             "--key" => key = Some(PathBuf::from(v)),
             "--only" => only = Some(v.split(',').map(|s| s.trim().to_uppercase()).collect()),
             "--previous" => previous = Some(PathBuf::from(v)),
+            "--commentary" => commentary = Some(PathBuf::from(v)),
+            "--commentary-skip" => {
+                commentary_skip = v
+                    .split(',')
+                    .map(|s| s.trim().to_string())
+                    .filter(|s| !s.is_empty())
+                    .collect()
+            }
             _ => bail!("unknown argument {k}"),
         }
     }
@@ -211,6 +235,8 @@ fn args() -> Result<Args> {
         key,
         only,
         previous,
+        commentary,
+        commentary_skip,
     })
 }
 
@@ -232,12 +258,18 @@ fn main() -> Result<()> {
     fs::create_dir_all(&packs_dir)?;
     let n = args.pack_version;
     let mut entries = Vec::new();
-    let prev: BTreeMap<String, PreviousEntry> = match &args.previous {
+    // Previous entries as published (to carry over) and parsed (to keep versions stable).
+    let prev_raw: Vec<Value> = match &args.previous {
         Some(p) if p.exists() => serde_json::from_slice::<PreviousCatalogue>(&fs::read(p)?)
-            .map(|c| c.packs.into_iter().map(|e| (e.id.clone(), e)).collect())
+            .map(|c| c.packs)
             .unwrap_or_default(),
-        _ => BTreeMap::new(),
+        _ => Vec::new(),
     };
+    let prev: BTreeMap<String, PreviousEntry> = prev_raw
+        .iter()
+        .filter_map(|v| serde_json::from_value::<PreviousEntry>(v.clone()).ok())
+        .map(|e| (e.id.clone(), e))
+        .collect();
 
     for v in &manifest.versions {
         if let Some(only) = &args.only {
@@ -314,6 +346,35 @@ fn main() -> Result<()> {
         });
     }
 
+    let mut entries: Vec<Value> = entries
+        .into_iter()
+        .map(serde_json::to_value)
+        .collect::<Result<_, _>>()?;
+    match &args.commentary {
+        Some(dir) => entries.extend(commentary_packs(
+            &args.out,
+            dir,
+            &args.commentary_skip,
+            &prev,
+            &prev_raw,
+            n,
+        )?),
+        None => {
+            let carried: Vec<Value> = prev_raw
+                .iter()
+                .filter(|v| v["type"] == "commentary")
+                .cloned()
+                .collect();
+            if !carried.is_empty() {
+                println!(
+                    "commentary: {} packs carried over from the published catalogue",
+                    carried.len()
+                );
+            }
+            entries.extend(carried);
+        }
+    }
+
     let mut config = BTreeMap::new();
     config.insert("stats.read.minVisible".into(), Value::from(0.6));
     config.insert("stats.read.minMs".into(), Value::from(2000));
@@ -353,6 +414,145 @@ fn main() -> Result<()> {
         eprintln!("note: no --key given, catalogue and bootstrap are unsigned");
     }
     Ok(())
+}
+
+#[derive(Deserialize)]
+struct CommentaryIndex {
+    sources: Vec<CommentarySource>,
+    /// source → book → chapters (0 is the book's introduction)
+    chapters: BTreeMap<String, BTreeMap<String, Vec<u32>>>,
+}
+
+#[derive(Deserialize, Serialize)]
+struct CommentarySource {
+    id: String,
+    name: String,
+    short: String,
+    #[serde(default)]
+    year: String,
+    #[serde(default)]
+    title: String,
+    #[serde(default)]
+    desc_ta: String,
+    #[serde(default)]
+    desc_en: String,
+    #[serde(default)]
+    licence: String,
+    #[serde(default)]
+    attribution: String,
+}
+
+/// One pack per commentary in a published commentary version. A source whose pack was
+/// already built from this version is carried over without reading its files again.
+fn commentary_packs(
+    out: &Path,
+    dir: &Path,
+    skip: &[String],
+    prev: &BTreeMap<String, PreviousEntry>,
+    prev_raw: &[Value],
+    first: u32,
+) -> Result<Vec<Value>> {
+    let version = dir
+        .file_name()
+        .and_then(|n| n.to_str())
+        .context("--commentary must be a version directory")?
+        .to_string();
+    let index: CommentaryIndex = serde_json::from_slice(&fs::read(dir.join("index.json"))?)
+        .with_context(|| format!("reading {}/index.json", dir.display()))?;
+    let mut out_entries = Vec::new();
+    for src in &index.sources {
+        if skip.contains(&src.id) {
+            continue;
+        }
+        let id = format!("commentary.{}", src.id);
+        if prev
+            .get(&id)
+            .is_some_and(|p| p.kind == "commentary" && p.build == version)
+        {
+            if let Some(v) = prev_raw.iter().find(|v| v["id"] == id.as_str()) {
+                println!("{id}: built from {version} already (unchanged)");
+                out_entries.push(v.clone());
+                continue;
+            }
+        }
+        let chapters = index.chapters.get(&src.id).cloned().unwrap_or_default();
+        let (rows, raw) = build_commentary(dir, src, &chapters)?;
+        let pl = place(out, &id, &format!("{id}.sqlite.zst"), &raw, prev, first)?;
+        println!(
+            "{id}: {rows} chapters → v{} {} KB{}",
+            pl.version,
+            pl.size / 1024,
+            if pl.reused { " (unchanged)" } else { "" }
+        );
+        out_entries.push(serde_json::to_value(CatalogueEntry {
+            id,
+            kind: "commentary".into(),
+            lang: "en".into(),
+            version: pl.version,
+            schema: SCHEMA,
+            min_app: 1,
+            title: Title {
+                ta: format!("{} · {}", src.short, src.desc_ta),
+                en: format!("{} · {}", src.short, src.desc_en),
+            },
+            licence: src.licence.clone(),
+            attribution: src.attribution.clone(),
+            path: pl.path,
+            size: pl.size,
+            raw_size: raw.len() as u64,
+            sha256: pl.sha256,
+            raw_sha256: hex(&Sha256::digest(&raw)),
+            starter: false,
+            build: version.clone(),
+        })?);
+    }
+    Ok(out_entries)
+}
+
+/// A commentary pack keeps each chapter's published JSON unchanged, so the app reads a
+/// downloaded chapter exactly as it reads one from the CDN. `meta.source` holds the
+/// source's entry from `index.json`, for showing it while offline.
+fn build_commentary(
+    dir: &Path,
+    src: &CommentarySource,
+    chapters: &BTreeMap<String, Vec<u32>>,
+) -> Result<(usize, Vec<u8>)> {
+    let conn = open()?;
+    conn.execute_batch(
+        "CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+         CREATE TABLE chapter (book TEXT NOT NULL, chapter INTEGER NOT NULL, body TEXT NOT NULL,
+                               PRIMARY KEY (book, chapter)) WITHOUT ROWID;",
+    )?;
+    let meta = [
+        ("pack_id", format!("commentary.{}", src.id)),
+        ("schema", SCHEMA.to_string()),
+        ("source", serde_json::to_string(src)?),
+    ];
+    for (k, v) in meta {
+        conn.execute("INSERT INTO meta VALUES (?1, ?2)", params![k, v])?;
+    }
+    let mut rows = 0;
+    let tx = conn.unchecked_transaction()?;
+    for (book, list) in chapters {
+        for ch in list {
+            // Chapter 0 is the book's introduction, published as intro.json.
+            let file = if *ch == 0 {
+                "intro.json".to_string()
+            } else {
+                format!("{ch}.json")
+            };
+            let path = dir.join(&src.id).join(book).join(file);
+            let body =
+                fs::read_to_string(&path).with_context(|| format!("reading {}", path.display()))?;
+            tx.execute(
+                "INSERT INTO chapter VALUES (?1, ?2, ?3)",
+                params![book, ch, body],
+            )?;
+            rows += 1;
+        }
+    }
+    tx.commit()?;
+    Ok((rows, finish(conn)?))
 }
 
 fn hex(b: &[u8]) -> String {
@@ -568,7 +768,50 @@ fn build_xref(build_dir: &Path, m: &Manifest) -> Result<(usize, Vec<u8>)> {
 
 #[cfg(test)]
 mod tests {
-    use super::FTS_TABLE;
+    use super::{build_commentary, CommentarySource, FTS_TABLE};
+    use std::collections::BTreeMap;
+
+    #[test]
+    fn commentary_pack_keeps_published_chapters() {
+        let dir = std::env::temp_dir().join(format!("pb-commentary-{}", std::process::id()));
+        let jhn = dir.join("henry").join("JHN");
+        std::fs::create_dir_all(&jhn).unwrap();
+        std::fs::write(jhn.join("intro.json"), r#"{"units":[]}"#).unwrap();
+        std::fs::write(
+            jhn.join("3.json"),
+            r#"{"source":"henry","book":"JHN","chapter":3}"#,
+        )
+        .unwrap();
+        let src: CommentarySource =
+            serde_json::from_str(r#"{"id":"henry","name":"Matthew Henry","short":"M. Henry"}"#)
+                .unwrap();
+        let chapters = BTreeMap::from([("JHN".to_string(), vec![0, 3])]);
+        let (rows, raw) = build_commentary(&dir, &src, &chapters).unwrap();
+        assert_eq!(rows, 2);
+        let db = dir.join("pack.sqlite");
+        std::fs::write(&db, &raw).unwrap();
+        let conn = rusqlite::Connection::open(&db).unwrap();
+        let body: String = conn
+            .query_row(
+                "SELECT body FROM chapter WHERE book = 'JHN' AND chapter = 3",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(body, r#"{"source":"henry","book":"JHN","chapter":3}"#);
+        let intro: String = conn
+            .query_row(
+                "SELECT body FROM chapter WHERE book = 'JHN' AND chapter = 0",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(intro, r#"{"units":[]}"#);
+        drop(conn);
+        // Deterministic: the same files give the same bytes.
+        assert_eq!(build_commentary(&dir, &src, &chapters).unwrap().1, raw);
+        let _ = std::fs::remove_dir_all(&dir);
+    }
 
     fn hits(texts: &[&str], query: &str) -> Vec<i64> {
         let conn = rusqlite::Connection::open_in_memory().unwrap();
