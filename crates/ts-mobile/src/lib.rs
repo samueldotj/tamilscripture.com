@@ -66,7 +66,9 @@ impl std::error::Error for PackError {}
 
 impl From<std::io::Error> for PackError {
     fn from(e: std::io::Error) -> Self {
-        PackError::Io { reason: e.to_string() }
+        PackError::Io {
+            reason: e.to_string(),
+        }
     }
 }
 
@@ -91,7 +93,11 @@ pub fn decompress_pack(source: String, dest: String) -> Result<String, PackError
         out.write_all(&buf[..n])?;
     }
     out.flush()?;
-    Ok(hasher.finalize().iter().map(|b| format!("{b:02x}")).collect())
+    Ok(hasher
+        .finalize()
+        .iter()
+        .map(|b| format!("{b:02x}"))
+        .collect())
 }
 
 /// Verifies an Ed25519 signature (hex) over `message` with `public_key` (hex),
@@ -109,9 +115,14 @@ pub fn verify_signature(public_key: String, message: Vec<u8>, signature: String)
         }
         Some(out)
     }
-    let (Some(pk), Some(sig)) = (unhex::<32>(&public_key), unhex::<64>(&signature)) else { return false };
-    let Ok(key) = ed25519_dalek::VerifyingKey::from_bytes(&pk) else { return false };
-    key.verify_strict(&message, &ed25519_dalek::Signature::from_bytes(&sig)).is_ok()
+    let (Some(pk), Some(sig)) = (unhex::<32>(&public_key), unhex::<64>(&signature)) else {
+        return false;
+    };
+    let Ok(key) = ed25519_dalek::VerifyingKey::from_bytes(&pk) else {
+        return false;
+    };
+    key.verify_strict(&message, &ed25519_dalek::Signature::from_bytes(&sig))
+        .is_ok()
 }
 
 #[cfg(test)]
@@ -123,7 +134,10 @@ mod tests {
         let r = parse_reference("யோவான் 3:16".into()).unwrap();
         assert_eq!((r.book.as_str(), r.chapter, r.verse), ("JHN", 3, Some(16)));
         let r = parse_reference("1co13.4-7".into()).unwrap();
-        assert_eq!((r.book.as_str(), r.verse, r.verse_end), ("1CO", Some(4), Some(7)));
+        assert_eq!(
+            (r.book.as_str(), r.verse, r.verse_end),
+            ("1CO", Some(4), Some(7))
+        );
         assert!(parse_reference("அன்பு".into()).is_none());
     }
 
@@ -132,6 +146,9 @@ mod tests {
         // Case suffixes strip to the stem (tamil-norm's own contract).
         assert_eq!(normalize("அன்பை".into()), normalize("அன்பினால்".into()));
         // Input is NFC-normalised first: a decomposed ொ (ெ + ா) equals the precomposed letter.
-        assert_eq!(normalize("கொ".into()), normalize("க\u{0BC6}\u{0BBE}".into()));
+        assert_eq!(
+            normalize("கொ".into()),
+            normalize("க\u{0BC6}\u{0BBE}".into())
+        );
     }
 }

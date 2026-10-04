@@ -144,11 +144,24 @@ struct Placement {
     reused: bool,
 }
 
-fn place(out: &Path, id: &str, file: &str, raw: &[u8], prev: &BTreeMap<String, PreviousEntry>, first: u32) -> Result<Placement> {
+fn place(
+    out: &Path,
+    id: &str,
+    file: &str,
+    raw: &[u8],
+    prev: &BTreeMap<String, PreviousEntry>,
+    first: u32,
+) -> Result<Placement> {
     let raw_sha = hex(&Sha256::digest(raw));
     if let Some(p) = prev.get(id) {
         if p.raw_sha256 == raw_sha {
-            return Ok(Placement { version: p.version, path: p.path.clone(), size: p.size, sha256: p.sha256.clone(), reused: true });
+            return Ok(Placement {
+                version: p.version,
+                path: p.path.clone(),
+                size: p.size,
+                sha256: p.sha256.clone(),
+                reused: true,
+            });
         }
     }
     let version = prev.get(id).map_or(first, |p| p.version + 1);
@@ -157,7 +170,13 @@ fn place(out: &Path, id: &str, file: &str, raw: &[u8], prev: &BTreeMap<String, P
     fs::create_dir_all(path.parent().unwrap())?;
     let compressed = zstd::encode_all(raw, 19)?;
     fs::write(&path, &compressed)?;
-    Ok(Placement { version, path: rel, size: compressed.len() as u64, sha256: hex(&Sha256::digest(&compressed)), reused: false })
+    Ok(Placement {
+        version,
+        path: rel,
+        size: compressed.len() as u64,
+        sha256: hex(&Sha256::digest(&compressed)),
+        reused: false,
+    })
 }
 
 struct Args {
@@ -171,7 +190,8 @@ struct Args {
 
 fn args() -> Result<Args> {
     let mut a = std::env::args().skip(1);
-    let (mut content, mut out, mut pack_version, mut key, mut only, mut previous) = (None, None, None, None, None, None);
+    let (mut content, mut out, mut pack_version, mut key, mut only, mut previous) =
+        (None, None, None, None, None, None);
     while let Some(k) = a.next() {
         let v = a.next().with_context(|| format!("{k} needs a value"))?;
         match k.as_str() {
@@ -198,12 +218,15 @@ fn main() -> Result<()> {
     // `pack-build --print-public <keyfile>`: the verifying key the app embeds.
     let raw: Vec<String> = std::env::args().collect();
     if raw.get(1).map(String::as_str) == Some("--print-public") {
-        let key = load_key(Path::new(raw.get(2).context("--print-public needs a key file")?))?;
+        let key = load_key(Path::new(
+            raw.get(2).context("--print-public needs a key file")?,
+        ))?;
         println!("{}", hex(key.verifying_key().as_bytes()));
         return Ok(());
     }
     let args = args()?;
-    let manifest: Manifest = serde_json::from_slice(&fs::read(args.content.join("manifest.json"))?)?;
+    let manifest: Manifest =
+        serde_json::from_slice(&fs::read(args.content.join("manifest.json"))?)?;
     let build_dir = args.content.join(&manifest.build);
     let packs_dir = args.out.join("packs");
     fs::create_dir_all(&packs_dir)?;
@@ -225,7 +248,12 @@ fn main() -> Result<()> {
         let id = format!("bible.{}", v.code);
         let (rows, raw) = build_bible(&build_dir, &manifest, v)?;
         let pl = place(&args.out, &id, &format!("{id}.sqlite.zst"), &raw, &prev, n)?;
-        println!("{id}: {rows} rows → v{} {} KB{}", pl.version, pl.size / 1024, if pl.reused { " (unchanged)" } else { "" });
+        println!(
+            "{id}: {rows} rows → v{} {} KB{}",
+            pl.version,
+            pl.size / 1024,
+            if pl.reused { " (unchanged)" } else { "" }
+        );
         let raw_size = raw.len() as u64;
         let raw_sha256 = hex(&Sha256::digest(&raw));
         entries.push(CatalogueEntry {
@@ -251,10 +279,19 @@ fn main() -> Result<()> {
         });
     }
 
-    if args.only.as_ref().map_or(true, |o| o.iter().any(|c| c == "XREF")) {
+    if args
+        .only
+        .as_ref()
+        .is_none_or(|o| o.iter().any(|c| c == "XREF"))
+    {
         let (rows, raw) = build_xref(&build_dir, &manifest)?;
         let pl = place(&args.out, "xref", "xref.sqlite.zst", &raw, &prev, n)?;
-        println!("xref: {rows} rows → v{} {} KB{}", pl.version, pl.size / 1024, if pl.reused { " (unchanged)" } else { "" });
+        println!(
+            "xref: {rows} rows → v{} {} KB{}",
+            pl.version,
+            pl.size / 1024,
+            if pl.reused { " (unchanged)" } else { "" }
+        );
         let raw_size = raw.len() as u64;
         let raw_sha256 = hex(&Sha256::digest(&raw));
         entries.push(CatalogueEntry {
@@ -290,7 +327,11 @@ fn main() -> Result<()> {
         packs: entries,
     };
     let key = args.key.as_deref().map(load_key).transpose()?;
-    write_signed(&packs_dir.join("catalogue.json"), &serde_json::to_vec_pretty(&catalogue)?, key.as_ref())?;
+    write_signed(
+        &packs_dir.join("catalogue.json"),
+        &serde_json::to_vec_pretty(&catalogue)?,
+        key.as_ref(),
+    )?;
     let bootstrap = serde_json::json!({
         "schema": 1,
         "origins": {
@@ -303,7 +344,11 @@ fn main() -> Result<()> {
         "catalogue": "packs/catalogue.json"
     });
     fs::create_dir_all(args.out.join("app"))?;
-    write_signed(&args.out.join("app/bootstrap.json"), &serde_json::to_vec_pretty(&bootstrap)?, key.as_ref())?;
+    write_signed(
+        &args.out.join("app/bootstrap.json"),
+        &serde_json::to_vec_pretty(&bootstrap)?,
+        key.as_ref(),
+    )?;
     if key.is_none() {
         eprintln!("note: no --key given, catalogue and bootstrap are unsigned");
     }
@@ -346,7 +391,9 @@ fn finish(conn: Connection) -> Result<Vec<u8>> {
 
 fn open() -> Result<Connection> {
     let conn = Connection::open_in_memory()?;
-    conn.execute_batch(&format!("PRAGMA page_size = 4096; PRAGMA user_version = {SCHEMA};"))?;
+    conn.execute_batch(&format!(
+        "PRAGMA page_size = 4096; PRAGMA user_version = {SCHEMA};"
+    ))?;
     Ok(conn)
 }
 
@@ -401,19 +448,44 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version) -> Result<(usize, Ve
         }
         tx.execute(
             "INSERT INTO book VALUES (?1, ?2, ?3, ?4, ?5)",
-            params![b.code, b.order, b.testament, if v.lang == "ta" { &b.name_ta } else { &b.name_en }, b.chapters],
+            params![
+                b.code,
+                b.order,
+                b.testament,
+                if v.lang == "ta" {
+                    &b.name_ta
+                } else {
+                    &b.name_en
+                },
+                b.chapters
+            ],
         )?;
         for ch in 1..=b.chapters {
             let f = dir.join(format!("{ch}.json"));
-            let Ok(body) = fs::read_to_string(&f) else { continue };
-            tx.execute("INSERT INTO chapter VALUES (?1, ?2, ?3)", params![b.code, ch, body])?;
-            let json: Value = serde_json::from_str(&body).with_context(|| f.display().to_string())?;
+            let Ok(body) = fs::read_to_string(&f) else {
+                continue;
+            };
+            tx.execute(
+                "INSERT INTO chapter VALUES (?1, ?2, ?3)",
+                params![b.code, ch, body],
+            )?;
+            let json: Value =
+                serde_json::from_str(&body).with_context(|| f.display().to_string())?;
             // Join a verse's segments (poetry lines, split paragraphs) in order.
             let mut verses: Vec<(u32, String)> = Vec::new();
             for block in json["blocks"].as_array().into_iter().flatten() {
                 for seg in block["segments"].as_array().into_iter().flatten() {
-                    let Some(id) = seg["id"].as_str() else { continue };
-                    let Some(n) = id.split('.').nth(2).and_then(|x| x.split('-').next()).and_then(|x| x.parse::<u32>().ok()) else { continue };
+                    let Some(id) = seg["id"].as_str() else {
+                        continue;
+                    };
+                    let Some(n) = id
+                        .split('.')
+                        .nth(2)
+                        .and_then(|x| x.split('-').next())
+                        .and_then(|x| x.parse::<u32>().ok())
+                    else {
+                        continue;
+                    };
                     let text = seg["text"].as_str().unwrap_or("");
                     match verses.last_mut() {
                         Some((last, t)) if *last == n => {
@@ -427,16 +499,20 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version) -> Result<(usize, Ve
             for (n, text) in verses {
                 let key = verse_key(b.order, ch, n);
                 let normed = norm(&text);
-                tx.execute("INSERT OR REPLACE INTO verse VALUES (?1, ?2, ?3, ?4, ?5)", params![key, b.code, ch, n, text])?;
-                tx.execute("INSERT INTO verse_fts(rowid, norm) VALUES (?1, ?2)", params![key, normed])?;
+                tx.execute(
+                    "INSERT OR REPLACE INTO verse VALUES (?1, ?2, ?3, ?4, ?5)",
+                    params![key, b.code, ch, n, text],
+                )?;
+                tx.execute(
+                    "INSERT INTO verse_fts(rowid, norm) VALUES (?1, ?2)",
+                    params![key, normed],
+                )?;
                 rows += 1;
             }
         }
     }
     tx.commit()?;
-    conn.execute_batch(
-        "INSERT INTO verse_fts(verse_fts) VALUES('optimize');",
-    )?;
+    conn.execute_batch("INSERT INTO verse_fts(verse_fts) VALUES('optimize');")?;
     Ok((rows, finish(conn)?))
 }
 
@@ -448,20 +524,32 @@ fn build_xref(build_dir: &Path, m: &Manifest) -> Result<(usize, Vec<u8>)> {
                             to_end TEXT, votes INTEGER NOT NULL, PRIMARY KEY (from_id, rank)) WITHOUT ROWID;",
     )?;
     let tx = conn.unchecked_transaction()?;
-    for (k, val) in [("pack_id", "xref".to_string()), ("schema", SCHEMA.to_string())] {
+    for (k, val) in [
+        ("pack_id", "xref".to_string()),
+        ("schema", SCHEMA.to_string()),
+    ] {
         tx.execute("INSERT INTO meta VALUES (?1, ?2)", params![k, val])?;
     }
     let mut rows = 0;
     for b in &m.books {
         for ch in 1..=b.chapters {
-            let f = build_dir.join("xref").join(&b.code).join(format!("{ch}.json"));
+            let f = build_dir
+                .join("xref")
+                .join(&b.code)
+                .join(format!("{ch}.json"));
             let Ok(body) = fs::read(&f) else { continue };
             let map: BTreeMap<String, Vec<Value>> = serde_json::from_slice(&body)?;
             for (from, list) in map {
                 for (rank, r) in list.iter().enumerate() {
                     tx.execute(
                         "INSERT INTO xref VALUES (?1, ?2, ?3, ?4, ?5)",
-                        params![from, rank as i64, r["to"].as_str().unwrap_or(""), r["end"].as_str(), r["votes"].as_i64().unwrap_or(0)],
+                        params![
+                            from,
+                            rank as i64,
+                            r["to"].as_str().unwrap_or(""),
+                            r["end"].as_str(),
+                            r["votes"].as_i64().unwrap_or(0)
+                        ],
                     )?;
                     rows += 1;
                 }
