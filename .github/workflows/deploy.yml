@@ -78,3 +78,33 @@ jobs:
           npx --yes vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
           npx --yes vercel@latest build --prod --token="$VERCEL_TOKEN"
           npx --yes vercel@latest deploy --prebuilt --prod --archive=tgz --token="$VERCEL_TOKEN"
+
+      # 3. Android app packs (tamilscripture.app design §7.2), after the site so a pack
+      #    problem never holds the site back. pack-build compares with the published
+      #    catalogue: unchanged packs keep their version and file, so phones only
+      #    download what changed. Files first, then the signature and catalogue.
+      - name: Build and publish app packs
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_PACKS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_PACKS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          # R2 rejects the newer default checksum headers of aws-cli v2.
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+          R2_ENDPOINT: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          BUCKET: ${{ vars.R2_PACKS_BUCKET || 'ts-packs' }}
+          PACKS_SIGNING_KEY: ${{ secrets.PACKS_SIGNING_KEY }}
+        run: |
+          key="$RUNNER_TEMP/packs.key"
+          printf '%s' "$PACKS_SIGNING_KEY" > "$key"
+          curl -sf https://packs.tamilaudiobible.com/packs/catalogue.json -o "$RUNNER_TEMP/previous.json" || true
+          cargo run --release -p pack-build -- --content apps/web/static/content --out dist/app \
+            --previous "$RUNNER_TEMP/previous.json" --key "$key"
+          rm -f "$key"
+          s3() { aws s3 cp --endpoint-url "$R2_ENDPOINT" --only-show-errors "$@"; }
+          s3 dist/app/packs "s3://$BUCKET/packs" --recursive --exclude 'catalogue.json*' \
+            --cache-control 'public, max-age=31536000, immutable' --content-type application/zstd
+          s3 dist/app/packs/catalogue.json.sig "s3://$BUCKET/packs/catalogue.json.sig" --cache-control 'public, max-age=300' --content-type text/plain
+          s3 dist/app/packs/catalogue.json "s3://$BUCKET/packs/catalogue.json" --cache-control 'public, max-age=300' --content-type application/json
+          s3 dist/app/app/bootstrap.json.sig "s3://$BUCKET/app/bootstrap.json.sig" --cache-control 'public, max-age=300' --content-type text/plain
+          s3 dist/app/app/bootstrap.json "s3://$BUCKET/app/bootstrap.json" --cache-control 'public, max-age=300' --content-type application/json

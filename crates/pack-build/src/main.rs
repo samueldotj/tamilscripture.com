@@ -19,7 +19,11 @@
 //!
 //! Usage:
 //!   pack-build --content apps/web/static/content --out dist/app \
-//!              --pack-version 7 [--key ~/.tamilscripture/catalogue-signing.key]
+//!              [--previous published-catalogue.json] [--pack-version 1] [--key signing.key]
+//!
+//! Pack bytes depend only on their content (no build ids or version numbers inside),
+//! so with `--previous` an unchanged pack keeps its published version and file, and
+//! phones re-download only what changed.
 
 use anyhow::{bail, Context, Result};
 use ed25519_dalek::{Signer, SigningKey};
@@ -113,17 +117,61 @@ struct Catalogue {
     packs: Vec<CatalogueEntry>,
 }
 
+/// The catalogue currently published, used to keep version numbers stable.
+#[derive(Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct PreviousEntry {
+    id: String,
+    version: u32,
+    path: String,
+    size: u64,
+    sha256: String,
+    raw_sha256: String,
+}
+
+#[derive(Deserialize)]
+struct PreviousCatalogue {
+    packs: Vec<PreviousEntry>,
+}
+
+/// Where a pack's bytes go: an unchanged pack keeps its published version and file,
+/// a changed one gets the next version number, a new one starts at `--pack-version`.
+struct Placement {
+    version: u32,
+    path: String,
+    size: u64,
+    sha256: String,
+    reused: bool,
+}
+
+fn place(out: &Path, id: &str, file: &str, raw: &[u8], prev: &BTreeMap<String, PreviousEntry>, first: u32) -> Result<Placement> {
+    let raw_sha = hex(&Sha256::digest(raw));
+    if let Some(p) = prev.get(id) {
+        if p.raw_sha256 == raw_sha {
+            return Ok(Placement { version: p.version, path: p.path.clone(), size: p.size, sha256: p.sha256.clone(), reused: true });
+        }
+    }
+    let version = prev.get(id).map_or(first, |p| p.version + 1);
+    let rel = format!("packs/{id}/{version}/{file}");
+    let path = out.join(&rel);
+    fs::create_dir_all(path.parent().unwrap())?;
+    let compressed = zstd::encode_all(raw, 19)?;
+    fs::write(&path, &compressed)?;
+    Ok(Placement { version, path: rel, size: compressed.len() as u64, sha256: hex(&Sha256::digest(&compressed)), reused: false })
+}
+
 struct Args {
     content: PathBuf,
     out: PathBuf,
     pack_version: u32,
     key: Option<PathBuf>,
     only: Option<Vec<String>>,
+    previous: Option<PathBuf>,
 }
 
 fn args() -> Result<Args> {
     let mut a = std::env::args().skip(1);
-    let (mut content, mut out, mut pack_version, mut key, mut only) = (None, None, None, None, None);
+    let (mut content, mut out, mut pack_version, mut key, mut only, mut previous) = (None, None, None, None, None, None);
     while let Some(k) = a.next() {
         let v = a.next().with_context(|| format!("{k} needs a value"))?;
         match k.as_str() {
@@ -132,6 +180,7 @@ fn args() -> Result<Args> {
             "--pack-version" => pack_version = Some(v.parse()?),
             "--key" => key = Some(PathBuf::from(v)),
             "--only" => only = Some(v.split(',').map(|s| s.trim().to_uppercase()).collect()),
+            "--previous" => previous = Some(PathBuf::from(v)),
             _ => bail!("unknown argument {k}"),
         }
     }
@@ -141,6 +190,7 @@ fn args() -> Result<Args> {
         pack_version: pack_version.unwrap_or(1),
         key,
         only,
+        previous,
     })
 }
 
@@ -159,6 +209,12 @@ fn main() -> Result<()> {
     fs::create_dir_all(&packs_dir)?;
     let n = args.pack_version;
     let mut entries = Vec::new();
+    let prev: BTreeMap<String, PreviousEntry> = match &args.previous {
+        Some(p) if p.exists() => serde_json::from_slice::<PreviousCatalogue>(&fs::read(p)?)
+            .map(|c| c.packs.into_iter().map(|e| (e.id.clone(), e)).collect())
+            .unwrap_or_default(),
+        _ => BTreeMap::new(),
+    };
 
     for v in &manifest.versions {
         if let Some(only) = &args.only {
@@ -167,15 +223,16 @@ fn main() -> Result<()> {
             }
         }
         let id = format!("bible.{}", v.code);
-        let rel = format!("packs/{id}/{n}/{id}.sqlite.zst");
-        let raw = build_bible(&build_dir, &manifest, v, n)?;
-        let e = write_pack(&args.out, &rel, raw)?;
-        println!("{id}: {} rows → {} KB", e.0, e.2 / 1024);
+        let (rows, raw) = build_bible(&build_dir, &manifest, v)?;
+        let pl = place(&args.out, &id, &format!("{id}.sqlite.zst"), &raw, &prev, n)?;
+        println!("{id}: {rows} rows → v{} {} KB{}", pl.version, pl.size / 1024, if pl.reused { " (unchanged)" } else { "" });
+        let raw_size = raw.len() as u64;
+        let raw_sha256 = hex(&Sha256::digest(&raw));
         entries.push(CatalogueEntry {
             id,
             kind: "bible".into(),
             lang: v.lang.clone(),
-            version: n,
+            version: pl.version,
             schema: SCHEMA,
             min_app: 1,
             title: Title {
@@ -184,36 +241,37 @@ fn main() -> Result<()> {
             },
             licence: v.licence.clone(),
             attribution: v.attribution.clone(),
-            path: rel,
-            size: e.2,
-            raw_size: e.1,
-            sha256: e.3,
-            raw_sha256: e.4,
+            path: pl.path,
+            size: pl.size,
+            raw_size,
+            sha256: pl.sha256,
+            raw_sha256,
             starter: v.default || v.code == "BSB",
             build: manifest.build.clone(),
         });
     }
 
     if args.only.as_ref().map_or(true, |o| o.iter().any(|c| c == "XREF")) {
-        let rel = format!("packs/xref/{n}/xref.sqlite.zst");
-        let raw = build_xref(&build_dir, &manifest, n)?;
-        let e = write_pack(&args.out, &rel, raw)?;
-        println!("xref: {} rows → {} KB", e.0, e.2 / 1024);
+        let (rows, raw) = build_xref(&build_dir, &manifest)?;
+        let pl = place(&args.out, "xref", "xref.sqlite.zst", &raw, &prev, n)?;
+        println!("xref: {rows} rows → v{} {} KB{}", pl.version, pl.size / 1024, if pl.reused { " (unchanged)" } else { "" });
+        let raw_size = raw.len() as u64;
+        let raw_sha256 = hex(&Sha256::digest(&raw));
         entries.push(CatalogueEntry {
             id: "xref".into(),
             kind: "xref".into(),
             lang: "".into(),
-            version: n,
+            version: pl.version,
             schema: SCHEMA,
             min_app: 1,
             title: Title { ta: "தொடர்புள்ள வசனங்கள்".into(), en: "Cross-references".into() },
             licence: "CC BY 4.0".into(),
             attribution: "OpenBible.info cross references, CC BY 4.0, merged with the translations' own references".into(),
-            path: rel,
-            size: e.2,
-            raw_size: e.1,
-            sha256: e.3,
-            raw_sha256: e.4,
+            path: pl.path,
+            size: pl.size,
+            raw_size,
+            sha256: pl.sha256,
+            raw_sha256,
             starter: true,
             build: manifest.build.clone(),
         });
@@ -250,16 +308,6 @@ fn main() -> Result<()> {
         eprintln!("note: no --key given, catalogue and bootstrap are unsigned");
     }
     Ok(())
-}
-
-/// (rows, raw size, compressed size, sha256 of compressed, sha256 of raw)
-fn write_pack(out: &Path, rel: &str, raw: (usize, Vec<u8>)) -> Result<(usize, u64, u64, String, String)> {
-    let (rows, bytes) = raw;
-    let path = out.join(rel);
-    fs::create_dir_all(path.parent().unwrap())?;
-    let compressed = zstd::encode_all(&bytes[..], 19)?;
-    fs::write(&path, &compressed)?;
-    Ok((rows, bytes.len() as u64, compressed.len() as u64, hex(&Sha256::digest(&compressed)), hex(&Sha256::digest(&bytes))))
 }
 
 fn hex(b: &[u8]) -> String {
@@ -311,7 +359,7 @@ fn verse_key(order: u32, chapter: u32, verse: u32) -> i64 {
     order as i64 * 1_000_000 + chapter as i64 * 1_000 + verse as i64
 }
 
-fn build_bible(build_dir: &Path, m: &Manifest, v: &Version, pack_version: u32) -> Result<(usize, Vec<u8>)> {
+fn build_bible(build_dir: &Path, m: &Manifest, v: &Version) -> Result<(usize, Vec<u8>)> {
     let conn = open()?;
     conn.execute_batch(
         "CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
@@ -326,7 +374,6 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version, pack_version: u32) -
     )?;
     let meta = [
         ("pack_id", format!("bible.{}", v.code)),
-        ("pack_version", pack_version.to_string()),
         ("schema", SCHEMA.to_string()),
         ("version_code", v.code.clone()),
         ("language", v.lang.clone()),
@@ -336,7 +383,6 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version, pack_version: u32) -
         ("licence", v.licence.clone()),
         ("attribution", v.attribution.clone()),
         ("source_url", v.source_url.clone().unwrap_or_default()),
-        ("build_id", m.build.clone()),
     ];
     let tx = conn.unchecked_transaction()?;
     for (k, val) in meta {
@@ -394,7 +440,7 @@ fn build_bible(build_dir: &Path, m: &Manifest, v: &Version, pack_version: u32) -
     Ok((rows, finish(conn)?))
 }
 
-fn build_xref(build_dir: &Path, m: &Manifest, pack_version: u32) -> Result<(usize, Vec<u8>)> {
+fn build_xref(build_dir: &Path, m: &Manifest) -> Result<(usize, Vec<u8>)> {
     let conn = open()?;
     conn.execute_batch(
         "CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
@@ -402,8 +448,7 @@ fn build_xref(build_dir: &Path, m: &Manifest, pack_version: u32) -> Result<(usiz
                             to_end TEXT, votes INTEGER NOT NULL, PRIMARY KEY (from_id, rank)) WITHOUT ROWID;",
     )?;
     let tx = conn.unchecked_transaction()?;
-    for (k, val) in [("pack_id", "xref".to_string()), ("pack_version", pack_version.to_string()),
-                     ("schema", SCHEMA.to_string()), ("build_id", m.build.clone())] {
+    for (k, val) in [("pack_id", "xref".to_string()), ("schema", SCHEMA.to_string())] {
         tx.execute("INSERT INTO meta VALUES (?1, ?2)", params![k, val])?;
     }
     let mut rows = 0;
