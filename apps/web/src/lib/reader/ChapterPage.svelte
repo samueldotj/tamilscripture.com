@@ -26,7 +26,7 @@
 	import { session } from '$lib/supabase/session.svelte';
 	import { track } from '$lib/analytics/track';
 	import { saveLastRead } from '$lib/personal/last-read';
-	import { chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, setRangeHighlight, removeRangeHighlight, isPartial, rangesOverlap, type Highlight, type HighlightColor, type Note, type TextRange } from '$lib/personal/repo';
+	import { chapterBookmarks, toggleBookmark, chapterHighlights, chapterNotes, recordVisit, setHighlight, removeHighlight, setRangeHighlight, removeRangeHighlight, isPartial, rangesOverlap, type Highlight, type HighlightColor, type Note, type TextRange } from '$lib/personal/repo';
 	import { marksByVerse, selectionRange, sideNotesByVerse } from './marks';
 	import { player, trackKey } from '$lib/audio/player.svelte';
 	import { loadCommentaryChapter, loadCommentaryIndex, unitVerses, type CommentaryChapter, type CommentaryIndex, type CommentaryUnit } from '$lib/commentary/load';
@@ -509,6 +509,8 @@
 	// Personal data (R-10.x): loaded after paint, only when signed in.
 	let userHighlights = $state<Highlight[]>([]);
 	let userNotes = $state<Note[]>([]);
+	/** Bookmarked verse numbers in this chapter. */
+	let userBookmarks = $state<Set<number>>(new Set());
 	let noteOpen = $state<{ start: number; end: number; existing: Note | null; range: TextRange | null } | null>(null);
 	const highlightMap = $derived.by(() => {
 		const m = new Map<string, string>();
@@ -531,12 +533,14 @@
 	async function loadPersonal() {
 		try {
 			[userHighlights, userNotes] = await Promise.all([chapterHighlights(data.book.code, data.chapter), chapterNotes(data.book.code, data.chapter)]);
+			userBookmarks = new Set((await chapterBookmarks(data.book.code, data.chapter)).map((b) => b.verse));
 		} catch { /* offline or signed out */ }
 	}
 	$effect(() => {
 		void data.canonical;
 		userHighlights = [];
 		userNotes = [];
+		userBookmarks = new Set();
 		noteOpen = null;
 		saveLastRead({ versions: versionPath, book: data.book.code, chapter: data.chapter });
 		if (!session.ready || !session.signedIn) return;
@@ -555,6 +559,17 @@
 			clearInterval(timer);
 		};
 	});
+	const firstSelected = $derived([...selected].map(verseNum).filter((n) => !isNaN(n)).sort((a, b) => a - b)[0]);
+	const bookmarked = $derived(firstSelected !== undefined && userBookmarks.has(firstSelected));
+	async function flipBookmark() {
+		if (firstSelected === undefined) return;
+		const on = !bookmarked;
+		const next = new Set(userBookmarks);
+		if (on) next.add(firstSelected); else next.delete(firstSelected);
+		userBookmarks = next;
+		try { await toggleBookmark(data.book.code, data.chapter, firstSelected, primary.code, on); }
+		catch { loadPersonal(); }
+	}
 	const currentColor = $derived.by(() => {
 		if (!selected.size) return null;
 		if (textSel) {
@@ -799,7 +814,7 @@
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
 				{#snippet actions()}
-					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} />
+					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} />
 				{/snippet}
 			</ContextPanel>
 			</div>
@@ -892,7 +907,7 @@
 {/if}
 
 <div class="overlays" class:dual>
-	<ActionBar onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} onoriginal={openOriginal} />
+	<ActionBar onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} onoriginal={openOriginal} />
 	{#if sheet}
 		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
 			{#snippet study()}
