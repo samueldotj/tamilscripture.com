@@ -62,7 +62,7 @@
 	.filter button { border: 1px solid var(--line); background: var(--surface); color: inherit; border-radius: 999px; padding: 0.35rem 0.8rem; min-height: 36px; cursor: pointer; font-family: var(--tamil); }
 	.filter button.on { border-color: var(--ink); }
 	.swatch { width: 30px; height: 30px; min-height: 30px; padding: 0; border-radius: 50%; }
-	.swatch.yellow, .dot.yellow { background: var(--hl-yellow); } .swatch.green, .dot.green { background: var(--hl-green); } .swatch.blue, .dot.blue { background: var(--hl-blue); } .swatch.pink, .dot.pink { background: var(--hl-pink); }
+	.swatch.yellow, .dot.yellow { background: var(--swatch-yellow); } .swatch.green, .dot.green { background: var(--swatch-green); } .swatch.blue, .dot.blue { background: var(--swatch-blue); } .swatch.pink, .dot.pink { background: var(--swatch-pink); }
 	h2 { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 1.2rem 0 0.4rem; font-family: var(--tamil); }
 	ul { list-style: none; padding: 0; margin: 0; }
 	li { display: flex; gap: 0.6rem; align-items: center; padding: 0.4rem 0; border-top: 1px solid var(--line); }
