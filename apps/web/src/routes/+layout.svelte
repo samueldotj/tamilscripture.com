@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { afterNavigate } from '$app/navigation';
-	import { track } from '$lib/analytics/track';
+	import { optedOut, track } from '$lib/analytics/track';
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
 	import MobileMenu from '$lib/reader/MobileMenu.svelte';
@@ -122,7 +122,8 @@
 	onMount(() => {
 		settings.stamp();
 		session.start();
-		inject({ mode: dev ? 'development' : 'production' });
+		// Honour Global Privacy Control / Do Not Track here too, as the privacy page promises.
+		inject({ mode: dev ? 'development' : 'production', beforeSend: (e) => (optedOut() ? null : e) });
 	});
 
 	function focusSearch() {
@@ -254,6 +255,7 @@
 	<a href="/about">{ui === 'ta' ? 'பற்றி' : 'About'}</a>
 	<a href="/plans">{ui === 'ta' ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'}</a>
 	<a href="/licences">{ui === 'ta' ? 'உரிமங்கள்' : 'Licences'}</a>
+	<a href="/privacy">{ui === 'ta' ? 'தனியுரிமை' : 'Privacy'}</a>
 	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>
 	<a href="/dictionary">{ui === 'ta' ? 'அகராதி' : 'Dictionary'}</a>
 	<a href="/heatmap">{ui === 'ta' ? 'வெப்ப வரைபடம்' : 'Heatmap'}</a>

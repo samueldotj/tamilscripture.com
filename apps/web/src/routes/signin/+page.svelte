@@ -58,7 +58,7 @@
 		</button>
 	{/if}
 	{#if error}<p class="err" role="alert">{error}</p>{/if}
-	<p class="privacy"><a href="/about">{ta ? 'தனியுரிமை' : 'Privacy'}</a></p>
+	<p class="privacy"><a href="/privacy">{ta ? 'தனியுரிமை' : 'Privacy'}</a></p>
 </section>
 
 <style>

@@ -10,7 +10,7 @@ type Fetch = typeof fetch;
 
 /** Pages that are not a chapter or an entity. The heatmaps and the map explorer
  *  are noindex (they hold no text of their own), so they are left out. */
-export const PAGE_PATHS = ['/', '/about', '/licences'];
+export const PAGE_PATHS = ['/', '/about', '/licences', '/privacy'];
 
 /** Every book and chapter page of one version. */
 export function chapterPaths(version: VersionMeta): string[] {
