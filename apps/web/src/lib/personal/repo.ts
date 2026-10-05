@@ -187,6 +187,48 @@ export async function allNotes(query = ''): Promise<Note[]> {
 	return data as Note[];
 }
 
+/** One per verse (`public.bookmarks`); the Android app syncs the same rows. */
+export interface Bookmark {
+	id: string;
+	book: string;
+	chapter: number;
+	verse: number;
+	version: string | null;
+	created_at: string;
+}
+
+export async function chapterBookmarks(book: string, chapter: number): Promise<Bookmark[]> {
+	const { data, error } = await (await sb()).from('bookmarks').select('*').eq('book', book).eq('chapter', chapter);
+	if (error) throw error;
+	return data as Bookmark[];
+}
+
+export async function allBookmarks(): Promise<Bookmark[]> {
+	const { data, error } = await (await sb()).from('bookmarks').select('*').order('created_at', { ascending: false });
+	if (error) throw error;
+	return data as Bookmark[];
+}
+
+/** Bookmarks the verse, or removes its bookmark when it has one. */
+export async function toggleBookmark(book: string, chapter: number, verse: number, version: string, on: boolean): Promise<void> {
+	const client = await sb();
+	if (!on) {
+		const { error } = await client.from('bookmarks').delete().eq('book', book).eq('chapter', chapter).eq('verse', verse);
+		if (error) throw error;
+		return;
+	}
+	const { data: userRes } = await client.auth.getUser();
+	const { error } = await client
+		.from('bookmarks')
+		.upsert({ user_id: userRes.user!.id, book, chapter, verse, version }, { onConflict: 'user_id,book,chapter,verse', ignoreDuplicates: true });
+	if (error) throw error;
+}
+
+export async function deleteBookmark(id: string): Promise<void> {
+	const { error } = await (await sb()).from('bookmarks').delete().eq('id', id);
+	if (error) throw error;
+}
+
 export async function recordVisit(book: string, chapter: number, version: string, range?: { start: number; end: number } | null): Promise<void> {
 	await (await sb()).rpc('record_visit', {
 		p_book: book,

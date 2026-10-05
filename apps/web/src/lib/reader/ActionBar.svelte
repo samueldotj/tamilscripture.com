@@ -21,6 +21,8 @@
 		onclear,
 		onhighlight,
 		onnote,
+		bookmarked = false,
+		onbookmark,
 		onoriginal,
 		onplayfrom
 	}: {
@@ -40,6 +42,9 @@
 		onclear: () => void;
 		onhighlight?: (color: HighlightColor | null) => void;
 		onnote?: () => void;
+		/** Whether the first selected verse is bookmarked; the button toggles it. */
+		bookmarked?: boolean;
+		onbookmark?: () => void;
 		/** Opens the Hebrew or Greek words of the selection (phones; the panel has a tab). */
 		onoriginal?: () => void;
 		/** Play the recording from the first selected verse (timed recordings only, design 12A). */
@@ -126,6 +131,9 @@
 				{/each}
 			</span>
 			<button type="button" class="chip primary" onclick={() => onnote?.()}>{ta ? 'குறிப்பு' : 'Note'}</button>
+			{#if onbookmark}
+				<button type="button" class="chip" aria-pressed={bookmarked} onclick={() => onbookmark?.()}><span aria-hidden="true">{bookmarked ? '★' : '☆'}</span> {ta ? 'குறி' : 'Bookmark'}</button>
+			{/if}
 		{:else}
 			<a class="chip primary" href={signinHref}>{ta ? 'அடிக்கோடு · குறிப்பு' : 'Highlight · Note'}</a>
 		{/if}
