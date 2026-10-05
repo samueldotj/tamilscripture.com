@@ -52,6 +52,14 @@ class SessionStore {
 		if (error) throw error;
 	}
 
+	/** Finishes a Google Identity Services sign-in (see google.ts). */
+	async signInWithGoogleIdToken(token: string, nonce: string) {
+		const client = await sb();
+		const { error } = await client.auth.signInWithIdToken({ provider: 'google', token, nonce });
+		if (error) throw error;
+		await this.refresh();
+	}
+
 	/** Called after a PKCE exchange so listeners attach even on a fresh session. */
 	async refresh() {
 		if (!this.started) this.started = true;

@@ -3,6 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { session } from '$lib/supabase/session.svelte';
 	import { settings } from '$lib/settings/store.svelte';
+	import { GOOGLE_CLIENT_ID, renderGoogleButton } from '$lib/supabase/google';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
 	const next = $derived(page.url.searchParams.get('next') || '/');
@@ -10,6 +11,28 @@
 	let sent = $state(false);
 	let busy = $state(false);
 	let error = $state('');
+	let gisEl = $state<HTMLElement>();
+	/** Google's own button is in use; false falls back to the redirect flow. */
+	let gis = $state(!!GOOGLE_CLIENT_ID);
+
+	$effect(() => {
+		if (!gis || !gisEl) return;
+		const el = gisEl;
+		const theme = document.documentElement.getAttribute('data-theme');
+		const dark = theme ? theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+		renderGoogleButton(el, {
+			locale: ta ? 'ta' : 'en',
+			dark,
+			onCredential: async (token, nonce) => {
+				error = '';
+				try {
+					await session.signInWithGoogleIdToken(token, nonce);
+				} catch (err) {
+					error = (err as Error).message;
+				}
+			}
+		}).catch(() => (gis = false));
+	});
 
 	$effect(() => {
 		if (session.ready && session.signedIn) goto(next, { replaceState: true });
@@ -52,16 +75,21 @@
 			<button type="submit" class="chip primary" disabled={busy}>{ta ? 'இணைப்பை அனுப்பு' : 'Send sign-in link'}</button>
 		</form>
 		<div class="or"><span>{ta ? 'அல்லது' : 'or'}</span></div>
+		{#if gis}
+		<div class="gis" bind:this={gisEl}></div>
+		{:else}
 		<button type="button" class="chip google" onclick={google}>
 			<svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.6 30.2 0 24 0 14.6 0 6.5 5.4 2.5 13.3l7.8 6C12.2 13.6 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.4 5.7c4.3-4 7.2-9.9 7.2-17.4z"/><path fill="#FBBC05" d="M10.3 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.8-6A24 24 0 0 0 0 24c0 3.9.9 7.5 2.5 10.7l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.9 2.3-8.5 2.3-6.4 0-11.8-4.1-13.7-9.8l-7.8 6C6.5 42.6 14.6 48 24 48z"/></svg>
 			{ta ? 'Google மூலம் உள்நுழை' : 'Continue with Google'}
 		</button>
+		{/if}
 	{/if}
 	{#if error}<p class="err" role="alert">{error}</p>{/if}
 	<p class="privacy"><a href="/privacy">{ta ? 'தனியுரிமை' : 'Privacy'}</a></p>
 </section>
 
 <style>
+	.gis { display: flex; justify-content: center; min-height: 44px; }
 	.signin { max-width: 26rem; margin: 2rem auto; padding: 1.6rem 1.5rem; }
 	h1 { font-size: 1.7rem; font-weight: 600; margin: 0 0 0.5rem; }
 	h1[lang='ta'] { font-family: var(--tamil); }

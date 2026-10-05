@@ -36,7 +36,7 @@
 		<ul>
 			<li><strong>Vercel</strong>: தளத்தை வழங்குகிறது, பக்கப் பார்வைகளை எண்ணுகிறது.</li>
 			<li><strong>Supabase</strong>: உள்நுழைவு மற்றும் உங்கள் கணக்குத் தரவைச் சேமிக்கிறது.</li>
-			<li><strong>Google</strong>: “Google மூலம் உள்நுழை” தேர்ந்தெடுத்தால் மட்டும்.</li>
+			<li><strong>Google</strong>: உள்நுழை பக்கத்தில் Google பொத்தானைக் காட்டவும், நீங்கள் Google மூலம் உள்நுழையும்போதும் மட்டும்.</li>
 			<li><strong>Cloudflare</strong>: ஒலி வேதாகமக் கோப்புகளையும் விளக்கவுரைகளையும் வழங்குகிறது.</li>
 		</ul>
 		<p>இந்தச் சேவைகளின் சர்வர்கள் உங்கள் நாட்டுக்கு வெளியே இருக்கலாம்.</p>
@@ -69,7 +69,7 @@
 		<ul>
 			<li><strong>Vercel</strong> hosts the site and counts page views.</li>
 			<li><strong>Supabase</strong> runs sign-in and stores account data.</li>
-			<li><strong>Google</strong> is contacted only if you choose “Continue with Google”.</li>
+			<li><strong>Google</strong> is contacted only on the sign-in page, to show its button, and when you sign in with Google.</li>
 			<li><strong>Cloudflare</strong> serves the audio Bible and commentaries.</li>
 		</ul>
 		<p>These services may store data outside your country.</p>
