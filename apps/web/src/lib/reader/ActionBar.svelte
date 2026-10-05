@@ -183,7 +183,7 @@
 	.panel .colors { width: 100%; gap: 0.5rem; padding: 0 0 0.2rem; }
 	.swatch { width: 28px; height: 28px; min-height: 28px; padding: 0; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
 	.panel .swatch { width: 32px; height: 32px; min-height: 32px; }
-	.swatch.yellow { background: var(--hl-yellow); } .swatch.green { background: var(--hl-green); } .swatch.blue { background: var(--hl-blue); } .swatch.pink { background: var(--hl-pink); }
+	.swatch.yellow { background: var(--swatch-yellow); } .swatch.green { background: var(--swatch-green); } .swatch.blue { background: var(--swatch-blue); } .swatch.pink { background: var(--swatch-pink); }
 	.swatch.on { border-color: var(--ink); }
 	.share { position: relative; display: inline-flex; }
 	.panel .share { flex: 1 1 auto; }

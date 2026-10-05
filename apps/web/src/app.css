@@ -40,6 +40,12 @@
 	--hl-green: #CFE6C2;
 	--hl-blue: #C9DCF2;
 	--hl-pink: #F4CBD8;
+	/* Highlight colour pickers: full, bright colours in every theme, so the buttons read as
+	   active; --hl-* are the dimmer tints behind highlighted text. Same as the Android app. */
+	--swatch-yellow: #F2C94C;
+	--swatch-green: #5CC27A;
+	--swatch-blue: #5B9BEF;
+	--swatch-pink: #F07AA0;
 	/* Review states (design 8A): accepted, waiting, not accepted. Reserved for
 	   status — never reused as a decorative colour. */
 	--good: #2F7D4F;
