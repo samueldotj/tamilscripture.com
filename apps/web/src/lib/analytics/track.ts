@@ -20,7 +20,7 @@ export function onFlush(fn: () => void) {
 	beforeFlush.push(fn);
 }
 
-function optedOut(): boolean {
+export function optedOut(): boolean {
 	const nav = navigator as Navigator & { globalPrivacyControl?: boolean };
 	return nav.globalPrivacyControl === true || nav.doNotTrack === '1';
 }

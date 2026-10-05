@@ -43,7 +43,7 @@
 
 <section>
 	<h2>{ta ? 'தரவை ஏற்றுமதி செய்' : 'Export your data'}</h2>
-	<p class="muted">{ta ? 'உங்கள் அடிக்கோடுகள், குறிப்புகள், வரலாறு ஒரு JSON ஆக.' : 'Your highlights, notes and history as one JSON document.'}</p>
+	<p class="muted">{ta ? 'உங்கள் அடிக்கோடுகள், குறிப்புகள், புத்தகக்குறிகள், வரலாறு, விளக்கக்காட்சிகள், வாசிப்புத் திட்டங்கள், அமைப்புகள் ஒரு JSON ஆக.' : 'Your highlights, notes, bookmarks, history, presentations, reading plans and settings as one JSON document.'}</p>
 	<button type="button" onclick={doExport} disabled={busy}>{ta ? 'ஏற்றுமதி' : 'Export'}</button>
 	{#if exported}
 		<button type="button" onclick={copyExport}>{ta ? 'நகல்' : 'Copy'}</button>
