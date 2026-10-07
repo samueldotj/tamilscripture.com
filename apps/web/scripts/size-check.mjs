@@ -27,8 +27,10 @@ const READER_LIMIT = 120 * 1024;
 // and to 285 kB on 26 Sep 2026 for the reading plans (Today, Plans, Stats and
 // their store, 14.5 kB), and to 295 kB on 27 Sep 2026 for the commentaries
 // (the focus pane and inline views are a chunk loaded when a reader turns
-// commentary on; about 7 kB in all).
-const SITE_LIMIT = 295 * 1024;
+// commentary on; about 7 kB in all), and to 310 kB on 7 Oct 2026 for the privacy
+// page, the Google sign-in button and "Share as image" (the picker and its canvas
+// templates ride with the single-verse page; about 12 kB in all).
+const SITE_LIMIT = 310 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 
