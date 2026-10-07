@@ -111,7 +111,9 @@
 	</button>
 </div>
 
-<div id="books-ot" role="tabpanel" aria-labelledby="tab-ot" hidden={testament !== 'OT'}>
+<!-- The chapter page's code loads while the book list is on screen, so the first tap
+     waits only for the chapter's text (phones have no hover to start it earlier). -->
+<div id="books-ot" role="tabpanel" aria-labelledby="tab-ot" hidden={testament !== 'OT'} data-sveltekit-preload-code="viewport">
 	<ul class="books">
 		{#each ot as b (b.code)}
 			<li>
@@ -123,7 +125,7 @@
 		{/each}
 	</ul>
 </div>
-<div id="books-nt" role="tabpanel" aria-labelledby="tab-nt" hidden={testament !== 'NT'}>
+<div id="books-nt" role="tabpanel" aria-labelledby="tab-nt" hidden={testament !== 'NT'} data-sveltekit-preload-code="viewport">
 	<ul class="books">
 		{#each nt as b (b.code)}
 			<li>

@@ -34,11 +34,16 @@
 		// Bring the current book into view inside the rail, without scrolling the
 		// page, when the page moves to another book. Expanding a different book in
 		// the rail must not jump back to the current one.
+		// After the chapter has painted: reading offsetTop any earlier forces a layout
+		// of the whole new page before its text can appear (~180 ms on a mid-range phone).
 		const code = book.code;
-		void tick().then(() => {
-			const el = list?.querySelector<HTMLElement>(`[data-book="${code}"]`);
-			if (list && el) list.scrollTop = Math.max(0, el.offsetTop - list.clientHeight / 3);
+		let frame = requestAnimationFrame(() => {
+			frame = requestAnimationFrame(() => {
+				const el = list?.querySelector<HTMLElement>(`[data-book="${code}"]`);
+				if (list && el && list.clientHeight) list.scrollTop = Math.max(0, el.offsetTop - list.clientHeight / 3);
+			});
 		});
+		return () => cancelAnimationFrame(frame);
 	});
 	const books = $derived(testament === 'OT' ? ot : nt);
 

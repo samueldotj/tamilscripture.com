@@ -16,7 +16,12 @@ const CONTENT = 'content-v2';
 const PAGES = 'pages-v1';
 const MAX_PAGES = 20;
 
+// The shell is the app's code and the small static files (fonts, icons, manifest).
+// Bible content is left out of `files` in vite.config.ts: static/content holds ~50,000
+// files, which never finished downloading within the browser's install time limit, so
+// the worker never activated and every visit started again. Chapters are cached as read.
 const shellAssets = [...build, ...files.filter((f) => !f.endsWith('.map'))];
+const shellSet = new Set(shellAssets);
 
 sw.addEventListener('install', (event) => {
 	event.waitUntil(
@@ -49,7 +54,7 @@ sw.addEventListener('fetch', (event) => {
 	if (url.origin !== sw.location.origin) return; // fonts etc. go straight to network
 
 	// App shell: cache first (immutable, versioned).
-	if (shellAssets.includes(url.pathname)) {
+	if (shellSet.has(url.pathname)) {
 		event.respondWith(caches.match(request).then((r) => r ?? fetch(request)));
 		return;
 	}
