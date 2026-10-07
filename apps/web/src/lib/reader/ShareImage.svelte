@@ -3,11 +3,14 @@
 	// Share Image): a live preview with six templates, an icon, a size, the versions
 	// and a light or dark ground, then download, share or copy the PNG.
 	import { onMount } from 'svelte';
+	import { track, type ShareAction } from '$lib/analytics/track';
 	import { autoIcon, FACES, ICONS, PALETTE, render, SIZES, TEMPLATES, type DrawOptions, type IconName, type ImageSize, type ImageTheme, type Passage, type Template } from './verse-image';
 
-	let { passages, book, slug, chapter, verses, ta }: {
+	let { passages, version, book, slug, chapter, verses, ta }: {
 		/** The versions shown on the page, in order: one or two. */
 		passages: Passage[];
+		/** The first version's code, for the traffic page. */
+		version: string;
 		book: string;
 		/** For the file name ("john-3-16.png"). */
 		slug: string;
@@ -94,6 +97,10 @@
 		});
 	}
 	const fileName = $derived(`${slug}-${chapter}-${verses}.png`);
+	/** An image that went out, for the moderators' traffic page (docs/feature_analytics.md A9). */
+	function counted(action: ShareAction) {
+		track('share', { action, verse: `${book}.${chapter}.${verses.split("-")[0]}`, book, chapter, version: version.toUpperCase(), lang: ta ? 'ta' : 'en', detail: `${template}.${size}.${theme}` });
+	}
 	function save(b: Blob) {
 		const a = document.createElement('a');
 		a.href = URL.createObjectURL(b);
@@ -101,6 +108,7 @@
 		a.click();
 		setTimeout(() => URL.revokeObjectURL(a.href), 2000);
 		flash(t.saved);
+		counted('download');
 	}
 	async function download() {
 		save(await blob());
@@ -108,13 +116,14 @@
 	async function shareImage() {
 		const b = await blob();
 		const f = new File([b], fileName, { type: 'image/png' });
-		if (navigator.canShare?.({ files: [f] })) { try { await navigator.share({ files: [f], title: passages[0].ref }); } catch { /* cancelled */ } }
+		if (navigator.canShare?.({ files: [f] })) { try { await navigator.share({ files: [f], title: passages[0].ref }); counted('sheet'); } catch { /* cancelled */ } }
 		else save(b);
 	}
 	async function copyImage() {
 		try {
 			await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob() })]);
 			flash(t.copied);
+			counted('copy');
 		} catch { flash(t.noCopy); }
 	}
 

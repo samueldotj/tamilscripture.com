@@ -1,6 +1,6 @@
 # Feature design: site analytics for moderators
 
-Milestone M8 in the [README](../README.md#milestones). Status: phases A1 to A6 built 18 Sep 2026; A7 (audio listening) and A8 (accounts, reading plans, traffic sources) built 26 Sep 2026.
+Milestone M8 in the [README](../README.md#milestones). Status: phases A1 to A6 built 18 Sep 2026; A7 (audio listening) and A8 (accounts, reading plans, traffic sources) built 26 Sep 2026; A9 (sharing) built 6 Oct 2026.
 
 Moderators need to see how many people use the site and what they read: visitors, page views, unique views, which verses people tap, and where readers are and on what devices. This document fixes what is collected, how it stays private, where it lives, and the order it is built in.
 
@@ -16,6 +16,7 @@ Moderators need to see how many people use the site and what they read: visitors
 | Device and resolution | Device class, OS and browser from the user-agent on the server; screen resolution (CSS pixels) from the page. |
 | Verse clicks | One event when a reader selects a verse (taps its number), with the verse id. |
 | Audio listening (A7) | `audio` events from the player: a chapter started (by the reader, from its start or from a verse, or by continuing), a jump to a verse, a chapter heard to its end, and seconds actually listened. Listening time is sent when the chapter changes, the bar closes or the tab is hidden, so time heard in the background counts. Nothing identifies the listener beyond the same daily hash. |
+| Sharing (A9) | `share` events when a share went through: a link from the reader's share menu (the verse in its chapter, or the large single-verse page; sent through the share sheet, or copied where there is none), or a verse image from "Share as image" (downloaded, sent through the share sheet, or copied). A share sheet closed without sending is not counted. Images also record their template, size and theme. |
 | Opt-out | Browsers that send Global Privacy Control or Do Not Track are not counted at all. |
 | Bots | Dropped on the server by user-agent (crawlers, previews, headless browsers, Lighthouse). |
 | Retention | Raw events 90 days; daily rollups kept two years (phase A3). A day's salt is deleted the day after, so its hashes become unlinkable. |
@@ -43,9 +44,9 @@ flowchart LR
 | Column | Meaning |
 |---|---|
 | `at`, `day` | Time; the day in India time (Asia/Kolkata), which is also the salt's day |
-| `kind` | `view`, `verse` or `audio` |
+| `kind` | `view`, `verse`, `audio` or `share` (the Android app adds its own kinds) |
 | `path`, `route` | URL path without query; SvelteKit route id, so "all chapter pages" can be grouped |
-| `verse` | For `verse` events: `JHN.3.16` |
+| `verse` | For `verse` events: `JHN.3.16`; for `share`, the first verse shared |
 | `book`, `chapter` | For chapter-page views: `JHN`, `3` |
 | `visitor` | First 16 hex of sha256(salt ‖ ip ‖ user-agent) |
 | `member` | First 16 hex of sha256(salt ‖ user id) for signed-in readers, else null |
@@ -54,9 +55,10 @@ flowchart LR
 | `screen` | `390x844` (CSS pixels) |
 | `referrer` | On a visit's landing page only (A8): the referring site's host when it is another site (an Android app arrives as its package, `com.whatsapp`, from Chrome's `android-app://` referrer); `utm:<tag>` when the link carried `?utm_source=<tag>`; `facebook.com`, `instagram.com` or `linkedin.com` for those apps' in-app browsers, which send none; `(direct)` for a landing with no referrer. Null on every other event |
 | `lang` | Interface language, `ta` or `en` |
-| `action` | For `audio`: `play` (a reader started a chapter; `verse` is set when started from a verse), `next` (the next or previous chapter, by itself or by ⏮/⏭), `jump` (to a verse while playing), `end` (heard to the end), `time` (seconds listened) |
-| `version` | For `audio`: the recording's version code, `IRVTAM` |
+| `action` | For `audio`: `play` (a reader started a chapter; `verse` is set when started from a verse), `next` (the next or previous chapter, by itself or by ⏮/⏭), `jump` (to a verse while playing), `end` (heard to the end), `time` (seconds listened). For `share` (A9): `link`, `large` (the reader's share menu), `download`, `sheet`, `copy` (an image) |
+| `version` | For `audio`: the recording's version code, `IRVTAM`; for `share`, the first version shown |
 | `amount` | For `audio` `time`: seconds listened, 1 to 3,600 |
+| `detail` | For an image `share`: template, size and theme, `plate.square.light` |
 
 Nothing in the table identifies a person. `analytics_salt(day, salt)` holds one random salt per day; the collector reads today's, and a daily job deletes older ones.
 
@@ -68,12 +70,13 @@ Nothing in the table identifies a person. `analytics_salt(day, salt)` holds one 
 - a live panel: visitors, views, verse clicks and listeners in the last 30 minutes, the pages being read, the chapters being heard and where from, refreshed every minute;
 - tiles: page views, visitors, unique page views, signed-in users, verse clicks, each with its change against the previous period of the same length;
 - an Audio Bible row of tiles (A7): chapter plays (`play` + `next`), listeners (per day, summed), listening time, and chapters completed with their share of plays; each also switches the daily chart, which shows listening time in minutes;
+- a Sharing row of tiles (A9): shares, sharers (per day, summed) and verses shared as an image; each also switches the daily chart;
 - a sign-ups tile (A8, accounts created in the range) beside them, which also switches the chart;
 - a daily chart of one chosen measure, with a note on any day above three times the typical day;
 - an Accounts card (A8, `analytics_accounts`): accounts in all; signed up, signed in (`auth.users.last_sign_in_at` in the window) and active while signed in (a session used in the window; the site refreshes its token hourly while open) over the last 24 hours, 7 days and 30 days; the peak sign-up day and the peak day for signed-in users, ever and in the range;
 - a Reading plans card (A8, `analytics_plans`): signed-in readers on a plan, plans joined, plans started in the range, readers who ticked a passage in the last 7 days, and the plans by readers, most followed first (plans joined while signed out live in that browser and are not counted);
 - a grid of the 66 books shaded by chapter-page views;
-- tables with bars and CSV export: where visitors come from (A8: every referrer in the range summed by `analytics_source()` into Google, WhatsApp, Facebook, Instagram, YouTube, Telegram, X, LinkedIn, Reddit, Bing, DuckDuckGo, other search engines, email, AI assistants, direct and other sites), top pages, parts of the site, most-read chapters, most-tapped verses, verse clicks by book, search terms, searches with no result, most-played chapters (with version), plays by version, listening time by version, how playback started, verses played from, countries, cities, devices, screen resolutions, operating systems, browsers, referring sites, interface language.
+- tables with bars and CSV export: where visitors come from (A8: every referrer in the range summed by `analytics_source()` into Google, WhatsApp, Facebook, Instagram, YouTube, Telegram, X, LinkedIn, Reddit, Bing, DuckDuckGo, other search engines, email, AI assistants, direct and other sites), top pages, parts of the site, most-read chapters, most-tapped verses, verse clicks by book, search terms, searches with no result, most-played chapters (with version), plays by version, listening time by version, how playback started, verses played from, most-shared verses, how verses were shared, image templates, image sizes, countries, cities, devices, screen resolutions, operating systems, browsers, referring sites, interface language.
 
 Definitions, shown on the page:
 
@@ -99,6 +102,7 @@ Definitions, shown on the page:
 | **A6 · Hardening** | Per-address limit of 60 events a minute in the collector (plus 600 a visitor a day in Postgres), 2 kB body cap, prefetches skipped, wider bot list, spike note on the chart, `scripts/analytics-load.mjs` dry-run load test (about 1,800 requests a second locally) | Built 18 Sep 2026 |
 | **A7 · Audio listening** | `audio` events from the Audio Bible player (`action`, `version`, `amount` columns); audio dimensions and totals in the daily rollups; Audio Bible tiles, chart, live listeners and five tables on `/mod/traffic`; migration `20260926100000_audio_analytics.sql`, pgTAP `audio_analytics.test.sql` | Built 26 Sep 2026 |
 | **A8 · Accounts, plans, sources** | Landing pages marked in the collector (`(direct)`, `utm:<tag>`, in-app browsers); `analytics_source()`, `analytics_accounts(from, to)` and `analytics_plans(from, to)` (staff only; counts from `auth.users`, `auth.sessions` and `plan_progress`, nobody named); `sources` in the report; sign-ups tile, Accounts and Reading plans cards and a sources table on `/mod/traffic`; migration `20260926130000_accounts_plans_sources.sql`, pgTAP `accounts_plans_sources.test.sql`. Direct visits are counted from this phase on; WhatsApp on iOS sends no referrer, so shared links need `?utm_source=whatsapp` to be credited | Built 26 Sep 2026 |
+| **A9 · Sharing** | `share` events from the reader's share menu and "Share as image" (`detail` column for an image's template, size and theme); share dimensions and totals in the daily rollups; Sharing tiles, chart and four tables on `/mod/traffic`; migration `20261006100000_share_analytics.sql`, pgTAP `share_analytics.test.sql` | Built 6 Oct 2026 |
 | **Next** | Countries on a map; per-page drill-down; alert moderators on the queue page when a day spikes | Ideas |
 
 ## 7. Owner items

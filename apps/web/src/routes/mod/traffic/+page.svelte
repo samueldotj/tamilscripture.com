@@ -63,7 +63,13 @@
 		{ id: 'listen_seconds', ta: 'கேட்ட நேரம்', en: 'Listening time', hint_ta: 'உண்மையில் ஒலித்த நேரம்', hint_en: 'Time audio actually played' },
 		{ id: 'audio_ends', ta: 'முழுதும் கேட்டவை', en: 'Chapters completed', hint_ta: 'முடிவு வரை கேட்ட அதிகாரங்கள்', hint_en: 'Heard to the end' }
 	];
-	const measureLabel = $derived([...MEASURES, ...AUDIO].find((m) => m.id === measure)!);
+	// Sharing (A9): links from the reader's share menu and verses shared as an image.
+	const SHARING: typeof MEASURES = [
+		{ id: 'shares', ta: 'பகிர்வுகள்', en: 'Shares', hint_ta: 'இணைப்புகளும் படங்களும்', hint_en: 'Links and images' },
+		{ id: 'sharers', ta: 'பகிர்ந்தவர்கள்', en: 'Sharers', hint_ta: 'நாள்தோறும் எண்ணி, கூட்டியது', hint_en: 'Counted per day, summed' },
+		{ id: 'image_shares', ta: 'படமாகப் பகிர்ந்தவை', en: 'Shared as image', hint_ta: 'பதிவிறக்கம், பகிர்வு, நகல்', hint_en: 'Downloaded, sent or copied' }
+	];
+	const measureLabel = $derived([...MEASURES, ...AUDIO, ...SHARING].find((m) => m.id === measure)!);
 	/** 3 h 20 m, 45 m, 30 s. */
 	function duration(seconds: number) {
 		if (seconds < 60) return `${seconds} s`;
@@ -173,6 +179,18 @@
 	type Section = { id: Dimension | 'searches' | 'searches_empty'; ta: string; en: string; n_ta: string; n_en: string; u_ta: string; u_en: string; seconds?: boolean };
 	const V = { n_ta: 'பார்வைகள்', n_en: 'Views', u_ta: 'வருகையாளர்', u_en: 'Visitors' };
 	const A = { n_ta: 'இயக்கங்கள்', n_en: 'Plays', u_ta: 'கேட்டவர்', u_en: 'Listeners' };
+	const S = { n_ta: 'பகிர்வுகள்', n_en: 'Shares', u_ta: 'பகிர்ந்தவர்', u_en: 'Sharers' };
+	const SHARE_METHODS: Record<string, [string, string]> = {
+		link: ['இணைப்பு: அதிகாரத்தில் வசனம்', 'Link: verse in its chapter'],
+		large: ['இணைப்பு: பெரிய எழுத்து', 'Link: large text'],
+		download: ['படம்: பதிவிறக்கம்', 'Image: downloaded'],
+		sheet: ['படம்: பகிர்வுத் தாள்', 'Image: share sheet'],
+		copy: ['படம்: நகல்', 'Image: copied']
+	};
+	const SHARE_TEMPLATES: Record<string, [string, string]> = {
+		plate: ['தகடு', 'Plate'], margin: ['ஓரம்', 'Margin'], rules: ['கோடுகள்', 'Rules'], numeral: ['எண்', 'Numeral'], initial: ['முதலெழுத்து', 'Initial'], corner: ['மூலை', 'Corner'],
+		square: ['சதுரம் 1080×1080', 'Square 1080×1080'], story: ['ஸ்டேட்டஸ் 1080×1920', 'Status 1080×1920'], landscape: ['கிடை 1200×630', 'Landscape 1200×630']
+	};
 	/** Referrers count landings: the first page of each visit. */
 	const R = { n_ta: 'வருகைகள்', n_en: 'Visits', u_ta: 'வருகையாளர்', u_en: 'Visitors' };
 	const SOURCE_NAMES: Record<string, [string, string]> = {
@@ -196,6 +214,10 @@
 		{ id: 'audio_time', ta: 'பதிப்புவாரியாகக் கேட்ட நேரம்', en: 'Listening time by version', n_ta: 'நேரம்', n_en: 'Time', u_ta: 'கேட்டவர்', u_en: 'Listeners', seconds: true },
 		{ id: 'audio_sources', ta: 'இயக்கம் தொடங்கிய விதம்', en: 'How playback started', n_ta: 'முறை', n_en: 'Times', u_ta: 'கேட்டவர்', u_en: 'Listeners' },
 		{ id: 'audio_verses', ta: 'கேட்கத் தொடங்கிய வசனங்கள்', en: 'Verses played from', n_ta: 'முறை', n_en: 'Times', u_ta: 'கேட்டவர்', u_en: 'Listeners' },
+		{ id: 'share_verses', ta: 'அதிகம் பகிரப்பட்ட வசனங்கள்', en: 'Most-shared verses', ...S },
+		{ id: 'share_methods', ta: 'பகிர்ந்த விதம்', en: 'How verses were shared', ...S },
+		{ id: 'share_templates', ta: 'பட வடிவங்கள்', en: 'Image templates', ...S },
+		{ id: 'share_sizes', ta: 'பட அளவுகள்', en: 'Image sizes', ...S },
 		{ id: 'searches', ta: 'தேடல் சொற்கள்', en: 'Search terms', n_ta: 'தேடல்கள்', n_en: 'Searches', u_ta: 'முடிவில்லை', u_en: 'No result' },
 		{ id: 'searches_empty', ta: 'முடிவு இல்லாத தேடல்கள்', en: 'Searches with no result', n_ta: 'முடிவில்லை', n_en: 'No result', u_ta: 'மொத்தம்', u_en: 'All' },
 		{ id: 'countries', ta: 'நாடுகள்', en: 'Countries', ...V },
@@ -284,10 +306,16 @@
 				return findVersion(r.key)?.name ?? r.key;
 			case 'audio_sources':
 				return SOURCE_NAMES[r.key]?.[ta ? 0 : 1] ?? r.key;
-			case 'audio_verses': {
+			case 'audio_verses':
+			case 'share_verses': {
 				const [code, ch, v] = r.key.split('.');
 				return `${bookName(code)} ${ch}:${v}`;
 			}
+			case 'share_methods':
+				return SHARE_METHODS[r.key]?.[ta ? 0 : 1] ?? r.key;
+			case 'share_templates':
+			case 'share_sizes':
+				return SHARE_TEMPLATES[r.key]?.[ta ? 0 : 1] ?? r.key;
 			case 'chapters': {
 				const [code, ch] = r.key.split('.');
 				return `${bookName(code)} ${ch}`;
@@ -309,7 +337,7 @@
 			const ver = id === 'audio_chapters' && r.extra && r.extra !== '?' ? r.extra.toLowerCase() : version;
 			return b ? chapterUrl(ver, b, Number(ch), v) : null;
 		}
-		if (id === 'verses' || id === 'chapters') {
+		if (id === 'verses' || id === 'chapters' || id === 'share_verses') {
 			const [code, ch, v] = r.key.split('.');
 			const b = findBook(code);
 			return b ? chapterUrl(version, b, Number(ch), v) : null;
@@ -329,8 +357,8 @@
 		downloadCsv(
 			`traffic-daily-${report.from}-${report.to}.csv`,
 			toCsv(
-				['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks', 'sign_ups', 'audio_plays', 'listeners', 'listen_seconds', 'audio_completed'],
-				report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks, d.signups, d.audio_starts, d.listeners, d.listen_seconds, d.audio_ends])
+				['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks', 'sign_ups', 'audio_plays', 'listeners', 'listen_seconds', 'audio_completed', 'shares', 'sharers', 'image_shares'],
+				report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks, d.signups, d.audio_starts, d.listeners, d.listen_seconds, d.audio_ends, d.shares ?? 0, d.sharers ?? 0, d.image_shares ?? 0])
 			)
 		);
 	}
@@ -440,6 +468,22 @@
 				{#if m.id === 'audio_ends' && completion !== null}
 					<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? `இயக்கங்களில் ${completion}%` : `${completion}% of plays`}</span>
 				{:else if d}
+					<span class="delta {d.dir}" lang={ta ? 'ta' : 'en'}>{d.dir === 'up' ? '▲' : d.dir === 'down' ? '▼' : '■'} {d.text} <span class="vs">{ta ? `முந்தைய ${rangeLabel.ta} ஒப்பிட` : `vs previous ${rangeLabel.en}`}</span></span>
+				{:else}
+					<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? m.hint_ta : m.hint_en}</span>
+				{/if}
+			</button>
+		{/each}
+	</div>
+
+	<h2 class="group kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'பகிர்வு' : 'Sharing'}</h2>
+	<div class="tiles" class:dim={loading}>
+		{#each SHARING as m (m.id)}
+			{@const d = delta(m.id)}
+			<button type="button" class="tile" class:on={measure === m.id} aria-pressed={measure === m.id} onclick={() => (measure = m.id)}>
+				<span class="label" lang={ta ? 'ta' : 'en'}>{ta ? m.ta : m.en}</span>
+				<span class="value">{compact.format(report.totals[m.id] ?? 0)}</span>
+				{#if d}
 					<span class="delta {d.dir}" lang={ta ? 'ta' : 'en'}>{d.dir === 'up' ? '▲' : d.dir === 'down' ? '▼' : '■'} {d.text} <span class="vs">{ta ? `முந்தைய ${rangeLabel.ta} ஒப்பிட` : `vs previous ${rangeLabel.en}`}</span></span>
 				{:else}
 					<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? m.hint_ta : m.hint_en}</span>
@@ -648,7 +692,7 @@
 		{#if ta}
 			கணக்குகள்: “உள்நுழைந்தவர்கள்” அந்தக் காலத்தில் ஒரு முறையேனும் உள்நுழைந்த கணக்குகள்; “பயன்படுத்தியவர்கள்” உள்நுழைந்த நிலையில் தளத்தைத் திறந்தவர்கள். வாசிப்புத் திட்டங்களில் உள்நுழைந்த வாசகர்கள் மட்டும் எண்ணப்படுவார்கள்; உள்நுழையாமல் சேர்ந்த திட்டம் அந்த உலாவியிலேயே இருக்கும். வந்த வழி ஒவ்வொரு வருகையின் முதல் பக்கத்தை மட்டும் பார்க்கிறது; WhatsApp போன்ற செயலிகள் பெரும்பாலும் வந்த தளத்தைச் சொல்வதில்லை, எனவே அவை “நேரடியாக” என எண்ணப்படலாம் — பகிரும் இணைப்பில் ?utm_source=whatsapp சேர்த்தால் சரியாக எண்ணப்படும். ஒலி வேதாகமம்: அதிகார இயக்கங்கள் வாசகர் தொடங்கியவையும் தானாகத் தொடர்ந்தவையும்; கேட்ட நேரம் ஒலி உண்மையில் ஒலித்த நேரம், பக்கம் பின்னணியில் இருந்தாலும் சேர்த்து. குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
 		{:else}
-			Accounts: “signed in” counts accounts that signed in at least once in the window; “active while signed in” counts accounts that opened the site while signed in. Reading plans count signed-in readers only; a plan joined while signed out stays in that browser. Where visitors come from looks at the first page of each visit only. Apps such as WhatsApp often send no referrer, so their visits can land under “Direct”; add ?utm_source=whatsapp to a shared link to count it. Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
+			Accounts: “signed in” counts accounts that signed in at least once in the window; “active while signed in” counts accounts that opened the site while signed in. Reading plans count signed-in readers only; a plan joined while signed out stays in that browser. Where visitors come from looks at the first page of each visit only. Apps such as WhatsApp often send no referrer, so their visits can land under “Direct”; add ?utm_source=whatsapp to a shared link to count it. Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. Sharing counts shares that went through: a link from the reader's share menu (sent, or copied where the browser has no share sheet) or a verse image downloaded, sent or copied; a share sheet closed without sending is not counted. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
 		{/if}
 	</p>
 {/if}

@@ -135,7 +135,7 @@
 		{ta ? `${b.name_ta} ${data.chapter} முழுவதும் வாசிக்க` : `Read all of ${b.name_en} ${data.chapter}`} <span aria-hidden="true">→</span>
 	</a>
 
-	<ShareImage {passages} book={b.code} slug={b.slug} chapter={data.chapter} {verses} {ta} />
+	<ShareImage {passages} version={data.shown[0].version.code} book={b.code} slug={b.slug} chapter={data.chapter} {verses} {ta} />
 </article>
 
 <style>

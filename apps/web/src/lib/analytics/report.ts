@@ -16,6 +16,12 @@ export interface Totals {
 	listen_seconds: number;
 	/** chapters heard to the end */
 	audio_ends: number;
+	/** Sharing (A9): shares that went through, links and images */
+	shares: number;
+	/** visitors who shared, per day, summed */
+	sharers: number;
+	/** verses shared as an image: downloaded, sent or copied */
+	image_shares: number;
 	/** accounts created (A8), merged in from analytics_accounts */
 	signups: number;
 }
@@ -52,7 +58,11 @@ export type Dimension =
 	| 'audio_time'
 	| 'audio_chapters'
 	| 'audio_sources'
-	| 'audio_verses';
+	| 'audio_verses'
+	| 'share_methods'
+	| 'share_verses'
+	| 'share_templates'
+	| 'share_sizes';
 /** Over the last 24 hours, 7 days and 30 days. */
 export interface Windows {
 	day: number;

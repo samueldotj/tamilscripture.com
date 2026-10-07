@@ -5,6 +5,7 @@
 	import type { ChapterJson, Book } from '$lib/content/types';
 	import { chapterUrl, verseUrl } from '$lib/content/manifest';
 	import { COLORS, type HighlightColor } from '$lib/personal/repo';
+	import { track } from '$lib/analytics/track';
 
 	let {
 		selected,
@@ -97,8 +98,11 @@
 		shareOpen = false;
 		const link = large ? `https://www.tamilscripture.com${largePath}` : url;
 		const data = large ? { title: label, text: label, url: link } : { title: label, text: selectedText(), url };
-		if (navigator.share) { try { await navigator.share(data); } catch { /* cancelled */ } }
-		else { try { await navigator.clipboard.writeText(link); flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied'); } catch { flash(link); } }
+		let sent = false;
+		if (navigator.share) { try { await navigator.share(data); sent = true; } catch { /* cancelled */ } }
+		else { try { await navigator.clipboard.writeText(link); sent = true; flash(ta ? 'இணைப்பு நகலெடுக்கப்பட்டது' : 'Link copied'); } catch { flash(link); } }
+		// A share that went through, for the moderators' traffic page (docs/feature_analytics.md A9).
+		if (sent) track('share', { action: large ? 'large' : 'link', verse: `${book.code}.${chapter.chapter}.${numbers[0]}`, book: book.code, chapter: chapter.chapter, version: versionPath.split('+')[0].toUpperCase(), lang });
 	}
 	function closeShare(e: Event) {
 		if (shareOpen && shareBox && !shareBox.contains(e.target as Node)) shareOpen = false;

@@ -72,15 +72,19 @@ export interface TrackData {
 	user?: string | null;
 	book?: string;
 	chapter?: number;
-	/** audio: play, next, jump, end or time */
-	action?: 'play' | 'next' | 'jump' | 'end' | 'time';
-	/** audio: the recording's version code */
+	/** audio: play, next, jump, end or time; share: link, large, download, sheet or copy */
+	action?: 'play' | 'next' | 'jump' | 'end' | 'time' | ShareAction;
+	/** audio: the recording's version code; share: the first version shown */
 	version?: string;
 	/** audio: seconds listened, for `time` */
 	amount?: number;
+	/** share: an image's template, size and theme (plate.square.light) */
+	detail?: string;
 }
+/** link and large: the reader's share menu; download, sheet and copy: "Share as image". */
+export type ShareAction = 'link' | 'large' | 'download' | 'sheet' | 'copy';
 
-export function track(kind: 'view' | 'verse' | 'audio', data: TrackData = {}) {
+export function track(kind: 'view' | 'verse' | 'audio' | 'share', data: TrackData = {}) {
 	if (!browser || dev || optedOut()) return;
 	listen();
 	queue.push({
@@ -95,6 +99,7 @@ export function track(kind: 'view' | 'verse' | 'audio', data: TrackData = {}) {
 		a: data.action,
 		vr: data.version,
 		n: data.amount,
+		d: data.detail,
 		s: `${screen.width}x${screen.height}`,
 		// Only the landing page has a meaningful referrer; e marks it, so a
 		// landing with no referrer counts as a direct visit.

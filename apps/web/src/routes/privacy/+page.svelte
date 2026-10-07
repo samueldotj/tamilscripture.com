@@ -20,7 +20,7 @@
 		<p>வாசிக்க கணக்கு தேவையில்லை. உங்கள் வாசிப்பு அமைப்புகள், கடைசியாக வாசித்த இடம், சமீபத்திய தேடல்கள், வாசிப்புத் திட்ட முன்னேற்றம், ஒலி வேகம் ஆகியவை உங்கள் உலாவியிலேயே (localStorage) சேமிக்கப்படுகின்றன; அவை எங்களுக்கு அனுப்பப்படுவதில்லை. நீங்கள் தேர்ந்தெடுத்த வேதாகமப் பதிப்பை நினைவில் வைக்க ஒரே ஒரு குக்கீ (<code>version</code>) பயன்படுகிறது; அது உங்களை அடையாளம் காண்பதில்லை.</p>
 
 		<h2>வருகை எண்ணிக்கை</h2>
-		<p>தளத்தை மேம்படுத்த அநாமதேய வருகை எண்ணிக்கைகளைச் சேகரிக்கிறோம்: பார்த்த பக்கம், தொட்ட வசனம், கேட்ட ஒலி அதிகாரமும் கேட்ட நேரமும், நாடு மற்றும் நகரம் (மதிப்பீடு), சாதன வகை, உலாவி, திரை அளவு, எந்தத் தளத்திலிருந்து வந்தீர்கள். IP முகவரியோ கணக்கு அடையாளமோ சேமிக்கப்படுவதில்லை; ஒவ்வொரு நாளும் மாறும் ஒரு சுருக்க எண் (hash) மட்டுமே வைக்கப்படுகிறது, எனவே ஒரு நாளுக்கு மேல் யாரையும் பின்தொடர முடியாது. விவரமான பதிவுகள் 90 நாட்களில் அழிக்கப்படுகின்றன; நாள்வாரி மொத்தங்கள் இரண்டு ஆண்டுகள் வைக்கப்படுகின்றன.</p>
+		<p>தளத்தை மேம்படுத்த அநாமதேய வருகை எண்ணிக்கைகளைச் சேகரிக்கிறோம்: பார்த்த பக்கம், தொட்ட வசனம், கேட்ட ஒலி அதிகாரமும் கேட்ட நேரமும், பகிர்ந்த வசனமும் பகிர்ந்த விதமும், நாடு மற்றும் நகரம் (மதிப்பீடு), சாதன வகை, உலாவி, திரை அளவு, எந்தத் தளத்திலிருந்து வந்தீர்கள். IP முகவரியோ கணக்கு அடையாளமோ சேமிக்கப்படுவதில்லை; ஒவ்வொரு நாளும் மாறும் ஒரு சுருக்க எண் (hash) மட்டுமே வைக்கப்படுகிறது, எனவே ஒரு நாளுக்கு மேல் யாரையும் பின்தொடர முடியாது. விவரமான பதிவுகள் 90 நாட்களில் அழிக்கப்படுகின்றன; நாள்வாரி மொத்தங்கள் இரண்டு ஆண்டுகள் வைக்கப்படுகின்றன.</p>
 		<p>இவற்றுடன், தளத்தை வழங்கும் Vercel நிறுவனத்தின் Web Analytics பக்கப் பார்வைகளைக் குக்கீ இல்லாமல் எண்ணுகிறது.</p>
 		<p>உங்கள் உலாவி “கண்காணிக்க வேண்டாம்” (Global Privacy Control / Do Not Track) அனுப்பினால் எதுவும் எண்ணப்படாது.</p>
 
@@ -53,7 +53,7 @@
 		<p>No account is needed to read. Your reader settings, last-read place, recent searches, reading plan progress and audio speed are kept in your own browser (localStorage) and are not sent to us. A single cookie, <code>version</code>, remembers which Bible version you chose; it does not identify you.</p>
 
 		<h2>Visit counts</h2>
-		<p>To improve the site we keep anonymous visit counts: the page viewed, verses tapped, audio chapters played and for how long, an estimated country and city, device type, browser, screen size and the site you came from. No IP address or account id is stored. Visitors are recorded only as a hash that changes every day, so no one can be followed beyond a single day. Detailed records are deleted after 90 days; daily totals are kept for two years.</p>
+		<p>To improve the site we keep anonymous visit counts: the page viewed, verses tapped, audio chapters played and for how long, verses shared and how, an estimated country and city, device type, browser, screen size and the site you came from. No IP address or account id is stored. Visitors are recorded only as a hash that changes every day, so no one can be followed beyond a single day. Detailed records are deleted after 90 days; daily totals are kept for two years.</p>
 		<p>Vercel, which hosts the site, also counts page views with its cookie-free Web Analytics.</p>
 		<p>If your browser sends Global Privacy Control or Do Not Track, nothing is counted.</p>
 

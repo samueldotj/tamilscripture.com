@@ -126,7 +126,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 		if (!dryRun && limited(ip || ua)) break;
 		const referrer = landing(body, ua, url.hostname);
 		const args = {
-			p_kind: body.k === 'verse' || body.k === 'audio' ? body.k : 'view',
+			p_kind: body.k === 'verse' || body.k === 'audio' || body.k === 'share' ? body.k : 'view',
 			p_path: str(body.p, 200),
 			p_route: str(body.r, 200),
 			p_verse: str(body.v, 20),
@@ -147,7 +147,9 @@ export const POST: RequestHandler = async ({ request, getClientAddress, url, fet
 			// Audio Bible listening (A7): Postgres checks the action and version.
 			p_action: str(body.a, 8),
 			p_version: str(body.vr, 12),
-			p_amount: typeof body.n === 'number' && Number.isInteger(body.n) ? body.n : null
+			p_amount: typeof body.n === 'number' && Number.isInteger(body.n) ? body.n : null,
+			// Sharing (A9): an image's template.size.theme; Postgres checks the shape.
+			...(typeof body.d === 'string' ? { p_detail: str(body.d, 40) } : {})
 		};
 		if (args.p_path) rows.push(args);
 	}
