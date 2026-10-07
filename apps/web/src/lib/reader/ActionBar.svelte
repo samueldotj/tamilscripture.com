@@ -153,6 +153,10 @@
 						{ta ? 'பெரிய எழுத்தில்' : 'Large text'}
 						<small>{ta ? 'இந்த வசனம் மட்டும், தமிழும் ஆங்கிலமும்' : 'Just this verse, in Tamil and English'}</small>
 					</button>
+					<a role="menuitem" class="item" href="{largePath}#image" onclick={() => (shareOpen = false)}>
+						{ta ? 'படமாகப் பகிர்' : 'Share as image'}
+						<small>{ta ? 'பகிர்வதற்கேற்ற வசனப் படம்' : 'A picture of the verse to post or send'}</small>
+					</a>
 					<a role="menuitem" href={largePath} onclick={() => (shareOpen = false)}>{ta ? 'பெரிய எழுத்தில் திற' : 'Open large text'} <span aria-hidden="true">↗</span></a>
 				</div>
 			{/if}
@@ -195,6 +199,7 @@
 	.menu button, .menu a { display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem; min-height: 44px; padding: 0.55rem 0.75rem; border: 0; border-radius: var(--r-s); background: none; color: var(--ink); font: inherit; font-weight: 600; text-align: left; text-decoration: none; cursor: pointer; }
 	.menu a { flex-direction: row; align-items: center; gap: 0.35rem; color: var(--accent); border-top: 1px solid var(--line); border-radius: 0 0 var(--r-s) var(--r-s); }
 	.menu button:hover, .menu a:hover { background: var(--surface-2); }
+	.menu a.item { flex-direction: column; align-items: flex-start; gap: 0.1rem; color: var(--ink); border-top: 0; border-radius: var(--r-s); }
 	.menu small { font-weight: 400; font-size: 0.8rem; color: var(--muted); }
 	.menu[lang='ta'] { font-family: var(--tamil); }
 	.toast { position: absolute; bottom: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: var(--r-s); white-space: nowrap; }

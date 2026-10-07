@@ -10,6 +10,9 @@
 @font-face { font-family: 'Noto Serif Tamil'; font-weight: 600; font-display: optional; src: url('/fonts/noto-serif-tamil-semibold.woff2') format('woff2'); unicode-range: U+0B80-0BFF, U+200C-200D, U+25CC; }
 @font-face { font-family: 'Noto Sans'; font-weight: 400; font-display: optional; src: url('/fonts/noto-sans-regular.woff2') format('woff2'); }
 @font-face { font-family: 'Noto Sans'; font-weight: 600; font-display: optional; src: url('/fonts/noto-sans-semibold.woff2') format('woff2'); }
+/* Latin faces for the "Share as image" canvas only (Classical style); nothing on the page uses them, so they load only when the picker opens. */
+@font-face { font-family: 'Lora'; font-weight: 400 700; font-display: optional; src: url('/fonts/lora-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-weight: 300 700; font-display: optional; src: url('/fonts/cormorant-garamond-latin.woff2') format('woff2'); }
 @font-face { font-family: 'Tamil Fallback'; src: local('Nirmala UI'), local('Latha'), local('Tamil Sangam MN'), local('Noto Sans Tamil'); size-adjust: 104%; ascent-override: 95%; descent-override: 30%; }
 
 /* ---- Theme tokens ----

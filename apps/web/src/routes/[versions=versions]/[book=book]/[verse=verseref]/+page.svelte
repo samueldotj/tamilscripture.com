@@ -3,6 +3,7 @@
 	import { settings } from '$lib/settings/store.svelte';
 	import CommentaryText from '$lib/commentary/CommentaryText.svelte';
 	import { unitLabel } from '$lib/commentary/load';
+	import ShareImage from '$lib/reader/ShareImage.svelte';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -46,6 +47,13 @@
 		const len = Math.max(...data.shown.map((s) => s.verses.reduce((n, v) => n + v.text.length, 0)));
 		return len < 220 ? 'xl' : len < 600 ? 'l' : 'm';
 	});
+
+	// "Share as image": the picker sits under the passage; the reader's share menu links to it (#image).
+	const passages = $derived(data.shown.map((s) => ({
+		lang: s.version.lang,
+		verses: s.verses,
+		ref: `${bookNameIn(b, s.version)} ${data.chapter}:${verses} · ${s.version.short}`
+	})));
 </script>
 
 <svelte:head>
@@ -126,6 +134,8 @@
 	<a class="expand" href={chapterHref} lang={ta ? 'ta' : 'en'}>
 		{ta ? `${b.name_ta} ${data.chapter} முழுவதும் வாசிக்க` : `Read all of ${b.name_en} ${data.chapter}`} <span aria-hidden="true">→</span>
 	</a>
+
+	<ShareImage {passages} book={b.code} slug={b.slug} chapter={data.chapter} {verses} {ta} />
 </article>
 
 <style>
