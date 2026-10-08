@@ -86,6 +86,8 @@ export type ShareAction = 'link' | 'large' | 'download' | 'sheet' | 'copy';
 
 export function track(kind: 'view' | 'verse' | 'audio' | 'share', data: TrackData = {}) {
 	if (!browser || dev || optedOut()) return;
+	// The moderators' own pages are not the site's traffic.
+	if (location.pathname === '/mod' || location.pathname.startsWith('/mod/')) return;
 	listen();
 	queue.push({
 		k: kind,

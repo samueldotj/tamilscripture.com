@@ -3,13 +3,14 @@
 	// Counts only: no visitor can be identified or followed across days.
 	import { onMount } from 'svelte';
 	import { findBook, findVersion, chapterUrl, manifest } from '$lib/content/manifest';
-	import { downloadCsv, loadNow, loadReport, spikes, toCsv, type Dimension, type Measure, type Now, type Report, type Row } from '$lib/analytics/report';
+	import { downloadCsv, loadNow, loadReport, spikes, toCsv, type Dimension, type Measure, type Now, type Report, type Row, type Source } from '$lib/analytics/report';
 	import { settings } from '$lib/settings/store.svelte';
 	import { BUILTIN } from '$lib/plans/schedule';
 
 	const ta = $derived(settings.value.uiLang === 'ta');
 	const locale = $derived(ta ? 'ta-IN' : 'en-IN');
 	let days = $state(30);
+	let source = $state<Source>(null);
 	let report = $state<Report | null>(null);
 	let now = $state<Now | null>(null);
 	let loading = $state(true);
@@ -21,7 +22,7 @@
 		loading = true;
 		error = '';
 		try {
-			[report, now] = await Promise.all([loadReport(days), loadNow().catch(() => null)]);
+			[report, now] = await Promise.all([loadReport(days, source), loadNow(source).catch(() => null)]);
 		} catch (e) {
 			error = (e as Error).message;
 		} finally {
@@ -30,7 +31,9 @@
 	}
 	async function refreshNow() {
 		if (document.visibilityState !== 'visible') return;
-		now = await loadNow().catch(() => now);
+		const s = source;
+		const next = await loadNow(s).catch(() => now);
+		if (s === source) now = next;
 	}
 	onMount(() => {
 		load();
@@ -41,13 +44,25 @@
 		days = n;
 		load();
 	}
+	function setSource(s: Source) {
+		source = s;
+		load();
+	}
 
 	const RANGES = [
+		{ n: 1, ta: '1 நாள்', en: '1 day' },
 		{ n: 7, ta: '7 நாள்', en: '7 days' },
 		{ n: 30, ta: '30 நாள்', en: '30 days' },
 		{ n: 90, ta: '90 நாள்', en: '90 days' },
 		{ n: 365, ta: '1 ஆண்டு', en: '1 year' }
 	];
+	const SOURCES: { id: Source; ta: string; en: string }[] = [
+		{ id: null, ta: 'அனைத்தும்', en: 'All' },
+		{ id: 'web', ta: 'இணையதளம்', en: 'Website' },
+		{ id: 'android', ta: 'மொபைல் செயலி', en: 'Mobile app' }
+	];
+	/** Added to CSV file names when the report is filtered by source. */
+	const fileTag = $derived(source ? `-${source}` : '');
 	const MEASURES: { id: Measure; ta: string; en: string; hint_ta: string; hint_en: string }[] = [
 		{ id: 'views', ta: 'பக்கப் பார்வைகள்', en: 'Page views', hint_ta: 'ஏற்றப்பட்ட ஒவ்வொரு பக்கமும்', hint_en: 'Every page loaded' },
 		{ id: 'visitors', ta: 'வருகையாளர்கள்', en: 'Visitors', hint_ta: 'நாள்தோறும் எண்ணி, கூட்டியது', hint_en: 'Counted per day, summed' },
@@ -348,14 +363,14 @@
 	function exportTable(sec: Section) {
 		const rows = rowsFor(sec.id);
 		downloadCsv(
-			`traffic-${sec.id}-${report?.from}-${report?.to}.csv`,
+			`traffic-${sec.id}${fileTag}-${report?.from}-${report?.to}.csv`,
 			toCsv([sec.en, sec.seconds ? 'seconds' : sec.n_en, sec.u_en], rows.map((r) => [rowLabel(sec.id, r), r.n, r.u]))
 		);
 	}
 	function exportDaily() {
 		if (!report) return;
 		downloadCsv(
-			`traffic-daily-${report.from}-${report.to}.csv`,
+			`traffic-daily${fileTag}-${report.from}-${report.to}.csv`,
 			toCsv(
 				['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks', 'sign_ups', 'audio_plays', 'listeners', 'listen_seconds', 'audio_completed', 'shares', 'sharers', 'image_shares'],
 				report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks, d.signups, d.audio_starts, d.listeners, d.listen_seconds, d.audio_ends, d.shares ?? 0, d.sharers ?? 0, d.image_shares ?? 0])
@@ -406,10 +421,17 @@
 
 <div class="head">
 	<h1 lang={ta ? 'ta' : 'en'}>{ta ? 'தள வருகை' : 'Site traffic'}</h1>
-	<div class="seg" role="group" aria-label={ta ? 'காலம்' : 'Range'}>
-		{#each RANGES as r (r.n)}
-			<button type="button" class:on={days === r.n} aria-pressed={days === r.n} onclick={() => setDays(r.n)} lang={ta ? 'ta' : 'en'}>{ta ? r.ta : r.en}</button>
-		{/each}
+	<div class="controls">
+		<div class="seg" role="group" aria-label={ta ? 'எங்கிருந்து' : 'Source'}>
+			{#each SOURCES as s (s.id ?? 'all')}
+				<button type="button" class:on={source === s.id} aria-pressed={source === s.id} onclick={() => setSource(s.id)} lang={ta ? 'ta' : 'en'}>{ta ? s.ta : s.en}</button>
+			{/each}
+		</div>
+		<div class="seg" role="group" aria-label={ta ? 'காலம்' : 'Range'}>
+			{#each RANGES as r (r.n)}
+				<button type="button" class:on={days === r.n} aria-pressed={days === r.n} onclick={() => setDays(r.n)} lang={ta ? 'ta' : 'en'}>{ta ? r.ta : r.en}</button>
+			{/each}
+		</div>
 	</div>
 </div>
 
@@ -690,9 +712,9 @@
 
 	<p class="note" lang={ta ? 'ta' : 'en'}>
 		{#if ta}
-			கணக்குகள்: “உள்நுழைந்தவர்கள்” அந்தக் காலத்தில் ஒரு முறையேனும் உள்நுழைந்த கணக்குகள்; “பயன்படுத்தியவர்கள்” உள்நுழைந்த நிலையில் தளத்தைத் திறந்தவர்கள். வாசிப்புத் திட்டங்களில் உள்நுழைந்த வாசகர்கள் மட்டும் எண்ணப்படுவார்கள்; உள்நுழையாமல் சேர்ந்த திட்டம் அந்த உலாவியிலேயே இருக்கும். வந்த வழி ஒவ்வொரு வருகையின் முதல் பக்கத்தை மட்டும் பார்க்கிறது; WhatsApp போன்ற செயலிகள் பெரும்பாலும் வந்த தளத்தைச் சொல்வதில்லை, எனவே அவை “நேரடியாக” என எண்ணப்படலாம் — பகிரும் இணைப்பில் ?utm_source=whatsapp சேர்த்தால் சரியாக எண்ணப்படும். ஒலி வேதாகமம்: அதிகார இயக்கங்கள் வாசகர் தொடங்கியவையும் தானாகத் தொடர்ந்தவையும்; கேட்ட நேரம் ஒலி உண்மையில் ஒலித்த நேரம், பக்கம் பின்னணியில் இருந்தாலும் சேர்த்து. குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
+			மதிப்பாய்வுப் பக்கங்கள் (/mod) எண்ணப்படுவதில்லை. “மொபைல் செயலி” என்பது Android செயலி; “இணையதளம்” மற்ற அனைத்தும். தேடல் சொற்கள், கணக்குகள், வாசிப்புத் திட்டங்கள் பிரிக்கப்படுவதில்லை. கணக்குகள்: “உள்நுழைந்தவர்கள்” அந்தக் காலத்தில் ஒரு முறையேனும் உள்நுழைந்த கணக்குகள்; “பயன்படுத்தியவர்கள்” உள்நுழைந்த நிலையில் தளத்தைத் திறந்தவர்கள். வாசிப்புத் திட்டங்களில் உள்நுழைந்த வாசகர்கள் மட்டும் எண்ணப்படுவார்கள்; உள்நுழையாமல் சேர்ந்த திட்டம் அந்த உலாவியிலேயே இருக்கும். வந்த வழி ஒவ்வொரு வருகையின் முதல் பக்கத்தை மட்டும் பார்க்கிறது; WhatsApp போன்ற செயலிகள் பெரும்பாலும் வந்த தளத்தைச் சொல்வதில்லை, எனவே அவை “நேரடியாக” என எண்ணப்படலாம் — பகிரும் இணைப்பில் ?utm_source=whatsapp சேர்த்தால் சரியாக எண்ணப்படும். ஒலி வேதாகமம்: அதிகார இயக்கங்கள் வாசகர் தொடங்கியவையும் தானாகத் தொடர்ந்தவையும்; கேட்ட நேரம் ஒலி உண்மையில் ஒலித்த நேரம், பக்கம் பின்னணியில் இருந்தாலும் சேர்த்து. குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
 		{:else}
-			Accounts: “signed in” counts accounts that signed in at least once in the window; “active while signed in” counts accounts that opened the site while signed in. Reading plans count signed-in readers only; a plan joined while signed out stays in that browser. Where visitors come from looks at the first page of each visit only. Apps such as WhatsApp often send no referrer, so their visits can land under “Direct”; add ?utm_source=whatsapp to a shared link to count it. Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. Sharing counts shares that went through: a link from the reader's share menu (sent, or copied where the browser has no share sheet) or a verse image downloaded, sent or copied; a share sheet closed without sending is not counted. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
+			Moderator pages (/mod) are not counted. “Mobile app” is the Android app; “Website” is everything else. Search terms, accounts and reading plans are not split by source. Accounts: “signed in” counts accounts that signed in at least once in the window; “active while signed in” counts accounts that opened the site while signed in. Reading plans count signed-in readers only; a plan joined while signed out stays in that browser. Where visitors come from looks at the first page of each visit only. Apps such as WhatsApp often send no referrer, so their visits can land under “Direct”; add ?utm_source=whatsapp to a shared link to count it. Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. Sharing counts shares that went through: a link from the reader's share menu (sent, or copied where the browser has no share sheet) or a verse image downloaded, sent or copied; a share sheet closed without sending is not counted. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
 		{/if}
 	</p>
 {/if}
@@ -701,7 +723,8 @@
 	.head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
 	h1 { font-size: 1.5rem; margin: 0; }
 	h1[lang='ta'] { font-family: var(--tamil); }
-	.seg { display: inline-flex; gap: 0.25rem; background: var(--surface-3); border-radius: 12px; padding: 4px; }
+	.controls { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+	.seg { display: inline-flex; flex-wrap: wrap; gap: 0.25rem; background: var(--surface-3); border-radius: 12px; padding: 4px; }
 	.seg button { border: 0; border-radius: 9px; padding: 0.45rem 0.9rem; background: transparent; color: var(--muted); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; min-height: 38px; }
 	.seg button[lang='ta'] { font-family: var(--tamil); }
 	.seg button.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(28, 26, 24, 0.1); }

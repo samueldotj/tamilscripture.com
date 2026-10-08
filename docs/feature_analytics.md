@@ -66,7 +66,8 @@ Nothing in the table identifies a person. `analytics_salt(day, salt)` holds one 
 
 `/mod/traffic`, a tab beside the queue:
 
-- a range of 7, 30 or 90 days, or a year;
+- a range of 1 day (today so far, India time), 7, 30 or 90 days, or a year;
+- a source switch (A10): all traffic, the website only, or the Android app only (`source` on each event); moderators' own pages (`/mod`, `/mod/*`) are never counted;
 - a live panel: visitors, views, verse clicks and listeners in the last 30 minutes, the pages being read, the chapters being heard and where from, refreshed every minute;
 - tiles: page views, visitors, unique page views, signed-in users, verse clicks, each with its change against the previous period of the same length;
 - an Audio Bible row of tiles (A7): chapter plays (`play` + `next`), listeners (per day, summed), listening time, and chapters completed with their share of plays; each also switches the daily chart, which shows listening time in minutes;
@@ -103,6 +104,7 @@ Definitions, shown on the page:
 | **A7 · Audio listening** | `audio` events from the Audio Bible player (`action`, `version`, `amount` columns); audio dimensions and totals in the daily rollups; Audio Bible tiles, chart, live listeners and five tables on `/mod/traffic`; migration `20260926100000_audio_analytics.sql`, pgTAP `audio_analytics.test.sql` | Built 26 Sep 2026 |
 | **A8 · Accounts, plans, sources** | Landing pages marked in the collector (`(direct)`, `utm:<tag>`, in-app browsers); `analytics_source()`, `analytics_accounts(from, to)` and `analytics_plans(from, to)` (staff only; counts from `auth.users`, `auth.sessions` and `plan_progress`, nobody named); `sources` in the report; sign-ups tile, Accounts and Reading plans cards and a sources table on `/mod/traffic`; migration `20260926130000_accounts_plans_sources.sql`, pgTAP `accounts_plans_sources.test.sql`. Direct visits are counted from this phase on; WhatsApp on iOS sends no referrer, so shared links need `?utm_source=whatsapp` to be credited | Built 26 Sep 2026 |
 | **A9 · Sharing** | `share` events from the reader's share menu and "Share as image" (`detail` column for an image's template, size and theme); share dimensions and totals in the daily rollups; Sharing tiles, chart and four tables on `/mod/traffic`; migration `20261006100000_share_analytics.sql`, pgTAP `share_analytics.test.sql` | Built 6 Oct 2026 |
+| **A10 · Source filter, 1 day** | A 1-day range; the beacon sends nothing from `/mod` and the summaries skip `/mod` events already stored (`analytics_counted()`); rollups kept per `source` (`web`, `android`), summed for "all"; `analytics_report(from, to, source)` and `analytics_now(source)` take an optional source; a source switch on `/mod/traffic`. Days whose raw events are still held (90 days) are rolled up again by the migration; older summaries keep any `/mod` views. Search terms, accounts and plans are not split by source; migration `20261007100000_traffic_source_filter.sql`, pgTAP `traffic_source_filter.test.sql` | Built 7 Oct 2026 |
 | **Next** | Countries on a map; per-page drill-down; alert moderators on the queue page when a day spikes | Ideas |
 
 ## 7. Owner items

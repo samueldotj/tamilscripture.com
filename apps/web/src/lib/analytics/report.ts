@@ -104,6 +104,8 @@ export interface Plans {
 	/** most-followed first */
 	plans: PlanStat[];
 }
+/** Where traffic came from: the website or the Android app; null for both. */
+export type Source = 'web' | 'android' | null;
 export interface Report {
 	from: string;
 	to: string;
@@ -145,7 +147,7 @@ interface AccountsRpc extends Accounts {
 	daily: { day: string; n: number }[];
 }
 
-export async function loadReport(days: number): Promise<Report | null> {
+export async function loadReport(days: number, source: Source = null): Promise<Report | null> {
 	const to = istToday();
 	const from = new Date(to);
 	from.setDate(from.getDate() - (days - 1));
@@ -154,7 +156,7 @@ export async function loadReport(days: number): Promise<Report | null> {
 	// Accounts and plans are extras: until their migration is live the traffic
 	// report still loads without them.
 	const [main, acc, plans] = await Promise.all([
-		client.rpc('analytics_report', range),
+		client.rpc('analytics_report', { ...range, p_source: source }),
 		client.rpc('analytics_accounts', range),
 		client.rpc('analytics_plans', range)
 	]);
@@ -172,8 +174,8 @@ export async function loadReport(days: number): Promise<Report | null> {
 	return report;
 }
 
-export async function loadNow(): Promise<Now | null> {
-	const { data, error } = await (await sb()).rpc('analytics_now');
+export async function loadNow(source: Source = null): Promise<Now | null> {
+	const { data, error } = await (await sb()).rpc('analytics_now', { p_source: source });
 	if (error) throw new Error(error.message);
 	return (data as Now | null) ?? null;
 }
