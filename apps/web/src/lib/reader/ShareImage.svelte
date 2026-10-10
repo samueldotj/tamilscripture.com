@@ -6,7 +6,7 @@
 	import { track, type ShareAction } from '$lib/analytics/track';
 	import { autoIcon, FACES, ICONS, PALETTE, render, SIZES, TEMPLATES, type DrawOptions, type IconName, type ImageSize, type ImageTheme, type Passage, type Template } from './verse-image';
 
-	let { passages, version, book, slug, chapter, verses, ta }: {
+	let { passages, version, book, slug, chapter, verses, link, ta }: {
 		/** The versions shown on the page, in order: one or two. */
 		passages: Passage[];
 		/** The first version's code, for the traffic page. */
@@ -16,6 +16,8 @@
 		slug: string;
 		chapter: number;
 		verses: string;
+		/** This page's address, sent with the image. */
+		link: string;
 		ta: boolean;
 	} = $props();
 
@@ -113,10 +115,18 @@
 	async function download() {
 		save(await blob());
 	}
+	/** The verses in the image, each with its reference, then the link: the words travel with the picture. */
+	function shareText(): string {
+		const shown = pick === 'both' ? passages.slice(0, 2) : [passages[pick] ?? passages[0]];
+		return [...shown.map((p) => `${p.verses.map((v) => (many ? `${v.n} ` : '') + v.text).join(' ')}\n— ${p.ref}`), link].join('\n\n');
+	}
 	async function shareImage() {
 		const b = await blob();
 		const f = new File([b], fileName, { type: 'image/png' });
-		if (navigator.canShare?.({ files: [f] })) { try { await navigator.share({ files: [f], title: passages[0].ref }); counted('sheet'); } catch { /* cancelled */ } }
+		// The link goes in the text: apps that take a picture often drop a separate url.
+		const data = { files: [f], title: passages[0].ref, text: shareText() };
+		if (navigator.canShare?.(data)) { try { await navigator.share(data); counted('sheet'); } catch { /* cancelled */ } }
+		else if (navigator.canShare?.({ files: [f] })) { try { await navigator.share({ files: [f], title: passages[0].ref }); counted('sheet'); } catch { /* cancelled */ } }
 		else save(b);
 	}
 	async function copyImage() {

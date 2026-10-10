@@ -48,7 +48,7 @@
 		return len < 220 ? 'xl' : len < 600 ? 'l' : 'm';
 	});
 
-	// "Share as image": the picker sits under the passage; the reader's share menu links to it (#image).
+	// "Share as image": the picker sits under the passage; the reader's Share button opens it (#image).
 	const passages = $derived(data.shown.map((s) => ({
 		lang: s.version.lang,
 		verses: s.verses,
@@ -135,7 +135,7 @@
 		{ta ? `${b.name_ta} ${data.chapter} முழுவதும் வாசிக்க` : `Read all of ${b.name_en} ${data.chapter}`} <span aria-hidden="true">→</span>
 	</a>
 
-	<ShareImage {passages} version={data.shown[0].version.code} book={b.code} slug={b.slug} chapter={data.chapter} {verses} {ta} />
+	<ShareImage {passages} version={data.shown[0].version.code} book={b.code} slug={b.slug} chapter={data.chapter} {verses} link={`https://www.tamilscripture.com${verseUrl(versionPath, b, data.chapter, verses)}`} {ta} />
 </article>
 
 <style>
