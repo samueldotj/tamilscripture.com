@@ -298,6 +298,29 @@
 		...(aidCounts.persons ? [{ id: 'persons' as const, ta: 'நபர்கள்', en: 'Persons', n: aidCounts.persons }] : [])
 	]);
 	let panelTab = $state<TabId>('related');
+	/** What the selected verses name, for the action bar's map and persons icons. */
+	const selectedAids = $derived.by(() => {
+		let places = false, persons = false;
+		for (const v of mentions?.verses ?? []) {
+			if (!selected.has(v.verse)) continue;
+			places ||= (v.places ?? []).some((id) => mentions?.places[id]);
+			persons ||= (v.people ?? []).some((id) => (mentions?.people ?? {})[id]);
+		}
+		return { map: places && !!mentions?.map, persons };
+	});
+	/** The study sheet narrowed to one aid, when the action bar opened it. */
+	let studyOnly = $state<'map' | 'persons' | null>(null);
+	$effect(() => {
+		if (sheet !== 'study') studyOnly = null;
+	});
+	/** The desktop column shows its tab; narrower screens open the study sheet at just that aid. */
+	function openAid(id: 'map' | 'persons') {
+		if (panelWanted && matchMedia('(min-width: 1180px)').matches) panelTab = id;
+		else {
+			studyOnly = id;
+			sheet = 'study';
+		}
+	}
 
 	// Dictionary words (design 7A, task 7.15): people and places named in the
 	// text carry a dotted underline when the setting is on; tapping one opens
@@ -332,6 +355,10 @@
 		if (!OriginalView) OriginalView = (await import('./OriginalWords.svelte')).default;
 	}
 	function openOriginal() {
+		if (panelWanted && matchMedia('(min-width: 1180px)').matches) {
+			panelTab = 'original';
+			return;
+		}
 		void ensureOriginal();
 		originalSheet = true;
 	}
@@ -687,7 +714,7 @@
 			'@context': 'https://schema.org',
 			'@type': 'BreadcrumbList',
 			itemListElement: [
-				{ '@type': 'ListItem', position: 1, name: primary.lang === 'ta' ? 'தமிழ் வேதாகமம்' : 'Tamil Bible', item: 'https://www.tamilscripture.com/' },
+				{ '@type': 'ListItem', position: 1, name: primary.lang === 'ta' ? 'தமிழ் வேதாகமம்' : 'Tamil Scripture', item: 'https://www.tamilscripture.com/' },
 				{ '@type': 'ListItem', position: 2, name: bookName, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book)}` },
 				{ '@type': 'ListItem', position: 3, name: `${bookName} ${data.chapter}`, item: `https://www.tamilscripture.com${chapterUrl(seoVersion.code.toLowerCase(), data.book, data.chapter)}` },
 				// The Testament crumb has no page of its own, and every crumb but the
@@ -814,7 +841,7 @@
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
 				{#snippet actions()}
-					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} />
+					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} onoriginal={openOriginal} onmap={selectedAids.map ? () => openAid('map') : undefined} onpersons={selectedAids.persons ? () => openAid('persons') : undefined} />
 				{/snippet}
 			</ContextPanel>
 			</div>
@@ -907,11 +934,11 @@
 {/if}
 
 <div class="overlays" class:dual>
-	<ActionBar onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} onoriginal={openOriginal} />
+	<ActionBar onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} onoriginal={openOriginal} onmap={selectedAids.map ? () => openAid('map') : undefined} onpersons={selectedAids.persons ? () => openAid('persons') : undefined} />
 	{#if sheet}
-		<XrefPanel view={sheet} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
+		<XrefPanel view={sheet} only={studyOnly} verseId={xrefOpen} targets={xrefOpen && xrefs ? xrefs[xrefOpen] ?? [] : null} version={primary.code} lang={ui} onclose={() => { sheet = null; xrefOpen = null; }}>
 			{#snippet study()}
-				<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading} />
+				<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading} only={studyOnly} />
 			{/snippet}
 		</XrefPanel>
 	{/if}

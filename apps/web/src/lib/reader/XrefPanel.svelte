@@ -14,9 +14,12 @@
 		version,
 		lang,
 		study,
+		only = null,
 		onclose
 	}: {
 		view?: 'related' | 'study' | null;
+		/** The study view narrowed to one aid (the action bar's map or persons icon). */
+		only?: 'map' | 'persons' | null;
 		verseId?: string | null;
 		targets?: XrefTarget[] | null;
 		version: string;
@@ -40,13 +43,13 @@
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="backdrop" onclick={onclose} onkeydown={onKey}></div>
-<div class="xref-panel" aria-label={isStudy ? (ta ? 'ஆய்வு' : 'Study') : (ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses')} role="dialog" tabindex="-1" onkeydown={onKey}>
+<div class="xref-panel" class:fill={isStudy && only === 'map'} aria-label={isStudy ? (ta ? 'ஆய்வு' : 'Study') : (ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses')} role="dialog" tabindex="-1" onkeydown={onKey}>
 	<span class="grab" aria-hidden="true"></span>
 	<header>
 		<div>
 			{#if isStudy}
 				<div class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'ஆய்வு' : 'Study'}</div>
-				<h2 lang={ta ? 'ta' : 'en'}>{ta ? 'இடங்கள், நபர்கள், வரைபடம்' : 'Places, persons, map'}</h2>
+				<h2 lang={ta ? 'ta' : 'en'}>{only === 'map' ? (ta ? 'வரைபடம்' : 'Map') : only === 'persons' ? (ta ? 'நபர்கள்' : 'Persons') : ta ? 'இடங்கள், நபர்கள், வரைபடம்' : 'Places, persons, map'}</h2>
 			{:else}
 				<div class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்புள்ள வசனங்கள்' : 'Related verses'}</div>
 				{#if verseId}
@@ -70,6 +73,9 @@
 <style>
 	.backdrop { position: fixed; inset: 0; z-index: 20; background: transparent; }
 	.xref-panel { position: fixed; z-index: 21; right: 0; top: 0; bottom: 0; width: min(26rem, 100%); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); padding: 1rem 1.4rem 2rem; box-shadow: var(--shadow-lg); }
+	/* The map takes the height that is left under the header. */
+	.xref-panel.fill { display: flex; flex-direction: column; overflow: hidden; }
+	.xref-panel.fill > :global(.study) { flex: 1; min-height: 0; }
 	.grab { display: none; }
 	header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.6rem; padding: 0.4rem 0 0.9rem; margin-bottom: 0.4rem; border-bottom: var(--bw) solid var(--line); }
 	h2 { font-size: 1.2rem; margin: 0.15rem 0 0; font-weight: 600; }
