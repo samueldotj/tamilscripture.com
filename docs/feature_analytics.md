@@ -66,7 +66,7 @@ Nothing in the table identifies a person. `analytics_salt(day, salt)` holds one 
 
 `/mod/traffic`, a tab beside the queue:
 
-- a range of 1 day (today so far, India time), 7, 30 or 90 days, or a year;
+- a range of the last day (today so far, India time; the default), 7, 30 or 90 days, or a year, with the time the report was fetched ("as of") under the title;
 - a source switch (A10): all traffic, the website only, or the Android app only (`source` on each event); moderators' own pages (`/mod`, `/mod/*`) are never counted;
 - a live panel: visitors, views, verse clicks and listeners in the last 30 minutes, the pages being read, the chapters being heard and where from, refreshed every minute;
 - tiles: page views, visitors, unique page views, signed-in users, verse clicks, each with its change against the previous period of the same length;

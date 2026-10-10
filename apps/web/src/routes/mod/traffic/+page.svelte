@@ -9,11 +9,13 @@
 
 	const ta = $derived(settings.value.uiLang === 'ta');
 	const locale = $derived(ta ? 'ta-IN' : 'en-IN');
-	let days = $state(30);
+	let days = $state(1);
 	let source = $state<Source>(null);
 	let report = $state<Report | null>(null);
 	let now = $state<Now | null>(null);
 	let loading = $state(true);
+	/** When the report shown was fetched. */
+	let fetchedAt = $state<Date | null>(null);
 	let error = $state('');
 	let measure = $state<Measure>('views');
 	let hover = $state<number | null>(null);
@@ -23,6 +25,7 @@
 		error = '';
 		try {
 			[report, now] = await Promise.all([loadReport(days, source), loadNow(source).catch(() => null)]);
+			fetchedAt = new Date();
 		} catch (e) {
 			error = (e as Error).message;
 		} finally {
@@ -50,7 +53,8 @@
 	}
 
 	const RANGES = [
-		{ n: 1, ta: '1 நாள்', en: '1 day' },
+		// The span reads in sentences: “vs previous 1 day”.
+		{ n: 1, ta: 'கடைசி நாள்', en: 'Last day', span_ta: '1 நாள்', span_en: '1 day' },
 		{ n: 7, ta: '7 நாள்', en: '7 days' },
 		{ n: 30, ta: '30 நாள்', en: '30 days' },
 		{ n: 90, ta: '90 நாள்', en: '90 days' },
@@ -101,7 +105,11 @@
 	/** Listening time is charted in minutes; everything else as counted. */
 	const chartUnit = $derived(measure === 'listen_seconds' ? 60 : 1);
 	const completion = $derived(report && report.totals.audio_starts ? Math.round((report.totals.audio_ends / report.totals.audio_starts) * 100) : null);
-	const rangeLabel = $derived(RANGES.find((r) => r.n === days)!);
+	const rangeLabel = $derived.by(() => {
+		const r = RANGES.find((x) => x.n === days)!;
+		return { ta: r.span_ta ?? r.ta, en: r.span_en ?? r.en };
+	});
+	const asOf = $derived(fetchedAt?.toLocaleString(locale, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }) ?? '');
 
 	const fmt = $derived(new Intl.NumberFormat(locale));
 	const compact = $derived(new Intl.NumberFormat(locale, { notation: 'compact', maximumFractionDigits: 1 }));
@@ -420,7 +428,10 @@
 <svelte:head><title>{ta ? 'வருகை' : 'Traffic'} · Tamil Scripture</title></svelte:head>
 
 <div class="head">
-	<h1 lang={ta ? 'ta' : 'en'}>{ta ? 'தள வருகை' : 'Site traffic'}</h1>
+	<div>
+		<h1 lang={ta ? 'ta' : 'en'}>{ta ? 'தள வருகை' : 'Site traffic'}</h1>
+		{#if asOf}<p class="asof" lang={ta ? 'ta' : 'en'}>{ta ? `${asOf} நிலவரப்படி` : `as of ${asOf}`}</p>{/if}
+	</div>
 	<div class="controls">
 		<div class="seg" role="group" aria-label={ta ? 'எங்கிருந்து' : 'Source'}>
 			{#each SOURCES as s (s.id ?? 'all')}
@@ -722,6 +733,8 @@
 <style>
 	.head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
 	h1 { font-size: 1.5rem; margin: 0; }
+	.asof { margin: 0.15rem 0 0; font-size: 0.75rem; color: var(--muted); }
+	.asof[lang='ta'] { font-family: var(--tamil); }
 	h1[lang='ta'] { font-family: var(--tamil); }
 	.controls { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 	.seg { display: inline-flex; flex-wrap: wrap; gap: 0.25rem; background: var(--surface-3); border-radius: 12px; padding: 4px; }
