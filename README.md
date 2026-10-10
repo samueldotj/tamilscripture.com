@@ -1,6 +1,6 @@
 # tamilscripture.com
 
-**Tamil Bible Online** — a fast, mobile-first website for reading, searching and studying the Bible in Tamil, with English alongside, cross-references, personal notes and highlights, and community reading heat.
+**Tamil Scripture** — a fast, mobile-first website for reading, searching and studying the Bible in Tamil, with English alongside, cross-references, personal notes and highlights, and community reading heat.
 
 Live site (planned): **https://www.tamilscripture.com**
 

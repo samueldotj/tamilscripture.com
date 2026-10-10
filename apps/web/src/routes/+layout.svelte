@@ -197,7 +197,7 @@
 			<svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="2" width="6" height="28" fill="currentColor"/><rect x="4" y="9" width="24" height="6" fill="#EC3013"/></svg>
 			<span class="words">
 				<span class="ta" lang="ta">தமிழ் வேதாகமம்</span>
-				<span class="en">Tamil Bible</span>
+				<span class="en">Tamil Scripture</span>
 			</span>
 		</a>
 		<div class="ref"><ReferenceBox {versionPath} lang={ui} /></div>

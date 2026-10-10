@@ -1,7 +1,7 @@
 {
   "name": "tamilscripture",
   "private": true,
-  "description": "Tamil Bible Online - www.tamilscripture.com",
+  "description": "Tamil Scripture - www.tamilscripture.com",
   "packageManager": "pnpm@12.3.4",
   "engines": {
     "node": ">=22"

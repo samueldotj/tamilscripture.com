@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>{ta ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'} · {ta ? 'தமிழ் வேதாகமம்' : 'Tamil Bible'}</title>
+	<title>{ta ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'} · {ta ? 'தமிழ் வேதாகமம்' : 'Tamil Scripture'}</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
