@@ -34,9 +34,9 @@ import mido
 import numpy as np
 import verovio
 
-from .infer import lines as line_starts
+from .infer import slots as syllable_slots
 
-TOOL_VERSION = '0.2.0'
+TOOL_VERSION = '0.3.0'
 CACHE = Path(__file__).resolve().parents[2] / '.cache'
 CHURCH_ORGAN = 19  # General MIDI program 20, zero-based
 
@@ -47,9 +47,47 @@ def _toolkit(width: int, breaks: str) -> verovio.toolkit:
         'pageWidth': width, 'adjustPageHeight': True, 'breaks': breaks, 'scale': 40,
         'header': 'none', 'footer': 'none', 'svgViewBox': True, 'svgFormatRaw': True,
         'svgRemoveXlink': True, 'xmlIdSeed': 1,
-        'pageMarginLeft': 20, 'pageMarginRight': 20, 'pageMarginTop': 0, 'pageMarginBottom': 0,
+        # Wider than Verovio's default, so the words written under the notes have room.
+        'spacingLinear': 0.42,
+        # The bottom margin leaves room under the last staff for the words the card writes there.
+        'pageMarginLeft': 20, 'pageMarginRight': 20, 'pageMarginTop': 0, 'pageMarginBottom': 40,
     })
     return tk
+
+
+def lyric_baselines(svg: str) -> dict[str, float]:
+    """For every note, where the words go under its staff, as a fraction of the drawing's
+    height: below the staff's bottom line and below its lowest note, the same for every
+    note of the staff so that a line of words reads level."""
+    import xml.etree.ElementTree as ET
+    root = ET.fromstring(svg)
+    inner = next(e for e in root.iter(f'{_SVG}svg') if e.get('class') == 'definition-scale')
+    h = float(inner.get('viewBox').split()[3])
+    out: dict[str, float] = {}
+
+    def walk(el: ET.Element, m: list[float]) -> None:
+        m = _mul(m, _matrix(el.get('transform')))
+        if el.tag == f'{_SVG}g' and el.get('class') == 'staff':
+            lines = [m[5] + m[3] * float(p.get('d').split()[1]) for p in el.findall(f'{_SVG}path') if re.match(r'M[-\d.]+ [-\d.]+ L', p.get('d', ''))]
+            heads: dict[str, float] = {}
+            for note in el.iter(f'{_SVG}g'):
+                if note.get('class') != 'note':
+                    continue
+                use = note.find(f".//{_SVG}g[@class='notehead']/{_SVG}use")
+                if use is not None:
+                    t = re.search(r'translate\(([-\d.]+), ([-\d.]+)\)', use.get('transform', ''))
+                    heads[note.get('id')] = m[5] + m[3] * float(t.group(2))
+            if lines and heads:
+                y = max(max(lines) + 560, max(heads.values()) + 400)
+                for nid in heads:
+                    out[nid] = round(y / h, 4)
+            return
+        for child in el:
+            walk(child, m)
+
+    for child in inner:
+        walk(child, [1, 0, 0, 1, 0, 0])
+    return out
 
 
 def first_line(xml: str, line_beats: int, pickup: int, beats_per_bar: int) -> str:
@@ -264,19 +302,23 @@ def render(xml_path: Path, midi_path: Path, out: Path, tune: dict, beats_per_bar
     inc_svg, inc_heads, inc_map = _svg(inc_tk, line)
     inc_ids = [e['id'] for e in _events(inc_tk, inc_map, tune['bpm'])]
 
-    # Notes pair up by order: the incipit is the first notes of the tune.
+    # Notes pair up by order: the incipit is the first notes of the tune. Each drawing gives
+    # [x, y, id, lyric baseline], positions as fractions of the drawing.
+    full_ly, inc_ly = lyric_baselines(full_svg), lyric_baselines(inc_svg)
     notes = []
     for i, e in enumerate(events):
-        n = {'on': e['on'], 'off': e['off'], 'midi': e['midi'], 'full': [*full_heads.get(e['id'], (None, None)), e['id']]}
+        n = {'on': e['on'], 'off': e['off'], 'midi': e['midi'], 'full': [*full_heads.get(e['id'], (None, None)), e['id'], full_ly.get(e['id'])]}
         if i < len(inc_ids):
-            n['incipit'] = [*inc_heads.get(inc_ids[i], (None, None)), inc_ids[i]]
+            n['incipit'] = [*inc_heads.get(inc_ids[i], (None, None)), inc_ids[i], inc_ly.get(inc_ids[i])]
         notes.append(n)
     (out / 'incipit.svg').write_text(inc_svg, encoding='utf-8', newline='\n')
     (out / 'full.svg').write_text(full_svg, encoding='utf-8', newline='\n')
     for name, svg in (('incipit', inc_svg), ('full', full_svg)):
         (out / f'{name}.draw.json').write_text(json.dumps(drawing(svg), separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
-    lines = [events[i]['on'] for i in line_starts(events, tune['meter'], tune['bpm'])]
-    (out / 'events.json').write_text(json.dumps({'duration': events[-1]['off'], 'incipit_notes': len(inc_ids), 'lines': lines, 'notes': notes}, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
+    slots = syllable_slots(events, tune['meter'], tune['bpm'])
+    lines = [events[line[0]]['on'] for line in slots if line]
+    body = {'duration': events[-1]['off'], 'bpm': tune['bpm'], 'incipit_notes': len(inc_ids), 'lines': lines, 'slots': slots, 'notes': notes}
+    (out / 'events.json').write_text(json.dumps(body, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
     organ_mp3(midi_path, tune['bpm'], out / 'audio.mp3')
     meta = {'source_sha256': hashlib.sha256(xml_path.read_bytes()).hexdigest(), 'midi_sha256': hashlib.sha256(midi_path.read_bytes()).hexdigest(),
             'verovio': verovio.toolkit().getVersion().split('[')[0], 'soundfont': 'FluidR3_GM (Church Organ)', 'tool': TOOL_VERSION}

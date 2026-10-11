@@ -67,6 +67,8 @@ export interface MetricalVersion {
 	tunes: string[];
 	/** The tunes only fit the metre: no traditional pairing is set. */
 	fallback: boolean;
+	/** The stanzas as syllables (stanza → line → syllable, "shep-" "herd,"), for the words under the notes. */
+	lyrics: string[][][];
 }
 
 export function psalmOf(r: PsalmRow): Psalm {

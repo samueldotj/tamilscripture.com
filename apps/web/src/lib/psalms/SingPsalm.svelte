@@ -60,7 +60,7 @@
 					</div>
 				{/if}
 				{#key tune.id}
-					<TuneBlock {tune} {ta} stanzas={v.stanzas.length} onplace={follow} />
+					<TuneBlock {tune} {ta} stanzas={v.stanzas.length} lyrics={v.lyrics} onplace={follow} />
 				{/key}
 				<p class="note">
 					{#if v.fallback}

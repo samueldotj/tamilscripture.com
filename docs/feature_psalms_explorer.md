@@ -200,7 +200,15 @@ The rendered files are committed, so CI needs neither Verovio nor ffmpeg. `entit
 
 Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaPlayer` in the app. Under "Sing this psalm" the player sings every stanza of the chosen version: after one stanza and a breath of 0.7 s it goes back to the start, and the time and progress cover the whole psalm ("stanza 2 of 5 · 0:38 / 2:32"). While it plays it lights the note whose `on ≤ position < off`, and the words light the line being sung in the current stanza (opening all stanzas once singing reaches the second). The web adds a class to that note's group in the inline SVG; the app draws that note's marks in the accent colour. The progress bar and the "0:12 / 0:30" time come from the player. This replaces the prototype's Web Audio oscillator: it sounds better, looks the same, and there is no synthesiser to keep in step on two platforms.
 
-"Full tune" swaps the first line for the whole melody, and the highlight follows. Later options: tempo (render at two tempos rather than time-stretching), a last-stanza "Amen" or rallentando, and lyrics under the notes (§9).
+"Full tune" swaps the first line for the whole melody, and the highlight follows. A later option: a last-stanza "Amen" or rallentando.
+
+**Tempo.** Slower, Normal and Faster (0.85, 1 and 1.15 times the tune's tempo, shown as ♩ = 71 / 84 / 97 for an 84 tune) change the playback rate with the pitch kept: `playbackRate` with `preservesPitch` on the web, `PlaybackParams.setSpeed` in the app. Rendering each tune at three tempos was the first plan, but it would triple the audio (9 MB), and the organ's sustained tones stretch cleanly by 15%. The note and line highlights read the audio's own position, so they stay in step at any tempo; the time shown is divided by the rate.
+
+**Words under the notes.** The words of the stanza being sung are written under the notes, in the first line and in the full tune, and change as the organ moves on; the syllable being sung is lit with its note. Many psalms share a tune, so the words are not engraved into the tune's drawing. Instead:
+
+- `psalter render` records, per line of the tune, the notes that start a syllable (`slots` in `events.json`; short notes sharing a beat are one syllable) and, for every note, the baseline for words under its staff. Verovio leaves room for them (a bottom margin, and `spacingLinear` 0.42 so syllables are not crowded).
+- `entity-ingest` splits every line of the 1650 text into syllables (`lyrics.rs`: the importer's counting rules, plus English split points: "shep-herd", "lead-eth", "qui-et", "ta-ble") and writes them as `lyrics` beside `stanzas`. 97% of the 8,976 lines split into their metre's count, or one more for a feminine ending.
+- The card sets a line's syllables on its slots (`lyrics.ts`, `Lyrics.kt`): with fewer syllables than slots the last syllable keeps the last note and the one before holds across the gap; with more, the extra syllables share the last note ("ri-ver" on one note). The web draws them as SVG text in the drawing's own units; the app draws them on its Canvas.
 
 ### Alternatives considered
 
@@ -246,7 +254,7 @@ Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaP
 
    `tunes.toml` records the source and the encoding; `review = true` stays until someone has compared the result with a printed psalter.
 4. **Pairings.** `pairings.toml` lists traditional associations first, then any tune of the right metre. The first six are 23 → Crimond, 100 → Old Hundredth, 121 → Dundee (French), 46 → Stroudwater, 8 → Winchester Old and 51 → Coleshill. St Mary, listed first for Psalm 51 in 1650-Psalter resources, has no public-domain encoding yet. The build rejects a pairing whose metre does not match the version's.
-5. **Lyrics under the notes (later).** Hyphenate stanza 1 (English hyphenation, then hand fixes in an overrides file) and attach the syllables to the notes in the build's in-memory MusicXML before engraving. The stored MusicXML stays melody-only.
+5. **Lyrics under the notes.** Done, for every stanza and every tune, at view time rather than engraved (§8, "Words under the notes"). The stored MusicXML stays melody-only. Where a syllable sits wrongly, the fix is in the line's text (an apostrophe for an elision) or in `lyrics.rs`.
 6. **Showing the text.** Done: "Sing this psalm" on the card (above).
 
 **Tamil.** The Scottish Psalter is English. Tamil metrical psalms and *keerthanai* are the next milestone (§11). They use the same files and pipeline: a `data/psalter/{collection}/` directory, tunes in `tunes.toml`, and pairings.

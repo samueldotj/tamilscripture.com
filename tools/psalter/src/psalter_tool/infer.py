@@ -68,6 +68,13 @@ METRES = {'C.M.': '8.6.8.6', 'L.M.': '8.8.8.8', 'S.M.': '6.6.8.6', 'C.M.D.': '8.
 def lines(events: list[dict], meter: str, bpm: int) -> list[int]:
     """Indices of the notes that start each line of a stanza (events in ms, as render
     writes them), from the metre's syllables per line, by the same rules as line_beats."""
+    return [line[0] for line in slots(events, meter, bpm) if line]
+
+
+def slots(events: list[dict], meter: str, bpm: int) -> list[list[int]]:
+    """For each line of a stanza, the notes that start a syllable: short notes sharing a
+    beat are one syllable (a melisma), and a line that stops on a short note takes the long
+    note after it as one more. The card writes the words of a stanza under these notes."""
     pattern = METRES.get(meter, meter)
     counts = [int(x) for x in pattern.split('.') if x.isdigit()]
     if pattern.endswith('.D'):
@@ -77,19 +84,23 @@ def lines(events: list[dict], meter: str, bpm: int) -> list[int]:
     def short(e: dict, beats: float = 1) -> bool:
         return e['off'] - e['on'] < beat * beats * 0.99
 
-    starts, i = [], 0
+    out: list[list[int]] = []
+    i = 0
     for li, count in enumerate(counts):
         if i >= len(events):
             break
-        starts.append(i)
-        sung = 0
-        while i < len(events) and sung < count:
+        line: list[int] = []
+        while i < len(events) and len(line) < count:
+            line.append(i)
             if short(events[i]):
                 b = int(events[i]['on'] // beat)
                 while i + 1 < len(events) and int(events[i + 1]['on'] // beat) == b and short(events[i + 1]):
                     i += 1
-            sung += 1
             i += 1
         if li + 1 < len(counts) and i < len(events) and short(events[i - 1], 2) and not short(events[i], 2):
+            line.append(i)
             i += 1
-    return starts
+        if li + 1 == len(counts):
+            line.extend(range(i, len(events)))  # whatever is left closes the last line
+        out.append(line)
+    return out

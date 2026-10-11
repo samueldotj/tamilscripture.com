@@ -153,6 +153,10 @@ pub struct Version {
     /// True when `tunes` are the metre's fallback rather than traditional pairings.
     #[serde(default)]
     pub fallback: bool,
+    /// The stanzas split into syllables (stanza → line → syllable, "shep-" "herd,"), for
+    /// writing the words under the notes. Made here by `lyrics::line`, not read from the TOML.
+    #[serde(default, skip_deserializing)]
+    pub lyrics: Vec<Vec<Vec<String>>>,
 }
 
 #[derive(Deserialize)]
@@ -223,7 +227,10 @@ fn load_psalter(dir: &Path, problems: &mut Vec<String>) -> Result<Psalter> {
         let mut files: Vec<_> = fs::read_dir(&text_dir)?.filter_map(|e| e.ok().map(|e| e.path())).filter(|p| p.extension().is_some_and(|x| x == "toml")).collect();
         files.sort();
         for path in files {
-            let f: MetricalFile = read_toml(&path)?;
+            let mut f: MetricalFile = read_toml(&path)?;
+            for v in &mut f.version {
+                v.lyrics = v.stanzas.iter().map(|st| st.iter().map(|l| crate::lyrics::line(l)).collect()).collect();
+            }
             psalms.insert(f.psalm, f.version);
         }
     }

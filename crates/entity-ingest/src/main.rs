@@ -31,6 +31,7 @@ mod geo;
 mod journeys;
 mod names;
 mod openbible;
+mod lyrics;
 mod psalms;
 mod stepbible;
 mod svg;
