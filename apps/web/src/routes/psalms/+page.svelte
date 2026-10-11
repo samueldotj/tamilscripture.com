@@ -143,18 +143,19 @@
 	</section>
 {/snippet}
 
-<section class="intro">
-	<span class="kicker">{ta ? 'சங்கீதங்கள் · 150 பாடல்கள்' : 'Psalms · 150 songs'}</span>
-	<h1 lang="ta">சங்கீதங்களைக் கருப்பொருள் வாரியாக ஆராயுங்கள்</h1>
-	<p>Explore the Psalms by theme. Filter by genre or author, browse the eight themes, or open any of the 150 from the grid, each with a short summary and a key verse in Tamil and English.</p>
-</section>
-
 <div class="layout">
 	<aside class="side wide-only">
 		{@render genrePanel(true)}
 	</aside>
 
 	<div class="main">
+		<!-- In the middle column, so the heading lines up with the grid it introduces. -->
+		<section class="intro">
+			<span class="kicker">{ta ? 'சங்கீதங்கள் · 150 பாடல்கள்' : 'Psalms · 150 songs'}</span>
+			<h1 lang="ta">சங்கீதங்களைக் கருப்பொருள் வாரியாக ஆராயுங்கள்</h1>
+			<p>Explore the Psalms by theme. Filter by genre or author, browse the eight themes, or open any of the 150 from the grid, each with a short summary and a key verse in Tamil and English.</p>
+		</section>
+
 		<div class="wide-only mid-only stack">
 			{@render authorRow()}
 		</div>
@@ -225,7 +226,7 @@
 </dialog>
 
 <style>
-	.intro { margin: 0.5rem 0 2rem; }
+	.intro { margin: 0.5rem 0 0; }
 	.kicker { display: block; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
 	h1 { font-family: var(--tamil); font-size: 2.2rem; font-weight: 600; margin: 0 0 0.4rem; letter-spacing: -0.01em; line-height: 1.2; text-wrap: balance; }
 	.intro p { color: var(--ink-2); max-width: 40rem; margin: 0; font-size: 1.02rem; line-height: 1.65; }
