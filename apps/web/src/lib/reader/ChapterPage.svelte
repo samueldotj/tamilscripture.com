@@ -913,6 +913,9 @@
 				{:else}
 					<span aria-current="page">{data.chapter}</span>
 				{/if}
+				{#if data.book.code === 'PSA'}
+					<a class="explore" href="/psalms?p={data.chapter}" lang={isTamil ? 'ta' : 'en'}>{isTamil ? 'சங்கீதங்களை ஆராயுங்கள்' : 'Explore the Psalms'}</a>
+				{/if}
 			</nav>
 
 			<div class="titles">
@@ -1140,6 +1143,7 @@
 	.crumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
 	.crumbs a { color: var(--accent); font-weight: 600; text-decoration: none; }
 	.crumbs a[lang='ta'] { font-family: var(--tamil); }
+	.crumbs .explore { margin-left: auto; }
 	.titles { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin: 0 0 0.6rem; }
 	h1 { font-family: var(--sans); font-weight: 600; font-size: 2.2rem; margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
 	h1[lang='ta'] { font-family: var(--tamil); }

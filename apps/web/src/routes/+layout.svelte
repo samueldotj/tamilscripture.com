@@ -262,6 +262,7 @@
 <footer class="site-foot">
 	<a href="/about">{ui === 'ta' ? 'பற்றி' : 'About'}</a>
 	<a href="/plans">{ui === 'ta' ? 'வாசிப்புத் திட்டங்கள்' : 'Reading plans'}</a>
+	<a href="/psalms">{ui === 'ta' ? 'சங்கீதங்கள்' : 'Psalms explorer'}</a>
 	<a href="/licences">{ui === 'ta' ? 'உரிமங்கள்' : 'Licences'}</a>
 	<a href="/privacy">{ui === 'ta' ? 'தனியுரிமை' : 'Privacy'}</a>
 	<a href="/atlas">{ui === 'ta' ? 'வேதாகம வரைபடம்' : 'Atlas'}</a>

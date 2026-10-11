@@ -1,0 +1,171 @@
+# Classification of the 150 psalms for the Psalms explorer.
+# Design: docs/feature_psalms_explorer.md. One line per psalm:
+#
+#   theme      the one coloured theme the grid shows (taxonomy.toml [[theme]])
+#   genres     every type the psalm belongs to (taxonomy.toml [[genre]]);
+#              the Genre filter matches any of them
+#   maybe      types the source marked with "?"; shown nowhere until moved
+#              into genres or deleted
+#   authors    names in the Hebrew superscription (taxonomy.toml [[author]]);
+#              empty means anonymous
+#   nt         authors named for the psalm in the New Testament, with the reference
+#   review     delete once the line has been checked
+#
+# genres and maybe were imported from Sean Finnegan, "All 150 Psalms
+# Categorized", restitutio.org, 18 Feb 2024, by
+# scripts/import-restitutio-psalms.py; the trailing comment keeps the
+# original wording. theme was derived from genres and needs checking where a
+# psalm has more than one. Edit freely: this file, not the source page, is
+# now the source of truth.
+
+[psalms]
+1 = { theme = "wisdom", genres = ["torah", "wisdom"], authors = [], review = true }  # Torah, wisdom
+2 = { theme = "royal", genres = ["royal", "prophecy"], authors = [], nt = { authors = ["david"], ref = "Acts 4:25" }, review = true }  # royal, prophecy
+3 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+4 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+5 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+6 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+7 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+8 = { theme = "praise", genres = ["creation"], authors = ["david"], review = true }  # creation
+9 = { theme = "praise", genres = ["enthronement"], authors = ["david"], review = true }  # enthronment
+10 = { theme = "lament", genres = ["imprecatory"], authors = [], review = true }  # imprecatory
+11 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+12 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+13 = { theme = "lament", genres = ["complaint"], authors = ["david"], review = true }  # complaint
+14 = { theme = "wisdom", genres = ["wisdom"], authors = ["david"], review = true }  # wisdom
+15 = { theme = "wisdom", genres = ["wisdom"], authors = ["david"], review = true }  # wisdom
+16 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+17 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+18 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+19 = { theme = "wisdom", genres = ["creation", "torah"], authors = ["david"], review = true }  # creation, Torah
+20 = { theme = "royal", genres = ["royal"], authors = ["david"], review = true }  # royal
+21 = { theme = "royal", genres = ["royal"], authors = ["david"], review = true }  # royal
+22 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+23 = { theme = "praise", genres = ["praise"], authors = ["david"], review = true }  # praise
+24 = { theme = "praise", genres = ["enthronement", "praise"], authors = ["david"], review = true }  # enthronment, praise
+25 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+26 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+27 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+28 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+29 = { theme = "praise", genres = ["enthronement"], authors = ["david"], review = true }  # enthronement
+30 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+31 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+32 = { theme = "repent", genres = ["repentance"], authors = ["david"], review = true }  # repentance
+33 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+34 = { theme = "praise", genres = ["praise"], authors = ["david"], review = true }  # praise
+35 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+36 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+37 = { theme = "wisdom", genres = ["wisdom"], authors = ["david"], review = true }  # wisdom
+38 = { theme = "repent", genres = ["repentance"], authors = ["david"], review = true }  # repentance
+39 = { theme = "repent", genres = ["repentance"], authors = ["david"], review = true }  # repentance
+40 = { theme = "thanks", genres = ["petition", "thanksgiving"], authors = ["david"], review = true }  # petition, thanksgiving
+41 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+42 = { theme = "lament", genres = ["complaint"], authors = ["korah"], review = true }  # complaint
+43 = { theme = "lament", genres = ["complaint"], authors = [], review = true }  # complaint
+44 = { theme = "lament", genres = ["complaint"], authors = ["korah"], review = true }  # complaint
+45 = { theme = "royal", genres = ["royal"], authors = ["korah"], review = true }  # royal
+46 = { theme = "praise", genres = ["praise"], authors = ["korah"], review = true }  # praise
+47 = { theme = "praise", genres = ["enthronement"], authors = ["korah"], review = true }  # enthronement
+48 = { theme = "zion", genres = ["praise", "zion"], authors = ["korah"], review = true }  # praise, Zion
+49 = { theme = "wisdom", genres = ["wisdom"], authors = ["korah"], review = true }  # wisdom
+50 = { theme = "wisdom", genres = ["prophecy"], maybe = ["enthronement"], authors = ["asaph"], review = true }  # prophecy, enthronement?
+51 = { theme = "repent", genres = ["repentance"], authors = ["david"], review = true }  # repentance
+52 = { theme = "wisdom", genres = ["wisdom"], authors = ["david"], review = true }  # wisdom
+53 = { theme = "wisdom", genres = ["wisdom"], authors = ["david"], review = true }  # wisdom
+54 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+55 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+56 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+57 = { theme = "trust", genres = ["trust"], authors = ["david"], review = true }  # trust
+58 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+59 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+60 = { theme = "lament", genres = ["petition", "complaint"], authors = ["david"], review = true }  # petition, complaint
+61 = { theme = "royal", genres = ["royal", "trust"], authors = ["david"], review = true }  # royal, trust
+62 = { theme = "trust", genres = ["trust"], authors = ["david"], review = true }  # trust
+63 = { theme = "trust", genres = ["trust"], authors = ["david"], review = true }  # trust
+64 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+65 = { theme = "thanks", genres = ["thanksgiving", "creation"], authors = ["david"], review = true }  # thanksgiving, creation
+66 = { theme = "thanks", genres = ["thanksgiving"], authors = [], review = true }  # thanksgiving
+67 = { theme = "praise", genres = ["praise"], authors = [], review = true }  # praise
+68 = { theme = "trust", genres = ["trust"], authors = ["david"], review = true }  # trust
+69 = { theme = "lament", genres = ["trust", "imprecatory", "petition"], authors = ["david"], review = true }  # trust, imprecatory, petition
+70 = { theme = "lament", genres = ["petition", "imprecatory"], authors = ["david"], review = true }  # petition, imprecatory
+71 = { theme = "trust", genres = ["trust"], authors = [], review = true }  # trust
+72 = { theme = "royal", genres = ["royal"], authors = ["solomon"], review = true }  # royal
+73 = { theme = "wisdom", genres = ["trust", "wisdom"], authors = ["asaph"], review = true }  # trust, wisdom
+74 = { theme = "lament", genres = ["complaint"], authors = ["asaph"], review = true }  # complaint
+75 = { theme = "thanks", genres = ["thanksgiving"], authors = ["asaph"], review = true }  # thanksgiving
+76 = { theme = "praise", genres = ["praise"], authors = ["asaph"], review = true }  # praise
+77 = { theme = "trust", genres = ["trust"], authors = ["asaph"], review = true }  # trust
+78 = { theme = "wisdom", genres = ["historical"], authors = ["asaph"], review = true }  # historical
+79 = { theme = "lament", genres = ["petition", "imprecatory"], authors = ["asaph"], review = true }  # petition, imprecatory
+80 = { theme = "lament", genres = ["complaint"], authors = ["asaph"], review = true }  # complaint
+81 = { theme = "wisdom", genres = ["historical", "prophecy"], authors = ["asaph"], review = true }  # historical, prophecy
+82 = { theme = "trust", genres = ["prophecy", "trust"], authors = ["asaph"], review = true }  # prophecy, trust
+83 = { theme = "lament", genres = ["imprecatory"], authors = ["asaph"], review = true }  # imprecatory
+84 = { theme = "zion", genres = ["zion"], authors = ["korah"], review = true }  # Zion
+85 = { theme = "trust", genres = ["trust"], authors = ["korah"], review = true }  # trust
+86 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+87 = { theme = "zion", genres = ["zion"], authors = ["korah"], review = true }  # Zion
+88 = { theme = "lament", genres = ["complaint"], authors = ["korah", "heman"], review = true }  # complaint
+89 = { theme = "lament", genres = ["historical", "complaint"], authors = ["ethan"], review = true }  # historical, complaint
+90 = { theme = "wisdom", genres = ["wisdom"], authors = ["moses"], review = true }  # wisdom
+91 = { theme = "trust", genres = ["trust", "prophecy"], authors = [], review = true }  # trust, prophecy
+92 = { theme = "thanks", genres = ["thanksgiving"], authors = [], review = true }  # thanksgiving
+93 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+94 = { theme = "trust", genres = ["trust"], authors = [], review = true }  # trust
+95 = { theme = "praise", genres = ["praise"], authors = [], nt = { authors = ["david"], ref = "Hebrews 4:7" }, review = true }  # praise
+96 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+97 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+98 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+99 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+100 = { theme = "praise", genres = ["praise"], authors = [], review = true }  # praise
+101 = { theme = "wisdom", genres = ["wisdom"], maybe = ["royal"], authors = ["david"], review = true }  # wisdom, royal?
+102 = { theme = "trust", genres = ["trust"], maybe = ["enthronement"], authors = [], review = true }  # trust, enthronement?
+103 = { theme = "praise", genres = ["praise"], authors = ["david"], review = true }  # praise
+104 = { theme = "praise", genres = ["creation"], authors = [], review = true }  # creation
+105 = { theme = "wisdom", genres = ["historical"], authors = [], review = true }  # historical
+106 = { theme = "wisdom", genres = ["historical"], authors = [], review = true }  # historical
+107 = { theme = "thanks", genres = ["thanksgiving"], authors = [], review = true }  # thanksgiving
+108 = { theme = "lament", genres = ["petition", "prophecy"], authors = ["david"], review = true }  # petition, prophecy
+109 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+110 = { theme = "royal", genres = ["royal", "prophecy"], authors = ["david"], review = true }  # royal, prophecy
+111 = { theme = "praise", genres = ["praise"], authors = [], review = true }  # praise
+112 = { theme = "wisdom", genres = ["torah", "wisdom"], authors = [], review = true }  # Torah, wisdom
+113 = { theme = "praise", genres = ["enthronement"], authors = [], review = true }  # enthronement
+114 = { theme = "wisdom", genres = ["historical"], authors = [], review = true }  # historical
+115 = { theme = "trust", genres = ["trust"], authors = [], review = true }  # trust
+116 = { theme = "thanks", genres = ["thanksgiving"], authors = [], review = true }  # thanksgiving
+117 = { theme = "praise", genres = ["praise"], authors = [], review = true }  # praise
+118 = { theme = "thanks", genres = ["thanksgiving"], authors = [], review = true }  # thanksgiving
+119 = { theme = "wisdom", genres = ["torah"], authors = [], review = true }  # Torah
+120 = { theme = "lament", genres = ["complaint"], authors = [], review = true }  # complaint
+121 = { theme = "trust", genres = ["trust"], authors = [], review = true }  # trust
+122 = { theme = "zion", genres = ["zion"], authors = ["david"], review = true }  # Zion
+123 = { theme = "lament", genres = ["petition"], authors = [], review = true }  # petition
+124 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+125 = { theme = "zion", genres = ["zion", "trust"], authors = [], review = true }  # Zion, trust
+126 = { theme = "zion", genres = ["zion"], authors = [], review = true }  # Zion
+127 = { theme = "wisdom", genres = ["wisdom"], authors = ["solomon"], review = true }  # wisdom
+128 = { theme = "zion", genres = ["wisdom", "zion"], authors = [], review = true }  # wisdom, Zion
+129 = { theme = "zion", genres = ["zion", "imprecatory"], authors = [], review = true }  # Zion, imprecatory
+130 = { theme = "repent", genres = ["repentance"], authors = [], review = true }  # repentance
+131 = { theme = "trust", genres = ["trust"], authors = ["david"], review = true }  # trust
+132 = { theme = "wisdom", genres = ["historical", "prophecy"], authors = [], review = true }  # historical, prophecy
+133 = { theme = "zion", genres = ["zion"], authors = ["david"], review = true }  # Zion
+134 = { theme = "zion", genres = ["zion"], authors = [], review = true }  # Zion
+135 = { theme = "wisdom", genres = ["historical"], authors = [], review = true }  # historical
+136 = { theme = "wisdom", genres = ["historical"], authors = [], review = true }  # historical
+137 = { theme = "lament", genres = ["imprecatory"], authors = [], review = true }  # imprecatory
+138 = { theme = "thanks", genres = ["thanksgiving"], authors = ["david"], review = true }  # thanksgiving
+139 = { theme = "praise", genres = ["praise"], authors = ["david"], review = true }  # praise
+140 = { theme = "lament", genres = ["imprecatory"], authors = ["david"], review = true }  # imprecatory
+141 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+142 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+143 = { theme = "lament", genres = ["petition"], authors = ["david"], review = true }  # petition
+144 = { theme = "royal", genres = ["royal", "petition"], authors = ["david"], review = true }  # royal, petition
+145 = { theme = "praise", genres = ["enthronement", "praise"], authors = ["david"], review = true }  # enthronement, praise
+146 = { theme = "praise", genres = ["enthronement", "praise"], authors = [], review = true }  # enthronement, praise
+147 = { theme = "zion", genres = ["zion", "praise"], authors = [], review = true }  # Zion, praise
+148 = { theme = "praise", genres = ["creation", "praise"], authors = [], review = true }  # creation, praise
+149 = { theme = "praise", genres = ["praise"], maybe = ["royal"], authors = [], review = true }  # praise, royal?
+150 = { theme = "praise", genres = ["praise"], authors = [], review = true }  # praise

@@ -1,0 +1,103 @@
+# Titles, summaries and key verses for the Psalms explorer card.
+# Design: docs/feature_psalms_explorer.md. One table per psalm; a psalm with no
+# entry shows its first verse as title and key verse, and no summary.
+#
+#   title_ta, title_en     short title (Tamil from the IRV wording where possible)
+#   key                    key verse or range, "23:1" or "121:1-2"; the text is
+#                          taken from the reader's versions at build time
+#   tags                   one or two English words; Tamil labels to follow
+#   summary_ta, summary_en two to four sentences
+#   review                 delete once checked
+#
+# The first ten entries come from the design (Psalms Explorer v2).
+# Licence: CC BY 4.0 (tamilscripture.com contributors).
+
+[23]
+title_ta = "கர்த்தர் என் மேய்ப்பர்"
+title_en = "The Lord is my shepherd"
+key = "23:1"
+tags = ["Shepherd"]
+summary_ta = "மேய்ப்பராகிய கர்த்தர் அமர்ந்த தண்ணீர்களண்டைக்கு நடத்தி, ஆத்துமாவைத் தேற்றி, மரண இருளின் பள்ளத்தாக்கிலும் கூட இருக்கிறார்; பின்பு சத்துருக்களுக்கு முன்பாக ஒரு பந்தியை ஆயத்தப்படுத்தும் விருந்தாளியாகக் காணப்படுகிறார்."
+summary_en = "David’s song of a sheltered life. God is the shepherd who leads to still water, restores the soul and walks through the darkest valley; then the picture changes to a host who sets a table in the sight of enemies. The psalm moves from pasture to the house of the LORD, and ends there for good."
+review = true
+
+[51]
+title_ta = "தேவனே, எனக்கு இரங்கும்"
+title_en = "Have mercy on me, O God"
+key = "51:10"
+tags = ["Penitential"]
+summary_ta = "நாத்தான் தீர்க்கதரிசி தாவீதைக் கடிந்துகொண்ட பின் எழுதப்பட்டது. பாவத்தை மறைக்காமல் அறிக்கையிட்டு, கழுவப்படவும் புதிய இருதயம் பெறவும் வேண்டுகிறார்."
+summary_en = "Written after Nathan confronted David over Bathsheba. The psalm owns the sin without excuse, asks to be washed rather than merely pardoned, and discovers that the sacrifice God wants is a broken spirit."
+review = true
+
+[1]
+title_ta = "நீதிமானின் வழி"
+title_en = "The way of the righteous"
+key = "1:2"
+tags = ["Two ways"]
+summary_ta = "சங்கீத புத்தகத்தின் நுழைவாயில். நீரோடைகளண்டை நடப்பட்ட மரமும், காற்று பறக்கடிக்கும் பதரும் என இரு வழிகள் ஒப்பிடப்படுகின்றன."
+summary_en = "The gateway to the Psalter. Two ways are set side by side: the tree planted by water that bears fruit in season, and the chaff the wind drives away. Delight in God’s instruction is the hinge between them."
+review = true
+
+[100]
+title_ta = "நன்றியோடே அவர் வாசல்களில்"
+title_en = "Enter his gates with thanksgiving"
+key = "100:4"
+tags = ["Liturgy"]
+summary_ta = "பூமியெங்கும் உள்ளவர்களை ஆலயத்திற்குள் அழைக்கும் சிறு பவனிப் பாடல். கர்த்தர் நல்லவர், அவருடைய கிருபை என்றுமுள்ளது என்பதே இதன் அடித்தளம்."
+summary_en = "A short processional for the whole earth. Seven imperatives carry the worshipper through the temple gates, resting on the reason for all of it: the LORD is good, and his steadfast love endures to every generation."
+review = true
+
+[46]
+title_ta = "தேவன் நமக்கு அடைக்கலம்"
+title_en = "God is our refuge and strength"
+key = "46:1"
+tags = ["Zion"]
+summary_ta = "மலைகள் சமுத்திரத்தில் சாய்ந்தாலும், ஜாதிகள் கொந்தளித்தாலும், தேவனுடைய நகரத்தை ஒரு நதி மகிழ்ச்சியாக்குகிறது. “அமர்ந்திருந்து, நானே தேவன் என்று அறிந்துகொள்ளுங்கள்” என்று முடிகிறது."
+summary_en = "Mountains fall into the sea and nations rage, but a river gladdens the city of God. The psalm that gave Luther his hymn ends with the quietest command in the Psalter: be still, and know."
+review = true
+
+[150]
+title_ta = "சுவாசமுள்ளவையெல்லாம் துதிக்கக்கடவது"
+title_en = "Let everything that has breath praise"
+key = "150:6"
+tags = ["Doxology"]
+summary_ta = "எக்காளம், சுரமண்டலம், தம்புரு, யாழ், கைத்தாளம் என முழு இசைக்குழுவுடன் சங்கீத புத்தகம் முடிகிறது. ஆறு வசனங்களில் பதின்மூன்று துதி அழைப்புகள்."
+summary_en = "The last word of the Psalter is a full orchestra: trumpet, harp, tambourine, strings, pipe and cymbals. Thirteen calls to praise in six verses, and no petition at all."
+review = true
+
+[121]
+title_ta = "மலைகளுக்கு நேராக என் கண்களை ஏறெடுக்கிறேன்"
+title_en = "I lift up my eyes to the hills"
+key = "121:1-2"
+tags = ["Pilgrimage"]
+summary_ta = "எருசலேமுக்குப் பயணிக்கும் யாத்திரிகனின் பாடல். “காக்கிறவர்” என்ற சொல் ஆறு முறை வருகிறது; இஸ்ரவேலைக் காக்கிறவர் உறங்குவதுமில்லை, தூங்குவதுமில்லை."
+summary_en = "A traveller’s psalm for the road to Jerusalem. The word keep is repeated six times: the one who keeps Israel neither slumbers nor sleeps, and keeps your going out and coming in."
+review = true
+
+[91]
+title_ta = "உன்னதமானவரின் மறைவில்"
+title_en = "In the shelter of the Most High"
+key = "91:1"
+tags = ["Protection"]
+summary_ta = "கோட்டை, செட்டைகள், கேடகம் என பாதுகாப்பின் நான்கு உருவகங்கள். இறுதி மூன்று வசனங்களில் தேவனே பேசி, தம் நாமத்தை அறிந்தவனை விடுவிப்பதாக வாக்களிக்கிறார்."
+summary_en = "Fortress, wings, shield and buckler: four pictures of safety against the terror of night and the arrow by day. God himself speaks in the last three verses, promising rescue to the one who knows his name."
+review = true
+
+[130]
+title_ta = "ஆழங்களிலிருந்து"
+title_en = "Out of the depths"
+key = "130:1"
+tags = ["Penitential"]
+summary_ta = "அக்கிரமங்களைக் கவனித்தால் யார் நிலைநிற்பான்? விடியற்காலத்திற்குக் காத்திருக்கும் ஜாமக்காரரைப் பார்க்கிலும் அதிகமாய்க் கர்த்தருக்குக் காத்திருக்கிறேன் என்கிறார்."
+summary_en = "If God kept a record of sins, who could stand? The psalmist waits for the LORD more than watchmen wait for morning, and ends by inviting all Israel into the same hope: with him is plentiful redemption."
+review = true
+
+[8]
+title_ta = "உமது நாமம் எவ்வளவு மேன்மையுள்ளது"
+title_en = "How majestic is your name"
+key = "8:1"
+tags = ["Creation"]
+summary_ta = "சந்திரனையும் நட்சத்திரங்களையும் பார்க்கும் இரவுப் பாடல். “மனுஷன் எம்மாத்திரம்?” என்ற கேள்விக்கு, மகிமையினாலும் கனத்தினாலும் முடிசூட்டப்பட்டவன் என்று பதில் வருகிறது."
+summary_en = "A night psalm under the moon and stars. Against that vastness the question is asked, what is man? — and answered with astonishing dignity: crowned with glory and honour, given charge of the works of God’s hands."
+review = true

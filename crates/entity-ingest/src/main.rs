@@ -31,6 +31,7 @@ mod geo;
 mod journeys;
 mod names;
 mod openbible;
+mod psalms;
 mod stepbible;
 mod svg;
 mod tipnr;
@@ -49,6 +50,8 @@ use std::path::{Path, PathBuf};
 struct Args {
     books: PathBuf,
     entities: PathBuf,
+    /// Psalms explorer data (docs/feature_psalms_explorer.md).
+    psalms: PathBuf,
     content: PathBuf,
     /// STEPBible tagged texts and lexicons, fetched by scripts/fetch-stepbible.mjs.
     stepbible: PathBuf,
@@ -71,6 +74,7 @@ fn parse_args() -> Result<Args> {
     let mut a = Args {
         books: PathBuf::from("data/books.toml"),
         entities: PathBuf::from("data/entities"),
+        psalms: PathBuf::from("data/psalms"),
         content: PathBuf::from("apps/web/static/content"),
         stepbible: PathBuf::from("data/cache/stepbible"),
         draft_names: false,
@@ -85,6 +89,7 @@ fn parse_args() -> Result<Args> {
         match arg.as_str() {
             "--books" => a.books = it.next().context("--books needs a path")?.into(),
             "--entities" => a.entities = it.next().context("--entities needs a path")?.into(),
+            "--psalms" => a.psalms = it.next().context("--psalms needs a path")?.into(),
             "--content" => a.content = it.next().context("--content needs a path")?.into(),
             "--stepbible" => a.stepbible = it.next().context("--stepbible needs a path")?.into(),
             "--draft-names" => a.draft_names = true,
@@ -96,7 +101,7 @@ fn parse_args() -> Result<Args> {
             }
             "--lenient" => a.strict = false,
             "-h" | "--help" => {
-                eprintln!("entity-ingest --books B --entities DIR --content DIR [--stepbible DIR] [--draft-names [--verse-window] [--redraft] [--fresh] [--names-out F]] [--lenient]");
+                eprintln!("entity-ingest --books B --entities DIR [--psalms DIR] --content DIR [--stepbible DIR] [--draft-names [--verse-window] [--redraft] [--fresh] [--names-out F]] [--lenient]");
                 std::process::exit(0);
             }
             other => bail!("unknown argument {other}"),
@@ -584,6 +589,11 @@ fn main() -> Result<()> {
     let names_overridden = community::apply_names(&mut names, &overrides);
 
     let out = build_dir.join("entities");
+
+    // ---- the Psalms explorer ----
+    let psalms_review = psalms::build(&args.psalms, &build_dir, &lead_ta, &out)?;
+    println!("psalms: 150 psalms, {psalms_review} entries marked for review");
+
     let base = svg::Base {
         land: geo::load_layer(&args.entities.join("geo/base/land.geojson"))?,
         lakes: geo::load_layer(&args.entities.join("geo/base/lakes.geojson"))?,

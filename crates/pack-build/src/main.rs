@@ -820,6 +820,14 @@ const STUDY_PACKS: &[StudyPack] = &[
         licence: "CC BY 4.0 and public domain",
         attribution: "Natural Earth (public domain), OpenBible.info (CC BY 4.0), Cliopatria (CC BY 4.0)",
     },
+    StudyPack {
+        id: "study.psalms",
+        prefixes: &["psalms/", "psalter/"],
+        title_ta: "சங்கீதங்களை ஆராயுங்கள்",
+        title_en: "Psalms explorer",
+        licence: "CC BY 4.0 and public domain",
+        attribution: "Psalm types after Sean Finnegan, \"All 150 Psalms Categorized\" (restitutio.org); summaries by tamilscripture.com contributors (CC BY 4.0); Scottish Psalter tunes (public domain)",
+    },
 ];
 
 /// A study pack keeps each entities/ file unchanged under its path, so the app reads a
