@@ -33,6 +33,9 @@
 	// Map pages (design 9A): the map is the page, edge to edge under the header,
 	// with its attribution on the map itself, so the site footer steps aside.
 	const bleed = $derived(page.route.id === '/atlas/explore' || page.route.id === '/atlas/[journey=slug]');
+	// The Psalms explorer uses the whole window: the genre panel at the left edge and
+	// the themes, grid and card across the rest, keeping the page's margins.
+	const full = $derived(page.route.id === '/psalms');
 	// The presenter (design 11A) is a screen, not a page: no header, no footer.
 	const bare = $derived(page.route.id === '/present/[slug=slug]');
 
@@ -249,7 +252,7 @@
 <MobileMenu bind:open={chapterMenu} lang={ui} book={curBook} chapter={curChapter} versions={curVersions} {versionPath} {signinHref} top={headerH} onsettings={() => (settingsOpen = true)} />
 
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -- a tap on the text is a shortcut; the bars also return on scroll up -->
-<main class="page" class:wide class:bleed class:bare onclick={onPageTap} style={headerH ? `--header-h: ${headerH}px` : undefined}>
+<main class="page" class:wide class:full class:bleed class:bare onclick={onPageTap} style={headerH ? `--header-h: ${headerH}px` : undefined}>
 	{@render children()}
 </main>
 
@@ -301,6 +304,7 @@
 	   measured value only fine-tunes it and nothing jumps after hydration. */
 	.page { --header-h: 4.4rem; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 	.page.wide, .page.bleed, .page.bare { max-width: none; padding: 0; }
+	.page.full { max-width: none; }
 	.site-foot { max-width: 74rem; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); border-top: var(--bw) solid var(--line); font-family: var(--tamil); }
 	.site-foot a { color: inherit; text-decoration: none; }
 	.site-foot a:hover { color: var(--accent); }
