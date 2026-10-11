@@ -296,9 +296,9 @@
 
 	.narrow-only { display: none; }
 	.large-only { display: none; }
-	/* Large screens: genre left, the grid and card in a 74rem middle, author and themes right. */
+	/* Large screens: genre, the grid and card in a 74rem middle, and author and themes, side by side in the centre. */
 	@media (min-width: 100rem) {
-		.layout { grid-template-columns: minmax(14rem, 16rem) minmax(0, 74rem) minmax(16rem, 20rem); justify-content: space-between; }
+		.layout { grid-template-columns: minmax(14rem, 16rem) minmax(0, 74rem) minmax(16rem, 20rem); justify-content: center; }
 		.large-only { display: flex; }
 		.mid-only, .themes-mid { display: none; }
 		.right { position: sticky; top: calc(var(--header-h) + 1rem); max-height: calc(100vh - var(--header-h) - 2rem); overflow: auto; flex-direction: column; gap: 2rem; padding-right: 0.25rem; }
