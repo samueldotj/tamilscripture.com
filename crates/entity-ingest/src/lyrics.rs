@@ -11,7 +11,11 @@
 /// A line's syllables in order: every one but a word's last ends with "-", and a word's
 /// punctuation stays on its last syllable. Superscript verse numbers are dropped.
 pub fn line(text: &str) -> Vec<String> {
-    let clean: String = text.trim().chars().filter(|c| !"⁰¹²³⁴⁵⁶⁷⁸⁹".contains(*c)).collect();
+    let clean: String = text
+        .trim()
+        .chars()
+        .filter(|c| !"⁰¹²³⁴⁵⁶⁷⁸⁹".contains(*c))
+        .collect();
     let mut out = Vec::new();
     for word in clean.split_whitespace() {
         let parts = word_parts(word);
@@ -33,7 +37,11 @@ fn word_parts(word: &str) -> Vec<String> {
     let letter = |c: char| c.is_alphabetic() || c == '\'' || c == '’';
     // The letters, without leading and trailing punctuation.
     let start = chars.iter().position(|&c| c.is_alphabetic()).unwrap_or(0);
-    let end = chars.iter().rposition(|&c| c.is_alphabetic()).map(|e| e + 1).unwrap_or(chars.len());
+    let end = chars
+        .iter()
+        .rposition(|&c| c.is_alphabetic())
+        .map(|e| e + 1)
+        .unwrap_or(chars.len());
     if start >= end {
         return vec![word.to_string()];
     }
@@ -45,10 +53,14 @@ fn word_parts(word: &str) -> Vec<String> {
     let mut groups: Vec<(usize, usize)> = Vec::new();
     let mut i = 0;
     while i < lower.len() {
-        let y_as_consonant = lower[i] == 'y' && (i == 0 || (i + 1 < lower.len() && is_vowel(lower[i + 1]) && lower[i + 1] != 'y'));
+        let y_as_consonant = lower[i] == 'y'
+            && (i == 0 || (i + 1 < lower.len() && is_vowel(lower[i + 1]) && lower[i + 1] != 'y'));
         if is_vowel(lower[i]) && !y_as_consonant {
             let s = i;
-            while i < lower.len() && is_vowel(lower[i]) && !(lower[i] == 'y' && i > s && i + 1 < lower.len() && is_vowel(lower[i + 1])) {
+            while i < lower.len()
+                && is_vowel(lower[i])
+                && !(lower[i] == 'y' && i > s && i + 1 < lower.len() && is_vowel(lower[i + 1]))
+            {
                 i += 1;
             }
             groups.push((s, i));
@@ -61,11 +73,17 @@ fn word_parts(word: &str) -> Vec<String> {
     }
 
     // Two vowels sung apart: split the group in two (not -tion, not the u of qu- and gu-).
-    let tion = ["tion", "sion", "tions", "sions"].iter().any(|t| bare.ends_with(t));
+    let tion = ["tion", "sion", "tions", "sions"]
+        .iter()
+        .any(|t| bare.ends_with(t));
     let mut split: Vec<(usize, usize)> = Vec::new();
     for &(s, e) in &groups {
         // The u of qu- and gu- is a consonant: "qui-et", "guide".
-        let s = if lower[s] == 'u' && e - s > 1 && s > 0 && matches!(lower[s - 1], 'q' | 'g') { s + 1 } else { s };
+        let s = if lower[s] == 'u' && e - s > 1 && s > 0 && matches!(lower[s - 1], 'q' | 'g') {
+            s + 1
+        } else {
+            s
+        };
         let g: String = lower[s..e].iter().collect();
         let after: String = lower[e..].iter().filter(|c| c.is_alphabetic()).collect();
         let quiet_u = g.starts_with('u') && s > 0 && matches!(lower[s - 1], 'q' | 'g');
@@ -86,15 +104,29 @@ fn word_parts(word: &str) -> Vec<String> {
     // A silent final e (also before s): "make", "makes", but not "able" or "graces".
     if groups.len() > 1 {
         // A possessive's "'s" does not count: "name's" ends in a silent e.
-        let possessive = lower.len() > 2 && lower[lower.len() - 1] == 's' && matches!(lower[lower.len() - 2], '\'' | '’');
-        let n = if possessive { lower.len() - 2 } else { lower.len() };
+        let possessive = lower.len() > 2
+            && lower[lower.len() - 1] == 's'
+            && matches!(lower[lower.len() - 2], '\'' | '’');
+        let n = if possessive {
+            lower.len() - 2
+        } else {
+            lower.len()
+        };
         let last = groups[groups.len() - 1];
         let ends_e = last.1 == n && last.0 == n - 1 && lower[n - 1] == 'e';
-        let ends_es = last.1 == n - 1 && last.0 == n - 2 && lower[n - 2] == 'e' && lower[n - 1] == 's';
-        let before = if ends_e { n.checked_sub(2) } else if ends_es { n.checked_sub(3) } else { None };
+        let ends_es =
+            last.1 == n - 1 && last.0 == n - 2 && lower[n - 2] == 'e' && lower[n - 1] == 's';
+        let before = if ends_e {
+            n.checked_sub(2)
+        } else if ends_es {
+            n.checked_sub(3)
+        } else {
+            None
+        };
         if let Some(b) = before {
             let c = lower[b];
-            let keeps = (ends_e && c == 'l') || (ends_es && matches!(c, 'c' | 'g' | 's' | 'x' | 'z'));
+            let keeps =
+                (ends_e && c == 'l') || (ends_es && matches!(c, 'c' | 'g' | 's' | 'x' | 'z'));
             if !is_vowel(c) && !keeps {
                 groups.pop();
             }
@@ -105,23 +137,42 @@ fn word_parts(word: &str) -> Vec<String> {
     }
 
     // Cut points between groups.
-    let digraph = |a: char, b: char| matches!((a, b), ('t', 'h') | ('s', 'h') | ('c', 'h') | ('w', 'h') | ('c', 'k'));
+    let digraph = |a: char, b: char| {
+        matches!(
+            (a, b),
+            ('t', 'h') | ('s', 'h') | ('c', 'h') | ('w', 'h') | ('c', 'k')
+        )
+    };
     // Verb endings keep the stem's consonant: "lead-eth", "lov-ing", "walk-ed", "seek-est".
-    let suffix = ["eth", "est", "ed", "ing"].iter().any(|x| bare.ends_with(x));
+    let suffix = ["eth", "est", "ed", "ing"]
+        .iter()
+        .any(|x| bare.ends_with(x));
     let mut cuts = Vec::new();
     for (wi, w) in groups.windows(2).enumerate() {
         let last_cut = wi + 2 == groups.len();
         let (a_end, b_start) = (w[0].1, w[1].0);
-        let cons: Vec<usize> = (a_end..b_start).filter(|&k| letter(core[k]) && lower[k] != '\'' && lower[k] != '’').collect();
+        let cons: Vec<usize> = (a_end..b_start)
+            .filter(|&k| letter(core[k]) && lower[k] != '\'' && lower[k] != '’')
+            .collect();
         let cut = match cons.len() {
             0 => b_start,
             1 if last_cut && suffix => b_start,
             2 if last_cut && suffix && digraph(lower[cons[0]], lower[cons[1]]) => b_start,
             // A final "-le" takes the consonant before it: "ta-ble", "tem-ple".
-            n if n >= 2 && last_cut && (bare.ends_with("le") && cons[n - 1] + 2 == lower.len() || bare.ends_with("les") && cons[n - 1] + 3 == lower.len()) => cons[n - 2],
+            n if n >= 2
+                && last_cut
+                && (bare.ends_with("le") && cons[n - 1] + 2 == lower.len()
+                    || bare.ends_with("les") && cons[n - 1] + 3 == lower.len()) =>
+            {
+                cons[n - 2]
+            }
             1 => cons[0],
             2 if digraph(lower[cons[0]], lower[cons[1]]) => {
-                if lower[cons[0]] == 'c' { b_start } else { cons[0] }
+                if lower[cons[0]] == 'c' {
+                    b_start
+                } else {
+                    cons[0]
+                }
             }
             // "gh" ends a syllable whole: "righ-teous", "migh-ty".
             n if n >= 3 && lower[cons[0]] == 'g' && lower[cons[1]] == 'h' => cons[1] + 1,
@@ -156,15 +207,36 @@ mod tests {
 
     #[test]
     fn words() {
-        assert_eq!(s("¹The Lord’s my shepherd, I’ll not want."), "The Lord’s my shep- herd, I’ll not want.");
-        assert_eq!(s("In pastures green: he leadeth me"), "In pas- tures green: he lead- eth me");
+        assert_eq!(
+            s("¹The Lord’s my shepherd, I’ll not want."),
+            "The Lord’s my shep- herd, I’ll not want."
+        );
+        assert_eq!(
+            s("In pastures green: he leadeth me"),
+            "In pas- tures green: he lead- eth me"
+        );
         assert_eq!(s("the quiet waters by."), "the qui- et wa- ters by.");
         assert_eq!(s("and me to walk doth make"), "and me to walk doth make");
-        assert_eq!(s("My table thou hast furnished"), "My ta- ble thou hast fur- nish- ed");
-        assert_eq!(s("Salvation doth appertain"), "Sal- va- ti- on doth ap- per- tain");
-        assert_eq!(s("should, like a lion, tear,"), "should, like a li- on, tear,");
-        assert_eq!(s("ev’n for his own name’s sake."), "ev’n for his own name’s sake.");
-        assert_eq!(s("Within the paths of righteousness,"), "Wi- thin the paths of righ- teous- ness,");
+        assert_eq!(
+            s("My table thou hast furnished"),
+            "My ta- ble thou hast fur- nish- ed"
+        );
+        assert_eq!(
+            s("Salvation doth appertain"),
+            "Sal- va- ti- on doth ap- per- tain"
+        );
+        assert_eq!(
+            s("should, like a lion, tear,"),
+            "should, like a li- on, tear,"
+        );
+        assert_eq!(
+            s("ev’n for his own name’s sake."),
+            "ev’n for his own name’s sake."
+        );
+        assert_eq!(
+            s("Within the paths of righteousness,"),
+            "Wi- thin the paths of righ- teous- ness,"
+        );
     }
 
     #[test]

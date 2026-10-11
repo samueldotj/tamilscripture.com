@@ -166,10 +166,20 @@ struct MetricalFile {
 }
 
 /// The files `psalter render` writes for a tune and the build copies.
-const RENDERED: [&str; 6] = ["incipit.svg", "full.svg", "incipit.draw.json", "full.draw.json", "events.json", "audio.mp3"];
+const RENDERED: [&str; 6] = [
+    "incipit.svg",
+    "full.svg",
+    "incipit.draw.json",
+    "full.draw.json",
+    "events.json",
+    "audio.mp3",
+];
 
 fn sha256_hex(bytes: &[u8]) -> String {
-    Sha256::digest(bytes).iter().map(|b| format!("{b:02x}")).collect()
+    Sha256::digest(bytes)
+        .iter()
+        .map(|b| format!("{b:02x}"))
+        .collect()
 }
 
 /// A tune's metre as a version spells it: "C.M." is "8.6.8.6".
@@ -201,18 +211,26 @@ fn load_psalter(dir: &Path, problems: &mut Vec<String>) -> Result<Psalter> {
             problems.push(format!("tune {id}: no {}", src.display()));
             continue;
         };
-        let meta: Option<Value> = fs::read_to_string(rendered.join("render.json")).ok().and_then(|t| serde_json::from_str(&t).ok());
+        let meta: Option<Value> = fs::read_to_string(rendered.join("render.json"))
+            .ok()
+            .and_then(|t| serde_json::from_str(&t).ok());
         match meta.as_ref().and_then(|m| m["source_sha256"].as_str()) {
             Some(h) if h == sha256_hex(&xml) => {}
-            Some(_) => problems.push(format!("tune {id}: the MusicXML changed since it was rendered; run `psalter render {id}`")),
-            None => problems.push(format!("tune {id}: not rendered; run `psalter render {id}`")),
+            Some(_) => problems.push(format!(
+                "tune {id}: the MusicXML changed since it was rendered; run `psalter render {id}`"
+            )),
+            None => problems.push(format!(
+                "tune {id}: not rendered; run `psalter render {id}`"
+            )),
         }
         // The organ audio comes from the four-part MIDI in sources/.
         let midi = fs::read(dir.join("sources").join(format!("{id}.mid"))).ok();
         match (midi, meta.as_ref().and_then(|m| m["midi_sha256"].as_str())) {
             (Some(m), Some(h)) if h == sha256_hex(&m) => {}
             (None, _) => problems.push(format!("tune {id}: no sources/{id}.mid")),
-            _ => problems.push(format!("tune {id}: the MIDI changed since it was rendered; run `psalter render {id}`")),
+            _ => problems.push(format!(
+                "tune {id}: the MIDI changed since it was rendered; run `psalter render {id}`"
+            )),
         }
         for f in RENDERED {
             if !rendered.join(f).exists() {
@@ -224,19 +242,30 @@ fn load_psalter(dir: &Path, problems: &mut Vec<String>) -> Result<Psalter> {
     let mut psalms: BTreeMap<u32, Vec<Version>> = BTreeMap::new();
     let text_dir = dir.join("scottish-1650");
     if text_dir.is_dir() {
-        let mut files: Vec<_> = fs::read_dir(&text_dir)?.filter_map(|e| e.ok().map(|e| e.path())).filter(|p| p.extension().is_some_and(|x| x == "toml")).collect();
+        let mut files: Vec<_> = fs::read_dir(&text_dir)?
+            .filter_map(|e| e.ok().map(|e| e.path()))
+            .filter(|p| p.extension().is_some_and(|x| x == "toml"))
+            .collect();
         files.sort();
         for path in files {
             let mut f: MetricalFile = read_toml(&path)?;
             for v in &mut f.version {
-                v.lyrics = v.stanzas.iter().map(|st| st.iter().map(|l| crate::lyrics::line(l)).collect()).collect();
+                v.lyrics = v
+                    .stanzas
+                    .iter()
+                    .map(|st| st.iter().map(|l| crate::lyrics::line(l)).collect())
+                    .collect();
             }
             psalms.insert(f.psalm, f.version);
         }
     }
     let keys: BTreeMap<String, (u32, usize)> = psalms
         .iter()
-        .flat_map(|(n, vs)| vs.iter().enumerate().map(move |(i, v)| (v.key.clone(), (*n, i))))
+        .flat_map(|(n, vs)| {
+            vs.iter()
+                .enumerate()
+                .map(move |(i, v)| (v.key.clone(), (*n, i)))
+        })
         .collect();
     let fits = |id: &str, meter: &str, what: &str, problems: &mut Vec<String>| match tunes.get(id) {
         None => {
@@ -244,14 +273,19 @@ fn load_psalter(dir: &Path, problems: &mut Vec<String>) -> Result<Psalter> {
             false
         }
         Some(t) if meter_of(t) != meter => {
-            problems.push(format!("pairings.toml: {what}: {id} is {} but the version is {meter}", t.meter));
+            problems.push(format!(
+                "pairings.toml: {what}: {id} is {} but the version is {meter}",
+                t.meter
+            ));
             false
         }
         Some(_) => true,
     };
     for (key, ids) in &pairs.psalms {
         let Some(&(n, i)) = keys.get(key) else {
-            problems.push(format!("pairings.toml: {key} is not a version of any psalm"));
+            problems.push(format!(
+                "pairings.toml: {key} is not a version of any psalm"
+            ));
             continue;
         };
         let meter = psalms[&n][i].meter.clone();
@@ -298,7 +332,10 @@ fn read_toml<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T> {
 /// Number of verses in a psalm, from the lead version's chapter JSON, or None
 /// when the chapter is not in this build (fixture builds).
 fn verse_count(build_dir: &Path, version: &str, n: u32) -> Result<Option<u32>> {
-    let path = build_dir.join(version).join("PSA").join(format!("{n}.json"));
+    let path = build_dir
+        .join(version)
+        .join("PSA")
+        .join(format!("{n}.json"));
     if !path.exists() {
         return Ok(None);
     }
@@ -331,7 +368,13 @@ fn parse_key(key: &str) -> Option<(u32, u32, u32)> {
 
 /// Validates the psalms data and tunes and writes `{out}/psalms/` and
 /// `{out}/psalter/`. Returns the number of entries still marked for review.
-pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, out: &Path) -> Result<usize> {
+pub fn build(
+    dir: &Path,
+    psalter: &Path,
+    build_dir: &Path,
+    lead_version: &str,
+    out: &Path,
+) -> Result<usize> {
     let mut tax: Taxonomy = read_toml(&dir.join("taxonomy.toml"))?;
     let psalms: PsalmsFile = read_toml(&dir.join("psalms.toml"))?;
     let notes: BTreeMap<String, NoteIn> = read_toml(&dir.join("notes.toml"))?;
@@ -405,7 +448,10 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
                     }
                 }
             }
-            _ => problems.push(format!("notes.toml {n}: key {:?} is not a verse of psalm {n}", note.key)),
+            _ => problems.push(format!(
+                "notes.toml {n}: key {:?} is not a verse of psalm {n}",
+                note.key
+            )),
         }
     }
     if !problems.is_empty() {
@@ -428,8 +474,12 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
                 p.authors,
                 note.map(|x| x.title_ta.as_str()),
                 note.map(|x| x.title_en.as_str()),
-                note.map(|x| x.key.clone()).unwrap_or_else(|| format!("{n}:1")),
-                metrical.get(n).and_then(|vs| vs.first()).and_then(|v| v.tunes.first())
+                note.map(|x| x.key.clone())
+                    .unwrap_or_else(|| format!("{n}:1")),
+                metrical
+                    .get(n)
+                    .and_then(|vs| vs.first())
+                    .and_then(|v| v.tunes.first())
             ])
         })
         .collect();
@@ -453,7 +503,14 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
             nt: p.nt.as_ref(),
             tunes: {
                 let mut seen = BTreeSet::new();
-                metrical.get(n).into_iter().flatten().flat_map(|v| &v.tunes).filter(|id| seen.insert(id.as_str())).filter_map(|id| tunes.get(id)).collect()
+                metrical
+                    .get(n)
+                    .into_iter()
+                    .flatten()
+                    .flat_map(|v| &v.tunes)
+                    .filter(|id| seen.insert(id.as_str()))
+                    .filter_map(|id| tunes.get(id))
+                    .collect()
             },
             metrical: metrical.get(n).map(Vec::as_slice).unwrap_or(&[]),
         };
@@ -464,7 +521,8 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
         let to = out.join("psalter").join(id);
         fs::create_dir_all(&to)?;
         for f in RENDERED {
-            fs::copy(from.join(f), to.join(f)).with_context(|| format!("copying {}", from.join(f).display()))?;
+            fs::copy(from.join(f), to.join(f))
+                .with_context(|| format!("copying {}", from.join(f).display()))?;
         }
     }
 
@@ -492,15 +550,26 @@ mod tests {
     fn repository_data_is_valid() {
         let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../..");
         let tmp = std::env::temp_dir().join(format!("psalms-test-{}", std::process::id()));
-        build(&root.join("data/psalms"), &root.join("data/psalter"), &tmp, "IRVTAM", &tmp).unwrap();
+        build(
+            &root.join("data/psalms"),
+            &root.join("data/psalter"),
+            &tmp,
+            "IRVTAM",
+            &tmp,
+        )
+        .unwrap();
         let index: Value =
             serde_json::from_str(&fs::read_to_string(tmp.join("psalms/index.json")).unwrap())
                 .unwrap();
         assert_eq!(index["psalms"].as_array().unwrap().len(), 150);
         assert_eq!(index["psalms"][22][7], "crimond");
-        let p119: Value = serde_json::from_str(&fs::read_to_string(tmp.join("psalms/119.json")).unwrap()).unwrap();
+        let p119: Value =
+            serde_json::from_str(&fs::read_to_string(tmp.join("psalms/119.json")).unwrap())
+                .unwrap();
         assert_eq!(p119["metrical"].as_array().unwrap().len(), 22);
-        let p100: Value = serde_json::from_str(&fs::read_to_string(tmp.join("psalms/100.json")).unwrap()).unwrap();
+        let p100: Value =
+            serde_json::from_str(&fs::read_to_string(tmp.join("psalms/100.json")).unwrap())
+                .unwrap();
         assert_eq!(p100["metrical"][0]["label"], "L.M.");
         assert_eq!(p100["metrical"][0]["tunes"][0], "old-hundredth");
         assert!(tmp.join("psalter/crimond/audio.mp3").exists());

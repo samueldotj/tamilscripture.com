@@ -863,7 +863,10 @@ fn build_files(entities: &Path, prefixes: &[&str]) -> Result<(usize, Vec<u8>)> {
         // Text files in `file`; binary ones (the psalter tunes' MP3s) in `blob`,
         // a table older apps never read.
         if rel.ends_with(".mp3") {
-            tx.execute("INSERT INTO blob VALUES (?1, ?2)", params![rel, fs::read(path)?])?;
+            tx.execute(
+                "INSERT INTO blob VALUES (?1, ?2)",
+                params![rel, fs::read(path)?],
+            )?;
         } else {
             tx.execute(
                 "INSERT INTO file VALUES (?1, ?2)",
