@@ -667,10 +667,18 @@
 	/** Where to put the page after a move into a neighbour: that element's top, in px from the viewport's. */
 	let align: { to: 'main' | 'next'; y: number } | null = null;
 	let scrolledByHand = false;
+	/**
+	 * The previous chapter's ending is drawn only once the reader heads up near the top (or
+	 * has just come from it): added above the text as the page loads, it would move the page
+	 * (layout shift) for every reader, most of whom read on down.
+	 */
+	let showPrev = $state(false);
+	const wantPrev = (dy: number) => { if (dy < 0 && !showPrev && scrollY < innerHeight) showPrev = true; };
 	$effect(() => {
 		const c = data.chapters[0];
 		const v = primary.code;
 		scrolledByHand = false;
+		showPrev = align !== null;
 		neighbours.set(nKey(v, c.book, c.chapter), c);
 		const want = (ref: { book: string; chapter: number } | null, set: (j: ChapterJson | null) => void) => {
 			if (dual || !ref) return set(null);
@@ -701,7 +709,7 @@
 		const key = nKey(primary.code, c.book, c.chapter);
 		if (prevPlacedFor === key) return;
 		prevPlacedFor = key;
-		if (align || data.range) return;
+		if (align) return;
 		const anchors = typeof CSS !== 'undefined' && CSS.supports('overflow-anchor', 'auto');
 		if (!anchors || scrollY < 1) scrollBy(0, box.getBoundingClientRect().height);
 	});
@@ -713,6 +721,7 @@
 		const wheel = (e: WheelEvent) => {
 			scrolledByHand = true;
 			settleSoon();
+			wantPrev(e.deltaY);
 			if (e.ctrlKey || !(inNext(e.deltaY) || inPrev(e.deltaY))) return;
 			e.preventDefault();
 			scrollBy(0, e.deltaY * PASS);
@@ -723,6 +732,7 @@
 			const y = e.touches[0].clientY;
 			const dy = touchLastY - y;
 			touchLastY = y;
+			wantPrev(dy);
 			if (e.touches.length > 1 || !(inNext(dy) || inPrev(dy))) return;
 			e.preventDefault();
 			scrollBy(0, dy * PASS);
@@ -795,6 +805,7 @@
 		if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
 		// An arrow a control has used (a column grip) does not also turn the chapter.
 		if (e.defaultPrevented && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) return;
+		if (e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'Home') wantPrev(-1);
 		if (e.key === 'ArrowRight' && navUrl(next)) goto(navUrl(next)!);
 		else if (e.key === 'ArrowLeft' && navUrl(prev)) goto(navUrl(prev)!);
 		else if (e.key === 'Escape') {
@@ -885,7 +896,7 @@
 		</div>
 
 		<div class="measure" class:with-margin={!dual && !!sidenotes} bind:this={measure}>
-			{#if prevChapter && !dual}
+			{#if prevChapter && !dual && showPrev}
 				<div bind:this={prevBox}><ChapterPreview chapter={prevChapter} part="end" title={neighbourTitle(prevChapter)} lang={primary.lang} /></div>
 			{/if}
 			<nav class="crumbs" aria-label="Breadcrumb" bind:this={mainTop}>
