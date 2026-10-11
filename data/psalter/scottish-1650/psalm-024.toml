@@ -1,0 +1,21 @@
+# Psalm 24 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 24
+
+[[version]]
+key = "24"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹The earth belongs unto the Lord,", "  and all that it contains;", "The world that is inhabited,", "  and all that there remains."],
+  ["²For the foundations thereof", "  he on the seas did lay,", "And he hath it established", "  upon the floods to stay."],
+  ["³Who is the man that shall ascend", "  into the hill of God?", "Or who within his holy place", "  shall have a firm abode?"],
+  ["⁴Whose hands are clean, whose heart is pure,", "  and unto vanity", "Who hath not lifted up his soul,", "  nor sworn deceitfully."],
+  ["⁵He from th’ Eternal shall receive", "  the blessing him upon,", "And righteousness, ev’n from the God", "  of his salvation."],
+  ["⁶This is the generation", "  that after him enquire,", "O Jacob, who do seek thy face", "  with their whole heart’s desire."],
+  ["⁷Ye gates, lift up your heads on high;", "  ye doors that last for aye,", "Be lifted up, that so the King", "  of glory enter may."],
+  ["⁸But who of glory is the King?", "  The mighty Lord is this;", "Ev’n that same Lord, that great in might", "  and strong in battle is."],
+  ["⁹Ye gates, lift up your heads; ye doors,", "  doors that do last for aye,", "Be lifted up, that so the King", "  of glory enter may."],
+  ["¹⁰But who is he that is the King", "  of glory? who is this?", "The Lord of hosts, and none but he,", "  the King of glory is."],
+]

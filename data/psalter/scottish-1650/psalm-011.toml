@@ -1,0 +1,18 @@
+# Psalm 11 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 11
+
+[[version]]
+key = "11"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹I in the Lord do put my trust:", "  how is it then that ye", "Say to my soul, Flee, as a bird,", "  unto your mountain high?"],
+  ["²For, lo, the wicked bend their bow,", "  their shafts on string they fit,", "That those who upright are in heart", "  they privily may hit."],
+  ["³If the foundations be destroy’d,", "  what hath the righteous done?", "⁴God in his holy temple is,", "  in heaven is his throne:"],
+  ["His eyes do see, his eye-lids try", "  ⁵men’s sons. The just he proves:", "But his soul hates the wicked man,", "  and him that vi’lence loves."],
+  ["⁶Snares, fire and brimstone, furious storms,", "  on sinners he shall rain:", "This, as the portion of their cup,", "  doth unto them pertain."],
+  ["⁷Because the Lord most righteous doth", "  in righteousness delight;", "And with a pleasant countenance", "  beholdeth the upright."],
+]

@@ -1,0 +1,23 @@
+# Psalm 60 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 60
+
+[[version]]
+key = "60"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Shushan-eduth, Michtam of David, to teach; when he strove with Aram-naharaim, and with Aram-zobah, when Joab returned and smote of Edom, in the valley of Salt, twelve thousand."
+stanzas = [
+  ["¹O Lord, thou hast rejected us,", "  and scatter’d us abroad;", "Thou justly hast displeased been;", "  return to us, O God."],
+  ["²The earth to tremble thou hast made;", "  therein didst breaches make:", "Do thou thereof the breaches heal,", "  because the land doth shake."],
+  ["³Unto thy people thou hard things", "  hast shew’d, and on them sent;", "And thou hast caused us to drink", "  wine of astonishment."],
+  ["⁴And yet a banner thou hast giv’n", "  to them who thee do fear;", "That it by them, because of truth,", "  displayed may appear."],
+  ["⁵That thy beloved people may", "  deliver’d be from thrall,", "Save with the pow’r of thy right hand,", "  and hear me when I call."],
+  ["⁶God in his holiness hath spoke;", "  herein I will take pleasure:", "Shechem I will divide, and forth", "  will Succoth’s valley measure."],
+  ["⁷Gilead I claim as mine by right;", "  Manasseh mine shall be;", "Ephraim is of mine head the strength;", "  Judah gives laws for me;"],
+  ["⁸Moab’s my washing-pot; my shoe", "  I’ll over Edom throw;", "And over Palestina’s land", "  I will in triumph go."],
+  ["⁹O who is he will bring me to", "  the city fortify’d?", "O who is he that to the land", "  of Edom will me guide?"],
+  ["¹⁰O God, which hadest us cast off,", "  this thing wilt thou not do?", "Ev’n thou, O God, which didest not", "  forth with our armies go?"],
+  ["¹¹Help us from trouble; for the help", "  is vain which man supplies.", "¹²Through God we’ll do great acts; he shall", "  tread down our enemies."],
+]

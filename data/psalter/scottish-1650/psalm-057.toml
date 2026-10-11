@@ -1,0 +1,22 @@
+# Psalm 57 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 57
+
+[[version]]
+key = "57"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, Al-taschith, Michtam of David, when he fled from Saul in the cave."
+stanzas = [
+  ["¹Be merciful to me, O God;", "  thy mercy unto me", "Do thou extend; because my soul", "  doth put her trust in thee:"],
+  ["Yea, in the shadow of thy wings", "  my refuge I will place,", "Until these sad calamities", "  do wholly overpass."],
+  ["²My cry I will cause to ascend", "  unto the Lord most high;", "To God, who doth all things for me", "  perform most perfectly."],
+  ["³From heav’n he shall send down, and me", "  from his reproach defend", "That would devour me: God his truth", "  and mercy forth shall send."],
+  ["⁴My soul among fierce lions is,", "  I firebrands live among,", "Men’s sons, whose teeth are spears and darts,", "  a sharp sword is their tongue."],
+  ["⁵Be thou exalted very high", "  above the heav’ns, O God;", "Let thou thy glory be advanc’d", "  o’er all the earth abroad."],
+  ["⁶My soul’s bow’d down; for they a net", "  have laid, my steps to snare:", "Into the pit which they have digg’d", "  for me, they fallen are."],
+  ["⁷My heart is fix’d, my heart is fix’d,", "  O God; I’ll sing and praise.", "⁸My glory wake; wake psalt’ry, harp;", "  myself I’ll early raise."],
+  ["⁹I’ll praise thee ‘mong the people, Lord;", "  ’mong nations sing will I:", "¹⁰For great to heav’n thy mercy is,", "  thy truth is to the sky."],
+  ["¹¹O Lord, exalted be thy name", "  above the heav’ns to stand:", "Do thou thy glory far advance", "  above both sea and land."],
+]

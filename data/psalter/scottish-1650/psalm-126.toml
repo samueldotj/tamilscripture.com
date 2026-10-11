@@ -1,0 +1,16 @@
+# Psalm 126 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 126
+
+[[version]]
+key = "126"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹When Sion’s bondage God turn’d back,", "  as men that dream’d were we.", "²Then fill’d with laughter was our mouth,", "  our tongue with melody:"],
+  ["They ‘mong the heathen said, The Lord", "  great things for them hath wrought.", "³The Lord hath done great things for us,", "  whence joy to us is brought."],
+  ["⁴As streams of water in the south,", "  our bondage, Lord, recall.", "⁵Who sow in tears, a reaping time", "  of joy enjoy they shall."],
+  ["⁶That man who, bearing precious seed,", "  in going forth doth mourn,", "He doubtless, bringing back his sheaves,", "  rejoicing shall return."],
+]

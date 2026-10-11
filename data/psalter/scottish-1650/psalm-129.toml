@@ -1,0 +1,17 @@
+# Psalm 129 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 129
+
+[[version]]
+key = "129"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹Oft did they vex me from my youth,", "  may Isr’el now declare;", "²Oft did they vex me from my youth,", "  yet not victorious were."],
+  ["³The plowers plow’d upon my back;", "  they long their furrows drew.", "⁴The righteous Lord did cut the cords", "  of the ungodly crew."],
+  ["⁵Let Sion’s haters all be turn’d", "  back with confusion.", "⁶As grass on houses’ tops be they,", "  which fades ere it be grown:"],
+  ["⁷Whereof enough to fill his hand", "  the mower cannot find;", "Nor can the man his bosom fill,", "  whose work is sheaves to bind."],
+  ["⁸Neither say they who do go by,", "  God’s blessing on you rest:", "We in the name of God the Lord", "  do wish you to be blest."],
+]

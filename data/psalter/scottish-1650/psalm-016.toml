@@ -1,0 +1,22 @@
+# Psalm 16 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 16
+
+[[version]]
+key = "16"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "Michtam of David."
+stanzas = [
+  ["¹Lord, keep me; for I trust in thee.", "  ²To God thus was my speech,", "Thou art my Lord; and unto thee", "  my goodness doth not reach:"],
+  ["³To saints on earth, to th’ excellent,", "  where my delight’s all plac’d.", "⁴Their sorrows shall be multiply’d", "  to other gods that haste:"],
+  ["Of their drink-offerings of blood", "  I will no off ‘ring make;", "Yea, neither I their very names", "  up in my lips will take."],
+  ["⁵God is of mine inheritance", "  and cup the portion;", "The lot that fallen is to me", "  thou dost maintain alone."],
+  ["⁶Unto me happily the lines", "  in pleasant places fell;", "Yea, the inheritance I got", "  in beauty doth excel."],
+  ["⁷I bless the Lord, because he doth", "  by counsel me conduct;", "And in the seasons of the night", "  my reins do me instruct."],
+  ["⁸Before me still the Lord I set:", "  sith it is so that he", "Doth ever stand at my right hand,", "  I shall not moved be."],
+  ["⁹Because of this my heart is glad,", "  and joy shall be exprest", "Ev’n by my glory; and my flesh", "  in confidence shall rest."],
+  ["¹⁰Because my soul in grave to dwell", "  shall not be left by thee;", "Nor wilt thou give thine Holy One", "  corruption to see."],
+  ["¹¹Thou wilt me shew the path of life:", "  of joys there is full store", "Before thy face; at thy right hand", "  are pleasures evermore."],
+]

@@ -1,0 +1,25 @@
+# Psalm 32 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 32
+
+[[version]]
+key = "32"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David, Maschil."
+stanzas = [
+  ["¹O blessed is the man to whom", "  is freely pardoned", "All the transgression he hath done,", "  whose sin is covered."],
+  ["²Bless’d is the man to whom the Lord", "  imputeth not his sin,", "And in whose sp’rit there is no guile,", "  nor fraud is found therein."],
+  ["³When as I did refrain my speech,", "  and silent was my tongue,", "My bones then waxed old, because", "  I roared all day long."],
+  ["⁴For upon me both day and night", "  thine hand did heavy lie,", "So that my moisture turned is", "  in summer’s drought thereby."],
+  ["⁵I thereupon have unto thee", "  my sin acknowledged,", "And likewise mine iniquity", "  I have not covered:"],
+  ["I will confess unto the Lord", "  my trespasses, said I;", "And of my sin thou freely didst", "  forgive th’ iniquity."],
+  ["⁶For this shall ev’ry godly one", "  his prayer make to thee;", "In such a time he shall thee seek,", "  as found thou mayest be."],
+  ["Surely, when floods of waters great", "  do swell up to the brim,", "They shall not overwhelm his soul,", "  nor once come near to him."],
+  ["⁷Thou art my hiding-place, thou shalt", "  from trouble keep me free:", "Thou with songs of deliverance", "  about shalt compass me."],
+  ["⁸I will instruct thee, and thee teach", "  the way that thou shalt go;", "And, with mine eye upon thee set,", "  I will direction show."],
+  ["⁹Then be not like the horse or mule,", "  which do not understand;", "Whose mouth, lest they come near to thee,", "  a bridle must command."],
+  ["¹⁰Unto the man that wicked is", "  his sorrows shall abound;", "But him that trusteth in the Lord", "  mercy shall compass round."],
+  ["¹¹Ye righteous, in the Lord be glad,", "  in him do ye rejoice:", "All ye that upright are in heart,", "  for joy lift up your voice."],
+]

@@ -1,0 +1,27 @@
+# Psalm 70 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 70
+
+[[version]]
+key = "70"
+label = "S.M."
+meter = "6.6.8.6"
+argument = "To the chief Musician, A Psalm of David, to bring to remembrance."
+stanzas = [
+  ["¹Lord, haste me to deliver;", "  with speed, Lord, succour me.", "²Let them that for my soul do seek", "  sham’d and confounded be:"],
+  ["Turn’d back be they, and sham’d,", "  that in my hurt delight.", "³Turn’d back be they, Ha, ha! that say,", "  their shaming to requite."],
+  ["⁴In thee let all be glad,", "  and joy that seek for thee:", "Let them who thy salvation love", "  say still, God praised be."],
+  ["⁵I poor and needy am;", "  come, Lord, and make no stay:", "My help thou and deliv’rer art;", "  O Lord, make no delay."],
+]
+
+[[version]]
+key = "70-2"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Make haste, O God, me to preserve;", "  with speed, Lord, succour me.", "²Let them that for my soul do seek", "  sham’d and confounded be:"],
+  ["Let them be turned back, and sham’d,", "  that in my hurt delight.", "³Turn’d back be they, Ha, ha! that say,", "  their shaming to requite."],
+  ["⁴O Lord, in thee let all be glad,", "  and joy that seek for thee:", "Let them who thy salvation love", "  say still, God praised be."],
+  ["⁵But I both poor and needy am;", "  come, Lord, and make no stay:", "My help thou and deliv’rer art;", "  O Lord, make no delay."],
+]

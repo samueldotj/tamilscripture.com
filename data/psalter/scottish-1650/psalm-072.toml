@@ -1,0 +1,30 @@
+# Psalm 72 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 72
+
+[[version]]
+key = "72"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm for Solomon."
+stanzas = [
+  ["¹O Lord, thy judgments give the king,", "  his son thy righteousness.", "²With right he shall thy people judge,", "  thy poor with uprightness."],
+  ["³The lofty mountains shall bring forth", "  unto the people peace;", "Likewise the little hills the same", "  shall do by righteousness."],
+  ["⁴The people’s poor ones he shall judge,", "  the needy’s children save;", "And those shall he in pieces break", "  who them oppressed have."],
+  ["⁵They shall thee fear, while sun and moon", "  do last, through ages all.", "⁶Like rain on mown grass he shall drop,", "  or show’rs on earth that fall."],
+  ["⁷The just shall flourish in his days,", "  and prosper in his reign:", "He shall, while doth the moon endure,", "  abundant peace maintain."],
+  ["⁸His large and great dominion shall", "  from sea to sea extend:", "It from the river shall reach forth", "  unto earth’s utmost end."],
+  ["⁹They in the wilderness that dwell", "  bow down before him must;", "And they that are his enemies", "  shall lick the very dust."],
+  ["¹⁰The kings of Tarshish, and the isles,", "  to him shall presents bring;", "And unto him shall offer gifts", "  Sheba’s and Seba’s king."],
+  ["¹¹Yea, all the mighty kings on earth", "  before him down shall fall;", "And all the nations of the world", "  do service to him shall."],
+  ["¹²For he the needy shall preserve,", "  when he to him doth call;", "The poor also, and him that hath", "  no help of man at all."],
+  ["¹³The poor man and the indigent", "  in mercy he shall spare;", "He shall preserve alive the souls", "  of those that needy are."],
+  ["¹⁴Both from deceit and violence", "  their soul he shall set free;", "And in his sight right precious", "  and dear their blood shall be."],
+  ["¹⁵Yea, he shall live, and giv’n to him", "  shall be of Sheba’s gold:", "For him still shall they pray, and he", "  shall daily be extoll’d."],
+  ["¹⁶Of corn an handful in the earth", "  on tops of mountains high,", "With prosp’rous fruit shall shake, like trees", "  on Lebanon that be."],
+  ["The city shall be flourishing,", "  her citizens abound", "In number shall, like to the grass", "  that grows upon the ground."],
+  ["¹⁷His name for ever shall endure;", "  last like the sun it shall:", "Men shall be bless’d in him, and bless’d", "  all nations shall him call."],
+  ["¹⁸Now blessed be the Lord our God,", "  the God of Israel,", "For he alone doth wondrous works,", "  in glory that excel."],
+  ["¹⁹And blessed be his glorious name", "  to all eternity:", "The whole earth let his glory fill.", "  Amen, so let it be."],
+]

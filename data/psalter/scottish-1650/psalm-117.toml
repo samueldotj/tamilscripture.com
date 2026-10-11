@@ -1,0 +1,13 @@
+# Psalm 117 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 117
+
+[[version]]
+key = "117"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O give ye praise unto the Lord,", "  all nations that be;", "Likewise, ye people all, accord", "  his name to magnify."],
+  ["²For great to us-ward ever are", "  his loving-kindnesses:", "His truth endures for evermore.", "  The Lord O do ye bless."],
+]

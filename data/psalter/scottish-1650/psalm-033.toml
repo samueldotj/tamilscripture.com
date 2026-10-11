@@ -1,0 +1,28 @@
+# Psalm 33 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 33
+
+[[version]]
+key = "33"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Ye righteous, in the Lord rejoice;", "  it comely is and right,", "That upright men, with thankful voice,", "  should praise the Lord of might."],
+  ["²Praise God with harp, and unto him", "  sing with the psaltery;", "Upon a ten-string’d instrument", "  make ye sweet melody."],
+  ["³A new song to him sing, and play", "  with loud noise skilfully;", "⁴For right is God’s word, all his works", "  are done in verity."],
+  ["⁵To judgment and to righteousness", "  a love he beareth still;", "The loving-kindness of the Lord", "  the earth throughout doth fill."],
+  ["⁶The heavens by the word of God", "  did their beginning take;", "And by the breathing of his mouth", "  he all their hosts did make."],
+  ["⁷The waters of the seas he brings", "  together as an heap;", "And in storehouses, as it were,", "  he layeth up the deep."],
+  ["⁸Let earth, and all that live therein,", "  with rev’rence fear the Lord;", "Let all the world’s inhabitants", "  dread him with one accord."],
+  ["⁹For he did speak the word, and done", "  it was without delay;", "Established it firmly stood,", "  whatever he did say."],
+  ["¹⁰God doth the counsel bring to nought", "  which heathen folk do take;", "And what the people do devise", "  of none effect doth make."],
+  ["¹¹O but the counsel of the Lord", "  doth stand for ever sure;", "And of his heart the purposes", "  from age to age endure."],
+  ["¹²That nation blessed is, whose God", "  Jehovah is, and those", "A blessed people are, whom for", "  his heritage he chose."],
+  ["¹³The Lord from heav’n sees and beholds", "  all sons of men full well:", "¹⁴He views all from his dwelling-place", "  that in the earth do dwell."],
+  ["¹⁵He forms their hearts alike, and all", "  their doings he observes.", "¹⁶Great hosts save not a king, much strength", "  no mighty man preserves."],
+  ["¹⁷An horse for preservation", "  is a deceitful thing;", "And by the greatness of his strength", "  can no deliv’rance bring."],
+  ["¹⁸Behold on those that do him fear", "  the Lord doth set his eye;", "Ev’n those who on his mercy do", "  with confidence rely."],
+  ["¹⁹From death to free their soul, in dearth", "  life unto them to yield.", "²⁰Our soul doth wait upon the Lord;", "  he is our help and shield."],
+  ["²¹Sith in his holy name we trust,", "  our heart shall joyful be.", "²²Lord, let thy mercy be on us,", "  as we do hope in thee."],
+]

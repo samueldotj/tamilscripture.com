@@ -1,0 +1,20 @@
+# Psalm 52 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 52
+
+[[version]]
+key = "52"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, Maschil, A Psalm of David, when Doeg the Edomite came and told Saul, and said unto him, David is come to the house of Ahimelech."
+stanzas = [
+  ["¹Why dost thou boast, O mighty man,", "  of mischief and of ill?", "The goodness of Almighty God", "  endureth ever still."],
+  ["²Thy tongue mischievous calumnies", "  deviseth subtilely,", "Like to a razor sharp to cut,", "  working deceitfully."],
+  ["³Ill more than good, and more than truth", "  thou lovest to speak wrong:", "⁴Thou lovest all-devouring words,", "  O thou deceitful tongue."],
+  ["⁵So God shall thee destroy for aye,", "  remove thee, pluck thee out", "Quite from thy house, out of the land", "  of life he shall thee root."],
+  ["⁶The righteous shall it see, and fear,", "  and laugh at him they shall:", "⁷Lo, this the man is that did not", "  make God his strength at all:"],
+  ["But he in his abundant wealth", "  his confidence did place;", "And he took strength unto himself", "  from his own wickedness."],
+  ["⁸But I am in the house of God", "  like to an olive green:", "My confidence for ever hath", "  upon God’s mercy been."],
+  ["⁹And I for ever will thee praise,", "  because thou hast done this:", "I on thy name will wait; for good", "  before thy saints it is."],
+]

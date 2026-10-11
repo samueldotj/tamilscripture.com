@@ -1,0 +1,31 @@
+# Psalm 55 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 55
+
+[[version]]
+key = "55"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician on Neginoth, Maschil, A Psalm of David."
+stanzas = [
+  ["¹Lord, hear my pray’r, hide not thyself", "  from my entreating voice:", "²Attend and hear me; in my plaint", "  I mourn and make a noise."],
+  ["³Because of th’ en’my’s voice, and for", "  lewd men’s oppression great:", "On me they cast iniquity,", "  and they in wrath me hate."],
+  ["⁴Sore pain’d within me is my heart:", "  death’s terrors on me fall.", "⁵On me comes trembling, fear and dread", "  o’erwhelmed me withal."],
+  ["⁶O that I, like a dove, had wings,", "  said I, then would I flee", "Far hence, that I might find a place", "  where I in rest might be."],
+  ["⁷Lo, then far off I wander would,", "  and in the desert stay;", "⁸From windy storm and tempest I", "  would haste to ‘scape away."],
+  ["⁹O Lord, on them destruction bring,", "  and do their tongues divide;", "For in the city violence", "  and strife I have espy’d."],
+  ["¹⁰They day and night upon the walls", "  do go about it round:", "There mischief is, and sorrow there", "  in midst of it is found."],
+  ["¹¹Abundant wickedness there is", "  within her inward part;", "And from her streets deceitfulness", "  and guile do not depart."],
+  ["¹²He was no foe that me reproach’d,", "  then that endure I could;", "Nor hater that did ‘gainst me boast,", "  from him me hide I would."],
+  ["¹³But thou, man, who mine equal, guide,", "  and mine acquaintance wast:", "¹⁴We join’d sweet counsels, to God’s house", "  in company we past."],
+  ["¹⁵Let death upon them seize, and down", "  let them go quick to hell;", "For wickedness doth much abound", "  among them where they dwell."],
+  ["¹⁶I’ll call on God: God will me save.", "  ¹⁷I’ll pray, and make a noise", "At ev’ning, morning, and at noon;", "  and he shall hear my voice."],
+  ["¹⁸He hath my soul delivered,", "  that it in peace might be", "From battle that against me was;", "  for many were with me."],
+  ["¹⁹The Lord shall hear, and them afflict,", "  of old who hath abode:", "Because they never changes have,", "  therefore they fear not God."],
+  ["²⁰’Gainst those that were at peace with him", "  he hath put forth his hand:", "The covenant that he had made,", "  by breaking he profan’d."],
+  ["²¹More smooth than butter were his words,", "  while in his heart was war;", "His speeches were more soft than oil,", "  and yet drawn swords they are."],
+  ["²²Cast thou thy burden on the Lord,", "  and he shall thee sustain;", "Yea, he shall cause the righteous man", "  unmoved to remain."],
+  ["²³But thou, O Lord my God, those men", "  in justice shalt o’erthrow,", "And in destruction’s dungeon dark", "  at last shalt lay them low:"],
+  ["The bloody and deceitful men", "  shall not live half their days:", "But upon thee with confidence", "  I will depend always."],
+]

@@ -1,0 +1,34 @@
+# Psalm 6 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 6
+
+[[version]]
+key = "6"
+label = "L.M."
+meter = "8.8.8.8"
+argument = "To the chief Musician on Neginoth upon Sheminith, A Psalm of David."
+stanzas = [
+  ["¹Lord, in thy wrath rebuke me not;", "Nor in thy hot rage chasten me.", "²Lord, pity me, for I am weak:", "Heal me, for my bones vexed be."],
+  ["³My soul is also vexed sore;", "But, Lord, how long stay wilt thou make?", "⁴Return, O Lord, my soul set free;", "O save me, for thy mercies’ sake."],
+  ["⁵Because those that deceased are", "Of thee shall no remembrance have;", "And who is he that will to thee", "Give praises lying in the grave?"],
+  ["⁶I with my groaning weary am,", "I also all the night my bed", "Have caused for to swim; and I", "With tears my couch have watered."],
+  ["⁷Mine eye, consum’d with grief, grows old,", "Because of all mine enemies.", "⁸Hence from me, wicked workers all;", "For God hath heard my weeping cries."],
+  ["⁹God hath my supplication heard,", "My pray’r received graciously", "¹⁰Sham’d and sore vex’d be all my foes,", "Sham’d and back turned suddenly."],
+]
+
+[[version]]
+key = "6-2"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹In thy great indignation,", "  O Lord, rebuke me not;", "Nor on me lay thy chast ‘ning hand,", "  in thy displeasure hot."],
+  ["²Lord, I am weak, therefore on me", "  have mercy, and me spare:", "Heal me, O Lord, because thou know’st", "  my bones much vexed are."],
+  ["³My soul is vexed sore: but, Lord,", "  how long stay wilt thou make?", "⁴Return, Lord, free my soul; and save", "  me, for thy mercies’ sake."],
+  ["⁵Because of thee in death there shall", "  no more remembrance be:", "Of those that in the grave do lie,", "  who shall give thanks to thee?"],
+  ["⁶I with my groaning weary am,", "  and all the night my bed", "I caused for to swim; with tears", "  my couch I watered."],
+  ["⁷By reason of my vexing grief,", "  mine eye consumed is;", "It waxeth old, because of all", "  that be mine enemies."],
+  ["⁸But now, depart from me all ye", "  that work iniquity:", "For why? the Lord hath heard my voice,", "  when I did mourn and cry."],
+  ["⁹Unto my supplication", "  the Lord did hearing give:", "When I to him my prayer make,", "  the Lord will it receive."],
+  ["¹⁰Let all be sham’d and troubled sore,", "  That en’mies are to me;", "Let them turn back, and suddenly", "  ashamed let them be."],
+]

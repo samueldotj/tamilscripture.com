@@ -1,0 +1,56 @@
+# Psalm 89 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 89
+
+[[version]]
+key = "89"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "Maschil of Ethan the Ezrahite."
+stanzas = [
+  ["¹God’s mercies I will ever sing;", "  and with my mouth I shall", "Thy faithfulness make to be known", "  to generations all."],
+  ["²For mercy shall be built, said I,", "  for ever to endure;", "Thy faithfulness, ev’n in the heav’ns,", "  thou wilt establish sure."],
+  ["³I with my chosen One have made", "  a cov’nant graciously;", "And to my servant, whom I lov’d,", "  to David sworn have I;"],
+  ["⁴That I thy seed establish shall", "  for ever to remain,", "And will to generations all", "  thy throne build and maintain."],
+  ["⁵The praises of thy wonders, Lord,", "  the heavens shall express;", "And in the congregation", "  of saints thy faithfulness."],
+  ["⁶For who in heaven with the Lord", "  may once himself compare?", "Who is like God among the sons", "  of those that mighty are?"],
+  ["⁷Great fear in meeting of the saints", "  is due unto the Lord;", "And he of all about him should", "  with rev’rence be ador’d."],
+  ["⁸O thou that art the Lord of hosts,", "  what Lord in mightiness", "Is like to thee? who compass’d round", "  art with thy faithfulness."],
+  ["⁹Ev’n in the raging of the sea", "  thou over it dost reign;", "And when the waves thereof do swell,", "  thou stillest them again."],
+  ["¹⁰Rahab in pieces thou didst break,", "  like one that slaughter’d is;", "And with thy mighty arm thou hast", "  dispers’d thine enemies."],
+  ["¹¹The heav’ns are thine, thou for thine own", "  the earth dost also take;", "The world, and fulness of the same,", "  thy pow’r did found and make."],
+  ["¹²The north and south from thee alone", "  their first beginning had;", "Both Tabor mount and Hermon hill", "  shall in thy name be glad."],
+  ["¹³Thou hast an arm that’s full of pow’r,", "  thy hand is great in might;", "And thy right hand exceedingly", "  exalted is in height."],
+  ["¹⁴Justice and judgment of thy throne", "  are made the dwelling-place;", "Mercy, accompany’d with truth,", "  shall go before thy face."],
+  ["¹⁵O greatly bless’d the people are", "  the joyful sound that know;", "In brightness of thy face, O Lord,", "  they ever on shall go."],
+  ["¹⁶They in thy name shall all the day", "  rejoice exceedingly;", "And in thy righteousness shall they", "  exalted be on high."],
+  ["¹⁷Because the glory of their strength", "  doth only stand in thee;", "And in thy favour shall our horn", "  and pow’r exalted be."],
+  ["¹⁸For God is our defence; and he", "  to us doth safety bring:", "The Holy One of Israel", "  is our almighty King."],
+  ["¹⁹In vision to thy Holy One", "  thou saidst, I help upon", "A strong one laid; out of the folk", "  I rais’d a chosen one;"],
+  ["²⁰Ev’n David, I have found him out", "  a servant unto me;", "And with my holy oil my King", "  anointed him to be."],
+  ["²¹With whom my hand shall stablish’d be;", "  mine arm shall make him strong.", "²²On him the foe shall not exact,", "  nor son of mischief wrong."],
+  ["²³I will beat down before his face", "  all his malicious foes;", "I will them greatly plague who do", "  with hatred him oppose."],
+  ["²⁴My mercy and my faithfulness", "  with him yet still shall be;", "And in my name his horn and pow’r", "  men shall exalted see."],
+  ["²⁵His hand and pow’r shall reach afar;", "  I’ll set it in the sea;", "And his right hand established", "  shall in the rivers be."],
+  ["²⁶Thou art my Father, he shall cry,", "  thou art my God alone;", "And he shall say, Thou art the Rock", "  of my salvation."],
+  ["²⁷I’ll make him my first-born, more high", "  than kings of any land.", "²⁸My love I’ll ever keep for him,", "  my cov’nant fast shall stand."],
+  ["²⁹His seed I by my pow’r will make", "  for ever to endure;", "And, as the days of heav’n, his throne", "  shall stable be, and sure."],
+  ["³⁰But if his children shall forsake", "  my laws, and go astray,", "And in my judgments shall not walk,", "  but wander from my way:"],
+  ["³¹If they my laws break, and do not", "  keep my commandements;", "³²I’ll visit then their faults with rods,", "  their sins with chastisements."],
+  ["³³Yet I’ll not take my love from him,", "  nor false my promise make.", "³⁴My cov’nant I’ll not break, nor change", "  what with my mouth I spake."],
+  ["³⁵Once by my holiness I sware,", "  to David I’ll not lie;", "³⁶His seed and throne shall, as the sun,", "  before me last for aye."],
+  ["³⁷It, like the moon, shall ever be", "  establish’d stedfastly;", "And like to that which in the heav’n", "  doth witness faithfully."],
+  ["³⁸But thou, displeased, hast cast off,", "  thou didst abhor and loathe;", "With him that thine anointed is", "  thou hast been very wroth."],
+  ["³⁹Thou hast thy servant’s covenant", "  made void, and quite cast by;", "Thou hast profan’d his crown, while it", "  cast on the ground doth lie."],
+  ["⁴⁰Thou all his hedges hast broke down,", "  his strong holds down hast torn.", "⁴¹He to all passers-by a spoil,", "  to neighbours is a scorn."],
+  ["⁴²Thou hast set up his foes’ right hand;", "  mad’st all his en’mies glad:", "⁴³Turn’d his sword’s edge, and him to stand", "  in battle hast not made."],
+  ["⁴⁴His glory thou hast made to cease,", "  his throne to ground down cast;", "⁴⁵Shorten’d his days of youth, and him", "  with shame thou cover’d hast."],
+  ["⁴⁶How long, Lord, wilt thou hide thyself?", "  for ever, in thine ire?", "And shall thine indignation", "  burn like unto a fire?"],
+  ["⁴⁷Remember, Lord, how short a time", "  I shall on earth remain:", "O wherefore is it so that thou", "  has made all men in vain?"],
+  ["⁴⁸What man is he that liveth here,", "  and death shall never see?", "Or from the power of the grave", "  what man his soul shall free?"],
+  ["⁴⁹Thy former loving-kindnesses,", "  O Lord, where be they now?", "Those which in truth and faithfulness", "  to David sworn hast thou?"],
+  ["⁵⁰Mind, Lord, thy servant’s sad reproach;", "  how I in bosom bear", "The scornings of the people all,", "  who strong and mighty are."],
+  ["⁵¹Wherewith thy raging enemies", "  reproach’d, O Lord, think on;", "Wherewith they have reproach’d the steps", "  of thine anointed one."],
+  ["⁵²All blessing to the Lord our God", "  let be ascribed then:", "For evermore so let it be.", "  Amen, yea, and amen."],
+]

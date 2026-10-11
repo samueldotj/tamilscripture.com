@@ -1,0 +1,23 @@
+# Psalm 48 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 48
+
+[[version]]
+key = "48"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song and Psalm for the sons of Korah."
+stanzas = [
+  ["¹Great is the Lord, and greatly he", "  is to be praised still,", "Within the city of our God,", "  upon his holy hill."],
+  ["²Mount Sion stands most beautiful,", "  the joy of all the land;", "The city of the mighty King", "  on her north side doth stand."],
+  ["³The Lord within her palaces", "  is for a refuge known.", "⁴For, lo, the kings that gather’d were", "  together, by have gone."],
+  ["⁵But when they did behold the same,", "  they, wond’ring, would not stay;", "But, being troubled at the sight,", "  they thence did haste away."],
+  ["⁶Great terror there took hold on them;", "  they were possess’d with fear;", "Their grief came like a woman’s pain,", "  when she a child doth bear."],
+  ["⁷Thou Tarshish ships with east wind break’st:", "  ⁸As we have heard it told,", "So, in the city of the Lord,", "  our eyes did it behold;"],
+  ["In our God’s city, which his hand", "  for ever stablish will.", "⁹We of thy loving-kindness thought,", "  Lord, in thy temple still."],
+  ["¹⁰O Lord, according to thy name,", "  through all the earth’s thy praise;", "And thy right hand, O Lord, is full", "  of righteousness always."],
+  ["¹¹Because thy judgments are made known,", "  let Sion mount rejoice;", "Of Judah let the daughters all", "  send forth a cheerful voice."],
+  ["¹²Walk about Sion, and go round;", "  the high tow’rs thereof tell:", "¹³Consider ye her palaces,", "  and mark her bulwarks well;"],
+  ["That ye may tell posterity.", "  ¹⁴For this God doth abide", "Our God for evermore; he will", "  ev’n unto death us guide."],
+]

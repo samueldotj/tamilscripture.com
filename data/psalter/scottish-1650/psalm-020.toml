@@ -1,0 +1,19 @@
+# Psalm 20 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 20
+
+[[version]]
+key = "20"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹Jehovah hear thee in the day", "  when trouble he doth send:", "And let the name of Jacob’s God", "  thee from all ill defend."],
+  ["²O let him help send from above,", "  out of his sanctuary:", "From Sion, his own holy hill,", "  let him give strength to thee."],
+  ["³Let him remember all thy gifts,", "  accept thy sacrifice:", "⁴Grant thee thine heart’s wish, and fulfil", "  thy thoughts and counsel wise."],
+  ["⁵In thy salvation we will joy;", "  in our God’s name we will", "Display our banners: and the Lord", "  thy prayers all fulfil."],
+  ["⁶Now know I God his king doth save:", "  he from his holy heav’n", "Will hear him, with the saving strength", "  by his own right hand giv’n."],
+  ["⁷In chariots some put confidence,", "  some horses trust upon:", "But we remember will the name", "  of our Lord God alone."],
+  ["⁸We rise, and upright stand, when they", "  are bowed down, and fall.", "⁹Deliver, Lord; and let the King", "  us hear, when we do call."],
+]

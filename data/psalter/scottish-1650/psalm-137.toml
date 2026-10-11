@@ -1,0 +1,18 @@
+# Psalm 137 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 137
+
+[[version]]
+key = "137"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹By Babel’s streams we sat and wept,", "  when Sion we thought on.", "²In midst thereof we hang’d our harps", "  the willow-trees upon."],
+  ["³For there a song required they,", "  who did us captive bring:", "Our spoilers call’d for mirth, and said,", "  A song of Sion sing."],
+  ["⁴O how the Lord’s song shall we sing", "  within a foreign land?", "⁵If thee, Jerus’lem, I forget,", "  skill part from my right hand."],
+  ["⁶My tongue to my mouth’s roof let cleave,", "  if I do thee forget,", "Jerusalem, and thee above", "  my chief joy do not set."],
+  ["⁷Remember Edom’s children, Lord,", "  who in Jerus’lems day,", "Ev’n unto its foundation,", "  Raze, raze it quite, did say."],
+  ["⁸O daughter thou of Babylon,", "  near to destruction;", "Bless’d shall he be that thee rewards,", "  as thou to us hast done."],
+  ["⁹Yea, happy surely shall he be", "  thy tender little ones", "Who shall lay hold upon, and them", "  shall dash against the stones."],
+]

@@ -1,0 +1,16 @@
+# Psalm 123 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 123
+
+[[version]]
+key = "123"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹O thou that dwellest in the heav’ns,", "  I lift mine eyes to thee.", "²Behold, as servants’ eyes do look", "  their masters’ hand to see,"],
+  ["As handmaid’s eyes her mistress’ hand;", "  so do our eyes attend", "Upon the Lord our God, until", "  to us he mercy send."],
+  ["³O Lord, be gracious to us,", "  unto us gracious be;", "Because replenish’d with contempt", "  exceedingly are we."],
+  ["⁴Our soul is fill’d with scorn of those", "  that at their ease abide,", "And with the insolent contempt", "  of those that swell in pride."],
+]

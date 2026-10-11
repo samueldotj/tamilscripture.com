@@ -1,0 +1,25 @@
+# Psalm 81 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 81
+
+[[version]]
+key = "81"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Gittith, A Psalm of Asaph."
+stanzas = [
+  ["¹Sing loud to God our strength; with joy", "  to Jacob’s God do sing.", "²Take up a psalm, the pleasant harp,", "  timbrel and psalt’ry bring."],
+  ["³Blow trumpets at new-moon, what day", "  our feast appointed is:", "⁴For charge to Isr’el, and a law", "  of Jacob’s God was this."],
+  ["⁵To Joseph this a testimony", "  he made, when Egypt land", "He travell’d through, where speech I heard", "  I did not understand."],
+  ["⁶His shoulder I from burdens took,", "  his hands from pots did free.", "⁷Thou didst in trouble on me call,", "  and I deliver’d thee:"],
+  ["In secret place of thundering", "  I did thee answer make;", "And at the streams of Meribah", "  of thee a proof did take."],
+  ["⁸O thou, my people, give an ear,", "  I’ll testify to thee;", "To thee, O Isr’el, if thou wilt", "  but hearken unto me."],
+  ["⁹In midst of thee there shall not be", "  any strange god at all;", "Nor unto any god unknown", "  thou bowing down shalt fall."],
+  ["¹⁰I am the Lord thy God, which did", "  from Egypt land thee guide;", "I’ll fill thy mouth abundantly,", "  do thou it open wide."],
+  ["¹¹But yet my people to my voice", "  would not attentive be;", "And ev’n my chosen Israel", "  he would have none of me."],
+  ["¹²So to the lust of their own hearts", "  I them delivered;", "And then in counsels of their own", "  they vainly wandered."],
+  ["¹³O that my people had me heard,", "  Isr’el my ways had chose!", "¹⁴I had their en’mies soon subdu’d,", "  my hand turn’d on their foes."],
+  ["¹⁵The haters of the Lord to him", "  submission should have feign’d;", "But as for them, their time should have", "  for evermore remain’d."],
+  ["¹⁶He should have also fed them with", "  the finest of the wheat;", "Of honey from the rock thy fill", "  I should have made thee eat."],
+]

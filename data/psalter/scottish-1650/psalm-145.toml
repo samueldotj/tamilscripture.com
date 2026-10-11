@@ -1,0 +1,50 @@
+# Psalm 145 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 145
+
+[[version]]
+key = "145"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "David’s Psalm of praise."
+stanzas = [
+  ["¹I’ll thee extol, my God, O King;", "  I’ll bless thy name always.", "²Thee will I bless each day, and will", "  thy name for ever praise."],
+  ["³Great is the Lord, much to be prais’d;", "  his greatness search exceeds.", "⁴Race unto race shall praise thy works,", "  and shew thy mighty deeds."],
+  ["⁵I of thy glorious majesty", "  the honour will record;", "I’ll speak of all thy mighty works,", "  which wondrous are, O Lord."],
+  ["⁶Men of thine acts the might shall show,", "  thine acts that dreadful are;", "And I, thy glory to advance,", "  thy greatness will declare."],
+  ["⁷The mem’ry of thy goodness great", "  they largely shall express;", "With songs of praise they shall extol", "  thy perfect righteousness."],
+  ["⁸The Lord is very gracious,", "  in him compassions flow;", "In mercy he is very great,", "  and is to anger slow."],
+  ["⁹The Lord Jehovah unto all", "  his goodness doth declare;", "And over all his other works", "  his tender mercies are."],
+  ["¹⁰Thee all thy works shall praise, O Lord,", "  and thee thy saints shall bless;", "¹¹They shall thy kingdom’s glory show,", "  thy pow’r by speech express:"],
+  ["¹²To make the sons of men to know", "  his acts done mightily,", "And of his kingdom th’ excellent", "  and glorious majesty."],
+  ["¹³Thy kingdom shall for ever stand,", "  thy reign through ages all.", "¹⁴God raiseth all that are bow’d down,", "  upholdeth all that fall."],
+  ["¹⁵The eyes of all things wait on thee,", "  the giver of all good;", "And thou, in time convenient,", "  bestow’st on them their food:"],
+  ["¹⁶Thine hand thou open’st lib’rally,", "  and of thy bounty gives", "Enough to satisfy the need", "  of ev’ry thing that lives."],
+  ["¹⁷The Lord is just in all his ways,", "  holy in his works all.", "¹⁸God’s near to all that call on him,", "  in truth that on him call."],
+  ["¹⁹He will accomplish the desire", "  of those that do him fear:", "He also will deliver them,", "  and he their cry will hear."],
+  ["²⁰The Lord preserves all who him love,", "  that nought can them annoy:", "But he all those that wicked are", "  will utterly destroy."],
+  ["²¹My mouth the praises of the Lord", "  to publish cease shall never:", "Let all flesh bless his holy name", "  for ever and for ever."],
+]
+
+[[version]]
+key = "145-2"
+label = "L.M."
+meter = "8.8.8.8"
+stanzas = [
+  ["¹O Lord, thou art my God and King;", "Thee will I magnify and praise:", "I will thee bless, and gladly sing", "Unto thy holy name always."],
+  ["²Each day I rise I will thee bless,", "And praise thy name time without end.", "³Much to be prais’d, and great God is;", "His greatness none can comprehend."],
+  ["⁴Race shall thy works praise unto race,", "The mighty acts show done by thee.", "⁵I will speak of the glorious grace,", "And honour of thy majesty;"],
+  ["Thy wondrous works I will record.", "⁶By men the might shall be extoll’d", "Of all thy dreadful acts, O Lord:", "And I thy greatness will unfold."],
+  ["⁷They utter shall abundantly", "The mem’ry of thy goodness great;", "And shall sing praises cheerfully,", "Whilst they thy righteousness relate."],
+  ["⁸The Lord our God is gracious,", "Compassionate is he also;", "In mercy he is plenteous,", "But unto wrath and anger slow."],
+  ["⁹Good unto all men is the Lord:", "O’er all his works his mercy is.", "¹⁰Thy works all praise to thee afford:", "Thy saints, O Lord, thy name shall bless."],
+  ["¹¹The glory of thy kingdom show", "Shall they, and of thy power tell:", "¹²That so men’s sons his deeds may know,", "His kingdom’s grace that doth excel."],
+  ["¹³Thy kingdom hath none end at all,", "It doth through ages all remain.", "¹⁴The Lord upholdeth all that fall,", "The cast-down raiseth up again."],
+  ["¹⁵The eyes of all things, Lord, attend,", "And on thee wait that here do live,", "And thou, in season due, dost send", "Sufficient food them to relieve."],
+  ["¹⁶Yea, thou thine hand dost open wide,", "And ev’ry thing dost satisfy", "That lives, and doth on earth abide,", "Of thy great liberality."],
+  ["¹⁷The Lord is just in his ways all,", "And holy in his works each one.", "¹⁸He’s near to all that on him call,", "Who call in truth on him alone."],
+  ["¹⁹God will the just desire fulfil", "Of such as do him fear and dread:", "Their cry regard, and hear he will,", "And save them in the time of need."],
+  ["²⁰The Lord preserves all, more and less,", "That bear to him a loving heart:", "But workers all of wickedness", "Destroy will he, and clean subvert."],
+  ["²¹Therefore my mouth and lips I’ll frame", "To speak the praises of the Lord:", "To magnify his holy name", "For ever let all flesh accord."],
+]

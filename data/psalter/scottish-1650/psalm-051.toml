@@ -1,0 +1,28 @@
+# Psalm 51 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 51
+
+[[version]]
+key = "51"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David, when Nathan the prophet came unto him, after he had gone into Bathsheba."
+stanzas = [
+  ["¹After thy loving-kindness, Lord,", "  have mercy upon me:", "For thy compassions great, blot out", "  all mine iniquity."],
+  ["²Me cleanse from sin, and throughly wash", "  from mine iniquity:", "³For my transgressions I confess;", "  my sin I ever see."],
+  ["⁴’Gainst thee, thee only, have I sinn’d,", "  in thy sight done this ill;", "That when thou speak’st thou may’st be just,", "  and clear in judging still."],
+  ["⁵Behold, I in iniquity", "  was form’d the womb within;", "My mother also me conceiv’d", "  in guiltiness and sin."],
+  ["⁶Behold, thou in the inward parts", "  with truth delighted art;", "And wisdom thou shalt make me know", "  within the hidden part."],
+  ["⁷Do thou with hyssop sprinkle me,", "  I shall be cleansed so;", "Yea, wash thou me, and then I shall", "  be whiter than the snow."],
+  ["⁸Of gladness and of joyfulness", "  make me to hear the voice;", "That so these very bones which thou", "  hast broken may rejoice."],
+  ["⁹All mine iniquities blot out,", "  thy face hide from my sin.", "¹⁰Create a clean heart, Lord, renew", "  a right sp’rit me within."],
+  ["¹¹Cast me not from thy sight, nor take", "  thy Holy Sp’rit away.", "¹²Restore me thy salvation’s joy;", "  with thy free Sp’rit me stay."],
+  ["¹³Then will I teach thy ways unto", "  those that transgressors be;", "And those that sinners are shall then", "  be turned unto thee."],
+  ["¹⁴O God, of my salvation God,", "  me from blood-guiltiness", "Set free; then shall my tongue aloud", "  sing of thy righteousness."],
+  ["¹⁵My closed lips, O Lord, by thee", "  let them be opened;", "Then shall thy praises by my mouth", "  abroad be published."],
+  ["¹⁶For thou desir’st not sacrifice,", "  else would I give it thee;", "Nor wilt thou with burnt-offering", "  at all delighted be."],
+  ["¹⁷A broken spirit is to God", "  a pleasing sacrifice:", "A broken and a contrite heart,", "  Lord, thou wilt not despise."],
+  ["¹⁸Shew kindness, and do good, O Lord,", "  to Sion, thine own hill:", "The walls of thy Jerusalem", "  build up of thy good will."],
+  ["¹⁹Then righteous off ‘rings shall thee please,", "  and off ‘rings burnt, which they", "With whole burnt-off ‘rings, and with calves,", "  shall on thine altar lay."],
+]

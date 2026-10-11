@@ -1,0 +1,24 @@
+# Psalm 62 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 62
+
+[[version]]
+key = "62"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, to Jeduthun, A Psalm of David."
+stanzas = [
+  ["¹My soul with expectation", "  depends on God indeed;", "My strength and my salvation doth", "  from him alone proceed."],
+  ["²He only my salvation is,", "  and my strong rock is he:", "He only is my sure defence;", "  much mov’d I shall not be."],
+  ["³How long will ye against a man", "  plot mischief? ye shall all", "Be slain; ye as a tott’ring fence", "  shall be, and bowing wall."],
+  ["⁴They only plot to cast him down", "  from his excellency:", "They joy in lies; with mouth they bless,", "  but they curse inwardly."],
+  ["⁵My soul, wait thou with patience", "  upon thy God alone;", "On him dependeth all my hope", "  and expectation."],
+  ["⁶He only my salvation is,", "  and my strong rock is he;", "He only is my sure defence:", "  I shall not moved be."],
+  ["⁷In God my glory placed is,", "  and my salvation sure;", "In God the rock is of my strength,", "  my refuge most secure."],
+  ["⁸Ye people, place your confidence", "  in him continually;", "Before him pour ye out your heart:", "  God is our refuge high."],
+  ["⁹Surely mean men are vanity,", "  and great men are a lie;", "In balance laid, they wholly are", "  more light than vanity."],
+  ["¹⁰Trust ye not in oppression,", "  in robb’ry be not vain;", "On wealth set not your hearts, when as", "  increased is your gain."],
+  ["¹¹God hath it spoken once to me,", "  yea, this I heard again,", "That power to Almighty God", "  alone doth appertain."],
+  ["¹²Yea, mercy also unto thee", "  belongs, O Lord, alone:", "For thou according to his work", "  rewardest ev’ry one."],
+]

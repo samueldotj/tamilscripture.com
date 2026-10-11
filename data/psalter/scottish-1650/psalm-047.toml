@@ -1,0 +1,19 @@
+# Psalm 47 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 47
+
+[[version]]
+key = "47"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm for the sons of Korah."
+stanzas = [
+  ["¹All people, clap your hands; to God", "  with voice of triumph shout:", "²For dreadful is the Lord most high,", "  great King the earth throughout."],
+  ["³The heathen people under us", "  he surely shall subdue;", "And he shall make the nations", "  under our feet to bow."],
+  ["⁴The lot of our inheritance", "  chuse out for us shall he,", "Of Jacob, whom he loved well,", "  ev’n the excellency."],
+  ["⁵God is with shouts gone up, the Lord", "  with trumpets sounding high.", "⁶Sing praise to God, sing praise, sing praise,", "  praise to our King sing ye."],
+  ["⁷For God is King of all the earth;", "  with knowledge praise express.", "⁸God rules the nations: God sits on", "  his throne of holiness."],
+  ["⁹The princes of the people are", "  assembled willingly;", "Ev’n of the God of Abraham", "  they who the people be."],
+  ["For why? the shields that do defend", "  the earth are only his:", "They to the Lord belong; yea, he", "  exalted greatly is."],
+]

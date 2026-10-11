@@ -1,0 +1,20 @@
+# Psalm 63 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 63
+
+[[version]]
+key = "63"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David, when he was in the wilderness of Judah."
+stanzas = [
+  ["¹Lord, thee my God, I’ll early seek:", "  my soul doth thirst for thee;", "My flesh longs in a dry parch’d land,", "  wherein no waters be:"],
+  ["²That I thy power may behold,", "  and brightness of thy face,", "As I have seen thee heretofore", "  within thy holy place."],
+  ["³Since better is thy love than life,", "  my lips thee praise shall give.", "⁴I in thy name will lift my hands,", "  and bless thee while I live."],
+  ["⁵Ev’n as with marrow and with fat", "  my soul shall filled be;", "Then shall my mouth with joyful lips", "  sing praises unto thee:"],
+  ["⁶When I do thee upon my bed", "  remember with delight,", "And when on thee I meditate", "  in watches of the night."],
+  ["⁷In shadow of thy wings I’ll joy;", "  for thou mine help hast been.", "⁸My soul thee follows hard; and me", "  thy right hand doth sustain."],
+  ["⁹Who seek my soul to spill shall sink", "  down to earth’s lowest room.", "¹⁰They by the sword shall be cut off,", "  and foxes’ prey become."],
+  ["¹¹Yet shall the king in God rejoice,", "  and each one glory shall", "That swear by him: but stopp’d shall be", "  the mouth of liars all."],
+]

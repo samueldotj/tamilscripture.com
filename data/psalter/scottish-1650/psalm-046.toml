@@ -1,0 +1,22 @@
+# Psalm 46 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 46
+
+[[version]]
+key = "46"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, for the sons of Korah, A Song upon Alomoth."
+stanzas = [
+  ["¹God is our refuge and our strength,", "  in straits a present aid;", "²Therefore, although the earth remove,", "  we will not be afraid:"],
+  ["Though hills amidst the seas be cast;", "  ³Though waters roaring make,", "And troubled be; yea, though the hills,", "  by swelling seas do shake."],
+  ["⁴A river is, whose streams do glad", "  the city of our God;", "The holy place, wherein the Lord", "  most high hath his abode."],
+  ["⁵God in the midst of her doth dwell;", "  nothing shall her remove:", "The Lord to her an helper will,", "  and that right early, prove."],
+  ["⁶The heathen rag’d tumultuously,", "  the kingdoms moved were:", "The Lord God uttered his voice,", "  the earth did melt for fear."],
+  ["⁷The Lord of hosts upon our side", "  doth constantly remain:", "The God of Jacob’s our refuge,", "  us safely to maintain."],
+  ["⁸Come, and behold what wondrous works", "  have by the Lord been wrought;", "Come, see what desolations", "  he on the earth hath brought."],
+  ["⁹Unto the ends of all the earth", "  wars into peace he turns:", "The bow he breaks, the spear he cuts,", "  in fire the chariot burns."],
+  ["¹⁰Be still, and know that I am God;", "  among the heathen I", "Will be exalted; I on earth", "  will be exalted high."],
+  ["¹¹Our God, who is the Lord of hosts,", "  is still upon our side;", "The God of Jacob our refuge", "  for ever will abide."],
+]

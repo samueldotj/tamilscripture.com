@@ -1,0 +1,25 @@
+# Psalm 147 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 147
+
+[[version]]
+key = "147"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise ye the Lord; for it is good", "  praise to our God to sing:", "For it is pleasant, and to praise", "  it is a comely thing."],
+  ["²God doth build up Jerusalem;", "  and he it is alone", "That the dispers’d of Israel", "  doth gather into one."],
+  ["³Those that are broken in their heart,", "  and grieved in their minds,", "He healeth, and their painful wounds", "  he tenderly up-binds."],
+  ["⁴He counts the number of the stars;", "  he names them ev’ry one.", "⁵Great is our Lord, and of great pow’r;", "  his wisdom search can none."],
+  ["⁶The Lord lifts up the meek; and casts", "  the wicked to the ground.", "⁷Sing to the Lord, and give him thanks;", "  on harp his praises sound;"],
+  ["⁸Who covereth the heav’n with clouds,", "  who for the earth below", "Prepareth rain, who maketh grass", "  upon the mountains grow."],
+  ["⁹He gives the beast his food, he feeds", "  the ravens young that cry.", "¹⁰His pleasure not in horses’ strength,", "  nor in man’s legs, doth lie."],
+  ["¹¹But in all those that do him fear", "  the Lord doth pleasure take;", "In those that to his mercy do", "  by hope themselves betake."],
+  ["¹²The Lord praise, O Jerusalem;", "  Sion, thy God confess:", "¹³For thy gates’ bars he maketh strong;", "  thy sons in thee doth bless."],
+  ["¹⁴He in thy borders maketh peace;", "  with fine wheat filleth thee.", "¹⁵He sends forth his command on earth,", "  his word runs speedily."],
+  ["¹⁶Hoar-frost, like ashes, scatt’reth he;", "  like wool he snow doth give:", "¹⁷Like morsels casteth forth his ice;", "  who in its cold can live?"],
+  ["¹⁸He sendeth forth his mighty word,", "  and melteth them again;", "His wind he makes to blow, and then", "  the waters flow amain."],
+  ["¹⁹The doctrine of his holy word", "  to Jacob he doth show;", "His statutes and his judgments he", "  gives Israel to know."],
+  ["²⁰To any nation never he", "  such favour did afford;", "For they his judgments have not known.", "  O do ye praise the Lord."],
+]

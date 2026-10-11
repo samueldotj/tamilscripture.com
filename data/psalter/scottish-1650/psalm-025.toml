@@ -1,0 +1,54 @@
+# Psalm 25 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 25
+
+[[version]]
+key = "25"
+label = "S.M."
+meter = "6.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹To thee I lift my soul:", "  ²O Lord, I trust in thee:", "My God, let me not be asham’d,", "  nor foes triumph o’er me."],
+  ["³Let none that wait on thee", "  be put to shame at all;", "But those that without cause transgress,", "  let shame upon them fall."],
+  ["⁴Shew me thy ways, O Lord;", "  thy paths, O teach thou me:", "⁵And do thou lead me in thy truth,", "  therein my teacher be:"],
+  ["For thou art God that dost", "  to me salvation send,", "And I upon thee all the day", "  expecting do attend."],
+  ["⁶Thy tender mercies, Lord,", "  I pray thee to remember,", "And loving-kindnesses; for they", "  have been of old for ever."],
+  ["⁷My sins and faults of youth", "  do thou, O Lord, forget:", "After thy mercy think on me,", "  and for thy goodness great."],
+  ["⁸God good and upright is:", "  the way he’ll sinners show.", "⁹The meek in judgment he will guide,", "  and make his path to know."],
+  ["¹⁰The whole paths of the Lord", "  are truth and mercy sure,", "To those that do his cov’nant keep,", "  and testimonies pure."],
+  ["¹¹Now, for thine own name’s sake,", "  O Lord, I thee entreat", "To pardon mine iniquity;", "  for it is very great."],
+  ["¹²What man is he that fears", "  the Lord, and doth him serve?", "Him shall he teach the way that he", "  shall choose, and still observe."],
+  ["¹³His soul shall dwell at ease;", "  and his posterity", "Shall flourish still, and of the earth", "  inheritors shall be."],
+  ["¹⁴With those that fear him is", "  the secret of the Lord;", "The knowledge of his covenant", "  he will to them afford."],
+  ["¹⁵Mine eyes upon the Lord", "  continually are set:", "For he it is that shall bring forth", "  my feet out of the net."],
+  ["¹⁶Turn unto me thy face,", "  and to me mercy show;", "Because that I am desolate,", "  and am brought very low."],
+  ["¹⁷My heart’s griefs are increas’d:", "  me from distress relieve.", "¹⁸See mine affliction and my pain,", "  and all my sins forgive."],
+  ["¹⁹Consider thou my foes,", "  because they many are;", "And it a cruel hatred is", "  which they against me bear."],
+  ["²⁰O do thou keep my soul,", "  do thou deliver me:", "And let me never be asham’d,", "  because I trust in thee."],
+  ["²¹Let uprightness and truth", "  keep me, who thee attend.", "²²Redemption, Lord, to Israel", "  from all his troubles send."],
+]
+
+[[version]]
+key = "25-2"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹To thee I lift my soul, O Lord:", "  ²My God, I trust in thee:", "Let me not be asham’d; let not", "  my foes triumph o’er me."],
+  ["³Yea, let thou none ashamed be", "  that do on thee attend:", "Ashamed let them be, O Lord,", "  who without cause offend."],
+  ["⁴Thy ways, Lord, shew; teach me thy paths:", "  ⁵Lead me in truth, teach me:", "For of my safety thou art God;", "  all day I wait on thee."],
+  ["⁶Thy mercies, that most tender are,", "  do thou, O Lord, remember,", "And loving-kindnesses; for they", "  have been of old for ever."],
+  ["⁷Let not the errors of my youth,", "  nor sins, remember’d be:", "In mercy, for thy goodness’ sake,", "  O Lord, remember me."],
+  ["⁸The Lord is good and gracious,", "  he upright is also:", "He therefore sinners will instruct", "  in ways that they should go."],
+  ["⁹The meek and lowly he will guide", "  in judgment just alway:", "To meek and poor afflicted ones", "  he’ll clearly teach his way."],
+  ["¹⁰The whole paths of the Lord our God", "  are truth and mercy sure,", "To such as keep his covenant,", "  and testimonies pure."],
+  ["¹¹Now, for thine own name’s sake, O Lord,", "  I humbly thee entreat", "To pardon mine iniquity;", "  for it is very great."],
+  ["¹²What man fears God? him shall he teach", "  the way that he shall chuse.", "¹³His soul shall dwell at ease; his seed", "  the earth, as heirs, shall use."],
+  ["¹⁴The secret of the Lord is with", "  such as do fear his name;", "And he his holy covenant", "  will manifest to them."],
+  ["¹⁵Towards the Lord my waiting eyes", "  continually are set;", "For he it is that shall bring forth", "  my feet out of the net."],
+  ["¹⁶O turn thee unto me, O God,", "  have mercy me upon;", "Because I solitary am,", "  and in affliction."],
+  ["¹⁷Enlarg’d the griefs are of mine heart;", "  me from distress relieve.", "¹⁸See mine affliction and my pain,", "  and all my sins forgive."],
+  ["¹⁹Consider thou mine enemies,", "  because they many are;", "And it a cruel hatred is", "  which they against me bear."],
+  ["²⁰O do thou keep my soul; O God,", "  do thou deliver me:", "Let me not be asham’d; for I", "  do put my trust in thee."],
+  ["²¹O let integrity and truth", "  keep me, who thee attend.", "²²Redemption, Lord, to Israel", "  from all his troubles send."],
+]

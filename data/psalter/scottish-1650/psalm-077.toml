@@ -1,0 +1,31 @@
+# Psalm 77 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 77
+
+[[version]]
+key = "77"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, to Jeduthun, A Psalm of Asaph."
+stanzas = [
+  ["¹Unto the Lord I with my voice,", "  I unto God did cry;", "Ev’n with my voice, and unto me", "  his ear he did apply."],
+  ["²I in my trouble sought the Lord,", "  my sore by night did run,", "And ceased not; my grieved soul", "  did consolation shun."],
+  ["³I to remembrance God did call,", "  yet trouble did remain;", "And overwhelm’d my spirit was,", "  whilst I did sore complain."],
+  ["⁴Mine eyes, debarr’d from rest and sleep,", "  thou makest still to wake;", "My trouble is so great that I", "  unable am to speak."],
+  ["⁵The days of old to mind I call’d,", "  and oft did think upon", "The times and ages that are past", "  full many years agone."],
+  ["⁶By night my song I call to mind,", "  and commune with my heart;", "My sp’rit did carefully enquire", "  how I might ease my smart."],
+  ["⁷For ever will the Lord cast off,", "  and gracious be no more?", "⁸For ever is his mercy gone?", "  fails his word evermore?"],
+  ["⁹Is’t true that to be gracious", "  the Lord forgotten hath?", "And that his tender mercies he", "  hath shut up in his wrath?"],
+  ["¹⁰Then did I say, That surely this", "  is mine infirmity:", "I’ll mind the years of the right hand", "  of him that is most High."],
+  ["¹¹Yea, I remember will the works", "  performed by the Lord:", "The wonders done of old by thee", "  I surely will record."],
+  ["¹²I also will of all thy works", "  my meditation make;", "And of thy doings to discourse", "  great pleasure I will take."],
+  ["¹³O God, thy way most holy is", "  within thy sanctuary;", "And what god is so great in pow’r", "  as is our God most high?"],
+  ["¹⁴Thou art the God that wonders do’st", "  by thy right hand most strong:", "Thy mighty pow’r thou hast declar’d", "  the nations among."],
+  ["¹⁵To thine own people with thine arm", "  thou didst redemption bring;", "To Jacob’s sons, and to the tribes", "  of Joseph that do spring."],
+  ["¹⁶The waters, Lord, perceived thee,", "  the waters saw thee well;", "And they for fear aside did flee;", "  the depths on trembling fell."],
+  ["¹⁷The clouds in water forth were pour’d,", "  sound loudly did the sky;", "And swiftly through the world abroad", "  thine arrows fierce did fly."],
+  ["¹⁸Thy thunder’s voice alongst the heav’n", "  a mighty noise did make;", "By lightnings lighten’d was the world,", "  th’ earth tremble did and shake."],
+  ["¹⁹Thy way is in the sea, and in", "  the waters great thy path;", "Yet are thy footsteps hid, O Lord;", "  none knowledge thereof hath."],
+  ["²⁰Thy people thou didst safely lead,", "  like to a flock of sheep;", "By Moses’ hand and Aaron’s thou", "  didst them conduct and keep."],
+]

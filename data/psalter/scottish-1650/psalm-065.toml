@@ -1,0 +1,25 @@
+# Psalm 65 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 65
+
+[[version]]
+key = "65"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm and Song of David."
+stanzas = [
+  ["¹Praise waits for thee in Sion, Lord:", "  to thee vows paid shall be.", "²O thou that hearer art of pray’r,", "  all flesh shall come to thee."],
+  ["³Iniquities, I must confess,", "  prevail against me do:", "But as for our transgressions,", "  them purge away shalt thou."],
+  ["⁴Bless’d is the man whom thou dost chuse,", "  and mak’st approach to thee,", "That he within thy courts, O Lord,", "  may still a dweller be:"],
+  ["We surely shall be satisfy’d", "  with thy abundant grace,", "And with the goodness of thy house,", "  ev’n of thy holy place."],
+  ["⁵O God of our salvation,", "  thou, in thy righteousness,", "By fearful works unto our pray’rs", "  thine answer dost express:"],
+  ["Therefore the ends of all the earth,", "  and those afar that be", "Upon the sea, their confidence,", "  O Lord, will place in thee."],
+  ["⁶Who, being girt with pow’r, sets fast", "  by his great strength the hills.", "⁷Who noise of seas, noise of their waves,", "  and people’s tumult, stills."],
+  ["⁸Those in the utmost parts that dwell", "  are at thy signs afraid:", "Th’ outgoings of the morn and ev’n", "  by thee are joyful made."],
+  ["⁹The earth thou visit’st, wat’ring it;", "  thou mak’st it rich to grow", "With God’s full flood; thou corn prepar’st,", "  when thou provid’st it so."],
+  ["¹⁰Her rigs thou wat’rest plenteously,", "  her furrows settelest:", "With show’rs thou dost her mollify,", "  her spring by thee is blest."],
+  ["¹¹So thou the year most lib’rally", "  dost with thy goodness crown;", "And all thy paths abundantly", "  on us drop fatness down."],
+  ["¹²They drop upon the pastures wide,", "  that do in deserts lie;", "The little hills on ev’ry side", "  rejoice right pleasantly."],
+  ["¹³With flocks the pastures clothed be,", "  the vales with corn are clad;", "And now they shout and sing to thee,", "  for thou hast made them glad."],
+]

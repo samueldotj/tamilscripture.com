@@ -1,0 +1,22 @@
+# Psalm 108 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 108
+
+[[version]]
+key = "108"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song or Psalm of David."
+stanzas = [
+  ["¹My heart is fix’d, Lord; I will sing,", "  and with my glory praise.", "²Awake up psaltery and harp;", "  myself I’ll early raise."],
+  ["³I’ll praise thee ‘mong the people, Lord;", "  ’mong nations sing will I:", "⁴For above heav’n thy mercy’s great,", "  thy truth doth reach the sky."],
+  ["⁵Be thou above the heavens, Lord,", "  exalted gloriously;", "Thy glory all the earth above", "  be lifted up on high."],
+  ["⁶That those who thy beloved are", "  delivered may be,", "O do thou save with thy right hand,", "  and answer give to me."],
+  ["⁷God in his holiness hath said,", "  Herein I will take pleasure;", "Shechem I will divide, and forth", "  will Succoth’s valley measure."],
+  ["⁸Gilead I claim as mine by right;", "  Manasseh mine shall be;", "Ephraim is of my head the strength;", "  Judah gives laws for me;"],
+  ["⁹Moab’s my washing-pot; my shoe", "  I’ll over Edom throw;", "Over the land of Palestine", "  I will in triumph go."],
+  ["¹⁰O who is he will bring me to", "  the city fortify’d?", "O who is he that to the land", "  of Edom will me guide?"],
+  ["¹¹O God, thou who hadst cast us off,", "  this thing wilt thou not do?", "And wilt not thou, ev’n thou, O God,", "  forth with our armies go?"],
+  ["¹²Do thou from trouble give us help,", "  for helpless is man’s aid.", "¹³Through God we shall do valiantly;", "  our foes he shall down tread."],
+]

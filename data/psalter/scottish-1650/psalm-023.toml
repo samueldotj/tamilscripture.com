@@ -1,0 +1,17 @@
+# Psalm 23 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 23
+
+[[version]]
+key = "23"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹The Lord’s my shepherd, I’ll not want.", "  ²He makes me down to lie", "In pastures green: he leadeth me", "  the quiet waters by."],
+  ["³My soul he doth restore again;", "  and me to walk doth make", "Within the paths of righteousness,", "  ev’n for his own name’s sake."],
+  ["⁴Yea, though I walk in death’s dark vale,", "  yet will I fear none ill:", "For thou art with me; and thy rod", "  and staff me comfort still."],
+  ["⁵My table thou hast furnished", "  in presence of my foes;", "My head thou dost with oil anoint,", "  and my cup overflows."],
+  ["⁶Goodness and mercy all my life", "  shall surely follow me:", "And in God’s house for evermore", "  my dwelling-place shall be."],
+]

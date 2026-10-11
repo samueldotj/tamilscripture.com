@@ -1,0 +1,25 @@
+# Psalm 79 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 79
+
+[[version]]
+key = "79"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of Asaph."
+stanzas = [
+  ["¹O God, the heathen enter’d have", "  thine heritage; by them", "Defiled is thy house: on heaps", "  they laid Jerusalem."],
+  ["²The bodies of thy servants they", "  have cast forth to be meat", "To rav’nous fowls; thy dear saints’ flesh", "  they gave to beasts to eat."],
+  ["³Their blood about Jerusalem", "  like water they have shed;", "And there was none to bury them", "  when they were slain and dead."],
+  ["⁴Unto our neighbours a reproach", "  most base become are we;", "A scorn and laughingstock to them", "  that round about us be."],
+  ["⁵How long, Lord, shall thine anger last?", "  wilt thou still keep the same?", "And shall thy fervent jealousy", "  burn like unto a flame?"],
+  ["⁶On heathen pour thy fury forth,", "  that have thee never known,", "And on those kingdoms which thy name", "  have never call’d upon."],
+  ["⁷For these are they who Jacob have", "  devoured cruelly;", "And they his habitation", "  have caused waste to lie."],
+  ["⁸Against us mind not former sins;", "  thy tender mercies show;", "Let them prevent us speedily,", "  for we’re brought very low."],
+  ["⁹For thy name’s glory help us, Lord,", "  who hast our Saviour been:", "Deliver us; for thy name’s sake,", "  O purge away our sin."],
+  ["¹⁰Why say the heathen, Where’s their God?", "  let him to them be known;", "When those who shed thy servants’ blood", "  are in our sight o’erthrown."],
+  ["¹¹O let the pris’ner’s sighs ascend", "  before thy sight on high;", "Preserve those in thy mighty pow’r", "  that are design’d to die."],
+  ["¹²And to our neighbours’ bosom cause", "  it sev’n-fold render’d be,", "Ev’n the reproach wherewith they have,", "  O Lord, reproached thee."],
+  ["¹³So we thy folk, and pasture-sheep,", "  shall give thee thanks always;", "And unto generations all", "  we will shew forth thy praise."],
+]

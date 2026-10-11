@@ -1,0 +1,27 @@
+# Psalm 100 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 100
+
+[[version]]
+key = "100"
+label = "L.M."
+meter = "8.8.8.8"
+argument = "A Psalm of praise."
+stanzas = [
+  ["¹All people that on earth do dwell,", "Sing to the Lord with cheerful voice.", "²Him serve with mirth, his praise forth tell,", "Come ye before him and rejoice."],
+  ["³Know that the Lord is God indeed;", "Without our aid he did us make:", "We are his flock, he doth us feed,", "And for his sheep he doth us take."],
+  ["⁴O enter then his gates with praise,", "Approach with joy his courts unto:", "Praise, laud, and bless his name always,", "For it is seemly so to do."],
+  ["⁵For why? the Lord our God is good,", "His mercy is for ever sure;", "His truth at all times firmly stood,", "And shall from age to age endure."],
+]
+
+[[version]]
+key = "100-2"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O all ye lands, unto the Lord", "  make ye a joyful noise.", "²Serve God with gladness, him before", "  come with a singing voice."],
+  ["³Know ye the Lord that he is God;", "  not we, but he us made:", "We are his people, and the sheep", "  within his pasture fed."],
+  ["⁴Enter his gates and courts with praise,", "  to thank him go ye thither:", "To him express your thankfulness,", "  and bless his name together."],
+  ["⁵Because the Lord our God is good,", "  his mercy faileth never;", "And to all generations", "  his truth endureth ever."],
+]

@@ -1,0 +1,18 @@
+# Psalm 12 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 12
+
+[[version]]
+key = "12"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Sheminith, A Psalm of David."
+stanzas = [
+  ["¹Help, Lord, because the godly man", "  doth daily fade away;", "And from among the sons of men", "  the faithful do decay."],
+  ["²Unto his neighbour ev’ry one", "  doth utter vanity:", "They with a double heart do speak,", "  and lips of flattery."],
+  ["³God shall cut off all flatt’ring lips,", "  tongues that speak proudly thus,", "⁴We’ll with our tongue prevail, our lips", "  are ours: who’s lord o’er us?"],
+  ["⁵For poor oppress’d, and for the sighs", "  of needy, rise will I,", "Saith God, and him in safety set", "  from such as him defy."],
+  ["⁶The words of God are words most pure;", "  they be like silver try’d", "In earthen furnace, seven times", "  that hath been purify’d."],
+  ["⁷Lord, thou shalt them preserve and keep", "  for ever from this race.", "⁸On each side walk the wicked, when", "  vile men are high in place."],
+]

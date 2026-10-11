@@ -1,0 +1,16 @@
+# Psalm 127 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 127
+
+[[version]]
+key = "127"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees for Solomon."
+stanzas = [
+  ["¹Except the Lord do build the house,", "  the builders lose their pain:", "Except the Lord the city keep,", "  the watchmen watch in vain."],
+  ["²’Tis vain for you to rise betimes,", "  or late from rest to keep,", "To feed on sorrows’ bread; so gives", "  he his beloved sleep."],
+  ["³Lo, children are God’s heritage,", "  the womb’s fruit his reward.", "⁴The sons of youth as arrows are,", "  for strong men’s hands prepar’d."],
+  ["⁵O happy is the man that hath", "  his quiver fill’d with those;", "They unashamed in the gate", "  shall speak unto their foes."],
+]

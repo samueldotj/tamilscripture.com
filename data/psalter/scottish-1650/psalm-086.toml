@@ -1,0 +1,27 @@
+# Psalm 86 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 86
+
+[[version]]
+key = "86"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Prayer of David."
+stanzas = [
+  ["¹O Lord, do thou bow down thine ear,", "  and hear me graciously;", "Because I sore afflicted am,", "  and am in poverty."],
+  ["²Because I’m holy, let my soul", "  by thee preserved be:", "O thou my God, thy servant save,", "  that puts his trust in thee."],
+  ["³Sith unto thee I daily cry,", "  be merciful to me.", "⁴Rejoice thy servant’s soul; for, Lord,", "  I lift my soul to thee."],
+  ["⁵For thou art gracious, O Lord,", "  and ready to forgive;", "And rich in mercy, all that call", "  upon thee to relieve."],
+  ["⁶Hear, Lord, my pray’r; unto the voice", "  of my request attend:", "⁷In troublous times I’ll call on thee;", "  for thou wilt answer send."],
+  ["⁸Lord, there is none among the gods", "  that may with thee compare;", "And like the works which thou hast done,", "  not any work is there."],
+  ["⁹All nations whom thou mad’st shall come", "  and worship rev’rently", "Before thy face; and they, O Lord,", "  thy name shall glorify."],
+  ["¹⁰Because thou art exceeding great,", "  and works by thee are done", "Which are to be admir’d; and thou", "  art God thyself alone."],
+  ["¹¹Teach me thy way, and in thy truth,", "  O Lord, then walk will I;", "Unite my heart, that I thy name", "  may fear continually."],
+  ["¹²O Lord my God, with all my heart", "  to thee I will give praise;", "And I the glory will ascribe", "  unto thy name always:"],
+  ["¹³Because thy mercy toward me", "  in greatness doth excel;", "And thou deliver’d hast my soul", "  out from the lowest hell."],
+  ["¹⁴O God, the proud against me rise,", "  and vi’lent men have met,", "That for my soul have sought; and thee", "  before them have not set."],
+  ["¹⁵But thou art full of pity, Lord,", "  a God most gracious,", "Long-suffering, and in thy truth", "  and mercy plenteous."],
+  ["¹⁶O turn to me thy countenance,", "  and mercy on me have;", "Thy servant strengthen, and the son", "  of thine own handmaid save."],
+  ["¹⁷Shew me a sign for good, that they", "  which do me hate may see,", "And be asham’d; because thou, Lord,", "  didst help and comfort me."],
+]

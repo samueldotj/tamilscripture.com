@@ -1,0 +1,20 @@
+# Psalm 75 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 75
+
+[[version]]
+key = "75"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, Al-taschith, A Psalm or Song of Asaph."
+stanzas = [
+  ["¹To thee, O God, do we give thanks,", "  we do give thanks to thee;", "Because thy wondrous works declare", "  thy great name near to be."],
+  ["²I purpose, when I shall receive", "  the congregation,", "That I shall judgment uprightly", "  render to ev’ry one."],
+  ["³Dissolved is the land, with all", "  that in the same do dwell;", "But I the pillars thereof do", "  bear up, and stablish well."],
+  ["⁴I to the foolish people said,", "  Do not deal foolishly;", "And unto those that wicked are,", "  Lift not your horn on high."],
+  ["⁵Lift not your horn on high, nor speak", "  ⁶with stubborn neck. But know,", "That not from east, nor west, nor south,", "  promotion doth flow."],
+  ["⁷But God is judge; he puts down one,", "  and sets another up.", "⁸For in the hand of God most high", "  of red wine is a cup:"],
+  ["’Tis full of mixture, he pours forth,", "  and makes the wicked all", "Wring out the bitter dregs thereof;", "  yea, and they drink them shall."],
+  ["⁹But I for ever will declare,", "  I Jacob’s God will praise.", "¹⁰All horns of lewd men I’ll cut off;", "  but just men’s horns will raise."],
+]

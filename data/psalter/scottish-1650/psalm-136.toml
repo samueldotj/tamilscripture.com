@@ -1,0 +1,47 @@
+# Psalm 136 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 136
+
+[[version]]
+key = "136"
+label = "8.7.8.7"
+meter = "8.7.8.7"
+stanzas = [
+  ["¹Give thanks to God, for good is he:", "  for mercy hath he ever.", "²Thanks to the God of gods give ye:", "  for his grace faileth never."],
+  ["³Thanks give the Lord of lords unto:", "  for mercy hath he ever.", "⁴Who only wonders great can do:", "  for his grace faileth never."],
+  ["⁵Who by his wisdom made heav’ns high:", "  for mercy hath he ever.", "⁶Who stretch’d the earth above the sea:", "  for his grace faileth never."],
+  ["⁷To him that made the great lights shine:", "  for mercy hath he ever.", "⁸The sun to rule till day decline:", "  for his grace faileth never."],
+  ["⁹The moon and stars to rule by night:", "  for mercy hath he ever.", "¹⁰Who Egypt’s first-born kill’d outright:", "  for his grace faileth never."],
+  ["¹¹And Isr’el brought from Egypt land:", "  for mercy hath he ever.", "¹²With stretch’d-out arm, and with strong hand:", "  for his grace faileth never."],
+  ["¹³By whom the Red sea parted was:", "  for mercy hath he ever.", "¹⁴And through its midst made Isr’el pass:", "  for his grace faileth never."],
+  ["¹⁵But Phar’oh and his host did drown:", "  for mercy hath he ever.", "¹⁶Who through the desert led his own:", "  for his grace faileth never."],
+  ["¹⁷To him great kings who overthrew:", "  for he hath mercy ever.", "¹⁸Yea, famous kings in battle slew:", "  for his grace faileth never."],
+  ["¹⁹Ev’n Sihon king of Amorites:", "  for he hath mercy ever.", "²⁰And Og the king of Bashanites:", "  for his grace faileth never."],
+  ["²¹Their land in heritage to have:", "  (for mercy hath he ever.)", "²²His servant Isr’el right he gave:", "  for his grace faileth never."],
+  ["²³In our low state who on us thought:", "  for he hath mercy ever.", "²⁴And from our foes our freedom wrought:", "  for his grace faileth never."],
+  ["²⁵Who doth all flesh with food relieve:", "  for he hath mercy ever.", "²⁶Thanks to the God of heaven give:", "  for his grace faileth never."],
+]
+
+[[version]]
+key = "136-2"
+label = "6.6.6.6.8.8"
+meter = "6.6.6.6.8.8"
+stanzas = [
+  ["¹Praise God, for he is kind:", "His mercy lasts for aye.", "²Give thanks with heart and mind", "To God of gods alway:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["³The Lord of lords praise ye,", "Whose mercies still endure.", "⁴Great wonders only he", "Doth work by his great pow’r", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["⁵Which God omnipotent,", "By might and wisdom high,", "The heav’n and firmament", "Did frame, as we may see:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["⁶To him who did outstretch", "This earth so great and wide,", "Above the waters’ reach", "Making it to abide:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["⁷Great lights he made to be;", "For his grace lasteth aye:", "⁸Such as the sun we see,", "To rule the lightsome day:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["⁹Also the moon so clear,", "Which shineth in our sight;", "The stars that do appear,", "To guide the darksome night:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹⁰To him that Egypt smote,", "Who did his message scorn;", "And in his anger hot", "Did kill all their first-born:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹¹Thence Isr’el out he brought;", "For his grace lasteth ever.", "¹²With a strong hand he wrought,", "And stretch’d-out arm deliver:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹³The sea he cut in two;", "For his grace lasteth still.", "¹⁴And through its midst to go", "Made his own Israel:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹⁵But overwhelm’d and lost", "Was proud king Pharaoh,", "With all his mighty host,", "And chariots there also:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹⁶To him who pow’rfully", "His chosen people led,", "Ev’n through the desert dry,", "And in that place them fed:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹⁷To him great kings who smote;", "For his grace hath no bound.", "¹⁸Who slew, and spared not", "Kings famous and renown’d:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["¹⁹Sihon the Am’rites’ king;", "For his grace lasteth ever:", "²⁰Og also, who did reign", "The land of Bashan over:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["²¹Their land by lot he gave;", "For his grace faileth never,", "²²That Isr’el might it have", "In heritage for ever:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["²³Who hath remembered", "Us in our low estate;", "²⁴And us delivered", "From foes which did us hate:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+  ["²⁵Who to all flesh gives food;", "For his grace faileth never.", "²⁶Give thanks to God most good,", "The God of heav’n, for ever:", "  For certainly", "  His mercies dure", "  Most firm and sure", "  Eternally."],
+]

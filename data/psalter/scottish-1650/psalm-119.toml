@@ -1,0 +1,312 @@
+# Psalm 119 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 119
+
+[[version]]
+key = "119-1"
+part = 1
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Blessed are they that undefil’d,", "  and straight are in the way;", "Who in the Lord’s most holy law", "  do walk, and do not stray."],
+  ["²Blessed are they who to observe", "  his statutes are inclin’d;", "And who do seek the living God", "  with their whole heart and mind."],
+  ["³Such in his ways do walk, and they", "  do no iniquity.", "⁴Thou hast commanded us to keep", "  thy precepts carefully."],
+  ["⁵O that thy statutes to observe", "  thou would’st my ways direct!", "⁶Then shall I not be sham’d, when I", "  thy precepts all respect."],
+  ["⁷Then with integrity of heart", "  thee will I praise and bless,", "When I the judgments all have learn’d", "  of thy pure righteousness."],
+  ["⁸That I will keep thy statutes all", "  firmly resolv’d have I:", "O do not then, most gracious God,", "  forsake me utterly."],
+]
+
+[[version]]
+key = "119-2"
+part = 2
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁹By what means shall a young man learn", "  his way to purify?", "If he according to thy word", "  thereto attentive be."],
+  ["¹⁰Unfeignedly thee have I sought", "  with all my soul and heart:", "O let me not from the right path", "  of thy commands depart."],
+  ["¹¹Thy word I in my heart have hid,", "  that I offend not thee.", "¹²O Lord, thou ever blessed art,", "  thy statutes teach thou me."],
+  ["¹³The judgments of thy mouth each one", "  my lips declared have:", "¹⁴More joy thy testimonies’ way", "  than riches all me gave."],
+  ["¹⁵I will thy holy precepts make", "  my meditation;", "And carefully I’ll have respect", "  unto thy ways each one."],
+  ["¹⁶Upon thy statutes my delight", "  shall constantly be set:", "And, by thy grace, I never will", "  thy holy word forget."],
+]
+
+[[version]]
+key = "119-3"
+part = 3
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹⁷With me thy servant, in thy grace,", "  deal bountifully, Lord:", "That by thy favor I may live,", "  and duly keep thy word."],
+  ["¹⁸Open mine eyes, that of thy law", "  the wonders I may see.", "¹⁹I am a stranger on this earth,", "  hide not thy laws from me."],
+  ["²⁰My soul within me breaks, and doth", "  much fainting still endure,", "Through longing that it hath all times", "  unto thy judgments pure."],
+  ["²¹Thou hast rebuk’d the cursed proud,", "  who from thy precepts swerve.", "²²Reproach and shame remove from me,", "  for I thy laws observe."],
+  ["²³Against me princes spake with spite,", "  while they in council sat:", "But I thy servant did upon", "  thy statutes meditate."],
+  ["²⁴My comfort, and my heart’s delight,", "  thy testimonies be;", "And they, in all my doubts and fears,", "  are counsellors to me."],
+]
+
+[[version]]
+key = "119-4"
+part = 4
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["²⁵My soul to dust cleaves: quicken me,", "  according to thy word.", "²⁶My ways I shew’d, and me thou heard’st:", "  teach me thy statutes, Lord."],
+  ["²⁷The way of thy commandements", "  make me aright to know;", "So all thy works that wondrous are", "  I shall to others show."],
+  ["²⁸My soul doth melt, and drop away,", "  for heaviness and grief:", "To me, according to thy word,", "  give strength, and send relief."],
+  ["²⁹From me the wicked way of lies", "  let far removed be;", "And graciously thy holy law", "  do thou grant unto me."],
+  ["³⁰I chosen have the perfect way", "  of truth and verity:", "Thy judgments that most righteous are", "  before me laid have I."],
+  ["³¹I to thy testimonies cleave;", "  shame do not on me cast.", "³²I’ll run thy precepts’ way, when thou", "  my heart enlarged hast."],
+]
+
+[[version]]
+key = "119-5"
+part = 5
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["³³Teach me, O Lord, the perfect way", "  of thy precepts divine,", "And to observe it to the end", "  I shall my heart incline."],
+  ["³⁴Give understanding unto me,", "  so keep thy law shall I;", "Yea, ev’n with my whole heart I shall", "  observe it carefully."],
+  ["³⁵In thy law’s path make me to go;", "  for I delight therein.", "³⁶My heart unto thy testimonies,", "  and not to greed, incline."],
+  ["³⁷Turn thou away my sight and eyes", "  from viewing vanity;", "And in thy good and holy way", "  be pleas’d to quicken me."],
+  ["³⁸Confirm to me thy gracious word,", "  which I did gladly hear,", "Ev’n to thy servant, Lord, who is", "  devoted to thy fear."],
+  ["³⁹Turn thou away my fear’d reproach;", "  for good thy judgments be.", "⁴⁰Lo, for thy precepts I have long’d;", "  in thy truth quicken me."],
+]
+
+[[version]]
+key = "119-6"
+part = 6
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁴¹Let thy sweet mercies also come", "  and visit me, O Lord;", "Ev’n thy benign salvation,", "  according to thy word."],
+  ["⁴²So shall I have wherewith I may", "  give him an answer just,", "Who spitefully reproacheth me;", "  for in thy word I trust."],
+  ["⁴³The word of truth out of my mouth", "  take thou not utterly;", "For on thy judgments righteous", "  my hope doth still rely."],
+  ["⁴⁴So shall I keep for evermore", "  thy law continually.", "⁴⁵And, sith that I thy precepts seek,", "  I’ll walk at liberty."],
+  ["⁴⁶I’ll speak thy word to kings, and I", "  with shame shall not be mov’d;", "⁴⁷And will delight myself always", "  in thy laws, which I lov’d."],
+  ["⁴⁸To thy commandments, which I lov’d,", "  my hands lift up I will;", "And I will also meditate", "  upon thy statutes still."],
+]
+
+[[version]]
+key = "119-7"
+part = 7
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁴⁹Remember, Lord, thy gracious word", "  thou to thy servant spake,", "Which, for a ground of my sure hope,", "  thou causedst me to take."],
+  ["⁵⁰This word of thine my comfort is", "  in mine affliction:", "For in my straits I am reviv’d", "  by this thy word alone."],
+  ["⁵¹The men whose hearts with pride are stuff’d", "  did greatly me deride;", "Yet from thy straight commandements", "  I have not turn’d aside."],
+  ["⁵²Thy judgments righteous, O Lord,", "  which thou of old forth gave,", "I did remember, and myself", "  by them comforted have."],
+  ["⁵³Horror took hold on me, because", "  ill men thy law forsake.", "⁵⁴I in my house of pilgrimage", "  thy laws my songs do make."],
+  ["⁵⁵Thy name by night, Lord, I did mind,", "  and I have kept thy law.", "⁵⁶And this I had, because thy word", "  I kept, and stood in awe."],
+]
+
+[[version]]
+key = "119-8"
+part = 8
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁵⁷Thou my sure portion art alone,", "  which I did chuse, O Lord:", "I have resolv’d, and said, that I", "  would keep thy holy word."],
+  ["⁵⁸With my whole heart I did entreat", "  thy face and favour free:", "According to thy gracious word", "  be merciful to me."],
+  ["⁵⁹I thought upon my former ways,", "  and did my life well try;", "And to thy testimonies pure", "  my feet then turned I."],
+  ["⁶⁰I did not stay, nor linger long,", "  as those that slothful are;", "But hastily thy laws to keep", "  myself I did prepare."],
+  ["⁶¹Bands of ill men me robb’d; yet I", "  thy precepts did not slight.", "⁶²I’ll rise at midnight thee to praise,", "  ev’n for thy judgments right."],
+  ["⁶³I am companion to all those", "  who fear, and thee obey.", "⁶⁴O Lord, thy mercy fills the earth:", "  teach me thy laws, I pray."],
+]
+
+[[version]]
+key = "119-9"
+part = 9
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁶⁵Well hast thou with thy servant dealt,", "  as thou didst promise give.", "⁶⁶Good judgment me, and knowledge teach,", "  for I thy word believe."],
+  ["⁶⁷Ere I afflicted was I stray’d;", "  but now I keep thy word.", "⁶⁸Both good thou art, and good thou do’st:", "  teach me thy statutes, Lord."],
+  ["⁶⁹The men that are puff ‘d up with pride", "  against me forg’d a lie;", "Yet thy commandements observe", "  with my whole heart will I."],
+  ["⁷⁰Their hearts, through worldly ease and wealth,", "  as fat as grease they be:", "But in thy holy law I take", "  delight continually."],
+  ["⁷¹It hath been very good for me", "  that I afflicted was,", "That I might well instructed be,", "  and learn thy holy laws."],
+  ["⁷²The word that cometh from thy mouth", "  is better unto me", "Than many thousands and great sums", "  of gold and silver be."],
+]
+
+[[version]]
+key = "119-10"
+part = 10
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁷³Thou mad’st and fashion’dst me: thy laws", "  to know give wisdom, Lord.", "⁷⁴So who thee fear shall joy to see", "  me trusting in thy word."],
+  ["⁷⁵That very right thy judgments are", "  I know, and do confess;", "And that thou hast afflicted me", "  in truth and faithfulness."],
+  ["⁷⁶O let thy kindness merciful,", "  I pray thee, comfort me,", "As to thy servant faithfully", "  was promised by thee."],
+  ["⁷⁷And let thy tender mercies come", "  to me, that I may live;", "Because thy holy laws to me", "  sweet delectation give."],
+  ["⁷⁸Lord, let the proud ashamed be;", "  for they, without a cause,", "With me perversely dealt: but I", "  will muse upon thy laws."],
+  ["⁷⁹Let such as fear thee, and have known", "  thy statutes, turn to me.", "⁸⁰My heart let in thy laws be sound,", "  that sham’d I never be."],
+]
+
+[[version]]
+key = "119-11"
+part = 11
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁸¹My soul for thy salvation faints;", "  yet I thy word believe.", "⁸²Mine eyes fail for thy word: I say,", "  When wilt thou comfort give?"],
+  ["⁸³For like a bottle I’m become,", "  that in the smoke is set:", "I’m black, and parch’d with grief; yet I", "  thy statutes not forget."],
+  ["⁸⁴How many are thy servant’s days?", "  when wilt thou execute", "Just judgment on these wicked men", "  that do me persecute?"],
+  ["⁸⁵The proud have digged pits for me,", "  which is against thy laws.", "⁸⁶Thy words all faithful are: help me,", "  pursu’d without a cause."],
+  ["⁸⁷They so consum’d me, that on earth", "  my life they scarce did leave:", "Thy precepts yet forsook I not,", "  but close to them did cleave."],
+  ["⁸⁸After thy loving-kindness, Lord,", "  me quicken, and preserve:", "The testimony of thy mouth", "  so shall I still observe."],
+]
+
+[[version]]
+key = "119-12"
+part = 12
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁸⁹Thy word for ever is, O Lord,", "  in heaven settled fast;", "⁹⁰Unto all generations", "  thy faithfulness doth last:"],
+  ["The earth thou hast established,", "  and it abides by thee.", "⁹¹This day they stand as thou ordain’dst;", "  for all thy servants be."],
+  ["⁹²Unless in thy most perfect law", "  my soul delights had found,", "I should have perished, when as", "  my troubles did abound."],
+  ["⁹³Thy precepts I will ne’er forget;", "  they quick’ning to me brought.", "⁹⁴Lord, I am thine; O save thou me:", "  thy precepts I have sought."],
+  ["⁹⁵For me the wicked have laid wait,", "  me seeking to destroy:", "But I thy testimonies true", "  consider will with joy."],
+  ["⁹⁶An end of all perfection", "  here have I seen, O God:", "But as for thy commandement,", "  it is exceeding broad."],
+]
+
+[[version]]
+key = "119-13"
+part = 13
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["⁹⁷O how love I thy law! it is", "  my study all the day:", "⁹⁸It makes me wiser than my foes;", "  for it doth with me stay."],
+  ["⁹⁹Than all my teachers now I have", "  more understanding far;", "Because my meditation", "  thy testimonies are."],
+  ["¹⁰⁰In understanding I excel", "  those that are ancients;", "For I endeavoured to keep", "  all thy commandements."],
+  ["¹⁰¹My feet from each ill way I stay’d,", "  that I may keep thy word.", "¹⁰²I from thy judgments have not swerv’d;", "  for thou hast taught me, Lord."],
+  ["¹⁰³How sweet unto my taste, O Lord,", "  are all thy words of truth!", "Yea, I do find them sweeter far", "  than honey to my mouth."],
+  ["¹⁰⁴I through thy precepts, that are pure,", "  do understanding get;", "I therefore ev’ry way that’s false", "  with all my heart do hate."],
+]
+
+[[version]]
+key = "119-14"
+part = 14
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹⁰⁵Thy word is to my feet a lamp,", "  and to my path a light.", "¹⁰⁶I sworn have, and I will perform,", "  to keep thy judgments right."],
+  ["¹⁰⁷I am with sore affliction", "  ev’n overwhelm’d, O Lord:", "In mercy raise and quicken me,", "  according to thy word."],
+  ["¹⁰⁸The free-will-off ‘rings of my mouth", "  accept, I thee beseech:", "And unto me thy servant, Lord,", "  thy judgments clearly teach."],
+  ["¹⁰⁹Though still my soul be in my hand,", "  thy laws I’ll not forget.", "¹¹⁰I err’d not from them, though for me", "  the wicked snares did set."],
+  ["¹¹¹I of thy testimonies have", "  above all things made choice,", "To be my heritage for aye;", "  for they my heart rejoice."],
+  ["¹¹²I carefully inclined have", "  my heart still to attend;", "That I thy statutes may perform", "  alway unto the end."],
+]
+
+[[version]]
+key = "119-15"
+part = 15
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹¹³I hate the thoughts of vanity,", "  but love thy law do I.", "¹¹⁴My shield and hiding-place thou art:", "  I on thy word rely."],
+  ["¹¹⁵All ye that evil-doers are", "  from me depart away;", "For the commandments of my God", "  I purpose to obey."],
+  ["¹¹⁶According to thy faithful word", "  uphold and stablish me,", "That I may live, and of my hope", "  ashamed never be."],
+  ["¹¹⁷Hold thou me up, so shall I be", "  in peace and safety still;", "And to thy statutes have respect", "  continually I will."],
+  ["¹¹⁸Thou tread’st down all that love to stray;", "  false their deceit doth prove.", "¹¹⁹Lewd men, like dross, away thou putt’st;", "  therefore thy law I love."],
+  ["¹²⁰For fear of thee my very flesh", "  doth tremble, all dismay’d;", "And of thy righteous judgments, Lord,", "  my soul is much afraid."],
+]
+
+[[version]]
+key = "119-16"
+part = 16
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹²¹To all men I have judgment done,", "  performing justice right;", "Then let me not be left unto", "  my fierce oppressors’ might."],
+  ["¹²²For good unto thy servant, Lord,", "  thy servant’s surety be:", "From the oppression of the proud", "  do thou deliver me."],
+  ["¹²³Mine eyes do fail with looking long", "  for thy salvation,", "The word of thy pure righteousness", "  while I do wait upon."],
+  ["¹²⁴In mercy with thy servant deal,", "  thy laws me teach and show.", "¹²⁵I am thy servant, wisdom give,", "  that I thy laws may know."],
+  ["¹²⁶’Tis time thou work, Lord; for they have", "  made void thy law divine.", "¹²⁷Therefore thy precepts more I love", "  than gold, yea, gold most fine."],
+  ["¹²⁸Concerning all things thy commands", "  all right I judge therefore;", "And ev’ry false and wicked way", "  I perfectly abhor."],
+]
+
+[[version]]
+key = "119-17"
+part = 17
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹²⁹Thy statutes, Lord, are wonderful,", "  my soul them keeps with care.", "¹³⁰The entrance of thy words gives light,", "  makes wise who simple are."],
+  ["¹³¹My mouth I have wide opened,", "  and panted earnestly,", "While after thy commandements", "  I long’d exceedingly."],
+  ["¹³²Look on me, Lord, and merciful", "  do thou unto me prove,", "As thou art wont to do to those", "  thy name who truly love."],
+  ["¹³³O let my footsteps in thy word", "  aright still order’d be:", "Let no iniquity obtain", "  dominion over me."],
+  ["¹³⁴From man’s oppression save thou me;", "  so keep thy laws I will.", "¹³⁵Thy face make on thy servant shine;", "  teach me thy statutes still."],
+  ["¹³⁶Rivers of waters from mine eyes", "  did run down, when I saw", "How wicked men run on in sin,", "  and do not keep thy law."],
+]
+
+[[version]]
+key = "119-18"
+part = 18
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹³⁷O Lord, thou art most righteous;", "  thy judgments are upright.", "¹³⁸Thy testimonies thou command’st", "  most faithful are and right."],
+  ["¹³⁹My zeal hath ev’n consumed me,", "  because mine enemies", "Thy holy words forgotten have,", "  and do thy laws despise."],
+  ["¹⁴⁰Thy word’s most pure, therefore on it", "  thy servant’s love is set.", "¹⁴¹Small, and despis’d I am, yet I", "  thy precepts not forget."],
+  ["¹⁴²Thy righteousness is righteousness", "  which ever doth endure:", "Thy holy law, Lord, also is", "  the very truth most pure."],
+  ["¹⁴³Trouble and anguish have me found,", "  and taken hold on me:", "Yet in my trouble my delight", "  thy just commandments be."],
+  ["¹⁴⁴Eternal righteousness is in", "  thy testimonies all:", "Lord, to me understanding give,", "  and ever live I shall."],
+]
+
+[[version]]
+key = "119-19"
+part = 19
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹⁴⁵With my whole heart I cry’d, Lord, hear;", "  I will thy word obey.", "¹⁴⁶I cry’d to thee; save me, and I", "  will keep thy laws alway."],
+  ["¹⁴⁷I of the morning did prevent", "  the dawning, and did cry:", "For all mine expectation", "  did on thy word rely."],
+  ["¹⁴⁸Mine eyes did timeously prevent", "  the watches of the night,", "That in thy word with careful mind", "  then meditate I might."],
+  ["¹⁴⁹After thy loving-kindness hear", "  my voice, that calls on thee:", "According to thy judgment, Lord,", "  revive and quicken me."],
+  ["¹⁵⁰Who follow mischief they draw nigh;", "  they from thy law are far:", "¹⁵¹But thou art near, Lord; most firm truth", "  all thy commandments are."],
+  ["¹⁵²As for thy testimonies all,", "  of old this have I try’d,", "That thou hast surely founded them", "  for ever to abide."],
+]
+
+[[version]]
+key = "119-20"
+part = 20
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹⁵³Consider mine affliction,", "  in safety do me set:", "Deliver me, O Lord, for I", "  thy law do not forget."],
+  ["¹⁵⁴After thy word revive thou me:", "  save me, and plead my cause.", "¹⁵⁵Salvation is from sinners far;", "  for they seek not thy laws."],
+  ["¹⁵⁶O Lord, both great and manifold", "  thy tender mercies be:", "According to thy judgments just,", "  revive and quicken me."],
+  ["¹⁵⁷My persecutors many are,", "  and foes that do combine;", "Yet from thy testimonies pure", "  my heart doth not decline."],
+  ["¹⁵⁸I saw transgressors, and was griev’d;", "  for they keep not thy word.", "¹⁵⁹See how I love thy law! as thou", "  art kind, me quicken, Lord."],
+  ["¹⁶⁰From the beginning all thy word", "  hath been most true and sure:", "Thy righteous judgments ev’ry one", "  for evermore endure."],
+]
+
+[[version]]
+key = "119-21"
+part = 21
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹⁶¹Princes have persecuted me,", "  although no cause they saw:", "But still of thy most holy word", "  my heart doth stand in awe."],
+  ["¹⁶²I at thy word rejoice, as one", "  of spoil that finds great store.", "¹⁶³Thy law I love; but lying all", "  I hate and do abhor."],
+  ["¹⁶⁴Sev’n times a-day it is my care", "  to give due praise to thee;", "Because of all thy judgments, Lord,", "  which righteous ever be."],
+  ["¹⁶⁵Great peace have they who love thy law;", "  offence they shall have none.", "¹⁶⁶I hop’d for thy salvation, Lord,", "  and thy commands have done."],
+  ["¹⁶⁷My soul thy testimonies pure", "  observed carefully;", "On them my heart is set, and them", "  I love exceedingly."],
+  ["¹⁶⁸Thy testimonies and thy laws", "  I kept with special care;", "For all my works and ways each one", "  before thee open are."],
+]
+
+[[version]]
+key = "119-22"
+part = 22
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹⁶⁹O let my earnest pray’r and cry", "  come near before thee, Lord:", "Give understanding unto me,", "  according to thy word."],
+  ["¹⁷⁰Let my request before thee come:", "  after thy word me free.", "¹⁷¹My lips shall utter praise, when thou", "  hast taught thy laws to me."],
+  ["¹⁷²My tongue of thy most blessed word", "  shall speak, and it confess;", "Because all thy commandements", "  are perfect righteousness."],
+  ["¹⁷³Let thy strong hand make help to me:", "  thy precepts are my choice.", "¹⁷⁴I long’d for thy salvation, Lord,", "  and in thy law rejoice."],
+  ["¹⁷⁵O let my soul live, and it shall", "  give praises unto thee;", "And let thy judgments gracious", "  be helpful unto me."],
+  ["¹⁷⁶I, like a lost sheep, went astray;", "  thy servant seek, and find:", "For thy commands I suffer’d not", "  to slip out of my mind."],
+]

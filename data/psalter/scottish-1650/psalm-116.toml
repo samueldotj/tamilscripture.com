@@ -1,0 +1,23 @@
+# Psalm 116 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 116
+
+[[version]]
+key = "116"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹I love the Lord, because my voice", "  and prayers he did hear.", "²I, while I live, will call on him,", "  who bow’d to me his ear."],
+  ["³Of death the cords and sorrows did", "  about me compass round;", "The pains of hell took hold on me,", "  I grief and trouble found."],
+  ["⁴Upon the name of God the Lord", "  then did I call, and say,", "Deliver thou my soul, O Lord,", "  I do thee humbly pray."],
+  ["⁵God merciful and righteous is,", "  yea, gracious is our Lord.", "⁶God saves the meek: I was brought low,", "  he did me help afford."],
+  ["⁷O thou my soul, do thou return", "  unto thy quiet rest;", "For largely, lo, the Lord to thee", "  his bounty hath exprest."],
+  ["⁸For my distressed soul from death", "  deliver’d was by thee:", "Thou didst my mourning eyes from tears,", "  my feet from falling, free."],
+  ["⁹I in the land of those that live", "  will walk the Lord before.", "¹⁰I did believe, therefore I spake:", "  I was afflicted sore."],
+  ["¹¹I said, when I was in my haste,", "  that all men liars be.", "¹²What shall I render to the Lord", "  for all his gifts to me?"],
+  ["¹³I’ll of salvation take the cup,", "  on God’s name will I call:", "¹⁴I’ll pay my vows now to the Lord", "  before his people all."],
+  ["¹⁵Dear in God’s sight is his saints’ death.", "  ¹⁶Thy servant, Lord, am I;", "Thy servant sure, thine handmaid’s son:", "  my bands thou didst untie."],
+  ["¹⁷Thank-off ‘rings I to thee will give,", "  and on God’s name will call.", "¹⁸I’ll pay my vows now to the Lord", "  before his people all;"],
+  ["¹⁹Within the courts of God’s own house,", "  within the midst of thee,", "O city of Jerusalem.", "  Praise to the Lord give ye."],
+]

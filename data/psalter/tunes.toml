@@ -108,3 +108,588 @@ incipit = "11737 11535 43733"
 encoding = "CCEH 001142a.mid, soprano line"
 encoding_url = "https://www.ccel.org/cceh/0011/x001142.htm"
 review = true
+
+[[tune]]
+id = "azmon"
+name = "Azmon"
+meter = "C.M."
+key = "G major"
+bpm = 84
+pickup = 0
+line_beats = 8
+composer = ""
+source = "arr., Lowell Mason, 1839 Other Names: Denfield"
+incipit = "51122 32123 3432_"
+encoding = "CCEH 000069a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0000/x000069.htm"
+review = true
+
+[[tune]]
+id = "ballerma"
+name = "Ballerma"
+meter = "C.M."
+key = "A-flat major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "Francois Hippolytus Barthelemon ad., Robert Simpson"
+incipit = "13216 56113 23532"
+encoding = "CCEH 000551a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0005/x000551.htm"
+review = true
+
+[[tune]]
+id = "belmont"
+name = "Belmont"
+meter = "C.M."
+key = "G major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "pub., William Gardiner, Sacred Melodies, 1812"
+incipit = "53217 76155 54332"
+encoding = "CCEH 000566a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0005/x000566.htm"
+review = true
+
+[[tune]]
+id = "caddo"
+name = "Caddo"
+meter = "C.M."
+key = "A-flat major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "William Batchelder Bradbury"
+incipit = "51353 21321 17612"
+encoding = "CCEH 000943a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0009/x000943.htm"
+review = true
+
+[[tune]]
+id = "caithness"
+name = "Caithness"
+meter = "C.M."
+key = "D major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Scottish Psalter, 1635"
+incipit = "13451 71234 56655"
+encoding = "CCEH 000556a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0005/x000556.htm"
+review = true
+
+[[tune]]
+id = "contemplation"
+name = "Contemplation"
+meter = "8.7.8.7"
+key = "B-flat major"
+bpm = 84
+pickup = 2
+line_beats = 8
+composer = ""
+source = "Felix Mendelssohn, 1840 arr. Other Names: Contemplation"
+incipit = "55651 32176 71432"
+encoding = "CCEH 000099a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0000/x000099.htm"
+review = true
+
+[[tune]]
+id = "culross"
+name = "Culross"
+meter = "C.M."
+key = "A minor"
+bpm = 84
+pickup = 0
+line_beats = 10
+composer = ""
+source = "Scottish Psalter, 1635"
+incipit = "51321 71251 71237"
+encoding = "CCEH 001155a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0011/x001155.htm"
+review = true
+
+[[tune]]
+id = "duke-street"
+name = "Duke Street"
+meter = "L.M."
+key = "D major"
+bpm = 84
+pickup = 0
+line_beats = 11
+composer = ""
+source = "John Hatton, 1793"
+incipit = "13456 71765 55565"
+encoding = "CCEH 000282a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0002/x000282.htm"
+review = true
+
+[[tune]]
+id = "franconia"
+name = "Franconia"
+meter = "S.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Johann Balthasar Konig, Choralbuch, 1738 arr., William Henry Havergal, 1840"
+incipit = "12345 35614 32517"
+encoding = "CCEH 000660a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0006/x000660.htm"
+review = true
+
+[[tune]]
+id = "glasgow"
+name = "Glasgow"
+meter = "C.M."
+key = "G major"
+bpm = 84
+pickup = 1
+line_beats = 9
+composer = ""
+source = "Moore, Psalm Singer's Pocket Companion, 1756"
+incipit = "51232 13565 43324"
+encoding = "CCEH 000419a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0004/x000419.htm"
+review = true
+
+[[tune]]
+id = "herongate"
+name = "Herongate"
+meter = "L.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "English Traditional arr., Ralph Vaughan Williams, 1906"
+incipit = "55165 53215 11356"
+encoding = "CCEH 001173a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0011/x001173.htm"
+review = true
+
+[[tune]]
+id = "irish"
+name = "Irish"
+meter = "C.M."
+key = "E major"
+bpm = 84
+pickup = 1
+line_beats = 9
+composer = ""
+source = "Irish Folk Song Collection of Hymns and Sacred Poems, 1749 Other Names: Dublin"
+incipit = "11512 34323 53451"
+encoding = "CCEH 000492a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0004/x000492.htm"
+review = true
+
+[[tune]]
+id = "jackson"
+name = "Jackson"
+meter = "C.M."
+key = "D major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Jackson Other Names: Jackson"
+incipit = "55176 54543 35176"
+encoding = "CCEH 001319a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0013/x001319.htm"
+review = true
+
+[[tune]]
+id = "kilmarnock"
+name = "Kilmarnock"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Neil Dougall, 1831 Tenor-lead arr., Purcell James Mansfield, 1923"
+incipit = "13565 33216 51651"
+encoding = "CCEH 000390a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0003/x000390.htm"
+review = true
+
+[[tune]]
+id = "london-new"
+name = "London New"
+meter = "C.M."
+key = "D major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Scottish Psalter, 1635 tenor-lead arr., Martin Shaw"
+incipit = "15315 61751 35215"
+encoding = "CCEH 001152a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0011/x001152.htm"
+review = true
+
+[[tune]]
+id = "martyrdom"
+name = "Martyrdom"
+meter = "C.M."
+key = "A-flat major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "Hugh Wilson, 1824 Other Names: Martyrdom"
+incipit = "51651 23213 53213"
+encoding = "CCEH 000113a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0001/x000113.htm"
+review = true
+
+[[tune]]
+id = "naomi"
+name = "Naomi"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 0
+line_beats = 12
+composer = ""
+source = "Hans G. Nageli, 1836 arr., Lowell Mason, 1863"
+incipit = "33354 32343 36654"
+encoding = "CCEH 000679a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0006/x000679.htm"
+review = true
+
+[[tune]]
+id = "praetorius"
+name = "Praetorius"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Harmonia Hymnorum Scholae Gerlicensis"
+incipit = "15565 54312 34433"
+encoding = "CCEH 000559a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0005/x000559.htm"
+review = true
+
+[[tune]]
+id = "richmond"
+name = "Richmond"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 0
+line_beats = 11
+composer = ""
+source = "Thomas Haweis, 1792 tenor-lead arr., Martin Shaw, 1815 Other Names: Chesterfield"
+incipit = "51354 34213 25171"
+encoding = "CCEH 000460a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0004/x000460.htm"
+review = true
+
+[[tune]]
+id = "rockingham-old"
+name = "Rockingham Old (Miller)"
+meter = "L.M."
+key = "D major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "Second Supplement to Psalmody in Miniature harm., Edward Miller, 1790"
+incipit = "13421 35655 17655"
+encoding = "CCEH 000784a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0007/x000784.htm"
+review = true
+
+[[tune]]
+id = "salzburg"
+name = "Salzburg (Haydn)"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "ad. from, Johann Michael Haydn"
+incipit = "13554 33211 17154"
+encoding = "CCEH 000770a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0007/x000770.htm"
+review = true
+
+[[tune]]
+id = "st-andrew"
+name = "St. Andrew (Barnby)"
+meter = "S.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Joseph Barnby, 1866 Other Names: St. Andrew"
+incipit = "33452 33365 43517"
+encoding = "CCEH 000919a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0009/x000919.htm"
+review = true
+
+[[tune]]
+id = "st-anne"
+name = "St. Anne"
+meter = "C.M."
+key = "C major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "A Supplement to the New Version of Psalms (sixth edition), 1708 attr. to, William Croft, Hart's Collection, 1720 tenor-lead arr., Martin Shaw, 1915"
+incipit = "53651 17151 5645_"
+encoding = "CCEH 000223a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0002/x000223.htm"
+review = true
+
+[[tune]]
+id = "st-bernard"
+name = "St. Bernard (Cologne)"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Tochter Sion, Cologne, 1741 arr., John Richardson"
+incipit = "51232 14325 36445"
+encoding = "CCEH 001263a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0012/x001263.htm"
+review = true
+
+[[tune]]
+id = "st-etheldreda"
+name = "St. Etheldreda"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Thomas Turton, 1863"
+incipit = "11232 17123 54323"
+encoding = "CCEH 001033a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0010/x001033.htm"
+review = true
+
+[[tune]]
+id = "st-fulbert"
+name = "St. Fulbert"
+meter = "C.M."
+key = "E major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Henry John Gauntlett, 1852"
+incipit = "55126 54353 56171"
+encoding = "CCEH 001075a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0010/x001075.htm"
+review = true
+
+[[tune]]
+id = "st-magnus"
+name = "St. Magnus (Clark)"
+meter = "C.M."
+key = "G major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Jeremiah Clarke, 1707 Other Names: Nottingham"
+incipit = "51275 12323 13452"
+encoding = "CCEH 000125a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0001/x000125.htm"
+review = true
+
+[[tune]]
+id = "st-matthew"
+name = "St. Matthew"
+meter = "C.M."
+key = "B-flat major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "attr. to, William Croft A Supplement to the New Version of Psalms (sixth edition), 1708"
+incipit = "53513 21713 25654"
+encoding = "CCEH 000978a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0009/x000978.htm"
+review = true
+
+[[tune]]
+id = "st-peter"
+name = "St. Peter"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Alexander R. Reinagle, 1826"
+incipit = "51765 54332 1432_"
+encoding = "CCEH 000249a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0002/x000249.htm"
+review = true
+
+[[tune]]
+id = "stracathro"
+name = "Stracathro"
+meter = "C.M."
+key = "D major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "Charles Hutcheson, 1832"
+incipit = "13212 31761 53132"
+encoding = "CCEH 001171a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0011/x001171.htm"
+review = true
+
+[[tune]]
+id = "tallis-ordinal"
+name = "Tallis' Ordinal"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Thomas Tallis, 1561"
+incipit = "13455 66551 7665_"
+encoding = "CCEH 000402a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0004/x000402.htm"
+review = true
+
+[[tune]]
+id = "wetherby"
+name = "Wetherby"
+meter = "C.M."
+key = "D major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = ""
+source = "Samuel Sebastian Wesley"
+incipit = "35321 56655 17765"
+encoding = "CCEH 001150a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0011/x001150.htm"
+review = true
+
+[[tune]]
+id = "york"
+name = "York"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 1
+line_beats = 8
+composer = ""
+source = "Scottish Psalter, 1615"
+incipit = "13546 35223 55451"
+encoding = "CCEH 001231a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0012/x001231.htm"
+review = true
+
+[[tune]]
+id = "arlington"
+name = "Arlington"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 0
+line_beats = 12
+composer = ""
+source = "Thomas Augustine Arne, 1762 ad., Ralph Harrison, 1784 Other Names: Prince's Street; Triumph; Artixerxes"
+incipit = "13332 11123 54332"
+encoding = "CCEH 000068a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0000/x000068.htm"
+review = true
+
+[[tune]]
+id = "bishopthorpe"
+name = "Bishopthorpe"
+meter = "C.M."
+key = "G major"
+bpm = 84
+pickup = 2
+line_beats = 14
+composer = ""
+source = "Jeremiah Clarke, 1700 Other Names: St. Paul's"
+incipit = "54321 76431 71234"
+encoding = "CCEH 001208a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0012/x001208.htm"
+review = true
+
+[[tune]]
+id = "evan"
+name = "Evan"
+meter = "C.M."
+key = "A-flat major"
+bpm = 84
+pickup = 0
+line_beats = 12
+composer = ""
+source = "William Henry Havergal, 1846 ad., Lowell Mason, 1850"
+incipit = "55132 16555 1312_"
+encoding = "CCEH 000468a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0004/x000468.htm"
+review = true
+
+[[tune]]
+id = "grafenberg"
+name = "Grafenberg"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 0
+line_beats = 13
+composer = ""
+source = "Johann Cruger, Praxis Pietatis Melica, Berlin, 1647 Other Names: Nun Danket All' Und Bringet Ehr"
+incipit = "16512 33235 4321_"
+encoding = "CCEH 000357a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0003/x000357.htm"
+review = true
+
+[[tune]]
+id = "rest"
+name = "Rest (Bradbury)"
+meter = "L.M."
+key = "D major"
+bpm = 84
+pickup = 3
+line_beats = 12
+composer = ""
+source = "William Batchelder Bradbury, 1843"
+incipit = "55515 53244 42767"
+encoding = "CCEH 000781a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0007/x000781.htm"
+review = true
+
+[[tune]]
+id = "thanksgiving"
+name = "Thanksgiving (Dykes)"
+meter = "C.M."
+key = "E major"
+bpm = 84
+pickup = 0
+line_beats = 8
+composer = ""
+source = "John Bacchus Dykes"
+incipit = "13515 45323 45576"
+encoding = "CCEH 001363a.mid, soprano line; key, pickup and first line inferred"
+encoding_url = "https://www.ccel.org/cceh/0013/x001363.htm"
+review = true

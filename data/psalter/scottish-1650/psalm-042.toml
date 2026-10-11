@@ -1,0 +1,25 @@
+# Psalm 42 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 42
+
+[[version]]
+key = "42"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, Maschil, for the sons of Korah."
+stanzas = [
+  ["¹Like as the hart for water-brooks", "  in thirst doth pant and bray;", "So pants my longing soul, O God,", "  that come to thee I may."],
+  ["²My soul for God, the living God,", "  doth thirst: when shall I near", "Unto thy countenance approach,", "  and in God’s sight appear?"],
+  ["³My tears have unto me been meat,", "  both in the night and day,", "While unto me continually,", "  Where is thy God? they say."],
+  ["⁴My soul is poured out in me,", "  when this I think upon;", "Because that with the multitude", "  I heretofore had gone:"],
+  ["With them into God’s house I went,", "  with voice of joy and praise;", "Yea, with the multitude that kept", "  the solemn holy days."],
+  ["⁵O why art thou cast down, my soul?", "  why in me so dismay’d?", "Trust God, for I shall praise him yet,", "  his count’nance is mine aid."],
+  ["⁶My God, my soul’s cast down in me;", "  thee therefore mind I will", "From Jordan’s land, the Hermonites,", "  and ev’n from Mizar hill."],
+  ["⁷At the noise of thy water-spouts", "  deep unto deep doth call;", "Thy breaking waves pass over me,", "  yea, and thy billows all."],
+  ["⁸His loving-kindness yet the Lord", "  command will in the day,", "His song’s with me by night; to God,", "  by whom I live, I’ll pray:"],
+  ["⁹And I will say to God my rock,", "  Why me forgett’st thou so?", "Why, for my foes’ oppression,", "  thus mourning do I go?"],
+  ["¹⁰’Tis as a sword within my bones,", "  when my foes me upbraid;", "Ev’n when by them, Where is thy God?", "  ’tis daily to me said."],
+  ["¹¹O why art thou cast down, my soul?", "  why, thus with grief opprest,", "Art thou disquieted in me?", "  in God still hope and rest:"],
+  ["For yet I know I shall him praise,", "  who graciously to me", "The health is of my countenance,", "  yea, mine own God is he."],
+]

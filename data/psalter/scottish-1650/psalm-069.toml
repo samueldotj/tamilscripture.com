@@ -1,0 +1,46 @@
+# Psalm 69 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 69
+
+[[version]]
+key = "69"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Shoshannim, A Psalm of David."
+stanzas = [
+  ["¹Save me, O God, because the floods", "  do so environ me,", "That ev’n unto my very soul", "  come in the waters be."],
+  ["²I downward in deep mire do sink,", "  where standing there is none:", "I am into deep waters come,", "  where floods have o’er me gone."],
+  ["³I weary with my crying am,", "  my throat is also dry’d;", "Mine eyes do fail, while for my God", "  I waiting do abide."],
+  ["⁴Those men that do without a cause", "  bear hatred unto me,", "Than are the hairs upon my head", "  in number more they be:"],
+  ["They that would me destroy, and are", "  mine en’mies wrongfully,", "Are mighty: so what I took not,", "  to render forc’d was I."],
+  ["They that would me destroy, and are", "  mine en’mies wrongfully,", "Are mighty: so what I took not,", "  to render forc’d was I."],
+  ["⁵Lord, thou my folly know’st, my sins", "  not cover’d are from thee.", "⁶Let none that wait on thee be sham’d,", "  Lord God of hosts, for me."],
+  ["O Lord, the God of Israel,", "  let none, who search do make,", "And seek thee, be at any time", "  confounded for my sake."],
+  ["⁷For I have borne reproach for thee,", "  my face is hid with shame.", "⁸To brethren strange, to mother’s sons", "  an alien I became."],
+  ["⁹Because the zeal did eat me up,", "  which to thine house I bear;", "And the reproaches cast at thee,", "  upon me fallen are."],
+  ["¹⁰My tears and fasts, t’ afflict my soul,", "  were turned to my shame.", "¹¹When sackcloth I did wear, to them", "  a proverb I became."],
+  ["¹²The men that in the gate do sit", "  against me evil spake;", "They also that vile drunkards were", "  of me their song did make."],
+  ["¹³But, in an acceptable time,", "  my pray’r, Lord, is to thee:", "In truth of thy salvation, Lord,", "  and mercy great, hear me."],
+  ["¹⁴Deliver me out of the mire,", "  from sinking do me keep;", "Free me from those that do me hate,", "  and from the waters deep."],
+  ["¹⁵Let not the flood on me prevail,", "  whose water overflows;", "Nor deep me swallow, nor the pit", "  her mouth upon me close."],
+  ["¹⁶Hear me, O Lord, because thy love", "  and kindness is most good;", "Turn unto me, according to", "  thy mercies’ multitude."],
+  ["¹⁷Nor from thy servant hide thy face:", "  I’m troubled, soon attend.", "¹⁸Draw near my soul, and it redeem;", "  me from my foes defend."],
+  ["¹⁹To thee is my reproach well known,", "  my shame, and my disgrace:", "Those that mine adversaries be", "  are all before thy face."],
+  ["²⁰Reproach hath broke my heart; I’m full", "  of grief: I look’d for one", "To pity me, but none I found;", "  comforters found I none."],
+  ["²¹They also bitter gall did give", "  unto me for my meat:", "They gave me vinegar to drink,", "  when as my thirst was great."],
+  ["²²Before them let their table prove", "  a snare; and do thou make", "Their welfare and prosperity", "  a trap themselves to take."],
+  ["²³Let thou their eyes so darken’d be,", "  that sight may them forsake;", "And let their loins be made by thee", "  continually to shake."],
+  ["²⁴Thy fury pour thou out on them,", "  and indignation;", "And let thy wrathful anger, Lord,", "  fast hold take them upon."],
+  ["²⁵All waste and desolate let be", "  their habitation;", "And in their tabernacles all", "  inhabitants be none."],
+  ["²⁶Because him they do persecute,", "  whom thou didst smite before;", "They talk unto the grief of those", "  whom thou hast wounded sore."],
+  ["²⁷Add thou iniquity unto", "  their former wickedness;", "And do not let them come at all", "  into thy righteousness."],
+  ["²⁸Out of the book of life let them", "  be raz’d and blotted quite;", "Among the just and righteous", "  let not their names be writ."],
+  ["²⁹But now become exceeding poor", "  and sorrowful am I:", "By thy salvation, O my God,", "  let me be set on high."],
+  ["³⁰The name of God I with a song", "  most cheerfully will praise;", "And I, in giving thanks to him,", "  his name shall highly raise."],
+  ["³¹This to the Lord a sacrifice", "  more gracious shall prove", "Than bullock, ox, or any beast", "  that hath both horn and hoof."],
+  ["³²When this the humble men shall see,", "  it joy to them shall give:", "O all ye that do seek the Lord,", "  your hearts shall ever live."],
+  ["³³For God the poor hears, and will not", "  his prisoners contemn.", "³⁴Let heav’n, and earth, and seas, him praise,", "  and all that move in them."],
+  ["³⁵For God will Judah’s cities build,", "  and he will Sion save,", "That they may dwell therein, and it", "  in sure possession have."],
+  ["³⁶And they that are his servants’ seed", "  inherit shall the same;", "So shall they have their dwelling there", "  that love his blessed name."],
+]

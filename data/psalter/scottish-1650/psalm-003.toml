@@ -1,0 +1,17 @@
+# Psalm 3 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 3
+
+[[version]]
+key = "3"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David, when he fled from Absalom his son."
+stanzas = [
+  ["¹O Lord, how are my foes increas’d?", "  against me many rise.", "²Many say of my soul, For him", "  in God no succour lies."],
+  ["³Yet thou my shield and glory art,", "  th’ uplifter of mine head.", "⁴I cry’d, and, from his holy hill,", "  the Lord me answer made."],
+  ["⁵I laid me down and slept; I wak’d;", "  for God sustained me.", "⁶I will not fear though thousands ten", "  set round against me be."],
+  ["⁷Arise, O Lord; save me, my God;", "  for thou my foes hast stroke", "All on the cheek-bone, and the teeth", "  of wicked men hast broke."],
+  ["⁸Salvation doth appertain", "  unto the Lord alone:", "Thy blessing, Lord, for evermore", "  thy people is upon."],
+]

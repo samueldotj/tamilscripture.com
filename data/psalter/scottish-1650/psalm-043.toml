@@ -1,0 +1,17 @@
+# Psalm 43 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 43
+
+[[version]]
+key = "43"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Judge me, O God, and plead my cause", "  against th’ ungodly nation;", "From the unjust and crafty man,", "  O be thou my salvation."],
+  ["²For thou the God art of my strength;", "  why thrusts thou me thee fro’?", "For th’ enemy’s oppression", "  why do I mourning go?"],
+  ["³O send thy light forth and thy truth;", "  let them be guides to me,", "And bring me to thine holy hill,", "  ev’n where thy dwellings be."],
+  ["⁴Then will I to God’s altar go,", "  to God my chiefest joy:", "Yea, God, my God, thy name to praise", "  my harp I will employ."],
+  ["⁵Why art thou then cast down, my soul?", "  what should discourage thee?", "And why with vexing thoughts art thou", "  disquieted in me?"],
+  ["Still trust in God; for him to praise", "  good cause I yet shall have:", "He of my count’nance is the health,", "  my God that doth me save."],
+]

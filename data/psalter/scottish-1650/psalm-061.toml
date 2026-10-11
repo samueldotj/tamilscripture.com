@@ -1,0 +1,20 @@
+# Psalm 61 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 61
+
+[[version]]
+key = "61"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Neginoth, A Psalm of David."
+stanzas = [
+  ["¹O God, give ear unto my cry;", "  unto my pray’r attend.", "²From th’ utmost corner of the land", "  my cry to thee I’ll send."],
+  ["What time my heart is overwhelm’d,", "  and in perplexity,", "Do thou me lead unto the Rock", "  that higher is than I."],
+  ["³For thou hast for my refuge been", "  a shelter by thy pow’r;", "And for defence against my foes", "  thou hast been a strong tow’r."],
+  ["⁴Within thy tabernacle I", "  for ever will abide;", "And under covert of thy wings", "  with confidence me hide."],
+  ["⁵For thou the vows that I did make,", "  O Lord my God, didst hear:", "Thou hast giv’n me the heritage", "  of those thy name that fear."],
+  ["⁶A life prolong’d for many days", "  thou to the king shalt give;", "Like many generations be", "  the years which he shall live."],
+  ["⁷He in God’s presence his abode", "  for evermore shall have:", "O do thou truth and mercy both", "  prepare, that may him save."],
+  ["⁸And so will I perpetually", "  sing praise unto thy name;", "That having made my vows, I may", "  each day perform the same."],
+]

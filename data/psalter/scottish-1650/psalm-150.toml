@@ -1,0 +1,15 @@
+# Psalm 150 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 150
+
+[[version]]
+key = "150"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise ye the Lord. God’s praise within", "  his sanctuary raise;", "And to him in the firmament", "  of his pow’r give ye praise."],
+  ["²Because of all his mighty acts,", "  with praise him magnify:", "O praise him, as he doth excel", "  in glorious majesty."],
+  ["³Praise him with trumpet’s sound; his praise", "  with psaltery advance:", "⁴With timbrel, harp, string’d instruments,", "  and organs, in the dance."],
+  ["⁵Praise him on cymbals loud; him praise", "  on cymbals sounding high.", "⁶Let each thing breathing praise the Lord.", "  Praise to the Lord give ye."],
+]

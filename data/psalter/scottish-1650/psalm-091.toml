@@ -1,0 +1,26 @@
+# Psalm 91 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 91
+
+[[version]]
+key = "91"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹He that doth in the secret place", "  of the most High reside,", "Under the shade of him that is", "  th’ Almighty shall abide."],
+  ["²I of the Lord my God will say,", "  He is my refuge still,", "He is my fortress, and my God,", "  and in him trust I will."],
+  ["³Assuredly he shall thee save,", "  and give deliverance", "From subtile fowler’s snare, and from", "  the noisome pestilence."],
+  ["⁴His feathers shall thee hide; thy trust", "  under his wings shall be:", "His faithfulness shall be a shield", "  and buckler unto thee."],
+  ["⁵Thou shalt not need to be afraid", "  for terrors of the night;", "Nor for the arrow that doth fly", "  by day, while it is light;"],
+  ["⁶Nor for the pestilence, that walks", "  in darkness secretly;", "Nor for destruction, that doth waste", "  at noon-day openly."],
+  ["⁷A thousand at thy side shall fall,", "  on thy right hand shall lie", "Ten thousand dead; yet unto thee", "  it shall not once come nigh."],
+  ["⁸Only thou with thine eyes shalt look,", "  and a beholder be;", "And thou therein the just reward", "  of wicked men shalt see."],
+  ["⁹Because the Lord, who constantly", "  my refuge is alone,", "Ev’n the most High, is made by thee", "  thy habitation;"],
+  ["¹⁰No plague shall near thy dwelling come;", "  no ill shall thee befall:", "¹¹For thee to keep in all thy ways", "  his angels charge he shall."],
+  ["¹²They in their hands shall bear thee up,", "  still waiting thee upon;", "Lest thou at any time should’st dash", "  thy foot against a stone."],
+  ["¹³Upon the adder thou shalt tread,", "  and on the lion strong;", "Thy feet on dragons trample shall,", "  and on the lions young."],
+  ["¹⁴Because on me he set his love,", "  I’ll save and set him free;", "Because my great name he hath known,", "  I will him set on high."],
+  ["¹⁵He’ll call on me, I’ll answer him;", "  I will be with him still", "In trouble, to deliver him,", "  and honour him I will."],
+  ["¹⁶With length of days unto his mind", "  I will him satisfy;", "I also my salvation", "  will cause his eyes to see."],
+]

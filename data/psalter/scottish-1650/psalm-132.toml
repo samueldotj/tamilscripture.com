@@ -1,0 +1,25 @@
+# Psalm 132 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 132
+
+[[version]]
+key = "132"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹David, and his afflictions all,", "  Lord, do thou think upon;", "²How unto God he sware, and vow’d", "  to Jacob’s mighty One."],
+  ["³I will not come within my house,", "  nor rest in bed at all;", "⁴Nor shall mine eyes take any sleep,", "  nor eyelids slumber shall;"],
+  ["⁵Till for the Lord a place I find,", "  where he may make abode;", "A place of habitation", "  for Jacob’s mighty God."],
+  ["⁶Lo, at the place of Ephratah", "  of it we understood;", "And we did find it in the fields,", "  and city of the wood."],
+  ["⁷We’ll go into his tabernacles,", "  and at his footstool bow.", "⁸Arise, O Lord, into thy rest,", "  th’ ark of thy strength, and thou."],
+  ["⁹O let thy priests be clothed, Lord,", "  with truth and righteousness;", "And let all those that are thy saints", "  shout loud for joyfulness."],
+  ["¹⁰For thine own servant David’s sake,", "  do not deny thy grace;", "Nor of thine own anointed one", "  turn thou away the face."],
+  ["¹¹The Lord in truth to David sware,", "  he will not turn from it,", "I of thy body’s fruit will make", "  upon thy throne to sit."],
+  ["¹²My cov’nant if thy sons will keep,", "  and laws to them made known,", "Their children then shall also sit", "  for ever on thy throne."],
+  ["¹³For God of Sion hath made choice;", "  there he desires to dwell.", "¹⁴This is my rest, here still I’ll stay;", "  for I do like it well."],
+  ["¹⁵Her food I’ll greatly bless; her poor", "  with bread will satisfy.", "¹⁶Her priests I’ll clothe with health; her saints", "  shall shout forth joyfully."],
+  ["¹⁷And there will I make David’s horn", "  to bud forth pleasantly:", "For him that mine anointed is", "  a lamp ordain’d have I."],
+  ["¹⁸As with a garment I will clothe", "  with shame his en’mies all:", "But yet the crown that he doth wear", "  upon him flourish shall."],
+]

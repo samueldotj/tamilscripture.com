@@ -1,0 +1,36 @@
+# Psalm 74 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 74
+
+[[version]]
+key = "74"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "Maschil of Asaph."
+stanzas = [
+  ["¹O God, why hast thou cast us off?", "  is it for evermore?", "Against thy pasture-sheep why doth", "  thine anger smoke so sore?"],
+  ["²O call to thy rememberance", "  thy congregation,", "Which thou hast purchased of old;", "  still think the same upon:"],
+  ["The rod of thine inheritance,", "  which thou redeemed hast,", "This Sion hill, wherein thou hadst", "  thy dwelling in times past."],
+  ["³To these long desolations", "  thy feet lift, do not tarry;", "For all the ills thy foes have done", "  within thy sanctuary."],
+  ["⁴Amidst thy congregations", "  thine enemies do roar:", "Their ensigns they set up for signs", "  of triumph thee before."],
+  ["⁵A man was famous, and was had", "  in estimation,", "According as he lifted up", "  his axe thick trees upon."],
+  ["⁶But all at once with axes now", "  and hammers they go to,", "And down the carved work thereof", "  they break, and quite undo."],
+  ["⁷They fired have thy sanctuary,", "  and have defil’d the same,", "By casting down unto the ground", "  the place where dwelt thy name."],
+  ["⁸Thus said they in their hearts, Let us", "  destroy them out of hand:", "They burnt up all the synagogues", "  of God within the land."],
+  ["⁹Our signs we do not now behold;", "  there is not us among", "A prophet more, nor any one", "  that knows the time how long."],
+  ["¹⁰How long, Lord, shall the enemy", "  thus in reproach exclaim?", "And shall the adversary thus", "  always blaspheme thy name?"],
+  ["¹¹Thy hand, ev’n thy right hand of might,", "  why dost thou thus draw back?", "O from thy bosom pluck it out", "  for our deliv’rance sake."],
+  ["¹²For certainly God is my King,", "  ev’n from the times of old,", "Working in midst of all the earth", "  salvation manifold."],
+  ["¹³The sea, by thy great pow’r, to part", "  asunder thou didst make;", "And thou the dragons’ heads, O Lord,", "  within the waters brake."],
+  ["¹⁴The leviathan’s head thou brak’st", "  in pieces, and didst give", "Him to be meat unto the folk", "  in wilderness that live."],
+  ["¹⁵Thou clav’st the fountain and the flood,", "  which did with streams abound:", "Thou dry’dst the mighty waters up", "  unto the very ground."],
+  ["¹⁶Thine only is the day, O Lord,", "  thine also is the night;", "And thou alone prepared hast", "  the sun and shining light."],
+  ["¹⁷By thee the borders of the earth", "  were settled ev’ry where:", "The summer and the winter both", "  by thee created were."],
+  ["¹⁸That th’ enemy reproached hath,", "  O keep it in record;", "And that the foolish people have", "  blasphem’d thy name, O Lord."],
+  ["¹⁹Unto the multitude do not", "  thy turtle’s soul deliver:", "The congregation of thy poor", "  do not forget for ever."],
+  ["²⁰Unto thy cov’nant have respect;", "  for earth’s dark places be", "Full of the habitations", "  of horrid cruelty."],
+  ["²¹O let not those that be oppress’d", "  return again with shame:", "Let those that poor and needy are", "  give praise unto thy name."],
+  ["²²Do thou, O God, arise and plead", "  the cause that is thine own:", "Remember how thou art reproach’d", "  still by the foolish one."],
+  ["²³Do not forget the voice of those", "  that are thine enemies:", "Of those the tumult ever grows", "  that do against thee rise."],
+]

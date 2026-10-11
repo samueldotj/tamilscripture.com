@@ -1,0 +1,28 @@
+# Psalm 9 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 9
+
+[[version]]
+key = "9"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Muth-labben, A Psalm of David."
+stanzas = [
+  ["¹Lord, thee I’ll praise with all my heart,", "  thy wonders all proclaim.", "²In thee, most High, I’ll greatly joy,", "  and sing unto thy name."],
+  ["³When back my foes were turn’d, they fell,", "  and perish’d at thy sight:", "⁴For thou maintain’dst my right and cause;", "  on throne sat’st judging right."],
+  ["⁵The heathen thou rebuked hast,", "  the wicked overthrown;", "Thou hast put out their names, that they", "  may never more be known."],
+  ["⁶O en’my! now destructions have", "  an end perpetual:", "Thou cities raz’d; perish’d with them", "  is their memorial."],
+  ["⁷God shall endure for aye; he doth", "  for judgment set his throne;", "⁸In righteousness to judge the world,", "  justice to give each one."],
+  ["⁹God also will a refuge be", "  for those that are oppress’d;", "A refuge will he be in times", "  of trouble to distress’d."],
+  ["¹⁰And they that know thy name, in thee", "  their confidence will place:", "For thou hast not forsaken them", "  that truly seek thy face."],
+  ["¹¹O sing ye praises to the Lord,", "  that dwells in Sion hill;", "And all the nations among", "  his deeds record ye still."],
+  ["¹²When he enquireth after blood,", "  he then rememb’reth them:", "The humble folk he not forgets", "  that call upon his name."],
+  ["¹³Lord, pity me; behold the grief", "  which I from foes sustain;", "Ev’n thou, who from the gates of death", "  dost raise me up again;"],
+  ["¹⁴That I, in Sion’s daughters’ gates,", "  may all thy praise advance;", "And that I may rejoice always", "  in thy deliverance."],
+  ["¹⁵The heathen are sunk in the pit", "  which they themselves prepar’d;", "And in the net which they have hid", "  their own feet fast are snar’d."],
+  ["¹⁶The Lord is by the judgment known", "  which he himself hath wrought:", "The sinners’ hands do make the snares", "  wherewith themselves are caught."],
+  ["¹⁷They who are wicked into hell", "  each one shall turned be;", "And all the nations that forget", "  to seek the Lord most high."],
+  ["¹⁸For they that needy are shall not", "  forgotten be alway;", "The expectation of the poor", "  shall not be lost for aye."],
+  ["¹⁹Arise, Lord, let not man prevail;", "  judge heathen in thy sight:", "²⁰That they may know themselves but men,", "  the nations, Lord, affright."],
+]

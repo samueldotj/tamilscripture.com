@@ -1,0 +1,36 @@
+# Psalm 31 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 31
+
+[[version]]
+key = "31"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹In thee, O Lord, I put my trust,", "  sham’d let me never be;", "According to thy righteousness", "  do thou deliver me."],
+  ["²Bow down thine ear to me, with speed", "  send me deliverance:", "To save me, my strong rock be thou,", "  and my house of defence."],
+  ["³Because thou art my rock, and thee", "  I for my fortress take;", "Therefore do thou me lead and guide,", "  ev’n for thine own name’s sake."],
+  ["⁴And sith thou art my strength, therefore", "  pull me out of the net,", "Which they in subtilty for me", "  so privily have set."],
+  ["⁵Into thine hands I do commit", "  my sp’rit: for thou art he,", "O thou, Jehovah, God of truth,", "  that hast redeemed me."],
+  ["⁶Those that do lying vanities", "  regard, I have abhorr’d:", "But as for me, my confidence", "  is fixed on the Lord."],
+  ["⁷I’ll in thy mercy gladly joy:", "  for thou my miseries", "Consider’d hast; thou hast my soul", "  known in adversities:"],
+  ["⁸And thou hast not inclosed me", "  within the en’my’s hand;", "And by thee have my feet been made", "  in a large room to stand."],
+  ["⁹O Lord, upon me mercy have,", "  for trouble is on me:", "Mine eye, my belly, and my soul,", "  with grief consumed be."],
+  ["¹⁰Because my life with grief is spent,", "  my years with sighs and groans:", "My strength doth fail; and for my sin", "  consumed are my bones."],
+  ["¹¹I was a scorn to all my foes,", "  and to my friends a fear;", "And specially reproach’d of those", "  that were my neighbours near:"],
+  ["When they me saw they from me fled.", "  ¹²Ev’n so I am forgot,", "As men are out of mind when dead:", "  I’m like a broken pot."],
+  ["¹³For slanders I of many heard;", "  fear compass’d me, while they", "Against me did consult, and plot", "  to take my life away."],
+  ["¹⁴But as for me, O Lord, my trust", "  upon thee I did lay;", "And I to thee, Thou art my God,", "  did confidently say."],
+  ["¹⁵My times are wholly in thine hand:", "  do thou deliver me", "From their hands that mine enemies", "  and persecutors be."],
+  ["¹⁶Thy countenance to shine do thou", "  upon thy servant make:", "Unto me give salvation,", "  for thy great mercies’ sake."],
+  ["¹⁷Let me not be asham’d, O Lord,", "  for on thee call’d I have:", "Let wicked men be sham’d, let them", "  be silent in the grave."],
+  ["¹⁸To silence put the lying lips,", "  that grievous things do say,", "And hard reports, in pride and scorn,", "  on righteous men do lay."],
+  ["¹⁹How great’s the goodness thou for them", "  that fear thee keep’st in store,", "And wrought’st for them that trust in thee", "  the sons of men before!"],
+  ["²⁰In secret of thy presence thou", "  shalt hide them from man’s pride:", "From strife of tongues thou closely shalt,", "  as in a tent, them hide."],
+  ["²¹All praise and thanks be to the Lord;", "  for he hath magnify’d", "His wondrous love to me within", "  a city fortify’d."],
+  ["²²For from thine eyes cut off I am,", "  I in my haste had said;", "My voice yet heard’st thou, when to thee", "  with cries my moan I made."],
+  ["²³O love the Lord, all ye his saints;", "  because the Lord doth guard", "The faithful, and he plenteously", "  proud doers doth reward."],
+  ["²⁴Be of good courage, and he strength", "  unto your heart shall send,", "All ye whose hope and confidence", "  doth on the Lord depend."],
+]

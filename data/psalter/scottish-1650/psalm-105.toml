@@ -1,0 +1,44 @@
+# Psalm 105 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 105
+
+[[version]]
+key = "105"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Give thanks to God, call on his name;", "  to men his deeds make known.", "²Sing ye to him, sing psalms; proclaim", "  his wondrous works each one."],
+  ["³See that ye in his holy name", "  to glory do accord;", "And let the heart of ev’ry one", "  rejoice that seeks the Lord."],
+  ["⁴The Lord Almighty, and his strength,", "  with stedfast hearts seek ye:", "His blessed and his gracious face", "  seek ye continually."],
+  ["⁵Think on the works that he hath done,", "  which admiration breed;", "His wonders, and the judgments all", "  which from his mouth proceed;"],
+  ["⁶O ye that are of Abr’ham’s race,", "  his servant well approv’n;", "And ye that Jacob’s children are,", "  whom he chose for his own."],
+  ["⁷Because he, and he only, is", "  the mighty Lord our God;", "And his most righteous judgments are", "  in all the earth abroad."],
+  ["⁸His cov’nant he remember’d hath,", "  that it may ever stand:", "To thousand generations", "  the word he did command."],
+  ["⁹Which covenant he firmly made", "  with faithful Abraham,", "And unto Isaac, by his oath,", "  he did renew the same:"],
+  ["¹⁰And unto Jacob, for a law,", "  he made it firm and sure,", "A covenant to Israel,", "  which ever should endure."],
+  ["¹¹He said, I’ll give Canaan’s land", "  for heritage to you;", "¹²While they were strangers there, and few,", "  in number very few:"],
+  ["¹³While yet they went from land to land", "  without a sure abode;", "And while through sundry kingdoms they", "  did wander far abroad;"],
+  ["¹⁴Yet, notwithstanding suffer’d he", "  no man to do them wrong:", "Yea, for their sakes, he did reprove", "  kings, who were great and strong."],
+  ["¹⁵Thus did he say, Touch ye not those", "  that mine anointed be,", "Nor do the prophets any harm", "  that do pertain to me."],
+  ["¹⁶He call’d for famine on the land,", "  he brake the staff of bread:", "¹⁷But yet he sent a man before,", "  by whom they should be fed;"],
+  ["Ev’n Joseph, whom unnat’rally", "  sell for a slave did they;", "¹⁸Whose feet with fetters they did hurt,", "  and he in irons lay;"],
+  ["¹⁹Until the time that his word came", "  to give him liberty;", "The word and purpose of the Lord", "  did him in prison try."],
+  ["²⁰Then sent the king, and did command", "  that he enlarg’d should be:", "He that the people’s ruler was", "  did send to set him free."],
+  ["²¹A lord to rule his family", "  he rais’d him, as most fit;", "To him of all that he possess’d", "  he did the charge commit:"],
+  ["²²That he might at his pleasure bind", "  the princes of the land;", "And he might teach his senators", "  wisdom to understand."],
+  ["²³The people then of Israel", "  down into Egypt came;", "And Jacob also sojourned", "  within the land of Ham."],
+  ["²⁴And he did greatly by his pow’r", "  increase his people there;", "And stronger than their enemies", "  they by his blessing were."],
+  ["²⁵Their heart he turned to envy", "  his folk maliciously,", "With those that his own servants were", "  to deal in subtilty."],
+  ["²⁶His servant Moses he did send,", "  Aaron his chosen one.", "²⁷By these his signs and wonders great", "  in Ham’s land were made known."],
+  ["²⁸Darkness he sent, and made it dark;", "  his word they did obey.", "²⁹He turn’d their waters into blood,", "  and he their fish did slay."],
+  ["³⁰The land in plenty brought forth frogs", "  in chambers of their kings.", "³¹His word all sorts of flies and lice", "  in all their borders brings."],
+  ["³²He hail for rain, and flaming fire", "  into their land he sent:", "³³And he their vines and fig-trees smote:", "  trees of their coasts he rent."],
+  ["³⁴He spake, and caterpillars came,", "  locusts did much abound;", "³⁵Which in their land all herbs consum’d,", "  and all fruits of their ground."],
+  ["³⁶He smote all first-born in their land,", "  chief of their strength each one.", "³⁷With gold and silver brought them forth,", "  weak in their tribes were none."],
+  ["³⁸Egypt was glad when forth they went,", "  their fear on them did light.", "³⁹He spread a cloud for covering,", "  and fire to shine by night."],
+  ["⁴⁰They ask’d, and he brought quails: with bread", "  of heav’n he filled them.", "⁴¹He open’d rocks, floods gush’d, and ran", "  in deserts like a stream."],
+  ["⁴²For on his holy promise he,", "  and servant Abr’ham, thought.", "⁴³With joy his people, his elect", "  with gladness, forth he brought."],
+  ["⁴⁴And unto them the pleasant lands", "  he of the heathen gave;", "That of the people’s labour they", "  inheritance might have."],
+  ["⁴⁵That they his statutes might observe", "  according to his word;", "And that they might his laws obey.", "  Give praise unto the Lord."],
+]

@@ -1,0 +1,17 @@
+# Psalm 15 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 15
+
+[[version]]
+key = "15"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹Within thy tabernacle, Lord,", "  who shall abide with thee?", "And in thy high and holy hill", "  who shall a dweller be?"],
+  ["²The man that walketh uprightly,", "  and worketh righteousness,", "And as he thinketh in his heart,", "  so doth he truth express."],
+  ["³Who doth not slander with his tongue,", "  nor to his friend doth hurt;", "Nor yet against his neighbour doth", "  take up an ill report."],
+  ["⁴In whose eyes vile men are despis’d;", "  but those that God do fear", "He honoureth; and changeth not,", "  though to his hurt he swear."],
+  ["⁵His coin puts not to usury,", "  nor take reward will he", "Against the guiltless. Who doth thus", "  shall never moved be."],
+]

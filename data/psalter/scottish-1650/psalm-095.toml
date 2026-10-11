@@ -1,0 +1,20 @@
+# Psalm 95 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 95
+
+[[version]]
+key = "95"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O come, let us sing to the Lord:", "  come, let us ev’ry one", "A joyful noise make to the Rock", "  of our salvation."],
+  ["²Let us before his presence come", "  with praise and thankful voice;", "Let us sing psalms to him with grace,", "  and make a joyful noise."],
+  ["³For God, a great God, and great King,", "  above all gods he is.", "⁴Depths of the earth are in his hand,", "  the strength of hills is his."],
+  ["⁵To him the spacious sea belongs,", "  for he the same did make;", "The dry land also from his hands", "  its form at first did take."],
+  ["⁶O come, and let us worship him,", "  let us bow down withal,", "And on our knees before the Lord", "  our Maker let us fall."],
+  ["⁷For he’s our God, the people we", "  of his own pasture are,", "And of his hand the sheep; to-day,", "  if ye his voice will hear,"],
+  ["⁸Then harden not your hearts, as in", "  the provocation,", "As in the desert, on the day", "  of the tentation:"],
+  ["⁹When me your fathers tempt’d and prov’d,", "  and did my working see;", "¹⁰Ev’n for the space of forty years", "  this race hath grieved me."],
+  ["I said, This people errs in heart,", "  my ways they do not know:", "¹¹To whom I sware in wrath, that to", "  my rest they should not go."],
+]

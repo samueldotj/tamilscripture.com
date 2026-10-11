@@ -1,0 +1,15 @@
+# Psalm 131 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 131
+
+[[version]]
+key = "131"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees of David."
+stanzas = [
+  ["¹My heart not haughty is, O Lord,", "  mine eyes not lofty be;", "Nor do I deal in matters great,", "  or things too high for me."],
+  ["²I surely have myself behav’d", "  with quiet sp’rit and mild,", "As child of mother wean’d: my soul", "  is like a weaned child."],
+  ["³Upon the Lord let all the hope", "  of Israel rely,", "Ev’n from the time that present is", "  unto eternity."],
+]

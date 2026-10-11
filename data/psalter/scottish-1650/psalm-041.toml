@@ -1,0 +1,24 @@
+# Psalm 41 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 41
+
+[[version]]
+key = "41"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹Blessed is he that wisely doth", "  the poor man’s case consider;", "For when the time of trouble is,", "  the Lord will him deliver."],
+  ["²God will him keep, yea, save alive;", "  on earth he bless’d shall live;", "And to his enemies’ desire", "  thou wilt him not up give."],
+  ["³God will give strength when he on bed", "  of languishing doth mourn;", "And in his sickness sore, O Lord,", "  thou all his bed wilt turn."],
+  ["⁴I said, O Lord, do thou extend", "  thy mercy unto me;", "O do thou heal my soul; for why?", "  I have offended thee."],
+  ["⁵Those that to me are enemies,", "  of me do evil say,", "When shall he die, that so his name", "  may perish quite away?"],
+  ["⁶To see me if he comes, he speaks", "  vain words: but then his heart", "Heaps mischief to it, which he tells,", "  when forth he doth depart."],
+  ["⁷My haters jointly whispering,", "  ’gainst me my hurt devise.", "⁸Mischief, say they, cleaves fast to him;", "  he li’th, and shall not rise."],
+  ["⁹Yea, ev’n mine own familiar friend,", "  on whom I did rely,", "Who ate my bread, ev’n he his heel", "  against me lifted high."],
+  ["¹⁰But, Lord, be merciful to me,", "  and up again me raise,", "That I may justly them requite", "  according to their ways."],
+  ["¹¹By this I know that certainly", "  I favour’d am by thee;", "Because my hateful enemy", "  triumphs not over me."],
+  ["¹²But as for me, thou me uphold’st", "  in mine integrity;", "And me before thy countenance", "  thou sett’st continually."],
+  ["¹³The Lord, the God of Israel,", "  be bless’d for ever then,", "From age to age eternally.", "  Amen, yea, and amen."],
+]

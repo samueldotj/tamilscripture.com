@@ -1,0 +1,32 @@
+# Psalm 148 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 148
+
+[[version]]
+key = "148"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise God. From heavens praise the Lord,", "  in heights praise to him be.", "²All ye his angels, praise ye him;", "  his hosts all, praise him ye."],
+  ["³O praise ye him, both sun and moon,", "  praise him, all stars of light.", "⁴Ye heav’ns of heav’ns him praise, and floods", "  above the heavens’ height."],
+  ["⁵Let all the creatures praise the name", "  of our almighty Lord:", "For he commanded, and they were", "  created by his word."],
+  ["⁶He also, for all times to come,", "  hath them establish’d sure;", "He hath appointed them a law,", "  which ever shall endure."],
+  ["⁷Praise ye Jehovah from the earth,", "  dragons, and ev’ry deep:", "⁸Fire, hail, snow, vapour, stormy wind,", "  his word that fully keep."],
+  ["⁹All hills and mountains, fruitful trees,", "  and all ye cedars high:", "¹⁰Beasts, and all cattle, creeping things,", "  and all ye birds that fly."],
+  ["¹¹Kings of the earth, all nations,", "  princes, earth’s judges all:", "¹²Both young men, yea, and maidens too,", "  old men, and children small."],
+  ["¹³Let them God’s name praise; for his name", "  alone is excellent:", "His glory reacheth far above", "  the earth and firmament."],
+  ["¹⁴His people’s horn, the praise of all", "  his saints, exalteth he;", "Ev’n Isr’el’s seed, a people near", "  to him. The Lord praise ye."],
+]
+
+[[version]]
+key = "148-2"
+label = "6.6.6.6.8.8"
+meter = "6.6.6.6.8.8"
+stanzas = [
+  ["¹The Lord of heav’n confess,", "  On high his glory raise.", "²Him let all angels bless,", "  Him all his armies praise.", "  ³Him glorify", "  Sun, moon, and stars;", "  ⁴Ye higher spheres,", "  And cloudy sky."],
+  ["⁵From God your beings are,", "  Him therefore famous make;", "You all created were,", "  When he the word but spake.", "  ⁶And from that place,", "  Where fix’d you be", "  By his decree,", "  You cannot pass."],
+  ["⁷Praise God from earth below,", "  Ye dragons, and ye deeps:", "⁸Fire, hail, clouds, wind, and snow.", "  Whom in command he keeps.", "  ⁹Praise ye his name,", "  Hills great and small,", "  Trees low and tall;", "  ¹⁰Beasts wild and tame;"],
+  ["All things that creep or fly.", "  ¹¹Ye kings, ye vulgar throng,", "All princes mean or high;", "  ¹²Both men and virgins young,", "  Ev’n young and old,", "  ¹³Exalt his name;", "  For much his fame", "  Should be extoll’d."],
+  ["O let God’s name be prais’d", "  Above both earth and sky;", "¹⁴For he his saints hath rais’d,", "  And set their horn on high;", "  Ev’n those that be", "  Of Isr’el’s race,", "  Near to his grace.", "  The Lord praise ye."],
+]

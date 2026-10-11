@@ -1,0 +1,19 @@
+# Psalm 146 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 146
+
+[[version]]
+key = "146"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise God. The Lord praise, O my soul.", "  ²I’ll praise God while I live;", "While I have being to my God", "  in songs I’ll praises give."],
+  ["³Trust not in princes, nor man’s son,", "  in whom there is no stay:", "⁴His breath departs, to’s earth he turns;", "  that day his thoughts decay."],
+  ["⁵O happy is that man and blest,", "  whom Jacob’s God doth aid;", "Whose hope upon the Lord doth rest,", "  and on his God is stay’d:"],
+  ["⁶Who made the earth and heavens high,", "  who made the swelling deep,", "And all that is within the same;", "  who truth doth ever keep:"],
+  ["⁷Who righteous judgment executes", "  for those oppress’d that be,", "Who to the hungry giveth food;", "  God sets the pris’ners free."],
+  ["⁸The Lord doth give the blind their sight,", "  the bowed down doth raise:", "The Lord doth dearly love all those", "  that walk in upright ways."],
+  ["⁹The stranger’s shield, the widow’s stay,", "  the orphan’s help, is he:", "But yet by him the wicked’s way", "  turn’d upside down shall be."],
+  ["¹⁰The Lord shall reign for evermore:", "  thy God, O Sion, he", "Reigns to all generations.", "  Praise to the Lord give ye."],
+]

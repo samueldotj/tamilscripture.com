@@ -1,0 +1,28 @@
+# Psalm 124 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 124
+
+[[version]]
+key = "124"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees of David."
+stanzas = [
+  ["¹Had not the Lord been on our side,", "  may Israel now say;", "²Had not the Lord been on our side,", "  when men rose us to slay;"],
+  ["³They had us swallow’d quick, when as", "  their wrath ‘gainst us did flame:", "⁴Waters had cover’d us, our soul", "  had sunk beneath the stream."],
+  ["⁵Then had the waters, swelling high,", "  over our soul made way.", "⁶Bless’d be the Lord, who to their teeth", "  us gave not for a prey."],
+  ["⁷Our soul’s escaped, as a bird", "  out of the fowler’s snare;", "The snare asunder broken is,", "  and we escaped are."],
+  ["⁸Our sure and all-sufficient help", "  is in Jehovah’s name;", "His name who did the heav’n create,", "  and who the earth did frame."],
+]
+
+[[version]]
+key = "124-2"
+label = "10s"
+meter = "10.10.10.10.10"
+stanzas = [
+  ["¹Now Israel may say, and that truly,", "If that the Lord had not our cause maintain’d;", "²If that the Lord had not our right sustain’d,", "When cruel men against us furiously", "Rose up in wrath, to make of us their prey;"],
+  ["³Then certainly they had devour’d us all,", "And swallow’d quick, for ought that we could deem;", "Such was their rage, as we might well esteem.", "⁴And as fierce floods before them all things drown,", "So had they brought our soul to death quite down."],
+  ["⁵The raging streams, with their proud swelling waves,", "Had then our soul o’erwhelmed in the deep.", "⁶But bless’d be God, who doth us safely keep,", "And hath not giv’n us for a living prey", "Unto their teeth, and bloody cruelty."],
+  ["⁷Ev’n as a bird out of the fowler’s snare", "Escapes away, so is our soul set free:", "Broke are their nets, and thus escaped we.", "⁸Therefore our help is in the Lord’s great name,", "Who heav’n and earth by his great pow’r did frame."],
+]

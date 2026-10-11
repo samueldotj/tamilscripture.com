@@ -1,0 +1,18 @@
+# Psalm 14 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 14
+
+[[version]]
+key = "14"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹That there is not a God, the fool", "  doth in his heart conclude:", "They are corrupt, their works are vile;", "  not one of them doth good."],
+  ["²Upon men’s sons the Lord from heav’n", "  did cast his eyes abroad,", "To see if any understood,", "  and did seek after God."],
+  ["³They altogether filthy are,", "  they all aside are gone;", "And there is none that doeth good,", "  yea, sure there is not one."],
+  ["⁴These workers of iniquity", "  do they not know at all,", "That they my people eat as bread,", "  and on God do not call?"],
+  ["⁵There fear’d they much; for God is with", "  the whole race of the just.", "⁶You shame the counsel of the poor,", "  because God is his trust."],
+  ["⁷Let Isr’el’s help from Sion come:", "  when back the Lord shall bring", "His captives, Jacob shall rejoice,", "  and Israel shall sing."],
+]

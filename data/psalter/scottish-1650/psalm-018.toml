@@ -1,0 +1,54 @@
+# Psalm 18 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 18
+
+[[version]]
+key = "18"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David, the servant of the Lord, who spake unto the Lord the words of this song in the day that the Lord delivered him from the hand of all his enemies, and from the hand of Saul: And he said,"
+stanzas = [
+  ["¹Thee will I love, O Lord, my strength.", "  ²My fortress is the Lord,", "My rock, and he that doth to me", "  deliverance afford:"],
+  ["My God, my strength, whom I will trust,", "  a buckler unto me,", "The horn of my salvation,", "  and my high tow’r, is he."],
+  ["³Upon the Lord, who worthy is", "  of praises, will I cry;", "And then shall I preserved be", "  safe from mine enemy."],
+  ["⁴Floods of ill men affrighted me,", "  death’s pangs about me went;", "⁵Hell’s sorrows me environed;", "  death’s snares did me prevent."],
+  ["⁶In my distress I call’d on God,", "  cry to my God did I;", "He from his temple heard my voice,", "  to his ears came my cry."],
+  ["⁷Th’ earth, as affrighted, then did shake,", "  trembling upon it seiz’d:", "The hills’ foundations moved were,", "  because he was displeas’d."],
+  ["⁸Up from his nostrils came a smoke,", "  and from his mouth there came", "Devouring fire, and coals by it", "  were turned into flame."],
+  ["⁹He also bowed down the heav’ns,", "  and thence he did descend;", "And thickest clouds of darkness did", "  under his feet attend."],
+  ["¹⁰And he upon a cherub rode,", "  and thereon he did fly;", "Yea, on the swift wings of the wind", "  his flight was from on high."],
+  ["¹¹He darkness made his secret place:", "  about him, for his tent,", "Dark waters were, and thickest clouds", "  of th’ airy firmament."],
+  ["¹²And at the brightness of that light,", "  which was before his eye,", "His thick clouds pass’d away, hailstones", "  and coals of fire did fly."],
+  ["¹³The Lord God also in the heav’ns", "  did thunder in his ire;", "And there the Highest gave his voice,", "  hailstones and coals of fire."],
+  ["¹⁴Yea, he his arrows sent abroad,", "  and them he scattered;", "His lightnings also he shot out,", "  and them discomfited."],
+  ["¹⁵The waters’ channels then were seen,", "  the world’s foundations vast", "At thy rebuke discover’d were,", "  and at thy nostrils’ blast."],
+  ["¹⁶And from above the Lord sent down,", "  and took me from below;", "From many waters he me drew,", "  which would me overflow."],
+  ["¹⁷He me reliev’d from my strong foes,", "  and such as did me hate;", "Because he saw that they for me", "  too strong were, and too great."],
+  ["¹⁸They me prevented in the day", "  of my calamity;", "But even then the Lord himself", "  a stay was unto me."],
+  ["¹⁹He to a place where liberty", "  and room was hath me brought;", "Because he took delight in me,", "  he my deliv’rance wrought."],
+  ["²⁰According to my righteousness", "  he did me recompense,", "He me repaid according to", "  my hands’ pure innocence."],
+  ["²¹For I God’s ways kept, from my God", "  did not turn wickedly.", "²²His judgments were before me, I", "  his laws put not from me."],
+  ["²³Sincere before him was my heart;", "  with him upright was I;", "And watchfully I kept myself", "  from mine iniquity."],
+  ["²⁴After my righteousness the Lord", "  hath recompensed me,", "After the cleanness of my hands", "  appearing in his eye."],
+  ["²⁵Thou gracious to the gracious art,", "  to upright men upright:", "²⁶Pure to the pure, froward thou kyth’st", "  unto the froward wight."],
+  ["²⁷For thou wilt the afflicted save", "  in grief that low do lie:", "But wilt bring down the countenance", "  of them whose looks are high."],
+  ["²⁸The Lord will light my candle so,", "  that it shall shine full bright:", "The Lord my God will also make", "  my darkness to be light."],
+  ["²⁹By thee through troops of men I break,", "  and them discomfit all;", "And, by my God assisting me,", "  I overleap a wall."],
+  ["³⁰As for God, perfect is his way:", "  the Lord his word is try’d;", "He is a buckler to all those", "  who do in him confide."],
+  ["³¹Who but the Lord is God? but he", "  who is a rock and stay?", "³²’Tis God that girdeth me with strength,", "  and perfect makes my way."],
+  ["³³He made my feet swift as the hinds,", "  set me on my high places.", "³⁴Mine hands to war he taught, mine arms", "  brake bows of steel in pieces."],
+  ["³⁵The shield of thy salvation", "  thou didst on me bestow:", "Thy right hand held me up, and great", "  thy kindness made me grow."],
+  ["³⁶And in my way my steps thou hast", "  enlarged under me,", "That I go safely, and my feet", "  are kept from sliding free."],
+  ["³⁷Mine en’mies I pursued have,", "  and did them overtake;", "Nor did I turn again till I", "  an end of them did make."],
+  ["³⁸I wounded them, they could not rise;", "  they at my feet did fall.", "³⁹Thou girdedst me with strength for war;", "  my foes thou brought’st down all:"],
+  ["⁴⁰And thou hast giv’n to me the necks", "  of all mine enemies;", "That I might them destroy and slay,", "  who did against me rise."],
+  ["⁴¹They cried out, but there was none", "  that would or could them save;", "Yea, they did cry unto the Lord,", "  but he no answer gave."],
+  ["⁴²Then did I beat them small as dust", "  before the wind that flies;", "And I did cast them out like dirt", "  upon the street that lies."],
+  ["⁴³Thou mad’st me free from people’s strife,", "  and heathen’s head to be:", "A people whom I have not known", "  shall service do to me."],
+  ["⁴⁴At hearing they shall me obey,", "  to me they shall submit.", "⁴⁵Strangers for fear shall fade away,", "  who in close places sit."],
+  ["⁴⁶God lives, bless’d be my Rock; the God", "  of my health praised be.", "⁴⁷God doth avenge me, and subdues", "  the people under me."],
+  ["⁴⁸He saves me from mine enemies;", "  yea, thou hast lifted me", "Above my foes; and from the man", "  of vi’lence set me free."],
+  ["⁴⁹Therefore to thee will I give thanks", "  the heathen folk among;", "And to thy name, O Lord, I will", "  sing praises in a song."],
+  ["⁵⁰He great deliv’rance gives his king:", "  he mercy doth extend", "To David, his anointed one,", "  and his seed without end."],
+]

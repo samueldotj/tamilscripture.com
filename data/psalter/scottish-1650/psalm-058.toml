@@ -1,0 +1,23 @@
+# Psalm 58 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 58
+
+[[version]]
+key = "58"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, Al-taschith, Michtam of David."
+stanzas = [
+  ["¹Do ye, O congregation,", "  indeed speak righteousness?", "O ye that are the sons of men,", "  judge ye with uprightness?"],
+  ["²Yea, ev’n within your very hearts", "  ye wickedness have done;", "And ye the vi’lence of your hands", "  do weigh the earth upon."],
+  ["³The wicked men estranged are,", "  ev’n from the very womb;", "They, speaking lies, do stray as soon", "  as to the world they come."],
+  ["⁴Unto a serpent’s poison like", "  their poison doth appear;", "Yea, they are like the adder deaf,", "  that closely stops her ear;"],
+  ["⁵That so she may not hear the voice", "  of one that charm her would,", "No, not though he most cunning were,", "  and charm most wisely could."],
+  ["⁶Their teeth, O God, within their mouth", "  break thou in pieces small;", "The great teeth break thou out, O Lord,", "  of these young lions all."],
+  ["⁷Let them like waters melt away,", "  which downward still do flow:", "In pieces cut his arrows all,", "  when he shall bend his bow."],
+  ["⁸Like to a snail that melts away,", "  let each of them be gone;", "Like woman’s birth untimely, that", "  they never see the sun."],
+  ["⁹He shall them take away before", "  your pots the thorns can find,", "Both living, and in fury great,", "  as with a stormy wind."],
+  ["¹⁰The righteous, when he vengeance sees,", "  he shall be joyful then;", "The righteous one shall wash his feet", "  in blood of wicked men."],
+  ["¹¹So men shall say, The righteous man", "  reward shall never miss:", "And verily upon the earth", "  a God to judge there is."],
+]

@@ -1,0 +1,21 @@
+# Psalm 76 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 76
+
+[[version]]
+key = "76"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician on Neginoth, A Psalm or Song of Asaph."
+stanzas = [
+  ["¹In Judah’s land God is well known,", "  his name’s in Isr’el great:", "²In Salem is his tabernacle,", "  in Sion is his seat."],
+  ["³There arrows of the bow he brake,", "  the shield, the sword, the war.", "⁴More glorious thou than hills of prey,", "  more excellent art far."],
+  ["⁵Those that were stout of heart are spoil’d,", "  they slept their sleep outright;", "And none of those their hands did find,", "  that were the men of might."],
+  ["⁶When thy rebuke, O Jacob’s God,", "  had forth against them past,", "Their horses and their chariots both", "  were in a dead sleep cast."],
+  ["⁷Thou, Lord, ev’n thou art he that should", "  be fear’d; and who is he", "That may stand up before thy sight,", "  if once thou angry be?"],
+  ["⁸From heav’n thou judgment caus’d be heard;", "  the earth was still with fear,", "⁹When God to judgment rose, to save", "  all meek on earth that were."],
+  ["¹⁰Surely the very wrath of man", "  unto thy praise redounds:", "Thou to the remnant of his wrath", "  wilt set restraining bounds."],
+  ["¹¹Vow to the Lord your God, and pay:", "  all ye that near him be,", "Bring gifts and presents unto him;", "  for to be fear’d is he."],
+  ["¹²By him the sp’rits shall be cut off", "  of those that princes are:", "Unto the kings that are on earth", "  he fearful doth appear."],
+]

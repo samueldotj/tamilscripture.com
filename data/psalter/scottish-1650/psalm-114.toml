@@ -1,0 +1,17 @@
+# Psalm 114 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 114
+
+[[version]]
+key = "114"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹When Isr’el out of Egypt went,", "  and did his dwelling change,", "When Jacob’s house went out from those", "  that were of language strange,"],
+  ["²He Judah did his sanctuary,", "  his kingdom Isr’el make:", "³The sea it saw, and quickly fled,", "  Jordan was driven back."],
+  ["⁴Like rams the mountains, and like lambs", "  the hills skipp’d to and fro.", "⁵O sea, why fledd’st thou? Jordan, back", "  why wast thou driven so?"],
+  ["⁶Ye mountains great, wherefore was it", "  that ye did skip like rams?", "And wherefore was it, little hills,", "  that ye did leap like lambs?"],
+  ["⁷O at the presence of the Lord,", "  earth, tremble thou for fear,", "While as the presence of the God", "  of Jacob doth appear:"],
+  ["⁸Who from the hard and stony rock", "  did standing water bring;", "And by his pow’r did turn the flint", "  into a water-spring."],
+]

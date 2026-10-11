@@ -1,0 +1,22 @@
+# Psalm 5 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 5
+
+[[version]]
+key = "5"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, upon Nehiloth, A Psalm of David."
+stanzas = [
+  ["¹Give ear unto my words, O Lord,", "  my meditation weigh.", "²Hear my loud cry, my King, my God;", "  for I to thee will pray."],
+  ["³Lord, thou shalt early hear my voice:", "  I early will direct", "My pray’r to thee; and, looking up,", "  an answer will expect."],
+  ["⁴For thou art not a God that doth", "  in wickedness delight;", "Neither shall evil dwell with thee,", "  ⁵Nor fools stand in thy sight."],
+  ["All that ill-doers are thou hat’st;", "  ⁶Cutt’st off that liars be:", "The bloody and deceitful man", "  abhorred is by thee."],
+  ["⁷But I into thy house will come", "  in thine abundant grace;", "And I will worship in thy fear", "  toward thy holy place."],
+  ["⁸Because of those mine enemies,", "  Lord, in thy righteousness", "Do thou me lead; do thou thy way", "  make straight before my face."],
+  ["⁹For in their mouth there is no truth,", "  their inward part is ill;", "Their throat’s an open sepulchre,", "  their tongue doth flatter still."],
+  ["¹⁰O God, destroy them; let them be", "  by their own counsel quell’d:", "Them for their many sins cast out,", "  for they ‘gainst thee rebell’d."],
+  ["¹¹But let all joy that trust in thee,", "  and still make shouting noise;", "For them thou sav’st; let all that love", "  thy name in thee rejoice."],
+  ["¹²For, Lord, unto the righteous man", "  thou wilt thy blessing yield:", "With favour thou wilt compass him", "  about, as with a shield."],
+]

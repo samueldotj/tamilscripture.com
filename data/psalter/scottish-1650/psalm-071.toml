@@ -1,0 +1,32 @@
+# Psalm 71 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 71
+
+[[version]]
+key = "71"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O Lord, my hope and confidence", "  is plac’d in thee alone;", "Then let thy servant never be", "  put to confusion."],
+  ["²And let me, in thy righteousness,", "  from thee deliv’rance have;", "Cause me escape, incline thine ear", "  unto me, and me save."],
+  ["³Be thou my dwelling-rock, to which", "  I ever may resort:", "Thou gav’st commandment me to save,", "  for thou’rt my rock and fort."],
+  ["⁴Free me, my God, from wicked hands,", "  hands cruel and unjust:", "⁵For thou, O Lord God, art my hope,", "  and from my youth my trust."],
+  ["⁶Thou from the womb didst hold me up;", "  thou art the same that me", "Out of my mother’s bowels took;", "  I ever will praise thee."],
+  ["⁷To many I a wonder am;", "  but thou’rt my refuge strong.", "⁸Fill’d let my mouth be with thy praise", "  and honour all day long."],
+  ["⁹O do not cast me off, when as", "  old age doth overtake me;", "And when my strength decayed is,", "  then do not thou forsake me."],
+  ["¹⁰For those that are mine enemies", "  against me speak with hate;", "And they together counsel take", "  that for my soul lay wait."],
+  ["¹¹They said, God leaves him; him pursue", "  and take: none will him save.", "¹²Be thou not far from me, my God:", "  thy speedy help I crave."],
+  ["¹³Confound, consume them, that unto", "  my soul are enemies:", "Cloth’d be they with reproach and shame", "  that do my hurt devise."],
+  ["¹⁴But I with expectation", "  will hope continually;", "And yet with praises more and more", "  I will thee magnify."],
+  ["¹⁵Thy justice and salvation", "  my mouth abroad shall show,", "Ev’n all the day; for I thereof", "  the numbers do not know."],
+  ["¹⁶And I will constantly go on", "  in strength of God the Lord;", "And thine own righteousness, ev’n thine", "  alone, I will record."],
+  ["¹⁷For even from my youth, O God,", "  by thee I have been taught;", "And hitherto I have declar’d", "  the wonders thou hast wrought."],
+  ["¹⁸And now, Lord, leave me not, when I", "  old and gray-headed grow:", "Till to this age thy strength and pow’r", "  to all to come I show."],
+  ["¹⁹And thy most perfect righteousness", "  O Lord, is very high,", "Who hast so great things done: O God,", "  who is like unto thee?"],
+  ["²⁰Thou, Lord, who great adversities,", "  and sore, to me didst show,", "Shalt quicken, and bring me again", "  from depths of earth below."],
+  ["²¹My greatness and my pow’r thou wilt", "  increase, and far extend:", "On ev’ry side against all grief", "  thou wilt me comfort send."],
+  ["²²Thee, ev’n thy truth, I’ll also praise,", "  my God, with psaltery:", "Thou Holy One of Israel,", "  with harp I’ll sing to thee."],
+  ["²³My lips shall much rejoice in thee,", "  when I thy praises sound;", "My soul, which thou redeemed hast,", "  in joy shall much abound."],
+  ["²⁴My tongue thy justice shall proclaim,", "  continuing all day long;", "For they confounded are, and sham’d,", "  that seek to do me wrong."],
+]

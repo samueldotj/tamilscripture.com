@@ -1,0 +1,16 @@
+# Psalm 128 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 128
+
+[[version]]
+key = "128"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹Bless’d is each one that fears the Lord,", "  and walketh in his ways;", "²For of thy labour thou shalt eat,", "  and happy be always."],
+  ["³Thy wife shall as a fruitful vine", "  by thy house’ sides be found:", "Thy children like to olive-plants", "  about thy table round."],
+  ["⁴Behold, the man that fears the Lord,", "  thus blessed shall he be.", "⁵The Lord shall out of Sion give", "  his blessing unto thee:"],
+  ["Thou shalt Jerus’lem’s good behold", "  whilst thou on earth dost dwell.", "⁶Thou shalt thy children’s children see,", "  and peace on Israel."],
+]

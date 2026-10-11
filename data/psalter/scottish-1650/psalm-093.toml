@@ -1,0 +1,16 @@
+# Psalm 93 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 93
+
+[[version]]
+key = "93"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹The Lord doth reign, and cloth’d is he", "  with majesty most bright;", "His works do shew him cloth’d to be,", "  and girt about with might."],
+  ["The world is also stablished,", "  that it cannot depart.", "²Thy throne is fix’d of old, and thou", "  from everlasting art."],
+  ["³The floods, O Lord, have lifted up,", "  they lifted up their voice;", "The floods have lifted up their waves,", "  and made a mighty noise."],
+  ["⁴But yet the Lord, that is on high,", "  is more of might by far", "Than noise of many waters is,", "  or great sea-billows are."],
+  ["⁵Thy testimonies ev’ry one", "  in faithfulness excel;", "And holiness for ever, Lord,", "  thine house becometh well."],
+]

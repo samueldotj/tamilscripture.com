@@ -1,0 +1,39 @@
+# Psalm 143 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 143
+
+[[version]]
+key = "143"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹Lord, hear my pray’r, attend my suits;", "  and in thy faithfulness", "Give thou an answer unto me,", "  and in thy righteousness."],
+  ["²Thy servant also bring thou not", "  in judgment to be try’d:", "Because no living man can be", "  in thy sight justify’d."],
+  ["³For th’ en’my hath pursu’d my soul,", "  my life to ground down tread:", "In darkness he hath made me dwell,", "  as who have long been dead."],
+  ["⁴My sp’rit is therefore overwhelm’d", "  in me perplexedly;", "Within me is my very heart", "  amazed wondrously."],
+  ["⁵I call to mind the days of old,", "  to meditate I use", "On all thy works; upon the deeds", "  I of thy hands do muse."],
+  ["⁶My hands to thee I stretch; my soul", "  thirsts, as dry land, for thee.", "⁷Haste, Lord, to hear, my spirit fails:", "  hide not thy face from me;"],
+  ["Lest like to them I do become", "  that go down to the dust.", "⁸At morn let me thy kindness hear;", "  for in thee do I trust."],
+  ["Teach me the way that I should walk:", "  I lift my soul to thee.", "⁹Lord, free me from my foes; I flee", "  to thee to cover me."],
+  ["¹⁰Because thou art my God, to do", "  thy will do me instruct:", "Thy Sp’rit is good, me to the land", "  of uprightness conduct."],
+  ["¹¹Revive and quicken me, O Lord,", "  ev’n for thine own name’s sake;", "And do thou, for thy righteousness,", "  my soul from trouble take."],
+  ["¹²And of thy mercy slay my foes;", "  let all destroyed be", "That do afflict my soul: for I", "  a servant am to thee."],
+]
+
+[[version]]
+key = "143-2"
+label = "6.6.6.6.D"
+meter = "6.6.6.6.D"
+stanzas = [
+  ["¹Oh, hear my prayer, Lord,", "And unto my desire", "To bow thine ear accord,", "I humbly thee require;", "And, in thy faithfulness,", "Unto me answer make,", "And, in thy righteousness,", "Upon me pity take."],
+  ["²In judgment enter not", "With me thy servant poor;", "For why, this well I wot,", "No sinner can endure", "The sight of thee, O God:", "If thou his deeds shalt try,", "He dare make none abode", "Himself to justify."],
+  ["³Behold, the cruel foe", "Me persecutes with spite,", "My soul to overthrow:", "Yea, he my life down quite", "Unto the ground hath smote,", "And made me dwell full low", "In darkness, as forgot,", "Or men dead long ago."],
+  ["⁴Therefore my sp’rit much vex’d,", "O’erwhelm’d is me within;", "My heart right sore perplex’d", "And desolate hath been.", "⁵Yet I do call to mind", "What ancient days record,", "Thy works of ev’ry kind", "I think upon, O Lord."],
+  ["⁶Lo, I do stretch my hands", "To thee, my help alone;", "For thou well understands", "All my complaint and moan:", "My thirsting soul desires,", "And longeth after thee,", "As thirsty ground requires", "With rain refresh’d to be."],
+  ["⁷Lord, let my pray’r prevail,", "To answer it make speed;", "For, lo, my sp’rit doth fail:", "Hide not thy face in need;", "Lest I be like to those", "That do in darkness sit,", "Or him that downward goes", "Into the dreadful pit."],
+  ["⁸Because I trust in thee,", "O Lord, cause me to hear", "Thy loving-kindness free,", "When morning doth appear:", "Cause me to know the way", "Wherein my path should be;", "For why, my soul on high", "I do lift up to thee."],
+  ["⁹From my fierce enemy", "In safety do me guide,", "Because I flee to thee,", "Lord, that thou may’st me hide.", "¹⁰My God alone art thou,", "Teach me thy righteousness:", "Thy Sp’rit’s good, lead me to", "The land of uprightness."],
+  ["¹¹O Lord, for thy name’s sake,", "Be pleas’d to quicken me;", "And, for thy truth, forth take", "My soul from misery.", "¹²And of thy grace destroy", "My foes, and put to shame", "All who my soul annoy;", "For I thy servant am."],
+]

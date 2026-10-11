@@ -1,0 +1,41 @@
+# Psalm 104 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 104
+
+[[version]]
+key = "104"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Bless God, my soul. O Lord my God,", "  thou art exceeding great;", "With honour and with majesty", "  thou clothed art in state."],
+  ["²With light, as with a robe, thyself", "  thou coverest about;", "And, like unto a curtain, thou", "  the heavens stretchest out."],
+  ["³Who of his chambers doth the beams", "  within the waters lay;", "Who doth the clouds his chariot make,", "  on wings of wind make way."],
+  ["⁴Who flaming fire his ministers,", "  his angels sp’rits, doth make:", "⁵Who earth’s foundations did lay,", "  that it should never shake."],
+  ["⁶Thou didst it cover with the deep,", "  as with a garment spread:", "The waters stood above the hills,", "  when thou the word but said."],
+  ["⁷But at the voice of thy rebuke", "  they fled, and would not stay;", "They at thy thunder’s dreadful voice", "  did haste them fast away."],
+  ["⁸They by the mountains do ascend,", "  and by the valley-ground", "Descend, unto that very place", "  which thou for them didst found."],
+  ["⁹Thou hast a bound unto them set,", "  that they may not pass over,", "That they do not return again", "  the face of earth to cover."],
+  ["¹⁰He to the valleys sends the springs,", "  which run among the hills:", "¹¹They to all beasts of field give drink,", "  wild asses drink their fills."],
+  ["¹²By them the fowls of heav’n shall have", "  their habitation,", "Which do among the branches sing", "  with delectation."],
+  ["¹³He from his chambers watereth", "  the hills, when they are dry’d:", "With fruit and increase of thy works", "  the earth is satisfy’d."],
+  ["¹⁴For cattle he makes grass to grow,", "  he makes the herb to spring", "For th’ use of man, that food to him", "  he from the earth may bring;"],
+  ["¹⁵And wine, that to the heart of man", "  doth cheerfulness impart,", "Oil that his face makes shine, and bread", "  that strengtheneth his heart."],
+  ["¹⁶The trees of God are full of sap;", "  the cedars that do stand", "In Lebanon, which planted were", "  by his almighty hand."],
+  ["¹⁷Birds of the air upon their boughs", "  do chuse their nests to make;", "As for the stork, the fir-tree she", "  doth for her dwelling take."],
+  ["¹⁸The lofty mountains for wild goats", "  a place of refuge be;", "The conies also to the rocks", "  do for their safety flee."],
+  ["¹⁹He sets the moon in heav’n, thereby", "  the seasons to discern:", "From him the sun his certain time", "  of going down doth learn."],
+  ["²⁰Thou darkness mak’st, ‘tis night, then beasts", "  of forests creep abroad.", "²¹The lions young roar for their prey,", "  and seek their meat from God."],
+  ["²²The sun doth rise, and home they flock,", "  down in their dens they lie.", "²³Man goes to work, his labour he", "  doth to the ev’ning ply."],
+  ["²⁴How manifold, Lord, are thy works!", "  in wisdom wonderful", "Thou ev’ry one of them hast made;", "  earth’s of thy riches full:"],
+  ["²⁵So is this great and spacious sea,", "  wherein things creeping are,", "Which number’d cannot be; and beasts", "  both great and small are there."],
+  ["²⁶There ships go; there thou mak’st to play", "  that leviathan great.", "²⁷These all wait on thee, that thou may’st", "  in due time give them meat."],
+  ["²⁸That which thou givest unto them", "  they gather for their food;", "Thine hand thou open’st lib’rally,", "  they filled are with good."],
+  ["²⁹Thou hid’st thy face; they troubled are,", "  their breath thou tak’st away;", "Then do they die, and to their dust", "  return again do they."],
+  ["³⁰Thy quick’ning spirit thou send’st forth,", "  then they created be;", "And then the earth’s decayed face", "  renewed is by thee."],
+  ["³¹The glory of the mighty Lord", "  continue shall for ever:", "The Lord Jehovah shall rejoice", "  in all his works together."],
+  ["³²Earth, as affrighted, trembleth all,", "  if he on it but look;", "And if the mountains he but touch,", "  they presently do smoke."],
+  ["³³I will sing to the Lord most high,", "  so long as I shall live;", "And while I being have I shall", "  to my God praises give."],
+  ["³⁴Of him my meditation shall", "  sweet thoughts to me afford;", "And as for me, I will rejoice", "  in God, my only Lord."],
+  ["³⁵From earth let sinners be consum’d,", "  let ill men no more be.", "O thou my soul, bless thou the Lord.", "  Praise to the Lord give ye."],
+]

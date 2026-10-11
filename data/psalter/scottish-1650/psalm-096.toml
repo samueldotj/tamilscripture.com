@@ -1,0 +1,23 @@
+# Psalm 96 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 96
+
+[[version]]
+key = "96"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O sing a new song to the Lord:", "  sing all the earth to God.", "²To God sing, bless his name, shew still", "  his saving health abroad."],
+  ["³Among the heathen nations", "  his glory do declare;", "And unto all the people shew", "  his works that wondrous are."],
+  ["⁴For great’s the Lord, and greatly he", "  is to be magnify’d;", "Yea, worthy to be fear’d is he", "  above all gods beside."],
+  ["⁵For all the gods are idols dumb,", "  which blinded nations fear;", "But our God is the Lord, by whom", "  the heav’ns created were."],
+  ["⁶Great honour is before his face,", "  and majesty divine;", "Strength is within his holy place,", "  and there doth beauty shine."],
+  ["⁷Do ye ascribe unto the Lord,", "  of people ev’ry tribe,", "Glory do ye unto the Lord,", "  and mighty pow’r ascribe."],
+  ["⁸Give ye the glory to the Lord", "  that to his name is due;", "Come ye into his courts, and bring", "  an offering with you."],
+  ["⁹In beauty of his holiness,", "  O do the Lord adore;", "Likewise let all the earth throughout", "  tremble his face before."],
+  ["¹⁰Among the heathen say, God reigns;", "  the world shall stedfastly", "Be fix’d from moving; he shall judge", "  the people righteously."],
+  ["¹¹Let heav’ns be glad before the Lord,", "  and let the earth rejoice;", "Let seas, and all that is therein,", "  cry out, and make a noise."],
+  ["¹²Let fields rejoice, and ev’ry thing", "  that springeth of the earth:", "Then woods and ev’ry tree shall sing", "  with gladness and with mirth"],
+  ["¹³Before the Lord; because he comes,", "  to judge the earth comes he:", "He’ll judge the world with righteousness,", "  the people faithfully."],
+]

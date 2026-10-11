@@ -126,7 +126,36 @@ struct TunesFile {
 
 #[derive(Deserialize)]
 struct PairingsFile {
+    /// Version key ("23", "100-2", "119-5") → tune ids, the traditional pairing first.
     psalms: BTreeMap<String, Vec<String>>,
+    /// Metre ("8.6.8.6") → tunes offered for a version with no traditional pairing.
+    #[serde(default)]
+    fallback: BTreeMap<String, Vec<String>>,
+}
+
+/// One version of a psalm in `data/psalter/scottish-1650/psalm-NNN.toml`.
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct Version {
+    pub key: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub part: Option<u32>,
+    pub label: String,
+    pub meter: String,
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub argument: String,
+    pub stanzas: Vec<Vec<String>>,
+    /// Tune ids to offer, filled from pairings.toml.
+    #[serde(default)]
+    pub tunes: Vec<String>,
+    /// True when `tunes` are the metre's fallback rather than traditional pairings.
+    #[serde(default)]
+    pub fallback: bool,
+}
+
+#[derive(Deserialize)]
+struct MetricalFile {
+    psalm: u32,
+    version: Vec<Version>,
 }
 
 /// The files `psalter render` writes for a tune and the build copies.
@@ -136,9 +165,22 @@ fn sha256_hex(bytes: &[u8]) -> String {
     Sha256::digest(bytes).iter().map(|b| format!("{b:02x}")).collect()
 }
 
-/// Tunes and pairings from `data/psalter/`, checked: every paired tune exists and
-/// was rendered from its current MusicXML. None when the directory is absent.
-fn load_tunes(dir: &Path, problems: &mut Vec<String>) -> Result<(BTreeMap<String, Tune>, BTreeMap<u32, Vec<String>>)> {
+/// A tune's metre as a version spells it: "C.M." is "8.6.8.6".
+fn meter_of(tune: &Tune) -> &str {
+    match tune.meter.as_str() {
+        "C.M." => "8.6.8.6",
+        "L.M." => "8.8.8.8",
+        "S.M." => "6.6.8.6",
+        m => m,
+    }
+}
+
+type Psalter = (BTreeMap<String, Tune>, BTreeMap<u32, Vec<Version>>);
+
+/// Tunes, the 1650 metrical text and the pairings from `data/psalter/`, checked: every
+/// tune was rendered from its current MusicXML, every pairing names a version and a tune
+/// whose metre fits it. Empty when the directory is absent.
+fn load_psalter(dir: &Path, problems: &mut Vec<String>) -> Result<Psalter> {
     if !dir.join("tunes.toml").exists() {
         return Ok((BTreeMap::new(), BTreeMap::new()));
     }
@@ -164,23 +206,57 @@ fn load_tunes(dir: &Path, problems: &mut Vec<String>) -> Result<(BTreeMap<String
             }
         }
     }
-    let mut pairings = BTreeMap::new();
-    for (k, ids) in pairs.psalms {
-        let n = match k.parse::<u32>() {
-            Ok(n) if (1..=150).contains(&n) => n,
-            _ => {
-                problems.push(format!("pairings.toml: {k} is not a psalm number"));
-                continue;
-            }
+
+    let mut psalms: BTreeMap<u32, Vec<Version>> = BTreeMap::new();
+    let text_dir = dir.join("scottish-1650");
+    if text_dir.is_dir() {
+        let mut files: Vec<_> = fs::read_dir(&text_dir)?.filter_map(|e| e.ok().map(|e| e.path())).filter(|p| p.extension().is_some_and(|x| x == "toml")).collect();
+        files.sort();
+        for path in files {
+            let f: MetricalFile = read_toml(&path)?;
+            psalms.insert(f.psalm, f.version);
+        }
+    }
+    let keys: BTreeMap<String, (u32, usize)> = psalms
+        .iter()
+        .flat_map(|(n, vs)| vs.iter().enumerate().map(move |(i, v)| (v.key.clone(), (*n, i))))
+        .collect();
+    let fits = |id: &str, meter: &str, what: &str, problems: &mut Vec<String>| match tunes.get(id) {
+        None => {
+            problems.push(format!("pairings.toml: {what}: unknown tune {id}"));
+            false
+        }
+        Some(t) if meter_of(t) != meter => {
+            problems.push(format!("pairings.toml: {what}: {id} is {} but the version is {meter}", t.meter));
+            false
+        }
+        Some(_) => true,
+    };
+    for (key, ids) in &pairs.psalms {
+        let Some(&(n, i)) = keys.get(key) else {
+            problems.push(format!("pairings.toml: {key} is not a version of any psalm"));
+            continue;
         };
-        for id in &ids {
-            if !tunes.contains_key(id) {
-                problems.push(format!("pairings.toml: psalm {n}: unknown tune {id}"));
+        let meter = psalms[&n][i].meter.clone();
+        for id in ids {
+            fits(id, &meter, key, problems);
+        }
+        psalms.get_mut(&n).unwrap()[i].tunes = ids.clone();
+    }
+    for (meter, ids) in &pairs.fallback {
+        for id in ids {
+            fits(id, meter, &format!("fallback {meter}"), problems);
+        }
+    }
+    for v in psalms.values_mut().flatten() {
+        if v.tunes.is_empty() {
+            if let Some(ids) = pairs.fallback.get(&v.meter) {
+                v.tunes = ids.clone();
+                v.fallback = true;
             }
         }
-        pairings.insert(n, ids);
     }
-    Ok((tunes, pairings))
+    Ok((tunes, psalms))
 }
 
 /// `psalms/{n}.json`.
@@ -191,7 +267,10 @@ struct Card<'a> {
     summary_en: Option<&'a str>,
     tags: &'a [String],
     nt: Option<&'a NtAttribution>,
+    /// Every tune the versions name, with what the card shows of it.
     tunes: Vec<&'a Tune>,
+    /// The psalm in the 1650 Scottish Psalter: one entry per version (or part of Psalm 119).
+    metrical: &'a [Version],
 }
 
 fn read_toml<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T> {
@@ -245,7 +324,7 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
     tax.author.sort_by_key(|t| t.order);
 
     let mut problems: Vec<String> = Vec::new();
-    let (tunes, pairings) = load_tunes(psalter, &mut problems)?;
+    let (tunes, metrical) = load_psalter(psalter, &mut problems)?;
     let themes: BTreeSet<&str> = tax.theme.iter().map(|t| t.id.as_str()).collect();
     let genres: BTreeSet<&str> = tax.genre.iter().map(|t| t.id.as_str()).collect();
     let authors: BTreeSet<&str> = tax.author.iter().map(|t| t.id.as_str()).collect();
@@ -333,7 +412,7 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
                 note.map(|x| x.title_ta.as_str()),
                 note.map(|x| x.title_en.as_str()),
                 note.map(|x| x.key.clone()).unwrap_or_else(|| format!("{n}:1")),
-                pairings.get(n).and_then(|ids| ids.first())
+                metrical.get(n).and_then(|vs| vs.first()).and_then(|v| v.tunes.first())
             ])
         })
         .collect();
@@ -355,7 +434,11 @@ pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, o
             summary_en: note.and_then(|x| x.summary_en.as_deref()),
             tags: note.map(|x| x.tags.as_slice()).unwrap_or(&empty),
             nt: p.nt.as_ref(),
-            tunes: pairings.get(n).into_iter().flatten().filter_map(|id| tunes.get(id)).collect(),
+            tunes: {
+                let mut seen = BTreeSet::new();
+                metrical.get(n).into_iter().flatten().flat_map(|v| &v.tunes).filter(|id| seen.insert(id.as_str())).filter_map(|id| tunes.get(id)).collect()
+            },
+            metrical: metrical.get(n).map(Vec::as_slice).unwrap_or(&[]),
         };
         crate::write_json(&dir_out.join(format!("{n}.json")), &card)?;
     }
@@ -398,6 +481,11 @@ mod tests {
                 .unwrap();
         assert_eq!(index["psalms"].as_array().unwrap().len(), 150);
         assert_eq!(index["psalms"][22][7], "crimond");
+        let p119: Value = serde_json::from_str(&fs::read_to_string(tmp.join("psalms/119.json")).unwrap()).unwrap();
+        assert_eq!(p119["metrical"].as_array().unwrap().len(), 22);
+        let p100: Value = serde_json::from_str(&fs::read_to_string(tmp.join("psalms/100.json")).unwrap()).unwrap();
+        assert_eq!(p100["metrical"][0]["label"], "L.M.");
+        assert_eq!(p100["metrical"][0]["tunes"][0], "old-hundredth");
         assert!(tmp.join("psalter/crimond/audio.mp3").exists());
         fs::remove_dir_all(&tmp).ok();
     }

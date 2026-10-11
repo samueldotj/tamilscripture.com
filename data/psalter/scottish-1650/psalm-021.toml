@@ -1,0 +1,24 @@
+# Psalm 21 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 21
+
+[[version]]
+key = "21"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹The king in thy great strength, O Lord,", "  shall very joyful be:", "In thy salvation rejoice", "  how veh’mently shall he!"],
+  ["²Thou hast bestowed upon him", "  all that his heart would have;", "And thou from him didst not withhold", "  whate’er his lips did crave."],
+  ["³For thou with blessings him prevent’st", "  of goodness manifold;", "And thou hast set upon his head", "  a crown of purest gold."],
+  ["⁴When he desired life of thee,", "  thou life to him didst give;", "Ev’n such a length of days, that he", "  for evermore should live."],
+  ["⁵In that salvation wrought by thee", "  his glory is made great;", "Honour and comely majesty", "  thou hast upon him set."],
+  ["⁶Because that thou for evermore", "  most blessed hast him made;", "And thou hast with thy countenance", "  made him exceeding glad."],
+  ["⁷Because the king upon the Lord", "  his confidence doth lay;", "And through the grace of the most High", "  shall not be mov’d away."],
+  ["⁸Thine hand shall all those men find out", "  that en’mies are to thee;", "Ev’n thy right hand shall find out those", "  of thee that haters be."],
+  ["⁹Like fiery ov’n thou shalt them make,", "  when kindled is thine ire;", "God shall them swallow in his wrath,", "  devour them shall the fire."],
+  ["¹⁰Their fruit from earth thou shalt destroy,", "  their seed men from among:", "¹¹For they beyond their might ‘gainst thee", "  did plot mischief and wrong."],
+  ["¹²Thou therefore shalt make them turn back,", "  when thou thy shafts shalt place", "Upon thy strings, made ready all", "  to fly against their face."],
+  ["¹³In thy great pow’r and strength, O Lord,", "  be thou exalted high;", "So shall we sing with joyful hearts,", "  thy power praise shall we."],
+]

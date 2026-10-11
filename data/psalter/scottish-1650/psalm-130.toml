@@ -1,0 +1,17 @@
+# Psalm 130 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 130
+
+[[version]]
+key = "130"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹Lord, from the depths to thee I cry’d.", "  ²My voice, Lord, do thou hear:", "Unto my supplication’s voice", "  give an attentive ear."],
+  ["³Lord, who shall stand, if thou, O Lord,", "  should’st mark iniquity?", "⁴But yet with thee forgiveness is,", "  that fear’d thou mayest be."],
+  ["⁵I wait for God, my soul doth wait,", "  my hope is in his word.", "⁶More than they that for morning watch,", "  my soul waits for the Lord;"],
+  ["I say, more than they that do watch", "  the morning light to see.", "⁷Let Israel hope in the Lord,", "  for with him mercies be;"],
+  ["And plenteous redemption", "  is ever found with him.", "⁸And from all his iniquities", "  he Isr’el shall redeem."],
+]

@@ -1,0 +1,19 @@
+# Psalm 53 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 53
+
+[[version]]
+key = "53"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Mahalath, Maschil, A Psalm of David."
+stanzas = [
+  ["¹That there is not a God, the fool", "  doth in his heart conclude:", "They are corrupt, their works are vile,", "  not one of them doth good."],
+  ["²The Lord upon the sons of men", "  from heav’n did cast his eyes,", "To see if any one there was", "  that sought God, and was wise."],
+  ["³They altogether filthy are,", "  they all are backward gone;", "And there is none that doeth good,", "  no, not so much as one."],
+  ["⁴These workers of iniquity,", "  do they not know at all,", "That they my people eat as bread,", "  and on God do not call?"],
+  ["⁵Ev’n there they were afraid, and stood", "  with trembling, all dismay’d,", "Whereas there was no cause at all", "  why they should be afraid:"],
+  ["For God his bones that thee besieg’d", "  hath scatter’d all abroad;", "Thou hast confounded them, for they", "  despised are of God."],
+  ["⁶Let Isr’el’s help from Sion come:", "  when back the Lord shall bring", "His captives, Jacob shall rejoice,", "  and Israel shall sing."],
+]

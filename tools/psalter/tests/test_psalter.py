@@ -11,6 +11,7 @@ from fractions import Fraction as F
 from pathlib import Path
 
 from psalter_tool.melody import Key, Note, _beams, check_incipit, musicxml
+from psalter_tool.cli import quarters_per_bar
 from psalter_tool.render import drawing, first_line
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -71,8 +72,7 @@ class CommittedTunesTest(unittest.TestCase):
                 xml = src.read_text(encoding='utf-8')
                 meta = json.loads((PSALTER / 'rendered' / t['id'] / 'render.json').read_text(encoding='utf-8'))
                 self.assertEqual(meta['source_sha256'], hashlib.sha256(src.read_bytes()).hexdigest())
-                beats = int(re.search(r'<beats>(\d+)</beats>', xml).group(1))
-                line = first_line(xml, t['line_beats'], t['pickup'], beats)
+                line = first_line(xml, t['line_beats'], t['pickup'], quarters_per_bar(xml))
                 total = sum(int(d) for d in re.findall(r'<duration>(\d+)</duration>', line)) / 4
                 self.assertEqual(total, t['line_beats'])
                 events = json.loads((PSALTER / 'rendered' / t['id'] / 'events.json').read_text(encoding='utf-8'))

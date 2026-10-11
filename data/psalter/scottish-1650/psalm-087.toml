@@ -1,0 +1,17 @@
+# Psalm 87 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 87
+
+[[version]]
+key = "87"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm or Song for the sons of Korah."
+stanzas = [
+  ["¹Upon the hills of holiness", "  he his foundation sets.", "²God, more than Jacob’s dwellings all,", "  delights in Sion’s gates."],
+  ["³Things glorious are said of thee,", "  thou city of the Lord.", "⁴Rahab and Babel I, to those", "  that know me, will record:"],
+  ["Behold ev’n Tyrus, and with it", "  the land of Palestine,", "And likewise Ethiopia;", "  this man was born therein."],
+  ["⁵And it of Sion shall be said,", "  This man and that man there", "Was born; and he that is most High", "  himself shall stablish her."],
+  ["⁶When God the people writes, he’ll count", "  that this man born was there.", "⁷There be that sing and play; and all", "  my well-springs in thee are."],
+]

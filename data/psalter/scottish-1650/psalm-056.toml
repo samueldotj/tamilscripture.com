@@ -1,0 +1,21 @@
+# Psalm 56 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 56
+
+[[version]]
+key = "56"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Jonath-elem-rechokim, Michtam of David, when the Philistines took him in Gath."
+stanzas = [
+  ["¹Shew mercy, Lord, to me, for man", "  would swallow me outright;", "He me oppresseth, while he doth", "  against me daily fight."],
+  ["²They daily would me swallow up", "  that hate me spitefully;", "For they be many that do fight", "  against me, O most High."],
+  ["³When I’m afraid I’ll trust in thee:", "  ⁴In God I’ll praise his word;", "I will not fear what flesh can do,", "  my trust is in the Lord."],
+  ["⁵Each day they wrest my words; their thoughts", "  ’gainst me are all for ill.", "⁶They meet, they lurk, they mark my steps,", "  waiting my soul to kill."],
+  ["⁷But shall they by iniquity", "  escape thy judgments so?", "O God, with indignation down", "  do thou the people throw."],
+  ["⁸My wand’rings all what they have been", "  thou know’st, their number took;", "Into thy bottle put my tears:", "  are they not in thy book?"],
+  ["⁹My foes shall, when I cry, turn back;", "  I know’t, God is for me.", "¹⁰In God his word I’ll praise; his word", "  in God shall praised be."],
+  ["¹¹In God I trust; I will not fear", "  what man can do to me.", "¹²Thy vows upon me are, O God:", "  I’ll render praise to thee."],
+  ["¹³Wilt thou not, who from death me sav’d,", "  my feet from falls keep free,", "To walk before God in the light", "  of those that living be?"],
+]

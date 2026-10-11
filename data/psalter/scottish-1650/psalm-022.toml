@@ -1,0 +1,39 @@
+# Psalm 22 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 22
+
+[[version]]
+key = "22"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Aijeleth Shahar, A Psalm of David."
+stanzas = [
+  ["¹My God, my God, why hast thou me", "  forsaken? why so far", "Art thou from helping me, and from", "  my words that roaring are?"],
+  ["²All day, my God, to thee I cry,", "  yet am not heard by thee;", "And in the season of the night", "  I cannot silent be."],
+  ["³But thou art holy, thou that dost", "  inhabit Isr’el’s praise.", "⁴Our fathers hop’d in thee, they hop’d", "  and thou didst them release."],
+  ["⁵When unto thee they sent their cry,", "  to them deliv’rance came:", "Because they put their trust in thee,", "  they were not put to shame."],
+  ["⁶But as for me, a worm I am,", "  and as no man am priz’d:", "Reproach of men I am, and by", "  the people am despis’d."],
+  ["⁷All that me see laugh me to scorn;", "  shoot out the lip do they;", "They nod and shake their heads at me,", "  and, mocking, thus do say,"],
+  ["⁸This man did trust in God, that he", "  would free him by his might:", "Let him deliver him, sith he", "  had in him such delight."],
+  ["⁹But thou art he out of the womb", "  that didst me safely take;", "When I was on my mother’s breasts", "  thou me to hope didst make."],
+  ["¹⁰And I was cast upon thy care,", "  ev’n from the womb till now;", "And from my mother’s belly, Lord,", "  my God and guide art thou."],
+  ["¹¹Be not far off, for grief is near,", "  and none to help is found.", "¹²Bulls many compass me, strong bulls", "  of Bashan me surround."],
+  ["¹³Their mouths they open’d wide on me,", "  upon me gape did they,", "Like to a lion ravening", "  and roaring for his prey."],
+  ["¹⁴Like water I’m pour’d out, my bones", "  all out of joint do part:", "Amidst my bowels, as the wax,", "  so melted is my heart."],
+  ["¹⁵My strength is like a potsherd dry’d;", "  my tongue it cleaveth fast", "Unto my jaws; and to the dust", "  of death thou brought me hast."],
+  ["¹⁶For dogs have compass’d me about:", "  the wicked, that did meet", "In their assembly, me inclos’d;", "  they pierc’d my hands and feet."],
+  ["¹⁷I all my bones may tell; they do", "  upon me look and stare.", "¹⁸Upon my vesture lots they cast,", "  and clothes among them share."],
+  ["¹⁹But be not far, O Lord, my strength;", "  haste to give help to me.", "²⁰From sword my soul, from pow’r of dogs", "  my darling set thou free."],
+  ["²¹Out of the roaring lion’s mouth", "  do thou me shield and save:", "For from the horns of unicorns", "  an ear to me thou gave."],
+  ["²²I will shew forth thy name unto", "  those that my brethren are;", "Amidst the congregation", "  thy praise I will declare."],
+  ["²³Praise ye the Lord, who do him fear;", "  him glorify all ye", "The seed of Jacob: fear him all", "  that Isr’el’s children be."],
+  ["²⁴For he despis’d not nor abhorr’d", "  th’ afflicted’s misery;", "Nor from him hid his face, but heard", "  when he to him did cry."],
+  ["²⁵Within the congregation great", "  my praise shall be of thee;", "My vows before them that him fear", "  shall be perform’d by me."],
+  ["²⁶The meek shall eat, and shall be fill’d;", "  they also praise shall give", "Unto the Lord that do him seek:", "  your heart shall ever live."],
+  ["²⁷All ends of th’ earth remember shall,", "  and turn the Lord unto;", "All kindreds of the nations", "  to him shall homage do:"],
+  ["²⁸Because the kingdom to the Lord", "  doth appertain as his;", "Likewise among the nations", "  the Governor he is."],
+  ["²⁹Earth’s fat ones eat, and worship shall:", "  all who to dust descend", "Shall bow to him; none of them can", "  his soul from death defend."],
+  ["³⁰A seed shall service do to him;", "  unto the Lord it shall", "Be for a generation", "  reckon’d in ages all."],
+  ["³¹They shall come, and they shall declare", "  his truth and righteousness", "Unto a people yet unborn,", "  and that he hath done this."],
+]

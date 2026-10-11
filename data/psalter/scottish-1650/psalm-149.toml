@@ -1,0 +1,20 @@
+# Psalm 149 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 149
+
+[[version]]
+key = "149"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise ye the Lord: unto him sing", "  a new song, and his praise", "In the assembly of his saints", "  in sweet psalms do ye raise."],
+  ["²Let Isr’el in his Maker joy,", "  and to him praises sing:", "Let all that Sion’s children are", "  be joyful in their King."],
+  ["³O let them unto his great name", "  give praises in the dance;", "Let them with timbrel and with harp", "  in songs his praise advance."],
+  ["⁴For God doth pleasure take in those", "  that his own people be;", "And he with his salvation", "  the meek will beautify."],
+  ["⁵And in his glory excellent", "  let all his saints rejoice:", "Let them to him upon their beds", "  aloud lift up their voice."],
+  ["⁶Let in their mouth aloft be rais’d", "  the high praise of the Lord,", "And let them have in their right hand", "  a sharp two-edged sword;"],
+  ["⁷To execute the vengeance due", "  upon the heathen all,", "And make deserved punishment", "  upon the people fall."],
+  ["⁸And ev’n with chains, as pris’ners, bind", "  their kings that them command;", "Yea, and with iron fetters strong,", "  the nobles of their land."],
+  ["⁹On them the judgment to perform", "  found written in his word:", "This honour is to all his saints.", "  O do ye praise the Lord."],
+]

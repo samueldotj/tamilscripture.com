@@ -1,0 +1,17 @@
+# Psalm 1 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 1
+
+[[version]]
+key = "1"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹That man hath perfect blessedness,", "  who walketh not astray", "In counsel of ungodly men,", "  nor stands in sinners’ way,"],
+  ["Nor sitteth in the scorner’s chair:", "  ²But placeth his delight", "Upon God’s law, and meditates", "  on his law day and night."],
+  ["³He shall be like a tree that grows", "  near planted by a river,", "Which in his season yields his fruit,", "  and his leaf fadeth never:"],
+  ["And all he doth shall prosper well.", "  ⁴The wicked are not so;", "But like they are unto the chaff,", "  which wind drives to and fro."],
+  ["⁵In judgment therefore shall not stand", "  such as ungodly are;", "Nor in th’ assembly of the just", "  shall wicked men appear."],
+  ["⁶For why? the way of godly men", "  unto the Lord is known:", "Whereas the way of wicked men", "  shall quite be overthrown."],
+]

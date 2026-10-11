@@ -1,0 +1,23 @@
+# Psalm 30 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 30
+
+[[version]]
+key = "30"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm and Song at the dedication of the house of David."
+stanzas = [
+  ["¹Lord, I will thee extol, for thou", "  hast lifted me on high,", "And over me thou to rejoice", "  mad’st not mine enemy."],
+  ["²O thou who art the Lord my God,", "  I in distress to thee,", "With loud cries lifted up my voice,", "  and thou hast healed me."],
+  ["³O Lord, my soul thou hast brought up,", "  and rescu’d from the grave;", "That I to pit should not go down,", "  alive thou didst me save."],
+  ["⁴O ye that are his holy ones,", "  sing praise unto the Lord;", "And give unto him thanks, when ye", "  his holiness record."],
+  ["⁵For but a moment lasts his wrath;", "  life in his favour lies:", "Weeping may for a night endure,", "  at morn doth joy arise."],
+  ["⁶In my prosperity I said,", "  that nothing shall me move.", "⁷O Lord, thou hast my mountain made", "  to stand strong by thy love:"],
+  ["But when that thou, O gracious God,", "  didst hide thy face from me,", "Then quickly was my prosp’rous state", "  turn’d into misery."],
+  ["⁸Wherefore unto the Lord my cry", "  I caused to ascend:", "My humble supplication", "  I to the Lord did send."],
+  ["⁹What profit is there in my blood,", "  when I go down to pit?", "Shall unto thee the dust give praise?", "  thy truth declare shall it?"],
+  ["¹⁰Hear, Lord, have mercy; help me, Lord:", "  ¹¹Thou turned hast my sadness", "To dancing; yea, my sackcloth loos’d,", "  and girded me with gladness;"],
+  ["¹²That sing thy praise my glory may,", "  and never silent be.", "O Lord my God, for evermore", "  I will give thanks to thee."],
+]

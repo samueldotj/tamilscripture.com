@@ -1,0 +1,24 @@
+# Psalm 19 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 19
+
+[[version]]
+key = "19"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹The heav’ns God’s glory do declare,", "  the skies his hand-works preach:", "²Day utters speech to day, and night", "  to night doth knowledge teach."],
+  ["³There is no speech nor tongue to which", "  their voice doth not extend:", "⁴Their line is gone through all the earth,", "  their words to the world’s end."],
+  ["In them he set the sun a tent;", "  ⁵Who, bridegroom-like, forth goes", "From’s chamber, as a strong man doth", "  to run his race rejoice."],
+  ["⁶From heav’n’s end is his going forth,", "  circling to th’ end again;", "And there is nothing from his heat", "  that hidden doth remain."],
+  ["⁷God’s law is perfect, and converts", "  the soul in sin that lies:", "God’s testimony is most sure,", "  and makes the simple wise."],
+  ["⁸The statutes of the Lord are right,", "  and do rejoice the heart:", "The Lord’s command is pure, and doth", "  light to the eyes impart."],
+  ["⁹Unspotted is the fear of God,", "  and doth endure for ever:", "The judgments of the Lord are true", "  and righteous altogether."],
+  ["¹⁰They more than gold, yea, much fine gold,", "  to be desired are:", "Than honey, honey from the comb", "  that droppeth, sweeter far."],
+  ["¹¹Moreover, they thy servant warn", "  how he his life should frame:", "A great reward provided is", "  for them that keep the same."],
+  ["¹²Who can his errors understand?", "  O cleanse thou me within", "¹³From secret faults. Thy servant keep", "  from all presumptuous sin:"],
+  ["And do not suffer them to have", "  dominion over me:", "Then, righteous and innocent,", "  I from much sin shall be."],
+  ["¹⁴The words which from my mouth proceed,", "  the thoughts sent from my heart,", "Accept, O Lord, for thou my strength", "  and my Redeemer art."],
+]

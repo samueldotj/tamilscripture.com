@@ -1,0 +1,31 @@
+# Psalm 139 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 139
+
+[[version]]
+key = "139"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹O Lord, thou hast me search’d and known.", "  ²Thou know’st my sitting down,", "And rising up; yea, all my thoughts", "  afar to thee are known."],
+  ["³My footsteps, and my lying down,", "  thou compassest always;", "Thou also most entirely art", "  acquaint with all my ways."],
+  ["⁴For in my tongue, before I speak,", "  not any word can be,", "But altogether, lo, O Lord,", "  it is well known to thee."],
+  ["⁵Behind, before, thou hast beset,", "  and laid on me thine hand.", "⁶Such knowledge is too strange for me,", "  too high to understand."],
+  ["⁷From thy Sp’rit whither shall I go?", "  or from thy presence fly?", "⁸Ascend I heav’n, lo, thou art there;", "  there, if in hell I lie."],
+  ["⁹Take I the morning wings, and dwell", "  in utmost parts of sea;", "¹⁰Ev’n there, Lord, shall thy hand me lead,", "  thy right hand hold shall me."],
+  ["¹¹If I do say that darkness shall", "  me cover from thy sight,", "Then surely shall the very night", "  about me be as light."],
+  ["¹²Yea, darkness hideth not from thee,", "  but night doth shine as day:", "To thee the darkness and the light", "  are both alike alway."],
+  ["¹³For thou possessed hast my reins,", "  and thou hast cover’d me,", "When I within my mother’s womb", "  inclosed was by thee."],
+  ["¹⁴Thee will I praise; for fearfully", "  and strangely made I am;", "Thy works are marv’llous, and right well", "  my soul doth know the same."],
+  ["¹⁵My substance was not hid from thee,", "  when as in secret I", "Was made; and in earth’s lowest parts", "  was wrought most curiously."],
+  ["¹⁶Thine eyes my substance did behold,", "  yet being unperfect;", "And in the volume of thy book", "  my members all were writ;"],
+  ["Which after in continuance", "  were fashion’d ev’ry one,", "When as they yet all shapeless were,", "  and of them there was none."],
+  ["¹⁷How precious also are thy thoughts,", "  O gracious God, to me!", "And in their sum how passing great", "  and numberless they be!"],
+  ["¹⁸If I should count them, than the sand", "  they more in number be:", "What time soever I awake,", "  I ever am with thee."],
+  ["¹⁹Thou, Lord, wilt sure the wicked slay:", "  hence from me bloody men.", "²⁰Thy foes against thee loudly speak,", "  and take thy name in vain."],
+  ["²¹Do not I hate all those, O Lord,", "  that hatred bear to thee?", "With those that up against thee rise", "  can I but grieved be?"],
+  ["²²With perfect hatred them I hate,", "  my foes I them do hold.", "²³Search me, O God, and know my heart,", "  try me, my thoughts unfold:"],
+  ["²⁴And see if any wicked way", "  there be at all in me;", "And in thine everlasting way", "  to me a leader be."],
+]

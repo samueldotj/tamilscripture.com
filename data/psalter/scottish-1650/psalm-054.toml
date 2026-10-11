@@ -1,0 +1,18 @@
+# Psalm 54 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 54
+
+[[version]]
+key = "54"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician on Neginoth, Maschil, A Psalm of David, when the Ziphims came and said to Saul, Doth not David hide himself with us?"
+stanzas = [
+  ["¹Save me, O God, by thy great name,", "  and judge me by thy strength:", "²My prayer hear, O God; give ear", "  unto my words at length."],
+  ["³For they that strangers are to me", "  do up against me rise;", "Oppressors seek my soul, and God", "  set not before their eyes."],
+  ["⁴The Lord my God my helper is,", "  lo, therefore I am bold:", "He taketh part with ev’ry one", "  that doth my soul uphold."],
+  ["⁵Unto mine enemies he shall", "  mischief and ill repay:", "O for thy truth’s sake cut them off,", "  and sweep them clean away."],
+  ["⁶I will a sacrifice to thee", "  give with free willingness;", "Thy name, O Lord, because ‘tis good,", "  with praise I will confess."],
+  ["⁷For he hath me delivered", "  from all adversities;", "And his desire mine eye hath seen", "  upon mine enemies."],
+]

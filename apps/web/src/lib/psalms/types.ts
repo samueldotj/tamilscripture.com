@@ -48,6 +48,25 @@ export interface PsalmCard {
 	tags: string[];
 	nt: { authors: string[]; ref: string } | null;
 	tunes: Tune[];
+	/** The psalm in the 1650 Scottish Psalter: one entry per version, or per part of Psalm 119. */
+	metrical: MetricalVersion[];
+}
+
+export interface MetricalVersion {
+	/** "23", "100-2" (a second version), "119-5" (a part of Psalm 119) */
+	key: string;
+	part?: number;
+	/** "C.M.", "L.M.", "10s"… */
+	label: string;
+	meter: string;
+	/** The superscription ("A Psalm of David.") */
+	argument?: string;
+	/** Lines; one starting with two spaces is indented, superscript digits start verses. */
+	stanzas: string[][];
+	/** Tune ids, the traditional pairing first */
+	tunes: string[];
+	/** The tunes only fit the metre: no traditional pairing is set. */
+	fallback: boolean;
 }
 
 export function psalmOf(r: PsalmRow): Psalm {

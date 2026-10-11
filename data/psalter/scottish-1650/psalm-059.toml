@@ -1,0 +1,28 @@
+# Psalm 59 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 59
+
+[[version]]
+key = "59"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, Al-taschith, Michtam of David; when Saul sent, and they watched the house to kill him."
+stanzas = [
+  ["¹My God, deliver me from those", "  that are mine enemies;", "And do thou me defend from those", "  that up against me rise."],
+  ["²Do thou deliver me from them", "  that work iniquity;", "And give me safety from the men", "  of bloody cruelty."],
+  ["³For, lo, they for my soul lay wait:", "  the mighty do combine", "Against me, Lord; not for my fault,", "  nor any sin of mine."],
+  ["⁴They run, and, without fault in me,", "  themselves do ready make:", "Awake to meet me with thy help;", "  and do thou notice take."],
+  ["⁵Awake therefore, Lord God of hosts,", "  thou God of Israel,", "To visit heathen all: spare none", "  that wickedly rebel."],
+  ["⁶At ev’ning they go to and fro;", "  they make great noise and sound,", "Like to a dog, and often walk", "  about the city round."],
+  ["⁷Behold, they belch out with their mouth,", "  and in their lips are swords:", "For they do say thus, Who is he", "  that now doth hear our words?"],
+  ["⁸But thou, O Lord, shalt laugh at them,", "  and all the heathen mock.", "⁹While he’s in pow’r I’ll wait on thee;", "  for God is my high rock."],
+  ["¹⁰He of my mercy that is God", "  betimes shall me prevent;", "Upon mine en’mies God shall let", "  me see mine heart’s content."],
+  ["¹¹Them slay not, lest my folk forget;", "  but scatter them abroad", "By thy strong pow’r; and bring them down,", "  O thou our shield and God."],
+  ["¹²For their mouth’s sin, and for the words", "  that from their lips do fly,", "Let them be taken in their pride;", "  because they curse and lie."],
+  ["¹³In wrath consume them, them consume,", "  that so they may not be:", "And that in Jacob God doth rule", "  to th’ earth’s ends let them see."],
+  ["¹⁴At ev’ning let thou them return,", "  making great noise and sound,", "Like to a dog, and often walk", "  about the city round."],
+  ["¹⁵And let them wander up and down,", "  in seeking food to eat;", "And let them grudge when they shall not", "  be satisfy’d with meat."],
+  ["¹⁶But of thy pow’r I’ll sing aloud;", "  at morn thy mercy praise:", "For thou to me my refuge wast,", "  and tow’r, in troublous days."],
+  ["¹⁷O God, thou art my strength, I will", "  sing praises unto thee;", "For God is my defence, a God", "  of mercy unto me."],
+]

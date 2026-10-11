@@ -1,0 +1,16 @@
+# Psalm 120 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 120
+
+[[version]]
+key = "120"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹In my distress to God I cry’d,", "  and he gave ear to me.", "²From lying lips, and guileful tongue,", "  O Lord, my soul set free."],
+  ["³What shall be giv’n thee? or what shall", "  be done to thee, false tongue?", "⁴Ev’n burning coals of juniper,", "  sharp arrows of the strong."],
+  ["⁵Woe’s me that I in Mesech am", "  a sojourner so long;", "That I in tabernacles dwell", "  to Kedar that belong."],
+  ["⁶My soul with him that hateth peace", "  hath long a dweller been.", "⁷I am for peace; but when I speak,", "  for battle they are keen."],
+]

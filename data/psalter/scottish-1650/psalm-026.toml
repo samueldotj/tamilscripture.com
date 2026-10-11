@@ -1,0 +1,21 @@
+# Psalm 26 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 26
+
+[[version]]
+key = "26"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹Judge me, O Lord, for I have walk’d", "  in mine integrity:", "I trusted also in the Lord;", "  slide therefore shall not I."],
+  ["²Examine me, and do me prove;", "  try heart and reins, O God:", "³For thy love is before mine eyes,", "  thy truth’s paths I have trode."],
+  ["⁴With persons vain I have not sat,", "  nor with dissemblers gone:", "⁵Th’ assembly of ill men I hate;", "  to sit with such I shun."],
+  ["⁶Mine hands in innocence, O Lord,", "  I’ll wash and purify;", "So to thine holy altar go,", "  and compass it will I:"],
+  ["⁷That I, with voice of thanksgiving,", "  may publish and declare,", "And tell of all thy mighty works,", "  that great and wondrous are."],
+  ["⁸The habitation of thy house,", "  Lord, I have loved well;", "Yea, in that place I do delight", "  where doth thine honour dwell."],
+  ["⁹With sinners gather not my soul,", "  and such as blood would spill:", "¹⁰Whose hands mischievous plots, right hand", "  corrupting bribes do fill."],
+  ["¹¹But as for me, I will walk on", "  in mine integrity:", "Do thou redeem me, and, O Lord,", "  be merciful to me."],
+  ["¹²My foot upon an even place", "  doth stand with stedfastness:", "Within the congregations", "  th’ Eternal I will bless."],
+]

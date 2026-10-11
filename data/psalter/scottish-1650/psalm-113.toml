@@ -1,0 +1,17 @@
+# Psalm 113 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 113
+
+[[version]]
+key = "113"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise God: ye servants of the Lord,", "  O praise, the Lord’s name praise.", "²Yea, blessed be the name of God", "  from this time forth always."],
+  ["³From rising sun to where it sets,", "  God’s name is to be prais’d.", "⁴Above all nations God is high,", "  ’bove heav’ns his glory rais’d."],
+  ["⁵Unto the Lord our God that dwells", "  on high, who can compare?", "⁶Himself that humbleth things to see", "  in heav’n and earth that are."],
+  ["⁷He from the dust doth raise the poor,", "  that very low doth lie;", "And from the dunghill lifts the man", "  oppress’d with poverty;"],
+  ["⁸That he may highly him advance,", "  and with the princes set;", "With those that of his people are", "  the chief, ev’n princes great."],
+  ["⁹The barren woman house to keep", "  he maketh, and to be", "Of sons a mother full of joy.", "  Praise to the Lord give ye."],
+]

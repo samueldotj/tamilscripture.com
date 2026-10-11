@@ -1,0 +1,19 @@
+# Psalm 4 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 4
+
+[[version]]
+key = "4"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician on Neginoth, A Psalm of David."
+stanzas = [
+  ["¹Give ear unto me when I call,", "  God of my righteousness:", "Have mercy, hear my pray’r; thou hast", "  enlarg’d me in distress."],
+  ["²O ye the sons of men! how long", "  will ye love vanities?", "How long my glory turn to shame,", "  and will ye follow lies?"],
+  ["³But know, that for himself the Lord", "  the godly man doth chuse:", "The Lord, when I on him do call,", "  to hear will not refuse."],
+  ["⁴Fear, and sin not; talk with your heart", "  on bed, and silent be.", "⁵Off ‘rings present of righteousness,", "  and in the Lord trust ye."],
+  ["⁶O who will shew us any good?", "  is that which many say:", "But of thy countenance the light,", "  Lord, lift on us alway."],
+  ["⁷Upon my heart, bestow’d by thee,", "  more gladness I have found", "Than they, ev’n then, when corn and wine", "  did most with them abound."],
+  ["⁸I will both lay me down in peace,", "  and quiet sleep will take;", "Because thou only me to dwell", "  in safety, Lord, dost make."],
+]

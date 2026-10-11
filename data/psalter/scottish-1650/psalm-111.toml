@@ -1,0 +1,20 @@
+# Psalm 111 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 111
+
+[[version]]
+key = "111"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise ye the Lord: with my whole heart", "  I will God’s praise declare,", "Where the assemblies of the just", "  and congregations are."],
+  ["²The whole works of the Lord our God", "  are great above all measure,", "Sought out they are of ev’ry one", "  that doth therein take pleasure."],
+  ["³His work most honourable is,", "  most glorious and pure,", "And his untainted righteousness", "  for ever doth endure."],
+  ["⁴His works most wonderful he hath", "  made to be thought upon:", "The Lord is gracious, and he is", "  full of compassion."],
+  ["⁵He giveth meat unto all those", "  that truly do him fear;", "And evermore his covenant", "  he in his mind will bear."],
+  ["⁶He did the power of his works", "  unto his people show,", "When he the heathen’s heritage", "  upon them did bestow."],
+  ["⁷His handy-works are truth and right;", "  all his commands are sure:", "⁸And, done in truth and uprightness,", "  they evermore endure."],
+  ["⁹He sent redemption to his folk;", "  his covenant for aye", "He did command: holy his name", "  and rev’rend is alway."],
+  ["¹⁰Wisdom’s beginning is God’s fear:", "  good understanding they", "Have all that his commands fulfill:", "  his praise endures for aye."],
+]

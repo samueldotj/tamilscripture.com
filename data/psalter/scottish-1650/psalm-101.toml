@@ -1,0 +1,20 @@
+# Psalm 101 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 101
+
+[[version]]
+key = "101"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹I mercy will and judgment sing,", "  Lord, I will sing to thee.", "²With wisdom in a perfect way", "  shall my behaviour be."],
+  ["O when, in kindness unto me,", "  wilt thou be pleas’d to come?", "I with a perfect heart will walk", "  within my house at home."],
+  ["³I will endure no wicked thing", "  before mine eyes to be:", "I hate their work that turn aside,", "  it shall not cleave to me."],
+  ["⁴A stubborn and a froward heart", "  depart quite from me shall;", "A person giv’n to wickedness", "  I will not know at all."],
+  ["⁵I’ll cut him off that slandereth", "  his neighbour privily:", "The haughty heart I will not bear,", "  nor him that looketh high."],
+  ["⁶Upon the faithful of the land", "  mine eyes shall be, that they", "May dwell with me: he shall me serve", "  that walks in perfect way."],
+  ["⁷Who of deceit a worker is", "  in my house shall not dwell;", "And in my presence shall he not", "  remain that lies doth tell."],
+  ["⁸Yea, all the wicked of the land", "  early destroy will I;", "All from God’s city to cut off", "  that work iniquity."],
+]

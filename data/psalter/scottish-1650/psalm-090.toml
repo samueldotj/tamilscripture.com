@@ -1,0 +1,29 @@
+# Psalm 90 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 90
+
+[[version]]
+key = "90"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Prayer of Moses the man of God."
+stanzas = [
+  ["¹Lord, thou hast been our dwelling-place", "  in generations all.", "²Before thou ever hadst brought forth", "  the mountains great or small;"],
+  ["Ere ever thou hadst form’d the earth,", "  and all the world abroad;", "Ev’n thou from everlasting art", "  to everlasting God."],
+  ["³Thou dost unto destruction", "  man that is mortal turn;", "And unto them thou say’st, Again,", "  ye sons of men, return."],
+  ["⁴Because a thousand years appear", "  no more before thy sight", "Than yesterday, when it is past,", "  or than a watch by night."],
+  ["⁵As with an overflowing flood", "  thou carry’st them away:", "They like a sleep are, like the grass", "  that grows at morn are they."],
+  ["⁶At morn it flourishes and grows,", "  cut down at ev’n doth fade.", "⁷For by thine anger we’re consum’d,", "  thy wrath makes us afraid."],
+  ["⁸Our sins thou and iniquities", "  dost in thy presence place,", "And sett’st our secret faults before", "  the brightness of thy face."],
+  ["⁹For in thine anger all our days", "  do pass on to an end;", "And as a tale that hath been told,", "  so we our years do spend."],
+  ["¹⁰Threescore and ten years do sum up", "  our days and years, we see;", "Or, if, by reason of more strength,", "  in some fourscore they be:"],
+  ["Yet doth the strength of such old men", "  but grief and labour prove;", "For it is soon cut off, and we", "  fly hence, and soon remove."],
+  ["¹¹Who knows the power of thy wrath?", "  according to thy fear", "¹²So is thy wrath: Lord, teach thou us", "  our end in mind to bear;"],
+  ["And so to count our days, that we", "  our hearts may still apply", "To learn thy wisdom and thy truth,", "  that we may live thereby."],
+  ["¹³Turn yet again to us, O Lord,", "  how long thus shall it be?", "Let it repent thee now for those", "  that servants are to thee."],
+  ["¹⁴O with thy tender mercies, Lord,", "  us early satisfy;", "So we rejoice shall all our days,", "  and still be glad in thee."],
+  ["¹⁵According as the days have been,", "  wherein we grief have had,", "And years wherein we ill have seen,", "  so do thou make us glad."],
+  ["¹⁶O let thy work and pow’r appear", "  thy servants’ face before;", "And shew unto their children dear", "  thy glory evermore:"],
+  ["¹⁷And let the beauty of the Lord", "  our God be us upon:", "Our handy-works establish thou,", "  establish them each one."],
+]

@@ -1,0 +1,18 @@
+# Psalm 142 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 142
+
+[[version]]
+key = "142"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "Maschil of David; A Prayer when he was in the cave."
+stanzas = [
+  ["¹I with my voice cry’d to the Lord,", "  with it made my request:", "²Pour’d out to him my plaint, to him", "  my trouble I exprest."],
+  ["³When in me was o’erwhelm’d my sp’rit,", "  then well thou knew’st my way;", "Where I did walk a snare for me", "  they privily did lay."],
+  ["⁴I look’d on my right hand, and view’d,", "  but none to know me were;", "All refuge failed me, no man", "  did for my soul take care."],
+  ["⁵I cry’d to thee; I said, Thou art", "  my refuge, Lord, alone;", "And in the land of those that live", "  thou art my portion."],
+  ["⁶Because I am brought very low,", "  attend unto my cry:", "Me from my persecutors save,", "  who stronger are than I."],
+  ["⁷From prison bring my soul, that I", "  thy name may glorify:", "The just shall compass me, when thou", "  with me deal’st bounteously."],
+]

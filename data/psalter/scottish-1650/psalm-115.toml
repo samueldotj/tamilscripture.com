@@ -1,0 +1,21 @@
+# Psalm 115 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 115
+
+[[version]]
+key = "115"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Not unto us, Lord, not to us,", "  but do thou glory take", "Unto thy name, ev’n for thy truth,", "  and for thy mercy’s sake."],
+  ["²O wherefore should the heathen say,", "  Where is their God now gone?", "³But our God in the heavens is,", "  what pleas’d him he hath done."],
+  ["⁴Their idols silver are and gold,", "  work of men’s hands they be.", "⁵Mouths have they, but they do not speak;", "  and eyes, but do not see;"],
+  ["⁶Ears have they, but they do not hear;", "  noses, but savour not;", "⁷Hands, feet, but handle not, nor walk;", "  nor speak they through their throat."],
+  ["⁸Like them their makers are, and all", "  on them their trust that build.", "⁹O Isr’el, trust thou in the Lord,", "  he is their help and shield."],
+  ["¹⁰O Aaron’s house, trust in the Lord,", "  their help and shield is he.", "¹¹Ye that fear God, trust in the Lord,", "  their help and shield he’ll be."],
+  ["¹²The Lord of us hath mindful been,", "  and he will bless us still:", "He will the house of Isr’el bless,", "  bless Aaron’s house he will."],
+  ["¹³Both small and great, that fear the Lord,", "  he will them surely bless.", "¹⁴The Lord will you, you and your seed,", "  aye more and more increase."],
+  ["¹⁵O blessed are ye of the Lord,", "  who made the earth and heav’n.", "¹⁶The heav’n, ev’n heav’ns, are God’s, but he", "  earth to men’s sons hath giv’n."],
+  ["¹⁷The dead, nor who to silence go,", "  God’s praise do not record.", "¹⁸But henceforth we for ever will", "  bless God. Praise ye the Lord."],
+]

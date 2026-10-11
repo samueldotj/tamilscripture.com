@@ -1,0 +1,18 @@
+# Psalm 13 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 13
+
+[[version]]
+key = "13"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹How long wilt thou forget me, Lord?", "  shall it for ever be?", "O how long shall it be that thou", "  wilt hide thy face from me?"],
+  ["²How long take counsel in my soul,", "  still sad in heart, shall I?", "How long exalted over me", "  shall be mine enemy?"],
+  ["³O Lord my God, consider well,", "  and answer to me make:", "Mine eyes enlighten, lest the sleep", "  of death me overtake:"],
+  ["⁴Lest that mine enemy should say,", "  Against him I prevail’d;", "And those that trouble me rejoice,", "  when I am mov’d and fail’d."],
+  ["⁵But I have all my confidence", "  thy mercy set upon;", "My heart within me shall rejoice", "  in thy salvation."],
+  ["⁶I will unto the Lord my God", "  sing praises cheerfully,", "Because he hath his bounty shown", "  to me abundantly."],
+]

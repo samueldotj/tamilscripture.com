@@ -1,0 +1,54 @@
+# Psalm 45 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 45
+
+[[version]]
+key = "45"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Shoshannim, for the sons of Korah, Maschil, A Song of loves."
+stanzas = [
+  ["¹My heart brings forth a goodly thing;", "  my words that I indite", "Concern the King: my tongue’s a pen", "  of one that swift doth write."],
+  ["²Thou fairer art than sons of men:", "  into thy lips is store", "Of grace infus’d; God therefore thee", "  hath bless’d for evermore."],
+  ["³O thou that art the mighty One,", "  thy sword gird on thy thigh;", "Ev’n with thy glory excellent,", "  and with thy majesty."],
+  ["⁴For meekness, truth, and righteousness,", "  in state ride prosp’rously;", "And thy right hand shall thee instruct", "  in things that fearful be."],
+  ["⁵Thine arrows sharply pierce the heart", "  of th’ en’mies of the King;", "And under thy subjection", "  the people down do bring."],
+  ["⁶For ever and for ever is,", "  O God, thy throne of might;", "The sceptre of thy kingdom is", "  a sceptre that is right."],
+  ["⁷Thou lovest right, and hatest ill;", "  for God, thy God, most high,", "Above thy fellows hath with th’ oil", "  of joy anointed thee."],
+  ["⁸Of aloes, myrrh, and cassia,", "  a smell thy garments had,", "Out of the iv’ry palaces,", "  whereby they made thee glad."],
+  ["⁹Among thy women honourable", "  kings’ daughters were at hand:", "Upon thy right hand did the queen", "  in gold of Ophir stand."],
+  ["¹⁰O daughter, hearken and regard,", "  and do thine ear incline;", "Likewise forget thy father’s house,", "  and people that are thine."],
+  ["¹¹Then of the King desir’d shall be", "  thy beauty veh’mently:", "Because he is thy Lord, do thou", "  him worship rev’rently."],
+  ["¹²The daughter there of Tyre shall be", "  with gifts and off ‘rings great:", "Those of the people that are rich", "  thy favour shall entreat."],
+  ["¹³Behold, the daughter of the King", "  all glorious is within;", "And with embroideries of gold", "  her garments wrought have been."],
+  ["¹⁴She shall be brought unto the King", "  in robes with needle wrought;", "Her fellow-virgins following", "  shall unto thee be brought."],
+  ["¹⁵They shall be brought with gladness great,", "  and mirth on ev’ry side,", "Into the palace of the King,", "  and there they shall abide."],
+  ["¹⁶Instead of those thy fathers dear,", "  thy children thou may’st take,", "And in all places of the earth", "  them noble princes make."],
+  ["¹⁷Thy name remember’d I will make", "  through ages all to be:", "The people therefore evermore", "  shall praises give to thee."],
+]
+
+[[version]]
+key = "45-2"
+label = "S.M."
+meter = "6.6.8.6"
+stanzas = [
+  ["¹My heart inditing is", "  good matter in a song:", "I speak the things that I have made,", "  which to the King belong:"],
+  ["My tongue shall be as quick,", "  his honour to indite,", "As is the pen of any scribe", "  that useth fast to write."],
+  ["²Thou’rt fairest of all men;", "  grace in thy lips doth flow:", "And therefore blessings evermore", "  on thee doth God bestow."],
+  ["³Thy sword gird on thy thigh,", "  thou that art most of might:", "Appear in dreadful majesty,", "  and in thy glory bright."],
+  ["⁴For meekness, truth, and right,", "  ride prosp’rously in state;", "And thy right hand shall teach to thee", "  things terrible and great."],
+  ["⁵Thy shafts shall pierce their hearts", "  that foes are to the King;", "Whereby into subjection", "  the people thou shalt bring."],
+  ["⁶Thy royal seat, O Lord,", "  for ever shall remain:", "The sceptre of thy kingdom doth", "  all righteousness maintain."],
+  ["⁷Thou lov’st right, and hat’st ill;", "  for God, thy God, most high,", "Above thy fellows hath with th’ oil", "  of joy anointed thee."],
+  ["⁸Of myrrh and spices sweet", "  a smell thy garments had,", "Out of the iv’ry palaces,", "  whereby they made thee glad."],
+  ["⁹And in thy glorious train", "  kings’ daughters waiting stand;", "And thy fair queen, in Ophir gold,", "  doth stand at thy right hand."],
+  ["¹⁰O daughter, take good heed,", "  incline, and give good ear;", "Thou must forget thy kindred all,", "  and father’s house most dear."],
+  ["¹¹Thy beauty to the King", "  shall then delightful be:", "And do thou humbly worship him,", "  because thy Lord is he."],
+  ["¹²The daughter then of Tyre", "  there with a gift shall be,", "And all the wealthy of the land", "  shall make their suit to thee."],
+  ["¹³The daughter of the King", "  all glorious is within;", "And with embroideries of gold", "  her garments wrought have been."],
+  ["¹⁴She cometh to the King", "  in robes with needle wrought;", "The virgins that do follow her", "  shall unto thee be brought."],
+  ["¹⁵They shall be brought with joy,", "  and mirth on ev’ry side,", "Into the palace of the King,", "  and there they shall abide."],
+  ["¹⁶And in thy fathers’ stead,", "  thy children thou may’st take,", "And in all places of the earth", "  them noble princes make."],
+  ["¹⁷I will shew forth thy name", "  to generations all:", "Therefore the people evermore", "  to thee give praises shall."],
+]

@@ -1,0 +1,28 @@
+# Psalm 49 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 49
+
+[[version]]
+key = "49"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm for the sons of Korah."
+stanzas = [
+  ["¹Hear this, all people, and give ear,", "  all in the world that dwell;", "²Both low and high, both rich and poor.", "  ³My mouth shall wisdom tell:"],
+  ["My heart shall knowledge meditate.", "  ⁴I will incline mine ear", "To parables, and on the harp", "  my sayings dark declare."],
+  ["⁵Amidst those days that evil be,", "  why should I, fearing, doubt?", "When of my heels th’ iniquity", "  shall compass me about."],
+  ["⁶Whoe’er they be that in their wealth", "  their confidence do pitch,", "And boast themselves, because they are", "  become exceeding rich:"],
+  ["⁷Yet none of these his brother can", "  redeem by any way;", "Nor can he unto God for him", "  sufficient ransom pay,"],
+  ["⁸(Their soul’s redemption precious is,", "  and it can never be,)", "⁹That still he should for ever live,", "  and not corruption see."],
+  ["¹⁰For why? he seeth that wise men die,", "  and brutish fools also", "Do perish; and their wealth, when dead,", "  to others they let go."],
+  ["¹¹Their inward thought is, that their house", "  and dwelling-places shall", "Stand through all ages; they their lands", "  by their own names do call."],
+  ["¹²But yet in honour shall not man", "  abide continually;", "But passing hence, may be compar’d", "  unto the beasts that die."],
+  ["¹³Thus brutish folly plainly is", "  their wisdom and their way;", "Yet their posterity approve", "  what they do fondly say."],
+  ["¹⁴Like sheep they in the grave are laid,", "  and death shall them devour;", "And in the morning upright men", "  shall over them have pow’r:"],
+  ["Their beauty from their dwelling shall", "  consume within the grave.", "¹⁵But from hell’s hand God will me free,", "  for he shall me receive."],
+  ["¹⁶Be thou not then afraid when one", "  enriched thou dost see,", "Nor when the glory of his house", "  advanced is on high:"],
+  ["¹⁷For he shall carry nothing hence", "  when death his days doth end;", "Nor shall his glory after him", "  into the grave descend."],
+  ["¹⁸Although he his own soul did bless", "  whilst he on earth did live;", "(And when thou to thyself dost well,", "  men will thee praises give;)"],
+  ["¹⁹He to his fathers’ race shall go,", "  they never shall see light.", "²⁰Man honour’d wanting knowledge is", "  like beasts that perish quite."],
+]

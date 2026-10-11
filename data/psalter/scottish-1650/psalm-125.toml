@@ -1,0 +1,17 @@
+# Psalm 125 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 125
+
+[[version]]
+key = "125"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹They in the Lord that firmly trust", "  shall be like Sion hill,", "Which at no time can be remov’d,", "  but standeth ever still."],
+  ["²As round about Jerusalem", "  the mountains stand alway,", "The Lord his folk doth compass so,", "  from henceforth and for aye."],
+  ["³For ill men’s rod upon the lot", "  of just men shall not lie;", "Lest righteous men stretch forth their hands", "  unto iniquity."],
+  ["⁴Do thou to all those that be good", "  thy goodness, Lord, impart;", "And do thou good to those that are", "  upright within their heart."],
+  ["⁵But as for such as turn aside", "  after their crooked way,", "God shall lead forth with wicked men:", "  on Isr’el peace shall stay."],
+]

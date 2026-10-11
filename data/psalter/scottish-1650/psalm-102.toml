@@ -1,0 +1,65 @@
+# Psalm 102 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 102
+
+[[version]]
+key = "102"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Prayer of the afflicted, when he is overwhelmed, and poureth out his complaint before the Lord."
+stanzas = [
+  ["¹O Lord, unto my pray’r give ear,", "  my cry let come to thee;", "²And in the day of my distress", "  hide not thy face from me."],
+  ["Give ear to me; what time I call,", "  to answer me make haste:", "³For, as an hearth, my bones are burnt,", "  my days, like smoke, do waste."],
+  ["⁴My heart within me smitten is,", "  and it is withered", "Like very grass; so that I do", "  forget to eat my bread."],
+  ["⁵By reason of my groaning voice", "  my bones cleave to my skin.", "⁶Like pelican in wilderness", "  forsaken I have been:"],
+  ["I like an owl in desert am,", "  that nightly there doth moan;", "⁷I watch, and like a sparrow am", "  on the house-top alone."],
+  ["⁸My bitter en’mies all the day", "  reproaches cast on me;", "And, being mad at me, with rage", "  against me sworn they be."],
+  ["⁹For why? I ashes eaten have", "  like bread, in sorrows deep;", "My drink I also mingled have", "  with tears that I did weep."],
+  ["¹⁰Thy wrath and indignation", "  did cause this grief and pain;", "For thou hast lift me up on high,", "  and cast me down again."],
+  ["¹¹My days are like unto a shade,", "  which doth declining pass;", "And I am dry’d and withered,", "  ev’n like unto the grass."],
+  ["¹²But thou, Lord, everlasting art,", "  and thy remembrance shall", "Continually endure, and be", "  to generations all."],
+  ["¹³Thou shalt arise, and mercy have", "  upon thy Sion yet;", "The time to favour her is come,", "  the time that thou hast set."],
+  ["¹⁴For in her rubbish and her stones", "  thy servants pleasure take;", "Yea, they the very dust thereof", "  do favour for her sake."],
+  ["¹⁵So shall the heathen people fear", "  the Lord’s most holy name;", "And all the kings on earth shall dread", "  thy glory and thy fame."],
+  ["¹⁶When Sion by the mighty Lord", "  built up again shall be,", "In glory then and majesty", "  to men appear shall he."],
+  ["¹⁷The prayer of the destitute", "  he surely will regard;", "Their prayer will he not despise,", "  by him it shall be heard."],
+  ["¹⁸For generations yet to come", "  this shall be on record:", "So shall the people that shall be", "  created praise the Lord."],
+  ["¹⁹He from his sanctuary’s height", "  hath downward cast his eye;", "And from his glorious throne in heav’n", "  the Lord the earth did spy;"],
+  ["²⁰That of the mournful prisoner", "  the groanings he might hear,", "To set them free that unto death", "  by men appointed are:"],
+  ["²¹That they in Sion may declare", "  the Lord’s most holy name,", "And publish in Jerusalem", "  the praises of the same;"],
+  ["²²When as the people gather shall", "  in troops with one accord,", "When kingdoms shall assembled be", "  to serve the highest Lord."],
+  ["²³My wonted strength and force he hath", "  abated in the way,", "And he my days hath shortened:", "  ²⁴Thus therefore did I say,"],
+  ["My God, in mid-time of my days", "  take thou me not away:", "From age to age eternally", "  thy years endure and stay."],
+  ["²⁵The firm foundation of the earth", "  of old time thou hast laid;", "The heavens also are the work", "  which thine own hands have made."],
+  ["²⁶Thou shalt for evermore endure,", "  but they shall perish all;", "Yea, ev’ry one of them wax old,", "  like to a garment, shall:"],
+  ["Thou, as a vesture, shalt them change,", "  and they shall changed be:", "²⁷But thou the same art, and thy years", "  are to eternity."],
+  ["²⁸The children of thy servants shall", "  continually endure;", "And in thy sight, O Lord, their seed", "  shall be establish’d sure."],
+]
+
+[[version]]
+key = "102-2"
+label = "L.M."
+meter = "8.8.8.8"
+stanzas = [
+  ["¹Lord, hear my pray’r, and let my cry", "Have speedy access unto thee;", "²In day of my calamity", "O hide not thou thy face from me."],
+  ["Hear when I call to thee; that day", "An answer speedily return:", "³My days, like smoke, consume away,", "And, as an hearth, my bones do burn."],
+  ["⁴My heart is wounded very sore,", "And withered, like grass doth fade:", "I am forgetful grown therefore", "To take and eat my daily bread."],
+  ["⁵By reason of my smart within,", "And voice of my most grievous groans,", "My flesh consumed is, my skin,", "All parch’d, doth cleave unto my bones."],
+  ["⁶The pelican of wilderness,", "The owl in desert, I do match;", "⁷And, sparrow-like, companionless,", "Upon the house’s top, I watch."],
+  ["⁸I all day long am made a scorn,", "Reproach’d by my malicious foes:", "The madmen are against me sworn,", "The men against me that arose."],
+  ["⁹For I have ashes eaten up,", "To me as if they had been bread;", "And with my drink I in my cup", "Of bitter tears a mixture made."],
+  ["¹⁰Because thy wrath was not appeas’d,", "And dreadful indignation:", "Therefore it was that thou me rais’d,", "And thou again didst cast me down."],
+  ["¹¹My days are like a shade alway,", "Which doth declining swiftly pass;", "And I am withered away,", "Much like unto the fading grass."],
+  ["¹²But thou, O Lord, shalt still endure,", "From change and all mutation free,", "And to all generations sure", "Shall thy remembrance ever be."],
+  ["¹³Thou shalt arise, and mercy yet", "Thou to mount Sion shalt extend:", "Her time for favour which was set,", "Behold, is now come to an end."],
+  ["¹⁴Thy saints take pleasure in her stones,", "Her very dust to them is dear.", "¹⁵All heathen lands and kingly thrones", "On earth thy glorious name shall fear."],
+  ["¹⁶God in his glory shall appear,", "When Sion he builds and repairs.", "¹⁷He shall regard and lend his ear", "Unto the needy’s humble pray’rs:"],
+  ["Th’ afflicted’s pray’r he will not scorn.", "¹⁸All times this shall be on record:", "And generations yet unborn", "Shall praise and magnify the Lord."],
+  ["¹⁹He from his holy place look’d down,", "The earth he view’d from heav’n on high;", "²⁰To hear the pris’ner’s mourning groan,", "And free them that are doom’d to die;"],
+  ["²¹That Sion, and Jerus’lem too,", "His name and praise may well record,", "²²When people and the kingdoms do", "Assemble all to praise the Lord."],
+  ["²³My strength he weaken’d in the way,", "My days of life he shortened.", "²⁴My God, O take me not away", "In mid-time of my days, I said:"],
+  ["Thy years throughout all ages last.", "²⁵Of old thou hast established", "The earth’s foundation firm and fast:", "Thy mighty hands the heav’ns have made."],
+  ["²⁶They perish shall, as garments do,", "But thou shalt evermore endure;", "As vestures, thou shalt change them so;", "And they shall all be changed sure:"],
+  ["²⁷But from all changes thou art free;", "Thy endless years do last for aye.", "²⁸Thy servants, and their seed who be,", "Establish’d shall before thee stay."],
+]

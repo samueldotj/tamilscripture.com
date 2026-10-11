@@ -1,0 +1,28 @@
+# Psalm 67 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 67
+
+[[version]]
+key = "67"
+label = "S.M."
+meter = "6.6.8.6"
+argument = "To the chief Musician on Neginoth, A Psalm or Song."
+stanzas = [
+  ["¹Lord, bless and pity us,", "  shine on us with thy face:", "²That th’ earth thy way, and nations all", "  may know thy saving grace."],
+  ["³Let people praise thee, Lord;", "  let people all thee praise.", "⁴O let the nations be glad,", "  in songs their voices raise:"],
+  ["Thou’lt justly people judge,", "  on earth rule nations all.", "⁵Let people praise thee, Lord; let them", "  praise thee, both great and small."],
+  ["⁶The earth her fruit shall yield,", "  our God shall blessing send.", "⁷God shall us bless; men shall him fear", "  unto earth’s utmost end."],
+]
+
+[[version]]
+key = "67-2"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Lord, unto us be merciful,", "  do thou us also bless;", "And graciously cause shine on us", "  the brightness of thy face:"],
+  ["²That so thy way upon the earth", "  to all men may be known;", "Also among the nations all", "  thy saving health be shown."],
+  ["³O let the people praise thee, Lord;", "  let people all thee praise.", "⁴O let the nations be glad,", "  and sing for joy always:"],
+  ["For rightly thou shalt people judge,", "  and nations rule on earth.", "⁵Let people praise thee, Lord; let all", "  the folk praise thee with mirth."],
+  ["⁶Then shall the earth yield her increase;", "  God, our God, bless us shall.", "⁷God shall us bless; and of the earth", "  the ends shall fear him all."],
+]

@@ -1,0 +1,31 @@
+# Psalm 80 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 80
+
+[[version]]
+key = "80"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief musician upon Shoshannim, Eduth, A Psalm of Asaph."
+stanzas = [
+  ["¹Hear, Isr’el’s Shepherd! like a flock", "  thou that dost Joseph guide;", "Shine forth, O thou that dost between", "  the cherubims abide."],
+  ["²In Ephraim’s, and Benjamin’s", "  and in Manasseh’s sight,", "O come for our salvation;", "  stir up thy strength and might."],
+  ["³Turn us again, O Lord our God,", "  and upon us vouchsafe", "To make thy countenance to shine,", "  and so we shall be safe."],
+  ["⁴O Lord of hosts, almighty God,", "  how long shall kindled be", "Thy wrath against the prayer made", "  by thine own folk to thee?"],
+  ["⁵Thou tears of sorrow giv’st to them", "  instead of bread to eat;", "Yea, tears instead of drink thou giv’st", "  to them in measure great."],
+  ["⁶Thou makest us a strife unto", "  our neighbours round about;", "Our enemies among themselves", "  at us do laugh and flout."],
+  ["⁷Turn us again, O God of hosts,", "  and upon us vouchsafe", "To make thy countenance to shine,", "  and so we shall be safe."],
+  ["⁸A vine from Egypt brought thou hast,", "  by thine outstretched hand;", "And thou the heathen out didst cast,", "  to plant it in their land."],
+  ["⁹Before it thou a room didst make,", "  where it might grow and stand;", "Thou causedst it deep root to take,", "  and it did fill the land."],
+  ["¹⁰The mountains vail’d were with its shade,", "  as with a covering;", "Like goodly cedars were the boughs", "  which out from it did spring."],
+  ["¹¹Upon the one hand to the sea", "  her boughs she did out send;", "On th’ other side unto the flood", "  her branches did extend."],
+  ["¹²Why hast thou then thus broken down,", "  and ta’en her hedge away?", "So that all passengers do pluck,", "  and make of her a prey."],
+  ["¹³The boar who from the forest comes", "  doth waste it at his pleasure;", "The wild beast of the field also", "  devours it out of measure."],
+  ["¹⁴O God of hosts, we thee beseech,", "  return now unto thine;", "Look down from heav’n in love, behold,", "  and visit this thy vine:"],
+  ["¹⁵This vineyard, which thine own right hand", "  hath planted us among;", "And that same branch, which for thyself", "  thou hast made to be strong."],
+  ["¹⁶Burnt up it is with flaming fire,", "  it also is cut down:", "They utterly are perished,", "  when as thy face doth frown."],
+  ["¹⁷O let thy hand be still upon", "  the Man of thy right hand,", "The Son of man, whom for thyself", "  thou madest strong to stand."],
+  ["¹⁸So henceforth we will not go back,", "  nor turn from thee at all:", "O do thou quicken us, and we", "  upon thy name will call."],
+  ["¹⁹Turn us again, Lord God of hosts,", "  and upon us vouchsafe", "To make thy countenance to shine,", "  and so we shall be safe."],
+]

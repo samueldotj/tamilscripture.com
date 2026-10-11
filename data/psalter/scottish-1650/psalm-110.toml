@@ -1,0 +1,19 @@
+# Psalm 110 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 110
+
+[[version]]
+key = "110"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹The Lord did say unto my Lord,", "  Sit thou at my right hand,", "Until I make thy foes a stool,", "  whereon thy feet may stand."],
+  ["²The Lord shall out of Sion send", "  the rod of thy great pow’r:", "In midst of all thine enemies", "  be thou the governor."],
+  ["³A willing people in thy day", "  of pow’r shall come to thee,", "In holy beauties from morn’s womb;", "  thy youth like dew shall be."],
+  ["⁴The Lord himself hath made an oath,", "  and will repent him never,", "Of th’ order of Melchisedec", "  thou art a priest for ever."],
+  ["⁵The glorious and mighty Lord,", "  that sits at thy right hand,", "Shall, in his day of wrath, strike through", "  kings that do him withstand."],
+  ["⁶He shall among the heathen judge,", "  he shall with bodies dead", "The places fill: o’er many lands", "  he wound shall ev’ry head."],
+  ["⁷The brook that runneth in the way", "  with drink shall him supply;", "And, for this cause, in triumph he", "  shall lift his head on high."],
+]

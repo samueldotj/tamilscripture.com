@@ -1,0 +1,18 @@
+# Psalm 122 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 122
+
+[[version]]
+key = "122"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees of David."
+stanzas = [
+  ["¹I joy’d when to the house of God,", "  Go up, they said to me.", "²Jerusalem, within thy gates", "  our feet shall standing be."],
+  ["³Jerus’lem, as a city, is", "  compactly built together:", "⁴Unto that place the tribes go up,", "  the tribes of God go thither:"],
+  ["To Isr’el’s testimony, there", "  to God’s name thanks to pay.", "⁵For thrones of judgment, ev’n the thrones", "  of David’s house, there stay."],
+  ["⁶Pray that Jerusalem may have", "  peace and felicity:", "Let them that love thee and thy peace", "  have still prosperity."],
+  ["⁷Therefore I wish that peace may still", "  within thy walls remain,", "And ever may thy palaces", "  prosperity retain."],
+  ["⁸Now, for my friends’ and brethren’s sakes,", "  Peace be in thee, I’ll say.", "⁹And for the house of God our Lord,", "  I’ll seek thy good alway."],
+]

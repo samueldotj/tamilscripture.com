@@ -1,0 +1,47 @@
+# Psalm 68 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 68
+
+[[version]]
+key = "68"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm or Song of David."
+stanzas = [
+  ["¹Let God arise, and scattered", "  let all his en’mies be;", "And let all those that do him hate", "  before his presence flee."],
+  ["²As smoke is driv’n, so drive thou them;", "  as fire melts wax away,", "Before God’s face let wicked men", "  so perish and decay."],
+  ["³But let the righteous be glad:", "  let them before God’s sight", "Be very joyful; yea, let them", "  rejoice with all their might."],
+  ["⁴To God sing, to his name sing praise;", "  extol him with your voice,", "That rides on heav’n, by his name Jah,", "  before his face rejoice."],
+  ["⁵Because the Lord a father is", "  unto the fatherless;", "God is the widow’s judge, within", "  his place of holiness."],
+  ["⁶God doth the solitary set", "  in fam’lies: and from bands", "The chain’d doth free; but rebels do", "  inhabit parched lands."],
+  ["⁷O God, what time thou didst go forth", "  before thy people’s face;", "And when through the great wilderness", "  thy glorious marching was;"],
+  ["⁸Then at God’s presence shook the earth,", "  then drops from heaven fell;", "This Sinai shook before the Lord,", "  the God of Israel."],
+  ["⁹O God, thou to thine heritage", "  didst send a plenteous rain,", "Whereby thou, when it weary was,", "  didst it refresh again."],
+  ["¹⁰Thy congregation then did make", "  their habitation there:", "Of thine own goodness for the poor,", "  O God, thou didst prepare."],
+  ["¹¹The Lord himself did give the word,", "  the word abroad did spread;", "Great was the company of them", "  the same who published."],
+  ["¹²Kings of great armies foiled were,", "  and forc’d to flee away;", "And women, who remain’d at home,", "  did distribute the prey."],
+  ["¹³Though ye have lien among the pots,", "  like doves ye shall appear,", "Whose wings with silver, and with gold", "  whose feathers cover’d are."],
+  ["¹⁴When there th’ Almighty scatter’d kings,", "  like Salmon’s snow ‘twas white.", "¹⁵God’s hill is like to Bashan hill,", "  like Bashan hill for height."],
+  ["¹⁶Why do ye leap, ye mountains high?", "  this is the hill where God", "Desires to dwell; yea, God in it", "  for aye will make abode."],
+  ["¹⁷God’s chariots twenty thousand are,", "  thousands of angels strong;", "In’s holy place God is, as in", "  mount Sinai, them among."],
+  ["¹⁸Thou hast, O Lord, most glorious,", "  ascended up on high;", "And in triumph victorious led", "  captive captivity:"],
+  ["Thou hast received gifts for men,", "  for such as did rebel;", "Yea, ev’n for them, that God the Lord", "  in midst of them might dwell."],
+  ["¹⁹Bless’d be the Lord, who is to us", "  of our salvation God;", "Who daily with his benefits", "  us plenteously doth load."],
+  ["²⁰He of salvation is the God,", "  who is our God most strong;", "And unto God the Lord from death", "  the issues do belong."],
+  ["²¹But surely God shall wound the head", "  of those that are his foes;", "The hairy scalp of him that still", "  on in his trespass goes."],
+  ["²²God said, My people I will bring", "  again from Bashan hill;", "Yea, from the sea’s devouring depths", "  them bring again I will;"],
+  ["²³That in the blood of enemies", "  thy foot imbru’d may be,", "And of thy dogs dipp’d in the same", "  the tongues thou mayest see."],
+  ["²⁴Thy goings they have seen, O God;", "  the steps of majesty", "Of my God, and my mighty King,", "  within the sanctuary."],
+  ["²⁵Before went singers, players next", "  on instruments took way;", "And them among the damsels were", "  that did on timbrels play."],
+  ["²⁶Within the congregations", "  bless God with one accord:", "From Isr’el’s fountain do ye bless", "  and praise the mighty Lord."],
+  ["²⁷With their prince, little Benjamin,", "  princes and council there", "Of Judah were, there Zabulon’s", "  and Napht’li’s princes were."],
+  ["²⁸Thy God commands thy strength; make strong", "  what thou wrought’st for us, Lord.", "²⁹For thy house at Jerusalem", "  kings shall thee gifts afford."],
+  ["³⁰The spearmen’s host, the multitude", "  of bulls, which fiercely look,", "Those calves which people have forth sent,", "  O Lord our God, rebuke,"],
+  ["Till ev’ry one submit himself,", "  and silver pieces bring:", "The people that delight in war", "  disperse, O God and King."],
+  ["³¹Those that be princes great shall then", "  come out of Egypt lands;", "And Ethiopia to God", "  shall soon stretch out her hands."],
+  ["³²O all ye kingdoms of the earth,", "  sing praises to this King;", "For he is Lord that ruleth all,", "  unto him praises sing."],
+  ["³³To him that rides on heav’ns of heav’ns,", "  which he of old did found;", "Lo, he sends out his voice, a voice", "  in might that doth abound."],
+  ["³⁴Strength unto God do ye ascribe;", "  for his excellency", "Is over Israel, his strength", "  is in the clouds most high."],
+  ["³⁵Thou’rt from thy temple dreadful, Lord;", "  Isr’el’s own God is he,", "Who gives his people strength and pow’r:", "  O let God blessed be."],
+]

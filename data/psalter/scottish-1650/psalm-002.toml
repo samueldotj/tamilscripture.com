@@ -1,0 +1,20 @@
+# Psalm 2 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 2
+
+[[version]]
+key = "2"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Why rage the heathen? and vain things", "  why do the people mind?", "²Kings of the earth do set themselves,", "  and princes are combin’d,"],
+  ["To plot against the Lord, and his", "  Anointed, saying thus,", "³Let us asunder break their bands,", "  and cast their cords from us."],
+  ["⁴He that in heaven sits shall laugh;", "  the Lord shall scorn them all.", "⁵Then shall he speak to them in wrath,", "  in rage he vex them shall."],
+  ["⁶Yet, notwithstanding, I have him", "  to be my King appointed;", "And over Sion, my holy hill,", "  I have him King anointed."],
+  ["⁷The sure decree I will declare:", "  The Lord hath said to me,", "Thou art mine only Son; this day", "  I have begotten thee."],
+  ["⁸Ask of me, and for heritage", "  the heathen I’ll make thine;", "And, for possession, I to thee", "  will give earth’s utmost line."],
+  ["⁹Thou shalt, as with a weighty rod", "  of iron, break them all;", "And, as a potter’s sherd, thou shalt", "  them dash in pieces small."],
+  ["¹⁰Now therefore, kings, be wise; be taught,", "  ye judges of the earth:", "¹¹Serve God in fear, and see that ye", "  join trembling with your mirth."],
+  ["¹²Kiss ye the Son, lest in his ire", "  ye perish from the way,", "If once his wrath begin to burn:", "  bless’d all that on him stay."],
+]

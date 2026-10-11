@@ -1,0 +1,23 @@
+# Psalm 141 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 141
+
+[[version]]
+key = "141"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹O Lord, I unto thee do cry,", "  do thou make haste to me,", "And give an ear unto my voice,", "  when I cry unto thee."],
+  ["²As incense let my prayer be", "  directed in thine eyes;", "And the uplifting of my hands", "  as th’ ev ‘ning sacrifice."],
+  ["³Set, Lord, a watch before my mouth,", "  keep of my lips the door.", "⁴My heart incline thou not unto", "  the ills I should abhor,"],
+  ["To practise wicked works with men", "  that work iniquity;", "And with their delicates my taste", "  let me not satisfy."],
+  ["⁵Let him that righteous is me smite,", "  it shall a kindness be;", "Let him reprove, I shall it count", "  a precious oil to me:"],
+  ["Such smiting shall not break my head;", "  for yet the time shall fall,", "When I in their calamities", "  to God pray for them shall."],
+  ["⁶When as their judges down shall be", "  in stony places cast,", "Then shall they hear my words; for they", "  shall sweet be to their taste."],
+  ["⁷About the grave’s devouring mouth", "  our bones are scatter’d round,", "As wood which men do cut and cleave", "  lies scatter’d on the ground."],
+  ["⁸But unto thee, O God the Lord,", "  mine eyes uplifted be:", "My soul do not leave destitute;", "  my trust is set on thee."],
+  ["⁹Lord, keep me safely from the snares", "  which they for me prepare;", "And from the subtile gins of them", "  that wicked workers are."],
+  ["¹⁰Let workers of iniquity", "  into their own nets fall,", "Whilst I do, by thine help, escape", "  the danger of them all."],
+]

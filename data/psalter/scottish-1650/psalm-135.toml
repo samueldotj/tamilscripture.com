@@ -1,0 +1,27 @@
+# Psalm 135 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 135
+
+[[version]]
+key = "135"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise ye the Lord, the Lord’s name praise;", "  his servants, praise ye God.", "²Who stand in God’s house, in the courts", "  of our God make abode."],
+  ["³Praise ye the Lord, for he is good;", "  unto him praises sing:", "Sing praises to his name, because", "  it is a pleasant thing."],
+  ["⁴For Jacob to himself the Lord", "  did chuse of his good pleasure,", "And he hath chosen Israel", "  for his peculiar treasure."],
+  ["⁵Because I know assuredly", "  the Lord is very great,", "And that our Lord above all gods", "  in glory hath his seat."],
+  ["⁶What things soever pleas’d the Lord,", "  that in the heav’n did he,", "And in the earth, the seas, and all", "  the places deep that be."],
+  ["⁷He from the ends of earth doth make", "  the vapours to ascend;", "With rain he lightnings makes, and wind", "  doth from his treasures send."],
+  ["⁸Egypt’s first-born, from man to beast", "  ⁹who smote. Strange tokens he", "On Phar’oh and his servants sent,", "  Egypt, in midst of thee."],
+  ["¹⁰He smote great nations, slew great kings:", "  ¹¹Sihon of Heshbon king,", "And Og of Bashan, and to nought", "  did Canaan’s kingdoms bring:"],
+  ["¹²And for a wealthy heritage", "  their pleasant land he gave,", "An heritage which Israel,", "  his chosen folk, should have."],
+  ["¹³Thy name, O Lord, shall still endure,", "  and thy memorial", "With honour shall continu’d be", "  to generations all."],
+  ["¹⁴For why? the righteous God will judge", "  his people righteously;", "Concerning those that do him serve,", "  himself repent will he."],
+  ["¹⁵The idols of the nations", "  of silver are and gold,", "And by the hands of men is made", "  their fashion and mould."],
+  ["¹⁶Mouths have they, but they do not speak;", "  eyes, but they do not see;", "¹⁷Ears have they, but hear not; and in", "  their mouths no breathing be."],
+  ["¹⁸Their makers are like them; so are", "  all that on them rely.", "¹⁹O Isr’el’s house, bless God; bless God,", "  O Aaron’s family."],
+  ["²⁰O bless the Lord, of Levi’s house", "  ye who his servants are;", "And bless the holy name of God,", "  all ye the Lord that fear."],
+  ["²¹And blessed be the Lord our God", "  from Sion’s holy hill,", "Who dwelleth at Jerusalem.", "  The Lord O praise ye still."],
+]

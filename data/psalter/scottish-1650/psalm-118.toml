@@ -1,0 +1,31 @@
+# Psalm 118 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 118
+
+[[version]]
+key = "118"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O praise the Lord, for he is good;", "  his mercy lasteth ever.", "²Let those of Israel now say,", "  His mercy faileth never."],
+  ["³Now let the house of Aaron say,", "  His mercy lasteth ever.", "⁴Let those that fear the Lord now say,", "  His mercy faileth never."],
+  ["⁵I in distress call’d on the Lord;", "  the Lord did answer me:", "He in a large place did me set,", "  from trouble made me free."],
+  ["⁶The mighty Lord is on my side,", "  I will not be afraid;", "For any thing that man can do", "  I shall not be dismay’d."],
+  ["⁷The Lord doth take my part with them", "  that help to succour me:", "Therefore on those that do me hate", "  I my desire shall see."],
+  ["⁸Better it is to trust in God", "  than trust in man’s defence;", "⁹Better to trust in God than make", "  princes our confidence."],
+  ["¹⁰The nations, joining all in one,", "  did compass me about:", "But in the Lord’s most holy name", "  I shall them all root out."],
+  ["¹¹They compass’d me about; I say,", "  they compass’d me about:", "But in the Lord’s most holy name", "  I shall them all root out."],
+  ["¹²Like bees they compass’d me about;", "  like unto thorns that flame", "They quenched are: for them shall I", "  destroy in God’s own name."],
+  ["¹³Thou sore hast thrust, that I might fall,", "  but my Lord helped me.", "¹⁴God my salvation is become,", "  my strength and song is he."],
+  ["¹⁵In dwellings of the righteous", "  is heard the melody", "Of joy and health: the Lord’s right hand", "  doth ever valiantly."],
+  ["¹⁶The right hand of the mighty Lord", "  exalted is on high;", "The right hand of the mighty Lord", "  doth ever valiantly."],
+  ["¹⁷I shall not die, but live, and shall", "  the works of God discover.", "¹⁸The Lord hath me chastised sore,", "  but not to death giv’n over."],
+  ["¹⁹O set ye open unto me", "  the gates of righteousness;", "Then will I enter into them,", "  and I the Lord will bless."],
+  ["²⁰This is the gate of God, by it", "  the just shall enter in.", "²¹Thee will I praise, for thou me heard’st", "  and hast my safety been."],
+  ["²²That stone is made head corner-stone,", "  which builders did despise:", "²³This is the doing of the Lord,", "  and wondrous in our eyes."],
+  ["²⁴This is the day God made, in it", "  we’ll joy triumphantly.", "²⁵Save now, I pray thee, Lord; I pray,", "  send now prosperity."],
+  ["²⁶Blessed is he in God’s great name", "  that cometh us to save:", "We, from the house which to the Lord", "  pertains, you blessed have."],
+  ["²⁷God is the Lord, who unto us", "  hath made light to arise:", "Bind ye unto the altar’s horns", "  with cords the sacrifice."],
+  ["²⁸Thou art my God, I’ll thee exalt;", "  my God, I will thee praise.", "²⁹Give thanks to God, for he is good:", "  his mercy lasts always."],
+]

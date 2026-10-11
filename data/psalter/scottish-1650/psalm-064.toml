@@ -1,0 +1,21 @@
+# Psalm 64 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 64
+
+[[version]]
+key = "64"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹When I to thee my prayer make,", "  Lord, to my voice give ear;", "My life save from the enemy,", "  of whom I stand in fear."],
+  ["²Me from their secret counsel hide", "  who do live wickedly;", "From insurrection of those men", "  that work iniquity:"],
+  ["³Who do their tongues with malice whet,", "  and make them cut like swords;", "In whose bent bows are arrows set,", "  ev’n sharp and bitter words:"],
+  ["⁴That they may at the perfect man", "  in secret aim their shot;", "Yea, suddenly they dare at him", "  to shoot, and fear it not."],
+  ["⁵In ill encourage they themselves,", "  and their snares close do lay:", "Together conference they have;", "  Who shall them see? they say."],
+  ["⁶They have search’d out iniquities,", "  a perfect search they keep:", "Of each of them the inward thought,", "  and very heart, is deep."],
+  ["⁷God shall an arrow shoot at them,", "  and wound them suddenly:", "⁸So their own tongue shall them confound;", "  all who them see shall fly."],
+  ["⁹And on all men a fear shall fall,", "  God’s works they shall declare;", "For they shall wisely notice take", "  what these his doings are."],
+  ["¹⁰In God the righteous shall rejoice,", "  and trust upon his might;", "Yea, they shall greatly glory all", "  in heart that are upright."],
+]

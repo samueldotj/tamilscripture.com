@@ -1,0 +1,20 @@
+# Psalm 138 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 138
+
+[[version]]
+key = "138"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹Thee will I praise with all my heart,", "  I will sing praise to thee", "²Before the gods: And worship will", "  toward thy sanctuary."],
+  ["I’ll praise thy name, ev’n for thy truth,", "  and kindness of thy love;", "For thou thy word hast magnify’d", "  all thy great name above."],
+  ["³Thou didst me answer in the day", "  when I to thee did cry;", "And thou my fainting soul with strength", "  didst strengthen inwardly."],
+  ["⁴All kings upon the earth that are", "  shall give thee praise, O Lord,", "When as they from thy mouth shall hear", "  thy true and faithful word."],
+  ["⁵Yea, in the righteous ways of God", "  with gladness they shall sing:", "For great’s the glory of the Lord;", "  who doth for ever reign."],
+  ["⁶Though God be high, yet he respects", "  all those that lowly be;", "Whereas the proud and lofty ones", "  afar off knoweth he."],
+  ["⁷Though I in midst of trouble walk,", "  I life from thee shall have:", "’Gainst my foes’ wrath thou’lt stretch thine hand;", "  thy right hand shall me save."],
+  ["⁸Surely that which concerneth me", "  the Lord will perfect make:", "Lord, still thy mercy lasts; do not", "  thine own hands’ works forsake."],
+]

@@ -1,0 +1,25 @@
+# Psalm 88 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 88
+
+[[version]]
+key = "88"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song or Psalm for the sons of Korah, to the chief Musician upon Mahalath Leannoth, Maschil of Heman the Ezrahite."
+stanzas = [
+  ["¹Lord God, my Saviour, day and night", "  before thee cry’d have I.", "²Before thee let my prayer come;", "  give ear unto my cry."],
+  ["³For troubles great do fill my soul;", "  my life draws nigh the grave.", "⁴I’m counted with those that go down", "  to pit, and no strength have."],
+  ["⁵Ev’n free among the dead, like them", "  that slain in grave do lie;", "Cut off from thy hand, whom no more", "  thou hast in memory."],
+  ["⁶Thou hast me laid in lowest pit,", "  in deeps and darksome caves.", "⁷Thy wrath lies hard on me, thou hast", "  me press’d with all thy waves."],
+  ["⁸Thou hast put far from me my friends,", "  thou mad’st them to abhor me;", "And I am so shut up, that I", "  find no evasion for me."],
+  ["⁹By reason of affliction", "  mine eye mourns dolefully:", "To thee, Lord, do I call, and stretch", "  my hands continually."],
+  ["¹⁰Wilt thou shew wonders to the dead?", "  shall they rise, and thee bless?", "¹¹Shall in the grave thy love be told?", "  in death thy faithfulness?"],
+  ["¹²Shall thy great wonders in the dark,", "  or shall thy righteousness", "Be known to any in the land", "  of deep forgetfulness?"],
+  ["¹³But, Lord, to thee I cry’d; my pray’r", "  at morn prevent shall thee.", "¹⁴Why, Lord, dost thou cast off my soul,", "  and hid’st thy face from me?"],
+  ["¹⁵Distress’d am I, and from my youth", "  I ready am to die;", "Thy terrors I have borne, and am", "  distracted fearfully."],
+  ["¹⁶The dreadful fierceness of thy wrath", "  quite over me doth go:", "Thy terrors great have cut me off,", "  they did pursue me so."],
+  ["¹⁷For round about me ev’ry day,", "  like water, they did roll;", "And, gathering together, they", "  have compassed my soul."],
+  ["¹⁸My friends thou hast put far from me,", "  and him that did me love;", "And those that mine acquaintance were", "  to darkness didst remove."],
+]

@@ -1,0 +1,44 @@
+# Psalm 107 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 107
+
+[[version]]
+key = "107"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise God, for he is good: for still", "  his mercies lasting be.", "²Let God’s redeem’d say so, whom he", "  from th’ en’my’s hand did free;"],
+  ["³And gather’d them out of the lands,", "  from north, south, east, and west.", "⁴They stray’d in desert’s pathless way,", "  no city found to rest."],
+  ["⁵For thirst and hunger in them faints", "  ⁶their soul. When straits them press,", "They cry unto the Lord, and he", "  them frees from their distress."],
+  ["⁷Them also in a way to walk", "  that right is he did guide,", "That they might to a city go,", "  wherein they might abide."],
+  ["⁸O that men to the Lord would give", "  praise for his goodness then,", "And for his works of wonder done", "  unto the sons of men!"],
+  ["⁹For he the soul that longing is", "  doth fully satisfy;", "With goodness he the hungry soul", "  doth fill abundantly."],
+  ["¹⁰Such as shut up in darkness deep,", "  and in death’s shade abide,", "Whom strongly hath affliction bound,", "  and irons fast have ty’d:"],
+  ["¹¹Because against the words of God", "  they wrought rebelliously,", "And they the counsel did contemn", "  of him that is most High:"],
+  ["¹²Their heart he did bring down with grief,", "  they fell, no help could have.", "¹³In trouble then they cry’d to God,", "  he them from straits did save."],
+  ["¹⁴He out of darkness did them bring,", "  and from death’s shade them take;", "These bands, wherewith they had been bound,", "  asunder quite he brake."],
+  ["¹⁵O that men to the Lord would give", "  praise for his goodness then,", "And for his works of wonder done", "  unto the sons of men!"],
+  ["¹⁶Because the mighty gates of brass", "  in pieces he did tear,", "By him in sunder also cut", "  the bars of iron were."],
+  ["¹⁷Fools, for their sin, and their offence,", "  do sore affliction bear;", "¹⁸All kind of meat their soul abhors;", "  they to death’s gates draw near."],
+  ["¹⁹In grief they cry to God; he saves", "  them from their miseries.", "²⁰He sends his word, them heals, and them", "  from their destructions frees."],
+  ["²¹O that men to the Lord would give", "  praise for his goodness then,", "And for his works of wonder done", "  unto the sons of men!"],
+  ["²²And let them sacrifice to him", "  off ‘rings of thankfulness;", "And let them shew abroad his works", "  in songs of joyfulness."],
+  ["²³Who go to sea in ships, and in", "  great waters trading be,", "²⁴Within the deep these men God’s works", "  and his great wonders see."],
+  ["²⁵For he commands, and forth in haste", "  the stormy tempest flies,", "Which makes the sea with rolling waves", "  aloft to swell and rise."],
+  ["²⁶They mount to heav’n, then to the depths", "  they do go down again;", "Their soul doth faint and melt away", "  with trouble and with pain."],
+  ["²⁷They reel and stagger like one drunk,", "  at their wit’s end they be:", "²⁸Then they to God in trouble cry,", "  who them from straits doth free."],
+  ["²⁹The storm is chang’d into a calm", "  at his command and will;", "So that the waves, which rag’d before,", "  now quiet are and still."],
+  ["³⁰Then are they glad, because at rest", "  and quiet now they be:", "So to the haven he them brings,", "  which they desir’d to see."],
+  ["³¹O that men to the Lord would give", "  praise for his goodness then,", "And for his works of wonder done", "  unto the sons of men!"],
+  ["³²Among the people gathered", "  let them exalt his name;", "Among assembled elders spread", "  his most renowned fame."],
+  ["³³He to dry land turns water-springs,", "  and floods to wilderness;", "³⁴For sins of those that dwell therein,", "  fat land to barrenness."],
+  ["³⁵The burnt and parched wilderness", "  to water-pools he brings;", "The ground that was dry’d up before", "  he turns to water-springs:"],
+  ["³⁶And there, for dwelling, he a place", "  doth to the hungry give,", "That they a city may prepare", "  commodiously to live."],
+  ["³⁷There sow they fields, and vineyards plant,", "  to yield fruits of increase.", "³⁸His blessing makes them multiply,", "  lets not their beasts decrease."],
+  ["³⁹Again they are diminished,", "  and very low brought down,", "Through sorrow and affliction,", "  and great oppression."],
+  ["⁴⁰He upon princes pours contempt,", "  and causeth them to stray,", "And wander in a wilderness,", "  wherein there is no way."],
+  ["⁴¹Yet setteth he the poor on high", "  from all his miseries,", "And he, much like unto a flock,", "  doth make him families."],
+  ["⁴²They that are righteous shall rejoice,", "  when they the same shall see;", "And, as ashamed, stop her mouth", "  shall all iniquity."],
+  ["⁴³Whoso is wise, and will these things", "  observe, and them record,", "Ev’n they shall understand the love", "  and kindness of the Lord."],
+]

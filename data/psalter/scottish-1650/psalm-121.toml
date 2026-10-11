@@ -1,0 +1,16 @@
+# Psalm 121 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 121
+
+[[version]]
+key = "121"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹I to the hills will lift mine eyes,", "  from whence doth come mine aid.", "²My safety cometh from the Lord,", "  who heav’n and earth hath made."],
+  ["³Thy foot he’ll not let slide, nor will", "  he slumber that thee keeps.", "⁴Behold, he that keeps Israel,", "  he slumbers not, nor sleeps."],
+  ["⁵The Lord thee keeps, the Lord thy shade", "  on thy right hand doth stay:", "⁶The moon by night thee shall not smite,", "  nor yet the sun by day."],
+  ["⁷The Lord shall keep thy soul; he shall", "  preserve thee from all ill.", "⁸Henceforth thy going out and in", "  God keep for ever will."],
+]

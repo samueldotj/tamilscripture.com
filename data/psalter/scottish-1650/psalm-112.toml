@@ -1,0 +1,21 @@
+# Psalm 112 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 112
+
+[[version]]
+key = "112"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Praise ye the Lord. The man is bless’d", "  that fears the Lord aright,", "He who in his commandements", "  doth greatly take delight."],
+  ["²His seed and offspring powerful", "  shall be the earth upon:", "Of upright men blessed shall be", "  the generation."],
+  ["³Riches and wealth shall ever be", "  within his house in store;", "And his unspotted righteousness", "  endures for evermore."],
+  ["⁴Unto the upright light doth rise,", "  though he in darkness be:", "Compassionate, and merciful,", "  and righteous, is he."],
+  ["⁵A good man doth his favour shew,", "  and doth to others lend:", "He with discretion his affairs", "  will guide unto the end."],
+  ["⁶Surely there is not any thing", "  that ever shall him move:", "The righteous man’s memorial", "  shall everlasting prove."],
+  ["⁷When he shall evil tidings hear,", "  he shall not be afraid:", "His heart is fix’d, his confidence", "  upon the Lord is stay’d."],
+  ["⁸His heart is firmly stablished,", "  afraid he shall not be,", "Until upon his enemies", "  he his desire shall see."],
+  ["⁹He hath dispers’d, giv’n to the poor;", "  his righteousness shall be", "To ages all; with honour shall", "  his horn be raised high."],
+  ["¹⁰The wicked shall it see, and fret,", "  his teeth gnash, melt away:", "What wicked men do most desire", "  shall utterly decay."],
+]

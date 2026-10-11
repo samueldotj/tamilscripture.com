@@ -1,0 +1,21 @@
+# Psalm 29 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 29
+
+[[version]]
+key = "29"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹Give ye unto the Lord, ye sons", "  that of the mighty be,", "All strength and glory to the Lord", "  with cheerfulness give ye."],
+  ["²Unto the Lord the glory give", "  that to his name is due;", "And in the beauty of holiness", "  unto Jehovah bow."],
+  ["³The Lord’s voice on the waters is;", "  the God of majesty", "Doth thunder, and on multitudes", "  of waters sitteth he."],
+  ["⁴A pow’rful voice it is that comes", "  out from the Lord most high;", "The voice of that great Lord is full", "  of glorious majesty."],
+  ["⁵The voice of the Eternal doth", "  asunder cedars tear;", "Yea, God the Lord doth cedars break", "  that Lebanon doth bear."],
+  ["⁶He makes them like a calf to skip,", "  ev’n that great Lebanon,", "And, like to a young unicorn,", "  the mountain Sirion."],
+  ["⁷God’s voice divides the flames of fire;", "  ⁸The desert it doth shake:", "The Lord doth make the wilderness", "  of Kadesh all to quake."],
+  ["⁹God’s voice doth make the hinds to calve,", "  it makes the forest bare:", "And in his temple ev’ry one", "  his glory doth declare."],
+  ["¹⁰The Lord sits on the floods; the Lord", "  sits King, and ever shall.", "¹¹The Lord will give his people strength,", "  and with peace bless them all."],
+]

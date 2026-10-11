@@ -1,0 +1,30 @@
+# Psalm 94 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 94
+
+[[version]]
+key = "94"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O Lord God, unto whom alone", "  all vengeance doth belong;", "O mighty God, who vengeance own’st,", "  shine forth, avenging wrong."],
+  ["²Lift up thyself, thou of the earth", "  the sov’reign Judge that art;", "And unto those that are so proud", "  a due reward impart."],
+  ["³How long, O mighty God, shall they", "  who lewd and wicked be,", "How long shall they who wicked are", "  thus triumph haughtily?"],
+  ["⁴How long shall things most hard by them", "  be uttered and told?", "And all that work iniquity", "  to boast themselves be bold?"],
+  ["⁵Thy folk they break in pieces, Lord,", "  thine heritage oppress:", "⁶The widow they and stranger slay,", "  and kill the fatherless."],
+  ["⁷Yet say they, God it shall not see,", "  nor God of Jacob know.", "⁸Ye brutish people! understand;", "  fools! when wise will ye grow?"],
+  ["⁹The Lord did plant the ear of man,", "  and hear then shall not he?", "He only form’d the eye, and then", "  shall he not clearly see?"],
+  ["¹⁰He that the nations doth correct,", "  shall he not chastise you?", "He knowledge unto man doth teach,", "  and shall himself not know?"],
+  ["¹¹Man’s thoughts to be but vanity", "  the Lord doth well discern.", "¹²Bless’d is the man thou chast’nest, Lord,", "  and mak’st thy law to learn:"],
+  ["¹³That thou may’st give him rest from days", "  of sad adversity,", "Until the pit be digg’d for those", "  that work iniquity."],
+  ["¹⁴For sure the Lord will not cast off", "  those that his people be,", "Neither his own inheritance", "  quit and forsake will he:"],
+  ["¹⁵But judgment unto righteousness", "  shall yet return again;", "And all shall follow after it", "  that are right-hearted men."],
+  ["¹⁶Who will rise up for me against", "  those that do wickedly?", "Who will stand up for me ‘gainst those", "  that work iniquity?"],
+  ["¹⁷Unless the Lord had been my help", "  when I was sore opprest,", "Almost my soul had in the house", "  of silence been at rest."],
+  ["¹⁸When I had uttered this word,", "  (my foot doth slip away,)", "Thy mercy held me up, O Lord,", "  thy goodness did me stay."],
+  ["¹⁹Amidst the multitude of thoughts", "  which in my heart do fight,", "My soul, lest it be overcharg’d,", "  thy comforts do delight."],
+  ["²⁰Shall of iniquity the throne", "  have fellowship with thee,", "Which mischief, cunningly contriv’d,", "  doth by a law decree?"],
+  ["²¹Against the righteous souls they join,", "  they guiltless blood condemn.", "²²But of my refuge God’s the rock,", "  and my defence from them."],
+  ["²³On them their own iniquity", "  the Lord shall bring and lay,", "And cut them off in their own sin;", "  our Lord God shall them slay."],
+]

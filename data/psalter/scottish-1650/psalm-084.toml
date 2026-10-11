@@ -1,0 +1,23 @@
+# Psalm 84 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 84
+
+[[version]]
+key = "84"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician upon Gittith, A Psalm for the sons of Korah."
+stanzas = [
+  ["¹How lovely is thy dwelling-place,", "  O Lord of hosts, to me!", "The tabernacles of thy grace", "  how pleasant, Lord, they be!"],
+  ["²My thirsty soul longs veh’mently,", "  yea faints, thy courts to see:", "My very heart and flesh cry out,", "  O living God, for thee."],
+  ["³Behold, the sparrow findeth out", "  an house wherein to rest;", "The swallow also for herself", "  hath purchased a nest;"],
+  ["Ev’n thine own altars,* where she safe", "  her young ones forth may bring,", "O thou almighty Lord of hosts,", "  who art my God and King."],
+  ["⁴Bless’d are they in thy house that dwell,", "  they ever give thee praise.", "⁵Bless’d is the man whose strength thou art,", "  in whose heart are thy ways:"],
+  ["⁶Who passing thorough Baca’s vale,", "  therein do dig up wells;", "Also the rain that falleth down", "  the pools with water fills."],
+  ["⁷So they from strength unwearied go", "  still forward unto strength,", "Until in Sion they appear", "  before the Lord at length."],
+  ["⁸Lord God of hosts, my prayer hear;", "  O Jacob’s God, give ear.", "⁹See God our shield, look on the face", "  of thine anointed dear."],
+  ["¹⁰For in thy courts one day excels", "  a thousand; rather in", "My God’s house will I keep a door,", "  than dwell in tents of sin."],
+  ["¹¹For God the Lord’s a sun and shield:", "  he’ll grace and glory give;", "And will withhold no good from them", "  that uprightly do live."],
+  ["¹²O thou that art the Lord of hosts,", "  that man is truly blest,", "Who by assured confidence", "  on thee alone doth rest."],
+]

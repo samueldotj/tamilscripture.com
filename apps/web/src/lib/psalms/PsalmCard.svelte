@@ -1,7 +1,8 @@
 <script lang="ts">
 	// The open psalm in the Psalms explorer (design: Psalms Explorer v2, the card):
 	// number and titles, theme, genres and author, summaries, the key verse in the
-	// reader's Tamil and English versions, more psalms of the theme, Read and Share.
+	// reader's Tamil and English versions, more psalms of the theme, Read and Share, and
+	// below them the psalm to sing from the 1650 Scottish Psalter (SingPsalm).
 	import { onMount } from 'svelte';
 	import { defaultFor, findBook, findVersion, chapterUrl, verseUrl } from '$lib/content/manifest';
 	import { chapterCached, versesText } from '$lib/content/verses';
@@ -85,11 +86,6 @@
 				<p class="muted" aria-busy="true">…</p>
 			{/if}
 		</figure>
-		{#if card?.tunes.length}
-			{#await import('./TuneBlock.svelte') then { default: TuneBlock }}
-				<TuneBlock tune={card.tunes[0]} {ta} />
-			{/await}
-		{/if}
 		{#if related.length}
 			<div>
 				<span class="kicker">{ta ? `${theme.ta} — மேலும்` : `More on ${theme.en}`}</span>
@@ -106,6 +102,11 @@
 			</a>
 		</div>
 	</div>
+	{#if card?.metrical?.length}
+		{#await import('./SingPsalm.svelte') then { default: SingPsalm }}
+			<SingPsalm {card} {ta} />
+		{/await}
+	{/if}
 </section>
 
 <style>

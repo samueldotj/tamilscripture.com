@@ -1,0 +1,24 @@
+# Psalm 140 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 140
+
+[[version]]
+key = "140"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David."
+stanzas = [
+  ["¹Lord, from the ill and froward man", "  give me deliverance,", "And do thou safe preserve me from", "  the man of violence:"],
+  ["²Who in their heart mischievous things", "  are meditating ever;", "And they for war assembled are", "  continually together."],
+  ["³Much like unto a serpent’s tongue", "  their tongues they sharp do make;", "And underneath their lips there lies", "  the poison of a snake."],
+  ["⁴Lord, keep me from the wicked’s hands,", "  from vi’lent men me save;", "Who utterly to overthrow", "  my goings purpos’d have."],
+  ["⁵The proud for me a snare have hid,", "  and cords; yea, they a net", "Have by the way-side for me spread;", "  they gins for me have set."],
+  ["⁶I said unto the Lord, Thou art", "  my God: unto the cry", "Of all my supplications,", "  Lord, do thine ear apply."],
+  ["⁷O God the Lord, who art the strength", "  of my salvation:", "A cov’ring in the day of war", "  my head thou hast put on."],
+  ["⁸Unto the wicked man, O Lord,", "  his wishes do not grant;", "Nor further thou his ill device,", "  lest they themselves should vaunt."],
+  ["⁹As for the head and chief of those", "  about that compass me,", "Ev’n by the mischief of their lips", "  let thou them cover’d be."],
+  ["¹⁰Let burning coals upon them fall,", "  them throw in fiery flame,", "And in deep pits, that they no more", "  may rise out of the same."],
+  ["¹¹Let not an evil speaker be", "  on earth established:", "Mischief shall hunt the vi’lent man,", "  till he be ruined."],
+  ["¹²I know God will th’ afflicted’s cause", "  maintain, and poor men’s right.", "¹³Surely the just shall praise thy name;", "  th’ upright dwell in thy sight."],
+]

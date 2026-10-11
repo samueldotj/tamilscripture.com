@@ -1,0 +1,30 @@
+# Psalm 38 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 38
+
+[[version]]
+key = "38"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David, to bring to remembrance."
+stanzas = [
+  ["¹In thy great indignation,", "  O Lord, rebuke me not;", "Nor on me lay thy chast’ning hand,", "  in thy displeasure hot."],
+  ["²For in me fast thine arrows stick,", "  thine hand doth press me sore:", "³And in my flesh there is no health,", "  nor soundness any more."],
+  ["This grief I have, because thy wrath", "  is forth against me gone;", "And in my bones there is no rest,", "  for sin that I have done."],
+  ["⁴Because gone up above mine head", "  my great transgressions be;", "And, as a weighty burden, they", "  too heavy are for me."],
+  ["⁵My wounds do stink, and are corrupt;", "  my folly makes it so.", "⁶I troubled am, and much bow’d down;", "  all day I mourning go."],
+  ["⁷For a disease that loathsome is", "  so fills my loins with pain,", "That in my weak and weary flesh", "  no soundness doth remain."],
+  ["⁸So feeble and infirm am I,", "  and broken am so sore,", "That, through disquiet of my heart,", "  I have been made to roar."],
+  ["⁹O Lord, all that I do desire", "  is still before thine eye;", "And of my heart the secret groans", "  not hidden are from thee."],
+  ["¹⁰My heart doth pant incessantly,", "  my strength doth quite decay;", "As for mine eyes, their wonted light", "  is from me gone away."],
+  ["¹¹My lovers and my friends do stand", "  at distance from my sore;", "And those do stand aloof that were", "  kinsmen and kind before."],
+  ["¹²Yea, they that seek my life lay snares:", "  who seek to do me wrong", "Speak things mischievous, and deceits", "  imagine all day long."],
+  ["¹³But, as one deaf, that heareth not,", "  I suffer’d all to pass;", "I as a dumb man did become,", "  whose mouth not open’d was:"],
+  ["¹⁴As one that hears not, in whose mouth", "  are no reproofs at all.", "¹⁵For, Lord, I hope in thee; my God,", "  thou’lt hear me when I call."],
+  ["¹⁶For I said, Hear me, lest they should", "  rejoice o’er me with pride;", "And o’er me magnify themselves,", "  when as my foot doth slide."],
+  ["¹⁷For I am near to halt, my grief", "  is still before mine eye:", "¹⁸For I’ll declare my sin, and grieve", "  for mine iniquity."],
+  ["¹⁹But yet mine en’mies lively are,", "  and strong are they beside;", "And they that hate me wrongfully", "  are greatly multiply’d."],
+  ["²⁰And they for good that render ill,", "  as en’mies me withstood;", "Yea, ev’n for this, because that I", "  do follow what is good."],
+  ["²¹Forsake me not, O Lord; my God,", "  far from me never be.", "²²O Lord, thou my salvation art,", "  haste to give help to me."],
+]

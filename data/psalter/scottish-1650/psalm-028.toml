@@ -1,0 +1,21 @@
+# Psalm 28 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 28
+
+[[version]]
+key = "28"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹To thee I’ll cry, O Lord, my rock;", "  hold not thy peace to me;", "Lest like those that to pit descend", "  I by thy silence be."],
+  ["²The voice hear of my humble pray’rs,", "  when unto thee I cry;", "When to thine holy oracle", "  I lift mine hands on high."],
+  ["³With ill men draw me not away", "  that work iniquity;", "That speak peace to their friends, while in", "  their hearts doth mischief lie."],
+  ["⁴Give them according to their deeds", "  and ills endeavoured:", "And as their handy-works deserve,", "  to them be rendered."],
+  ["⁵God shall not build, but them destroy,", "  who would not understand", "The Lord’s own works, nor did regard", "  the doing of his hand."],
+  ["⁶For ever blessed be the Lord,", "  for graciously he heard", "The voice of my petitions,", "  and prayers did regard."],
+  ["⁷The Lord’s my strength and shield; my heart", "  upon him did rely;", "And I am helped: hence my heart", "  doth joy exceedingly,"],
+  ["And with my song I will him praise.", "  ⁸Their strength is God alone:", "He also is the saving strength", "  of his anointed one."],
+  ["⁹O thine own people do thou save,", "  bless thine inheritance;", "Them also do thou feed, and them", "  for evermore advance."],
+]

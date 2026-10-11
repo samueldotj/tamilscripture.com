@@ -1,0 +1,19 @@
+# Psalm 99 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 99
+
+[[version]]
+key = "99"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹Th’ eternal Lord doth reign as king,", "  let all the people quake;", "He sits between the cherubims,", "  let th’ earth be mov’d and shake."],
+  ["²The Lord in Sion great and high", "  above all people is;", "³Thy great and dreadful name (for it", "  is holy) let them bless."],
+  ["⁴The king’s strength also judgment loves;", "  thou settlest equity:", "Just judgment thou dost execute", "  in Jacob righteously."],
+  ["⁵The Lord our God exalt on high,", "  and rev’rently do ye", "Before his footstool worship him:", "  the Holy One is he."],
+  ["⁶Moses and Aaron ‘mong his priests,", "  Samuel, with them that call", "Upon his name: these call’d on God,", "  and he them answer’d all."],
+  ["⁷Within the pillar of the cloud", "  he unto them did speak:", "The testimonies he them taught,", "  and laws, they did not break."],
+  ["⁸Thou answer’dst them, O Lord our God;", "  thou wast a God that gave", "Pardon to them, though on their deeds", "  thou wouldest vengeance have."],
+  ["⁹Do ye exalt the Lord our God,", "  and at his holy hill", "Do ye him worship: for the Lord", "  our God is holy still."],
+]

@@ -1,0 +1,28 @@
+# Psalm 7 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 7
+
+[[version]]
+key = "7"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "Shiggaion of David, which he sang unto the Lord, concerning the words of Cush the Benjamite."
+stanzas = [
+  ["¹O Lord my God, in thee do I", "  my confidence repose:", "Save and deliver me from all", "  my persecuting foes;"],
+  ["²Lest that the enemy my soul", "  should, like a lion, tear,", "In pieces rending it, while there", "  is no deliverer."],
+  ["³O Lord my God, if it be so", "  that I committed this;", "If it be so that in my hands", "  iniquity there is:"],
+  ["⁴If I rewarded ill to him", "  that was at peace with me;", "(Yea, ev’n the man that without cause", "  my foe was I did free;)"],
+  ["⁵Then let the foe pursue and take", "  my soul, and my life thrust", "Down to the earth, and let him lay", "  mine honour in the dust."],
+  ["⁶Rise in thy wrath, Lord, raise thyself,", "  for my foes raging be;", "And, to the judgment which thou hast", "  commanded, wake for me."],
+  ["⁷So shall th’ assembly of thy folk", "  about encompass thee:", "Thou, therefore, for their sakes, return", "  unto thy place on high."],
+  ["⁸The Lord he shall the people judge:", "  my judge, Jehovah, be,", "After my righteousness, and mine", "  integrity in me."],
+  ["⁹O let the wicked’s malice end;", "  but stablish stedfastly", "The righteous: for the righteous God", "  the hearts and reins doth try."],
+  ["¹⁰In God, who saves th’ upright in heart,", "  is my defence and stay.", "¹¹God just men judgeth, God is wroth", "  with ill men ev’ry day."],
+  ["¹²If he do not return again,", "  then he his sword will whet;", "His bow he hath already bent,", "  and hath it ready set:"],
+  ["¹³He also hath for him prepar’d", "  the instruments of death;", "Against the persecutors he", "  his shafts ordained hath."],
+  ["¹⁴Behold, he with iniquity", "  doth travail, as in birth;", "A mischief he conceived hath,", "  and falsehood shall bring forth."],
+  ["¹⁵He made a pit and digg’d it deep,", "  another there to take;", "But he is fall’n into the ditch", "  which he himself did make."],
+  ["¹⁶Upon his own head his mischief", "  shall be returned home;", "His vi’lent dealing also down", "  on his own pate shall come."],
+  ["¹⁷According to his righteousness", "  the Lord I’ll magnify;", "And will sing praise unto the name", "  of God that is most high."],
+]

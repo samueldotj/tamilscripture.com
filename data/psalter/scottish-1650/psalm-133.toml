@@ -1,0 +1,15 @@
+# Psalm 133 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 133
+
+[[version]]
+key = "133"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees of David."
+stanzas = [
+  ["¹Behold, how good a thing it is,", "  and how becoming well,", "Together such as brethren are", "  in unity to dwell!"],
+  ["²Like precious ointment on the head,", "  that down the beard did flow,", "Ev’n Aaron’s beard, and to the skirts,*", "  did of his garments go."],
+  ["³As Hermon’s dew, the dew that doth", "  on Sion’ hills descend:", "For there the blessing God commands,", "  life that shall never end."],
+]

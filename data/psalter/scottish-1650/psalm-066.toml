@@ -1,0 +1,26 @@
+# Psalm 66 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 66
+
+[[version]]
+key = "66"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Song or Psalm."
+stanzas = [
+  ["¹All lands to God in joyful sounds,", "  aloft your voices raise.", "²Sing forth the honour of his name,", "  and glorious make his praise."],
+  ["³Say unto God, How terrible", "  in all thy works art thou!", "Through thy great pow’r thy foes to thee", "  shall be constrain’d to bow."],
+  ["⁴All on the earth shall worship thee,", "  they shall thy praise proclaim", "In songs: they shall sing cheerfully", "  unto thy holy name."],
+  ["⁵Come, and the works that God hath wrought", "  with admiration see:", "In’s working to the sons of men", "  most terrible is he."],
+  ["⁶Into dry land the sea he turn’d,", "  and they a passage had;", "Ev’n marching through the flood on foot,", "  there we in him were glad."],
+  ["⁷He ruleth ever by his pow’r;", "  his eyes the nations see:", "O let not the rebellious ones", "  lift up themselves on high."],
+  ["⁸Ye people, bless our God; aloud", "  the voice speak of his praise:", "⁹Our soul in life who safe preserves,", "  our foot from sliding stays."],
+  ["¹⁰For thou didst prove and try us, Lord,", "  as men do silver try;", "¹¹Brought’st us into the net, and mad’st", "  bands on our loins to lie."],
+  ["¹²Thou hast caus’d men ride o’er our heads;", "  and though that we did pass", "Through fire and water, yet thou brought’st", "  us to a wealthy place."],
+  ["¹³I’ll bring burnt off ‘rings to thy house;", "  to thee my vows I’ll pay,", "¹⁴Which my lips utter’d, my mouth spake,", "  when trouble on me lay."],
+  ["¹⁵Burnt-sacrifices of fat rams", "  with incense I will bring;", "Of bullocks and of goats I will", "  present an offering."],
+  ["¹⁶All that fear God, come, hear, I’ll tell", "  what he did for my soul.", "¹⁷I with my mouth unto him cry’d,", "  my tongue did him extol."],
+  ["¹⁸If in my heart I sin regard,", "  the Lord me will not hear:", "¹⁹But surely God me heard, and to", "  my prayer’s voice gave ear."],
+  ["²⁰O let the Lord, our gracious God,", "  for ever blessed be,", "Who turned not my pray’r from him,", "  nor yet his grace from me."],
+]

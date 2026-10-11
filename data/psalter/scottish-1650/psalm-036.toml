@@ -1,0 +1,23 @@
+# Psalm 36 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 36
+
+[[version]]
+key = "36"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm of David, the servant of the Lord."
+stanzas = [
+  ["¹The wicked man’s transgression", "  within my heart thus says,", "Undoubtedly the fear of God", "  is not before his eyes."],
+  ["²Because himself he flattereth", "  in his own blinded eye,", "Until the hatefulness be found", "  of his iniquity."],
+  ["³Words from his mouth proceeding are,", "  fraud and iniquity:", "He to be wise, and to do good,", "  hath left off utterly."],
+  ["⁴He mischief, lying on his bed,", "  most cunningly doth plot:", "He sets himself in ways not good,", "  ill he abhorreth not."],
+  ["⁵Thy mercy, Lord, is in the heav’ns;", "  thy truth doth reach the clouds:", "⁶Thy justice is like mountains great;", "  thy judgments deep as floods:"],
+  ["Lord, thou preservest man and beast.", "  ⁷How precious is thy grace!", "Therefore in shadow of thy wings", "  men’s sons their trust shall place."],
+  ["⁸They with the fatness of thy house", "  shall be well satisfy’d;", "From rivers of thy pleasures thou", "  wilt drink to them provide."],
+  ["⁹Because of life the fountain pure", "  remains alone with thee;", "And in that purest light of thine", "  we clearly light shall see."],
+  ["¹⁰Thy loving-kindness unto them", "  continue that thee know;", "And still on men upright in heart", "  thy righteousness bestow."],
+  ["¹¹Let not the foot of cruel pride", "  come, and against me stand;", "And let me not removed be,", "  Lord, by the wicked’s hand."],
+  ["¹²There fallen are they, and ruined,", "  that work iniquities:", "Cast down they are, and never shall", "  be able to arise."],
+]

@@ -1,0 +1,14 @@
+# Psalm 134 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 134
+
+[[version]]
+key = "134"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Song of degrees."
+stanzas = [
+  ["¹Behold, bless ye the Lord, all ye", "  that his attendants are,", "Ev’n you that in God’s temple be,", "  and praise him nightly there."],
+  ["²Your hands within God’s holy place", "  lift up, and praise his name.", "³From Sion’ hill the Lord thee bless,", "  that heav’n and earth did frame."],
+]

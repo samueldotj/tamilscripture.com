@@ -1,0 +1,23 @@
+# Psalm 39 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 39
+
+[[version]]
+key = "39"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, even to Jeduthan, A Psalm of David."
+stanzas = [
+  ["¹I said, I will look to my ways,", "  lest with my tongue I sin:", "In sight of wicked men my mouth", "  with bridle I’ll keep in."],
+  ["²With silence I as dumb became,", "  I did myself restrain", "From speaking good; but then the more", "  increased was my pain."],
+  ["³My heart within me waxed hot;", "  and, while I musing was,", "The fire did burn; and from my tongue", "  these words I did let pass:"],
+  ["⁴Mine end, and measure of my days,", "  O Lord, unto me show", "What is the same; that I thereby", "  my frailty well may know."],
+  ["⁵Lo, thou my days an handbreadth mad’st;", "  mine age is in thine eye", "As nothing: sure each man at best", "  is wholly vanity."],
+  ["⁶Sure each man walks in a vain show;", "  they vex themselves in vain:", "He heaps up wealth, and doth not know", "  to whom it shall pertain."],
+  ["⁷And now, O Lord, what wait I for?", "  my hope is fix’d on thee.", "⁸Free me from all my trespasses,", "  the fool’s scorn make not me."],
+  ["⁹Dumb was I, op’ning not my mouth,", "  because this work was thine.", "¹⁰Thy stroke take from me; by the blow", "  of thine hand I do pine."],
+  ["¹¹When with rebukes thou dost correct", "  man for iniquity,", "Thou wastes his beauty like a moth:", "  sure each man’s vanity."],
+  ["¹²Attend my cry, Lord, at my tears", "  and pray’rs not silent be:", "I sojourn as my fathers all,", "  and stranger am with thee."],
+  ["¹³O spare thou me, that I my strength", "  recover may again,", "Before from hence I do depart,", "  and here no more remain."],
+]

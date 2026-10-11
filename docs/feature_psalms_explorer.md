@@ -1,6 +1,6 @@
 # Feature design: Psalms explorer
 
-Status: built 10 Oct 2026 (§10 steps 2–4 and 6): the website's `/psalms` and the app's Study → Psalms, with six Scottish Psalter tunes. The rest of the Scottish Psalter (step 7) and the summaries (step 5) are not done yet. Comes from Claude Design handoff "Tamil Scripture Psalms Explorer" (`Psalms Explorer v2.dc.html` for desktop web, `Psalms Mobile Screen.dc.html` for mobile web and the app). The Android app (`tamilscripture.app`) builds the same feature from the same data (§7).
+Status: built 10 Oct 2026 (§10 steps 2–4, 6 and 7): the website's `/psalms` and the app's Study → Psalms, with the whole 1650 Scottish Psalter to sing and 45 psalm tunes. The summaries (step 5) are not done yet. Comes from Claude Design handoff "Tamil Scripture Psalms Explorer" (`Psalms Explorer v2.dc.html` for desktop web, `Psalms Mobile Screen.dc.html` for mobile web and the app). The Android app (`tamilscripture.app`) builds the same feature from the same data (§7).
 
 A reader explores the 150 psalms by theme, genre and author. A grid shows every psalm as a numbered tile with a coloured bar for its theme. Filters narrow the grid. Tapping a number opens a card with the psalm's title, theme, genres and author, a short summary, a key verse in Tamil and English, and, where one is set, a psalter tune shown as notation that can be played. From the card the reader opens the full psalm in the reader or shares the key verse.
 
@@ -164,7 +164,7 @@ Tiles move when filters change. Moved tiles slide (FLIP, 320 ms) and newly shown
 | Compact width | Design 1b: title bar with Filters button and badge, theme tiles, grid (`LazyVerticalGrid`, adaptive 44 dp minimum), and the card in a `ModalBottomSheet`. The filter sheet is a second bottom sheet. |
 | Medium and expanded | From 840 dp: filters in a 260 dp pane, the grid, and the card in a 400 dp pane, side by side. |
 | Tune | `PsalmTune.kt`: `PsalmTuneBlock` loads the tune; `PsalmTuneView` draws `incipit.draw.json` or `full.draw.json` on a Compose `Canvas` (the app's way with the website's drawings, as for maps: no SVG library), with the sounding note's marks in the accent colour. It plays `audio.mp3`, cached to a file, with `MediaPlayer` under transient audio focus, so the Bible audio pauses meanwhile. Models: `:core:model` `Psalter.kt`. |
-| Pack | `pack-build` has `StudyPack { id: "study.psalms", prefixes: &["psalms/", "psalter/"], … }` (about 560 KB). Study packs gained a `blob` table for binary files: the tunes' MP3s go there, text stays in `file`. Apps released before this read only `file`, so they are unaffected. |
+| Pack | `pack-build` has `StudyPack { id: "study.psalms", prefixes: &["psalms/", "psalter/"], … }` (about 4 MB). Study packs gained a `blob` table for binary files: the tunes' MP3s go there, text stays in `file`. Apps released before this read only `file`, so they are unaffected. |
 | Tests | `PsalmsScreenshotTest` (compact and wide, light and dark, Tamil and English; the card with Crimond playing and with the full tune) and, in `:core:model`, `PsalmsTest` (parsing and filters) and `PsalterTest` (drawings and timings). |
 
 ## 8. MusicXML: storing, showing and playing tunes
@@ -213,9 +213,30 @@ Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaP
 
 *The Psalms of David in Metre* (Church of Scotland, 1650) gives every psalm in English metre, mostly common metre (8.6.8.6). Some psalms have a second version ("another of the same"). Its tunes come from the 1615 and 1635 Scottish psalters and later Scottish use. The 1650 text and these melodies are public domain. Modern engravings and harmonisations may not be, so we encode the melodies ourselves or take them only from sources whose licence is stated.
 
-**Steps**
+**What was imported (10 Oct 2026)**
 
-1. **Text.** Choose a transcription of the 1650 text (candidates: Wikisource, CCEL). Record the source and its licence in `data/psalter/scottish-1650/SOURCE.md`, and import with `scripts/import-scottish-psalter.py` into one TOML per psalm: `versions = [{ meter = "C.M.", stanzas = [["line", "line", "line", "line"], …] }]`. Check that every stanza's syllable count matches its metre and list exceptions for review.
+| Part | Source | Result |
+|---|---|---|
+| Text | CCEL's *Scottish Psalter and Paraphrases* (ThML, `DC.Rights` Public Domain; from *The Psalms and Church Hymnary*, 1973), by `scripts/import-scottish-psalter.py` | `data/psalter/scottish-1650/psalm-NNN.toml`: 150 psalms, 184 versions (13 psalms have a second version; Psalm 119 has 22 parts), 2,213 stanzas |
+| Pairings | The "Recommended Tunes" of Pilgrim Covenant Church's *1650 Psalter with Notes*, tune names only | `pairings.toml`: 91 versions with traditional tunes. The rest get the `[fallback]` tunes for their metre (C.M.: Dundee, Martyrdom, Kilmarnock; L.M.: Old Hundredth, Duke Street; S.M.: St Andrew, Franconia; 8.7.8.7: Contemplation), shown as fitting the metre, not as traditional |
+| Tunes | CCEH MIDI for every recommended tune the archive has, by `psalter import` (key, pickup and first line from `psalter infer`) | 45 tunes in `tunes.toml`, each matched against its Oxford Hymn Tune Index incipit, all `review = true` |
+
+**The text files.** Each `psalm-NNN.toml` has `psalm` and one `[[version]]` per version: `key` ("23", "100-2", "119-5"), `part` (Psalm 119), `label` ("C.M.", "L.M.", "10s"…), `meter` ("8.6.8.6", "6.6.6.6.D"…), `argument` (the superscription) and `stanzas`, a list of lines. A line starting with two spaces is indented, and superscript digits mark where scripture verses begin. Lines that CCEL prints in halves (Psalm 124's 10s) are joined. The importer checks each line's syllables against its metre, allowing the psalter's one-syllable feminine endings. Its count is a heuristic (it doesn't know "li-on" from "lion" in every case), so the 316 lines it lists are lines to look at, not errors.
+
+**Pairings and the build.** `pairings.toml` keys tunes by version key, so Psalm 100's L.M. version gets Old Hundredth and its C.M. version gets C.M. tunes. `entity-ingest` reads the text, rejects a pairing whose tune metre does not fit its version (C.M. is 8.6.8.6), applies the fallback, and writes `metrical` into each `psalms/{n}.json`: every version with its stanzas, its tune ids, and whether they are a fallback.
+
+**On the card.** "Sing this psalm" sits below the card (website `lib/psalms/SingPsalm.svelte`, app `PsalmSing.kt`). It has chips for the version (or Psalm 119's part) and the tune, the tune block, and the first stanza with "All *n* stanzas". The note under the tune says whether it is traditional or only fits the metre.
+
+**Still to do.**
+- Tunes recommended but not in the CCEH archive (with how many versions name them): St Paul 10, St Kilda 7, Torwood 6, Bangor 5, Crediton 5, Moravia 5, Arnold 4, Huddersfield 4, Milton 4, Old 44th 4, St Asaph 4, Tiverton 4, St Agnes 3, St Mary 3, St Minver 3, and nine more with one or two. These need entering by hand from a public-domain source (§9, step 3).
+- Eight CCEH tunes did not match their incipit even when the chord was searched for the incipit note (Bangor, Consolation, Crediton, Need, Newington / St Stephen, St Agnes, St Asaph, St Paul), and Spohr is in 6/8, which `psalter import` does not support. Either the MIDI or the index has an error; each needs checking against a printed psalter.
+- No tune yet for Psalm 124's 10s (Old 124th), the 6.6.6.6.8.8 versions of 136 and 148 (Darwall's 148th), and Psalm 143's 6.6.6.6.D.
+- The 39 tunes added in this step got their key, pickup and first line from `psalter infer`. The pickup heuristic matched five of the six hand-set tunes (Dundee came out as an equally valid pickup of one beat), so look at the bar lines when reviewing.
+- The study.psalms pack is about 4 MB with 45 tunes and the whole text (audio is most of it).
+
+**Steps for adding more (as originally planned)**
+
+1. **Text.** Done, from CCEL as above. A different transcription can be imported the same way; corrections go straight into the TOML files.
 2. **Tune list.** Start from the common tunes of the 1635 psalter and the standard proper tunes (for example Old Hundredth L.M., Old 124th 10.10.10.10.10, Dundee, French, Crimond, St Paul, Martyrdom, Coleshill). About 30–40 tunes cover every psalm, because any common-metre tune fits any common-metre version.
 3. **Melodies to MusicXML.** For each tune, in order of preference:
    - the MIDI from the Christian Classics Ethereal Hymnary (ccel.org/cceh), whose files are public domain ("free to use in any manner"), through `psalter import`. This is how the first six tunes were made.
@@ -223,9 +244,9 @@ Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaP
    - entering it ourselves in MuseScore 4 from a public-domain facsimile and exporting MIDI. This is the route for tunes the CCEH lacks, such as St Mary (Prys 1621).
 
    `tunes.toml` records the source and the encoding; `review = true` stays until someone has compared the result with a printed psalter.
-4. **Pairings.** `pairings.toml` lists traditional associations first, then any tune of the right metre. The first six are 23 → Crimond, 100 → Old Hundredth, 121 → Dundee (French), 46 → Stroudwater, 8 → Winchester Old and 51 → Coleshill. St Mary, listed first for Psalm 51 in 1650-Psalter resources, has no public-domain encoding yet. Once the metrical text is imported, the build will reject a pairing whose metre does not match the version's.
+4. **Pairings.** `pairings.toml` lists traditional associations first, then any tune of the right metre. The first six are 23 → Crimond, 100 → Old Hundredth, 121 → Dundee (French), 46 → Stroudwater, 8 → Winchester Old and 51 → Coleshill. St Mary, listed first for Psalm 51 in 1650-Psalter resources, has no public-domain encoding yet. The build rejects a pairing whose metre does not match the version's.
 5. **Lyrics under the notes (later).** Hyphenate stanza 1 (English hyphenation, then hand fixes in an overrides file) and attach the syllables to the notes in the build's in-memory MusicXML before engraving. The stored MusicXML stays melody-only.
-6. **Showing the text.** The card shows the tune. "Sing this psalm" opens the metrical stanzas next to `full.svg`, with Play.
+6. **Showing the text.** Done: "Sing this psalm" on the card (above).
 
 **Tamil.** The Scottish Psalter is English. Tamil metrical psalms and *keerthanai* are the next milestone (§11). They use the same files and pipeline: a `data/psalter/{collection}/` directory, tunes in `tunes.toml`, and pairings.
 
@@ -239,7 +260,7 @@ Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaP
 | 4 | App `:feature:study` Psalms explorer and `study.psalms` pack | 2 |
 | 5 | Titles, summaries and key verses for all 150 (`notes.toml`), drafted then reviewed | — |
 | 6 | **Done.** MusicXML pipeline (§8) with six Scottish Psalter tunes for the design's psalms: Old Hundredth (100), Crimond (23), Dundee (121), Stroudwater (46), Winchester Old (8) and Coleshill (51), the last three in place of the design's hymn tunes; tune block on both platforms | 3, 4 |
-| 7 | Scottish Psalter text and tunes (§9) | 6 |
+| 7 | **Done.** Scottish Psalter text (all 150 psalms, 184 versions) and tunes (45, paired with 91 versions; the rest fall back to tunes of their metre), "Sing this psalm" on both platforms (§9) | 6 |
 
 
 ## 11. Next milestone: Tamil metrical psalms and keerthanai

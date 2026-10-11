@@ -1,0 +1,21 @@
+# Psalm 85 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 85
+
+[[version]]
+key = "85"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "To the chief Musician, A Psalm for the sons of Korah."
+stanzas = [
+  ["¹O Lord, thou hast been favourable", "  to thy beloved land:", "Jacob’s captivity thou hast", "  recall’d with mighty hand."],
+  ["²Thou pardoned thy people hast", "  all their iniquities;", "Thou all their trespasses and sins", "  hast cover’d from thine eyes."],
+  ["³Thou took’st off all thine ire, and turn’dst", "  from thy wrath’s furiousness.", "⁴Turn us, God of our health, and cause", "  thy wrath ‘gainst us to cease."],
+  ["⁵Shall thy displeasure thus endure", "  against us without end?", "Wilt thou to generations all", "  thine anger forth extend?"],
+  ["⁶That in thee may thy people joy,", "  wilt thou not us revive?", "⁷Shew us thy mercy, Lord, to us", "  do thy salvation give."],
+  ["⁸I’ll hear what God the Lord will speak:", "  to his folk he’ll speak peace,", "And to his saints; but let them not", "  return to foolishness."],
+  ["⁹To them that fear him surely near", "  is his salvation;", "That glory in our land may have", "  her habitation."],
+  ["¹⁰Truth met with mercy, righteousness", "  and peace kiss’d mutually:", "¹¹Truth springs from earth, and righteousness", "  looks down from heaven high."],
+  ["¹²Yea, what is good the Lord shall give;", "  our land shall yield increase:", "¹³Justice, to set us in his steps,", "  shall go before his face."],
+]

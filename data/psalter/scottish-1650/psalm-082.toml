@@ -1,0 +1,17 @@
+# Psalm 82 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 82
+
+[[version]]
+key = "82"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of Asaph."
+stanzas = [
+  ["¹In gods’ assembly God doth stand;", "  he judgeth gods among.", "²How long, accepting persons vile,", "  will ye give judgment wrong?"],
+  ["³Defend the poor and fatherless;", "  to poor oppress’d do right.", "⁴The poor and needy ones set free;", "  rid them from ill men’s might."],
+  ["⁵They know not, nor will understand;", "  in darkness they walk on:", "All the foundations of the earth", "  out of their course are gone."],
+  ["⁶I said that ye are gods, and are", "  sons of the Highest all:", "⁷But ye shall die like men, and as", "  one of the princes fall."],
+  ["⁸O God, do thou raise up thyself,", "  the earth to judgment call:", "For thou, as thine inheritance,", "  shalt take the nations all."],
+]

@@ -1,0 +1,45 @@
+# Psalm 37 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 37
+
+[[version]]
+key = "37"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm of David."
+stanzas = [
+  ["¹For evil-doers fret thou not", "  thyself unquietly;", "Nor do thou envy bear to those", "  that work iniquity."],
+  ["²For, even like unto the grass,", "  soon be cut down shall they;", "And, like the green and tender herb,", "  they wither shall away."],
+  ["³Set thou thy trust upon the Lord,", "  and be thou doing good;", "And so thou in the land shalt dwell,", "  and verily have food."],
+  ["⁴Delight thyself in God; he’ll give", "  thine heart’s desire to thee.", "⁵Thy way to God commit, him trust,", "  it bring to pass shall he."],
+  ["⁶And, like unto the light, he shall", "  thy righteousness display;", "And he thy judgment shall bring forth", "  like noon-tide of the day."],
+  ["⁷Rest in the Lord, and patiently", "  wait for him: do not fret", "For him who, prosp’ring in his way,", "  success in sin doth get."],
+  ["⁸Do thou from anger cease, and wrath", "  see thou forsake also:", "Fret not thyself in any wise,", "  that evil thou should’st do."],
+  ["⁹For those that evil doers are", "  shall be cut off and fall:", "But those that wait upon the Lord", "  the earth inherit shall."],
+  ["¹⁰For yet a little while, and then", "  the wicked shall not be;", "His place thou shalt consider well,", "  but it thou shalt not see."],
+  ["¹¹But by inheritance the earth", "  the meek ones shall possess:", "They also shall delight themselves", "  in an abundant peace."],
+  ["¹²The wicked plots against the just,", "  and at him whets his teeth:", "¹³The Lord shall laugh at him, because", "  his day he coming seeth."],
+  ["¹⁴The wicked have drawn out the sword,", "  and bent their bow, to slay", "The poor and needy, and to kill", "  men of an upright way."],
+  ["¹⁵But their own sword, which they have drawn,", "  shall enter their own heart:", "Their bows which they have bent shall break,", "  and into pieces part."],
+  ["¹⁶A little that a just man hath", "  is more and better far", "Than is the wealth of many such", "  as lewd and wicked are."],
+  ["¹⁷For sinners’ arms shall broken be;", "  but God the just sustains.", "¹⁸God knows the just man’s days, and still", "  their heritage remains."],
+  ["¹⁹They shall not be asham’d when they", "  the evil time do see;", "And when the days of famine are,", "  they satisfy’d shall be."],
+  ["²⁰But wicked men, and foes of God,", "  as fat of lambs, decay;", "They shall consume, yea, into smoke", "  they shall consume away."],
+  ["²¹The wicked borrows, but the same", "  again he doth not pay;", "Whereas the righteous mercy shews,", "  and gives his own away."],
+  ["²²For such as blessed be of him", "  the earth inherit shall;", "And they that cursed are of him", "  shall be destroyed all."],
+  ["²³A good man’s footsteps by the Lord", "  are ordered aright;", "And in the way wherein he walks", "  he greatly doth delight."],
+  ["²⁴Although he fall, yet shall he not", "  be cast down utterly;", "Because the Lord with his own hand", "  upholds him mightily."],
+  ["²⁵I have been young, and now am old,", "  yet have I never seen", "The just man left, nor that his seed", "  for bread have beggars been."],
+  ["²⁶He’s ever merciful, and lends:", "  his seed is bless’d therefore.", "²⁷Depart from evil, and do good,", "  and dwell for evermore."],
+  ["²⁸For God loves judgment, and his saints", "  leaves not in any case;", "They are kept ever: but cut off", "  shall be the sinner’s race."],
+  ["²⁹The just inherit shall the land,", "  and ever in it dwell:", "³⁰The just man’s mouth doth wisdom speak;", "  his tongue doth judgment tell."],
+  ["³¹In’s heart the law is of his God,", "  his steps slide not away.", "³²The wicked man doth watch the just,", "  and seeketh him to slay."],
+  ["³³Yet him the Lord will not forsake,", "  nor leave him in his hands:", "The righteous will he not condemn,", "  when he in judgment stands."],
+  ["³⁴Wait on the Lord, and keep his way,", "  and thee exalt shall he", "Th’ earth to inherit; when cut off", "  the wicked thou shalt see."],
+  ["³⁵I saw the wicked great in pow’r,", "  spread like a green bay-tree:", "³⁶He pass’d, yea, was not; him I sought,", "  but found he could not be."],
+  ["³⁷Mark thou the perfect, and behold", "  the man of uprightness;", "Because that surely of this man", "  the latter end is peace."],
+  ["³⁸But those men that transgressors are", "  shall be destroy’d together;", "The latter end of wicked men", "  shall be cut off for ever."],
+  ["³⁹But the salvation of the just", "  is from the Lord above;", "He in the time of their distress", "  their stay and strength doth prove."],
+  ["⁴⁰The Lord shall help, and them deliver:", "  he shall them free and save", "From wicked men; because in him", "  their confidence they have."],
+]

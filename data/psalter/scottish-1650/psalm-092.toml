@@ -1,0 +1,26 @@
+# Psalm 92 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 92
+
+[[version]]
+key = "92"
+label = "C.M."
+meter = "8.6.8.6"
+argument = "A Psalm or Song for the sabbath day."
+stanzas = [
+  ["¹To render thanks unto the Lord", "  it is a comely thing,", "And to thy name, O thou most High,", "  due praise aloud to sing."],
+  ["²Thy loving-kindness to shew forth", "  when shines the morning light;", "And to declare thy faithfulness", "  with pleasure ev’ry night."],
+  ["³On a ten-stringed instrument,", "  upon the psaltery,", "And on the harp with solemn sound,", "  and grave sweet melody."],
+  ["⁴For thou, Lord, by thy mighty works", "  hast made my heart right glad;", "And I will triumph in the works", "  which by thine hands were made."],
+  ["⁵How great, Lord, are thy works! each thought", "  of thine a deep it is:", "⁶A brutish man it knoweth not;", "  fools understand not this."],
+  ["⁷When those that lewd and wicked are", "  spring quickly up like grass,", "And workers of iniquity", "  do flourish all apace;"],
+  ["It is that they for ever may", "  destroyed be and slain;", "⁸But thou, O Lord, art the most High,", "  for ever to remain."],
+  ["⁹For, lo, thine enemies, O Lord,", "  thine en’mies perish shall;", "The workers of iniquity", "  shall be dispersed all."],
+  ["¹⁰But thou shalt, like unto the horn", "  of th’ unicorn, exalt", "My horn on high: thou with fresh oil", "  anoint me also shalt."],
+  ["¹¹Mine eyes shall also my desire", "  see on mine enemies;", "Mine ears shall of the wicked hear", "  that do against me rise."],
+  ["¹²But like the palm-tree flourishing", "  shall be the righteous one;", "He shall like to the cedar grow", "  that is in Lebanon."],
+  ["¹³Those that within the house of God", "  are planted by his grace,", "They shall grow up, and flourish all", "  in our God’s holy place."],
+  ["¹⁴And in old age, when others fade,", "  they fruit still forth shall bring;", "They shall be fat, and full of sap,", "  and aye be flourishing;"],
+  ["¹⁵To shew that upright is the Lord:", "  he is a rock to me;", "And he from all unrighteousness", "  is altogether free."],
+]

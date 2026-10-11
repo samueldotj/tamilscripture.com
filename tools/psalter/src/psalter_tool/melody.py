@@ -64,7 +64,9 @@ class Key:
         return STEPS[pc], SHARP[pc], octave
 
 
-def melody(path: str, pickup: Fraction, beats_per_bar: int) -> list[Note]:
+def melody(path: str, pickup: Fraction, beats_per_bar: int, guide: tuple['Key', str] | None = None) -> list[Note]:
+    """`beats_per_bar` counts quarter notes. With `guide` (key, incipit), a chord whose top
+    note contradicts the incipit gives the note that matches it: the alto crossing above."""
     mid = mido.MidiFile(path)
     tpb = mid.ticks_per_beat
     t, on, raw = 0, {}, []
@@ -77,11 +79,17 @@ def melody(path: str, pickup: Fraction, beats_per_bar: int) -> list[Note]:
     chords: dict[int, list[tuple[int, int]]] = {}
     for a, b, n in raw:
         chords.setdefault(a, []).append((n, b))
+    want = guide[1].replace(' ', '') if guide else ''
     top: list[tuple[int, int, int]] = []  # onset, end, pitch
     for onset in sorted(chords):
         pitch, end = max(chords[onset])
         if top and top[-1][1] > onset and top[-1][2] > pitch:
             continue  # an inner voice moving under a held melody note
+        i = len(top)
+        if guide and i < len(want) and want[i] != '_' and guide[0].degree(pitch) != int(want[i]):
+            match = [(n, e) for n, e in chords[onset] if guide[0].degree(n) == int(want[i])]
+            if match:
+                pitch, end = max(match)
         top.append((onset, end, pitch))
     beats = [Fraction(a, tpb) for a, _, _ in top]
     notes = []
@@ -101,9 +109,10 @@ def incipit_digits(notes: list[Note], key: Key, n: int) -> str:
 
 
 def check_incipit(notes: list[Note], key: Key, incipit: str) -> None:
+    """The melody's opening against the Oxford Hymn Tune Index digits; '_' matches anything."""
     want = incipit.replace(' ', '').rstrip('_')
     got = incipit_digits(notes, key, len(want))
-    if got != want:
+    if len(got) < len(want) or any(w != '_' and w != g for w, g in zip(want, got)):
         raise ValueError(f'melody opens {got}, the incipit is {want}')
 
 
@@ -143,8 +152,9 @@ def _beams(notes: list[Note]) -> dict[Fraction, list[tuple[int, str]]]:
     return out
 
 
-def musicxml(notes: list[Note], key: Key, beats_per_bar: int, pickup: Fraction, bpm: int, title: str) -> str:
-    bar = beats_per_bar * DIV
+def musicxml(notes: list[Note], key: Key, beats_per_bar: int, pickup: Fraction, bpm: int, title: str, beat_type: int = 4) -> str:
+    """`beats_per_bar` and `beat_type` are the time signature (3 and 2 for 3/2)."""
+    bar = beats_per_bar * DIV * 4 // beat_type
     pick = int(pickup * DIV)
     # Bar boundaries in divisions.
     end = int((notes[-1].onset + notes[-1].dur) * DIV)
@@ -205,7 +215,7 @@ def musicxml(notes: list[Note], key: Key, beats_per_bar: int, pickup: Fraction, 
         out.append(f'<measure number="{number}"{attrs}>')
         if first:
             out.append(f'<attributes><divisions>{DIV}</divisions><key><fifths>{key.fifths}</fifths><mode>{mode}</mode></key>'
-                       f'<time><beats>{beats_per_bar}</beats><beat-type>4</beat-type></time><clef><sign>G</sign><line>2</line></clef></attributes>')
+                       f'<time><beats>{beats_per_bar}</beats><beat-type>{beat_type}</beat-type></time><clef><sign>G</sign><line>2</line></clef></attributes>')
             out.append(f'<sound tempo="{bpm}"/>')
         out.extend(content)
         if i == len(bars) - 1:

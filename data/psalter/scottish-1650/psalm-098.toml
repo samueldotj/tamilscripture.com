@@ -1,0 +1,18 @@
+# Psalm 98 in the Psalms of David in Metre (Scottish Psalter, 1650).
+# From CCEL (public domain): scripts/import-scottish-psalter.py; edit freely.
+# A line starting with two spaces is indented; superscript numbers start verses.
+psalm = 98
+
+[[version]]
+key = "98"
+label = "C.M."
+meter = "8.6.8.6"
+stanzas = [
+  ["¹O sing a new song to the Lord,", "  for wonders he hath done:", "His right hand and his holy arm", "  him victory hath won."],
+  ["²The Lord God his salvation", "  hath caused to be known;", "His justice in the heathen’s sight", "  he openly hath shown."],
+  ["³He mindful of his grace and truth", "  to Isr’el’s house hath been;", "And the salvation of our God", "  all ends of th’ earth have seen."],
+  ["⁴Let all the earth unto the Lord", "  send forth a joyful noise;", "Lift up your voice aloud to him,", "  sing praises, and rejoice."],
+  ["⁵With harp, with harp, and voice of psalms,", "  unto Jehovah sing:", "⁶With trumpets, cornets, gladly sound", "  before the Lord the King."],
+  ["⁷Let seas and all their fulness roar;", "  the world, and dwellers there;", "⁸Let floods clap hands, and let the hills", "  together joy declare"],
+  ["⁹Before the Lord; because he comes,", "  to judge the earth comes he:", "He’ll judge the world with righteousness,", "  his folk with equity."],
+]
