@@ -5,6 +5,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { optedOut, track } from '$lib/analytics/track';
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
+	import HeaderVersions from '$lib/reader/HeaderVersions.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
 	import MobileMenu from '$lib/reader/MobileMenu.svelte';
 	import VersePreview from '$lib/reader/VersePreview.svelte';
@@ -42,6 +43,12 @@
 		document.documentElement.lang = pageLang(page.params.versions);
 	});
 	const ui = $derived(settings.value.uiLang);
+	// A chapter page's versions, book and chapter, for the translation picker in the header.
+	const readerData = $derived.by(() => {
+		if (!page.route.id?.includes('[chapter=int]')) return null;
+		const d = page.data as { versions?: VersionMeta[]; book?: Book; chapter?: number };
+		return d.versions?.length && d.book && typeof d.chapter === 'number' ? { versions: d.versions, book: d.book, chapter: d.chapter } : null;
+	});
 	const signinHref = $derived(`/signin?next=${encodeURIComponent(page.url.pathname)}`);
 
 	// One page view per navigation, including the first load (docs/feature_analytics.md).
@@ -201,6 +208,7 @@
 			</span>
 		</a>
 		<div class="ref"><ReferenceBox {versionPath} lang={ui} /></div>
+		{#if readerData}<HeaderVersions versions={readerData.versions} book={readerData.book} chapter={readerData.chapter} lang={ui} />{/if}
 		<div class="tools">
 			<div class="lang" role="group" aria-label={ui === 'ta' ? 'இடைமுக மொழி' : 'Interface language'}>
 				<button type="button" lang="ta" class:on={ui === 'ta'} aria-pressed={ui === 'ta'} onclick={() => settings.update({ uiLang: 'ta' })}>த</button>
