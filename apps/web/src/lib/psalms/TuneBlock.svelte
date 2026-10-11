@@ -60,6 +60,7 @@
 
 	async function enterBig() {
 		fullBefore = full;
+		followed = null;
 		full = true;
 		big = true;
 		try {
@@ -181,6 +182,20 @@
 		lit.forEach((e) => e.classList.remove('on'));
 		els.forEach((e) => e.classList.add('on'));
 		lit = els;
+		if (big && els[0]) follow(els[0]);
+	}
+
+	/** Full screen: keep the line being sung in view, with its words, scrolling as it moves on. */
+	let followed: Element | null = null;
+	function follow(note: Element) {
+		const system = note.closest('g.system');
+		if (!system || system === followed || !box) return;
+		followed = system;
+		const r = system.getBoundingClientRect();
+		const view = box.getBoundingClientRect();
+		const bottom = r.bottom + r.height * 0.4; // the words under the staff
+		if (r.top >= view.top && bottom <= view.bottom) return;
+		box.scrollBy({ top: r.top - view.top - 8, behavior: 'smooth' });
 	}
 
 	let place: string | null = null;
@@ -422,8 +437,9 @@
 	.bighead .stz { flex: 1; font-size: 1.05rem; font-weight: 600; color: var(--amber); font-variant-numeric: tabular-nums; }
 	.exit { margin-left: auto; width: 44px; height: 44px; border-radius: 999px; border: var(--bw) solid var(--line-2); background: var(--surface-2); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
 	.exit:hover { border-color: var(--accent); }
-	.panel.big .score { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
-	.panel.big .score :global(svg) { width: auto; height: 100%; max-width: 100%; max-height: 100%; }
-	.panel.big .controls { max-width: 48rem; width: 100%; margin: 0 auto; }
+	/* The whole width of the window: a tune taller than the screen scrolls, following the line sung. */
+	.panel.big .score { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain; }
+	.panel.big .score > :global(svg) { margin: auto 0; flex: none; }
+	.panel.big .score :global(svg) { width: 100%; height: auto; max-height: none; }
 	.panel.big .tempo { justify-content: center; }
 </style>
