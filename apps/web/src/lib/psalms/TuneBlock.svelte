@@ -54,6 +54,14 @@
 	});
 
 	const fmt = (ms: number) => `${Math.floor(ms / 60000)}:${String(Math.floor((ms % 60000) / 1000)).padStart(2, '0')}`;
+	/** Where the melody comes from, and the other names it goes by. */
+	const credit = $derived(
+		[
+			tune.source,
+			tune.composer && tune.composer !== 'Anonymous' ? tune.composer : '',
+			tune.other_names?.length ? (ta ? 'வேறு பெயர்: ' : 'also known as ') + tune.other_names.join(', ') : ''
+		].filter(Boolean).join(' · ')
+	);
 	const once = $derived(events?.duration ?? 0);
 	/** A breath between stanzas, about a beat, as a congregation takes. */
 	const breath = 700;
@@ -150,7 +158,7 @@
 			</div>
 		</div>
 		<div class="foot">
-			<span>{tune.source}{tune.composer && tune.composer !== 'Anonymous' ? ` · ${tune.composer}` : ''}</span>
+			<span>{credit}</span>
 			<button type="button" class="more" onclick={() => (full = !full)} aria-expanded={full}>{full ? (ta ? 'முதல் வரி' : 'First line') : (ta ? 'முழுப் பண்' : 'Full tune')}</button>
 		</div>
 	</div>

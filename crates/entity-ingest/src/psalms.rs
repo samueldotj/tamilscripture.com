@@ -115,6 +115,9 @@ pub struct Tune {
     pub key: String,
     pub composer: String,
     pub source: String,
+    /// Other names the tune is known by ("French" for Dundee in Scotland).
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub other_names: Vec<String>,
     #[serde(default, skip_serializing)]
     pub review: bool,
 }

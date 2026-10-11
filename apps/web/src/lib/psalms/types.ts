@@ -38,7 +38,7 @@ export interface Psalm {
 	tune: string | null;
 }
 
-export interface Tune { id: string; name: string; meter: string; key: string; composer: string; source: string }
+export interface Tune { id: string; name: string; meter: string; key: string; composer: string; source: string; other_names?: string[] }
 
 /** psalms/{n}.json */
 export interface PsalmCard {
