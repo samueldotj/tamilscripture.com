@@ -110,7 +110,8 @@
 </section>
 
 <style>
-	.card { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); background: var(--surface); border: var(--bw) solid var(--line); border-radius: var(--r-xl); overflow: hidden; }
+	/* The psalm and its key verse half and half; Sing this psalm spans both below. */
+	.card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--surface); border: var(--bw) solid var(--line); border-radius: var(--r-xl); overflow: hidden; }
 	.left { padding: 1.5rem 1.5rem 1.6rem; }
 	.right { background: var(--surface-2); padding: 1.5rem; display: flex; flex-direction: column; gap: 1.2rem; border-left: var(--bw) solid var(--line); }
 	.kicker { display: block; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; font-variant-numeric: tabular-nums; }
@@ -143,6 +144,7 @@
 	.btn [lang='ta'] { font-family: var(--tamil); }
 	.muted { color: var(--muted); }
 	@media (max-width: 52rem) {
+		.card { grid-template-columns: minmax(0, 1fr); }
 		.right { border-left: 0; border-top: var(--bw) solid var(--line); }
 		.num { font-size: 2.8rem; }
 	}
