@@ -5,7 +5,9 @@
 	// organ) once for each of `stanzas`, a breath between, at the tempo chosen, and
 	// lights the note that is sounding, from events.json. The words of the stanza being
 	// sung are written under the notes, and the stanza and line sung are reported
-	// through `onplace`. "Full tune" swaps the first line for the whole melody.
+	// through `onplace`. "Full tune" swaps the first line for the whole melody;
+	// "Full screen" shows the whole tune and its words as large as the screen allows,
+	// for singing from, and keeps the screen awake meanwhile.
 	import { onDestroy, onMount } from 'svelte';
 	import { contentUrl } from '$lib/content/manifest';
 	import { stanzaOnNotes } from './lyrics';
@@ -47,6 +49,54 @@
 	let box = $state<HTMLElement>();
 	let stanza = $state(0);
 	let rate = $state(1);
+	/** Full screen for singing: the panel fills the screen (the Fullscreen API where there
+	 *  is one, else a fixed overlay, as on iPhone). */
+	let big = $state(false);
+	let panel = $state<HTMLElement>();
+	let fullBefore = false;
+	let wake: { release(): Promise<void> } | null = null;
+
+	async function enterBig() {
+		fullBefore = full;
+		full = true;
+		big = true;
+		try {
+			await panel?.requestFullscreen?.();
+		} catch {
+			// No element full screen here: the overlay alone covers the page.
+		}
+		try {
+			wake = (await (navigator as Navigator & { wakeLock?: { request(t: 'screen'): Promise<{ release(): Promise<void> }> } }).wakeLock?.request('screen')) ?? null;
+		} catch {
+			wake = null;
+		}
+	}
+
+	function exitBig() {
+		if (!big) return;
+		big = false;
+		full = fullBefore;
+		if (document.fullscreenElement === panel) document.exitFullscreen().catch(() => {});
+		wake?.release().catch(() => {});
+		wake = null;
+	}
+
+	onMount(() => {
+		const change = () => {
+			if (big && !document.fullscreenElement && wasFull) exitBig();
+			wasFull = !!document.fullscreenElement;
+		};
+		let wasFull = false;
+		const key = (e: KeyboardEvent) => {
+			if (e.key === 'Escape' && big) exitBig();
+		};
+		document.addEventListener('fullscreenchange', change);
+		document.addEventListener('keydown', key);
+		return () => {
+			document.removeEventListener('fullscreenchange', change);
+			document.removeEventListener('keydown', key);
+		};
+	});
 	let audio: HTMLAudioElement | null = null;
 	let frame = 0;
 	let lit: Element[] = [];
@@ -63,6 +113,7 @@
 		cancelAnimationFrame(frame);
 		audio?.pause();
 		onplace?.(null);
+		exitBig();
 	});
 
 	const fmt = (ms: number) => `${Math.floor(ms / 60000)}:${String(Math.floor((ms % 60000) / 1000)).padStart(2, '0')}`;
@@ -199,7 +250,16 @@
 
 <div class="tune">
 	<span class="kicker">{ta ? 'சங்கீதப் பண்' : 'Psalter tune'} · {tune.name}</span>
-	<div class="panel">
+	<div class="panel" class:big bind:this={panel} role={big ? 'dialog' : undefined} aria-modal={big ? 'true' : undefined} aria-label={big ? tune.name : undefined}>
+		{#if big}
+			<div class="bighead">
+				<span class="name">{tune.name}</span>
+				{#if stanzas > 1}<span class="stz">{ta ? `பத்தி ${stanza + 1} / ${stanzas}` : `Stanza ${stanza + 1} of ${stanzas}`}</span>{/if}
+				<button type="button" class="exit" onclick={exitBig} aria-label={ta ? 'முழுத் திரையிலிருந்து வெளியேறு' : 'Exit full screen'}>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+				</button>
+			</div>
+		{/if}
 		{#if svgs}
 			<!-- Build output of tools/psalter (Verovio), not user content. -->
 			<div class="score" class:full bind:this={box} role="img" aria-label="{ta ? 'இசைக் குறியீடு' : 'Musical notation for'} {tune.name}">{@html full ? svgs.full : svgs.incipit}</div>
@@ -230,10 +290,18 @@
 				{/each}
 			</div>
 		{/if}
-		<div class="foot">
-			<span>{credit}</span>
-			<button type="button" class="more" onclick={() => (full = !full)} aria-expanded={full}>{full ? (ta ? 'முதல் வரி' : 'First line') : (ta ? 'முழுப் பண்' : 'Full tune')}</button>
-		</div>
+		{#if !big}
+			<div class="foot">
+				<span>{credit}</span>
+				<span class="links">
+					<button type="button" class="more" onclick={() => (full = !full)} aria-expanded={full}>{full ? (ta ? 'முதல் வரி' : 'First line') : (ta ? 'முழுப் பண்' : 'Full tune')}</button>
+					<button type="button" class="more big-btn" onclick={enterBig} disabled={!svgs}>
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" /></svg>
+						{ta ? 'முழுத் திரை' : 'Full screen'}
+					</button>
+				</span>
+			</div>
+		{/if}
 	</div>
 </div>
 
@@ -265,4 +333,22 @@
 	.tempo .bpm { font-weight: 400; font-size: 0.72rem; opacity: 0.8; font-variant-numeric: tabular-nums; }
 	.foot { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; font-size: 0.74rem; color: var(--muted); }
 	.more { border: 0; background: none; color: var(--accent); font: inherit; font-weight: 600; cursor: pointer; padding: 0.2rem 0; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+	.links { display: inline-flex; gap: 0.9rem; flex: none; }
+	.big-btn { display: inline-flex; align-items: center; gap: 0.3rem; }
+	.big-btn:disabled { opacity: 0.5; cursor: default; }
+
+	/* Full screen for singing: the whole tune as large as the screen allows, the controls below. */
+	.panel.big { position: fixed; inset: 0; z-index: 1000; border: 0; border-radius: 0; gap: 0.8rem;
+		padding: max(0.8rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(0.8rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)); }
+	.panel.big:fullscreen { width: 100vw; height: 100vh; }
+	.panel.big::backdrop { background: var(--surface); }
+	.bighead { display: flex; align-items: center; gap: 1rem; }
+	.bighead .name { font-weight: 700; font-size: 1.1rem; color: var(--ink); }
+	.bighead .stz { flex: 1; font-size: 1.05rem; font-weight: 600; color: var(--amber); font-variant-numeric: tabular-nums; }
+	.exit { margin-left: auto; width: 44px; height: 44px; border-radius: 999px; border: var(--bw) solid var(--line-2); background: var(--surface-2); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+	.exit:hover { border-color: var(--accent); }
+	.panel.big .score { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+	.panel.big .score :global(svg) { width: auto; height: 100%; max-width: 100%; max-height: 100%; }
+	.panel.big .controls { max-width: 48rem; width: 100%; margin: 0 auto; }
+	.panel.big .tempo { justify-content: center; }
 </style>

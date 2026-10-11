@@ -123,6 +123,8 @@ fn word_parts(word: &str) -> Vec<String> {
             2 if digraph(lower[cons[0]], lower[cons[1]]) => {
                 if lower[cons[0]] == 'c' { b_start } else { cons[0] }
             }
+            // "gh" ends a syllable whole: "righ-teous", "migh-ty".
+            n if n >= 3 && lower[cons[0]] == 'g' && lower[cons[1]] == 'h' => cons[1] + 1,
             _ => cons[0] + 1,
         };
         cuts.push(cut);
@@ -162,6 +164,7 @@ mod tests {
         assert_eq!(s("Salvation doth appertain"), "Sal- va- ti- on doth ap- per- tain");
         assert_eq!(s("should, like a lion, tear,"), "should, like a li- on, tear,");
         assert_eq!(s("ev’n for his own name’s sake."), "ev’n for his own name’s sake.");
+        assert_eq!(s("Within the paths of righteousness,"), "Wi- thin the paths of righ- teous- ness,");
     }
 
     #[test]
