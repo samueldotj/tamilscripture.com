@@ -7,10 +7,12 @@
 	// sung are written under the notes, and the stanza and line sung are reported
 	// through `onplace`. "Full tune" swaps the first line for the whole melody;
 	// "Full screen" shows the whole tune and its words as large as the screen allows,
-	// for singing from, and keeps the screen awake meanwhile.
+	// for singing from, and keeps the screen awake meanwhile. A tap on a note or a word
+	// sings from there; the timeline can be dragged, or stepped with the arrow keys.
 	import { onDestroy, onMount } from 'svelte';
 	import { contentUrl } from '$lib/content/manifest';
 	import { stanzaOnNotes } from './lyrics';
+	import { nearestNote, place as placeAt } from './seek';
 	import type { Tune } from './types';
 
 	let { tune, ta, stanzas = 1, lyrics, onplace }: {
@@ -212,7 +214,7 @@
 		report(-1);
 	}
 
-	function toggle() {
+	function load(): HTMLAudioElement {
 		if (!audio) {
 			audio = new Audio(contentUrl(`${base}/audio.mp3`));
 			audio.preservesPitch = true;
@@ -220,14 +222,72 @@
 			audio.addEventListener('pause', () => (playing = false));
 		}
 		audio.playbackRate = rate;
-		if (playing) {
-			audio.pause();
-		} else {
-			audio.play().then(() => {
-				playing = true;
-				frame = requestAnimationFrame(tick);
-			}).catch(() => (playing = false));
-		}
+		return audio;
+	}
+
+	function play() {
+		load().play().then(() => {
+			playing = true;
+			cancelAnimationFrame(frame);
+			frame = requestAnimationFrame(tick);
+		}).catch(() => (playing = false));
+	}
+
+	function toggle() {
+		if (playing) audio?.pause();
+		else play();
+	}
+
+	/** Go to `ms` of the whole psalm in the audio's own clock (stanzas a breath apart). */
+	function seek(ms: number) {
+		const p = placeAt(ms, once, breath, stanzas);
+		stanza = p.stanza;
+		now = p.at;
+		load().currentTime = p.at / 1000;
+		light(now);
+		report(now);
+	}
+
+	/** A tap on the score: sing from the note tapped, or from the note of the word tapped. */
+	function tapScore(e: MouseEvent) {
+		const svg = box?.querySelector('svg.definition-scale') as SVGSVGElement | null;
+		const m = svg?.getScreenCTM();
+		if (!svg || !m || !events) return;
+		const pt = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+		const [, , w, h] = svg.getAttribute('viewBox')!.split(' ').map(Number);
+		const i = nearestNote(events.notes.map((n) => (full ? n.full : n.incipit)), pt.x, pt.y, w, h);
+		if (i < 0) return;
+		seek(stanza * (once + breath) + events.notes[i].on);
+		if (!playing) play();
+	}
+
+	/** The timeline: a press or drag goes to that point of the psalm. */
+	let bar = $state<HTMLElement>();
+	function barAt(e: PointerEvent) {
+		const r = bar!.getBoundingClientRect();
+		const f = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+		seek(f * total * rate);
+	}
+	function barDown(e: PointerEvent) {
+		if (!events) return;
+		bar!.setPointerCapture(e.pointerId);
+		barAt(e);
+	}
+	function barMove(e: PointerEvent) {
+		if (bar?.hasPointerCapture(e.pointerId)) barAt(e);
+	}
+	/** Arrow keys step five seconds (of the listener's clock); Home and End go to the ends. */
+	function barKey(e: KeyboardEvent) {
+		const step = 5000 * rate;
+		const at = elapsed * rate;
+		const to = e.key === 'ArrowLeft' || e.key === 'ArrowDown' ? at - step
+			: e.key === 'ArrowRight' || e.key === 'ArrowUp' ? at + step
+			: e.key === 'Home' ? 0
+			: e.key === 'End' ? total * rate
+			: null;
+		if (to == null || !events) return;
+		e.preventDefault();
+		seek(Math.max(0, to));
 	}
 
 	function setRate(r: number) {
@@ -262,7 +322,9 @@
 		{/if}
 		{#if svgs}
 			<!-- Build output of tools/psalter (Verovio), not user content. -->
-			<div class="score" class:full bind:this={box} role="img" aria-label="{ta ? 'இசைக் குறியீடு' : 'Musical notation for'} {tune.name}">{@html full ? svgs.full : svgs.incipit}</div>
+			<!-- A tap sings from a note; keyboard users have the timeline below. -->
+			<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
+			<div class="score" class:full bind:this={box} role="img" aria-label="{ta ? 'இசைக் குறியீடு' : 'Musical notation for'} {tune.name}" onclick={tapScore}>{@html full ? svgs.full : svgs.incipit}</div>
 		{:else}
 			<div class="score empty" aria-busy="true"></div>
 		{/if}
@@ -276,7 +338,13 @@
 			</button>
 			<div class="meta">
 				<div class="row"><span>{tune.meter} · {tune.key}{#if stanzas > 1}{' · '}{ta ? `பத்தி ${stanza + 1}/${stanzas}` : `stanza ${stanza + 1} of ${stanzas}`}{/if}</span><span class="time">{fmt(elapsed)} / {fmt(total)}</span></div>
-				<div class="bar"><div style="width: {total ? Math.min(100, (elapsed / total) * 100) : 0}%"></div></div>
+				<div class="bar" bind:this={bar} role="slider" tabindex={events ? 0 : -1}
+					aria-label={ta ? 'பாடலில் இடம்' : 'Position in the psalm'} aria-valuemin={0} aria-valuemax={Math.round(total / 1000)}
+					aria-valuenow={Math.round(elapsed / 1000)} aria-valuetext="{fmt(elapsed)} / {fmt(total)}"
+					onpointerdown={barDown} onpointermove={barMove} onkeydown={barKey}>
+					<div class="track"><div class="fill" style="width: {total ? Math.min(100, (elapsed / total) * 100) : 0}%"></div></div>
+					<div class="thumb" style="left: {total ? Math.min(100, (elapsed / total) * 100) : 0}%"></div>
+				</div>
 			</div>
 		</div>
 		{#if events}
@@ -323,8 +391,15 @@
 	.meta { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; }
 	.row { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); }
 	.time { font-variant-numeric: tabular-nums; }
-	.bar { height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; }
-	.bar div { height: 100%; background: var(--accent); }
+	/* The timeline: a 4px track in a taller box, so a finger can take hold of it. */
+	.bar { position: relative; height: 20px; margin: -8px 0; display: flex; align-items: center; cursor: pointer; touch-action: none; }
+	.bar:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+	.track { flex: 1; height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; }
+	.fill { height: 100%; background: var(--accent); }
+	.thumb { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 999px; background: var(--accent); opacity: 0; transition: opacity 0.15s; pointer-events: none; }
+	.bar:hover .thumb, .bar:focus-visible .thumb, .bar:active .thumb { opacity: 1; }
+	@media (pointer: coarse) { .thumb { opacity: 1; } }
+	.score { cursor: pointer; }
 	.tempo { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
 	.tempo .lbl { font-size: 0.74rem; color: var(--muted); margin-right: 0.2rem; }
 	.tempo button { display: inline-flex; align-items: baseline; gap: 0.35rem; min-height: 32px; padding: 0.2rem 0.65rem; border: var(--bw) solid var(--line-2); border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-size: 0.78rem; font-weight: 600; cursor: pointer; }
