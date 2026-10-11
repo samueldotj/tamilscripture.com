@@ -178,6 +178,8 @@ __pycache__/
 
 # psalter tool: local virtualenv
 tools/psalter/.venv/
+# psalter tool: FluidSynth and the FluidR3_GM SoundFont (README: Setup)
+tools/psalter/.cache/
 
 # translate tool: local virtualenv and work folder (batch ids, usage log, raw replies)
 tools/translate/.venv/

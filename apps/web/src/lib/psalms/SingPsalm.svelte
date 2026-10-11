@@ -1,8 +1,8 @@
 <script lang="ts">
 	// "Sing this psalm" on the Psalms explorer's card (docs/feature_psalms_explorer.md §9):
 	// the psalm in the 1650 Scottish Psalter. A switch picks the version (C.M. or L.M., or
-	// the part of Psalm 119), chips pick its tune, the tune plays beside the words, and
-	// the first stanza opens out into all of them.
+	// the part of Psalm 119), chips pick its tune, and the tune plays every stanza on
+	// organ while the line being sung is lit; the first stanza opens out into all of them.
 	import TuneBlock from './TuneBlock.svelte';
 	import type { PsalmCard } from './types';
 
@@ -11,6 +11,15 @@
 	let vi = $state(0);
 	let ti = $state(0);
 	let all = $state(false);
+	/** The stanza and line the organ is on. */
+	let place = $state<{ stanza: number; line: number } | null>(null);
+	let words = $state<HTMLElement>();
+	function follow(p: { stanza: number; line: number } | null) {
+		place = p;
+		if (!p) return;
+		if (p.stanza > 0) all = true;
+		if (p.line === 0) queueMicrotask(() => words?.querySelectorAll('.stanza')[p.stanza]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }));
+	}
 	const v = $derived(card.metrical[vi]);
 	const tunes = $derived(v.tunes.map((id) => card.tunes.find((t) => t.id === id)!).filter(Boolean));
 	const tune = $derived(tunes[Math.min(ti, tunes.length - 1)]);
@@ -22,6 +31,7 @@
 		vi = i;
 		ti = 0;
 		all = false;
+		place = null;
 	}
 	const versionName = (x: (typeof card.metrical)[number]) => (x.part ? `${x.part}` : x.label);
 </script>
@@ -50,7 +60,7 @@
 					</div>
 				{/if}
 				{#key tune.id}
-					<TuneBlock {tune} {ta} />
+					<TuneBlock {tune} {ta} stanzas={v.stanzas.length} onplace={follow} />
 				{/key}
 				<p class="note">
 					{#if v.fallback}
@@ -64,12 +74,12 @@
 			{/if}
 		</div>
 
-		<div class="words" lang="en">
+		<div class="words" lang="en" bind:this={words}>
 			{#if v.argument}<p class="argument">{v.argument}</p>{/if}
 			{#each shown as stanza, si (si)}
 				<p class="stanza">
 					{#each stanza as line, li (li)}
-						<span class="line" class:indent={line.startsWith('  ')}>{line.trim()}</span>
+						<span class="line" class:indent={line.startsWith('  ')} class:sung={place?.stanza === si && place?.line === li}>{line.trim()}</span>
 					{/each}
 				</p>
 			{/each}
@@ -102,5 +112,8 @@
 	.stanza { margin: 0 0 0.9rem; }
 	.line { display: block; }
 	.line.indent { padding-left: 1.5rem; }
+	.line { border-radius: 4px; transition: background-color 0.2s; }
+	.line.sung { background: var(--hl); color: var(--ink); }
+	@media (prefers-reduced-motion: reduce) { .line { transition: none; } }
 	.more { border: 0; background: none; color: var(--accent); font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; padding: 0.3rem 0; text-decoration: underline; text-underline-offset: 3px; }
 </style>

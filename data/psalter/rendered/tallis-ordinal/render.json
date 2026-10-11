@@ -1,5 +1,7 @@
 {
  "source_sha256": "0e1b3787edda289c9f007cf71fc20679242ad07871697f2d4e18657267b1a01a",
+ "midi_sha256": "ec4381ea999939e97d12e3023c001a2214d94dc0f7f45d09a31160fda347e596",
  "verovio": "6.3.0",
- "tool": "0.1.0"
+ "soundfont": "FluidR3_GM (Church Organ)",
+ "tool": "0.2.0"
 }

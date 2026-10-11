@@ -49,6 +49,9 @@ def cmd_import(tune_id: str, midi_path: str) -> None:
     key = melody.Key.parse(t['key'])
     notes = melody.melody(midi_path, Fraction(t['pickup']), num * 4 // den, (key, t['incipit']))
     melody.check_incipit(notes, key, t['incipit'])
+    # Keep the MIDI: the organ audio is rendered from its four parts.
+    (DATA / 'sources').mkdir(parents=True, exist_ok=True)
+    (DATA / 'sources' / f'{tune_id}.mid').write_bytes(Path(midi_path).read_bytes())
     xml = melody.musicxml(notes, key, num, Fraction(t['pickup']), t['bpm'], t['name'], den)
     out = DATA / 'tunes' / f'{tune_id}.musicxml'
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -60,8 +63,9 @@ def cmd_render(ids: list[str]) -> None:
     all_tunes = tunes()
     for tune_id in ids or list(all_tunes):
         src = DATA / 'tunes' / f'{tune_id}.musicxml'
-        meta = render.render(src, DATA / 'rendered' / tune_id, all_tunes[tune_id], quarters_per_bar(src.read_text(encoding='utf-8')))
-        print(f'{tune_id}: rendered with Verovio {meta["verovio"]}')
+        midi = DATA / 'sources' / f'{tune_id}.mid'
+        meta = render.render(src, midi, DATA / 'rendered' / tune_id, all_tunes[tune_id], quarters_per_bar(src.read_text(encoding='utf-8')))
+        print(f'{tune_id}: rendered with Verovio {meta["verovio"]} and {meta["soundfont"]}')
 
 
 def suggest(midi_path: str, incipit: str, syllables: int = 8) -> dict:

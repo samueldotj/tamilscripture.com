@@ -4,13 +4,19 @@ incipit.svg  the first line on one staff, as the explorer's card shows it
 full.svg     the whole tune, wrapped to a 600 px column
 *.draw.json  the same two drawings reduced to glyphs and paths, for the app
 events.json  every note: when it sounds, its pitch, and where its head is in
-             each SVG as a fraction of the drawing's width and height
-audio.mp3    the melody, synthesised here (an organ-like tone) and encoded by ffmpeg
-render.json  the MusicXML's SHA-256 and the tool versions; entity-ingest refuses
-             a render whose hash no longer matches the MusicXML
+             each SVG as a fraction of the drawing's width and height; and when
+             each line of a stanza starts, for the card to light the line sung
+audio.mp3    one stanza on organ, in four parts: the source MIDI (sources/{id}.mid)
+             played at the tune's tempo on FluidR3_GM's Church Organ by FluidSynth,
+             then encoded by ffmpeg. The card repeats it for every stanza.
+render.json  the SHA-256 of the MusicXML and the MIDI, and the tool versions;
+             entity-ingest refuses a render whose sources have changed
 
-Everything is deterministic: Verovio ids come from a fixed seed, the synthesis
-has no randomness and ffmpeg runs with bitexact flags.
+Everything is deterministic: Verovio ids come from a fixed seed, FluidSynth renders
+the same bytes every time and ffmpeg runs with bitexact flags.
+
+FluidSynth and the SoundFont are found in tools/psalter/.cache/ (README: Setup), or
+through the FLUIDSYNTH and SOUNDFONT environment variables.
 """
 from __future__ import annotations
 
@@ -22,11 +28,17 @@ import tempfile
 import wave
 from pathlib import Path
 
+import os
+
+import mido
 import numpy as np
 import verovio
 
-TOOL_VERSION = '0.1.0'
-RATE = 22050
+from .infer import lines as line_starts
+
+TOOL_VERSION = '0.2.0'
+CACHE = Path(__file__).resolve().parents[2] / '.cache'
+CHURCH_ORGAN = 19  # General MIDI program 20, zero-based
 
 
 def _toolkit(width: int, breaks: str) -> verovio.toolkit:
@@ -179,36 +191,67 @@ def _events(tk: verovio.toolkit, timemap: list[dict], bpm: int) -> list[dict]:
     return [{'id': e['id'], 'on': round(e['q0'] * ms), 'off': round(e['q1'] * ms), 'midi': e['midi']} for e in out]
 
 
-def synth(events: list[dict]) -> np.ndarray:
-    """A soft organ tone per note: a few harmonics, short attack and release."""
-    total = events[-1]['off'] / 1000 + 0.6
-    out = np.zeros(int(total * RATE), dtype=np.float64)
-    harmonics = [(1, 1.0), (2, 0.45), (3, 0.25), (4, 0.12), (5, 0.06)]
-    for e in events:
-        f = 440 * 2 ** ((e['midi'] - 69) / 12)
-        a, b = e['on'] / 1000, e['off'] / 1000
-        n = int((b - a + 0.08) * RATE)
-        t = np.arange(n) / RATE
-        tone = sum(amp * np.sin(2 * np.pi * f * k * t) for k, amp in harmonics)
-        env = np.minimum(1, t / 0.03) * np.clip((b - a + 0.08 - t) / 0.12, 0, 1)
-        start = int(a * RATE)
-        out[start:start + n] += tone * env
-    return out / max(1e-9, np.abs(out).max()) * 0.7
+def _tool(env: str, *candidates: Path) -> Path:
+    if os.environ.get(env):
+        return Path(os.environ[env])
+    for c in candidates:
+        if c.exists():
+            return c
+    raise FileNotFoundError(f'{env} not found: set it or unpack it into {CACHE} (tools/psalter/README.md)')
 
 
-def _mp3(samples: np.ndarray, path: Path) -> None:
+def fluidsynth() -> Path:
+    return _tool('FLUIDSYNTH', *sorted(CACHE.glob('fluidsynth/*/bin/fluidsynth.exe')), *sorted(CACHE.glob('fluidsynth/*/bin/fluidsynth')))
+
+
+def soundfont() -> Path:
+    return _tool('SOUNDFONT', CACHE / 'FluidR3_GM.sf2')
+
+
+def organ_midi(src: Path, bpm: int, dst: Path) -> None:
+    """The source MIDI's notes, all four parts, at `bpm` on the Church Organ. Ticks are
+    kept, so the audio lines up with the notation's timings to the millisecond."""
+    mid = mido.MidiFile(str(src))
+    out = mido.MidiFile(type=1, ticks_per_beat=mid.ticks_per_beat)
+    head = mido.MidiTrack([mido.MetaMessage('set_tempo', tempo=round(60_000_000 / bpm), time=0)])
+    out.tracks.append(head)
+    channels: set[int] = set()
+    for track in mid.tracks[1:]:
+        t, carry = mido.MidiTrack(), 0
+        for m in track:
+            if m.type in ('note_on', 'note_off'):
+                channels.add(m.channel)
+                t.append(m.copy(time=m.time + carry))
+                carry = 0
+            else:
+                carry += m.time
+        out.tracks.append(t)
+    for ch in sorted(channels):
+        head.append(mido.Message('program_change', channel=ch, program=CHURCH_ORGAN, time=0))
+    out.save(str(dst))
+
+
+def organ_mp3(src: Path, bpm: int, path: Path) -> None:
     with tempfile.TemporaryDirectory() as tmp:
-        wav = Path(tmp) / 'tune.wav'
+        midi, wav = Path(tmp) / 'organ.mid', Path(tmp) / 'organ.wav'
+        organ_midi(src, bpm, midi)
+        subprocess.run([str(fluidsynth()), '-ni', '-g', '0.6', '-r', '44100', '-F', str(wav), str(soundfont()), str(midi)],
+                       check=True, capture_output=True)
+        # Even loudness from tune to tune: the peak at -1 dBFS.
+        with wave.open(str(wav)) as w:
+            rate, ch = w.getframerate(), w.getnchannels()
+            a = np.frombuffer(w.readframes(w.getnframes()), dtype='<i2').astype(np.float64)
+        a = a / max(1.0, np.abs(a).max()) * 0.89 * 32767
         with wave.open(str(wav), 'wb') as w:
-            w.setnchannels(1)
+            w.setnchannels(ch)
             w.setsampwidth(2)
-            w.setframerate(RATE)
-            w.writeframes((samples * 32767).astype('<i2').tobytes())
+            w.setframerate(rate)
+            w.writeframes(a.astype('<i2').tobytes())
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(wav), '-map_metadata', '-1', '-fflags', '+bitexact',
-                        '-flags:a', '+bitexact', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '32k', str(path)], check=True)
+                        '-flags:a', '+bitexact', '-ac', '1', '-ar', '44100', '-codec:a', 'libmp3lame', '-b:a', '48k', str(path)], check=True)
 
 
-def render(xml_path: Path, out: Path, tune: dict, beats_per_bar: int) -> dict:
+def render(xml_path: Path, midi_path: Path, out: Path, tune: dict, beats_per_bar: int) -> dict:
     xml = xml_path.read_text(encoding='utf-8')
     out.mkdir(parents=True, exist_ok=True)
 
@@ -232,8 +275,10 @@ def render(xml_path: Path, out: Path, tune: dict, beats_per_bar: int) -> dict:
     (out / 'full.svg').write_text(full_svg, encoding='utf-8', newline='\n')
     for name, svg in (('incipit', inc_svg), ('full', full_svg)):
         (out / f'{name}.draw.json').write_text(json.dumps(drawing(svg), separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
-    (out / 'events.json').write_text(json.dumps({'duration': events[-1]['off'], 'incipit_notes': len(inc_ids), 'notes': notes}, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
-    _mp3(synth(events), out / 'audio.mp3')
-    meta = {'source_sha256': hashlib.sha256(xml_path.read_bytes()).hexdigest(), 'verovio': verovio.toolkit().getVersion().split('[')[0], 'tool': TOOL_VERSION}
+    lines = [events[i]['on'] for i in line_starts(events, tune['meter'], tune['bpm'])]
+    (out / 'events.json').write_text(json.dumps({'duration': events[-1]['off'], 'incipit_notes': len(inc_ids), 'lines': lines, 'notes': notes}, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
+    organ_mp3(midi_path, tune['bpm'], out / 'audio.mp3')
+    meta = {'source_sha256': hashlib.sha256(xml_path.read_bytes()).hexdigest(), 'midi_sha256': hashlib.sha256(midi_path.read_bytes()).hexdigest(),
+            'verovio': verovio.toolkit().getVersion().split('[')[0], 'soundfont': 'FluidR3_GM (Church Organ)', 'tool': TOOL_VERSION}
     (out / 'render.json').write_text(json.dumps(meta, indent=1) + '\n', encoding='utf-8', newline='\n')
     return meta

@@ -200,6 +200,13 @@ fn load_psalter(dir: &Path, problems: &mut Vec<String>) -> Result<Psalter> {
             Some(_) => problems.push(format!("tune {id}: the MusicXML changed since it was rendered; run `psalter render {id}`")),
             None => problems.push(format!("tune {id}: not rendered; run `psalter render {id}`")),
         }
+        // The organ audio comes from the four-part MIDI in sources/.
+        let midi = fs::read(dir.join("sources").join(format!("{id}.mid"))).ok();
+        match (midi, meta.as_ref().and_then(|m| m["midi_sha256"].as_str())) {
+            (Some(m), Some(h)) if h == sha256_hex(&m) => {}
+            (None, _) => problems.push(format!("tune {id}: no sources/{id}.mid")),
+            _ => problems.push(format!("tune {id}: the MIDI changed since it was rendered; run `psalter render {id}`")),
+        }
         for f in RENDERED {
             if !rendered.join(f).exists() {
                 problems.push(format!("tune {id}: rendered/{id}/{f} is missing"));

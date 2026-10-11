@@ -59,3 +59,37 @@ def line_beats(notes: list[Note], syllables: int) -> int:
         i += 1
     last = notes[i - 1]
     return int(last.onset + last.dur + Fraction(1, 2))
+
+
+METRES = {'C.M.': '8.6.8.6', 'L.M.': '8.8.8.8', 'S.M.': '6.6.8.6', 'C.M.D.': '8.6.8.6.8.6.8.6',
+          'L.M.D.': '8.8.8.8.8.8.8.8', 'S.M.D.': '6.6.8.6.6.6.8.6'}
+
+
+def lines(events: list[dict], meter: str, bpm: int) -> list[int]:
+    """Indices of the notes that start each line of a stanza (events in ms, as render
+    writes them), from the metre's syllables per line, by the same rules as line_beats."""
+    pattern = METRES.get(meter, meter)
+    counts = [int(x) for x in pattern.split('.') if x.isdigit()]
+    if pattern.endswith('.D'):
+        counts *= 2
+    beat = 60000 / bpm
+
+    def short(e: dict, beats: float = 1) -> bool:
+        return e['off'] - e['on'] < beat * beats * 0.99
+
+    starts, i = [], 0
+    for li, count in enumerate(counts):
+        if i >= len(events):
+            break
+        starts.append(i)
+        sung = 0
+        while i < len(events) and sung < count:
+            if short(events[i]):
+                b = int(events[i]['on'] // beat)
+                while i + 1 < len(events) and int(events[i + 1]['on'] // beat) == b and short(events[i + 1]):
+                    i += 1
+            sung += 1
+            i += 1
+        if li + 1 < len(counts) and i < len(events) and short(events[i - 1], 2) and not short(events[i], 2):
+            i += 1
+    return starts

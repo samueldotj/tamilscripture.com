@@ -164,7 +164,7 @@ Tiles move when filters change. Moved tiles slide (FLIP, 320 ms) and newly shown
 | Compact width | Design 1b: title bar with Filters button and badge, theme tiles, grid (`LazyVerticalGrid`, adaptive 44 dp minimum), and the card in a `ModalBottomSheet`. The filter sheet is a second bottom sheet. |
 | Medium and expanded | From 840 dp: filters in a 260 dp pane, the grid, and the card in a 400 dp pane, side by side. |
 | Tune | `PsalmTune.kt`: `PsalmTuneBlock` loads the tune; `PsalmTuneView` draws `incipit.draw.json` or `full.draw.json` on a Compose `Canvas` (the app's way with the website's drawings, as for maps: no SVG library), with the sounding note's marks in the accent colour. It plays `audio.mp3`, cached to a file, with `MediaPlayer` under transient audio focus, so the Bible audio pauses meanwhile. Models: `:core:model` `Psalter.kt`. |
-| Pack | `pack-build` has `StudyPack { id: "study.psalms", prefixes: &["psalms/", "psalter/"], … }` (about 4 MB). Study packs gained a `blob` table for binary files: the tunes' MP3s go there, text stays in `file`. Apps released before this read only `file`, so they are unaffected. |
+| Pack | `pack-build` has `StudyPack { id: "study.psalms", prefixes: &["psalms/", "psalter/"], … }` (about 9 MB). Study packs gained a `blob` table for binary files: the tunes' MP3s go there, text stays in `file`. Apps released before this read only `file`, so they are unaffected. |
 | Tests | `PsalmsScreenshotTest` (compact and wide, light and dark, Tamil and English; the card with Crimond playing and with the full tune) and, in `:core:model`, `PsalmsTest` (parsing and filters) and `PsalterTest` (drawings and timings). |
 
 ## 8. MusicXML: storing, showing and playing tunes
@@ -182,24 +182,25 @@ data/psalter/
     incipit.draw.json,       the same drawings as glyph outlines and placed marks, for the app
     full.draw.json
     events.json              each note: on and off (ms), MIDI pitch, and its id and head
-                             position in each drawing
-    audio.mp3                the melody, 32 kbps mono (about 90–120 KB a tune)
-    render.json              the MusicXML's SHA-256 and the Verovio and tool versions
+                             position in each drawing; when each line of a stanza starts
+    audio.mp3                one stanza on organ in four parts, 48 kbps mono (about 200 KB)
+    render.json              the SHA-256 of the MusicXML and the MIDI, and the tool versions
+  sources/{id}.mid           the public-domain four-part MIDI the tune came from
 ```
 
 ### The psalter tool (`tools/psalter`)
 
 `psalter import ID MIDI` takes the soprano line of a hymn-tune MIDI: the top note of each chord in the treble track, skipping an alto note that moves under a held melody note. Each note lasts until the next one, and the last note fills its bar. The import fails unless the opening matches the tune's Oxford Hymn Tune Index incipit. It writes MusicXML with bars (and a pickup bar), beams within each beat, and accidentals where the key signature or an earlier note in the bar would mislead.
 
-`psalter render` engraves with Verovio 6.3 (Python; LGPL-3.0 applies to the build tool, not to its output). It takes the timings from Verovio's timemap and the notehead positions from the SVG. It post-processes the SVG so the ink is `currentColor` (it follows the theme), and reduces each drawing to `draw.json` for the app. The audio is synthesised by the tool itself (a soft organ tone: five harmonics, short attack and release) and encoded by ffmpeg. The whole render is deterministic: Verovio ids come from a fixed seed and ffmpeg runs bitexact.
+`psalter render` engraves with Verovio 6.3 (Python; LGPL-3.0 applies to the build tool, not to its output). It takes the timings from Verovio's timemap and the notehead positions from the SVG. It post-processes the SVG so the ink is `currentColor` (it follows the theme), and reduces each drawing to `draw.json` for the app. The audio is the source MIDI's four parts, harmony and all, retimed to the tune's tempo on the same tick grid as the notation (so the lit note never drifts), played by FluidSynth on the Church Organ of the FluidR3_GM SoundFont (MIT), peak-normalised and encoded by ffmpeg. `events.json` also records when each line of a stanza starts: the metre gives the syllables per line, and short notes sharing a beat count as one syllable. The whole render is deterministic: Verovio ids come from a fixed seed, FluidSynth renders the same bytes every time, and ffmpeg runs bitexact. (The first version synthesised a melody-only tone itself; it sounded thin, so it was replaced.)
 
 The rendered files are committed, so CI needs neither Verovio nor ffmpeg. `entity-ingest` checks each `render.json` against its MusicXML's hash, fails if a tune changed without being rendered again, and copies the files to `entities/psalter/{id}/`. The index row's tune is the psalm's first pairing; the card lists every paired tune with its name, metre, key, composer and source.
 
 ### Playback
 
-Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaPlayer` in the app. While it plays they light the note whose `on ≤ position < off`. The web adds a class to that note's group in the inline SVG; the app draws that note's marks in the accent colour. The progress bar and the "0:12 / 0:30" time come from the player. This replaces the prototype's Web Audio oscillator: it sounds better, looks the same, and there is no synthesiser to keep in step on two platforms.
+Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaPlayer` in the app. Under "Sing this psalm" the player sings every stanza of the chosen version: after one stanza and a breath of 0.7 s it goes back to the start, and the time and progress cover the whole psalm ("stanza 2 of 5 · 0:38 / 2:32"). While it plays it lights the note whose `on ≤ position < off`, and the words light the line being sung in the current stanza (opening all stanzas once singing reaches the second). The web adds a class to that note's group in the inline SVG; the app draws that note's marks in the accent colour. The progress bar and the "0:12 / 0:30" time come from the player. This replaces the prototype's Web Audio oscillator: it sounds better, looks the same, and there is no synthesiser to keep in step on two platforms.
 
-"Full tune" swaps the first line for the whole melody, and the highlight follows. Later options: play all stanzas (repeat with a stanza counter), tempo (render at two tempos rather than time-stretching), and lyrics under the notes (§9).
+"Full tune" swaps the first line for the whole melody, and the highlight follows. Later options: tempo (render at two tempos rather than time-stretching), a last-stanza "Amen" or rallentando, and lyrics under the notes (§9).
 
 ### Alternatives considered
 
@@ -232,7 +233,7 @@ Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaP
 - Eight CCEH tunes did not match their incipit even when the chord was searched for the incipit note (Bangor, Consolation, Crediton, Need, Newington / St Stephen, St Agnes, St Asaph, St Paul), and Spohr is in 6/8, which `psalter import` does not support. Either the MIDI or the index has an error; each needs checking against a printed psalter.
 - No tune yet for Psalm 124's 10s (Old 124th), the 6.6.6.6.8.8 versions of 136 and 148 (Darwall's 148th), and Psalm 143's 6.6.6.6.D.
 - The 39 tunes added in this step got their key, pickup and first line from `psalter infer`. The pickup heuristic matched five of the six hand-set tunes (Dundee came out as an equally valid pickup of one beat), so look at the bar lines when reviewing.
-- The study.psalms pack is about 4 MB with 45 tunes and the whole text (audio is most of it).
+- The study.psalms pack is about 9 MB with 45 organ tunes and the whole text (audio is most of it); `data/psalter/rendered/` is about 12 MB.
 
 **Steps for adding more (as originally planned)**
 

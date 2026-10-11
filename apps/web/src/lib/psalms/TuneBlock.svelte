@@ -1,18 +1,28 @@
 <script lang="ts">
 	// The psalter tune on the Psalms explorer's card (design: Psalms Explorer v2,
 	// "Psalter tune"; docs/feature_psalms_explorer.md §8). Notation and audio are
-	// rendered at build time by tools/psalter; this plays the MP3 and lights the
-	// note that is sounding, from events.json. "Full tune" swaps the first line
-	// for the whole melody.
+	// rendered at build time by tools/psalter; this plays the MP3 (one stanza on
+	// organ) once for each of `stanzas`, a beat's breath between, and lights the
+	// note that is sounding, from events.json. It reports the stanza and line being
+	// sung through `onplace`. "Full tune" swaps the first line for the whole melody.
 	import { onDestroy, onMount } from 'svelte';
 	import { contentUrl } from '$lib/content/manifest';
 	import type { Tune } from './types';
 
-	let { tune, ta }: { tune: Tune; ta: boolean } = $props();
+	let { tune, ta, stanzas = 1, onplace }: {
+		tune: Tune;
+		ta: boolean;
+		/** How many times to play the tune: the stanzas of the version being sung. */
+		stanzas?: number;
+		/** The stanza and line being sung, or null when stopped or between stanzas. */
+		onplace?: (place: { stanza: number; line: number } | null) => void;
+	} = $props();
 
 	interface Events {
 		duration: number;
 		incipit_notes: number;
+		/** When each line of a stanza starts (ms) */
+		lines: number[];
 		/** [x, y, id]: the notehead as fractions of the drawing, and its SVG id */
 		notes: { on: number; off: number; midi: number; full: [number, number, string]; incipit?: [number, number, string] }[];
 	}
@@ -24,6 +34,7 @@
 	let playing = $state(false);
 	let now = $state(0);
 	let box = $state<HTMLElement>();
+	let stanza = $state(0);
 	let audio: HTMLAudioElement | null = null;
 	let frame = 0;
 	let lit: Element | null = null;
@@ -39,10 +50,15 @@
 	onDestroy(() => {
 		cancelAnimationFrame(frame);
 		audio?.pause();
+		onplace?.(null);
 	});
 
 	const fmt = (ms: number) => `${Math.floor(ms / 60000)}:${String(Math.floor((ms % 60000) / 1000)).padStart(2, '0')}`;
-	const total = $derived(events?.duration ?? 0);
+	const once = $derived(events?.duration ?? 0);
+	/** A breath between stanzas, about a beat, as a congregation takes. */
+	const breath = 700;
+	const total = $derived(stanzas * once + (stanzas - 1) * breath);
+	const elapsed = $derived(stanza * (once + breath) + Math.min(now, once + breath));
 
 	/** Light the note sounding at `ms` in the drawing on show. */
 	function light(ms: number) {
@@ -56,21 +72,41 @@
 		lit = el;
 	}
 
+	let place: string | null = null;
+	function report(ms: number) {
+		const line = events && ms < once ? events.lines.findLastIndex((t) => t <= ms) : -1;
+		const key = line < 0 ? null : `${stanza}.${line}`;
+		if (key === place) return;
+		place = key;
+		onplace?.(line < 0 ? null : { stanza, line });
+	}
+
 	function tick() {
 		if (!audio) return;
 		now = audio.currentTime * 1000;
+		// The stanza is sung; after the breath, the next one starts (the organ's tail is cut).
+		if (now >= once + breath && stanza + 1 < stanzas) {
+			stanza += 1;
+			audio.currentTime = 0;
+			now = 0;
+		}
 		light(now);
+		report(now);
 		if (playing) frame = requestAnimationFrame(tick);
+	}
+
+	function stop() {
+		playing = false;
+		now = 0;
+		stanza = 0;
+		light(-1);
+		report(-1);
 	}
 
 	function toggle() {
 		if (!audio) {
 			audio = new Audio(contentUrl(`${base}/audio.mp3`));
-			audio.addEventListener('ended', () => {
-				playing = false;
-				now = 0;
-				light(-1);
-			});
+			audio.addEventListener('ended', stop);
 			audio.addEventListener('pause', () => (playing = false));
 		}
 		if (playing) {
@@ -109,8 +145,8 @@
 				{/if}
 			</button>
 			<div class="meta">
-				<div class="row"><span>{tune.meter} · {tune.key}</span><span class="time">{fmt(now)} / {fmt(total)}</span></div>
-				<div class="bar"><div style="width: {total ? Math.min(100, (now / total) * 100) : 0}%"></div></div>
+				<div class="row"><span>{tune.meter} · {tune.key}{#if stanzas > 1}{' · '}{ta ? `பத்தி ${stanza + 1}/${stanzas}` : `stanza ${stanza + 1} of ${stanzas}`}{/if}</span><span class="time">{fmt(elapsed)} / {fmt(total)}</span></div>
+				<div class="bar"><div style="width: {total ? Math.min(100, (elapsed / total) * 100) : 0}%"></div></div>
 			</div>
 		</div>
 		<div class="foot">
