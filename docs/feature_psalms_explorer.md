@@ -276,11 +276,88 @@ Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaP
 
 ## 11. Next milestone: Tamil metrical psalms and keerthanai
 
-Not in this milestone. To be designed next:
+Plan, 11 Oct 2026. The goal is "Sing this psalm" in Tamil: Tamil words that can be sung, with the notes, organ and words under the notes the English setting already has.
 
-- Find Tamil metrical psalm translations and *keerthanai* settings of psalms, and confirm their licences (who holds the rights, and whether the text and the music are free to use).
-- Decide on notation. Keerthanai are usually sung to Carnatic ragas and talas and are not always written in staff notation. Choose between transcribing to MusicXML (same pipeline as §8), sargam notation shown as text, or recorded audio only.
-- Store them alongside the Scottish Psalter: `data/psalter/{collection}/`, tunes in `tunes.toml` and pairings in `pairings.toml`, so the card can offer both an English and a Tamil setting.
+### What exists (research, 11 Oct 2026)
+
+| Source | What it is | Rights | Digital copy |
+|---|---|---|---|
+| *ஞானப்பாட்டுகள்* (Madras Religious Tract and Book Society, American Mission Press, 1861) | Tamil hymns marked L.M., C.M. and so on, with a scripture index. Includes Psalm 100 in L.M. ("விஸ்தார லோக மக்களே"), Psalm 1 and a Psalm 87 hymn | Public domain (1861) | Scan and poor OCR on archive.org (`nanappattukkal00unse`) |
+| *பாமாலை* (Paamaalai), the hymnal in current church use | Each hymn heading gives the English or German first line, a tune name and the metre ("Lobe den Herren, 14.14.4.7.8"; "L.M."). No music printed | Many translations are 19th-century, but the compiled and revised edition's rights are unclear. The archive.org e-book's Public Domain Mark is doubtful | Scan on archive.org (`tamil-christian-ebook-01-pamalai`) |
+| Fabricius, *Hymnologia Germano-Tamulica* (1774; SPCK edition 1872) | 335 Lutheran chorales in Tamil, still sung in the TELC. Chorales, not a psalter | Public domain | HathiTrust (1872) |
+| Philippus de Melho, *Eenige Psalmen* (Colombo, 1755) | Some Genevan psalms in Tamil verse, with staff notation | Public domain | None. Only the print at Cambridge University Library (Rare Books 7837.d.2) |
+| Keerthanai (Vedanayagam Sastriar, H. A. Krishnapillai and others) | Carnatic songs with a raga and tala name. Learned by ear. No source links particular keerthanai to particular psalms | The authors' texts are public domain. Modern collections may not be | archive.org uploads with no stated licence. Popley's *Tune Book to Tamil Christian Lyrics* (1933, 1937; notation not yet checked) |
+
+No complete Tamil metrical psalter is available, in print or online. I found no free MusicXML, MIDI or ABC encoding of any Tamil Christian song.
+
+What matters for the design: Tamil hymnody counts **Western syllables per note**, not Tamil prosody (அசை, சீர்), and names Western tunes. So a Tamil text in C.M. fits Crimond, as an English one does, and the tunes, renders, organ audio, highlighting and full screen are reused unchanged. The Paamaalai preface gives the singing rules:
+- இயேசு, கிறிஸ்து and கிரீடம் are always two syllables, and திரியேக is three.
+- Letters under a slur are sung as one (நித்தியர் is sung நித்யர்).
+
+### Scope: two tracks
+
+**A. Tamil words to the psalter tunes (this milestone).** Metrical Tamil texts set to tunes we already have, or will add to `tunes.toml`, through the same pipeline. The sources above cover only a few psalms, so a full set needs new texts:
+
+1. **Public-domain texts first.** Re-key the psalm hymns of the 1861 *ஞானப்பாட்டுகள்* from the scan (the OCR is too poor to import), each with its source page. Add any Paamaalai psalm hymn whose translator's dates make it public domain, but only after confirming the current edition's publisher and rights.
+2. **New Tamil metrical versions** of the remaining psalms, written for this project under CC BY 4.0 (as the summaries are), in C.M., L.M. and S.M. so the existing fallbacks fit. This is the bulk of the work, and it needs a Tamil writer and reviewer, not a script. Start with the psalms the design features (23, 100, 121, 46, 8, 51) and the most sung (1, 19, 27, 34, 90, 91, 103, 139, 150).
+
+**B. Keerthanai (later, a separate milestone).** A keerthanai has no fixed Western melody to engrave, and its gamakas and microtones are lost on the organ and in staff notation. When it comes, the plan is recorded audio with the text and its raga and tala shown, plus sargam as text if a source gives it. There is no MusicXML or organ step. This needs either licensed recordings or our own, and a source tying keerthanai to psalms (Popley's tune books are the first to check). Nothing in track A depends on it.
+
+### Data
+
+Each collection becomes a directory with its own text, pairings and a description. The Scottish Psalter moves into this shape, so the loader handles every collection the same way:
+
+```text
+data/psalter/
+  tunes.toml                    shared by every collection (unchanged)
+  scottish-1650/
+    collection.toml             id, title, lang = "en", year, source, licence
+    pairings.toml               moved from data/psalter/pairings.toml
+    psalm-NNN.toml              unchanged
+  tamil/
+    collection.toml             title = "தமிழ்ச் சங்கீதப் பாடல்கள்", lang = "ta", licence per version
+    pairings.toml               version key → tune ids, with its own [fallback]
+    psalm-NNN.toml              same schema as the Scottish files, plus per version:
+                                  source  ("ஞானப்பாட்டுகள் 1861, p. 214" or "tamilscripture.com")
+                                  licence ("public-domain" or "CC-BY-4.0")
+                                  author  (translator, where known)
+                                  review  (true until a second Tamil reader has sung it through)
+```
+
+One `tamil` collection with a `source` per version keeps the card simple: one Tamil chip, not one per book. A second Tamil collection directory can be added later if a full public-domain psalter turns up.
+
+### Build (`entity-ingest`)
+
+- **Loading.** `load_psalter` reads every `data/psalter/*/collection.toml` instead of the hard-coded `scottish-1650`. Each `metrical` version in `psalms/{n}.json` gains `collection` and `lang`. The metre check and the fallback are per collection.
+- **Tamil syllables.** `lyrics.rs` gets a `line_ta`. A syllable is a consonant cluster plus its vowel, and a consonant with pulli (்) closes the syllable before it ("கர்-த்-தர்" is sung "கர்த்-தர்", two syllables). Overrides come from `[syllables]` in `tamil/collection.toml`, starting with the Paamaalai rules above. Under the notes, words are hyphenated the way the English ones are.
+- **Review list.** As with the 1650 text, a line whose count does not fit its metre goes on a review list for a reader to check; it does not fail the build.
+- **Fonts.** The web's Tamil fonts are subsets (`scripts/subset-fonts.py`), so the Tamil psalm text must be added to the subset input. A size check catches the growth. The app uses system Tamil fonts and needs no change.
+
+### On the card
+
+- "Sing this psalm" gets a language chip, **English** and **தமிழ்**, when the psalm has both. It defaults to the interface language, and to English when there is no Tamil version.
+- The version and tune chips, stanzas, words under the notes, tempo and full screen work as now. The note under the tune shows the version's source and licence.
+- **Tamil layout.** Tamil syllables are wider than English ones at the same size, and the slot spacing (`spacingLinear` 0.42) was set for English. Each line's words are measured, and a line that would overlap is drawn smaller, on both platforms. If that is common, the alternative is a second, wider render of each tune used by Tamil versions (`full-wide.svg`), which costs more storage. Decide after seeing the first ten psalms.
+- The pack (`study.psalms`) carries the Tamil text alongside the English. It is text only, a few hundred KB at most, and needs no new audio.
+
+### Steps
+
+| Step | Work | Depends on |
+|---|---|---|
+| T1 | Move `scottish-1650` to the collection layout (`collection.toml`, its own `pairings.toml`); the loader reads every collection; `collection`/`lang` in the output. No visible change | — |
+| T2 | `line_ta` with tests (consonant clusters, pulli, grantha letters, the Paamaalai overrides); review list | — |
+| T3 | Re-key the psalm hymns of *ஞானப்பாட்டுகள்* (1861) into `tamil/` with pairings; check Paamaalai's rights and psalm hymns | T1 |
+| T4 | Language chip and Tamil words under the notes, on the web and in the app, with the per-line fit; screenshots; size check | T1, T2, some of T3 |
+| T5 | New CC BY 4.0 Tamil metrical versions, the featured and most-sung psalms first, each read and sung by a second person before `review` is cleared | T2 (for the count) |
+| T6 | Tunes Tamil texts call for that we lack (for example German chorales from Fabricius's tradition), through `psalter import` as in §9 | as needed |
+| K | Keerthanai (track B): sources, recordings and licences | separate milestone |
+
+### Decisions needed
+
+1. Who writes and reviews the new Tamil metrical versions (T5), and is CC BY 4.0 the right licence for them?
+2. Is it worth asking Cambridge University Library for a scan of de Melho (1755), the only Tamil Genevan psalter found?
+3. Who publishes Paamaalai today (CLS or CSI), and may we use its public-domain-era psalm translations?
+4. Should keerthanai remain a separate milestone, or are there recordings the church already has rights to?
 
 ## 12. Open questions
 
