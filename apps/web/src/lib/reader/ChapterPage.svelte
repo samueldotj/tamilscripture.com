@@ -2,6 +2,8 @@
 	import { chrome } from '$lib/chrome.svelte';
 	import { afterNavigate, goto } from '$app/navigation';
 	import Chapter from './Chapter.svelte';
+	import ChapterPreview from './ChapterPreview.svelte';
+	import { tick } from 'svelte';
 	import DualChapter from './DualChapter.svelte';
 	import ActionBar from './ActionBar.svelte';
 	import Picker from './Picker.svelte';
@@ -18,10 +20,10 @@
 	import type { ChapterMentions } from '$lib/entities/types';
 	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findBook, findVersion, verseUrl } from '$lib/content/manifest';
 	import { versesText } from '$lib/content/verses';
-	import { loadXrefs } from '$lib/content/load';
+	import { loadChapter, loadXrefs } from '$lib/content/load';
 	import { bookHeat, bucket } from '$lib/content/heat';
 	import type { ChapterPageData } from '$lib/content/chapter-load';
-	import type { XrefChapter } from '$lib/content/types';
+	import type { ChapterJson, XrefChapter } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
 	import { track } from '$lib/analytics/track';
@@ -652,6 +654,123 @@
 	let sizeOpen = $state(false);
 	const fontSize = $derived(settings.value.fontSize);
 
+	// Continuous scrolling (the app does the same): the previous chapter's last verses
+	// above this one and the next chapter's first below, greyed. Scrolling into them is
+	// slowed; coming to rest well inside one opens it in place, the text staying put.
+	const neighbours = new Map<string, ChapterJson>();
+	const nKey = (v: string, b: string, c: number) => `${v}/${b}/${c}`;
+	let prevChapter = $state<ChapterJson | null>(null);
+	let nextChapter = $state<ChapterJson | null>(null);
+	let prevBox = $state<HTMLElement>();
+	let mainTop = $state<HTMLElement>();
+	let nextTitle = $state<HTMLElement>();
+	/** Where to put the page after a move into a neighbour: that element's top, in px from the viewport's. */
+	let align: { to: 'main' | 'next'; y: number } | null = null;
+	let scrolledByHand = false;
+	$effect(() => {
+		const c = data.chapters[0];
+		const v = primary.code;
+		scrolledByHand = false;
+		neighbours.set(nKey(v, c.book, c.chapter), c);
+		const want = (ref: { book: string; chapter: number } | null, set: (j: ChapterJson | null) => void) => {
+			if (dual || !ref) return set(null);
+			const k = nKey(v, ref.book, ref.chapter);
+			const hit = neighbours.get(k);
+			set(hit ?? null);
+			if (!hit) loadChapter(fetch, v, ref.book, ref.chapter).then((j) => {
+				neighbours.set(k, j);
+				if (data.chapters[0] === c) set(j);
+			}).catch(() => {});
+		};
+		want(c.prev, (j) => (prevChapter = j));
+		want(c.next, (j) => (nextChapter = j));
+	});
+	const neighbourTitle = (j: ChapterJson) => {
+		const b = findBook(j.book);
+		return b ? `${bookNameIn(b, primary)} ${j.chapter}` : `${j.book} ${j.chapter}`;
+	};
+	// The previous chapter's verses arrive after the page is drawn, above it: the page moves
+	// down by their height so the chapter stays where it was (browsers without scroll
+	// anchoring, and any page still at the very top, where anchoring does not apply).
+	let prevPlacedFor = '';
+	$effect(() => {
+		const box = prevBox;
+		const pc = prevChapter;
+		if (!box || !pc) return;
+		const c = data.chapters[0];
+		const key = nKey(primary.code, c.book, c.chapter);
+		if (prevPlacedFor === key) return;
+		prevPlacedFor = key;
+		if (align || data.range) return;
+		const anchors = typeof CSS !== 'undefined' && CSS.supports('overflow-anchor', 'auto');
+		if (!anchors || scrollY < 1) scrollBy(0, box.getBoundingClientRect().height);
+	});
+	function inNext(dy: number) { return dy > 0 && !!nextTitle && nextTitle.getBoundingClientRect().top < innerHeight; }
+	function inPrev(dy: number) { return dy < 0 && !!prevBox && !!mainTop && mainTop.getBoundingClientRect().top > 0; }
+	const PASS = 0.6;
+	let touchLastY = 0, touching = false;
+	$effect(() => {
+		const wheel = (e: WheelEvent) => {
+			scrolledByHand = true;
+			settleSoon();
+			if (e.ctrlKey || !(inNext(e.deltaY) || inPrev(e.deltaY))) return;
+			e.preventDefault();
+			scrollBy(0, e.deltaY * PASS);
+		};
+		const start = (e: TouchEvent) => { touching = true; touchLastY = e.touches[0].clientY; };
+		const move = (e: TouchEvent) => {
+			scrolledByHand = true;
+			const y = e.touches[0].clientY;
+			const dy = touchLastY - y;
+			touchLastY = y;
+			if (e.touches.length > 1 || !(inNext(dy) || inPrev(dy))) return;
+			e.preventDefault();
+			scrollBy(0, dy * PASS);
+		};
+		const end = () => { touching = false; settleSoon(); };
+		addEventListener('wheel', wheel, { passive: false });
+		addEventListener('touchstart', start, { passive: true });
+		addEventListener('touchmove', move, { passive: false });
+		addEventListener('touchend', end, { passive: true });
+		return () => {
+			removeEventListener('wheel', wheel);
+			removeEventListener('touchstart', start);
+			removeEventListener('touchmove', move);
+			removeEventListener('touchend', end);
+		};
+	});
+	let settleTimer: ReturnType<typeof setTimeout> | undefined;
+	function settleSoon() { clearTimeout(settleTimer); settleTimer = setTimeout(settle, 180); }
+	/** At rest: the next chapter's title above the middle (or the page's end reached), or this chapter's top below it (or the page's top), opens that one: about a second of slowed scrolling. One line both ways, so a chapter just opened never sits where it would open the other again. */
+	function settle() {
+		if (touching || !scrolledByHand || align) return;
+		if (nextTitle && navUrl(next)) {
+			const t = nextTitle.getBoundingClientRect().top;
+			const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 2;
+			if (t < innerHeight / 2 || (atEnd && t < innerHeight)) return continueInto(true, t);
+		}
+		if (prevBox && mainTop && navUrl(prev)) {
+			const t = mainTop.getBoundingClientRect().top;
+			if (t > innerHeight / 2 || (scrollY < 1 && t > 0)) continueInto(false, t);
+		}
+	}
+	function continueInto(forward: boolean, y: number) {
+		const url = navUrl(forward ? next : prev);
+		if (!url) return;
+		align = { to: forward ? 'main' : 'next', y };
+		goto(url, { noScroll: true, keepFocus: true });
+	}
+
+	afterNavigate(async () => {
+		if (align) {
+			const a = align;
+			await tick();
+			const el = a.to === 'main' ? mainTop : nextTitle;
+			if (el) scrollBy(0, el.getBoundingClientRect().top - a.y);
+			align = null;
+		}
+	});
+
 	afterNavigate(() => {
 		sizeOpen = false;
 		if (!data.range) return;
@@ -694,7 +813,7 @@
 	}
 </script>
 
-<svelte:window onkeydown={onKey} onscroll={onScrollProgress} onwheel={markHandScroll} ontouchmove={markHandScroll} />
+<svelte:window onkeydown={onKey} onscroll={() => { onScrollProgress(); if (scrolledByHand) settleSoon(); }} onwheel={markHandScroll} ontouchmove={markHandScroll} />
 <svelte:document onselectionchange={onSelectionChange} onpointerdowncapture={onPointerDown} />
 
 <svelte:head>
@@ -766,7 +885,10 @@
 		</div>
 
 		<div class="measure" class:with-margin={!dual && !!sidenotes} bind:this={measure}>
-			<nav class="crumbs" aria-label="Breadcrumb">
+			{#if prevChapter && !dual}
+				<div bind:this={prevBox}><ChapterPreview chapter={prevChapter} part="end" title={neighbourTitle(prevChapter)} lang={primary.lang} /></div>
+			{/if}
+			<nav class="crumbs" aria-label="Breadcrumb" bind:this={mainTop}>
 				<a href="/">Bible</a>
 				<span aria-hidden="true">›</span>
 				<span>{testamentName}</span>
@@ -813,6 +935,9 @@
 				<Chapter chapter={data.chapters[0]} lang={primary.lang} selected={textSel ? new Set() : selected} onselect={toggle} {xrefs} onxref={openXref} versionPath={primary.code.toLowerCase()} highlights={highlightMap} noted={notedSet} onnote={(id) => openNote(id)} heat={heatOverlay} names={nameMap} onname={pickName} {marks} {sidenotes} onopennote={openNoteFor} speaking={speakingId} onplay={timed ? playFromId : undefined} after={cmOn && cmSourceInfo && cmChapter && CmViews ? cmAfterBlock : undefined} />
 			{:else}
 				<DualChapter chapters={data.chapters} versions={data.versions} {selected} onselect={toggle} />
+			{/if}
+			{#if nextChapter && !dual}
+				<ChapterPreview chapter={nextChapter} part="start" title={neighbourTitle(nextChapter)} lang={primary.lang} bind:titleEl={nextTitle} />
 			{/if}
 
 			<nav class="pager" aria-label={isTamil ? 'அதிகாரங்கள்' : 'Chapters'}>
