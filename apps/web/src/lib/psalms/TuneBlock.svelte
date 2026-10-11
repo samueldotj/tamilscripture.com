@@ -8,7 +8,8 @@
 	// through `onplace`. "Full tune" swaps the first line for the whole melody;
 	// "Full screen" shows the whole tune and its words as large as the screen allows,
 	// for singing from, and keeps the screen awake meanwhile. A tap on a note or a word
-	// sings from there; the timeline can be dragged, or stepped with the arrow keys.
+	// sings from there; the timeline can be dragged, or stepped with the arrow keys. Play
+	// opens full screen; leaving it carries on playing on the card.
 	import { onDestroy, onMount } from 'svelte';
 	import { contentUrl } from '$lib/content/manifest';
 	import { stanzaOnNotes } from './lyrics';
@@ -249,8 +250,14 @@
 	}
 
 	function toggle() {
-		if (playing) audio?.pause();
-		else play();
+		if (playing) {
+			audio?.pause();
+		} else {
+			// Singing from the tune: play opens full screen (playing first, while the click
+			// still counts as a gesture for the audio).
+			play();
+			if (!big && svgs) enterBig();
+		}
 	}
 
 	/** Go to `ms` of the whole psalm in the audio's own clock (stanzas a breath apart). */
