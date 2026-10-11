@@ -119,6 +119,19 @@
 	</section>
 {/snippet}
 
+{#snippet themeTiles()}
+	<div class="themes">
+		{#each index.themes as t (t.id)}
+			{@const on = sel.themes.includes(t.id)}
+			{@const [a, b] = two(t.ta, t.en)}
+			<button type="button" class="theme" class:on class:dim={sel.themes.length && !on} aria-pressed={on} style="--tc: {t.color}" onclick={() => set({ ...sel, themes: toggled(sel.themes, t.id) })}>
+				<span class="a" lang={ta ? 'ta' : 'en'}>{a}</span>
+				<span class="b">{b} · {themeCounts.get(t.id)}</span>
+			</button>
+		{/each}
+	</div>
+{/snippet}
+
 {#snippet authorRow()}
 	<section>
 		{@render heading('ஆசிரியர்', 'Author')}
@@ -142,11 +155,11 @@
 	</aside>
 
 	<div class="main">
-		<div class="wide-only stack">
+		<div class="wide-only mid-only stack">
 			{@render authorRow()}
 		</div>
 
-		<section>
+		<section class="themes-mid">
 			<div class="h-row">
 				<h2><span lang={ta ? 'ta' : 'en'}>{ta ? 'கருப்பொருள்கள்' : 'Themes'}</span><span class="sub" lang={ta ? 'en' : 'ta'}>{ta ? 'Themes' : 'கருப்பொருள்கள்'}</span></h2>
 				<button type="button" class="filters narrow-only" aria-label={ta ? 'வடிகட்டிகள்' : 'Filters'} onclick={() => sheet?.showModal()}>
@@ -155,16 +168,7 @@
 					{#if count(sel) - sel.themes.length}<span class="badge">{count(sel) - sel.themes.length}</span>{/if}
 				</button>
 			</div>
-			<div class="themes">
-				{#each index.themes as t (t.id)}
-					{@const on = sel.themes.includes(t.id)}
-					{@const [a, b] = two(t.ta, t.en)}
-					<button type="button" class="theme" class:on class:dim={sel.themes.length && !on} aria-pressed={on} style="--tc: {t.color}" onclick={() => set({ ...sel, themes: toggled(sel.themes, t.id) })}>
-						<span class="a" lang={ta ? 'ta' : 'en'}>{a}</span>
-						<span class="b">{b} · {themeCounts.get(t.id)}</span>
-					</button>
-				{/each}
-			</div>
+			{@render themeTiles()}
 		</section>
 
 		<section>
@@ -192,6 +196,19 @@
 			{/key}
 		</div>
 	</div>
+
+	<!-- Large screens: author and themes in a column of their own, right of the grid. -->
+	<aside class="right large-only">
+		<div class="stack">
+			{@render authorRow()}
+		</div>
+		<section>
+			<div class="h-row">
+				<h2><span lang={ta ? 'ta' : 'en'}>{ta ? 'கருப்பொருள்கள்' : 'Themes'}</span><span class="sub" lang={ta ? 'en' : 'ta'}>{ta ? 'Themes' : 'கருப்பொருள்கள்'}</span></h2>
+			</div>
+			{@render themeTiles()}
+		</section>
+	</aside>
 </div>
 
 <dialog bind:this={sheet} class="sheet" aria-label={ta ? 'வடிகட்டிகள்' : 'Filters'} onclick={(e) => { if (e.target === sheet) sheet?.close(); }}>
@@ -278,6 +295,15 @@
 	.primary { width: 100%; min-height: 48px; border: var(--bw) solid var(--accent); border-radius: 12px; background: var(--accent); color: var(--on-accent); font: inherit; font-weight: 600; font-size: 0.98rem; cursor: pointer; font-variant-numeric: tabular-nums; }
 
 	.narrow-only { display: none; }
+	.large-only { display: none; }
+	/* Large screens: genre left, the grid and card in a 74rem middle, author and themes right. */
+	@media (min-width: 100rem) {
+		.layout { grid-template-columns: minmax(14rem, 16rem) minmax(0, 74rem) minmax(16rem, 20rem); justify-content: space-between; }
+		.large-only { display: flex; }
+		.mid-only, .themes-mid { display: none; }
+		.right { position: sticky; top: calc(var(--header-h) + 1rem); max-height: calc(100vh - var(--header-h) - 2rem); overflow: auto; flex-direction: column; gap: 2rem; padding-right: 0.25rem; }
+		.right .themes { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+	}
 	@media (max-width: 52rem) {
 		.layout { grid-template-columns: minmax(0, 1fr); }
 		.wide-only { display: none; }
