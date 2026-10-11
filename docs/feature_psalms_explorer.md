@@ -1,6 +1,6 @@
 # Feature design: Psalms explorer
 
-Status: built 10 Oct 2026 without tunes (§10 steps 2–4): the website's `/psalms` and the app's Study → Psalms. Tunes (steps 6–7) are not built yet. Comes from Claude Design handoff "Tamil Scripture Psalms Explorer" (`Psalms Explorer v2.dc.html` for desktop web, `Psalms Mobile Screen.dc.html` for mobile web and the app). The Android app (`tamilscripture.app`) builds the same feature from the same data (§7).
+Status: built 10 Oct 2026 (§10 steps 2–4 and 6): the website's `/psalms` and the app's Study → Psalms, with six Scottish Psalter tunes. The rest of the Scottish Psalter (step 7) and the summaries (step 5) are not done yet. Comes from Claude Design handoff "Tamil Scripture Psalms Explorer" (`Psalms Explorer v2.dc.html` for desktop web, `Psalms Mobile Screen.dc.html` for mobile web and the app). The Android app (`tamilscripture.app`) builds the same feature from the same data (§7).
 
 A reader explores the 150 psalms by theme, genre and author. A grid shows every psalm as a numbered tile with a coloured bar for its theme. Filters narrow the grid. Tapping a number opens a card with the psalm's title, theme, genres and author, a short summary, a key verse in Tamil and English, and, where one is set, a psalter tune shown as notation that can be played. From the card the reader opens the full psalm in the reader or shares the key verse.
 
@@ -147,7 +147,7 @@ Tiles move when filters change. Moved tiles slide (FLIP, 320 ms) and newly shown
 |---|---|
 | Route | `apps/web/src/routes/psalms/+page.ts` loads `psalms/index.json` (prerendered; `/psalms` is in the sitemap). `+page.svelte` lays out the panels. |
 | Pure logic | `lib/psalms/filter.ts`: `matcher`, `toggled`, `toQuery`/`fromQuery`. No Svelte. The web app has no unit-test runner, so the same rules are tested in the app (`PsalmsTest`, against a copy of the built `index.json`). |
-| Components | `routes/psalms/+page.svelte` (panels as snippets shared by the side panel and the phone's filter `<dialog>`, the grid with `animate:flip` and `in:scale`) and `lib/psalms/PsalmCard.svelte`. `TuneBlock.svelte` comes with step 6. |
+| Components | `routes/psalms/+page.svelte` (panels as snippets shared by the side panel and the phone's filter `<dialog>`, the grid with `animate:flip` and `in:scale`) and `lib/psalms/PsalmCard.svelte`, which loads `lib/psalms/TuneBlock.svelte` only for a psalm with a tune. |
 | Key verse | The card fetches the chapter JSON the reader already uses, for the reader's Tamil and English versions, and slices out the key verse. These files are cached and usually warm. |
 | Share | Links to the key verse's single-verse page (`/irvtam/psalms/23.1`), which holds the share image sheet. In the app it opens the reader with the key verse selected, where Share is in the action bar. |
 | Colours | The design's hex values map to theme tokens (`--accent`, `--surface-2`, …), so the page follows the dark theme. The eight theme colours get dark-theme variants checked for contrast against `--surface`. |
@@ -159,13 +159,13 @@ Tiles move when filters change. Moved tiles slide (FLIP, 320 ms) and newly shown
 | Part | Where |
 |---|---|
 | Module | `:feature:study`, `PsalmsScreen.kt` (`PsalmsScreen` loads; `PsalmsExplorer` and `PsalmCardView` draw, so screenshot tests pass fixtures). The Study hub's Psalm explorer card opens it; `/psalms` deep links open it. Models and the filter are in `:core:model` `Psalms.kt`. |
-| Data | `PsalmsRepository` reads `entities/psalms/index.json` and `{n}.json` through `ContentSource` (pack, then cache, then network). Models use kotlinx.serialization, mirroring `types.ts`. |
+| Data | `StudyRepository.psalmsIndex()` and `psalmCard(n)` read `entities/psalms/index.json` and `{n}.json` from the `study.psalms` pack, then the cache, then the website. `StudyRepository.bytes()` does the same for a tune's MP3 (the pack's `blob` table). Models use kotlinx.serialization, mirroring `types.ts`. |
 | Logic | `PsalmSelection.matcher` mirrors `filter.ts`. |
 | Compact width | Design 1b: title bar with Filters button and badge, theme tiles, grid (`LazyVerticalGrid`, adaptive 44 dp minimum), and the card in a `ModalBottomSheet`. The filter sheet is a second bottom sheet. |
 | Medium and expanded | From 840 dp: filters in a 260 dp pane, the grid, and the card in a 400 dp pane, side by side. |
-| Tune | `TuneBlock` renders the incipit SVG with AndroidSVG (Apache 2.0) into a `Picture`. It draws the highlight from `events.json` boxes on a Compose `Canvas` overlay and plays `audio.mp3` with a screen-scoped Media3 `ExoPlayer`. Audio focus pauses the Bible audio. |
-| Pack | `pack-build` gains `StudyPack { id: "study.psalms", prefixes: &["psalms/", "psalter/"], … }`. It is listed in Downloads under Study. |
-| Tests | `PsalmsScreenshotTest` (compact and wide, light and dark, Tamil and English) and `PsalmsTest` (parsing and filters). |
+| Tune | `PsalmTune.kt`: `PsalmTuneBlock` loads the tune; `PsalmTuneView` draws `incipit.draw.json` or `full.draw.json` on a Compose `Canvas` (the app's way with the website's drawings, as for maps: no SVG library), with the sounding note's marks in the accent colour. It plays `audio.mp3`, cached to a file, with `MediaPlayer` under transient audio focus, so the Bible audio pauses meanwhile. Models: `:core:model` `Psalter.kt`. |
+| Pack | `pack-build` has `StudyPack { id: "study.psalms", prefixes: &["psalms/", "psalter/"], … }` (about 560 KB). Study packs gained a `blob` table for binary files: the tunes' MP3s go there, text stays in `file`. Apps released before this read only `file`, so they are unaffected. |
+| Tests | `PsalmsScreenshotTest` (compact and wide, light and dark, Tamil and English; the card with Crimond playing and with the full tune) and, in `:core:model`, `PsalmsTest` (parsing and filters) and `PsalterTest` (drawings and timings). |
 
 ## 8. MusicXML: storing, showing and playing tunes
 
@@ -173,26 +173,33 @@ Tiles move when filters change. Moved tiles slide (FLIP, 320 ms) and newly shown
 
 ```text
 data/psalter/
-  tunes.toml                 one [[tune]] per tune: id, name, meter ("C.M." or "8.6.8.6"),
-                             key, composer, year, source, licence, file
-  tunes/{id}.musicxml        uncompressed MusicXML 4.0, melody only, no lyrics or credits,
-                             so diffs are readable
-  scottish-1650/psalm-023.toml   metrical text (§9)
-  pairings.toml              psalm (and version) → ranked tune ids
+  tunes.toml                 one [[tune]] per tune: id, name, meter, key, bpm, pickup,
+                             line_beats, composer, source, incipit, encoding, review
+  pairings.toml              psalm → tune ids, the traditional pairing first
+  tunes/{id}.musicxml        MusicXML 4.0, melody only, no lyrics or credits, so diffs read well
+  rendered/{id}/             written by `psalter render`, committed:
+    incipit.svg, full.svg    the first line, and the whole tune wrapped to a 600 px column
+    incipit.draw.json,       the same drawings as glyph outlines and placed marks, for the app
+    full.draw.json
+    events.json              each note: on and off (ms), MIDI pitch, and its id and head
+                             position in each drawing
+    audio.mp3                the melody, 32 kbps mono (about 90–120 KB a tune)
+    render.json              the MusicXML's SHA-256 and the Verovio and tool versions
 ```
 
-### Build (once per tune, cached by file hash)
+### The psalter tool (`tools/psalter`)
 
-1. **Validate** against the MusicXML 4.0 XSD, then **normalise** with music21: one part, explicit key and time signatures, consistent divisions, and a check that the phrase lengths match the declared metre.
-2. **Engrave** with Verovio (Python package; LGPL-3.0 applies only to the build tool, not to our output). This writes `incipit.svg` (the first phrase, matching the design's one-line staff) and `full.svg` (the whole tune at a fixed 600 px width, with `breaks: encoded`). The SVG is post-processed so black becomes `currentColor` (it follows the theme) and every note has a stable `id`.
-3. **Time** with Verovio's `renderToTimemap`, plus each notehead's position in the SVG. The result is `events.json`: `[{ id, on_ms, off_ms, midi, x, y }]`.
-4. **Render audio** with Verovio's MIDI export and FluidSynth using a small permissively licensed SoundFont (organ or piano), encoded to MP3 at 64 kbps mono (~30 KB a verse).
+`psalter import ID MIDI` takes the soprano line of a hymn-tune MIDI: the top note of each chord in the treble track, skipping an alto note that moves under a held melody note. Each note lasts until the next one, and the last note fills its bar. The import fails unless the opening matches the tune's Oxford Hymn Tune Index incipit. It writes MusicXML with bars (and a pickup bar), beams within each beat, and accidentals where the key signature or an earlier note in the bar would mislead.
+
+`psalter render` engraves with Verovio 6.3 (Python; LGPL-3.0 applies to the build tool, not to its output). It takes the timings from Verovio's timemap and the notehead positions from the SVG. It post-processes the SVG so the ink is `currentColor` (it follows the theme), and reduces each drawing to `draw.json` for the app. The audio is synthesised by the tool itself (a soft organ tone: five harmonics, short attack and release) and encoded by ffmpeg. The whole render is deterministic: Verovio ids come from a fixed seed and ffmpeg runs bitexact.
+
+The rendered files are committed, so CI needs neither Verovio nor ffmpeg. `entity-ingest` checks each `render.json` against its MusicXML's hash, fails if a tune changed without being rendered again, and copies the files to `entities/psalter/{id}/`. The index row's tune is the psalm's first pairing; the card lists every paired tune with its name, metre, key, composer and source.
 
 ### Playback
 
-Both platforms play the pre-rendered MP3 with their existing audio stack (`<audio>` on the web, Media3 in the app). They highlight the note whose `on_ms ≤ currentTime < off_ms`: the web toggles a class on the note's SVG id, and the app draws a circle at `(x, y)`. The design's progress bar and "0:12 / 0:31" time come straight from the audio element. This replaces the prototype's Web Audio oscillator: it sounds better, looks the same, and leaves no synthesiser code to keep in step on two platforms.
+Both platforms play the pre-rendered MP3: an `Audio` element on the web, `MediaPlayer` in the app. While it plays they light the note whose `on ≤ position < off`. The web adds a class to that note's group in the inline SVG; the app draws that note's marks in the accent colour. The progress bar and the "0:12 / 0:30" time come from the player. This replaces the prototype's Web Audio oscillator: it sounds better, looks the same, and there is no synthesiser to keep in step on two platforms.
 
-"Show full tune" (below the incipit) expands `full.svg`, with the highlight following along. Later options: play all stanzas (repeat with a stanza counter), tempo (re-render at two tempos rather than time-stretching), and lyrics under the notes (§9).
+"Full tune" swaps the first line for the whole melody, and the highlight follows. Later options: play all stanzas (repeat with a stanza counter), tempo (render at two tempos rather than time-stretching), and lyrics under the notes (§9).
 
 ### Alternatives considered
 
@@ -211,12 +218,12 @@ Both platforms play the pre-rendered MP3 with their existing audio stack (`<audi
 1. **Text.** Choose a transcription of the 1650 text (candidates: Wikisource, CCEL). Record the source and its licence in `data/psalter/scottish-1650/SOURCE.md`, and import with `scripts/import-scottish-psalter.py` into one TOML per psalm: `versions = [{ meter = "C.M.", stanzas = [["line", "line", "line", "line"], …] }]`. Check that every stanza's syllable count matches its metre and list exceptions for review.
 2. **Tune list.** Start from the common tunes of the 1635 psalter and the standard proper tunes (for example Old Hundredth L.M., Old 124th 10.10.10.10.10, Dundee, French, Crimond, St Paul, Martyrdom, Coleshill). About 30–40 tunes cover every psalm, because any common-metre tune fits any common-metre version.
 3. **Melodies to MusicXML.** For each tune, in order of preference:
-   - a public-domain machine-readable source: ABC from the Open Hymnal Project or hymn-tune collections, converted with `abc2xml`
-   - a Mutopia LilyPond file under a free licence, converted with `ly musicxml` and checked by hand
-   - entering it ourselves in MuseScore 4 from a public-domain facsimile, then exporting `.musicxml`
+   - the MIDI from the Christian Classics Ethereal Hymnary (ccel.org/cceh), whose files are public domain ("free to use in any manner"), through `psalter import`. This is how the first six tunes were made.
+   - a Mutopia LilyPond file under a free licence, exported to MIDI
+   - entering it ourselves in MuseScore 4 from a public-domain facsimile and exporting MIDI. This is the route for tunes the CCEH lacks, such as St Mary (Prys 1621).
 
-   Each tune is then validated and normalised as in §8.1. `tunes.toml` records the source, licence and who checked it.
-4. **Pairings.** `pairings.toml` lists traditional associations first (23 → Crimond, 100 → Old Hundredth, 121 → French, 124 → Old 124th, …), then any tune of the right metre. The build rejects a pairing whose metre does not match the version's.
+   `tunes.toml` records the source and the encoding; `review = true` stays until someone has compared the result with a printed psalter.
+4. **Pairings.** `pairings.toml` lists traditional associations first, then any tune of the right metre. The first six are 23 → Crimond, 100 → Old Hundredth, 121 → Dundee (French), 46 → Stroudwater, 8 → Winchester Old and 51 → Coleshill. St Mary, listed first for Psalm 51 in 1650-Psalter resources, has no public-domain encoding yet. Once the metrical text is imported, the build will reject a pairing whose metre does not match the version's.
 5. **Lyrics under the notes (later).** Hyphenate stanza 1 (English hyphenation, then hand fixes in an overrides file) and attach the syllables to the notes in the build's in-memory MusicXML before engraving. The stored MusicXML stays melody-only.
 6. **Showing the text.** The card shows the tune. "Sing this psalm" opens the metrical stanzas next to `full.svg`, with Play.
 
@@ -231,10 +238,9 @@ Both platforms play the pre-rendered MP3 with their existing audio stack (`<audi
 | 3 | Website `/psalms`: panels, grid, card, filter sheet, URL state, links | 2 |
 | 4 | App `:feature:study` Psalms explorer and `study.psalms` pack | 2 |
 | 5 | Titles, summaries and key verses for all 150 (`notes.toml`), drafted then reviewed | — |
-| 6 | MusicXML pipeline (§8) with six Scottish Psalter tunes for the design's psalms: Old Hundredth (100), Crimond (23), Dundee (121), and the traditional Scottish pairings for 46, 8 and 51 in place of the design's hymn tunes, each confirmed from a printed source (such as the tune index of *The Scottish Psalter 1929*) before it is encoded; tune block on both platforms | 3, 4 |
+| 6 | **Done.** MusicXML pipeline (§8) with six Scottish Psalter tunes for the design's psalms: Old Hundredth (100), Crimond (23), Dundee (121), Stroudwater (46), Winchester Old (8) and Coleshill (51), the last three in place of the design's hymn tunes; tune block on both platforms | 3, 4 |
 | 7 | Scottish Psalter text and tunes (§9) | 6 |
 
-Steps 3 and 4 ship without tunes; the tune block appears when step 6 lands.
 
 ## 11. Next milestone: Tamil metrical psalms and keerthanai
 

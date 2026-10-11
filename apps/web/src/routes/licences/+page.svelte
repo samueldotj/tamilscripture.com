@@ -58,6 +58,14 @@
 			The concordance, the Hebrew and Greek words of each verse, their Strong's numbers and lexicon meanings come from TAHOT, TAGNT, TBESH and TBESG by <a href="https://github.com/STEPBible/STEPBible-Data">STEPBible.org</a> (Tyndale House, Cambridge), <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. The source files are not redistributed here, only data derived from them. Tamil meanings arrive as drafts and are corrected through community review.
 		{/if}
 	</p>
+	<h2>{ta ? 'சங்கீதங்களை ஆராயுங்கள்' : 'Psalms explorer'}</h2>
+	<p>
+		{#if ta}
+			<a href="/psalms">சங்கீதங்களின் வகைகள்</a> Sean Finnegan எழுதிய <a href="https://restitutio.org/2024/02/18/all-150-psalms-categorized/">“All 150 Psalms Categorized”</a> (restitutio.org, 2024) கட்டுரையில் உள்ள வகைப்பாட்டைப் பின்பற்றுகின்றன; விளக்கங்கள், கருப்பொருள்கள், சுருக்கங்கள் எங்களுடையவை (CC BY 4.0). ஆசிரியர்கள் எபிரெயத் தலைப்புகளிலிருந்து. சங்கீதப் பண்கள் பொது உரிமையுள்ள ஸ்காட்டிஷ் சங்கீதப் பண்கள்; இசைக்கோப்புகள் <a href="https://www.ccel.org/cceh/">Christian Classics Ethereal Hymnary</a> (பொது உரிமை) தொகுப்பிலிருந்து; இசைக் குறியீடு <a href="https://www.verovio.org">Verovio</a> மூலம் வரையப்பட்டது.
+		{:else}
+			The <a href="/psalms">psalm types</a> follow Sean Finnegan's <a href="https://restitutio.org/2024/02/18/all-150-psalms-categorized/">“All 150 Psalms Categorized”</a> (restitutio.org, 2024); the descriptions, themes and summaries are ours (CC BY 4.0). Authors come from the Hebrew superscriptions. The psalter tunes are public-domain Scottish psalm tunes, encoded from the <a href="https://www.ccel.org/cceh/">Christian Classics Ethereal Hymnary</a> (public domain) and engraved with <a href="https://www.verovio.org">Verovio</a>.
+		{/if}
+	</p>
 </article>
 
 <style>

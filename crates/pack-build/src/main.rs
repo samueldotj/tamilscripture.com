@@ -832,11 +832,13 @@ const STUDY_PACKS: &[StudyPack] = &[
 
 /// A study pack keeps each entities/ file unchanged under its path, so the app reads a
 /// downloaded file exactly as it reads one from the website (`content/{build}/entities/{path}`).
+/// Text goes in `file`, MP3s in `blob`.
 fn build_files(entities: &Path, prefixes: &[&str]) -> Result<(usize, Vec<u8>)> {
     let conn = open()?;
     conn.execute_batch(
         "CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
-         CREATE TABLE file (path TEXT PRIMARY KEY, body TEXT NOT NULL) WITHOUT ROWID;",
+         CREATE TABLE file (path TEXT PRIMARY KEY, body TEXT NOT NULL) WITHOUT ROWID;
+         CREATE TABLE blob (path TEXT PRIMARY KEY, body BLOB NOT NULL) WITHOUT ROWID;",
     )?;
     conn.execute(
         "INSERT INTO meta VALUES ('schema', ?1)",
@@ -858,10 +860,16 @@ fn build_files(entities: &Path, prefixes: &[&str]) -> Result<(usize, Vec<u8>)> {
             .strip_prefix(entities)?
             .to_string_lossy()
             .replace('\\', "/");
-        tx.execute(
-            "INSERT INTO file VALUES (?1, ?2)",
-            params![rel, fs::read_to_string(path)?],
-        )?;
+        // Text files in `file`; binary ones (the psalter tunes' MP3s) in `blob`,
+        // a table older apps never read.
+        if rel.ends_with(".mp3") {
+            tx.execute("INSERT INTO blob VALUES (?1, ?2)", params![rel, fs::read(path)?])?;
+        } else {
+            tx.execute(
+                "INSERT INTO file VALUES (?1, ?2)",
+                params![rel, fs::read_to_string(path)?],
+            )?;
+        }
     }
     tx.commit()?;
     Ok((paths.len(), finish(conn)?))

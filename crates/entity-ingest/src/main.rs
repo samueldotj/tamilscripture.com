@@ -50,8 +50,9 @@ use std::path::{Path, PathBuf};
 struct Args {
     books: PathBuf,
     entities: PathBuf,
-    /// Psalms explorer data (docs/feature_psalms_explorer.md).
+    /// Psalms explorer data and psalter tunes (docs/feature_psalms_explorer.md).
     psalms: PathBuf,
+    psalter: PathBuf,
     content: PathBuf,
     /// STEPBible tagged texts and lexicons, fetched by scripts/fetch-stepbible.mjs.
     stepbible: PathBuf,
@@ -75,6 +76,7 @@ fn parse_args() -> Result<Args> {
         books: PathBuf::from("data/books.toml"),
         entities: PathBuf::from("data/entities"),
         psalms: PathBuf::from("data/psalms"),
+        psalter: PathBuf::from("data/psalter"),
         content: PathBuf::from("apps/web/static/content"),
         stepbible: PathBuf::from("data/cache/stepbible"),
         draft_names: false,
@@ -90,6 +92,7 @@ fn parse_args() -> Result<Args> {
             "--books" => a.books = it.next().context("--books needs a path")?.into(),
             "--entities" => a.entities = it.next().context("--entities needs a path")?.into(),
             "--psalms" => a.psalms = it.next().context("--psalms needs a path")?.into(),
+            "--psalter" => a.psalter = it.next().context("--psalter needs a path")?.into(),
             "--content" => a.content = it.next().context("--content needs a path")?.into(),
             "--stepbible" => a.stepbible = it.next().context("--stepbible needs a path")?.into(),
             "--draft-names" => a.draft_names = true,
@@ -101,7 +104,7 @@ fn parse_args() -> Result<Args> {
             }
             "--lenient" => a.strict = false,
             "-h" | "--help" => {
-                eprintln!("entity-ingest --books B --entities DIR [--psalms DIR] --content DIR [--stepbible DIR] [--draft-names [--verse-window] [--redraft] [--fresh] [--names-out F]] [--lenient]");
+                eprintln!("entity-ingest --books B --entities DIR [--psalms DIR] [--psalter DIR] --content DIR [--stepbible DIR] [--draft-names [--verse-window] [--redraft] [--fresh] [--names-out F]] [--lenient]");
                 std::process::exit(0);
             }
             other => bail!("unknown argument {other}"),
@@ -591,7 +594,7 @@ fn main() -> Result<()> {
     let out = build_dir.join("entities");
 
     // ---- the Psalms explorer ----
-    let psalms_review = psalms::build(&args.psalms, &build_dir, &lead_ta, &out)?;
+    let psalms_review = psalms::build(&args.psalms, &args.psalter, &build_dir, &lead_ta, &out)?;
     println!("psalms: 150 psalms, {psalms_review} entries marked for review");
 
     let base = svg::Base {

@@ -1,0 +1,21 @@
+# Which psalter tune the Psalms explorer offers for a psalm (docs/feature_psalms_explorer.md §9).
+# Each psalm lists tune ids from tunes.toml, the traditional Scottish pairing
+# first; the card shows the first. Only Scottish Psalter tunes are used in this
+# milestone.
+#
+#   23   Crimond         the 1650 "The Lord's my shepherd"
+#   100  Old Hundredth   the 1650 L.M. "All people that on earth do dwell"
+#   121  Dundee (French) "I to the hills will lift mine eyes"
+#   46   Stroudwater     usual Scottish tune for "God is our refuge and our strength"
+#   8    Winchester Old  set to "How excellent in all the earth" (Scottish Psalter 1929)
+#   51   Coleshill       a traditional tune for "After thy loving-kindness, Lord";
+#                        St Mary (Prys 1621), the first choice, has no public-domain
+#                        encoding yet
+
+[psalms]
+8 = ["winchester-old"]
+23 = ["crimond"]
+46 = ["stroudwater"]
+51 = ["coleshill"]
+100 = ["old-hundredth"]
+121 = ["dundee"]

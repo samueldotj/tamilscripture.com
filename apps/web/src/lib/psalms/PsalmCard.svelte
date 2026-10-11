@@ -85,6 +85,11 @@
 				<p class="muted" aria-busy="true">…</p>
 			{/if}
 		</figure>
+		{#if card?.tunes.length}
+			{#await import('./TuneBlock.svelte') then { default: TuneBlock }}
+				<TuneBlock tune={card.tunes[0]} {ta} />
+			{/await}
+		{/if}
 		{#if related.length}
 			<div>
 				<span class="kicker">{ta ? `${theme.ta} — மேலும்` : `More on ${theme.en}`}</span>

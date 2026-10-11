@@ -1,0 +1,110 @@
+# Psalter tunes for the Psalms explorer (docs/feature_psalms_explorer.md §8, §9).
+# Each tune is a melody-only MusicXML file in tunes/{id}.musicxml, made by
+# `psalter import` from a public-domain MIDI and checked against the tune's
+# Oxford Hymn Tune Index incipit. `psalter render` writes rendered/{id}/:
+# notation (incipit.svg, full.svg), note timings (events.json) and audio
+# (audio.mp3); entity-ingest copies them into the content build and fails if
+# a tune changed since it was rendered.
+#
+#   meter       the tune's metre (C.M. 8.6.8.6, L.M. 8.8.8.8)
+#   key         tonic and mode; the incipit check counts scale degrees from it
+#   bpm         quarter notes a minute for the audio and the timings
+#   pickup      beats before the first barline
+#   line_beats  beats in the first line, from the start: the card's notation
+#   incipit     Oxford Hymn Tune Index form of the opening (scale degrees)
+#   encoding    where our MusicXML came from: CCEH tune number and file
+#   review      delete once someone has sung or played the tune from the
+#               MusicXML and compared it with a printed psalter
+#
+# Licence: the melodies are public domain; the CCEH states its files are
+# "free to use in any manner". Our MusicXML: CC0.
+
+[[tune]]
+id = "old-hundredth"
+name = "Old Hundredth"
+meter = "L.M."
+key = "G major"
+bpm = 92
+pickup = 0
+line_beats = 8
+composer = "Attributed to Louis Bourgeois"
+source = "Genevan Psalter, 1551"
+incipit = "11765 12333 32143"
+encoding = "CCEH 000006a.mid, soprano line (equal-note form)"
+encoding_url = "https://www.ccel.org/cceh/0000/x000006.htm"
+review = true
+
+[[tune]]
+id = "crimond"
+name = "Crimond"
+meter = "C.M."
+key = "F major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = "Jessie Seymour Irvine"
+source = "The Northern Psalter, 1872"
+incipit = "53425 42171"
+encoding = "CCEH 000341a.mid, soprano line"
+encoding_url = "https://www.ccel.org/cceh/0003/x000341.htm"
+review = true
+
+[[tune]]
+id = "dundee"
+name = "Dundee (French)"
+meter = "C.M."
+key = "E-flat major"
+bpm = 84
+pickup = 0
+line_beats = 16
+composer = "Anonymous"
+source = "Scottish Psalter, 1615"
+incipit = "13451 23432 11715"
+encoding = "CCEH 000439a.mid, soprano line"
+encoding_url = "https://www.ccel.org/cceh/0004/x000439.htm"
+review = true
+
+[[tune]]
+id = "stroudwater"
+name = "Stroudwater"
+meter = "C.M."
+key = "G major"
+bpm = 84
+pickup = 1
+line_beats = 12
+composer = "Anonymous"
+source = "Matthew Wilkins, A Book of Psalmody, c. 1730"
+incipit = "15153 43211 23432"
+encoding = "CCEH 001367a.mid, soprano line"
+encoding_url = "https://www.ccel.org/cceh/0013/x001367.htm"
+review = true
+
+[[tune]]
+id = "winchester-old"
+name = "Winchester Old"
+meter = "C.M."
+key = "F major"
+bpm = 88
+pickup = 1
+line_beats = 16
+composer = "Anonymous"
+source = "Thomas Este, The Whole Booke of Psalmes, 1592"
+incipit = "13321 44323 5545"
+encoding = "CCEH 000096a.mid, soprano line"
+encoding_url = "https://www.ccel.org/cceh/0000/x000096.htm"
+review = true
+
+[[tune]]
+id = "coleshill"
+name = "Coleshill"
+meter = "C.M."
+key = "A minor"
+bpm = 80
+pickup = 2
+line_beats = 17
+composer = "Anonymous"
+source = "William Barton, Psalms, 1706"
+incipit = "11737 11535 43733"
+encoding = "CCEH 001142a.mid, soprano line"
+encoding_url = "https://www.ccel.org/cceh/0011/x001142.htm"
+review = true

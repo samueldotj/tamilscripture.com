@@ -1,11 +1,13 @@
 //! The Psalms explorer (docs/feature_psalms_explorer.md): validates the
 //! hand-edited `data/psalms/{taxonomy,psalms,notes}.toml` and writes
 //! `entities/psalms/index.json` (grid and filters) and `entities/psalms/{n}.json`
-//! (the card).
+//! (the card). Psalter tunes (`data/psalter/`, rendered by tools/psalter) are
+//! checked against their MusicXML and copied to `entities/psalter/{tune}/`.
 
 use anyhow::{bail, Context, Result};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
+use sha2::{Digest, Sha256};
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
 use std::path::Path;
@@ -104,6 +106,83 @@ struct NoteIn {
     review: bool,
 }
 
+/// One tune of `data/psalter/tunes.toml`; the card shows these fields.
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct Tune {
+    pub id: String,
+    pub name: String,
+    pub meter: String,
+    pub key: String,
+    pub composer: String,
+    pub source: String,
+    #[serde(default, skip_serializing)]
+    pub review: bool,
+}
+
+#[derive(Deserialize)]
+struct TunesFile {
+    tune: Vec<Tune>,
+}
+
+#[derive(Deserialize)]
+struct PairingsFile {
+    psalms: BTreeMap<String, Vec<String>>,
+}
+
+/// The files `psalter render` writes for a tune and the build copies.
+const RENDERED: [&str; 6] = ["incipit.svg", "full.svg", "incipit.draw.json", "full.draw.json", "events.json", "audio.mp3"];
+
+fn sha256_hex(bytes: &[u8]) -> String {
+    Sha256::digest(bytes).iter().map(|b| format!("{b:02x}")).collect()
+}
+
+/// Tunes and pairings from `data/psalter/`, checked: every paired tune exists and
+/// was rendered from its current MusicXML. None when the directory is absent.
+fn load_tunes(dir: &Path, problems: &mut Vec<String>) -> Result<(BTreeMap<String, Tune>, BTreeMap<u32, Vec<String>>)> {
+    if !dir.join("tunes.toml").exists() {
+        return Ok((BTreeMap::new(), BTreeMap::new()));
+    }
+    let tunes: TunesFile = read_toml(&dir.join("tunes.toml"))?;
+    let pairs: PairingsFile = read_toml(&dir.join("pairings.toml"))?;
+    let tunes: BTreeMap<String, Tune> = tunes.tune.into_iter().map(|t| (t.id.clone(), t)).collect();
+    for id in tunes.keys() {
+        let src = dir.join("tunes").join(format!("{id}.musicxml"));
+        let rendered = dir.join("rendered").join(id);
+        let Ok(xml) = fs::read(&src) else {
+            problems.push(format!("tune {id}: no {}", src.display()));
+            continue;
+        };
+        let meta: Option<Value> = fs::read_to_string(rendered.join("render.json")).ok().and_then(|t| serde_json::from_str(&t).ok());
+        match meta.as_ref().and_then(|m| m["source_sha256"].as_str()) {
+            Some(h) if h == sha256_hex(&xml) => {}
+            Some(_) => problems.push(format!("tune {id}: the MusicXML changed since it was rendered; run `psalter render {id}`")),
+            None => problems.push(format!("tune {id}: not rendered; run `psalter render {id}`")),
+        }
+        for f in RENDERED {
+            if !rendered.join(f).exists() {
+                problems.push(format!("tune {id}: rendered/{id}/{f} is missing"));
+            }
+        }
+    }
+    let mut pairings = BTreeMap::new();
+    for (k, ids) in pairs.psalms {
+        let n = match k.parse::<u32>() {
+            Ok(n) if (1..=150).contains(&n) => n,
+            _ => {
+                problems.push(format!("pairings.toml: {k} is not a psalm number"));
+                continue;
+            }
+        };
+        for id in &ids {
+            if !tunes.contains_key(id) {
+                problems.push(format!("pairings.toml: psalm {n}: unknown tune {id}"));
+            }
+        }
+        pairings.insert(n, ids);
+    }
+    Ok((tunes, pairings))
+}
+
 /// `psalms/{n}.json`.
 #[derive(Serialize)]
 struct Card<'a> {
@@ -112,7 +191,7 @@ struct Card<'a> {
     summary_en: Option<&'a str>,
     tags: &'a [String],
     nt: Option<&'a NtAttribution>,
-    tunes: Vec<Value>,
+    tunes: Vec<&'a Tune>,
 }
 
 fn read_toml<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T> {
@@ -154,9 +233,9 @@ fn parse_key(key: &str) -> Option<(u32, u32, u32)> {
     Some((ch.parse().ok()?, a, b))
 }
 
-/// Validates the psalms data and writes `{out}/psalms/`. Returns the number of
-/// lines still marked for review.
-pub fn build(dir: &Path, build_dir: &Path, lead_version: &str, out: &Path) -> Result<usize> {
+/// Validates the psalms data and tunes and writes `{out}/psalms/` and
+/// `{out}/psalter/`. Returns the number of entries still marked for review.
+pub fn build(dir: &Path, psalter: &Path, build_dir: &Path, lead_version: &str, out: &Path) -> Result<usize> {
     let mut tax: Taxonomy = read_toml(&dir.join("taxonomy.toml"))?;
     let psalms: PsalmsFile = read_toml(&dir.join("psalms.toml"))?;
     let notes: BTreeMap<String, NoteIn> = read_toml(&dir.join("notes.toml"))?;
@@ -166,6 +245,7 @@ pub fn build(dir: &Path, build_dir: &Path, lead_version: &str, out: &Path) -> Re
     tax.author.sort_by_key(|t| t.order);
 
     let mut problems: Vec<String> = Vec::new();
+    let (tunes, pairings) = load_tunes(psalter, &mut problems)?;
     let themes: BTreeSet<&str> = tax.theme.iter().map(|t| t.id.as_str()).collect();
     let genres: BTreeSet<&str> = tax.genre.iter().map(|t| t.id.as_str()).collect();
     let authors: BTreeSet<&str> = tax.author.iter().map(|t| t.id.as_str()).collect();
@@ -253,7 +333,7 @@ pub fn build(dir: &Path, build_dir: &Path, lead_version: &str, out: &Path) -> Re
                 note.map(|x| x.title_ta.as_str()),
                 note.map(|x| x.title_en.as_str()),
                 note.map(|x| x.key.clone()).unwrap_or_else(|| format!("{n}:1")),
-                Value::Null
+                pairings.get(n).and_then(|ids| ids.first())
             ])
         })
         .collect();
@@ -275,15 +355,24 @@ pub fn build(dir: &Path, build_dir: &Path, lead_version: &str, out: &Path) -> Re
             summary_en: note.and_then(|x| x.summary_en.as_deref()),
             tags: note.map(|x| x.tags.as_slice()).unwrap_or(&empty),
             nt: p.nt.as_ref(),
-            tunes: Vec::new(),
+            tunes: pairings.get(n).into_iter().flatten().filter_map(|id| tunes.get(id)).collect(),
         };
         crate::write_json(&dir_out.join(format!("{n}.json")), &card)?;
+    }
+    for id in tunes.keys() {
+        let from = psalter.join("rendered").join(id);
+        let to = out.join("psalter").join(id);
+        fs::create_dir_all(&to)?;
+        for f in RENDERED {
+            fs::copy(from.join(f), to.join(f)).with_context(|| format!("copying {}", from.join(f).display()))?;
+        }
     }
 
     let review = by_n.values().filter(|p| p.review).count()
         + notes.values().filter(|x| x.review).count()
         + tax.genre.iter().filter(|g| g.review).count()
-        + tax.collection.iter().filter(|c| c.review).count();
+        + tax.collection.iter().filter(|c| c.review).count()
+        + tunes.values().filter(|t| t.review).count();
     Ok(review)
 }
 
@@ -303,11 +392,13 @@ mod tests {
     fn repository_data_is_valid() {
         let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../..");
         let tmp = std::env::temp_dir().join(format!("psalms-test-{}", std::process::id()));
-        build(&root.join("data/psalms"), &tmp, "IRVTAM", &tmp).unwrap();
+        build(&root.join("data/psalms"), &root.join("data/psalter"), &tmp, "IRVTAM", &tmp).unwrap();
         let index: Value =
             serde_json::from_str(&fs::read_to_string(tmp.join("psalms/index.json")).unwrap())
                 .unwrap();
         assert_eq!(index["psalms"].as_array().unwrap().len(), 150);
+        assert_eq!(index["psalms"][22][7], "crimond");
+        assert!(tmp.join("psalter/crimond/audio.mp3").exists());
         fs::remove_dir_all(&tmp).ok();
     }
 }

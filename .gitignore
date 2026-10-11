@@ -176,6 +176,9 @@ audio_bibles/
 tools/audio/.venv/
 __pycache__/
 
+# psalter tool: local virtualenv
+tools/psalter/.venv/
+
 # translate tool: local virtualenv and work folder (batch ids, usage log, raw replies)
 tools/translate/.venv/
 .translate-work/
