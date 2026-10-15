@@ -31,8 +31,11 @@ const READER_LIMIT = 120 * 1024;
 // page, the Google sign-in button and "Share as image" (the picker and its canvas
 // templates ride with the single-verse page; about 12 kB in all), and to 325 kB on
 // 11 Oct 2026 for the Psalms explorer (its page 7 kB, and "Sing this psalm" with the
-// tune player 4 kB, a chunk loaded only when a psalm with metrical text is open).
-const SITE_LIMIT = 325 * 1024;
+// tune player 4 kB, a chunk loaded only when a psalm with metrical text is open),
+// and to 330 kB on 14 Oct 2026 for Spurgeon on the Psalms explorer (the card's overview
+// 0.8 kB, and the exposition, notes and hints below it 1.8 kB, a chunk loaded once
+// the psalm's commentary has arrived).
+const SITE_LIMIT = 330 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 

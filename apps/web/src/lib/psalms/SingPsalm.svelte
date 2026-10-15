@@ -93,7 +93,7 @@
 </section>
 
 <style>
-	.sing { grid-column: 1 / -1; border-top: var(--bw) solid var(--line); padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
+	.sing { border-top: var(--bw) solid var(--line); padding: 1.4rem var(--pad, 1.5rem) 1.6rem; display: flex; flex-direction: column; gap: 1rem; }
 	.head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.6rem 1rem; }
 	h3 { margin: 0; font-size: 1.1rem; font-weight: 600; color: var(--amber); display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; }
 	h3 [lang='ta'] { font-family: var(--tamil); }

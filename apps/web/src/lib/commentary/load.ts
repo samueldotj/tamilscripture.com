@@ -47,6 +47,10 @@ export interface CommentaryParagraph {
 	anchor_ta?: string;
 	/** the verse the paragraph is on, inside a unit covering several */
 	verse?: number;
+	/** Spurgeon: the last verse of a label such as "Verses 1, 2." */
+	verse_end?: number;
+	/** Spurgeon: overview, exposition, notes (Explanatory Notes and Quaint Sayings) or hints (Hints to the Village Preacher) */
+	section?: 'overview' | 'exposition' | 'notes' | 'hints';
 	label?: string;
 	footnote?: boolean;
 	refs?: CommentaryRef[];
