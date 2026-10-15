@@ -23,6 +23,16 @@ ROOT = commentary.WORK / "pilot"
 RATINGS = ROOT / "ratings.jsonl"
 
 
+def use_list(name: str | None) -> None:
+    """A later pilot of its own (`--list spurgeon`): seed/commentary-pilot-{name}.txt,
+    its drafts and ratings under .translate-work/commentary/pilot-{name}/."""
+    global LIST, ROOT, RATINGS
+    if name:
+        LIST = LIST.with_name(f"commentary-pilot-{name}.txt")
+        ROOT = commentary.WORK / f"pilot-{name}"
+        RATINGS = ROOT / "ratings.jsonl"
+
+
 def ids() -> list[str]:
     return [l.split("#")[0].strip() for l in LIST.read_text(encoding="utf-8").splitlines()
             if l.strip() and not l.startswith("#")]

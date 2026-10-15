@@ -50,6 +50,13 @@ SOURCES = {
              "each opening with the words it explains (anchor)",
     "trapp": "John Trapp, A Commentary upon the Old and New Testaments (1647-1656): pithy, witty notes on the "
              "words of each verse, full of proverbs, Latin tags and allusions; footnotes give his Latin and Greek sources",
+    "spurgeon": "C. H. Spurgeon, The Treasury of David (1869-1885), on the Psalms only. Paragraphs marked "
+                "\"section\": \"overview\" (his introduction to the psalm) and \"exposition\" are Spurgeon's own "
+                "preaching prose, warm, vivid and rhetorical (exclamations, questions, appeals to the reader): keep "
+                "that voice and its force in Tamil rather than flattening it into plain statement. \"notes\" are "
+                "quotations from Puritan and other writers on the verse, each in its writer's own style; the writer's "
+                "name is shown separately, so do not add it. \"hints\" are terse sermon outlines for preachers: keep "
+                "them terse, with their numbering (I., 1.) and their clause references (\"first clause\")",
     "ecf": "quotations from the church fathers (1st to 10th century) on each verse, each with the father's name "
            "and the work quoted, in 19th-century and later English translations",
 }
@@ -304,7 +311,7 @@ def user_message(u: dict, paragraphs: list[dict], part: tuple[int, int], names: 
         sections.append(f"This is part {k} of {n} of a long unit; translate only these paragraphs. "
                         "Give the title every time.")
 
-    keep = ("anchor", "verse", "heading", "footnote", "label", "refs")
+    keep = ("anchor", "verse", "heading", "footnote", "label", "section", "refs")
     payload = {
         "id": u["id"],
         "title": u.get("title") or "",

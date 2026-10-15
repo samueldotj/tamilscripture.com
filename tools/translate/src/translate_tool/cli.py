@@ -502,6 +502,7 @@ def cmd_commentary(a) -> int:
 def cmd_commentary_pilot(a) -> int:
     from . import commentary_pilot as cp
 
+    cp.use_list(a.list)
     if a.action == "run":
         if not a.model_given:
             raise SystemExit("run needs --model (the pilot compares two: e.g. claude-sonnet-5 and claude-opus-5-5)")
@@ -691,7 +692,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("action", choices=["status", "show", "run"],
                    help="status: units and drafts per commentary; show: print the requests, no API call; run: translate now")
     p.add_argument("ids", nargs="*", help="unit ids, e.g. henry/JHN.3.1-21")
-    p.add_argument("--source", choices=["geneva", "henry", "calvin", "poole", "trapp", "ecf"])
+    p.add_argument("--source", choices=["geneva", "henry", "calvin", "poole", "trapp", "spurgeon", "ecf"])
     p.add_argument("--limit", type=int)
     p.add_argument("--every", type=int, default=1, help="with --source: take every Nth unit, for a spread")
     p.add_argument("--force", action="store_true", help="redo units that already have a current draft")
@@ -707,11 +708,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--clean-only", action="store_true", help="adopt: leave out drafts the checks still flag")
     p.add_argument("--port", type=int, default=8768, help="review: the page's port")
     p.add_argument("--no-open", action="store_true", help="review: do not open the browser")
+    p.add_argument("--list", help="a later pilot of its own: seed/commentary-pilot-{LIST}.txt (e.g. spurgeon)")
     model_opts(p)
     p.set_defaults(fn=cmd_commentary_pilot)
 
     p = sub.add_parser("commentary-full-run", help="translate whole commentaries: batches, repairs, drafts; resumable")
-    p.add_argument("--source", action="append", choices=["geneva", "henry", "calvin", "poole", "trapp", "ecf"],
+    p.add_argument("--source", action="append", choices=["geneva", "henry", "calvin", "poole", "trapp", "spurgeon", "ecf"],
                    help="a commentary to translate (repeat for several; default all)")
     p.add_argument("--plan", action="store_true", help="count what is left and its cost; no API call")
     p.add_argument("--poll", type=int, default=300, help="seconds between batch checks")

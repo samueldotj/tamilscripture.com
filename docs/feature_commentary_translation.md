@@ -32,6 +32,7 @@ English words, including anchors, from `translate commentary status`:
 | Calvin | 13,724 | 7.10M |
 | Poole | 27,136 | 3.42M |
 | Trapp | 27,595 | 3.47M |
+| Spurgeon, Treasury of David (Psalms) | 2,486 | 2.11M |
 | Early Church Fathers | not yet imported | 13.4M |
 
 The dictionary run cost about $100 per million English words on Claude Sonnet 5 as batches. At that rate the
