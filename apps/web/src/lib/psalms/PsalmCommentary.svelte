@@ -4,6 +4,7 @@
 	// Sayings (quotations from other writers) and its Hints to the Village Preacher, one tab
 	// each. The notes and hints are folded by verse and drawn only when opened: Psalm 119
 	// alone has 170,000 words of them.
+	import { findBook, verseUrl } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import CommentaryText from '$lib/commentary/CommentaryText.svelte';
 	import CommentaryFoot from '$lib/commentary/CommentaryFoot.svelte';
@@ -37,6 +38,13 @@
 	});
 	const overviewUnit = $derived<CommentaryUnit | null>(intro && overview.length ? { ...intro, paragraphs: more ? overview : lead } : null);
 
+	const book = findBook('PSA')!;
+	/** The verse page of a group's verses, in the reader's version; the site-wide hover preview shows the verse. */
+	function href(u: CommentaryUnit): string | null {
+		const [a, b] = unitVerses(u);
+		return a ? verseUrl(settings.value.version, book, n, b > a ? `${a}-${b}` : `${a}`) : null;
+	}
+
 	function label(u: CommentaryUnit): string {
 		const [a, b] = unitVerses(u);
 		if (!a) return ta ? 'முழுச் சங்கீதம்' : 'The whole psalm';
@@ -55,7 +63,7 @@
 				.map((p) => (section === 'exposition' || a === b ? { ...p, verse: undefined } : p));
 			if (!paragraphs.length) return [];
 			const count = section === 'notes' ? new Set(paragraphs.map((p) => p.quote ?? p.id)).size : paragraphs.length;
-			return [{ id: u.id, label: label(u), count, unit: { ...u, paragraphs } }];
+			return [{ id: u.id, label: label(u), href: href(u), count, unit: { ...u, paragraphs } }];
 		});
 	}
 
@@ -100,7 +108,7 @@
 		<div class="list">
 			{#each shown as g (g.id)}
 				<article>
-					<h4 lang={ta ? 'ta' : 'en'}>{g.label}</h4>
+					<h4 lang={ta ? 'ta' : 'en'}>{#if g.href}<a class="vref" href={g.href}>{g.label}</a>{:else}{g.label}{/if}</h4>
 					<CommentaryText unit={g.unit} {lang} versionPath={settings.value.version} />
 				</article>
 			{/each}
@@ -109,7 +117,13 @@
 		<div class="list folded">
 			{#each shown as g (g.id)}
 				<details bind:open={opened[`${current}:${g.id}`]}>
-					<summary><span lang={ta ? 'ta' : 'en'}>{g.label}</span><span class="count" lang={ta ? 'ta' : 'en'}>{countLabel(g.count)}</span></summary>
+					<summary>
+						{#if g.href}
+							<!-- A plain click still opens and closes the row; the link is for the hover preview and a new tab. -->
+							<a class="vref" href={g.href} lang={ta ? 'ta' : 'en'} onclick={(e) => { if (!e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) { e.preventDefault(); opened[`${current}:${g.id}`] = !opened[`${current}:${g.id}`]; } }}>{g.label}</a>
+						{:else}
+							<span lang={ta ? 'ta' : 'en'}>{g.label}</span>
+						{/if}<span class="count" lang={ta ? 'ta' : 'en'}>{countLabel(g.count)}</span></summary>
 					{#if opened[`${current}:${g.id}`]}
 						<div class="body"><CommentaryText unit={g.unit} {lang} versionPath={settings.value.version} /></div>
 					{/if}
@@ -142,6 +156,8 @@
 	summary { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; min-height: 44px; padding: 0.65rem 0.9rem; cursor: pointer; font-weight: 600; font-size: 0.95rem; list-style-position: inside; }
 	summary [lang='ta'] { font-family: var(--tamil); }
 	summary:hover { color: var(--accent); }
+	.vref { color: inherit; text-decoration: underline dotted; text-decoration-color: var(--line-2); text-underline-offset: 0.25em; }
+	.vref:hover { color: var(--accent); text-decoration-color: currentColor; }
 	.count { font-size: 0.8rem; font-weight: 500; color: var(--muted); white-space: nowrap; }
 	details[open] summary { border-bottom: var(--bw) solid var(--line); }
 	.body { padding: 0.9rem 0.9rem 1rem; }
