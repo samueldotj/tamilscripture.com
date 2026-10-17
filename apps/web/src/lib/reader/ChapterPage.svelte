@@ -15,6 +15,7 @@
 	import StudyPanel from './StudyPanel.svelte';
 	import ColumnGrip from './ColumnGrip.svelte';
 	import RailToggle from './RailToggle.svelte';
+	import { trail } from './trail.svelte';
 	import NameCard from './NameCard.svelte';
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
@@ -792,9 +793,19 @@
 	function continueInto(forward: boolean, y: number) {
 		const url = navUrl(forward ? next : prev);
 		if (!url) return;
+		readingOn = true;
 		align = { to: forward ? 'main' : 'next', y };
 		goto(url, { noScroll: true, keepFocus: true });
 	}
+
+	// Each passage visited joins the tab's trail (trail.svelte.ts), walked from the
+	// book rail and the phone chapter menu (TrailNav). Reading on into the next
+	// chapter by scrolling updates the current stop instead of adding one.
+	let readingOn = false;
+	afterNavigate(() => {
+		trail.visit(location.pathname + location.search, `${bookName} ${data.chapter}${rangeLabel ? `:${rangeLabel}` : ''}`, readingOn);
+		readingOn = false;
+	});
 
 	afterNavigate(async () => {
 		if (align) {

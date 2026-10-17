@@ -6,6 +6,7 @@
 	import { chapterUrl, manifest } from '$lib/content/manifest';
 	import type { Book, VersionMeta } from '$lib/content/types';
 	import RailToggle from './RailToggle.svelte';
+	import TrailNav from './TrailNav.svelte';
 
 	let {
 		versions,
@@ -65,6 +66,7 @@
 		<button type="button" role="tab" aria-selected={testament === 'NT'} class:on={testament === 'NT'} onclick={() => (testament = 'NT')}><span lang="ta">புதிய</span> <span class="short">NT</span></button>
 		<RailToggle {lang} {ontoggle} />
 	</div>
+	<TrailNav {lang} />
 	<div class="list" bind:this={list}>
 		{#each books as b (b.code)}
 			{@const current = b.code === book.code}

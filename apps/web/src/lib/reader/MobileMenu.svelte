@@ -8,6 +8,8 @@
 	import type { Book, VersionMeta } from '$lib/content/types';
 	import { settings } from '$lib/settings/store.svelte';
 	import { session } from '$lib/supabase/session.svelte';
+	import TrailNav from './TrailNav.svelte';
+	import { trail } from './trail.svelte';
 
 	let {
 		open = $bindable(false),
@@ -34,7 +36,7 @@
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
-	type Tab = 'book' | 'chapter' | 'version';
+	type Tab = 'book' | 'chapter' | 'version' | 'recent';
 	let tab = $state<Tab>('book');
 	// The book whose chapters the chapter tab shows: the one being read until another is tapped.
 	let picked = $state<Book | undefined>(undefined);
@@ -95,6 +97,11 @@
 			<button type="button" role="tab" aria-selected={tab === 'book'} class:on={tab === 'book'} lang="ta" onclick={() => (tab = 'book')}>{ta ? 'புத்தகம்' : 'Book'}</button>
 			<button type="button" role="tab" aria-selected={tab === 'chapter'} class:on={tab === 'chapter'} disabled={!chaptersBook} onclick={() => (tab = 'chapter')}>{ta ? 'அதிகாரம்' : 'Chapter'}</button>
 			<button type="button" role="tab" aria-selected={tab === 'version'} class:on={tab === 'version'} class="ver" onclick={() => (tab = 'version')}>{primaryMeta.short}</button>
+			{#if trail.stops.length}
+				<button type="button" role="tab" aria-selected={tab === 'recent'} class:on={tab === 'recent'} class="recent" aria-label={ta ? 'சமீபத்தில் வாசித்தவை' : 'Recently read'} title={ta ? 'சமீபத்தில் வாசித்தவை' : 'Recently read'} onclick={() => (tab = 'recent')}>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l3 2" /></svg>
+				</button>
+			{/if}
 		</div>
 
 		<div class="body" bind:this={grid}>
@@ -115,6 +122,8 @@
 						<a class="cell num" class:current={here} aria-current={here ? 'page' : undefined} href={chapterUrl(versionPath, chaptersBook, c)} onclick={close}>{c}</a>
 					{/each}
 				</div>
+			{:else if tab === 'recent'}
+				<TrailNav {lang} mode="list" onpick={close} />
 			{:else}
 				<p class="group">{ta ? 'மொழிபெயர்ப்பு' : 'Version'}</p>
 				<div class="versions">
@@ -172,6 +181,7 @@
 	.tabs { display: flex; gap: 8px; flex: none; }
 	.tabs button { flex: 1; height: 48px; border-radius: 14px; border: var(--bw) solid var(--line-2); background: none; color: var(--ink-2); font-family: var(--tamil); font-size: 1rem; font-weight: 600; cursor: pointer; }
 	.tabs button.ver { font-family: var(--sans); font-size: 0.94rem; font-weight: 700; }
+	.tabs button.recent { flex: none; width: 52px; display: flex; align-items: center; justify-content: center; }
 	.tabs button.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 	.tabs button:disabled { opacity: 0.45; cursor: default; }
 	.body { position: relative; overflow-y: auto; min-height: 0; overscroll-behavior: contain; scrollbar-width: none; display: grid; gap: 8px; align-content: start; }
