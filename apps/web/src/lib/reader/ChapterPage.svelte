@@ -301,6 +301,17 @@
 		...(aidCounts.persons ? [{ id: 'persons' as const, ta: 'நபர்கள்', en: 'Persons', n: aidCounts.persons }] : [])
 	]);
 	let panelTab = $state<TabId>('related');
+	/** Tablets under 960px: the book rail slides in over the text from the floating button. */
+	let railOpen = $state(false);
+	/** Wide screens fold the rail column away (a saved setting); tablets open and close the drawer. */
+	function railToggle(show: boolean) {
+		if (matchMedia('(min-width: 960px)').matches) settings.update({ railCollapsed: !show });
+		else railOpen = show;
+	}
+	afterNavigate(() => (railOpen = false));
+	/** The context panel column, when CSS shows it: desktops, and tablets in the Study Bible format. */
+	let panelEl: HTMLElement | undefined = $state();
+	const panelShown = () => !!panelEl && getComputedStyle(panelEl).display !== 'none';
 	/** What the selected verses name, for the action bar's map and persons icons. */
 	const selectedAids = $derived.by(() => {
 		let places = false, persons = false;
@@ -318,7 +329,7 @@
 	});
 	/** The desktop column shows its tab; narrower screens open the study sheet at just that aid. */
 	function openAid(id: 'map' | 'persons') {
-		if (panelWanted && matchMedia('(min-width: 1180px)').matches) panelTab = id;
+		if (panelWanted && panelShown()) panelTab = id;
 		else {
 			studyOnly = id;
 			sheet = 'study';
@@ -336,7 +347,7 @@
 	);
 	function pickName(hit: NameHit) {
 		picked = hit;
-		if (matchMedia('(min-width: 1180px)').matches) {
+		if (panelShown()) {
 			panelTab = 'entry';
 			nameSheet = false;
 		} else {
@@ -358,7 +369,7 @@
 		if (!OriginalView) OriginalView = (await import('./OriginalWords.svelte')).default;
 	}
 	function openOriginal() {
-		if (panelWanted && matchMedia('(min-width: 1180px)').matches) {
+		if (panelWanted && panelShown()) {
 			panelTab = 'original';
 			return;
 		}
@@ -868,13 +879,14 @@
 <!-- Three columns on wide screens for a single version (design 3A): book rail,
      reading column, context panel. Compare pages use the full width (design 3B). -->
 <!-- svelte-ignore a11y_no_static_element_interactions -- swipe is a shortcut for the prev/next links below -->
-<div class="reader" class:dual ontouchstart={touchStart} ontouchend={touchEnd}>
+<div class="reader" class:dual class:rail-open={railOpen} ontouchstart={touchStart} ontouchend={touchEnd}>
 	{#if !dual}
 		<aside class="rail">
-			<BookRail versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
+			<BookRail versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} ontoggle={railToggle} />
 			<ColumnGrip side="rail" lang={ui} />
 		</aside>
-		<span class="rail-float"><RailToggle lang={ui} floating /></span>
+		<span class="rail-float"><RailToggle lang={ui} floating ontoggle={railToggle} /></span>
+		{#if railOpen}<button type="button" class="rail-scrim" aria-label={isTamil ? 'மூடு' : 'Close'} onclick={() => (railOpen = false)}></button>{/if}
 	{/if}
 
 	<div class="main">
@@ -973,7 +985,7 @@
 	</div>
 
 	{#if !dual}
-		<aside class="panel">
+		<aside class="panel" bind:this={panelEl}>
 			<ColumnGrip side="panel" lang={ui} />
 			<!-- The panel scrolls inside this, so the grip on its edge stays put. -->
 			<div class="panel-scroll">
@@ -1181,7 +1193,7 @@
 	.name-sheet { position: fixed; z-index: 22; left: 50%; bottom: 0; transform: translateX(-50%); width: min(40rem, 100%); max-height: 70vh; overflow-y: auto; background: var(--surface); border: var(--bw) solid var(--line-2); border-bottom: 0; border-radius: 26px 26px 0 0; padding: 0.6rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); box-shadow: var(--shadow-lg); }
 	.sheet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-family: var(--tamil); }
 	.name-sheet .grip { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.6rem; }
-	.thumb, .float-aa, .progress, .fade, .m-chips, .rail-float { display: none; }
+	.thumb, .float-aa, .progress, .fade, .m-chips, .rail-float, .rail-scrim { display: none; }
 	@media (max-width: 720px) {
 		/* Room at the end of the chapter for the thumb bar */
 		.main { padding: 1.25rem 1rem 7.5rem; }
@@ -1205,6 +1217,14 @@
 		.bars span { animation: none; }
 	}
 
+	/* Tablets under 960px: no rail column; the floating button opens the rail as a drawer over the text. */
+	@media (min-width: 721px) and (max-width: 959px) {
+		.reader:not(.dual) .rail-float { display: contents; }
+		.reader:not(.dual) .main { padding-left: 4.5rem; }
+		.reader.rail-open:not(.dual) .rail { display: block; position: fixed; z-index: 31; left: 0; top: var(--header-h, 0px); bottom: 0; width: min(19.5rem, 85vw); box-shadow: var(--shadow-lg); }
+		.reader.rail-open:not(.dual) .rail :global(.grip), .reader.rail-open:not(.dual) .rail-float { display: none; }
+		.reader.rail-open:not(.dual) .rail-scrim { display: block; position: fixed; z-index: 30; inset: 0; border: 0; padding: 0; background: var(--scrim); cursor: default; }
+	}
 	/* Rail joins. The side columns grow with the window up to 312px (rail) and
 	   420px (panel); the clamps keep a 1180-1440px screen from squeezing the
 	   reading column, which stays centred on its 40rem measure. A column dragged
@@ -1228,6 +1248,22 @@
 		:global(html.rail-off) .reader:not(.dual) .measure { --measure: max(40rem, 80vw); }
 		:global(html.rail-off) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr); }
 		:global(html.rail-off) .reader:not(.dual) .rail { display: none; }
+	}
+	/* Tablets in the Study Bible format: the context panel docks on the right as on desktops.
+	   Both side columns run narrower here so the text keeps its room; below 960px there is no
+	   rail and the toolbar's book and chapter menus stand in for it. */
+	@media (min-width: 721px) and (max-width: 1179px) {
+		:global(html.fmt-xref) .reader { --rail-col: min(var(--rail-w, 15rem), 30vw); --panel-col: min(var(--panel-w, 19rem), 34vw); }
+		:global(html.fmt-xref) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr) var(--panel-col); }
+		:global(html.fmt-xref) .reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); background: var(--surface); border-left: var(--bw) solid var(--line); }
+		:global(html.fmt-xref) .reader:not(.dual) .main { max-width: none; padding: 1.5rem 1.5rem 4rem; }
+		:global(html.fmt-xref) .reader:not(.dual) .study-chip, :global(html.fmt-xref) .reader:not(.dual) .cm-inline-wrap { display: none; }
+		:global(html.fmt-xref) .overlays:not(.dual) { display: none; }
+	}
+	@media (min-width: 960px) and (max-width: 1179px) {
+		:global(html.fmt-xref) .reader:not(.dual) { grid-template-columns: var(--rail-col) minmax(0, 1fr) var(--panel-col); }
+		:global(html.fmt-xref.rail-off) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr) var(--panel-col); }
+		:global(html.fmt-xref.rail-off) .reader:not(.dual) .main { padding-left: 4.5rem; }
 	}
 	/* Context panel joins; the floating action bar, the overlay sheet and the Study chip step aside */
 	@media (min-width: 1180px) {

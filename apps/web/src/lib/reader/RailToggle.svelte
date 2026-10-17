@@ -1,16 +1,15 @@
 <script lang="ts">
-	// Hides or shows the wide-screen book rail (rail-off on <html>). It sits in
-	// the rail's own header; while the rail is hidden the reader floats one at
-	// the left edge to bring it back.
-	import { settings } from '$lib/settings/store.svelte';
-
-	let { lang, floating = false }: { lang: 'ta' | 'en'; floating?: boolean } = $props();
+	// Hides or shows the book rail. It sits in the rail's own header; while the
+	// rail is hidden the reader floats one at the left edge to bring it back.
+	// The reader decides what showing means: a column on wide screens, a
+	// drawer over the text on tablets.
+	let { lang, floating = false, ontoggle }: { lang: 'ta' | 'en'; floating?: boolean; ontoggle: (show: boolean) => void } = $props();
 
 	const ta = $derived(lang === 'ta');
 	const label = $derived(floating ? (ta ? 'புத்தகப் பட்டியலைக் காட்டு' : 'Show book list') : ta ? 'புத்தகப் பட்டியலை மறை' : 'Hide book list');
 </script>
 
-<button type="button" class="rail-toggle" class:floating aria-expanded={!floating} aria-label={label} title={label} onclick={() => settings.update({ railCollapsed: !floating })}>
+<button type="button" class="rail-toggle" class:floating aria-expanded={!floating} aria-label={label} title={label} onclick={() => ontoggle(floating)}>
 	<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 		<rect x="3" y="4" width="18" height="16" rx="2.5" /><path d="M9 4v16" />
 		{#if floating}<path d="m13 9.5 2.5 2.5-2.5 2.5" />{:else}<path d="m15.5 9.5-2.5 2.5 2.5 2.5" />{/if}

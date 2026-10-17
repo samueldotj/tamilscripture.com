@@ -133,6 +133,14 @@
 	/* Under the reading column (design 12B): the same offsets as the reader's grid. */
 	@media (min-width: 960px) {
 		.column { left: clamp(16.75rem, 21vw, 19.5rem); }
+		:global(html.rail-off) .column { left: 0; }
+	}
+	/* Tablets in the Study Bible format: narrower columns, the context panel on the right (ChapterPage). */
+	@media (min-width: 721px) and (max-width: 1179px) {
+		:global(html.fmt-xref) .column { right: min(19rem, 34vw); }
+	}
+	@media (min-width: 960px) and (max-width: 1179px) {
+		:global(html.fmt-xref:not(.rail-off)) .column { left: min(15rem, 30vw); }
 	}
 	@media (min-width: 1180px) {
 		.column { right: clamp(21.5rem, 27vw, 26.25rem); }

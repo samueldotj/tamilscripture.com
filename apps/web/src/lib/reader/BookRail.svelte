@@ -11,8 +11,9 @@
 		versions,
 		book,
 		chapter,
-		lang
-	}: { versions: VersionMeta[]; book: Book; chapter?: number; lang: 'ta' | 'en' } = $props();
+		lang,
+		ontoggle
+	}: { versions: VersionMeta[]; book: Book; chapter?: number; lang: 'ta' | 'en'; /** The hide button in the header (RailToggle). */ ontoggle: (show: boolean) => void } = $props();
 
 	const ta = $derived(lang === 'ta');
 	const versionPath = $derived(versions.map((v) => v.code.toLowerCase()).join('+'));
@@ -62,7 +63,7 @@
 	<div class="seg" role="tablist" aria-label={ta ? 'ஏற்பாடு' : 'Testament'}>
 		<button type="button" role="tab" aria-selected={testament === 'OT'} class:on={testament === 'OT'} onclick={() => (testament = 'OT')}><span lang="ta">பழைய</span> <span class="short">OT</span></button>
 		<button type="button" role="tab" aria-selected={testament === 'NT'} class:on={testament === 'NT'} onclick={() => (testament = 'NT')}><span lang="ta">புதிய</span> <span class="short">NT</span></button>
-		<RailToggle {lang} />
+		<RailToggle {lang} {ontoggle} />
 	</div>
 	<div class="list" bind:this={list}>
 		{#each books as b (b.code)}

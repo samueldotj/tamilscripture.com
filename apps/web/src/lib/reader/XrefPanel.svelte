@@ -1,7 +1,9 @@
 <script lang="ts">
 	// Overlay for screens without the desktop column: a right-hand drawer on
-	// tablets and a bottom sheet on phones (design 04). Shows related verses
-	// for the ‡ marker that was pressed, or the Study Bible aids.
+	// tablets and a bottom sheet on phones (design 04). On tablets the drawer
+	// leaves the text tappable, so verses can be picked while it is open.
+	// Shows related verses for the ‡ marker that was pressed, or the Study
+	// Bible aids.
 	import type { Snippet } from 'svelte';
 	import { findBook } from '$lib/content/manifest';
 	import type { XrefTarget } from '$lib/content/types';
@@ -71,7 +73,7 @@
 </div>
 
 <style>
-	.backdrop { position: fixed; inset: 0; z-index: 20; background: transparent; }
+	.backdrop { display: none; position: fixed; inset: 0; z-index: 20; }
 	.xref-panel { position: fixed; z-index: 21; right: 0; top: 0; bottom: 0; width: min(26rem, 100%); overflow-y: auto; background: var(--surface); border-left: var(--bw) solid var(--line); padding: 1rem 1.4rem 2rem; box-shadow: var(--shadow-lg); }
 	/* The map takes the height that is left under the header. */
 	.xref-panel.fill { display: flex; flex-direction: column; overflow: hidden; }
@@ -88,7 +90,7 @@
 	.hint { color: var(--muted); line-height: 1.7; margin: 0.8rem 0 0; font-size: 0.95rem; }
 	.hint[lang='ta'] { font-family: var(--tamil); }
 	@media (max-width: 720px) {
-		.backdrop { background: var(--scrim); }
+		.backdrop { display: block; background: var(--scrim); }
 		.xref-panel { top: 14%; width: 100%; border-left: 0; border-top: var(--bw) solid var(--line-2); border-radius: 26px 26px 0 0; padding-top: 0.75rem; }
 		.grab { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.8rem; }
 	}
