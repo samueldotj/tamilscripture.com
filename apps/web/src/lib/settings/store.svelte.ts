@@ -6,7 +6,7 @@ import { DEFAULT_VERSION } from '$lib/content/manifest';
 
 /** 'xref' is the Study Bible format: one verse per line with study aids (kept as the class name fmt-xref). */
 export type Format = 'reader' | 'standard' | 'xref';
-export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language' | 'names' | 'marginNotes' | 'commentary';
+export type ToggleKey = 'headings' | 'intro' | 'footnotes' | 'xrefs' | 'heat' | 'places' | 'persons' | 'maps' | 'language' | 'names' | 'marginNotes' | 'commentary' | 'railCollapsed';
 export type Theme = 'system' | 'light' | 'dark';
 export type TamilFont = 'mukta' | 'sans' | 'serif' | 'system';
 
@@ -40,6 +40,8 @@ export interface Settings {
 	/** Wide-screen side columns dragged to a width, in px; 0 keeps the automatic width. */
 	railWidth: number;
 	panelWidth: number;
+	/** Wide-screen book rail folded away; the toolbar's book and chapter menus take over. */
+	railCollapsed: boolean;
 }
 
 export const DEFAULTS: Settings = {
@@ -63,7 +65,8 @@ export const DEFAULTS: Settings = {
 	uiLang: 'ta',
 	version: DEFAULT_VERSION.toLowerCase(),
 	railWidth: 0,
-	panelWidth: 0
+	panelWidth: 0,
+	railCollapsed: false
 };
 
 const KEY = 'reader';
@@ -86,6 +89,7 @@ export function htmlClasses(s: Settings): string[] {
 	if (!s.footnotes) c.push('no-footnotes');
 	if (!s.xrefs) c.push('no-xrefs');
 	if (s.names) c.push('nm-on');
+	if (s.railCollapsed) c.push('rail-off');
 	return c;
 }
 
@@ -117,7 +121,7 @@ class SettingsStore {
 		if (!browser) return;
 		const html = document.documentElement;
 		const keep = [...html.classList].filter(
-			(c) => !/^(fmt-|fs-|tf-|ui-|no-headings$|no-intro$|no-footnotes$|no-xrefs$)/.test(c)
+			(c) => !/^(fmt-|fs-|tf-|ui-|no-headings$|no-intro$|no-footnotes$|no-xrefs$|nm-on$|rail-off$)/.test(c)
 		);
 		html.className = [...keep, ...htmlClasses(this.value)].join(' ');
 		if (this.value.theme === 'system') html.removeAttribute('data-theme');

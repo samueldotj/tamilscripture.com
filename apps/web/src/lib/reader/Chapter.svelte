@@ -156,7 +156,7 @@
 
 <style>
 	/* Scripture measure follows the redesign: Tamil 22px/1.9, English 19px/1.8 at the default step. */
-	.chapter { max-width: 40rem; }
+	.chapter { max-width: var(--measure, 40rem); }
 	.frame { container: chapter / inline-size; --mw: clamp(11rem, 28cqi, 16rem); }
 	@container chapter (min-width: 41rem) {
 		.with-notes .chapter { max-width: none; padding-right: var(--mw); }

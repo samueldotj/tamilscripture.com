@@ -66,7 +66,7 @@
 </section>
 
 <style>
-	.preview { max-width: 40rem; color: var(--muted); opacity: 0.55; user-select: none; }
+	.preview { max-width: var(--measure, 40rem); color: var(--muted); opacity: 0.55; user-select: none; }
 	.preview[lang='ta'] { font-family: var(--tamil); font-size: 1.3rem; line-height: 1.9; }
 	.preview[lang='en'] { font-family: var(--en); font-size: 1.12rem; line-height: 1.8; }
 	.preview.start { margin-top: 2.5rem; }

@@ -14,6 +14,7 @@
 	import type { TabId } from './ContextPanel.svelte';
 	import StudyPanel from './StudyPanel.svelte';
 	import ColumnGrip from './ColumnGrip.svelte';
+	import RailToggle from './RailToggle.svelte';
 	import NameCard from './NameCard.svelte';
 	import { nameIndex, type NameHit } from './names';
 	import { loadMapSvg, loadMentions } from '$lib/entities/load';
@@ -873,6 +874,7 @@
 			<BookRail versions={data.versions} book={data.book} chapter={data.chapter} lang={ui} />
 			<ColumnGrip side="rail" lang={ui} />
 		</aside>
+		<span class="rail-float"><RailToggle lang={ui} floating /></span>
 	{/if}
 
 	<div class="main">
@@ -1109,10 +1111,11 @@
 	.reader { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
 	.rail, .panel { display: none; }
 	.main { width: 100%; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
-	.measure { max-width: 40rem; margin: 0 auto; }
+	/* --measure is the text's width (Chapter.svelte reads it); it takes in the rail's width while the rail is hidden. */
+	.measure { --measure: 40rem; max-width: var(--measure); margin: 0 auto; }
 	.reader.dual .measure { max-width: none; }
-	/* Room for margin notes beside the 40rem text (Chapter.svelte decides whether they fit). */
-	.measure.with-margin { max-width: 56rem; }
+	/* Room for margin notes beside the text (Chapter.svelte decides whether they fit). */
+	.measure.with-margin { max-width: calc(var(--measure) + 16rem); }
 
 	.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0 0 1rem; margin: 0 0 1.5rem; border-bottom: var(--bw) solid var(--line); }
 	.toolbar .right { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; }
@@ -1177,7 +1180,7 @@
 	.name-sheet { position: fixed; z-index: 22; left: 50%; bottom: 0; transform: translateX(-50%); width: min(40rem, 100%); max-height: 70vh; overflow-y: auto; background: var(--surface); border: var(--bw) solid var(--line-2); border-bottom: 0; border-radius: 26px 26px 0 0; padding: 0.6rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); box-shadow: var(--shadow-lg); }
 	.sheet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-family: var(--tamil); }
 	.name-sheet .grip { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.6rem; }
-	.thumb, .float-aa, .progress, .fade, .m-chips { display: none; }
+	.thumb, .float-aa, .progress, .fade, .m-chips, .rail-float { display: none; }
 	@media (max-width: 720px) {
 		/* Room at the end of the chapter for the thumb bar */
 		.main { padding: 1.25rem 1rem 7.5rem; }
@@ -1215,11 +1218,19 @@
 		.reader:not(.dual) { grid-template-columns: var(--rail-col) minmax(0, 1fr); }		.reader:not(.dual) .rail { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); }
 		.reader:not(.dual) .main { max-width: none; padding: 1.5rem 2.5rem 4rem; }
 		/* The rail covers book and chapter navigation */
-		.reader:not(.dual) :global(.picker select.nav) { display: none; }
+		:global(html:not(.rail-off)) .reader:not(.dual) :global(.picker select.nav) { display: none; }
+		/* The book rail folds away (rail-off on <html>, RailToggle); the picker's menus come back
+		   and a floating toggle at the left edge brings the rail back. */
+		:global(html.rail-off) .reader:not(.dual) .rail-float { display: contents; }
+		:global(html.rail-off) .reader:not(.dual) .main { padding-left: 4.5rem; }
+		:global(html.rail-off) .reader:not(.dual) .measure { --measure: calc(40rem + var(--rail-col)); }
+		:global(html.rail-off) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr); }
+		:global(html.rail-off) .reader:not(.dual) .rail { display: none; }
 	}
 	/* Context panel joins; the floating action bar, the overlay sheet and the Study chip step aside */
 	@media (min-width: 1180px) {
 		.reader:not(.dual) { grid-template-columns: var(--rail-col) minmax(0, 1fr) var(--panel-col); }
+		:global(html.rail-off) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr) var(--panel-col); }
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); background: var(--surface); border-left: var(--bw) solid var(--line); }		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
 		.reader:not(.dual) .study-chip { display: none; }
 		/* The focus pane in the context panel takes over from the inline comments. */

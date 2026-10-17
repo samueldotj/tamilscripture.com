@@ -5,6 +5,7 @@
 	import { tick } from 'svelte';
 	import { chapterUrl, manifest } from '$lib/content/manifest';
 	import type { Book, VersionMeta } from '$lib/content/types';
+	import RailToggle from './RailToggle.svelte';
 
 	let {
 		versions,
@@ -61,6 +62,7 @@
 	<div class="seg" role="tablist" aria-label={ta ? 'ஏற்பாடு' : 'Testament'}>
 		<button type="button" role="tab" aria-selected={testament === 'OT'} class:on={testament === 'OT'} onclick={() => (testament = 'OT')}><span lang="ta">பழைய</span> <span class="short">OT</span></button>
 		<button type="button" role="tab" aria-selected={testament === 'NT'} class:on={testament === 'NT'} onclick={() => (testament = 'NT')}><span lang="ta">புதிய</span> <span class="short">NT</span></button>
+		<RailToggle {lang} />
 	</div>
 	<div class="list" bind:this={list}>
 		{#each books as b (b.code)}
