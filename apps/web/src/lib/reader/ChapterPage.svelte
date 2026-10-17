@@ -1111,7 +1111,8 @@
 	.reader { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
 	.rail, .panel { display: none; }
 	.main { width: 100%; max-width: 74rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
-	/* --measure is the text's width (Chapter.svelte reads it); it takes in the rail's width while the rail is hidden. */
+	/* --measure is the text's width (Chapter.svelte reads it). On wide screens it grows
+	   so that rail + text + panel cover at least 80% of the window (media queries below). */
 	.measure { --measure: 40rem; max-width: var(--measure); margin: 0 auto; }
 	.reader.dual .measure { max-width: none; }
 	/* Room for margin notes beside the text (Chapter.svelte decides whether they fit). */
@@ -1223,7 +1224,8 @@
 		   and a floating toggle at the left edge brings the rail back. */
 		:global(html.rail-off) .reader:not(.dual) .rail-float { display: contents; }
 		:global(html.rail-off) .reader:not(.dual) .main { padding-left: 4.5rem; }
-		:global(html.rail-off) .reader:not(.dual) .measure { --measure: calc(40rem + var(--rail-col)); }
+		.reader:not(.dual) .measure { --measure: max(40rem, calc(80vw - var(--rail-col))); }
+		:global(html.rail-off) .reader:not(.dual) .measure { --measure: max(40rem, 80vw); }
 		:global(html.rail-off) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr); }
 		:global(html.rail-off) .reader:not(.dual) .rail { display: none; }
 	}
@@ -1231,6 +1233,8 @@
 	@media (min-width: 1180px) {
 		.reader:not(.dual) { grid-template-columns: var(--rail-col) minmax(0, 1fr) var(--panel-col); }
 		:global(html.rail-off) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr) var(--panel-col); }
+		.reader:not(.dual) .measure { --measure: max(40rem, calc(80vw - var(--rail-col) - var(--panel-col))); }
+		:global(html.rail-off) .reader:not(.dual) .measure { --measure: max(40rem, calc(80vw - var(--panel-col))); }
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); background: var(--surface); border-left: var(--bw) solid var(--line); }		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
 		.reader:not(.dual) .study-chip { display: none; }
 		/* The focus pane in the context panel takes over from the inline comments. */
