@@ -139,6 +139,9 @@
 	@media (min-width: 721px) and (max-width: 1179px) {
 		:global(html.fmt-xref) .column { right: min(19rem, 34vw); }
 	}
+	@media (min-width: 721px) {
+		:global(html.panel-off) .column { right: 0; }
+	}
 	@media (min-width: 960px) and (max-width: 1179px) {
 		:global(html.fmt-xref:not(.rail-off)) .column { left: min(15rem, 30vw); }
 	}

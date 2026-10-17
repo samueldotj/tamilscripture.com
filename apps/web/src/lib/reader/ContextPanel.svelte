@@ -29,7 +29,8 @@
 		actions,
 		entry,
 		original,
-		commentary
+		commentary,
+		tools
 	}: {
 		/** verse or range label for the header; empty when nothing is selected */
 		label?: string;
@@ -50,6 +51,8 @@
 		original?: Snippet;
 		/** The commentary on the selection (design 15B), under the விளக்கவுரை tab, while the setting is on. */
 		commentary?: Snippet;
+		/** Buttons at the header's end (the panel's hide button). */
+		tools?: Snippet;
 	} = $props();
 
 	const ta = $derived(lang === 'ta');
@@ -96,6 +99,7 @@
 		{:else}
 			<h2 class="empty" lang={ta ? 'ta' : 'en'}>{ta ? 'வசனம் தேர்வு செய்யவில்லை' : 'No verse selected'}</h2>
 		{/if}
+		{#if tools}{@render tools()}{/if}
 	</header>
 
 	{#if aids.length || entry || commentary || (hasRelated && original)}
@@ -153,7 +157,9 @@
 
 <style>
 	.context { display: flex; flex-direction: column; min-height: 100%; }
-	header { padding: 1.4rem 1.4rem 0.7rem; }
+	header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; padding: 1.4rem 1.4rem 0.7rem; }
+	header:has(> :global(.rail-toggle)) { padding: 0.95rem 0.75rem 0.7rem 1.4rem; }
+	header:has(> :global(.rail-toggle)) h2 { padding-top: 0.45rem; }
 	/* One tab per thing the panel can show, instead of stacking them (8A). */
 	.tabs { display: flex; gap: 0.25rem; padding: 0 1.4rem; border-bottom: var(--bw) solid var(--line); overflow-x: auto; scrollbar-width: none; }
 	.tabs::-webkit-scrollbar { display: none; }

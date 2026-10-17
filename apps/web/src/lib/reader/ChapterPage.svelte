@@ -3,7 +3,7 @@
 	import { afterNavigate, goto } from '$app/navigation';
 	import Chapter from './Chapter.svelte';
 	import ChapterPreview from './ChapterPreview.svelte';
-	import { tick } from 'svelte';
+	import { tick, untrack } from 'svelte';
 	import DualChapter from './DualChapter.svelte';
 	import ActionBar from './ActionBar.svelte';
 	import Picker from './Picker.svelte';
@@ -309,6 +309,9 @@
 		else railOpen = show;
 	}
 	afterNavigate(() => (railOpen = false));
+	function panelToggle(show: boolean) {
+		settings.update({ panelCollapsed: !show });
+	}
 	/** The context panel column, when CSS shows it: desktops, and tablets in the Study Bible format. */
 	let panelEl: HTMLElement | undefined = $state();
 	const panelShown = () => !!panelEl && getComputedStyle(panelEl).display !== 'none';
@@ -358,6 +361,16 @@
 		picked = null;
 		nameSheet = false;
 	}
+
+	// A folded context panel opens again when a verse is picked or its ‡ marker
+	// pressed: that is what the panel is for. Folding it while a verse stays
+	// selected keeps it folded until the selection changes.
+	$effect(() => {
+		if (!selected.size && !xrefOpen) return;
+		untrack(() => {
+			if (settings.value.panelCollapsed) settings.update({ panelCollapsed: false });
+		});
+	});
 
 	// The selected verses' Hebrew or Greek words (concordance C3): a மூலம் tab in
 	// the panel, a sheet on phones. The component is its own chunk, fetched the
@@ -993,12 +1006,14 @@
 				{#snippet study(only)}
 					<StudyPanel {mentions} {mapSvg} {selected} lang={ui} versionPath={primary.code.toLowerCase()} show={aidShow} loading={studyLoading || (only === 'map' && mapLoading)} {only} />
 				{/snippet}
+				{#snippet tools()}<RailToggle side="panel" lang={ui} ontoggle={panelToggle} />{/snippet}
 				{#snippet actions()}
 					<ActionBar variant="panel" onplayfrom={chapterAudio?.timed ? playFromSelection : undefined} {selected} chapter={data.chapters[0]} book={data.book} {versionPath} versionShort={primary.short} lang={ui} signedIn={session.signedIn} {currentColor} excerpt={textSel?.quote ?? ''} communityUsers={selectedUsers} onclear={clearSelection} onhighlight={applyHighlight} onnote={() => openNote()} {bookmarked} onbookmark={flipBookmark} onoriginal={openOriginal} onmap={selectedAids.map ? () => openAid('map') : undefined} onpersons={selectedAids.persons ? () => openAid('persons') : undefined} />
 				{/snippet}
 			</ContextPanel>
 			</div>
 		</aside>
+		<span class="panel-float"><RailToggle side="panel" lang={ui} floating ontoggle={panelToggle} /></span>
 	{/if}
 </div>
 
@@ -1193,7 +1208,7 @@
 	.name-sheet { position: fixed; z-index: 22; left: 50%; bottom: 0; transform: translateX(-50%); width: min(40rem, 100%); max-height: 70vh; overflow-y: auto; background: var(--surface); border: var(--bw) solid var(--line-2); border-bottom: 0; border-radius: 26px 26px 0 0; padding: 0.6rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); box-shadow: var(--shadow-lg); }
 	.sheet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-family: var(--tamil); }
 	.name-sheet .grip { display: block; width: 44px; height: 5px; border-radius: 999px; background: var(--line-2); margin: 0 auto 0.6rem; }
-	.thumb, .float-aa, .progress, .fade, .m-chips, .rail-float, .rail-scrim { display: none; }
+	.thumb, .float-aa, .progress, .fade, .m-chips, .rail-float, .rail-scrim, .panel-float { display: none; }
 	@media (max-width: 720px) {
 		/* Room at the end of the chapter for the thumb bar */
 		.main { padding: 1.25rem 1rem 7.5rem; }
@@ -1257,7 +1272,7 @@
 		:global(html.fmt-xref) .reader:not(.dual) { grid-template-columns: minmax(0, 1fr) var(--panel-col); }
 		:global(html.fmt-xref) .reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); background: var(--surface); border-left: var(--bw) solid var(--line); }
 		:global(html.fmt-xref) .reader:not(.dual) .main { max-width: none; padding: 1.5rem 1.5rem 4rem; }
-		:global(html.fmt-xref) .reader:not(.dual) .study-chip, :global(html.fmt-xref) .reader:not(.dual) .cm-inline-wrap { display: none; }
+		:global(html.fmt-xref) .reader:not(.dual) .study-chip, :global(html.fmt-xref:not(.panel-off)) .reader:not(.dual) .cm-inline-wrap { display: none; }
 		:global(html.fmt-xref) .overlays:not(.dual) { display: none; }
 	}
 	@media (min-width: 960px) and (max-width: 1179px) {
@@ -1274,7 +1289,22 @@
 		.reader:not(.dual) .panel { display: block; position: sticky; top: var(--header-h, 0px); height: calc(100vh - var(--header-h, 0px)); background: var(--surface); border-left: var(--bw) solid var(--line); }		.reader:not(.dual) .main { padding: 2rem 2.5rem 4rem; }
 		.reader:not(.dual) .study-chip { display: none; }
 		/* The focus pane in the context panel takes over from the inline comments. */
-		.reader:not(.dual) .cm-inline-wrap { display: none; }
+		:global(html:not(.panel-off)) .reader:not(.dual) .cm-inline-wrap { display: none; }
 		.overlays:not(.dual) { display: none; }
+	}
+	/* The context panel folds away (panel-off on <html>, RailToggle) wherever it is a column:
+	   its width goes to the text, and a floating button at the right edge brings it back.
+	   Selecting a verse opens it again (ChapterPage script). */
+	@media (min-width: 721px) and (max-width: 1179px) {
+		:global(html.fmt-xref.panel-off) .reader:not(.dual) { --panel-col: 0px; }
+		:global(html.fmt-xref.panel-off) .reader:not(.dual) .panel { display: none; }
+		:global(html.fmt-xref.panel-off) .reader:not(.dual) .panel-float { display: contents; }
+		:global(html.fmt-xref.panel-off) .reader:not(.dual) .main { padding-right: 4.5rem; }
+	}
+	@media (min-width: 1180px) {
+		:global(html.panel-off) .reader:not(.dual) { --panel-col: 0px; }
+		:global(html.panel-off) .reader:not(.dual) .panel { display: none; }
+		:global(html.panel-off) .reader:not(.dual) .panel-float { display: contents; }
+		:global(html.panel-off) .reader:not(.dual) .main { padding-right: 4.5rem; }
 	}
 </style>

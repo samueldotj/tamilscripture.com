@@ -23,6 +23,7 @@
 				if (s.xrefs === false) c.push('no-xrefs');
 				if (s.names === true) c.push('nm-on');
 				if (s.railCollapsed === true) c.push('rail-off');
+				if (s.panelCollapsed === true) c.push('panel-off');
 				document.documentElement.className = c.join(' ');
 				if (s.theme === 'light' || s.theme === 'dark') document.documentElement.setAttribute('data-theme', s.theme);
 				if (s.railWidth > 0) document.documentElement.style.setProperty('--rail-w', s.railWidth + 'px');
