@@ -97,26 +97,21 @@
 	})}</script>`}
 </svelte:head>
 
-<div class="top-row">
-	<div class="start">
-		<section class="hero">
-			<h1 lang="ta">தமிழ் வேதாகமம்</h1>
-			<p class="lede" lang={ta ? 'ta' : 'en'}>{ta ? 'வாசிக்கத் தொடங்க ஒரு புத்தகத்தைத் தேர்வு செய்யுங்கள், அல்லது மேலே யோவான் 3:16 போல தட்டச்சு செய்யுங்கள்.' : 'Pick a book to start reading, or type a reference like John 3:16 above.'}</p>
-		</section>
+<section class="hero">
+	<h1 lang="ta">தமிழ் வேதாகமம்</h1>
+	<p class="lede" lang={ta ? 'ta' : 'en'}>{ta ? 'வாசிக்கத் தொடங்க ஒரு புத்தகத்தைத் தேர்வு செய்யுங்கள், அல்லது மேலே யோவான் 3:16 போல தட்டச்சு செய்யுங்கள்.' : 'Pick a book to start reading, or type a reference like John 3:16 above.'}</p>
+</section>
 
-		{#if resume}
-			<a class="resume" href={resume.href}>
-				<span class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்ந்து வாசிக்க' : 'Continue reading'}</span>
-				<span class="ref">
-					<span lang={resume.versions[0].lang}>{bookNameIn(resume.book, resume.versions[0])} {resume.chapter}</span>
-					<span class="ver">{resume.versions.map((v) => v.short).join(' + ')}</span>
-				</span>
-				<span class="go" aria-hidden="true">→</span>
-			</a>
-		{/if}
-	</div>
-	<div class="daily"><VerseOfDay versionPath={version} {ta} /></div>
-</div>
+{#if resume}
+	<a class="resume" href={resume.href}>
+		<span class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்ந்து வாசிக்க' : 'Continue reading'}</span>
+		<span class="ref">
+			<span lang={resume.versions[0].lang}>{bookNameIn(resume.book, resume.versions[0])} {resume.chapter}</span>
+			<span class="ver">{resume.versions.map((v) => v.short).join(' + ')}</span>
+		</span>
+		<span class="go" aria-hidden="true">→</span>
+	</a>
+{/if}
 
 <div class="seg" role="tablist" aria-label={ta ? 'ஏற்பாடு' : 'Testament'}>
 	<button type="button" role="tab" id="tab-ot" aria-selected={testament === 'OT'} aria-controls="books-ot" class:on={testament === 'OT'} onclick={() => (testament = 'OT')}>
@@ -196,15 +191,15 @@
 	<RootsCard {lang} />
 </Feature>
 
+<div class="daily"><VerseOfDay versionPath={version} {ta} /></div>
+
 <style>
-	.top-row { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.2rem 2.5rem; margin: 0 0 1.4rem; }
-	.start { flex: 999 1 28rem; min-width: 0; }
-	.daily { flex: 1 1 20rem; max-width: 30rem; min-width: 0; margin-top: 0.5rem; }
+	.daily { margin-top: 3.5rem; padding-top: 2.8rem; border-top: var(--bw) solid var(--line); max-width: 44rem; }
 	.hero { margin: 0.5rem 0 1.5rem; }
 	h1 { font-family: var(--tamil); font-size: 2.2rem; font-weight: 600; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
 	.lede { color: var(--ink-2); max-width: 40rem; margin: 0; font-size: 1.02rem; line-height: 1.65; }
 	.lede[lang='ta'] { font-family: var(--tamil); }
-	.resume { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.15rem 1rem; max-width: 30rem; margin: 0; padding: 0.8rem 1.1rem; border: var(--bw) solid var(--accent); border-radius: 14px; background: var(--accent-soft); color: inherit; text-decoration: none; }
+	.resume { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.15rem 1rem; max-width: 30rem; margin: 0 0 1.4rem; padding: 0.8rem 1.1rem; border: var(--bw) solid var(--accent); border-radius: 14px; background: var(--accent-soft); color: inherit; text-decoration: none; }
 	.resume:hover { background: var(--surface); color: inherit; }
 	.resume .kicker { grid-column: 1; margin: 0; }
 	.resume .kicker[lang='ta'] { font-family: var(--tamil); letter-spacing: 0.02em; text-transform: none; }
