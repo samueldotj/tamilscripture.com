@@ -11,6 +11,8 @@ attribution = "World English Bible, public domain"
 source_url = "https://ebible.org/find/details.php?id=engwebp"
 ebible_id = "engwebp"
 order = 5
+# Kept out of search: Google indexed these English pages in place of the Tamil ones they name as canonical.
+noindex = true
 
 [audio]
 recording = "r1"

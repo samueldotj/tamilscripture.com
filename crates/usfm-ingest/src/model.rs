@@ -148,6 +148,11 @@ pub struct VersionMeta {
     /// first default (by order) is the site's default version.
     #[serde(default)]
     pub default: bool,
+    /// Kept out of search engines: its pages carry `noindex`. For a version
+    /// in a language whose canonical page search engines will not take as
+    /// the same passage (an English version beside the Tamil default).
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub noindex: bool,
     /// Book codes present in this version's content; filled in by the pipeline.
     #[serde(default)]
     pub books: Vec<String>,

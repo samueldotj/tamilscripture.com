@@ -11,6 +11,8 @@ attribution = "Berean Standard Bible, public domain, BSB Publishing"
 source_url = "https://ebible.org/find/details.php?id=engbsb"
 ebible_id = "engbsb"
 order = 4
+# Kept out of search: Google indexed these English pages in place of the Tamil ones they name as canonical.
+noindex = true
 default = true
 
 [audio]

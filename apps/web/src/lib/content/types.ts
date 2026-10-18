@@ -106,6 +106,8 @@ export interface VersionMeta {
 	order?: number;
 	/** The version a reader of this language gets unless they choose. */
 	default?: boolean;
+	/** Kept out of search engines: its pages carry `noindex` and no canonical. */
+	noindex?: boolean;
 	/** Book names from the version's own headers, for languages books.toml does not name. */
 	book_names?: Record<string, string>;
 	/** The live recording, when the version has audio. */

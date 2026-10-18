@@ -11,6 +11,8 @@ attribution = "King James (Authorized) Version, 1769 text, public domain"
 source_url = "https://ebible.org/find/details.php?id=eng-kjv2006"
 ebible_id = "eng-kjv2006"
 order = 6
+# Kept out of search: Google indexed these English pages in place of the Tamil ones they name as canonical.
+noindex = true
 
 [audio]
 recording = "r1"

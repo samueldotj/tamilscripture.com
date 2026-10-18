@@ -866,9 +866,13 @@
 <svelte:head>
 	<title>{title} · Tamil Scripture</title>
 	<meta name="description" content={description} />
-	<link rel="canonical" href={seoUrl} />
-	<link rel="alternate" hreflang="ta" href={seoUrl} />
-	<link rel="alternate" hreflang="x-default" href={seoUrl} />
+	{#if primary.noindex}
+		<meta name="robots" content="noindex, follow" />
+	{:else}
+		<link rel="canonical" href={seoUrl} />
+		<link rel="alternate" hreflang="ta" href={seoUrl} />
+		<link rel="alternate" hreflang="x-default" href={seoUrl} />
+	{/if}
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />

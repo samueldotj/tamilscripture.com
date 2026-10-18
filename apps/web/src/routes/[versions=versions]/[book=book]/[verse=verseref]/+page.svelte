@@ -59,7 +59,11 @@
 <svelte:head>
 	<title>{headTitle} · Tamil Scripture</title>
 	<meta name="description" content={description} />
-	<link rel="canonical" href={seoUrl} />
+	{#if data.versions[0].noindex}
+		<meta name="robots" content="noindex, follow" />
+	{:else}
+		<link rel="canonical" href={seoUrl} />
+	{/if}
 	<meta property="og:title" content={headTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />

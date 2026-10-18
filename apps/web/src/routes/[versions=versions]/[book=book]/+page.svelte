@@ -18,7 +18,11 @@
 
 <svelte:head>
 	<title>{bookName} · {primary.short} · Tamil Scripture</title>
-	<link rel="canonical" href={seoUrl} />
+	{#if primary.noindex}
+		<meta name="robots" content="noindex, follow" />
+	{:else}
+		<link rel="canonical" href={seoUrl} />
+	{/if}
 	<meta name="description" content={description} />
 	<meta property="og:title" content={`${data.book.name_ta} – ${data.book.name_en}`} />
 	<meta property="og:description" content={description} />
