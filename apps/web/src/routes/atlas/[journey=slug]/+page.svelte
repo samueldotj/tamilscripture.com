@@ -281,8 +281,12 @@
 	.attrib { position: absolute; right: 76px; bottom: 30px; margin: 0; font-size: 11px; color: var(--tick); pointer-events: none; }
 
 	/* Stops on the map: a numbered pin, the name beside it in both scripts. */
-	.canvas :global(.stop) { position: relative; display: grid; place-content: center; width: 26px; height: 26px; border-radius: 999px; background: var(--accent); color: var(--on-accent); border: 2px solid var(--bg); box-shadow: 0 0 0 4px color-mix(in srgb, var(--map-water) 60%, transparent); text-decoration: none; font: 800 12px var(--sans); }
-	.canvas :global(.stop.em) { box-shadow: 0 0 0 5px rgba(var(--accent-rgb), 0.35); transform: scale(1.12); }
+	/* MapLibre places a marker with `transform` from the map's top-left, so the
+	   pin must stay absolutely positioned and must not scale itself (`transform`
+	   or `scale` would move it off its point): a relative pin flows below the ones before it and drifts
+	   off its place by a different distance at every zoom. */
+	.canvas :global(.stop) { position: absolute; display: grid; place-content: center; width: 26px; height: 26px; border-radius: 999px; background: var(--accent); color: var(--on-accent); border: 2px solid var(--bg); box-shadow: 0 0 0 4px color-mix(in srgb, var(--map-water) 60%, transparent); text-decoration: none; font: 800 12px var(--sans); }
+	.canvas :global(.stop.em) { box-shadow: 0 0 0 5px rgba(var(--accent-rgb), 0.35); width: 30px; height: 30px; }
 	.canvas :global(.stop .lb) { position: absolute; left: calc(100% + 9px); top: 50%; transform: translateY(-55%); display: grid; white-space: nowrap; pointer-events: none; }
 	.canvas :global(.stop.left .lb) { left: auto; right: calc(100% + 9px); text-align: right; }
 	.canvas :global(.stop .p) { font: 600 16px var(--sans); color: var(--ink); line-height: 1.2; text-shadow: 0 0 3px var(--map-water), 0 0 4px var(--map-water), 0 0 5px var(--map-water); }
