@@ -8,6 +8,7 @@
 	import { nameTarget } from '$lib/community/repo';
 	import { sourceOf } from '$lib/entities/sources';
 	import DictionaryText from '$lib/entities/DictionaryText.svelte';
+	import Genealogy from '$lib/entities/Genealogy.svelte';
 
 	let { data } = $props();
 	const ui = $derived(settings.value.uiLang);
@@ -20,9 +21,6 @@
 	const version = $derived(settings.value.version);
 	const groups = $derived(groupByBook(p.verses));
 	const kind = $derived(p.gender === 'group' ? { ta: 'மக்கள் குழு', en: 'People group' } : p.gender === 'female' ? { ta: 'பெண்', en: 'Woman' } : { ta: 'ஆண்', en: 'Man' });
-	const relationLabels = { parents: ['பெற்றோர்', 'Parents'], partners: ['துணை', 'Spouse'], siblings: ['உடன்பிறந்தோர்', 'Siblings'], children: ['பிள்ளைகள்', 'Children'] } as const;
-	const relationOrder = ['parents', 'partners', 'siblings', 'children'] as const;
-	const relations = $derived(relationOrder.filter((k) => p.relations[k]?.length).map((k) => ({ key: k, label: ta ? relationLabels[k][0] : relationLabels[k][1], people: p.relations[k]! })));
 	const paragraphs = $derived((p.article ?? '').split(/\n+/).map((s) => s.trim()).filter(Boolean));
 	/** The dictionary entry of this name, the page's main text; the other
 	 *  linked articles stay a list beside it. */
@@ -98,6 +96,10 @@
 				</section>
 			{/if}
 
+			{#if data.family}
+				<div class="family"><Genealogy family={data.family} self={{ id: p.id, name_en: p.name_en, name_ta: labelTa }} gender={p.gender} lang={ta ? 'ta' : 'en'} /></div>
+			{/if}
+
 			<section class="verses">
 				<h2 class="kicker"><span lang="ta">வசனங்கள்</span> · Verses <span class="n">{p.verses.length}</span></h2>
 				{#each groups as [code, verses] (code)}
@@ -144,17 +146,6 @@
 				</section>
 			{/if}
 
-			{#each relations as r (r.key)}
-				<section class="card">
-					<h2 class="kicker" lang={ta ? 'ta' : 'en'}>{r.label}</h2>
-					<ul class="chips">
-						{#each r.people as rel (rel.id)}
-							<li><a class="chip round" href="/person/{rel.id}" lang={ta && rel.name_ta ? 'ta' : 'en'} title={rel.brief ?? undefined}>{ta && rel.name_ta ? rel.name_ta : rel.name_en}</a></li>
-						{/each}
-					</ul>
-				</section>
-			{/each}
-
 			{#if moreArticles.length}
 				<section class="card">
 					<h2 class="kicker"><span lang="ta">{dict ? 'மேலும் அகராதியில்' : 'அகராதி'}</span> · {dict ? 'More in the dictionary' : 'Dictionary'}</h2>
@@ -188,10 +179,10 @@
 	.about h2 { margin: 0 0 0.6rem; }
 	.about p { margin: 0 0 0.8rem; line-height: 1.7; max-width: 42rem; }
 	.about p:last-of-type { margin-bottom: 0; }
+	.family { margin-top: 1.8rem; }
 	.verses { margin-top: 1.8rem; }
 	.verses h2 { margin: 0 0 0.8rem; }
 	.kicker [lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
-	.kicker[lang='ta'] { font-family: var(--tamil); letter-spacing: 0.04em; }
 	.kicker .n { font-weight: 600; margin-left: 0.3rem; }
 	.book { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.6rem 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line); align-items: start; }
 	.book h3 { margin: 0; font-size: 1rem; font-weight: 600; }
@@ -213,9 +204,6 @@
 	.orig-word { font-size: 1.15rem; }
 	.strongs { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.04em; text-decoration: none; }
 	.strongs:hover { text-decoration: underline; }
-	.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-	.chips .chip { min-height: 36px; font-weight: 500; font-size: 0.88rem; padding: 0.3rem 0.8rem; }
-	.chips .chip[lang='ta'] { font-family: var(--tamil); }
 	.muted { color: var(--muted); margin: 0; }
 	.muted[lang='ta'] { font-family: var(--tamil); }
 	.small { font-size: 0.78rem; }
