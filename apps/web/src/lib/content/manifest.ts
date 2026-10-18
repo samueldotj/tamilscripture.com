@@ -105,6 +105,12 @@ export function verseUrl(versionPath: string, book: Book, chapter: number, verse
 	return `/${versionPath.toLowerCase()}/${book.slug}/${chapter}.${verses}`;
 }
 
+/** The lasting link to the commentary on a verse, `/john/3/16/commentary` (or under a version,
+ *  `/irvtam/john/3/16/commentary`): it redirects to the verse page at its commentaries. */
+export function commentaryUrl(book: Book, chapter: number, verses: string, versionPath?: string): string {
+	return `${versionPath ? `/${versionPath.toLowerCase()}` : ''}/${book.slug}/${chapter}/${verses}/commentary`;
+}
+
 export function parseRange(verses: string | undefined): { start: number; end: number } | null {
 	if (!verses) return null;
 	const [a, b] = verses.split('-').map(Number);

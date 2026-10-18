@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findVersion, verseUrl } from '$lib/content/manifest';
+	import { bookNameIn, chapterUrl, commentaryUrl, DEFAULT_VERSION, findVersion, verseUrl } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import CommentaryText from '$lib/commentary/CommentaryText.svelte';
 	import { unitLabel } from '$lib/commentary/load';
@@ -101,8 +101,14 @@
 	{/each}
 
 	{#if explained}
-		<section class="explain" aria-labelledby="explain-h">
-			<h2 id="explain-h" lang={ta ? 'ta' : 'en'}>{ta ? 'விளக்கவுரைகள்' : 'Commentaries'}</h2>
+		<a class="chapter-link" href={chapterHref} lang={ta ? 'ta' : 'en'}>
+			{ta ? `${b.name_ta} ${data.chapter} முழு அதிகாரத்தையும் வாசிக்க` : `Read full chapter, ${b.name_en} ${data.chapter}`} <span aria-hidden="true">→</span>
+		</a>
+		<section class="explain" id="commentary" aria-labelledby="explain-h">
+			<div class="explain-head">
+				<h2 id="explain-h" lang={ta ? 'ta' : 'en'}>{ta ? 'விளக்கவுரைகள்' : 'Commentaries'}</h2>
+				<a class="permalink" href={commentaryUrl(b, data.chapter, verses)} lang={ta ? 'ta' : 'en'} title={ta ? 'இந்த விளக்கவுரைகளின் நிலையான இணைப்பு' : 'A lasting link to these commentaries'}>{ta ? 'இணைப்பு' : 'Permalink'}</a>
+			</div>
 			{#each data.commentary as c (c.unit.id)}
 				<article class="comment">
 					<header>
@@ -163,7 +169,14 @@
 	.passage[lang='ta'] figcaption { font-family: var(--tamil); }
 	figcaption abbr { text-decoration: none; font-family: var(--sans); font-weight: 600; letter-spacing: 0.03em; }
 
-	.explain { margin: 0 0 2.5rem; display: grid; gap: 1.25rem; }
+	.chapter-link { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; margin: -1rem 0 1.25rem; font-family: var(--sans); font-size: 0.92rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+	.chapter-link[lang='ta'] { font-family: var(--tamil); }
+	.chapter-link:hover { text-decoration: underline; }
+	.explain { margin: 0 0 2.5rem; display: grid; gap: 1.25rem; scroll-margin-top: 5rem; }
+	.explain-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; }
+	.permalink { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--muted); text-decoration: none; }
+	.permalink[lang='ta'] { font-family: var(--tamil); }
+	.permalink:hover { color: var(--accent); text-decoration: underline; }
 	.explain h2 { margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
 	.explain h2[lang='ta'] { font-family: var(--tamil); }
 	.comment { display: grid; gap: 0.7rem; padding: 1.1rem 1.2rem 1.2rem; border: var(--bw) solid var(--line); border-radius: 14px; background: var(--surface); }

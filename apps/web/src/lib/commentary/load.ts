@@ -159,6 +159,13 @@ export function unitFor(units: CommentaryUnit[], v: number | null): CommentaryUn
 }
 
 /** "3:16" or "3:14–15", or the chapter number for its introduction. */
+/** A unit's verses as a URL segment, `16` or `16-18`; '' for a chapter introduction. */
+export function unitVersePath(u: CommentaryUnit): string {
+	const [a, b] = unitVerses(u);
+	if (!a) return '';
+	return b > a && b < 999 ? `${a}-${b}` : `${a}`;
+}
+
 export function unitLabel(u: CommentaryUnit, chapter: number): string {
 	const [a, b] = unitVerses(u);
 	if (!a) return `${chapter}`;

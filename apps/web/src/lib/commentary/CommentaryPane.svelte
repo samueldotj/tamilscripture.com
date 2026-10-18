@@ -4,9 +4,10 @@
 	// through the chapter's comments, the text, a provenance strip, and a
 	// one-line preview from each other commentary on the same verse.
 	import { settings } from '$lib/settings/store.svelte';
+	import { commentaryUrl, findBook } from '$lib/content/manifest';
 	import CommentaryText from './CommentaryText.svelte';
 	import CommentaryFoot from './CommentaryFoot.svelte';
-	import { loadCommentaryChapter, unitFor, unitLabel, unitVerses, type CommentaryChapter, type CommentaryIndex, type CommentaryUnit } from './load';
+	import { loadCommentaryChapter, unitFor, unitLabel, unitVersePath, unitVerses, type CommentaryChapter, type CommentaryIndex, type CommentaryUnit } from './load';
 
 	let {
 		index,
@@ -77,6 +78,12 @@
 			});
 		return () => { cancelled = true; };
 	});
+	/** The lasting link to the comment in view, on the verse page; none for a chapter introduction. */
+	const permalink = $derived.by(() => {
+		const b = findBook(book);
+		const v = unit && unitVersePath(unit);
+		return b && v ? commentaryUrl(b, chapter, v, versionPath) : null;
+	});
 	function preview(u: CommentaryUnit): string {
 		const p = u.paragraphs.find((x) => !x.heading && !x.footnote) ?? u.paragraphs[0];
 		const text = (ta && p?.ta) || p?.text || '';
@@ -115,6 +122,7 @@
 			{#if unit.title}<div class="title" lang={ta && unit.title_ta ? 'ta' : 'en'}>{ta && unit.title_ta ? unit.title_ta : unit.title}</div>{/if}
 			{#key unit.id}<CommentaryText {unit} {lang} {versionPath} />{/key}
 			<CommentaryFoot {source} {unit} {lang} />
+			{#if permalink}<a class="permalink" href={permalink} lang={ta ? 'ta' : 'en'}>{ta ? 'இந்த விளக்கத்தின் நிலையான இணைப்பு' : 'Permalink to this commentary'} <span aria-hidden="true">→</span></a>{/if}
 		{/if}
 
 		{#if others.length}
@@ -152,6 +160,9 @@
 	.step:disabled { opacity: 0.35; cursor: default; }
 	.title { font-weight: 700; color: var(--amber); margin-top: -0.4rem; }
 	.title[lang='ta'] { font-family: var(--tamil); }
+	.permalink { justify-self: start; margin-top: -0.4rem; font-size: 0.82rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+	.permalink[lang='ta'] { font-family: var(--tamil); }
+	.permalink:hover { text-decoration: underline; }
 	.also { display: grid; gap: 0.5rem; border-top: 1px dashed var(--line-2); padding-top: 0.9rem; }
 	.also .kicker { font-size: 0.72rem; }
 	.other { display: grid; gap: 0.15rem; text-align: left; font: inherit; padding: 0.6rem 0.75rem; border: 0; border-radius: 10px; background: var(--surface-2); color: inherit; cursor: pointer; }

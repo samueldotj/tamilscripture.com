@@ -3,7 +3,8 @@
 	// paragraph that ends its verses. Phones and tablets; wide screens have the
 	// focus pane in the context panel instead.
 	import CommentaryText from './CommentaryText.svelte';
-	import { unitLabel, type CommentarySource, type CommentaryUnit } from './load';
+	import { commentaryUrl, findBook } from '$lib/content/manifest';
+	import { unitLabel, unitVersePath, type CommentarySource, type CommentaryUnit } from './load';
 
 	let {
 		unit,
@@ -23,6 +24,11 @@
 		ontoggle: () => void;
 	} = $props();
 	const ta = $derived(lang === 'ta');
+	const permalink = $derived.by(() => {
+		const b = findBook(unit.range.split('.')[0]);
+		const v = unitVersePath(unit);
+		return b && v ? commentaryUrl(b, chapter, v, versionPath) : null;
+	});
 	const label = $derived(unit.kind === 'passage' ? `${ta ? 'வ.' : 'v.'} ${unitLabel(unit, chapter).split(':')[1]}` : ta ? 'அதிகார முன்னுரை' : 'Chapter introduction');
 </script>
 
@@ -36,6 +42,7 @@
 		<div class="text">
 			{#if unit.title}<div class="title" lang={ta && unit.title_ta ? 'ta' : 'en'}>{ta && unit.title_ta ? unit.title_ta : unit.title}</div>{/if}
 			<CommentaryText {unit} {lang} {versionPath} compact />
+			{#if permalink}<a class="permalink" href={permalink} lang={ta ? 'ta' : 'en'}>{ta ? 'நிலையான இணைப்பு' : 'Permalink'} <span aria-hidden="true">→</span></a>{/if}
 		</div>
 	{/if}
 </div>
@@ -51,6 +58,8 @@
 	.text { padding: 0 1rem 1rem; display: grid; gap: 0.6rem; }
 	.title { font-weight: 700; color: var(--amber); font-size: 0.92rem; }
 	.title[lang='ta'] { font-family: var(--tamil); }
+	.permalink { justify-self: start; font-size: 0.82rem; font-weight: 600; color: var(--accent); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+	.permalink[lang='ta'] { font-family: var(--tamil); }
 	@media (max-width: 720px) {
 		.cm-inline { margin-left: 0.6rem; }
 	}
