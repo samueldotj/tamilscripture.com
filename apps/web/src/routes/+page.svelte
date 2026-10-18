@@ -6,12 +6,23 @@
 	import { loadLastRead } from '$lib/personal/last-read';
 	import type { Book, VersionMeta } from '$lib/content/types';
 	import type { TopHighlight } from './api/top-highlights/+server';
+	import VerseOfDay from '$lib/home/VerseOfDay.svelte';
+	import Feature from '$lib/home/Feature.svelte';
+	import AtlasCard from '$lib/home/AtlasCard.svelte';
+	import PeopleCard from '$lib/home/PeopleCard.svelte';
+	import CommentaryCard from '$lib/home/CommentaryCard.svelte';
+	import PsalmsCard from '$lib/home/PsalmsCard.svelte';
+	import DictionaryCard from '$lib/home/DictionaryCard.svelte';
+	import PlanCard from '$lib/home/PlanCard.svelte';
+	import RefsCard from '$lib/home/RefsCard.svelte';
+	import RootsCard from '$lib/home/RootsCard.svelte';
 
 	const ot = manifest.books.filter((b) => b.testament === 'OT');
 	const nt = manifest.books.filter((b) => b.testament === 'NT');
 	// Default version comes from settings (changeable in the settings panel or the reader picker).
 	const version = $derived(settings.value.version);
 	const ta = $derived(settings.value.uiLang === 'ta');
+	const lang = $derived<'ta' | 'en'>(ta ? 'ta' : 'en');
 	let testament = $state<'OT' | 'NT'>('OT');
 	// "Tamil (IRV, TCV) and English (BSB, WEB, KJV)", from the versions themselves.
 	const byLanguage = [...new Set(manifest.versions.map((v) => v.language ?? v.lang))].map(
@@ -86,21 +97,26 @@
 	})}</script>`}
 </svelte:head>
 
-<section class="hero">
-	<h1 lang="ta">தமிழ் வேதாகமம்</h1>
-	<p class="lede" lang={ta ? 'ta' : 'en'}>{ta ? 'வாசிக்கத் தொடங்க ஒரு புத்தகத்தைத் தேர்வு செய்யுங்கள், அல்லது மேலே யோவான் 3:16 போல தட்டச்சு செய்யுங்கள்.' : 'Pick a book to start reading, or type a reference like John 3:16 above.'}</p>
-</section>
+<div class="top-row">
+	<div class="start">
+		<section class="hero">
+			<h1 lang="ta">தமிழ் வேதாகமம்</h1>
+			<p class="lede" lang={ta ? 'ta' : 'en'}>{ta ? 'வாசிக்கத் தொடங்க ஒரு புத்தகத்தைத் தேர்வு செய்யுங்கள், அல்லது மேலே யோவான் 3:16 போல தட்டச்சு செய்யுங்கள்.' : 'Pick a book to start reading, or type a reference like John 3:16 above.'}</p>
+		</section>
 
-{#if resume}
-	<a class="resume" href={resume.href}>
-		<span class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்ந்து வாசிக்க' : 'Continue reading'}</span>
-		<span class="ref">
-			<span lang={resume.versions[0].lang}>{bookNameIn(resume.book, resume.versions[0])} {resume.chapter}</span>
-			<span class="ver">{resume.versions.map((v) => v.short).join(' + ')}</span>
-		</span>
-		<span class="go" aria-hidden="true">→</span>
-	</a>
-{/if}
+		{#if resume}
+			<a class="resume" href={resume.href}>
+				<span class="kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'தொடர்ந்து வாசிக்க' : 'Continue reading'}</span>
+				<span class="ref">
+					<span lang={resume.versions[0].lang}>{bookNameIn(resume.book, resume.versions[0])} {resume.chapter}</span>
+					<span class="ver">{resume.versions.map((v) => v.short).join(' + ')}</span>
+				</span>
+				<span class="go" aria-hidden="true">→</span>
+			</a>
+		{/if}
+	</div>
+	<div class="daily"><VerseOfDay versionPath={version} {ta} /></div>
+</div>
 
 <div class="seg" role="tablist" aria-label={ta ? 'ஏற்பாடு' : 'Testament'}>
 	<button type="button" role="tab" id="tab-ot" aria-selected={testament === 'OT'} aria-controls="books-ot" class:on={testament === 'OT'} onclick={() => (testament = 'OT')}>
@@ -155,12 +171,40 @@
 	</section>
 {/if}
 
+<!-- What else the site does, a working sample of each; each loads its data only as it nears the screen. -->
+<Feature id="f-atlas" kickerTa="வரைபடமும் மக்களும்" kickerEn="Atlas & Peoples" {lang}
+	title={ta ? 'வேதாகம இடங்களில் நடந்து, அதன் மனிதர்களைச் சந்தியுங்கள்' : 'Walk the places of the Bible and meet its people'}>
+	<AtlasCard {lang} />
+	<PeopleCard {lang} />
+</Feature>
+
+<Feature id="f-commentary" kickerTa="விளக்கவுரையும் சங்கீதங்களும்" kickerEn="Commentary & Psalms" {lang}
+	title={ta ? 'வசனத்தின் அருகிலேயே விளக்கம்; பாடல்களைக் கருப்பொருள் வாரியாக' : 'Commentary beside the verse; the psalms by theme, to read and sing'}>
+	<CommentaryCard {lang} versionPath={version} />
+	<PsalmsCard {lang} />
+</Feature>
+
+<Feature id="f-dictionary" kickerTa="அகராதியும் வாசிப்புத் திட்டங்களும்" kickerEn="Dictionary & Reading plans" {lang}
+	title={ta ? 'சொற்களைப் புரிந்து, ஒவ்வொரு நாளும் வாசியுங்கள்' : 'Understand the words, and read every day'}>
+	<DictionaryCard {lang} versionPath={version} />
+	<PlanCard {lang} versionPath={version} />
+</Feature>
+
+<Feature id="f-refs" kickerTa="ஒத்த வசனங்களும் மூலச்சொற்களும்" kickerEn="References & root words" {lang}
+	title={ta ? 'ஒரு வசனத்திலிருந்து முழு வேதாகமத்திற்கும்; தமிழ்ச் சொல்லிலிருந்து மூல மொழிக்கும்' : 'From one verse to the whole Bible, and from the translation to the original words'}>
+	<RefsCard {lang} versionPath={version} />
+	<RootsCard {lang} />
+</Feature>
+
 <style>
+	.top-row { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.2rem 2.5rem; margin: 0 0 1.4rem; }
+	.start { flex: 999 1 28rem; min-width: 0; }
+	.daily { flex: 1 1 20rem; max-width: 30rem; min-width: 0; margin-top: 0.5rem; }
 	.hero { margin: 0.5rem 0 1.5rem; }
 	h1 { font-family: var(--tamil); font-size: 2.2rem; font-weight: 600; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
 	.lede { color: var(--ink-2); max-width: 40rem; margin: 0; font-size: 1.02rem; line-height: 1.65; }
 	.lede[lang='ta'] { font-family: var(--tamil); }
-	.resume { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.15rem 1rem; max-width: 30rem; margin: 0 0 1.4rem; padding: 0.8rem 1.1rem; border: var(--bw) solid var(--accent); border-radius: 14px; background: var(--accent-soft); color: inherit; text-decoration: none; }
+	.resume { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.15rem 1rem; max-width: 30rem; margin: 0; padding: 0.8rem 1.1rem; border: var(--bw) solid var(--accent); border-radius: 14px; background: var(--accent-soft); color: inherit; text-decoration: none; }
 	.resume:hover { background: var(--surface); color: inherit; }
 	.resume .kicker { grid-column: 1; margin: 0; }
 	.resume .kicker[lang='ta'] { font-family: var(--tamil); letter-spacing: 0.02em; text-transform: none; }
