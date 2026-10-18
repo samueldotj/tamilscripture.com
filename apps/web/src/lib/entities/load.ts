@@ -49,7 +49,7 @@ export interface StrongsEntry {
 	/** surface forms, and for each verse the index of the form it uses */
 	f: string[];
 	fi: number[];
-	names: { kind: 'person' | 'place'; id: string; name_en: string; name_ta?: string | null; brief?: string }[];
+	names: { kind: 'person' | 'place'; id: string; name_en: string; name_ta?: string | null; brief?: string; brief_ta?: string }[];
 	renderings: string[];
 	/** Tamil meaning (concordance C5), with where it came from */
 	gloss_ta?: string | null;
@@ -162,6 +162,13 @@ export function loadGlossary(fetch: Fetch): Promise<Glossary> {
 export function placeName(p: { name_en: string; name_ta?: string | null; qualifier?: string | null }, lang: 'ta' | 'en'): string {
 	const base = lang === 'ta' && p.name_ta ? p.name_ta : p.name_en;
 	return p.qualifier ? `${base} (${p.qualifier})` : base;
+}
+
+/** A person's one-line description in the interface language: the Tamil
+ *  draft when there is one, else STEP's English. */
+export function briefIn(p: { brief?: string; brief_ta?: string }, lang: 'ta' | 'en'): { text: string; lang: 'ta' | 'en' } | null {
+	if (lang === 'ta' && p.brief_ta) return { text: p.brief_ta, lang: 'ta' };
+	return p.brief ? { text: p.brief, lang: 'en' } : null;
 }
 
 /** Tamil label for a full entity record. */

@@ -349,6 +349,8 @@ struct RelationOut {
     name_ta: Option<String>,
     #[serde(skip_serializing_if = "str::is_empty")]
     brief: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    brief_ta: Option<String>,
 }
 
 #[derive(Serialize)]
@@ -380,8 +382,12 @@ struct PersonOut<'a> {
     summary: &'a str,
     #[serde(skip_serializing_if = "str::is_empty")]
     brief: &'a str,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    brief_ta: Option<String>,
     #[serde(skip_serializing_if = "str::is_empty")]
     short: &'a str,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    short_ta: Option<String>,
     #[serde(skip_serializing_if = "str::is_empty")]
     article: &'a str,
     #[serde(skip_serializing_if = "std::ops::Not::not")]
@@ -414,6 +420,8 @@ struct PersonIndexEntry<'a> {
     gender: &'a str,
     #[serde(skip_serializing_if = "str::is_empty")]
     brief: &'a str,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    brief_ta: Option<String>,
     mentions: usize,
 }
 
@@ -496,6 +504,32 @@ fn main() -> Result<()> {
         tipnr.people.len(),
         tipnr.places.len()
     );
+    // Tamil of the people's briefs and shorts (tools/translate `tipnr`), by English text.
+    let (tipnr_ta, tipnr_rejected) =
+        community::load_text_drafts(&args.entities.join("drafts/ta/tipnr.json"))?;
+    let ta_of = |en: &str| -> Option<String> {
+        if en.is_empty() {
+            None
+        } else {
+            tipnr_ta.get(&community::squash(en)).cloned()
+        }
+    };
+    {
+        let texts: BTreeSet<&str> = tipnr
+            .people
+            .iter()
+            .flat_map(|p| [p.brief.as_str(), p.short.as_str()])
+            .filter(|s| !s.is_empty())
+            .collect();
+        let covered = texts.iter().filter(|s| ta_of(s).is_some()).count();
+        eprintln!(
+            "tipnr Tamil: {covered} of {} distinct briefs and shorts",
+            texts.len()
+        );
+    }
+    for x in &tipnr_rejected {
+        eprintln!("warning: tipnr draft rejected {x}");
+    }
 
     // Verses per English name string (same-named places and people share Tamil forms).
     let mut verses_by_name: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
@@ -918,6 +952,7 @@ fn main() -> Result<()> {
                 name_en: q.name_en.clone(),
                 name_ta: label_ta(&names, &q.name_en),
                 brief: q.brief.clone(),
+                brief_ta: ta_of(&q.brief),
             })
             .collect()
     };
@@ -952,7 +987,9 @@ fn main() -> Result<()> {
             tribe: &p.tribe,
             summary: &p.summary,
             brief: &p.brief,
+            brief_ta: ta_of(&p.brief),
             short: &p.short,
+            short_ta: ta_of(&p.short),
             article: &p.article,
             uncertain: p.uncertain,
             tamil_name: tamil_name_out(&names, &p.name_en),
@@ -984,6 +1021,7 @@ fn main() -> Result<()> {
             name_ta: label_ta(&names, &p.name_en),
             gender: &p.gender,
             brief: &p.brief,
+            brief_ta: ta_of(&p.brief),
             mentions: p.verses.len(),
         });
         let weight = ((1 + p.verses.len()) as f64).ln();
@@ -1127,7 +1165,7 @@ fn main() -> Result<()> {
             .people
             .iter()
             .filter_map(|id| person_by_slug.get(id.as_str()).map(|p| (id, *p)))
-            .map(|(id, p)| serde_json::json!({ "kind": "person", "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en), "brief": p.brief }));
+            .map(|(id, p)| serde_json::json!({ "kind": "person", "id": id, "name_en": p.name_en, "name_ta": label_ta(&names, &p.name_en), "brief": p.brief, "brief_ta": ta_of(&p.brief) }));
         let places = w
             .places
             .iter()
@@ -1335,7 +1373,7 @@ fn main() -> Result<()> {
                     serde_json::json!({
                         "name_en": p.name_en, "qualifier": if name_count[&p.name_en.to_lowercase()] > 1 { Some(ref_label(&p.first_ref)) } else { None },
                         "name_ta": label_ta(&names, &p.name_en), "forms": forms_ta(&names, &p.name_en, &verses_of(id, false), &corpora),
-                        "gender": p.gender, "brief": p.brief, "mentions": p.verses.len(),
+                        "gender": p.gender, "brief": p.brief, "brief_ta": ta_of(&p.brief), "mentions": p.verses.len(),
                         "article": articles_by_entity.get(&format!("person/{id}")).and_then(|ix| ix.first()).map(|&i| all_articles[i].id.clone()),
                         "original": primary_form(&p.forms).map(|f| serde_json::json!({ "text": f.original, "script": f.script, "strongs": f.strongs }))
                     }),

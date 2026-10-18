@@ -27,7 +27,7 @@ export interface BrowseRow {
 	n?: number;
 }
 
-type Entry = BrowseRow & { ta: string; en: string; key?: string };
+type Entry = BrowseRow & { ta: string; en: string; key?: string; gloss_ta?: string };
 
 /** Letters only, accents and vowel points removed: "e.lo.Him" and "Elohim" meet. */
 function fold(s: string): string {
@@ -59,6 +59,7 @@ function entries(fetchFn: typeof fetch): Promise<Entry[]> {
 					name: '',
 					alt: '',
 					gloss: p.brief ?? '',
+					gloss_ta: p.brief_ta,
 					href: `/person/${p.id}`,
 					n: p.mentions,
 					ta: p.name_ta ?? '',
@@ -155,7 +156,8 @@ export const GET: RequestHandler = async ({ url, fetch }) => {
 		if (e.type === 'strongs') return e;
 		const name = (lang === 'ta' ? e.ta : e.en) || e.en || e.ta;
 		const alt = name === e.en ? e.ta : e.en;
-		return { ...e, name, alt };
+		const gloss = lang === 'ta' && e.gloss_ta ? e.gloss_ta : e.gloss;
+		return { ...e, name, alt, gloss };
 	});
 
 	// Searching the merged index handles a Tamil prefix, which the database's

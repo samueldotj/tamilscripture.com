@@ -21,6 +21,9 @@
 	const version = $derived(settings.value.version);
 	const groups = $derived(groupByBook(p.verses));
 	const kind = $derived(p.gender === 'group' ? { ta: 'மக்கள் குழு', en: 'People group' } : p.gender === 'female' ? { ta: 'பெண்', en: 'Woman' } : { ta: 'ஆண்', en: 'Man' });
+	// STEP's one-line description and short paragraph, in Tamil when drafted.
+	const briefTa = $derived(p.brief_ta);
+	const shortText = $derived(ta && p.short_ta ? p.short_ta : p.short);
 	const paragraphs = $derived((p.article ?? '').split(/\n+/).map((s) => s.trim()).filter(Boolean));
 	/** The dictionary entry of this name, the page's main text; the other
 	 *  linked articles stay a list beside it. */
@@ -33,7 +36,7 @@
 		lead?.ta
 			? lead.ta.replace(/\s+/g, ' ').slice(0, 160)
 			: ta
-				? `${title}${qualifier}: ${p.brief ?? p.description ?? ''} வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படுகிறார்.`
+				? `${title}${qualifier}: ${briefTa ? `${briefTa}. ` : ''}வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படுகிறார்.`
 				: `${p.name_en}${qualifier}: ${p.brief ?? p.description ?? 'a person in the Bible'}, named in ${p.verses.length} verses.`
 	);
 	function verseHref(v: string) {
@@ -76,8 +79,10 @@
 			<h1 lang={ta ? 'ta' : 'en'}>{title}<span class="q">{qualifier}</span></h1>
 			{#if alt}<span class="alt" lang={ta ? 'en' : 'ta'}>{alt}</span>{/if}
 		</div>
-		{#if (p.brief || p.description) && !(ta && dict)}
-			<p class="brief">{p.brief ?? p.description}</p>
+		{#if ta && briefTa && !dict}
+			<p class="brief" lang="ta">{briefTa}</p>
+		{:else if (p.brief || p.description) && !(ta && dict)}
+			<p class="brief" lang="en">{p.brief ?? p.description}</p>
 		{/if}
 	</header>
 
@@ -85,10 +90,11 @@
 		<div class="main">
 			{#if dict}
 				<DictionaryText article={dict.article} entries={dict.entries} lang={ta ? 'ta' : 'en'} />
-			{:else if p.short || paragraphs.length}
+			{:else if shortText || paragraphs.length}
 				<section class="about card">
 					<h2 class="kicker"><span lang="ta">பற்றி</span> · About</h2>
-					{#if p.short && !paragraphs.length}<p><RefText text={p.short} /></p>{/if}
+					{#if ta && p.short_ta}<p lang="ta"><RefText text={p.short_ta} /></p>
+					{:else if p.short && !paragraphs.length}<p lang="en"><RefText text={p.short} /></p>{/if}
 					{#each paragraphs as para, i (i)}
 						<p><RefText text={para} /></p>
 					{/each}

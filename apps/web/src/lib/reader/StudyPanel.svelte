@@ -5,7 +5,7 @@
 	// when the Language toggle is on.
 	import type { ChapterMentions } from '$lib/entities/types';
 	import { chapterUrl, findBook } from '$lib/content/manifest';
-	import { placeName } from '$lib/entities/load';
+	import { briefIn, placeName } from '$lib/entities/load';
 	import PanelMap from './PanelMap.svelte';
 
 	let {
@@ -142,6 +142,7 @@
 				{#if peopleRows.length}
 					<ul class="list">
 						{#each peopleRows as r (r.id)}
+							{@const brief = briefIn(r.p, lang)}
 							<li class:sel={selectedPeople.has(r.id)}>
 								<div class="row">
 									<a class="name" href="/person/{r.id}" lang={ta && r.p.name_ta ? 'ta' : 'en'}>{label(r.p)}</a>
@@ -151,7 +152,7 @@
 								{#if show.language && r.p.original}
 									<p class="orig"><span lang={r.p.original.script}>{r.p.original.text}</span> <a class="strongs" href="/strongs/{r.p.original.strongs}">{r.p.original.strongs}</a>{#if r.p.original.translit} <span class="translit">{r.p.original.translit}</span>{/if}</p>
 								{/if}
-								{#if r.p.brief}<p class="brief">{r.p.brief}</p>{/if}
+								{#if brief}<p class="brief" lang={brief.lang}>{brief.text}</p>{/if}
 								<div class="verses">
 									{#each r.verses.slice(0, 12) as v (v)}
 										<a href={verseHref(v)} class:on={selected.has(v)} aria-label={ta ? `வசனம் ${verseNo(v)}` : `verse ${verseNo(v)}`}>{verseNo(v)}</a>

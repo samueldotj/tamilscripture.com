@@ -723,5 +723,104 @@ class CommentaryTests(unittest.TestCase):
                 commentary.ROOT = saved
 
 
+class TipnrTests(unittest.TestCase):
+    def ctx(self):
+        from translate_tool import tipnr
+
+        return tipnr.Context(terms=TERMS, names={**NAMES, "Aaron": Name("Aaron", "ஆரோன்", ["ஆரோன்", "ஆரோனின்"])},
+                             provisional={"Abihu": {"label": "அபியூ", "review": True}})
+
+    def test_checks(self):
+        from translate_tool import tipnr
+
+        ctx = self.ctx()
+        brief = tipnr.Line("Son of Aaron", "brief", ["Abihu"])
+        self.assertEqual(tipnr.check(brief, "ஆரோனின் மகன்", ctx), [])
+        self.assertIn("name: Aaron is ஆரோன் in the IRV", tipnr.check(brief, "அவனுடைய மகன்", ctx))
+        self.assertTrue(tipnr.check(brief, "ஆரோனின் மகன் " * 20, ctx))
+        short = tipnr.Line("Abihu was a son of Aaron who served as a priest. (Exo.6.23)", "short", ["Abihu"])
+        self.assertEqual(tipnr.check(short, "அபியூ ஆரோனின் மகன், ஆசாரியனாகப் பணியாற்றினான். (Exo.6.23)", ctx), [])
+        self.assertIn("references not copied exactly: Exo.6.23",
+                      tipnr.check(short, "அபியூ ஆரோனின் மகன், ஆசாரியனாகப் பணியாற்றினான். (யாத். 6:23)", ctx))
+        # Indian digit grouping keeps the value.
+        troops = tipnr.Line("Commander of 300,000 troops", "brief", ["Adnah"])
+        self.assertEqual(tipnr.check(troops, "3,00,000 வீரர்களின் தளபதி", ctx), [])
+        self.assertIn("numbers missing: 300000", tipnr.check(troops, "மூன்று லட்சம் வீரர்களின் தளபதி", ctx))
+
+    def test_checks_allow_compounds_and_short_names(self):
+        from translate_tool import tipnr
+
+        ctx = self.ctx()
+        ctx.terms = {"law": Term("law", "நியாயப்பிரமாணம்", ["நியாயப்பிரமாணம்"], [], [], "", False)}
+        ctx.names = {"Hur": Name("Hur", "ஊர்", ["ஊர்"]), "Kish": Name("Kish", "கீச்", ["கீசின்", "கீசுடைய"])}
+        # "law" inside son-in-law is not the glossary term.
+        self.assertEqual(tipnr.check(tipnr.Line("Father-in-law of Esau", "brief"), "ஏசாவின் மாமனார்", ctx), [])
+        self.assertTrue(tipnr.check(tipnr.Line("Teacher of the law", "brief"), "போதகர்", ctx))
+        # A short name whose final consonant takes a case ending: ஊர் → ஊரின்.
+        self.assertEqual(tipnr.check(tipnr.Line("Son of Hur", "brief"), "ஊரின் மகன்", ctx), [])
+        # The label counts even when the IRV forms are all inflected.
+        self.assertEqual(tipnr.check(tipnr.Line("Kish was a Benjamite", "short"), "கீச் ஒரு பென்யமீனியன்", ctx), [])
+
+    def test_message_and_groups(self):
+        from translate_tool import tipnr
+
+        ctx = self.ctx()
+        group = [tipnr.Line("Son of Aaron", "brief", ["Abihu"])]
+        msg = tipnr.message(group, ctx)
+        self.assertIn("- Aaron → ஆரோன்", msg)
+        self.assertIn("- Abihu → அபியூ (not yet checked", msg)
+        self.assertIn('"about": "Abihu"', msg)
+        lines = [tipnr.Line(f"line {k} " + "x" * 200, "short", ["A"]) for k in range(30)]
+        gs = tipnr.groups(lines)
+        self.assertTrue(all(sum(len(x.en) for x in g) <= tipnr.GROUP_CHARS for g in gs))
+        self.assertEqual(sum(len(g) for g in gs), 30)
+
+    def test_apply_writes_good_lines_and_logs_the_rest(self):
+        from translate_tool import client as cl, tipnr
+
+        with tempfile.TemporaryDirectory() as d:
+            with unittest.mock.patch.object(tipnr, "LOG", Path(d) / "tipnr.jsonl"), \
+                 unittest.mock.patch.object(repo, "WORK", Path(d)):
+                group = [tipnr.Line("Son of Aaron", "brief", ["Abihu"]), tipnr.Line("Wife of Ahasuerus", "brief", ["Vashti"])]
+                reply = cl.Reply({"items": [{"id": "1", "text": "ஆரோனின் மகன்"}, {"id": "2", "text": "Wife of the king"}]}, None, "")
+                drafts = {"texts": {}}
+                rows = tipnr.apply_group(group, reply, self.ctx(), drafts, dry_run=False)
+                self.assertEqual(drafts["texts"], {"Son of Aaron": "ஆரோனின் மகன்"})
+                self.assertEqual(rows[1]["problems"], ["no Tamil script"])
+                self.assertEqual(set(tipnr.failures()), {"Wife of Ahasuerus"})
+
+
+class TipnrReviewTests(unittest.TestCase):
+    def test_accept_reject_undo(self):
+        from translate_tool import tipnr, tipnrweb
+
+        with tempfile.TemporaryDirectory() as d, \
+             unittest.mock.patch.object(tipnr, "LOG", Path(d) / "tipnr.jsonl"), \
+             unittest.mock.patch.object(tipnr, "DRAFTS", Path(d) / "tipnr.json"), \
+             unittest.mock.patch.object(repo, "WORK", Path(d)):
+            ctx = tipnr.Context(terms={}, names={"Solomon": Name("Solomon", "சாலொமோன்", ["சாலொமோன்"])}, provisional={})
+            items = [tipnrweb.Item("Mentioned in Song of Solomon", "brief", ["Shulammite"], "உன்னதப்பாட்டில் குறிப்பிடப்பட்டவள்",
+                                   ["name: Solomon is சாலொமோன் in the IRV"], "flagged"),
+                     tipnrweb.Item("Father of Anak", "brief", ["Arba"], "ஏனாக்கின் தகப்பன்", [], "flagged")]
+            s = tipnrweb.Session(items, ctx=ctx)
+            # Accept overrules the check and writes the Tamil.
+            s.accept("உன்னதப்பாட்டில்  குறிப்பிடப்பட்டவள்")
+            self.assertEqual(tipnr.load_drafts()["texts"], {"Mentioned in Song of Solomon": "உன்னதப்பாட்டில் குறிப்பிடப்பட்டவள்"})
+            self.assertNotIn("Mentioned in Song of Solomon", tipnr.failures())
+            # Reject keeps the line flagged, with the reason for --repair, and out of recheck.
+            s.reject("ஏனாக்கின் தகப்பன்", "Arba is அர்பா")
+            self.assertEqual(tipnr.failures()["Father of Anak"]["problems"], ["rejected in review: Arba is அர்பா"])
+            self.assertEqual(tipnr.recheck(dry_run=True), [])
+            with self.assertRaises(ValueError):
+                s.accept("x")
+            # Undo puts both back.
+            s.undo()
+            s.undo()
+            self.assertEqual(tipnr.load_drafts()["texts"], {})
+            self.assertEqual(s.i, 0)
+            with self.assertRaises(ValueError):
+                s.accept("English only")
+
+
 if __name__ == "__main__":
     unittest.main()

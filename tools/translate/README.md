@@ -162,9 +162,31 @@ translate commentary run --source poole --every 1000 --limit 5
 
 Drafts go to `bible-commentaries/ta/{source}/{BOOK}/{chapter}.json`, or `ta-ecf/` for the Early Church Fathers; the report and flagged replies to `.translate-work/commentary/`.
 
+## People's briefs and short descriptions (TIPNR)
+
+The one-line `brief` on the dictionary card ("Apostle of Jesus, leader in the early church") and the `short` paragraph on the person page come from STEP Bible's TIPNR (CC BY 4.0). Each distinct English line is translated once, about 40 lines per request, with the names and glossary terms it uses.
+
+```bash
+translate tipnr                              # plan: lines, requests and rough cost; no API call
+translate tipnr show --texts "Apostle of Jesus"   # the request for those lines
+translate tipnr run --limit 80               # a pilot, translated now
+translate tipnr submit                       # the rest as a batch (half price)
+translate tipnr collect msgbatch_…           # check the lines and write the good ones
+translate tipnr submit --repair              # ask again for the flagged lines, with their problems
+translate tipnr problems                     # every flagged line: English, Tamil, what is wrong
+translate tipnr recheck                      # check the flagged lines again after fixing a check or a name; no API call
+translate tipnr review                       # accept or reject the flagged lines in the browser
+translate tipnr review --texts Arba          # any lines containing "Arba", written or not
+```
+
+In the review, Accept writes the Tamil as shown, even over a check's objection. Reject keeps the English on the site and keeps the line flagged, with your reason, for `submit --repair`.
+
+A line is written only when it passes the checks (Tamil script, no English left, names and glossary terms as given, `Exo.6.23`-style references and numbers kept). The build shows the Tamil in place of the English when the interface is Tamil.
+
 ## What it writes
 
 - **Drafts:** `data/entities/drafts/ta/{source}/{slug}.json`, or `drafts/ta-sa/aquifer/{slug}.json` for Aquifer. A draft is written unless the build would reject it (missing paragraphs, no Tamil, markup).
+- **TIPNR lines:** `data/entities/drafts/ta/tipnr.json`, English text → Tamil; failures in `.translate-work/tipnr.jsonl`.
 - **Work folder:** `.translate-work/`, git-ignored.
   - `report.jsonl`: every article with its remaining problems (glossary, names, verse references, length, untranslated English).
   - `flagged/`: raw replies of flagged articles, for `repair`.

@@ -62,6 +62,39 @@ pub fn load_drafts(drafts: &Path) -> Result<BTreeMap<String, Draft>> {
     Ok(out)
 }
 
+#[derive(Debug, Deserialize)]
+struct TextDrafts {
+    texts: BTreeMap<String, String>,
+}
+
+/// Tamil drafts of short English texts, keyed by the English itself:
+/// `drafts/ta/tipnr.json` holds the people's TIPNR briefs and shorts, which
+/// many people share ("Son of Aaron"). Keys are whitespace-normalised; a
+/// Tamil text the build would reject is dropped and reported. Missing file,
+/// no drafts.
+pub fn load_text_drafts(path: &Path) -> Result<(BTreeMap<String, String>, Vec<String>)> {
+    if !path.exists() {
+        return Ok((BTreeMap::new(), Vec::new()));
+    }
+    let text = fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    let d: TextDrafts =
+        serde_json::from_str(&text).with_context(|| format!("parsing {}", path.display()))?;
+    let (mut out, mut rejected) = (BTreeMap::new(), Vec::new());
+    for (en, ta) in d.texts {
+        match check_text(&ta) {
+            Ok(()) => {
+                out.insert(squash(&en), squash(&ta));
+            }
+            Err(why) => rejected.push(format!("{en:?}: {why}")),
+        }
+    }
+    Ok((out, rejected))
+}
+
+pub fn squash(s: &str) -> String {
+    s.split_whitespace().collect::<Vec<_>>().join(" ")
+}
+
 // ---- overrides ----
 
 #[derive(Debug, Deserialize)]
@@ -364,6 +397,24 @@ mod tests {
         assert_eq!(check_text("தமஸ்கு <b>x</b>"), Err("contains HTML"));
         assert!(check_text("தமஸ்கு < 3").is_ok());
         assert_eq!(check_text("  "), Err("empty"));
+    }
+
+    #[test]
+    fn text_drafts_by_english_text() {
+        let dir = std::env::temp_dir().join(format!("tipnr-drafts-{}", std::process::id()));
+        fs::create_dir_all(&dir).unwrap();
+        let path = dir.join("tipnr.json");
+        fs::write(
+            &path,
+            r#"{"lang": "ta", "texts": {"Son of  Aaron": "ஆரோனின்  மகன்", "Wife of Ahasuerus": "Wife of the king"}}"#,
+        )
+        .unwrap();
+        let (texts, rejected) = load_text_drafts(&path).unwrap();
+        assert_eq!(texts.get("Son of Aaron").map(String::as_str), Some("ஆரோனின் மகன்"));
+        assert_eq!(texts.len(), 1);
+        assert_eq!(rejected.len(), 1);
+        assert!(load_text_drafts(&dir.join("missing.json")).unwrap().0.is_empty());
+        fs::remove_dir_all(&dir).ok();
     }
 
     fn article(id: &str, licence: &'static str) -> Article {
