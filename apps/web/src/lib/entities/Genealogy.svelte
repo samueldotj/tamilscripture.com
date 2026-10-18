@@ -18,6 +18,7 @@
 	const GRAND = 5;
 	const name = (n: Node) => (ta && n.name_ta ? n.name_ta : n.name_en);
 	const langOf = (n: Node) => (ta && n.name_ta ? 'ta' : 'en');
+	const tip = (n: Node) => (ta && n.brief_ta ? n.brief_ta : n.brief);
 	/** "mother: Hagar" under a child of a man with several wives; "father: …" for a woman's. */
 	const otherLabel = $derived(gender === 'female' ? (ta ? 'தந்தை' : 'father') : ta ? 'தாய்' : 'mother');
 </script>
@@ -30,7 +31,7 @@
 			<span class="label" {lang}>{ta ? r.label[0] : r.label[1]}</span>
 			<ul class="row">
 				{#each r.people as n (n.id)}
-					<li><a class="node" href="/person/{n.id}" lang={langOf(n)} title={n.brief}>{name(n)}</a></li>
+					<li><a class="node" href="/person/{n.id}" lang={langOf(n)} title={tip(n)}>{name(n)}</a></li>
 				{/each}
 			</ul>
 		</div>
@@ -42,13 +43,13 @@
 		<div class="self-row">
 			<ul class="sibs" aria-label={ta ? 'உடன்பிறந்தோர்' : 'Siblings'}>
 				{#each family.siblings as n (n.id)}
-					<li><a class="node sib" href="/person/{n.id}" lang={langOf(n)} title={n.brief}>{name(n)}</a></li>
+					<li><a class="node sib" href="/person/{n.id}" lang={langOf(n)} title={tip(n)}>{name(n)}</a></li>
 				{/each}
 			</ul>
 			<span class="node self" lang={langOf(self)} aria-current="page">{name(self)}</span>
 			<ul class="partners" aria-label={ta ? 'துணை' : 'Spouses'}>
 				{#each family.partners as n (n.id)}
-					<li><span class="tie" aria-hidden="true">═</span><a class="node" href="/person/{n.id}" lang={langOf(n)} title={n.brief}>{name(n)}</a></li>
+					<li><span class="tie" aria-hidden="true">═</span><a class="node" href="/person/{n.id}" lang={langOf(n)} title={tip(n)}>{name(n)}</a></li>
 				{/each}
 			</ul>
 		</div>
@@ -69,12 +70,12 @@
 					{#each family.children as c (c.id)}
 						<li class="kid">
 							<span class="drop" aria-hidden="true"></span>
-							<a class="node" href="/person/{c.id}" lang={langOf(c)} title={c.brief}>{name(c)}</a>
+							<a class="node" href="/person/{c.id}" lang={langOf(c)} title={tip(c)}>{name(c)}</a>
 							{#if c.other}<span class="other" {lang}>{otherLabel}: <span lang={langOf(c.other)}>{name(c.other)}</span></span>{/if}
 							{#if c.children.length}
 								<ul class="grand">
 									{#each c.children.slice(0, GRAND) as g (g.id)}
-										<li><a class="node small" href="/person/{g.id}" lang={langOf(g)} title={g.brief}>{name(g)}</a></li>
+										<li><a class="node small" href="/person/{g.id}" lang={langOf(g)} title={tip(g)}>{name(g)}</a></li>
 									{/each}
 									{#if c.children.length > GRAND}
 										<li><a class="more" href="/person/{c.id}" {lang}>+{c.children.length - GRAND} {ta ? 'மேலும்' : 'more'}</a></li>

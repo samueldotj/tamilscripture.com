@@ -7,6 +7,7 @@
     flag-names  send unchecked names whose Tamil does not sound like the name back to review
     ai-names   ask Claude for the Tamil of the names still in review
     ai-terms   ask Claude to propose the Tamil for the theological glossary
+    tipnr      Tamil for the people's one-line briefs and short descriptions (TIPNR)
     review-terms  approve the glossary in the browser
     pilot      the pilot: run a model on seed/pilot.txt, status, adopt the chosen drafts
     review-pilot  compare the two models' pilot drafts blind, in the browser
@@ -130,6 +131,79 @@ def cmd_ai_names(a) -> int:
               f"`translate batch status` shows progress; `translate ai-names collect {bid}` when it has ended.")
         return 0
     return ai_report(ai_names.run_direct(todo, a.model, a.effort, a.dry_run, a.workers))
+
+
+def cmd_tipnr(a) -> int:
+    from collections import Counter
+
+    from . import tipnr
+
+    ctx = tipnr.Context(model=a.model, effort=a.effort)
+    if a.action == "collect":
+        if not a.batch_id:
+            raise SystemExit("collect needs a batch id (translate batch status lists them)")
+        return tipnr_report(tipnr.collect(a.batch_id, a.dry_run))
+    if a.action == "review":
+        from . import tipnrweb
+
+        items = tipnrweb.queue(a.texts, a.include_rejected)
+        if not items:
+            print("no flagged lines to review" + ("" if a.texts else " (--texts reviews any lines)"))
+            return 0
+        tipnrweb.serve(tipnrweb.Session(items), port=a.port, open_browser=not a.no_open)
+        return 0
+    if a.action == "recheck":
+        return tipnr_report(tipnr.recheck(a.dry_run))
+    if a.action == "problems":
+        failed = tipnr.failures()
+        kinds = Counter(p.split(":")[0] for r in failed.values() for p in r["problems"])
+        for en, r in sorted(failed.items()):
+            print(f"{en}\n  ta: {r.get('ta') or '(none)'}")
+            for p in r["problems"]:
+                print(f"  ✗ {p}")
+            print()
+        print(f"{len(failed)} flagged lines: " + ", ".join(f"{n} {k}" for k, n in kinds.most_common()))
+        return 0
+    todo = tipnr.todo(a.kind, a.limit, a.repair, a.force, a.texts)
+    if not todo:
+        print("nothing to translate" + (" (no flagged lines to repair)" if a.repair else ""))
+        return 0
+    if a.action == "show":
+        print(tipnr.system_blocks()[0]["text"])
+        print("\n" + "=" * 72 + "\n")
+        print(tipnr.message(tipnr.groups(todo)[0], ctx))
+        return 0
+    if a.action == "plan":
+        kinds = Counter(line.kind for line in todo)
+        e = tipnr.estimate(todo, ctx)
+        print(f"{kinds['brief']:,} briefs and {kinds['short']:,} shorts in {e['requests']:,} requests; "
+              f"about {e['input']:,} input and {e['output']:,} output tokens, "
+              f"roughly ${e['cost']:.2f} as a batch with {ctx.model}. No API call made.\n"
+              "`translate tipnr submit` sends them as a batch at half price; "
+              "`translate tipnr run --limit 40` translates 40 now.")
+        return 0
+    if a.action == "submit":
+        if a.dry_run:
+            e = tipnr.estimate(todo, ctx)
+            print(f"would submit {e['requests']} requests for {len(todo)} lines with {ctx.model} "
+                  f"(about ${e['cost']:.2f})")
+            return 0
+        bid, n = tipnr.submit(todo, ctx)
+        print(f"submitted {bid}: {len(todo)} lines in {n} requests. "
+              f"`translate batch status` shows progress; `translate tipnr collect {bid}` when it has ended.")
+        return 0
+    return tipnr_report(tipnr.run_direct(todo, ctx, a.dry_run, a.workers))
+
+
+def tipnr_report(rows: list[dict]) -> int:
+    from . import tipnr
+
+    bad = [r for r in rows if r["problems"]]
+    for r in bad[:20]:
+        print(f"  flagged: {r['en'][:70]!r}: {'; '.join(r['problems'])}")
+    print(f"\n{len(rows) - len(bad)} written to {tipnr.DRAFTS.relative_to(repo.ROOT)}, {len(bad)} flagged "
+          "(.translate-work/tipnr.jsonl; `translate tipnr submit --repair` asks again). Run `pnpm content` to build.")
+    return 0
 
 
 def ai_report(rows: list[dict]) -> int:
@@ -606,6 +680,26 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--dry-run", action="store_true", help="ask, but write nothing")
     model_opts(p)
     p.set_defaults(fn=cmd_ai_names)
+
+    p = sub.add_parser("tipnr", help="Tamil for the people's briefs and short descriptions (TIPNR)")
+    p.add_argument("action", nargs="?", default="plan",
+                   choices=["plan", "show", "run", "submit", "collect", "problems", "recheck", "review"],
+                   help="plan (default): count and cost, no API call; show: print the first request; run: translate now; "
+                        "submit/collect: as a batch at half price; problems: list the flagged lines; "
+                        "recheck: check the flagged lines again (after fixing a check or a name), no API call; "
+                        "review: accept or reject the flagged lines in the browser (--texts: any lines)")
+    p.add_argument("--include-rejected", action="store_true", help="review: also lines rejected before")
+    p.add_argument("--port", type=int, default=8767, help="review: the page's port")
+    p.add_argument("--no-open", action="store_true", help="review: do not open the browser")
+    p.add_argument("batch_id", nargs="?")
+    p.add_argument("--kind", choices=["brief", "short"], help="only briefs or only shorts")
+    p.add_argument("--texts", nargs="+", help="only lines containing one of these (any case)")
+    p.add_argument("--limit", type=int)
+    p.add_argument("--repair", action="store_true", help="only lines the checks flagged, with their problems")
+    p.add_argument("--force", action="store_true", help="also lines that already have a Tamil draft")
+    p.add_argument("--dry-run", action="store_true", help="run/collect: write nothing; submit: count only")
+    model_opts(p)
+    p.set_defaults(fn=cmd_tipnr)
 
     p = sub.add_parser("full-run", help="translate every article: batches, repairs, drafts; resumable")
     p.add_argument("--plan", action="store_true", help="count what is left; no API call")

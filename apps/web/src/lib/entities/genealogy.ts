@@ -19,6 +19,7 @@ export interface Node {
 	name_en: string;
 	name_ta?: string;
 	brief?: string;
+	brief_ta?: string;
 }
 
 export interface ChildBranch extends Node {
@@ -35,7 +36,7 @@ export interface Family {
 	children: ChildBranch[];
 }
 
-const node = (r: Relation): Node => ({ id: r.id, name_en: r.name_en, name_ta: r.name_ta, brief: r.brief });
+const node = (r: Relation): Node => ({ id: r.id, name_en: r.name_en, name_ta: r.name_ta, brief: r.brief, brief_ta: r.brief_ta });
 
 function dedupe(nodes: Node[], skip: Set<string>): Node[] {
 	const out: Node[] = [];

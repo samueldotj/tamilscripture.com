@@ -89,6 +89,7 @@ export interface Relation {
 	name_en: string;
 	name_ta?: string;
 	brief?: string;
+	brief_ta?: string;
 }
 
 export interface OriginalForm {
@@ -111,7 +112,10 @@ export interface Person {
 	tribe?: string;
 	summary?: string;
 	brief?: string;
+	/** Tamil drafts of `brief` and `short` (tools/translate `tipnr`). */
+	brief_ta?: string;
 	short?: string;
+	short_ta?: string;
 	/** STEP Bible article; paragraphs separated by newlines. */
 	article?: string;
 	uncertain?: boolean;
@@ -131,6 +135,7 @@ export interface PersonIndexEntry {
 	name_ta?: string;
 	gender: Gender;
 	brief?: string;
+	brief_ta?: string;
 	mentions: number;
 }
 
@@ -157,6 +162,7 @@ export interface PersonSummary {
 	name_ta?: string | null;
 	gender: Gender;
 	brief?: string;
+	brief_ta?: string;
 	mentions: number;
 	article?: string | null;
 	/** primary original-language form, for the Study Bible's Language toggle */

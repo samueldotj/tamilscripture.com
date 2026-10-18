@@ -5,6 +5,7 @@
 	// The desktop context panel shows it under its அகராதி tab; phones get it
 	// as a half-sheet.
 	import RefText from '$lib/refs/RefText.svelte';
+	import { briefIn } from '$lib/entities/load';
 	import type { PersonSummary, PlaceSummary } from '$lib/entities/types';
 	import type { NameHit } from './names';
 
@@ -27,6 +28,7 @@
 	const headLang = $derived(ta && summary.name_ta ? 'ta' : 'en');
 	const kind = $derived(hit.kind === 'person' ? (ta ? 'நபர்' : 'Person') : ta ? 'இடம்' : 'Place');
 	const href = $derived(`/${hit.kind}/${hit.id}`);
+	const brief = $derived(person ? briefIn(person, lang) : null);
 </script>
 
 <div class="card-name">
@@ -48,8 +50,8 @@
 		<span class="chip-s" lang={ta ? 'ta' : 'en'}>{summary.mentions.toLocaleString('en-IN')} {ta ? 'வசனங்கள்' : summary.mentions === 1 ? 'verse' : 'verses'}</span>
 	</div>
 
-	{#if person?.brief}
-		<p class="brief" lang="en"><RefText text={person.brief} /></p>
+	{#if brief}
+		<p class="brief" lang={brief.lang}><RefText text={brief.text} /></p>
 	{:else if place?.type}
 		<p class="brief" lang="en">{place.type}</p>
 	{/if}

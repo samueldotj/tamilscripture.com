@@ -7,6 +7,7 @@
 	import RefText from '$lib/refs/RefText.svelte';
 	import { bookNameIn, chapterUrl, DEFAULT_VERSION, findBook, findVersion } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
+	import { briefIn } from '$lib/entities/load';
 	import { decodeVerses, describePos } from '$lib/concordance';
 	import Provenance from '$lib/community/Provenance.svelte';
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
@@ -150,10 +151,11 @@
 				<span class="label" lang={ta ? 'ta' : 'en'}>{ta ? 'இச்சொல் குறிக்கும் பெயர்கள்' : 'Names this word refers to'}</span>
 				<ul>
 					{#each e.names as n (n.kind + n.id)}
+						{@const brief = briefIn(n, ta ? 'ta' : 'en')}
 						<li>
 							<a href="/{n.kind}/{n.id}">
 								<span lang={ta && n.name_ta ? 'ta' : 'en'}>{ta && n.name_ta ? n.name_ta : n.name_en}</span>
-								{#if n.brief}<span class="brief" lang="en">{n.brief}</span>{/if}
+								{#if brief}<span class="brief" lang={brief.lang}>{brief.text}</span>{/if}
 							</a>
 						</li>
 					{/each}

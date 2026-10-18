@@ -114,7 +114,7 @@
 						<span class="text">
 							<span class="name" lang={scriptOf(r)} dir={scriptOf(r) === 'he' ? 'rtl' : undefined}>{r.name}</span>
 							<span class="meta" lang={ta ? 'ta' : 'en'}>
-								{#if r.alt}<span class="alt" lang={/[a-z]/i.test(r.alt[0]) ? 'en' : 'ta'}>{r.alt}&nbsp;·&nbsp;</span>{/if}<span>{ta ? kinds[r.type][0] : kinds[r.type][1]}</span>{#if r.gloss}<span class="gloss" lang={r.type === 'person' || r.type === 'place' || r.type === 'strongs' ? 'en' : undefined}>&nbsp;·&nbsp;{r.gloss}</span>{/if}
+								{#if r.alt}<span class="alt" lang={/[a-z]/i.test(r.alt[0]) ? 'en' : 'ta'}>{r.alt}&nbsp;·&nbsp;</span>{/if}<span>{ta ? kinds[r.type][0] : kinds[r.type][1]}</span>{#if r.gloss}<span class="gloss" lang={/[஀-௿]/.test(r.gloss) ? 'ta' : r.type === 'person' || r.type === 'place' || r.type === 'strongs' ? 'en' : undefined}>&nbsp;·&nbsp;{r.gloss}</span>{/if}
 							</span>
 						</span>
 						{#if r.n && (r.type === 'person' || r.type === 'place' || r.type === 'strongs')}<span class="n" title={ta ? 'வசனங்கள்' : 'verses'}>{r.n.toLocaleString('en-IN')}</span>{/if}

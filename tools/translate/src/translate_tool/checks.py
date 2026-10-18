@@ -56,10 +56,15 @@ def terms_in(english: str, terms: dict[str, Term]) -> list[Term]:
 def mentions(english: str, form: str) -> bool:
     """`form` occurs as a word or phrase (plural or possessive allowed). A form
     in capitals (LORD) matches only in capitals; any other form matches in any
-    case except all capitals, so "Lord" does not match "LORD"."""
+    case except all capitals, so "Lord" does not match "LORD". A form inside
+    a hyphenated word is not the term: "law" in son-in-law."""
     english = english.replace("’", "'")
     form = form.replace("’", "'")
-    pat = rf"\b{re.escape(form)}(?:s|es|'s)?\b"
+    # Most terms are not in a given text: a plain search first saves compiling
+    # the pattern (hundreds of terms overflow the re module's cache).
+    if form.lower() not in english.lower():
+        return False
+    pat = rf"(?<!-)\b{re.escape(form)}(?:s|es|'s)?\b(?!-)"
     if form.isupper() and len(form) > 1:
         return re.search(pat, english) is not None
     return any(not (m[0].isupper() and len(m[0]) > 1) for m in re.finditer(pat, english, re.IGNORECASE))
@@ -72,10 +77,12 @@ COMMON_WORDS = {"On", "No", "So", "Am", "As", "Job", "Will", "Mark", "Hope", "Ri
 def names_in(english: str, names: dict[str, Name]) -> list[Name]:
     """Names mentioned as themselves: not part of a hyphenated name (Ben in
     Ben-hadad, Hur in Beth-hur), and not an everyday word (River, South)."""
+    # The substring test first: thousands of name patterns overflow the re
+    # module's cache, and compiling each one per text made checks slow.
     return [
         n
         for en, n in names.items()
-        if en not in COMMON_WORDS and re.search(rf"(?<![\w-]){re.escape(en)}(?![\w-])", english)
+        if en not in COMMON_WORDS and en in english and re.search(rf"(?<![\w-]){re.escape(en)}(?![\w-])", english)
     ]
 
 
@@ -119,8 +126,15 @@ def usable_avoid(t: Term, terms: dict[str, Term]) -> list[str]:
     return out
 
 
+def _unmarked(form: str) -> str:
+    """A form ending in a bare consonant without its virama, which a case
+    ending replaces with a vowel sign: ஊர் → ஊர (ஊரின்), கீச் → கீச (கீசின்).
+    Short names are too short for `_root`."""
+    return form[:-1] if form.endswith("்") and len(form) >= 3 else form
+
+
 def uses_any(tamil: str, forms: list[str]) -> bool:
-    return any(f and (f in tamil or _stem(f) in tamil or _root(f) in tamil) for f in forms)
+    return any(f and (f in tamil or _stem(f) in tamil or _root(f) in tamil or _unmarked(f) in tamil) for f in forms)
 
 
 def check_draft(
@@ -146,32 +160,37 @@ def check_draft(
         en = english.get(p["id"])
         if en is None:
             continue
-        ta = p["text"]
-        where = p["id"]
-        if why := check_text(ta):
-            # A label with nothing to translate ("538", "37:1–2", "P1 (P. Oxy. 2)")
-            # comes back unchanged: no Tamil, but nothing wrong. The draft leaves
-            # it out and the site shows the original, which is the same text.
-            if not (why == "no Tamil script" and untranslatable(en["text"])):
-                out.append(Problem(where, why))
-            continue
-        if m := ENGLISH_RUN.search(ta):
-            out.append(Problem(where, f"untranslated English: {m[0]!r}"))
-        missing_refs = sorted(set(VERSE_NUM.findall(en["text"])) - set(VERSE_NUM.findall(ta)))
-        if missing_refs:
-            out.append(Problem(where, f"verse references missing: {', '.join(missing_refs)}"))
-        ratio = len(ta) / max(1, len(en["text"]))
-        if len(en["text"]) > 80 and not 0.6 <= ratio <= 3.5:
-            out.append(Problem(where, f"length {ratio:.1f}× the English; likely something left out or added"))
-        for t in terms_in(en["text"], terms):
-            if not uses_any(ta, t.forms):
-                out.append(Problem(where, f"glossary: “{t.en}” should be {t.ta}"))
-            for bad in usable_avoid(t, terms):
-                # Inflected too: ஒப்பந்தம் → ஒப்பந்தமும், so match without a final ்.
-                stem = bad[:-1] if bad.endswith("்") and len(bad) > 3 else bad
-                if re.search(rf"(?<![஀-௿]){re.escape(stem)}", ta):
-                    out.append(Problem(where, f"glossary: “{bad}” is not used for “{t.en}”; use {t.ta}"))
-        for n in names_in(en["text"], names):
-            if not uses_any(ta, n.forms):
-                out.append(Problem(where, f"name: {n.en} is {n.label} in the IRV"))
+        out += [Problem(p["id"], what) for what in check_paragraph(en["text"], p["text"], terms, names)]
+    return out
+
+
+def check_paragraph(english: str, ta: str, terms: dict[str, Term], names: dict[str, Name]) -> list[str]:
+    """What is wrong with one Tamil paragraph (or line) of an English one."""
+    out: list[str] = []
+    if why := check_text(ta):
+        # A label with nothing to translate ("538", "37:1–2", "P1 (P. Oxy. 2)")
+        # comes back unchanged: no Tamil, but nothing wrong. The draft leaves
+        # it out and the site shows the original, which is the same text.
+        if not (why == "no Tamil script" and untranslatable(english)):
+            out.append(why)
+        return out
+    if m := ENGLISH_RUN.search(ta):
+        out.append(f"untranslated English: {m[0]!r}")
+    missing_refs = sorted(set(VERSE_NUM.findall(english)) - set(VERSE_NUM.findall(ta)))
+    if missing_refs:
+        out.append(f"verse references missing: {', '.join(missing_refs)}")
+    ratio = len(ta) / max(1, len(english))
+    if len(english) > 80 and not 0.6 <= ratio <= 3.5:
+        out.append(f"length {ratio:.1f}× the English; likely something left out or added")
+    for t in terms_in(english, terms):
+        if not uses_any(ta, t.forms):
+            out.append(f"glossary: “{t.en}” should be {t.ta}")
+        for bad in usable_avoid(t, terms):
+            # Inflected too: ஒப்பந்தம் → ஒப்பந்தமும், so match without a final ்.
+            stem = bad[:-1] if bad.endswith("்") and len(bad) > 3 else bad
+            if re.search(rf"(?<![஀-௿]){re.escape(stem)}", ta):
+                out.append(f"glossary: “{bad}” is not used for “{t.en}”; use {t.ta}")
+    for n in names_in(english, names):
+        if not uses_any(ta, [n.label, *n.forms]):
+            out.append(f"name: {n.en} is {n.label} in the IRV")
     return out
