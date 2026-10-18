@@ -245,7 +245,7 @@
 "Aramitess" = { label = "அராமிய பெண்", forms = ["அராமிய பெண்ணிடம்"], confidence = 1.00, n = 1 }
 "Aran" = { label = "அரான்", forms = ["அரான்"], confidence = 1.00, n = 2 }
 "Ararat" = { label = "அரராத்", forms = ["அரராத்", "ஆரராத்"], confidence = 1.00, n = 4 }
-"Arba" = { label = "எபிரோனை", forms = ["எபிரோனுக்குக்", "எபிரோனை", "எபிரோனையும்"], confidence = 1.00, n = 3 }
+"Arba" = { label = "அர்பா", forms = ["அர்பா", "அர்பாவின்"], confidence = 1.00, n = 3 }
 "Archelaus" = { label = "அர்கெலாயு", forms = ["அர்கெலாயு"], confidence = 1.00, n = 1 }
 "Archippus" = { label = "அர்க்கிப்பு", forms = ["அர்க்கிப்பைக்", "அர்க்கிப்புவிற்கும்"], confidence = 1.00, n = 2 }
 "Archites" = { label = "அற்கியனான", forms = ["அற்கியனான", "அற்கியினுடைய"], confidence = 1.00, n = 6 }
