@@ -204,7 +204,7 @@
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
 		</button>
 		<a class="brand" href="/">
-			<svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="2" width="6" height="28" fill="currentColor"/><rect x="4" y="9" width="24" height="6" fill="#EC3013"/></svg>
+			<svg class="mark" width="24" height="34" viewBox="32 20 48 68" aria-hidden="true"><rect x="38" y="26" width="40" height="30" rx="4" fill="currentColor" opacity="0.25"/><path d="M38,22 H70 A4,4 0 0 1 74,26 V58 L54,86 L34,58 V26 A4,4 0 0 1 38,22 Z" fill="#EC3013"/><path d="M51.5,32 H56.5 V38 H63 V43 H56.5 V54 H51.5 V43 H45 V38 H51.5 Z" fill="#F3F2F2"/><path d="M65.5,22 V33 L67.5,31 L69.5,33 V22 Z" fill="currentColor"/></svg>
 			<span class="words">
 				<span class="ta" lang="ta">தமிழ் வேதாகமம்</span>
 				<span class="en">Tamil Scripture</span>
