@@ -100,7 +100,7 @@
 	aria-label={side === 'rail' ? (ta ? 'புத்தகப் பட்டியலின் அகலம்' : 'Book list width') : ta ? 'பக்கப் பலகையின் அகலம்' : 'Side panel width'}
 	aria-valuemin={lo}
 	aria-valuemax={hi}
-	aria-valuenow={width || settings.value[key] || undefined}
+	aria-valuenow={width || settings.value[key] || lo}
 	title={ta ? 'அகலத்தை மாற்ற இழுக்கவும் · இருமுறை சொடுக்கினால் இயல்பு அகலம்' : 'Drag to resize · double-click to reset'}
 	tabindex="0"
 	onpointerdown={down}

@@ -61,9 +61,12 @@
 </script>
 
 <nav class="rail" aria-label={ta ? 'புத்தகங்கள்' : 'Books'}>
-	<div class="seg" role="tablist" aria-label={ta ? 'ஏற்பாடு' : 'Testament'}>
-		<button type="button" role="tab" aria-selected={testament === 'OT'} class:on={testament === 'OT'} onclick={() => (testament = 'OT')}><span lang="ta">பழைய</span> <span class="short">OT</span></button>
-		<button type="button" role="tab" aria-selected={testament === 'NT'} class:on={testament === 'NT'} onclick={() => (testament = 'NT')}><span lang="ta">புதிய</span> <span class="short">NT</span></button>
+	<div class="seg">
+		<!-- the tabs alone in the tablist; the rail toggle sits beside them -->
+		<div class="tabs" role="tablist" aria-label={ta ? 'ஏற்பாடு' : 'Testament'}>
+			<button type="button" role="tab" aria-selected={testament === 'OT'} class:on={testament === 'OT'} onclick={() => (testament = 'OT')}><span lang="ta">பழைய</span> <span class="short">OT</span></button>
+			<button type="button" role="tab" aria-selected={testament === 'NT'} class:on={testament === 'NT'} onclick={() => (testament = 'NT')}><span lang="ta">புதிய</span> <span class="short">NT</span></button>
+		</div>
 		<RailToggle {lang} {ontoggle} />
 	</div>
 	<TrailNav {lang} />
@@ -91,6 +94,7 @@
 <style>
 	.rail { display: flex; flex-direction: column; height: 100%; background: var(--rail); border-right: var(--bw) solid var(--line); }
 	.seg { display: flex; gap: 0.35rem; padding: 1rem; border-bottom: var(--bw) solid var(--line); flex: none; }
+	.seg .tabs { display: contents; }
 	.seg button { flex: 1; border: 0; border-radius: 10px; padding: 0.55rem 0.3rem; background: transparent; color: var(--muted); font-weight: 600; font-size: 0.82rem; cursor: pointer; min-height: 40px; }
 	.seg button [lang='ta'] { font-family: var(--tamil); }
 	.seg button .short { font-weight: 500; }

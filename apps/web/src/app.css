@@ -35,7 +35,7 @@
 	--accent-hover: #1E4267;
 	--on-accent: #FFFFFF;
 	--accent-soft: #EEF3F8; /* tinted selection surface */
-	--amber: #A2600F;       /* section headings, second reference colour */
+	--amber: #9A5A0C;       /* section headings, second reference colour; 4.5:1 on --hl */
 	--hl: #FBEFD3;          /* selected verse, search match */
 	--select: var(--hl);
 	--wj: var(--amber);
