@@ -34,8 +34,10 @@ const READER_LIMIT = 120 * 1024;
 // tune player 4 kB, a chunk loaded only when a psalm with metrical text is open),
 // and to 330 kB on 14 Oct 2026 for Spurgeon on the Psalms explorer (the card's overview
 // 0.8 kB, and the exposition, notes and hints below it 1.8 kB, a chunk loaded once
-// the psalm's commentary has arrived).
-const SITE_LIMIT = 330 * 1024;
+// the psalm's commentary has arrived), and to 350 kB on 20 Oct 2026 for the home page's
+// feature bands (eight sample cards, 10.8 kB), the family tree on person pages (1.8 kB),
+// reading history in the player store (2.1 kB) and the entity search helpers (0.4 kB).
+const SITE_LIMIT = 350 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
 
