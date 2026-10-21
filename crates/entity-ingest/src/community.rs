@@ -410,10 +410,16 @@ mod tests {
         )
         .unwrap();
         let (texts, rejected) = load_text_drafts(&path).unwrap();
-        assert_eq!(texts.get("Son of Aaron").map(String::as_str), Some("ஆரோனின் மகன்"));
+        assert_eq!(
+            texts.get("Son of Aaron").map(String::as_str),
+            Some("ஆரோனின் மகன்")
+        );
         assert_eq!(texts.len(), 1);
         assert_eq!(rejected.len(), 1);
-        assert!(load_text_drafts(&dir.join("missing.json")).unwrap().0.is_empty());
+        assert!(load_text_drafts(&dir.join("missing.json"))
+            .unwrap()
+            .0
+            .is_empty());
         fs::remove_dir_all(&dir).ok();
     }
 
