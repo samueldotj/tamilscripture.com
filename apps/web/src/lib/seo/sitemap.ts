@@ -50,7 +50,9 @@ export async function versePaths(fetch: Fetch, version: VersionMeta): Promise<st
 	return perBook.flat();
 }
 
-/** Atlas, journeys, places, people and dictionary articles, from the content indexes. */
+/** Atlas, journeys, places, people and dictionary articles, from the content indexes:
+ *  only the pages put forward for indexing (crates/entity-ingest/src/seo.rs), and
+ *  Strong's numbers with a Tamil meaning. The rest carry noindex. */
 export async function entityPaths(fetch: Fetch): Promise<string[]> {
 	const [index, journeys, people, articles, strongs] = await Promise.all([
 		loadPlaceIndex(fetch).catch(() => null),
@@ -63,10 +65,10 @@ export async function entityPaths(fetch: Fetch): Promise<string[]> {
 		'/atlas',
 		'/dictionary',
 		...journeys.map((j) => `/atlas/${j.id}`),
-		...(index?.places ?? []).map((p) => `/place/${p.id}`),
-		...people.map((p) => `/person/${p.id}`),
-		...articles.map((a) => `/dictionary/${a.id}`),
-		...strongs.map((s) => `/strongs/${s[0]}`)
+		...(index?.places ?? []).filter((p) => p.index).map((p) => `/place/${p.id}`),
+		...people.filter((p) => p.index).map((p) => `/person/${p.id}`),
+		...articles.filter((a) => a.index).map((a) => `/dictionary/${a.id}`),
+		...strongs.filter((s) => s[5]).map((s) => `/strongs/${s[0]}`)
 	];
 }
 

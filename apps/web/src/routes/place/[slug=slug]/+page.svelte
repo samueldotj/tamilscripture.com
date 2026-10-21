@@ -7,6 +7,7 @@
 	import { nameTarget } from '$lib/community/repo';
 	import { sourceOf } from '$lib/entities/sources';
 	import DictionaryText from '$lib/entities/DictionaryText.svelte';
+	import { leadTa, meaningDescription, meaningTitle } from '$lib/entities/seo';
 
 	let { data } = $props();
 	const ui = $derived(settings.value.uiLang);
@@ -23,13 +24,14 @@
 	/** The dictionary entry of this name, the page's main text; the other
 	 *  linked articles stay a list beside it. */
 	const dict = $derived(data.dictionary);
-	const moreArticles = $derived((p.articles ?? []).filter((x) => !dict?.entries.some((e) => e.id === x.id)));
+	const moreArticles = $derived((p.articles ?? []).filter((x) => !dict?.articles.some((e) => e.id === x.id)));
 	// Search engines get the Tamil page: the dictionary's first Tamil paragraph
 	// when there is one, else the one-line summary.
-	const lead = $derived(dict?.article.paragraphs.find((x) => !x.heading && x.ta));
+	const lead = $derived(leadTa(dict?.articles[0]));
+	const seoTitle = $derived(dict ? meaningTitle(labelTa, p.name_en, qualifier) : `${labelTa ? `${labelTa} – ` : ''}${p.name_en}${qualifier} · இடம் · Place`);
 	const description = $derived(
-		lead?.ta
-			? lead.ta.replace(/\s+/g, ' ').slice(0, 160)
+		lead
+			? meaningDescription(labelTa, lead)
 			: ta
 				? `${title}${qualifier}: வேதாகமத்தில் ${p.verses.length} வசனங்களில் குறிப்பிடப்படும் ${kind.ta}.`
 				: `${p.name_en}${qualifier}, a biblical ${kind.en} named in ${p.verses.length} verses.`
@@ -46,8 +48,9 @@
 </script>
 
 <svelte:head>
-	<title>{labelTa ? `${labelTa} – ` : ''}{p.name_en}{qualifier} · இடம் · Place · Tamil Scripture</title>
+	<title>{seoTitle} · Tamil Scripture</title>
 	<meta name="description" content={description} />
+	{#if !p.index}<meta name="robots" content="noindex, follow" />{/if}
 	<link rel="canonical" href={`https://www.tamilscripture.com/place/${p.id}`} />
 	<meta property="og:title" content={`${title}${qualifier}`} />
 	<meta property="og:description" content={description} />
@@ -98,7 +101,7 @@
 			{/if}
 
 			{#if dict}
-				<DictionaryText article={dict.article} entries={dict.entries} lang={ta ? 'ta' : 'en'} />
+				<DictionaryText articles={dict.articles} owner={`place/${p.id}`} chosen={dict.chosen} lang={ta ? 'ta' : 'en'} />
 			{/if}
 
 			<section class="verses">

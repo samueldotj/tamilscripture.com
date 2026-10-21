@@ -33,6 +33,7 @@ mod lyrics;
 mod names;
 mod openbible;
 mod psalms;
+mod seo;
 mod stepbible;
 mod svg;
 mod tipnr;
@@ -307,6 +308,9 @@ struct PlaceOut<'a> {
     #[serde(skip_serializing_if = "Vec::is_empty")]
     articles: Vec<ArticleRef<'a>>,
     source: SourceOut,
+    /// Put forward for indexing (seo.rs)
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    index: bool,
 }
 
 #[derive(Serialize)]
@@ -332,6 +336,8 @@ struct IndexEntry<'a> {
     lon: Option<f64>,
     precision: &'a str,
     mentions: usize,
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    index: bool,
 }
 
 #[derive(Serialize)]
@@ -399,6 +405,9 @@ struct PersonOut<'a> {
     #[serde(skip_serializing_if = "Vec::is_empty")]
     articles: Vec<ArticleRef<'a>>,
     source: DescriptionSource,
+    /// Put forward for indexing (seo.rs)
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    index: bool,
 }
 
 #[derive(Serialize)]
@@ -423,6 +432,8 @@ struct PersonIndexEntry<'a> {
     #[serde(skip_serializing_if = "Option::is_none")]
     brief_ta: Option<String>,
     mentions: usize,
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    index: bool,
 }
 
 #[derive(Serialize)]
@@ -434,6 +445,10 @@ struct ArticleIndexEntry<'a> {
     paragraphs: usize,
     #[serde(skip_serializing_if = "<[String]>::is_empty")]
     entities: &'a [String],
+    #[serde(skip_serializing_if = "Option::is_none")]
+    canonical: &'a Option<String>,
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    index: bool,
 }
 
 const STEP: DescriptionSource = DescriptionSource {
@@ -808,6 +823,36 @@ fn main() -> Result<()> {
         all_articles.len()
     );
 
+    // ---- search indexing (seo.rs) ----
+    // An article about one person or place belongs to that page; the rest
+    // stand on their own and are indexed with enough Tamil.
+    let entity_names: HashMap<String, &str> = places
+        .iter()
+        .map(|p| (format!("place/{}", p.id), p.name_en.as_str()))
+        .chain(tipnr.people.iter().map(|p| {
+            (
+                format!("person/{}", person_slug[&p.key]),
+                p.name_en.as_str(),
+            )
+        }))
+        .collect();
+    for a in all_articles.iter_mut() {
+        a.ta_words = seo::article_words(a);
+        a.canonical = seo::owner(a, |k| entity_names.get(k).map(|s| s.to_string()));
+        a.index = a.canonical.is_none() && a.ta_words >= seo::MIN_TA_WORDS;
+    }
+    // A person or place page with its name entries, as the page renders them.
+    let indexed = |key: &str, name: &str, summary: &[Option<&str>]| -> bool {
+        let entries: Vec<&articles::Article> = articles_by_entity
+            .get(key)
+            .into_iter()
+            .flatten()
+            .map(|&i| &all_articles[i])
+            .filter(|a| a.title.to_lowercase() == name.to_lowercase())
+            .collect();
+        seo::CHOSEN.contains(&key) || seo::entity_words(key, &entries, summary) >= seo::MIN_TA_WORDS
+    };
+
     let article_refs = |key: &str| -> Vec<ArticleRef<'_>> {
         articles_by_entity
             .get(key)
@@ -838,9 +883,20 @@ fn main() -> Result<()> {
             hash: &a.hash,
             paragraphs: a.paragraphs.len(),
             entities: &a.entities,
+            canonical: &a.canonical,
+            index: a.index,
         })
         .collect();
     write_json(&out.join("articles/index.json"), &article_index)?;
+    println!(
+        "seo: {} of {} articles indexed, {} shown in full on their person or place page",
+        all_articles.iter().filter(|a| a.index).count(),
+        all_articles.len(),
+        all_articles
+            .iter()
+            .filter(|a| a.canonical.is_some())
+            .count()
+    );
 
     // ---- TIPNR place descriptions matched to OpenBible places ----
     let mut tipnr_places_by_name: HashMap<String, Vec<&tipnr::TipnrPlace>> = HashMap::new();
@@ -957,6 +1013,7 @@ fn main() -> Result<()> {
             .collect()
     };
     let mut people_index = Vec::new();
+    let mut people_indexed = 0usize;
     let mut csv = String::from("id,type,slug,name_en,names_ta,alt_en,weight\n");
     for p in &tipnr.people {
         let slug = &person_slug[&p.key];
@@ -977,6 +1034,14 @@ fn main() -> Result<()> {
                 relations.insert(k, r);
             }
         }
+        let brief_ta = ta_of(&p.brief);
+        let short_ta = ta_of(&p.short);
+        let index = indexed(
+            &format!("person/{slug}"),
+            &p.name_en,
+            &[brief_ta.as_deref(), short_ta.as_deref()],
+        );
+        people_indexed += usize::from(index);
         let person_out = PersonOut {
             id: slug,
             kind: "person",
@@ -987,9 +1052,9 @@ fn main() -> Result<()> {
             tribe: &p.tribe,
             summary: &p.summary,
             brief: &p.brief,
-            brief_ta: ta_of(&p.brief),
+            brief_ta: brief_ta.clone(),
             short: &p.short,
-            short_ta: ta_of(&p.short),
+            short_ta,
             article: &p.article,
             uncertain: p.uncertain,
             tamil_name: tamil_name_out(&names, &p.name_en),
@@ -1009,6 +1074,7 @@ fn main() -> Result<()> {
             verses: &p.verses,
             articles: article_refs(&format!("person/{slug}")),
             source: STEP,
+            index,
         };
         write_json(
             &out.join("person").join(format!("{slug}.json")),
@@ -1021,8 +1087,9 @@ fn main() -> Result<()> {
             name_ta: label_ta(&names, &p.name_en),
             gender: &p.gender,
             brief: &p.brief,
-            brief_ta: ta_of(&p.brief),
+            brief_ta,
             mentions: p.verses.len(),
+            index,
         });
         let weight = ((1 + p.verses.len()) as f64).ln();
         csv.push_str(&format!(
@@ -1036,6 +1103,10 @@ fn main() -> Result<()> {
         ));
     }
     write_json(&out.join("people.json"), &people_index)?;
+    println!(
+        "seo: {people_indexed} of {} people indexed",
+        people_index.len()
+    );
 
     // ---- mentions per chapter: verse → place and person ids, with summaries ----
     #[derive(Default)]
@@ -1410,6 +1481,7 @@ fn main() -> Result<()> {
         }
         let place_type = p.types.first().map(String::as_str).unwrap_or("place");
         let desc = description_for(p);
+        let index = indexed(&format!("place/{}", p.id), &p.name_en, &[]);
         let out_place = PlaceOut {
             id: &p.id,
             kind: "place",
@@ -1438,6 +1510,7 @@ fn main() -> Result<()> {
                 licence: "CC BY 4.0",
                 attribution: "OpenBible.info Bible Geocoding, CC BY 4.0",
             },
+            index,
         };
         write_json(
             &out.join("place").join(format!("{}.json", p.id)),
@@ -1453,6 +1526,7 @@ fn main() -> Result<()> {
             lon: p.lon.map(round5),
             precision: &p.precision,
             mentions: p.verses.len(),
+            index,
         });
         let weight = ((1 + p.verses.len()) as f64).ln();
         csv.push_str(&format!(
@@ -1472,6 +1546,11 @@ fn main() -> Result<()> {
             weight
         ));
     }
+    println!(
+        "seo: {} of {} places indexed",
+        index_entries.iter().filter(|e| e.index).count(),
+        index_entries.len()
+    );
     write_json(
         &out.join("places.json"),
         &Index {

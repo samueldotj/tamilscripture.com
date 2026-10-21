@@ -6,6 +6,7 @@
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { articleTarget } from '$lib/community/repo';
 	import { byEntryOrder, sourceOf } from '$lib/entities/sources';
+	import { leadTa, meaningDescription, meaningTitle } from '$lib/entities/seo';
 
 	let { data } = $props();
 	const ta = $derived(settings.value.uiLang === 'ta');
@@ -39,11 +40,13 @@
 	const corrections = $derived(a.paragraphs.filter((p) => p.ta_source === 'community' || p.ta_source === 'owner').length);
 	// Search engines get the Tamil page (the server renders the default
 	// language): a title in both scripts and a Tamil description, as the Bible
-	// pages do (ADR-15). The English original is not indexed separately.
-	const seoUrl = $derived(`https://www.tamilscripture.com/dictionary/${a.id}`);
-	const seoTitle = $derived(a.title_ta && a.title_ta !== a.title ? `${a.title_ta} · ${a.title}` : a.title);
+	// pages do (ADR-15). The English original is not indexed separately. An
+	// article about one person or place is that page's text, and points there.
+	const ownUrl = $derived(`https://www.tamilscripture.com/dictionary/${a.id}`);
+	const seoUrl = $derived(a.canonical ? `https://www.tamilscripture.com/${a.canonical}` : ownUrl);
+	const seoTitle = $derived(meaningTitle(a.title_ta, a.title));
 	const lead = $derived(a.paragraphs.find((p) => !p.heading) ?? a.paragraphs[0]);
-	const description = $derived(((lead?.ta ?? lead?.text) || '').replace(/\s+/g, ' ').slice(0, 160));
+	const description = $derived(lead?.ta ? meaningDescription(a.title_ta, leadTa(a)) : (lead?.text ?? '').replace(/\s+/g, ' ').slice(0, 160));
 	const jsonLd = $derived(
 		JSON.stringify({
 			'@context': 'https://schema.org',
@@ -51,7 +54,7 @@
 			headline: a.title_ta ?? a.title,
 			alternativeHeadline: a.title,
 			inLanguage: hasTa ? 'ta' : 'en',
-			url: seoUrl,
+			url: ownUrl,
 			description,
 			isBasedOn: { '@type': 'Book', name: src.name, datePublished: String(src.year), inLanguage: 'en' },
 			isPartOf: { '@type': 'WebSite', name: 'Tamil Scripture · தமிழ் வேதாகமம்', url: 'https://www.tamilscripture.com/' }
@@ -60,11 +63,17 @@
 </script>
 
 <svelte:head>
-	<title>{seoTitle} · அகராதி · Dictionary · Tamil Scripture</title>
+	<title>{seoTitle} · Tamil Scripture</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={seoUrl} />
-	<link rel="alternate" hreflang="ta" href={seoUrl} />
-	<link rel="alternate" hreflang="x-default" href={seoUrl} />
+	{#if a.canonical}
+		<!-- the person or place page carries this article: no robots tag beside the canonical -->
+	{:else if a.index}
+		<link rel="alternate" hreflang="ta" href={ownUrl} />
+		<link rel="alternate" hreflang="x-default" href={ownUrl} />
+	{:else}
+		<meta name="robots" content="noindex, follow" />
+	{/if}
 	<meta property="og:title" content={seoTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />

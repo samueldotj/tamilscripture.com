@@ -126,17 +126,17 @@ const CHOSEN_ENTRIES: Record<string, string[]> = {
 	'person/jesus': ['aquifer/jesus-christ', 'eastons/christ', 'smiths/jesus-christ']
 };
 
-/** The main dictionary article of a person or place (`entity` is
- *  `person/jesus`), and its entries; null when no dictionary has an entry of
- *  that name. */
+/** The dictionary entries of a person or place's name (`entity` is
+ *  `person/jesus`), every one loaded so the server renders them all: the
+ *  page is the canonical home of the articles about it alone (seo.ts).
+ *  Null when no dictionary has an entry of that name. */
 export async function loadNameArticle(fetch: Fetch, refs: ArticleRef[] | undefined, name: string, entity = '') {
 	const chosen = CHOSEN_ENTRIES[entity];
 	const entries: ArticleRef[] = chosen
 		? chosen.map((id) => ({ source: id.split('/')[0], id, title: name, paragraphs: 0 }))
 		: nameEntries(refs, name);
-	if (!entries.length) return null;
-	const article = await loadArticle(fetch, entries[0].id).catch(() => null);
-	return article ? { article, entries } : null;
+	const articles = (await Promise.all(entries.map((e) => loadArticle(fetch, e.id).catch(() => null)))).filter((a) => a !== null);
+	return articles.length ? { articles, chosen: !!chosen } : null;
 }
 
 /** Mentions for a chapter; null when the chapter names no places or people. */

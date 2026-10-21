@@ -2,24 +2,25 @@
 	// A dictionary article as the main text of a person or place page: in the
 	// site language (Tamil, or the English original under EN), with a switch
 	// between the dictionaries that have an entry of this name, one draft
-	// badge and one correction control, as on the article page.
+	// badge and one correction control, as on the article page. Every entry is
+	// in the page, so search engines read the articles this page is the home
+	// of; an article about several people or places shows its opening here and
+	// lives on its own page (seo.ts).
 	import RefText from '$lib/refs/RefText.svelte';
 	import SuggestControl from '$lib/community/SuggestControl.svelte';
 	import Provenance from '$lib/community/Provenance.svelte';
 	import { articleTarget } from '$lib/community/repo';
-	import { loadArticle } from '$lib/entities/load';
 	import { sourceOf } from '$lib/entities/sources';
-	import type { Article, ArticleRef } from '$lib/entities/types';
+	import { excerpt, ownedBy } from '$lib/entities/seo';
+	import type { Article } from '$lib/entities/types';
 
-	let { article, entries, lang }: { article: Article; entries: ArticleRef[]; lang: 'ta' | 'en' } = $props();
+	let { articles, owner, chosen = false, lang }: { articles: Article[]; owner: string; chosen?: boolean; lang: 'ta' | 'en' } = $props();
 
 	const ta = $derived(lang === 'ta');
-	let shown = $state<Article | null>(null);
-	let loading = $state(false);
-	const a = $derived(shown && shown.id !== article.id && entries.some((e) => e.id === shown!.id) ? shown : article);
+	let shownId = $state<string | null>(null);
+	const a = $derived(articles.find((x) => x.id === shownId) ?? articles[0]);
 	const src = $derived(sourceOf(a.source));
 	const hasTa = $derived(a.paragraphs.some((p) => p.ta));
-	const showTa = $derived(ta && hasTa);
 	const corrections = $derived(a.paragraphs.filter((p) => p.ta_source === 'community' || p.ta_source === 'owner').length);
 	const choices = $derived(
 		a.paragraphs.map((p, i) => {
@@ -27,44 +28,38 @@
 			return { target: articleTarget(p.id), current: p.ta ?? '', source: p.text, label: `${i + 1}. ${text.length > 70 ? text.slice(0, 70) + '…' : text}` };
 		})
 	);
-
-	async function show(id: string) {
-		if (id === a.id || loading) return;
-		if (id === article.id) {
-			shown = null;
-			return;
-		}
-		loading = true;
-		try {
-			shown = await loadArticle(fetch, id);
-		} finally {
-			loading = false;
-		}
-	}
 </script>
 
 <section class="dict card">
 	<div class="top">
 		<h2 class="kicker"><span lang="ta">அகராதி</span> · Dictionary</h2>
-		{#if entries.length > 1}
+		{#if articles.length > 1}
 			<div class="pills" role="group" aria-label={ta ? 'அகராதி மூலம்' : 'Dictionary source'}>
-				{#each entries as e (e.id)}
-					<button type="button" class="pill" class:on={e.id === a.id} aria-pressed={e.id === a.id} disabled={loading} onclick={() => show(e.id)}>{sourceOf(e.source).short}</button>
+				{#each articles as e (e.id)}
+					<button type="button" class="pill" class:on={e.id === a.id} aria-pressed={e.id === a.id} onclick={() => (shownId = e.id)}>{sourceOf(e.source).short}</button>
 				{/each}
 			</div>
 		{/if}
 	</div>
 
-	<div class="body" class:dim={loading}>
-		{#each a.paragraphs as p (p.id)}
-			{@const tamil = showTa && p.ta}
-			{#if p.heading}
-				<h3 lang={tamil ? 'ta' : 'en'}>{tamil ? p.ta : p.text}</h3>
+	{#each articles as x (x.id)}
+		{@const xTa = ta && x.paragraphs.some((p) => p.ta)}
+		<div class="body" hidden={x.id !== a.id}>
+			{#if ownedBy(x, owner, chosen)}
+				{#each x.paragraphs as p (p.id)}
+					{@const tamil = xTa && p.ta}
+					{#if p.heading}
+						<h3 lang={tamil ? 'ta' : 'en'}>{tamil ? p.ta : p.text}</h3>
+					{:else}
+						<p lang={tamil ? 'ta' : 'en'} class:ta={tamil}><RefText text={(tamil ? p.ta : p.text) ?? ''} /></p>
+					{/if}
+				{/each}
 			{:else}
-				<p lang={tamil ? 'ta' : 'en'} class:ta={tamil}><RefText text={(tamil ? p.ta : p.text) ?? ''} /></p>
+				<p lang={xTa ? 'ta' : 'en'} class:ta={xTa}>{excerpt(x, !xTa)}</p>
+				<p class="more"><a href="/dictionary/{x.id}" lang={ta ? 'ta' : 'en'}>{ta ? 'முழுக் கட்டுரையை வாசிக்க →' : 'Read the full entry →'}</a></p>
 			{/if}
-		{/each}
-	</div>
+		</div>
+	{/each}
 
 	<div class="foot">
 		<div class="meta">
@@ -93,8 +88,11 @@
 	.pill { font: inherit; font-size: 0.82rem; font-weight: 600; min-height: 32px; padding: 0.15rem 0.75rem; border: var(--bw, 1px) solid var(--line-2); border-radius: 999px; background: none; color: var(--ink-2); cursor: pointer; }
 	.pill:hover { border-color: var(--accent); color: var(--accent); }
 	.pill.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-	.body { display: grid; gap: 0.9rem; transition: opacity 0.15s; }
-	.body.dim { opacity: 0.5; }
+	.body { display: grid; gap: 0.9rem; }
+	.body[hidden] { display: none; }
+	.more { font-size: 0.88rem; font-weight: 600; }
+	.more a { text-decoration: none; }
+	.more [lang='ta'] { font-family: var(--tamil); }
 	.body p { margin: 0; line-height: 1.75; font-size: 1.02rem; }
 	.body p.ta { font-family: var(--tamil); font-size: 1.1rem; line-height: 1.9; }
 	.body h3 { margin: 0.4rem 0 0; font-size: 1.05rem; font-weight: 700; }

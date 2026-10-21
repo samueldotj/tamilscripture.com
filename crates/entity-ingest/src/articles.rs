@@ -50,6 +50,16 @@ pub struct Article {
     /// the 8,122 headwords are in more than one, so an entry is not an island.
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub also_in: Vec<Sibling>,
+    /// `person/rehabiah`: the page this article is shown on in full, and its
+    /// canonical URL, when it is about that one person or place (seo.rs)
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub canonical: Option<String>,
+    /// Put forward for indexing: its own page, with enough Tamil (seo.rs)
+    #[serde(skip_serializing_if = "std::ops::Not::not")]
+    pub index: bool,
+    /// Tamil words of the whole article, filled in by the build
+    #[serde(skip)]
+    pub ta_words: usize,
 }
 
 /// One line about the same headword in another dictionary: enough to decide
@@ -321,6 +331,9 @@ pub fn load_neuu(dir: &Path, src: &NeuuSource) -> Result<Vec<Article>> {
                 refs,
                 hash: fnv8(&full_text),
                 also_in: Vec::new(),
+                canonical: None,
+                index: false,
+                ta_words: 0,
             });
         }
     }

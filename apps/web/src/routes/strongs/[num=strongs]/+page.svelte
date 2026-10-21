@@ -113,9 +113,11 @@
 </script>
 
 <svelte:head>
-	<title>{e.s} · {e.lemma} · ஒத்த வசன அகராதி · Concordance · Tamil Scripture</title>
-	<meta name="description" content={`${e.s} ${e.lemma} (${e.translit}) “${e.gloss}”: ${verses.length} ${ta ? 'வசனங்கள்' : 'verses'}.`} />
+	<title>{e.gloss_ta ? `${e.gloss_ta} – ` : ''}{e.s} · {e.lemma} · ஒத்த வசன அகராதி · Concordance · Tamil Scripture</title>
+	<meta name="description" content={`${e.s} ${e.lemma} (${e.translit}) “${e.gloss_ta ?? e.gloss}”: ${verses.length} ${ta ? 'வசனங்கள்' : 'verses'}.`} />
 	<link rel="canonical" href="https://www.tamilscripture.com/strongs/{e.s}" />
+	<!-- Indexed once the word has a Tamil meaning: until then the page is the English lexicon alone. -->
+	{#if !e.gloss_ta}<meta name="robots" content="noindex, follow" />{/if}
 </svelte:head>
 
 <article class="conc">

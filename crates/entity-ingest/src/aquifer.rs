@@ -151,6 +151,9 @@ pub fn load(dir: &Path) -> Result<Vec<Article>> {
                 refs,
                 hash: fnv8(&full),
                 also_in: Vec::new(),
+                canonical: None,
+                index: false,
+                ta_words: 0,
             });
         }
     }

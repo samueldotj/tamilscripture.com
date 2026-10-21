@@ -439,6 +439,9 @@ mod tests {
             refs: vec![],
             hash: "f448c73f".into(),
             also_in: vec![],
+            canonical: None,
+            index: false,
+            ta_words: 0,
         }
     }
 

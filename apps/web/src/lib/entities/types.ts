@@ -62,6 +62,8 @@ export interface Place {
 	description?: Description;
 	articles?: ArticleRef[];
 	source: { openbible_id: string; url: string; licence: string; attribution: string };
+	/** Put forward for indexing (crates/entity-ingest/src/seo.rs) */
+	index?: boolean;
 }
 
 export interface PlaceIndexEntry {
@@ -74,6 +76,7 @@ export interface PlaceIndexEntry {
 	lon?: number;
 	precision: Precision;
 	mentions: number;
+	index?: boolean;
 }
 
 export interface PlaceIndex {
@@ -126,6 +129,8 @@ export interface Person {
 	verses: string[];
 	articles?: ArticleRef[];
 	source: { name: string; url: string; licence: string; attribution: string };
+	/** Put forward for indexing (crates/entity-ingest/src/seo.rs) */
+	index?: boolean;
 }
 
 export interface PersonIndexEntry {
@@ -137,6 +142,7 @@ export interface PersonIndexEntry {
 	brief?: string;
 	brief_ta?: string;
 	mentions: number;
+	index?: boolean;
 }
 
 /** Summary of one place inside a chapter's mentions file. */
@@ -210,6 +216,10 @@ export interface Article {
 	hash: string;
 	/** The same headword in the other dictionaries, in entry order. */
 	also_in?: Sibling[];
+	/** `person/rehabiah`: the page this article is shown on in full, and its canonical URL */
+	canonical?: string;
+	/** Put forward for indexing (crates/entity-ingest/src/seo.rs) */
+	index?: boolean;
 }
 
 /** The same headword in another dictionary: one line, enough to choose by. */
@@ -232,6 +242,8 @@ export interface ArticleIndexEntry {
 	hash: string;
 	paragraphs: number;
 	entities?: string[];
+	canonical?: string;
+	index?: boolean;
 }
 
 export interface JourneyStop {
