@@ -119,8 +119,11 @@
 	.gn:hover { color: var(--accent); }
 	.row.selected .gn { color: var(--amber); }
 	.gn .word { display: none; }
-	/* verse numbers live in the gutter here */
-	.cell :global(.vn) { display: none; }
+	/* Verse numbers live in the gutter here, and a verse's lines run on as prose:
+	   the columns are too narrow for poetry indents. Specific enough to beat the
+	   Study Bible format's one-verse-per-line rules (app.css, fmt-xref). */
+	.dual .cell.chapter :global(.verse .vn) { display: none; }
+	.dual .cell.chapter :global(.verse) { display: inline; padding: 0; text-indent: 0; }
 	.cell[lang='ta'] { font-family: var(--tamil); font-size: 1.25rem; line-height: 1.85; text-wrap: pretty; }
 	.cell[lang='en'] { font-family: var(--en); font-size: 1.12rem; line-height: 1.8; color: var(--ink-en); text-wrap: pretty; }
 	.dash { color: var(--muted); }
