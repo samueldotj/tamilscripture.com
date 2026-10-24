@@ -614,7 +614,7 @@ def cmd_commentary_full_run(a) -> int:
     if a.plan:
         print(cf.plan(sources))
         return 0
-    return cf.run(a.model, a.effort, sources, a.poll)
+    return cf.run(a.model, a.effort, sources, a.poll, a.collect_only)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -811,6 +811,8 @@ def main(argv: list[str] | None = None) -> int:
                    help="a commentary to translate (repeat for several; default all)")
     p.add_argument("--plan", action="store_true", help="count what is left and its cost; no API call")
     p.add_argument("--poll", type=int, default=300, help="seconds between batch checks")
+    p.add_argument("--collect-only", action="store_true",
+                   help="collect finished batches and write drafts; submit nothing (repairs wait for the next run)")
     model_opts(p)
     p.set_defaults(fn=cmd_commentary_full_run)
 

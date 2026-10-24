@@ -156,11 +156,19 @@ def collect_repairs(b: dict, ctx: commentary.Context) -> None:
     say(f"collected repair batch {b['id']} ({b['source']}): {fixed} units now clean, {still} still flagged for a human")
 
 
-def run(model: str, effort: str, sources: list[str], poll: int = POLL) -> int:
+def run(model: str, effort: str, sources: list[str], poll: int = POLL, collect_only: bool = False) -> int:
+    """`collect_only`: download finished batches and write their drafts, but submit
+    nothing (no credit, say); the repairs they need wait in the state file and go
+    out on the next ordinary run."""
     keep_awake()
     ctx = commentary.Context(model=model, effort=effort)
     state = load_state()
-    submit_translations(state, ctx, sources)
+    if not collect_only:
+        submit_translations(state, ctx, sources)
+        for b in state["batches"]:
+            if b.get("repairs_pending") is not None:
+                submit_repairs(state, b, b.pop("repairs_pending"), ctx)
+                save_state(state)
     while True:
         open_batches = [b for b in state["batches"] if b["status"] == "submitted"]
         if not open_batches:
@@ -171,8 +179,10 @@ def run(model: str, effort: str, sources: list[str], poll: int = POLL) -> int:
             if b["kind"] == "translate":
                 flagged = collect_translation(b, ctx)
                 b["status"] = "collected"
+                b["repairs_pending"] = flagged
                 save_state(state)
-                submit_repairs(state, b, flagged, ctx)
+                if not collect_only:
+                    submit_repairs(state, b, b.pop("repairs_pending"), ctx)
             else:
                 collect_repairs(b, ctx)
                 b["status"] = "collected"
