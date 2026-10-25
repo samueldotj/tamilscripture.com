@@ -1,9 +1,9 @@
 <script lang="ts">
-	// The provenance strip under a comment (design 15): the commentary and its
-	// year, whether the text shown is the English original or a Tamil draft,
-	// and the licence it is used under.
+	// The provenance strip under a comment (design 15): the commentator, when and
+	// where they lived (else the commentary's year), whether the text shown is the
+	// English original or a Tamil draft, and the licence it is used under.
 	import Provenance from '$lib/community/Provenance.svelte';
-	import type { CommentarySource, CommentaryUnit } from './load';
+	import { lifeLine, type CommentarySource, type CommentaryUnit } from './load';
 
 	let { source, unit = null, lang }: { source: CommentarySource; unit?: CommentaryUnit | null; lang: 'ta' | 'en' } = $props();
 	const ta = $derived(lang === 'ta');
@@ -13,7 +13,7 @@
 
 <div class="foot">
 	<div class="meta">
-		<span class="name">{source.name}, {source.year}</span>
+		<span class="name">{#if source.lived}{source.name} <span class="life">{lifeLine(source)}</span>{:else}{source.name}, {source.year}{/if}</span>
 		<span class="state" lang={ta ? 'ta' : 'en'}>
 			{#if hasTa && ta}
 				தமிழாக்கம் ·
@@ -32,6 +32,7 @@
 	.foot { display: grid; gap: 0.35rem; padding: 0.7rem 0.8rem; background: var(--surface-2); border-radius: 10px; }
 	.meta { display: grid; gap: 0.1rem; }
 	.name { font-size: 0.82rem; font-weight: 700; }
+	.life { font-weight: 400; color: var(--muted); margin-left: 0.25em; }
 	.state { font-size: 0.78rem; color: var(--muted); }
 	.state[lang='ta'] { font-family: var(--tamil); }
 	.ok { color: var(--good); font-weight: 600; }

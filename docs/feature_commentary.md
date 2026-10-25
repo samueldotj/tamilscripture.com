@@ -16,7 +16,7 @@ built 27 Sep 2026, waiting for the CDN.
 | Versions | `{base}/latest.json` names the current version (5-minute cache). Files under `{base}/{version}/` never change (one-year cache), so new text needs no deploy. |
 | Loading | After paint, only while the setting is on: the index (24 kB) and the chosen commentary's chapter (for example Henry on John 3 is 107 kB, about 35 kB gzipped). The focus pane also fetches the other commentaries' chapters for its "Also in" previews. The views are a lazy chunk. |
 | English and Tamil | Tamil where a current draft exists and the site is in Tamil. Otherwise the English, labelled ஆங்கில மூலம் · தமிழாக்கம் விரைவில் (English original, translation coming). |
-| Credit and licence | Each comment shows the commentary, its year, the attribution and the licence. The Early Church Fathers are used under SermonIndex's terms (free for personal and ministry purposes). |
+| Credit and licence | Each comment shows the commentator with when and where they lived (`lived`, `place` in `index.json`; the commentary's year where there is none), the attribution and the licence. Each quotation of a Father shows the same beside the name (on its first paragraph, from `data/fathers.json` of bible-commentaries, resolved from Wikidata), and the city links to the atlas opened there in the Father's day: `/atlas/explore?at={lat},{lon}&name={city}&who={author}&year={year}`. The Early Church Fathers are used under SermonIndex's terms (free for personal and ministry purposes). |
 | Offline | The service worker caches same-origin requests only, so commentary is not available offline. |
 
 ## 2. Files

@@ -63,6 +63,8 @@
 	let markers: import('maplibre-gl').Marker[] = [];
 	let places: PlaceIndexEntry[] = [];
 	let focused = new Set<string>();
+	/** The year the query string asks the timeline to open on (`?year=430`). */
+	let askedYear: number | null = null;
 
 	const JOURNEY_LAYERS = DASHES.map((_, d) => `journeys-${d}`);
 	/** `['in', ['get', 'id'], ['literal', ids]]`, typed for the style spec. */
@@ -191,8 +193,10 @@
 				await new Promise((r) => setTimeout(r, 100));
 			}
 			timeline = t;
-			// Open on the year of the first journey shown, else in the middle.
-			step = Math.max(0, t.years.findIndex((y) => y >= -1000));
+			// Open on the year asked for, else on the year of the first journey shown.
+			step = askedYear !== null
+				? Math.max(0, t.years.findLastIndex((y) => y <= askedYear!))
+				: Math.max(0, t.years.findIndex((y) => y >= -1000));
 			map.addSource('polities', { type: 'geojson', data: t.fc as never });
 			const hues = Array.from({ length: HUES }, (_, i) => css(`--j-${i + 1}`, '#2A78D6'));
 			const ids = [...new Set(t.rows.map((r) => r.id))];
@@ -386,7 +390,24 @@
 		const placeId = q.get('place');
 		const journeyId = q.get('journey');
 		const chapter = q.get('chapter');
-		if (placeId) {
+		const at = (q.get('at') ?? '').split(',').map(Number);
+		if (q.has('year') && Number.isFinite(Number(q.get('year')))) askedYear = Number(q.get('year'));
+		if (at.length === 2 && at.every(Number.isFinite)) {
+			// A city outside the gazetteer, as a commentary links a church father's:
+			// `?at=36.88,7.75&name=Hippo Regius&who=Augustine of Hippo&year=430`.
+			const [lat, lon] = at;
+			const name = q.get('name') ?? '';
+			const who = q.get('who');
+			focusLabel = who && name ? `${who} · ${name}` : who || name;
+			map.jumpTo({ center: [lon, lat], zoom: 6 });
+			if (maplibre) {
+				const el = document.createElement('div');
+				el.className = 'asked';
+				el.innerHTML = '<span class="nm"></span><span class="dot" aria-hidden="true"></span>';
+				el.querySelector('.nm')!.textContent = name;
+				new maplibre.Marker({ element: el, anchor: 'bottom' }).setLngLat([lon, lat]).addTo(map);
+			}
+		} else if (placeId) {
 			const p = places.find((x) => x.id === placeId);
 			if (p?.lat !== undefined) {
 				focused = new Set([p.id]);
@@ -935,6 +956,9 @@
 	.canvas :global(.church .nm) { text-shadow: 0 0 3px var(--map-land), 0 0 3px var(--map-land), 0 0 3px var(--map-land); }
 	.canvas :global(.church:hover .nm), .canvas :global(.church.em .nm) { color: var(--accent); }
 	.canvas :global(.church.em .pin) { box-shadow: 0 0 0 3px var(--accent-soft); }
+	.canvas :global(.asked) { display: flex; flex-direction: column; align-items: center; gap: 2px; pointer-events: none; }
+	.canvas :global(.asked .nm) { font: 700 13px var(--sans); color: var(--amber); white-space: nowrap; text-shadow: 0 0 3px var(--map-land), 0 0 3px var(--map-land), 0 0 3px var(--map-land); }
+	.canvas :global(.asked .dot) { width: 12px; height: 12px; margin-bottom: -6px; border-radius: 999px; background: var(--amber); border: 2px solid var(--surface); box-shadow: 0 0 0 4px color-mix(in srgb, var(--amber) 30%, transparent); }
 	.canvas :global(.clist) { list-style: none; margin: 0.35rem 0 0; padding: 0; display: grid; gap: 0.28rem; }
 	.canvas :global(.crow) { display: grid; grid-template-columns: auto 1fr auto; gap: 0.4rem; align-items: baseline; font-size: 0.85rem; }
 	.canvas :global(.cwhat) { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }

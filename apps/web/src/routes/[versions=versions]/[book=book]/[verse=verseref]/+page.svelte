@@ -2,7 +2,7 @@
 	import { bookNameIn, chapterUrl, commentaryUrl, DEFAULT_VERSION, findVersion, verseUrl } from '$lib/content/manifest';
 	import { settings } from '$lib/settings/store.svelte';
 	import CommentaryText from '$lib/commentary/CommentaryText.svelte';
-	import { unitLabel } from '$lib/commentary/load';
+	import { lifeLine, unitLabel } from '$lib/commentary/load';
 	import ShareImage from '$lib/reader/ShareImage.svelte';
 
 	let { data } = $props();
@@ -117,7 +117,7 @@
 				<article class="comment">
 					<header>
 						<span class="badge">{c.source.short}</span>
-						<h3 lang="en">{c.source.name} <span class="year">({c.source.year})</span></h3>
+						<h3 lang="en">{c.source.name} <span class="year">({lifeLine(c.source, ', ') || c.source.year})</span></h3>
 						{#if many && !c.partOf}<span class="at">{unitLabel(c.unit, data.chapter)}</span>{/if}
 					</header>
 					{#if c.unit.title && !c.partOf}<div class="title" lang={ta && c.unit.title_ta ? 'ta' : 'en'}>{ta && c.unit.title_ta ? c.unit.title_ta : c.unit.title}</div>{/if}

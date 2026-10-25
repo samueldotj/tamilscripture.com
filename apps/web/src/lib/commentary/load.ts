@@ -21,6 +21,9 @@ export interface CommentarySource {
 	desc_en: string;
 	licence: string;
 	attribution: string;
+	/** when and where the commentator lived: "1662–1714", "Chester, England" */
+	lived?: string;
+	place?: string;
 }
 
 export interface CommentaryIndex {
@@ -59,6 +62,13 @@ export interface CommentaryParagraph {
 	work?: string;
 	via?: string;
 	quote?: number;
+	/** on a quotation's first paragraph: when and where its author lived, from
+	 *  Wikidata; the city's coordinates and a year in the author's life */
+	lived?: string;
+	place?: string;
+	lat?: number;
+	lon?: number;
+	year?: number;
 }
 
 export interface CommentaryUnit {
@@ -156,6 +166,19 @@ export function unitFor(units: CommentaryUnit[], v: number | null): CommentaryUn
 		if (hit) return hit;
 	}
 	return units.find((u) => u.kind === 'chapter') ?? (v ? null : units[0] ?? null);
+}
+
+/** When and where a commentator lived, "1662–1714 · Chester, England"; '' when unknown. */
+export function lifeLine(x: { lived?: string; place?: string }, sep = ' · '): string {
+	return [x.lived, x.place].filter(Boolean).join(sep);
+}
+
+/** The atlas opened on a quoting author's city, in their day; null when the city has no coordinates. */
+export function fatherAtlasUrl(p: CommentaryParagraph, author: string): string | null {
+	if (p.lat == null || p.lon == null) return null;
+	const q = new URLSearchParams({ at: `${p.lat},${p.lon}`, name: (p.place ?? '').split(', ')[0], who: author });
+	if (p.year != null) q.set('year', String(p.year));
+	return `/atlas/explore?${q}`;
 }
 
 /** "3:16" or "3:14–15", or the chapter number for its introduction. */

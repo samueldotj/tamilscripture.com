@@ -5,7 +5,7 @@
 	// resolved ("Mal. ii. 7") first, the rest by the site's own linkifier.
 	import RefText from '$lib/refs/RefText.svelte';
 	import { chapterUrl, findBook, verseUrl } from '$lib/content/manifest';
-	import type { CommentaryParagraph, CommentaryUnit } from './load';
+	import { fatherAtlasUrl, type CommentaryParagraph, type CommentaryUnit } from './load';
 
 	let { unit, lang, versionPath, compact = false }: { unit: CommentaryUnit; lang: 'ta' | 'en'; versionPath: string; compact?: boolean } = $props();
 
@@ -46,8 +46,10 @@
 				ta,
 				text: ta ? p.ta! : p.text,
 				anchor: ta ? p.anchor_ta ?? p.anchor : p.anchor,
-				// Early Church Fathers: the father's name before a quotation, the work after it.
+				// Early Church Fathers: the father's name before a quotation, when and
+				// where they lived (the city a link to the atlas), the work after it.
 				author: p.author && (!prev || prev.quote !== p.quote) ? p.author : null,
+				atlas: p.author ? fatherAtlasUrl(p, p.author) : null,
 				work: p.work && (!next || next.quote !== p.quote) ? p.work : null
 			};
 		})
@@ -57,7 +59,7 @@
 <div class="cm" class:compact>
 	{#each paras as x (x.p.id)}
 		{#if x.author}
-			<div class="who" lang="en">{x.author}{#if x.p.via}<span class="via">{` · ${x.p.via}`}</span>{/if}</div>
+			<div class="who" lang="en">{x.author}{#if x.p.lived || x.p.place}{' '}<span class="life">{x.p.lived ?? ''}{#if x.p.lived && x.p.place}{' · '}{/if}{#if x.p.place && x.atlas}<a class="place" href={x.atlas} title={lang === 'ta' ? 'வரைபடத்தில் காண்க' : 'See on the atlas'}>{x.p.place}</a>{:else}{x.p.place ?? ''}{/if}</span>{/if}{#if x.p.via}<span class="via">{` · ${x.p.via}`}</span>{/if}</div>
 		{/if}
 		{#if x.p.heading}
 			<h4 lang={x.ta ? 'ta' : 'en'}>{x.text}</h4>
@@ -90,6 +92,9 @@
 	.lab { font-family: var(--sans); font-size: 0.72em; font-weight: 700; color: var(--accent); margin-right: 0.35em; vertical-align: 0.15em; }
 	.who { font-family: var(--sans); font-size: 0.82rem; font-weight: 700; color: var(--ink); margin-top: 0.35rem; }
 	.via { font-weight: 400; color: var(--muted); }
+	.life { font-weight: 400; color: var(--muted); margin-left: 0.25em; }
+	.place { color: inherit; text-decoration: underline dotted; text-underline-offset: 0.2em; }
+	.place:hover { color: var(--accent); text-decoration-style: solid; }
 	.work { font-family: var(--sans); font-size: 0.78rem; font-style: italic; color: var(--muted); margin-top: -0.35rem; }
 	.ref-link { color: var(--accent); text-decoration: underline dotted; text-underline-offset: 0.2em; }
 	.ref-link:hover { text-decoration-style: solid; }
