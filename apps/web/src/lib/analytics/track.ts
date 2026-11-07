@@ -6,6 +6,7 @@
 // be tracked (Global Privacy Control, Do Not Track) are not counted, and
 // nothing is sent in development.
 import { browser, dev } from '$app/environment';
+import { advance, ENGAGEMENTS, newProgress, watch, type Engagement } from './engagement';
 
 /** The server accepts at most this many events in one request. */
 export const MAX_BATCH = 20;
@@ -76,8 +77,9 @@ export interface TrackData {
 	user?: string | null;
 	book?: string;
 	chapter?: number;
-	/** audio: play, next, jump, end or time; share: link, large, download, sheet or copy */
-	action?: 'play' | 'next' | 'jump' | 'end' | 'time' | ShareAction;
+	/** audio: play, next, jump, end or time; share: link, large, download, sheet or copy;
+	 *  goal: reader, listener, atlas or psalms */
+	action?: 'play' | 'next' | 'jump' | 'end' | 'time' | ShareAction | Engagement;
 	/** audio: the recording's version code; share: the first version shown */
 	version?: string;
 	/** audio: seconds listened, for `time` */
@@ -88,7 +90,7 @@ export interface TrackData {
 /** link and large: the reader's share menu; download, sheet and copy: "Share as image". */
 export type ShareAction = 'link' | 'large' | 'download' | 'sheet' | 'copy';
 
-export function track(kind: 'view' | 'verse' | 'audio' | 'share', data: TrackData = {}) {
+export function track(kind: 'view' | 'verse' | 'audio' | 'share' | 'goal', data: TrackData = {}) {
 	if (!browser || dev || optedOut()) return;
 	// The moderators' own pages are not the site's traffic.
 	if (location.pathname === '/mod' || location.pathname.startsWith('/mod/')) return;
@@ -113,4 +115,16 @@ export function track(kind: 'view' | 'verse' | 'audio' | 'share', data: TrackDat
 	});
 	if (kind === 'view') firstView = false;
 	if (queue.length >= MAX_BATCH) flush();
+}
+
+/** Engagement (A11): one `goal` event the first time in this visit (this tab)
+ *  a reader reads on, listens, or spends a minute on the atlas or the Psalms
+ *  explorer. Kept in memory only, like the rest of the beacon. */
+export function watchEngagement() {
+	if (!browser || dev || optedOut()) return;
+	const p = newProgress();
+	watch((s) => {
+		for (const g of advance(p, s)) track('goal', { action: g });
+		return p.done.length < ENGAGEMENTS.length;
+	});
 }

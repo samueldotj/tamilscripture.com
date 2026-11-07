@@ -88,7 +88,22 @@
 		{ id: 'sharers', ta: 'பகிர்ந்தவர்கள்', en: 'Sharers', hint_ta: 'நாள்தோறும் எண்ணி, கூட்டியது', hint_en: 'Counted per day, summed' },
 		{ id: 'image_shares', ta: 'படமாகப் பகிர்ந்தவை', en: 'Shared as image', hint_ta: 'பதிவிறக்கம், பகிர்வு, நகல்', hint_en: 'Downloaded, sent or copied' }
 	];
-	const measureLabel = $derived([...MEASURES, ...AUDIO, ...SHARING].find((m) => m.id === measure)!);
+	// Engagement (A11): visitors who read on, listened, or spent a minute on the atlas
+	// or the Psalms explorer; the same rules as the Google Ads conversions.
+	const ENGAGEMENT: typeof MEASURES = [
+		{ id: 'engaged_readers', ta: 'தொடர்ந்து வாசித்தவர்கள்', en: 'Engaged readers', hint_ta: '2+ பக்கங்கள், மொத்தம் 2 நிமிடம்', hint_en: '2+ pages, 2 minutes in all' },
+		{ id: 'engaged_listeners', ta: 'தொடர்ந்து கேட்டவர்கள்', en: 'Engaged listeners', hint_ta: 'ஒலி வேதாகமம் 1 நிமிடம்', hint_en: 'A minute of the Audio Bible' },
+		{ id: 'atlas_viewers', ta: 'வரைபடம் பார்த்தவர்கள்', en: 'Atlas viewers', hint_ta: 'வரைபடத்தில் 1 நிமிடம்', hint_en: 'A minute on the atlas' },
+		{ id: 'psalms_explorers', ta: 'சங்கீதங்களை ஆராய்ந்தவர்கள்', en: 'Psalms explorers', hint_ta: 'சங்கீதப் பகுதியில் 1 நிமிடம்', hint_en: 'A minute in the Psalms explorer' }
+	];
+	/** Share of the range's visitors, as a whole percentage; "<1" when small but not none. */
+	function ofVisitors(n: number) {
+		const v = report?.totals.visitors ?? 0;
+		if (!v) return null;
+		const pct = Math.round((n / v) * 100);
+		return pct === 0 && n > 0 ? '<1' : String(pct);
+	}
+	const measureLabel = $derived([...MEASURES, ...AUDIO, ...SHARING, ...ENGAGEMENT].find((m) => m.id === measure)!);
 	/** 3 h 20 m, 45 m, 30 s. */
 	function duration(seconds: number) {
 		if (seconds < 60) return `${seconds} s`;
@@ -199,7 +214,7 @@
 	]);
 
 	// ---- ranked tables ----
-	type Section = { id: Dimension | 'searches' | 'searches_empty'; ta: string; en: string; n_ta: string; n_en: string; u_ta: string; u_en: string; seconds?: boolean };
+	type Section = { id: Dimension | 'searches' | 'searches_empty' | 'engaged_sources'; ta: string; en: string; n_ta: string; n_en: string; u_ta: string; u_en: string; seconds?: boolean; pct?: boolean };
 	const V = { n_ta: 'பார்வைகள்', n_en: 'Views', u_ta: 'வருகையாளர்', u_en: 'Visitors' };
 	const A = { n_ta: 'இயக்கங்கள்', n_en: 'Plays', u_ta: 'கேட்டவர்', u_en: 'Listeners' };
 	const S = { n_ta: 'பகிர்வுகள்', n_en: 'Shares', u_ta: 'பகிர்ந்தவர்', u_en: 'Sharers' };
@@ -227,6 +242,7 @@
 	}
 	const SECTIONS: Section[] = [
 		{ id: 'sources', ta: 'வருகையாளர் வந்த வழி', en: 'Where visitors come from', ...R },
+		{ id: 'engaged_sources', ta: 'வந்த வழிவாரியாகத் தொடர்ந்து வாசித்தவர்கள்', en: 'Engaged readers by source', n_ta: 'வாசித்தவர்', n_en: 'Readers', u_ta: 'வருகையாளரில் %', u_en: '% of visitors', pct: true },
 		{ id: 'pages', ta: 'அதிகம் பார்க்கப்பட்ட பக்கங்கள்', en: 'Top pages', ...V },
 		{ id: 'sections', ta: 'தளத்தின் பகுதிகள்', en: 'Parts of the site', ...V },
 		{ id: 'chapters', ta: 'அதிகம் வாசிக்கப்பட்ட அதிகாரங்கள்', en: 'Most-read chapters', ...V },
@@ -269,6 +285,7 @@
 	// Traffic sources (A8): analytics_source() in Postgres groups referrers into these.
 	const ORIGIN_NAMES: Record<string, [string, string]> = {
 		direct: ['நேரடியாக (வந்த தளம் இல்லை)', 'Direct (no referrer)'],
+		google_ads: ['Google விளம்பரங்கள்', 'Google Ads'],
 		google: ['Google', 'Google'],
 		whatsapp: ['WhatsApp', 'WhatsApp'],
 		facebook: ['Facebook', 'Facebook'],
@@ -290,9 +307,22 @@
 		if (key.startsWith('utm:')) return `${key.slice(4)} ${ta ? '(இணைப்புக் குறி)' : '(link tag)'}`;
 		return key;
 	}
+	/** Each source's visitors who read on, and what share of its visitors that is. */
+	const engagedBySource = $derived.by((): Row[] => {
+		if (!report?.engagedSources) return [];
+		const readers = new Map(report.engagedSources.filter((r) => r.extra === 'reader').map((r) => [r.key, r.u]));
+		return (report.sources ?? [])
+			.filter((s) => s.u > 0)
+			.map((s) => {
+				const n = readers.get(s.key) ?? 0;
+				return { key: s.key, extra: null, n, u: Math.round((n / s.u) * 100) };
+			})
+			.sort((a, b) => b.n - a.n || b.u - a.u || a.key.localeCompare(b.key));
+	});
 	function rowsFor(id: Section['id']): Row[] {
 		if (!report) return [];
 		if (id === 'sources') return report.sources ?? [];
+		if (id === 'engaged_sources') return engagedBySource;
 		if (id === 'searches') return report.searches ?? [];
 		if (id === 'searches_empty') return report.searches_empty ?? [];
 		const rows = report.top[id] ?? [];
@@ -315,6 +345,7 @@
 			case 'sections':
 				return SECTION_NAMES[r.key]?.[ta ? 0 : 1] ?? r.key;
 			case 'sources':
+			case 'engaged_sources':
 				return ORIGIN_NAMES[r.key]?.[ta ? 0 : 1] ?? r.key;
 			case 'referrers':
 				return referrerLabel(r.key);
@@ -380,8 +411,8 @@
 		downloadCsv(
 			`traffic-daily${fileTag}-${report.from}-${report.to}.csv`,
 			toCsv(
-				['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks', 'sign_ups', 'audio_plays', 'listeners', 'listen_seconds', 'audio_completed', 'shares', 'sharers', 'image_shares'],
-				report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks, d.signups, d.audio_starts, d.listeners, d.listen_seconds, d.audio_ends, d.shares ?? 0, d.sharers ?? 0, d.image_shares ?? 0])
+				['day', 'views', 'visitors', 'unique_views', 'signed_in', 'verse_clicks', 'sign_ups', 'audio_plays', 'listeners', 'listen_seconds', 'audio_completed', 'shares', 'sharers', 'image_shares', 'engaged_readers', 'engaged_listeners', 'atlas_viewers', 'psalms_explorers'],
+				report.daily.map((d) => [d.day, d.views, d.visitors, d.unique_views, d.members, d.verse_clicks, d.signups, d.audio_starts, d.listeners, d.listen_seconds, d.audio_ends, d.shares ?? 0, d.sharers ?? 0, d.image_shares ?? 0, d.engaged_readers, d.engaged_listeners, d.atlas_viewers, d.psalms_explorers])
 			)
 		);
 	}
@@ -524,6 +555,28 @@
 			</button>
 		{/each}
 	</div>
+
+	{#if report.engagedSources}
+		<h2 class="group kicker" lang={ta ? 'ta' : 'en'}>{ta ? 'ஈடுபாடு' : 'Engagement'}</h2>
+		<div class="tiles" class:dim={loading}>
+			{#each ENGAGEMENT as m (m.id)}
+				{@const d = delta(m.id)}
+				{@const share = ofVisitors(report.totals[m.id])}
+				<button type="button" class="tile" class:on={measure === m.id} aria-pressed={measure === m.id} onclick={() => (measure = m.id)}>
+					<span class="label" lang={ta ? 'ta' : 'en'}>{ta ? m.ta : m.en}</span>
+					<span class="value">{compact.format(report.totals[m.id])}</span>
+					{#if share !== null && report.totals[m.id] > 0}
+						<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? `வருகையாளர்களில் ${share}%` : `${share}% of visitors`}</span>
+					{/if}
+					{#if d}
+						<span class="delta {d.dir}" lang={ta ? 'ta' : 'en'}>{d.dir === 'up' ? '▲' : d.dir === 'down' ? '▼' : '■'} {d.text} <span class="vs">{ta ? `முந்தைய ${rangeLabel.ta} ஒப்பிட` : `vs previous ${rangeLabel.en}`}</span></span>
+					{:else}
+						<span class="hint" lang={ta ? 'ta' : 'en'}>{ta ? m.hint_ta : m.hint_en}</span>
+					{/if}
+				</button>
+			{/each}
+		</div>
+	{/if}
 
 	<section class="card chart" class:dim={loading}>
 		<div class="sec-head">
@@ -709,7 +762,7 @@
 										{#if href}<a {href} class="name">{rowLabel(sec.id, r)}</a>{:else}<span class="name">{rowLabel(sec.id, r)}</span>{/if}
 									</td>
 									<td class="num">{sec.seconds ? duration(r.n) : fmt.format(r.n)}</td>
-									<td class="num muted-n">{fmt.format(r.u)}</td>
+									<td class="num muted-n">{sec.pct ? `${r.u}%` : fmt.format(r.u)}</td>
 								</tr>
 							{/each}
 						</tbody>
@@ -723,9 +776,9 @@
 
 	<p class="note" lang={ta ? 'ta' : 'en'}>
 		{#if ta}
-			மதிப்பாய்வுப் பக்கங்கள் (/mod) எண்ணப்படுவதில்லை. “மொபைல் செயலி” என்பது Android செயலி; “இணையதளம்” மற்ற அனைத்தும். தேடல் சொற்கள், கணக்குகள், வாசிப்புத் திட்டங்கள் பிரிக்கப்படுவதில்லை. கணக்குகள்: “உள்நுழைந்தவர்கள்” அந்தக் காலத்தில் ஒரு முறையேனும் உள்நுழைந்த கணக்குகள்; “பயன்படுத்தியவர்கள்” உள்நுழைந்த நிலையில் தளத்தைத் திறந்தவர்கள். வாசிப்புத் திட்டங்களில் உள்நுழைந்த வாசகர்கள் மட்டும் எண்ணப்படுவார்கள்; உள்நுழையாமல் சேர்ந்த திட்டம் அந்த உலாவியிலேயே இருக்கும். வந்த வழி ஒவ்வொரு வருகையின் முதல் பக்கத்தை மட்டும் பார்க்கிறது; WhatsApp போன்ற செயலிகள் பெரும்பாலும் வந்த தளத்தைச் சொல்வதில்லை, எனவே அவை “நேரடியாக” என எண்ணப்படலாம் — பகிரும் இணைப்பில் ?utm_source=whatsapp சேர்த்தால் சரியாக எண்ணப்படும். ஒலி வேதாகமம்: அதிகார இயக்கங்கள் வாசகர் தொடங்கியவையும் தானாகத் தொடர்ந்தவையும்; கேட்ட நேரம் ஒலி உண்மையில் ஒலித்த நேரம், பக்கம் பின்னணியில் இருந்தாலும் சேர்த்து. குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
+			மதிப்பாய்வுப் பக்கங்கள் (/mod) எண்ணப்படுவதில்லை. “மொபைல் செயலி” என்பது Android செயலி; “இணையதளம்” மற்ற அனைத்தும். தேடல் சொற்கள், கணக்குகள், வாசிப்புத் திட்டங்கள் பிரிக்கப்படுவதில்லை. கணக்குகள்: “உள்நுழைந்தவர்கள்” அந்தக் காலத்தில் ஒரு முறையேனும் உள்நுழைந்த கணக்குகள்; “பயன்படுத்தியவர்கள்” உள்நுழைந்த நிலையில் தளத்தைத் திறந்தவர்கள். வாசிப்புத் திட்டங்களில் உள்நுழைந்த வாசகர்கள் மட்டும் எண்ணப்படுவார்கள்; உள்நுழையாமல் சேர்ந்த திட்டம் அந்த உலாவியிலேயே இருக்கும். வந்த வழி ஒவ்வொரு வருகையின் முதல் பக்கத்தை மட்டும் பார்க்கிறது; WhatsApp போன்ற செயலிகள் பெரும்பாலும் வந்த தளத்தைச் சொல்வதில்லை, எனவே அவை “நேரடியாக” என எண்ணப்படலாம் — பகிரும் இணைப்பில் ?utm_source=whatsapp சேர்த்தால் சரியாக எண்ணப்படும். ஈடுபாடு: “தொடர்ந்து வாசித்தவர்கள்” முகப்புப் பக்கம் அல்லாத இரண்டு அல்லது அதற்கு மேற்பட்ட பக்கங்களை மொத்தம் இரண்டு நிமிடம் திரையில் வாசித்தவர்கள் (10 வினாடிக்குக் குறைவான பக்கங்கள் சேராது); மற்றவை ஒலி வேதாகமம், வரைபடம், சங்கீதப் பகுதி ஒவ்வொன்றிலும் ஒரு நிமிடம். இவை Google விளம்பர மாற்றங்களின் அதே விதிகள், ஆனால் எல்லா வாசகர்களுக்கும்; 7 நவம்பர் 2026 முதல் எண்ணப்படுகின்றன. ஒலி வேதாகமம்: அதிகார இயக்கங்கள் வாசகர் தொடங்கியவையும் தானாகத் தொடர்ந்தவையும்; கேட்ட நேரம் ஒலி உண்மையில் ஒலித்த நேரம், பக்கம் பின்னணியில் இருந்தாலும் சேர்த்து. குக்கீகள் இல்லை; IP முகவரியோ பயனர் அடையாளமோ சேமிக்கப்படுவதில்லை. ஒரு வருகையாளர் அன்றைய நாளுக்கு மட்டும் செல்லும் மறைக்குறியீட்டால் எண்ணப்படுகிறார், எனவே பல நாள் காலத்தில் மீண்டும் வருபவர்கள் ஒவ்வொரு நாளும் தனியாக எண்ணப்படுவார்கள். இருப்பிடம் Vercel தரும் நகர அளவிலான மதிப்பீடு. “கண்காணிக்க வேண்டாம்” என்று கேட்கும் உலாவிகள் எண்ணப்படுவதில்லை. மூலத் தரவு 90 நாள், நாள்தோறும் சுருக்கிய எண்ணிக்கைகள் இரண்டு ஆண்டு வைக்கப்படுகின்றன.
 		{:else}
-			Moderator pages (/mod) are not counted. “Mobile app” is the Android app; “Website” is everything else. Search terms, accounts and reading plans are not split by source. Accounts: “signed in” counts accounts that signed in at least once in the window; “active while signed in” counts accounts that opened the site while signed in. Reading plans count signed-in readers only; a plan joined while signed out stays in that browser. Where visitors come from looks at the first page of each visit only. Apps such as WhatsApp often send no referrer, so their visits can land under “Direct”; add ?utm_source=whatsapp to a shared link to count it. Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. Sharing counts shares that went through: a link from the reader's share menu (sent, or copied where the browser has no share sheet) or a verse image downloaded, sent or copied; a share sheet closed without sending is not counted. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
+			Moderator pages (/mod) are not counted. “Mobile app” is the Android app; “Website” is everything else. Search terms, accounts and reading plans are not split by source. Accounts: “signed in” counts accounts that signed in at least once in the window; “active while signed in” counts accounts that opened the site while signed in. Reading plans count signed-in readers only; a plan joined while signed out stays in that browser. Where visitors come from looks at the first page of each visit only. Apps such as WhatsApp often send no referrer, so their visits can land under “Direct”; add ?utm_source=whatsapp to a shared link to count it. Engagement: “engaged readers” read two or more pages other than the home page for two minutes on screen in all (pages seen under 10 seconds do not count); the others spent a minute listening, on the atlas, or in the Psalms explorer. These are the Google Ads conversion rules, counted for every reader, from 7 Nov 2026. Audio Bible: chapter plays count chapters started by a reader and those that continued by themselves; listening time is the time audio actually played, including with the page in the background. Sharing counts shares that went through: a link from the reader's share menu (sent, or copied where the browser has no share sheet) or a verse image downloaded, sent or copied; a share sheet closed without sending is not counted. No cookies; no IP address or user id is stored. A visitor is counted with a code that lasts one day, so over a range a returning reader is counted once per day. Location is Vercel's city-level estimate. Browsers that ask not to be tracked are not counted. Raw events are kept for 90 days and daily summaries for two years.
 		{/if}
 	</p>
 {/if}

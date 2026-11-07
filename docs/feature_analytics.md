@@ -1,6 +1,6 @@
 # Feature design: site analytics for moderators
 
-Milestone M8 in the [README](../README.md#milestones). Status: phases A1 to A6 built 18 Sep 2026; A7 (audio listening) and A8 (accounts, reading plans, traffic sources) built 26 Sep 2026; A9 (sharing) built 6 Oct 2026.
+Milestone M8 in the [README](../README.md#milestones). Status: phases A1 to A6 built 18 Sep 2026; A7 (audio listening) and A8 (accounts, reading plans, traffic sources) built 26 Sep 2026; A9 (sharing) built 6 Oct 2026; A11 (engagement) built 7 Nov 2026.
 
 Moderators need to see how many people use the site and what they read: visitors, page views, unique views, which verses people tap, and where readers are and on what devices. This document fixes what is collected, how it stays private, where it lives, and the order it is built in.
 
@@ -44,7 +44,7 @@ flowchart LR
 | Column | Meaning |
 |---|---|
 | `at`, `day` | Time; the day in India time (Asia/Kolkata), which is also the salt's day |
-| `kind` | `view`, `verse`, `audio` or `share` (the Android app adds its own kinds) |
+| `kind` | `view`, `verse`, `audio`, `share` or `goal` (A11) (the Android app adds its own kinds) |
 | `path`, `route` | URL path without query; SvelteKit route id, so "all chapter pages" can be grouped |
 | `verse` | For `verse` events: `JHN.3.16`; for `share`, the first verse shared |
 | `book`, `chapter` | For chapter-page views: `JHN`, `3` |
@@ -105,6 +105,7 @@ Definitions, shown on the page:
 | **A8 · Accounts, plans, sources** | Landing pages marked in the collector (`(direct)`, `utm:<tag>`, in-app browsers); `analytics_source()`, `analytics_accounts(from, to)` and `analytics_plans(from, to)` (staff only; counts from `auth.users`, `auth.sessions` and `plan_progress`, nobody named); `sources` in the report; sign-ups tile, Accounts and Reading plans cards and a sources table on `/mod/traffic`; migration `20260926130000_accounts_plans_sources.sql`, pgTAP `accounts_plans_sources.test.sql`. Direct visits are counted from this phase on; WhatsApp on iOS sends no referrer, so shared links need `?utm_source=whatsapp` to be credited | Built 26 Sep 2026 |
 | **A9 · Sharing** | `share` events from the reader's share menu and "Share as image" (`detail` column for an image's template, size and theme); share dimensions and totals in the daily rollups; Sharing tiles, chart and four tables on `/mod/traffic`; migration `20261006100000_share_analytics.sql`, pgTAP `share_analytics.test.sql` | Built 6 Oct 2026 |
 | **A10 · Source filter, 1 day** | A 1-day range; the beacon sends nothing from `/mod` and the summaries skip `/mod` events already stored (`analytics_counted()`); rollups kept per `source` (`web`, `android`), summed for "all"; `analytics_report(from, to, source)` and `analytics_now(source)` take an optional source; a source switch on `/mod/traffic`. Days whose raw events are still held (90 days) are rolled up again by the migration; older summaries keep any `/mod` views. Search terms, accounts and plans are not split by source; migration `20261007100000_traffic_source_filter.sql`, pgTAP `traffic_source_filter.test.sql` | Built 7 Oct 2026 |
+| **A11 · Engagement** | A `goal` event the first time in a visit (a tab, in memory only) a reader becomes engaged: `reader` (2+ pages, not the home page, 2 minutes on screen in all, pages under 10 s ignored), `listener` (60 s of audio), `atlas` (60 s on the atlas), `psalms` (60 s in the Psalms explorer); the rules live in `lib/analytics/engagement.ts` and are shared with the Google Ads conversions (§8). Summaries keep `goals` (engaged visitors per goal) and `goal_referrers` (for each landing referrer, the visitors from it who reached each goal); `analytics_engagement(from, to, source)` (staff only) gives them per day, for the range and the one before, and by source. `/mod/traffic` shows an Engagement row of tiles (also chart switches, with the share of visitors), and an "Engaged readers by source" table: each source's engaged readers and their share of its visitors. Ad landings (`utm:google-ads`) are their own source, `google_ads`. Counted from deploy on; the Android app sends none. Migration `20261107100000_engagement_analytics.sql`, pgTAP `engagement_analytics.test.sql` | Built 7 Nov 2026 |
 | **Next** | Countries on a map; per-page drill-down; alert moderators on the queue page when a day spikes | Ideas |
 
 ## 7. Owner items
@@ -131,6 +132,7 @@ Built 7 Nov 2026. The site is advertised on Google Ads, and five things a visito
 | Opt-out | Global Privacy Control and Do Not Track skip it, like the first-party beacon. |
 | Europe | Not loaded where the browser's time zone is in Europe: the tag's cookies there would need a consent prompt, which the site does not have. Those visits are not credited to ads. |
 | GA4 | Not used. Conversions need only the Google Ads tag; behaviour is already on `/mod/traffic`. |
+| Shared rules | The four engagement goals are measured by `lib/analytics/engagement.ts`, which also feeds `/mod/traffic` (A11), so Google Ads and the dashboard count by the same rules. For Google Ads the progress is kept with the click in `localStorage`, so it carries across reloads; for `/mod/traffic` it is kept in memory for the tab. |
 | `/mod/traffic` | The first-party beacon tags an ad landing (`gclid`, `gbraid`, `wbraid`, with no `utm_source`) as `utm:google-ads`, so paid visits show in the sources table apart from Google search, including visitors the conversions skip (Europe). The five goals themselves are not counted there; page views, chapters, listening, atlas and Psalms use are, for every reader. |
 | Code | `apps/web/src/lib/analytics/ads.ts`, called from the root layout (`adsLanding` on first load, `adsPage` on each navigation, `adsSignup` when the session's user changes). Privacy and About pages describe it. |
 

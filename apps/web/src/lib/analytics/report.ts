@@ -24,6 +24,13 @@ export interface Totals {
 	image_shares: number;
 	/** accounts created (A8), merged in from analytics_accounts */
 	signups: number;
+	/** Engagement (A11), merged in from analytics_engagement: visitors, per day,
+	 *  summed, who read on (2+ pages, 2 minutes), listened a minute, or spent a
+	 *  minute on the atlas or the Psalms explorer */
+	engaged_readers: number;
+	engaged_listeners: number;
+	atlas_viewers: number;
+	psalms_explorers: number;
 }
 export type Measure = keyof Totals;
 export interface Day extends Totals {
@@ -116,6 +123,9 @@ export interface Report {
 	top: Partial<Record<Dimension, Row[]>>;
 	/** referrers summed by source (A8): google, whatsapp, direct, … */
 	sources: Row[];
+	/** engaged visitors by source (A11): key source, extra goal, u visitors; null
+	 *  until the migration is live */
+	engagedSources: Row[] | null;
 	searches: Row[];
 	searches_empty: Row[];
 	accounts: Accounts | null;
@@ -141,6 +151,21 @@ export function isoDay(d: Date): string {
 	return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
+type GoalCounts = { reader: number; listener: number; atlas: number; psalms: number };
+interface EngagementRpc {
+	daily: ({ day: string } & GoalCounts)[];
+	range: GoalCounts;
+	previous: GoalCounts;
+	sources: Row[];
+}
+/** analytics_engagement's goals as report measures. */
+const GOAL_MEASURES: [keyof GoalCounts, Measure][] = [
+	['reader', 'engaged_readers'],
+	['listener', 'engaged_listeners'],
+	['atlas', 'atlas_viewers'],
+	['psalms', 'psalms_explorers']
+];
+
 interface AccountsRpc extends Accounts {
 	range: number;
 	previous: number;
@@ -155,10 +180,11 @@ export async function loadReport(days: number, source: Source = null): Promise<R
 	const range = { p_from: isoDay(from), p_to: isoDay(to) };
 	// Accounts and plans are extras: until their migration is live the traffic
 	// report still loads without them.
-	const [main, acc, plans] = await Promise.all([
+	const [main, acc, plans, eng] = await Promise.all([
 		client.rpc('analytics_report', { ...range, p_source: source }),
 		client.rpc('analytics_accounts', range),
-		client.rpc('analytics_plans', range)
+		client.rpc('analytics_plans', range),
+		client.rpc('analytics_engagement', { ...range, p_source: source })
 	]);
 	if (main.error) throw new Error(main.error.message);
 	const report = (main.data as Report | null) ?? null;
@@ -169,6 +195,14 @@ export async function loadReport(days: number, source: Source = null): Promise<R
 	report.totals.signups = a?.range ?? 0;
 	report.previous.signups = a?.previous ?? 0;
 	report.sources ??= [];
+	const e = eng.error ? null : ((eng.data as EngagementRpc | null) ?? null);
+	const perDay = new Map((e?.daily ?? []).map((d) => [d.day, d]));
+	for (const [goal, m] of GOAL_MEASURES) {
+		for (const d of report.daily) d[m] = perDay.get(d.day)?.[goal] ?? 0;
+		report.totals[m] = e?.range[goal] ?? 0;
+		report.previous[m] = e?.previous[goal] ?? 0;
+	}
+	report.engagedSources = e ? e.sources : null;
 	report.accounts = a;
 	report.plans = plans.error ? null : ((plans.data as Plans | null) ?? null);
 	return report;
