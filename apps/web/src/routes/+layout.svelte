@@ -4,6 +4,7 @@
 	import { page } from '$app/state';
 	import { afterNavigate } from '$app/navigation';
 	import { optedOut, track } from '$lib/analytics/track';
+	import { adsLanding, adsPage, adsSignup } from '$lib/analytics/ads';
 	import ReferenceBox from '$lib/reader/ReferenceBox.svelte';
 	import HeaderVersions from '$lib/reader/HeaderVersions.svelte';
 	import SettingsPanel from '$lib/reader/SettingsPanel.svelte';
@@ -62,6 +63,7 @@
 		searchOpen = false;
 		// Chapter pages carry their book and chapter, for the reading insight on /mod/traffic.
 		const d = page.data as { book?: { code?: string }; chapter?: number };
+		adsPage(page.route.id, page.url.pathname);
 		track('view', { route: page.route.id, lang: ui, user: session.user?.id, book: d.book?.code, chapter: typeof d.chapter === 'number' ? d.chapter : undefined });
 	});
 
@@ -134,7 +136,12 @@
 		session.start();
 		// Honour Global Privacy Control / Do Not Track here too, as the privacy page promises.
 		inject({ mode: dev ? 'development' : 'production', beforeSend: (e) => (optedOut() ? null : e) });
+		// Google's tag loads only for visits from our ads (lib/analytics/ads.ts).
+		adsLanding(new URL(location.href), () => player.playing);
 	});
+
+	// A sign-up from an ad visit is reported to Google Ads once (lib/analytics/ads.ts).
+	$effect(() => adsSignup(session.user));
 
 	function focusSearch() {
 		document.querySelector<HTMLInputElement>('input[type=search]')?.focus();

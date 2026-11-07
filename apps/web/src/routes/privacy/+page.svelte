@@ -11,7 +11,7 @@
 
 <article class="privacy" lang={ta ? 'ta' : 'en'}>
 	<h1 lang="ta">தனியுரிமை <span class="en">Privacy policy</span></h1>
-	<p class="date">{ta ? 'கடைசியாகப் புதுப்பிக்கப்பட்டது: 5 அக்டோபர் 2026' : 'Last updated: 5 October 2026'}</p>
+	<p class="date">{ta ? 'கடைசியாகப் புதுப்பிக்கப்பட்டது: 7 நவம்பர் 2026' : 'Last updated: 7 November 2026'}</p>
 
 	{#if ta}
 		<p>tamilscripture.com ஒரு இலவச வேதாகமத் தளம். விளம்பரங்கள் இல்லை; உங்கள் தகவல்களை நாங்கள் விற்பதோ பகிர்வதோ இல்லை. எதைச் சேமிக்கிறோம், ஏன் என்பதை இப்பக்கம் விளக்குகிறது.</p>
@@ -23,6 +23,9 @@
 		<p>தளத்தை மேம்படுத்த அநாமதேய வருகை எண்ணிக்கைகளைச் சேகரிக்கிறோம்: பார்த்த பக்கம், தொட்ட வசனம், கேட்ட ஒலி அதிகாரமும் கேட்ட நேரமும், பகிர்ந்த வசனமும் பகிர்ந்த விதமும், நாடு மற்றும் நகரம் (மதிப்பீடு), சாதன வகை, உலாவி, திரை அளவு, எந்தத் தளத்திலிருந்து வந்தீர்கள். IP முகவரியோ கணக்கு அடையாளமோ சேமிக்கப்படுவதில்லை; ஒவ்வொரு நாளும் மாறும் ஒரு சுருக்க எண் (hash) மட்டுமே வைக்கப்படுகிறது, எனவே ஒரு நாளுக்கு மேல் யாரையும் பின்தொடர முடியாது. விவரமான பதிவுகள் 90 நாட்களில் அழிக்கப்படுகின்றன; நாள்வாரி மொத்தங்கள் இரண்டு ஆண்டுகள் வைக்கப்படுகின்றன.</p>
 		<p>இவற்றுடன், தளத்தை வழங்கும் Vercel நிறுவனத்தின் Web Analytics பக்கப் பார்வைகளைக் குக்கீ இல்லாமல் எண்ணுகிறது.</p>
 		<p>உங்கள் உலாவி “கண்காணிக்க வேண்டாம்” (Global Privacy Control / Do Not Track) அனுப்பினால் எதுவும் எண்ணப்படாது.</p>
+
+		<h2>எங்கள் Google விளம்பரங்கள்</h2>
+		<p>இத்தளத்தை Google-இல் விளம்பரம் செய்கிறோம். எங்கள் விளம்பரம் ஒன்றைச் சொடுக்கி வந்தால், அந்த இணைப்பில் Google-இன் சொடுக்கு அடையாளம் (click id) இருக்கும். அப்போது மட்டுமே தளம் Google-இன் விளம்பரக் குறியீட்டை (gtag.js) ஏற்றும்; அது Google குக்கீகளை அமைக்கும். அந்தச் சொடுக்கை உங்கள் உலாவி 30 நாட்கள் நினைவில் வைக்கும். அதற்குள் பின்வருவனவற்றில் ஏதேனும் நடந்தால் அதை Google Ads-க்குத் தெரிவிக்கிறோம்: புதிய கணக்கு, இரண்டு அல்லது அதற்கு மேற்பட்ட பக்கங்களை மொத்தம் இரண்டு நிமிடம் வாசித்தல், ஒலி வேதாகமத்தை ஒரு நிமிடம் கேட்டல், வரைபடங்களில் (atlas) ஒரு நிமிடம், சங்கீதங்கள் பகுதியில் ஒரு நிமிடம். ஒவ்வொன்றும் ஒரு முறை மட்டுமே தெரிவிக்கப்படும்; உங்களைப் பற்றியோ நீங்கள் வாசித்ததைப் பற்றியோ (கணக்கு விவரங்கள், புத்தகம், வசனம்) எதுவும் அனுப்பப்படுவதில்லை. விளம்பரம் வழியாக வராதவர்களுக்கு Google-இன் குறியீடு ஏற்றப்படுவதே இல்லை. உங்கள் உலாவி “கண்காணிக்க வேண்டாம்” அனுப்பினாலோ, நீங்கள் ஐரோப்பாவில் இருந்தாலோ அதுவும் ஏற்றப்படாது.</p>
 
 		<h2>உள்நுழைந்தால்</h2>
 		<p>Google மூலமாகவோ மின்னஞ்சல் இணைப்பு மூலமாகவோ உள்நுழையலாம். உள்நுழையும்போது உங்கள் மின்னஞ்சல் முகவரி சேமிக்கப்படுகிறது. Google உங்கள் பெயரையும் படத்தையும் அனுப்புகிறது; தளத்தில் உங்கள் பெயரை மட்டுமே காட்டுகிறோம். அதன் பின் நீங்கள் உருவாக்கும் உள்ளடக்கம் மட்டுமே சேமிக்கப்படும்: அடிக்கோடுகள் (highlights), குறிப்புகள், புத்தகக்குறிகள், வாசிப்பு வரலாறு, வாசிப்புத் திட்ட முன்னேற்றம், அமைப்புகள், விளக்கக்காட்சிகள், நீங்கள் அனுப்பும் திருத்தப் பரிந்துரைகள். இவற்றை நீங்கள் மட்டுமே பார்க்க முடியும்; கீழே குறிப்பிட்டவை மட்டும் விதிவிலக்கு.</p>
@@ -36,7 +39,7 @@
 		<ul>
 			<li><strong>Vercel</strong>: தளத்தை வழங்குகிறது, பக்கப் பார்வைகளை எண்ணுகிறது.</li>
 			<li><strong>Supabase</strong>: உள்நுழைவு மற்றும் உங்கள் கணக்குத் தரவைச் சேமிக்கிறது.</li>
-			<li><strong>Google</strong>: உள்நுழை பக்கத்தில் Google பொத்தானைக் காட்டவும், நீங்கள் Google மூலம் உள்நுழையும்போதும் மட்டும்.</li>
+			<li><strong>Google</strong>: உள்நுழை பக்கத்தில் Google பொத்தானைக் காட்டவும், நீங்கள் Google மூலம் உள்நுழையும்போதும், எங்கள் Google விளம்பரங்கள் வழியாக வரும் வருகைகளில் மட்டும் அந்த வருகையின் பலனை அளவிடவும் (மேலே காண்க).</li>
 			<li><strong>Cloudflare</strong>: ஒலி வேதாகமக் கோப்புகளையும் விளக்கவுரைகளையும் வழங்குகிறது.</li>
 		</ul>
 		<p>இந்தச் சேவைகளின் சர்வர்கள் உங்கள் நாட்டுக்கு வெளியே இருக்கலாம்.</p>
@@ -57,6 +60,9 @@
 		<p>Vercel, which hosts the site, also counts page views with its cookie-free Web Analytics.</p>
 		<p>If your browser sends Global Privacy Control or Do Not Track, nothing is counted.</p>
 
+		<h2>Our Google ads</h2>
+		<p>We advertise the site on Google. If you arrive by clicking one of our ads, the link carries a Google click id. Only then does the site load Google's advertising tag (gtag.js), which sets Google cookies, and your browser remembers the click for 30 days. In that time the site tells Google Ads when the visit leads to any of these: a new account, reading on across two or more pages for two minutes in all, a minute of the Audio Bible, a minute on the atlas, or a minute in the Psalms explorer. Each is reported at most once, and nothing about you or what you read (account details, books, verses) is sent. Visitors who did not come from an ad never load Google's tag. It is also not loaded if your browser sends Global Privacy Control or Do Not Track, or if you are in Europe.</p>
+
 		<h2>If you sign in</h2>
 		<p>You can sign in with Google or with an email link. Signing in stores your email address. Google also sends your name and picture; the site only shows your name. After that, only what you create is stored: highlights, notes, bookmarks, reading history, reading plan progress, settings, presentations and any edit suggestions you send. Only you can see them, except as listed below.</p>
 		<ul>
@@ -69,7 +75,7 @@
 		<ul>
 			<li><strong>Vercel</strong> hosts the site and counts page views.</li>
 			<li><strong>Supabase</strong> runs sign-in and stores account data.</li>
-			<li><strong>Google</strong> is contacted only on the sign-in page, to show its button, and when you sign in with Google.</li>
+			<li><strong>Google</strong> is contacted on the sign-in page, to show its button, when you sign in with Google, and, only for visits from our Google ads, to measure what the visit led to (see above).</li>
 			<li><strong>Cloudflare</strong> serves the audio Bible and commentaries.</li>
 		</ul>
 		<p>These services may store data outside your country.</p>

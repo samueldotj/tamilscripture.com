@@ -110,3 +110,28 @@ Definitions, shown on the page:
 ## 7. Owner items
 
 None for A1 and A2: collection uses the existing public key and Vercel's own headers. A3's nightly job runs in Postgres with pg_cron, which the project already uses.
+
+## 8. Google Ads conversions
+
+Built 7 Nov 2026. The site is advertised on Google Ads, and five things a visitor from an ad can go on to do are reported as conversions. §1's "build, not buy" still holds for everyone else: Google's tag (`gtag.js`) loads only for a visit that came from one of our ads, so ordinary readers get no Google script and no Google cookies, and the home page's script budget is untouched.
+
+| Goal | Reported when | Env label |
+|---|---|---|
+| Sign-up | The signed-in user's account was created in the last 30 minutes (Google, the Google button, or an email link). A returning user signing in is not one. | `PUBLIC_GOOGLE_ADS_LABEL_SIGNUP` |
+| Engaged reader | At least two different pages, other than the home page (and sign-in and `/mod`), adding up to 2 minutes in front. A page counts once it has been seen for 10 seconds, bringing those seconds with it; a glance under 10 seconds adds nothing. So 2 pages × 60 s and 4 chapters × 30 s both qualify, one page for 5 minutes does not. Different chapters are different pages; the time on a page adds up if the reader returns to it in the same tab. | `PUBLIC_GOOGLE_ADS_LABEL_READER` |
+| Engaged listener | 60 seconds of the Audio Bible playing, in front or in the background. | `PUBLIC_GOOGLE_ADS_LABEL_LISTENER` |
+| Atlas viewer | 60 seconds in front on `/atlas` pages, added up. | `PUBLIC_GOOGLE_ADS_LABEL_ATLAS` |
+| Psalms explorer | 60 seconds in front on `/psalms`. | `PUBLIC_GOOGLE_ADS_LABEL_PSALMS` |
+
+| Question | Decision |
+|---|---|
+| Who is tracked | A visit whose landing URL carries `gclid`, `gbraid` or `wbraid` (added by Google to ad clicks). The click and its progress (goals sent, pages read, reading seconds, seconds on the atlas, Psalms and audio) are kept in `localStorage` (`ads-click`) for 30 days, so progress carries across pages and reloads. A new ad click starts over. |
+| What is sent | One `conversion` event per goal per ad click, to `PUBLIC_GOOGLE_ADS_ID/<label>`, with nothing else: no account, book, chapter or verse. A goal without a label is not tracked. Once every labelled goal is sent, the timer stops. |
+| Time | A one-second timer measuring real elapsed time. Page time counts only while the tab is visible (gaps over 5 s are dropped); listening counts while audio plays (gaps over 2 minutes dropped, for background tabs whose timers are slowed). |
+| Opt-out | Global Privacy Control and Do Not Track skip it, like the first-party beacon. |
+| Europe | Not loaded where the browser's time zone is in Europe: the tag's cookies there would need a consent prompt, which the site does not have. Those visits are not credited to ads. |
+| GA4 | Not used. Conversions need only the Google Ads tag; behaviour is already on `/mod/traffic`. |
+| `/mod/traffic` | The first-party beacon tags an ad landing (`gclid`, `gbraid`, `wbraid`, with no `utm_source`) as `utm:google-ads`, so paid visits show in the sources table apart from Google search, including visitors the conversions skip (Europe). The five goals themselves are not counted there; page views, chapters, listening, atlas and Psalms use are, for every reader. |
+| Code | `apps/web/src/lib/analytics/ads.ts`, called from the root layout (`adsLanding` on first load, `adsPage` on each navigation, `adsSignup` when the session's user changes). Privacy and About pages describe it. |
+
+Owner items: in Google Ads, create five **Website** conversion actions (Goals → Conversions → New → Website, set up the Google tag manually), each with Count set to **One**: *Sign-up* (category Sign-up), *Engaged reader*, *Engaged listener*, *Atlas viewer*, *Psalms explorer* (category Page view or Other). Mark the ones bidding should aim for as **primary** and the rest **secondary**. Copy the tag id (`AW-…`) and each conversion label into Vercel (Production) under the names above, keep auto-tagging on, and redeploy. Leave the campaign on Maximize Clicks until the primary goals record about 15–30 conversions a month.

@@ -56,10 +56,14 @@ function listen() {
 }
 
 /** ?utm_source=whatsapp on the landing URL: a tag for links shared where no
- *  referrer is sent (WhatsApp on iOS, email clients, printed QR codes). */
+ *  referrer is sent (WhatsApp on iOS, email clients, printed QR codes). A click
+ *  on one of our Google ads (gclid, gbraid, wbraid) is tagged google-ads, so paid
+ *  visits are told apart from Google search on /mod/traffic. */
 function utmSource(): string | undefined {
 	try {
-		return new URLSearchParams(location.search).get('utm_source') || undefined;
+		const q = new URLSearchParams(location.search);
+		const ad = ['gclid', 'gbraid', 'wbraid'].some((p) => q.has(p));
+		return q.get('utm_source') || (ad ? 'google-ads' : undefined);
 	} catch {
 		return undefined;
 	}
