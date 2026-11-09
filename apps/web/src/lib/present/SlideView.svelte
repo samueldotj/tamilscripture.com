@@ -6,18 +6,24 @@
 	// Every size is a fraction of the slide's longer side (cqmax), so the 16:9
 	// preview and a full screen are the same picture at two scales; a passage
 	// too long for the frame is shrunk until it fits. References and verse
-	// numbers link to the reader.
+	// numbers link to the reader. Words the author marked (per version) are
+	// highlighted; with `markable`, a click or a drag across words sets them,
+	// through `onmark`, and `live` (the presenter's own marks for this showing)
+	// flips the saved ones.
 	import { chapterCached, verseList } from '$lib/content/verses';
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 	import Markdown from '$lib/md/Markdown.svelte';
-	import { verseKey, verseLabel, verseVersion, type Slide, type SlideVerse } from './types';
+	import { tokens, verseKey, verseLabel, verseVersion, type Slide, type SlideVerse } from './types';
 
 	let {
 		slide,
 		version,
 		showNotes = true,
 		mode = 'preview',
-		lang = 'ta'
+		lang = 'ta',
+		markable = false,
+		live,
+		onmark
 	}: {
 		slide: Slide;
 		/** The presentation's default version code. */
@@ -26,7 +32,33 @@
 		mode?: 'preview' | 'present';
 		/** Interface language, for the notes' lang attribute and placeholders. */
 		lang?: string;
+		/** Clicks and drags on words set marks (the editor's preview, the presenter's highlight mode). */
+		markable?: boolean;
+		/** Marks flipped for this showing only, keyed by liveKey(). */
+		live?: Set<string>;
+		/** A word should be marked (`on`) or not: verse index on the slide, version code, `verse.word`. */
+		onmark?: (i: number, code: string, pos: string, on: boolean) => void;
 	} = $props();
+
+	const liveKey = (i: number, code: string, pos: string) => `${slide.id}|${i}|${code}|${pos}`;
+	function marked(i: number, v: SlideVerse, code: string, pos: string): boolean {
+		const saved = !!v.marks?.[code]?.includes(pos);
+		return live?.has(liveKey(i, code, pos)) ? !saved : saved;
+	}
+	// A drag paints every word it crosses the way the first one went.
+	let painting = $state<boolean | null>(null);
+	function down(e: PointerEvent, i: number, v: SlideVerse, code: string, pos: string) {
+		if (!markable || e.button !== 0) return;
+		e.preventDefault();
+		e.stopPropagation();
+		painting = !marked(i, v, code, pos);
+		onmark?.(i, code, pos, painting);
+		(e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId);
+	}
+	function over(i: number, v: SlideVerse, code: string, pos: string) {
+		if (painting === null || marked(i, v, code, pos) === painting) return;
+		onmark?.(i, code, pos, painting);
+	}
 
 	type Loaded = { label: string; verses: { n: string; text: string }[]; lang: string; short: string; code: string; failed?: boolean; ready?: boolean };
 	let loaded = $state<Record<string, Loaded>>({});
@@ -83,7 +115,14 @@
 	}
 </script>
 
-<div class="slide {mode}">
+{#snippet words(i: number, v: SlideVerse, code: string, x: { n: string; text: string })}
+	{@const n = x.n.split('-')[0]}
+	{#each tokens(x.text) as w, j (j)}{w.sep}{w.pre}<!-- svelte-ignore a11y_no_static_element_interactions -- pointer-only marking; the marks are also settable in the editor --><span class="w" class:on={marked(i, v, code, `${n}.${j}`)} onpointerdown={(e) => down(e, i, v, code, `${n}.${j}`)} onpointerenter={() => over(i, v, code, `${n}.${j}`)}>{w.word}</span>{w.post}{/each}
+{/snippet}
+
+<svelte:window onpointerup={() => (painting = null)} onpointercancel={() => (painting = null)} />
+
+<div class="slide {mode}" class:markable>
 	{#if title && !titlePage}
 		<header class="head" lang={isTa(title) ? 'ta' : 'en'}>{title}</header>
 	{/if}
@@ -97,16 +136,16 @@
 					<p class="empty" lang={lang}>{lang === 'ta' ? 'வெற்று ஸ்லைடு · வசனம் சேர்க்கவும், அல்லது தலைப்புப் பக்கத்திற்குக் குறிப்புகள் எழுதவும்' : 'Empty slide · add a verse, or write notes for a title page'}</p>
 				{/if}
 			{/if}
-			{#each items as { v, code, key } (key)}
+			{#each items as { v, code, key }, i (key)}
 				{@const t = loaded[key]}
 				<div class="verse">
 					<a class="ref" lang={t?.lang ?? 'ta'} href={href(v, code)} target="_blank" rel="noopener" title={lang === 'ta' ? 'வாசிப்பில் திற' : 'Open in the reader'}>{t?.label ?? verseLabel(v, lang)}</a>
 					{#if t?.verses.length}
 						<p class="text" lang={t.lang}>
 							{#if t.verses.length > 1}
-								{#each t.verses as x (x.n)}<a class="vn" href={href(v, code, x.n.split('-')[0])} target="_blank" rel="noopener">{x.n}</a>{x.text}{' '}{/each}
+								{#each t.verses as x (x.n)}<a class="vn" href={href(v, code, x.n.split('-')[0])} target="_blank" rel="noopener">{x.n}</a>{@render words(i, v, code, x)}{' '}{/each}
 							{:else}
-								{t.verses[0].text}
+								{@render words(i, v, code, t.verses[0])}
 							{/if}
 						</p>
 					{:else if t?.failed}
@@ -178,6 +217,12 @@
 	.vn { font-family: var(--sans); font-size: 0.55em; font-weight: 700; color: var(--accent); vertical-align: super; line-height: 1; margin-right: 0.3em; text-decoration: none; padding: 0 0.15em; border-radius: 3px; }
 	.vn:hover, .vn:focus-visible { background: rgba(217, 178, 92, 0.18); }
 	.muted { color: var(--faint); }
+	/* A marked word: a gold marker stroke behind it. */
+	.w { border-radius: 0.18em; transition: background-color 0.12s ease; }
+	.w.on { background: rgba(217, 178, 92, 0.34); box-shadow: 0 0 0 0.08em rgba(217, 178, 92, 0.34); color: #FFF8E6; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+	.markable .w { cursor: pointer; user-select: none; }
+	.markable .w:hover { background: rgba(217, 178, 92, 0.16); }
+	.markable .w.on:hover { background: rgba(217, 178, 92, 0.44); }
 	.ver { font-size: calc(1.1cqmax * var(--fit, 1)); letter-spacing: 0.12em; color: var(--faint); font-weight: 600; font-family: var(--sans); }
 	.big { margin: 0; font-size: calc(4.4cqmax * var(--fit, 1)); font-weight: 600; line-height: 1.25; color: var(--ink); text-wrap: balance; }
 	.big[lang='ta'] { font-family: var(--tamil); }

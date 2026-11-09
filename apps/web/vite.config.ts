@@ -40,8 +40,9 @@ export default defineConfig({
 			},
 			adapter,
 			// The service worker's file list: the small static files only. Bible content
-			// (static/content, ~50,000 files) is cached as it is read, not precached.
-			serviceWorker: { files: (file) => !/^\/?content\//.test(file.replaceAll('\\', '/')) },
+			// (static/content, ~50,000 files) is cached as it is read, not precached;
+			// so are the presenter's drawing fonts (static/excalidraw, 0.5 MB).
+			serviceWorker: { files: (file) => !/^\/?(content|excalidraw)\//.test(file.replaceAll('\\', '/')) },
 			prerender: {
 				// Chapter pages are enumerated by `entries()`; crawling would find the same set.
 				crawl: false,

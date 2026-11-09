@@ -13,11 +13,14 @@
 		"size": "size-limit && node scripts/size-check.mjs"
 	},
 	"dependencies": {
+		"@excalidraw/excalidraw": "0.18.1",
 		"@supabase/ssr": "^0.12.6",
 		"@supabase/supabase-js": "^2.115.0",
 		"@tamilscripture/bible-wasm": "workspace:*",
 		"@vercel/analytics": "^2.0.1",
-		"maplibre-gl": "^6.9.0"
+		"maplibre-gl": "^6.9.0",
+		"react": "^19.3.1",
+		"react-dom": "^19.3.1"
 	},
 	"devDependencies": {
 		"@lhci/cli": "^0.15.1",
@@ -27,6 +30,8 @@
 		"@sveltejs/kit": "^2.63.0",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@types/node": "^26.4.1",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
 		"size-limit": "^13.0.3",
 		"svelte": "^5.56.1",
 		"svelte-check": "^4.6.0",

@@ -36,10 +36,16 @@ const READER_LIMIT = 120 * 1024;
 // 0.8 kB, and the exposition, notes and hints below it 1.8 kB, a chunk loaded once
 // the psalm's commentary has arrived), and to 350 kB on 20 Oct 2026 for the home page's
 // feature bands (eight sample cards, 10.8 kB), the family tree on person pages (1.8 kB),
-// reading history in the player store (2.1 kB) and the entity search helpers (0.4 kB).
-const SITE_LIMIT = 350 * 1024;
+// reading history in the player store (2.1 kB) and the entity search helpers (0.4 kB),
+// and to 360 kB on 8 Nov 2026 for highlighted words and the Highlight and Draw controls
+// in the presenter and editor (353.0 kB measured; Excalidraw itself is DRAW_LIMIT's).
+const SITE_LIMIT = 360 * 1024;
 const MAP_LIMIT = 480 * 1024; // gzip, the map engine chunk plus its bundled web worker
 const STAFF_LIMIT = 60 * 1024; // gzip, chunks only the /mod pages load (reviewers and moderators)
+// gzip, the presenter's drawing layer: React and Excalidraw with every chunk only
+// it loads (its locales among them; one locale is fetched per visit). Loaded only
+// when a presenter presses D (8 Nov 2026).
+const DRAW_LIMIT = 2900 * 1024;
 
 function walk(dir) {
 	const out = [];
@@ -87,6 +93,31 @@ function staffFiles() {
 	return new Set([...staff].map((k) => join(client, manifest[k].file)));
 }
 
+/** Output files only the drawing layer loads: whatever src/lib/present/draw
+ *  reaches (static and dynamic imports) that no entry or route reaches without
+ *  going through it. Reachability, not importer lists, since Excalidraw's
+ *  chunks (mermaid's among them) import each other in cycles. */
+function drawFiles() {
+	const manifestPath = join(client, '.vite/manifest.json');
+	if (!existsSync(manifestPath)) return new Set();
+	const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+	const roots = Object.keys(manifest).filter((k) => k.includes('src/lib/present/draw/'));
+	const reach = (starts, stop) => {
+		const seen = new Set();
+		const visit = (key) => {
+			if (seen.has(key) || stop.has(key) || !manifest[key]) return;
+			seen.add(key);
+			for (const dep of [...(manifest[key].imports ?? []), ...(manifest[key].dynamicImports ?? [])]) visit(dep);
+		};
+		starts.forEach(visit);
+		return seen;
+	};
+	const others = Object.keys(manifest).filter((k) => !roots.includes(k) && (manifest[k].isEntry || /nodes\/\d+\.js$/.test(k)));
+	const elsewhere = reach(others, new Set(roots));
+	const draw = [...reach(roots, new Set())].filter((k) => !elsewhere.has(k));
+	return new Set(draw.map((k) => join(client, manifest[k].file)));
+}
+
 /** Output files a chapter page loads up front: the static import closure of the
  *  client entry, the root layout and the chapter route. */
 function readerFiles() {
@@ -124,6 +155,8 @@ const readerSet = readerFiles();
 let reader = 0;
 for (const file of readerSet) reader += gzipSync(readFileSync(file)).length;
 const staffSet = staffFiles();
+const drawSet = drawFiles();
+let draw = 0;
 let site = 0;
 let map = 0;
 let staff = 0;
@@ -134,6 +167,8 @@ for (const file of walk(root)) {
 	if ((src.includes('maplibregl') && gz > 50 * 1024) || file.includes('maplibre-gl-worker')) {
 		map += gz;
 		mapFiles.push(file.slice(root.length));
+	} else if (drawSet.has(file)) {
+		draw += gz;
 	} else if (staffSet.has(file)) {
 		staff += gz;
 	} else {
@@ -144,6 +179,7 @@ const kb = (n) => `${(n / 1024).toFixed(1)} kB`;
 console.log(`reader route (gzip, loaded before any lazy import): ${kb(reader)} / ${kb(READER_LIMIT)} in ${readerSet.size} files`);
 console.log(`site JavaScript (gzip, excluding map engine and /mod): ${kb(site)} / ${kb(SITE_LIMIT)}`);
 console.log(`moderation pages (gzip, /mod only): ${kb(staff)} / ${kb(STAFF_LIMIT)} in ${staffSet.size} chunks`);
+console.log(`drawing layer (gzip, presenter only, on first D): ${kb(draw)} / ${kb(DRAW_LIMIT)} in ${drawSet.size} chunks`);
 console.log(`map engine (gzip): ${kb(map)} / ${kb(MAP_LIMIT)}${mapFiles.length ? ` in ${mapFiles.join(', ')}` : ' (chunk not found)'}`);
 let ok = true;
 if (!readerSet.size) {
@@ -159,6 +195,14 @@ if (site > SITE_LIMIT) {
 }
 if (staff > STAFF_LIMIT) {
 	console.error('FAIL: moderation pages exceed their budget');
+	ok = false;
+}
+if (draw > DRAW_LIMIT) {
+	console.error('FAIL: drawing layer exceeds its budget');
+	ok = false;
+}
+if (!drawSet.size) {
+	console.error('FAIL: drawing layer chunk not found; is src/lib/present/draw still loaded on demand?');
 	ok = false;
 }
 if (map > MAP_LIMIT) {

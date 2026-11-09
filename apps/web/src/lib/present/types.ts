@@ -12,6 +12,28 @@ export interface SlideVerse {
 	end: number;
 	/** Overrides the presentation's version for this verse (`TCV`). */
 	version?: string;
+	/** Highlighted words per version code, as `verse.word` (0-based word in the verse): `{ IRVTAM: ['16.3'] }`.
+	 *  Per version because word positions differ between translations. */
+	marks?: Record<string, string[]>;
+}
+
+/** Limits on marks, mirrored in check_slides(). */
+export const MARK_LIMITS = { versions: 8, perVersion: 300 } as const;
+
+export type Token = { sep: string; pre: string; word: string; post: string };
+
+/** A verse's text as words (split on spaces), each with its leading and trailing
+ *  punctuation apart, so a highlight covers the word itself. */
+export function tokens(text: string): Token[] {
+	const out: Token[] = [];
+	const re = /(\s*)(\S+)/g;
+	let m: RegExpExecArray | null;
+	while ((m = re.exec(text))) {
+		const p = /^([\p{P}\p{S}]*)(.*?)([\p{P}\p{S}]*)$/u.exec(m[2])!;
+		// All punctuation: keep it as the word so it still has a position.
+		out.push(p[2] ? { sep: m[1], pre: p[1], word: p[2], post: p[3] } : { sep: m[1], pre: '', word: m[2], post: '' });
+	}
+	return out;
 }
 
 export interface Slide {

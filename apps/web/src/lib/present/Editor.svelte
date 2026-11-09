@@ -11,7 +11,7 @@
 	import { settings } from '$lib/settings/store.svelte';
 	import { DEFAULT_VERSION, findVersion, manifest } from '$lib/content/manifest';
 	import { myPresentation, presentChannel, presentUrl, savePresentation, type PresentMessage } from '$lib/present/repo';
-	import { LIMITS, newId, newSlide, verseLabel, verseVersion, type Presentation, type Slide, type SlideVerse } from '$lib/present/types';
+	import { LIMITS, MARK_LIMITS, newId, newSlide, verseLabel, verseVersion, type Presentation, type Slide, type SlideVerse } from '$lib/present/types';
 	import SlideRail from '$lib/present/SlideRail.svelte';
 	import SlideView from '$lib/present/SlideView.svelte';
 	import NotesEditor from '$lib/present/NotesEditor.svelte';
@@ -153,7 +153,35 @@
 		else delete slide.verses[i].version;
 		touch();
 	}
-	const insertLabel = $derived(slide?.verses.length ? verseLabel(slide.verses[0], findVersion(verseVersion(slide.verses[0], doc?.version ?? DEFAULT_VERSION)) ?? lang) : null);
+	/** Highlight a word of a verse on this slide, in the version it is shown in. */
+	function setMark(i: number, code: string, pos: string, on: boolean) {
+		const v = slide?.verses[i];
+		if (!v) return;
+		const marks = (v.marks ??= {});
+		const list = marks[code] ?? [];
+		if (on) {
+			if (list.includes(pos) || list.length >= MARK_LIMITS.perVersion) return;
+			if (!marks[code] && Object.keys(marks).length >= MARK_LIMITS.versions) return;
+			marks[code] = [...list, pos];
+		} else {
+			const next = list.filter((p) => p !== pos);
+			if (next.length) marks[code] = next;
+			else delete marks[code];
+		}
+		if (!Object.keys(marks).length) delete v.marks;
+		touch();
+	}
+	/** The marks shown on this slide now (in the versions its verses are shown in). */
+	const hasMarks = $derived(!!slide && !!doc && slide.verses.some((v) => v.marks?.[verseVersion(v, doc!.version)]?.length));
+	function clearMarks() {
+		if (!slide || !doc) return;
+		for (const v of slide.verses) {
+			const code = verseVersion(v, doc.version);
+			if (v.marks?.[code]) { delete v.marks[code]; if (!Object.keys(v.marks).length) delete v.marks; }
+		}
+		touch();
+	}
+	const insertLabel =$derived(slide?.verses.length ? verseLabel(slide.verses[0], findVersion(verseVersion(slide.verses[0], doc?.version ?? DEFAULT_VERSION)) ?? lang) : null);
 
 	// ---- share -----------------------------------------------------------------------
 	function flash(msg: string) { toast = msg; setTimeout(() => (toast = ''), 1800); }
@@ -238,8 +266,14 @@
 			</label>
 			<div class="canvas-wrap">
 				<div class="canvas">
-					<SlideView {slide} version={doc.version} {lang} />
+					<SlideView {slide} version={doc.version} {lang} markable onmark={setMark} />
 				</div>
+				{#if slide.verses.length}
+					<p class="mark-hint" lang={ta ? 'ta' : 'en'}>
+						{ta ? 'சொற்களைச் சொடுக்கி, அல்லது இழுத்து, முன்னிலைப்படுத்தவும் · ஒவ்வொரு மொழிபெயர்ப்புக்கும் தனியாக' : 'Click or drag across words to highlight them · kept for each translation separately'}
+						{#if hasMarks}<button type="button" class="linkish" onclick={clearMarks}>{ta ? 'அழி' : 'Clear'}</button>{/if}
+					</p>
+				{/if}
 			</div>
 			<div class="notes-wrap">
 				<NotesEditor bind:value={slide.notes} version={doc.version} {lang} {insertLabel} onchange={touch} />
@@ -293,6 +327,9 @@
 	.vis [lang='ta'] { font-family: var(--tamil); }
 	.canvas-wrap { padding: 14px 32px 0; }
 	.canvas { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: var(--bw) solid var(--line); overflow: hidden; background: #0E1015; }
+	.mark-hint { margin: 0.5rem 0 0; font-size: 0.78rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; }
+	.mark-hint[lang='ta'] { font-family: var(--tamil); }
+	.linkish { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
 	.slide-title { display: grid; gap: 0.35rem; padding: 18px 32px 0; }
 	.slide-title .kicker [lang='ta'] { font-family: var(--tamil); text-transform: none; letter-spacing: 0.06em; }
 	.slide-title .field { font-size: 0.95rem; padding: 0.55rem 0.9rem; border-radius: var(--r); }

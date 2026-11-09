@@ -3,7 +3,12 @@
 	// opened in its own tab from the editor or from a shared link. Space, →
 	// and ↓ advance, ← and ↑ go back, F is fullscreen, N hides the notes, ?
 	// shows the keys, Esc leaves fullscreen. The controls fade after 3 s.
+	// H is highlight mode: clicks and drags on words mark them for this showing
+	// (on top of the author's saved marks). D is drawing: Excalidraw over the
+	// slide, loaded on first use, its ink kept per slide until the tab closes.
+	// Esc leaves either mode; PageUp and PageDown still turn slides.
 	import { onMount } from 'svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { replaceState } from '$app/navigation';
@@ -15,6 +20,7 @@
 	import { verseVersion, type Presentation } from '$lib/present/types';
 	import SlideView from '$lib/present/SlideView.svelte';
 	import ClosingSlide from '$lib/present/ClosingSlide.svelte';
+	import type { DrawLayer } from '$lib/present/draw/excalidraw';
 
 	let { data } = $props();
 	const slug = $derived(page.params.slug!);
@@ -32,6 +38,14 @@
 	let help = $state(false);
 	let fullscreen = $state(false);
 	let override = $state<string | null>(null);
+	/** nav: clicks turn slides · mark: clicks mark words · draw: Excalidraw takes the pointer */
+	let mode = $state<'nav' | 'mark' | 'draw'>('nav');
+	/** Marks flipped for this showing, keyed as SlideView's liveKey(). */
+	const live = new SvelteSet<string>();
+	let drawNode = $state<HTMLElement | undefined>();
+	let layer = $state<DrawLayer | null>(null);
+	let drawLoading = $state(false);
+	let drawFailed = $state(false);
 	let channel: BroadcastChannel | null = null;
 	let hideTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -87,6 +101,41 @@
 	const next = () => go(index + 1);
 	const prev = () => go(index - 1);
 
+	// ---- highlight and draw --------------------------------------------------------
+	function liveMark(i: number, code: string, pos: string, on: boolean) {
+		if (!slide) return;
+		const key = `${slide.id}|${i}|${code}|${pos}`;
+		const saved = !!slide.verses[i]?.marks?.[code]?.includes(pos);
+		if (on === saved) live.delete(key);
+		else live.add(key);
+	}
+	const sceneId = $derived(slide ? slide.id : '#closing');
+	$effect(() => { layer?.show(sceneId); });
+	$effect(() => { layer?.setActive(mode === 'draw'); });
+	function setMode(m: 'nav' | 'mark' | 'draw') {
+		mode = mode === m ? 'nav' : m;
+		if (mode === 'draw' && !layer && !drawLoading) loadDraw();
+	}
+	async function loadDraw() {
+		drawLoading = true;
+		drawFailed = false;
+		try {
+			const { mountDraw } = await import('$lib/present/draw/excalidraw');
+			if (drawNode) layer = mountDraw(drawNode, { slideId: sceneId, lang });
+		} catch {
+			drawFailed = true;
+			mode = 'nav';
+		} finally {
+			drawLoading = false;
+		}
+	}
+	/** This slide's marks for this showing, and in draw mode its ink. */
+	function clearSlide() {
+		if (slide) for (const k of [...live]) if (k.startsWith(`${slide.id}|`)) live.delete(k);
+		if (mode === 'draw') layer?.clear();
+	}
+	onMount(() => () => layer?.destroy());
+
 	function wake() {
 		controls = true;
 		clearTimeout(hideTimer);
@@ -111,6 +160,13 @@
 		if (t && (t.tagName === 'INPUT' || t.tagName === 'SELECT' || t.tagName === 'TEXTAREA')) return;
 		if (e.ctrlKey || e.metaKey || e.altKey) return;
 		wake();
+		// While drawing, Excalidraw has the keys (its tools are letters); Esc and the page keys stay ours.
+		if (mode === 'draw' && t instanceof Element && t.closest('.draw')) {
+			if (e.key === 'Escape') { mode = 'nav'; (document.activeElement as HTMLElement | null)?.blur(); }
+			else if (e.key === 'PageDown') { e.preventDefault(); next(); }
+			else if (e.key === 'PageUp') { e.preventDefault(); prev(); }
+			return;
+		}
 		switch (e.key) {
 			case ' ': case 'ArrowRight': case 'ArrowDown': case 'PageDown': case 'Enter':
 				e.preventDefault(); e.shiftKey && e.key === ' ' ? prev() : next(); break;
@@ -120,8 +176,10 @@
 			case 'End': e.preventDefault(); go(total - 1); break;
 			case 'f': case 'F': toggleFullscreen(); break;
 			case 'n': case 'N': notes = !notes; break;
+			case 'h': case 'H': setMode('mark'); break;
+			case 'd': case 'D': setMode('draw'); break;
 			case '?': help = !help; break;
-			case 'Escape': if (help) help = false; break;
+			case 'Escape': if (help) help = false; else if (mode !== 'nav') mode = 'nav'; break;
 		}
 	}
 	// Taps on the slide: the right two thirds advance, the left third goes back.
@@ -130,12 +188,13 @@
 		const el = e.target as HTMLElement | null;
 		if (el?.closest('a, button, select, [role="dialog"]')) return;
 		wake();
+		if (mode !== 'nav') return;
 		e.clientX < innerWidth / 3 ? prev() : next();
 	}
 	function onTouchStart(e: TouchEvent) { touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; }
 	function onTouchEnd(e: TouchEvent) {
 		const dx = e.changedTouches[0].clientX - touchX, dy = e.changedTouches[0].clientY - touchY;
-		if (Math.abs(dx) > 60 && Math.abs(dy) < 50) { e.preventDefault(); dx < 0 ? next() : prev(); }
+		if (mode === 'nav' && Math.abs(dx) > 60 && Math.abs(dy) < 50) { e.preventDefault(); dx < 0 ? next() : prev(); }
 	}
 </script>
 
@@ -152,18 +211,21 @@
 
 <svelte:window onkeydown={onKey} onmousemove={wake} onpointerdown={wake} />
 
-<div class="presenter" class:idle={!controls}>
+<div class="presenter" class:idle={!controls && mode === 'nav'} class:marking={mode === 'mark'}>
 	{#if doc && (slide || closing)}
 		<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -- keys are handled on the window; a tap is the touch shortcut -->
 		<div class="stage" onclick={onTap} ontouchstart={onTouchStart} ontouchend={onTouchEnd}>
 			{#if slide}
 				{#key slide.id + version}
-					<SlideView {slide} {version} showNotes={notes} mode="present" {lang} />
+					<SlideView {slide} {version} showNotes={notes} mode="present" {lang} markable={mode === 'mark'} {live} onmark={liveMark} />
 				{/key}
 			{:else}
 				<ClosingSlide {slug} title={doc.title} subtitle={doc.subtitle} votes={{ up: doc.votes_up ?? 0, down: doc.votes_down ?? 0 }} shared={doc.visibility === 'link'} {shareUrl} {lang} />
 			{/if}
 		</div>
+
+		<!-- drawing layer: mounted on first use; its ink stays visible after drawing is turned off -->
+		<div class="draw" class:active={mode === 'draw'} bind:this={drawNode} aria-hidden={mode !== 'draw'}></div>
 
 		<!-- progress hairline -->
 		<div class="progress" aria-hidden="true"><div style="width: {((index + 1) / total) * 100}%"></div></div>
@@ -177,6 +239,11 @@
 				<span class="sep"></span>
 				<button type="button" class="txt" onclick={toggleFullscreen} aria-pressed={fullscreen}><span class="glyph" aria-hidden="true">⛶</span>{fullscreen ? (ta ? 'வெளியேறு' : 'Exit') : 'Fullscreen'}<kbd>F</kbd></button>
 				<button type="button" class="txt" class:on={notes} onclick={() => (notes = !notes)} aria-pressed={notes} lang="ta">குறிப்புகள்<kbd>N</kbd></button>
+				<span class="sep"></span>
+				<button type="button" class="txt" class:on={mode === 'mark'} onclick={() => setMode('mark')} aria-pressed={mode === 'mark'}><span class="glyph" aria-hidden="true">▍</span>{ta ? 'முன்னிலை' : 'Highlight'}<kbd>H</kbd></button>
+				<button type="button" class="txt" class:on={mode === 'draw'} onclick={() => setMode('draw')} aria-pressed={mode === 'draw'} aria-busy={drawLoading}><span class="glyph" aria-hidden="true">✎</span>{drawLoading ? '…' : ta ? 'வரை' : 'Draw'}<kbd>D</kbd></button>
+				{#if mode !== 'nav'}<button type="button" class="txt" onclick={clearSlide}>{ta ? 'அழி' : 'Clear'}</button>{/if}
+				<span class="sep"></span>
 				<select class="ver" value={version} onchange={(e) => setVersion(e.currentTarget.value)} aria-label={ta ? 'மொழிபெயர்ப்பு' : 'Version'}>
 					{#each manifest.versions as v (v.code)}<option value={v.code}>{v.short}</option>{/each}
 				</select>
@@ -193,10 +260,13 @@
 					<span><kbd>Home</kbd> <kbd>End</kbd> {ta ? 'முதல் · கடைசி' : 'first · last'}</span>
 					<span><kbd>F</kbd> fullscreen</span>
 					<span><kbd>N</kbd> {ta ? 'குறிப்புகள்' : 'notes'}</span>
+					<span><kbd>H</kbd> {ta ? 'சொற்களை முன்னிலைப்படுத்து' : 'highlight words'}</span>
+					<span><kbd>D</kbd> {ta ? 'வரை' : 'draw'} · <kbd>PgUp</kbd> <kbd>PgDn</kbd> {ta ? 'வரையும்போது ஸ்லைடு மாற்ற' : 'turn slides while drawing'}</span>
 				{/if}
 				<span><kbd>Esc</kbd> {ta ? 'வெளியேறு' : 'exit'}</span>
 			</div>
 		{/if}
+		{#if drawFailed}<div class="hint help" role="status">{ta ? 'வரைதல் கருவியை ஏற்ற முடியவில்லை' : 'The drawing tools could not be loaded'}</div>{/if}
 		<div class="who" aria-hidden="true">{doc.title}{doc.subtitle ? ` · ${doc.subtitle}` : ''}</div>
 	{:else if denied}
 		<div class="message">
@@ -214,9 +284,18 @@
 	.presenter { position: fixed; inset: 0; background: #0E1015; color: #F1ECE1; overflow: hidden; --pill-bg: rgba(32, 35, 42, 0.92); --pill-line: #3A3F4A; --faint: #7E8798; }
 	.presenter.idle { cursor: none; }
 	.stage { position: absolute; inset: 0; }
+	.marking .stage { cursor: text; }
+	/* Excalidraw over the slide: clicks pass through while it is off, and its UI hides. */
+	.draw { position: absolute; inset: 0; pointer-events: none; }
+	.draw.active { pointer-events: auto; }
+	.draw:not(.active) :global(.layer-ui__wrapper) { display: none; }
+	/* The view is pinned (see draw/excalidraw.ts), so zoom controls would do nothing. */
+	.draw :global(.zoom-actions), .draw :global(.scroll-back-to-content) { display: none; }
 	.progress { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: #2E323B; }
 	.progress div { height: 3px; background: #D9B25C; transition: width 0.25s ease; }
-	.controls { position: absolute; left: 0; right: 0; bottom: 24px; display: flex; justify-content: center; transition: opacity 0.3s ease; }
+	.controls { position: absolute; left: 0; right: 0; bottom: 24px; display: flex; justify-content: center; transition: opacity 0.3s ease; pointer-events: none; z-index: 5; }
+	.controls .pill { pointer-events: auto; }
+	.hint, .who, .progress { z-index: 5; }
 	.idle .controls, .idle .hint:not(.help), .idle .who { opacity: 0; pointer-events: none; }
 	.pill { display: flex; align-items: center; gap: 6px; padding: 8px; border-radius: 16px; background: var(--pill-bg); border: 1.5px solid var(--pill-line); backdrop-filter: blur(10px); max-width: calc(100vw - 32px); flex-wrap: wrap; justify-content: center; }
 	.ic { width: 44px; height: 44px; border-radius: 12px; border: 0; background: none; color: #F1ECE1; font-size: 1.3rem; cursor: pointer; }

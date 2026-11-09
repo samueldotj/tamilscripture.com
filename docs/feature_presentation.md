@@ -1,6 +1,6 @@
 # Feature design: verse presentations
 
-Status: P1–P3 built 21 Sep 2026 from design 11A (Claude Design handoff, "Tamil Bible Site Redesign", turn 11); P4 (headers, title pages, linked references, closing slide with votes) and P5 (statistics for the owner) 22 Sep 2026.
+Status: P1–P3 built 21 Sep 2026 from design 11A (Claude Design handoff, "Tamil Bible Site Redesign", turn 11); P4 (headers, title pages, linked references, closing slide with votes) and P5 (statistics for the owner) 22 Sep 2026; P6 (highlighted words and drawing) 8 Nov 2026.
 
 A preacher or Bible study leader makes a presentation of slides. Each slide holds one or more verses and optional notes written in Markdown. "Present" opens the slides in their own tab, full screen if wanted, driven from the keyboard. Every presentation has a permanent link that can be shared. Slides hold verse *references*, never verse text, so the translation can be changed later, by the author or by whoever opens the link.
 
@@ -16,6 +16,8 @@ A preacher or Bible study leader makes a presentation of slides. Each slide hold
 | Markdown | A small renderer in the app (`src/lib/md`, about 2 kB) that builds a tree and renders elements: no HTML string is ever produced from user text, so nothing needs sanitising. Headings, bold, italics, code, quotes, bullet and numbered lists, links (http, https, site-relative) and rules. Verse references in the notes become links with the site's hover preview, as everywhere else. |
 | Editing while presenting | The editor broadcasts every change to a presenter tab in the same browser (`BroadcastChannel`), and the presenter reports the slide it is on. Other devices see changes on their next load. |
 | Screen colours | The presenter is always night slate (design 11A), whatever the site theme: it is meant for a projector. The editor follows the site theme. |
+| Highlighted words | Stored on the slide verse as positions, never text: `marks: { "IRVTAM": ["16.3"] }`, verse number and 0-based word, **per version**, since word positions differ between translations. A viewer who switches version sees that version's marks, or none. A word is the text between spaces, its punctuation outside the highlight. The presenter can mark more (or unmark) for one showing; those are never saved. |
+| Drawing while presenting | Excalidraw (React) over the slide on a transparent canvas, loaded only when the presenter first presses D, so React never reaches any other page. Ink is kept per slide while the tab is open and never saved. The view is pinned (no pan or zoom; the zoom follows the window's longer side, as the slide's type does), so ink stays on its words when the window or fullscreen changes. Its fonts are served from the site (`static/excalidraw/fonts`, the CJK set left out), not a CDN. |
 | Who sees the list | `/me/presentations`, a tab of the personal pages, browser-rendered like the rest of `/me`. |
 
 ## 2. Data
@@ -38,11 +40,12 @@ A slide (`title` is the one-line header across the top; on a slide without verse
 ```json
 { "id": "k4m2p7qx", "title": "அன்பின் அளவு",
   "verses": [ { "book": "JHN", "chapter": 3, "start": 16, "end": 16 },
-              { "book": "ROM", "chapter": 5, "start": 6, "end": 8, "version": "TCV" } ],
+              { "book": "ROM", "chapter": 5, "start": 6, "end": 8, "version": "TCV",
+                "marks": { "TCV": ["6.2", "8.0", "8.1"] } } ],
   "notes": "## அன்பின் அளவு\n- **இவ்வளவாய்** — the measure of love\n> Illustration: the prodigal son" }
 ```
 
-Limits, enforced in `check_slides()` and mirrored in `LIMITS` (`src/lib/present/types.ts`): 200 slides, 20 verses a slide, 20,000 characters of notes, 200 of title, 400 kB for the whole document. Book codes are USFM (`^[1-3A-Z]{3}$`), chapters 1–150, verses 1–176, `end ≥ start`.
+Limits, enforced in `check_slides()` and mirrored in `LIMITS` (`src/lib/present/types.ts`): 200 slides, 20 verses a slide, 20,000 characters of notes, 200 of title, 400 kB for the whole document. Book codes are USFM (`^[1-3A-Z]{3}$`), chapters 1–150, verses 1–176, `end ≥ start`. Marks (`20261108100000_presentation_marks.sql`): at most 8 versions a verse, 300 marks a version, each `^[0-9]{1,3}\.[0-9]{1,4}$` (`MARK_LIMITS`).
 
 The user's data export (`export_my_data()`) now includes presentations.
 
@@ -61,8 +64,8 @@ flowchart LR
 
 ## 4. Screens
 
-- **Editor** (`/present/{slug}/edit`, design 11A "Presentation editor"): three columns under the site header. Left: title, subtitle, "saved just now", the slides as small cards (drag or Alt+↑/↓ to reorder), "new slide". Centre: slide n of N, default version, duplicate, delete, share (link, copy, anyone-with-link or only-me), Present (new tab); a 16:9 preview drawn by the same component as the presenter; the slide's title; notes with a formatting toolbar and Write / Split / Preview. Right: the verses on this slide, each with its version and a remove control; a box that takes a reference, a chapter (which lists its verses to pick from) or a word to search; the slide's cross-references, recently read verses and the author's highlights as one-tap additions. Saves 800 ms after the last change; warns before the tab closes with a save in flight.
-- **Presenter** (`/present/{slug}`, design 11A "Presenter fullscreen"): the slide fills the window, with its header on one line across the top; the reference and, in a range, each verse number link to the reader in the version shown; a slide without verses is a title page, its header large and its notes centred under it; a progress hairline at the top; a control pill at the bottom (previous, n / N, next, fullscreen, notes, version, ?) that fades after three seconds without the mouse; a shortcut hint bottom-left on opening; title bottom-right. Notes sit in a column on the right and drop below the verses on a portrait screen. A passage too long for the frame is shrunk until it fits. Taps on the right two thirds advance, on the left third go back; a swipe does the same.
+- **Editor** (`/present/{slug}/edit`, design 11A "Presentation editor"): three columns under the site header. Left: title, subtitle, "saved just now", the slides as small cards (drag or Alt+↑/↓ to reorder), "new slide". Centre: slide n of N, default version, duplicate, delete, share (link, copy, anyone-with-link or only-me), Present (new tab); a 16:9 preview drawn by the same component as the presenter, where a click or a drag across words highlights them in the version shown (with Clear under it); the slide's title; notes with a formatting toolbar and Write / Split / Preview. Right: the verses on this slide, each with its version and a remove control; a box that takes a reference, a chapter (which lists its verses to pick from) or a word to search; the slide's cross-references, recently read verses and the author's highlights as one-tap additions. Saves 800 ms after the last change; warns before the tab closes with a save in flight.
+- **Presenter** (`/present/{slug}`, design 11A "Presenter fullscreen"): the slide fills the window, with its header on one line across the top; the reference and, in a range, each verse number link to the reader in the version shown; a slide without verses is a title page, its header large and its notes centred under it; a progress hairline at the top; a control pill at the bottom (previous, n / N, next, fullscreen, notes, version, ?) that fades after three seconds without the mouse; a shortcut hint bottom-left on opening; title bottom-right. Notes sit in a column on the right and drop below the verses on a portrait screen. A passage too long for the frame is shrunk until it fits. Taps on the right two thirds advance, on the left third go back; a swipe does the same. The pill also has Highlight (H): clicks and drags mark words for this showing, over the saved ones, and taps no longer turn slides; and Draw (D): Excalidraw's tools (pen, highlighter by opacity, shapes, arrows, text, laser pointer, eraser) over the slide, with Clear for the slide's ink and marks. Esc leaves either mode; ink stays visible after.
 - **Closing slide**, after the last stored slide of every presentation and never stored: thanks and the title, thumbs up and down with the counts (`presentation_vote()`, one vote per browser kept in `localStorage`, a change moves the vote), and a share button (Web Share, else the link copied). Only a presentation shared by link takes votes, so a private one gives nothing away. The editor's rail shows it as a fixed last card.
 - **List** (`/me/presentations`): every presentation with its slide count, version and date, plus a line of numbers (views, visitors, votes, last opened) from `my_presentations_stats()`; new, edit, stats, present, copy link, delete.
 - **Statistics** (`/present/{slug}/stats`, owner only): tiles for views (all time and last 30 days), visitors, votes and last opened; a bar chart of views per day for 30 days with a table view; countries and devices for the last 90 days. `presentation_stats()` reads the site's own analytics for the path `/present/{slug}`: finished days from the `pages` rollups (kept two years), today and the 90-day detail from the raw events. Nothing new is collected, and the analytics privacy rules apply unchanged (no cookies, daily-rotating visitor hashes, bots dropped, GPC and DNT honoured), which the page says in a footnote.
@@ -76,12 +79,16 @@ Keys in the presenter:
 | Home, End | first, last |
 | F | full screen on or off |
 | N | notes on or off |
+| H | highlight words on or off |
+| D | drawing on or off (Excalidraw then has the letter keys; PageUp and PageDown still turn slides) |
 | ? | the key list |
-| Esc | leave full screen (the browser handles it), close the key list |
+| Esc | leave full screen (the browser handles it), close the key list, leave highlight or drawing |
 
 ## 5. Budgets
 
 The editor is one chunk (10.9 kB gzipped) fetched when its page opens, so the route node stays tiny; the presenter and the list are ordinary route nodes; the reference parser (wasm) loads on the first keystroke in the verse box, as in the header. Measured on 21 Sep 2026 (`pnpm size`): route nodes 104.7 → 110.7 kB of 120; site JavaScript 207.9 → 238.3 kB after P4; the budget was raised from 240 to 260 kB for P5 (`scripts/size-check.mjs`), as it was for the concordance. The reader route itself is unchanged.
+
+P6, measured 8 Nov 2026: the drawing layer (React, Excalidraw and every chunk only it reaches, its locales and Mermaid import among them) is 2,484 kB gzipped in 156 chunks, budgeted on its own (`DRAW_LIMIT`, 2,900 kB) and fetched only when a presenter first presses D; much of it (locales, Mermaid, font subsetting) loads only if used. Its stylesheet is 22 kB. Site JavaScript 353.0 kB, the budget raised from 350 to 360 kB for the highlight code and the new controls; the reader route is unchanged at 113.5 kB. The drawing fonts (`static/excalidraw`, 0.5 MB) are kept out of the service worker's precache.
 
 ## 6. Roadmap
 
@@ -92,6 +99,7 @@ The editor is one chunk (10.9 kB gzipped) fetched when its page opens, so the ro
 | **P3 · Presenter** | Permalink page with server-rendered title, keys, fullscreen, auto-hide, version switch, follow-along channel | Built 21 Sep 2026 |
 | **P4 · Headers, title pages, votes** | One-line header per slide; title pages with centred Markdown; references and verse numbers link to the reader; closing slide with thumbs up / down (`20260922100000_presentation_votes.sql`) and share | Built 22 Sep 2026 |
 | **P5 · Statistics** | `presentation_stats()` and `my_presentations_stats()` over the existing analytics (`20260922140000_presentation_stats.sql`); `/present/{slug}/stats`; numbers on the list | Built 22 Sep 2026 |
+| **P6 · Highlights and drawing** | Marked words saved per version (`20261108100000_presentation_marks.sql`, pgTAP `presentation_marks.test.sql`), set in the editor's preview; live marks and Excalidraw drawing in the presenter | Built 8 Nov 2026 |
 | **Later** | "Add to presentation" from the reader's verse action bar; a dual-version slide (Tamil beside English); a printed handout; duplicating a whole presentation; a presenter view with the next slide and a clock on the speaker's screen | Ideas |
 
 ## 7. Risks and checks
