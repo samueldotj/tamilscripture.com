@@ -7,13 +7,14 @@
 	// preview and a full screen are the same picture at two scales; a passage
 	// too long for the frame is shrunk until it fits. References and verse
 	// numbers link to the reader. Words the author marked (per version) are
-	// highlighted; with `markable`, a click or a drag across words sets them,
+	// highlighted in their colour; with `markable`, a click or a drag across
+	// words paints them in `color` (a word already that colour is cleared),
 	// through `onmark`, and `live` (the presenter's own marks for this showing)
-	// flips the saved ones.
+	// overrides the saved ones.
 	import { chapterCached, verseList } from '$lib/content/verses';
 	import { chapterUrl, findBook, findVersion } from '$lib/content/manifest';
 	import Markdown from '$lib/md/Markdown.svelte';
-	import { tokens, verseKey, verseLabel, verseVersion, type Slide, type SlideVerse } from './types';
+	import { DEFAULT_MARK, markBg, savedMark, tokens, verseKey, verseLabel, verseVersion, type MarkColor, type Slide, type SlideVerse } from './types';
 
 	let {
 		slide,
@@ -23,6 +24,7 @@
 		lang = 'ta',
 		markable = false,
 		live,
+		color = DEFAULT_MARK,
 		onmark
 	}: {
 		slide: Slide;
@@ -34,30 +36,33 @@
 		lang?: string;
 		/** Clicks and drags on words set marks (the editor's preview, the presenter's highlight mode). */
 		markable?: boolean;
-		/** Marks flipped for this showing only, keyed by liveKey(). */
-		live?: Set<string>;
-		/** A word should be marked (`on`) or not: verse index on the slide, version code, `verse.word`. */
-		onmark?: (i: number, code: string, pos: string, on: boolean) => void;
+		/** Marks for this showing only, keyed by liveKey(): a colour, or null for a saved mark removed. */
+		live?: Map<string, MarkColor | null>;
+		/** The colour clicks paint in. */
+		color?: MarkColor;
+		/** A word should take a colour, or none (null): verse index on the slide, version code, `verse.word`. */
+		onmark?: (i: number, code: string, pos: string, color: MarkColor | null) => void;
 	} = $props();
 
 	const liveKey = (i: number, code: string, pos: string) => `${slide.id}|${i}|${code}|${pos}`;
-	function marked(i: number, v: SlideVerse, code: string, pos: string): boolean {
-		const saved = !!v.marks?.[code]?.includes(pos);
-		return live?.has(liveKey(i, code, pos)) ? !saved : saved;
+	function markOf(i: number, v: SlideVerse, code: string, pos: string): MarkColor | null {
+		const k = liveKey(i, code, pos);
+		return live?.has(k) ? live.get(k)! : savedMark(v, code, pos);
 	}
-	// A drag paints every word it crosses the way the first one went.
-	let painting = $state<boolean | null>(null);
+	// A drag paints every word it crosses the way the first one went: in the
+	// colour, or cleared when the first word already had it.
+	let painting = $state<{ to: MarkColor | null } | null>(null);
 	function down(e: PointerEvent, i: number, v: SlideVerse, code: string, pos: string) {
 		if (!markable || e.button !== 0) return;
 		e.preventDefault();
 		e.stopPropagation();
-		painting = !marked(i, v, code, pos);
-		onmark?.(i, code, pos, painting);
+		painting = { to: markOf(i, v, code, pos) === color ? null : color };
+		onmark?.(i, code, pos, painting.to);
 		(e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId);
 	}
 	function over(i: number, v: SlideVerse, code: string, pos: string) {
-		if (painting === null || marked(i, v, code, pos) === painting) return;
-		onmark?.(i, code, pos, painting);
+		if (!painting || markOf(i, v, code, pos) === painting.to) return;
+		onmark?.(i, code, pos, painting.to);
 	}
 
 	type Loaded = { label: string; verses: { n: string; text: string }[]; lang: string; short: string; code: string; failed?: boolean; ready?: boolean };
@@ -117,7 +122,7 @@
 
 {#snippet words(i: number, v: SlideVerse, code: string, x: { n: string; text: string })}
 	{@const n = x.n.split('-')[0]}
-	{#each tokens(x.text) as w, j (j)}{w.sep}{w.pre}<!-- svelte-ignore a11y_no_static_element_interactions -- pointer-only marking; the marks are also settable in the editor --><span class="w" class:on={marked(i, v, code, `${n}.${j}`)} onpointerdown={(e) => down(e, i, v, code, `${n}.${j}`)} onpointerenter={() => over(i, v, code, `${n}.${j}`)}>{w.word}</span>{w.post}{/each}
+	{#each tokens(x.text) as w, j (j)}{@const c = markOf(i, v, code, `${n}.${j}`)}{w.sep}{w.pre}<!-- svelte-ignore a11y_no_static_element_interactions -- pointer-only marking; the marks are also settable in the editor --><span class="w" class:on={c} style:--mark={c ? markBg(c) : null} onpointerdown={(e) => down(e, i, v, code, `${n}.${j}`)} onpointerenter={() => over(i, v, code, `${n}.${j}`)}>{w.word}</span>{w.post}{/each}
 {/snippet}
 
 <svelte:window onpointerup={() => (painting = null)} onpointercancel={() => (painting = null)} />
@@ -219,10 +224,10 @@
 	.muted { color: var(--faint); }
 	/* A marked word: a gold marker stroke behind it. */
 	.w { border-radius: 0.18em; transition: background-color 0.12s ease; }
-	.w.on { background: rgba(217, 178, 92, 0.34); box-shadow: 0 0 0 0.08em rgba(217, 178, 92, 0.34); color: #FFF8E6; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+	.w.on { background: var(--mark); box-shadow: 0 0 0 0.08em var(--mark); color: #FFF8E6; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 	.markable .w { cursor: pointer; user-select: none; }
 	.markable .w:hover { background: rgba(217, 178, 92, 0.16); }
-	.markable .w.on:hover { background: rgba(217, 178, 92, 0.44); }
+	.markable .w.on:hover { filter: brightness(1.15); }
 	.ver { font-size: calc(1.1cqmax * var(--fit, 1)); letter-spacing: 0.12em; color: var(--faint); font-weight: 600; font-family: var(--sans); }
 	.big { margin: 0; font-size: calc(4.4cqmax * var(--fit, 1)); font-weight: 600; line-height: 1.25; color: var(--ink); text-wrap: balance; }
 	.big[lang='ta'] { font-family: var(--tamil); }

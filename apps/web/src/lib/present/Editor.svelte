@@ -11,7 +11,8 @@
 	import { settings } from '$lib/settings/store.svelte';
 	import { DEFAULT_VERSION, findVersion, manifest } from '$lib/content/manifest';
 	import { myPresentation, presentChannel, presentUrl, savePresentation, type PresentMessage } from '$lib/present/repo';
-	import { LIMITS, MARK_LIMITS, newId, newSlide, verseLabel, verseVersion, type Presentation, type Slide, type SlideVerse } from '$lib/present/types';
+	import { DEFAULT_MARK, formatMark, LIMITS, MARK_LIMITS, newId, newSlide, parseMark, verseLabel, verseVersion, type MarkColor, type Presentation, type Slide, type SlideVerse } from '$lib/present/types';
+	import MarkColors from '$lib/present/MarkColors.svelte';
 	import SlideRail from '$lib/present/SlideRail.svelte';
 	import SlideView from '$lib/present/SlideView.svelte';
 	import NotesEditor from '$lib/present/NotesEditor.svelte';
@@ -28,6 +29,8 @@
 	let savedAt = $state<Date | null>(null);
 	let shareOpen = $state(false);
 	let toast = $state('');
+	/** The colour clicks on the preview's words paint in. */
+	let markColor = $state<MarkColor>(DEFAULT_MARK);
 	let channel: BroadcastChannel | null = null;
 	let timer: ReturnType<typeof setTimeout> | undefined;
 	let saving = false;
@@ -154,20 +157,18 @@
 		touch();
 	}
 	/** Highlight a word of a verse on this slide, in the version it is shown in. */
-	function setMark(i: number, code: string, pos: string, on: boolean) {
+	function setMark(i: number, code: string, pos: string, color: MarkColor | null) {
 		const v = slide?.verses[i];
 		if (!v) return;
 		const marks = (v.marks ??= {});
 		const list = marks[code] ?? [];
-		if (on) {
-			if (list.includes(pos) || list.length >= MARK_LIMITS.perVersion) return;
+		const rest = list.filter((m) => parseMark(m).pos !== pos);
+		if (color) {
+			if (rest.length >= MARK_LIMITS.perVersion) return;
 			if (!marks[code] && Object.keys(marks).length >= MARK_LIMITS.versions) return;
-			marks[code] = [...list, pos];
-		} else {
-			const next = list.filter((p) => p !== pos);
-			if (next.length) marks[code] = next;
-			else delete marks[code];
-		}
+			marks[code] = [...rest, formatMark(pos, color)];
+		} else if (rest.length) marks[code] = rest;
+		else delete marks[code];
 		if (!Object.keys(marks).length) delete v.marks;
 		touch();
 	}
@@ -266,11 +267,12 @@
 			</label>
 			<div class="canvas-wrap">
 				<div class="canvas">
-					<SlideView {slide} version={doc.version} {lang} markable onmark={setMark} />
+					<SlideView {slide} version={doc.version} {lang} markable color={markColor} onmark={setMark} />
 				</div>
 				{#if slide.verses.length}
 					<p class="mark-hint" lang={ta ? 'ta' : 'en'}>
-						{ta ? 'சொற்களைச் சொடுக்கி, அல்லது இழுத்து, முன்னிலைப்படுத்தவும் · ஒவ்வொரு மொழிபெயர்ப்புக்கும் தனியாக' : 'Click or drag across words to highlight them · kept for each translation separately'}
+						<MarkColors bind:value={markColor} {lang} />
+						{ta ? 'சொற்களைச் சொடுக்கி, அல்லது இழுத்து, முன்னிலைப்படுத்தவும் · அதே நிறத்தில் மீண்டும் சொடுக்கினால் நீங்கும் · ஒவ்வொரு மொழிபெயர்ப்புக்கும் தனியாக' : 'Click or drag across words to highlight them · click again in the same colour to remove · kept for each translation separately'}
 						{#if hasMarks}<button type="button" class="linkish" onclick={clearMarks}>{ta ? 'அழி' : 'Clear'}</button>{/if}
 					</p>
 				{/if}
@@ -327,7 +329,8 @@
 	.vis [lang='ta'] { font-family: var(--tamil); }
 	.canvas-wrap { padding: 14px 32px 0; }
 	.canvas { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: var(--bw) solid var(--line); overflow: hidden; background: #0E1015; }
-	.mark-hint { margin: 0.5rem 0 0; font-size: 0.78rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; }
+	.mark-hint { margin: 0.5rem 0 0; font-size: 0.78rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+	.mark-hint :global(.colors) { color: var(--ink); }
 	.mark-hint[lang='ta'] { font-family: var(--tamil); }
 	.linkish { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
 	.slide-title { display: grid; gap: 0.35rem; padding: 18px 32px 0; }

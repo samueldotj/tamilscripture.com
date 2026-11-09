@@ -12,13 +12,43 @@ export interface SlideVerse {
 	end: number;
 	/** Overrides the presentation's version for this verse (`TCV`). */
 	version?: string;
-	/** Highlighted words per version code, as `verse.word` (0-based word in the verse): `{ IRVTAM: ['16.3'] }`.
+	/** Highlighted words per version code, as `verse.word` (0-based word in the verse), with
+	 *  `:colour` unless gold: `{ IRVTAM: ['16.3', '16.4:g'] }`.
 	 *  Per version because word positions differ between translations. */
 	marks?: Record<string, string[]>;
 }
 
 /** Limits on marks, mirrored in check_slides(). */
 export const MARK_LIMITS = { versions: 8, perVersion: 300 } as const;
+
+/** Highlight colours, picked to read on the night-slate slide. The first is the default
+ *  and is stored without a suffix; the ids are mirrored in check_slides(). */
+export const MARK_COLORS = [
+	{ id: 'y', ta: 'பொன்', en: 'Gold', bg: 'rgba(217, 178, 92, 0.38)', swatch: '#D9B25C' },
+	{ id: 'g', ta: 'பச்சை', en: 'Green', bg: 'rgba(98, 186, 120, 0.38)', swatch: '#62BA78' },
+	{ id: 'b', ta: 'நீலம்', en: 'Blue', bg: 'rgba(92, 156, 230, 0.42)', swatch: '#5C9CE6' },
+	{ id: 'p', ta: 'இளஞ்சிவப்பு', en: 'Pink', bg: 'rgba(226, 110, 170, 0.40)', swatch: '#E26EAA' },
+	{ id: 'r', ta: 'சிவப்பு', en: 'Red', bg: 'rgba(228, 88, 76, 0.42)', swatch: '#E4584C' }
+] as const;
+export type MarkColor = (typeof MARK_COLORS)[number]['id'];
+export const DEFAULT_MARK: MarkColor = 'y';
+export const markBg = (c: string) => (MARK_COLORS.find((m) => m.id === c) ?? MARK_COLORS[0]).bg;
+
+/** `16.3:g` → position and colour. */
+export function parseMark(m: string): { pos: string; color: MarkColor } {
+	const [pos, c] = m.split(':');
+	return { pos, color: (MARK_COLORS.some((x) => x.id === c) ? c : DEFAULT_MARK) as MarkColor };
+}
+export const formatMark = (pos: string, color: MarkColor) => (color === DEFAULT_MARK ? pos : `${pos}:${color}`);
+
+/** A word's saved colour in a version's marks, or null. */
+export function savedMark(v: SlideVerse, code: string, pos: string): MarkColor | null {
+	for (const m of v.marks?.[code] ?? []) {
+		const p = parseMark(m);
+		if (p.pos === pos) return p.color;
+	}
+	return null;
+}
 
 export type Token = { sep: string; pre: string; word: string; post: string };
 

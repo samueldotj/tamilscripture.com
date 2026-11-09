@@ -8,7 +8,7 @@
 	// slide, loaded on first use, its ink kept per slide until the tab closes.
 	// Esc leaves either mode; PageUp and PageDown still turn slides.
 	import { onMount } from 'svelte';
-	import { SvelteSet } from 'svelte/reactivity';
+	import { SvelteMap } from 'svelte/reactivity';
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { replaceState } from '$app/navigation';
@@ -17,7 +17,8 @@
 	import { DEFAULT_VERSION, findVersion, manifest } from '$lib/content/manifest';
 	import { chapterCached } from '$lib/content/verses';
 	import { myPresentation, presentChannel, type PresentMessage } from '$lib/present/repo';
-	import { verseVersion, type Presentation } from '$lib/present/types';
+	import { DEFAULT_MARK, MARK_COLORS, savedMark, verseVersion, type MarkColor, type Presentation } from '$lib/present/types';
+	import MarkColors from '$lib/present/MarkColors.svelte';
 	import SlideView from '$lib/present/SlideView.svelte';
 	import ClosingSlide from '$lib/present/ClosingSlide.svelte';
 	import type { DrawLayer } from '$lib/present/draw/excalidraw';
@@ -40,8 +41,9 @@
 	let override = $state<string | null>(null);
 	/** nav: clicks turn slides · mark: clicks mark words · draw: Excalidraw takes the pointer */
 	let mode = $state<'nav' | 'mark' | 'draw'>('nav');
-	/** Marks flipped for this showing, keyed as SlideView's liveKey(). */
-	const live = new SvelteSet<string>();
+	/** Marks for this showing, keyed as SlideView's liveKey(): a colour, or null for a saved one removed. */
+	const live = new SvelteMap<string, MarkColor | null>();
+	let markColor = $state<MarkColor>(DEFAULT_MARK);
 	let drawNode = $state<HTMLElement | undefined>();
 	let layer = $state<DrawLayer | null>(null);
 	let drawLoading = $state(false);
@@ -102,12 +104,11 @@
 	const prev = () => go(index - 1);
 
 	// ---- highlight and draw --------------------------------------------------------
-	function liveMark(i: number, code: string, pos: string, on: boolean) {
-		if (!slide) return;
+	function liveMark(i: number, code: string, pos: string, color: MarkColor | null) {
+		if (!slide || !slide.verses[i]) return;
 		const key = `${slide.id}|${i}|${code}|${pos}`;
-		const saved = !!slide.verses[i]?.marks?.[code]?.includes(pos);
-		if (on === saved) live.delete(key);
-		else live.add(key);
+		if (color === savedMark(slide.verses[i], code, pos)) live.delete(key);
+		else live.set(key, color);
 	}
 	const sceneId = $derived(slide ? slide.id : '#closing');
 	$effect(() => { layer?.show(sceneId); });
@@ -131,7 +132,7 @@
 	}
 	/** This slide's marks for this showing, and in draw mode its ink. */
 	function clearSlide() {
-		if (slide) for (const k of [...live]) if (k.startsWith(`${slide.id}|`)) live.delete(k);
+		if (slide) for (const k of [...live.keys()]) if (k.startsWith(`${slide.id}|`)) live.delete(k);
 		if (mode === 'draw') layer?.clear();
 	}
 	onMount(() => () => layer?.destroy());
@@ -178,6 +179,9 @@
 			case 'n': case 'N': notes = !notes; break;
 			case 'h': case 'H': setMode('mark'); break;
 			case 'd': case 'D': setMode('draw'); break;
+			case '1': case '2': case '3': case '4': case '5':
+				if (mode === 'mark') markColor = MARK_COLORS[Number(e.key) - 1].id;
+				break;
 			case '?': help = !help; break;
 			case 'Escape': if (help) help = false; else if (mode !== 'nav') mode = 'nav'; break;
 		}
@@ -217,7 +221,7 @@
 		<div class="stage" onclick={onTap} ontouchstart={onTouchStart} ontouchend={onTouchEnd}>
 			{#if slide}
 				{#key slide.id + version}
-					<SlideView {slide} {version} showNotes={notes} mode="present" {lang} markable={mode === 'mark'} {live} onmark={liveMark} />
+					<SlideView {slide} {version} showNotes={notes} mode="present" {lang} markable={mode === 'mark'} {live} color={markColor} onmark={liveMark} />
 				{/key}
 			{:else}
 				<ClosingSlide {slug} title={doc.title} subtitle={doc.subtitle} votes={{ up: doc.votes_up ?? 0, down: doc.votes_down ?? 0 }} shared={doc.visibility === 'link'} {shareUrl} {lang} />
@@ -242,6 +246,7 @@
 				<span class="sep"></span>
 				<button type="button" class="txt" class:on={mode === 'mark'} onclick={() => setMode('mark')} aria-pressed={mode === 'mark'}><span class="glyph" aria-hidden="true">▍</span>{ta ? 'முன்னிலை' : 'Highlight'}<kbd>H</kbd></button>
 				<button type="button" class="txt" class:on={mode === 'draw'} onclick={() => setMode('draw')} aria-pressed={mode === 'draw'} aria-busy={drawLoading}><span class="glyph" aria-hidden="true">✎</span>{drawLoading ? '…' : ta ? 'வரை' : 'Draw'}<kbd>D</kbd></button>
+				{#if mode === 'mark'}<MarkColors bind:value={markColor} {lang} keys />{/if}
 				{#if mode !== 'nav'}<button type="button" class="txt" onclick={clearSlide}>{ta ? 'அழி' : 'Clear'}</button>{/if}
 				<span class="sep"></span>
 				<select class="ver" value={version} onchange={(e) => setVersion(e.currentTarget.value)} aria-label={ta ? 'மொழிபெயர்ப்பு' : 'Version'}>
@@ -260,7 +265,7 @@
 					<span><kbd>Home</kbd> <kbd>End</kbd> {ta ? 'முதல் · கடைசி' : 'first · last'}</span>
 					<span><kbd>F</kbd> fullscreen</span>
 					<span><kbd>N</kbd> {ta ? 'குறிப்புகள்' : 'notes'}</span>
-					<span><kbd>H</kbd> {ta ? 'சொற்களை முன்னிலைப்படுத்து' : 'highlight words'}</span>
+					<span><kbd>H</kbd> {ta ? 'சொற்களை முன்னிலைப்படுத்து' : 'highlight words'} · <kbd>1</kbd>–<kbd>5</kbd> {ta ? 'நிறம்' : 'colour'}</span>
 					<span><kbd>D</kbd> {ta ? 'வரை' : 'draw'} · <kbd>PgUp</kbd> <kbd>PgDn</kbd> {ta ? 'வரையும்போது ஸ்லைடு மாற்ற' : 'turn slides while drawing'}</span>
 				{/if}
 				<span><kbd>Esc</kbd> {ta ? 'வெளியேறு' : 'exit'}</span>

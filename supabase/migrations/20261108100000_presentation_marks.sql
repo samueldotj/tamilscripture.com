@@ -3,7 +3,9 @@
 -- version, since word positions differ between translations:
 --   "marks": { "IRVTAM": ["16.3", "16.4"], "KJV": ["16.7"] }
 -- Each entry is "<verse>.<word>", the verse number and the word's 0-based
--- position in it. Still references only: no verse text is stored.
+-- position in it, with ":<colour>" for any colour but the default gold
+-- (g green, b blue, p pink, r red; MARK_COLORS in src/lib/present/types.ts).
+-- Still references only: no verse text is stored.
 create or replace function public.check_slides(p jsonb)
 returns boolean
 language plpgsql
@@ -39,7 +41,7 @@ begin
           if m !~ '^[A-Z0-9]{2,12}$' then return false; end if;
           if jsonb_typeof(v->'marks'->m) <> 'array' or jsonb_array_length(v->'marks'->m) > 300 then return false; end if;
           if exists (select 1 from jsonb_array_elements(v->'marks'->m) w
-                     where jsonb_typeof(w) <> 'string' or (w #>> '{}') !~ '^[0-9]{1,3}\.[0-9]{1,4}$') then return false; end if;
+                     where jsonb_typeof(w) <> 'string' or (w #>> '{}') !~ '^[0-9]{1,3}\.[0-9]{1,4}(:[ygbpr])?$') then return false; end if;
         end loop;
       end if;
     end loop;
